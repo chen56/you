@@ -12,22 +12,22 @@ import 'package:flutter/src/widgets/icon_data.dart';
 class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Mate {
   /// CupertinoContextMenuAction CupertinoContextMenuAction({Key? key, required Widget child, bool isDefaultAction = false, bool isDestructiveAction = false, void Function()? onPressed, IconData? trailingIcon})
   CupertinoContextMenuAction$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {bool isDefaultAction = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDefaultAction = false} , default:processed=BooleanLiteralImpl
     bool isDefaultAction = false,
 
-    /// optionalParameters: {bool isDestructiveAction = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDestructiveAction = false} , default:processed=BooleanLiteralImpl
     bool isDestructiveAction = false,
 
-    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {IconData? trailingIcon} , defaultValue:none
+    /// optionalParameters: {IconData? trailingIcon} , default:none
     IconData? trailingIcon,
   }) : super(
           key: key,
@@ -47,11 +47,37 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Ma
           onPressed: p.get('onPressed').build(),
           trailingIcon: p.get('trailingIcon').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('isDefaultAction', isDefaultAction, isNamed: true);
-    mateUse('isDestructiveAction', isDestructiveAction, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('trailingIcon', trailingIcon, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'isDefaultAction',
+      isDefaultAction,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isDestructiveAction',
+      isDestructiveAction,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'trailingIcon',
+      trailingIcon,
+      isNamed: true,
+    );
   }
 }

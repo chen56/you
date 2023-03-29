@@ -10,13 +10,13 @@ import 'package:flutter/widgets.dart';
 class AutofillGroup$Mate extends AutofillGroup with Mate {
   /// AutofillGroup AutofillGroup({Key? key, required Widget child, AutofillContextAction onDisposeAction = AutofillContextAction.commit})
   AutofillGroup$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , default:processed=PrefixedIdentifierImpl
     AutofillContextAction onDisposeAction = AutofillContextAction.commit,
   }) : super(
           key: key,
@@ -30,8 +30,21 @@ class AutofillGroup$Mate extends AutofillGroup with Mate {
           child: p.get('child').build(),
           onDisposeAction: p.get('onDisposeAction').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('onDisposeAction', onDisposeAction, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onDisposeAction',
+      onDisposeAction,
+      isNamed: true,
+      defaultValue: AutofillContextAction.commit,
+    );
   }
 }

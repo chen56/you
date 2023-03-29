@@ -11,10 +11,10 @@ import 'package:vector_math/vector_math_64.dart';
 class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate {
   /// AnnotationEntry<T> AnnotationEntry({required T annotation, required Offset localPosition})
   AnnotationEntry$Mate({
-    /// optionalParameters: {required T annotation} , defaultValue:none
+    /// optionalParameters: {required T annotation} , default:none
     required T annotation,
 
-    /// optionalParameters: {required Offset localPosition} , defaultValue:none
+    /// optionalParameters: {required Offset localPosition} , default:none
     required Offset localPosition,
   }) : super(
           annotation: annotation,
@@ -26,8 +26,16 @@ class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate {
           annotation: p.get('annotation').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse('annotation', annotation, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse(
+      'annotation',
+      annotation,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -42,7 +50,11 @@ class LayerHandle$Mate<T extends Layer> extends LayerHandle<T> with Mate {
     mateCreateName = 'LayerHandle';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => LayerHandle$Mate<T>(p.get('_layer').value);
-    mateUse('_layer', _layer, isNamed: false);
+    mateUse(
+      '_layer',
+      _layer,
+      isNamed: false,
+    );
   }
 }
 
@@ -57,7 +69,11 @@ class PictureLayer$Mate extends PictureLayer with Mate {
     mateCreateName = 'PictureLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PictureLayer$Mate(p.get('canvasBounds').value);
-    mateUse('canvasBounds', canvasBounds, isNamed: false);
+    mateUse(
+      'canvasBounds',
+      canvasBounds,
+      isNamed: false,
+    );
   }
 }
 
@@ -65,16 +81,16 @@ class PictureLayer$Mate extends PictureLayer with Mate {
 class TextureLayer$Mate extends TextureLayer with Mate {
   /// TextureLayer TextureLayer({required Rect rect, required int textureId, bool freeze = false, FilterQuality filterQuality = ui.FilterQuality.low})
   TextureLayer$Mate({
-    /// optionalParameters: {required Rect rect} , defaultValue:none
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {required int textureId} , defaultValue:none
+    /// optionalParameters: {required int textureId} , default:none
     required int textureId,
 
-    /// optionalParameters: {bool freeze = false} , defaultValue:Literal
+    /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
     bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = ui.FilterQuality.low} , defaultValue:unprocessed
+    /// optionalParameters: {FilterQuality filterQuality = ui.FilterQuality.low} , default:unprocessed=PropertyAccessImpl
     required FilterQuality filterQuality,
   }) : super(
           rect: rect,
@@ -90,10 +106,27 @@ class TextureLayer$Mate extends TextureLayer with Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateUse('rect', rect, isNamed: true);
-    mateUse('textureId', textureId, isNamed: true);
-    mateUse('freeze', freeze, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'textureId',
+      textureId,
+      isNamed: true,
+    );
+    mateUse(
+      'freeze',
+      freeze,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
   }
 }
 
@@ -101,10 +134,10 @@ class TextureLayer$Mate extends TextureLayer with Mate {
 class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
   /// PlatformViewLayer PlatformViewLayer({required Rect rect, required int viewId})
   PlatformViewLayer$Mate({
-    /// optionalParameters: {required Rect rect} , defaultValue:none
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {required int viewId} , defaultValue:none
+    /// optionalParameters: {required int viewId} , default:none
     required int viewId,
   }) : super(
           rect: rect,
@@ -116,8 +149,16 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
           rect: p.get('rect').build(),
           viewId: p.get('viewId').build(),
         );
-    mateUse('rect', rect, isNamed: true);
-    mateUse('viewId', viewId, isNamed: true);
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'viewId',
+      viewId,
+      isNamed: true,
+    );
   }
 }
 
@@ -125,19 +166,19 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
 class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
   /// PerformanceOverlayLayer PerformanceOverlayLayer({required Rect overlayRect, required int optionsMask, required int rasterizerThreshold, required bool checkerboardRasterCacheImages, required bool checkerboardOffscreenLayers})
   PerformanceOverlayLayer$Mate({
-    /// optionalParameters: {required Rect overlayRect} , defaultValue:none
+    /// optionalParameters: {required Rect overlayRect} , default:none
     required Rect overlayRect,
 
-    /// optionalParameters: {required int optionsMask} , defaultValue:none
+    /// optionalParameters: {required int optionsMask} , default:none
     required int optionsMask,
 
-    /// optionalParameters: {required int rasterizerThreshold} , defaultValue:none
+    /// optionalParameters: {required int rasterizerThreshold} , default:none
     required int rasterizerThreshold,
 
-    /// optionalParameters: {required bool checkerboardRasterCacheImages} , defaultValue:none
+    /// optionalParameters: {required bool checkerboardRasterCacheImages} , default:none
     required bool checkerboardRasterCacheImages,
 
-    /// optionalParameters: {required bool checkerboardOffscreenLayers} , defaultValue:none
+    /// optionalParameters: {required bool checkerboardOffscreenLayers} , default:none
     required bool checkerboardOffscreenLayers,
   }) : super(
           overlayRect: overlayRect,
@@ -155,11 +196,31 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    mateUse('overlayRect', overlayRect, isNamed: true);
-    mateUse('optionsMask', optionsMask, isNamed: true);
-    mateUse('rasterizerThreshold', rasterizerThreshold, isNamed: true);
-    mateUse('checkerboardRasterCacheImages', checkerboardRasterCacheImages, isNamed: true);
-    mateUse('checkerboardOffscreenLayers', checkerboardOffscreenLayers, isNamed: true);
+    mateUse(
+      'overlayRect',
+      overlayRect,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsMask',
+      optionsMask,
+      isNamed: true,
+    );
+    mateUse(
+      'rasterizerThreshold',
+      rasterizerThreshold,
+      isNamed: true,
+    );
+    mateUse(
+      'checkerboardRasterCacheImages',
+      checkerboardRasterCacheImages,
+      isNamed: true,
+    );
+    mateUse(
+      'checkerboardOffscreenLayers',
+      checkerboardOffscreenLayers,
+      isNamed: true,
+    );
   }
 }
 
@@ -168,13 +229,18 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
   /// OffsetLayer OffsetLayer({Offset offset = Offset.zero})
   OffsetLayer$Mate(
       {
-      /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+      /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
       Offset offset = Offset.zero})
       : super(offset: offset) {
     mateCreateName = 'OffsetLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OffsetLayer$Mate(offset: p.get('offset').build());
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -182,10 +248,10 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
 class ClipRectLayer$Mate extends ClipRectLayer with Mate {
   /// ClipRectLayer ClipRectLayer({Rect? clipRect, Clip clipBehavior = Clip.hardEdge})
   ClipRectLayer$Mate({
-    /// optionalParameters: {Rect? clipRect} , defaultValue:none
+    /// optionalParameters: {Rect? clipRect} , default:none
     Rect? clipRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           clipRect: clipRect,
@@ -197,8 +263,17 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
           clipRect: p.get('clipRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('clipRect', clipRect, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'clipRect',
+      clipRect,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -206,10 +281,10 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
 class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
   /// ClipRRectLayer ClipRRectLayer({RRect? clipRRect, Clip clipBehavior = Clip.antiAlias})
   ClipRRectLayer$Mate({
-    /// optionalParameters: {RRect? clipRRect} , defaultValue:none
+    /// optionalParameters: {RRect? clipRRect} , default:none
     RRect? clipRRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.antiAlias,
   }) : super(
           clipRRect: clipRRect,
@@ -221,8 +296,17 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
           clipRRect: p.get('clipRRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('clipRRect', clipRRect, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'clipRRect',
+      clipRRect,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
   }
 }
 
@@ -230,10 +314,10 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
 class ClipPathLayer$Mate extends ClipPathLayer with Mate {
   /// ClipPathLayer ClipPathLayer({Path? clipPath, Clip clipBehavior = Clip.antiAlias})
   ClipPathLayer$Mate({
-    /// optionalParameters: {Path? clipPath} , defaultValue:none
+    /// optionalParameters: {Path? clipPath} , default:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.antiAlias,
   }) : super(
           clipPath: clipPath,
@@ -245,8 +329,17 @@ class ClipPathLayer$Mate extends ClipPathLayer with Mate {
           clipPath: p.get('clipPath').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('clipPath', clipPath, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'clipPath',
+      clipPath,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
   }
 }
 
@@ -255,13 +348,17 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
   /// ColorFilterLayer ColorFilterLayer({ColorFilter? colorFilter})
   ColorFilterLayer$Mate(
       {
-      /// optionalParameters: {ColorFilter? colorFilter} , defaultValue:none
+      /// optionalParameters: {ColorFilter? colorFilter} , default:none
       ColorFilter? colorFilter})
       : super(colorFilter: colorFilter) {
     mateCreateName = 'ColorFilterLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
-    mateUse('colorFilter', colorFilter, isNamed: true);
+    mateUse(
+      'colorFilter',
+      colorFilter,
+      isNamed: true,
+    );
   }
 }
 
@@ -269,10 +366,10 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
 class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
   /// ImageFilterLayer ImageFilterLayer({ImageFilter? imageFilter, Offset offset = Offset.zero})
   ImageFilterLayer$Mate({
-    /// optionalParameters: {ImageFilter? imageFilter} , defaultValue:none
+    /// optionalParameters: {ImageFilter? imageFilter} , default:none
     ImageFilter? imageFilter,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offset = Offset.zero,
   }) : super(
           imageFilter: imageFilter,
@@ -284,8 +381,17 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
           imageFilter: p.get('imageFilter').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('imageFilter', imageFilter, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'imageFilter',
+      imageFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -293,10 +399,10 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
 class TransformLayer$Mate extends TransformLayer with Mate {
   /// TransformLayer TransformLayer({Matrix4? transform, Offset offset = Offset.zero})
   TransformLayer$Mate({
-    /// optionalParameters: {Matrix4? transform} , defaultValue:none
+    /// optionalParameters: {Matrix4? transform} , default:none
     Matrix4? transform,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offset = Offset.zero,
   }) : super(
           transform: transform,
@@ -308,8 +414,17 @@ class TransformLayer$Mate extends TransformLayer with Mate {
           transform: p.get('transform').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('transform', transform, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -317,10 +432,10 @@ class TransformLayer$Mate extends TransformLayer with Mate {
 class OpacityLayer$Mate extends OpacityLayer with Mate {
   /// OpacityLayer OpacityLayer({int? alpha, Offset offset = Offset.zero})
   OpacityLayer$Mate({
-    /// optionalParameters: {int? alpha} , defaultValue:none
+    /// optionalParameters: {int? alpha} , default:none
     int? alpha,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offset = Offset.zero,
   }) : super(
           alpha: alpha,
@@ -332,8 +447,17 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
           alpha: p.get('alpha').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('alpha', alpha, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'alpha',
+      alpha,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -341,13 +465,13 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
 class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
   /// ShaderMaskLayer ShaderMaskLayer({Shader? shader, Rect? maskRect, BlendMode? blendMode})
   ShaderMaskLayer$Mate({
-    /// optionalParameters: {Shader? shader} , defaultValue:none
+    /// optionalParameters: {Shader? shader} , default:none
     Shader? shader,
 
-    /// optionalParameters: {Rect? maskRect} , defaultValue:none
+    /// optionalParameters: {Rect? maskRect} , default:none
     Rect? maskRect,
 
-    /// optionalParameters: {BlendMode? blendMode} , defaultValue:none
+    /// optionalParameters: {BlendMode? blendMode} , default:none
     BlendMode? blendMode,
   }) : super(
           shader: shader,
@@ -361,9 +485,21 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
           maskRect: p.get('maskRect').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('shader', shader, isNamed: true);
-    mateUse('maskRect', maskRect, isNamed: true);
-    mateUse('blendMode', blendMode, isNamed: true);
+    mateUse(
+      'shader',
+      shader,
+      isNamed: true,
+    );
+    mateUse(
+      'maskRect',
+      maskRect,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+    );
   }
 }
 
@@ -371,10 +507,10 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
 class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
   /// BackdropFilterLayer BackdropFilterLayer({ImageFilter? filter, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilterLayer$Mate({
-    /// optionalParameters: {ImageFilter? filter} , defaultValue:none
+    /// optionalParameters: {ImageFilter? filter} , default:none
     ImageFilter? filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
     BlendMode blendMode = BlendMode.srcOver,
   }) : super(
           filter: filter,
@@ -386,8 +522,17 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('filter', filter, isNamed: true);
-    mateUse('blendMode', blendMode, isNamed: true);
+    mateUse(
+      'filter',
+      filter,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.srcOver,
+    );
   }
 }
 
@@ -395,19 +540,19 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
 class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
   /// PhysicalModelLayer PhysicalModelLayer({Path? clipPath, Clip clipBehavior = Clip.none, double? elevation, Color? color, Color? shadowColor})
   PhysicalModelLayer$Mate({
-    /// optionalParameters: {Path? clipPath} , defaultValue:none
+    /// optionalParameters: {Path? clipPath} , default:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
   }) : super(
           clipPath: clipPath,
@@ -425,11 +570,32 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateUse('clipPath', clipPath, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse(
+      'clipPath',
+      clipPath,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -437,10 +603,10 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
 class LeaderLayer$Mate extends LeaderLayer with Mate {
   /// LeaderLayer LeaderLayer({required LayerLink link, Offset offset = Offset.zero})
   LeaderLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , defaultValue:none
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offset = Offset.zero,
   }) : super(
           link: link,
@@ -452,8 +618,17 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
           link: p.get('link').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('link', link, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -461,16 +636,16 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
 class FollowerLayer$Mate extends FollowerLayer with Mate {
   /// FollowerLayer FollowerLayer({required LayerLink link, bool? showWhenUnlinked = true, Offset? unlinkedOffset = Offset.zero, Offset? linkedOffset = Offset.zero})
   FollowerLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , defaultValue:none
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {bool? showWhenUnlinked = true} , defaultValue:Literal
+    /// optionalParameters: {bool? showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
     bool? showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset? unlinkedOffset = Offset.zero,
 
-    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset? linkedOffset = Offset.zero,
   }) : super(
           link: link,
@@ -486,10 +661,29 @@ class FollowerLayer$Mate extends FollowerLayer with Mate {
           unlinkedOffset: p.get('unlinkedOffset').build(),
           linkedOffset: p.get('linkedOffset').build(),
         );
-    mateUse('link', link, isNamed: true);
-    mateUse('showWhenUnlinked', showWhenUnlinked, isNamed: true);
-    mateUse('unlinkedOffset', unlinkedOffset, isNamed: true);
-    mateUse('linkedOffset', linkedOffset, isNamed: true);
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'showWhenUnlinked',
+      showWhenUnlinked,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'unlinkedOffset',
+      unlinkedOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'linkedOffset',
+      linkedOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -499,13 +693,13 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
   AnnotatedRegionLayer$Mate(
     /// requiredParameters: T value
     T value, {
-    /// optionalParameters: {Size? size} , defaultValue:none
+    /// optionalParameters: {Size? size} , default:none
     Size? size,
 
-    /// optionalParameters: {Offset? offset} , defaultValue:none
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
 
-    /// optionalParameters: {bool opaque = false} , defaultValue:Literal
+    /// optionalParameters: {bool opaque = false} , default:processed=BooleanLiteralImpl
     bool opaque = false,
   }) : super(
           value,
@@ -521,9 +715,26 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
           offset: p.get('offset').build(),
           opaque: p.get('opaque').build(),
         );
-    mateUse('value', value, isNamed: false);
-    mateUse('size', size, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('opaque', opaque, isNamed: true);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'opaque',
+      opaque,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

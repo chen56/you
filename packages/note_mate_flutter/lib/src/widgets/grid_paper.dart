@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class GridPaper$Mate extends GridPaper with Mate {
   /// GridPaper GridPaper({Key? key, Color color = const Color(0x7FC3E8F3), double interval = 100.0, int divisions = 2, int subdivisions = 5, Widget? child})
   GridPaper$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color color = const Color(0x7FC3E8F3)} , defaultValue:unprocessed
+    /// optionalParameters: {Color color = const Color(0x7FC3E8F3)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {double interval = 100.0} , defaultValue:Literal
+    /// optionalParameters: {double interval = 100.0} , default:processed=DoubleLiteralImpl
     double interval = 100.0,
 
-    /// optionalParameters: {int divisions = 2} , defaultValue:Literal
+    /// optionalParameters: {int divisions = 2} , default:processed=IntegerLiteralImpl
     int divisions = 2,
 
-    /// optionalParameters: {int subdivisions = 5} , defaultValue:Literal
+    /// optionalParameters: {int subdivisions = 5} , default:processed=IntegerLiteralImpl
     int subdivisions = 5,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -46,11 +46,38 @@ class GridPaper$Mate extends GridPaper with Mate {
           subdivisions: p.get('subdivisions').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('interval', interval, isNamed: true);
-    mateUse('divisions', divisions, isNamed: true);
-    mateUse('subdivisions', subdivisions, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'interval',
+      interval,
+      isNamed: true,
+      defaultValue: 100.0,
+    );
+    mateUse(
+      'divisions',
+      divisions,
+      isNamed: true,
+      defaultValue: 2,
+    );
+    mateUse(
+      'subdivisions',
+      subdivisions,
+      isNamed: true,
+      defaultValue: 5,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

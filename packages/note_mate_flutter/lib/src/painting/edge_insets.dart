@@ -34,10 +34,26 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           p.get('right').value,
           p.get('bottom').value,
         );
-    mateUse('left', left, isNamed: false);
-    mateUse('top', top, isNamed: false);
-    mateUse('right', right, isNamed: false);
-    mateUse('bottom', bottom, isNamed: false);
+    mateUse(
+      'left',
+      left,
+      isNamed: false,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: false,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: false,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: false,
+    );
   }
 
   /// EdgeInsets EdgeInsets.all(double value)
@@ -49,21 +65,25 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
     mateCreateName = 'EdgeInsets.all';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsets$Mate.all(p.get('value').value);
-    mateUse('value', value, isNamed: false);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 
   /// EdgeInsets EdgeInsets.only({double left = 0.0, double top = 0.0, double right = 0.0, double bottom = 0.0})
   EdgeInsets$Mate.only({
-    /// optionalParameters: {double left = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double left = 0.0} , default:processed=DoubleLiteralImpl
     double left = 0.0,
 
-    /// optionalParameters: {double top = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double top = 0.0} , default:processed=DoubleLiteralImpl
     double top = 0.0,
 
-    /// optionalParameters: {double right = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double right = 0.0} , default:processed=DoubleLiteralImpl
     double right = 0.0,
 
-    /// optionalParameters: {double bottom = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double bottom = 0.0} , default:processed=DoubleLiteralImpl
     double bottom = 0.0,
   }) : super.only(
           left: left,
@@ -79,18 +99,38 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           right: p.get('right').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse('left', left, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('right', right, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
   }
 
   /// EdgeInsets EdgeInsets.symmetric({double vertical = 0.0, double horizontal = 0.0})
   EdgeInsets$Mate.symmetric({
-    /// optionalParameters: {double vertical = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double vertical = 0.0} , default:processed=DoubleLiteralImpl
     double vertical = 0.0,
 
-    /// optionalParameters: {double horizontal = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double horizontal = 0.0} , default:processed=DoubleLiteralImpl
     double horizontal = 0.0,
   }) : super.symmetric(
           vertical: vertical,
@@ -102,8 +142,18 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
         );
-    mateUse('vertical', vertical, isNamed: true);
-    mateUse('horizontal', horizontal, isNamed: true);
+    mateUse(
+      'vertical',
+      vertical,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'horizontal',
+      horizontal,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
   }
 
   /// EdgeInsets EdgeInsets.fromViewPadding(ViewPadding padding, double devicePixelRatio)
@@ -123,8 +173,16 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           p.get('padding').value,
           p.get('devicePixelRatio').value,
         );
-    mateUse('padding', padding, isNamed: false);
-    mateUse('devicePixelRatio', devicePixelRatio, isNamed: false);
+    mateUse(
+      'padding',
+      padding,
+      isNamed: false,
+    );
+    mateUse(
+      'devicePixelRatio',
+      devicePixelRatio,
+      isNamed: false,
+    );
   }
 }
 
@@ -157,24 +215,40 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           p.get('end').value,
           p.get('bottom').value,
         );
-    mateUse('start', start, isNamed: false);
-    mateUse('top', top, isNamed: false);
-    mateUse('end', end, isNamed: false);
-    mateUse('bottom', bottom, isNamed: false);
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: false,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: false,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: false,
+    );
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.only({double start = 0.0, double top = 0.0, double end = 0.0, double bottom = 0.0})
   EdgeInsetsDirectional$Mate.only({
-    /// optionalParameters: {double start = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double start = 0.0} , default:processed=DoubleLiteralImpl
     double start = 0.0,
 
-    /// optionalParameters: {double top = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double top = 0.0} , default:processed=DoubleLiteralImpl
     double top = 0.0,
 
-    /// optionalParameters: {double end = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double end = 0.0} , default:processed=DoubleLiteralImpl
     double end = 0.0,
 
-    /// optionalParameters: {double bottom = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double bottom = 0.0} , default:processed=DoubleLiteralImpl
     double bottom = 0.0,
   }) : super.only(
           start: start,
@@ -190,18 +264,38 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           end: p.get('end').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse('start', start, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('end', end, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.symmetric({double horizontal = 0.0, double vertical = 0.0})
   EdgeInsetsDirectional$Mate.symmetric({
-    /// optionalParameters: {double horizontal = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double horizontal = 0.0} , default:processed=DoubleLiteralImpl
     double horizontal = 0.0,
 
-    /// optionalParameters: {double vertical = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double vertical = 0.0} , default:processed=DoubleLiteralImpl
     double vertical = 0.0,
   }) : super.symmetric(
           horizontal: horizontal,
@@ -213,8 +307,18 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           horizontal: p.get('horizontal').build(),
           vertical: p.get('vertical').build(),
         );
-    mateUse('horizontal', horizontal, isNamed: true);
-    mateUse('vertical', vertical, isNamed: true);
+    mateUse(
+      'horizontal',
+      horizontal,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'vertical',
+      vertical,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
   }
 
   /// EdgeInsetsDirectional EdgeInsetsDirectional.all(double value)
@@ -226,6 +330,10 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
     mateCreateName = 'EdgeInsetsDirectional.all';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsetsDirectional$Mate.all(p.get('value').value);
-    mateUse('value', value, isNamed: false);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }

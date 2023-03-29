@@ -10,16 +10,16 @@ import 'dart:ui';
 class Texture$Mate extends Texture with Mate {
   /// Texture Texture({Key? key, required int textureId, bool freeze = false, FilterQuality filterQuality = FilterQuality.low})
   Texture$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required int textureId} , defaultValue:none
+    /// optionalParameters: {required int textureId} , default:none
     required int textureId,
 
-    /// optionalParameters: {bool freeze = false} , defaultValue:Literal
+    /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
     bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           key: key,
@@ -35,9 +35,27 @@ class Texture$Mate extends Texture with Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('textureId', textureId, isNamed: true);
-    mateUse('freeze', freeze, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'textureId',
+      textureId,
+      isNamed: true,
+    );
+    mateUse(
+      'freeze',
+      freeze,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
   }
 }

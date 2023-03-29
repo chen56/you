@@ -11,31 +11,31 @@ import 'package:flutter/src/rendering/box.dart';
 class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate {
   /// BottomSheetThemeData BottomSheetThemeData({Color? backgroundColor, Color? surfaceTintColor, double? elevation, Color? modalBackgroundColor, Color? modalBarrierColor, double? modalElevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints})
   BottomSheetThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? modalBackgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? modalBackgroundColor} , default:none
     Color? modalBackgroundColor,
 
-    /// optionalParameters: {Color? modalBarrierColor} , defaultValue:none
+    /// optionalParameters: {Color? modalBarrierColor} , default:none
     Color? modalBarrierColor,
 
-    /// optionalParameters: {double? modalElevation} , defaultValue:none
+    /// optionalParameters: {double? modalElevation} , default:none
     double? modalElevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip? clipBehavior} , defaultValue:none
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
   }) : super(
           backgroundColor: backgroundColor,
@@ -61,14 +61,50 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           constraints: p.get('constraints').build(),
         );
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('modalBackgroundColor', modalBackgroundColor, isNamed: true);
-    mateUse('modalBarrierColor', modalBarrierColor, isNamed: true);
-    mateUse('modalElevation', modalElevation, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('constraints', constraints, isNamed: true);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'modalBackgroundColor',
+      modalBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'modalBarrierColor',
+      modalBarrierColor,
+      isNamed: true,
+    );
+    mateUse(
+      'modalElevation',
+      modalElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
   }
 }

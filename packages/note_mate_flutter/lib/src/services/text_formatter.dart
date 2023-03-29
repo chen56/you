@@ -10,10 +10,10 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
   FilteringTextInputFormatter$Mate(
     /// requiredParameters: Pattern filterPattern
     Pattern filterPattern, {
-    /// optionalParameters: {required bool allow} , defaultValue:none
+    /// optionalParameters: {required bool allow} , default:none
     required bool allow,
 
-    /// optionalParameters: {String replacementString = ''} , defaultValue:Literal
+    /// optionalParameters: {String replacementString = ''} , default:processed=SimpleStringLiteralImpl
     String replacementString = '',
   }) : super(
           filterPattern,
@@ -27,16 +27,29 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           allow: p.get('allow').build(),
           replacementString: p.get('replacementString').build(),
         );
-    mateUse('filterPattern', filterPattern, isNamed: false);
-    mateUse('allow', allow, isNamed: true);
-    mateUse('replacementString', replacementString, isNamed: true);
+    mateUse(
+      'filterPattern',
+      filterPattern,
+      isNamed: false,
+    );
+    mateUse(
+      'allow',
+      allow,
+      isNamed: true,
+    );
+    mateUse(
+      'replacementString',
+      replacementString,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.allow(Pattern filterPattern, {String replacementString = ''})
   FilteringTextInputFormatter$Mate.allow(
     /// requiredParameters: Pattern filterPattern
     Pattern filterPattern, {
-    /// optionalParameters: {String replacementString = ''} , defaultValue:Literal
+    /// optionalParameters: {String replacementString = ''} , default:processed=SimpleStringLiteralImpl
     String replacementString = '',
   }) : super.allow(
           filterPattern,
@@ -48,15 +61,24 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    mateUse('filterPattern', filterPattern, isNamed: false);
-    mateUse('replacementString', replacementString, isNamed: true);
+    mateUse(
+      'filterPattern',
+      filterPattern,
+      isNamed: false,
+    );
+    mateUse(
+      'replacementString',
+      replacementString,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.deny(Pattern filterPattern, {String replacementString = ''})
   FilteringTextInputFormatter$Mate.deny(
     /// requiredParameters: Pattern filterPattern
     Pattern filterPattern, {
-    /// optionalParameters: {String replacementString = ''} , defaultValue:Literal
+    /// optionalParameters: {String replacementString = ''} , default:processed=SimpleStringLiteralImpl
     String replacementString = '',
   }) : super.deny(
           filterPattern,
@@ -68,8 +90,17 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    mateUse('filterPattern', filterPattern, isNamed: false);
-    mateUse('replacementString', replacementString, isNamed: true);
+    mateUse(
+      'filterPattern',
+      filterPattern,
+      isNamed: false,
+    );
+    mateUse(
+      'replacementString',
+      replacementString,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 }
 
@@ -79,7 +110,7 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
   LengthLimitingTextInputFormatter$Mate(
     /// requiredParameters: int? maxLength
     int? maxLength, {
-    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , defaultValue:none
+    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , default:none
     MaxLengthEnforcement? maxLengthEnforcement,
   }) : super(
           maxLength,
@@ -91,7 +122,15 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
           p.get('maxLength').value,
           maxLengthEnforcement: p.get('maxLengthEnforcement').build(),
         );
-    mateUse('maxLength', maxLength, isNamed: false);
-    mateUse('maxLengthEnforcement', maxLengthEnforcement, isNamed: true);
+    mateUse(
+      'maxLength',
+      maxLength,
+      isNamed: false,
+    );
+    mateUse(
+      'maxLengthEnforcement',
+      maxLengthEnforcement,
+      isNamed: true,
+    );
   }
 }

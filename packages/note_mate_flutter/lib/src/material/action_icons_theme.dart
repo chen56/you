@@ -9,16 +9,16 @@ import 'package:flutter/src/foundation/key.dart';
 class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
   /// ActionIconThemeData ActionIconThemeData({Widget Function(BuildContext)? backButtonIconBuilder, Widget Function(BuildContext)? closeButtonIconBuilder, Widget Function(BuildContext)? drawerButtonIconBuilder, Widget Function(BuildContext)? endDrawerButtonIconBuilder})
   ActionIconThemeData$Mate({
-    /// optionalParameters: {Widget Function(BuildContext)? backButtonIconBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext)? backButtonIconBuilder} , default:none
     WidgetBuilder? backButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? closeButtonIconBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext)? closeButtonIconBuilder} , default:none
     WidgetBuilder? closeButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? drawerButtonIconBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext)? drawerButtonIconBuilder} , default:none
     WidgetBuilder? drawerButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? endDrawerButtonIconBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext)? endDrawerButtonIconBuilder} , default:none
     WidgetBuilder? endDrawerButtonIconBuilder,
   }) : super(
           backButtonIconBuilder: backButtonIconBuilder,
@@ -34,10 +34,26 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
           drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
           endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
         );
-    mateUse('backButtonIconBuilder', backButtonIconBuilder, isNamed: true);
-    mateUse('closeButtonIconBuilder', closeButtonIconBuilder, isNamed: true);
-    mateUse('drawerButtonIconBuilder', drawerButtonIconBuilder, isNamed: true);
-    mateUse('endDrawerButtonIconBuilder', endDrawerButtonIconBuilder, isNamed: true);
+    mateUse(
+      'backButtonIconBuilder',
+      backButtonIconBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'closeButtonIconBuilder',
+      closeButtonIconBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'drawerButtonIconBuilder',
+      drawerButtonIconBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'endDrawerButtonIconBuilder',
+      endDrawerButtonIconBuilder,
+      isNamed: true,
+    );
   }
 }
 
@@ -45,13 +61,13 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
 class ActionIconTheme$Mate extends ActionIconTheme with Mate {
   /// ActionIconTheme ActionIconTheme({Key? key, required ActionIconThemeData data, required Widget child})
   ActionIconTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ActionIconThemeData data} , defaultValue:none
+    /// optionalParameters: {required ActionIconThemeData data} , default:none
     required ActionIconThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -65,8 +81,20 @@ class ActionIconTheme$Mate extends ActionIconTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

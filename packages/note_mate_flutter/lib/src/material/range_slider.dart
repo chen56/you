@@ -14,46 +14,46 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 class RangeSlider$Mate extends RangeSlider with Mate {
   /// RangeSlider RangeSlider({Key? key, required RangeValues values, required void Function(RangeValues)? onChanged, void Function(RangeValues)? onChangeStart, void Function(RangeValues)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, RangeLabels? labels, Color? activeColor, Color? inactiveColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<MouseCursor?>? mouseCursor, String Function(double)? semanticFormatterCallback})
   RangeSlider$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required RangeValues values} , defaultValue:none
+    /// optionalParameters: {required RangeValues values} , default:none
     required RangeValues values,
 
-    /// optionalParameters: {required void Function(RangeValues)? onChanged} , defaultValue:none
+    /// optionalParameters: {required void Function(RangeValues)? onChanged} , default:none
     required ValueChanged<RangeValues>? onChanged,
 
-    /// optionalParameters: {void Function(RangeValues)? onChangeStart} , defaultValue:none
+    /// optionalParameters: {void Function(RangeValues)? onChangeStart} , default:none
     ValueChanged<RangeValues>? onChangeStart,
 
-    /// optionalParameters: {void Function(RangeValues)? onChangeEnd} , defaultValue:none
+    /// optionalParameters: {void Function(RangeValues)? onChangeEnd} , default:none
     ValueChanged<RangeValues>? onChangeEnd,
 
-    /// optionalParameters: {double min = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
     double min = 0.0,
 
-    /// optionalParameters: {double max = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
     double max = 1.0,
 
-    /// optionalParameters: {int? divisions} , defaultValue:none
+    /// optionalParameters: {int? divisions} , default:none
     int? divisions,
 
-    /// optionalParameters: {RangeLabels? labels} , defaultValue:none
+    /// optionalParameters: {RangeLabels? labels} , default:none
     RangeLabels? labels,
 
-    /// optionalParameters: {Color? activeColor} , defaultValue:none
+    /// optionalParameters: {Color? activeColor} , default:none
     Color? activeColor,
 
-    /// optionalParameters: {Color? inactiveColor} , defaultValue:none
+    /// optionalParameters: {Color? inactiveColor} , default:none
     Color? inactiveColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {String Function(double)? semanticFormatterCallback} , defaultValue:none
+    /// optionalParameters: {String Function(double)? semanticFormatterCallback} , default:none
     SemanticFormatterCallback? semanticFormatterCallback,
   }) : super(
           key: key,
@@ -89,19 +89,77 @@ class RangeSlider$Mate extends RangeSlider with Mate {
           mouseCursor: p.get('mouseCursor').build(),
           semanticFormatterCallback: p.get('semanticFormatterCallback').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('values', values, isNamed: true);
-    mateUse('onChanged', onChanged, isNamed: true);
-    mateUse('onChangeStart', onChangeStart, isNamed: true);
-    mateUse('onChangeEnd', onChangeEnd, isNamed: true);
-    mateUse('min', min, isNamed: true);
-    mateUse('max', max, isNamed: true);
-    mateUse('divisions', divisions, isNamed: true);
-    mateUse('labels', labels, isNamed: true);
-    mateUse('activeColor', activeColor, isNamed: true);
-    mateUse('inactiveColor', inactiveColor, isNamed: true);
-    mateUse('overlayColor', overlayColor, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('semanticFormatterCallback', semanticFormatterCallback, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'values',
+      values,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeStart',
+      onChangeStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeEnd',
+      onChangeEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'min',
+      min,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'max',
+      max,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'divisions',
+      divisions,
+      isNamed: true,
+    );
+    mateUse(
+      'labels',
+      labels,
+      isNamed: true,
+    );
+    mateUse(
+      'activeColor',
+      activeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'inactiveColor',
+      inactiveColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticFormatterCallback',
+      semanticFormatterCallback,
+      isNamed: true,
+    );
   }
 }

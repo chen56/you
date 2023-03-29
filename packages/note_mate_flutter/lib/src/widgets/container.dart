@@ -18,16 +18,16 @@ import 'package:vector_math/vector_math_64.dart';
 class DecoratedBox$Mate extends DecoratedBox with Mate {
   /// DecoratedBox DecoratedBox({Key? key, required Decoration decoration, DecorationPosition position = DecorationPosition.background, Widget? child})
   DecoratedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Decoration decoration} , defaultValue:none
+    /// optionalParameters: {required Decoration decoration} , default:none
     required Decoration decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
     DecorationPosition position = DecorationPosition.background,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -43,10 +43,27 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: DecorationPosition.background,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -54,46 +71,46 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
 class Container$Mate extends Container with Mate {
   /// Container Container({Key? key, AlignmentGeometry? alignment, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsetsGeometry? margin, Matrix4? transform, AlignmentGeometry? transformAlignment, Widget? child, Clip clipBehavior = Clip.none})
   Container$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Decoration? decoration} , defaultValue:none
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {Decoration? foregroundDecoration} , defaultValue:none
+    /// optionalParameters: {Decoration? foregroundDecoration} , default:none
     Decoration? foregroundDecoration,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {Matrix4? transform} , defaultValue:none
+    /// optionalParameters: {Matrix4? transform} , default:none
     Matrix4? transform,
 
-    /// optionalParameters: {AlignmentGeometry? transformAlignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? transformAlignment} , default:none
     AlignmentGeometry? transformAlignment,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
@@ -129,19 +146,76 @@ class Container$Mate extends Container with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('foregroundDecoration', foregroundDecoration, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('constraints', constraints, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('transform', transform, isNamed: true);
-    mateUse('transformAlignment', transformAlignment, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundDecoration',
+      foregroundDecoration,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'transformAlignment',
+      transformAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }

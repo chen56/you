@@ -15,6 +15,10 @@ class ReadBuffer$Mate extends ReadBuffer with Mate {
     mateCreateName = 'ReadBuffer';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ReadBuffer$Mate(p.get('data').value);
-    mateUse('data', data, isNamed: false);
+    mateUse(
+      'data',
+      data,
+      isNamed: false,
+    );
   }
 }

@@ -8,10 +8,10 @@ import 'dart:ui';
 class MaterialPointArcTween$Mate extends MaterialPointArcTween with Mate {
   /// MaterialPointArcTween MaterialPointArcTween({Offset? begin, Offset? end})
   MaterialPointArcTween$Mate({
-    /// optionalParameters: {Offset? begin} , defaultValue:none
+    /// optionalParameters: {Offset? begin} , default:none
     Offset? begin,
 
-    /// optionalParameters: {Offset? end} , defaultValue:none
+    /// optionalParameters: {Offset? end} , default:none
     Offset? end,
   }) : super(
           begin: begin,
@@ -23,8 +23,16 @@ class MaterialPointArcTween$Mate extends MaterialPointArcTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -32,10 +40,10 @@ class MaterialPointArcTween$Mate extends MaterialPointArcTween with Mate {
 class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
   /// MaterialRectArcTween MaterialRectArcTween({Rect? begin, Rect? end})
   MaterialRectArcTween$Mate({
-    /// optionalParameters: {Rect? begin} , defaultValue:none
+    /// optionalParameters: {Rect? begin} , default:none
     Rect? begin,
 
-    /// optionalParameters: {Rect? end} , defaultValue:none
+    /// optionalParameters: {Rect? end} , default:none
     Rect? end,
   }) : super(
           begin: begin,
@@ -47,8 +55,16 @@ class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -56,10 +72,10 @@ class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
 class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween with Mate {
   /// MaterialRectCenterArcTween MaterialRectCenterArcTween({Rect? begin, Rect? end})
   MaterialRectCenterArcTween$Mate({
-    /// optionalParameters: {Rect? begin} , defaultValue:none
+    /// optionalParameters: {Rect? begin} , default:none
     Rect? begin,
 
-    /// optionalParameters: {Rect? end} , defaultValue:none
+    /// optionalParameters: {Rect? end} , default:none
     Rect? end,
   }) : super(
           begin: begin,
@@ -71,7 +87,15 @@ class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween with Ma
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }

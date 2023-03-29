@@ -9,12 +9,16 @@ class ClipboardData$Mate extends ClipboardData with Mate {
   /// ClipboardData ClipboardData({String? text})
   ClipboardData$Mate(
       {
-      /// optionalParameters: {String? text} , defaultValue:none
+      /// optionalParameters: {String? text} , default:none
       String? text})
       : super(text: text) {
     mateCreateName = 'ClipboardData';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ClipboardData$Mate(text: p.get('text').build());
-    mateUse('text', text, isNamed: true);
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
   }
 }

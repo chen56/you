@@ -8,16 +8,16 @@ import 'dart:core';
 class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
   /// RawKeyEventDataIos RawKeyEventDataIos({String characters = '', String charactersIgnoringModifiers = '', int keyCode = 0, int modifiers = 0})
   RawKeyEventDataIos$Mate({
-    /// optionalParameters: {String characters = ''} , defaultValue:Literal
+    /// optionalParameters: {String characters = ''} , default:processed=SimpleStringLiteralImpl
     String characters = '',
 
-    /// optionalParameters: {String charactersIgnoringModifiers = ''} , defaultValue:Literal
+    /// optionalParameters: {String charactersIgnoringModifiers = ''} , default:processed=SimpleStringLiteralImpl
     String charactersIgnoringModifiers = '',
 
-    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
     int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
     int modifiers = 0,
   }) : super(
           characters: characters,
@@ -33,9 +33,29 @@ class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateUse('characters', characters, isNamed: true);
-    mateUse('charactersIgnoringModifiers', charactersIgnoringModifiers, isNamed: true);
-    mateUse('keyCode', keyCode, isNamed: true);
-    mateUse('modifiers', modifiers, isNamed: true);
+    mateUse(
+      'characters',
+      characters,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'charactersIgnoringModifiers',
+      charactersIgnoringModifiers,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'keyCode',
+      keyCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'modifiers',
+      modifiers,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }

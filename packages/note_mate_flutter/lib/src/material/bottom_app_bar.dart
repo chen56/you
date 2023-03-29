@@ -13,34 +13,34 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class BottomAppBar$Mate extends BottomAppBar with Mate {
   /// BottomAppBar BottomAppBar({Key? key, Color? color, double? elevation, NotchedShape? shape, Clip clipBehavior = Clip.none, double notchMargin = 4.0, Widget? child, EdgeInsetsGeometry? padding, Color? surfaceTintColor, double? height})
   BottomAppBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {NotchedShape? shape} , defaultValue:none
+    /// optionalParameters: {NotchedShape? shape} , default:none
     NotchedShape? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {double notchMargin = 4.0} , defaultValue:Literal
+    /// optionalParameters: {double notchMargin = 4.0} , default:processed=DoubleLiteralImpl
     double notchMargin = 4.0,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
   }) : super(
           key: key,
@@ -68,15 +68,57 @@ class BottomAppBar$Mate extends BottomAppBar with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           height: p.get('height').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('notchMargin', notchMargin, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('height', height, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'notchMargin',
+      notchMargin,
+      isNamed: true,
+      defaultValue: 4.0,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
   }
 }

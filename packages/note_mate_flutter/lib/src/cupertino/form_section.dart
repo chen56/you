@@ -15,28 +15,28 @@ import 'package:flutter/src/painting/box_decoration.dart';
 class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
   /// CupertinoFormSection CupertinoFormSection({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = EdgeInsets.zero, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
   CupertinoFormSection$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , defaultValue:none
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {Widget? header} , defaultValue:none
+    /// optionalParameters: {Widget? header} , default:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , defaultValue:none
+    /// optionalParameters: {Widget? footer} , default:none
     Widget? footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     EdgeInsetsGeometry margin = EdgeInsets.zero,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
     Color backgroundColor = CupertinoColors.systemGroupedBackground,
 
-    /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
+    /// optionalParameters: {BoxDecoration? decoration} , default:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
@@ -60,40 +60,75 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('header', header, isNamed: true);
-    mateUse('footer', footer, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'header',
+      header,
+      isNamed: true,
+    );
+    mateUse(
+      'footer',
+      footer,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+      defaultValue: CupertinoColors.systemGroupedBackground,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 
   /// CupertinoFormSection CupertinoFormSection.insetGrouped({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
   CupertinoFormSection$Mate.insetGrouped({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , defaultValue:none
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {Widget? header} , defaultValue:none
+    /// optionalParameters: {Widget? header} , default:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , defaultValue:none
+    /// optionalParameters: {Widget? footer} , default:none
     Widget? footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin} , defaultValue:unprocessed
+    /// optionalParameters: {EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin} , default:unprocessed=SimpleIdentifierImpl
     required EdgeInsetsGeometry margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
     Color backgroundColor = CupertinoColors.systemGroupedBackground,
 
-    /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
+    /// optionalParameters: {BoxDecoration? decoration} , default:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
   }) : super.insetGrouped(
           key: key,
@@ -117,13 +152,47 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('header', header, isNamed: true);
-    mateUse('footer', footer, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'header',
+      header,
+      isNamed: true,
+    );
+    mateUse(
+      'footer',
+      footer,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+      defaultValue: CupertinoColors.systemGroupedBackground,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }

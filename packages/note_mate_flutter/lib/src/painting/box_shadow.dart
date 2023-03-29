@@ -10,19 +10,19 @@ import 'dart:core';
 class BoxShadow$Mate extends BoxShadow with Mate {
   /// BoxShadow BoxShadow({Color color = const Color(_kColorDefault), Offset offset = Offset.zero, double blurRadius = 0.0, double spreadRadius = 0.0, BlurStyle blurStyle = BlurStyle.normal})
   BoxShadow$Mate({
-    /// optionalParameters: {Color color = const Color(_kColorDefault)} , defaultValue:unprocessed
+    /// optionalParameters: {Color color = const Color(_kColorDefault)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offset = Offset.zero,
 
-    /// optionalParameters: {double blurRadius = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double blurRadius = 0.0} , default:processed=DoubleLiteralImpl
     double blurRadius = 0.0,
 
-    /// optionalParameters: {double spreadRadius = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double spreadRadius = 0.0} , default:processed=DoubleLiteralImpl
     double spreadRadius = 0.0,
 
-    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , default:processed=PrefixedIdentifierImpl
     BlurStyle blurStyle = BlurStyle.normal,
   }) : super(
           color: color,
@@ -40,10 +40,34 @@ class BoxShadow$Mate extends BoxShadow with Mate {
           spreadRadius: p.get('spreadRadius').build(),
           blurStyle: p.get('blurStyle').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('blurRadius', blurRadius, isNamed: true);
-    mateUse('spreadRadius', spreadRadius, isNamed: true);
-    mateUse('blurStyle', blurStyle, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'blurRadius',
+      blurRadius,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'spreadRadius',
+      spreadRadius,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'blurStyle',
+      blurStyle,
+      isNamed: true,
+      defaultValue: BlurStyle.normal,
+    );
   }
 }

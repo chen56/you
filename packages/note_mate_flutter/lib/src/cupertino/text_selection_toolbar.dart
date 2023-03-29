@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar with Mate {
   /// CupertinoTextSelectionToolbar CupertinoTextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, required List<Widget> children, Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder})
   CupertinoTextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchorAbove} , defaultValue:none
+    /// optionalParameters: {required Offset anchorAbove} , default:none
     required Offset anchorAbove,
 
-    /// optionalParameters: {required Offset anchorBelow} , defaultValue:none
+    /// optionalParameters: {required Offset anchorBelow} , default:none
     required Offset anchorBelow,
 
-    /// optionalParameters: {required List<Widget> children} , defaultValue:none
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder} , defaultValue:unprocessed
+    /// optionalParameters: {Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder} , default:unprocessed=SimpleIdentifierImpl
     required CupertinoToolbarBuilder toolbarBuilder,
   }) : super(
           key: key,
@@ -41,10 +41,30 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar w
           children: p.get('children').build(),
           toolbarBuilder: p.get('toolbarBuilder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('anchorAbove', anchorAbove, isNamed: true);
-    mateUse('anchorBelow', anchorBelow, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('toolbarBuilder', toolbarBuilder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorAbove',
+      anchorAbove,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorBelow',
+      anchorBelow,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarBuilder',
+      toolbarBuilder,
+      isNamed: true,
+    );
   }
 }

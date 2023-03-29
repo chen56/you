@@ -12,28 +12,28 @@ import 'package:flutter/src/foundation/assertions.dart';
 class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDetailsForPointerEventDispatcher with Mate {
   /// FlutterErrorDetailsForPointerEventDispatcher FlutterErrorDetailsForPointerEventDispatcher({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, PointerEvent? event, HitTestEntry<HitTestTarget>? hitTestEntry, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetailsForPointerEventDispatcher$Mate({
-    /// optionalParameters: {required Object exception} , defaultValue:none
+    /// optionalParameters: {required Object exception} , default:none
     required Object exception,
 
-    /// optionalParameters: {StackTrace? stack} , defaultValue:none
+    /// optionalParameters: {StackTrace? stack} , default:none
     StackTrace? stack,
 
-    /// optionalParameters: {String? library = 'Flutter framework'} , defaultValue:Literal
+    /// optionalParameters: {String? library = 'Flutter framework'} , default:processed=SimpleStringLiteralImpl
     String? library = 'Flutter framework',
 
-    /// optionalParameters: {DiagnosticsNode? context} , defaultValue:none
+    /// optionalParameters: {DiagnosticsNode? context} , default:none
     DiagnosticsNode? context,
 
-    /// optionalParameters: {PointerEvent? event} , defaultValue:none
+    /// optionalParameters: {PointerEvent? event} , default:none
     PointerEvent? event,
 
-    /// optionalParameters: {HitTestEntry<HitTestTarget>? hitTestEntry} , defaultValue:none
+    /// optionalParameters: {HitTestEntry<HitTestTarget>? hitTestEntry} , default:none
     HitTestEntry<HitTestTarget>? hitTestEntry,
 
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , defaultValue:none
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
     InformationCollector? informationCollector,
 
-    /// optionalParameters: {bool silent = false} , defaultValue:Literal
+    /// optionalParameters: {bool silent = false} , default:processed=BooleanLiteralImpl
     bool silent = false,
   }) : super(
           exception: exception,
@@ -57,13 +57,47 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    mateUse('exception', exception, isNamed: true);
-    mateUse('stack', stack, isNamed: true);
-    mateUse('library', library, isNamed: true);
-    mateUse('context', context, isNamed: true);
-    mateUse('event', event, isNamed: true);
-    mateUse('hitTestEntry', hitTestEntry, isNamed: true);
-    mateUse('informationCollector', informationCollector, isNamed: true);
-    mateUse('silent', silent, isNamed: true);
+    mateUse(
+      'exception',
+      exception,
+      isNamed: true,
+    );
+    mateUse(
+      'stack',
+      stack,
+      isNamed: true,
+    );
+    mateUse(
+      'library',
+      library,
+      isNamed: true,
+      defaultValue: 'Flutter framework',
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'event',
+      event,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestEntry',
+      hitTestEntry,
+      isNamed: true,
+    );
+    mateUse(
+      'informationCollector',
+      informationCollector,
+      isNamed: true,
+    );
+    mateUse(
+      'silent',
+      silent,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

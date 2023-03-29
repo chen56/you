@@ -9,16 +9,16 @@ import 'dart:ui';
 class TextSelection$Mate extends TextSelection with Mate {
   /// TextSelection TextSelection({required int baseOffset, required int extentOffset, TextAffinity affinity = TextAffinity.downstream, bool isDirectional = false})
   TextSelection$Mate({
-    /// optionalParameters: {required int baseOffset} , defaultValue:none
+    /// optionalParameters: {required int baseOffset} , default:none
     required int baseOffset,
 
-    /// optionalParameters: {required int extentOffset} , defaultValue:none
+    /// optionalParameters: {required int extentOffset} , default:none
     required int extentOffset,
 
-    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , default:processed=PrefixedIdentifierImpl
     TextAffinity affinity = TextAffinity.downstream,
 
-    /// optionalParameters: {bool isDirectional = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDirectional = false} , default:processed=BooleanLiteralImpl
     bool isDirectional = false,
   }) : super(
           baseOffset: baseOffset,
@@ -34,18 +34,36 @@ class TextSelection$Mate extends TextSelection with Mate {
           affinity: p.get('affinity').build(),
           isDirectional: p.get('isDirectional').build(),
         );
-    mateUse('baseOffset', baseOffset, isNamed: true);
-    mateUse('extentOffset', extentOffset, isNamed: true);
-    mateUse('affinity', affinity, isNamed: true);
-    mateUse('isDirectional', isDirectional, isNamed: true);
+    mateUse(
+      'baseOffset',
+      baseOffset,
+      isNamed: true,
+    );
+    mateUse(
+      'extentOffset',
+      extentOffset,
+      isNamed: true,
+    );
+    mateUse(
+      'affinity',
+      affinity,
+      isNamed: true,
+      defaultValue: TextAffinity.downstream,
+    );
+    mateUse(
+      'isDirectional',
+      isDirectional,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 
   /// TextSelection TextSelection.collapsed({required int offset, TextAffinity affinity = TextAffinity.downstream})
   TextSelection$Mate.collapsed({
-    /// optionalParameters: {required int offset} , defaultValue:none
+    /// optionalParameters: {required int offset} , default:none
     required int offset,
 
-    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , default:processed=PrefixedIdentifierImpl
     TextAffinity affinity = TextAffinity.downstream,
   }) : super.collapsed(
           offset: offset,
@@ -57,8 +75,17 @@ class TextSelection$Mate extends TextSelection with Mate {
           offset: p.get('offset').build(),
           affinity: p.get('affinity').build(),
         );
-    mateUse('offset', offset, isNamed: true);
-    mateUse('affinity', affinity, isNamed: true);
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'affinity',
+      affinity,
+      isNamed: true,
+      defaultValue: TextAffinity.downstream,
+    );
   }
 
   /// TextSelection TextSelection.fromPosition(TextPosition position)
@@ -70,6 +97,10 @@ class TextSelection$Mate extends TextSelection with Mate {
     mateCreateName = 'TextSelection.fromPosition';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => TextSelection$Mate.fromPosition(p.get('position').value);
-    mateUse('position', position, isNamed: false);
+    mateUse(
+      'position',
+      position,
+      isNamed: false,
+    );
   }
 }

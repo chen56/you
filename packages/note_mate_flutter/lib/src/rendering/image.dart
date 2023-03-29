@@ -14,55 +14,55 @@ import 'package:flutter/src/painting/decoration_image.dart';
 class RenderImage$Mate extends RenderImage with Mate {
   /// RenderImage RenderImage({Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, TextDirection? textDirection, bool invertColors = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low})
   RenderImage$Mate({
-    /// optionalParameters: {Image? image} , defaultValue:none
+    /// optionalParameters: {Image? image} , default:none
     Image? image,
 
-    /// optionalParameters: {String? debugImageLabel} , defaultValue:none
+    /// optionalParameters: {String? debugImageLabel} , default:none
     String? debugImageLabel,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     double scale = 1.0,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , defaultValue:none
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , defaultValue:none
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , defaultValue:none
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , defaultValue:none
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
     bool matchTextDirection = false,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool invertColors = false} , defaultValue:Literal
+    /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
     bool invertColors = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
     bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           image: image,
@@ -104,22 +104,97 @@ class RenderImage$Mate extends RenderImage with Mate {
           isAntiAlias: p.get('isAntiAlias').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateUse('image', image, isNamed: true);
-    mateUse('debugImageLabel', debugImageLabel, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('scale', scale, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('colorBlendMode', colorBlendMode, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('repeat', repeat, isNamed: true);
-    mateUse('centerSlice', centerSlice, isNamed: true);
-    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('invertColors', invertColors, isNamed: true);
-    mateUse('isAntiAlias', isAntiAlias, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'debugImageLabel',
+      debugImageLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'invertColors',
+      invertColors,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
   }
 }

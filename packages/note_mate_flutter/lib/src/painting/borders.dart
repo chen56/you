@@ -10,16 +10,16 @@ import 'package:flutter/painting.dart';
 class BorderSide$Mate extends BorderSide with Mate {
   /// BorderSide BorderSide({Color color = const Color(0xFF000000), double width = 1.0, BorderStyle style = BorderStyle.solid, double strokeAlign = strokeAlignInside})
   BorderSide$Mate({
-    /// optionalParameters: {Color color = const Color(0xFF000000)} , defaultValue:unprocessed
+    /// optionalParameters: {Color color = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {double width = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double width = 1.0} , default:processed=DoubleLiteralImpl
     double width = 1.0,
 
-    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , default:processed=PrefixedIdentifierImpl
     BorderStyle style = BorderStyle.solid,
 
-    /// optionalParameters: {double strokeAlign = strokeAlignInside} , defaultValue:unprocessed
+    /// optionalParameters: {double strokeAlign = strokeAlignInside} , default:unprocessed=SimpleIdentifierImpl
     required double strokeAlign,
   }) : super(
           color: color,
@@ -35,9 +35,27 @@ class BorderSide$Mate extends BorderSide with Mate {
           style: p.get('style').build(),
           strokeAlign: p.get('strokeAlign').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('strokeAlign', strokeAlign, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: BorderStyle.solid,
+    );
+    mateUse(
+      'strokeAlign',
+      strokeAlign,
+      isNamed: true,
+    );
   }
 }

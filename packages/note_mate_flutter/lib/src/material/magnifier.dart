@@ -16,10 +16,10 @@ import 'package:flutter/material.dart';
 class TextMagnifier$Mate extends TextMagnifier with Mate {
   /// TextMagnifier TextMagnifier({Key? key, required ValueNotifier<MagnifierInfo> magnifierInfo})
   TextMagnifier$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ValueNotifier<MagnifierInfo> magnifierInfo} , defaultValue:none
+    /// optionalParameters: {required ValueNotifier<MagnifierInfo> magnifierInfo} , default:none
     required ValueNotifier<MagnifierInfo> magnifierInfo,
   }) : super(
           key: key,
@@ -31,8 +31,16 @@ class TextMagnifier$Mate extends TextMagnifier with Mate {
           key: p.get('key').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('magnifierInfo', magnifierInfo, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierInfo',
+      magnifierInfo,
+      isNamed: true,
+    );
   }
 }
 
@@ -40,22 +48,22 @@ class TextMagnifier$Mate extends TextMagnifier with Mate {
 class Magnifier$Mate extends Magnifier with Mate {
   /// Magnifier Magnifier({Key? key, Offset additionalFocalPointOffset = Offset.zero, BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius)), Color filmColor = const Color.fromARGB(8, 158, 158, 158), List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))], Size size = Magnifier.kDefaultMagnifierSize})
   Magnifier$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset additionalFocalPointOffset = Offset.zero,
 
-    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius))} , defaultValue:unprocessed
+    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius))} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderRadius borderRadius,
 
-    /// optionalParameters: {Color filmColor = const Color.fromARGB(8, 158, 158, 158)} , defaultValue:unprocessed
+    /// optionalParameters: {Color filmColor = const Color.fromARGB(8, 158, 158, 158)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color filmColor,
 
-    /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))]} , defaultValue:unprocessed
+    /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))]} , default:unprocessed=ListLiteralImpl
     required List<BoxShadow> shadows,
 
-    /// optionalParameters: {Size size = Magnifier.kDefaultMagnifierSize} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Size size = Magnifier.kDefaultMagnifierSize} , default:processed=PrefixedIdentifierImpl
     Size size = Magnifier.kDefaultMagnifierSize,
   }) : super(
           key: key,
@@ -75,11 +83,37 @@ class Magnifier$Mate extends Magnifier with Mate {
           shadows: p.get('shadows').build(),
           size: p.get('size').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('additionalFocalPointOffset', additionalFocalPointOffset, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('filmColor', filmColor, isNamed: true);
-    mateUseList('shadows', shadows, isNamed: true);
-    mateUse('size', size, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'additionalFocalPointOffset',
+      additionalFocalPointOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'filmColor',
+      filmColor,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: Magnifier.kDefaultMagnifierSize,
+    );
   }
 }

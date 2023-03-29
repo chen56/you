@@ -15,25 +15,25 @@ import 'package:flutter/src/rendering/selection.dart';
 class SelectableRegion$Mate extends SelectableRegion with Mate {
   /// SelectableRegion SelectableRegion({Key? key, Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder, required FocusNode focusNode, required TextSelectionControls selectionControls, required Widget child, TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled, void Function(SelectedContent?)? onSelectionChanged})
   SelectableRegion$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder} , default:none
     SelectableRegionContextMenuBuilder? contextMenuBuilder,
 
-    /// optionalParameters: {required FocusNode focusNode} , defaultValue:none
+    /// optionalParameters: {required FocusNode focusNode} , default:none
     required FocusNode focusNode,
 
-    /// optionalParameters: {required TextSelectionControls selectionControls} , defaultValue:none
+    /// optionalParameters: {required TextSelectionControls selectionControls} , default:none
     required TextSelectionControls selectionControls,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
     TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
 
-    /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , defaultValue:none
+    /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , default:none
     ValueChanged<SelectedContent?>? onSelectionChanged,
   }) : super(
           key: key,
@@ -55,12 +55,41 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
           onSelectionChanged: p.get('onSelectionChanged').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('contextMenuBuilder', contextMenuBuilder, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('selectionControls', selectionControls, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('magnifierConfiguration', magnifierConfiguration, isNamed: true);
-    mateUse('onSelectionChanged', onSelectionChanged, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'contextMenuBuilder',
+      contextMenuBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionControls',
+      selectionControls,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierConfiguration',
+      magnifierConfiguration,
+      isNamed: true,
+      defaultValue: TextMagnifierConfiguration.disabled,
+    );
+    mateUse(
+      'onSelectionChanged',
+      onSelectionChanged,
+      isNamed: true,
+    );
   }
 }

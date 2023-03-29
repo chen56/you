@@ -13,25 +13,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Mate {
   /// GlowingOverscrollIndicator GlowingOverscrollIndicator({Key? key, bool showLeading = true, bool showTrailing = true, required AxisDirection axisDirection, required Color color, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Widget? child})
   GlowingOverscrollIndicator$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool showLeading = true} , defaultValue:Literal
+    /// optionalParameters: {bool showLeading = true} , default:processed=BooleanLiteralImpl
     bool showLeading = true,
 
-    /// optionalParameters: {bool showTrailing = true} , defaultValue:Literal
+    /// optionalParameters: {bool showTrailing = true} , default:processed=BooleanLiteralImpl
     bool showTrailing = true,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , defaultValue:none
+    /// optionalParameters: {required AxisDirection axisDirection} , default:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -53,13 +53,43 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Ma
           notificationPredicate: p.get('notificationPredicate').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('showLeading', showLeading, isNamed: true);
-    mateUse('showTrailing', showTrailing, isNamed: true);
-    mateUse('axisDirection', axisDirection, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'showLeading',
+      showLeading,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showTrailing',
+      showTrailing,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'notificationPredicate',
+      notificationPredicate,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -67,19 +97,19 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Ma
 class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator with Mate {
   /// StretchingOverscrollIndicator StretchingOverscrollIndicator({Key? key, required AxisDirection axisDirection, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Clip clipBehavior = Clip.hardEdge, Widget? child})
   StretchingOverscrollIndicator$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , defaultValue:none
+    /// optionalParameters: {required AxisDirection axisDirection} , default:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -97,11 +127,32 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator w
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('axisDirection', axisDirection, isNamed: true);
-    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'notificationPredicate',
+      notificationPredicate,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -110,12 +161,16 @@ class OverscrollIndicatorNotification$Mate extends OverscrollIndicatorNotificati
   /// OverscrollIndicatorNotification OverscrollIndicatorNotification({required bool leading})
   OverscrollIndicatorNotification$Mate(
       {
-      /// optionalParameters: {required bool leading} , defaultValue:none
+      /// optionalParameters: {required bool leading} , default:none
       required bool leading})
       : super(leading: leading) {
     mateCreateName = 'OverscrollIndicatorNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
-    mateUse('leading', leading, isNamed: true);
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
   }
 }

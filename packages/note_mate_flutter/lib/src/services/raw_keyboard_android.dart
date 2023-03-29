@@ -8,37 +8,37 @@ import 'dart:core';
 class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate {
   /// RawKeyEventDataAndroid RawKeyEventDataAndroid({int flags = 0, int codePoint = 0, int plainCodePoint = 0, int keyCode = 0, int scanCode = 0, int metaState = 0, int eventSource = 0, int vendorId = 0, int productId = 0, int deviceId = 0, int repeatCount = 0})
   RawKeyEventDataAndroid$Mate({
-    /// optionalParameters: {int flags = 0} , defaultValue:Literal
+    /// optionalParameters: {int flags = 0} , default:processed=IntegerLiteralImpl
     int flags = 0,
 
-    /// optionalParameters: {int codePoint = 0} , defaultValue:Literal
+    /// optionalParameters: {int codePoint = 0} , default:processed=IntegerLiteralImpl
     int codePoint = 0,
 
-    /// optionalParameters: {int plainCodePoint = 0} , defaultValue:Literal
+    /// optionalParameters: {int plainCodePoint = 0} , default:processed=IntegerLiteralImpl
     int plainCodePoint = 0,
 
-    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
     int keyCode = 0,
 
-    /// optionalParameters: {int scanCode = 0} , defaultValue:Literal
+    /// optionalParameters: {int scanCode = 0} , default:processed=IntegerLiteralImpl
     int scanCode = 0,
 
-    /// optionalParameters: {int metaState = 0} , defaultValue:Literal
+    /// optionalParameters: {int metaState = 0} , default:processed=IntegerLiteralImpl
     int metaState = 0,
 
-    /// optionalParameters: {int eventSource = 0} , defaultValue:Literal
+    /// optionalParameters: {int eventSource = 0} , default:processed=IntegerLiteralImpl
     int eventSource = 0,
 
-    /// optionalParameters: {int vendorId = 0} , defaultValue:Literal
+    /// optionalParameters: {int vendorId = 0} , default:processed=IntegerLiteralImpl
     int vendorId = 0,
 
-    /// optionalParameters: {int productId = 0} , defaultValue:Literal
+    /// optionalParameters: {int productId = 0} , default:processed=IntegerLiteralImpl
     int productId = 0,
 
-    /// optionalParameters: {int deviceId = 0} , defaultValue:Literal
+    /// optionalParameters: {int deviceId = 0} , default:processed=IntegerLiteralImpl
     int deviceId = 0,
 
-    /// optionalParameters: {int repeatCount = 0} , defaultValue:Literal
+    /// optionalParameters: {int repeatCount = 0} , default:processed=IntegerLiteralImpl
     int repeatCount = 0,
   }) : super(
           flags: flags,
@@ -68,16 +68,71 @@ class RawKeyEventDataAndroid$Mate extends RawKeyEventDataAndroid with Mate {
           deviceId: p.get('deviceId').build(),
           repeatCount: p.get('repeatCount').build(),
         );
-    mateUse('flags', flags, isNamed: true);
-    mateUse('codePoint', codePoint, isNamed: true);
-    mateUse('plainCodePoint', plainCodePoint, isNamed: true);
-    mateUse('keyCode', keyCode, isNamed: true);
-    mateUse('scanCode', scanCode, isNamed: true);
-    mateUse('metaState', metaState, isNamed: true);
-    mateUse('eventSource', eventSource, isNamed: true);
-    mateUse('vendorId', vendorId, isNamed: true);
-    mateUse('productId', productId, isNamed: true);
-    mateUse('deviceId', deviceId, isNamed: true);
-    mateUse('repeatCount', repeatCount, isNamed: true);
+    mateUse(
+      'flags',
+      flags,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'codePoint',
+      codePoint,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'plainCodePoint',
+      plainCodePoint,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'keyCode',
+      keyCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'scanCode',
+      scanCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'metaState',
+      metaState,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'eventSource',
+      eventSource,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'vendorId',
+      vendorId,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'productId',
+      productId,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'deviceId',
+      deviceId,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'repeatCount',
+      repeatCount,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }

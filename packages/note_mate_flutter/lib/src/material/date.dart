@@ -8,10 +8,10 @@ import 'dart:core';
 class DateTimeRange$Mate extends DateTimeRange with Mate {
   /// DateTimeRange DateTimeRange({required DateTime start, required DateTime end})
   DateTimeRange$Mate({
-    /// optionalParameters: {required DateTime start} , defaultValue:none
+    /// optionalParameters: {required DateTime start} , default:none
     required DateTime start,
 
-    /// optionalParameters: {required DateTime end} , defaultValue:none
+    /// optionalParameters: {required DateTime end} , default:none
     required DateTime end,
   }) : super(
           start: start,
@@ -23,7 +23,15 @@ class DateTimeRange$Mate extends DateTimeRange with Mate {
           start: p.get('start').build(),
           end: p.get('end').build(),
         );
-    mateUse('start', start, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }

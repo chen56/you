@@ -9,10 +9,10 @@ import 'dart:core';
 class RenderSliverFixedExtentList$Mate extends RenderSliverFixedExtentList with Mate {
   /// RenderSliverFixedExtentList RenderSliverFixedExtentList({required RenderSliverBoxChildManager childManager, required double itemExtent})
   RenderSliverFixedExtentList$Mate({
-    /// optionalParameters: {required RenderSliverBoxChildManager childManager} , defaultValue:none
+    /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none
     required RenderSliverBoxChildManager childManager,
 
-    /// optionalParameters: {required double itemExtent} , defaultValue:none
+    /// optionalParameters: {required double itemExtent} , default:none
     required double itemExtent,
   }) : super(
           childManager: childManager,
@@ -24,7 +24,15 @@ class RenderSliverFixedExtentList$Mate extends RenderSliverFixedExtentList with 
           childManager: p.get('childManager').build(),
           itemExtent: p.get('itemExtent').build(),
         );
-    mateUse('childManager', childManager, isNamed: true);
-    mateUse('itemExtent', itemExtent, isNamed: true);
+    mateUse(
+      'childManager',
+      childManager,
+      isNamed: true,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
   }
 }

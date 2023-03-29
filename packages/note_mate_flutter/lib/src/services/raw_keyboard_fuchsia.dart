@@ -8,13 +8,13 @@ import 'dart:core';
 class RawKeyEventDataFuchsia$Mate extends RawKeyEventDataFuchsia with Mate {
   /// RawKeyEventDataFuchsia RawKeyEventDataFuchsia({int hidUsage = 0, int codePoint = 0, int modifiers = 0})
   RawKeyEventDataFuchsia$Mate({
-    /// optionalParameters: {int hidUsage = 0} , defaultValue:Literal
+    /// optionalParameters: {int hidUsage = 0} , default:processed=IntegerLiteralImpl
     int hidUsage = 0,
 
-    /// optionalParameters: {int codePoint = 0} , defaultValue:Literal
+    /// optionalParameters: {int codePoint = 0} , default:processed=IntegerLiteralImpl
     int codePoint = 0,
 
-    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
     int modifiers = 0,
   }) : super(
           hidUsage: hidUsage,
@@ -28,8 +28,23 @@ class RawKeyEventDataFuchsia$Mate extends RawKeyEventDataFuchsia with Mate {
           codePoint: p.get('codePoint').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateUse('hidUsage', hidUsage, isNamed: true);
-    mateUse('codePoint', codePoint, isNamed: true);
-    mateUse('modifiers', modifiers, isNamed: true);
+    mateUse(
+      'hidUsage',
+      hidUsage,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'codePoint',
+      codePoint,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'modifiers',
+      modifiers,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }

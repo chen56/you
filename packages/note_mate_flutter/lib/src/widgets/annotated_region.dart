@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mate {
   /// AnnotatedRegion<T> AnnotatedRegion({Key? key, required Widget child, required T value, bool sized = true})
   AnnotatedRegion$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required T value} , defaultValue:none
+    /// optionalParameters: {required T value} , default:none
     required T value,
 
-    /// optionalParameters: {bool sized = true} , defaultValue:Literal
+    /// optionalParameters: {bool sized = true} , default:processed=BooleanLiteralImpl
     bool sized = true,
   }) : super(
           key: key,
@@ -35,9 +35,26 @@ class AnnotatedRegion$Mate<T extends Object> extends AnnotatedRegion<T> with Mat
           value: p.get('value').build(),
           sized: p.get('sized').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('sized', sized, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'sized',
+      sized,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

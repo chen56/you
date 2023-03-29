@@ -10,10 +10,10 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class EagerGestureRecognizer$Mate extends EagerGestureRecognizer with Mate {
   /// EagerGestureRecognizer EagerGestureRecognizer({Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   EagerGestureRecognizer$Mate({
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           supportedDevices: supportedDevices,
@@ -25,7 +25,15 @@ class EagerGestureRecognizer$Mate extends EagerGestureRecognizer with Mate {
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }

@@ -11,13 +11,17 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate {
   /// TextButtonThemeData TextButtonThemeData({ButtonStyle? style})
   TextButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+      /// optionalParameters: {ButtonStyle? style} , default:none
       ButtonStyle? style})
       : super(style: style) {
     mateCreateName = 'TextButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextButtonThemeData$Mate(style: p.get('style').build());
-    mateUse('style', style, isNamed: true);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -25,13 +29,13 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate {
 class TextButtonTheme$Mate extends TextButtonTheme with Mate {
   /// TextButtonTheme TextButtonTheme({Key? key, required TextButtonThemeData data, required Widget child})
   TextButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TextButtonThemeData data} , defaultValue:none
+    /// optionalParameters: {required TextButtonThemeData data} , default:none
     required TextButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -45,8 +49,20 @@ class TextButtonTheme$Mate extends TextButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

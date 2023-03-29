@@ -14,40 +14,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class Badge$Mate extends Badge with Mate {
   /// Badge Badge({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, Widget? label, bool isLabelVisible = true, Widget? child})
   Badge$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , defaultValue:none
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , defaultValue:none
+    /// optionalParameters: {double? smallSize} , default:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , defaultValue:none
+    /// optionalParameters: {double? largeSize} , default:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , defaultValue:none
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
 
-    /// optionalParameters: {Widget? label} , defaultValue:none
+    /// optionalParameters: {Widget? label} , default:none
     Widget? label,
 
-    /// optionalParameters: {bool isLabelVisible = true} , defaultValue:Literal
+    /// optionalParameters: {bool isLabelVisible = true} , default:processed=BooleanLiteralImpl
     bool isLabelVisible = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -79,56 +79,105 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('textColor', textColor, isNamed: true);
-    mateUse('smallSize', smallSize, isNamed: true);
-    mateUse('largeSize', largeSize, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('label', label, isNamed: true);
-    mateUse('isLabelVisible', isLabelVisible, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'smallSize',
+      smallSize,
+      isNamed: true,
+    );
+    mateUse(
+      'largeSize',
+      largeSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'isLabelVisible',
+      isLabelVisible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Badge Badge.count({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, required int count, bool isLabelVisible = true, Widget? child})
   Badge$Mate.count({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , defaultValue:none
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , defaultValue:none
+    /// optionalParameters: {double? smallSize} , default:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , defaultValue:none
+    /// optionalParameters: {double? largeSize} , default:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , defaultValue:none
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
 
-    /// optionalParameters: {required int count} , defaultValue:none
+    /// optionalParameters: {required int count} , default:none
     required int count,
 
-    /// optionalParameters: {bool isLabelVisible = true} , defaultValue:Literal
+    /// optionalParameters: {bool isLabelVisible = true} , default:processed=BooleanLiteralImpl
     bool isLabelVisible = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.count(
           key: key,
@@ -160,17 +209,66 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('textColor', textColor, isNamed: true);
-    mateUse('smallSize', smallSize, isNamed: true);
-    mateUse('largeSize', largeSize, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('count', count, isNamed: true);
-    mateUse('isLabelVisible', isLabelVisible, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'smallSize',
+      smallSize,
+      isNamed: true,
+    );
+    mateUse(
+      'largeSize',
+      largeSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'count',
+      count,
+      isNamed: true,
+    );
+    mateUse(
+      'isLabelVisible',
+      isLabelVisible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -15,25 +15,25 @@ import 'dart:ui';
 class AnimatedSize$Mate extends AnimatedSize with Mate {
   /// AnimatedSize AnimatedSize({Key? key, Widget? child, AlignmentGeometry alignment = Alignment.center, Curve curve = Curves.linear, required Duration duration, Duration? reverseDuration, Clip clipBehavior = Clip.hardEdge})
   AnimatedSize$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {Duration? reverseDuration} , defaultValue:none
+    /// optionalParameters: {Duration? reverseDuration} , default:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
@@ -55,12 +55,43 @@ class AnimatedSize$Mate extends AnimatedSize with Mate {
           reverseDuration: p.get('reverseDuration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('reverseDuration', reverseDuration, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseDuration',
+      reverseDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

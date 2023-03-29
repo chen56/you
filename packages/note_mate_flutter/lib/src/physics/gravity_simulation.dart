@@ -33,9 +33,25 @@ class GravitySimulation$Mate extends GravitySimulation with Mate {
           p.get('endDistance').value,
           p.get('velocity').value,
         );
-    mateUse('acceleration', acceleration, isNamed: false);
-    mateUse('distance', distance, isNamed: false);
-    mateUse('endDistance', endDistance, isNamed: false);
-    mateUse('velocity', velocity, isNamed: false);
+    mateUse(
+      'acceleration',
+      acceleration,
+      isNamed: false,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: false,
+    );
+    mateUse(
+      'endDistance',
+      endDistance,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
   }
 }

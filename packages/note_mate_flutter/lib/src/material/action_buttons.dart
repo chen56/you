@@ -11,13 +11,17 @@ class BackButtonIcon$Mate extends BackButtonIcon with Mate {
   /// BackButtonIcon BackButtonIcon({Key? key})
   BackButtonIcon$Mate(
       {
-      /// optionalParameters: {Key? key} , defaultValue:none
+      /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super(key: key) {
     mateCreateName = 'BackButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BackButtonIcon$Mate(key: p.get('key').build());
-    mateUse('key', key, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }
 
@@ -25,16 +29,16 @@ class BackButtonIcon$Mate extends BackButtonIcon with Mate {
 class BackButton$Mate extends BackButton with Mate {
   /// BackButton BackButton({Key? key, Color? color, ButtonStyle? style, void Function()? onPressed})
   BackButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
   }) : super(
           key: key,
@@ -50,10 +54,26 @@ class BackButton$Mate extends BackButton with Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
   }
 }
 
@@ -62,13 +82,17 @@ class CloseButtonIcon$Mate extends CloseButtonIcon with Mate {
   /// CloseButtonIcon CloseButtonIcon({Key? key})
   CloseButtonIcon$Mate(
       {
-      /// optionalParameters: {Key? key} , defaultValue:none
+      /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super(key: key) {
     mateCreateName = 'CloseButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CloseButtonIcon$Mate(key: p.get('key').build());
-    mateUse('key', key, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }
 
@@ -76,16 +100,16 @@ class CloseButtonIcon$Mate extends CloseButtonIcon with Mate {
 class CloseButton$Mate extends CloseButton with Mate {
   /// CloseButton CloseButton({Key? key, Color? color, void Function()? onPressed, ButtonStyle? style})
   CloseButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
   }) : super(
           key: key,
@@ -101,10 +125,26 @@ class CloseButton$Mate extends CloseButton with Mate {
           onPressed: p.get('onPressed').build(),
           style: p.get('style').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('style', style, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -113,13 +153,17 @@ class DrawerButtonIcon$Mate extends DrawerButtonIcon with Mate {
   /// DrawerButtonIcon DrawerButtonIcon({Key? key})
   DrawerButtonIcon$Mate(
       {
-      /// optionalParameters: {Key? key} , defaultValue:none
+      /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super(key: key) {
     mateCreateName = 'DrawerButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerButtonIcon$Mate(key: p.get('key').build());
-    mateUse('key', key, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }
 
@@ -127,13 +171,13 @@ class DrawerButtonIcon$Mate extends DrawerButtonIcon with Mate {
 class DrawerButton$Mate extends DrawerButton with Mate {
   /// DrawerButton DrawerButton({Key? key, ButtonStyle? style, void Function()? onPressed})
   DrawerButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
   }) : super(
           key: key,
@@ -147,9 +191,21 @@ class DrawerButton$Mate extends DrawerButton with Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
   }
 }
 
@@ -158,13 +214,17 @@ class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with Mate {
   /// EndDrawerButtonIcon EndDrawerButtonIcon({Key? key})
   EndDrawerButtonIcon$Mate(
       {
-      /// optionalParameters: {Key? key} , defaultValue:none
+      /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super(key: key) {
     mateCreateName = 'EndDrawerButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EndDrawerButtonIcon$Mate(key: p.get('key').build());
-    mateUse('key', key, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }
 
@@ -172,13 +232,13 @@ class EndDrawerButtonIcon$Mate extends EndDrawerButtonIcon with Mate {
 class EndDrawerButton$Mate extends EndDrawerButton with Mate {
   /// EndDrawerButton EndDrawerButton({Key? key, ButtonStyle? style, void Function()? onPressed})
   EndDrawerButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
   }) : super(
           key: key,
@@ -192,8 +252,20 @@ class EndDrawerButton$Mate extends EndDrawerButton with Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
   }
 }

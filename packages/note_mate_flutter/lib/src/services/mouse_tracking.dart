@@ -10,16 +10,16 @@ import 'dart:core';
 class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
   /// MouseTrackerAnnotation MouseTrackerAnnotation({void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, MouseCursor cursor = MouseCursor.defer, bool validForMouseTracker = true})
   MouseTrackerAnnotation$Mate({
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , defaultValue:none
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
     MouseCursor cursor = MouseCursor.defer,
 
-    /// optionalParameters: {bool validForMouseTracker = true} , defaultValue:Literal
+    /// optionalParameters: {bool validForMouseTracker = true} , default:processed=BooleanLiteralImpl
     bool validForMouseTracker = true,
   }) : super(
           onEnter: onEnter,
@@ -35,9 +35,27 @@ class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
           cursor: p.get('cursor').build(),
           validForMouseTracker: p.get('validForMouseTracker').build(),
         );
-    mateUse('onEnter', onEnter, isNamed: true);
-    mateUse('onExit', onExit, isNamed: true);
-    mateUse('cursor', cursor, isNamed: true);
-    mateUse('validForMouseTracker', validForMouseTracker, isNamed: true);
+    mateUse(
+      'onEnter',
+      onEnter,
+      isNamed: true,
+    );
+    mateUse(
+      'onExit',
+      onExit,
+      isNamed: true,
+    );
+    mateUse(
+      'cursor',
+      cursor,
+      isNamed: true,
+      defaultValue: MouseCursor.defer,
+    );
+    mateUse(
+      'validForMouseTracker',
+      validForMouseTracker,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

@@ -9,13 +9,13 @@ import 'dart:typed_data';
 class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
   /// KeyboardInsertedContent KeyboardInsertedContent({required String mimeType, required String uri, Uint8List? data})
   KeyboardInsertedContent$Mate({
-    /// optionalParameters: {required String mimeType} , defaultValue:none
+    /// optionalParameters: {required String mimeType} , default:none
     required String mimeType,
 
-    /// optionalParameters: {required String uri} , defaultValue:none
+    /// optionalParameters: {required String uri} , default:none
     required String uri,
 
-    /// optionalParameters: {Uint8List? data} , defaultValue:none
+    /// optionalParameters: {Uint8List? data} , default:none
     Uint8List? data,
   }) : super(
           mimeType: mimeType,
@@ -29,9 +29,21 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
           uri: p.get('uri').build(),
           data: p.get('data').build(),
         );
-    mateUse('mimeType', mimeType, isNamed: true);
-    mateUse('uri', uri, isNamed: true);
-    mateUse('data', data, isNamed: true);
+    mateUse(
+      'mimeType',
+      mimeType,
+      isNamed: true,
+    );
+    mateUse(
+      'uri',
+      uri,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
   }
 
   /// KeyboardInsertedContent KeyboardInsertedContent.fromJson(Map<String, dynamic> metadata)
@@ -43,6 +55,10 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
     mateCreateName = 'KeyboardInsertedContent.fromJson';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
-    mateUse('metadata', metadata, isNamed: false);
+    mateUse(
+      'metadata',
+      metadata,
+      isNamed: false,
+    );
   }
 }

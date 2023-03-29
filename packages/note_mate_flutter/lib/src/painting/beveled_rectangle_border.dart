@@ -10,10 +10,10 @@ import 'package:flutter/src/painting/border_radius.dart';
 class BeveledRectangleBorder$Mate extends BeveledRectangleBorder with Mate {
   /// BeveledRectangleBorder BeveledRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   BeveledRectangleBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
     BorderRadiusGeometry borderRadius = BorderRadius.zero,
   }) : super(
           side: side,
@@ -25,7 +25,17 @@ class BeveledRectangleBorder$Mate extends BeveledRectangleBorder with Mate {
           side: p.get('side').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateUse('side', side, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+      defaultValue: BorderRadius.zero,
+    );
   }
 }

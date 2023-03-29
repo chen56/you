@@ -10,16 +10,16 @@ import 'dart:core';
 class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Mate {
   /// CupertinoActivityIndicator CupertinoActivityIndicator({Key? key, Color? color, bool animating = true, double radius = _kDefaultIndicatorRadius})
   CupertinoActivityIndicator$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {bool animating = true} , defaultValue:Literal
+    /// optionalParameters: {bool animating = true} , default:processed=BooleanLiteralImpl
     bool animating = true,
 
-    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , defaultValue:unprocessed
+    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , default:unprocessed=SimpleIdentifierImpl
     required double radius,
   }) : super(
           key: key,
@@ -35,24 +35,41 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           animating: p.get('animating').build(),
           radius: p.get('radius').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('animating', animating, isNamed: true);
-    mateUse('radius', radius, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'animating',
+      animating,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
   }
 
   /// CupertinoActivityIndicator CupertinoActivityIndicator.partiallyRevealed({Key? key, Color? color, double radius = _kDefaultIndicatorRadius, double progress = 1.0})
   CupertinoActivityIndicator$Mate.partiallyRevealed({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , defaultValue:unprocessed
+    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , default:unprocessed=SimpleIdentifierImpl
     required double radius,
 
-    /// optionalParameters: {double progress = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double progress = 1.0} , default:processed=DoubleLiteralImpl
     double progress = 1.0,
   }) : super.partiallyRevealed(
           key: key,
@@ -68,9 +85,26 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           radius: p.get('radius').build(),
           progress: p.get('progress').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('radius', radius, isNamed: true);
-    mateUse('progress', progress, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'progress',
+      progress,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }

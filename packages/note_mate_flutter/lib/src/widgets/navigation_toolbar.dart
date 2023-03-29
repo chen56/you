@@ -10,22 +10,22 @@ import 'dart:core';
 class NavigationToolbar$Mate extends NavigationToolbar with Mate {
   /// NavigationToolbar NavigationToolbar({Key? key, Widget? leading, Widget? middle, Widget? trailing, bool centerMiddle = true, double middleSpacing = kMiddleSpacing})
   NavigationToolbar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , defaultValue:none
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? middle} , defaultValue:none
+    /// optionalParameters: {Widget? middle} , default:none
     Widget? middle,
 
-    /// optionalParameters: {Widget? trailing} , defaultValue:none
+    /// optionalParameters: {Widget? trailing} , default:none
     Widget? trailing,
 
-    /// optionalParameters: {bool centerMiddle = true} , defaultValue:Literal
+    /// optionalParameters: {bool centerMiddle = true} , default:processed=BooleanLiteralImpl
     bool centerMiddle = true,
 
-    /// optionalParameters: {double middleSpacing = kMiddleSpacing} , defaultValue:unprocessed
+    /// optionalParameters: {double middleSpacing = kMiddleSpacing} , default:unprocessed=SimpleIdentifierImpl
     required double middleSpacing,
   }) : super(
           key: key,
@@ -45,11 +45,36 @@ class NavigationToolbar$Mate extends NavigationToolbar with Mate {
           centerMiddle: p.get('centerMiddle').build(),
           middleSpacing: p.get('middleSpacing').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('leading', leading, isNamed: true);
-    mateUse('middle', middle, isNamed: true);
-    mateUse('trailing', trailing, isNamed: true);
-    mateUse('centerMiddle', centerMiddle, isNamed: true);
-    mateUse('middleSpacing', middleSpacing, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'middle',
+      middle,
+      isNamed: true,
+    );
+    mateUse(
+      'trailing',
+      trailing,
+      isNamed: true,
+    );
+    mateUse(
+      'centerMiddle',
+      centerMiddle,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'middleSpacing',
+      middleSpacing,
+      isNamed: true,
+    );
   }
 }

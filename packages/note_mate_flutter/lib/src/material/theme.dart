@@ -14,13 +14,13 @@ import 'dart:ui';
 class Theme$Mate extends Theme with Mate {
   /// Theme Theme({Key? key, required ThemeData data, required Widget child})
   Theme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ThemeData data} , defaultValue:none
+    /// optionalParameters: {required ThemeData data} , default:none
     required ThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -34,9 +34,21 @@ class Theme$Mate extends Theme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -44,10 +56,10 @@ class Theme$Mate extends Theme with Mate {
 class ThemeDataTween$Mate extends ThemeDataTween with Mate {
   /// ThemeDataTween ThemeDataTween({ThemeData? begin, ThemeData? end})
   ThemeDataTween$Mate({
-    /// optionalParameters: {ThemeData? begin} , defaultValue:none
+    /// optionalParameters: {ThemeData? begin} , default:none
     ThemeData? begin,
 
-    /// optionalParameters: {ThemeData? end} , defaultValue:none
+    /// optionalParameters: {ThemeData? end} , default:none
     ThemeData? end,
   }) : super(
           begin: begin,
@@ -59,8 +71,16 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -68,22 +88,22 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate {
 class AnimatedTheme$Mate extends AnimatedTheme with Mate {
   /// AnimatedTheme AnimatedTheme({Key? key, required ThemeData data, Curve curve = Curves.linear, Duration duration = kThemeAnimationDuration, void Function()? onEnd, required Widget child})
   AnimatedTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ThemeData data} , defaultValue:none
+    /// optionalParameters: {required ThemeData data} , default:none
     required ThemeData data,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {Duration duration = kThemeAnimationDuration} , defaultValue:unprocessed
+    /// optionalParameters: {Duration duration = kThemeAnimationDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -103,11 +123,36 @@ class AnimatedTheme$Mate extends AnimatedTheme with Mate {
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

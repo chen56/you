@@ -10,82 +10,82 @@ import 'package:flutter/src/painting/text_painter.dart';
 class TextStyle$Mate extends TextStyle with Mate {
   /// TextStyle TextStyle({bool inherit = true, Color? color, Color? backgroundColor, double? fontSize, FontWeight? fontWeight, FontStyle? fontStyle, double? letterSpacing, double? wordSpacing, TextBaseline? textBaseline, double? height, TextLeadingDistribution? leadingDistribution, Locale? locale, Paint? foreground, Paint? background, List<Shadow>? shadows, List<FontFeature>? fontFeatures, List<FontVariation>? fontVariations, TextDecoration? decoration, Color? decorationColor, TextDecorationStyle? decorationStyle, double? decorationThickness, String? debugLabel, String? fontFamily, List<String>? fontFamilyFallback, String? package, TextOverflow? overflow})
   TextStyle$Mate({
-    /// optionalParameters: {bool inherit = true} , defaultValue:Literal
+    /// optionalParameters: {bool inherit = true} , default:processed=BooleanLiteralImpl
     bool inherit = true,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? fontSize} , defaultValue:none
+    /// optionalParameters: {double? fontSize} , default:none
     double? fontSize,
 
-    /// optionalParameters: {FontWeight? fontWeight} , defaultValue:none
+    /// optionalParameters: {FontWeight? fontWeight} , default:none
     FontWeight? fontWeight,
 
-    /// optionalParameters: {FontStyle? fontStyle} , defaultValue:none
+    /// optionalParameters: {FontStyle? fontStyle} , default:none
     FontStyle? fontStyle,
 
-    /// optionalParameters: {double? letterSpacing} , defaultValue:none
+    /// optionalParameters: {double? letterSpacing} , default:none
     double? letterSpacing,
 
-    /// optionalParameters: {double? wordSpacing} , defaultValue:none
+    /// optionalParameters: {double? wordSpacing} , default:none
     double? wordSpacing,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , defaultValue:none
+    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , default:none
     TextLeadingDistribution? leadingDistribution,
 
-    /// optionalParameters: {Locale? locale} , defaultValue:none
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {Paint? foreground} , defaultValue:none
+    /// optionalParameters: {Paint? foreground} , default:none
     Paint? foreground,
 
-    /// optionalParameters: {Paint? background} , defaultValue:none
+    /// optionalParameters: {Paint? background} , default:none
     Paint? background,
 
-    /// optionalParameters: {List<Shadow>? shadows} , defaultValue:none
+    /// optionalParameters: {List<Shadow>? shadows} , default:none
     List<Shadow>? shadows,
 
-    /// optionalParameters: {List<FontFeature>? fontFeatures} , defaultValue:none
+    /// optionalParameters: {List<FontFeature>? fontFeatures} , default:none
     List<FontFeature>? fontFeatures,
 
-    /// optionalParameters: {List<FontVariation>? fontVariations} , defaultValue:none
+    /// optionalParameters: {List<FontVariation>? fontVariations} , default:none
     List<FontVariation>? fontVariations,
 
-    /// optionalParameters: {TextDecoration? decoration} , defaultValue:none
+    /// optionalParameters: {TextDecoration? decoration} , default:none
     TextDecoration? decoration,
 
-    /// optionalParameters: {Color? decorationColor} , defaultValue:none
+    /// optionalParameters: {Color? decorationColor} , default:none
     Color? decorationColor,
 
-    /// optionalParameters: {TextDecorationStyle? decorationStyle} , defaultValue:none
+    /// optionalParameters: {TextDecorationStyle? decorationStyle} , default:none
     TextDecorationStyle? decorationStyle,
 
-    /// optionalParameters: {double? decorationThickness} , defaultValue:none
+    /// optionalParameters: {double? decorationThickness} , default:none
     double? decorationThickness,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
 
-    /// optionalParameters: {String? fontFamily} , defaultValue:none
+    /// optionalParameters: {String? fontFamily} , default:none
     String? fontFamily,
 
-    /// optionalParameters: {List<String>? fontFamilyFallback} , defaultValue:none
+    /// optionalParameters: {List<String>? fontFamilyFallback} , default:none
     List<String>? fontFamilyFallback,
 
-    /// optionalParameters: {String? package} , defaultValue:none
+    /// optionalParameters: {String? package} , default:none
     String? package,
 
-    /// optionalParameters: {TextOverflow? overflow} , defaultValue:none
+    /// optionalParameters: {TextOverflow? overflow} , default:none
     TextOverflow? overflow,
   }) : super(
           inherit: inherit,
@@ -145,31 +145,136 @@ class TextStyle$Mate extends TextStyle with Mate {
           package: p.get('package').build(),
           overflow: p.get('overflow').build(),
         );
-    mateUse('inherit', inherit, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('fontSize', fontSize, isNamed: true);
-    mateUse('fontWeight', fontWeight, isNamed: true);
-    mateUse('fontStyle', fontStyle, isNamed: true);
-    mateUse('letterSpacing', letterSpacing, isNamed: true);
-    mateUse('wordSpacing', wordSpacing, isNamed: true);
-    mateUse('textBaseline', textBaseline, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('leadingDistribution', leadingDistribution, isNamed: true);
-    mateUse('locale', locale, isNamed: true);
-    mateUse('foreground', foreground, isNamed: true);
-    mateUse('background', background, isNamed: true);
-    mateUseList('shadows', shadows, isNamed: true);
-    mateUseList('fontFeatures', fontFeatures, isNamed: true);
-    mateUseList('fontVariations', fontVariations, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('decorationColor', decorationColor, isNamed: true);
-    mateUse('decorationStyle', decorationStyle, isNamed: true);
-    mateUse('decorationThickness', decorationThickness, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
-    mateUse('fontFamily', fontFamily, isNamed: true);
-    mateUseList('fontFamilyFallback', fontFamilyFallback, isNamed: true);
-    mateUse('package', package, isNamed: true);
-    mateUse('overflow', overflow, isNamed: true);
+    mateUse(
+      'inherit',
+      inherit,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'fontSize',
+      fontSize,
+      isNamed: true,
+    );
+    mateUse(
+      'fontWeight',
+      fontWeight,
+      isNamed: true,
+    );
+    mateUse(
+      'fontStyle',
+      fontStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'letterSpacing',
+      letterSpacing,
+      isNamed: true,
+    );
+    mateUse(
+      'wordSpacing',
+      wordSpacing,
+      isNamed: true,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingDistribution',
+      leadingDistribution,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'foreground',
+      foreground,
+      isNamed: true,
+    );
+    mateUse(
+      'background',
+      background,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
+    mateUseList(
+      'fontFeatures',
+      fontFeatures,
+      isNamed: true,
+    );
+    mateUseList(
+      'fontVariations',
+      fontVariations,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'decorationColor',
+      decorationColor,
+      isNamed: true,
+    );
+    mateUse(
+      'decorationStyle',
+      decorationStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'decorationThickness',
+      decorationThickness,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'fontFamily',
+      fontFamily,
+      isNamed: true,
+    );
+    mateUseList(
+      'fontFamilyFallback',
+      fontFamilyFallback,
+      isNamed: true,
+    );
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+    );
   }
 }

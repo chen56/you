@@ -14,25 +14,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class DrawerHeader$Mate extends DrawerHeader with Mate {
   /// DrawerHeader DrawerHeader({Key? key, Decoration? decoration, EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0), EdgeInsetsGeometry padding = const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0), Duration duration = const Duration(milliseconds: 250), Curve curve = Curves.fastOutSlowIn, required Widget? child})
   DrawerHeader$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Decoration? decoration} , defaultValue:none
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0)} , defaultValue:unprocessed
-    EdgeInsetsGeometry? margin,
+    /// optionalParameters: {EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0)} , default:unprocessed=InstanceCreationExpressionImpl
+    required EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0)} , defaultValue:unprocessed
+    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Duration duration = const Duration(milliseconds: 250)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration duration = const Duration(milliseconds: 250)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.fastOutSlowIn,
 
-    /// optionalParameters: {required Widget? child} , defaultValue:none
+    /// optionalParameters: {required Widget? child} , default:none
     required Widget? child,
   }) : super(
           key: key,
@@ -54,12 +54,41 @@ class DrawerHeader$Mate extends DrawerHeader with Mate {
           curve: p.get('curve').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.fastOutSlowIn,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -25,8 +25,16 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           p.get('state').value,
           p.get('data').value,
         );
-    mateUse('state', state, isNamed: false);
-    mateUse('data', data, isNamed: false);
+    mateUse(
+      'state',
+      state,
+      isNamed: false,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: false,
+    );
   }
 
   /// AsyncSnapshot<T> AsyncSnapshot.withError(ConnectionState state, Object error, [StackTrace stackTrace = StackTrace.empty])
@@ -51,9 +59,22 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           p.get('error').value,
           p.get('stackTrace').value,
         );
-    mateUse('state', state, isNamed: false);
-    mateUse('error', error, isNamed: false);
-    mateUse('stackTrace', stackTrace, isNamed: false);
+    mateUse(
+      'state',
+      state,
+      isNamed: false,
+    );
+    mateUse(
+      'error',
+      error,
+      isNamed: false,
+    );
+    mateUse(
+      'stackTrace',
+      stackTrace,
+      isNamed: false,
+      defaultValue: StackTrace.empty,
+    );
   }
 }
 
@@ -61,16 +82,16 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
 class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
   /// StreamBuilder<T> StreamBuilder({Key? key, T? initialData, Stream<T>? stream, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   StreamBuilder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {T? initialData} , defaultValue:none
+    /// optionalParameters: {T? initialData} , default:none
     T? initialData,
 
-    /// optionalParameters: {Stream<T>? stream} , defaultValue:none
+    /// optionalParameters: {Stream<T>? stream} , default:none
     Stream<T>? stream,
 
-    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , default:none
     required AsyncWidgetBuilder<T> builder,
   }) : super(
           key: key,
@@ -86,10 +107,26 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
           stream: p.get('stream').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('initialData', initialData, isNamed: true);
-    mateUse('stream', stream, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'initialData',
+      initialData,
+      isNamed: true,
+    );
+    mateUse(
+      'stream',
+      stream,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -97,16 +134,16 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
 class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
   /// FutureBuilder<T> FutureBuilder({Key? key, Future<T>? future, T? initialData, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   FutureBuilder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Future<T>? future} , defaultValue:none
+    /// optionalParameters: {Future<T>? future} , default:none
     Future<T>? future,
 
-    /// optionalParameters: {T? initialData} , defaultValue:none
+    /// optionalParameters: {T? initialData} , default:none
     T? initialData,
 
-    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , default:none
     required AsyncWidgetBuilder<T> builder,
   }) : super(
           key: key,
@@ -122,9 +159,25 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
           initialData: p.get('initialData').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('future', future, isNamed: true);
-    mateUse('initialData', initialData, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'future',
+      future,
+      isNamed: true,
+    );
+    mateUse(
+      'initialData',
+      initialData,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }

@@ -17,70 +17,70 @@ import 'package:flutter/src/material/ink_well.dart';
 class ButtonStyle$Mate extends ButtonStyle with Mate {
   /// ButtonStyle ButtonStyle({MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? foregroundColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<double?>? elevation, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<Size?>? minimumSize, MaterialStateProperty<Size?>? fixedSize, MaterialStateProperty<Size?>? maximumSize, MaterialStateProperty<Color?>? iconColor, MaterialStateProperty<double?>? iconSize, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity, MaterialTapTargetSize? tapTargetSize, Duration? animationDuration, bool? enableFeedback, AlignmentGeometry? alignment, InteractiveInkFeatureFactory? splashFactory})
   ButtonStyle$Mate({
-    /// optionalParameters: {MaterialStateProperty<TextStyle?>? textStyle} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? textStyle} , default:none
     MaterialStateProperty<TextStyle?>? textStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , default:none
     MaterialStateProperty<Color?>? backgroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? foregroundColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? foregroundColor} , default:none
     MaterialStateProperty<Color?>? foregroundColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , default:none
     MaterialStateProperty<Color?>? shadowColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , default:none
     MaterialStateProperty<Color?>? surfaceTintColor,
 
-    /// optionalParameters: {MaterialStateProperty<double?>? elevation} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<double?>? elevation} , default:none
     MaterialStateProperty<double?>? elevation,
 
-    /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , default:none
     MaterialStateProperty<EdgeInsetsGeometry?>? padding,
 
-    /// optionalParameters: {MaterialStateProperty<Size?>? minimumSize} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Size?>? minimumSize} , default:none
     MaterialStateProperty<Size?>? minimumSize,
 
-    /// optionalParameters: {MaterialStateProperty<Size?>? fixedSize} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Size?>? fixedSize} , default:none
     MaterialStateProperty<Size?>? fixedSize,
 
-    /// optionalParameters: {MaterialStateProperty<Size?>? maximumSize} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Size?>? maximumSize} , default:none
     MaterialStateProperty<Size?>? maximumSize,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? iconColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? iconColor} , default:none
     MaterialStateProperty<Color?>? iconColor,
 
-    /// optionalParameters: {MaterialStateProperty<double?>? iconSize} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<double?>? iconSize} , default:none
     MaterialStateProperty<double?>? iconSize,
 
-    /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , default:none
     MaterialStateProperty<BorderSide?>? side,
 
-    /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , default:none
     MaterialStateProperty<OutlinedBorder?>? shape,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {MaterialTapTargetSize? tapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? tapTargetSize} , default:none
     MaterialTapTargetSize? tapTargetSize,
 
-    /// optionalParameters: {Duration? animationDuration} , defaultValue:none
+    /// optionalParameters: {Duration? animationDuration} , default:none
     Duration? animationDuration,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , defaultValue:none
+    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
     InteractiveInkFeatureFactory? splashFactory,
   }) : super(
           textStyle: textStyle,
@@ -132,27 +132,115 @@ class ButtonStyle$Mate extends ButtonStyle with Mate {
           alignment: p.get('alignment').build(),
           splashFactory: p.get('splashFactory').build(),
         );
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('overlayColor', overlayColor, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('minimumSize', minimumSize, isNamed: true);
-    mateUse('fixedSize', fixedSize, isNamed: true);
-    mateUse('maximumSize', maximumSize, isNamed: true);
-    mateUse('iconColor', iconColor, isNamed: true);
-    mateUse('iconSize', iconSize, isNamed: true);
-    mateUse('side', side, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('visualDensity', visualDensity, isNamed: true);
-    mateUse('tapTargetSize', tapTargetSize, isNamed: true);
-    mateUse('animationDuration', animationDuration, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('splashFactory', splashFactory, isNamed: true);
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'minimumSize',
+      minimumSize,
+      isNamed: true,
+    );
+    mateUse(
+      'fixedSize',
+      fixedSize,
+      isNamed: true,
+    );
+    mateUse(
+      'maximumSize',
+      maximumSize,
+      isNamed: true,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconSize',
+      iconSize,
+      isNamed: true,
+    );
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+    );
+    mateUse(
+      'tapTargetSize',
+      tapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'animationDuration',
+      animationDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'splashFactory',
+      splashFactory,
+      isNamed: true,
+    );
   }
 }

@@ -12,28 +12,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class SafeArea$Mate extends SafeArea with Mate {
   /// SafeArea SafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, bool maintainBottomViewPadding = false, required Widget child})
   SafeArea$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool left = true} , defaultValue:Literal
+    /// optionalParameters: {bool left = true} , default:processed=BooleanLiteralImpl
     bool left = true,
 
-    /// optionalParameters: {bool top = true} , defaultValue:Literal
+    /// optionalParameters: {bool top = true} , default:processed=BooleanLiteralImpl
     bool top = true,
 
-    /// optionalParameters: {bool right = true} , defaultValue:Literal
+    /// optionalParameters: {bool right = true} , default:processed=BooleanLiteralImpl
     bool right = true,
 
-    /// optionalParameters: {bool bottom = true} , defaultValue:Literal
+    /// optionalParameters: {bool bottom = true} , default:processed=BooleanLiteralImpl
     bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     EdgeInsets minimum = EdgeInsets.zero,
 
-    /// optionalParameters: {bool maintainBottomViewPadding = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainBottomViewPadding = false} , default:processed=BooleanLiteralImpl
     bool maintainBottomViewPadding = false,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -57,14 +57,52 @@ class SafeArea$Mate extends SafeArea with Mate {
           maintainBottomViewPadding: p.get('maintainBottomViewPadding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('left', left, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('right', right, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('minimum', minimum, isNamed: true);
-    mateUse('maintainBottomViewPadding', maintainBottomViewPadding, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'minimum',
+      minimum,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'maintainBottomViewPadding',
+      maintainBottomViewPadding,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -72,25 +110,25 @@ class SafeArea$Mate extends SafeArea with Mate {
 class SliverSafeArea$Mate extends SliverSafeArea with Mate {
   /// SliverSafeArea SliverSafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, required Widget sliver})
   SliverSafeArea$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool left = true} , defaultValue:Literal
+    /// optionalParameters: {bool left = true} , default:processed=BooleanLiteralImpl
     bool left = true,
 
-    /// optionalParameters: {bool top = true} , defaultValue:Literal
+    /// optionalParameters: {bool top = true} , default:processed=BooleanLiteralImpl
     bool top = true,
 
-    /// optionalParameters: {bool right = true} , defaultValue:Literal
+    /// optionalParameters: {bool right = true} , default:processed=BooleanLiteralImpl
     bool right = true,
 
-    /// optionalParameters: {bool bottom = true} , defaultValue:Literal
+    /// optionalParameters: {bool bottom = true} , default:processed=BooleanLiteralImpl
     bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     EdgeInsets minimum = EdgeInsets.zero,
 
-    /// optionalParameters: {required Widget sliver} , defaultValue:none
+    /// optionalParameters: {required Widget sliver} , default:none
     required Widget sliver,
   }) : super(
           key: key,
@@ -112,12 +150,45 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           minimum: p.get('minimum').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('left', left, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('right', right, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('minimum', minimum, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'minimum',
+      minimum,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }

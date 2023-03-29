@@ -18,76 +18,76 @@ import 'package:flutter/src/painting/text_style.dart';
 class FloatingActionButton$Mate extends FloatingActionButton with Mate {
   /// FloatingActionButton FloatingActionButton({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, bool mini = false, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool isExtended = false, bool? enableFeedback})
   FloatingActionButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
+    /// optionalParameters: {Color? foregroundColor} , default:none
     Color? foregroundColor,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , defaultValue:none
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , defaultValue:none
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , defaultValue:unprocessed
-    Object? heroTag,
+    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , default:unprocessed=InstanceCreationExpressionImpl
+    required Object? heroTag,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {double? focusElevation} , defaultValue:none
+    /// optionalParameters: {double? focusElevation} , default:none
     double? focusElevation,
 
-    /// optionalParameters: {double? hoverElevation} , defaultValue:none
+    /// optionalParameters: {double? hoverElevation} , default:none
     double? hoverElevation,
 
-    /// optionalParameters: {double? highlightElevation} , defaultValue:none
+    /// optionalParameters: {double? highlightElevation} , default:none
     double? highlightElevation,
 
-    /// optionalParameters: {double? disabledElevation} , defaultValue:none
+    /// optionalParameters: {double? disabledElevation} , default:none
     double? disabledElevation,
 
-    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {bool mini = false} , defaultValue:Literal
+    /// optionalParameters: {bool mini = false} , default:processed=BooleanLiteralImpl
     bool mini = false,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {bool isExtended = false} , defaultValue:Literal
+    /// optionalParameters: {bool isExtended = false} , default:processed=BooleanLiteralImpl
     bool isExtended = false,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
   }) : super(
           key: key,
@@ -143,98 +143,198 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           isExtended: p.get('isExtended').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('hoverColor', hoverColor, isNamed: true);
-    mateUse('splashColor', splashColor, isNamed: true);
-    mateUse('heroTag', heroTag, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('focusElevation', focusElevation, isNamed: true);
-    mateUse('hoverElevation', hoverElevation, isNamed: true);
-    mateUse('highlightElevation', highlightElevation, isNamed: true);
-    mateUse('disabledElevation', disabledElevation, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('mini', mini, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('isExtended', isExtended, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'heroTag',
+      heroTag,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'focusElevation',
+      focusElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverElevation',
+      hoverElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightElevation',
+      highlightElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledElevation',
+      disabledElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'mini',
+      mini,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'isExtended',
+      isExtended,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
   }
 
   /// FloatingActionButton FloatingActionButton.small({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
   FloatingActionButton$Mate.small({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
+    /// optionalParameters: {Color? foregroundColor} , default:none
     Color? foregroundColor,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , defaultValue:none
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , defaultValue:none
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , defaultValue:unprocessed
-    Object? heroTag,
+    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , default:unprocessed=InstanceCreationExpressionImpl
+    required Object? heroTag,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {double? focusElevation} , defaultValue:none
+    /// optionalParameters: {double? focusElevation} , default:none
     double? focusElevation,
 
-    /// optionalParameters: {double? hoverElevation} , defaultValue:none
+    /// optionalParameters: {double? hoverElevation} , default:none
     double? hoverElevation,
 
-    /// optionalParameters: {double? highlightElevation} , defaultValue:none
+    /// optionalParameters: {double? highlightElevation} , default:none
     double? highlightElevation,
 
-    /// optionalParameters: {double? disabledElevation} , defaultValue:none
+    /// optionalParameters: {double? disabledElevation} , default:none
     double? disabledElevation,
 
-    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
   }) : super.small(
           key: key,
@@ -286,96 +386,186 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('hoverColor', hoverColor, isNamed: true);
-    mateUse('splashColor', splashColor, isNamed: true);
-    mateUse('heroTag', heroTag, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('focusElevation', focusElevation, isNamed: true);
-    mateUse('hoverElevation', hoverElevation, isNamed: true);
-    mateUse('highlightElevation', highlightElevation, isNamed: true);
-    mateUse('disabledElevation', disabledElevation, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'heroTag',
+      heroTag,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'focusElevation',
+      focusElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverElevation',
+      hoverElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightElevation',
+      highlightElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledElevation',
+      disabledElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
   }
 
   /// FloatingActionButton FloatingActionButton.large({Key? key, Widget? child, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, bool? enableFeedback})
   FloatingActionButton$Mate.large({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
+    /// optionalParameters: {Color? foregroundColor} , default:none
     Color? foregroundColor,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , defaultValue:none
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , defaultValue:none
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , defaultValue:unprocessed
-    Object? heroTag,
+    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , default:unprocessed=InstanceCreationExpressionImpl
+    required Object? heroTag,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {double? focusElevation} , defaultValue:none
+    /// optionalParameters: {double? focusElevation} , default:none
     double? focusElevation,
 
-    /// optionalParameters: {double? hoverElevation} , defaultValue:none
+    /// optionalParameters: {double? hoverElevation} , default:none
     double? hoverElevation,
 
-    /// optionalParameters: {double? highlightElevation} , defaultValue:none
+    /// optionalParameters: {double? highlightElevation} , default:none
     double? highlightElevation,
 
-    /// optionalParameters: {double? disabledElevation} , defaultValue:none
+    /// optionalParameters: {double? disabledElevation} , default:none
     double? disabledElevation,
 
-    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
   }) : super.large(
           key: key,
@@ -427,111 +617,201 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('hoverColor', hoverColor, isNamed: true);
-    mateUse('splashColor', splashColor, isNamed: true);
-    mateUse('heroTag', heroTag, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('focusElevation', focusElevation, isNamed: true);
-    mateUse('hoverElevation', hoverElevation, isNamed: true);
-    mateUse('highlightElevation', highlightElevation, isNamed: true);
-    mateUse('disabledElevation', disabledElevation, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'heroTag',
+      heroTag,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'focusElevation',
+      focusElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverElevation',
+      hoverElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightElevation',
+      highlightElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledElevation',
+      disabledElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
   }
 
   /// FloatingActionButton FloatingActionButton.extended({Key? key, String? tooltip, Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Object? heroTag = const _DefaultHeroTag(), double? elevation, double? focusElevation, double? hoverElevation, Color? splashColor, double? highlightElevation, double? disabledElevation, required void Function()? onPressed, MouseCursor? mouseCursor = SystemMouseCursors.click, ShapeBorder? shape, bool isExtended = true, MaterialTapTargetSize? materialTapTargetSize, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, Widget? icon, required Widget label, bool? enableFeedback})
   FloatingActionButton$Mate.extended({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
+    /// optionalParameters: {Color? foregroundColor} , default:none
     Color? foregroundColor,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , defaultValue:none
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , defaultValue:unprocessed
-    Object? heroTag,
+    /// optionalParameters: {Object? heroTag = const _DefaultHeroTag()} , default:unprocessed=InstanceCreationExpressionImpl
+    required Object? heroTag,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {double? focusElevation} , defaultValue:none
+    /// optionalParameters: {double? focusElevation} , default:none
     double? focusElevation,
 
-    /// optionalParameters: {double? hoverElevation} , defaultValue:none
+    /// optionalParameters: {double? hoverElevation} , default:none
     double? hoverElevation,
 
-    /// optionalParameters: {Color? splashColor} , defaultValue:none
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {double? highlightElevation} , defaultValue:none
+    /// optionalParameters: {double? highlightElevation} , default:none
     double? highlightElevation,
 
-    /// optionalParameters: {double? disabledElevation} , defaultValue:none
+    /// optionalParameters: {double? disabledElevation} , default:none
     double? disabledElevation,
 
-    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor = SystemMouseCursors.click} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MouseCursor? mouseCursor = SystemMouseCursors.click} , default:processed=PrefixedIdentifierImpl
     MouseCursor? mouseCursor = SystemMouseCursors.click,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {bool isExtended = true} , defaultValue:Literal
+    /// optionalParameters: {bool isExtended = true} , default:processed=BooleanLiteralImpl
     bool isExtended = true,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {double? extendedIconLabelSpacing} , defaultValue:none
+    /// optionalParameters: {double? extendedIconLabelSpacing} , default:none
     double? extendedIconLabelSpacing,
 
-    /// optionalParameters: {EdgeInsetsGeometry? extendedPadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? extendedPadding} , default:none
     EdgeInsetsGeometry? extendedPadding,
 
-    /// optionalParameters: {TextStyle? extendedTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? extendedTextStyle} , default:none
     TextStyle? extendedTextStyle,
 
-    /// optionalParameters: {Widget? icon} , defaultValue:none
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {required Widget label} , defaultValue:none
+    /// optionalParameters: {required Widget label} , default:none
     required Widget label,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
   }) : super.extended(
           key: key,
@@ -593,32 +873,144 @@ class FloatingActionButton$Mate extends FloatingActionButton with Mate {
           label: p.get('label').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('hoverColor', hoverColor, isNamed: true);
-    mateUse('heroTag', heroTag, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('focusElevation', focusElevation, isNamed: true);
-    mateUse('hoverElevation', hoverElevation, isNamed: true);
-    mateUse('splashColor', splashColor, isNamed: true);
-    mateUse('highlightElevation', highlightElevation, isNamed: true);
-    mateUse('disabledElevation', disabledElevation, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('isExtended', isExtended, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing, isNamed: true);
-    mateUse('extendedPadding', extendedPadding, isNamed: true);
-    mateUse('extendedTextStyle', extendedTextStyle, isNamed: true);
-    mateUse('icon', icon, isNamed: true);
-    mateUse('label', label, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'heroTag',
+      heroTag,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'focusElevation',
+      focusElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverElevation',
+      hoverElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightElevation',
+      highlightElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledElevation',
+      disabledElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+      defaultValue: SystemMouseCursors.click,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'isExtended',
+      isExtended,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'extendedIconLabelSpacing',
+      extendedIconLabelSpacing,
+      isNamed: true,
+    );
+    mateUse(
+      'extendedPadding',
+      extendedPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'extendedTextStyle',
+      extendedTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
   }
 }

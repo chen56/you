@@ -15,31 +15,31 @@ import 'package:flutter/src/widgets/framework.dart';
 class CheckboxThemeData$Mate extends CheckboxThemeData with Mate {
   /// CheckboxThemeData CheckboxThemeData({MaterialStateProperty<MouseCursor?>? mouseCursor, MaterialStateProperty<Color?>? fillColor, MaterialStateProperty<Color?>? checkColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, OutlinedBorder? shape, BorderSide? side})
   CheckboxThemeData$Mate({
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , default:none
     MaterialStateProperty<Color?>? fillColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? checkColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? checkColor} , default:none
     MaterialStateProperty<Color?>? checkColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , defaultValue:none
+    /// optionalParameters: {double? splashRadius} , default:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
+    /// optionalParameters: {OutlinedBorder? shape} , default:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {BorderSide? side} , defaultValue:none
+    /// optionalParameters: {BorderSide? side} , default:none
     BorderSide? side,
   }) : super(
           mouseCursor: mouseCursor,
@@ -65,15 +65,51 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate {
           shape: p.get('shape').build(),
           side: p.get('side').build(),
         );
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('fillColor', fillColor, isNamed: true);
-    mateUse('checkColor', checkColor, isNamed: true);
-    mateUse('overlayColor', overlayColor, isNamed: true);
-    mateUse('splashRadius', splashRadius, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('visualDensity', visualDensity, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('side', side, isNamed: true);
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'checkColor',
+      checkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashRadius',
+      splashRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+    );
   }
 }
 
@@ -81,13 +117,13 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate {
 class CheckboxTheme$Mate extends CheckboxTheme with Mate {
   /// CheckboxTheme CheckboxTheme({Key? key, required CheckboxThemeData data, required Widget child})
   CheckboxTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required CheckboxThemeData data} , defaultValue:none
+    /// optionalParameters: {required CheckboxThemeData data} , default:none
     required CheckboxThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -101,8 +137,20 @@ class CheckboxTheme$Mate extends CheckboxTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

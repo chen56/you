@@ -16,7 +16,7 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate {
 
     /// requiredParameters: MessageCodec<T> codec
     MessageCodec<T> codec, {
-    /// optionalParameters: {BinaryMessenger? binaryMessenger} , defaultValue:none
+    /// optionalParameters: {BinaryMessenger? binaryMessenger} , default:none
     BinaryMessenger? binaryMessenger,
   }) : super(
           name,
@@ -30,9 +30,21 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate {
           p.get('codec').value,
           binaryMessenger: p.get('binaryMessenger').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('codec', codec, isNamed: false);
-    mateUse('binaryMessenger', binaryMessenger, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: true,
+    );
   }
 }
 
@@ -60,9 +72,21 @@ class MethodChannel$Mate extends MethodChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('codec', codec, isNamed: false);
-    mateUse('binaryMessenger', binaryMessenger, isNamed: false);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: false,
+    );
   }
 }
 
@@ -90,9 +114,21 @@ class OptionalMethodChannel$Mate extends OptionalMethodChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('codec', codec, isNamed: false);
-    mateUse('binaryMessenger', binaryMessenger, isNamed: false);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: false,
+    );
   }
 }
 
@@ -120,8 +156,20 @@ class EventChannel$Mate extends EventChannel with Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('codec', codec, isNamed: false);
-    mateUse('binaryMessenger', binaryMessenger, isNamed: false);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: false,
+    );
   }
 }

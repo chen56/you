@@ -9,16 +9,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class GridTile$Mate extends GridTile with Mate {
   /// GridTile GridTile({Key? key, Widget? header, Widget? footer, required Widget child})
   GridTile$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? header} , defaultValue:none
+    /// optionalParameters: {Widget? header} , default:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , defaultValue:none
+    /// optionalParameters: {Widget? footer} , default:none
     Widget? footer,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -34,9 +34,25 @@ class GridTile$Mate extends GridTile with Mate {
           footer: p.get('footer').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('header', header, isNamed: true);
-    mateUse('footer', footer, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'header',
+      header,
+      isNamed: true,
+    );
+    mateUse(
+      'footer',
+      footer,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

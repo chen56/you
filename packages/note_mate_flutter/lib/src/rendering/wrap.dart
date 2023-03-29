@@ -13,34 +13,34 @@ import 'dart:ui';
 class RenderWrap$Mate extends RenderWrap with Mate {
   /// RenderWrap RenderWrap({List<RenderBox>? children, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none})
   RenderWrap$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
+    /// optionalParameters: {List<RenderBox>? children} , default:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
     Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     WrapAlignment alignment = WrapAlignment.start,
 
-    /// optionalParameters: {double spacing = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
     double spacing = 0.0,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     WrapAlignment runAlignment = WrapAlignment.start,
 
-    /// optionalParameters: {double runSpacing = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
     double runSpacing = 0.0,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
     WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
   }) : super(
           children: children,
@@ -68,15 +68,63 @@ class RenderWrap$Mate extends RenderWrap with Mate {
           verticalDirection: p.get('verticalDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList('children', children, isNamed: true);
-    mateUse('direction', direction, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('spacing', spacing, isNamed: true);
-    mateUse('runAlignment', runAlignment, isNamed: true);
-    mateUse('runSpacing', runSpacing, isNamed: true);
-    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('verticalDirection', verticalDirection, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'spacing',
+      spacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'runAlignment',
+      runAlignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'runSpacing',
+      runSpacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: WrapCrossAlignment.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }

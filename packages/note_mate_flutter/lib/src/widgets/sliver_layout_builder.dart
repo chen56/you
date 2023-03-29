@@ -10,10 +10,10 @@ import 'package:flutter/src/rendering/sliver.dart';
 class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with Mate {
   /// SliverLayoutBuilder SliverLayoutBuilder({Key? key, required Widget Function(BuildContext, SliverConstraints) builder})
   SliverLayoutBuilder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, SliverConstraints) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, SliverConstraints) builder} , default:none
     required Widget Function(
       BuildContext,
       SliverConstraints,
@@ -28,7 +28,15 @@ class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }

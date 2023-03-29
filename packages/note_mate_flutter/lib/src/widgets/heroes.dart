@@ -10,25 +10,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class Hero$Mate extends Hero with Mate {
   /// Hero Hero({Key? key, required Object tag, Tween<Rect?> Function(Rect?, Rect?)? createRectTween, Widget Function(BuildContext, Animation<double>, HeroFlightDirection, BuildContext, BuildContext)? flightShuttleBuilder, Widget Function(BuildContext, Size, Widget)? placeholderBuilder, bool transitionOnUserGestures = false, required Widget child})
   Hero$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Object tag} , defaultValue:none
+    /// optionalParameters: {required Object tag} , default:none
     required Object tag,
 
-    /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , defaultValue:none
+    /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , default:none
     CreateRectTween? createRectTween,
 
-    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, HeroFlightDirection, BuildContext, BuildContext)? flightShuttleBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, HeroFlightDirection, BuildContext, BuildContext)? flightShuttleBuilder} , default:none
     HeroFlightShuttleBuilder? flightShuttleBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Size, Widget)? placeholderBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Size, Widget)? placeholderBuilder} , default:none
     HeroPlaceholderBuilder? placeholderBuilder,
 
-    /// optionalParameters: {bool transitionOnUserGestures = false} , defaultValue:Literal
+    /// optionalParameters: {bool transitionOnUserGestures = false} , default:processed=BooleanLiteralImpl
     bool transitionOnUserGestures = false,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -50,13 +50,42 @@ class Hero$Mate extends Hero with Mate {
           transitionOnUserGestures: p.get('transitionOnUserGestures').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('tag', tag, isNamed: true);
-    mateUse('createRectTween', createRectTween, isNamed: true);
-    mateUse('flightShuttleBuilder', flightShuttleBuilder, isNamed: true);
-    mateUse('placeholderBuilder', placeholderBuilder, isNamed: true);
-    mateUse('transitionOnUserGestures', transitionOnUserGestures, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'tag',
+      tag,
+      isNamed: true,
+    );
+    mateUse(
+      'createRectTween',
+      createRectTween,
+      isNamed: true,
+    );
+    mateUse(
+      'flightShuttleBuilder',
+      flightShuttleBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderBuilder',
+      placeholderBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionOnUserGestures',
+      transitionOnUserGestures,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -65,13 +94,17 @@ class HeroController$Mate extends HeroController with Mate {
   /// HeroController HeroController({Tween<Rect?> Function(Rect?, Rect?)? createRectTween})
   HeroController$Mate(
       {
-      /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , defaultValue:none
+      /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , default:none
       CreateRectTween? createRectTween})
       : super(createRectTween: createRectTween) {
     mateCreateName = 'HeroController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build());
-    mateUse('createRectTween', createRectTween, isNamed: true);
+    mateUse(
+      'createRectTween',
+      createRectTween,
+      isNamed: true,
+    );
   }
 }
 
@@ -79,13 +112,13 @@ class HeroController$Mate extends HeroController with Mate {
 class HeroMode$Mate extends HeroMode with Mate {
   /// HeroMode HeroMode({Key? key, required Widget child, bool enabled = true})
   HeroMode$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
   }) : super(
           key: key,
@@ -99,8 +132,21 @@ class HeroMode$Mate extends HeroMode with Mate {
           child: p.get('child').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

@@ -18,7 +18,11 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate {
     mateCreateName = 'NumericFocusOrder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NumericFocusOrder$Mate(p.get('order').value);
-    mateUse('order', order, isNamed: false);
+    mateUse(
+      'order',
+      order,
+      isNamed: false,
+    );
   }
 }
 
@@ -33,7 +37,11 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate {
     mateCreateName = 'LexicalFocusOrder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LexicalFocusOrder$Mate(p.get('order').value);
-    mateUse('order', order, isNamed: false);
+    mateUse(
+      'order',
+      order,
+      isNamed: false,
+    );
   }
 }
 
@@ -42,13 +50,17 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
   /// OrderedTraversalPolicy OrderedTraversalPolicy({FocusTraversalPolicy? secondary})
   OrderedTraversalPolicy$Mate(
       {
-      /// optionalParameters: {FocusTraversalPolicy? secondary} , defaultValue:none
+      /// optionalParameters: {FocusTraversalPolicy? secondary} , default:none
       FocusTraversalPolicy? secondary})
       : super(secondary: secondary) {
     mateCreateName = 'OrderedTraversalPolicy';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
-    mateUse('secondary', secondary, isNamed: true);
+    mateUse(
+      'secondary',
+      secondary,
+      isNamed: true,
+    );
   }
 }
 
@@ -56,13 +68,13 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
 class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
   /// FocusTraversalOrder FocusTraversalOrder({Key? key, required FocusOrder order, required Widget child})
   FocusTraversalOrder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FocusOrder order} , defaultValue:none
+    /// optionalParameters: {required FocusOrder order} , default:none
     required FocusOrder order,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -76,9 +88,21 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
           order: p.get('order').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('order', order, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'order',
+      order,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -86,19 +110,19 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
 class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
   /// FocusTraversalGroup FocusTraversalGroup({Key? key, FocusTraversalPolicy? policy, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, required Widget child})
   FocusTraversalGroup$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {FocusTraversalPolicy? policy} , defaultValue:none
+    /// optionalParameters: {FocusTraversalPolicy? policy} , default:none
     FocusTraversalPolicy? policy,
 
-    /// optionalParameters: {bool descendantsAreFocusable = true} , defaultValue:Literal
+    /// optionalParameters: {bool descendantsAreFocusable = true} , default:processed=BooleanLiteralImpl
     bool descendantsAreFocusable = true,
 
-    /// optionalParameters: {bool descendantsAreTraversable = true} , defaultValue:Literal
+    /// optionalParameters: {bool descendantsAreTraversable = true} , default:processed=BooleanLiteralImpl
     bool descendantsAreTraversable = true,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -116,11 +140,33 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
           descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('policy', policy, isNamed: true);
-    mateUse('descendantsAreFocusable', descendantsAreFocusable, isNamed: true);
-    mateUse('descendantsAreTraversable', descendantsAreTraversable, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'policy',
+      policy,
+      isNamed: true,
+    );
+    mateUse(
+      'descendantsAreFocusable',
+      descendantsAreFocusable,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'descendantsAreTraversable',
+      descendantsAreTraversable,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -135,7 +181,11 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate {
     mateCreateName = 'RequestFocusIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RequestFocusIntent$Mate(p.get('focusNode').value);
-    mateUse('focusNode', focusNode, isNamed: false);
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: false,
+    );
   }
 }
 
@@ -145,7 +195,7 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
   DirectionalFocusIntent$Mate(
     /// requiredParameters: TraversalDirection direction
     TraversalDirection direction, {
-    /// optionalParameters: {bool ignoreTextFields = true} , defaultValue:Literal
+    /// optionalParameters: {bool ignoreTextFields = true} , default:processed=BooleanLiteralImpl
     bool ignoreTextFields = true,
   }) : super(
           direction,
@@ -157,8 +207,17 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
           p.get('direction').value,
           ignoreTextFields: p.get('ignoreTextFields').build(),
         );
-    mateUse('direction', direction, isNamed: false);
-    mateUse('ignoreTextFields', ignoreTextFields, isNamed: true);
+    mateUse(
+      'direction',
+      direction,
+      isNamed: false,
+    );
+    mateUse(
+      'ignoreTextFields',
+      ignoreTextFields,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -166,13 +225,13 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
 class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
   /// ExcludeFocusTraversal ExcludeFocusTraversal({Key? key, bool excluding = true, required Widget child})
   ExcludeFocusTraversal$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool excluding = true} , defaultValue:Literal
+    /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
     bool excluding = true,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -186,8 +245,21 @@ class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('excluding', excluding, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'excluding',
+      excluding,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

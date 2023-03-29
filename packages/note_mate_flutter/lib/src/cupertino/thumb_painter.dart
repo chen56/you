@@ -11,10 +11,10 @@ import 'package:flutter/src/painting/box_shadow.dart';
 class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
   /// CupertinoThumbPainter CupertinoThumbPainter({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSliderBoxShadows})
   CupertinoThumbPainter$Mate({
-    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Color color = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
     Color color = CupertinoColors.white,
 
-    /// optionalParameters: {List<BoxShadow> shadows = _kSliderBoxShadows} , defaultValue:unprocessed
+    /// optionalParameters: {List<BoxShadow> shadows = _kSliderBoxShadows} , default:unprocessed=SimpleIdentifierImpl
     required List<BoxShadow> shadows,
   }) : super(
           color: color,
@@ -26,16 +26,25 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
           color: p.get('color').build(),
           shadows: p.get('shadows').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUseList('shadows', shadows, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+      defaultValue: CupertinoColors.white,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
   }
 
   /// CupertinoThumbPainter CupertinoThumbPainter.switchThumb({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSwitchBoxShadows})
   CupertinoThumbPainter$Mate.switchThumb({
-    /// optionalParameters: {Color color = CupertinoColors.white} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Color color = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
     Color color = CupertinoColors.white,
 
-    /// optionalParameters: {List<BoxShadow> shadows = _kSwitchBoxShadows} , defaultValue:unprocessed
+    /// optionalParameters: {List<BoxShadow> shadows = _kSwitchBoxShadows} , default:unprocessed=SimpleIdentifierImpl
     required List<BoxShadow> shadows,
   }) : super.switchThumb(
           color: color,
@@ -47,7 +56,16 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
           color: p.get('color').build(),
           shadows: p.get('shadows').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUseList('shadows', shadows, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+      defaultValue: CupertinoColors.white,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
   }
 }

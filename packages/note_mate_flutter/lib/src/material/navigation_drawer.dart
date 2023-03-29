@@ -13,34 +13,34 @@ import 'package:flutter/src/foundation/basic_types.dart';
 class NavigationDrawer$Mate extends NavigationDrawer with Mate {
   /// NavigationDrawer NavigationDrawer({Key? key, required List<Widget> children, Color? backgroundColor, Color? shadowColor, Color? surfaceTintColor, double? elevation, Color? indicatorColor, ShapeBorder? indicatorShape, void Function(int)? onDestinationSelected, int? selectedIndex = 0})
   NavigationDrawer$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , defaultValue:none
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
+    /// optionalParameters: {Color? indicatorColor} , default:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {void Function(int)? onDestinationSelected} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onDestinationSelected} , default:none
     ValueChanged<int>? onDestinationSelected,
 
-    /// optionalParameters: {int? selectedIndex = 0} , defaultValue:Literal
+    /// optionalParameters: {int? selectedIndex = 0} , default:processed=IntegerLiteralImpl
     int? selectedIndex = 0,
   }) : super(
           key: key,
@@ -68,16 +68,57 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
           onDestinationSelected: p.get('onDestinationSelected').build(),
           selectedIndex: p.get('selectedIndex').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('indicatorColor', indicatorColor, isNamed: true);
-    mateUse('indicatorShape', indicatorShape, isNamed: true);
-    mateUse('onDestinationSelected', onDestinationSelected, isNamed: true);
-    mateUse('selectedIndex', selectedIndex, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorColor',
+      indicatorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorShape',
+      indicatorShape,
+      isNamed: true,
+    );
+    mateUse(
+      'onDestinationSelected',
+      onDestinationSelected,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedIndex',
+      selectedIndex,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -85,19 +126,19 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
 class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with Mate {
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {required Widget icon} , defaultValue:none
+    /// optionalParameters: {required Widget icon} , default:none
     required Widget icon,
 
-    /// optionalParameters: {Widget? selectedIcon} , defaultValue:none
+    /// optionalParameters: {Widget? selectedIcon} , default:none
     Widget? selectedIcon,
 
-    /// optionalParameters: {required Widget label} , defaultValue:none
+    /// optionalParameters: {required Widget label} , default:none
     required Widget label,
   }) : super(
           key: key,
@@ -115,10 +156,30 @@ class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with 
           selectedIcon: p.get('selectedIcon').build(),
           label: p.get('label').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('icon', icon, isNamed: true);
-    mateUse('selectedIcon', selectedIcon, isNamed: true);
-    mateUse('label', label, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedIcon',
+      selectedIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
   }
 }

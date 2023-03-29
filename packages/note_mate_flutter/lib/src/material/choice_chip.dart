@@ -18,82 +18,82 @@ import 'package:flutter/src/widgets/icon_theme_data.dart';
 class ChoiceChip$Mate extends ChoiceChip with Mate {
   /// ChoiceChip ChoiceChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, void Function(bool)? onSelected, double? pressElevation, required bool selected, Color? selectedColor, Color? disabledColor, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme, Color? selectedShadowColor, ShapeBorder avatarBorder = const CircleBorder()})
   ChoiceChip$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? avatar} , defaultValue:none
+    /// optionalParameters: {Widget? avatar} , default:none
     Widget? avatar,
 
-    /// optionalParameters: {required Widget label} , defaultValue:none
+    /// optionalParameters: {required Widget label} , default:none
     required Widget label,
 
-    /// optionalParameters: {TextStyle? labelStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? labelStyle} , default:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {void Function(bool)? onSelected} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onSelected} , default:none
     ValueChanged<bool>? onSelected,
 
-    /// optionalParameters: {double? pressElevation} , defaultValue:none
+    /// optionalParameters: {double? pressElevation} , default:none
     double? pressElevation,
 
-    /// optionalParameters: {required bool selected} , defaultValue:none
+    /// optionalParameters: {required bool selected} , default:none
     required bool selected,
 
-    /// optionalParameters: {Color? selectedColor} , defaultValue:none
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? disabledColor} , defaultValue:none
+    /// optionalParameters: {Color? disabledColor} , default:none
     Color? disabledColor,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {BorderSide? side} , defaultValue:none
+    /// optionalParameters: {BorderSide? side} , default:none
     BorderSide? side,
 
-    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
+    /// optionalParameters: {OutlinedBorder? shape} , default:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
+    /// optionalParameters: {IconThemeData? iconTheme} , default:none
     IconThemeData? iconTheme,
 
-    /// optionalParameters: {Color? selectedShadowColor} , defaultValue:none
+    /// optionalParameters: {Color? selectedShadowColor} , default:none
     Color? selectedShadowColor,
 
-    /// optionalParameters: {ShapeBorder avatarBorder = const CircleBorder()} , defaultValue:unprocessed
+    /// optionalParameters: {ShapeBorder avatarBorder = const CircleBorder()} , default:unprocessed=InstanceCreationExpressionImpl
     required ShapeBorder avatarBorder,
   }) : super(
           key: key,
@@ -153,31 +153,137 @@ class ChoiceChip$Mate extends ChoiceChip with Mate {
           selectedShadowColor: p.get('selectedShadowColor').build(),
           avatarBorder: p.get('avatarBorder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('avatar', avatar, isNamed: true);
-    mateUse('label', label, isNamed: true);
-    mateUse('labelStyle', labelStyle, isNamed: true);
-    mateUse('labelPadding', labelPadding, isNamed: true);
-    mateUse('onSelected', onSelected, isNamed: true);
-    mateUse('pressElevation', pressElevation, isNamed: true);
-    mateUse('selected', selected, isNamed: true);
-    mateUse('selectedColor', selectedColor, isNamed: true);
-    mateUse('disabledColor', disabledColor, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('side', side, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('visualDensity', visualDensity, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('iconTheme', iconTheme, isNamed: true);
-    mateUse('selectedShadowColor', selectedShadowColor, isNamed: true);
-    mateUse('avatarBorder', avatarBorder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'avatar',
+      avatar,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'labelStyle',
+      labelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'labelPadding',
+      labelPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelected',
+      onSelected,
+      isNamed: true,
+    );
+    mateUse(
+      'pressElevation',
+      pressElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledColor',
+      disabledColor,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconTheme',
+      iconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedShadowColor',
+      selectedShadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'avatarBorder',
+      avatarBorder,
+      isNamed: true,
+    );
   }
 }

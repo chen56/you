@@ -9,79 +9,79 @@ import 'package:flutter/foundation.dart';
 class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
   /// TextTreeConfiguration TextTreeConfiguration({required String prefixLineOne, required String prefixOtherLines, required String prefixLastChildLineOne, required String prefixOtherLinesRootNode, required String linkCharacter, required String propertyPrefixIfChildren, required String propertyPrefixNoChildren, String lineBreak = '\n', bool lineBreakProperties = true, String afterName = ':', String afterDescriptionIfBody = '', String afterDescription = '', String beforeProperties = '', String afterProperties = '', String mandatoryAfterProperties = '', String propertySeparator = '', String bodyIndent = '', String footer = '', bool showChildren = true, bool addBlankLineIfNoChildren = true, bool isNameOnOwnLine = false, bool isBlankLineBetweenPropertiesAndChildren = true, String beforeName = '', String suffixLineOne = '', String mandatoryFooter = ''})
   TextTreeConfiguration$Mate({
-    /// optionalParameters: {required String prefixLineOne} , defaultValue:none
+    /// optionalParameters: {required String prefixLineOne} , default:none
     required String prefixLineOne,
 
-    /// optionalParameters: {required String prefixOtherLines} , defaultValue:none
+    /// optionalParameters: {required String prefixOtherLines} , default:none
     required String prefixOtherLines,
 
-    /// optionalParameters: {required String prefixLastChildLineOne} , defaultValue:none
+    /// optionalParameters: {required String prefixLastChildLineOne} , default:none
     required String prefixLastChildLineOne,
 
-    /// optionalParameters: {required String prefixOtherLinesRootNode} , defaultValue:none
+    /// optionalParameters: {required String prefixOtherLinesRootNode} , default:none
     required String prefixOtherLinesRootNode,
 
-    /// optionalParameters: {required String linkCharacter} , defaultValue:none
+    /// optionalParameters: {required String linkCharacter} , default:none
     required String linkCharacter,
 
-    /// optionalParameters: {required String propertyPrefixIfChildren} , defaultValue:none
+    /// optionalParameters: {required String propertyPrefixIfChildren} , default:none
     required String propertyPrefixIfChildren,
 
-    /// optionalParameters: {required String propertyPrefixNoChildren} , defaultValue:none
+    /// optionalParameters: {required String propertyPrefixNoChildren} , default:none
     required String propertyPrefixNoChildren,
 
-    /// optionalParameters: {String lineBreak = '\n'} , defaultValue:Literal
+    /// optionalParameters: {String lineBreak = '\n'} , default:processed=SimpleStringLiteralImpl
     String lineBreak = '\n',
 
-    /// optionalParameters: {bool lineBreakProperties = true} , defaultValue:Literal
+    /// optionalParameters: {bool lineBreakProperties = true} , default:processed=BooleanLiteralImpl
     bool lineBreakProperties = true,
 
-    /// optionalParameters: {String afterName = ':'} , defaultValue:Literal
+    /// optionalParameters: {String afterName = ':'} , default:processed=SimpleStringLiteralImpl
     String afterName = ':',
 
-    /// optionalParameters: {String afterDescriptionIfBody = ''} , defaultValue:Literal
+    /// optionalParameters: {String afterDescriptionIfBody = ''} , default:processed=SimpleStringLiteralImpl
     String afterDescriptionIfBody = '',
 
-    /// optionalParameters: {String afterDescription = ''} , defaultValue:Literal
+    /// optionalParameters: {String afterDescription = ''} , default:processed=SimpleStringLiteralImpl
     String afterDescription = '',
 
-    /// optionalParameters: {String beforeProperties = ''} , defaultValue:Literal
+    /// optionalParameters: {String beforeProperties = ''} , default:processed=SimpleStringLiteralImpl
     String beforeProperties = '',
 
-    /// optionalParameters: {String afterProperties = ''} , defaultValue:Literal
+    /// optionalParameters: {String afterProperties = ''} , default:processed=SimpleStringLiteralImpl
     String afterProperties = '',
 
-    /// optionalParameters: {String mandatoryAfterProperties = ''} , defaultValue:Literal
+    /// optionalParameters: {String mandatoryAfterProperties = ''} , default:processed=SimpleStringLiteralImpl
     String mandatoryAfterProperties = '',
 
-    /// optionalParameters: {String propertySeparator = ''} , defaultValue:Literal
+    /// optionalParameters: {String propertySeparator = ''} , default:processed=SimpleStringLiteralImpl
     String propertySeparator = '',
 
-    /// optionalParameters: {String bodyIndent = ''} , defaultValue:Literal
+    /// optionalParameters: {String bodyIndent = ''} , default:processed=SimpleStringLiteralImpl
     String bodyIndent = '',
 
-    /// optionalParameters: {String footer = ''} , defaultValue:Literal
+    /// optionalParameters: {String footer = ''} , default:processed=SimpleStringLiteralImpl
     String footer = '',
 
-    /// optionalParameters: {bool showChildren = true} , defaultValue:Literal
+    /// optionalParameters: {bool showChildren = true} , default:processed=BooleanLiteralImpl
     bool showChildren = true,
 
-    /// optionalParameters: {bool addBlankLineIfNoChildren = true} , defaultValue:Literal
+    /// optionalParameters: {bool addBlankLineIfNoChildren = true} , default:processed=BooleanLiteralImpl
     bool addBlankLineIfNoChildren = true,
 
-    /// optionalParameters: {bool isNameOnOwnLine = false} , defaultValue:Literal
+    /// optionalParameters: {bool isNameOnOwnLine = false} , default:processed=BooleanLiteralImpl
     bool isNameOnOwnLine = false,
 
-    /// optionalParameters: {bool isBlankLineBetweenPropertiesAndChildren = true} , defaultValue:Literal
+    /// optionalParameters: {bool isBlankLineBetweenPropertiesAndChildren = true} , default:processed=BooleanLiteralImpl
     bool isBlankLineBetweenPropertiesAndChildren = true,
 
-    /// optionalParameters: {String beforeName = ''} , defaultValue:Literal
+    /// optionalParameters: {String beforeName = ''} , default:processed=SimpleStringLiteralImpl
     String beforeName = '',
 
-    /// optionalParameters: {String suffixLineOne = ''} , defaultValue:Literal
+    /// optionalParameters: {String suffixLineOne = ''} , default:processed=SimpleStringLiteralImpl
     String suffixLineOne = '',
 
-    /// optionalParameters: {String mandatoryFooter = ''} , defaultValue:Literal
+    /// optionalParameters: {String mandatoryFooter = ''} , default:processed=SimpleStringLiteralImpl
     String mandatoryFooter = '',
   }) : super(
           prefixLineOne: prefixLineOne,
@@ -139,31 +139,149 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
         );
-    mateUse('prefixLineOne', prefixLineOne, isNamed: true);
-    mateUse('prefixOtherLines', prefixOtherLines, isNamed: true);
-    mateUse('prefixLastChildLineOne', prefixLastChildLineOne, isNamed: true);
-    mateUse('prefixOtherLinesRootNode', prefixOtherLinesRootNode, isNamed: true);
-    mateUse('linkCharacter', linkCharacter, isNamed: true);
-    mateUse('propertyPrefixIfChildren', propertyPrefixIfChildren, isNamed: true);
-    mateUse('propertyPrefixNoChildren', propertyPrefixNoChildren, isNamed: true);
-    mateUse('lineBreak', lineBreak, isNamed: true);
-    mateUse('lineBreakProperties', lineBreakProperties, isNamed: true);
-    mateUse('afterName', afterName, isNamed: true);
-    mateUse('afterDescriptionIfBody', afterDescriptionIfBody, isNamed: true);
-    mateUse('afterDescription', afterDescription, isNamed: true);
-    mateUse('beforeProperties', beforeProperties, isNamed: true);
-    mateUse('afterProperties', afterProperties, isNamed: true);
-    mateUse('mandatoryAfterProperties', mandatoryAfterProperties, isNamed: true);
-    mateUse('propertySeparator', propertySeparator, isNamed: true);
-    mateUse('bodyIndent', bodyIndent, isNamed: true);
-    mateUse('footer', footer, isNamed: true);
-    mateUse('showChildren', showChildren, isNamed: true);
-    mateUse('addBlankLineIfNoChildren', addBlankLineIfNoChildren, isNamed: true);
-    mateUse('isNameOnOwnLine', isNameOnOwnLine, isNamed: true);
-    mateUse('isBlankLineBetweenPropertiesAndChildren', isBlankLineBetweenPropertiesAndChildren, isNamed: true);
-    mateUse('beforeName', beforeName, isNamed: true);
-    mateUse('suffixLineOne', suffixLineOne, isNamed: true);
-    mateUse('mandatoryFooter', mandatoryFooter, isNamed: true);
+    mateUse(
+      'prefixLineOne',
+      prefixLineOne,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixOtherLines',
+      prefixOtherLines,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixLastChildLineOne',
+      prefixLastChildLineOne,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixOtherLinesRootNode',
+      prefixOtherLinesRootNode,
+      isNamed: true,
+    );
+    mateUse(
+      'linkCharacter',
+      linkCharacter,
+      isNamed: true,
+    );
+    mateUse(
+      'propertyPrefixIfChildren',
+      propertyPrefixIfChildren,
+      isNamed: true,
+    );
+    mateUse(
+      'propertyPrefixNoChildren',
+      propertyPrefixNoChildren,
+      isNamed: true,
+    );
+    mateUse(
+      'lineBreak',
+      lineBreak,
+      isNamed: true,
+      defaultValue: '\n',
+    );
+    mateUse(
+      'lineBreakProperties',
+      lineBreakProperties,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'afterName',
+      afterName,
+      isNamed: true,
+      defaultValue: ':',
+    );
+    mateUse(
+      'afterDescriptionIfBody',
+      afterDescriptionIfBody,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'afterDescription',
+      afterDescription,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'beforeProperties',
+      beforeProperties,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'afterProperties',
+      afterProperties,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'mandatoryAfterProperties',
+      mandatoryAfterProperties,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'propertySeparator',
+      propertySeparator,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'bodyIndent',
+      bodyIndent,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'footer',
+      footer,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'showChildren',
+      showChildren,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'addBlankLineIfNoChildren',
+      addBlankLineIfNoChildren,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'isNameOnOwnLine',
+      isNameOnOwnLine,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isBlankLineBetweenPropertiesAndChildren',
+      isBlankLineBetweenPropertiesAndChildren,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'beforeName',
+      beforeName,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'suffixLineOne',
+      suffixLineOne,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'mandatoryFooter',
+      mandatoryFooter,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 }
 
@@ -171,17 +289,17 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
 class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
   /// TextTreeRenderer TextTreeRenderer({DiagnosticLevel minLevel = DiagnosticLevel.debug, int wrapWidth = 100, int wrapWidthProperties = 65, int maxDescendentsTruncatableNode = -1})
   TextTreeRenderer$Mate({
-    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , default:processed=PrefixedIdentifierImpl
     DiagnosticLevel minLevel = DiagnosticLevel.debug,
 
-    /// optionalParameters: {int wrapWidth = 100} , defaultValue:Literal
+    /// optionalParameters: {int wrapWidth = 100} , default:processed=IntegerLiteralImpl
     int wrapWidth = 100,
 
-    /// optionalParameters: {int wrapWidthProperties = 65} , defaultValue:Literal
+    /// optionalParameters: {int wrapWidthProperties = 65} , default:processed=IntegerLiteralImpl
     int wrapWidthProperties = 65,
 
-    /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , defaultValue:unprocessed
-    required int maxDescendentsTruncatableNode,
+    /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , default:processed=PrefixExpressionImpl
+    int maxDescendentsTruncatableNode = -1,
   }) : super(
           minLevel: minLevel,
           wrapWidth: wrapWidth,
@@ -196,10 +314,30 @@ class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
           maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
         );
-    mateUse('minLevel', minLevel, isNamed: true);
-    mateUse('wrapWidth', wrapWidth, isNamed: true);
-    mateUse('wrapWidthProperties', wrapWidthProperties, isNamed: true);
-    mateUse('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode, isNamed: true);
+    mateUse(
+      'minLevel',
+      minLevel,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.debug,
+    );
+    mateUse(
+      'wrapWidth',
+      wrapWidth,
+      isNamed: true,
+      defaultValue: 100,
+    );
+    mateUse(
+      'wrapWidthProperties',
+      wrapWidthProperties,
+      isNamed: true,
+      defaultValue: 65,
+    );
+    mateUse(
+      'maxDescendentsTruncatableNode',
+      maxDescendentsTruncatableNode,
+      isNamed: true,
+      defaultValue: -1,
+    );
   }
 }
 
@@ -212,10 +350,10 @@ class MessageProperty$Mate extends MessageProperty with Mate {
 
     /// requiredParameters: String message
     String message, {
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
@@ -231,10 +369,28 @@ class MessageProperty$Mate extends MessageProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('message', message, isNamed: false);
-    mateUse('style', style, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -247,29 +403,29 @@ class StringProperty$Mate extends StringProperty with Mate {
 
     /// requiredParameters: String? value
     String? value, {
-    /// optionalParameters: {String? description} , defaultValue:none
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {bool quoted = true} , defaultValue:Literal
+    /// optionalParameters: {bool quoted = true} , default:processed=BooleanLiteralImpl
     bool quoted = true,
 
-    /// optionalParameters: {String? ifEmpty} , defaultValue:none
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -296,16 +452,60 @@ class StringProperty$Mate extends StringProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('description', description, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('quoted', quoted, isNamed: true);
-    mateUse('ifEmpty', ifEmpty, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'quoted',
+      quoted,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -318,26 +518,26 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
 
     /// requiredParameters: double? value
     double? value, {
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? unit} , defaultValue:none
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -362,15 +562,54 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('unit', unit, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 
   /// DoubleProperty DoubleProperty.lazy(String name, double? Function() computeValue, {String? ifNull, bool showName = true, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
@@ -380,23 +619,23 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
 
     /// requiredParameters: double? Function() computeValue
     ComputePropertyValueCallback<double> computeValue, {
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {String? unit} , defaultValue:none
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super.lazy(
           name,
           computeValue,
@@ -419,14 +658,48 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('computeValue', computeValue, isNamed: false);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('unit', unit, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'computeValue',
+      computeValue,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -439,23 +712,23 @@ class IntProperty$Mate extends IntProperty with Mate {
 
     /// requiredParameters: int? value
     int? value, {
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {String? unit} , defaultValue:none
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -478,14 +751,49 @@ class IntProperty$Mate extends IntProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('unit', unit, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -498,20 +806,20 @@ class PercentProperty$Mate extends PercentProperty with Mate {
 
     /// requiredParameters: double? fraction
     double? fraction, {
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {String? unit} , defaultValue:none
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           fraction,
@@ -532,13 +840,43 @@ class PercentProperty$Mate extends PercentProperty with Mate {
           unit: p.get('unit').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('fraction', fraction, isNamed: false);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('unit', unit, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'fraction',
+      fraction,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -548,22 +886,22 @@ class FlagProperty$Mate extends FlagProperty with Mate {
   FlagProperty$Mate(
     /// requiredParameters: String name
     String name, {
-    /// optionalParameters: {required bool? value} , defaultValue:none
+    /// optionalParameters: {required bool? value} , default:none
     required bool? value,
 
-    /// optionalParameters: {String? ifTrue} , defaultValue:none
+    /// optionalParameters: {String? ifTrue} , default:none
     String? ifTrue,
 
-    /// optionalParameters: {String? ifFalse} , defaultValue:none
+    /// optionalParameters: {String? ifFalse} , default:none
     String? ifFalse,
 
-    /// optionalParameters: {bool showName = false} , defaultValue:Literal
+    /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
     bool showName = false,
 
-    /// optionalParameters: {Object? defaultValue} , defaultValue:none
+    /// optionalParameters: {Object? defaultValue} , default:none
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
@@ -585,13 +923,43 @@ class FlagProperty$Mate extends FlagProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: true);
-    mateUse('ifTrue', ifTrue, isNamed: true);
-    mateUse('ifFalse', ifFalse, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'ifTrue',
+      ifTrue,
+      isNamed: true,
+    );
+    mateUse(
+      'ifFalse',
+      ifFalse,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -604,26 +972,26 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
 
     /// requiredParameters: Iterable<T>? value
     Iterable<T>? value, {
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty = '[]'} , defaultValue:Literal
+    /// optionalParameters: {String? ifEmpty = '[]'} , default:processed=SimpleStringLiteralImpl
     String? ifEmpty = '[]',
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , defaultValue:is!ConstVariableElement
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -648,15 +1016,56 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('ifEmpty', ifEmpty, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('showSeparator', showSeparator, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+      defaultValue: '[]',
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -669,11 +1078,11 @@ class EnumProperty$Mate<T> extends EnumProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -688,10 +1097,27 @@ class EnumProperty$Mate<T> extends EnumProperty<T> with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -704,17 +1130,17 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {String? ifPresent} , defaultValue:none
+    /// optionalParameters: {String? ifPresent} , default:none
     String? ifPresent,
 
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = false} , defaultValue:Literal
+    /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
     bool showName = false,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -733,12 +1159,38 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           showName: p.get('showName').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('ifPresent', ifPresent, isNamed: true);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifPresent',
+      ifPresent,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 
   /// ObjectFlagProperty<T> ObjectFlagProperty.has(String name, T? value, {DiagnosticLevel level = DiagnosticLevel.info})
@@ -748,8 +1200,8 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super.has(
           name,
           value,
@@ -762,9 +1214,22 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           p.get('value').value,
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -777,17 +1242,17 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
 
     /// requiredParameters: Map<String, T?> value
     Map<String, T?> value, {
-    /// optionalParameters: {String? ifEmpty} , defaultValue:none
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , defaultValue:is!ConstVariableElement
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -806,12 +1271,39 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('ifEmpty', ifEmpty, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('showSeparator', showSeparator, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -824,46 +1316,46 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {String? description} , defaultValue:none
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty} , defaultValue:none
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:Literal
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
     bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     bool showSeparator = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:unprocessed
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {bool missingIfNull = false} , defaultValue:Literal
+    /// optionalParameters: {bool missingIfNull = false} , default:processed=BooleanLiteralImpl
     bool missingIfNull = false,
 
-    /// optionalParameters: {String? linePrefix} , defaultValue:none
+    /// optionalParameters: {String? linePrefix} , default:none
     String? linePrefix,
 
-    /// optionalParameters: {bool expandableValue = false} , defaultValue:Literal
+    /// optionalParameters: {bool expandableValue = false} , default:processed=BooleanLiteralImpl
     bool expandableValue = false,
 
-    /// optionalParameters: {bool allowWrap = true} , defaultValue:Literal
+    /// optionalParameters: {bool allowWrap = true} , default:processed=BooleanLiteralImpl
     bool allowWrap = true,
 
-    /// optionalParameters: {bool allowNameWrap = true} , defaultValue:Literal
+    /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
     bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
@@ -903,22 +1395,94 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('description', description, isNamed: true);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('ifEmpty', ifEmpty, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('showSeparator', showSeparator, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('missingIfNull', missingIfNull, isNamed: true);
-    mateUse('linePrefix', linePrefix, isNamed: true);
-    mateUse('expandableValue', expandableValue, isNamed: true);
-    mateUse('allowWrap', allowWrap, isNamed: true);
-    mateUse('allowNameWrap', allowNameWrap, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'missingIfNull',
+      missingIfNull,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'linePrefix',
+      linePrefix,
+      isNamed: true,
+    );
+    mateUse(
+      'expandableValue',
+      expandableValue,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'allowWrap',
+      allowWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'allowNameWrap',
+      allowNameWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 
   /// DiagnosticsProperty<T> DiagnosticsProperty.lazy(String? name, T? Function() computeValue, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
@@ -928,43 +1492,43 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 
     /// requiredParameters: T? Function() computeValue
     ComputePropertyValueCallback<T> computeValue, {
-    /// optionalParameters: {String? description} , defaultValue:none
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {String? ifNull} , defaultValue:none
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty} , defaultValue:none
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:Literal
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
     bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     bool showSeparator = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:unprocessed
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {bool missingIfNull = false} , defaultValue:Literal
+    /// optionalParameters: {bool missingIfNull = false} , default:processed=BooleanLiteralImpl
     bool missingIfNull = false,
 
-    /// optionalParameters: {bool expandableValue = false} , defaultValue:Literal
+    /// optionalParameters: {bool expandableValue = false} , default:processed=BooleanLiteralImpl
     bool expandableValue = false,
 
-    /// optionalParameters: {bool allowWrap = true} , defaultValue:Literal
+    /// optionalParameters: {bool allowWrap = true} , default:processed=BooleanLiteralImpl
     bool allowWrap = true,
 
-    /// optionalParameters: {bool allowNameWrap = true} , defaultValue:Literal
+    /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
     bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
     DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     DiagnosticLevel level = DiagnosticLevel.info,
   }) : super.lazy(
           name,
@@ -1002,21 +1566,89 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('computeValue', computeValue, isNamed: false);
-    mateUse('description', description, isNamed: true);
-    mateUse('ifNull', ifNull, isNamed: true);
-    mateUse('ifEmpty', ifEmpty, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('showSeparator', showSeparator, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('missingIfNull', missingIfNull, isNamed: true);
-    mateUse('expandableValue', expandableValue, isNamed: true);
-    mateUse('allowWrap', allowWrap, isNamed: true);
-    mateUse('allowNameWrap', allowNameWrap, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'computeValue',
+      computeValue,
+      isNamed: false,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'missingIfNull',
+      missingIfNull,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'expandableValue',
+      expandableValue,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'allowWrap',
+      allowWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'allowNameWrap',
+      allowNameWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -1024,13 +1656,13 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNode<T> with Mate {
   /// DiagnosticableNode<T> DiagnosticableNode({String? name, required T value, required DiagnosticsTreeStyle? style})
   DiagnosticableNode$Mate({
-    /// optionalParameters: {String? name} , defaultValue:none
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {required T value} , defaultValue:none
+    /// optionalParameters: {required T value} , default:none
     required T value,
 
-    /// optionalParameters: {required DiagnosticsTreeStyle? style} , defaultValue:none
+    /// optionalParameters: {required DiagnosticsTreeStyle? style} , default:none
     required DiagnosticsTreeStyle? style,
   }) : super(
           name: name,
@@ -1044,9 +1676,21 @@ class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNo
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    mateUse('name', name, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('style', style, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -1054,13 +1698,13 @@ class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNo
 class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
   /// DiagnosticableTreeNode DiagnosticableTreeNode({String? name, required DiagnosticableTree value, required DiagnosticsTreeStyle? style})
   DiagnosticableTreeNode$Mate({
-    /// optionalParameters: {String? name} , defaultValue:none
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {required DiagnosticableTree value} , defaultValue:none
+    /// optionalParameters: {required DiagnosticableTree value} , default:none
     required DiagnosticableTree value,
 
-    /// optionalParameters: {required DiagnosticsTreeStyle? style} , defaultValue:none
+    /// optionalParameters: {required DiagnosticsTreeStyle? style} , default:none
     required DiagnosticsTreeStyle? style,
   }) : super(
           name: name,
@@ -1074,9 +1718,21 @@ class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    mateUse('name', name, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('style', style, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -1091,7 +1747,11 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
     mateCreateName = 'DiagnosticPropertiesBuilder.fromProperties';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
-    mateUseList('properties', properties, isNamed: false);
+    mateUseList(
+      'properties',
+      properties,
+      isNamed: false,
+    );
   }
 }
 
@@ -1099,37 +1759,37 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
 class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
   /// DiagnosticsBlock DiagnosticsBlock({String? name, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace, bool showName = true, bool showSeparator = true, String? linePrefix, Object? value, String? description, DiagnosticLevel level = DiagnosticLevel.info, bool allowTruncate = false, List<DiagnosticsNode> children = const <DiagnosticsNode>[], List<DiagnosticsNode> properties = const <DiagnosticsNode>[]})
   DiagnosticsBlock$Mate({
-    /// optionalParameters: {String? name} , defaultValue:none
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , default:processed=PrefixedIdentifierImpl
     DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace,
 
-    /// optionalParameters: {bool showName = true} , defaultValue:Literal
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
     bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     bool showSeparator = true,
 
-    /// optionalParameters: {String? linePrefix} , defaultValue:none
+    /// optionalParameters: {String? linePrefix} , default:none
     String? linePrefix,
 
-    /// optionalParameters: {Object? value} , defaultValue:none
+    /// optionalParameters: {Object? value} , default:none
     Object? value,
 
-    /// optionalParameters: {String? description} , defaultValue:none
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     DiagnosticLevel level = DiagnosticLevel.info,
 
-    /// optionalParameters: {bool allowTruncate = false} , defaultValue:Literal
+    /// optionalParameters: {bool allowTruncate = false} , default:processed=BooleanLiteralImpl
     bool allowTruncate = false,
 
-    /// optionalParameters: {List<DiagnosticsNode> children = const <DiagnosticsNode>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<DiagnosticsNode> children = const <DiagnosticsNode>[]} , default:unprocessed=ListLiteralImpl
     required List<DiagnosticsNode> children,
 
-    /// optionalParameters: {List<DiagnosticsNode> properties = const <DiagnosticsNode>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<DiagnosticsNode> properties = const <DiagnosticsNode>[]} , default:unprocessed=ListLiteralImpl
     required List<DiagnosticsNode> properties,
   }) : super(
           name: name,
@@ -1159,16 +1819,65 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
           children: p.get('children').build(),
           properties: p.get('properties').build(),
         );
-    mateUse('name', name, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('showSeparator', showSeparator, isNamed: true);
-    mateUse('linePrefix', linePrefix, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('description', description, isNamed: true);
-    mateUse('level', level, isNamed: true);
-    mateUse('allowTruncate', allowTruncate, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUseList('properties', properties, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.whitespace,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'linePrefix',
+      linePrefix,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
+    mateUse(
+      'allowTruncate',
+      allowTruncate,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUseList(
+      'properties',
+      properties,
+      isNamed: true,
+    );
   }
 }

@@ -10,10 +10,10 @@ import 'package:flutter/src/foundation/key.dart';
 class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate {
   /// SegmentedButtonThemeData SegmentedButtonThemeData({ButtonStyle? style, Widget? selectedIcon})
   SegmentedButtonThemeData$Mate({
-    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {Widget? selectedIcon} , defaultValue:none
+    /// optionalParameters: {Widget? selectedIcon} , default:none
     Widget? selectedIcon,
   }) : super(
           style: style,
@@ -25,8 +25,16 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate {
           style: p.get('style').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    mateUse('style', style, isNamed: true);
-    mateUse('selectedIcon', selectedIcon, isNamed: true);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedIcon',
+      selectedIcon,
+      isNamed: true,
+    );
   }
 }
 
@@ -34,13 +42,13 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate {
 class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with Mate {
   /// SegmentedButtonTheme SegmentedButtonTheme({Key? key, required SegmentedButtonThemeData data, required Widget child})
   SegmentedButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SegmentedButtonThemeData data} , defaultValue:none
+    /// optionalParameters: {required SegmentedButtonThemeData data} , default:none
     required SegmentedButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -54,8 +62,20 @@ class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

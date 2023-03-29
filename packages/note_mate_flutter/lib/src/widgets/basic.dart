@@ -44,13 +44,13 @@ export 'package:flutter/painting.dart';
 class Directionality$Mate extends Directionality with Mate {
   /// Directionality Directionality({Key? key, required TextDirection textDirection, required Widget child})
   Directionality$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -64,9 +64,21 @@ class Directionality$Mate extends Directionality with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -74,16 +86,16 @@ class Directionality$Mate extends Directionality with Mate {
 class Opacity$Mate extends Opacity with Mate {
   /// Opacity Opacity({Key? key, required double opacity, bool alwaysIncludeSemantics = false, Widget? child})
   Opacity$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double opacity} , defaultValue:none
+    /// optionalParameters: {required double opacity} , default:none
     required double opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -99,10 +111,27 @@ class Opacity$Mate extends Opacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -110,16 +139,16 @@ class Opacity$Mate extends Opacity with Mate {
 class ShaderMask$Mate extends ShaderMask with Mate {
   /// ShaderMask ShaderMask({Key? key, required Shader Function(Rect) shaderCallback, BlendMode blendMode = BlendMode.modulate, Widget? child})
   ShaderMask$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , defaultValue:none
+    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , default:none
     required ShaderCallback shaderCallback,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:processed=PrefixedIdentifierImpl
     BlendMode blendMode = BlendMode.modulate,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -135,10 +164,27 @@ class ShaderMask$Mate extends ShaderMask with Mate {
           blendMode: p.get('blendMode').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('shaderCallback', shaderCallback, isNamed: true);
-    mateUse('blendMode', blendMode, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'shaderCallback',
+      shaderCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.modulate,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -146,16 +192,16 @@ class ShaderMask$Mate extends ShaderMask with Mate {
 class BackdropFilter$Mate extends BackdropFilter with Mate {
   /// BackdropFilter BackdropFilter({Key? key, required ImageFilter filter, Widget? child, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilter$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ImageFilter filter} , defaultValue:none
+    /// optionalParameters: {required ImageFilter filter} , default:none
     required ImageFilter filter,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
     BlendMode blendMode = BlendMode.srcOver,
   }) : super(
           key: key,
@@ -171,10 +217,27 @@ class BackdropFilter$Mate extends BackdropFilter with Mate {
           child: p.get('child').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('filter', filter, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('blendMode', blendMode, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'filter',
+      filter,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.srcOver,
+    );
   }
 }
 
@@ -182,25 +245,25 @@ class BackdropFilter$Mate extends BackdropFilter with Mate {
 class CustomPaint$Mate extends CustomPaint with Mate {
   /// CustomPaint CustomPaint({Key? key, CustomPainter? painter, CustomPainter? foregroundPainter, Size size = Size.zero, bool isComplex = false, bool willChange = false, Widget? child})
   CustomPaint$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomPainter? painter} , defaultValue:none
+    /// optionalParameters: {CustomPainter? painter} , default:none
     CustomPainter? painter,
 
-    /// optionalParameters: {CustomPainter? foregroundPainter} , defaultValue:none
+    /// optionalParameters: {CustomPainter? foregroundPainter} , default:none
     CustomPainter? foregroundPainter,
 
-    /// optionalParameters: {Size size = Size.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
     Size size = Size.zero,
 
-    /// optionalParameters: {bool isComplex = false} , defaultValue:Literal
+    /// optionalParameters: {bool isComplex = false} , default:processed=BooleanLiteralImpl
     bool isComplex = false,
 
-    /// optionalParameters: {bool willChange = false} , defaultValue:Literal
+    /// optionalParameters: {bool willChange = false} , default:processed=BooleanLiteralImpl
     bool willChange = false,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -222,13 +285,44 @@ class CustomPaint$Mate extends CustomPaint with Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('painter', painter, isNamed: true);
-    mateUse('foregroundPainter', foregroundPainter, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('isComplex', isComplex, isNamed: true);
-    mateUse('willChange', willChange, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'painter',
+      painter,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundPainter',
+      foregroundPainter,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: Size.zero,
+    );
+    mateUse(
+      'isComplex',
+      isComplex,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'willChange',
+      willChange,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -236,16 +330,16 @@ class CustomPaint$Mate extends CustomPaint with Mate {
 class ClipRect$Mate extends ClipRect with Mate {
   /// ClipRect ClipRect({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.hardEdge, Widget? child})
   ClipRect$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -261,10 +355,27 @@ class ClipRect$Mate extends ClipRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -272,19 +383,19 @@ class ClipRect$Mate extends ClipRect with Mate {
 class ClipRRect$Mate extends ClipRRect with Mate {
   /// ClipRRect ClipRRect({Key? key, BorderRadiusGeometry? borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipRRect$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
     BorderRadiusGeometry? borderRadius = BorderRadius.zero,
 
-    /// optionalParameters: {CustomClipper<RRect>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
     CustomClipper<RRect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.antiAlias,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -302,11 +413,33 @@ class ClipRRect$Mate extends ClipRRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+      defaultValue: BorderRadius.zero,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -314,16 +447,16 @@ class ClipRRect$Mate extends ClipRRect with Mate {
 class ClipOval$Mate extends ClipOval with Mate {
   /// ClipOval ClipOval({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipOval$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.antiAlias,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -339,10 +472,27 @@ class ClipOval$Mate extends ClipOval with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -350,16 +500,16 @@ class ClipOval$Mate extends ClipOval with Mate {
 class ClipPath$Mate extends ClipPath with Mate {
   /// ClipPath ClipPath({Key? key, CustomClipper<Path>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipPath$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Path>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<Path>? clipper} , default:none
     CustomClipper<Path>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.antiAlias,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -375,10 +525,27 @@ class ClipPath$Mate extends ClipPath with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -386,28 +553,28 @@ class ClipPath$Mate extends ClipPath with Mate {
 class PhysicalModel$Mate extends PhysicalModel with Mate {
   /// PhysicalModel PhysicalModel({Key? key, BoxShape shape = BoxShape.rectangle, Clip clipBehavior = Clip.none, BorderRadius? borderRadius, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalModel$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
     BoxShape shape = BoxShape.rectangle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {double elevation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
     double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color shadowColor,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -431,14 +598,49 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+      defaultValue: BoxShape.rectangle,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -446,25 +648,25 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
 class PhysicalShape$Mate extends PhysicalShape with Mate {
   /// PhysicalShape PhysicalShape({Key? key, required CustomClipper<Path> clipper, Clip clipBehavior = Clip.none, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalShape$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required CustomClipper<Path> clipper} , defaultValue:none
+    /// optionalParameters: {required CustomClipper<Path> clipper} , default:none
     required CustomClipper<Path> clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {double elevation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
     double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color shadowColor,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -486,13 +688,43 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -500,25 +732,25 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
 class Transform$Mate extends Transform with Mate {
   /// Transform Transform({Key? key, required Matrix4 transform, Offset? origin, AlignmentGeometry? alignment, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Matrix4 transform} , defaultValue:none
+    /// optionalParameters: {required Matrix4 transform} , default:none
     required Matrix4 transform,
 
-    /// optionalParameters: {Offset? origin} , defaultValue:none
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -540,36 +772,65 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('transform', transform, isNamed: true);
-    mateUse('origin', origin, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.rotate({Key? key, required double angle, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.rotate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double angle} , defaultValue:none
+    /// optionalParameters: {required double angle} , default:none
     required double angle,
 
-    /// optionalParameters: {Offset? origin} , defaultValue:none
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry? alignment = Alignment.center,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.rotate(
           key: key,
@@ -591,30 +852,60 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('angle', angle, isNamed: true);
-    mateUse('origin', origin, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'angle',
+      angle,
+      isNamed: true,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.translate({Key? key, required Offset offset, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.translate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset offset} , defaultValue:none
+    /// optionalParameters: {required Offset offset} , default:none
     required Offset offset,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.translate(
           key: key,
@@ -632,40 +923,61 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.scale({Key? key, double? scale, double? scaleX, double? scaleY, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.scale({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? scale} , defaultValue:none
+    /// optionalParameters: {double? scale} , default:none
     double? scale,
 
-    /// optionalParameters: {double? scaleX} , defaultValue:none
+    /// optionalParameters: {double? scaleX} , default:none
     double? scaleX,
 
-    /// optionalParameters: {double? scaleY} , defaultValue:none
+    /// optionalParameters: {double? scaleY} , default:none
     double? scaleY,
 
-    /// optionalParameters: {Offset? origin} , defaultValue:none
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry? alignment = Alignment.center,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.scale(
           key: key,
@@ -691,38 +1003,76 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('scale', scale, isNamed: true);
-    mateUse('scaleX', scaleX, isNamed: true);
-    mateUse('scaleY', scaleY, isNamed: true);
-    mateUse('origin', origin, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+    );
+    mateUse(
+      'scaleX',
+      scaleX,
+      isNamed: true,
+    );
+    mateUse(
+      'scaleY',
+      scaleY,
+      isNamed: true,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.flip({Key? key, bool flipX = false, bool flipY = false, Offset? origin, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.flip({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool flipX = false} , defaultValue:Literal
+    /// optionalParameters: {bool flipX = false} , default:processed=BooleanLiteralImpl
     bool flipX = false,
 
-    /// optionalParameters: {bool flipY = false} , defaultValue:Literal
+    /// optionalParameters: {bool flipY = false} , default:processed=BooleanLiteralImpl
     bool flipY = false,
 
-    /// optionalParameters: {Offset? origin} , defaultValue:none
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.flip(
           key: key,
@@ -744,13 +1094,44 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('flipX', flipX, isNamed: true);
-    mateUse('flipY', flipY, isNamed: true);
-    mateUse('origin', origin, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flipX',
+      flipX,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'flipY',
+      flipY,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -758,13 +1139,13 @@ class Transform$Mate extends Transform with Mate {
 class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate {
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required LayerLink link} , defaultValue:none
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -778,9 +1159,21 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('link', link, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -788,25 +1181,25 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate
 class CompositedTransformFollower$Mate extends CompositedTransformFollower with Mate {
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required LayerLink link} , defaultValue:none
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {bool showWhenUnlinked = true} , defaultValue:Literal
+    /// optionalParameters: {bool showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
     bool showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offset = Offset.zero,
 
-    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
     Alignment targetAnchor = Alignment.topLeft,
 
-    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
     Alignment followerAnchor = Alignment.topLeft,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -828,13 +1221,45 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('link', link, isNamed: true);
-    mateUse('showWhenUnlinked', showWhenUnlinked, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('targetAnchor', targetAnchor, isNamed: true);
-    mateUse('followerAnchor', followerAnchor, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'showWhenUnlinked',
+      showWhenUnlinked,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'targetAnchor',
+      targetAnchor,
+      isNamed: true,
+      defaultValue: Alignment.topLeft,
+    );
+    mateUse(
+      'followerAnchor',
+      followerAnchor,
+      isNamed: true,
+      defaultValue: Alignment.topLeft,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -842,19 +1267,19 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
 class FittedBox$Mate extends FittedBox with Mate {
   /// FittedBox FittedBox({Key? key, BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, Clip clipBehavior = Clip.none, Widget? child})
   FittedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {BoxFit fit = BoxFit.contain} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:processed=PrefixedIdentifierImpl
     BoxFit fit = BoxFit.contain,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -872,11 +1297,34 @@ class FittedBox$Mate extends FittedBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: BoxFit.contain,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -884,16 +1332,16 @@ class FittedBox$Mate extends FittedBox with Mate {
 class FractionalTranslation$Mate extends FractionalTranslation with Mate {
   /// FractionalTranslation FractionalTranslation({Key? key, required Offset translation, bool transformHitTests = true, Widget? child})
   FractionalTranslation$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset translation} , defaultValue:none
+    /// optionalParameters: {required Offset translation} , default:none
     required Offset translation,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -909,10 +1357,27 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('translation', translation, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'translation',
+      translation,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -920,13 +1385,13 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
 class RotatedBox$Mate extends RotatedBox with Mate {
   /// RotatedBox RotatedBox({Key? key, required int quarterTurns, Widget? child})
   RotatedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required int quarterTurns} , defaultValue:none
+    /// optionalParameters: {required int quarterTurns} , default:none
     required int quarterTurns,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -940,9 +1405,21 @@ class RotatedBox$Mate extends RotatedBox with Mate {
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('quarterTurns', quarterTurns, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'quarterTurns',
+      quarterTurns,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -950,13 +1427,13 @@ class RotatedBox$Mate extends RotatedBox with Mate {
 class Padding$Mate extends Padding with Mate {
   /// Padding Padding({Key? key, required EdgeInsetsGeometry padding, Widget? child})
   Padding$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , defaultValue:none
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -970,9 +1447,21 @@ class Padding$Mate extends Padding with Mate {
           padding: p.get('padding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -980,19 +1469,19 @@ class Padding$Mate extends Padding with Mate {
 class Align$Mate extends Align with Mate {
   /// Align Align({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   Align$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {double? widthFactor} , defaultValue:none
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , defaultValue:none
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1010,11 +1499,32 @@ class Align$Mate extends Align with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('widthFactor', widthFactor, isNamed: true);
-    mateUse('heightFactor', heightFactor, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1022,16 +1532,16 @@ class Align$Mate extends Align with Mate {
 class Center$Mate extends Center with Mate {
   /// Center Center({Key? key, double? widthFactor, double? heightFactor, Widget? child})
   Center$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? widthFactor} , defaultValue:none
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , defaultValue:none
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1047,10 +1557,26 @@ class Center$Mate extends Center with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('widthFactor', widthFactor, isNamed: true);
-    mateUse('heightFactor', heightFactor, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1058,13 +1584,13 @@ class Center$Mate extends Center with Mate {
 class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
   /// CustomSingleChildLayout CustomSingleChildLayout({Key? key, required SingleChildLayoutDelegate delegate, Widget? child})
   CustomSingleChildLayout$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , default:none
     required SingleChildLayoutDelegate delegate,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1078,9 +1604,21 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('delegate', delegate, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1088,13 +1626,13 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
 class LayoutId$Mate extends LayoutId with Mate {
   /// LayoutId LayoutId({Key? key, required Object id, required Widget child})
   LayoutId$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Object id} , defaultValue:none
+    /// optionalParameters: {required Object id} , default:none
     required Object id,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -1108,9 +1646,21 @@ class LayoutId$Mate extends LayoutId with Mate {
           id: p.get('id').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('id', id, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'id',
+      id,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1118,13 +1668,13 @@ class LayoutId$Mate extends LayoutId with Mate {
 class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
   /// CustomMultiChildLayout CustomMultiChildLayout({Key? key, required MultiChildLayoutDelegate delegate, List<Widget> children = const <Widget>[]})
   CustomMultiChildLayout$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , default:none
     required MultiChildLayoutDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1138,9 +1688,21 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
           delegate: p.get('delegate').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('delegate', delegate, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1148,16 +1710,16 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
 class SizedBox$Mate extends SizedBox with Mate {
   /// SizedBox SizedBox({Key? key, double? width, double? height, Widget? child})
   SizedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1173,18 +1735,34 @@ class SizedBox$Mate extends SizedBox with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.expand({Key? key, Widget? child})
   SizedBox$Mate.expand({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.expand(
           key: key,
@@ -1196,16 +1774,24 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.shrink({Key? key, Widget? child})
   SizedBox$Mate.shrink({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.shrink(
           key: key,
@@ -1217,19 +1803,27 @@ class SizedBox$Mate extends SizedBox with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.fromSize({Key? key, Widget? child, Size? size})
   SizedBox$Mate.fromSize({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Size? size} , defaultValue:none
+    /// optionalParameters: {Size? size} , default:none
     Size? size,
   }) : super.fromSize(
           key: key,
@@ -1243,20 +1837,32 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: p.get('child').build(),
           size: p.get('size').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('size', size, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.square({Key? key, Widget? child, double? dimension})
   SizedBox$Mate.square({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {double? dimension} , defaultValue:none
+    /// optionalParameters: {double? dimension} , default:none
     double? dimension,
   }) : super.square(
           key: key,
@@ -1270,9 +1876,21 @@ class SizedBox$Mate extends SizedBox with Mate {
           child: p.get('child').build(),
           dimension: p.get('dimension').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('dimension', dimension, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'dimension',
+      dimension,
+      isNamed: true,
+    );
   }
 }
 
@@ -1280,13 +1898,13 @@ class SizedBox$Mate extends SizedBox with Mate {
 class ConstrainedBox$Mate extends ConstrainedBox with Mate {
   /// ConstrainedBox ConstrainedBox({Key? key, required BoxConstraints constraints, Widget? child})
   ConstrainedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required BoxConstraints constraints} , defaultValue:none
+    /// optionalParameters: {required BoxConstraints constraints} , default:none
     required BoxConstraints constraints,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1300,9 +1918,21 @@ class ConstrainedBox$Mate extends ConstrainedBox with Mate {
           constraints: p.get('constraints').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('constraints', constraints, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1310,25 +1940,25 @@ class ConstrainedBox$Mate extends ConstrainedBox with Mate {
 class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
   /// ConstraintsTransformBox ConstraintsTransformBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, required BoxConstraints Function(BoxConstraints) constraintsTransform, Clip clipBehavior = Clip.none, String debugTransformType = ''})
   ConstraintsTransformBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , defaultValue:none
+    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , default:none
     required BoxConstraintsTransform constraintsTransform,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {String debugTransformType = ''} , defaultValue:Literal
+    /// optionalParameters: {String debugTransformType = ''} , default:processed=SimpleStringLiteralImpl
     String debugTransformType = '',
   }) : super(
           key: key,
@@ -1350,13 +1980,44 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           debugTransformType: p.get('debugTransformType').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('constraintsTransform', constraintsTransform, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('debugTransformType', debugTransformType, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'constraintsTransform',
+      constraintsTransform,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'debugTransformType',
+      debugTransformType,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 }
 
@@ -1364,22 +2025,22 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
 class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
   /// UnconstrainedBox UnconstrainedBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, Axis? constrainedAxis, Clip clipBehavior = Clip.none})
   UnconstrainedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Axis? constrainedAxis} , defaultValue:none
+    /// optionalParameters: {Axis? constrainedAxis} , default:none
     Axis? constrainedAxis,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
@@ -1399,12 +2060,38 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
           constrainedAxis: p.get('constrainedAxis').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('constrainedAxis', constrainedAxis, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'constrainedAxis',
+      constrainedAxis,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }
 
@@ -1412,19 +2099,19 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
 class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
   /// FractionallySizedBox FractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   FractionallySizedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {double? widthFactor} , defaultValue:none
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , defaultValue:none
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1442,11 +2129,32 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('widthFactor', widthFactor, isNamed: true);
-    mateUse('heightFactor', heightFactor, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1454,16 +2162,16 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
 class LimitedBox$Mate extends LimitedBox with Mate {
   /// LimitedBox LimitedBox({Key? key, double maxWidth = double.infinity, double maxHeight = double.infinity, Widget? child})
   LimitedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
     double maxWidth = double.infinity,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
     double maxHeight = double.infinity,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1479,10 +2187,28 @@ class LimitedBox$Mate extends LimitedBox with Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('maxWidth', maxWidth, isNamed: true);
-    mateUse('maxHeight', maxHeight, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'maxWidth',
+      maxWidth,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'maxHeight',
+      maxHeight,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1490,25 +2216,25 @@ class LimitedBox$Mate extends LimitedBox with Mate {
 class OverflowBox$Mate extends OverflowBox with Mate {
   /// OverflowBox OverflowBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, Widget? child})
   OverflowBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {double? minWidth} , defaultValue:none
+    /// optionalParameters: {double? minWidth} , default:none
     double? minWidth,
 
-    /// optionalParameters: {double? maxWidth} , defaultValue:none
+    /// optionalParameters: {double? maxWidth} , default:none
     double? maxWidth,
 
-    /// optionalParameters: {double? minHeight} , defaultValue:none
+    /// optionalParameters: {double? minHeight} , default:none
     double? minHeight,
 
-    /// optionalParameters: {double? maxHeight} , defaultValue:none
+    /// optionalParameters: {double? maxHeight} , default:none
     double? maxHeight,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1530,13 +2256,42 @@ class OverflowBox$Mate extends OverflowBox with Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('minWidth', minWidth, isNamed: true);
-    mateUse('maxWidth', maxWidth, isNamed: true);
-    mateUse('minHeight', minHeight, isNamed: true);
-    mateUse('maxHeight', maxHeight, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'minWidth',
+      minWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'maxWidth',
+      maxWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'minHeight',
+      minHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'maxHeight',
+      maxHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1544,16 +2299,16 @@ class OverflowBox$Mate extends OverflowBox with Mate {
 class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
   /// SizedOverflowBox SizedOverflowBox({Key? key, required Size size, AlignmentGeometry alignment = Alignment.center, Widget? child})
   SizedOverflowBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Size size} , defaultValue:none
+    /// optionalParameters: {required Size size} , default:none
     required Size size,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1569,10 +2324,27 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1580,13 +2352,13 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
 class Offstage$Mate extends Offstage with Mate {
   /// Offstage Offstage({Key? key, bool offstage = true, Widget? child})
   Offstage$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool offstage = true} , defaultValue:Literal
+    /// optionalParameters: {bool offstage = true} , default:processed=BooleanLiteralImpl
     bool offstage = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1600,9 +2372,22 @@ class Offstage$Mate extends Offstage with Mate {
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('offstage', offstage, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'offstage',
+      offstage,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1610,13 +2395,13 @@ class Offstage$Mate extends Offstage with Mate {
 class AspectRatio$Mate extends AspectRatio with Mate {
   /// AspectRatio AspectRatio({Key? key, required double aspectRatio, Widget? child})
   AspectRatio$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double aspectRatio} , defaultValue:none
+    /// optionalParameters: {required double aspectRatio} , default:none
     required double aspectRatio,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1630,9 +2415,21 @@ class AspectRatio$Mate extends AspectRatio with Mate {
           aspectRatio: p.get('aspectRatio').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('aspectRatio', aspectRatio, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'aspectRatio',
+      aspectRatio,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1640,16 +2437,16 @@ class AspectRatio$Mate extends AspectRatio with Mate {
 class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
   /// IntrinsicWidth IntrinsicWidth({Key? key, double? stepWidth, double? stepHeight, Widget? child})
   IntrinsicWidth$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? stepWidth} , defaultValue:none
+    /// optionalParameters: {double? stepWidth} , default:none
     double? stepWidth,
 
-    /// optionalParameters: {double? stepHeight} , defaultValue:none
+    /// optionalParameters: {double? stepHeight} , default:none
     double? stepHeight,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1665,10 +2462,26 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('stepWidth', stepWidth, isNamed: true);
-    mateUse('stepHeight', stepHeight, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'stepWidth',
+      stepWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'stepHeight',
+      stepHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1676,10 +2489,10 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
 class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
   /// IntrinsicHeight IntrinsicHeight({Key? key, Widget? child})
   IntrinsicHeight$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1691,8 +2504,16 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1700,16 +2521,16 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
 class Baseline$Mate extends Baseline with Mate {
   /// Baseline Baseline({Key? key, required double baseline, required TextBaseline baselineType, Widget? child})
   Baseline$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double baseline} , defaultValue:none
+    /// optionalParameters: {required double baseline} , default:none
     required double baseline,
 
-    /// optionalParameters: {required TextBaseline baselineType} , defaultValue:none
+    /// optionalParameters: {required TextBaseline baselineType} , default:none
     required TextBaseline baselineType,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1725,10 +2546,26 @@ class Baseline$Mate extends Baseline with Mate {
           baselineType: p.get('baselineType').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('baseline', baseline, isNamed: true);
-    mateUse('baselineType', baselineType, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'baseline',
+      baseline,
+      isNamed: true,
+    );
+    mateUse(
+      'baselineType',
+      baselineType,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1736,10 +2573,10 @@ class Baseline$Mate extends Baseline with Mate {
 class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
   /// SliverToBoxAdapter SliverToBoxAdapter({Key? key, Widget? child})
   SliverToBoxAdapter$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1751,8 +2588,16 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1760,13 +2605,13 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
 class SliverPadding$Mate extends SliverPadding with Mate {
   /// SliverPadding SliverPadding({Key? key, required EdgeInsetsGeometry padding, Widget? sliver})
   SliverPadding$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , defaultValue:none
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? sliver} , defaultValue:none
+    /// optionalParameters: {Widget? sliver} , default:none
     Widget? sliver,
   }) : super(
           key: key,
@@ -1780,9 +2625,21 @@ class SliverPadding$Mate extends SliverPadding with Mate {
           padding: p.get('padding').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -1790,16 +2647,16 @@ class SliverPadding$Mate extends SliverPadding with Mate {
 class ListBody$Mate extends ListBody with Mate {
   /// ListBody ListBody({Key? key, Axis mainAxis = Axis.vertical, bool reverse = false, List<Widget> children = const <Widget>[]})
   ListBody$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis mainAxis = Axis.vertical} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     Axis mainAxis = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1815,10 +2672,28 @@ class ListBody$Mate extends ListBody with Mate {
           reverse: p.get('reverse').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('mainAxis', mainAxis, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxis',
+      mainAxis,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1826,22 +2701,22 @@ class ListBody$Mate extends ListBody with Mate {
 class Stack$Mate extends Stack with Mate {
   /// Stack Stack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, List<Widget> children = const <Widget>[]})
   Stack$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
     StackFit fit = StackFit.loose,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1861,12 +2736,39 @@ class Stack$Mate extends Stack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.topStart,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: StackFit.loose,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1874,25 +2776,25 @@ class Stack$Mate extends Stack with Mate {
 class IndexedStack$Mate extends IndexedStack with Mate {
   /// IndexedStack IndexedStack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, Clip clipBehavior = Clip.hardEdge, StackFit sizing = StackFit.loose, int? index = 0, List<Widget> children = const <Widget>[]})
   IndexedStack$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {StackFit sizing = StackFit.loose} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {StackFit sizing = StackFit.loose} , default:processed=PrefixedIdentifierImpl
     StackFit sizing = StackFit.loose,
 
-    /// optionalParameters: {int? index = 0} , defaultValue:Literal
+    /// optionalParameters: {int? index = 0} , default:processed=IntegerLiteralImpl
     int? index = 0,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1914,13 +2816,45 @@ class IndexedStack$Mate extends IndexedStack with Mate {
           index: p.get('index').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('sizing', sizing, isNamed: true);
-    mateUse('index', index, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.topStart,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'sizing',
+      sizing,
+      isNamed: true,
+      defaultValue: StackFit.loose,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1928,28 +2862,28 @@ class IndexedStack$Mate extends IndexedStack with Mate {
 class Positioned$Mate extends Positioned with Mate {
   /// Positioned Positioned({Key? key, double? left, double? top, double? right, double? bottom, double? width, double? height, required Widget child})
   Positioned$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? left} , defaultValue:none
+    /// optionalParameters: {double? left} , default:none
     double? left,
 
-    /// optionalParameters: {double? top} , defaultValue:none
+    /// optionalParameters: {double? top} , default:none
     double? top,
 
-    /// optionalParameters: {double? right} , defaultValue:none
+    /// optionalParameters: {double? right} , default:none
     double? right,
 
-    /// optionalParameters: {double? bottom} , defaultValue:none
+    /// optionalParameters: {double? bottom} , default:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -1973,25 +2907,57 @@ class Positioned$Mate extends Positioned with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('left', left, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('right', right, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Positioned Positioned.fromRect({Key? key, required Rect rect, required Widget child})
   Positioned$Mate.fromRect({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Rect rect} , defaultValue:none
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.fromRect(
           key: key,
@@ -2005,20 +2971,32 @@ class Positioned$Mate extends Positioned with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('rect', rect, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Positioned Positioned.fromRelativeRect({Key? key, required RelativeRect rect, required Widget child})
   Positioned$Mate.fromRelativeRect({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required RelativeRect rect} , defaultValue:none
+    /// optionalParameters: {required RelativeRect rect} , default:none
     required RelativeRect rect,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.fromRelativeRect(
           key: key,
@@ -2032,29 +3010,41 @@ class Positioned$Mate extends Positioned with Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('rect', rect, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Positioned Positioned.fill({Key? key, double? left = 0.0, double? top = 0.0, double? right = 0.0, double? bottom = 0.0, required Widget child})
   Positioned$Mate.fill({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? left = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double? left = 0.0} , default:processed=DoubleLiteralImpl
     double? left = 0.0,
 
-    /// optionalParameters: {double? top = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double? top = 0.0} , default:processed=DoubleLiteralImpl
     double? top = 0.0,
 
-    /// optionalParameters: {double? right = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double? right = 0.0} , default:processed=DoubleLiteralImpl
     double? right = 0.0,
 
-    /// optionalParameters: {double? bottom = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double? bottom = 0.0} , default:processed=DoubleLiteralImpl
     double? bottom = 0.0,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.fill(
           key: key,
@@ -2074,12 +3064,40 @@ class Positioned$Mate extends Positioned with Mate {
           bottom: p.get('bottom').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('left', left, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('right', right, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2087,28 +3105,28 @@ class Positioned$Mate extends Positioned with Mate {
 class PositionedDirectional$Mate extends PositionedDirectional with Mate {
   /// PositionedDirectional PositionedDirectional({Key? key, double? start, double? top, double? end, double? bottom, double? width, double? height, required Widget child})
   PositionedDirectional$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? start} , defaultValue:none
+    /// optionalParameters: {double? start} , default:none
     double? start,
 
-    /// optionalParameters: {double? top} , defaultValue:none
+    /// optionalParameters: {double? top} , default:none
     double? top,
 
-    /// optionalParameters: {double? end} , defaultValue:none
+    /// optionalParameters: {double? end} , default:none
     double? end,
 
-    /// optionalParameters: {double? bottom} , defaultValue:none
+    /// optionalParameters: {double? bottom} , default:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -2132,14 +3150,46 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('start', start, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('end', end, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2147,34 +3197,34 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
 class Flex$Mate extends Flex with Mate {
   /// Flex Flex({Key? key, required Axis direction, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Flex$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Axis direction} , defaultValue:none
+    /// optionalParameters: {required Axis direction} , default:none
     required Axis direction,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
     MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
     MainAxisSize mainAxisSize = MainAxisSize.max,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
     CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2202,16 +3252,61 @@ class Flex$Mate extends Flex with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('direction', direction, isNamed: true);
-    mateUse('mainAxisAlignment', mainAxisAlignment, isNamed: true);
-    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
-    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('verticalDirection', verticalDirection, isNamed: true);
-    mateUse('textBaseline', textBaseline, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisAlignment',
+      mainAxisAlignment,
+      isNamed: true,
+      defaultValue: MainAxisAlignment.start,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+      defaultValue: MainAxisSize.max,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: CrossAxisAlignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2219,28 +3314,28 @@ class Flex$Mate extends Flex with Mate {
 class Row$Mate extends Row with Mate {
   /// Row Row({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Row$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
     MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
     MainAxisSize mainAxisSize = MainAxisSize.max,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
     CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2264,14 +3359,50 @@ class Row$Mate extends Row with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('mainAxisAlignment', mainAxisAlignment, isNamed: true);
-    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
-    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('verticalDirection', verticalDirection, isNamed: true);
-    mateUse('textBaseline', textBaseline, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisAlignment',
+      mainAxisAlignment,
+      isNamed: true,
+      defaultValue: MainAxisAlignment.start,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+      defaultValue: MainAxisSize.max,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: CrossAxisAlignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2279,28 +3410,28 @@ class Row$Mate extends Row with Mate {
 class Column$Mate extends Column with Mate {
   /// Column Column({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Column$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
     MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
     MainAxisSize mainAxisSize = MainAxisSize.max,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
     CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , defaultValue:none
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2324,14 +3455,50 @@ class Column$Mate extends Column with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('mainAxisAlignment', mainAxisAlignment, isNamed: true);
-    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
-    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('verticalDirection', verticalDirection, isNamed: true);
-    mateUse('textBaseline', textBaseline, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisAlignment',
+      mainAxisAlignment,
+      isNamed: true,
+      defaultValue: MainAxisAlignment.start,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+      defaultValue: MainAxisSize.max,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: CrossAxisAlignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2339,16 +3506,16 @@ class Column$Mate extends Column with Mate {
 class Flexible$Mate extends Flexible with Mate {
   /// Flexible Flexible({Key? key, int flex = 1, FlexFit fit = FlexFit.loose, required Widget child})
   Flexible$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , defaultValue:Literal
+    /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
     int flex = 1,
 
-    /// optionalParameters: {FlexFit fit = FlexFit.loose} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {FlexFit fit = FlexFit.loose} , default:processed=PrefixedIdentifierImpl
     FlexFit fit = FlexFit.loose,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -2364,10 +3531,28 @@ class Flexible$Mate extends Flexible with Mate {
           fit: p.get('fit').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('flex', flex, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flex',
+      flex,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: FlexFit.loose,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2375,13 +3560,13 @@ class Flexible$Mate extends Flexible with Mate {
 class Expanded$Mate extends Expanded with Mate {
   /// Expanded Expanded({Key? key, int flex = 1, required Widget child})
   Expanded$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , defaultValue:Literal
+    /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
     int flex = 1,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -2395,9 +3580,22 @@ class Expanded$Mate extends Expanded with Mate {
           flex: p.get('flex').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('flex', flex, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flex',
+      flex,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2405,37 +3603,37 @@ class Expanded$Mate extends Expanded with Mate {
 class Wrap$Mate extends Wrap with Mate {
   /// Wrap Wrap({Key? key, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Wrap$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
     Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     WrapAlignment alignment = WrapAlignment.start,
 
-    /// optionalParameters: {double spacing = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
     double spacing = 0.0,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     WrapAlignment runAlignment = WrapAlignment.start,
 
-    /// optionalParameters: {double runSpacing = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
     double runSpacing = 0.0,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
     WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2465,17 +3663,69 @@ class Wrap$Mate extends Wrap with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('direction', direction, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('spacing', spacing, isNamed: true);
-    mateUse('runAlignment', runAlignment, isNamed: true);
-    mateUse('runSpacing', runSpacing, isNamed: true);
-    mateUse('crossAxisAlignment', crossAxisAlignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('verticalDirection', verticalDirection, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'spacing',
+      spacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'runAlignment',
+      runAlignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'runSpacing',
+      runSpacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: WrapCrossAlignment.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2483,16 +3733,16 @@ class Wrap$Mate extends Wrap with Mate {
 class Flow$Mate extends Flow with Mate {
   /// Flow Flow({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FlowDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required FlowDelegate delegate} , default:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
@@ -2508,24 +3758,41 @@ class Flow$Mate extends Flow with Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('delegate', delegate, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 
   /// Flow Flow.unwrapped({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate.unwrapped({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FlowDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required FlowDelegate delegate} , default:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super.unwrapped(
           key: key,
@@ -2541,10 +3808,27 @@ class Flow$Mate extends Flow with Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('delegate', delegate, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -2552,46 +3836,46 @@ class Flow$Mate extends Flow with Mate {
 class RichText$Mate extends RichText with Mate {
   /// RichText RichText({Key? key, required InlineSpan text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, SelectionRegistrar? selectionRegistrar, Color? selectionColor})
   RichText$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required InlineSpan text} , defaultValue:none
+    /// optionalParameters: {required InlineSpan text} , default:none
     required InlineSpan text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
     TextAlign textAlign = TextAlign.start,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
+    /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
     TextOverflow overflow = TextOverflow.clip,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
     double textScaleFactor = 1.0,
 
-    /// optionalParameters: {int? maxLines} , defaultValue:none
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {Locale? locale} , defaultValue:none
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
     TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {SelectionRegistrar? selectionRegistrar} , defaultValue:none
+    /// optionalParameters: {SelectionRegistrar? selectionRegistrar} , default:none
     SelectionRegistrar? selectionRegistrar,
 
-    /// optionalParameters: {Color? selectionColor} , defaultValue:none
+    /// optionalParameters: {Color? selectionColor} , default:none
     Color? selectionColor,
   }) : super(
           key: key,
@@ -2627,20 +3911,81 @@ class RichText$Mate extends RichText with Mate {
           selectionRegistrar: p.get('selectionRegistrar').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('text', text, isNamed: true);
-    mateUse('textAlign', textAlign, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('softWrap', softWrap, isNamed: true);
-    mateUse('overflow', overflow, isNamed: true);
-    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
-    mateUse('maxLines', maxLines, isNamed: true);
-    mateUse('locale', locale, isNamed: true);
-    mateUse('strutStyle', strutStyle, isNamed: true);
-    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
-    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
-    mateUse('selectionRegistrar', selectionRegistrar, isNamed: true);
-    mateUse('selectionColor', selectionColor, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+      defaultValue: TextAlign.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+      defaultValue: TextOverflow.clip,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+      defaultValue: TextWidthBasis.parent,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionRegistrar',
+      selectionRegistrar,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -2648,55 +3993,55 @@ class RichText$Mate extends RichText with Mate {
 class RawImage$Mate extends RawImage with Mate {
   /// RawImage RawImage({Key? key, Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool invertColors = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false})
   RawImage$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Image? image} , defaultValue:none
+    /// optionalParameters: {Image? image} , default:none
     Image? image,
 
-    /// optionalParameters: {String? debugImageLabel} , defaultValue:none
+    /// optionalParameters: {String? debugImageLabel} , default:none
     String? debugImageLabel,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     double scale = 1.0,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , defaultValue:none
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , defaultValue:none
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , defaultValue:none
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , defaultValue:none
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
     bool matchTextDirection = false,
 
-    /// optionalParameters: {bool invertColors = false} , defaultValue:Literal
+    /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
     bool invertColors = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {bool isAntiAlias = false} , defaultValue:Literal
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
     bool isAntiAlias = false,
   }) : super(
           key: key,
@@ -2738,23 +4083,98 @@ class RawImage$Mate extends RawImage with Mate {
           filterQuality: p.get('filterQuality').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('image', image, isNamed: true);
-    mateUse('debugImageLabel', debugImageLabel, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('scale', scale, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('colorBlendMode', colorBlendMode, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('repeat', repeat, isNamed: true);
-    mateUse('centerSlice', centerSlice, isNamed: true);
-    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
-    mateUse('invertColors', invertColors, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('isAntiAlias', isAntiAlias, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'debugImageLabel',
+      debugImageLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'invertColors',
+      invertColors,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -2762,13 +4182,13 @@ class RawImage$Mate extends RawImage with Mate {
 class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
   /// DefaultAssetBundle DefaultAssetBundle({Key? key, required AssetBundle bundle, required Widget child})
   DefaultAssetBundle$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required AssetBundle bundle} , defaultValue:none
+    /// optionalParameters: {required AssetBundle bundle} , default:none
     required AssetBundle bundle,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -2782,9 +4202,21 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
           bundle: p.get('bundle').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('bundle', bundle, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2792,13 +4224,13 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
 class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
   /// WidgetToRenderBoxAdapter WidgetToRenderBoxAdapter({required RenderBox renderBox, void Function()? onBuild, void Function()? onUnmount})
   WidgetToRenderBoxAdapter$Mate({
-    /// optionalParameters: {required RenderBox renderBox} , defaultValue:none
+    /// optionalParameters: {required RenderBox renderBox} , default:none
     required RenderBox renderBox,
 
-    /// optionalParameters: {void Function()? onBuild} , defaultValue:none
+    /// optionalParameters: {void Function()? onBuild} , default:none
     VoidCallback? onBuild,
 
-    /// optionalParameters: {void Function()? onUnmount} , defaultValue:none
+    /// optionalParameters: {void Function()? onUnmount} , default:none
     VoidCallback? onUnmount,
   }) : super(
           renderBox: renderBox,
@@ -2812,9 +4244,21 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
           onBuild: p.get('onBuild').build(),
           onUnmount: p.get('onUnmount').build(),
         );
-    mateUse('renderBox', renderBox, isNamed: true);
-    mateUse('onBuild', onBuild, isNamed: true);
-    mateUse('onUnmount', onUnmount, isNamed: true);
+    mateUse(
+      'renderBox',
+      renderBox,
+      isNamed: true,
+    );
+    mateUse(
+      'onBuild',
+      onBuild,
+      isNamed: true,
+    );
+    mateUse(
+      'onUnmount',
+      onUnmount,
+      isNamed: true,
+    );
   }
 }
 
@@ -2822,40 +4266,40 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
 class Listener$Mate extends Listener with Mate {
   /// Listener Listener({Key? key, void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   Listener$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , default:none
     PointerDownEventListener? onPointerDown,
 
-    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , defaultValue:none
+    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , default:none
     PointerMoveEventListener? onPointerMove,
 
-    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , defaultValue:none
+    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , default:none
     PointerUpEventListener? onPointerUp,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , defaultValue:none
+    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , default:none
     PointerHoverEventListener? onPointerHover,
 
-    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , defaultValue:none
+    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , default:none
     PointerCancelEventListener? onPointerCancel,
 
-    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , defaultValue:none
+    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , default:none
     PointerPanZoomStartEventListener? onPointerPanZoomStart,
 
-    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , default:none
     PointerPanZoomUpdateEventListener? onPointerPanZoomUpdate,
 
-    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , defaultValue:none
+    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , default:none
     PointerPanZoomEndEventListener? onPointerPanZoomEnd,
 
-    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , defaultValue:none
+    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , default:none
     PointerSignalEventListener? onPointerSignal,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -2887,18 +4331,67 @@ class Listener$Mate extends Listener with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onPointerDown', onPointerDown, isNamed: true);
-    mateUse('onPointerMove', onPointerMove, isNamed: true);
-    mateUse('onPointerUp', onPointerUp, isNamed: true);
-    mateUse('onPointerHover', onPointerHover, isNamed: true);
-    mateUse('onPointerCancel', onPointerCancel, isNamed: true);
-    mateUse('onPointerPanZoomStart', onPointerPanZoomStart, isNamed: true);
-    mateUse('onPointerPanZoomUpdate', onPointerPanZoomUpdate, isNamed: true);
-    mateUse('onPointerPanZoomEnd', onPointerPanZoomEnd, isNamed: true);
-    mateUse('onPointerSignal', onPointerSignal, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerDown',
+      onPointerDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerMove',
+      onPointerMove,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerUp',
+      onPointerUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerHover',
+      onPointerHover,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerCancel',
+      onPointerCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomStart',
+      onPointerPanZoomStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomUpdate',
+      onPointerPanZoomUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomEnd',
+      onPointerPanZoomEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerSignal',
+      onPointerSignal,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2906,28 +4399,28 @@ class Listener$Mate extends Listener with Mate {
 class MouseRegion$Mate extends MouseRegion with Mate {
   /// MouseRegion MouseRegion({Key? key, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, void Function(PointerHoverEvent)? onHover, MouseCursor cursor = MouseCursor.defer, bool opaque = true, HitTestBehavior? hitTestBehavior, Widget? child})
   MouseRegion$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , defaultValue:none
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , defaultValue:none
+    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , default:none
     PointerHoverEventListener? onHover,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
     MouseCursor cursor = MouseCursor.defer,
 
-    /// optionalParameters: {bool opaque = true} , defaultValue:Literal
+    /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
     bool opaque = true,
 
-    /// optionalParameters: {HitTestBehavior? hitTestBehavior} , defaultValue:none
+    /// optionalParameters: {HitTestBehavior? hitTestBehavior} , default:none
     HitTestBehavior? hitTestBehavior,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -2951,14 +4444,48 @@ class MouseRegion$Mate extends MouseRegion with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onEnter', onEnter, isNamed: true);
-    mateUse('onExit', onExit, isNamed: true);
-    mateUse('onHover', onHover, isNamed: true);
-    mateUse('cursor', cursor, isNamed: true);
-    mateUse('opaque', opaque, isNamed: true);
-    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnter',
+      onEnter,
+      isNamed: true,
+    );
+    mateUse(
+      'onExit',
+      onExit,
+      isNamed: true,
+    );
+    mateUse(
+      'onHover',
+      onHover,
+      isNamed: true,
+    );
+    mateUse(
+      'cursor',
+      cursor,
+      isNamed: true,
+      defaultValue: MouseCursor.defer,
+    );
+    mateUse(
+      'opaque',
+      opaque,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2966,10 +4493,10 @@ class MouseRegion$Mate extends MouseRegion with Mate {
 class RepaintBoundary$Mate extends RepaintBoundary with Mate {
   /// RepaintBoundary RepaintBoundary({Key? key, Widget? child})
   RepaintBoundary$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -2981,8 +4508,16 @@ class RepaintBoundary$Mate extends RepaintBoundary with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2990,16 +4525,16 @@ class RepaintBoundary$Mate extends RepaintBoundary with Mate {
 class IgnorePointer$Mate extends IgnorePointer with Mate {
   /// IgnorePointer IgnorePointer({Key? key, bool ignoring = true, bool? ignoringSemantics, Widget? child})
   IgnorePointer$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool ignoring = true} , defaultValue:Literal
+    /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
     bool ignoring = true,
 
-    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
+    /// optionalParameters: {bool? ignoringSemantics} , default:none
     bool? ignoringSemantics,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -3015,10 +4550,27 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
           ignoringSemantics: p.get('ignoringSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('ignoring', ignoring, isNamed: true);
-    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'ignoring',
+      ignoring,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringSemantics',
+      ignoringSemantics,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3026,16 +4578,16 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
 class AbsorbPointer$Mate extends AbsorbPointer with Mate {
   /// AbsorbPointer AbsorbPointer({Key? key, bool absorbing = true, Widget? child, bool? ignoringSemantics})
   AbsorbPointer$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool absorbing = true} , defaultValue:Literal
+    /// optionalParameters: {bool absorbing = true} , default:processed=BooleanLiteralImpl
     bool absorbing = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
+    /// optionalParameters: {bool? ignoringSemantics} , default:none
     bool? ignoringSemantics,
   }) : super(
           key: key,
@@ -3051,10 +4603,27 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
           child: p.get('child').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('absorbing', absorbing, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'absorbing',
+      absorbing,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'ignoringSemantics',
+      ignoringSemantics,
+      isNamed: true,
+    );
   }
 }
 
@@ -3062,16 +4631,16 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
 class MetaData$Mate extends MetaData with Mate {
   /// MetaData MetaData({Key? key, dynamic metaData, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   MetaData$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {dynamic metaData} , defaultValue:none
+    /// optionalParameters: {dynamic metaData} , default:none
     dynamic metaData,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -3087,10 +4656,27 @@ class MetaData$Mate extends MetaData with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('metaData', metaData, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'metaData',
+      metaData,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3098,196 +4684,196 @@ class MetaData$Mate extends MetaData with Mate {
 class Semantics$Mate extends Semantics with Mate {
   /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool container = false} , defaultValue:Literal
+    /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
     bool container = false,
 
-    /// optionalParameters: {bool explicitChildNodes = false} , defaultValue:Literal
+    /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
     bool explicitChildNodes = false,
 
-    /// optionalParameters: {bool excludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeSemantics = false,
 
-    /// optionalParameters: {bool? enabled} , defaultValue:none
+    /// optionalParameters: {bool? enabled} , default:none
     bool? enabled,
 
-    /// optionalParameters: {bool? checked} , defaultValue:none
+    /// optionalParameters: {bool? checked} , default:none
     bool? checked,
 
-    /// optionalParameters: {bool? mixed} , defaultValue:none
+    /// optionalParameters: {bool? mixed} , default:none
     bool? mixed,
 
-    /// optionalParameters: {bool? selected} , defaultValue:none
+    /// optionalParameters: {bool? selected} , default:none
     bool? selected,
 
-    /// optionalParameters: {bool? toggled} , defaultValue:none
+    /// optionalParameters: {bool? toggled} , default:none
     bool? toggled,
 
-    /// optionalParameters: {bool? button} , defaultValue:none
+    /// optionalParameters: {bool? button} , default:none
     bool? button,
 
-    /// optionalParameters: {bool? slider} , defaultValue:none
+    /// optionalParameters: {bool? slider} , default:none
     bool? slider,
 
-    /// optionalParameters: {bool? keyboardKey} , defaultValue:none
+    /// optionalParameters: {bool? keyboardKey} , default:none
     bool? keyboardKey,
 
-    /// optionalParameters: {bool? link} , defaultValue:none
+    /// optionalParameters: {bool? link} , default:none
     bool? link,
 
-    /// optionalParameters: {bool? header} , defaultValue:none
+    /// optionalParameters: {bool? header} , default:none
     bool? header,
 
-    /// optionalParameters: {bool? textField} , defaultValue:none
+    /// optionalParameters: {bool? textField} , default:none
     bool? textField,
 
-    /// optionalParameters: {bool? readOnly} , defaultValue:none
+    /// optionalParameters: {bool? readOnly} , default:none
     bool? readOnly,
 
-    /// optionalParameters: {bool? focusable} , defaultValue:none
+    /// optionalParameters: {bool? focusable} , default:none
     bool? focusable,
 
-    /// optionalParameters: {bool? focused} , defaultValue:none
+    /// optionalParameters: {bool? focused} , default:none
     bool? focused,
 
-    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , defaultValue:none
+    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , default:none
     bool? inMutuallyExclusiveGroup,
 
-    /// optionalParameters: {bool? obscured} , defaultValue:none
+    /// optionalParameters: {bool? obscured} , default:none
     bool? obscured,
 
-    /// optionalParameters: {bool? multiline} , defaultValue:none
+    /// optionalParameters: {bool? multiline} , default:none
     bool? multiline,
 
-    /// optionalParameters: {bool? scopesRoute} , defaultValue:none
+    /// optionalParameters: {bool? scopesRoute} , default:none
     bool? scopesRoute,
 
-    /// optionalParameters: {bool? namesRoute} , defaultValue:none
+    /// optionalParameters: {bool? namesRoute} , default:none
     bool? namesRoute,
 
-    /// optionalParameters: {bool? hidden} , defaultValue:none
+    /// optionalParameters: {bool? hidden} , default:none
     bool? hidden,
 
-    /// optionalParameters: {bool? image} , defaultValue:none
+    /// optionalParameters: {bool? image} , default:none
     bool? image,
 
-    /// optionalParameters: {bool? liveRegion} , defaultValue:none
+    /// optionalParameters: {bool? liveRegion} , default:none
     bool? liveRegion,
 
-    /// optionalParameters: {int? maxValueLength} , defaultValue:none
+    /// optionalParameters: {int? maxValueLength} , default:none
     int? maxValueLength,
 
-    /// optionalParameters: {int? currentValueLength} , defaultValue:none
+    /// optionalParameters: {int? currentValueLength} , default:none
     int? currentValueLength,
 
-    /// optionalParameters: {String? label} , defaultValue:none
+    /// optionalParameters: {String? label} , default:none
     String? label,
 
-    /// optionalParameters: {AttributedString? attributedLabel} , defaultValue:none
+    /// optionalParameters: {AttributedString? attributedLabel} , default:none
     AttributedString? attributedLabel,
 
-    /// optionalParameters: {String? value} , defaultValue:none
+    /// optionalParameters: {String? value} , default:none
     String? value,
 
-    /// optionalParameters: {AttributedString? attributedValue} , defaultValue:none
+    /// optionalParameters: {AttributedString? attributedValue} , default:none
     AttributedString? attributedValue,
 
-    /// optionalParameters: {String? increasedValue} , defaultValue:none
+    /// optionalParameters: {String? increasedValue} , default:none
     String? increasedValue,
 
-    /// optionalParameters: {AttributedString? attributedIncreasedValue} , defaultValue:none
+    /// optionalParameters: {AttributedString? attributedIncreasedValue} , default:none
     AttributedString? attributedIncreasedValue,
 
-    /// optionalParameters: {String? decreasedValue} , defaultValue:none
+    /// optionalParameters: {String? decreasedValue} , default:none
     String? decreasedValue,
 
-    /// optionalParameters: {AttributedString? attributedDecreasedValue} , defaultValue:none
+    /// optionalParameters: {AttributedString? attributedDecreasedValue} , default:none
     AttributedString? attributedDecreasedValue,
 
-    /// optionalParameters: {String? hint} , defaultValue:none
+    /// optionalParameters: {String? hint} , default:none
     String? hint,
 
-    /// optionalParameters: {AttributedString? attributedHint} , defaultValue:none
+    /// optionalParameters: {AttributedString? attributedHint} , default:none
     AttributedString? attributedHint,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {String? onTapHint} , defaultValue:none
+    /// optionalParameters: {String? onTapHint} , default:none
     String? onTapHint,
 
-    /// optionalParameters: {String? onLongPressHint} , defaultValue:none
+    /// optionalParameters: {String? onLongPressHint} , default:none
     String? onLongPressHint,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {SemanticsSortKey? sortKey} , defaultValue:none
+    /// optionalParameters: {SemanticsSortKey? sortKey} , default:none
     SemanticsSortKey? sortKey,
 
-    /// optionalParameters: {SemanticsTag? tagForChildren} , defaultValue:none
+    /// optionalParameters: {SemanticsTag? tagForChildren} , default:none
     SemanticsTag? tagForChildren,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function()? onScrollLeft} , defaultValue:none
+    /// optionalParameters: {void Function()? onScrollLeft} , default:none
     VoidCallback? onScrollLeft,
 
-    /// optionalParameters: {void Function()? onScrollRight} , defaultValue:none
+    /// optionalParameters: {void Function()? onScrollRight} , default:none
     VoidCallback? onScrollRight,
 
-    /// optionalParameters: {void Function()? onScrollUp} , defaultValue:none
+    /// optionalParameters: {void Function()? onScrollUp} , default:none
     VoidCallback? onScrollUp,
 
-    /// optionalParameters: {void Function()? onScrollDown} , defaultValue:none
+    /// optionalParameters: {void Function()? onScrollDown} , default:none
     VoidCallback? onScrollDown,
 
-    /// optionalParameters: {void Function()? onIncrease} , defaultValue:none
+    /// optionalParameters: {void Function()? onIncrease} , default:none
     VoidCallback? onIncrease,
 
-    /// optionalParameters: {void Function()? onDecrease} , defaultValue:none
+    /// optionalParameters: {void Function()? onDecrease} , default:none
     VoidCallback? onDecrease,
 
-    /// optionalParameters: {void Function()? onCopy} , defaultValue:none
+    /// optionalParameters: {void Function()? onCopy} , default:none
     VoidCallback? onCopy,
 
-    /// optionalParameters: {void Function()? onCut} , defaultValue:none
+    /// optionalParameters: {void Function()? onCut} , default:none
     VoidCallback? onCut,
 
-    /// optionalParameters: {void Function()? onPaste} , defaultValue:none
+    /// optionalParameters: {void Function()? onPaste} , default:none
     VoidCallback? onPaste,
 
-    /// optionalParameters: {void Function()? onDismiss} , defaultValue:none
+    /// optionalParameters: {void Function()? onDismiss} , default:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , default:none
     MoveCursorHandler? onMoveCursorForwardByCharacter,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , default:none
     MoveCursorHandler? onMoveCursorBackwardByCharacter,
 
-    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , defaultValue:none
+    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , default:none
     SetSelectionHandler? onSetSelection,
 
-    /// optionalParameters: {void Function(String)? onSetText} , defaultValue:none
+    /// optionalParameters: {void Function(String)? onSetText} , default:none
     SetTextHandler? onSetText,
 
-    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , defaultValue:none
+    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , default:none
     VoidCallback? onDidGainAccessibilityFocus,
 
-    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , defaultValue:none
+    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , default:none
     VoidCallback? onDidLoseAccessibilityFocus,
 
-    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , defaultValue:none
+    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , default:none
     Map<CustomSemanticsAction, VoidCallback>? customSemanticsActions,
   }) : super(
           key: key,
@@ -3423,90 +5009,349 @@ class Semantics$Mate extends Semantics with Mate {
           onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('container', container, isNamed: true);
-    mateUse('explicitChildNodes', explicitChildNodes, isNamed: true);
-    mateUse('excludeSemantics', excludeSemantics, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('checked', checked, isNamed: true);
-    mateUse('mixed', mixed, isNamed: true);
-    mateUse('selected', selected, isNamed: true);
-    mateUse('toggled', toggled, isNamed: true);
-    mateUse('button', button, isNamed: true);
-    mateUse('slider', slider, isNamed: true);
-    mateUse('keyboardKey', keyboardKey, isNamed: true);
-    mateUse('link', link, isNamed: true);
-    mateUse('header', header, isNamed: true);
-    mateUse('textField', textField, isNamed: true);
-    mateUse('readOnly', readOnly, isNamed: true);
-    mateUse('focusable', focusable, isNamed: true);
-    mateUse('focused', focused, isNamed: true);
-    mateUse('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('multiline', multiline, isNamed: true);
-    mateUse('scopesRoute', scopesRoute, isNamed: true);
-    mateUse('namesRoute', namesRoute, isNamed: true);
-    mateUse('hidden', hidden, isNamed: true);
-    mateUse('image', image, isNamed: true);
-    mateUse('liveRegion', liveRegion, isNamed: true);
-    mateUse('maxValueLength', maxValueLength, isNamed: true);
-    mateUse('currentValueLength', currentValueLength, isNamed: true);
-    mateUse('label', label, isNamed: true);
-    mateUse('attributedLabel', attributedLabel, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('attributedValue', attributedValue, isNamed: true);
-    mateUse('increasedValue', increasedValue, isNamed: true);
-    mateUse('attributedIncreasedValue', attributedIncreasedValue, isNamed: true);
-    mateUse('decreasedValue', decreasedValue, isNamed: true);
-    mateUse('attributedDecreasedValue', attributedDecreasedValue, isNamed: true);
-    mateUse('hint', hint, isNamed: true);
-    mateUse('attributedHint', attributedHint, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('onTapHint', onTapHint, isNamed: true);
-    mateUse('onLongPressHint', onLongPressHint, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('sortKey', sortKey, isNamed: true);
-    mateUse('tagForChildren', tagForChildren, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('onScrollLeft', onScrollLeft, isNamed: true);
-    mateUse('onScrollRight', onScrollRight, isNamed: true);
-    mateUse('onScrollUp', onScrollUp, isNamed: true);
-    mateUse('onScrollDown', onScrollDown, isNamed: true);
-    mateUse('onIncrease', onIncrease, isNamed: true);
-    mateUse('onDecrease', onDecrease, isNamed: true);
-    mateUse('onCopy', onCopy, isNamed: true);
-    mateUse('onCut', onCut, isNamed: true);
-    mateUse('onPaste', onPaste, isNamed: true);
-    mateUse('onDismiss', onDismiss, isNamed: true);
-    mateUse('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter, isNamed: true);
-    mateUse('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter, isNamed: true);
-    mateUse('onSetSelection', onSetSelection, isNamed: true);
-    mateUse('onSetText', onSetText, isNamed: true);
-    mateUse('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus, isNamed: true);
-    mateUse('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus, isNamed: true);
-    mateUse('customSemanticsActions', customSemanticsActions, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'container',
+      container,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'explicitChildNodes',
+      explicitChildNodes,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'excludeSemantics',
+      excludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+    );
+    mateUse(
+      'checked',
+      checked,
+      isNamed: true,
+    );
+    mateUse(
+      'mixed',
+      mixed,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+    );
+    mateUse(
+      'toggled',
+      toggled,
+      isNamed: true,
+    );
+    mateUse(
+      'button',
+      button,
+      isNamed: true,
+    );
+    mateUse(
+      'slider',
+      slider,
+      isNamed: true,
+    );
+    mateUse(
+      'keyboardKey',
+      keyboardKey,
+      isNamed: true,
+    );
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'header',
+      header,
+      isNamed: true,
+    );
+    mateUse(
+      'textField',
+      textField,
+      isNamed: true,
+    );
+    mateUse(
+      'readOnly',
+      readOnly,
+      isNamed: true,
+    );
+    mateUse(
+      'focusable',
+      focusable,
+      isNamed: true,
+    );
+    mateUse(
+      'focused',
+      focused,
+      isNamed: true,
+    );
+    mateUse(
+      'inMutuallyExclusiveGroup',
+      inMutuallyExclusiveGroup,
+      isNamed: true,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+    );
+    mateUse(
+      'multiline',
+      multiline,
+      isNamed: true,
+    );
+    mateUse(
+      'scopesRoute',
+      scopesRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'namesRoute',
+      namesRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'hidden',
+      hidden,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'liveRegion',
+      liveRegion,
+      isNamed: true,
+    );
+    mateUse(
+      'maxValueLength',
+      maxValueLength,
+      isNamed: true,
+    );
+    mateUse(
+      'currentValueLength',
+      currentValueLength,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedLabel',
+      attributedLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedValue',
+      attributedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'increasedValue',
+      increasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedIncreasedValue',
+      attributedIncreasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'decreasedValue',
+      decreasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedDecreasedValue',
+      attributedDecreasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'hint',
+      hint,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedHint',
+      attributedHint,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapHint',
+      onTapHint,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressHint',
+      onLongPressHint,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'sortKey',
+      sortKey,
+      isNamed: true,
+    );
+    mateUse(
+      'tagForChildren',
+      tagForChildren,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollLeft',
+      onScrollLeft,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollRight',
+      onScrollRight,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollUp',
+      onScrollUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollDown',
+      onScrollDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onIncrease',
+      onIncrease,
+      isNamed: true,
+    );
+    mateUse(
+      'onDecrease',
+      onDecrease,
+      isNamed: true,
+    );
+    mateUse(
+      'onCopy',
+      onCopy,
+      isNamed: true,
+    );
+    mateUse(
+      'onCut',
+      onCut,
+      isNamed: true,
+    );
+    mateUse(
+      'onPaste',
+      onPaste,
+      isNamed: true,
+    );
+    mateUse(
+      'onDismiss',
+      onDismiss,
+      isNamed: true,
+    );
+    mateUse(
+      'onMoveCursorForwardByCharacter',
+      onMoveCursorForwardByCharacter,
+      isNamed: true,
+    );
+    mateUse(
+      'onMoveCursorBackwardByCharacter',
+      onMoveCursorBackwardByCharacter,
+      isNamed: true,
+    );
+    mateUse(
+      'onSetSelection',
+      onSetSelection,
+      isNamed: true,
+    );
+    mateUse(
+      'onSetText',
+      onSetText,
+      isNamed: true,
+    );
+    mateUse(
+      'onDidGainAccessibilityFocus',
+      onDidGainAccessibilityFocus,
+      isNamed: true,
+    );
+    mateUse(
+      'onDidLoseAccessibilityFocus',
+      onDidLoseAccessibilityFocus,
+      isNamed: true,
+    );
+    mateUse(
+      'customSemanticsActions',
+      customSemanticsActions,
+      isNamed: true,
+    );
   }
 
   /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, required SemanticsProperties properties})
   Semantics$Mate.fromProperties({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool container = false} , defaultValue:Literal
+    /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
     bool container = false,
 
-    /// optionalParameters: {bool explicitChildNodes = false} , defaultValue:Literal
+    /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
     bool explicitChildNodes = false,
 
-    /// optionalParameters: {bool excludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeSemantics = false,
 
-    /// optionalParameters: {required SemanticsProperties properties} , defaultValue:none
+    /// optionalParameters: {required SemanticsProperties properties} , default:none
     required SemanticsProperties properties,
   }) : super.fromProperties(
           key: key,
@@ -3526,12 +5371,39 @@ class Semantics$Mate extends Semantics with Mate {
           excludeSemantics: p.get('excludeSemantics').build(),
           properties: p.get('properties').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('container', container, isNamed: true);
-    mateUse('explicitChildNodes', explicitChildNodes, isNamed: true);
-    mateUse('excludeSemantics', excludeSemantics, isNamed: true);
-    mateUse('properties', properties, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'container',
+      container,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'explicitChildNodes',
+      explicitChildNodes,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'excludeSemantics',
+      excludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'properties',
+      properties,
+      isNamed: true,
+    );
   }
 }
 
@@ -3539,10 +5411,10 @@ class Semantics$Mate extends Semantics with Mate {
 class MergeSemantics$Mate extends MergeSemantics with Mate {
   /// MergeSemantics MergeSemantics({Key? key, Widget? child})
   MergeSemantics$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -3554,8 +5426,16 @@ class MergeSemantics$Mate extends MergeSemantics with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3563,13 +5443,13 @@ class MergeSemantics$Mate extends MergeSemantics with Mate {
 class BlockSemantics$Mate extends BlockSemantics with Mate {
   /// BlockSemantics BlockSemantics({Key? key, bool blocking = true, Widget? child})
   BlockSemantics$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool blocking = true} , defaultValue:Literal
+    /// optionalParameters: {bool blocking = true} , default:processed=BooleanLiteralImpl
     bool blocking = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -3583,9 +5463,22 @@ class BlockSemantics$Mate extends BlockSemantics with Mate {
           blocking: p.get('blocking').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('blocking', blocking, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'blocking',
+      blocking,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3593,13 +5486,13 @@ class BlockSemantics$Mate extends BlockSemantics with Mate {
 class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
   /// ExcludeSemantics ExcludeSemantics({Key? key, bool excluding = true, Widget? child})
   ExcludeSemantics$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool excluding = true} , defaultValue:Literal
+    /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
     bool excluding = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -3613,9 +5506,22 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('excluding', excluding, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'excluding',
+      excluding,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3623,13 +5529,13 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
 class IndexedSemantics$Mate extends IndexedSemantics with Mate {
   /// IndexedSemantics IndexedSemantics({Key? key, required int index, Widget? child})
   IndexedSemantics$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required int index} , defaultValue:none
+    /// optionalParameters: {required int index} , default:none
     required int index,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -3643,9 +5549,21 @@ class IndexedSemantics$Mate extends IndexedSemantics with Mate {
           index: p.get('index').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('index', index, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3653,10 +5571,10 @@ class IndexedSemantics$Mate extends IndexedSemantics with Mate {
 class KeyedSubtree$Mate extends KeyedSubtree with Mate {
   /// KeyedSubtree KeyedSubtree({Key? key, required Widget child})
   KeyedSubtree$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -3668,8 +5586,16 @@ class KeyedSubtree$Mate extends KeyedSubtree with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3677,10 +5603,10 @@ class KeyedSubtree$Mate extends KeyedSubtree with Mate {
 class Builder$Mate extends Builder with Mate {
   /// Builder Builder({Key? key, required Widget Function(BuildContext) builder})
   Builder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required WidgetBuilder builder,
   }) : super(
           key: key,
@@ -3692,8 +5618,16 @@ class Builder$Mate extends Builder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -3701,10 +5635,10 @@ class Builder$Mate extends Builder with Mate {
 class StatefulBuilder$Mate extends StatefulBuilder with Mate {
   /// StatefulBuilder StatefulBuilder({Key? key, required Widget Function(BuildContext, void Function(void Function())) builder})
   StatefulBuilder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, void Function(void Function())) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, void Function(void Function())) builder} , default:none
     required StatefulWidgetBuilder builder,
   }) : super(
           key: key,
@@ -3716,8 +5650,16 @@ class StatefulBuilder$Mate extends StatefulBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -3725,13 +5667,13 @@ class StatefulBuilder$Mate extends StatefulBuilder with Mate {
 class ColoredBox$Mate extends ColoredBox with Mate {
   /// ColoredBox ColoredBox({required Color color, Widget? child, Key? key})
   ColoredBox$Mate({
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
   }) : super(
           color: color,
@@ -3745,8 +5687,20 @@ class ColoredBox$Mate extends ColoredBox with Mate {
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('key', key, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }

@@ -11,13 +11,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar with Mate {
   /// DesktopTextSelectionToolbar DesktopTextSelectionToolbar({Key? key, required Offset anchor, required List<Widget> children})
   DesktopTextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchor} , defaultValue:none
+    /// optionalParameters: {required Offset anchor} , default:none
     required Offset anchor,
 
-    /// optionalParameters: {required List<Widget> children} , defaultValue:none
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
   }) : super(
           key: key,
@@ -31,8 +31,20 @@ class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar with 
           anchor: p.get('anchor').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('anchor', anchor, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }

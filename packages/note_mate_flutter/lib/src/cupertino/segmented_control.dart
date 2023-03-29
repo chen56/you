@@ -13,31 +13,31 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmentedControl<T> with Mate {
   /// CupertinoSegmentedControl<T> CupertinoSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T) onValueChanged, T? groupValue, Color? unselectedColor, Color? selectedColor, Color? borderColor, Color? pressedColor, EdgeInsetsGeometry? padding})
   CupertinoSegmentedControl$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Map<T, Widget> children} , defaultValue:none
+    /// optionalParameters: {required Map<T, Widget> children} , default:none
     required Map<T, Widget> children,
 
-    /// optionalParameters: {required void Function(T) onValueChanged} , defaultValue:none
+    /// optionalParameters: {required void Function(T) onValueChanged} , default:none
     required ValueChanged<T> onValueChanged,
 
-    /// optionalParameters: {T? groupValue} , defaultValue:none
+    /// optionalParameters: {T? groupValue} , default:none
     T? groupValue,
 
-    /// optionalParameters: {Color? unselectedColor} , defaultValue:none
+    /// optionalParameters: {Color? unselectedColor} , default:none
     Color? unselectedColor,
 
-    /// optionalParameters: {Color? selectedColor} , defaultValue:none
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? borderColor} , defaultValue:none
+    /// optionalParameters: {Color? borderColor} , default:none
     Color? borderColor,
 
-    /// optionalParameters: {Color? pressedColor} , defaultValue:none
+    /// optionalParameters: {Color? pressedColor} , default:none
     Color? pressedColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
   }) : super(
           key: key,
@@ -63,14 +63,50 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
           pressedColor: p.get('pressedColor').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('children', children, isNamed: true);
-    mateUse('onValueChanged', onValueChanged, isNamed: true);
-    mateUse('groupValue', groupValue, isNamed: true);
-    mateUse('unselectedColor', unselectedColor, isNamed: true);
-    mateUse('selectedColor', selectedColor, isNamed: true);
-    mateUse('borderColor', borderColor, isNamed: true);
-    mateUse('pressedColor', pressedColor, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'onValueChanged',
+      onValueChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'groupValue',
+      groupValue,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedColor',
+      unselectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderColor',
+      borderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'pressedColor',
+      pressedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
   }
 }

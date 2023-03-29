@@ -15,28 +15,28 @@ import 'package:flutter/painting.dart';
 class BoxDecoration$Mate extends BoxDecoration with Mate {
   /// BoxDecoration BoxDecoration({Color? color, DecorationImage? image, BoxBorder? border, BorderRadiusGeometry? borderRadius, List<BoxShadow>? boxShadow, Gradient? gradient, BlendMode? backgroundBlendMode, BoxShape shape = BoxShape.rectangle})
   BoxDecoration$Mate({
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {DecorationImage? image} , defaultValue:none
+    /// optionalParameters: {DecorationImage? image} , default:none
     DecorationImage? image,
 
-    /// optionalParameters: {BoxBorder? border} , defaultValue:none
+    /// optionalParameters: {BoxBorder? border} , default:none
     BoxBorder? border,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , defaultValue:none
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , default:none
     BorderRadiusGeometry? borderRadius,
 
-    /// optionalParameters: {List<BoxShadow>? boxShadow} , defaultValue:none
+    /// optionalParameters: {List<BoxShadow>? boxShadow} , default:none
     List<BoxShadow>? boxShadow,
 
-    /// optionalParameters: {Gradient? gradient} , defaultValue:none
+    /// optionalParameters: {Gradient? gradient} , default:none
     Gradient? gradient,
 
-    /// optionalParameters: {BlendMode? backgroundBlendMode} , defaultValue:none
+    /// optionalParameters: {BlendMode? backgroundBlendMode} , default:none
     BlendMode? backgroundBlendMode,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
     BoxShape shape = BoxShape.rectangle,
   }) : super(
           color: color,
@@ -60,13 +60,46 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
           backgroundBlendMode: p.get('backgroundBlendMode').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('image', image, isNamed: true);
-    mateUse('border', border, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUseList('boxShadow', boxShadow, isNamed: true);
-    mateUse('gradient', gradient, isNamed: true);
-    mateUse('backgroundBlendMode', backgroundBlendMode, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUseList(
+      'boxShadow',
+      boxShadow,
+      isNamed: true,
+    );
+    mateUse(
+      'gradient',
+      gradient,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundBlendMode',
+      backgroundBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+      defaultValue: BoxShape.rectangle,
+    );
   }
 }

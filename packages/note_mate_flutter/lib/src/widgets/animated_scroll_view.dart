@@ -17,37 +17,37 @@ import 'package:flutter/src/widgets/sliver.dart';
 class AnimatedList$Mate extends AnimatedList with Mate {
   /// AnimatedList AnimatedList({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, int initialItemCount = 0, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, Clip clipBehavior = Clip.hardEdge})
   AnimatedList$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , default:none
     required AnimatedItemBuilder itemBuilder,
 
-    /// optionalParameters: {int initialItemCount = 0} , defaultValue:Literal
+    /// optionalParameters: {int initialItemCount = 0} , default:processed=IntegerLiteralImpl
     int initialItemCount = 0,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     Axis scrollDirection = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , defaultValue:none
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , defaultValue:none
+    /// optionalParameters: {bool? primary} , default:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
     bool shrinkWrap = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
@@ -77,17 +77,66 @@ class AnimatedList$Mate extends AnimatedList with Mate {
           padding: p.get('padding').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('initialItemCount', initialItemCount, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('primary', primary, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('shrinkWrap', shrinkWrap, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'initialItemCount',
+      initialItemCount,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'shrinkWrap',
+      shrinkWrap,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -95,37 +144,37 @@ class AnimatedList$Mate extends AnimatedList with Mate {
 class AnimatedGrid$Mate extends AnimatedGrid with Mate {
   /// AnimatedGrid AnimatedGrid({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, required SliverGridDelegate gridDelegate, int initialItemCount = 0, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, EdgeInsetsGeometry? padding, Clip clipBehavior = Clip.hardEdge})
   AnimatedGrid$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , default:none
     required AnimatedItemBuilder itemBuilder,
 
-    /// optionalParameters: {required SliverGridDelegate gridDelegate} , defaultValue:none
+    /// optionalParameters: {required SliverGridDelegate gridDelegate} , default:none
     required SliverGridDelegate gridDelegate,
 
-    /// optionalParameters: {int initialItemCount = 0} , defaultValue:Literal
+    /// optionalParameters: {int initialItemCount = 0} , default:processed=IntegerLiteralImpl
     int initialItemCount = 0,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     Axis scrollDirection = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , defaultValue:none
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , defaultValue:none
+    /// optionalParameters: {bool? primary} , default:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
@@ -155,17 +204,65 @@ class AnimatedGrid$Mate extends AnimatedGrid with Mate {
           padding: p.get('padding').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('gridDelegate', gridDelegate, isNamed: true);
-    mateUse('initialItemCount', initialItemCount, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('primary', primary, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'gridDelegate',
+      gridDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'initialItemCount',
+      initialItemCount,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -173,16 +270,16 @@ class AnimatedGrid$Mate extends AnimatedGrid with Mate {
 class SliverAnimatedList$Mate extends SliverAnimatedList with Mate {
   /// SliverAnimatedList SliverAnimatedList({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, int? Function(Key)? findChildIndexCallback, int initialItemCount = 0})
   SliverAnimatedList$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , default:none
     required AnimatedItemBuilder itemBuilder,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {int initialItemCount = 0} , defaultValue:Literal
+    /// optionalParameters: {int initialItemCount = 0} , default:processed=IntegerLiteralImpl
     int initialItemCount = 0,
   }) : super(
           key: key,
@@ -198,10 +295,27 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with Mate {
           findChildIndexCallback: p.get('findChildIndexCallback').build(),
           initialItemCount: p.get('initialItemCount').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
-    mateUse('initialItemCount', initialItemCount, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'findChildIndexCallback',
+      findChildIndexCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'initialItemCount',
+      initialItemCount,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -209,19 +323,19 @@ class SliverAnimatedList$Mate extends SliverAnimatedList with Mate {
 class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with Mate {
   /// SliverAnimatedGrid SliverAnimatedGrid({Key? key, required Widget Function(BuildContext, int, Animation<double>) itemBuilder, required SliverGridDelegate gridDelegate, int? Function(Key)? findChildIndexCallback, int initialItemCount = 0})
   SliverAnimatedGrid$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, int, Animation<double>) itemBuilder} , default:none
     required AnimatedItemBuilder itemBuilder,
 
-    /// optionalParameters: {required SliverGridDelegate gridDelegate} , defaultValue:none
+    /// optionalParameters: {required SliverGridDelegate gridDelegate} , default:none
     required SliverGridDelegate gridDelegate,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {int initialItemCount = 0} , defaultValue:Literal
+    /// optionalParameters: {int initialItemCount = 0} , default:processed=IntegerLiteralImpl
     int initialItemCount = 0,
   }) : super(
           key: key,
@@ -239,10 +353,31 @@ class SliverAnimatedGrid$Mate extends SliverAnimatedGrid with Mate {
           findChildIndexCallback: p.get('findChildIndexCallback').build(),
           initialItemCount: p.get('initialItemCount').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('gridDelegate', gridDelegate, isNamed: true);
-    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
-    mateUse('initialItemCount', initialItemCount, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'gridDelegate',
+      gridDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'findChildIndexCallback',
+      findChildIndexCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'initialItemCount',
+      initialItemCount,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }

@@ -10,22 +10,22 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class CupertinoFormRow$Mate extends CupertinoFormRow with Mate {
   /// CupertinoFormRow CupertinoFormRow({Key? key, required Widget child, Widget? prefix, EdgeInsetsGeometry? padding, Widget? helper, Widget? error})
   CupertinoFormRow$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {Widget? prefix} , defaultValue:none
+    /// optionalParameters: {Widget? prefix} , default:none
     Widget? prefix,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Widget? helper} , defaultValue:none
+    /// optionalParameters: {Widget? helper} , default:none
     Widget? helper,
 
-    /// optionalParameters: {Widget? error} , defaultValue:none
+    /// optionalParameters: {Widget? error} , default:none
     Widget? error,
   }) : super(
           key: key,
@@ -45,11 +45,35 @@ class CupertinoFormRow$Mate extends CupertinoFormRow with Mate {
           helper: p.get('helper').build(),
           error: p.get('error').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('prefix', prefix, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('helper', helper, isNamed: true);
-    mateUse('error', error, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'prefix',
+      prefix,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'helper',
+      helper,
+      isNamed: true,
+    );
+    mateUse(
+      'error',
+      error,
+      isNamed: true,
+    );
   }
 }

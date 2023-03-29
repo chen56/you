@@ -23,91 +23,91 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
   /// CupertinoSearchTextField CupertinoSearchTextField({Key? key, TextEditingController? controller, void Function(String)? onChanged, void Function(String)? onSubmitted, TextStyle? style, String? placeholder, TextStyle? placeholderStyle, BoxDecoration? decoration, Color? backgroundColor, BorderRadius? borderRadius, TextInputType? keyboardType = TextInputType.text, EdgeInsetsGeometry padding = const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8), Color itemColor = CupertinoColors.secondaryLabel, double itemSize = 20.0, EdgeInsetsGeometry prefixInsets = const EdgeInsetsDirectional.fromSTEB(6, 0, 0, 3), Widget prefixIcon = const Icon(CupertinoIcons.search), EdgeInsetsGeometry suffixInsets = const EdgeInsetsDirectional.fromSTEB(0, 0, 5, 2), Icon suffixIcon = const Icon(CupertinoIcons.xmark_circle_fill), OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing, void Function()? onSuffixTap, String? restorationId, FocusNode? focusNode, SmartQuotesType? smartQuotesType, SmartDashesType? smartDashesType, bool enableIMEPersonalizedLearning = true, bool autofocus = false, void Function()? onTap, bool autocorrect = true, bool? enabled})
   CupertinoSearchTextField$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {TextEditingController? controller} , defaultValue:none
+    /// optionalParameters: {TextEditingController? controller} , default:none
     TextEditingController? controller,
 
-    /// optionalParameters: {void Function(String)? onChanged} , defaultValue:none
+    /// optionalParameters: {void Function(String)? onChanged} , default:none
     ValueChanged<String>? onChanged,
 
-    /// optionalParameters: {void Function(String)? onSubmitted} , defaultValue:none
+    /// optionalParameters: {void Function(String)? onSubmitted} , default:none
     ValueChanged<String>? onSubmitted,
 
-    /// optionalParameters: {TextStyle? style} , defaultValue:none
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {String? placeholder} , defaultValue:none
+    /// optionalParameters: {String? placeholder} , default:none
     String? placeholder,
 
-    /// optionalParameters: {TextStyle? placeholderStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? placeholderStyle} , default:none
     TextStyle? placeholderStyle,
 
-    /// optionalParameters: {BoxDecoration? decoration} , defaultValue:none
+    /// optionalParameters: {BoxDecoration? decoration} , default:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {TextInputType? keyboardType = TextInputType.text} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextInputType? keyboardType = TextInputType.text} , default:processed=PrefixedIdentifierImpl
     TextInputType? keyboardType = TextInputType.text,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8)} , defaultValue:unprocessed
+    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Color itemColor = CupertinoColors.secondaryLabel} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Color itemColor = CupertinoColors.secondaryLabel} , default:processed=PrefixedIdentifierImpl
     Color itemColor = CupertinoColors.secondaryLabel,
 
-    /// optionalParameters: {double itemSize = 20.0} , defaultValue:Literal
+    /// optionalParameters: {double itemSize = 20.0} , default:processed=DoubleLiteralImpl
     double itemSize = 20.0,
 
-    /// optionalParameters: {EdgeInsetsGeometry prefixInsets = const EdgeInsetsDirectional.fromSTEB(6, 0, 0, 3)} , defaultValue:unprocessed
+    /// optionalParameters: {EdgeInsetsGeometry prefixInsets = const EdgeInsetsDirectional.fromSTEB(6, 0, 0, 3)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsetsGeometry prefixInsets,
 
-    /// optionalParameters: {Widget prefixIcon = const Icon(CupertinoIcons.search)} , defaultValue:unprocessed
+    /// optionalParameters: {Widget prefixIcon = const Icon(CupertinoIcons.search)} , default:unprocessed=InstanceCreationExpressionImpl
     required Widget prefixIcon,
 
-    /// optionalParameters: {EdgeInsetsGeometry suffixInsets = const EdgeInsetsDirectional.fromSTEB(0, 0, 5, 2)} , defaultValue:unprocessed
+    /// optionalParameters: {EdgeInsetsGeometry suffixInsets = const EdgeInsetsDirectional.fromSTEB(0, 0, 5, 2)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsetsGeometry suffixInsets,
 
-    /// optionalParameters: {Icon suffixIcon = const Icon(CupertinoIcons.xmark_circle_fill)} , defaultValue:unprocessed
+    /// optionalParameters: {Icon suffixIcon = const Icon(CupertinoIcons.xmark_circle_fill)} , default:unprocessed=InstanceCreationExpressionImpl
     required Icon suffixIcon,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing} , default:processed=PrefixedIdentifierImpl
     OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing,
 
-    /// optionalParameters: {void Function()? onSuffixTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onSuffixTap} , default:none
     VoidCallback? onSuffixTap,
 
-    /// optionalParameters: {String? restorationId} , defaultValue:none
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {SmartQuotesType? smartQuotesType} , defaultValue:none
+    /// optionalParameters: {SmartQuotesType? smartQuotesType} , default:none
     SmartQuotesType? smartQuotesType,
 
-    /// optionalParameters: {SmartDashesType? smartDashesType} , defaultValue:none
+    /// optionalParameters: {SmartDashesType? smartDashesType} , default:none
     SmartDashesType? smartDashesType,
 
-    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , defaultValue:Literal
+    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , default:processed=BooleanLiteralImpl
     bool enableIMEPersonalizedLearning = true,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {bool autocorrect = true} , defaultValue:Literal
+    /// optionalParameters: {bool autocorrect = true} , default:processed=BooleanLiteralImpl
     bool autocorrect = true,
 
-    /// optionalParameters: {bool? enabled} , defaultValue:none
+    /// optionalParameters: {bool? enabled} , default:none
     bool? enabled,
   }) : super(
           key: key,
@@ -173,34 +173,157 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
           autocorrect: p.get('autocorrect').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('onChanged', onChanged, isNamed: true);
-    mateUse('onSubmitted', onSubmitted, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('placeholder', placeholder, isNamed: true);
-    mateUse('placeholderStyle', placeholderStyle, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('keyboardType', keyboardType, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('itemColor', itemColor, isNamed: true);
-    mateUse('itemSize', itemSize, isNamed: true);
-    mateUse('prefixInsets', prefixInsets, isNamed: true);
-    mateUse('prefixIcon', prefixIcon, isNamed: true);
-    mateUse('suffixInsets', suffixInsets, isNamed: true);
-    mateUse('suffixIcon', suffixIcon, isNamed: true);
-    mateUse('suffixMode', suffixMode, isNamed: true);
-    mateUse('onSuffixTap', onSuffixTap, isNamed: true);
-    mateUse('restorationId', restorationId, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('smartQuotesType', smartQuotesType, isNamed: true);
-    mateUse('smartDashesType', smartDashesType, isNamed: true);
-    mateUse('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('autocorrect', autocorrect, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onSubmitted',
+      onSubmitted,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholder',
+      placeholder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderStyle',
+      placeholderStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'keyboardType',
+      keyboardType,
+      isNamed: true,
+      defaultValue: TextInputType.text,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'itemColor',
+      itemColor,
+      isNamed: true,
+      defaultValue: CupertinoColors.secondaryLabel,
+    );
+    mateUse(
+      'itemSize',
+      itemSize,
+      isNamed: true,
+      defaultValue: 20.0,
+    );
+    mateUse(
+      'prefixInsets',
+      prefixInsets,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixIcon',
+      prefixIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixInsets',
+      suffixInsets,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixIcon',
+      suffixIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixMode',
+      suffixMode,
+      isNamed: true,
+      defaultValue: OverlayVisibilityMode.editing,
+    );
+    mateUse(
+      'onSuffixTap',
+      onSuffixTap,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'smartQuotesType',
+      smartQuotesType,
+      isNamed: true,
+    );
+    mateUse(
+      'smartDashesType',
+      smartDashesType,
+      isNamed: true,
+    );
+    mateUse(
+      'enableIMEPersonalizedLearning',
+      enableIMEPersonalizedLearning,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'autocorrect',
+      autocorrect,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+    );
   }
 }

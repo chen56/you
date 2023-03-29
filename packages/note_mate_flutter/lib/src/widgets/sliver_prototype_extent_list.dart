@@ -11,13 +11,13 @@ import 'dart:core';
 class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate {
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SliverChildDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required SliverChildDelegate delegate} , default:none
     required SliverChildDelegate delegate,
 
-    /// optionalParameters: {required Widget prototypeItem} , defaultValue:none
+    /// optionalParameters: {required Widget prototypeItem} , default:none
     required Widget prototypeItem,
   }) : super(
           key: key,
@@ -31,35 +31,47 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           delegate: p.get('delegate').build(),
           prototypeItem: p.get('prototypeItem').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('delegate', delegate, isNamed: true);
-    mateUse('prototypeItem', prototypeItem, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'prototypeItem',
+      prototypeItem,
+      isNamed: true,
+    );
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.builder({Key? key, required Widget? Function(BuildContext, int) itemBuilder, required Widget prototypeItem, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
   SliverPrototypeExtentList$Mate.builder({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , default:none
     required NullableIndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {required Widget prototypeItem} , defaultValue:none
+    /// optionalParameters: {required Widget prototypeItem} , default:none
     required Widget prototypeItem,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {int? itemCount} , defaultValue:none
+    /// optionalParameters: {int? itemCount} , default:none
     int? itemCount,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
     bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
     bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
     bool addSemanticIndexes = true,
   }) : super.builder(
           key: key,
@@ -83,34 +95,69 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('prototypeItem', prototypeItem, isNamed: true);
-    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
-    mateUse('itemCount', itemCount, isNamed: true);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
-    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'prototypeItem',
+      prototypeItem,
+      isNamed: true,
+    );
+    mateUse(
+      'findChildIndexCallback',
+      findChildIndexCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'itemCount',
+      itemCount,
+      isNamed: true,
+    );
+    mateUse(
+      'addAutomaticKeepAlives',
+      addAutomaticKeepAlives,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'addRepaintBoundaries',
+      addRepaintBoundaries,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'addSemanticIndexes',
+      addSemanticIndexes,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.list({Key? key, required List<Widget> children, required Widget prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
   SliverPrototypeExtentList$Mate.list({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , defaultValue:none
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {required Widget prototypeItem} , defaultValue:none
+    /// optionalParameters: {required Widget prototypeItem} , default:none
     required Widget prototypeItem,
 
-    /// optionalParameters: {bool addAutomaticKeepAlives = true} , defaultValue:Literal
+    /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
     bool addAutomaticKeepAlives = true,
 
-    /// optionalParameters: {bool addRepaintBoundaries = true} , defaultValue:Literal
+    /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
     bool addRepaintBoundaries = true,
 
-    /// optionalParameters: {bool addSemanticIndexes = true} , defaultValue:Literal
+    /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
     bool addSemanticIndexes = true,
   }) : super.list(
           key: key,
@@ -130,11 +177,38 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('prototypeItem', prototypeItem, isNamed: true);
-    mateUse('addAutomaticKeepAlives', addAutomaticKeepAlives, isNamed: true);
-    mateUse('addRepaintBoundaries', addRepaintBoundaries, isNamed: true);
-    mateUse('addSemanticIndexes', addSemanticIndexes, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'prototypeItem',
+      prototypeItem,
+      isNamed: true,
+    );
+    mateUse(
+      'addAutomaticKeepAlives',
+      addAutomaticKeepAlives,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'addRepaintBoundaries',
+      addRepaintBoundaries,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'addSemanticIndexes',
+      addSemanticIndexes,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

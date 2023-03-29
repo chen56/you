@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/editable_text.dart';
 class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
   /// SpellCheckConfiguration SpellCheckConfiguration({SpellCheckService? spellCheckService, TextStyle? misspelledTextStyle, Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder})
   SpellCheckConfiguration$Mate({
-    /// optionalParameters: {SpellCheckService? spellCheckService} , defaultValue:none
+    /// optionalParameters: {SpellCheckService? spellCheckService} , default:none
     SpellCheckService? spellCheckService,
 
-    /// optionalParameters: {TextStyle? misspelledTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? misspelledTextStyle} , default:none
     TextStyle? misspelledTextStyle,
 
-    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder} , default:none
     EditableTextContextMenuBuilder? spellCheckSuggestionsToolbarBuilder,
   }) : super(
           spellCheckService: spellCheckService,
@@ -30,8 +30,20 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
           spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
-    mateUse('spellCheckService', spellCheckService, isNamed: true);
-    mateUse('misspelledTextStyle', misspelledTextStyle, isNamed: true);
-    mateUse('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder, isNamed: true);
+    mateUse(
+      'spellCheckService',
+      spellCheckService,
+      isNamed: true,
+    );
+    mateUse(
+      'misspelledTextStyle',
+      misspelledTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'spellCheckSuggestionsToolbarBuilder',
+      spellCheckSuggestionsToolbarBuilder,
+      isNamed: true,
+    );
   }
 }

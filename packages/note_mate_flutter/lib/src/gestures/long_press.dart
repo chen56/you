@@ -13,13 +13,13 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
   /// LongPressDownDetails LongPressDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   LongPressDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , defaultValue:none
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
   }) : super(
           globalPosition: globalPosition,
@@ -33,9 +33,22 @@ class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
   }
 }
 
@@ -43,10 +56,10 @@ class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
 class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
   /// LongPressStartDetails LongPressStartDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   LongPressStartDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
   }) : super(
           globalPosition: globalPosition,
@@ -58,8 +71,17 @@ class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -67,16 +89,16 @@ class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
 class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Mate {
   /// LongPressMoveUpdateDetails LongPressMoveUpdateDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Offset offsetFromOrigin = Offset.zero, Offset? localOffsetFromOrigin})
   LongPressMoveUpdateDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {Offset offsetFromOrigin = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offsetFromOrigin = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offsetFromOrigin = Offset.zero,
 
-    /// optionalParameters: {Offset? localOffsetFromOrigin} , defaultValue:none
+    /// optionalParameters: {Offset? localOffsetFromOrigin} , default:none
     Offset? localOffsetFromOrigin,
   }) : super(
           globalPosition: globalPosition,
@@ -92,10 +114,28 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
           offsetFromOrigin: p.get('offsetFromOrigin').build(),
           localOffsetFromOrigin: p.get('localOffsetFromOrigin').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('offsetFromOrigin', offsetFromOrigin, isNamed: true);
-    mateUse('localOffsetFromOrigin', localOffsetFromOrigin, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'offsetFromOrigin',
+      offsetFromOrigin,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localOffsetFromOrigin',
+      localOffsetFromOrigin,
+      isNamed: true,
+    );
   }
 }
 
@@ -103,13 +143,13 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
 class LongPressEndDetails$Mate extends LongPressEndDetails with Mate {
   /// LongPressEndDetails LongPressEndDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Velocity velocity = Velocity.zero})
   LongPressEndDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
     Velocity velocity = Velocity.zero,
   }) : super(
           globalPosition: globalPosition,
@@ -123,9 +163,23 @@ class LongPressEndDetails$Mate extends LongPressEndDetails with Mate {
           localPosition: p.get('localPosition').build(),
           velocity: p.get('velocity').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('velocity', velocity, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: true,
+      defaultValue: Velocity.zero,
+    );
   }
 }
 
@@ -133,20 +187,20 @@ class LongPressEndDetails$Mate extends LongPressEndDetails with Mate {
 class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Mate {
   /// LongPressGestureRecognizer LongPressGestureRecognizer({Duration? duration, double? postAcceptSlopTolerance = null, Set<PointerDeviceKind>? supportedDevices, Object? debugOwner, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   LongPressGestureRecognizer$Mate({
-    /// optionalParameters: {Duration? duration} , defaultValue:none
+    /// optionalParameters: {Duration? duration} , default:none
     Duration? duration,
 
-    /// optionalParameters: {double? postAcceptSlopTolerance = null} , defaultValue:Literal
+    /// optionalParameters: {double? postAcceptSlopTolerance = null} , default:processed=NullLiteralImpl
     double? postAcceptSlopTolerance = null,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {Object? debugOwner} , defaultValue:none
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , defaultValue:unprocessed
-    AllowedButtonsFilter? allowedButtonsFilter,
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , default:unprocessed=SimpleIdentifierImpl
+    required AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           duration: duration,
           postAcceptSlopTolerance: postAcceptSlopTolerance,
@@ -163,10 +217,31 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
           debugOwner: p.get('debugOwner').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('duration', duration, isNamed: true);
-    mateUse('postAcceptSlopTolerance', postAcceptSlopTolerance, isNamed: true);
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
-    mateUse('debugOwner', debugOwner, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'postAcceptSlopTolerance',
+      postAcceptSlopTolerance,
+      isNamed: true,
+      defaultValue: null,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }

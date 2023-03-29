@@ -12,13 +12,18 @@ class SnapshotController$Mate extends SnapshotController with Mate {
   /// SnapshotController SnapshotController({bool allowSnapshotting = false})
   SnapshotController$Mate(
       {
-      /// optionalParameters: {bool allowSnapshotting = false} , defaultValue:Literal
+      /// optionalParameters: {bool allowSnapshotting = false} , default:processed=BooleanLiteralImpl
       bool allowSnapshotting = false})
       : super(allowSnapshotting: allowSnapshotting) {
     mateCreateName = 'SnapshotController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
-    mateUse('allowSnapshotting', allowSnapshotting, isNamed: true);
+    mateUse(
+      'allowSnapshotting',
+      allowSnapshotting,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -26,22 +31,22 @@ class SnapshotController$Mate extends SnapshotController with Mate {
 class SnapshotWidget$Mate extends SnapshotWidget with Mate {
   /// SnapshotWidget SnapshotWidget({Key? key, SnapshotMode mode = SnapshotMode.normal, SnapshotPainter painter = const _DefaultSnapshotPainter(), bool autoresize = false, required SnapshotController controller, required Widget? child})
   SnapshotWidget$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {SnapshotMode mode = SnapshotMode.normal} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {SnapshotMode mode = SnapshotMode.normal} , default:processed=PrefixedIdentifierImpl
     SnapshotMode mode = SnapshotMode.normal,
 
-    /// optionalParameters: {SnapshotPainter painter = const _DefaultSnapshotPainter()} , defaultValue:unprocessed
+    /// optionalParameters: {SnapshotPainter painter = const _DefaultSnapshotPainter()} , default:unprocessed=InstanceCreationExpressionImpl
     required SnapshotPainter painter,
 
-    /// optionalParameters: {bool autoresize = false} , defaultValue:Literal
+    /// optionalParameters: {bool autoresize = false} , default:processed=BooleanLiteralImpl
     bool autoresize = false,
 
-    /// optionalParameters: {required SnapshotController controller} , defaultValue:none
+    /// optionalParameters: {required SnapshotController controller} , default:none
     required SnapshotController controller,
 
-    /// optionalParameters: {required Widget? child} , defaultValue:none
+    /// optionalParameters: {required Widget? child} , default:none
     required Widget? child,
   }) : super(
           key: key,
@@ -61,11 +66,37 @@ class SnapshotWidget$Mate extends SnapshotWidget with Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('mode', mode, isNamed: true);
-    mateUse('painter', painter, isNamed: true);
-    mateUse('autoresize', autoresize, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mode',
+      mode,
+      isNamed: true,
+      defaultValue: SnapshotMode.normal,
+    );
+    mateUse(
+      'painter',
+      painter,
+      isNamed: true,
+    );
+    mateUse(
+      'autoresize',
+      autoresize,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

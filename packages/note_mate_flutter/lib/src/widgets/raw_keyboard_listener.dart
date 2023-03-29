@@ -13,22 +13,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
   /// RawKeyboardListener RawKeyboardListener({Key? key, required FocusNode focusNode, bool autofocus = false, bool includeSemantics = true, void Function(RawKeyEvent)? onKey, required Widget child})
   RawKeyboardListener$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FocusNode focusNode} , defaultValue:none
+    /// optionalParameters: {required FocusNode focusNode} , default:none
     required FocusNode focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {bool includeSemantics = true} , defaultValue:Literal
+    /// optionalParameters: {bool includeSemantics = true} , default:processed=BooleanLiteralImpl
     bool includeSemantics = true,
 
-    /// optionalParameters: {void Function(RawKeyEvent)? onKey} , defaultValue:none
+    /// optionalParameters: {void Function(RawKeyEvent)? onKey} , default:none
     ValueChanged<RawKeyEvent>? onKey,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -48,11 +48,37 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
           onKey: p.get('onKey').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('includeSemantics', includeSemantics, isNamed: true);
-    mateUse('onKey', onKey, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'includeSemantics',
+      includeSemantics,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onKey',
+      onKey,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

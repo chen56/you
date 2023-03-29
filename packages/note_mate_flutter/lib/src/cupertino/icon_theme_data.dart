@@ -9,28 +9,28 @@ import 'dart:ui';
 class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
   /// CupertinoIconThemeData CupertinoIconThemeData({double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, double? opacity, List<Shadow>? shadows})
   CupertinoIconThemeData$Mate({
-    /// optionalParameters: {double? size} , defaultValue:none
+    /// optionalParameters: {double? size} , default:none
     double? size,
 
-    /// optionalParameters: {double? fill} , defaultValue:none
+    /// optionalParameters: {double? fill} , default:none
     double? fill,
 
-    /// optionalParameters: {double? weight} , defaultValue:none
+    /// optionalParameters: {double? weight} , default:none
     double? weight,
 
-    /// optionalParameters: {double? grade} , defaultValue:none
+    /// optionalParameters: {double? grade} , default:none
     double? grade,
 
-    /// optionalParameters: {double? opticalSize} , defaultValue:none
+    /// optionalParameters: {double? opticalSize} , default:none
     double? opticalSize,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double? opacity} , defaultValue:none
+    /// optionalParameters: {double? opacity} , default:none
     double? opacity,
 
-    /// optionalParameters: {List<Shadow>? shadows} , defaultValue:none
+    /// optionalParameters: {List<Shadow>? shadows} , default:none
     List<Shadow>? shadows,
   }) : super(
           size: size,
@@ -54,13 +54,45 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
           opacity: p.get('opacity').build(),
           shadows: p.get('shadows').build(),
         );
-    mateUse('size', size, isNamed: true);
-    mateUse('fill', fill, isNamed: true);
-    mateUse('weight', weight, isNamed: true);
-    mateUse('grade', grade, isNamed: true);
-    mateUse('opticalSize', opticalSize, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('opacity', opacity, isNamed: true);
-    mateUseList('shadows', shadows, isNamed: true);
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'fill',
+      fill,
+      isNamed: true,
+    );
+    mateUse(
+      'weight',
+      weight,
+      isNamed: true,
+    );
+    mateUse(
+      'grade',
+      grade,
+      isNamed: true,
+    );
+    mateUse(
+      'opticalSize',
+      opticalSize,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
   }
 }

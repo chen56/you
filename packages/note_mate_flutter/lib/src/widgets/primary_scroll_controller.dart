@@ -14,19 +14,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
   /// PrimaryScrollController PrimaryScrollController({Key? key, required ScrollController controller, Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms, Axis? scrollDirection = Axis.vertical, required Widget child})
   PrimaryScrollController$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ScrollController controller} , defaultValue:none
+    /// optionalParameters: {required ScrollController controller} , default:none
     required ScrollController controller,
 
-    /// optionalParameters: {Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms} , defaultValue:unprocessed
+    /// optionalParameters: {Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms} , default:unprocessed=SimpleIdentifierImpl
     required Set<TargetPlatform> automaticallyInheritForPlatforms,
 
-    /// optionalParameters: {Axis? scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis? scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     Axis? scrollDirection = Axis.vertical,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -44,19 +44,40 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           scrollDirection: p.get('scrollDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('automaticallyInheritForPlatforms', automaticallyInheritForPlatforms, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'automaticallyInheritForPlatforms',
+      automaticallyInheritForPlatforms,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// PrimaryScrollController PrimaryScrollController.none({Key? key, required Widget child})
   PrimaryScrollController$Mate.none({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.none(
           key: key,
@@ -68,7 +89,15 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

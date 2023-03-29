@@ -14,40 +14,40 @@ import 'dart:core';
 class AnimatedCrossFade$Mate extends AnimatedCrossFade with Mate {
   /// AnimatedCrossFade AnimatedCrossFade({Key? key, required Widget firstChild, required Widget secondChild, Curve firstCurve = Curves.linear, Curve secondCurve = Curves.linear, Curve sizeCurve = Curves.linear, AlignmentGeometry alignment = Alignment.topCenter, required CrossFadeState crossFadeState, required Duration duration, Duration? reverseDuration, Widget Function(Widget, Key, Widget, Key) layoutBuilder = defaultLayoutBuilder, bool excludeBottomFocus = true})
   AnimatedCrossFade$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget firstChild} , defaultValue:none
+    /// optionalParameters: {required Widget firstChild} , default:none
     required Widget firstChild,
 
-    /// optionalParameters: {required Widget secondChild} , defaultValue:none
+    /// optionalParameters: {required Widget secondChild} , default:none
     required Widget secondChild,
 
-    /// optionalParameters: {Curve firstCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve firstCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve firstCurve = Curves.linear,
 
-    /// optionalParameters: {Curve secondCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve secondCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve secondCurve = Curves.linear,
 
-    /// optionalParameters: {Curve sizeCurve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve sizeCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve sizeCurve = Curves.linear,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.topCenter} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.topCenter} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.topCenter,
 
-    /// optionalParameters: {required CrossFadeState crossFadeState} , defaultValue:none
+    /// optionalParameters: {required CrossFadeState crossFadeState} , default:none
     required CrossFadeState crossFadeState,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {Duration? reverseDuration} , defaultValue:none
+    /// optionalParameters: {Duration? reverseDuration} , default:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Widget Function(Widget, Key, Widget, Key) layoutBuilder = defaultLayoutBuilder} , defaultValue:unprocessed
+    /// optionalParameters: {Widget Function(Widget, Key, Widget, Key) layoutBuilder = defaultLayoutBuilder} , default:unprocessed=SimpleIdentifierImpl
     required AnimatedCrossFadeBuilder layoutBuilder,
 
-    /// optionalParameters: {bool excludeBottomFocus = true} , defaultValue:Literal
+    /// optionalParameters: {bool excludeBottomFocus = true} , default:processed=BooleanLiteralImpl
     bool excludeBottomFocus = true,
   }) : super(
           key: key,
@@ -79,17 +79,70 @@ class AnimatedCrossFade$Mate extends AnimatedCrossFade with Mate {
           layoutBuilder: p.get('layoutBuilder').build(),
           excludeBottomFocus: p.get('excludeBottomFocus').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('firstChild', firstChild, isNamed: true);
-    mateUse('secondChild', secondChild, isNamed: true);
-    mateUse('firstCurve', firstCurve, isNamed: true);
-    mateUse('secondCurve', secondCurve, isNamed: true);
-    mateUse('sizeCurve', sizeCurve, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('crossFadeState', crossFadeState, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('reverseDuration', reverseDuration, isNamed: true);
-    mateUse('layoutBuilder', layoutBuilder, isNamed: true);
-    mateUse('excludeBottomFocus', excludeBottomFocus, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'firstChild',
+      firstChild,
+      isNamed: true,
+    );
+    mateUse(
+      'secondChild',
+      secondChild,
+      isNamed: true,
+    );
+    mateUse(
+      'firstCurve',
+      firstCurve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'secondCurve',
+      secondCurve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'sizeCurve',
+      sizeCurve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.topCenter,
+    );
+    mateUse(
+      'crossFadeState',
+      crossFadeState,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseDuration',
+      reverseDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'layoutBuilder',
+      layoutBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeBottomFocus',
+      excludeBottomFocus,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

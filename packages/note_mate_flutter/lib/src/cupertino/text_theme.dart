@@ -10,31 +10,31 @@ import 'package:flutter/src/painting/text_style.dart';
 class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
   /// CupertinoTextThemeData CupertinoTextThemeData({Color primaryColor = CupertinoColors.systemBlue, TextStyle? textStyle, TextStyle? actionTextStyle, TextStyle? tabLabelTextStyle, TextStyle? navTitleTextStyle, TextStyle? navLargeTitleTextStyle, TextStyle? navActionTextStyle, TextStyle? pickerTextStyle, TextStyle? dateTimePickerTextStyle})
   CupertinoTextThemeData$Mate({
-    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , default:processed=PrefixedIdentifierImpl
     Color primaryColor = CupertinoColors.systemBlue,
 
-    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {TextStyle? actionTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? actionTextStyle} , default:none
     TextStyle? actionTextStyle,
 
-    /// optionalParameters: {TextStyle? tabLabelTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? tabLabelTextStyle} , default:none
     TextStyle? tabLabelTextStyle,
 
-    /// optionalParameters: {TextStyle? navTitleTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? navTitleTextStyle} , default:none
     TextStyle? navTitleTextStyle,
 
-    /// optionalParameters: {TextStyle? navLargeTitleTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? navLargeTitleTextStyle} , default:none
     TextStyle? navLargeTitleTextStyle,
 
-    /// optionalParameters: {TextStyle? navActionTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? navActionTextStyle} , default:none
     TextStyle? navActionTextStyle,
 
-    /// optionalParameters: {TextStyle? pickerTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? pickerTextStyle} , default:none
     TextStyle? pickerTextStyle,
 
-    /// optionalParameters: {TextStyle? dateTimePickerTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? dateTimePickerTextStyle} , default:none
     TextStyle? dateTimePickerTextStyle,
   }) : super(
           primaryColor: primaryColor,
@@ -60,14 +60,51 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
           pickerTextStyle: p.get('pickerTextStyle').build(),
           dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').build(),
         );
-    mateUse('primaryColor', primaryColor, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('actionTextStyle', actionTextStyle, isNamed: true);
-    mateUse('tabLabelTextStyle', tabLabelTextStyle, isNamed: true);
-    mateUse('navTitleTextStyle', navTitleTextStyle, isNamed: true);
-    mateUse('navLargeTitleTextStyle', navLargeTitleTextStyle, isNamed: true);
-    mateUse('navActionTextStyle', navActionTextStyle, isNamed: true);
-    mateUse('pickerTextStyle', pickerTextStyle, isNamed: true);
-    mateUse('dateTimePickerTextStyle', dateTimePickerTextStyle, isNamed: true);
+    mateUse(
+      'primaryColor',
+      primaryColor,
+      isNamed: true,
+      defaultValue: CupertinoColors.systemBlue,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'actionTextStyle',
+      actionTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'tabLabelTextStyle',
+      tabLabelTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'navTitleTextStyle',
+      navTitleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'navLargeTitleTextStyle',
+      navLargeTitleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'navActionTextStyle',
+      navActionTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'pickerTextStyle',
+      pickerTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'dateTimePickerTextStyle',
+      dateTimePickerTextStyle,
+      isNamed: true,
+    );
   }
 }

@@ -12,10 +12,10 @@ import 'package:flutter/rendering.dart';
 class TapRegionSurface$Mate extends TapRegionSurface with Mate {
   /// TapRegionSurface TapRegionSurface({Key? key, required Widget child})
   TapRegionSurface$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -27,8 +27,16 @@ class TapRegionSurface$Mate extends TapRegionSurface with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -36,28 +44,28 @@ class TapRegionSurface$Mate extends TapRegionSurface with Mate {
 class TapRegion$Mate extends TapRegion with Mate {
   /// TapRegion TapRegion({Key? key, required Widget? child, bool enabled = true, HitTestBehavior behavior = HitTestBehavior.deferToChild, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, Object? groupId, String? debugLabel})
   TapRegion$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget? child} , defaultValue:none
+    /// optionalParameters: {required Widget? child} , default:none
     required Widget? child,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     TapRegionCallback? onTapOutside,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , default:none
     TapRegionCallback? onTapInside,
 
-    /// optionalParameters: {Object? groupId} , defaultValue:none
+    /// optionalParameters: {Object? groupId} , default:none
     Object? groupId,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           key: key,
@@ -81,14 +89,48 @@ class TapRegion$Mate extends TapRegion with Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('onTapOutside', onTapOutside, isNamed: true);
-    mateUse('onTapInside', onTapInside, isNamed: true);
-    mateUse('groupId', groupId, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'onTapOutside',
+      onTapOutside,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapInside',
+      onTapInside,
+      isNamed: true,
+    );
+    mateUse(
+      'groupId',
+      groupId,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -96,25 +138,25 @@ class TapRegion$Mate extends TapRegion with Mate {
 class RenderTapRegion$Mate extends RenderTapRegion with Mate {
   /// RenderTapRegion RenderTapRegion({TapRegionRegistry? registry, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, HitTestBehavior behavior = HitTestBehavior.deferToChild, Object? groupId, String? debugLabel})
   RenderTapRegion$Mate({
-    /// optionalParameters: {TapRegionRegistry? registry} , defaultValue:none
+    /// optionalParameters: {TapRegionRegistry? registry} , default:none
     TapRegionRegistry? registry,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     TapRegionCallback? onTapOutside,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , default:none
     TapRegionCallback? onTapInside,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {Object? groupId} , defaultValue:none
+    /// optionalParameters: {Object? groupId} , default:none
     Object? groupId,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           registry: registry,
@@ -136,13 +178,43 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('registry', registry, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('onTapOutside', onTapOutside, isNamed: true);
-    mateUse('onTapInside', onTapInside, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('groupId', groupId, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'registry',
+      registry,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onTapOutside',
+      onTapOutside,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapInside',
+      onTapInside,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'groupId',
+      groupId,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -150,22 +222,22 @@ class RenderTapRegion$Mate extends RenderTapRegion with Mate {
 class TextFieldTapRegion$Mate extends TextFieldTapRegion with Mate {
   /// TextFieldTapRegion TextFieldTapRegion({Key? key, required Widget? child, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, String? debugLabel})
   TextFieldTapRegion$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget? child} , defaultValue:none
+    /// optionalParameters: {required Widget? child} , default:none
     required Widget? child,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     TapRegionCallback? onTapOutside,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , default:none
     TapRegionCallback? onTapInside,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           key: key,
@@ -185,11 +257,36 @@ class TextFieldTapRegion$Mate extends TextFieldTapRegion with Mate {
           onTapInside: p.get('onTapInside').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('onTapOutside', onTapOutside, isNamed: true);
-    mateUse('onTapInside', onTapInside, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onTapOutside',
+      onTapOutside,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapInside',
+      onTapInside,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }

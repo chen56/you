@@ -9,12 +9,16 @@ class ContextMenuController$Mate extends ContextMenuController with Mate {
   /// ContextMenuController ContextMenuController({void Function()? onRemove})
   ContextMenuController$Mate(
       {
-      /// optionalParameters: {void Function()? onRemove} , defaultValue:none
+      /// optionalParameters: {void Function()? onRemove} , default:none
       VoidCallback? onRemove})
       : super(onRemove: onRemove) {
     mateCreateName = 'ContextMenuController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ContextMenuController$Mate(onRemove: p.get('onRemove').build());
-    mateUse('onRemove', onRemove, isNamed: true);
+    mateUse(
+      'onRemove',
+      onRemove,
+      isNamed: true,
+    );
   }
 }

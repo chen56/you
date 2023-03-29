@@ -10,13 +10,13 @@ import 'dart:core';
 class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
   /// ContextMenuButtonItem ContextMenuButtonItem({required void Function() onPressed, ContextMenuButtonType type = ContextMenuButtonType.custom, String? label})
   ContextMenuButtonItem$Mate({
-    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function() onPressed} , default:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , default:processed=PrefixedIdentifierImpl
     ContextMenuButtonType type = ContextMenuButtonType.custom,
 
-    /// optionalParameters: {String? label} , defaultValue:none
+    /// optionalParameters: {String? label} , default:none
     String? label,
   }) : super(
           onPressed: onPressed,
@@ -30,8 +30,21 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
           type: p.get('type').build(),
           label: p.get('label').build(),
         );
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('type', type, isNamed: true);
-    mateUse('label', label, isNamed: true);
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+      defaultValue: ContextMenuButtonType.custom,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
   }
 }

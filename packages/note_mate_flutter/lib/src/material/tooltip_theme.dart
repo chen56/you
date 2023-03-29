@@ -14,43 +14,43 @@ import 'package:flutter/src/widgets/framework.dart';
 class TooltipThemeData$Mate extends TooltipThemeData with Mate {
   /// TooltipThemeData TooltipThemeData({double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback})
   TooltipThemeData$Mate({
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {double? verticalOffset} , defaultValue:none
+    /// optionalParameters: {double? verticalOffset} , default:none
     double? verticalOffset,
 
-    /// optionalParameters: {bool? preferBelow} , defaultValue:none
+    /// optionalParameters: {bool? preferBelow} , default:none
     bool? preferBelow,
 
-    /// optionalParameters: {bool? excludeFromSemantics} , defaultValue:none
+    /// optionalParameters: {bool? excludeFromSemantics} , default:none
     bool? excludeFromSemantics,
 
-    /// optionalParameters: {Decoration? decoration} , defaultValue:none
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {Duration? waitDuration} , defaultValue:none
+    /// optionalParameters: {Duration? waitDuration} , default:none
     Duration? waitDuration,
 
-    /// optionalParameters: {Duration? showDuration} , defaultValue:none
+    /// optionalParameters: {Duration? showDuration} , default:none
     Duration? showDuration,
 
-    /// optionalParameters: {TooltipTriggerMode? triggerMode} , defaultValue:none
+    /// optionalParameters: {TooltipTriggerMode? triggerMode} , default:none
     TooltipTriggerMode? triggerMode,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
   }) : super(
           height: height,
@@ -84,19 +84,71 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('height', height, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('verticalOffset', verticalOffset, isNamed: true);
-    mateUse('preferBelow', preferBelow, isNamed: true);
-    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('textAlign', textAlign, isNamed: true);
-    mateUse('waitDuration', waitDuration, isNamed: true);
-    mateUse('showDuration', showDuration, isNamed: true);
-    mateUse('triggerMode', triggerMode, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalOffset',
+      verticalOffset,
+      isNamed: true,
+    );
+    mateUse(
+      'preferBelow',
+      preferBelow,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'waitDuration',
+      waitDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'showDuration',
+      showDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'triggerMode',
+      triggerMode,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
   }
 }
 
@@ -104,13 +156,13 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
 class TooltipTheme$Mate extends TooltipTheme with Mate {
   /// TooltipTheme TooltipTheme({Key? key, required TooltipThemeData data, required Widget child})
   TooltipTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TooltipThemeData data} , defaultValue:none
+    /// optionalParameters: {required TooltipThemeData data} , default:none
     required TooltipThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -124,8 +176,20 @@ class TooltipTheme$Mate extends TooltipTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -12,28 +12,28 @@ import 'package:flutter/src/services/text_input.dart';
 class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
   /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, TextEditingValue? initialValue})
   Autocomplete$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , defaultValue:none
+    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , default:none
     required AutocompleteOptionsBuilder<T> optionsBuilder,
 
-    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , default:processed=PrefixedIdentifierImpl
     AutocompleteOptionToString<T> displayStringForOption = RawAutocomplete.defaultStringForOption,
 
-    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , defaultValue:unprocessed
+    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , default:unprocessed=SimpleIdentifierImpl
     required AutocompleteFieldViewBuilder fieldViewBuilder,
 
-    /// optionalParameters: {void Function(T)? onSelected} , defaultValue:none
+    /// optionalParameters: {void Function(T)? onSelected} , default:none
     AutocompleteOnSelected<T>? onSelected,
 
-    /// optionalParameters: {double optionsMaxHeight = 200.0} , defaultValue:Literal
+    /// optionalParameters: {double optionsMaxHeight = 200.0} , default:processed=DoubleLiteralImpl
     double optionsMaxHeight = 200.0,
 
-    /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , default:none
     AutocompleteOptionsViewBuilder<T>? optionsViewBuilder,
 
-    /// optionalParameters: {TextEditingValue? initialValue} , defaultValue:none
+    /// optionalParameters: {TextEditingValue? initialValue} , default:none
     TextEditingValue? initialValue,
   }) : super(
           key: key,
@@ -57,13 +57,47 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
           initialValue: p.get('initialValue').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('optionsBuilder', optionsBuilder, isNamed: true);
-    mateUse('displayStringForOption', displayStringForOption, isNamed: true);
-    mateUse('fieldViewBuilder', fieldViewBuilder, isNamed: true);
-    mateUse('onSelected', onSelected, isNamed: true);
-    mateUse('optionsMaxHeight', optionsMaxHeight, isNamed: true);
-    mateUse('optionsViewBuilder', optionsViewBuilder, isNamed: true);
-    mateUse('initialValue', initialValue, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsBuilder',
+      optionsBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'displayStringForOption',
+      displayStringForOption,
+      isNamed: true,
+      defaultValue: RawAutocomplete.defaultStringForOption,
+    );
+    mateUse(
+      'fieldViewBuilder',
+      fieldViewBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelected',
+      onSelected,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsMaxHeight',
+      optionsMaxHeight,
+      isNamed: true,
+      defaultValue: 200.0,
+    );
+    mateUse(
+      'optionsViewBuilder',
+      optionsViewBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'initialValue',
+      initialValue,
+      isNamed: true,
+    );
   }
 }

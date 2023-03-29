@@ -10,19 +10,19 @@ import 'package:flutter/src/services/raw_keyboard.dart';
 class KeyDownEvent$Mate extends KeyDownEvent with Mate {
   /// KeyDownEvent KeyDownEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp, bool synthesized = false})
   KeyDownEvent$Mate({
-    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , defaultValue:none
+    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required PhysicalKeyboardKey physicalKey,
 
-    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , defaultValue:none
+    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , default:none
     required LogicalKeyboardKey logicalKey,
 
-    /// optionalParameters: {String? character} , defaultValue:none
+    /// optionalParameters: {String? character} , default:none
     String? character,
 
-    /// optionalParameters: {required Duration timeStamp} , defaultValue:none
+    /// optionalParameters: {required Duration timeStamp} , default:none
     required Duration timeStamp,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
   }) : super(
           physicalKey: physicalKey,
@@ -40,11 +40,32 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateUse('physicalKey', physicalKey, isNamed: true);
-    mateUse('logicalKey', logicalKey, isNamed: true);
-    mateUse('character', character, isNamed: true);
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
+    mateUse(
+      'physicalKey',
+      physicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'logicalKey',
+      logicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'character',
+      character,
+      isNamed: true,
+    );
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -52,16 +73,16 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
 class KeyUpEvent$Mate extends KeyUpEvent with Mate {
   /// KeyUpEvent KeyUpEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, required Duration timeStamp, bool synthesized = false})
   KeyUpEvent$Mate({
-    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , defaultValue:none
+    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required PhysicalKeyboardKey physicalKey,
 
-    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , defaultValue:none
+    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , default:none
     required LogicalKeyboardKey logicalKey,
 
-    /// optionalParameters: {required Duration timeStamp} , defaultValue:none
+    /// optionalParameters: {required Duration timeStamp} , default:none
     required Duration timeStamp,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
   }) : super(
           physicalKey: physicalKey,
@@ -77,10 +98,27 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate {
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateUse('physicalKey', physicalKey, isNamed: true);
-    mateUse('logicalKey', logicalKey, isNamed: true);
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
+    mateUse(
+      'physicalKey',
+      physicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'logicalKey',
+      logicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -88,16 +126,16 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate {
 class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate {
   /// KeyRepeatEvent KeyRepeatEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp})
   KeyRepeatEvent$Mate({
-    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , defaultValue:none
+    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required PhysicalKeyboardKey physicalKey,
 
-    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , defaultValue:none
+    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , default:none
     required LogicalKeyboardKey logicalKey,
 
-    /// optionalParameters: {String? character} , defaultValue:none
+    /// optionalParameters: {String? character} , default:none
     String? character,
 
-    /// optionalParameters: {required Duration timeStamp} , defaultValue:none
+    /// optionalParameters: {required Duration timeStamp} , default:none
     required Duration timeStamp,
   }) : super(
           physicalKey: physicalKey,
@@ -113,10 +151,26 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate {
           character: p.get('character').build(),
           timeStamp: p.get('timeStamp').build(),
         );
-    mateUse('physicalKey', physicalKey, isNamed: true);
-    mateUse('logicalKey', logicalKey, isNamed: true);
-    mateUse('character', character, isNamed: true);
-    mateUse('timeStamp', timeStamp, isNamed: true);
+    mateUse(
+      'physicalKey',
+      physicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'logicalKey',
+      logicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'character',
+      character,
+      isNamed: true,
+    );
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+    );
   }
 }
 
@@ -139,8 +193,16 @@ class KeyMessage$Mate extends KeyMessage with Mate {
           p.get('events').value,
           p.get('rawEvent').value,
         );
-    mateUseList('events', events, isNamed: false);
-    mateUse('rawEvent', rawEvent, isNamed: false);
+    mateUseList(
+      'events',
+      events,
+      isNamed: false,
+    );
+    mateUse(
+      'rawEvent',
+      rawEvent,
+      isNamed: false,
+    );
   }
 }
 
@@ -163,7 +225,15 @@ class KeyEventManager$Mate extends KeyEventManager with Mate {
           p.get('_hardwareKeyboard').value,
           p.get('_rawKeyboard').value,
         );
-    mateUse('_hardwareKeyboard', _hardwareKeyboard, isNamed: false);
-    mateUse('_rawKeyboard', _rawKeyboard, isNamed: false);
+    mateUse(
+      '_hardwareKeyboard',
+      _hardwareKeyboard,
+      isNamed: false,
+    );
+    mateUse(
+      '_rawKeyboard',
+      _rawKeyboard,
+      isNamed: false,
+    );
   }
 }

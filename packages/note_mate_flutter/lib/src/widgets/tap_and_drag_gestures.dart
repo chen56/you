@@ -14,19 +14,19 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class TapDragDownDetails$Mate extends TapDragDownDetails with Mate {
   /// TapDragDownDetails TapDragDownDetails({required Offset globalPosition, required Offset localPosition, PointerDeviceKind? kind, required int consecutiveTapCount, required Set<LogicalKeyboardKey> keysPressedOnDown})
   TapDragDownDetails$Mate({
-    /// optionalParameters: {required Offset globalPosition} , defaultValue:none
+    /// optionalParameters: {required Offset globalPosition} , default:none
     required Offset globalPosition,
 
-    /// optionalParameters: {required Offset localPosition} , defaultValue:none
+    /// optionalParameters: {required Offset localPosition} , default:none
     required Offset localPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , defaultValue:none
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
 
-    /// optionalParameters: {required int consecutiveTapCount} , defaultValue:none
+    /// optionalParameters: {required int consecutiveTapCount} , default:none
     required int consecutiveTapCount,
 
-    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , defaultValue:none
+    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , default:none
     required Set<LogicalKeyboardKey> keysPressedOnDown,
   }) : super(
           globalPosition: globalPosition,
@@ -44,11 +44,31 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
-    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
+    mateUse(
+      'consecutiveTapCount',
+      consecutiveTapCount,
+      isNamed: true,
+    );
+    mateUse(
+      'keysPressedOnDown',
+      keysPressedOnDown,
+      isNamed: true,
+    );
   }
 }
 
@@ -56,19 +76,19 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate {
 class TapDragUpDetails$Mate extends TapDragUpDetails with Mate {
   /// TapDragUpDetails TapDragUpDetails({required PointerDeviceKind kind, required Offset globalPosition, required Offset localPosition, required int consecutiveTapCount, required Set<LogicalKeyboardKey> keysPressedOnDown})
   TapDragUpDetails$Mate({
-    /// optionalParameters: {required PointerDeviceKind kind} , defaultValue:none
+    /// optionalParameters: {required PointerDeviceKind kind} , default:none
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {required Offset globalPosition} , defaultValue:none
+    /// optionalParameters: {required Offset globalPosition} , default:none
     required Offset globalPosition,
 
-    /// optionalParameters: {required Offset localPosition} , defaultValue:none
+    /// optionalParameters: {required Offset localPosition} , default:none
     required Offset localPosition,
 
-    /// optionalParameters: {required int consecutiveTapCount} , defaultValue:none
+    /// optionalParameters: {required int consecutiveTapCount} , default:none
     required int consecutiveTapCount,
 
-    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , defaultValue:none
+    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , default:none
     required Set<LogicalKeyboardKey> keysPressedOnDown,
   }) : super(
           kind: kind,
@@ -86,11 +106,31 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('kind', kind, isNamed: true);
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
-    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'consecutiveTapCount',
+      consecutiveTapCount,
+      isNamed: true,
+    );
+    mateUse(
+      'keysPressedOnDown',
+      keysPressedOnDown,
+      isNamed: true,
+    );
   }
 }
 
@@ -98,22 +138,22 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate {
 class TapDragStartDetails$Mate extends TapDragStartDetails with Mate {
   /// TapDragStartDetails TapDragStartDetails({Duration? sourceTimeStamp, required Offset globalPosition, required Offset localPosition, PointerDeviceKind? kind, required int consecutiveTapCount, required Set<LogicalKeyboardKey> keysPressedOnDown})
   TapDragStartDetails$Mate({
-    /// optionalParameters: {Duration? sourceTimeStamp} , defaultValue:none
+    /// optionalParameters: {Duration? sourceTimeStamp} , default:none
     Duration? sourceTimeStamp,
 
-    /// optionalParameters: {required Offset globalPosition} , defaultValue:none
+    /// optionalParameters: {required Offset globalPosition} , default:none
     required Offset globalPosition,
 
-    /// optionalParameters: {required Offset localPosition} , defaultValue:none
+    /// optionalParameters: {required Offset localPosition} , default:none
     required Offset localPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , defaultValue:none
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
 
-    /// optionalParameters: {required int consecutiveTapCount} , defaultValue:none
+    /// optionalParameters: {required int consecutiveTapCount} , default:none
     required int consecutiveTapCount,
 
-    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , defaultValue:none
+    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , default:none
     required Set<LogicalKeyboardKey> keysPressedOnDown,
   }) : super(
           sourceTimeStamp: sourceTimeStamp,
@@ -133,12 +173,36 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('sourceTimeStamp', sourceTimeStamp, isNamed: true);
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
-    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
+    mateUse(
+      'sourceTimeStamp',
+      sourceTimeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
+    mateUse(
+      'consecutiveTapCount',
+      consecutiveTapCount,
+      isNamed: true,
+    );
+    mateUse(
+      'keysPressedOnDown',
+      keysPressedOnDown,
+      isNamed: true,
+    );
   }
 }
 
@@ -146,34 +210,34 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate {
 class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
   /// TapDragUpdateDetails TapDragUpdateDetails({Duration? sourceTimeStamp, Offset delta = Offset.zero, double? primaryDelta, required Offset globalPosition, PointerDeviceKind? kind, required Offset localPosition, required Offset offsetFromOrigin, required Offset localOffsetFromOrigin, required int consecutiveTapCount, required Set<LogicalKeyboardKey> keysPressedOnDown})
   TapDragUpdateDetails$Mate({
-    /// optionalParameters: {Duration? sourceTimeStamp} , defaultValue:none
+    /// optionalParameters: {Duration? sourceTimeStamp} , default:none
     Duration? sourceTimeStamp,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset delta = Offset.zero,
 
-    /// optionalParameters: {double? primaryDelta} , defaultValue:none
+    /// optionalParameters: {double? primaryDelta} , default:none
     double? primaryDelta,
 
-    /// optionalParameters: {required Offset globalPosition} , defaultValue:none
+    /// optionalParameters: {required Offset globalPosition} , default:none
     required Offset globalPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , defaultValue:none
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
 
-    /// optionalParameters: {required Offset localPosition} , defaultValue:none
+    /// optionalParameters: {required Offset localPosition} , default:none
     required Offset localPosition,
 
-    /// optionalParameters: {required Offset offsetFromOrigin} , defaultValue:none
+    /// optionalParameters: {required Offset offsetFromOrigin} , default:none
     required Offset offsetFromOrigin,
 
-    /// optionalParameters: {required Offset localOffsetFromOrigin} , defaultValue:none
+    /// optionalParameters: {required Offset localOffsetFromOrigin} , default:none
     required Offset localOffsetFromOrigin,
 
-    /// optionalParameters: {required int consecutiveTapCount} , defaultValue:none
+    /// optionalParameters: {required int consecutiveTapCount} , default:none
     required int consecutiveTapCount,
 
-    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , defaultValue:none
+    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , default:none
     required Set<LogicalKeyboardKey> keysPressedOnDown,
   }) : super(
           sourceTimeStamp: sourceTimeStamp,
@@ -201,16 +265,57 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('sourceTimeStamp', sourceTimeStamp, isNamed: true);
-    mateUse('delta', delta, isNamed: true);
-    mateUse('primaryDelta', primaryDelta, isNamed: true);
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('offsetFromOrigin', offsetFromOrigin, isNamed: true);
-    mateUse('localOffsetFromOrigin', localOffsetFromOrigin, isNamed: true);
-    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
-    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
+    mateUse(
+      'sourceTimeStamp',
+      sourceTimeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'delta',
+      delta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'primaryDelta',
+      primaryDelta,
+      isNamed: true,
+    );
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'offsetFromOrigin',
+      offsetFromOrigin,
+      isNamed: true,
+    );
+    mateUse(
+      'localOffsetFromOrigin',
+      localOffsetFromOrigin,
+      isNamed: true,
+    );
+    mateUse(
+      'consecutiveTapCount',
+      consecutiveTapCount,
+      isNamed: true,
+    );
+    mateUse(
+      'keysPressedOnDown',
+      keysPressedOnDown,
+      isNamed: true,
+    );
   }
 }
 
@@ -218,16 +323,16 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
 class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
   /// TapDragEndDetails TapDragEndDetails({Velocity velocity = Velocity.zero, double? primaryVelocity, required int consecutiveTapCount, required Set<LogicalKeyboardKey> keysPressedOnDown})
   TapDragEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
     Velocity velocity = Velocity.zero,
 
-    /// optionalParameters: {double? primaryVelocity} , defaultValue:none
+    /// optionalParameters: {double? primaryVelocity} , default:none
     double? primaryVelocity,
 
-    /// optionalParameters: {required int consecutiveTapCount} , defaultValue:none
+    /// optionalParameters: {required int consecutiveTapCount} , default:none
     required int consecutiveTapCount,
 
-    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , defaultValue:none
+    /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , default:none
     required Set<LogicalKeyboardKey> keysPressedOnDown,
   }) : super(
           velocity: velocity,
@@ -243,10 +348,27 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
           consecutiveTapCount: p.get('consecutiveTapCount').build(),
           keysPressedOnDown: p.get('keysPressedOnDown').build(),
         );
-    mateUse('velocity', velocity, isNamed: true);
-    mateUse('primaryVelocity', primaryVelocity, isNamed: true);
-    mateUse('consecutiveTapCount', consecutiveTapCount, isNamed: true);
-    mateUse('keysPressedOnDown', keysPressedOnDown, isNamed: true);
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: true,
+      defaultValue: Velocity.zero,
+    );
+    mateUse(
+      'primaryVelocity',
+      primaryVelocity,
+      isNamed: true,
+    );
+    mateUse(
+      'consecutiveTapCount',
+      consecutiveTapCount,
+      isNamed: true,
+    );
+    mateUse(
+      'keysPressedOnDown',
+      keysPressedOnDown,
+      isNamed: true,
+    );
   }
 }
 
@@ -254,13 +376,13 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
 class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with Mate {
   /// TapAndDragGestureRecognizer TapAndDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   TapAndDragGestureRecognizer$Mate({
-    /// optionalParameters: {Object? debugOwner} , defaultValue:none
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -274,8 +396,20 @@ class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner, isNamed: true);
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }

@@ -10,13 +10,13 @@ import 'package:flutter/src/rendering/sliver.dart';
 class RenderSliverPadding$Mate extends RenderSliverPadding with Mate {
   /// RenderSliverPadding RenderSliverPadding({required EdgeInsetsGeometry padding, TextDirection? textDirection, RenderSliver? child})
   RenderSliverPadding$Mate({
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , defaultValue:none
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {RenderSliver? child} , defaultValue:none
+    /// optionalParameters: {RenderSliver? child} , default:none
     RenderSliver? child,
   }) : super(
           padding: padding,
@@ -30,8 +30,20 @@ class RenderSliverPadding$Mate extends RenderSliverPadding with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse('padding', padding, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

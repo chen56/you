@@ -11,16 +11,16 @@ import 'dart:core';
 class ImageFiltered$Mate extends ImageFiltered with Mate {
   /// ImageFiltered ImageFiltered({Key? key, required ImageFilter imageFilter, Widget? child, bool enabled = true})
   ImageFiltered$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ImageFilter imageFilter} , defaultValue:none
+    /// optionalParameters: {required ImageFilter imageFilter} , default:none
     required ImageFilter imageFilter,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
   }) : super(
           key: key,
@@ -36,9 +36,26 @@ class ImageFiltered$Mate extends ImageFiltered with Mate {
           child: p.get('child').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('imageFilter', imageFilter, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'imageFilter',
+      imageFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

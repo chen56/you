@@ -17,13 +17,13 @@ import 'package:flutter/src/widgets/selectable_region.dart';
 class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar with Mate {
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget>? children} , defaultValue:none
+    /// optionalParameters: {required List<Widget>? children} , default:none
     required List<Widget>? children,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super(
           key: key,
@@ -37,20 +37,32 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           children: p.get('children').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('anchors', anchors, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.buttonItems({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<ContextMenuButtonItem>? buttonItems} , defaultValue:none
+    /// optionalParameters: {required List<ContextMenuButtonItem>? buttonItems} , default:none
     required List<ContextMenuButtonItem>? buttonItems,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.buttonItems(
           key: key,
@@ -64,32 +76,44 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           buttonItems: p.get('buttonItems').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('buttonItems', buttonItems, isNamed: true);
-    mateUse('anchors', anchors, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'buttonItems',
+      buttonItems,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.editable({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ClipboardStatus clipboardStatus} , defaultValue:none
+    /// optionalParameters: {required ClipboardStatus clipboardStatus} , default:none
     required ClipboardStatus clipboardStatus,
 
-    /// optionalParameters: {required void Function()? onCopy} , defaultValue:none
+    /// optionalParameters: {required void Function()? onCopy} , default:none
     required VoidCallback? onCopy,
 
-    /// optionalParameters: {required void Function()? onCut} , defaultValue:none
+    /// optionalParameters: {required void Function()? onCut} , default:none
     required VoidCallback? onCut,
 
-    /// optionalParameters: {required void Function()? onPaste} , defaultValue:none
+    /// optionalParameters: {required void Function()? onPaste} , default:none
     required VoidCallback? onPaste,
 
-    /// optionalParameters: {required void Function()? onSelectAll} , defaultValue:none
+    /// optionalParameters: {required void Function()? onSelectAll} , default:none
     required VoidCallback? onSelectAll,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.editable(
           key: key,
@@ -111,21 +135,49 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           onSelectAll: p.get('onSelectAll').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('clipboardStatus', clipboardStatus, isNamed: true);
-    mateUse('onCopy', onCopy, isNamed: true);
-    mateUse('onCut', onCut, isNamed: true);
-    mateUse('onPaste', onPaste, isNamed: true);
-    mateUse('onSelectAll', onSelectAll, isNamed: true);
-    mateUse('anchors', anchors, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipboardStatus',
+      clipboardStatus,
+      isNamed: true,
+    );
+    mateUse(
+      'onCopy',
+      onCopy,
+      isNamed: true,
+    );
+    mateUse(
+      'onCut',
+      onCut,
+      isNamed: true,
+    );
+    mateUse(
+      'onPaste',
+      onPaste,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectAll',
+      onSelectAll,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
   AdaptiveTextSelectionToolbar$Mate.editableText({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required EditableTextState editableTextState} , defaultValue:none
+    /// optionalParameters: {required EditableTextState editableTextState} , default:none
     required EditableTextState editableTextState,
   }) : super.editableText(
           key: key,
@@ -137,25 +189,33 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           key: p.get('key').build(),
           editableTextState: p.get('editableTextState').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('editableTextState', editableTextState, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'editableTextState',
+      editableTextState,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.selectable({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required void Function() onCopy} , defaultValue:none
+    /// optionalParameters: {required void Function() onCopy} , default:none
     required VoidCallback onCopy,
 
-    /// optionalParameters: {required void Function() onSelectAll} , defaultValue:none
+    /// optionalParameters: {required void Function() onSelectAll} , default:none
     required VoidCallback onSelectAll,
 
-    /// optionalParameters: {required SelectionGeometry selectionGeometry} , defaultValue:none
+    /// optionalParameters: {required SelectionGeometry selectionGeometry} , default:none
     required SelectionGeometry selectionGeometry,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , defaultValue:none
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.selectable(
           key: key,
@@ -173,19 +233,39 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           selectionGeometry: p.get('selectionGeometry').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onCopy', onCopy, isNamed: true);
-    mateUse('onSelectAll', onSelectAll, isNamed: true);
-    mateUse('selectionGeometry', selectionGeometry, isNamed: true);
-    mateUse('anchors', anchors, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onCopy',
+      onCopy,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectAll',
+      onSelectAll,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionGeometry',
+      selectionGeometry,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectableRegion({Key? key, required SelectableRegionState selectableRegionState})
   AdaptiveTextSelectionToolbar$Mate.selectableRegion({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SelectableRegionState selectableRegionState} , defaultValue:none
+    /// optionalParameters: {required SelectableRegionState selectableRegionState} , default:none
     required SelectableRegionState selectableRegionState,
   }) : super.selectableRegion(
           key: key,
@@ -197,7 +277,15 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           key: p.get('key').build(),
           selectableRegionState: p.get('selectableRegionState').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('selectableRegionState', selectableRegionState, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'selectableRegionState',
+      selectableRegionState,
+      isNamed: true,
+    );
   }
 }

@@ -10,13 +10,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with Mate {
   /// DisplayFeatureSubScreen DisplayFeatureSubScreen({Key? key, Offset? anchorPoint, required Widget child})
   DisplayFeatureSubScreen$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Offset? anchorPoint} , defaultValue:none
+    /// optionalParameters: {Offset? anchorPoint} , default:none
     Offset? anchorPoint,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -30,8 +30,20 @@ class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('anchorPoint', anchorPoint, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorPoint',
+      anchorPoint,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

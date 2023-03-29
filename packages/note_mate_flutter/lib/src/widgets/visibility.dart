@@ -10,31 +10,31 @@ import 'dart:core';
 class Visibility$Mate extends Visibility with Mate {
   /// Visibility Visibility({Key? key, required Widget child, Widget replacement = const SizedBox.shrink(), bool visible = true, bool maintainState = false, bool maintainAnimation = false, bool maintainSize = false, bool maintainSemantics = false, bool maintainInteractivity = false})
   Visibility$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {Widget replacement = const SizedBox.shrink()} , defaultValue:unprocessed
+    /// optionalParameters: {Widget replacement = const SizedBox.shrink()} , default:unprocessed=InstanceCreationExpressionImpl
     required Widget replacement,
 
-    /// optionalParameters: {bool visible = true} , defaultValue:Literal
+    /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
     bool visible = true,
 
-    /// optionalParameters: {bool maintainState = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
     bool maintainState = false,
 
-    /// optionalParameters: {bool maintainAnimation = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainAnimation = false} , default:processed=BooleanLiteralImpl
     bool maintainAnimation = false,
 
-    /// optionalParameters: {bool maintainSize = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainSize = false} , default:processed=BooleanLiteralImpl
     bool maintainSize = false,
 
-    /// optionalParameters: {bool maintainSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainSemantics = false} , default:processed=BooleanLiteralImpl
     bool maintainSemantics = false,
 
-    /// optionalParameters: {bool maintainInteractivity = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainInteractivity = false} , default:processed=BooleanLiteralImpl
     bool maintainInteractivity = false,
   }) : super(
           key: key,
@@ -60,29 +60,71 @@ class Visibility$Mate extends Visibility with Mate {
           maintainSemantics: p.get('maintainSemantics').build(),
           maintainInteractivity: p.get('maintainInteractivity').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('replacement', replacement, isNamed: true);
-    mateUse('visible', visible, isNamed: true);
-    mateUse('maintainState', maintainState, isNamed: true);
-    mateUse('maintainAnimation', maintainAnimation, isNamed: true);
-    mateUse('maintainSize', maintainSize, isNamed: true);
-    mateUse('maintainSemantics', maintainSemantics, isNamed: true);
-    mateUse('maintainInteractivity', maintainInteractivity, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'replacement',
+      replacement,
+      isNamed: true,
+    );
+    mateUse(
+      'visible',
+      visible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'maintainState',
+      maintainState,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainAnimation',
+      maintainAnimation,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainSize',
+      maintainSize,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainSemantics',
+      maintainSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainInteractivity',
+      maintainInteractivity,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 
   /// Visibility Visibility.maintain({Key? key, required Widget child, Widget replacement = const SizedBox.shrink(), bool visible = true})
   Visibility$Mate.maintain({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {Widget replacement = const SizedBox.shrink()} , defaultValue:unprocessed
+    /// optionalParameters: {Widget replacement = const SizedBox.shrink()} , default:unprocessed=InstanceCreationExpressionImpl
     required Widget replacement,
 
-    /// optionalParameters: {bool visible = true} , defaultValue:Literal
+    /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
     bool visible = true,
   }) : super.maintain(
           key: key,
@@ -98,10 +140,27 @@ class Visibility$Mate extends Visibility with Mate {
           replacement: p.get('replacement').build(),
           visible: p.get('visible').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('replacement', replacement, isNamed: true);
-    mateUse('visible', visible, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'replacement',
+      replacement,
+      isNamed: true,
+    );
+    mateUse(
+      'visible',
+      visible,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -109,31 +168,31 @@ class Visibility$Mate extends Visibility with Mate {
 class SliverVisibility$Mate extends SliverVisibility with Mate {
   /// SliverVisibility SliverVisibility({Key? key, required Widget sliver, Widget replacementSliver = const SliverToBoxAdapter(), bool visible = true, bool maintainState = false, bool maintainAnimation = false, bool maintainSize = false, bool maintainSemantics = false, bool maintainInteractivity = false})
   SliverVisibility$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget sliver} , defaultValue:none
+    /// optionalParameters: {required Widget sliver} , default:none
     required Widget sliver,
 
-    /// optionalParameters: {Widget replacementSliver = const SliverToBoxAdapter()} , defaultValue:unprocessed
+    /// optionalParameters: {Widget replacementSliver = const SliverToBoxAdapter()} , default:unprocessed=InstanceCreationExpressionImpl
     required Widget replacementSliver,
 
-    /// optionalParameters: {bool visible = true} , defaultValue:Literal
+    /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
     bool visible = true,
 
-    /// optionalParameters: {bool maintainState = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
     bool maintainState = false,
 
-    /// optionalParameters: {bool maintainAnimation = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainAnimation = false} , default:processed=BooleanLiteralImpl
     bool maintainAnimation = false,
 
-    /// optionalParameters: {bool maintainSize = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainSize = false} , default:processed=BooleanLiteralImpl
     bool maintainSize = false,
 
-    /// optionalParameters: {bool maintainSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainSemantics = false} , default:processed=BooleanLiteralImpl
     bool maintainSemantics = false,
 
-    /// optionalParameters: {bool maintainInteractivity = false} , defaultValue:Literal
+    /// optionalParameters: {bool maintainInteractivity = false} , default:processed=BooleanLiteralImpl
     bool maintainInteractivity = false,
   }) : super(
           key: key,
@@ -159,29 +218,71 @@ class SliverVisibility$Mate extends SliverVisibility with Mate {
           maintainSemantics: p.get('maintainSemantics').build(),
           maintainInteractivity: p.get('maintainInteractivity').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
-    mateUse('replacementSliver', replacementSliver, isNamed: true);
-    mateUse('visible', visible, isNamed: true);
-    mateUse('maintainState', maintainState, isNamed: true);
-    mateUse('maintainAnimation', maintainAnimation, isNamed: true);
-    mateUse('maintainSize', maintainSize, isNamed: true);
-    mateUse('maintainSemantics', maintainSemantics, isNamed: true);
-    mateUse('maintainInteractivity', maintainInteractivity, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
+    mateUse(
+      'replacementSliver',
+      replacementSliver,
+      isNamed: true,
+    );
+    mateUse(
+      'visible',
+      visible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'maintainState',
+      maintainState,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainAnimation',
+      maintainAnimation,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainSize',
+      maintainSize,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainSemantics',
+      maintainSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainInteractivity',
+      maintainInteractivity,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 
   /// SliverVisibility SliverVisibility.maintain({Key? key, required Widget sliver, Widget replacementSliver = const SliverToBoxAdapter(), bool visible = true})
   SliverVisibility$Mate.maintain({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget sliver} , defaultValue:none
+    /// optionalParameters: {required Widget sliver} , default:none
     required Widget sliver,
 
-    /// optionalParameters: {Widget replacementSliver = const SliverToBoxAdapter()} , defaultValue:unprocessed
+    /// optionalParameters: {Widget replacementSliver = const SliverToBoxAdapter()} , default:unprocessed=InstanceCreationExpressionImpl
     required Widget replacementSliver,
 
-    /// optionalParameters: {bool visible = true} , defaultValue:Literal
+    /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
     bool visible = true,
   }) : super.maintain(
           key: key,
@@ -197,9 +298,26 @@ class SliverVisibility$Mate extends SliverVisibility with Mate {
           replacementSliver: p.get('replacementSliver').build(),
           visible: p.get('visible').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
-    mateUse('replacementSliver', replacementSliver, isNamed: true);
-    mateUse('visible', visible, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
+    mateUse(
+      'replacementSliver',
+      replacementSliver,
+      isNamed: true,
+    );
+    mateUse(
+      'visible',
+      visible,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

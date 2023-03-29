@@ -18,91 +18,91 @@ import 'package:flutter/src/foundation/basic_types.dart';
 class AppBar$Mate extends AppBar with Mate {
   /// AppBar AppBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double toolbarOpacity = 1.0, double bottomOpacity = 1.0, double? toolbarHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false})
   AppBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , defaultValue:none
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {bool automaticallyImplyLeading = true} , defaultValue:Literal
+    /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
     bool automaticallyImplyLeading = true,
 
-    /// optionalParameters: {Widget? title} , defaultValue:none
+    /// optionalParameters: {Widget? title} , default:none
     Widget? title,
 
-    /// optionalParameters: {List<Widget>? actions} , defaultValue:none
+    /// optionalParameters: {List<Widget>? actions} , default:none
     List<Widget>? actions,
 
-    /// optionalParameters: {Widget? flexibleSpace} , defaultValue:none
+    /// optionalParameters: {Widget? flexibleSpace} , default:none
     Widget? flexibleSpace,
 
-    /// optionalParameters: {PreferredSizeWidget? bottom} , defaultValue:none
+    /// optionalParameters: {PreferredSizeWidget? bottom} , default:none
     PreferredSizeWidget? bottom,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {double? scrolledUnderElevation} , defaultValue:none
+    /// optionalParameters: {double? scrolledUnderElevation} , default:none
     double? scrolledUnderElevation,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
+    /// optionalParameters: {Color? foregroundColor} , default:none
     Color? foregroundColor,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
+    /// optionalParameters: {IconThemeData? iconTheme} , default:none
     IconThemeData? iconTheme,
 
-    /// optionalParameters: {IconThemeData? actionsIconTheme} , defaultValue:none
+    /// optionalParameters: {IconThemeData? actionsIconTheme} , default:none
     IconThemeData? actionsIconTheme,
 
-    /// optionalParameters: {bool primary = true} , defaultValue:Literal
+    /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
     bool primary = true,
 
-    /// optionalParameters: {bool? centerTitle} , defaultValue:none
+    /// optionalParameters: {bool? centerTitle} , default:none
     bool? centerTitle,
 
-    /// optionalParameters: {bool excludeHeaderSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeHeaderSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeHeaderSemantics = false,
 
-    /// optionalParameters: {double? titleSpacing} , defaultValue:none
+    /// optionalParameters: {double? titleSpacing} , default:none
     double? titleSpacing,
 
-    /// optionalParameters: {double toolbarOpacity = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double toolbarOpacity = 1.0} , default:processed=DoubleLiteralImpl
     double toolbarOpacity = 1.0,
 
-    /// optionalParameters: {double bottomOpacity = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double bottomOpacity = 1.0} , default:processed=DoubleLiteralImpl
     double bottomOpacity = 1.0,
 
-    /// optionalParameters: {double? toolbarHeight} , defaultValue:none
+    /// optionalParameters: {double? toolbarHeight} , default:none
     double? toolbarHeight,
 
-    /// optionalParameters: {double? leadingWidth} , defaultValue:none
+    /// optionalParameters: {double? leadingWidth} , default:none
     double? leadingWidth,
 
-    /// optionalParameters: {TextStyle? toolbarTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? toolbarTextStyle} , default:none
     TextStyle? toolbarTextStyle,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? titleTextStyle} , default:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , defaultValue:none
+    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , default:none
     SystemUiOverlayStyle? systemOverlayStyle,
 
-    /// optionalParameters: {bool forceMaterialTransparency = false} , defaultValue:Literal
+    /// optionalParameters: {bool forceMaterialTransparency = false} , default:processed=BooleanLiteralImpl
     bool forceMaterialTransparency = false,
   }) : super(
           key: key,
@@ -168,35 +168,157 @@ class AppBar$Mate extends AppBar with Mate {
           systemOverlayStyle: p.get('systemOverlayStyle').build(),
           forceMaterialTransparency: p.get('forceMaterialTransparency').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('leading', leading, isNamed: true);
-    mateUse('automaticallyImplyLeading', automaticallyImplyLeading, isNamed: true);
-    mateUse('title', title, isNamed: true);
-    mateUseList('actions', actions, isNamed: true);
-    mateUse('flexibleSpace', flexibleSpace, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('scrolledUnderElevation', scrolledUnderElevation, isNamed: true);
-    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('iconTheme', iconTheme, isNamed: true);
-    mateUse('actionsIconTheme', actionsIconTheme, isNamed: true);
-    mateUse('primary', primary, isNamed: true);
-    mateUse('centerTitle', centerTitle, isNamed: true);
-    mateUse('excludeHeaderSemantics', excludeHeaderSemantics, isNamed: true);
-    mateUse('titleSpacing', titleSpacing, isNamed: true);
-    mateUse('toolbarOpacity', toolbarOpacity, isNamed: true);
-    mateUse('bottomOpacity', bottomOpacity, isNamed: true);
-    mateUse('toolbarHeight', toolbarHeight, isNamed: true);
-    mateUse('leadingWidth', leadingWidth, isNamed: true);
-    mateUse('toolbarTextStyle', toolbarTextStyle, isNamed: true);
-    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
-    mateUse('systemOverlayStyle', systemOverlayStyle, isNamed: true);
-    mateUse('forceMaterialTransparency', forceMaterialTransparency, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'automaticallyImplyLeading',
+      automaticallyImplyLeading,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUseList(
+      'actions',
+      actions,
+      isNamed: true,
+    );
+    mateUse(
+      'flexibleSpace',
+      flexibleSpace,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'scrolledUnderElevation',
+      scrolledUnderElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'notificationPredicate',
+      notificationPredicate,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconTheme',
+      iconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'actionsIconTheme',
+      actionsIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'centerTitle',
+      centerTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeHeaderSemantics',
+      excludeHeaderSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'titleSpacing',
+      titleSpacing,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarOpacity',
+      toolbarOpacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'bottomOpacity',
+      bottomOpacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'toolbarHeight',
+      toolbarHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingWidth',
+      leadingWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarTextStyle',
+      toolbarTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'titleTextStyle',
+      titleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'systemOverlayStyle',
+      systemOverlayStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'forceMaterialTransparency',
+      forceMaterialTransparency,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -204,109 +326,109 @@ class AppBar$Mate extends AppBar with Mate {
 class SliverAppBar$Mate extends SliverAppBar with Mate {
   /// SliverAppBar SliverAppBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, bool forceElevated = false, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double? collapsedHeight, double? expandedHeight, bool floating = false, bool pinned = false, bool snap = false, bool stretch = false, double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger, ShapeBorder? shape, double toolbarHeight = kToolbarHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false})
   SliverAppBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , defaultValue:none
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {bool automaticallyImplyLeading = true} , defaultValue:Literal
+    /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
     bool automaticallyImplyLeading = true,
 
-    /// optionalParameters: {Widget? title} , defaultValue:none
+    /// optionalParameters: {Widget? title} , default:none
     Widget? title,
 
-    /// optionalParameters: {List<Widget>? actions} , defaultValue:none
+    /// optionalParameters: {List<Widget>? actions} , default:none
     List<Widget>? actions,
 
-    /// optionalParameters: {Widget? flexibleSpace} , defaultValue:none
+    /// optionalParameters: {Widget? flexibleSpace} , default:none
     Widget? flexibleSpace,
 
-    /// optionalParameters: {PreferredSizeWidget? bottom} , defaultValue:none
+    /// optionalParameters: {PreferredSizeWidget? bottom} , default:none
     PreferredSizeWidget? bottom,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {double? scrolledUnderElevation} , defaultValue:none
+    /// optionalParameters: {double? scrolledUnderElevation} , default:none
     double? scrolledUnderElevation,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {bool forceElevated = false} , defaultValue:Literal
+    /// optionalParameters: {bool forceElevated = false} , default:processed=BooleanLiteralImpl
     bool forceElevated = false,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
+    /// optionalParameters: {Color? foregroundColor} , default:none
     Color? foregroundColor,
 
-    /// optionalParameters: {IconThemeData? iconTheme} , defaultValue:none
+    /// optionalParameters: {IconThemeData? iconTheme} , default:none
     IconThemeData? iconTheme,
 
-    /// optionalParameters: {IconThemeData? actionsIconTheme} , defaultValue:none
+    /// optionalParameters: {IconThemeData? actionsIconTheme} , default:none
     IconThemeData? actionsIconTheme,
 
-    /// optionalParameters: {bool primary = true} , defaultValue:Literal
+    /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
     bool primary = true,
 
-    /// optionalParameters: {bool? centerTitle} , defaultValue:none
+    /// optionalParameters: {bool? centerTitle} , default:none
     bool? centerTitle,
 
-    /// optionalParameters: {bool excludeHeaderSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeHeaderSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeHeaderSemantics = false,
 
-    /// optionalParameters: {double? titleSpacing} , defaultValue:none
+    /// optionalParameters: {double? titleSpacing} , default:none
     double? titleSpacing,
 
-    /// optionalParameters: {double? collapsedHeight} , defaultValue:none
+    /// optionalParameters: {double? collapsedHeight} , default:none
     double? collapsedHeight,
 
-    /// optionalParameters: {double? expandedHeight} , defaultValue:none
+    /// optionalParameters: {double? expandedHeight} , default:none
     double? expandedHeight,
 
-    /// optionalParameters: {bool floating = false} , defaultValue:Literal
+    /// optionalParameters: {bool floating = false} , default:processed=BooleanLiteralImpl
     bool floating = false,
 
-    /// optionalParameters: {bool pinned = false} , defaultValue:Literal
+    /// optionalParameters: {bool pinned = false} , default:processed=BooleanLiteralImpl
     bool pinned = false,
 
-    /// optionalParameters: {bool snap = false} , defaultValue:Literal
+    /// optionalParameters: {bool snap = false} , default:processed=BooleanLiteralImpl
     bool snap = false,
 
-    /// optionalParameters: {bool stretch = false} , defaultValue:Literal
+    /// optionalParameters: {bool stretch = false} , default:processed=BooleanLiteralImpl
     bool stretch = false,
 
-    /// optionalParameters: {double stretchTriggerOffset = 100.0} , defaultValue:Literal
+    /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
     double stretchTriggerOffset = 100.0,
 
-    /// optionalParameters: {Future<void> Function()? onStretchTrigger} , defaultValue:none
+    /// optionalParameters: {Future<void> Function()? onStretchTrigger} , default:none
     AsyncCallback? onStretchTrigger,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {double toolbarHeight = kToolbarHeight} , defaultValue:unprocessed
+    /// optionalParameters: {double toolbarHeight = kToolbarHeight} , default:unprocessed=SimpleIdentifierImpl
     required double toolbarHeight,
 
-    /// optionalParameters: {double? leadingWidth} , defaultValue:none
+    /// optionalParameters: {double? leadingWidth} , default:none
     double? leadingWidth,
 
-    /// optionalParameters: {TextStyle? toolbarTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? toolbarTextStyle} , default:none
     TextStyle? toolbarTextStyle,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? titleTextStyle} , default:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , defaultValue:none
+    /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , default:none
     SystemUiOverlayStyle? systemOverlayStyle,
 
-    /// optionalParameters: {bool forceMaterialTransparency = false} , defaultValue:Literal
+    /// optionalParameters: {bool forceMaterialTransparency = false} , default:processed=BooleanLiteralImpl
     bool forceMaterialTransparency = false,
   }) : super(
           key: key,
@@ -384,40 +506,190 @@ class SliverAppBar$Mate extends SliverAppBar with Mate {
           systemOverlayStyle: p.get('systemOverlayStyle').build(),
           forceMaterialTransparency: p.get('forceMaterialTransparency').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('leading', leading, isNamed: true);
-    mateUse('automaticallyImplyLeading', automaticallyImplyLeading, isNamed: true);
-    mateUse('title', title, isNamed: true);
-    mateUseList('actions', actions, isNamed: true);
-    mateUse('flexibleSpace', flexibleSpace, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('scrolledUnderElevation', scrolledUnderElevation, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('forceElevated', forceElevated, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('iconTheme', iconTheme, isNamed: true);
-    mateUse('actionsIconTheme', actionsIconTheme, isNamed: true);
-    mateUse('primary', primary, isNamed: true);
-    mateUse('centerTitle', centerTitle, isNamed: true);
-    mateUse('excludeHeaderSemantics', excludeHeaderSemantics, isNamed: true);
-    mateUse('titleSpacing', titleSpacing, isNamed: true);
-    mateUse('collapsedHeight', collapsedHeight, isNamed: true);
-    mateUse('expandedHeight', expandedHeight, isNamed: true);
-    mateUse('floating', floating, isNamed: true);
-    mateUse('pinned', pinned, isNamed: true);
-    mateUse('snap', snap, isNamed: true);
-    mateUse('stretch', stretch, isNamed: true);
-    mateUse('stretchTriggerOffset', stretchTriggerOffset, isNamed: true);
-    mateUse('onStretchTrigger', onStretchTrigger, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('toolbarHeight', toolbarHeight, isNamed: true);
-    mateUse('leadingWidth', leadingWidth, isNamed: true);
-    mateUse('toolbarTextStyle', toolbarTextStyle, isNamed: true);
-    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
-    mateUse('systemOverlayStyle', systemOverlayStyle, isNamed: true);
-    mateUse('forceMaterialTransparency', forceMaterialTransparency, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'automaticallyImplyLeading',
+      automaticallyImplyLeading,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUseList(
+      'actions',
+      actions,
+      isNamed: true,
+    );
+    mateUse(
+      'flexibleSpace',
+      flexibleSpace,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'scrolledUnderElevation',
+      scrolledUnderElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'forceElevated',
+      forceElevated,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconTheme',
+      iconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'actionsIconTheme',
+      actionsIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'centerTitle',
+      centerTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeHeaderSemantics',
+      excludeHeaderSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'titleSpacing',
+      titleSpacing,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedHeight',
+      collapsedHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'expandedHeight',
+      expandedHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'floating',
+      floating,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pinned',
+      pinned,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'snap',
+      snap,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'stretch',
+      stretch,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'stretchTriggerOffset',
+      stretchTriggerOffset,
+      isNamed: true,
+      defaultValue: 100.0,
+    );
+    mateUse(
+      'onStretchTrigger',
+      onStretchTrigger,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarHeight',
+      toolbarHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingWidth',
+      leadingWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarTextStyle',
+      toolbarTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'titleTextStyle',
+      titleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'systemOverlayStyle',
+      systemOverlayStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'forceMaterialTransparency',
+      forceMaterialTransparency,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

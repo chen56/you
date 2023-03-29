@@ -8,25 +8,25 @@ import 'dart:core';
 class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
   /// RawKeyEventDataLinux RawKeyEventDataLinux({required KeyHelper keyHelper, int unicodeScalarValues = 0, int scanCode = 0, int keyCode = 0, int modifiers = 0, required bool isDown, int? specifiedLogicalKey})
   RawKeyEventDataLinux$Mate({
-    /// optionalParameters: {required KeyHelper keyHelper} , defaultValue:none
+    /// optionalParameters: {required KeyHelper keyHelper} , default:none
     required KeyHelper keyHelper,
 
-    /// optionalParameters: {int unicodeScalarValues = 0} , defaultValue:Literal
+    /// optionalParameters: {int unicodeScalarValues = 0} , default:processed=IntegerLiteralImpl
     int unicodeScalarValues = 0,
 
-    /// optionalParameters: {int scanCode = 0} , defaultValue:Literal
+    /// optionalParameters: {int scanCode = 0} , default:processed=IntegerLiteralImpl
     int scanCode = 0,
 
-    /// optionalParameters: {int keyCode = 0} , defaultValue:Literal
+    /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
     int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , defaultValue:Literal
+    /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
     int modifiers = 0,
 
-    /// optionalParameters: {required bool isDown} , defaultValue:none
+    /// optionalParameters: {required bool isDown} , default:none
     required bool isDown,
 
-    /// optionalParameters: {int? specifiedLogicalKey} , defaultValue:none
+    /// optionalParameters: {int? specifiedLogicalKey} , default:none
     int? specifiedLogicalKey,
   }) : super(
           keyHelper: keyHelper,
@@ -48,12 +48,44 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
           isDown: p.get('isDown').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    mateUse('keyHelper', keyHelper, isNamed: true);
-    mateUse('unicodeScalarValues', unicodeScalarValues, isNamed: true);
-    mateUse('scanCode', scanCode, isNamed: true);
-    mateUse('keyCode', keyCode, isNamed: true);
-    mateUse('modifiers', modifiers, isNamed: true);
-    mateUse('isDown', isDown, isNamed: true);
-    mateUse('specifiedLogicalKey', specifiedLogicalKey, isNamed: true);
+    mateUse(
+      'keyHelper',
+      keyHelper,
+      isNamed: true,
+    );
+    mateUse(
+      'unicodeScalarValues',
+      unicodeScalarValues,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'scanCode',
+      scanCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'keyCode',
+      keyCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'modifiers',
+      modifiers,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'isDown',
+      isDown,
+      isNamed: true,
+    );
+    mateUse(
+      'specifiedLogicalKey',
+      specifiedLogicalKey,
+      isNamed: true,
+    );
   }
 }

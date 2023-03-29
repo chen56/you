@@ -15,37 +15,37 @@ import 'package:flutter/src/widgets/framework.dart';
 class ElevatedButton$Mate extends ElevatedButton with Mate {
   /// ElevatedButton ElevatedButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget? child})
   ElevatedButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onHover} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onHover} , default:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , defaultValue:none
+    /// optionalParameters: {MaterialStatesController? statesController} , default:none
     MaterialStatesController? statesController,
 
-    /// optionalParameters: {required Widget? child} , defaultValue:none
+    /// optionalParameters: {required Widget? child} , default:none
     required Widget? child,
   }) : super(
           key: key,
@@ -75,16 +75,62 @@ class ElevatedButton$Mate extends ElevatedButton with Mate {
           statesController: p.get('statesController').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('onHover', onHover, isNamed: true);
-    mateUse('onFocusChange', onFocusChange, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('statesController', statesController, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onHover',
+      onHover,
+      isNamed: true,
+    );
+    mateUse(
+      'onFocusChange',
+      onFocusChange,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'statesController',
+      statesController,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

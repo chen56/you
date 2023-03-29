@@ -8,49 +8,49 @@ import 'package:flutter/src/painting/text_style.dart';
 class TextTheme$Mate extends TextTheme with Mate {
   /// TextTheme TextTheme({TextStyle? displayLarge, TextStyle? displayMedium, TextStyle? displaySmall, TextStyle? headlineLarge, TextStyle? headlineMedium, TextStyle? headlineSmall, TextStyle? titleLarge, TextStyle? titleMedium, TextStyle? titleSmall, TextStyle? bodyLarge, TextStyle? bodyMedium, TextStyle? bodySmall, TextStyle? labelLarge, TextStyle? labelMedium, TextStyle? labelSmall, TextStyle? headline1, TextStyle? headline2, TextStyle? headline3, TextStyle? headline4, TextStyle? headline5, TextStyle? headline6, TextStyle? subtitle1, TextStyle? subtitle2, TextStyle? bodyText1, TextStyle? bodyText2, TextStyle? caption, TextStyle? button, TextStyle? overline})
   TextTheme$Mate({
-    /// optionalParameters: {TextStyle? displayLarge} , defaultValue:none
+    /// optionalParameters: {TextStyle? displayLarge} , default:none
     TextStyle? displayLarge,
 
-    /// optionalParameters: {TextStyle? displayMedium} , defaultValue:none
+    /// optionalParameters: {TextStyle? displayMedium} , default:none
     TextStyle? displayMedium,
 
-    /// optionalParameters: {TextStyle? displaySmall} , defaultValue:none
+    /// optionalParameters: {TextStyle? displaySmall} , default:none
     TextStyle? displaySmall,
 
-    /// optionalParameters: {TextStyle? headlineLarge} , defaultValue:none
+    /// optionalParameters: {TextStyle? headlineLarge} , default:none
     TextStyle? headlineLarge,
 
-    /// optionalParameters: {TextStyle? headlineMedium} , defaultValue:none
+    /// optionalParameters: {TextStyle? headlineMedium} , default:none
     TextStyle? headlineMedium,
 
-    /// optionalParameters: {TextStyle? headlineSmall} , defaultValue:none
+    /// optionalParameters: {TextStyle? headlineSmall} , default:none
     TextStyle? headlineSmall,
 
-    /// optionalParameters: {TextStyle? titleLarge} , defaultValue:none
+    /// optionalParameters: {TextStyle? titleLarge} , default:none
     TextStyle? titleLarge,
 
-    /// optionalParameters: {TextStyle? titleMedium} , defaultValue:none
+    /// optionalParameters: {TextStyle? titleMedium} , default:none
     TextStyle? titleMedium,
 
-    /// optionalParameters: {TextStyle? titleSmall} , defaultValue:none
+    /// optionalParameters: {TextStyle? titleSmall} , default:none
     TextStyle? titleSmall,
 
-    /// optionalParameters: {TextStyle? bodyLarge} , defaultValue:none
+    /// optionalParameters: {TextStyle? bodyLarge} , default:none
     TextStyle? bodyLarge,
 
-    /// optionalParameters: {TextStyle? bodyMedium} , defaultValue:none
+    /// optionalParameters: {TextStyle? bodyMedium} , default:none
     TextStyle? bodyMedium,
 
-    /// optionalParameters: {TextStyle? bodySmall} , defaultValue:none
+    /// optionalParameters: {TextStyle? bodySmall} , default:none
     TextStyle? bodySmall,
 
-    /// optionalParameters: {TextStyle? labelLarge} , defaultValue:none
+    /// optionalParameters: {TextStyle? labelLarge} , default:none
     TextStyle? labelLarge,
 
-    /// optionalParameters: {TextStyle? labelMedium} , defaultValue:none
+    /// optionalParameters: {TextStyle? labelMedium} , default:none
     TextStyle? labelMedium,
 
-    /// optionalParameters: {TextStyle? labelSmall} , defaultValue:none
+    /// optionalParameters: {TextStyle? labelSmall} , default:none
     TextStyle? labelSmall,
   }) : super(
           displayLarge: displayLarge,
@@ -88,20 +88,80 @@ class TextTheme$Mate extends TextTheme with Mate {
           labelMedium: p.get('labelMedium').build(),
           labelSmall: p.get('labelSmall').build(),
         );
-    mateUse('displayLarge', displayLarge, isNamed: true);
-    mateUse('displayMedium', displayMedium, isNamed: true);
-    mateUse('displaySmall', displaySmall, isNamed: true);
-    mateUse('headlineLarge', headlineLarge, isNamed: true);
-    mateUse('headlineMedium', headlineMedium, isNamed: true);
-    mateUse('headlineSmall', headlineSmall, isNamed: true);
-    mateUse('titleLarge', titleLarge, isNamed: true);
-    mateUse('titleMedium', titleMedium, isNamed: true);
-    mateUse('titleSmall', titleSmall, isNamed: true);
-    mateUse('bodyLarge', bodyLarge, isNamed: true);
-    mateUse('bodyMedium', bodyMedium, isNamed: true);
-    mateUse('bodySmall', bodySmall, isNamed: true);
-    mateUse('labelLarge', labelLarge, isNamed: true);
-    mateUse('labelMedium', labelMedium, isNamed: true);
-    mateUse('labelSmall', labelSmall, isNamed: true);
+    mateUse(
+      'displayLarge',
+      displayLarge,
+      isNamed: true,
+    );
+    mateUse(
+      'displayMedium',
+      displayMedium,
+      isNamed: true,
+    );
+    mateUse(
+      'displaySmall',
+      displaySmall,
+      isNamed: true,
+    );
+    mateUse(
+      'headlineLarge',
+      headlineLarge,
+      isNamed: true,
+    );
+    mateUse(
+      'headlineMedium',
+      headlineMedium,
+      isNamed: true,
+    );
+    mateUse(
+      'headlineSmall',
+      headlineSmall,
+      isNamed: true,
+    );
+    mateUse(
+      'titleLarge',
+      titleLarge,
+      isNamed: true,
+    );
+    mateUse(
+      'titleMedium',
+      titleMedium,
+      isNamed: true,
+    );
+    mateUse(
+      'titleSmall',
+      titleSmall,
+      isNamed: true,
+    );
+    mateUse(
+      'bodyLarge',
+      bodyLarge,
+      isNamed: true,
+    );
+    mateUse(
+      'bodyMedium',
+      bodyMedium,
+      isNamed: true,
+    );
+    mateUse(
+      'bodySmall',
+      bodySmall,
+      isNamed: true,
+    );
+    mateUse(
+      'labelLarge',
+      labelLarge,
+      isNamed: true,
+    );
+    mateUse(
+      'labelMedium',
+      labelMedium,
+      isNamed: true,
+    );
+    mateUse(
+      'labelSmall',
+      labelSmall,
+      isNamed: true,
+    );
   }
 }

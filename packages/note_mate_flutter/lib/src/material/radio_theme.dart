@@ -14,22 +14,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class RadioThemeData$Mate extends RadioThemeData with Mate {
   /// RadioThemeData RadioThemeData({MaterialStateProperty<MouseCursor?>? mouseCursor, MaterialStateProperty<Color?>? fillColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity})
   RadioThemeData$Mate({
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , default:none
     MaterialStateProperty<Color?>? fillColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , defaultValue:none
+    /// optionalParameters: {double? splashRadius} , default:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
     VisualDensity? visualDensity,
   }) : super(
           mouseCursor: mouseCursor,
@@ -49,12 +49,36 @@ class RadioThemeData$Mate extends RadioThemeData with Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           visualDensity: p.get('visualDensity').build(),
         );
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('fillColor', fillColor, isNamed: true);
-    mateUse('overlayColor', overlayColor, isNamed: true);
-    mateUse('splashRadius', splashRadius, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('visualDensity', visualDensity, isNamed: true);
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashRadius',
+      splashRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+    );
   }
 }
 
@@ -62,13 +86,13 @@ class RadioThemeData$Mate extends RadioThemeData with Mate {
 class RadioTheme$Mate extends RadioTheme with Mate {
   /// RadioTheme RadioTheme({Key? key, required RadioThemeData data, required Widget child})
   RadioTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required RadioThemeData data} , defaultValue:none
+    /// optionalParameters: {required RadioThemeData data} , default:none
     required RadioThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -82,8 +106,20 @@ class RadioTheme$Mate extends RadioTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

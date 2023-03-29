@@ -9,16 +9,16 @@ import 'package:flutter/src/services/text_input.dart';
 class AutofillConfiguration$Mate extends AutofillConfiguration with Mate {
   /// AutofillConfiguration AutofillConfiguration({required String uniqueIdentifier, required List<String> autofillHints, required TextEditingValue currentEditingValue, String? hintText})
   AutofillConfiguration$Mate({
-    /// optionalParameters: {required String uniqueIdentifier} , defaultValue:none
+    /// optionalParameters: {required String uniqueIdentifier} , default:none
     required String uniqueIdentifier,
 
-    /// optionalParameters: {required List<String> autofillHints} , defaultValue:none
+    /// optionalParameters: {required List<String> autofillHints} , default:none
     required List<String> autofillHints,
 
-    /// optionalParameters: {required TextEditingValue currentEditingValue} , defaultValue:none
+    /// optionalParameters: {required TextEditingValue currentEditingValue} , default:none
     required TextEditingValue currentEditingValue,
 
-    /// optionalParameters: {String? hintText} , defaultValue:none
+    /// optionalParameters: {String? hintText} , default:none
     String? hintText,
   }) : super(
           uniqueIdentifier: uniqueIdentifier,
@@ -34,9 +34,25 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate {
           currentEditingValue: p.get('currentEditingValue').build(),
           hintText: p.get('hintText').build(),
         );
-    mateUse('uniqueIdentifier', uniqueIdentifier, isNamed: true);
-    mateUseList('autofillHints', autofillHints, isNamed: true);
-    mateUse('currentEditingValue', currentEditingValue, isNamed: true);
-    mateUse('hintText', hintText, isNamed: true);
+    mateUse(
+      'uniqueIdentifier',
+      uniqueIdentifier,
+      isNamed: true,
+    );
+    mateUseList(
+      'autofillHints',
+      autofillHints,
+      isNamed: true,
+    );
+    mateUse(
+      'currentEditingValue',
+      currentEditingValue,
+      isNamed: true,
+    );
+    mateUse(
+      'hintText',
+      hintText,
+      isNamed: true,
+    );
   }
 }

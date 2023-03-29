@@ -8,13 +8,13 @@ import 'dart:core';
 class ObjectCreated$Mate extends ObjectCreated with Mate {
   /// ObjectCreated ObjectCreated({required String library, required String className, required Object object})
   ObjectCreated$Mate({
-    /// optionalParameters: {required String library} , defaultValue:none
+    /// optionalParameters: {required String library} , default:none
     required String library,
 
-    /// optionalParameters: {required String className} , defaultValue:none
+    /// optionalParameters: {required String className} , default:none
     required String className,
 
-    /// optionalParameters: {required Object object} , defaultValue:none
+    /// optionalParameters: {required Object object} , default:none
     required Object object,
   }) : super(
           library: library,
@@ -28,9 +28,21 @@ class ObjectCreated$Mate extends ObjectCreated with Mate {
           className: p.get('className').build(),
           object: p.get('object').build(),
         );
-    mateUse('library', library, isNamed: true);
-    mateUse('className', className, isNamed: true);
-    mateUse('object', object, isNamed: true);
+    mateUse(
+      'library',
+      library,
+      isNamed: true,
+    );
+    mateUse(
+      'className',
+      className,
+      isNamed: true,
+    );
+    mateUse(
+      'object',
+      object,
+      isNamed: true,
+    );
   }
 }
 
@@ -39,12 +51,16 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate {
   /// ObjectDisposed ObjectDisposed({required Object object})
   ObjectDisposed$Mate(
       {
-      /// optionalParameters: {required Object object} , defaultValue:none
+      /// optionalParameters: {required Object object} , default:none
       required Object object})
       : super(object: object) {
     mateCreateName = 'ObjectDisposed';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectDisposed$Mate(object: p.get('object').build());
-    mateUse('object', object, isNamed: true);
+    mateUse(
+      'object',
+      object,
+      isNamed: true,
+    );
   }
 }

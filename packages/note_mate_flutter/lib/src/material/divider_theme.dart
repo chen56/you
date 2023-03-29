@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class DividerThemeData$Mate extends DividerThemeData with Mate {
   /// DividerThemeData DividerThemeData({Color? color, double? space, double? thickness, double? indent, double? endIndent})
   DividerThemeData$Mate({
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double? space} , defaultValue:none
+    /// optionalParameters: {double? space} , default:none
     double? space,
 
-    /// optionalParameters: {double? thickness} , defaultValue:none
+    /// optionalParameters: {double? thickness} , default:none
     double? thickness,
 
-    /// optionalParameters: {double? indent} , defaultValue:none
+    /// optionalParameters: {double? indent} , default:none
     double? indent,
 
-    /// optionalParameters: {double? endIndent} , defaultValue:none
+    /// optionalParameters: {double? endIndent} , default:none
     double? endIndent,
   }) : super(
           color: color,
@@ -41,11 +41,31 @@ class DividerThemeData$Mate extends DividerThemeData with Mate {
           indent: p.get('indent').build(),
           endIndent: p.get('endIndent').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('space', space, isNamed: true);
-    mateUse('thickness', thickness, isNamed: true);
-    mateUse('indent', indent, isNamed: true);
-    mateUse('endIndent', endIndent, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'space',
+      space,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'indent',
+      indent,
+      isNamed: true,
+    );
+    mateUse(
+      'endIndent',
+      endIndent,
+      isNamed: true,
+    );
   }
 }
 
@@ -53,13 +73,13 @@ class DividerThemeData$Mate extends DividerThemeData with Mate {
 class DividerTheme$Mate extends DividerTheme with Mate {
   /// DividerTheme DividerTheme({Key? key, required DividerThemeData data, required Widget child})
   DividerTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required DividerThemeData data} , defaultValue:none
+    /// optionalParameters: {required DividerThemeData data} , default:none
     required DividerThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -73,8 +93,20 @@ class DividerTheme$Mate extends DividerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -14,34 +14,34 @@ import 'dart:ui';
 class TextSpan$Mate extends TextSpan with Mate {
   /// TextSpan TextSpan({String? text, List<InlineSpan>? children, TextStyle? style, GestureRecognizer? recognizer, MouseCursor? mouseCursor, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, String? semanticsLabel, Locale? locale, bool? spellOut})
   TextSpan$Mate({
-    /// optionalParameters: {String? text} , defaultValue:none
+    /// optionalParameters: {String? text} , default:none
     String? text,
 
-    /// optionalParameters: {List<InlineSpan>? children} , defaultValue:none
+    /// optionalParameters: {List<InlineSpan>? children} , default:none
     List<InlineSpan>? children,
 
-    /// optionalParameters: {TextStyle? style} , defaultValue:none
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {GestureRecognizer? recognizer} , defaultValue:none
+    /// optionalParameters: {GestureRecognizer? recognizer} , default:none
     GestureRecognizer? recognizer,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , defaultValue:none
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {Locale? locale} , defaultValue:none
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {bool? spellOut} , defaultValue:none
+    /// optionalParameters: {bool? spellOut} , default:none
     bool? spellOut,
   }) : super(
           text: text,
@@ -69,15 +69,55 @@ class TextSpan$Mate extends TextSpan with Mate {
           locale: p.get('locale').build(),
           spellOut: p.get('spellOut').build(),
         );
-    mateUse('text', text, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('recognizer', recognizer, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('onEnter', onEnter, isNamed: true);
-    mateUse('onExit', onExit, isNamed: true);
-    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
-    mateUse('locale', locale, isNamed: true);
-    mateUse('spellOut', spellOut, isNamed: true);
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'recognizer',
+      recognizer,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnter',
+      onEnter,
+      isNamed: true,
+    );
+    mateUse(
+      'onExit',
+      onExit,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'spellOut',
+      spellOut,
+      isNamed: true,
+    );
   }
 }

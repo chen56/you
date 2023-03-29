@@ -37,7 +37,11 @@ class RenderProxyBox$Mate extends RenderProxyBox with Mate {
     mateCreateName = 'RenderProxyBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderProxyBox$Mate(p.get('child').value);
-    mateUse('child', child, isNamed: false);
+    mateUse(
+      'child',
+      child,
+      isNamed: false,
+    );
   }
 }
 
@@ -45,10 +49,10 @@ class RenderProxyBox$Mate extends RenderProxyBox with Mate {
 class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate {
   /// RenderConstrainedBox RenderConstrainedBox({RenderBox? child, required BoxConstraints additionalConstraints})
   RenderConstrainedBox$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required BoxConstraints additionalConstraints} , defaultValue:none
+    /// optionalParameters: {required BoxConstraints additionalConstraints} , default:none
     required BoxConstraints additionalConstraints,
   }) : super(
           child: child,
@@ -60,8 +64,16 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate {
           child: p.get('child').build(),
           additionalConstraints: p.get('additionalConstraints').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('additionalConstraints', additionalConstraints, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'additionalConstraints',
+      additionalConstraints,
+      isNamed: true,
+    );
   }
 }
 
@@ -69,13 +81,13 @@ class RenderConstrainedBox$Mate extends RenderConstrainedBox with Mate {
 class RenderLimitedBox$Mate extends RenderLimitedBox with Mate {
   /// RenderLimitedBox RenderLimitedBox({RenderBox? child, double maxWidth = double.infinity, double maxHeight = double.infinity})
   RenderLimitedBox$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
     double maxWidth = double.infinity,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
     double maxHeight = double.infinity,
   }) : super(
           child: child,
@@ -89,9 +101,23 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate {
           maxWidth: p.get('maxWidth').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('maxWidth', maxWidth, isNamed: true);
-    mateUse('maxHeight', maxHeight, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'maxWidth',
+      maxWidth,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'maxHeight',
+      maxHeight,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
   }
 }
 
@@ -99,10 +125,10 @@ class RenderLimitedBox$Mate extends RenderLimitedBox with Mate {
 class RenderAspectRatio$Mate extends RenderAspectRatio with Mate {
   /// RenderAspectRatio RenderAspectRatio({RenderBox? child, required double aspectRatio})
   RenderAspectRatio$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required double aspectRatio} , defaultValue:none
+    /// optionalParameters: {required double aspectRatio} , default:none
     required double aspectRatio,
   }) : super(
           child: child,
@@ -114,8 +140,16 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate {
           child: p.get('child').build(),
           aspectRatio: p.get('aspectRatio').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('aspectRatio', aspectRatio, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'aspectRatio',
+      aspectRatio,
+      isNamed: true,
+    );
   }
 }
 
@@ -123,13 +157,13 @@ class RenderAspectRatio$Mate extends RenderAspectRatio with Mate {
 class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate {
   /// RenderIntrinsicWidth RenderIntrinsicWidth({double? stepWidth, double? stepHeight, RenderBox? child})
   RenderIntrinsicWidth$Mate({
-    /// optionalParameters: {double? stepWidth} , defaultValue:none
+    /// optionalParameters: {double? stepWidth} , default:none
     double? stepWidth,
 
-    /// optionalParameters: {double? stepHeight} , defaultValue:none
+    /// optionalParameters: {double? stepHeight} , default:none
     double? stepHeight,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           stepWidth: stepWidth,
@@ -143,9 +177,21 @@ class RenderIntrinsicWidth$Mate extends RenderIntrinsicWidth with Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('stepWidth', stepWidth, isNamed: true);
-    mateUse('stepHeight', stepHeight, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'stepWidth',
+      stepWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'stepHeight',
+      stepHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -154,13 +200,17 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate {
   /// RenderIntrinsicHeight RenderIntrinsicHeight({RenderBox? child})
   RenderIntrinsicHeight$Mate(
       {
-      /// optionalParameters: {RenderBox? child} , defaultValue:none
+      /// optionalParameters: {RenderBox? child} , default:none
       RenderBox? child})
       : super(child: child) {
     mateCreateName = 'RenderIntrinsicHeight';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -168,13 +218,13 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate {
 class RenderOpacity$Mate extends RenderOpacity with Mate {
   /// RenderOpacity RenderOpacity({double opacity = 1.0, bool alwaysIncludeSemantics = false, RenderBox? child})
   RenderOpacity$Mate({
-    /// optionalParameters: {double opacity = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double opacity = 1.0} , default:processed=DoubleLiteralImpl
     double opacity = 1.0,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           opacity: opacity,
@@ -188,9 +238,23 @@ class RenderOpacity$Mate extends RenderOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -198,13 +262,13 @@ class RenderOpacity$Mate extends RenderOpacity with Mate {
 class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate {
   /// RenderAnimatedOpacity RenderAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderBox? child})
   RenderAnimatedOpacity$Mate({
-    /// optionalParameters: {required Animation<double> opacity} , defaultValue:none
+    /// optionalParameters: {required Animation<double> opacity} , default:none
     required Animation<double> opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           opacity: opacity,
@@ -218,9 +282,22 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -228,13 +305,13 @@ class RenderAnimatedOpacity$Mate extends RenderAnimatedOpacity with Mate {
 class RenderShaderMask$Mate extends RenderShaderMask with Mate {
   /// RenderShaderMask RenderShaderMask({RenderBox? child, required Shader Function(Rect) shaderCallback, BlendMode blendMode = BlendMode.modulate})
   RenderShaderMask$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , defaultValue:none
+    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , default:none
     required ShaderCallback shaderCallback,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:processed=PrefixedIdentifierImpl
     BlendMode blendMode = BlendMode.modulate,
   }) : super(
           child: child,
@@ -248,9 +325,22 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate {
           shaderCallback: p.get('shaderCallback').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('shaderCallback', shaderCallback, isNamed: true);
-    mateUse('blendMode', blendMode, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'shaderCallback',
+      shaderCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.modulate,
+    );
   }
 }
 
@@ -258,13 +348,13 @@ class RenderShaderMask$Mate extends RenderShaderMask with Mate {
 class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate {
   /// RenderBackdropFilter RenderBackdropFilter({RenderBox? child, required ImageFilter filter, BlendMode blendMode = BlendMode.srcOver})
   RenderBackdropFilter$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required ImageFilter filter} , defaultValue:none
+    /// optionalParameters: {required ImageFilter filter} , default:none
     required ImageFilter filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
     BlendMode blendMode = BlendMode.srcOver,
   }) : super(
           child: child,
@@ -278,9 +368,22 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate {
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('filter', filter, isNamed: true);
-    mateUse('blendMode', blendMode, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'filter',
+      filter,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.srcOver,
+    );
   }
 }
 
@@ -288,10 +391,10 @@ class RenderBackdropFilter$Mate extends RenderBackdropFilter with Mate {
 class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate {
   /// ShapeBorderClipper ShapeBorderClipper({required ShapeBorder shape, TextDirection? textDirection})
   ShapeBorderClipper$Mate({
-    /// optionalParameters: {required ShapeBorder shape} , defaultValue:none
+    /// optionalParameters: {required ShapeBorder shape} , default:none
     required ShapeBorder shape,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
   }) : super(
           shape: shape,
@@ -303,8 +406,16 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate {
           shape: p.get('shape').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('shape', shape, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
   }
 }
 
@@ -312,14 +423,14 @@ class ShapeBorderClipper$Mate extends ShapeBorderClipper with Mate {
 class RenderClipRect$Mate extends RenderClipRect with Mate {
   /// RenderClipRect RenderClipRect({RenderBox? child, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias})
   RenderClipRect$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:is!ConstVariableElement
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
   }) : super(
           child: child,
           clipper: clipper,
@@ -332,9 +443,22 @@ class RenderClipRect$Mate extends RenderClipRect with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
   }
 }
 
@@ -342,19 +466,19 @@ class RenderClipRect$Mate extends RenderClipRect with Mate {
 class RenderClipRRect$Mate extends RenderClipRRect with Mate {
   /// RenderClipRRect RenderClipRRect({RenderBox? child, BorderRadiusGeometry borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, TextDirection? textDirection})
   RenderClipRRect$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
     BorderRadiusGeometry borderRadius = BorderRadius.zero,
 
-    /// optionalParameters: {CustomClipper<RRect>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
     CustomClipper<RRect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:is!ConstVariableElement
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
   }) : super(
           child: child,
@@ -372,11 +496,33 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+      defaultValue: BorderRadius.zero,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
   }
 }
 
@@ -384,14 +530,14 @@ class RenderClipRRect$Mate extends RenderClipRRect with Mate {
 class RenderClipOval$Mate extends RenderClipOval with Mate {
   /// RenderClipOval RenderClipOval({RenderBox? child, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias})
   RenderClipOval$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:is!ConstVariableElement
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
   }) : super(
           child: child,
           clipper: clipper,
@@ -404,9 +550,22 @@ class RenderClipOval$Mate extends RenderClipOval with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
   }
 }
 
@@ -414,14 +573,14 @@ class RenderClipOval$Mate extends RenderClipOval with Mate {
 class RenderClipPath$Mate extends RenderClipPath with Mate {
   /// RenderClipPath RenderClipPath({RenderBox? child, CustomClipper<Path>? clipper, Clip clipBehavior = Clip.antiAlias})
   RenderClipPath$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {CustomClipper<Path>? clipper} , defaultValue:none
+    /// optionalParameters: {CustomClipper<Path>? clipper} , default:none
     CustomClipper<Path>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , defaultValue:is!ConstVariableElement
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
   }) : super(
           child: child,
           clipper: clipper,
@@ -434,9 +593,22 @@ class RenderClipPath$Mate extends RenderClipPath with Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
   }
 }
 
@@ -444,25 +616,25 @@ class RenderClipPath$Mate extends RenderClipPath with Mate {
 class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
   /// RenderPhysicalModel RenderPhysicalModel({RenderBox? child, BoxShape shape = BoxShape.rectangle, Clip clipBehavior = Clip.none, BorderRadius? borderRadius, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000)})
   RenderPhysicalModel$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
     BoxShape shape = BoxShape.rectangle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:is!ConstVariableElement
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {double elevation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
     double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color shadowColor,
   }) : super(
           child: child,
@@ -484,13 +656,44 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+      defaultValue: BoxShape.rectangle,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -498,22 +701,22 @@ class RenderPhysicalModel$Mate extends RenderPhysicalModel with Mate {
 class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate {
   /// RenderPhysicalShape RenderPhysicalShape({RenderBox? child, required CustomClipper<Path> clipper, Clip clipBehavior = Clip.none, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000)})
   RenderPhysicalShape$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required CustomClipper<Path> clipper} , defaultValue:none
+    /// optionalParameters: {required CustomClipper<Path> clipper} , default:none
     required CustomClipper<Path> clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:is!ConstVariableElement
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {double elevation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
     double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , defaultValue:unprocessed
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color shadowColor,
   }) : super(
           child: child,
@@ -533,12 +736,38 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('clipper', clipper, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -546,16 +775,16 @@ class RenderPhysicalShape$Mate extends RenderPhysicalShape with Mate {
 class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate {
   /// RenderDecoratedBox RenderDecoratedBox({required Decoration decoration, DecorationPosition position = DecorationPosition.background, ImageConfiguration configuration = ImageConfiguration.empty, RenderBox? child})
   RenderDecoratedBox$Mate({
-    /// optionalParameters: {required Decoration decoration} , defaultValue:none
+    /// optionalParameters: {required Decoration decoration} , default:none
     required Decoration decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
     DecorationPosition position = DecorationPosition.background,
 
-    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:processed=PrefixedIdentifierImpl
     ImageConfiguration configuration = ImageConfiguration.empty,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           decoration: decoration,
@@ -571,10 +800,28 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate {
           configuration: p.get('configuration').build(),
           child: p.get('child').build(),
         );
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('configuration', configuration, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: DecorationPosition.background,
+    );
+    mateUse(
+      'configuration',
+      configuration,
+      isNamed: true,
+      defaultValue: ImageConfiguration.empty,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -582,25 +829,25 @@ class RenderDecoratedBox$Mate extends RenderDecoratedBox with Mate {
 class RenderTransform$Mate extends RenderTransform with Mate {
   /// RenderTransform RenderTransform({required Matrix4 transform, Offset? origin, AlignmentGeometry? alignment, TextDirection? textDirection, bool transformHitTests = true, FilterQuality? filterQuality, RenderBox? child})
   RenderTransform$Mate({
-    /// optionalParameters: {required Matrix4 transform} , defaultValue:none
+    /// optionalParameters: {required Matrix4 transform} , default:none
     required Matrix4 transform,
 
-    /// optionalParameters: {Offset? origin} , defaultValue:none
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           transform: transform,
@@ -622,13 +869,42 @@ class RenderTransform$Mate extends RenderTransform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse('transform', transform, isNamed: true);
-    mateUse('origin', origin, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -636,19 +912,19 @@ class RenderTransform$Mate extends RenderTransform with Mate {
 class RenderFittedBox$Mate extends RenderFittedBox with Mate {
   /// RenderFittedBox RenderFittedBox({BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderFittedBox$Mate({
-    /// optionalParameters: {BoxFit fit = BoxFit.contain} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:processed=PrefixedIdentifierImpl
     BoxFit fit = BoxFit.contain,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
   }) : super(
           fit: fit,
@@ -666,11 +942,34 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('fit', fit, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: BoxFit.contain,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }
 
@@ -678,13 +977,13 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
 class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with Mate {
   /// RenderFractionalTranslation RenderFractionalTranslation({required Offset translation, bool transformHitTests = true, RenderBox? child})
   RenderFractionalTranslation$Mate({
-    /// optionalParameters: {required Offset translation} , defaultValue:none
+    /// optionalParameters: {required Offset translation} , default:none
     required Offset translation,
 
-    /// optionalParameters: {bool transformHitTests = true} , defaultValue:Literal
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
     bool transformHitTests = true,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           translation: translation,
@@ -698,9 +997,22 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with 
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    mateUse('translation', translation, isNamed: true);
-    mateUse('transformHitTests', transformHitTests, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'translation',
+      translation,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -708,37 +1020,37 @@ class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with 
 class RenderPointerListener$Mate extends RenderPointerListener with Mate {
   /// RenderPointerListener RenderPointerListener({void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, RenderBox? child})
   RenderPointerListener$Mate({
-    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , defaultValue:none
+    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , default:none
     PointerDownEventListener? onPointerDown,
 
-    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , defaultValue:none
+    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , default:none
     PointerMoveEventListener? onPointerMove,
 
-    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , defaultValue:none
+    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , default:none
     PointerUpEventListener? onPointerUp,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , defaultValue:none
+    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , default:none
     PointerHoverEventListener? onPointerHover,
 
-    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , defaultValue:none
+    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , default:none
     PointerCancelEventListener? onPointerCancel,
 
-    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , defaultValue:none
+    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , default:none
     PointerPanZoomStartEventListener? onPointerPanZoomStart,
 
-    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , default:none
     PointerPanZoomUpdateEventListener? onPointerPanZoomUpdate,
 
-    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , defaultValue:none
+    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , default:none
     PointerPanZoomEndEventListener? onPointerPanZoomEnd,
 
-    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , defaultValue:none
+    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , default:none
     PointerSignalEventListener? onPointerSignal,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           onPointerDown: onPointerDown,
@@ -768,17 +1080,62 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('onPointerDown', onPointerDown, isNamed: true);
-    mateUse('onPointerMove', onPointerMove, isNamed: true);
-    mateUse('onPointerUp', onPointerUp, isNamed: true);
-    mateUse('onPointerHover', onPointerHover, isNamed: true);
-    mateUse('onPointerCancel', onPointerCancel, isNamed: true);
-    mateUse('onPointerPanZoomStart', onPointerPanZoomStart, isNamed: true);
-    mateUse('onPointerPanZoomUpdate', onPointerPanZoomUpdate, isNamed: true);
-    mateUse('onPointerPanZoomEnd', onPointerPanZoomEnd, isNamed: true);
-    mateUse('onPointerSignal', onPointerSignal, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'onPointerDown',
+      onPointerDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerMove',
+      onPointerMove,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerUp',
+      onPointerUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerHover',
+      onPointerHover,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerCancel',
+      onPointerCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomStart',
+      onPointerPanZoomStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomUpdate',
+      onPointerPanZoomUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomEnd',
+      onPointerPanZoomEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerSignal',
+      onPointerSignal,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -786,28 +1143,28 @@ class RenderPointerListener$Mate extends RenderPointerListener with Mate {
 class RenderMouseRegion$Mate extends RenderMouseRegion with Mate {
   /// RenderMouseRegion RenderMouseRegion({void Function(PointerEnterEvent)? onEnter, void Function(PointerHoverEvent)? onHover, void Function(PointerExitEvent)? onExit, MouseCursor cursor = MouseCursor.defer, bool validForMouseTracker = true, bool opaque = true, RenderBox? child, HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque})
   RenderMouseRegion$Mate({
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , defaultValue:none
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , defaultValue:none
+    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , default:none
     PointerHoverEventListener? onHover,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , defaultValue:none
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
     MouseCursor cursor = MouseCursor.defer,
 
-    /// optionalParameters: {bool validForMouseTracker = true} , defaultValue:Literal
+    /// optionalParameters: {bool validForMouseTracker = true} , default:processed=BooleanLiteralImpl
     bool validForMouseTracker = true,
 
-    /// optionalParameters: {bool opaque = true} , defaultValue:Literal
+    /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
     bool opaque = true,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque,
   }) : super(
           onEnter: onEnter,
@@ -831,14 +1188,50 @@ class RenderMouseRegion$Mate extends RenderMouseRegion with Mate {
           child: p.get('child').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateUse('onEnter', onEnter, isNamed: true);
-    mateUse('onHover', onHover, isNamed: true);
-    mateUse('onExit', onExit, isNamed: true);
-    mateUse('cursor', cursor, isNamed: true);
-    mateUse('validForMouseTracker', validForMouseTracker, isNamed: true);
-    mateUse('opaque', opaque, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
+    mateUse(
+      'onEnter',
+      onEnter,
+      isNamed: true,
+    );
+    mateUse(
+      'onHover',
+      onHover,
+      isNamed: true,
+    );
+    mateUse(
+      'onExit',
+      onExit,
+      isNamed: true,
+    );
+    mateUse(
+      'cursor',
+      cursor,
+      isNamed: true,
+      defaultValue: MouseCursor.defer,
+    );
+    mateUse(
+      'validForMouseTracker',
+      validForMouseTracker,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'opaque',
+      opaque,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.opaque,
+    );
   }
 }
 
@@ -847,13 +1240,17 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate {
   /// RenderRepaintBoundary RenderRepaintBoundary({RenderBox? child})
   RenderRepaintBoundary$Mate(
       {
-      /// optionalParameters: {RenderBox? child} , defaultValue:none
+      /// optionalParameters: {RenderBox? child} , default:none
       RenderBox? child})
       : super(child: child) {
     mateCreateName = 'RenderRepaintBoundary';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -861,13 +1258,13 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate {
 class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate {
   /// RenderIgnorePointer RenderIgnorePointer({RenderBox? child, bool ignoring = true, bool? ignoringSemantics})
   RenderIgnorePointer$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {bool ignoring = true} , defaultValue:Literal
+    /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
     bool ignoring = true,
 
-    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
+    /// optionalParameters: {bool? ignoringSemantics} , default:none
     bool? ignoringSemantics,
   }) : super(
           child: child,
@@ -881,9 +1278,22 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate {
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('ignoring', ignoring, isNamed: true);
-    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'ignoring',
+      ignoring,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringSemantics',
+      ignoringSemantics,
+      isNamed: true,
+    );
   }
 }
 
@@ -891,10 +1301,10 @@ class RenderIgnorePointer$Mate extends RenderIgnorePointer with Mate {
 class RenderOffstage$Mate extends RenderOffstage with Mate {
   /// RenderOffstage RenderOffstage({bool offstage = true, RenderBox? child})
   RenderOffstage$Mate({
-    /// optionalParameters: {bool offstage = true} , defaultValue:Literal
+    /// optionalParameters: {bool offstage = true} , default:processed=BooleanLiteralImpl
     bool offstage = true,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           offstage: offstage,
@@ -906,8 +1316,17 @@ class RenderOffstage$Mate extends RenderOffstage with Mate {
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    mateUse('offstage', offstage, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'offstage',
+      offstage,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -915,13 +1334,13 @@ class RenderOffstage$Mate extends RenderOffstage with Mate {
 class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate {
   /// RenderAbsorbPointer RenderAbsorbPointer({RenderBox? child, bool absorbing = true, bool? ignoringSemantics})
   RenderAbsorbPointer$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {bool absorbing = true} , defaultValue:Literal
+    /// optionalParameters: {bool absorbing = true} , default:processed=BooleanLiteralImpl
     bool absorbing = true,
 
-    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
+    /// optionalParameters: {bool? ignoringSemantics} , default:none
     bool? ignoringSemantics,
   }) : super(
           child: child,
@@ -935,9 +1354,22 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate {
           absorbing: p.get('absorbing').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('absorbing', absorbing, isNamed: true);
-    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'absorbing',
+      absorbing,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringSemantics',
+      ignoringSemantics,
+      isNamed: true,
+    );
   }
 }
 
@@ -945,13 +1377,13 @@ class RenderAbsorbPointer$Mate extends RenderAbsorbPointer with Mate {
 class RenderMetaData$Mate extends RenderMetaData with Mate {
   /// RenderMetaData RenderMetaData({dynamic metaData, HitTestBehavior behavior = HitTestBehavior.deferToChild, RenderBox? child})
   RenderMetaData$Mate({
-    /// optionalParameters: {dynamic metaData} , defaultValue:none
+    /// optionalParameters: {dynamic metaData} , default:none
     dynamic metaData,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           metaData: metaData,
@@ -965,9 +1397,22 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('metaData', metaData, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'metaData',
+      metaData,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -975,25 +1420,25 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
 class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler with Mate {
   /// RenderSemanticsGestureHandler RenderSemanticsGestureHandler({RenderBox? child, void Function()? onTap, void Function()? onLongPress, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragUpdateDetails)? onVerticalDragUpdate, double scrollFactor = 0.8, HitTestBehavior behavior = HitTestBehavior.deferToChild})
   RenderSemanticsGestureHandler$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onHorizontalDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onHorizontalDragUpdate} , default:none
     GestureDragUpdateCallback? onHorizontalDragUpdate,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onVerticalDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onVerticalDragUpdate} , default:none
     GestureDragUpdateCallback? onVerticalDragUpdate,
 
-    /// optionalParameters: {double scrollFactor = 0.8} , defaultValue:Literal
+    /// optionalParameters: {double scrollFactor = 0.8} , default:processed=DoubleLiteralImpl
     double scrollFactor = 0.8,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior behavior = HitTestBehavior.deferToChild,
   }) : super(
           child: child,
@@ -1015,13 +1460,43 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler w
           scrollFactor: p.get('scrollFactor').build(),
           behavior: p.get('behavior').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('onHorizontalDragUpdate', onHorizontalDragUpdate, isNamed: true);
-    mateUse('onVerticalDragUpdate', onVerticalDragUpdate, isNamed: true);
-    mateUse('scrollFactor', scrollFactor, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onHorizontalDragUpdate',
+      onHorizontalDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onVerticalDragUpdate',
+      onVerticalDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollFactor',
+      scrollFactor,
+      isNamed: true,
+      defaultValue: 0.8,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
   }
 }
 
@@ -1029,22 +1504,22 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler w
 class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Mate {
   /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, TextDirection? textDirection})
   RenderSemanticsAnnotations$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required SemanticsProperties properties} , defaultValue:none
+    /// optionalParameters: {required SemanticsProperties properties} , default:none
     required SemanticsProperties properties,
 
-    /// optionalParameters: {bool container = false} , defaultValue:Literal
+    /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
     bool container = false,
 
-    /// optionalParameters: {bool explicitChildNodes = false} , defaultValue:Literal
+    /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
     bool explicitChildNodes = false,
 
-    /// optionalParameters: {bool excludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeSemantics = false,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
   }) : super(
           child: child,
@@ -1064,12 +1539,39 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Ma
           excludeSemantics: p.get('excludeSemantics').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('properties', properties, isNamed: true);
-    mateUse('container', container, isNamed: true);
-    mateUse('explicitChildNodes', explicitChildNodes, isNamed: true);
-    mateUse('excludeSemantics', excludeSemantics, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'properties',
+      properties,
+      isNamed: true,
+    );
+    mateUse(
+      'container',
+      container,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'explicitChildNodes',
+      explicitChildNodes,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'excludeSemantics',
+      excludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
   }
 }
 
@@ -1077,10 +1579,10 @@ class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Ma
 class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate {
   /// RenderBlockSemantics RenderBlockSemantics({RenderBox? child, bool blocking = true})
   RenderBlockSemantics$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {bool blocking = true} , defaultValue:Literal
+    /// optionalParameters: {bool blocking = true} , default:processed=BooleanLiteralImpl
     bool blocking = true,
   }) : super(
           child: child,
@@ -1092,8 +1594,17 @@ class RenderBlockSemantics$Mate extends RenderBlockSemantics with Mate {
           child: p.get('child').build(),
           blocking: p.get('blocking').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('blocking', blocking, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'blocking',
+      blocking,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -1102,13 +1613,17 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate {
   /// RenderMergeSemantics RenderMergeSemantics({RenderBox? child})
   RenderMergeSemantics$Mate(
       {
-      /// optionalParameters: {RenderBox? child} , defaultValue:none
+      /// optionalParameters: {RenderBox? child} , default:none
       RenderBox? child})
       : super(child: child) {
     mateCreateName = 'RenderMergeSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1116,10 +1631,10 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate {
 class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate {
   /// RenderExcludeSemantics RenderExcludeSemantics({RenderBox? child, bool excluding = true})
   RenderExcludeSemantics$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {bool excluding = true} , defaultValue:Literal
+    /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
     bool excluding = true,
   }) : super(
           child: child,
@@ -1131,8 +1646,17 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate {
           child: p.get('child').build(),
           excluding: p.get('excluding').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('excluding', excluding, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'excluding',
+      excluding,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -1140,10 +1664,10 @@ class RenderExcludeSemantics$Mate extends RenderExcludeSemantics with Mate {
 class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate {
   /// RenderIndexedSemantics RenderIndexedSemantics({RenderBox? child, required int index})
   RenderIndexedSemantics$Mate({
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required int index} , defaultValue:none
+    /// optionalParameters: {required int index} , default:none
     required int index,
   }) : super(
           child: child,
@@ -1155,8 +1679,16 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate {
           child: p.get('child').build(),
           index: p.get('index').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('index', index, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+    );
   }
 }
 
@@ -1164,10 +1696,10 @@ class RenderIndexedSemantics$Mate extends RenderIndexedSemantics with Mate {
 class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate {
   /// RenderLeaderLayer RenderLeaderLayer({required LayerLink link, RenderBox? child})
   RenderLeaderLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , defaultValue:none
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           link: link,
@@ -1179,8 +1711,16 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate {
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    mateUse('link', link, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1188,22 +1728,22 @@ class RenderLeaderLayer$Mate extends RenderLeaderLayer with Mate {
 class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
   /// RenderFollowerLayer RenderFollowerLayer({required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment leaderAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, RenderBox? child})
   RenderFollowerLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , defaultValue:none
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {bool showWhenUnlinked = true} , defaultValue:Literal
+    /// optionalParameters: {bool showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
     bool showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset offset = Offset.zero,
 
-    /// optionalParameters: {Alignment leaderAnchor = Alignment.topLeft} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Alignment leaderAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
     Alignment leaderAnchor = Alignment.topLeft,
 
-    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
     Alignment followerAnchor = Alignment.topLeft,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           link: link,
@@ -1223,12 +1763,40 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    mateUse('link', link, isNamed: true);
-    mateUse('showWhenUnlinked', showWhenUnlinked, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('leaderAnchor', leaderAnchor, isNamed: true);
-    mateUse('followerAnchor', followerAnchor, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'showWhenUnlinked',
+      showWhenUnlinked,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'leaderAnchor',
+      leaderAnchor,
+      isNamed: true,
+      defaultValue: Alignment.topLeft,
+    );
+    mateUse(
+      'followerAnchor',
+      followerAnchor,
+      isNamed: true,
+      defaultValue: Alignment.topLeft,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1236,13 +1804,13 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
 class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion<T> with Mate {
   /// RenderAnnotatedRegion<T> RenderAnnotatedRegion({required T value, required bool sized, RenderBox? child})
   RenderAnnotatedRegion$Mate({
-    /// optionalParameters: {required T value} , defaultValue:none
+    /// optionalParameters: {required T value} , default:none
     required T value,
 
-    /// optionalParameters: {required bool sized} , defaultValue:none
+    /// optionalParameters: {required bool sized} , default:none
     required bool sized,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           value: value,
@@ -1256,8 +1824,20 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion
           sized: p.get('sized').build(),
           child: p.get('child').build(),
         );
-    mateUse('value', value, isNamed: true);
-    mateUse('sized', sized, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'sized',
+      sized,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

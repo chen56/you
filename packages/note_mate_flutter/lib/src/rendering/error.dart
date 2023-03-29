@@ -15,6 +15,11 @@ class RenderErrorBox$Mate extends RenderErrorBox with Mate {
     mateCreateName = 'RenderErrorBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderErrorBox$Mate(p.get('message').value);
-    mateUse('message', message, isNamed: false);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+      defaultValue: '',
+    );
   }
 }

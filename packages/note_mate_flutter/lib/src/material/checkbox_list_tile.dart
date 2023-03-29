@@ -20,100 +20,100 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class CheckboxListTile$Mate extends CheckboxListTile with Mate {
   /// CheckboxListTile CheckboxListTile({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback})
   CheckboxListTile$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required bool? value} , defaultValue:none
+    /// optionalParameters: {required bool? value} , default:none
     required bool? value,
 
-    /// optionalParameters: {required void Function(bool?)? onChanged} , defaultValue:none
+    /// optionalParameters: {required void Function(bool?)? onChanged} , default:none
     required ValueChanged<bool?>? onChanged,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {Color? activeColor} , defaultValue:none
+    /// optionalParameters: {Color? activeColor} , default:none
     Color? activeColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , default:none
     MaterialStateProperty<Color?>? fillColor,
 
-    /// optionalParameters: {Color? checkColor} , defaultValue:none
+    /// optionalParameters: {Color? checkColor} , default:none
     Color? checkColor,
 
-    /// optionalParameters: {Color? hoverColor} , defaultValue:none
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {double? splashRadius} , defaultValue:none
+    /// optionalParameters: {double? splashRadius} , default:none
     double? splashRadius,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , defaultValue:none
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {BorderSide? side} , defaultValue:none
+    /// optionalParameters: {BorderSide? side} , default:none
     BorderSide? side,
 
-    /// optionalParameters: {bool isError = false} , defaultValue:Literal
+    /// optionalParameters: {bool isError = false} , default:processed=BooleanLiteralImpl
     bool isError = false,
 
-    /// optionalParameters: {bool? enabled} , defaultValue:none
+    /// optionalParameters: {bool? enabled} , default:none
     bool? enabled,
 
-    /// optionalParameters: {Color? tileColor} , defaultValue:none
+    /// optionalParameters: {Color? tileColor} , default:none
     Color? tileColor,
 
-    /// optionalParameters: {Widget? title} , defaultValue:none
+    /// optionalParameters: {Widget? title} , default:none
     Widget? title,
 
-    /// optionalParameters: {Widget? subtitle} , defaultValue:none
+    /// optionalParameters: {Widget? subtitle} , default:none
     Widget? subtitle,
 
-    /// optionalParameters: {bool isThreeLine = false} , defaultValue:Literal
+    /// optionalParameters: {bool isThreeLine = false} , default:processed=BooleanLiteralImpl
     bool isThreeLine = false,
 
-    /// optionalParameters: {bool? dense} , defaultValue:none
+    /// optionalParameters: {bool? dense} , default:none
     bool? dense,
 
-    /// optionalParameters: {Widget? secondary} , defaultValue:none
+    /// optionalParameters: {Widget? secondary} , default:none
     Widget? secondary,
 
-    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     bool selected = false,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
     ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {bool tristate = false} , defaultValue:Literal
+    /// optionalParameters: {bool tristate = false} , default:processed=BooleanLiteralImpl
     bool tristate = false,
 
-    /// optionalParameters: {OutlinedBorder? checkboxShape} , defaultValue:none
+    /// optionalParameters: {OutlinedBorder? checkboxShape} , default:none
     OutlinedBorder? checkboxShape,
 
-    /// optionalParameters: {Color? selectedTileColor} , defaultValue:none
+    /// optionalParameters: {Color? selectedTileColor} , default:none
     Color? selectedTileColor,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
   }) : super(
           key: key,
@@ -185,37 +185,171 @@ class CheckboxListTile$Mate extends CheckboxListTile with Mate {
           onFocusChange: p.get('onFocusChange').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('onChanged', onChanged, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('activeColor', activeColor, isNamed: true);
-    mateUse('fillColor', fillColor, isNamed: true);
-    mateUse('checkColor', checkColor, isNamed: true);
-    mateUse('hoverColor', hoverColor, isNamed: true);
-    mateUse('overlayColor', overlayColor, isNamed: true);
-    mateUse('splashRadius', splashRadius, isNamed: true);
-    mateUse('materialTapTargetSize', materialTapTargetSize, isNamed: true);
-    mateUse('visualDensity', visualDensity, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('side', side, isNamed: true);
-    mateUse('isError', isError, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('tileColor', tileColor, isNamed: true);
-    mateUse('title', title, isNamed: true);
-    mateUse('subtitle', subtitle, isNamed: true);
-    mateUse('isThreeLine', isThreeLine, isNamed: true);
-    mateUse('dense', dense, isNamed: true);
-    mateUse('secondary', secondary, isNamed: true);
-    mateUse('selected', selected, isNamed: true);
-    mateUse('controlAffinity', controlAffinity, isNamed: true);
-    mateUse('contentPadding', contentPadding, isNamed: true);
-    mateUse('tristate', tristate, isNamed: true);
-    mateUse('checkboxShape', checkboxShape, isNamed: true);
-    mateUse('selectedTileColor', selectedTileColor, isNamed: true);
-    mateUse('onFocusChange', onFocusChange, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'activeColor',
+      activeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'checkColor',
+      checkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashRadius',
+      splashRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+    );
+    mateUse(
+      'isError',
+      isError,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+    );
+    mateUse(
+      'tileColor',
+      tileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'subtitle',
+      subtitle,
+      isNamed: true,
+    );
+    mateUse(
+      'isThreeLine',
+      isThreeLine,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'dense',
+      dense,
+      isNamed: true,
+    );
+    mateUse(
+      'secondary',
+      secondary,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controlAffinity',
+      controlAffinity,
+      isNamed: true,
+      defaultValue: ListTileControlAffinity.platform,
+    );
+    mateUse(
+      'contentPadding',
+      contentPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'tristate',
+      tristate,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'checkboxShape',
+      checkboxShape,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedTileColor',
+      selectedTileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'onFocusChange',
+      onFocusChange,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
   }
 }

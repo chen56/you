@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/foundation/diagnostics.dart';
+import 'package:flutter/foundation.dart';
 
 /// class HSVColor
 class HSVColor$Mate extends HSVColor with Mate {
@@ -35,10 +36,26 @@ class HSVColor$Mate extends HSVColor with Mate {
           p.get('saturation').value,
           p.get('value').value,
         );
-    mateUse('alpha', alpha, isNamed: false);
-    mateUse('hue', hue, isNamed: false);
-    mateUse('saturation', saturation, isNamed: false);
-    mateUse('value', value, isNamed: false);
+    mateUse(
+      'alpha',
+      alpha,
+      isNamed: false,
+    );
+    mateUse(
+      'hue',
+      hue,
+      isNamed: false,
+    );
+    mateUse(
+      'saturation',
+      saturation,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }
 
@@ -71,10 +88,26 @@ class HSLColor$Mate extends HSLColor with Mate {
           p.get('saturation').value,
           p.get('lightness').value,
         );
-    mateUse('alpha', alpha, isNamed: false);
-    mateUse('hue', hue, isNamed: false);
-    mateUse('saturation', saturation, isNamed: false);
-    mateUse('lightness', lightness, isNamed: false);
+    mateUse(
+      'alpha',
+      alpha,
+      isNamed: false,
+    );
+    mateUse(
+      'hue',
+      hue,
+      isNamed: false,
+    );
+    mateUse(
+      'saturation',
+      saturation,
+      isNamed: false,
+    );
+    mateUse(
+      'lightness',
+      lightness,
+      isNamed: false,
+    );
   }
 }
 
@@ -97,8 +130,16 @@ class ColorSwatch$Mate<T> extends ColorSwatch<T> with Mate {
           p.get('primary').value,
           p.get('_swatch').value,
         );
-    mateUse('primary', primary, isNamed: false);
-    mateUse('_swatch', _swatch, isNamed: false);
+    mateUse(
+      'primary',
+      primary,
+      isNamed: false,
+    );
+    mateUse(
+      '_swatch',
+      _swatch,
+      isNamed: false,
+    );
   }
 }
 
@@ -111,17 +152,17 @@ class ColorProperty$Mate extends ColorProperty with Mate {
 
     /// requiredParameters: Color? value
     Color? value, {
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , defaultValue:is!ConstVariableElement
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -140,11 +181,38 @@ class ColorProperty$Mate extends ColorProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('level', level, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }

@@ -10,13 +10,13 @@ import 'package:flutter/src/foundation/key.dart';
 class ColorFiltered$Mate extends ColorFiltered with Mate {
   /// ColorFiltered ColorFiltered({required ColorFilter colorFilter, Widget? child, Key? key})
   ColorFiltered$Mate({
-    /// optionalParameters: {required ColorFilter colorFilter} , defaultValue:none
+    /// optionalParameters: {required ColorFilter colorFilter} , default:none
     required ColorFilter colorFilter,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
   }) : super(
           colorFilter: colorFilter,
@@ -30,8 +30,20 @@ class ColorFiltered$Mate extends ColorFiltered with Mate {
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse('colorFilter', colorFilter, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('key', key, isNamed: true);
+    mateUse(
+      'colorFilter',
+      colorFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }

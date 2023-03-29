@@ -11,31 +11,31 @@ import 'dart:core';
 class CupertinoTabView$Mate extends CupertinoTabView with Mate {
   /// CupertinoTabView CupertinoTabView({Key? key, Widget Function(BuildContext)? builder, GlobalKey<NavigatorState>? navigatorKey, String? defaultTitle, Map<String, Widget Function(BuildContext)>? routes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? restorationScopeId})
   CupertinoTabView$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget Function(BuildContext)? builder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext)? builder} , default:none
     WidgetBuilder? builder,
 
-    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , defaultValue:none
+    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , default:none
     GlobalKey<NavigatorState>? navigatorKey,
 
-    /// optionalParameters: {String? defaultTitle} , defaultValue:none
+    /// optionalParameters: {String? defaultTitle} , default:none
     String? defaultTitle,
 
-    /// optionalParameters: {Map<String, Widget Function(BuildContext)>? routes} , defaultValue:none
+    /// optionalParameters: {Map<String, Widget Function(BuildContext)>? routes} , default:none
     Map<String, WidgetBuilder>? routes,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , defaultValue:none
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
     RouteFactory? onGenerateRoute,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , defaultValue:none
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
     RouteFactory? onUnknownRoute,
 
-    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
     required List<NavigatorObserver> navigatorObservers,
 
-    /// optionalParameters: {String? restorationScopeId} , defaultValue:none
+    /// optionalParameters: {String? restorationScopeId} , default:none
     String? restorationScopeId,
   }) : super(
           key: key,
@@ -61,14 +61,50 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
           navigatorObservers: p.get('navigatorObservers').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
-    mateUse('navigatorKey', navigatorKey, isNamed: true);
-    mateUse('defaultTitle', defaultTitle, isNamed: true);
-    mateUse('routes', routes, isNamed: true);
-    mateUse('onGenerateRoute', onGenerateRoute, isNamed: true);
-    mateUse('onUnknownRoute', onUnknownRoute, isNamed: true);
-    mateUseList('navigatorObservers', navigatorObservers, isNamed: true);
-    mateUse('restorationScopeId', restorationScopeId, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'navigatorKey',
+      navigatorKey,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultTitle',
+      defaultTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'routes',
+      routes,
+      isNamed: true,
+    );
+    mateUse(
+      'onGenerateRoute',
+      onGenerateRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'onUnknownRoute',
+      onUnknownRoute,
+      isNamed: true,
+    );
+    mateUseList(
+      'navigatorObservers',
+      navigatorObservers,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationScopeId',
+      restorationScopeId,
+      isNamed: true,
+    );
   }
 }

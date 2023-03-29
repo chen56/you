@@ -10,22 +10,22 @@ import 'dart:ui';
 class Divider$Mate extends Divider with Mate {
   /// Divider Divider({Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color})
   Divider$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {double? thickness} , defaultValue:none
+    /// optionalParameters: {double? thickness} , default:none
     double? thickness,
 
-    /// optionalParameters: {double? indent} , defaultValue:none
+    /// optionalParameters: {double? indent} , default:none
     double? indent,
 
-    /// optionalParameters: {double? endIndent} , defaultValue:none
+    /// optionalParameters: {double? endIndent} , default:none
     double? endIndent,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
   }) : super(
           key: key,
@@ -45,12 +45,36 @@ class Divider$Mate extends Divider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('thickness', thickness, isNamed: true);
-    mateUse('indent', indent, isNamed: true);
-    mateUse('endIndent', endIndent, isNamed: true);
-    mateUse('color', color, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'indent',
+      indent,
+      isNamed: true,
+    );
+    mateUse(
+      'endIndent',
+      endIndent,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
   }
 }
 
@@ -58,22 +82,22 @@ class Divider$Mate extends Divider with Mate {
 class VerticalDivider$Mate extends VerticalDivider with Mate {
   /// VerticalDivider VerticalDivider({Key? key, double? width, double? thickness, double? indent, double? endIndent, Color? color})
   VerticalDivider$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? thickness} , defaultValue:none
+    /// optionalParameters: {double? thickness} , default:none
     double? thickness,
 
-    /// optionalParameters: {double? indent} , defaultValue:none
+    /// optionalParameters: {double? indent} , default:none
     double? indent,
 
-    /// optionalParameters: {double? endIndent} , defaultValue:none
+    /// optionalParameters: {double? endIndent} , default:none
     double? endIndent,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
   }) : super(
           key: key,
@@ -93,11 +117,35 @@ class VerticalDivider$Mate extends VerticalDivider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('thickness', thickness, isNamed: true);
-    mateUse('indent', indent, isNamed: true);
-    mateUse('endIndent', endIndent, isNamed: true);
-    mateUse('color', color, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'indent',
+      indent,
+      isNamed: true,
+    );
+    mateUse(
+      'endIndent',
+      endIndent,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
   }
 }

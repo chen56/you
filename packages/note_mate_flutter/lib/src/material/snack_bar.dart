@@ -17,19 +17,19 @@ import 'package:flutter/widgets.dart';
 class SnackBarAction$Mate extends SnackBarAction with Mate {
   /// SnackBarAction SnackBarAction({Key? key, Color? textColor, Color? disabledTextColor, required String label, required void Function() onPressed})
   SnackBarAction$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? textColor} , defaultValue:none
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {Color? disabledTextColor} , defaultValue:none
+    /// optionalParameters: {Color? disabledTextColor} , default:none
     Color? disabledTextColor,
 
-    /// optionalParameters: {required String label} , defaultValue:none
+    /// optionalParameters: {required String label} , default:none
     required String label,
 
-    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function() onPressed} , default:none
     required VoidCallback onPressed,
   }) : super(
           key: key,
@@ -47,11 +47,31 @@ class SnackBarAction$Mate extends SnackBarAction with Mate {
           label: p.get('label').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('textColor', textColor, isNamed: true);
-    mateUse('disabledTextColor', disabledTextColor, isNamed: true);
-    mateUse('label', label, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledTextColor',
+      disabledTextColor,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
   }
 }
 
@@ -59,58 +79,58 @@ class SnackBarAction$Mate extends SnackBarAction with Mate {
 class SnackBar$Mate extends SnackBar with Mate {
   /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
   SnackBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget content} , defaultValue:none
+    /// optionalParameters: {required Widget content} , default:none
     required Widget content,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {SnackBarBehavior? behavior} , defaultValue:none
+    /// optionalParameters: {SnackBarBehavior? behavior} , default:none
     SnackBarBehavior? behavior,
 
-    /// optionalParameters: {SnackBarAction? action} , defaultValue:none
+    /// optionalParameters: {SnackBarAction? action} , default:none
     SnackBarAction? action,
 
-    /// optionalParameters: {double? actionOverflowThreshold} , defaultValue:none
+    /// optionalParameters: {double? actionOverflowThreshold} , default:none
     double? actionOverflowThreshold,
 
-    /// optionalParameters: {bool? showCloseIcon} , defaultValue:none
+    /// optionalParameters: {bool? showCloseIcon} , default:none
     bool? showCloseIcon,
 
-    /// optionalParameters: {Color? closeIconColor} , defaultValue:none
+    /// optionalParameters: {Color? closeIconColor} , default:none
     Color? closeIconColor,
 
-    /// optionalParameters: {Duration duration = _snackBarDisplayDuration} , defaultValue:unprocessed
+    /// optionalParameters: {Duration duration = _snackBarDisplayDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration duration,
 
-    /// optionalParameters: {Animation<double>? animation} , defaultValue:none
+    /// optionalParameters: {Animation<double>? animation} , default:none
     Animation<double>? animation,
 
-    /// optionalParameters: {void Function()? onVisible} , defaultValue:none
+    /// optionalParameters: {void Function()? onVisible} , default:none
     VoidCallback? onVisible,
 
-    /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , default:processed=PrefixedIdentifierImpl
     DismissDirection dismissDirection = DismissDirection.down,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
@@ -154,23 +174,97 @@ class SnackBar$Mate extends SnackBar with Mate {
           dismissDirection: p.get('dismissDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('content', content, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('action', action, isNamed: true);
-    mateUse('actionOverflowThreshold', actionOverflowThreshold, isNamed: true);
-    mateUse('showCloseIcon', showCloseIcon, isNamed: true);
-    mateUse('closeIconColor', closeIconColor, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('animation', animation, isNamed: true);
-    mateUse('onVisible', onVisible, isNamed: true);
-    mateUse('dismissDirection', dismissDirection, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'content',
+      content,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+    );
+    mateUse(
+      'action',
+      action,
+      isNamed: true,
+    );
+    mateUse(
+      'actionOverflowThreshold',
+      actionOverflowThreshold,
+      isNamed: true,
+    );
+    mateUse(
+      'showCloseIcon',
+      showCloseIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'closeIconColor',
+      closeIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'animation',
+      animation,
+      isNamed: true,
+    );
+    mateUse(
+      'onVisible',
+      onVisible,
+      isNamed: true,
+    );
+    mateUse(
+      'dismissDirection',
+      dismissDirection,
+      isNamed: true,
+      defaultValue: DismissDirection.down,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

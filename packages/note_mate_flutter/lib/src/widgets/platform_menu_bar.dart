@@ -16,13 +16,13 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
   ShortcutSerialization$Mate.character(
     /// requiredParameters: String character
     String character, {
-    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
     bool alt = false,
 
-    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
     bool control = false,
 
-    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
     bool meta = false,
   }) : super.character(
           character,
@@ -38,26 +38,45 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           control: p.get('control').build(),
           meta: p.get('meta').build(),
         );
-    mateUse('character', character, isNamed: false);
-    mateUse('alt', alt, isNamed: true);
-    mateUse('control', control, isNamed: true);
-    mateUse('meta', meta, isNamed: true);
+    mateUse(
+      'character',
+      character,
+      isNamed: false,
+    );
+    mateUse(
+      'alt',
+      alt,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'control',
+      control,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'meta',
+      meta,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 
   /// ShortcutSerialization ShortcutSerialization.modifier(LogicalKeyboardKey trigger, {bool alt = false, bool control = false, bool meta = false, bool shift = false})
   ShortcutSerialization$Mate.modifier(
     /// requiredParameters: LogicalKeyboardKey trigger
     LogicalKeyboardKey trigger, {
-    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
     bool alt = false,
 
-    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
     bool control = false,
 
-    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
     bool meta = false,
 
-    /// optionalParameters: {bool shift = false} , defaultValue:Literal
+    /// optionalParameters: {bool shift = false} , default:processed=BooleanLiteralImpl
     bool shift = false,
   }) : super.modifier(
           trigger,
@@ -75,11 +94,35 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           meta: p.get('meta').build(),
           shift: p.get('shift').build(),
         );
-    mateUse('trigger', trigger, isNamed: false);
-    mateUse('alt', alt, isNamed: true);
-    mateUse('control', control, isNamed: true);
-    mateUse('meta', meta, isNamed: true);
-    mateUse('shift', shift, isNamed: true);
+    mateUse(
+      'trigger',
+      trigger,
+      isNamed: false,
+    );
+    mateUse(
+      'alt',
+      alt,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'control',
+      control,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'meta',
+      meta,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'shift',
+      shift,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -88,13 +131,17 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
   /// DefaultPlatformMenuDelegate DefaultPlatformMenuDelegate({MethodChannel? channel})
   DefaultPlatformMenuDelegate$Mate(
       {
-      /// optionalParameters: {MethodChannel? channel} , defaultValue:none
+      /// optionalParameters: {MethodChannel? channel} , default:none
       MethodChannel? channel})
       : super(channel: channel) {
     mateCreateName = 'DefaultPlatformMenuDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
-    mateUse('channel', channel, isNamed: true);
+    mateUse(
+      'channel',
+      channel,
+      isNamed: true,
+    );
   }
 }
 
@@ -102,13 +149,13 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
 class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
   /// PlatformMenuBar PlatformMenuBar({Key? key, required List<PlatformMenuItem> menus, Widget? child, Widget? body})
   PlatformMenuBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<PlatformMenuItem> menus} , defaultValue:none
+    /// optionalParameters: {required List<PlatformMenuItem> menus} , default:none
     required List<PlatformMenuItem> menus,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -122,9 +169,21 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
           menus: p.get('menus').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('menus', menus, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'menus',
+      menus,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -132,16 +191,16 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
 class PlatformMenu$Mate extends PlatformMenu with Mate {
   /// PlatformMenu PlatformMenu({required String label, void Function()? onOpen, void Function()? onClose, required List<PlatformMenuItem> menus})
   PlatformMenu$Mate({
-    /// optionalParameters: {required String label} , defaultValue:none
+    /// optionalParameters: {required String label} , default:none
     required String label,
 
-    /// optionalParameters: {void Function()? onOpen} , defaultValue:none
+    /// optionalParameters: {void Function()? onOpen} , default:none
     VoidCallback? onOpen,
 
-    /// optionalParameters: {void Function()? onClose} , defaultValue:none
+    /// optionalParameters: {void Function()? onClose} , default:none
     VoidCallback? onClose,
 
-    /// optionalParameters: {required List<PlatformMenuItem> menus} , defaultValue:none
+    /// optionalParameters: {required List<PlatformMenuItem> menus} , default:none
     required List<PlatformMenuItem> menus,
   }) : super(
           label: label,
@@ -157,10 +216,26 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
           onClose: p.get('onClose').build(),
           menus: p.get('menus').build(),
         );
-    mateUse('label', label, isNamed: true);
-    mateUse('onOpen', onOpen, isNamed: true);
-    mateUse('onClose', onClose, isNamed: true);
-    mateUseList('menus', menus, isNamed: true);
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'onOpen',
+      onOpen,
+      isNamed: true,
+    );
+    mateUse(
+      'onClose',
+      onClose,
+      isNamed: true,
+    );
+    mateUseList(
+      'menus',
+      menus,
+      isNamed: true,
+    );
   }
 }
 
@@ -169,13 +244,17 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
   /// PlatformMenuItemGroup PlatformMenuItemGroup({required List<PlatformMenuItem> members})
   PlatformMenuItemGroup$Mate(
       {
-      /// optionalParameters: {required List<PlatformMenuItem> members} , defaultValue:none
+      /// optionalParameters: {required List<PlatformMenuItem> members} , default:none
       required List<PlatformMenuItem> members})
       : super(members: members) {
     mateCreateName = 'PlatformMenuItemGroup';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
-    mateUseList('members', members, isNamed: true);
+    mateUseList(
+      'members',
+      members,
+      isNamed: true,
+    );
   }
 }
 
@@ -183,16 +262,16 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
 class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
   /// PlatformMenuItem PlatformMenuItem({required String label, MenuSerializableShortcut? shortcut, void Function()? onSelected, Intent? onSelectedIntent})
   PlatformMenuItem$Mate({
-    /// optionalParameters: {required String label} , defaultValue:none
+    /// optionalParameters: {required String label} , default:none
     required String label,
 
-    /// optionalParameters: {MenuSerializableShortcut? shortcut} , defaultValue:none
+    /// optionalParameters: {MenuSerializableShortcut? shortcut} , default:none
     MenuSerializableShortcut? shortcut,
 
-    /// optionalParameters: {void Function()? onSelected} , defaultValue:none
+    /// optionalParameters: {void Function()? onSelected} , default:none
     VoidCallback? onSelected,
 
-    /// optionalParameters: {Intent? onSelectedIntent} , defaultValue:none
+    /// optionalParameters: {Intent? onSelectedIntent} , default:none
     Intent? onSelectedIntent,
   }) : super(
           label: label,
@@ -208,10 +287,26 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
           onSelected: p.get('onSelected').build(),
           onSelectedIntent: p.get('onSelectedIntent').build(),
         );
-    mateUse('label', label, isNamed: true);
-    mateUse('shortcut', shortcut, isNamed: true);
-    mateUse('onSelected', onSelected, isNamed: true);
-    mateUse('onSelectedIntent', onSelectedIntent, isNamed: true);
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'shortcut',
+      shortcut,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelected',
+      onSelected,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectedIntent',
+      onSelectedIntent,
+      isNamed: true,
+    );
   }
 }
 
@@ -219,10 +314,10 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
 class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
   /// PlatformProvidedMenuItem PlatformProvidedMenuItem({required PlatformProvidedMenuItemType type, bool enabled = true})
   PlatformProvidedMenuItem$Mate({
-    /// optionalParameters: {required PlatformProvidedMenuItemType type} , defaultValue:none
+    /// optionalParameters: {required PlatformProvidedMenuItemType type} , default:none
     required PlatformProvidedMenuItemType type,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
   }) : super(
           type: type,
@@ -234,7 +329,16 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
           type: p.get('type').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('type', type, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

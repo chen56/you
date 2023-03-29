@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class Placeholder$Mate extends Placeholder with Mate {
   /// Placeholder Placeholder({Key? key, Color color = const Color(0xFF455A64), double strokeWidth = 2.0, double fallbackWidth = 400.0, double fallbackHeight = 400.0, Widget? child})
   Placeholder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color color = const Color(0xFF455A64)} , defaultValue:unprocessed
+    /// optionalParameters: {Color color = const Color(0xFF455A64)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {double strokeWidth = 2.0} , defaultValue:Literal
+    /// optionalParameters: {double strokeWidth = 2.0} , default:processed=DoubleLiteralImpl
     double strokeWidth = 2.0,
 
-    /// optionalParameters: {double fallbackWidth = 400.0} , defaultValue:Literal
+    /// optionalParameters: {double fallbackWidth = 400.0} , default:processed=DoubleLiteralImpl
     double fallbackWidth = 400.0,
 
-    /// optionalParameters: {double fallbackHeight = 400.0} , defaultValue:Literal
+    /// optionalParameters: {double fallbackHeight = 400.0} , default:processed=DoubleLiteralImpl
     double fallbackHeight = 400.0,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -46,11 +46,38 @@ class Placeholder$Mate extends Placeholder with Mate {
           fallbackHeight: p.get('fallbackHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('strokeWidth', strokeWidth, isNamed: true);
-    mateUse('fallbackWidth', fallbackWidth, isNamed: true);
-    mateUse('fallbackHeight', fallbackHeight, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'strokeWidth',
+      strokeWidth,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'fallbackWidth',
+      fallbackWidth,
+      isNamed: true,
+      defaultValue: 400.0,
+    );
+    mateUse(
+      'fallbackHeight',
+      fallbackHeight,
+      isNamed: true,
+      defaultValue: 400.0,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

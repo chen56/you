@@ -11,16 +11,16 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
   ClampedSimulation$Mate(
     /// requiredParameters: Simulation simulation
     Simulation simulation, {
-    /// optionalParameters: {double xMin = double.negativeInfinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double xMin = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
     double xMin = double.negativeInfinity,
 
-    /// optionalParameters: {double xMax = double.infinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double xMax = double.infinity} , default:processed=PrefixedIdentifierImpl
     double xMax = double.infinity,
 
-    /// optionalParameters: {double dxMin = double.negativeInfinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double dxMin = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
     double dxMin = double.negativeInfinity,
 
-    /// optionalParameters: {double dxMax = double.infinity} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {double dxMax = double.infinity} , default:processed=PrefixedIdentifierImpl
     double dxMax = double.infinity,
   }) : super(
           simulation,
@@ -38,10 +38,34 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
           dxMin: p.get('dxMin').build(),
           dxMax: p.get('dxMax').build(),
         );
-    mateUse('simulation', simulation, isNamed: false);
-    mateUse('xMin', xMin, isNamed: true);
-    mateUse('xMax', xMax, isNamed: true);
-    mateUse('dxMin', dxMin, isNamed: true);
-    mateUse('dxMax', dxMax, isNamed: true);
+    mateUse(
+      'simulation',
+      simulation,
+      isNamed: false,
+    );
+    mateUse(
+      'xMin',
+      xMin,
+      isNamed: true,
+      defaultValue: double.negativeInfinity,
+    );
+    mateUse(
+      'xMax',
+      xMax,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'dxMin',
+      dxMin,
+      isNamed: true,
+      defaultValue: double.negativeInfinity,
+    );
+    mateUse(
+      'dxMax',
+      dxMax,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
   }
 }

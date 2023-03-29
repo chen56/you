@@ -14,6 +14,10 @@ class StandardMethodCodec$Mate extends StandardMethodCodec with Mate {
     mateCreateName = 'StandardMethodCodec';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => StandardMethodCodec$Mate(p.get('messageCodec').value);
-    mateUse('messageCodec', messageCodec, isNamed: false);
+    mateUse(
+      'messageCodec',
+      messageCodec,
+      isNamed: false,
+    );
   }
 }

@@ -12,19 +12,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate {
   /// TextSelectionToolbar TextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder, required List<Widget> children})
   TextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchorAbove} , defaultValue:none
+    /// optionalParameters: {required Offset anchorAbove} , default:none
     required Offset anchorAbove,
 
-    /// optionalParameters: {required Offset anchorBelow} , defaultValue:none
+    /// optionalParameters: {required Offset anchorBelow} , default:none
     required Offset anchorBelow,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder} , defaultValue:unprocessed
+    /// optionalParameters: {Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder} , default:unprocessed=SimpleIdentifierImpl
     required ToolbarBuilder toolbarBuilder,
 
-    /// optionalParameters: {required List<Widget> children} , defaultValue:none
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
   }) : super(
           key: key,
@@ -42,10 +42,30 @@ class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate {
           toolbarBuilder: p.get('toolbarBuilder').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('anchorAbove', anchorAbove, isNamed: true);
-    mateUse('anchorBelow', anchorBelow, isNamed: true);
-    mateUse('toolbarBuilder', toolbarBuilder, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorAbove',
+      anchorAbove,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorBelow',
+      anchorBelow,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarBuilder',
+      toolbarBuilder,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }

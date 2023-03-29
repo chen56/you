@@ -9,22 +9,22 @@ import 'package:flutter/src/painting/basic_types.dart';
 class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
   /// FixedScrollMetrics FixedScrollMetrics({required double? minScrollExtent, required double? maxScrollExtent, required double? pixels, required double? viewportDimension, required AxisDirection axisDirection, required double devicePixelRatio})
   FixedScrollMetrics$Mate({
-    /// optionalParameters: {required double? minScrollExtent} , defaultValue:none
+    /// optionalParameters: {required double? minScrollExtent} , default:none
     required double? minScrollExtent,
 
-    /// optionalParameters: {required double? maxScrollExtent} , defaultValue:none
+    /// optionalParameters: {required double? maxScrollExtent} , default:none
     required double? maxScrollExtent,
 
-    /// optionalParameters: {required double? pixels} , defaultValue:none
+    /// optionalParameters: {required double? pixels} , default:none
     required double? pixels,
 
-    /// optionalParameters: {required double? viewportDimension} , defaultValue:none
+    /// optionalParameters: {required double? viewportDimension} , default:none
     required double? viewportDimension,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , defaultValue:none
+    /// optionalParameters: {required AxisDirection axisDirection} , default:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required double devicePixelRatio} , defaultValue:none
+    /// optionalParameters: {required double devicePixelRatio} , default:none
     required double devicePixelRatio,
   }) : super(
           minScrollExtent: minScrollExtent,
@@ -44,11 +44,35 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
           axisDirection: p.get('axisDirection').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateUse('minScrollExtent', minScrollExtent, isNamed: true);
-    mateUse('maxScrollExtent', maxScrollExtent, isNamed: true);
-    mateUse('pixels', pixels, isNamed: true);
-    mateUse('viewportDimension', viewportDimension, isNamed: true);
-    mateUse('axisDirection', axisDirection, isNamed: true);
-    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
+    mateUse(
+      'minScrollExtent',
+      minScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'maxScrollExtent',
+      maxScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'pixels',
+      pixels,
+      isNamed: true,
+    );
+    mateUse(
+      'viewportDimension',
+      viewportDimension,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'devicePixelRatio',
+      devicePixelRatio,
+      isNamed: true,
+    );
   }
 }

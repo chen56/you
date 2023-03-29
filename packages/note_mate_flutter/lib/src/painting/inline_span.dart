@@ -17,7 +17,12 @@ class Accumulator$Mate extends Accumulator with Mate {
     mateCreateName = 'Accumulator';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Accumulator$Mate(p.get('_value').value);
-    mateUse('_value', _value, isNamed: false);
+    mateUse(
+      '_value',
+      _value,
+      isNamed: false,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -27,16 +32,16 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
   InlineSpanSemanticsInformation$Mate(
     /// requiredParameters: String text
     String text, {
-    /// optionalParameters: {bool isPlaceholder = false} , defaultValue:Literal
+    /// optionalParameters: {bool isPlaceholder = false} , default:processed=BooleanLiteralImpl
     bool isPlaceholder = false,
 
-    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {List<StringAttribute> stringAttributes = const <ui.StringAttribute>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<StringAttribute> stringAttributes = const <ui.StringAttribute>[]} , default:unprocessed=ListLiteralImpl
     required List<StringAttribute> stringAttributes,
 
-    /// optionalParameters: {GestureRecognizer? recognizer} , defaultValue:none
+    /// optionalParameters: {GestureRecognizer? recognizer} , default:none
     GestureRecognizer? recognizer,
   }) : super(
           text,
@@ -54,10 +59,31 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           stringAttributes: p.get('stringAttributes').build(),
           recognizer: p.get('recognizer').build(),
         );
-    mateUse('text', text, isNamed: false);
-    mateUse('isPlaceholder', isPlaceholder, isNamed: true);
-    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
-    mateUseList('stringAttributes', stringAttributes, isNamed: true);
-    mateUse('recognizer', recognizer, isNamed: true);
+    mateUse(
+      'text',
+      text,
+      isNamed: false,
+    );
+    mateUse(
+      'isPlaceholder',
+      isPlaceholder,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUseList(
+      'stringAttributes',
+      stringAttributes,
+      isNamed: true,
+    );
+    mateUse(
+      'recognizer',
+      recognizer,
+      isNamed: true,
+    );
   }
 }

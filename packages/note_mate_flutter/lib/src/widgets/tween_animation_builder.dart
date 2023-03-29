@@ -15,25 +15,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilder<T> with Mate {
   /// TweenAnimationBuilder<T> TweenAnimationBuilder({Key? key, required Tween<T> tween, required Duration duration, Curve curve = Curves.linear, required Widget Function(BuildContext, T, Widget?) builder, void Function()? onEnd, Widget? child})
   TweenAnimationBuilder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Tween<T> tween} , defaultValue:none
+    /// optionalParameters: {required Tween<T> tween} , default:none
     required Tween<T> tween,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , default:none
     required ValueWidgetBuilder<T> builder,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -55,12 +55,41 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('tween', tween, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'tween',
+      tween,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

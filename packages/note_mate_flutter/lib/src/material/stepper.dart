@@ -15,16 +15,16 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class ControlsDetails$Mate extends ControlsDetails with Mate {
   /// ControlsDetails ControlsDetails({required int currentStep, required int stepIndex, void Function()? onStepCancel, void Function()? onStepContinue})
   ControlsDetails$Mate({
-    /// optionalParameters: {required int currentStep} , defaultValue:none
+    /// optionalParameters: {required int currentStep} , default:none
     required int currentStep,
 
-    /// optionalParameters: {required int stepIndex} , defaultValue:none
+    /// optionalParameters: {required int stepIndex} , default:none
     required int stepIndex,
 
-    /// optionalParameters: {void Function()? onStepCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onStepCancel} , default:none
     VoidCallback? onStepCancel,
 
-    /// optionalParameters: {void Function()? onStepContinue} , defaultValue:none
+    /// optionalParameters: {void Function()? onStepContinue} , default:none
     VoidCallback? onStepContinue,
   }) : super(
           currentStep: currentStep,
@@ -40,10 +40,26 @@ class ControlsDetails$Mate extends ControlsDetails with Mate {
           onStepCancel: p.get('onStepCancel').build(),
           onStepContinue: p.get('onStepContinue').build(),
         );
-    mateUse('currentStep', currentStep, isNamed: true);
-    mateUse('stepIndex', stepIndex, isNamed: true);
-    mateUse('onStepCancel', onStepCancel, isNamed: true);
-    mateUse('onStepContinue', onStepContinue, isNamed: true);
+    mateUse(
+      'currentStep',
+      currentStep,
+      isNamed: true,
+    );
+    mateUse(
+      'stepIndex',
+      stepIndex,
+      isNamed: true,
+    );
+    mateUse(
+      'onStepCancel',
+      onStepCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onStepContinue',
+      onStepContinue,
+      isNamed: true,
+    );
   }
 }
 
@@ -51,22 +67,22 @@ class ControlsDetails$Mate extends ControlsDetails with Mate {
 class Step$Mate extends Step with Mate {
   /// Step Step({required Widget title, Widget? subtitle, required Widget content, StepState state = StepState.indexed, bool isActive = false, Widget? label})
   Step$Mate({
-    /// optionalParameters: {required Widget title} , defaultValue:none
+    /// optionalParameters: {required Widget title} , default:none
     required Widget title,
 
-    /// optionalParameters: {Widget? subtitle} , defaultValue:none
+    /// optionalParameters: {Widget? subtitle} , default:none
     Widget? subtitle,
 
-    /// optionalParameters: {required Widget content} , defaultValue:none
+    /// optionalParameters: {required Widget content} , default:none
     required Widget content,
 
-    /// optionalParameters: {StepState state = StepState.indexed} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {StepState state = StepState.indexed} , default:processed=PrefixedIdentifierImpl
     StepState state = StepState.indexed,
 
-    /// optionalParameters: {bool isActive = false} , defaultValue:Literal
+    /// optionalParameters: {bool isActive = false} , default:processed=BooleanLiteralImpl
     bool isActive = false,
 
-    /// optionalParameters: {Widget? label} , defaultValue:none
+    /// optionalParameters: {Widget? label} , default:none
     Widget? label,
   }) : super(
           title: title,
@@ -86,12 +102,38 @@ class Step$Mate extends Step with Mate {
           isActive: p.get('isActive').build(),
           label: p.get('label').build(),
         );
-    mateUse('title', title, isNamed: true);
-    mateUse('subtitle', subtitle, isNamed: true);
-    mateUse('content', content, isNamed: true);
-    mateUse('state', state, isNamed: true);
-    mateUse('isActive', isActive, isNamed: true);
-    mateUse('label', label, isNamed: true);
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'subtitle',
+      subtitle,
+      isNamed: true,
+    );
+    mateUse(
+      'content',
+      content,
+      isNamed: true,
+    );
+    mateUse(
+      'state',
+      state,
+      isNamed: true,
+      defaultValue: StepState.indexed,
+    );
+    mateUse(
+      'isActive',
+      isActive,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
   }
 }
 
@@ -99,37 +141,37 @@ class Step$Mate extends Step with Mate {
 class Stepper$Mate extends Stepper with Mate {
   /// Stepper Stepper({Key? key, required List<Step> steps, ScrollPhysics? physics, StepperType type = StepperType.vertical, int currentStep = 0, void Function(int)? onStepTapped, void Function()? onStepContinue, void Function()? onStepCancel, Widget Function(BuildContext, ControlsDetails)? controlsBuilder, double? elevation, EdgeInsetsGeometry? margin})
   Stepper$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Step> steps} , defaultValue:none
+    /// optionalParameters: {required List<Step> steps} , default:none
     required List<Step> steps,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {StepperType type = StepperType.vertical} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {StepperType type = StepperType.vertical} , default:processed=PrefixedIdentifierImpl
     StepperType type = StepperType.vertical,
 
-    /// optionalParameters: {int currentStep = 0} , defaultValue:Literal
+    /// optionalParameters: {int currentStep = 0} , default:processed=IntegerLiteralImpl
     int currentStep = 0,
 
-    /// optionalParameters: {void Function(int)? onStepTapped} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onStepTapped} , default:none
     ValueChanged<int>? onStepTapped,
 
-    /// optionalParameters: {void Function()? onStepContinue} , defaultValue:none
+    /// optionalParameters: {void Function()? onStepContinue} , default:none
     VoidCallback? onStepContinue,
 
-    /// optionalParameters: {void Function()? onStepCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onStepCancel} , default:none
     VoidCallback? onStepCancel,
 
-    /// optionalParameters: {Widget Function(BuildContext, ControlsDetails)? controlsBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, ControlsDetails)? controlsBuilder} , default:none
     ControlsWidgetBuilder? controlsBuilder,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
   }) : super(
           key: key,
@@ -159,16 +201,62 @@ class Stepper$Mate extends Stepper with Mate {
           elevation: p.get('elevation').build(),
           margin: p.get('margin').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('steps', steps, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('type', type, isNamed: true);
-    mateUse('currentStep', currentStep, isNamed: true);
-    mateUse('onStepTapped', onStepTapped, isNamed: true);
-    mateUse('onStepContinue', onStepContinue, isNamed: true);
-    mateUse('onStepCancel', onStepCancel, isNamed: true);
-    mateUse('controlsBuilder', controlsBuilder, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'steps',
+      steps,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+      defaultValue: StepperType.vertical,
+    );
+    mateUse(
+      'currentStep',
+      currentStep,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'onStepTapped',
+      onStepTapped,
+      isNamed: true,
+    );
+    mateUse(
+      'onStepContinue',
+      onStepContinue,
+      isNamed: true,
+    );
+    mateUse(
+      'onStepCancel',
+      onStepCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'controlsBuilder',
+      controlsBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
   }
 }

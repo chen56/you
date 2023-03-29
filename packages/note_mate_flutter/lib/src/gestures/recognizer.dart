@@ -8,10 +8,10 @@ import 'dart:ui';
 class OffsetPair$Mate extends OffsetPair with Mate {
   /// OffsetPair OffsetPair({required Offset local, required Offset global})
   OffsetPair$Mate({
-    /// optionalParameters: {required Offset local} , defaultValue:none
+    /// optionalParameters: {required Offset local} , default:none
     required Offset local,
 
-    /// optionalParameters: {required Offset global} , defaultValue:none
+    /// optionalParameters: {required Offset global} , default:none
     required Offset global,
   }) : super(
           local: local,
@@ -23,7 +23,15 @@ class OffsetPair$Mate extends OffsetPair with Mate {
           local: p.get('local').build(),
           global: p.get('global').build(),
         );
-    mateUse('local', local, isNamed: true);
-    mateUse('global', global, isNamed: true);
+    mateUse(
+      'local',
+      local,
+      isNamed: true,
+    );
+    mateUse(
+      'global',
+      global,
+      isNamed: true,
+    );
   }
 }

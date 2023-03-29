@@ -15,43 +15,43 @@ import 'package:flutter/src/widgets/framework.dart';
 class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
   /// NavigationRailThemeData NavigationRailThemeData({Color? backgroundColor, double? elevation, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? groupAlignment, NavigationRailLabelType? labelType, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape, double? minWidth, double? minExtendedWidth})
   NavigationRailThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , default:none
     TextStyle? unselectedLabelTextStyle,
 
-    /// optionalParameters: {TextStyle? selectedLabelTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? selectedLabelTextStyle} , default:none
     TextStyle? selectedLabelTextStyle,
 
-    /// optionalParameters: {IconThemeData? unselectedIconTheme} , defaultValue:none
+    /// optionalParameters: {IconThemeData? unselectedIconTheme} , default:none
     IconThemeData? unselectedIconTheme,
 
-    /// optionalParameters: {IconThemeData? selectedIconTheme} , defaultValue:none
+    /// optionalParameters: {IconThemeData? selectedIconTheme} , default:none
     IconThemeData? selectedIconTheme,
 
-    /// optionalParameters: {double? groupAlignment} , defaultValue:none
+    /// optionalParameters: {double? groupAlignment} , default:none
     double? groupAlignment,
 
-    /// optionalParameters: {NavigationRailLabelType? labelType} , defaultValue:none
+    /// optionalParameters: {NavigationRailLabelType? labelType} , default:none
     NavigationRailLabelType? labelType,
 
-    /// optionalParameters: {bool? useIndicator} , defaultValue:none
+    /// optionalParameters: {bool? useIndicator} , default:none
     bool? useIndicator,
 
-    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
+    /// optionalParameters: {Color? indicatorColor} , default:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {double? minWidth} , defaultValue:none
+    /// optionalParameters: {double? minWidth} , default:none
     double? minWidth,
 
-    /// optionalParameters: {double? minExtendedWidth} , defaultValue:none
+    /// optionalParameters: {double? minExtendedWidth} , default:none
     double? minExtendedWidth,
   }) : super(
           backgroundColor: backgroundColor,
@@ -85,19 +85,71 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
           minWidth: p.get('minWidth').build(),
           minExtendedWidth: p.get('minExtendedWidth').build(),
         );
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('unselectedLabelTextStyle', unselectedLabelTextStyle, isNamed: true);
-    mateUse('selectedLabelTextStyle', selectedLabelTextStyle, isNamed: true);
-    mateUse('unselectedIconTheme', unselectedIconTheme, isNamed: true);
-    mateUse('selectedIconTheme', selectedIconTheme, isNamed: true);
-    mateUse('groupAlignment', groupAlignment, isNamed: true);
-    mateUse('labelType', labelType, isNamed: true);
-    mateUse('useIndicator', useIndicator, isNamed: true);
-    mateUse('indicatorColor', indicatorColor, isNamed: true);
-    mateUse('indicatorShape', indicatorShape, isNamed: true);
-    mateUse('minWidth', minWidth, isNamed: true);
-    mateUse('minExtendedWidth', minExtendedWidth, isNamed: true);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedLabelTextStyle',
+      unselectedLabelTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedLabelTextStyle',
+      selectedLabelTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedIconTheme',
+      unselectedIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedIconTheme',
+      selectedIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'groupAlignment',
+      groupAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'labelType',
+      labelType,
+      isNamed: true,
+    );
+    mateUse(
+      'useIndicator',
+      useIndicator,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorColor',
+      indicatorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorShape',
+      indicatorShape,
+      isNamed: true,
+    );
+    mateUse(
+      'minWidth',
+      minWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'minExtendedWidth',
+      minExtendedWidth,
+      isNamed: true,
+    );
   }
 }
 
@@ -105,13 +157,13 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
 class NavigationRailTheme$Mate extends NavigationRailTheme with Mate {
   /// NavigationRailTheme NavigationRailTheme({Key? key, required NavigationRailThemeData data, required Widget child})
   NavigationRailTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required NavigationRailThemeData data} , defaultValue:none
+    /// optionalParameters: {required NavigationRailThemeData data} , default:none
     required NavigationRailThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -125,8 +177,20 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

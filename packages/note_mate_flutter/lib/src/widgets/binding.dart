@@ -10,13 +10,13 @@ import 'dart:core';
 class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObjectToWidgetAdapter<T> with Mate {
   /// RenderObjectToWidgetAdapter<T> RenderObjectToWidgetAdapter({Widget? child, required RenderObjectWithChildMixin<T> container, String? debugShortDescription})
   RenderObjectToWidgetAdapter$Mate({
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required RenderObjectWithChildMixin<T> container} , defaultValue:none
+    /// optionalParameters: {required RenderObjectWithChildMixin<T> container} , default:none
     required RenderObjectWithChildMixin<T> container,
 
-    /// optionalParameters: {String? debugShortDescription} , defaultValue:none
+    /// optionalParameters: {String? debugShortDescription} , default:none
     String? debugShortDescription,
   }) : super(
           child: child,
@@ -30,9 +30,21 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObj
           container: p.get('container').build(),
           debugShortDescription: p.get('debugShortDescription').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('container', container, isNamed: true);
-    mateUse('debugShortDescription', debugShortDescription, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'container',
+      container,
+      isNamed: true,
+    );
+    mateUse(
+      'debugShortDescription',
+      debugShortDescription,
+      isNamed: true,
+    );
   }
 }
 
@@ -47,6 +59,10 @@ class RenderObjectToWidgetElement$Mate<T extends RenderObject> extends RenderObj
     mateCreateName = 'RenderObjectToWidgetElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
-    mateUse('widget', widget, isNamed: false);
+    mateUse(
+      'widget',
+      widget,
+      isNamed: false,
+    );
   }
 }

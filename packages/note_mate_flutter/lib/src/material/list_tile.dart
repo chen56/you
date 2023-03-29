@@ -20,109 +20,109 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 class ListTile$Mate extends ListTile with Mate {
   /// ListTile ListTile({Key? key, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing, bool isThreeLine = false, bool? dense, VisualDensity? visualDensity, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, bool enabled = true, void Function()? onTap, void Function()? onLongPress, void Function(bool)? onFocusChange, MouseCursor? mouseCursor, bool selected = false, Color? focusColor, Color? hoverColor, Color? splashColor, FocusNode? focusNode, bool autofocus = false, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, ListTileTitleAlignment? titleAlignment})
   ListTile$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , defaultValue:none
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? title} , defaultValue:none
+    /// optionalParameters: {Widget? title} , default:none
     Widget? title,
 
-    /// optionalParameters: {Widget? subtitle} , defaultValue:none
+    /// optionalParameters: {Widget? subtitle} , default:none
     Widget? subtitle,
 
-    /// optionalParameters: {Widget? trailing} , defaultValue:none
+    /// optionalParameters: {Widget? trailing} , default:none
     Widget? trailing,
 
-    /// optionalParameters: {bool isThreeLine = false} , defaultValue:Literal
+    /// optionalParameters: {bool isThreeLine = false} , default:processed=BooleanLiteralImpl
     bool isThreeLine = false,
 
-    /// optionalParameters: {bool? dense} , defaultValue:none
+    /// optionalParameters: {bool? dense} , default:none
     bool? dense,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , defaultValue:none
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ListTileStyle? style} , defaultValue:none
+    /// optionalParameters: {ListTileStyle? style} , default:none
     ListTileStyle? style,
 
-    /// optionalParameters: {Color? selectedColor} , defaultValue:none
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? iconColor} , defaultValue:none
+    /// optionalParameters: {Color? iconColor} , default:none
     Color? iconColor,
 
-    /// optionalParameters: {Color? textColor} , defaultValue:none
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? titleTextStyle} , default:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {TextStyle? subtitleTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? subtitleTextStyle} , default:none
     TextStyle? subtitleTextStyle,
 
-    /// optionalParameters: {TextStyle? leadingAndTrailingTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? leadingAndTrailingTextStyle} , default:none
     TextStyle? leadingAndTrailingTextStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     bool selected = false,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , defaultValue:none
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , defaultValue:none
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {Color? tileColor} , defaultValue:none
+    /// optionalParameters: {Color? tileColor} , default:none
     Color? tileColor,
 
-    /// optionalParameters: {Color? selectedTileColor} , defaultValue:none
+    /// optionalParameters: {Color? selectedTileColor} , default:none
     Color? selectedTileColor,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {double? horizontalTitleGap} , defaultValue:none
+    /// optionalParameters: {double? horizontalTitleGap} , default:none
     double? horizontalTitleGap,
 
-    /// optionalParameters: {double? minVerticalPadding} , defaultValue:none
+    /// optionalParameters: {double? minVerticalPadding} , default:none
     double? minVerticalPadding,
 
-    /// optionalParameters: {double? minLeadingWidth} , defaultValue:none
+    /// optionalParameters: {double? minLeadingWidth} , default:none
     double? minLeadingWidth,
 
-    /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , defaultValue:none
+    /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , default:none
     ListTileTitleAlignment? titleAlignment,
   }) : super(
           key: key,
@@ -200,40 +200,184 @@ class ListTile$Mate extends ListTile with Mate {
           minLeadingWidth: p.get('minLeadingWidth').build(),
           titleAlignment: p.get('titleAlignment').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('leading', leading, isNamed: true);
-    mateUse('title', title, isNamed: true);
-    mateUse('subtitle', subtitle, isNamed: true);
-    mateUse('trailing', trailing, isNamed: true);
-    mateUse('isThreeLine', isThreeLine, isNamed: true);
-    mateUse('dense', dense, isNamed: true);
-    mateUse('visualDensity', visualDensity, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('selectedColor', selectedColor, isNamed: true);
-    mateUse('iconColor', iconColor, isNamed: true);
-    mateUse('textColor', textColor, isNamed: true);
-    mateUse('titleTextStyle', titleTextStyle, isNamed: true);
-    mateUse('subtitleTextStyle', subtitleTextStyle, isNamed: true);
-    mateUse('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle, isNamed: true);
-    mateUse('contentPadding', contentPadding, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('onFocusChange', onFocusChange, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('selected', selected, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('hoverColor', hoverColor, isNamed: true);
-    mateUse('splashColor', splashColor, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('tileColor', tileColor, isNamed: true);
-    mateUse('selectedTileColor', selectedTileColor, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
-    mateUse('horizontalTitleGap', horizontalTitleGap, isNamed: true);
-    mateUse('minVerticalPadding', minVerticalPadding, isNamed: true);
-    mateUse('minLeadingWidth', minLeadingWidth, isNamed: true);
-    mateUse('titleAlignment', titleAlignment, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'subtitle',
+      subtitle,
+      isNamed: true,
+    );
+    mateUse(
+      'trailing',
+      trailing,
+      isNamed: true,
+    );
+    mateUse(
+      'isThreeLine',
+      isThreeLine,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'dense',
+      dense,
+      isNamed: true,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'titleTextStyle',
+      titleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'subtitleTextStyle',
+      subtitleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingAndTrailingTextStyle',
+      leadingAndTrailingTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'contentPadding',
+      contentPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onFocusChange',
+      onFocusChange,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'tileColor',
+      tileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedTileColor',
+      selectedTileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'horizontalTitleGap',
+      horizontalTitleGap,
+      isNamed: true,
+    );
+    mateUse(
+      'minVerticalPadding',
+      minVerticalPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'minLeadingWidth',
+      minLeadingWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'titleAlignment',
+      titleAlignment,
+      isNamed: true,
+    );
   }
 }

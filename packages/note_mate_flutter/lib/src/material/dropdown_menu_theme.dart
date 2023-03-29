@@ -12,13 +12,13 @@ import 'package:flutter/src/widgets/framework.dart';
 class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
   /// DropdownMenuThemeData DropdownMenuThemeData({TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle})
   DropdownMenuThemeData$Mate({
-    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , defaultValue:none
+    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , default:none
     InputDecorationTheme? inputDecorationTheme,
 
-    /// optionalParameters: {MenuStyle? menuStyle} , defaultValue:none
+    /// optionalParameters: {MenuStyle? menuStyle} , default:none
     MenuStyle? menuStyle,
   }) : super(
           textStyle: textStyle,
@@ -32,9 +32,21 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
           menuStyle: p.get('menuStyle').build(),
         );
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('inputDecorationTheme', inputDecorationTheme, isNamed: true);
-    mateUse('menuStyle', menuStyle, isNamed: true);
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'inputDecorationTheme',
+      inputDecorationTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'menuStyle',
+      menuStyle,
+      isNamed: true,
+    );
   }
 }
 
@@ -42,13 +54,13 @@ class DropdownMenuThemeData$Mate extends DropdownMenuThemeData with Mate {
 class DropdownMenuTheme$Mate extends DropdownMenuTheme with Mate {
   /// DropdownMenuTheme DropdownMenuTheme({Key? key, required DropdownMenuThemeData data, required Widget child})
   DropdownMenuTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required DropdownMenuThemeData data} , defaultValue:none
+    /// optionalParameters: {required DropdownMenuThemeData data} , default:none
     required DropdownMenuThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -62,8 +74,20 @@ class DropdownMenuTheme$Mate extends DropdownMenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

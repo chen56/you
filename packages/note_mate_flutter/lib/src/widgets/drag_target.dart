@@ -17,64 +17,64 @@ import 'package:flutter/src/gestures/velocity_tracker.dart';
 class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
   /// Draggable<T> Draggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, Axis? affinity, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, bool rootOverlay = false, HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild, bool Function(int)? allowedButtonsFilter})
   Draggable$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Widget feedback} , defaultValue:none
+    /// optionalParameters: {required Widget feedback} , default:none
     required Widget feedback,
 
-    /// optionalParameters: {T? data} , defaultValue:none
+    /// optionalParameters: {T? data} , default:none
     T? data,
 
-    /// optionalParameters: {Axis? axis} , defaultValue:none
+    /// optionalParameters: {Axis? axis} , default:none
     Axis? axis,
 
-    /// optionalParameters: {Widget? childWhenDragging} , defaultValue:none
+    /// optionalParameters: {Widget? childWhenDragging} , default:none
     Widget? childWhenDragging,
 
-    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset feedbackOffset = Offset.zero,
 
-    /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , defaultValue:unprocessed
+    /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , default:unprocessed=SimpleIdentifierImpl
     required DragAnchorStrategy dragAnchorStrategy,
 
-    /// optionalParameters: {Axis? affinity} , defaultValue:none
+    /// optionalParameters: {Axis? affinity} , default:none
     Axis? affinity,
 
-    /// optionalParameters: {int? maxSimultaneousDrags} , defaultValue:none
+    /// optionalParameters: {int? maxSimultaneousDrags} , default:none
     int? maxSimultaneousDrags,
 
-    /// optionalParameters: {void Function()? onDragStarted} , defaultValue:none
+    /// optionalParameters: {void Function()? onDragStarted} , default:none
     VoidCallback? onDragStarted,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onDragUpdate} , default:none
     DragUpdateCallback? onDragUpdate,
 
-    /// optionalParameters: {void Function(Velocity, Offset)? onDraggableCanceled} , defaultValue:none
+    /// optionalParameters: {void Function(Velocity, Offset)? onDraggableCanceled} , default:none
     DraggableCanceledCallback? onDraggableCanceled,
 
-    /// optionalParameters: {void Function(DraggableDetails)? onDragEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DraggableDetails)? onDragEnd} , default:none
     DragEndCallback? onDragEnd,
 
-    /// optionalParameters: {void Function()? onDragCompleted} , defaultValue:none
+    /// optionalParameters: {void Function()? onDragCompleted} , default:none
     VoidCallback? onDragCompleted,
 
-    /// optionalParameters: {bool ignoringFeedbackSemantics = true} , defaultValue:Literal
+    /// optionalParameters: {bool ignoringFeedbackSemantics = true} , default:processed=BooleanLiteralImpl
     bool ignoringFeedbackSemantics = true,
 
-    /// optionalParameters: {bool ignoringFeedbackPointer = true} , defaultValue:Literal
+    /// optionalParameters: {bool ignoringFeedbackPointer = true} , default:processed=BooleanLiteralImpl
     bool ignoringFeedbackPointer = true,
 
-    /// optionalParameters: {bool rootOverlay = false} , defaultValue:Literal
+    /// optionalParameters: {bool rootOverlay = false} , default:processed=BooleanLiteralImpl
     bool rootOverlay = false,
 
-    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           key: key,
@@ -122,26 +122,111 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('feedback', feedback, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('axis', axis, isNamed: true);
-    mateUse('childWhenDragging', childWhenDragging, isNamed: true);
-    mateUse('feedbackOffset', feedbackOffset, isNamed: true);
-    mateUse('dragAnchorStrategy', dragAnchorStrategy, isNamed: true);
-    mateUse('affinity', affinity, isNamed: true);
-    mateUse('maxSimultaneousDrags', maxSimultaneousDrags, isNamed: true);
-    mateUse('onDragStarted', onDragStarted, isNamed: true);
-    mateUse('onDragUpdate', onDragUpdate, isNamed: true);
-    mateUse('onDraggableCanceled', onDraggableCanceled, isNamed: true);
-    mateUse('onDragEnd', onDragEnd, isNamed: true);
-    mateUse('onDragCompleted', onDragCompleted, isNamed: true);
-    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics, isNamed: true);
-    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer, isNamed: true);
-    mateUse('rootOverlay', rootOverlay, isNamed: true);
-    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'feedback',
+      feedback,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'axis',
+      axis,
+      isNamed: true,
+    );
+    mateUse(
+      'childWhenDragging',
+      childWhenDragging,
+      isNamed: true,
+    );
+    mateUse(
+      'feedbackOffset',
+      feedbackOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'dragAnchorStrategy',
+      dragAnchorStrategy,
+      isNamed: true,
+    );
+    mateUse(
+      'affinity',
+      affinity,
+      isNamed: true,
+    );
+    mateUse(
+      'maxSimultaneousDrags',
+      maxSimultaneousDrags,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragStarted',
+      onDragStarted,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragUpdate',
+      onDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onDraggableCanceled',
+      onDraggableCanceled,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragEnd',
+      onDragEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragCompleted',
+      onDragCompleted,
+      isNamed: true,
+    );
+    mateUse(
+      'ignoringFeedbackSemantics',
+      ignoringFeedbackSemantics,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringFeedbackPointer',
+      ignoringFeedbackPointer,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'rootOverlay',
+      rootOverlay,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }
 
@@ -149,61 +234,61 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
 class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> with Mate {
   /// LongPressDraggable<T> LongPressDraggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool hapticFeedbackOnStart = true, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, Duration delay = kLongPressTimeout, bool Function(int)? allowedButtonsFilter})
   LongPressDraggable$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Widget feedback} , defaultValue:none
+    /// optionalParameters: {required Widget feedback} , default:none
     required Widget feedback,
 
-    /// optionalParameters: {T? data} , defaultValue:none
+    /// optionalParameters: {T? data} , default:none
     T? data,
 
-    /// optionalParameters: {Axis? axis} , defaultValue:none
+    /// optionalParameters: {Axis? axis} , default:none
     Axis? axis,
 
-    /// optionalParameters: {Widget? childWhenDragging} , defaultValue:none
+    /// optionalParameters: {Widget? childWhenDragging} , default:none
     Widget? childWhenDragging,
 
-    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , defaultValue:is!ConstVariableElement
-    required Offset feedbackOffset,
+    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset feedbackOffset = Offset.zero,
 
-    /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , defaultValue:is!ConstVariableElement
+    /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , default:unprocessed=SimpleIdentifierImpl
     required DragAnchorStrategy dragAnchorStrategy,
 
-    /// optionalParameters: {int? maxSimultaneousDrags} , defaultValue:none
+    /// optionalParameters: {int? maxSimultaneousDrags} , default:none
     int? maxSimultaneousDrags,
 
-    /// optionalParameters: {void Function()? onDragStarted} , defaultValue:none
+    /// optionalParameters: {void Function()? onDragStarted} , default:none
     VoidCallback? onDragStarted,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onDragUpdate} , default:none
     DragUpdateCallback? onDragUpdate,
 
-    /// optionalParameters: {void Function(Velocity, Offset)? onDraggableCanceled} , defaultValue:none
+    /// optionalParameters: {void Function(Velocity, Offset)? onDraggableCanceled} , default:none
     DraggableCanceledCallback? onDraggableCanceled,
 
-    /// optionalParameters: {void Function(DraggableDetails)? onDragEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DraggableDetails)? onDragEnd} , default:none
     DragEndCallback? onDragEnd,
 
-    /// optionalParameters: {void Function()? onDragCompleted} , defaultValue:none
+    /// optionalParameters: {void Function()? onDragCompleted} , default:none
     VoidCallback? onDragCompleted,
 
-    /// optionalParameters: {bool hapticFeedbackOnStart = true} , defaultValue:Literal
+    /// optionalParameters: {bool hapticFeedbackOnStart = true} , default:processed=BooleanLiteralImpl
     bool hapticFeedbackOnStart = true,
 
-    /// optionalParameters: {bool ignoringFeedbackSemantics = true} , defaultValue:is!ConstVariableElement
-    required bool ignoringFeedbackSemantics,
+    /// optionalParameters: {bool ignoringFeedbackSemantics = true} , default:processed=BooleanLiteralImpl
+    bool ignoringFeedbackSemantics = true,
 
-    /// optionalParameters: {bool ignoringFeedbackPointer = true} , defaultValue:is!ConstVariableElement
-    required bool ignoringFeedbackPointer,
+    /// optionalParameters: {bool ignoringFeedbackPointer = true} , default:processed=BooleanLiteralImpl
+    bool ignoringFeedbackPointer = true,
 
-    /// optionalParameters: {Duration delay = kLongPressTimeout} , defaultValue:unprocessed
+    /// optionalParameters: {Duration delay = kLongPressTimeout} , default:unprocessed=SimpleIdentifierImpl
     required Duration delay,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           key: key,
@@ -249,25 +334,105 @@ class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> wi
           delay: p.get('delay').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('feedback', feedback, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('axis', axis, isNamed: true);
-    mateUse('childWhenDragging', childWhenDragging, isNamed: true);
-    mateUse('feedbackOffset', feedbackOffset, isNamed: true);
-    mateUse('dragAnchorStrategy', dragAnchorStrategy, isNamed: true);
-    mateUse('maxSimultaneousDrags', maxSimultaneousDrags, isNamed: true);
-    mateUse('onDragStarted', onDragStarted, isNamed: true);
-    mateUse('onDragUpdate', onDragUpdate, isNamed: true);
-    mateUse('onDraggableCanceled', onDraggableCanceled, isNamed: true);
-    mateUse('onDragEnd', onDragEnd, isNamed: true);
-    mateUse('onDragCompleted', onDragCompleted, isNamed: true);
-    mateUse('hapticFeedbackOnStart', hapticFeedbackOnStart, isNamed: true);
-    mateUse('ignoringFeedbackSemantics', ignoringFeedbackSemantics, isNamed: true);
-    mateUse('ignoringFeedbackPointer', ignoringFeedbackPointer, isNamed: true);
-    mateUse('delay', delay, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'feedback',
+      feedback,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'axis',
+      axis,
+      isNamed: true,
+    );
+    mateUse(
+      'childWhenDragging',
+      childWhenDragging,
+      isNamed: true,
+    );
+    mateUse(
+      'feedbackOffset',
+      feedbackOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'dragAnchorStrategy',
+      dragAnchorStrategy,
+      isNamed: true,
+    );
+    mateUse(
+      'maxSimultaneousDrags',
+      maxSimultaneousDrags,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragStarted',
+      onDragStarted,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragUpdate',
+      onDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onDraggableCanceled',
+      onDraggableCanceled,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragEnd',
+      onDragEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragCompleted',
+      onDragCompleted,
+      isNamed: true,
+    );
+    mateUse(
+      'hapticFeedbackOnStart',
+      hapticFeedbackOnStart,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringFeedbackSemantics',
+      ignoringFeedbackSemantics,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringFeedbackPointer',
+      ignoringFeedbackPointer,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'delay',
+      delay,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }
 
@@ -275,13 +440,13 @@ class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> wi
 class DraggableDetails$Mate extends DraggableDetails with Mate {
   /// DraggableDetails DraggableDetails({bool wasAccepted = false, required Velocity velocity, required Offset offset})
   DraggableDetails$Mate({
-    /// optionalParameters: {bool wasAccepted = false} , defaultValue:Literal
+    /// optionalParameters: {bool wasAccepted = false} , default:processed=BooleanLiteralImpl
     bool wasAccepted = false,
 
-    /// optionalParameters: {required Velocity velocity} , defaultValue:none
+    /// optionalParameters: {required Velocity velocity} , default:none
     required Velocity velocity,
 
-    /// optionalParameters: {required Offset offset} , defaultValue:none
+    /// optionalParameters: {required Offset offset} , default:none
     required Offset offset,
   }) : super(
           wasAccepted: wasAccepted,
@@ -295,9 +460,22 @@ class DraggableDetails$Mate extends DraggableDetails with Mate {
           velocity: p.get('velocity').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('wasAccepted', wasAccepted, isNamed: true);
-    mateUse('velocity', velocity, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'wasAccepted',
+      wasAccepted,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
   }
 }
 
@@ -305,10 +483,10 @@ class DraggableDetails$Mate extends DraggableDetails with Mate {
 class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate {
   /// DragTargetDetails<T> DragTargetDetails({required T data, required Offset offset})
   DragTargetDetails$Mate({
-    /// optionalParameters: {required T data} , defaultValue:none
+    /// optionalParameters: {required T data} , default:none
     required T data,
 
-    /// optionalParameters: {required Offset offset} , defaultValue:none
+    /// optionalParameters: {required Offset offset} , default:none
     required Offset offset,
   }) : super(
           data: data,
@@ -320,8 +498,16 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate {
           data: p.get('data').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('data', data, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
   }
 }
 
@@ -329,28 +515,28 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate {
 class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate {
   /// DragTarget<T> DragTarget({Key? key, required Widget Function(BuildContext, List<T?>, List<dynamic>) builder, bool Function(T?)? onWillAccept, void Function(T)? onAccept, void Function(DragTargetDetails<T>)? onAcceptWithDetails, void Function(T?)? onLeave, void Function(DragTargetDetails<T>)? onMove, HitTestBehavior hitTestBehavior = HitTestBehavior.translucent})
   DragTarget$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, List<T?>, List<dynamic>) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, List<T?>, List<dynamic>) builder} , default:none
     required DragTargetBuilder<T> builder,
 
-    /// optionalParameters: {bool Function(T?)? onWillAccept} , defaultValue:none
+    /// optionalParameters: {bool Function(T?)? onWillAccept} , default:none
     DragTargetWillAccept<T>? onWillAccept,
 
-    /// optionalParameters: {void Function(T)? onAccept} , defaultValue:none
+    /// optionalParameters: {void Function(T)? onAccept} , default:none
     DragTargetAccept<T>? onAccept,
 
-    /// optionalParameters: {void Function(DragTargetDetails<T>)? onAcceptWithDetails} , defaultValue:none
+    /// optionalParameters: {void Function(DragTargetDetails<T>)? onAcceptWithDetails} , default:none
     DragTargetAcceptWithDetails<T>? onAcceptWithDetails,
 
-    /// optionalParameters: {void Function(T?)? onLeave} , defaultValue:none
+    /// optionalParameters: {void Function(T?)? onLeave} , default:none
     DragTargetLeave<T>? onLeave,
 
-    /// optionalParameters: {void Function(DragTargetDetails<T>)? onMove} , defaultValue:none
+    /// optionalParameters: {void Function(DragTargetDetails<T>)? onMove} , default:none
     DragTargetMove<T>? onMove,
 
-    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.translucent} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.translucent} , default:processed=PrefixedIdentifierImpl
     HitTestBehavior hitTestBehavior = HitTestBehavior.translucent,
   }) : super(
           key: key,
@@ -374,13 +560,46 @@ class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate {
           onMove: p.get('onMove').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
-    mateUse('onWillAccept', onWillAccept, isNamed: true);
-    mateUse('onAccept', onAccept, isNamed: true);
-    mateUse('onAcceptWithDetails', onAcceptWithDetails, isNamed: true);
-    mateUse('onLeave', onLeave, isNamed: true);
-    mateUse('onMove', onMove, isNamed: true);
-    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'onWillAccept',
+      onWillAccept,
+      isNamed: true,
+    );
+    mateUse(
+      'onAccept',
+      onAccept,
+      isNamed: true,
+    );
+    mateUse(
+      'onAcceptWithDetails',
+      onAcceptWithDetails,
+      isNamed: true,
+    );
+    mateUse(
+      'onLeave',
+      onLeave,
+      isNamed: true,
+    );
+    mateUse(
+      'onMove',
+      onMove,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.translucent,
+    );
   }
 }

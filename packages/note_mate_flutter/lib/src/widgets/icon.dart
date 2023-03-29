@@ -13,34 +13,34 @@ class Icon$Mate extends Icon with Mate {
   Icon$Mate(
     /// requiredParameters: IconData? icon
     IconData? icon, {
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? size} , defaultValue:none
+    /// optionalParameters: {double? size} , default:none
     double? size,
 
-    /// optionalParameters: {double? fill} , defaultValue:none
+    /// optionalParameters: {double? fill} , default:none
     double? fill,
 
-    /// optionalParameters: {double? weight} , defaultValue:none
+    /// optionalParameters: {double? weight} , default:none
     double? weight,
 
-    /// optionalParameters: {double? grade} , defaultValue:none
+    /// optionalParameters: {double? grade} , default:none
     double? grade,
 
-    /// optionalParameters: {double? opticalSize} , defaultValue:none
+    /// optionalParameters: {double? opticalSize} , default:none
     double? opticalSize,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {List<Shadow>? shadows} , defaultValue:none
+    /// optionalParameters: {List<Shadow>? shadows} , default:none
     List<Shadow>? shadows,
 
-    /// optionalParameters: {String? semanticLabel} , defaultValue:none
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
   }) : super(
           icon,
@@ -70,16 +70,60 @@ class Icon$Mate extends Icon with Mate {
           semanticLabel: p.get('semanticLabel').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse('icon', icon, isNamed: false);
-    mateUse('key', key, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('fill', fill, isNamed: true);
-    mateUse('weight', weight, isNamed: true);
-    mateUse('grade', grade, isNamed: true);
-    mateUse('opticalSize', opticalSize, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUseList('shadows', shadows, isNamed: true);
-    mateUse('semanticLabel', semanticLabel, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
+    mateUse(
+      'icon',
+      icon,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'fill',
+      fill,
+      isNamed: true,
+    );
+    mateUse(
+      'weight',
+      weight,
+      isNamed: true,
+    );
+    mateUse(
+      'grade',
+      grade,
+      isNamed: true,
+    );
+    mateUse(
+      'opticalSize',
+      opticalSize,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
   }
 }

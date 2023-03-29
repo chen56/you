@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Mate {
   /// ValueListenableBuilder<T> ValueListenableBuilder({Key? key, required ValueListenable<T> valueListenable, required Widget Function(BuildContext, T, Widget?) builder, Widget? child})
   ValueListenableBuilder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ValueListenable<T> valueListenable} , defaultValue:none
+    /// optionalParameters: {required ValueListenable<T> valueListenable} , default:none
     required ValueListenable<T> valueListenable,
 
-    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , default:none
     required ValueWidgetBuilder<T> builder,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -35,9 +35,25 @@ class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Mate
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('valueListenable', valueListenable, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'valueListenable',
+      valueListenable,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

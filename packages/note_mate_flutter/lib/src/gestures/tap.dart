@@ -11,13 +11,13 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class TapDownDetails$Mate extends TapDownDetails with Mate {
   /// TapDownDetails TapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   TapDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , defaultValue:none
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
   }) : super(
           globalPosition: globalPosition,
@@ -31,9 +31,22 @@ class TapDownDetails$Mate extends TapDownDetails with Mate {
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
   }
 }
 
@@ -41,13 +54,13 @@ class TapDownDetails$Mate extends TapDownDetails with Mate {
 class TapUpDetails$Mate extends TapUpDetails with Mate {
   /// TapUpDetails TapUpDetails({required PointerDeviceKind kind, Offset globalPosition = Offset.zero, Offset? localPosition})
   TapUpDetails$Mate({
-    /// optionalParameters: {required PointerDeviceKind kind} , defaultValue:none
+    /// optionalParameters: {required PointerDeviceKind kind} , default:none
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
   }) : super(
           kind: kind,
@@ -61,9 +74,22 @@ class TapUpDetails$Mate extends TapUpDetails with Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse('kind', kind, isNamed: true);
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -71,13 +97,13 @@ class TapUpDetails$Mate extends TapUpDetails with Mate {
 class TapGestureRecognizer$Mate extends TapGestureRecognizer with Mate {
   /// TapGestureRecognizer TapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   TapGestureRecognizer$Mate({
-    /// optionalParameters: {Object? debugOwner} , defaultValue:none
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -91,8 +117,20 @@ class TapGestureRecognizer$Mate extends TapGestureRecognizer with Mate {
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner, isNamed: true);
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }

@@ -27,8 +27,16 @@ class PaintingContext$Mate extends PaintingContext with Mate {
           p.get('_containerLayer').value,
           p.get('estimatedBounds').value,
         );
-    mateUse('_containerLayer', _containerLayer, isNamed: false);
-    mateUse('estimatedBounds', estimatedBounds, isNamed: false);
+    mateUse(
+      '_containerLayer',
+      _containerLayer,
+      isNamed: false,
+    );
+    mateUse(
+      'estimatedBounds',
+      estimatedBounds,
+      isNamed: false,
+    );
   }
 }
 
@@ -36,16 +44,16 @@ class PaintingContext$Mate extends PaintingContext with Mate {
 class PipelineOwner$Mate extends PipelineOwner with Mate {
   /// PipelineOwner PipelineOwner({void Function()? onNeedVisualUpdate, void Function()? onSemanticsOwnerCreated, void Function(SemanticsUpdate)? onSemanticsUpdate, void Function()? onSemanticsOwnerDisposed})
   PipelineOwner$Mate({
-    /// optionalParameters: {void Function()? onNeedVisualUpdate} , defaultValue:none
+    /// optionalParameters: {void Function()? onNeedVisualUpdate} , default:none
     VoidCallback? onNeedVisualUpdate,
 
-    /// optionalParameters: {void Function()? onSemanticsOwnerCreated} , defaultValue:none
+    /// optionalParameters: {void Function()? onSemanticsOwnerCreated} , default:none
     VoidCallback? onSemanticsOwnerCreated,
 
-    /// optionalParameters: {void Function(SemanticsUpdate)? onSemanticsUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(SemanticsUpdate)? onSemanticsUpdate} , default:none
     SemanticsUpdateCallback? onSemanticsUpdate,
 
-    /// optionalParameters: {void Function()? onSemanticsOwnerDisposed} , defaultValue:none
+    /// optionalParameters: {void Function()? onSemanticsOwnerDisposed} , default:none
     VoidCallback? onSemanticsOwnerDisposed,
   }) : super(
           onNeedVisualUpdate: onNeedVisualUpdate,
@@ -61,10 +69,26 @@ class PipelineOwner$Mate extends PipelineOwner with Mate {
           onSemanticsUpdate: p.get('onSemanticsUpdate').build(),
           onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').build(),
         );
-    mateUse('onNeedVisualUpdate', onNeedVisualUpdate, isNamed: true);
-    mateUse('onSemanticsOwnerCreated', onSemanticsOwnerCreated, isNamed: true);
-    mateUse('onSemanticsUpdate', onSemanticsUpdate, isNamed: true);
-    mateUse('onSemanticsOwnerDisposed', onSemanticsOwnerDisposed, isNamed: true);
+    mateUse(
+      'onNeedVisualUpdate',
+      onNeedVisualUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onSemanticsOwnerCreated',
+      onSemanticsOwnerCreated,
+      isNamed: true,
+    );
+    mateUse(
+      'onSemanticsUpdate',
+      onSemanticsUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onSemanticsOwnerDisposed',
+      onSemanticsOwnerDisposed,
+      isNamed: true,
+    );
   }
 }
 
@@ -79,6 +103,10 @@ class DiagnosticsDebugCreator$Mate extends DiagnosticsDebugCreator with Mate {
     mateCreateName = 'DiagnosticsDebugCreator';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => DiagnosticsDebugCreator$Mate(p.get('value').value);
-    mateUse('value', value, isNamed: false);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }

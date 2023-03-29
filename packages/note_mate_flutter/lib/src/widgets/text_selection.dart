@@ -27,49 +27,49 @@ import 'package:flutter/src/rendering/proxy_box.dart';
 class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate {
   /// TextSelectionOverlay TextSelectionOverlay({required TextEditingValue value, required BuildContext context, Widget? debugRequiredFor, required LayerLink toolbarLayerLink, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, required RenderEditable renderObject, TextSelectionControls? selectionControls, bool handlesVisible = false, required TextSelectionDelegate selectionDelegate, DragStartBehavior dragStartBehavior = DragStartBehavior.start, void Function()? onSelectionHandleTapped, ClipboardStatusNotifier? clipboardStatus, Widget Function(BuildContext)? contextMenuBuilder, required TextMagnifierConfiguration magnifierConfiguration})
   TextSelectionOverlay$Mate({
-    /// optionalParameters: {required TextEditingValue value} , defaultValue:none
+    /// optionalParameters: {required TextEditingValue value} , default:none
     required TextEditingValue value,
 
-    /// optionalParameters: {required BuildContext context} , defaultValue:none
+    /// optionalParameters: {required BuildContext context} , default:none
     required BuildContext context,
 
-    /// optionalParameters: {Widget? debugRequiredFor} , defaultValue:none
+    /// optionalParameters: {Widget? debugRequiredFor} , default:none
     Widget? debugRequiredFor,
 
-    /// optionalParameters: {required LayerLink toolbarLayerLink} , defaultValue:none
+    /// optionalParameters: {required LayerLink toolbarLayerLink} , default:none
     required LayerLink toolbarLayerLink,
 
-    /// optionalParameters: {required LayerLink startHandleLayerLink} , defaultValue:none
+    /// optionalParameters: {required LayerLink startHandleLayerLink} , default:none
     required LayerLink startHandleLayerLink,
 
-    /// optionalParameters: {required LayerLink endHandleLayerLink} , defaultValue:none
+    /// optionalParameters: {required LayerLink endHandleLayerLink} , default:none
     required LayerLink endHandleLayerLink,
 
-    /// optionalParameters: {required RenderEditable renderObject} , defaultValue:none
+    /// optionalParameters: {required RenderEditable renderObject} , default:none
     required RenderEditable renderObject,
 
-    /// optionalParameters: {TextSelectionControls? selectionControls} , defaultValue:none
+    /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
     TextSelectionControls? selectionControls,
 
-    /// optionalParameters: {bool handlesVisible = false} , defaultValue:Literal
+    /// optionalParameters: {bool handlesVisible = false} , default:processed=BooleanLiteralImpl
     bool handlesVisible = false,
 
-    /// optionalParameters: {required TextSelectionDelegate selectionDelegate} , defaultValue:none
+    /// optionalParameters: {required TextSelectionDelegate selectionDelegate} , default:none
     required TextSelectionDelegate selectionDelegate,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {void Function()? onSelectionHandleTapped} , defaultValue:none
+    /// optionalParameters: {void Function()? onSelectionHandleTapped} , default:none
     VoidCallback? onSelectionHandleTapped,
 
-    /// optionalParameters: {ClipboardStatusNotifier? clipboardStatus} , defaultValue:none
+    /// optionalParameters: {ClipboardStatusNotifier? clipboardStatus} , default:none
     ClipboardStatusNotifier? clipboardStatus,
 
-    /// optionalParameters: {Widget Function(BuildContext)? contextMenuBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext)? contextMenuBuilder} , default:none
     WidgetBuilder? contextMenuBuilder,
 
-    /// optionalParameters: {required TextMagnifierConfiguration magnifierConfiguration} , defaultValue:none
+    /// optionalParameters: {required TextMagnifierConfiguration magnifierConfiguration} , default:none
     required TextMagnifierConfiguration magnifierConfiguration,
   }) : super(
           value: value,
@@ -107,21 +107,83 @@ class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate {
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateUse('value', value, isNamed: true);
-    mateUse('context', context, isNamed: true);
-    mateUse('debugRequiredFor', debugRequiredFor, isNamed: true);
-    mateUse('toolbarLayerLink', toolbarLayerLink, isNamed: true);
-    mateUse('startHandleLayerLink', startHandleLayerLink, isNamed: true);
-    mateUse('endHandleLayerLink', endHandleLayerLink, isNamed: true);
-    mateUse('renderObject', renderObject, isNamed: true);
-    mateUse('selectionControls', selectionControls, isNamed: true);
-    mateUse('handlesVisible', handlesVisible, isNamed: true);
-    mateUse('selectionDelegate', selectionDelegate, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('onSelectionHandleTapped', onSelectionHandleTapped, isNamed: true);
-    mateUse('clipboardStatus', clipboardStatus, isNamed: true);
-    mateUse('contextMenuBuilder', contextMenuBuilder, isNamed: true);
-    mateUse('magnifierConfiguration', magnifierConfiguration, isNamed: true);
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'debugRequiredFor',
+      debugRequiredFor,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarLayerLink',
+      toolbarLayerLink,
+      isNamed: true,
+    );
+    mateUse(
+      'startHandleLayerLink',
+      startHandleLayerLink,
+      isNamed: true,
+    );
+    mateUse(
+      'endHandleLayerLink',
+      endHandleLayerLink,
+      isNamed: true,
+    );
+    mateUse(
+      'renderObject',
+      renderObject,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionControls',
+      selectionControls,
+      isNamed: true,
+    );
+    mateUse(
+      'handlesVisible',
+      handlesVisible,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'selectionDelegate',
+      selectionDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'onSelectionHandleTapped',
+      onSelectionHandleTapped,
+      isNamed: true,
+    );
+    mateUse(
+      'clipboardStatus',
+      clipboardStatus,
+      isNamed: true,
+    );
+    mateUse(
+      'contextMenuBuilder',
+      contextMenuBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierConfiguration',
+      magnifierConfiguration,
+      isNamed: true,
+    );
   }
 }
 
@@ -129,79 +191,79 @@ class TextSelectionOverlay$Mate extends TextSelectionOverlay with Mate {
 class SelectionOverlay$Mate extends SelectionOverlay with Mate {
   /// SelectionOverlay SelectionOverlay({required BuildContext context, Widget? debugRequiredFor, required TextSelectionHandleType startHandleType, required double lineHeightAtStart, ValueListenable<bool>? startHandlesVisible, void Function(DragStartDetails)? onStartHandleDragStart, void Function(DragUpdateDetails)? onStartHandleDragUpdate, void Function(DragEndDetails)? onStartHandleDragEnd, required TextSelectionHandleType endHandleType, required double lineHeightAtEnd, ValueListenable<bool>? endHandlesVisible, void Function(DragStartDetails)? onEndHandleDragStart, void Function(DragUpdateDetails)? onEndHandleDragUpdate, void Function(DragEndDetails)? onEndHandleDragEnd, ValueListenable<bool>? toolbarVisible, required List<TextSelectionPoint> selectionEndpoints, required TextSelectionControls? selectionControls, required TextSelectionDelegate? selectionDelegate, required ClipboardStatusNotifier? clipboardStatus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, required LayerLink toolbarLayerLink, DragStartBehavior dragStartBehavior = DragStartBehavior.start, void Function()? onSelectionHandleTapped, Offset? toolbarLocation, TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled})
   SelectionOverlay$Mate({
-    /// optionalParameters: {required BuildContext context} , defaultValue:none
+    /// optionalParameters: {required BuildContext context} , default:none
     required BuildContext context,
 
-    /// optionalParameters: {Widget? debugRequiredFor} , defaultValue:none
+    /// optionalParameters: {Widget? debugRequiredFor} , default:none
     Widget? debugRequiredFor,
 
-    /// optionalParameters: {required TextSelectionHandleType startHandleType} , defaultValue:none
+    /// optionalParameters: {required TextSelectionHandleType startHandleType} , default:none
     required TextSelectionHandleType startHandleType,
 
-    /// optionalParameters: {required double lineHeightAtStart} , defaultValue:none
+    /// optionalParameters: {required double lineHeightAtStart} , default:none
     required double lineHeightAtStart,
 
-    /// optionalParameters: {ValueListenable<bool>? startHandlesVisible} , defaultValue:none
+    /// optionalParameters: {ValueListenable<bool>? startHandlesVisible} , default:none
     ValueListenable<bool>? startHandlesVisible,
 
-    /// optionalParameters: {void Function(DragStartDetails)? onStartHandleDragStart} , defaultValue:none
+    /// optionalParameters: {void Function(DragStartDetails)? onStartHandleDragStart} , default:none
     ValueChanged<DragStartDetails>? onStartHandleDragStart,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onStartHandleDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onStartHandleDragUpdate} , default:none
     ValueChanged<DragUpdateDetails>? onStartHandleDragUpdate,
 
-    /// optionalParameters: {void Function(DragEndDetails)? onStartHandleDragEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DragEndDetails)? onStartHandleDragEnd} , default:none
     ValueChanged<DragEndDetails>? onStartHandleDragEnd,
 
-    /// optionalParameters: {required TextSelectionHandleType endHandleType} , defaultValue:none
+    /// optionalParameters: {required TextSelectionHandleType endHandleType} , default:none
     required TextSelectionHandleType endHandleType,
 
-    /// optionalParameters: {required double lineHeightAtEnd} , defaultValue:none
+    /// optionalParameters: {required double lineHeightAtEnd} , default:none
     required double lineHeightAtEnd,
 
-    /// optionalParameters: {ValueListenable<bool>? endHandlesVisible} , defaultValue:none
+    /// optionalParameters: {ValueListenable<bool>? endHandlesVisible} , default:none
     ValueListenable<bool>? endHandlesVisible,
 
-    /// optionalParameters: {void Function(DragStartDetails)? onEndHandleDragStart} , defaultValue:none
+    /// optionalParameters: {void Function(DragStartDetails)? onEndHandleDragStart} , default:none
     ValueChanged<DragStartDetails>? onEndHandleDragStart,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onEndHandleDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onEndHandleDragUpdate} , default:none
     ValueChanged<DragUpdateDetails>? onEndHandleDragUpdate,
 
-    /// optionalParameters: {void Function(DragEndDetails)? onEndHandleDragEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DragEndDetails)? onEndHandleDragEnd} , default:none
     ValueChanged<DragEndDetails>? onEndHandleDragEnd,
 
-    /// optionalParameters: {ValueListenable<bool>? toolbarVisible} , defaultValue:none
+    /// optionalParameters: {ValueListenable<bool>? toolbarVisible} , default:none
     ValueListenable<bool>? toolbarVisible,
 
-    /// optionalParameters: {required List<TextSelectionPoint> selectionEndpoints} , defaultValue:none
+    /// optionalParameters: {required List<TextSelectionPoint> selectionEndpoints} , default:none
     required List<TextSelectionPoint> selectionEndpoints,
 
-    /// optionalParameters: {required TextSelectionControls? selectionControls} , defaultValue:none
+    /// optionalParameters: {required TextSelectionControls? selectionControls} , default:none
     required TextSelectionControls? selectionControls,
 
-    /// optionalParameters: {required TextSelectionDelegate? selectionDelegate} , defaultValue:none
+    /// optionalParameters: {required TextSelectionDelegate? selectionDelegate} , default:none
     required TextSelectionDelegate? selectionDelegate,
 
-    /// optionalParameters: {required ClipboardStatusNotifier? clipboardStatus} , defaultValue:none
+    /// optionalParameters: {required ClipboardStatusNotifier? clipboardStatus} , default:none
     required ClipboardStatusNotifier? clipboardStatus,
 
-    /// optionalParameters: {required LayerLink startHandleLayerLink} , defaultValue:none
+    /// optionalParameters: {required LayerLink startHandleLayerLink} , default:none
     required LayerLink startHandleLayerLink,
 
-    /// optionalParameters: {required LayerLink endHandleLayerLink} , defaultValue:none
+    /// optionalParameters: {required LayerLink endHandleLayerLink} , default:none
     required LayerLink endHandleLayerLink,
 
-    /// optionalParameters: {required LayerLink toolbarLayerLink} , defaultValue:none
+    /// optionalParameters: {required LayerLink toolbarLayerLink} , default:none
     required LayerLink toolbarLayerLink,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {void Function()? onSelectionHandleTapped} , defaultValue:none
+    /// optionalParameters: {void Function()? onSelectionHandleTapped} , default:none
     VoidCallback? onSelectionHandleTapped,
 
-    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
     TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
   }) : super(
           context: context,
@@ -259,31 +321,133 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate {
           onSelectionHandleTapped: p.get('onSelectionHandleTapped').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateUse('context', context, isNamed: true);
-    mateUse('debugRequiredFor', debugRequiredFor, isNamed: true);
-    mateUse('startHandleType', startHandleType, isNamed: true);
-    mateUse('lineHeightAtStart', lineHeightAtStart, isNamed: true);
-    mateUse('startHandlesVisible', startHandlesVisible, isNamed: true);
-    mateUse('onStartHandleDragStart', onStartHandleDragStart, isNamed: true);
-    mateUse('onStartHandleDragUpdate', onStartHandleDragUpdate, isNamed: true);
-    mateUse('onStartHandleDragEnd', onStartHandleDragEnd, isNamed: true);
-    mateUse('endHandleType', endHandleType, isNamed: true);
-    mateUse('lineHeightAtEnd', lineHeightAtEnd, isNamed: true);
-    mateUse('endHandlesVisible', endHandlesVisible, isNamed: true);
-    mateUse('onEndHandleDragStart', onEndHandleDragStart, isNamed: true);
-    mateUse('onEndHandleDragUpdate', onEndHandleDragUpdate, isNamed: true);
-    mateUse('onEndHandleDragEnd', onEndHandleDragEnd, isNamed: true);
-    mateUse('toolbarVisible', toolbarVisible, isNamed: true);
-    mateUseList('selectionEndpoints', selectionEndpoints, isNamed: true);
-    mateUse('selectionControls', selectionControls, isNamed: true);
-    mateUse('selectionDelegate', selectionDelegate, isNamed: true);
-    mateUse('clipboardStatus', clipboardStatus, isNamed: true);
-    mateUse('startHandleLayerLink', startHandleLayerLink, isNamed: true);
-    mateUse('endHandleLayerLink', endHandleLayerLink, isNamed: true);
-    mateUse('toolbarLayerLink', toolbarLayerLink, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('onSelectionHandleTapped', onSelectionHandleTapped, isNamed: true);
-    mateUse('magnifierConfiguration', magnifierConfiguration, isNamed: true);
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'debugRequiredFor',
+      debugRequiredFor,
+      isNamed: true,
+    );
+    mateUse(
+      'startHandleType',
+      startHandleType,
+      isNamed: true,
+    );
+    mateUse(
+      'lineHeightAtStart',
+      lineHeightAtStart,
+      isNamed: true,
+    );
+    mateUse(
+      'startHandlesVisible',
+      startHandlesVisible,
+      isNamed: true,
+    );
+    mateUse(
+      'onStartHandleDragStart',
+      onStartHandleDragStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onStartHandleDragUpdate',
+      onStartHandleDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onStartHandleDragEnd',
+      onStartHandleDragEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'endHandleType',
+      endHandleType,
+      isNamed: true,
+    );
+    mateUse(
+      'lineHeightAtEnd',
+      lineHeightAtEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'endHandlesVisible',
+      endHandlesVisible,
+      isNamed: true,
+    );
+    mateUse(
+      'onEndHandleDragStart',
+      onEndHandleDragStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onEndHandleDragUpdate',
+      onEndHandleDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onEndHandleDragEnd',
+      onEndHandleDragEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarVisible',
+      toolbarVisible,
+      isNamed: true,
+    );
+    mateUseList(
+      'selectionEndpoints',
+      selectionEndpoints,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionControls',
+      selectionControls,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionDelegate',
+      selectionDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'clipboardStatus',
+      clipboardStatus,
+      isNamed: true,
+    );
+    mateUse(
+      'startHandleLayerLink',
+      startHandleLayerLink,
+      isNamed: true,
+    );
+    mateUse(
+      'endHandleLayerLink',
+      endHandleLayerLink,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarLayerLink',
+      toolbarLayerLink,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'onSelectionHandleTapped',
+      onSelectionHandleTapped,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierConfiguration',
+      magnifierConfiguration,
+      isNamed: true,
+      defaultValue: TextMagnifierConfiguration.disabled,
+    );
   }
 }
 
@@ -292,13 +456,17 @@ class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetec
   /// TextSelectionGestureDetectorBuilder TextSelectionGestureDetectorBuilder({required TextSelectionGestureDetectorBuilderDelegate delegate})
   TextSelectionGestureDetectorBuilder$Mate(
       {
-      /// optionalParameters: {required TextSelectionGestureDetectorBuilderDelegate delegate} , defaultValue:none
+      /// optionalParameters: {required TextSelectionGestureDetectorBuilderDelegate delegate} , default:none
       required TextSelectionGestureDetectorBuilderDelegate delegate})
       : super(delegate: delegate) {
     mateCreateName = 'TextSelectionGestureDetectorBuilder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').build());
-    mateUse('delegate', delegate, isNamed: true);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
   }
 }
 
@@ -306,55 +474,55 @@ class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetec
 class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector with Mate {
   /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {void Function(TapDragDownDetails)? onTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDragDownDetails)? onTapDown} , default:none
     GestureTapDragDownCallback? onTapDown,
 
-    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressStart} , defaultValue:none
+    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressStart} , default:none
     GestureForcePressStartCallback? onForcePressStart,
 
-    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressEnd} , defaultValue:none
+    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressEnd} , default:none
     GestureForcePressEndCallback? onForcePressEnd,
 
-    /// optionalParameters: {void Function()? onSecondaryTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onSecondaryTap} , default:none
     GestureTapCallback? onSecondaryTap,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , default:none
     GestureTapDownCallback? onSecondaryTapDown,
 
-    /// optionalParameters: {void Function(TapDragUpDetails)? onSingleTapUp} , defaultValue:none
+    /// optionalParameters: {void Function(TapDragUpDetails)? onSingleTapUp} , default:none
     GestureTapDragUpCallback? onSingleTapUp,
 
-    /// optionalParameters: {void Function()? onSingleTapCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onSingleTapCancel} , default:none
     GestureCancelCallback? onSingleTapCancel,
 
-    /// optionalParameters: {void Function(LongPressStartDetails)? onSingleLongTapStart} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressStartDetails)? onSingleLongTapStart} , default:none
     GestureLongPressStartCallback? onSingleLongTapStart,
 
-    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate} , default:none
     GestureLongPressMoveUpdateCallback? onSingleLongTapMoveUpdate,
 
-    /// optionalParameters: {void Function(LongPressEndDetails)? onSingleLongTapEnd} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressEndDetails)? onSingleLongTapEnd} , default:none
     GestureLongPressEndCallback? onSingleLongTapEnd,
 
-    /// optionalParameters: {void Function(TapDragDownDetails)? onDoubleTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDragDownDetails)? onDoubleTapDown} , default:none
     GestureTapDragDownCallback? onDoubleTapDown,
 
-    /// optionalParameters: {void Function(TapDragStartDetails)? onDragSelectionStart} , defaultValue:none
+    /// optionalParameters: {void Function(TapDragStartDetails)? onDragSelectionStart} , default:none
     GestureTapDragStartCallback? onDragSelectionStart,
 
-    /// optionalParameters: {void Function(TapDragUpdateDetails)? onDragSelectionUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(TapDragUpdateDetails)? onDragSelectionUpdate} , default:none
     GestureTapDragUpdateCallback? onDragSelectionUpdate,
 
-    /// optionalParameters: {void Function(TapDragEndDetails)? onDragSelectionEnd} , defaultValue:none
+    /// optionalParameters: {void Function(TapDragEndDetails)? onDragSelectionEnd} , default:none
     GestureTapDragEndCallback? onDragSelectionEnd,
 
-    /// optionalParameters: {HitTestBehavior? behavior} , defaultValue:none
+    /// optionalParameters: {HitTestBehavior? behavior} , default:none
     HitTestBehavior? behavior,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -396,23 +564,91 @@ class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector wit
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onTapDown', onTapDown, isNamed: true);
-    mateUse('onForcePressStart', onForcePressStart, isNamed: true);
-    mateUse('onForcePressEnd', onForcePressEnd, isNamed: true);
-    mateUse('onSecondaryTap', onSecondaryTap, isNamed: true);
-    mateUse('onSecondaryTapDown', onSecondaryTapDown, isNamed: true);
-    mateUse('onSingleTapUp', onSingleTapUp, isNamed: true);
-    mateUse('onSingleTapCancel', onSingleTapCancel, isNamed: true);
-    mateUse('onSingleLongTapStart', onSingleLongTapStart, isNamed: true);
-    mateUse('onSingleLongTapMoveUpdate', onSingleLongTapMoveUpdate, isNamed: true);
-    mateUse('onSingleLongTapEnd', onSingleLongTapEnd, isNamed: true);
-    mateUse('onDoubleTapDown', onDoubleTapDown, isNamed: true);
-    mateUse('onDragSelectionStart', onDragSelectionStart, isNamed: true);
-    mateUse('onDragSelectionUpdate', onDragSelectionUpdate, isNamed: true);
-    mateUse('onDragSelectionEnd', onDragSelectionEnd, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapDown',
+      onTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onForcePressStart',
+      onForcePressStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onForcePressEnd',
+      onForcePressEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryTap',
+      onSecondaryTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryTapDown',
+      onSecondaryTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onSingleTapUp',
+      onSingleTapUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onSingleTapCancel',
+      onSingleTapCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onSingleLongTapStart',
+      onSingleLongTapStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onSingleLongTapMoveUpdate',
+      onSingleLongTapMoveUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onSingleLongTapEnd',
+      onSingleLongTapEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTapDown',
+      onDoubleTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragSelectionStart',
+      onDragSelectionStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragSelectionUpdate',
+      onDragSelectionUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragSelectionEnd',
+      onDragSelectionEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -421,12 +657,17 @@ class ClipboardStatusNotifier$Mate extends ClipboardStatusNotifier with Mate {
   /// ClipboardStatusNotifier ClipboardStatusNotifier({ClipboardStatus value = ClipboardStatus.unknown})
   ClipboardStatusNotifier$Mate(
       {
-      /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , defaultValue:PrefixedIdentifier
+      /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , default:processed=PrefixedIdentifierImpl
       ClipboardStatus value = ClipboardStatus.unknown})
       : super(value: value) {
     mateCreateName = 'ClipboardStatusNotifier';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
-    mateUse('value', value, isNamed: true);
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+      defaultValue: ClipboardStatus.unknown,
+    );
   }
 }

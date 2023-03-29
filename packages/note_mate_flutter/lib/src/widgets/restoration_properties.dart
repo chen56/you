@@ -16,7 +16,11 @@ class RestorableNum$Mate<T extends num> extends RestorableNum<T> with Mate {
     mateCreateName = 'RestorableNum';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableNum$Mate<T>(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -31,7 +35,11 @@ class RestorableDouble$Mate extends RestorableDouble with Mate {
     mateCreateName = 'RestorableDouble';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDouble$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -46,7 +54,11 @@ class RestorableInt$Mate extends RestorableInt with Mate {
     mateCreateName = 'RestorableInt';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableInt$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -61,7 +73,11 @@ class RestorableString$Mate extends RestorableString with Mate {
     mateCreateName = 'RestorableString';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableString$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -76,7 +92,11 @@ class RestorableBool$Mate extends RestorableBool with Mate {
     mateCreateName = 'RestorableBool';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableBool$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -91,7 +111,11 @@ class RestorableBoolN$Mate extends RestorableBoolN with Mate {
     mateCreateName = 'RestorableBoolN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableBoolN$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -106,7 +130,11 @@ class RestorableNumN$Mate<T extends num?> extends RestorableNumN<T> with Mate {
     mateCreateName = 'RestorableNumN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableNumN$Mate<T>(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -121,7 +149,11 @@ class RestorableDoubleN$Mate extends RestorableDoubleN with Mate {
     mateCreateName = 'RestorableDoubleN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDoubleN$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -136,7 +168,11 @@ class RestorableIntN$Mate extends RestorableIntN with Mate {
     mateCreateName = 'RestorableIntN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableIntN$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -151,7 +187,11 @@ class RestorableStringN$Mate extends RestorableStringN with Mate {
     mateCreateName = 'RestorableStringN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableStringN$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -166,7 +206,11 @@ class RestorableDateTime$Mate extends RestorableDateTime with Mate {
     mateCreateName = 'RestorableDateTime';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDateTime$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -181,7 +225,11 @@ class RestorableDateTimeN$Mate extends RestorableDateTimeN with Mate {
     mateCreateName = 'RestorableDateTimeN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDateTimeN$Mate(p.get('defaultValue').value);
-    mateUse('defaultValue', defaultValue, isNamed: false);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }
 
@@ -196,7 +244,11 @@ class RestorableTextEditingController$Mate extends RestorableTextEditingControll
     mateCreateName = 'RestorableTextEditingController.fromValue';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableTextEditingController$Mate.fromValue(p.get('value').value);
-    mateUse('value', value, isNamed: false);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }
 
@@ -206,7 +258,7 @@ class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate 
   RestorableEnumN$Mate(
     /// requiredParameters: T? defaultValue
     T? defaultValue, {
-    /// optionalParameters: {required Iterable<T> values} , defaultValue:none
+    /// optionalParameters: {required Iterable<T> values} , default:none
     required Iterable<T> values,
   }) : super(
           defaultValue,
@@ -218,8 +270,16 @@ class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate 
           p.get('defaultValue').value,
           values: p.get('values').build(),
         );
-    mateUse('defaultValue', defaultValue, isNamed: false);
-    mateUse('values', values, isNamed: true);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
+    mateUse(
+      'values',
+      values,
+      isNamed: true,
+    );
   }
 }
 
@@ -229,7 +289,7 @@ class RestorableEnum$Mate<T extends Enum> extends RestorableEnum<T> with Mate {
   RestorableEnum$Mate(
     /// requiredParameters: T defaultValue
     T defaultValue, {
-    /// optionalParameters: {required Iterable<T> values} , defaultValue:none
+    /// optionalParameters: {required Iterable<T> values} , default:none
     required Iterable<T> values,
   }) : super(
           defaultValue,
@@ -241,7 +301,15 @@ class RestorableEnum$Mate<T extends Enum> extends RestorableEnum<T> with Mate {
           p.get('defaultValue').value,
           values: p.get('values').build(),
         );
-    mateUse('defaultValue', defaultValue, isNamed: false);
-    mateUse('values', values, isNamed: true);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
+    mateUse(
+      'values',
+      values,
+      isNamed: true,
+    );
   }
 }

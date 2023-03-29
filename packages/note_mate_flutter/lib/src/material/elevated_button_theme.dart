@@ -11,13 +11,17 @@ class ElevatedButtonThemeData$Mate extends ElevatedButtonThemeData with Mate {
   /// ElevatedButtonThemeData ElevatedButtonThemeData({ButtonStyle? style})
   ElevatedButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+      /// optionalParameters: {ButtonStyle? style} , default:none
       ButtonStyle? style})
       : super(style: style) {
     mateCreateName = 'ElevatedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
-    mateUse('style', style, isNamed: true);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -25,13 +29,13 @@ class ElevatedButtonThemeData$Mate extends ElevatedButtonThemeData with Mate {
 class ElevatedButtonTheme$Mate extends ElevatedButtonTheme with Mate {
   /// ElevatedButtonTheme ElevatedButtonTheme({Key? key, required ElevatedButtonThemeData data, required Widget child})
   ElevatedButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ElevatedButtonThemeData data} , defaultValue:none
+    /// optionalParameters: {required ElevatedButtonThemeData data} , default:none
     required ElevatedButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -45,8 +49,20 @@ class ElevatedButtonTheme$Mate extends ElevatedButtonTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

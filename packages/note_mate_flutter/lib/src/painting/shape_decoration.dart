@@ -13,19 +13,19 @@ import 'package:flutter/src/painting/borders.dart';
 class ShapeDecoration$Mate extends ShapeDecoration with Mate {
   /// ShapeDecoration ShapeDecoration({Color? color, DecorationImage? image, Gradient? gradient, List<BoxShadow>? shadows, required ShapeBorder shape})
   ShapeDecoration$Mate({
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {DecorationImage? image} , defaultValue:none
+    /// optionalParameters: {DecorationImage? image} , default:none
     DecorationImage? image,
 
-    /// optionalParameters: {Gradient? gradient} , defaultValue:none
+    /// optionalParameters: {Gradient? gradient} , default:none
     Gradient? gradient,
 
-    /// optionalParameters: {List<BoxShadow>? shadows} , defaultValue:none
+    /// optionalParameters: {List<BoxShadow>? shadows} , default:none
     List<BoxShadow>? shadows,
 
-    /// optionalParameters: {required ShapeBorder shape} , defaultValue:none
+    /// optionalParameters: {required ShapeBorder shape} , default:none
     required ShapeBorder shape,
   }) : super(
           color: color,
@@ -43,10 +43,30 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('image', image, isNamed: true);
-    mateUse('gradient', gradient, isNamed: true);
-    mateUseList('shadows', shadows, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'gradient',
+      gradient,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
   }
 }

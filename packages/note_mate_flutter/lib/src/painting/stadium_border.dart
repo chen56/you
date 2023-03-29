@@ -10,12 +10,17 @@ class StadiumBorder$Mate extends StadiumBorder with Mate {
   /// StadiumBorder StadiumBorder({BorderSide side = BorderSide.none})
   StadiumBorder$Mate(
       {
-      /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+      /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
       BorderSide side = BorderSide.none})
       : super(side: side) {
     mateCreateName = 'StadiumBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StadiumBorder$Mate(side: p.get('side').build());
-    mateUse('side', side, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
   }
 }

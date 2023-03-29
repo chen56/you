@@ -13,16 +13,16 @@ class ImageIcon$Mate extends ImageIcon with Mate {
   ImageIcon$Mate(
     /// requiredParameters: ImageProvider<Object>? image
     ImageProvider<Object>? image, {
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? size} , defaultValue:none
+    /// optionalParameters: {double? size} , default:none
     double? size,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {String? semanticLabel} , defaultValue:none
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
   }) : super(
           image,
@@ -40,10 +40,30 @@ class ImageIcon$Mate extends ImageIcon with Mate {
           color: p.get('color').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    mateUse('image', image, isNamed: false);
-    mateUse('key', key, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('semanticLabel', semanticLabel, isNamed: true);
+    mateUse(
+      'image',
+      image,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
   }
 }

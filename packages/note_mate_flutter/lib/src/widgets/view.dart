@@ -9,10 +9,10 @@ import 'package:flutter/src/widgets/framework.dart';
 class View$Mate extends View with Mate {
   /// View View({required FlutterView view, required Widget child})
   View$Mate({
-    /// optionalParameters: {required FlutterView view} , defaultValue:none
+    /// optionalParameters: {required FlutterView view} , default:none
     required FlutterView view,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           view: view,
@@ -24,7 +24,15 @@ class View$Mate extends View with Mate {
           view: p.get('view').build(),
           child: p.get('child').build(),
         );
-    mateUse('view', view, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'view',
+      view,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -38,10 +38,26 @@ class RelativeRect$Mate extends RelativeRect with Mate {
           p.get('right').value,
           p.get('bottom').value,
         );
-    mateUse('left', left, isNamed: false);
-    mateUse('top', top, isNamed: false);
-    mateUse('right', right, isNamed: false);
-    mateUse('bottom', bottom, isNamed: false);
+    mateUse(
+      'left',
+      left,
+      isNamed: false,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: false,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: false,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: false,
+    );
   }
 }
 
@@ -49,19 +65,19 @@ class RelativeRect$Mate extends RelativeRect with Mate {
 class RenderStack$Mate extends RenderStack with Mate {
   /// RenderStack RenderStack({List<RenderBox>? children, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge})
   RenderStack$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
+    /// optionalParameters: {List<RenderBox>? children} , default:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
     StackFit fit = StackFit.loose,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           children: children,
@@ -79,11 +95,34 @@ class RenderStack$Mate extends RenderStack with Mate {
           fit: p.get('fit').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList('children', children, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.topStart,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: StackFit.loose,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -91,22 +130,22 @@ class RenderStack$Mate extends RenderStack with Mate {
 class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
   /// RenderIndexedStack RenderIndexedStack({List<RenderBox>? children, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, int? index = 0})
   RenderIndexedStack$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
+    /// optionalParameters: {List<RenderBox>? children} , default:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
     StackFit fit = StackFit.loose,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {int? index = 0} , defaultValue:Literal
+    /// optionalParameters: {int? index = 0} , default:processed=IntegerLiteralImpl
     int? index = 0,
   }) : super(
           children: children,
@@ -126,11 +165,39 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           index: p.get('index').build(),
         );
-    mateUseList('children', children, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('index', index, isNamed: true);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.topStart,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: StackFit.loose,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }

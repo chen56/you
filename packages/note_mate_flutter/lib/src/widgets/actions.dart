@@ -16,16 +16,16 @@ import 'dart:ui';
 class ActionListener$Mate extends ActionListener with Mate {
   /// ActionListener ActionListener({Key? key, required void Function(Action<Intent>) listener, required Action<Intent> action, required Widget child})
   ActionListener$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required void Function(Action<Intent>) listener} , defaultValue:none
+    /// optionalParameters: {required void Function(Action<Intent>) listener} , default:none
     required ActionListenerCallback listener,
 
-    /// optionalParameters: {required Action<Intent> action} , defaultValue:none
+    /// optionalParameters: {required Action<Intent> action} , default:none
     required Action<Intent> action,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -41,10 +41,26 @@ class ActionListener$Mate extends ActionListener with Mate {
           action: p.get('action').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('listener', listener, isNamed: true);
-    mateUse('action', action, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'listener',
+      listener,
+      isNamed: true,
+    );
+    mateUse(
+      'action',
+      action,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -53,13 +69,17 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate 
   /// CallbackAction<T> CallbackAction({required Object? Function(T) onInvoke})
   CallbackAction$Mate(
       {
-      /// optionalParameters: {required Object? Function(T) onInvoke} , defaultValue:none
+      /// optionalParameters: {required Object? Function(T) onInvoke} , default:none
       required OnInvokeCallback<T> onInvoke})
       : super(onInvoke: onInvoke) {
     mateCreateName = 'CallbackAction';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
-    mateUse('onInvoke', onInvoke, isNamed: true);
+    mateUse(
+      'onInvoke',
+      onInvoke,
+      isNamed: true,
+    );
   }
 }
 
@@ -67,16 +87,16 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate 
 class Actions$Mate extends Actions with Mate {
   /// Actions Actions({Key? key, ActionDispatcher? dispatcher, required Map<Type, Action<Intent>> actions, required Widget child})
   Actions$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ActionDispatcher? dispatcher} , defaultValue:none
+    /// optionalParameters: {ActionDispatcher? dispatcher} , default:none
     ActionDispatcher? dispatcher,
 
-    /// optionalParameters: {required Map<Type, Action<Intent>> actions} , defaultValue:none
+    /// optionalParameters: {required Map<Type, Action<Intent>> actions} , default:none
     required Map<Type, Action<Intent>> actions,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -92,10 +112,26 @@ class Actions$Mate extends Actions with Mate {
           actions: p.get('actions').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('dispatcher', dispatcher, isNamed: true);
-    mateUse('actions', actions, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'dispatcher',
+      dispatcher,
+      isNamed: true,
+    );
+    mateUse(
+      'actions',
+      actions,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -103,46 +139,46 @@ class Actions$Mate extends Actions with Mate {
 class FocusableActionDetector$Mate extends FocusableActionDetector with Mate {
   /// FocusableActionDetector FocusableActionDetector({Key? key, bool enabled = true, FocusNode? focusNode, bool autofocus = false, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, void Function(bool)? onShowFocusHighlight, void Function(bool)? onShowHoverHighlight, void Function(bool)? onFocusChange, MouseCursor mouseCursor = MouseCursor.defer, bool includeFocusSemantics = true, required Widget child})
   FocusableActionDetector$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {bool descendantsAreFocusable = true} , defaultValue:Literal
+    /// optionalParameters: {bool descendantsAreFocusable = true} , default:processed=BooleanLiteralImpl
     bool descendantsAreFocusable = true,
 
-    /// optionalParameters: {bool descendantsAreTraversable = true} , defaultValue:Literal
+    /// optionalParameters: {bool descendantsAreTraversable = true} , default:processed=BooleanLiteralImpl
     bool descendantsAreTraversable = true,
 
-    /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , defaultValue:none
+    /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , default:none
     Map<ShortcutActivator, Intent>? shortcuts,
 
-    /// optionalParameters: {Map<Type, Action<Intent>>? actions} , defaultValue:none
+    /// optionalParameters: {Map<Type, Action<Intent>>? actions} , default:none
     Map<Type, Action<Intent>>? actions,
 
-    /// optionalParameters: {void Function(bool)? onShowFocusHighlight} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onShowFocusHighlight} , default:none
     ValueChanged<bool>? onShowFocusHighlight,
 
-    /// optionalParameters: {void Function(bool)? onShowHoverHighlight} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onShowHoverHighlight} , default:none
     ValueChanged<bool>? onShowHoverHighlight,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {MouseCursor mouseCursor = MouseCursor.defer} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {MouseCursor mouseCursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
     MouseCursor mouseCursor = MouseCursor.defer,
 
-    /// optionalParameters: {bool includeFocusSemantics = true} , defaultValue:Literal
+    /// optionalParameters: {bool includeFocusSemantics = true} , default:processed=BooleanLiteralImpl
     bool includeFocusSemantics = true,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -178,20 +214,82 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with Mate {
           includeFocusSemantics: p.get('includeFocusSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('descendantsAreFocusable', descendantsAreFocusable, isNamed: true);
-    mateUse('descendantsAreTraversable', descendantsAreTraversable, isNamed: true);
-    mateUse('shortcuts', shortcuts, isNamed: true);
-    mateUse('actions', actions, isNamed: true);
-    mateUse('onShowFocusHighlight', onShowFocusHighlight, isNamed: true);
-    mateUse('onShowHoverHighlight', onShowHoverHighlight, isNamed: true);
-    mateUse('onFocusChange', onFocusChange, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
-    mateUse('includeFocusSemantics', includeFocusSemantics, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'descendantsAreFocusable',
+      descendantsAreFocusable,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'descendantsAreTraversable',
+      descendantsAreTraversable,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'shortcuts',
+      shortcuts,
+      isNamed: true,
+    );
+    mateUse(
+      'actions',
+      actions,
+      isNamed: true,
+    );
+    mateUse(
+      'onShowFocusHighlight',
+      onShowFocusHighlight,
+      isNamed: true,
+    );
+    mateUse(
+      'onShowHoverHighlight',
+      onShowHoverHighlight,
+      isNamed: true,
+    );
+    mateUse(
+      'onFocusChange',
+      onFocusChange,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+      defaultValue: MouseCursor.defer,
+    );
+    mateUse(
+      'includeFocusSemantics',
+      includeFocusSemantics,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -206,7 +304,11 @@ class VoidCallbackIntent$Mate extends VoidCallbackIntent with Mate {
     mateCreateName = 'VoidCallbackIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => VoidCallbackIntent$Mate(p.get('callback').value);
-    mateUse('callback', callback, isNamed: false);
+    mateUse(
+      'callback',
+      callback,
+      isNamed: false,
+    );
   }
 }
 
@@ -215,13 +317,18 @@ class DoNothingAction$Mate extends DoNothingAction with Mate {
   /// DoNothingAction DoNothingAction({bool consumesKey = true})
   DoNothingAction$Mate(
       {
-      /// optionalParameters: {bool consumesKey = true} , defaultValue:Literal
+      /// optionalParameters: {bool consumesKey = true} , default:processed=BooleanLiteralImpl
       bool consumesKey = true})
       : super(consumesKey: consumesKey) {
     mateCreateName = 'DoNothingAction';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
-    mateUse('consumesKey', consumesKey, isNamed: true);
+    mateUse(
+      'consumesKey',
+      consumesKey,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -230,12 +337,16 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate {
   /// PrioritizedIntents PrioritizedIntents({required List<Intent> orderedIntents})
   PrioritizedIntents$Mate(
       {
-      /// optionalParameters: {required List<Intent> orderedIntents} , defaultValue:none
+      /// optionalParameters: {required List<Intent> orderedIntents} , default:none
       required List<Intent> orderedIntents})
       : super(orderedIntents: orderedIntents) {
     mateCreateName = 'PrioritizedIntents';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
-    mateUseList('orderedIntents', orderedIntents, isNamed: true);
+    mateUseList(
+      'orderedIntents',
+      orderedIntents,
+      isNamed: true,
+    );
   }
 }

@@ -10,13 +10,13 @@ import 'package:flutter/physics.dart';
 class SpringDescription$Mate extends SpringDescription with Mate {
   /// SpringDescription SpringDescription({required double mass, required double stiffness, required double damping})
   SpringDescription$Mate({
-    /// optionalParameters: {required double mass} , defaultValue:none
+    /// optionalParameters: {required double mass} , default:none
     required double mass,
 
-    /// optionalParameters: {required double stiffness} , defaultValue:none
+    /// optionalParameters: {required double stiffness} , default:none
     required double stiffness,
 
-    /// optionalParameters: {required double damping} , defaultValue:none
+    /// optionalParameters: {required double damping} , default:none
     required double damping,
   }) : super(
           mass: mass,
@@ -30,20 +30,32 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           damping: p.get('damping').build(),
         );
-    mateUse('mass', mass, isNamed: true);
-    mateUse('stiffness', stiffness, isNamed: true);
-    mateUse('damping', damping, isNamed: true);
+    mateUse(
+      'mass',
+      mass,
+      isNamed: true,
+    );
+    mateUse(
+      'stiffness',
+      stiffness,
+      isNamed: true,
+    );
+    mateUse(
+      'damping',
+      damping,
+      isNamed: true,
+    );
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
   SpringDescription$Mate.withDampingRatio({
-    /// optionalParameters: {required double mass} , defaultValue:none
+    /// optionalParameters: {required double mass} , default:none
     required double mass,
 
-    /// optionalParameters: {required double stiffness} , defaultValue:none
+    /// optionalParameters: {required double stiffness} , default:none
     required double stiffness,
 
-    /// optionalParameters: {double ratio = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double ratio = 1.0} , default:processed=DoubleLiteralImpl
     double ratio = 1.0,
   }) : super.withDampingRatio(
           mass: mass,
@@ -57,9 +69,22 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: p.get('stiffness').build(),
           ratio: p.get('ratio').build(),
         );
-    mateUse('mass', mass, isNamed: true);
-    mateUse('stiffness', stiffness, isNamed: true);
-    mateUse('ratio', ratio, isNamed: true);
+    mateUse(
+      'mass',
+      mass,
+      isNamed: true,
+    );
+    mateUse(
+      'stiffness',
+      stiffness,
+      isNamed: true,
+    );
+    mateUse(
+      'ratio',
+      ratio,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -78,7 +103,7 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           spring,
@@ -96,11 +121,32 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateUse('spring', spring, isNamed: false);
-    mateUse('start', start, isNamed: false);
-    mateUse('end', end, isNamed: false);
-    mateUse('velocity', velocity, isNamed: false);
-    mateUse('tolerance', tolerance, isNamed: true);
+    mateUse(
+      'spring',
+      spring,
+      isNamed: false,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
   }
 }
 
@@ -119,7 +165,7 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           spring,
@@ -137,10 +183,31 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateUse('spring', spring, isNamed: false);
-    mateUse('start', start, isNamed: false);
-    mateUse('end', end, isNamed: false);
-    mateUse('velocity', velocity, isNamed: false);
-    mateUse('tolerance', tolerance, isNamed: true);
+    mateUse(
+      'spring',
+      spring,
+      isNamed: false,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
   }
 }

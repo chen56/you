@@ -14,22 +14,22 @@ import 'dart:typed_data';
 class ImageConfiguration$Mate extends ImageConfiguration with Mate {
   /// ImageConfiguration ImageConfiguration({AssetBundle? bundle, double? devicePixelRatio, Locale? locale, TextDirection? textDirection, Size? size, TargetPlatform? platform})
   ImageConfiguration$Mate({
-    /// optionalParameters: {AssetBundle? bundle} , defaultValue:none
+    /// optionalParameters: {AssetBundle? bundle} , default:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {double? devicePixelRatio} , defaultValue:none
+    /// optionalParameters: {double? devicePixelRatio} , default:none
     double? devicePixelRatio,
 
-    /// optionalParameters: {Locale? locale} , defaultValue:none
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Size? size} , defaultValue:none
+    /// optionalParameters: {Size? size} , default:none
     Size? size,
 
-    /// optionalParameters: {TargetPlatform? platform} , defaultValue:none
+    /// optionalParameters: {TargetPlatform? platform} , default:none
     TargetPlatform? platform,
   }) : super(
           bundle: bundle,
@@ -49,12 +49,36 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
           size: p.get('size').build(),
           platform: p.get('platform').build(),
         );
-    mateUse('bundle', bundle, isNamed: true);
-    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
-    mateUse('locale', locale, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('platform', platform, isNamed: true);
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'devicePixelRatio',
+      devicePixelRatio,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'platform',
+      platform,
+      isNamed: true,
+    );
   }
 }
 
@@ -62,13 +86,13 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
 class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
   /// AssetBundleImageKey AssetBundleImageKey({required AssetBundle bundle, required String name, required double scale})
   AssetBundleImageKey$Mate({
-    /// optionalParameters: {required AssetBundle bundle} , defaultValue:none
+    /// optionalParameters: {required AssetBundle bundle} , default:none
     required AssetBundle bundle,
 
-    /// optionalParameters: {required String name} , defaultValue:none
+    /// optionalParameters: {required String name} , default:none
     required String name,
 
-    /// optionalParameters: {required double scale} , defaultValue:none
+    /// optionalParameters: {required double scale} , default:none
     required double scale,
   }) : super(
           bundle: bundle,
@@ -82,9 +106,21 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
           name: p.get('name').build(),
           scale: p.get('scale').build(),
         );
-    mateUse('bundle', bundle, isNamed: true);
-    mateUse('name', name, isNamed: true);
-    mateUse('scale', scale, isNamed: true);
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+    );
   }
 }
 
@@ -94,16 +130,16 @@ class ResizeImage$Mate extends ResizeImage with Mate {
   ResizeImage$Mate(
     /// requiredParameters: ImageProvider<Object> imageProvider
     ImageProvider<Object> imageProvider, {
-    /// optionalParameters: {int? width} , defaultValue:none
+    /// optionalParameters: {int? width} , default:none
     int? width,
 
-    /// optionalParameters: {int? height} , defaultValue:none
+    /// optionalParameters: {int? height} , default:none
     int? height,
 
-    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , default:processed=PrefixedIdentifierImpl
     ResizeImagePolicy policy = ResizeImagePolicy.exact,
 
-    /// optionalParameters: {bool allowUpscaling = false} , defaultValue:Literal
+    /// optionalParameters: {bool allowUpscaling = false} , default:processed=BooleanLiteralImpl
     bool allowUpscaling = false,
   }) : super(
           imageProvider,
@@ -121,11 +157,33 @@ class ResizeImage$Mate extends ResizeImage with Mate {
           policy: p.get('policy').build(),
           allowUpscaling: p.get('allowUpscaling').build(),
         );
-    mateUse('imageProvider', imageProvider, isNamed: false);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('policy', policy, isNamed: true);
-    mateUse('allowUpscaling', allowUpscaling, isNamed: true);
+    mateUse(
+      'imageProvider',
+      imageProvider,
+      isNamed: false,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'policy',
+      policy,
+      isNamed: true,
+      defaultValue: ResizeImagePolicy.exact,
+    );
+    mateUse(
+      'allowUpscaling',
+      allowUpscaling,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -135,7 +193,7 @@ class FileImage$Mate extends FileImage with Mate {
   FileImage$Mate(
     /// requiredParameters: File file
     File file, {
-    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     double scale = 1.0,
   }) : super(
           file,
@@ -147,8 +205,17 @@ class FileImage$Mate extends FileImage with Mate {
           p.get('file').value,
           scale: p.get('scale').build(),
         );
-    mateUse('file', file, isNamed: false);
-    mateUse('scale', scale, isNamed: true);
+    mateUse(
+      'file',
+      file,
+      isNamed: false,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -158,7 +225,7 @@ class MemoryImage$Mate extends MemoryImage with Mate {
   MemoryImage$Mate(
     /// requiredParameters: Uint8List bytes
     Uint8List bytes, {
-    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     double scale = 1.0,
   }) : super(
           bytes,
@@ -170,8 +237,17 @@ class MemoryImage$Mate extends MemoryImage with Mate {
           p.get('bytes').value,
           scale: p.get('scale').build(),
         );
-    mateUse('bytes', bytes, isNamed: false);
-    mateUse('scale', scale, isNamed: true);
+    mateUse(
+      'bytes',
+      bytes,
+      isNamed: false,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -181,13 +257,13 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
   ExactAssetImage$Mate(
     /// requiredParameters: String assetName
     String assetName, {
-    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     double scale = 1.0,
 
-    /// optionalParameters: {AssetBundle? bundle} , defaultValue:none
+    /// optionalParameters: {AssetBundle? bundle} , default:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {String? package} , defaultValue:none
+    /// optionalParameters: {String? package} , default:none
     String? package,
   }) : super(
           assetName,
@@ -203,10 +279,27 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    mateUse('assetName', assetName, isNamed: false);
-    mateUse('scale', scale, isNamed: true);
-    mateUse('bundle', bundle, isNamed: true);
-    mateUse('package', package, isNamed: true);
+    mateUse(
+      'assetName',
+      assetName,
+      isNamed: false,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
   }
 }
 
@@ -214,10 +307,10 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
 class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate {
   /// NetworkImageLoadException NetworkImageLoadException({required int statusCode, required Uri uri})
   NetworkImageLoadException$Mate({
-    /// optionalParameters: {required int statusCode} , defaultValue:none
+    /// optionalParameters: {required int statusCode} , default:none
     required int statusCode,
 
-    /// optionalParameters: {required Uri uri} , defaultValue:none
+    /// optionalParameters: {required Uri uri} , default:none
     required Uri uri,
   }) : super(
           statusCode: statusCode,
@@ -229,7 +322,15 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
           statusCode: p.get('statusCode').build(),
           uri: p.get('uri').build(),
         );
-    mateUse('statusCode', statusCode, isNamed: true);
-    mateUse('uri', uri, isNamed: true);
+    mateUse(
+      'statusCode',
+      statusCode,
+      isNamed: true,
+    );
+    mateUse(
+      'uri',
+      uri,
+      isNamed: true,
+    );
   }
 }

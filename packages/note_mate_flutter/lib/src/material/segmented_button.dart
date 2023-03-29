@@ -11,16 +11,16 @@ import 'package:flutter/src/material/button_style.dart';
 class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
   /// ButtonSegment<T> ButtonSegment({required T value, Widget? icon, Widget? label, bool enabled = true})
   ButtonSegment$Mate({
-    /// optionalParameters: {required T value} , defaultValue:none
+    /// optionalParameters: {required T value} , default:none
     required T value,
 
-    /// optionalParameters: {Widget? icon} , defaultValue:none
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {Widget? label} , defaultValue:none
+    /// optionalParameters: {Widget? label} , default:none
     Widget? label,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
   }) : super(
           value: value,
@@ -36,10 +36,27 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
           label: p.get('label').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('value', value, isNamed: true);
-    mateUse('icon', icon, isNamed: true);
-    mateUse('label', label, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -47,31 +64,31 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
 class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
   /// SegmentedButton<T> SegmentedButton({Key? key, required List<ButtonSegment<T>> segments, required Set<T> selected, void Function(Set<T>)? onSelectionChanged, bool multiSelectionEnabled = false, bool emptySelectionAllowed = false, ButtonStyle? style, bool showSelectedIcon = true, Widget? selectedIcon})
   SegmentedButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<ButtonSegment<T>> segments} , defaultValue:none
+    /// optionalParameters: {required List<ButtonSegment<T>> segments} , default:none
     required List<ButtonSegment<T>> segments,
 
-    /// optionalParameters: {required Set<T> selected} , defaultValue:none
+    /// optionalParameters: {required Set<T> selected} , default:none
     required Set<T> selected,
 
-    /// optionalParameters: {void Function(Set<T>)? onSelectionChanged} , defaultValue:none
+    /// optionalParameters: {void Function(Set<T>)? onSelectionChanged} , default:none
     void Function(Set<T>)? onSelectionChanged,
 
-    /// optionalParameters: {bool multiSelectionEnabled = false} , defaultValue:Literal
+    /// optionalParameters: {bool multiSelectionEnabled = false} , default:processed=BooleanLiteralImpl
     bool multiSelectionEnabled = false,
 
-    /// optionalParameters: {bool emptySelectionAllowed = false} , defaultValue:Literal
+    /// optionalParameters: {bool emptySelectionAllowed = false} , default:processed=BooleanLiteralImpl
     bool emptySelectionAllowed = false,
 
-    /// optionalParameters: {ButtonStyle? style} , defaultValue:none
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {bool showSelectedIcon = true} , defaultValue:Literal
+    /// optionalParameters: {bool showSelectedIcon = true} , default:processed=BooleanLiteralImpl
     bool showSelectedIcon = true,
 
-    /// optionalParameters: {Widget? selectedIcon} , defaultValue:none
+    /// optionalParameters: {Widget? selectedIcon} , default:none
     Widget? selectedIcon,
   }) : super(
           key: key,
@@ -97,14 +114,53 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
           showSelectedIcon: p.get('showSelectedIcon').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('segments', segments, isNamed: true);
-    mateUse('selected', selected, isNamed: true);
-    mateUse('onSelectionChanged', onSelectionChanged, isNamed: true);
-    mateUse('multiSelectionEnabled', multiSelectionEnabled, isNamed: true);
-    mateUse('emptySelectionAllowed', emptySelectionAllowed, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('showSelectedIcon', showSelectedIcon, isNamed: true);
-    mateUse('selectedIcon', selectedIcon, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'segments',
+      segments,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectionChanged',
+      onSelectionChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'multiSelectionEnabled',
+      multiSelectionEnabled,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'emptySelectionAllowed',
+      emptySelectionAllowed,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'showSelectedIcon',
+      showSelectedIcon,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'selectedIcon',
+      selectedIcon,
+      isNamed: true,
+    );
   }
 }

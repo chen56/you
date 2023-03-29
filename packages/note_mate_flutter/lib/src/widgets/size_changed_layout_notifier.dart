@@ -9,10 +9,10 @@ import 'package:flutter/src/widgets/framework.dart';
 class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Mate {
   /// SizeChangedLayoutNotifier SizeChangedLayoutNotifier({Key? key, Widget? child})
   SizeChangedLayoutNotifier$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -24,7 +24,15 @@ class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Mate
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

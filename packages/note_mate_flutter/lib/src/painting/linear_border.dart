@@ -10,10 +10,10 @@ import 'package:flutter/painting.dart';
 class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
   /// LinearBorderEdge LinearBorderEdge({double size = 1.0, double alignment = 0.0})
   LinearBorderEdge$Mate({
-    /// optionalParameters: {double size = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
     double size = 1.0,
 
-    /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
     double alignment = 0.0,
   }) : super(
           size: size,
@@ -25,8 +25,18 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
         );
-    mateUse('size', size, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
   }
 }
 
@@ -34,19 +44,19 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
 class LinearBorder$Mate extends LinearBorder with Mate {
   /// LinearBorder LinearBorder({BorderSide side = BorderSide.none, LinearBorderEdge? start, LinearBorderEdge? end, LinearBorderEdge? top, LinearBorderEdge? bottom})
   LinearBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {LinearBorderEdge? start} , defaultValue:none
+    /// optionalParameters: {LinearBorderEdge? start} , default:none
     LinearBorderEdge? start,
 
-    /// optionalParameters: {LinearBorderEdge? end} , defaultValue:none
+    /// optionalParameters: {LinearBorderEdge? end} , default:none
     LinearBorderEdge? end,
 
-    /// optionalParameters: {LinearBorderEdge? top} , defaultValue:none
+    /// optionalParameters: {LinearBorderEdge? top} , default:none
     LinearBorderEdge? top,
 
-    /// optionalParameters: {LinearBorderEdge? bottom} , defaultValue:none
+    /// optionalParameters: {LinearBorderEdge? bottom} , default:none
     LinearBorderEdge? bottom,
   }) : super(
           side: side,
@@ -64,22 +74,43 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse('side', side, isNamed: true);
-    mateUse('start', start, isNamed: true);
-    mateUse('end', end, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
   }
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.start({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
     double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
     double size = 1.0,
   }) : super.start(
           side: side,
@@ -93,20 +124,35 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('size', size, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.end({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
     double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
     double size = 1.0,
   }) : super.end(
           side: side,
@@ -120,20 +166,35 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('size', size, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.top({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
     double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
     double size = 1.0,
   }) : super.top(
           side: side,
@@ -147,20 +208,35 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('size', size, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.bottom({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
     double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
     double size = 1.0,
   }) : super.bottom(
           side: side,
@@ -174,8 +250,23 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse('side', side, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('size', size, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }

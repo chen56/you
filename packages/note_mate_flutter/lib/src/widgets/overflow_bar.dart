@@ -15,31 +15,31 @@ import 'package:flutter/src/widgets/framework.dart';
 class OverflowBar$Mate extends OverflowBar with Mate {
   /// OverflowBar OverflowBar({Key? key, double spacing = 0.0, MainAxisAlignment? alignment, double overflowSpacing = 0.0, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start, VerticalDirection overflowDirection = VerticalDirection.down, TextDirection? textDirection, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   OverflowBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double spacing = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
     double spacing = 0.0,
 
-    /// optionalParameters: {MainAxisAlignment? alignment} , defaultValue:none
+    /// optionalParameters: {MainAxisAlignment? alignment} , default:none
     MainAxisAlignment? alignment,
 
-    /// optionalParameters: {double overflowSpacing = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double overflowSpacing = 0.0} , default:processed=DoubleLiteralImpl
     double overflowSpacing = 0.0,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , default:processed=PrefixedIdentifierImpl
     OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start,
 
-    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     VerticalDirection overflowDirection = VerticalDirection.down,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -65,14 +65,55 @@ class OverflowBar$Mate extends OverflowBar with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('spacing', spacing, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('overflowSpacing', overflowSpacing, isNamed: true);
-    mateUse('overflowAlignment', overflowAlignment, isNamed: true);
-    mateUse('overflowDirection', overflowDirection, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'spacing',
+      spacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'overflowSpacing',
+      overflowSpacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'overflowAlignment',
+      overflowAlignment,
+      isNamed: true,
+      defaultValue: OverflowBarAlignment.start,
+    );
+    mateUse(
+      'overflowDirection',
+      overflowDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }

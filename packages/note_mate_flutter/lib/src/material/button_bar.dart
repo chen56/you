@@ -14,40 +14,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class ButtonBar$Mate extends ButtonBar with Mate {
   /// ButtonBar ButtonBar({Key? key, MainAxisAlignment? alignment, MainAxisSize? mainAxisSize, ButtonTextTheme? buttonTextTheme, double? buttonMinWidth, double? buttonHeight, EdgeInsetsGeometry? buttonPadding, bool? buttonAlignedDropdown, ButtonBarLayoutBehavior? layoutBehavior, VerticalDirection? overflowDirection, double? overflowButtonSpacing, List<Widget> children = const <Widget>[]})
   ButtonBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {MainAxisAlignment? alignment} , defaultValue:none
+    /// optionalParameters: {MainAxisAlignment? alignment} , default:none
     MainAxisAlignment? alignment,
 
-    /// optionalParameters: {MainAxisSize? mainAxisSize} , defaultValue:none
+    /// optionalParameters: {MainAxisSize? mainAxisSize} , default:none
     MainAxisSize? mainAxisSize,
 
-    /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , defaultValue:none
+    /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , default:none
     ButtonTextTheme? buttonTextTheme,
 
-    /// optionalParameters: {double? buttonMinWidth} , defaultValue:none
+    /// optionalParameters: {double? buttonMinWidth} , default:none
     double? buttonMinWidth,
 
-    /// optionalParameters: {double? buttonHeight} , defaultValue:none
+    /// optionalParameters: {double? buttonHeight} , default:none
     double? buttonHeight,
 
-    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , default:none
     EdgeInsetsGeometry? buttonPadding,
 
-    /// optionalParameters: {bool? buttonAlignedDropdown} , defaultValue:none
+    /// optionalParameters: {bool? buttonAlignedDropdown} , default:none
     bool? buttonAlignedDropdown,
 
-    /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , defaultValue:none
+    /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , default:none
     ButtonBarLayoutBehavior? layoutBehavior,
 
-    /// optionalParameters: {VerticalDirection? overflowDirection} , defaultValue:none
+    /// optionalParameters: {VerticalDirection? overflowDirection} , default:none
     VerticalDirection? overflowDirection,
 
-    /// optionalParameters: {double? overflowButtonSpacing} , defaultValue:none
+    /// optionalParameters: {double? overflowButtonSpacing} , default:none
     double? overflowButtonSpacing,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -79,17 +79,65 @@ class ButtonBar$Mate extends ButtonBar with Mate {
           overflowButtonSpacing: p.get('overflowButtonSpacing').build(),
           children: p.get('children').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('mainAxisSize', mainAxisSize, isNamed: true);
-    mateUse('buttonTextTheme', buttonTextTheme, isNamed: true);
-    mateUse('buttonMinWidth', buttonMinWidth, isNamed: true);
-    mateUse('buttonHeight', buttonHeight, isNamed: true);
-    mateUse('buttonPadding', buttonPadding, isNamed: true);
-    mateUse('buttonAlignedDropdown', buttonAlignedDropdown, isNamed: true);
-    mateUse('layoutBehavior', layoutBehavior, isNamed: true);
-    mateUse('overflowDirection', overflowDirection, isNamed: true);
-    mateUse('overflowButtonSpacing', overflowButtonSpacing, isNamed: true);
-    mateUseList('children', children, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonTextTheme',
+      buttonTextTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonMinWidth',
+      buttonMinWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonHeight',
+      buttonHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonPadding',
+      buttonPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonAlignedDropdown',
+      buttonAlignedDropdown,
+      isNamed: true,
+    );
+    mateUse(
+      'layoutBehavior',
+      layoutBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'overflowDirection',
+      overflowDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'overflowButtonSpacing',
+      overflowButtonSpacing,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }

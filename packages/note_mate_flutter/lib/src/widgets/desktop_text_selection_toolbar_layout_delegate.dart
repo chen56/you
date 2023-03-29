@@ -9,12 +9,16 @@ class DesktopTextSelectionToolbarLayoutDelegate$Mate extends DesktopTextSelectio
   /// DesktopTextSelectionToolbarLayoutDelegate DesktopTextSelectionToolbarLayoutDelegate({required Offset anchor})
   DesktopTextSelectionToolbarLayoutDelegate$Mate(
       {
-      /// optionalParameters: {required Offset anchor} , defaultValue:none
+      /// optionalParameters: {required Offset anchor} , default:none
       required Offset anchor})
       : super(anchor: anchor) {
     mateCreateName = 'DesktopTextSelectionToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
-    mateUse('anchor', anchor, isNamed: true);
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+    );
   }
 }

@@ -15,34 +15,34 @@ import 'package:flutter/src/widgets/framework.dart';
 class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate {
   /// NavigationDrawerThemeData NavigationDrawerThemeData({double? tileHeight, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, Size? indicatorSize, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme})
   NavigationDrawerThemeData$Mate({
-    /// optionalParameters: {double? tileHeight} , defaultValue:none
+    /// optionalParameters: {double? tileHeight} , default:none
     double? tileHeight,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? indicatorColor} , defaultValue:none
+    /// optionalParameters: {Color? indicatorColor} , default:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {Size? indicatorSize} , defaultValue:none
+    /// optionalParameters: {Size? indicatorSize} , default:none
     Size? indicatorSize,
 
-    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , default:none
     MaterialStateProperty<TextStyle?>? labelTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , default:none
     MaterialStateProperty<IconThemeData?>? iconTheme,
   }) : super(
           tileHeight: tileHeight,
@@ -70,16 +70,56 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: p.get('labelTextStyle').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateUse('tileHeight', tileHeight, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('indicatorColor', indicatorColor, isNamed: true);
-    mateUse('indicatorShape', indicatorShape, isNamed: true);
-    mateUse('indicatorSize', indicatorSize, isNamed: true);
-    mateUse('labelTextStyle', labelTextStyle, isNamed: true);
-    mateUse('iconTheme', iconTheme, isNamed: true);
+    mateUse(
+      'tileHeight',
+      tileHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorColor',
+      indicatorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorShape',
+      indicatorShape,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorSize',
+      indicatorSize,
+      isNamed: true,
+    );
+    mateUse(
+      'labelTextStyle',
+      labelTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'iconTheme',
+      iconTheme,
+      isNamed: true,
+    );
   }
 }
 
@@ -87,13 +127,13 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
 class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
   /// NavigationDrawerTheme NavigationDrawerTheme({Key? key, required NavigationDrawerThemeData data, required Widget child})
   NavigationDrawerTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required NavigationDrawerThemeData data} , defaultValue:none
+    /// optionalParameters: {required NavigationDrawerThemeData data} , default:none
     required NavigationDrawerThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -107,8 +147,20 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -36,8 +36,16 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
           p.get('_constructor').value,
           p.get('_initializer').value,
         );
-    mateUse('_constructor', _constructor, isNamed: false);
-    mateUse('_initializer', _initializer, isNamed: false);
+    mateUse(
+      '_constructor',
+      _constructor,
+      isNamed: false,
+    );
+    mateUse(
+      '_initializer',
+      _initializer,
+      isNamed: false,
+    );
   }
 }
 
@@ -45,199 +53,199 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
 class GestureDetector$Mate extends GestureDetector with Mate {
   /// GestureDetector GestureDetector({Key? key, Widget? child, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTap, void Function()? onTapCancel, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapUpDetails)? onSecondaryTapUp, void Function()? onSecondaryTapCancel, void Function(TapDownDetails)? onTertiaryTapDown, void Function(TapUpDetails)? onTertiaryTapUp, void Function()? onTertiaryTapCancel, void Function(TapDownDetails)? onDoubleTapDown, void Function()? onDoubleTap, void Function()? onDoubleTapCancel, void Function(LongPressDownDetails)? onLongPressDown, void Function()? onLongPressCancel, void Function()? onLongPress, void Function(LongPressStartDetails)? onLongPressStart, void Function(LongPressMoveUpdateDetails)? onLongPressMoveUpdate, void Function()? onLongPressUp, void Function(LongPressEndDetails)? onLongPressEnd, void Function(LongPressDownDetails)? onSecondaryLongPressDown, void Function()? onSecondaryLongPressCancel, void Function()? onSecondaryLongPress, void Function(LongPressStartDetails)? onSecondaryLongPressStart, void Function(LongPressMoveUpdateDetails)? onSecondaryLongPressMoveUpdate, void Function()? onSecondaryLongPressUp, void Function(LongPressEndDetails)? onSecondaryLongPressEnd, void Function(LongPressDownDetails)? onTertiaryLongPressDown, void Function()? onTertiaryLongPressCancel, void Function()? onTertiaryLongPress, void Function(LongPressStartDetails)? onTertiaryLongPressStart, void Function(LongPressMoveUpdateDetails)? onTertiaryLongPressMoveUpdate, void Function()? onTertiaryLongPressUp, void Function(LongPressEndDetails)? onTertiaryLongPressEnd, void Function(DragDownDetails)? onVerticalDragDown, void Function(DragStartDetails)? onVerticalDragStart, void Function(DragUpdateDetails)? onVerticalDragUpdate, void Function(DragEndDetails)? onVerticalDragEnd, void Function()? onVerticalDragCancel, void Function(DragDownDetails)? onHorizontalDragDown, void Function(DragStartDetails)? onHorizontalDragStart, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragEndDetails)? onHorizontalDragEnd, void Function()? onHorizontalDragCancel, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressPeak, void Function(ForcePressDetails)? onForcePressUpdate, void Function(ForcePressDetails)? onForcePressEnd, void Function(DragDownDetails)? onPanDown, void Function(DragStartDetails)? onPanStart, void Function(DragUpdateDetails)? onPanUpdate, void Function(DragEndDetails)? onPanEnd, void Function()? onPanCancel, void Function(ScaleStartDetails)? onScaleStart, void Function(ScaleUpdateDetails)? onScaleUpdate, void Function(ScaleEndDetails)? onScaleEnd, HitTestBehavior? behavior, bool excludeFromSemantics = false, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool trackpadScrollCausesScale = false, Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor, Set<PointerDeviceKind>? supportedDevices})
   GestureDetector$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
     GestureTapDownCallback? onTapDown,
 
-    /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , defaultValue:none
+    /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , default:none
     GestureTapUpCallback? onTapUp,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onTapCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onTapCancel} , default:none
     GestureTapCancelCallback? onTapCancel,
 
-    /// optionalParameters: {void Function()? onSecondaryTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onSecondaryTap} , default:none
     GestureTapCallback? onSecondaryTap,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , default:none
     GestureTapDownCallback? onSecondaryTapDown,
 
-    /// optionalParameters: {void Function(TapUpDetails)? onSecondaryTapUp} , defaultValue:none
+    /// optionalParameters: {void Function(TapUpDetails)? onSecondaryTapUp} , default:none
     GestureTapUpCallback? onSecondaryTapUp,
 
-    /// optionalParameters: {void Function()? onSecondaryTapCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onSecondaryTapCancel} , default:none
     GestureTapCancelCallback? onSecondaryTapCancel,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onTertiaryTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDownDetails)? onTertiaryTapDown} , default:none
     GestureTapDownCallback? onTertiaryTapDown,
 
-    /// optionalParameters: {void Function(TapUpDetails)? onTertiaryTapUp} , defaultValue:none
+    /// optionalParameters: {void Function(TapUpDetails)? onTertiaryTapUp} , default:none
     GestureTapUpCallback? onTertiaryTapUp,
 
-    /// optionalParameters: {void Function()? onTertiaryTapCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onTertiaryTapCancel} , default:none
     GestureTapCancelCallback? onTertiaryTapCancel,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onDoubleTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDownDetails)? onDoubleTapDown} , default:none
     GestureTapDownCallback? onDoubleTapDown,
 
-    /// optionalParameters: {void Function()? onDoubleTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onDoubleTap} , default:none
     GestureTapCallback? onDoubleTap,
 
-    /// optionalParameters: {void Function()? onDoubleTapCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onDoubleTapCancel} , default:none
     GestureTapCancelCallback? onDoubleTapCancel,
 
-    /// optionalParameters: {void Function(LongPressDownDetails)? onLongPressDown} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressDownDetails)? onLongPressDown} , default:none
     GestureLongPressDownCallback? onLongPressDown,
 
-    /// optionalParameters: {void Function()? onLongPressCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPressCancel} , default:none
     GestureLongPressCancelCallback? onLongPressCancel,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(LongPressStartDetails)? onLongPressStart} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressStartDetails)? onLongPressStart} , default:none
     GestureLongPressStartCallback? onLongPressStart,
 
-    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onLongPressMoveUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onLongPressMoveUpdate} , default:none
     GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
 
-    /// optionalParameters: {void Function()? onLongPressUp} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPressUp} , default:none
     GestureLongPressUpCallback? onLongPressUp,
 
-    /// optionalParameters: {void Function(LongPressEndDetails)? onLongPressEnd} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressEndDetails)? onLongPressEnd} , default:none
     GestureLongPressEndCallback? onLongPressEnd,
 
-    /// optionalParameters: {void Function(LongPressDownDetails)? onSecondaryLongPressDown} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressDownDetails)? onSecondaryLongPressDown} , default:none
     GestureLongPressDownCallback? onSecondaryLongPressDown,
 
-    /// optionalParameters: {void Function()? onSecondaryLongPressCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onSecondaryLongPressCancel} , default:none
     GestureLongPressCancelCallback? onSecondaryLongPressCancel,
 
-    /// optionalParameters: {void Function()? onSecondaryLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onSecondaryLongPress} , default:none
     GestureLongPressCallback? onSecondaryLongPress,
 
-    /// optionalParameters: {void Function(LongPressStartDetails)? onSecondaryLongPressStart} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressStartDetails)? onSecondaryLongPressStart} , default:none
     GestureLongPressStartCallback? onSecondaryLongPressStart,
 
-    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onSecondaryLongPressMoveUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onSecondaryLongPressMoveUpdate} , default:none
     GestureLongPressMoveUpdateCallback? onSecondaryLongPressMoveUpdate,
 
-    /// optionalParameters: {void Function()? onSecondaryLongPressUp} , defaultValue:none
+    /// optionalParameters: {void Function()? onSecondaryLongPressUp} , default:none
     GestureLongPressUpCallback? onSecondaryLongPressUp,
 
-    /// optionalParameters: {void Function(LongPressEndDetails)? onSecondaryLongPressEnd} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressEndDetails)? onSecondaryLongPressEnd} , default:none
     GestureLongPressEndCallback? onSecondaryLongPressEnd,
 
-    /// optionalParameters: {void Function(LongPressDownDetails)? onTertiaryLongPressDown} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressDownDetails)? onTertiaryLongPressDown} , default:none
     GestureLongPressDownCallback? onTertiaryLongPressDown,
 
-    /// optionalParameters: {void Function()? onTertiaryLongPressCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onTertiaryLongPressCancel} , default:none
     GestureLongPressCancelCallback? onTertiaryLongPressCancel,
 
-    /// optionalParameters: {void Function()? onTertiaryLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onTertiaryLongPress} , default:none
     GestureLongPressCallback? onTertiaryLongPress,
 
-    /// optionalParameters: {void Function(LongPressStartDetails)? onTertiaryLongPressStart} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressStartDetails)? onTertiaryLongPressStart} , default:none
     GestureLongPressStartCallback? onTertiaryLongPressStart,
 
-    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onTertiaryLongPressMoveUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onTertiaryLongPressMoveUpdate} , default:none
     GestureLongPressMoveUpdateCallback? onTertiaryLongPressMoveUpdate,
 
-    /// optionalParameters: {void Function()? onTertiaryLongPressUp} , defaultValue:none
+    /// optionalParameters: {void Function()? onTertiaryLongPressUp} , default:none
     GestureLongPressUpCallback? onTertiaryLongPressUp,
 
-    /// optionalParameters: {void Function(LongPressEndDetails)? onTertiaryLongPressEnd} , defaultValue:none
+    /// optionalParameters: {void Function(LongPressEndDetails)? onTertiaryLongPressEnd} , default:none
     GestureLongPressEndCallback? onTertiaryLongPressEnd,
 
-    /// optionalParameters: {void Function(DragDownDetails)? onVerticalDragDown} , defaultValue:none
+    /// optionalParameters: {void Function(DragDownDetails)? onVerticalDragDown} , default:none
     GestureDragDownCallback? onVerticalDragDown,
 
-    /// optionalParameters: {void Function(DragStartDetails)? onVerticalDragStart} , defaultValue:none
+    /// optionalParameters: {void Function(DragStartDetails)? onVerticalDragStart} , default:none
     GestureDragStartCallback? onVerticalDragStart,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onVerticalDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onVerticalDragUpdate} , default:none
     GestureDragUpdateCallback? onVerticalDragUpdate,
 
-    /// optionalParameters: {void Function(DragEndDetails)? onVerticalDragEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DragEndDetails)? onVerticalDragEnd} , default:none
     GestureDragEndCallback? onVerticalDragEnd,
 
-    /// optionalParameters: {void Function()? onVerticalDragCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onVerticalDragCancel} , default:none
     GestureDragCancelCallback? onVerticalDragCancel,
 
-    /// optionalParameters: {void Function(DragDownDetails)? onHorizontalDragDown} , defaultValue:none
+    /// optionalParameters: {void Function(DragDownDetails)? onHorizontalDragDown} , default:none
     GestureDragDownCallback? onHorizontalDragDown,
 
-    /// optionalParameters: {void Function(DragStartDetails)? onHorizontalDragStart} , defaultValue:none
+    /// optionalParameters: {void Function(DragStartDetails)? onHorizontalDragStart} , default:none
     GestureDragStartCallback? onHorizontalDragStart,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onHorizontalDragUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onHorizontalDragUpdate} , default:none
     GestureDragUpdateCallback? onHorizontalDragUpdate,
 
-    /// optionalParameters: {void Function(DragEndDetails)? onHorizontalDragEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DragEndDetails)? onHorizontalDragEnd} , default:none
     GestureDragEndCallback? onHorizontalDragEnd,
 
-    /// optionalParameters: {void Function()? onHorizontalDragCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onHorizontalDragCancel} , default:none
     GestureDragCancelCallback? onHorizontalDragCancel,
 
-    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressStart} , defaultValue:none
+    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressStart} , default:none
     GestureForcePressStartCallback? onForcePressStart,
 
-    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressPeak} , defaultValue:none
+    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressPeak} , default:none
     GestureForcePressPeakCallback? onForcePressPeak,
 
-    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressUpdate} , default:none
     GestureForcePressUpdateCallback? onForcePressUpdate,
 
-    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressEnd} , defaultValue:none
+    /// optionalParameters: {void Function(ForcePressDetails)? onForcePressEnd} , default:none
     GestureForcePressEndCallback? onForcePressEnd,
 
-    /// optionalParameters: {void Function(DragDownDetails)? onPanDown} , defaultValue:none
+    /// optionalParameters: {void Function(DragDownDetails)? onPanDown} , default:none
     GestureDragDownCallback? onPanDown,
 
-    /// optionalParameters: {void Function(DragStartDetails)? onPanStart} , defaultValue:none
+    /// optionalParameters: {void Function(DragStartDetails)? onPanStart} , default:none
     GestureDragStartCallback? onPanStart,
 
-    /// optionalParameters: {void Function(DragUpdateDetails)? onPanUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(DragUpdateDetails)? onPanUpdate} , default:none
     GestureDragUpdateCallback? onPanUpdate,
 
-    /// optionalParameters: {void Function(DragEndDetails)? onPanEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DragEndDetails)? onPanEnd} , default:none
     GestureDragEndCallback? onPanEnd,
 
-    /// optionalParameters: {void Function()? onPanCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onPanCancel} , default:none
     GestureDragCancelCallback? onPanCancel,
 
-    /// optionalParameters: {void Function(ScaleStartDetails)? onScaleStart} , defaultValue:none
+    /// optionalParameters: {void Function(ScaleStartDetails)? onScaleStart} , default:none
     GestureScaleStartCallback? onScaleStart,
 
-    /// optionalParameters: {void Function(ScaleUpdateDetails)? onScaleUpdate} , defaultValue:none
+    /// optionalParameters: {void Function(ScaleUpdateDetails)? onScaleUpdate} , default:none
     GestureScaleUpdateCallback? onScaleUpdate,
 
-    /// optionalParameters: {void Function(ScaleEndDetails)? onScaleEnd} , defaultValue:none
+    /// optionalParameters: {void Function(ScaleEndDetails)? onScaleEnd} , default:none
     GestureScaleEndCallback? onScaleEnd,
 
-    /// optionalParameters: {HitTestBehavior? behavior} , defaultValue:none
+    /// optionalParameters: {HitTestBehavior? behavior} , default:none
     HitTestBehavior? behavior,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeFromSemantics = false,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool trackpadScrollCausesScale = false} , defaultValue:Literal
+    /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
     bool trackpadScrollCausesScale = false,
 
-    /// optionalParameters: {Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor} , defaultValue:unprocessed
+    /// optionalParameters: {Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor} , default:unprocessed=SimpleIdentifierImpl
     required Offset trackpadScrollToScaleFactor,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
   }) : super(
           key: key,
@@ -375,71 +383,334 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
           supportedDevices: p.get('supportedDevices').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('onTapDown', onTapDown, isNamed: true);
-    mateUse('onTapUp', onTapUp, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('onTapCancel', onTapCancel, isNamed: true);
-    mateUse('onSecondaryTap', onSecondaryTap, isNamed: true);
-    mateUse('onSecondaryTapDown', onSecondaryTapDown, isNamed: true);
-    mateUse('onSecondaryTapUp', onSecondaryTapUp, isNamed: true);
-    mateUse('onSecondaryTapCancel', onSecondaryTapCancel, isNamed: true);
-    mateUse('onTertiaryTapDown', onTertiaryTapDown, isNamed: true);
-    mateUse('onTertiaryTapUp', onTertiaryTapUp, isNamed: true);
-    mateUse('onTertiaryTapCancel', onTertiaryTapCancel, isNamed: true);
-    mateUse('onDoubleTapDown', onDoubleTapDown, isNamed: true);
-    mateUse('onDoubleTap', onDoubleTap, isNamed: true);
-    mateUse('onDoubleTapCancel', onDoubleTapCancel, isNamed: true);
-    mateUse('onLongPressDown', onLongPressDown, isNamed: true);
-    mateUse('onLongPressCancel', onLongPressCancel, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('onLongPressStart', onLongPressStart, isNamed: true);
-    mateUse('onLongPressMoveUpdate', onLongPressMoveUpdate, isNamed: true);
-    mateUse('onLongPressUp', onLongPressUp, isNamed: true);
-    mateUse('onLongPressEnd', onLongPressEnd, isNamed: true);
-    mateUse('onSecondaryLongPressDown', onSecondaryLongPressDown, isNamed: true);
-    mateUse('onSecondaryLongPressCancel', onSecondaryLongPressCancel, isNamed: true);
-    mateUse('onSecondaryLongPress', onSecondaryLongPress, isNamed: true);
-    mateUse('onSecondaryLongPressStart', onSecondaryLongPressStart, isNamed: true);
-    mateUse('onSecondaryLongPressMoveUpdate', onSecondaryLongPressMoveUpdate, isNamed: true);
-    mateUse('onSecondaryLongPressUp', onSecondaryLongPressUp, isNamed: true);
-    mateUse('onSecondaryLongPressEnd', onSecondaryLongPressEnd, isNamed: true);
-    mateUse('onTertiaryLongPressDown', onTertiaryLongPressDown, isNamed: true);
-    mateUse('onTertiaryLongPressCancel', onTertiaryLongPressCancel, isNamed: true);
-    mateUse('onTertiaryLongPress', onTertiaryLongPress, isNamed: true);
-    mateUse('onTertiaryLongPressStart', onTertiaryLongPressStart, isNamed: true);
-    mateUse('onTertiaryLongPressMoveUpdate', onTertiaryLongPressMoveUpdate, isNamed: true);
-    mateUse('onTertiaryLongPressUp', onTertiaryLongPressUp, isNamed: true);
-    mateUse('onTertiaryLongPressEnd', onTertiaryLongPressEnd, isNamed: true);
-    mateUse('onVerticalDragDown', onVerticalDragDown, isNamed: true);
-    mateUse('onVerticalDragStart', onVerticalDragStart, isNamed: true);
-    mateUse('onVerticalDragUpdate', onVerticalDragUpdate, isNamed: true);
-    mateUse('onVerticalDragEnd', onVerticalDragEnd, isNamed: true);
-    mateUse('onVerticalDragCancel', onVerticalDragCancel, isNamed: true);
-    mateUse('onHorizontalDragDown', onHorizontalDragDown, isNamed: true);
-    mateUse('onHorizontalDragStart', onHorizontalDragStart, isNamed: true);
-    mateUse('onHorizontalDragUpdate', onHorizontalDragUpdate, isNamed: true);
-    mateUse('onHorizontalDragEnd', onHorizontalDragEnd, isNamed: true);
-    mateUse('onHorizontalDragCancel', onHorizontalDragCancel, isNamed: true);
-    mateUse('onForcePressStart', onForcePressStart, isNamed: true);
-    mateUse('onForcePressPeak', onForcePressPeak, isNamed: true);
-    mateUse('onForcePressUpdate', onForcePressUpdate, isNamed: true);
-    mateUse('onForcePressEnd', onForcePressEnd, isNamed: true);
-    mateUse('onPanDown', onPanDown, isNamed: true);
-    mateUse('onPanStart', onPanStart, isNamed: true);
-    mateUse('onPanUpdate', onPanUpdate, isNamed: true);
-    mateUse('onPanEnd', onPanEnd, isNamed: true);
-    mateUse('onPanCancel', onPanCancel, isNamed: true);
-    mateUse('onScaleStart', onScaleStart, isNamed: true);
-    mateUse('onScaleUpdate', onScaleUpdate, isNamed: true);
-    mateUse('onScaleEnd', onScaleEnd, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('trackpadScrollCausesScale', trackpadScrollCausesScale, isNamed: true);
-    mateUse('trackpadScrollToScaleFactor', trackpadScrollToScaleFactor, isNamed: true);
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapDown',
+      onTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapUp',
+      onTapUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapCancel',
+      onTapCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryTap',
+      onSecondaryTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryTapDown',
+      onSecondaryTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryTapUp',
+      onSecondaryTapUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryTapCancel',
+      onSecondaryTapCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryTapDown',
+      onTertiaryTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryTapUp',
+      onTertiaryTapUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryTapCancel',
+      onTertiaryTapCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTapDown',
+      onDoubleTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTap',
+      onDoubleTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTapCancel',
+      onDoubleTapCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressDown',
+      onLongPressDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressCancel',
+      onLongPressCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressStart',
+      onLongPressStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressMoveUpdate',
+      onLongPressMoveUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressUp',
+      onLongPressUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressEnd',
+      onLongPressEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryLongPressDown',
+      onSecondaryLongPressDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryLongPressCancel',
+      onSecondaryLongPressCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryLongPress',
+      onSecondaryLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryLongPressStart',
+      onSecondaryLongPressStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryLongPressMoveUpdate',
+      onSecondaryLongPressMoveUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryLongPressUp',
+      onSecondaryLongPressUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onSecondaryLongPressEnd',
+      onSecondaryLongPressEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryLongPressDown',
+      onTertiaryLongPressDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryLongPressCancel',
+      onTertiaryLongPressCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryLongPress',
+      onTertiaryLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryLongPressStart',
+      onTertiaryLongPressStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryLongPressMoveUpdate',
+      onTertiaryLongPressMoveUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryLongPressUp',
+      onTertiaryLongPressUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onTertiaryLongPressEnd',
+      onTertiaryLongPressEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onVerticalDragDown',
+      onVerticalDragDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onVerticalDragStart',
+      onVerticalDragStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onVerticalDragUpdate',
+      onVerticalDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onVerticalDragEnd',
+      onVerticalDragEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onVerticalDragCancel',
+      onVerticalDragCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onHorizontalDragDown',
+      onHorizontalDragDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onHorizontalDragStart',
+      onHorizontalDragStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onHorizontalDragUpdate',
+      onHorizontalDragUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onHorizontalDragEnd',
+      onHorizontalDragEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onHorizontalDragCancel',
+      onHorizontalDragCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onForcePressStart',
+      onForcePressStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onForcePressPeak',
+      onForcePressPeak,
+      isNamed: true,
+    );
+    mateUse(
+      'onForcePressUpdate',
+      onForcePressUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onForcePressEnd',
+      onForcePressEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onPanDown',
+      onPanDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onPanStart',
+      onPanStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onPanUpdate',
+      onPanUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onPanEnd',
+      onPanEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onPanCancel',
+      onPanCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onScaleStart',
+      onScaleStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onScaleUpdate',
+      onScaleUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onScaleEnd',
+      onScaleEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'trackpadScrollCausesScale',
+      trackpadScrollCausesScale,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'trackpadScrollToScaleFactor',
+      trackpadScrollToScaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
   }
 }
 
@@ -447,22 +718,22 @@ class GestureDetector$Mate extends GestureDetector with Mate {
 class RawGestureDetector$Mate extends RawGestureDetector with Mate {
   /// RawGestureDetector RawGestureDetector({Key? key, Widget? child, Map<Type, GestureRecognizerFactory<GestureRecognizer>> gestures = const <Type, GestureRecognizerFactory>{}, HitTestBehavior? behavior, bool excludeFromSemantics = false, SemanticsGestureDelegate? semantics})
   RawGestureDetector$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Map<Type, GestureRecognizerFactory<GestureRecognizer>> gestures = const <Type, GestureRecognizerFactory>{}} , defaultValue:unprocessed
+    /// optionalParameters: {Map<Type, GestureRecognizerFactory<GestureRecognizer>> gestures = const <Type, GestureRecognizerFactory>{}} , default:unprocessed=SetOrMapLiteralImpl
     required Map<Type, GestureRecognizerFactory<GestureRecognizer>> gestures,
 
-    /// optionalParameters: {HitTestBehavior? behavior} , defaultValue:none
+    /// optionalParameters: {HitTestBehavior? behavior} , default:none
     HitTestBehavior? behavior,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeFromSemantics = false,
 
-    /// optionalParameters: {SemanticsGestureDelegate? semantics} , defaultValue:none
+    /// optionalParameters: {SemanticsGestureDelegate? semantics} , default:none
     SemanticsGestureDelegate? semantics,
   }) : super(
           key: key,
@@ -482,11 +753,36 @@ class RawGestureDetector$Mate extends RawGestureDetector with Mate {
           excludeFromSemantics: p.get('excludeFromSemantics').build(),
           semantics: p.get('semantics').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('gestures', gestures, isNamed: true);
-    mateUse('behavior', behavior, isNamed: true);
-    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
-    mateUse('semantics', semantics, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'gestures',
+      gestures,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'semantics',
+      semantics,
+      isNamed: true,
+    );
   }
 }

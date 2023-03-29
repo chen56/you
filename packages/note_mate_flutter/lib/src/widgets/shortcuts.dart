@@ -6,6 +6,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/actions.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:ui';
@@ -39,10 +40,26 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
           p.get('key3').value,
           p.get('key4').value,
         );
-    mateUse('key1', key1, isNamed: false);
-    mateUse('key2', key2, isNamed: false);
-    mateUse('key3', key3, isNamed: false);
-    mateUse('key4', key4, isNamed: false);
+    mateUse(
+      'key1',
+      key1,
+      isNamed: false,
+    );
+    mateUse(
+      'key2',
+      key2,
+      isNamed: false,
+    );
+    mateUse(
+      'key3',
+      key3,
+      isNamed: false,
+    );
+    mateUse(
+      'key4',
+      key4,
+      isNamed: false,
+    );
   }
 
   /// KeySet<T> KeySet.fromSet(Set<T> keys)
@@ -54,7 +71,11 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
     mateCreateName = 'KeySet.fromSet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeySet$Mate<T>.fromSet(p.get('keys').value);
-    mateUse('keys', keys, isNamed: false);
+    mateUse(
+      'keys',
+      keys,
+      isNamed: false,
+    );
   }
 }
 
@@ -87,10 +108,26 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
           p.get('key3').value,
           p.get('key4').value,
         );
-    mateUse('key1', key1, isNamed: false);
-    mateUse('key2', key2, isNamed: false);
-    mateUse('key3', key3, isNamed: false);
-    mateUse('key4', key4, isNamed: false);
+    mateUse(
+      'key1',
+      key1,
+      isNamed: false,
+    );
+    mateUse(
+      'key2',
+      key2,
+      isNamed: false,
+    );
+    mateUse(
+      'key3',
+      key3,
+      isNamed: false,
+    );
+    mateUse(
+      'key4',
+      key4,
+      isNamed: false,
+    );
   }
 
   /// LogicalKeySet LogicalKeySet.fromSet(Set<LogicalKeyboardKey> keys)
@@ -102,7 +139,11 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
     mateCreateName = 'LogicalKeySet.fromSet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LogicalKeySet$Mate.fromSet(p.get('keys').value);
-    mateUse('keys', keys, isNamed: false);
+    mateUse(
+      'keys',
+      keys,
+      isNamed: false,
+    );
   }
 }
 
@@ -115,16 +156,16 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
 
     /// requiredParameters: Map<ShortcutActivator, Intent> value
     Map<ShortcutActivator, Intent> value, {
-    /// optionalParameters: {bool showName = true} , defaultValue:is!ConstVariableElement
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {Object defaultValue = kNoDefaultValue} , defaultValue:is!ConstVariableElement
+    /// optionalParameters: {Object defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     required Object defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , defaultValue:is!ConstVariableElement
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
 
-    /// optionalParameters: {String? description} , defaultValue:none
+    /// optionalParameters: {String? description} , default:none
     String? description,
   }) : super(
           name,
@@ -144,12 +185,38 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
           level: p.get('level').build(),
           description: p.get('description').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('value', value, isNamed: false);
-    mateUse('showName', showName, isNamed: true);
-    mateUse('defaultValue', defaultValue, isNamed: true);
-    mateUse('level', level, isNamed: true);
-    mateUse('description', description, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
   }
 }
 
@@ -159,19 +226,19 @@ class SingleActivator$Mate extends SingleActivator with Mate {
   SingleActivator$Mate(
     /// requiredParameters: LogicalKeyboardKey trigger
     LogicalKeyboardKey trigger, {
-    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
     bool control = false,
 
-    /// optionalParameters: {bool shift = false} , defaultValue:Literal
+    /// optionalParameters: {bool shift = false} , default:processed=BooleanLiteralImpl
     bool shift = false,
 
-    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
     bool alt = false,
 
-    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
     bool meta = false,
 
-    /// optionalParameters: {bool includeRepeats = true} , defaultValue:Literal
+    /// optionalParameters: {bool includeRepeats = true} , default:processed=BooleanLiteralImpl
     bool includeRepeats = true,
   }) : super(
           trigger,
@@ -191,12 +258,41 @@ class SingleActivator$Mate extends SingleActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    mateUse('trigger', trigger, isNamed: false);
-    mateUse('control', control, isNamed: true);
-    mateUse('shift', shift, isNamed: true);
-    mateUse('alt', alt, isNamed: true);
-    mateUse('meta', meta, isNamed: true);
-    mateUse('includeRepeats', includeRepeats, isNamed: true);
+    mateUse(
+      'trigger',
+      trigger,
+      isNamed: false,
+    );
+    mateUse(
+      'control',
+      control,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'shift',
+      shift,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'alt',
+      alt,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'meta',
+      meta,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'includeRepeats',
+      includeRepeats,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -206,16 +302,16 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
   CharacterActivator$Mate(
     /// requiredParameters: String character
     String character, {
-    /// optionalParameters: {bool alt = false} , defaultValue:Literal
+    /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
     bool alt = false,
 
-    /// optionalParameters: {bool control = false} , defaultValue:Literal
+    /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
     bool control = false,
 
-    /// optionalParameters: {bool meta = false} , defaultValue:Literal
+    /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
     bool meta = false,
 
-    /// optionalParameters: {bool includeRepeats = true} , defaultValue:Literal
+    /// optionalParameters: {bool includeRepeats = true} , default:processed=BooleanLiteralImpl
     bool includeRepeats = true,
   }) : super(
           character,
@@ -233,11 +329,35 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    mateUse('character', character, isNamed: false);
-    mateUse('alt', alt, isNamed: true);
-    mateUse('control', control, isNamed: true);
-    mateUse('meta', meta, isNamed: true);
-    mateUse('includeRepeats', includeRepeats, isNamed: true);
+    mateUse(
+      'character',
+      character,
+      isNamed: false,
+    );
+    mateUse(
+      'alt',
+      alt,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'control',
+      control,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'meta',
+      meta,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'includeRepeats',
+      includeRepeats,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -245,10 +365,10 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
 class ShortcutManager$Mate extends ShortcutManager with Mate {
   /// ShortcutManager ShortcutManager({Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}, bool modal = false})
   ShortcutManager$Mate({
-    /// optionalParameters: {Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}} , defaultValue:unprocessed
+    /// optionalParameters: {Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}} , default:unprocessed=SetOrMapLiteralImpl
     required Map<ShortcutActivator, Intent> shortcuts,
 
-    /// optionalParameters: {bool modal = false} , defaultValue:Literal
+    /// optionalParameters: {bool modal = false} , default:processed=BooleanLiteralImpl
     bool modal = false,
   }) : super(
           shortcuts: shortcuts,
@@ -260,8 +380,17 @@ class ShortcutManager$Mate extends ShortcutManager with Mate {
           shortcuts: p.get('shortcuts').build(),
           modal: p.get('modal').build(),
         );
-    mateUse('shortcuts', shortcuts, isNamed: true);
-    mateUse('modal', modal, isNamed: true);
+    mateUse(
+      'shortcuts',
+      shortcuts,
+      isNamed: true,
+    );
+    mateUse(
+      'modal',
+      modal,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -269,16 +398,16 @@ class ShortcutManager$Mate extends ShortcutManager with Mate {
 class Shortcuts$Mate extends Shortcuts with Mate {
   /// Shortcuts Shortcuts({Key? key, required Map<ShortcutActivator, Intent> shortcuts, required Widget child, String? debugLabel})
   Shortcuts$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Map<ShortcutActivator, Intent> shortcuts} , defaultValue:none
+    /// optionalParameters: {required Map<ShortcutActivator, Intent> shortcuts} , default:none
     required Map<ShortcutActivator, Intent> shortcuts,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           key: key,
@@ -294,24 +423,40 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('shortcuts', shortcuts, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'shortcuts',
+      shortcuts,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 
   /// Shortcuts Shortcuts.manager({Key? key, required ShortcutManager manager, required Widget child, String? debugLabel})
   Shortcuts$Mate.manager({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ShortcutManager manager} , defaultValue:none
+    /// optionalParameters: {required ShortcutManager manager} , default:none
     required ShortcutManager manager,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super.manager(
           key: key,
@@ -327,10 +472,26 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('manager', manager, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'manager',
+      manager,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -338,13 +499,13 @@ class Shortcuts$Mate extends Shortcuts with Mate {
 class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
   /// CallbackShortcuts CallbackShortcuts({Key? key, required Map<ShortcutActivator, void Function()> bindings, required Widget child})
   CallbackShortcuts$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Map<ShortcutActivator, void Function()> bindings} , defaultValue:none
+    /// optionalParameters: {required Map<ShortcutActivator, void Function()> bindings} , default:none
     required Map<ShortcutActivator, VoidCallback> bindings,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -358,9 +519,21 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
           bindings: p.get('bindings').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('bindings', bindings, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'bindings',
+      bindings,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -368,10 +541,10 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
 class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate {
   /// ShortcutRegistrar ShortcutRegistrar({Key? key, required Widget child})
   ShortcutRegistrar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -383,7 +556,15 @@ class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -20,22 +20,22 @@ import 'package:flutter/src/widgets/form.dart';
 class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
   /// DropdownMenuItem<T> DropdownMenuItem({Key? key, void Function()? onTap, T? value, bool enabled = true, AlignmentGeometry alignment = AlignmentDirectional.centerStart, required Widget child})
   DropdownMenuItem$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {T? value} , defaultValue:none
+    /// optionalParameters: {T? value} , default:none
     T? value,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = AlignmentDirectional.centerStart,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -55,12 +55,38 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.centerStart,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -68,10 +94,10 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
 class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with Mate {
   /// DropdownButtonHideUnderline DropdownButtonHideUnderline({Key? key, required Widget child})
   DropdownButtonHideUnderline$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -83,8 +109,16 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with 
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -92,85 +126,85 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with 
 class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
   /// DropdownButton<T> DropdownButton({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? underline, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = false, bool isExpanded = false, double? itemHeight = kMinInteractiveDimension, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<DropdownMenuItem<T>>? items} , defaultValue:none
+    /// optionalParameters: {required List<DropdownMenuItem<T>>? items} , default:none
     required List<DropdownMenuItem<T>>? items,
 
-    /// optionalParameters: {List<Widget> Function(BuildContext)? selectedItemBuilder} , defaultValue:none
+    /// optionalParameters: {List<Widget> Function(BuildContext)? selectedItemBuilder} , default:none
     DropdownButtonBuilder? selectedItemBuilder,
 
-    /// optionalParameters: {T? value} , defaultValue:none
+    /// optionalParameters: {T? value} , default:none
     T? value,
 
-    /// optionalParameters: {Widget? hint} , defaultValue:none
+    /// optionalParameters: {Widget? hint} , default:none
     Widget? hint,
 
-    /// optionalParameters: {Widget? disabledHint} , defaultValue:none
+    /// optionalParameters: {Widget? disabledHint} , default:none
     Widget? disabledHint,
 
-    /// optionalParameters: {required void Function(T?)? onChanged} , defaultValue:none
+    /// optionalParameters: {required void Function(T?)? onChanged} , default:none
     required ValueChanged<T?>? onChanged,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {int elevation = 8} , defaultValue:Literal
+    /// optionalParameters: {int elevation = 8} , default:processed=IntegerLiteralImpl
     int elevation = 8,
 
-    /// optionalParameters: {TextStyle? style} , defaultValue:none
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {Widget? underline} , defaultValue:none
+    /// optionalParameters: {Widget? underline} , default:none
     Widget? underline,
 
-    /// optionalParameters: {Widget? icon} , defaultValue:none
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {Color? iconDisabledColor} , defaultValue:none
+    /// optionalParameters: {Color? iconDisabledColor} , default:none
     Color? iconDisabledColor,
 
-    /// optionalParameters: {Color? iconEnabledColor} , defaultValue:none
+    /// optionalParameters: {Color? iconEnabledColor} , default:none
     Color? iconEnabledColor,
 
-    /// optionalParameters: {double iconSize = 24.0} , defaultValue:Literal
+    /// optionalParameters: {double iconSize = 24.0} , default:processed=DoubleLiteralImpl
     double iconSize = 24.0,
 
-    /// optionalParameters: {bool isDense = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDense = false} , default:processed=BooleanLiteralImpl
     bool isDense = false,
 
-    /// optionalParameters: {bool isExpanded = false} , defaultValue:Literal
+    /// optionalParameters: {bool isExpanded = false} , default:processed=BooleanLiteralImpl
     bool isExpanded = false,
 
-    /// optionalParameters: {double? itemHeight = kMinInteractiveDimension} , defaultValue:unprocessed
-    double? itemHeight,
+    /// optionalParameters: {double? itemHeight = kMinInteractiveDimension} , default:unprocessed=SimpleIdentifierImpl
+    required double? itemHeight,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {Color? dropdownColor} , defaultValue:none
+    /// optionalParameters: {Color? dropdownColor} , default:none
     Color? dropdownColor,
 
-    /// optionalParameters: {double? menuMaxHeight} , defaultValue:none
+    /// optionalParameters: {double? menuMaxHeight} , default:none
     double? menuMaxHeight,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = AlignmentDirectional.centerStart,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
   }) : super(
           key: key,
@@ -232,33 +266,147 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('items', items, isNamed: true);
-    mateUse('selectedItemBuilder', selectedItemBuilder, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('hint', hint, isNamed: true);
-    mateUse('disabledHint', disabledHint, isNamed: true);
-    mateUse('onChanged', onChanged, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('underline', underline, isNamed: true);
-    mateUse('icon', icon, isNamed: true);
-    mateUse('iconDisabledColor', iconDisabledColor, isNamed: true);
-    mateUse('iconEnabledColor', iconEnabledColor, isNamed: true);
-    mateUse('iconSize', iconSize, isNamed: true);
-    mateUse('isDense', isDense, isNamed: true);
-    mateUse('isExpanded', isExpanded, isNamed: true);
-    mateUse('itemHeight', itemHeight, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('dropdownColor', dropdownColor, isNamed: true);
-    mateUse('menuMaxHeight', menuMaxHeight, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'items',
+      items,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedItemBuilder',
+      selectedItemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'hint',
+      hint,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledHint',
+      disabledHint,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 8,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'underline',
+      underline,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'iconDisabledColor',
+      iconDisabledColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconEnabledColor',
+      iconEnabledColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconSize',
+      iconSize,
+      isNamed: true,
+      defaultValue: 24.0,
+    );
+    mateUse(
+      'isDense',
+      isDense,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isExpanded',
+      isExpanded,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'itemHeight',
+      itemHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'dropdownColor',
+      dropdownColor,
+      isNamed: true,
+    );
+    mateUse(
+      'menuMaxHeight',
+      menuMaxHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.centerStart,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
   }
 }
 
@@ -266,94 +414,94 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
 class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Mate {
   /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButtonFormField$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<DropdownMenuItem<T>>? items} , defaultValue:none
+    /// optionalParameters: {required List<DropdownMenuItem<T>>? items} , default:none
     required List<DropdownMenuItem<T>>? items,
 
-    /// optionalParameters: {List<Widget> Function(BuildContext)? selectedItemBuilder} , defaultValue:none
+    /// optionalParameters: {List<Widget> Function(BuildContext)? selectedItemBuilder} , default:none
     DropdownButtonBuilder? selectedItemBuilder,
 
-    /// optionalParameters: {T? value} , defaultValue:none
+    /// optionalParameters: {T? value} , default:none
     T? value,
 
-    /// optionalParameters: {Widget? hint} , defaultValue:none
+    /// optionalParameters: {Widget? hint} , default:none
     Widget? hint,
 
-    /// optionalParameters: {Widget? disabledHint} , defaultValue:none
+    /// optionalParameters: {Widget? disabledHint} , default:none
     Widget? disabledHint,
 
-    /// optionalParameters: {required void Function(T?)? onChanged} , defaultValue:none
+    /// optionalParameters: {required void Function(T?)? onChanged} , default:none
     required ValueChanged<T?>? onChanged,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {int elevation = 8} , defaultValue:Literal
+    /// optionalParameters: {int elevation = 8} , default:processed=IntegerLiteralImpl
     int elevation = 8,
 
-    /// optionalParameters: {TextStyle? style} , defaultValue:none
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {Widget? icon} , defaultValue:none
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {Color? iconDisabledColor} , defaultValue:none
+    /// optionalParameters: {Color? iconDisabledColor} , default:none
     Color? iconDisabledColor,
 
-    /// optionalParameters: {Color? iconEnabledColor} , defaultValue:none
+    /// optionalParameters: {Color? iconEnabledColor} , default:none
     Color? iconEnabledColor,
 
-    /// optionalParameters: {double iconSize = 24.0} , defaultValue:Literal
+    /// optionalParameters: {double iconSize = 24.0} , default:processed=DoubleLiteralImpl
     double iconSize = 24.0,
 
-    /// optionalParameters: {bool isDense = true} , defaultValue:Literal
+    /// optionalParameters: {bool isDense = true} , default:processed=BooleanLiteralImpl
     bool isDense = true,
 
-    /// optionalParameters: {bool isExpanded = false} , defaultValue:Literal
+    /// optionalParameters: {bool isExpanded = false} , default:processed=BooleanLiteralImpl
     bool isExpanded = false,
 
-    /// optionalParameters: {double? itemHeight} , defaultValue:none
+    /// optionalParameters: {double? itemHeight} , default:none
     double? itemHeight,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {FocusNode? focusNode} , defaultValue:none
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , defaultValue:Literal
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     bool autofocus = false,
 
-    /// optionalParameters: {Color? dropdownColor} , defaultValue:none
+    /// optionalParameters: {Color? dropdownColor} , default:none
     Color? dropdownColor,
 
-    /// optionalParameters: {InputDecoration? decoration} , defaultValue:none
+    /// optionalParameters: {InputDecoration? decoration} , default:none
     InputDecoration? decoration,
 
-    /// optionalParameters: {void Function(T?)? onSaved} , defaultValue:none
+    /// optionalParameters: {void Function(T?)? onSaved} , default:none
     FormFieldSetter<T>? onSaved,
 
-    /// optionalParameters: {String? Function(T?)? validator} , defaultValue:none
+    /// optionalParameters: {String? Function(T?)? validator} , default:none
     FormFieldValidator<T>? validator,
 
-    /// optionalParameters: {AutovalidateMode? autovalidateMode} , defaultValue:none
+    /// optionalParameters: {AutovalidateMode? autovalidateMode} , default:none
     AutovalidateMode? autovalidateMode,
 
-    /// optionalParameters: {double? menuMaxHeight} , defaultValue:none
+    /// optionalParameters: {double? menuMaxHeight} , default:none
     double? menuMaxHeight,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = AlignmentDirectional.centerStart,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
   }) : super(
           key: key,
@@ -421,35 +569,161 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Ma
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('items', items, isNamed: true);
-    mateUse('selectedItemBuilder', selectedItemBuilder, isNamed: true);
-    mateUse('value', value, isNamed: true);
-    mateUse('hint', hint, isNamed: true);
-    mateUse('disabledHint', disabledHint, isNamed: true);
-    mateUse('onChanged', onChanged, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('icon', icon, isNamed: true);
-    mateUse('iconDisabledColor', iconDisabledColor, isNamed: true);
-    mateUse('iconEnabledColor', iconEnabledColor, isNamed: true);
-    mateUse('iconSize', iconSize, isNamed: true);
-    mateUse('isDense', isDense, isNamed: true);
-    mateUse('isExpanded', isExpanded, isNamed: true);
-    mateUse('itemHeight', itemHeight, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('focusNode', focusNode, isNamed: true);
-    mateUse('autofocus', autofocus, isNamed: true);
-    mateUse('dropdownColor', dropdownColor, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('onSaved', onSaved, isNamed: true);
-    mateUse('validator', validator, isNamed: true);
-    mateUse('autovalidateMode', autovalidateMode, isNamed: true);
-    mateUse('menuMaxHeight', menuMaxHeight, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'items',
+      items,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedItemBuilder',
+      selectedItemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'hint',
+      hint,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledHint',
+      disabledHint,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 8,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'iconDisabledColor',
+      iconDisabledColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconEnabledColor',
+      iconEnabledColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconSize',
+      iconSize,
+      isNamed: true,
+      defaultValue: 24.0,
+    );
+    mateUse(
+      'isDense',
+      isDense,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'isExpanded',
+      isExpanded,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'itemHeight',
+      itemHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'dropdownColor',
+      dropdownColor,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'onSaved',
+      onSaved,
+      isNamed: true,
+    );
+    mateUse(
+      'validator',
+      validator,
+      isNamed: true,
+    );
+    mateUse(
+      'autovalidateMode',
+      autovalidateMode,
+      isNamed: true,
+    );
+    mateUse(
+      'menuMaxHeight',
+      menuMaxHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.centerStart,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
   }
 }

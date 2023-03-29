@@ -16,40 +16,40 @@ import 'package:flutter/src/widgets/navigator.dart';
 class BottomSheet$Mate extends BottomSheet with Mate {
   /// BottomSheet BottomSheet({Key? key, AnimationController? animationController, bool enableDrag = true, void Function(DragStartDetails)? onDragStart, void Function(DragEndDetails, {required bool isClosing})? onDragEnd, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, required void Function() onClosing, required Widget Function(BuildContext) builder})
   BottomSheet$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AnimationController? animationController} , defaultValue:none
+    /// optionalParameters: {AnimationController? animationController} , default:none
     AnimationController? animationController,
 
-    /// optionalParameters: {bool enableDrag = true} , defaultValue:Literal
+    /// optionalParameters: {bool enableDrag = true} , default:processed=BooleanLiteralImpl
     bool enableDrag = true,
 
-    /// optionalParameters: {void Function(DragStartDetails)? onDragStart} , defaultValue:none
+    /// optionalParameters: {void Function(DragStartDetails)? onDragStart} , default:none
     BottomSheetDragStartHandler? onDragStart,
 
-    /// optionalParameters: {void Function(DragEndDetails, {required bool isClosing})? onDragEnd} , defaultValue:none
+    /// optionalParameters: {void Function(DragEndDetails, {required bool isClosing})? onDragEnd} , default:none
     BottomSheetDragEndHandler? onDragEnd,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip? clipBehavior} , defaultValue:none
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {required void Function() onClosing} , defaultValue:none
+    /// optionalParameters: {required void Function() onClosing} , default:none
     required VoidCallback onClosing,
 
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required WidgetBuilder builder,
   }) : super(
           key: key,
@@ -81,18 +81,67 @@ class BottomSheet$Mate extends BottomSheet with Mate {
           onClosing: p.get('onClosing').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('animationController', animationController, isNamed: true);
-    mateUse('enableDrag', enableDrag, isNamed: true);
-    mateUse('onDragStart', onDragStart, isNamed: true);
-    mateUse('onDragEnd', onDragEnd, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('constraints', constraints, isNamed: true);
-    mateUse('onClosing', onClosing, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'animationController',
+      animationController,
+      isNamed: true,
+    );
+    mateUse(
+      'enableDrag',
+      enableDrag,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onDragStart',
+      onDragStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragEnd',
+      onDragEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'onClosing',
+      onClosing,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -100,55 +149,55 @@ class BottomSheet$Mate extends BottomSheet with Mate {
 class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
   /// ModalBottomSheetRoute<T> ModalBottomSheetRoute({required Widget Function(BuildContext) builder, CapturedThemes? capturedThemes, String? barrierLabel, String? barrierOnTapHint, Color? backgroundColor, double? elevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints, Color? modalBarrierColor, bool isDismissible = true, bool enableDrag = true, required bool isScrollControlled, RouteSettings? settings, AnimationController? transitionAnimationController, Offset? anchorPoint, bool useSafeArea = false})
   ModalBottomSheetRoute$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required WidgetBuilder builder,
 
-    /// optionalParameters: {CapturedThemes? capturedThemes} , defaultValue:none
+    /// optionalParameters: {CapturedThemes? capturedThemes} , default:none
     CapturedThemes? capturedThemes,
 
-    /// optionalParameters: {String? barrierLabel} , defaultValue:none
+    /// optionalParameters: {String? barrierLabel} , default:none
     String? barrierLabel,
 
-    /// optionalParameters: {String? barrierOnTapHint} , defaultValue:none
+    /// optionalParameters: {String? barrierOnTapHint} , default:none
     String? barrierOnTapHint,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip? clipBehavior} , defaultValue:none
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {Color? modalBarrierColor} , defaultValue:none
+    /// optionalParameters: {Color? modalBarrierColor} , default:none
     Color? modalBarrierColor,
 
-    /// optionalParameters: {bool isDismissible = true} , defaultValue:Literal
+    /// optionalParameters: {bool isDismissible = true} , default:processed=BooleanLiteralImpl
     bool isDismissible = true,
 
-    /// optionalParameters: {bool enableDrag = true} , defaultValue:Literal
+    /// optionalParameters: {bool enableDrag = true} , default:processed=BooleanLiteralImpl
     bool enableDrag = true,
 
-    /// optionalParameters: {required bool isScrollControlled} , defaultValue:none
+    /// optionalParameters: {required bool isScrollControlled} , default:none
     required bool isScrollControlled,
 
-    /// optionalParameters: {RouteSettings? settings} , defaultValue:none
+    /// optionalParameters: {RouteSettings? settings} , default:none
     RouteSettings? settings,
 
-    /// optionalParameters: {AnimationController? transitionAnimationController} , defaultValue:none
+    /// optionalParameters: {AnimationController? transitionAnimationController} , default:none
     AnimationController? transitionAnimationController,
 
-    /// optionalParameters: {Offset? anchorPoint} , defaultValue:none
+    /// optionalParameters: {Offset? anchorPoint} , default:none
     Offset? anchorPoint,
 
-    /// optionalParameters: {bool useSafeArea = false} , defaultValue:Literal
+    /// optionalParameters: {bool useSafeArea = false} , default:processed=BooleanLiteralImpl
     bool useSafeArea = false,
   }) : super(
           builder: builder,
@@ -190,22 +239,93 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
           anchorPoint: p.get('anchorPoint').build(),
           useSafeArea: p.get('useSafeArea').build(),
         );
-    mateUse('builder', builder, isNamed: true);
-    mateUse('capturedThemes', capturedThemes, isNamed: true);
-    mateUse('barrierLabel', barrierLabel, isNamed: true);
-    mateUse('barrierOnTapHint', barrierOnTapHint, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('constraints', constraints, isNamed: true);
-    mateUse('modalBarrierColor', modalBarrierColor, isNamed: true);
-    mateUse('isDismissible', isDismissible, isNamed: true);
-    mateUse('enableDrag', enableDrag, isNamed: true);
-    mateUse('isScrollControlled', isScrollControlled, isNamed: true);
-    mateUse('settings', settings, isNamed: true);
-    mateUse('transitionAnimationController', transitionAnimationController, isNamed: true);
-    mateUse('anchorPoint', anchorPoint, isNamed: true);
-    mateUse('useSafeArea', useSafeArea, isNamed: true);
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'capturedThemes',
+      capturedThemes,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierLabel',
+      barrierLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierOnTapHint',
+      barrierOnTapHint,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'modalBarrierColor',
+      modalBarrierColor,
+      isNamed: true,
+    );
+    mateUse(
+      'isDismissible',
+      isDismissible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'enableDrag',
+      enableDrag,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'isScrollControlled',
+      isScrollControlled,
+      isNamed: true,
+    );
+    mateUse(
+      'settings',
+      settings,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionAnimationController',
+      transitionAnimationController,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorPoint',
+      anchorPoint,
+      isNamed: true,
+    );
+    mateUse(
+      'useSafeArea',
+      useSafeArea,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

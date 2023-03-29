@@ -10,10 +10,10 @@ import 'dart:core';
 class OvalBorder$Mate extends OvalBorder with Mate {
   /// OvalBorder OvalBorder({BorderSide side = BorderSide.none, double eccentricity = 1.0})
   OvalBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double eccentricity = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double eccentricity = 1.0} , default:processed=DoubleLiteralImpl
     double eccentricity = 1.0,
   }) : super(
           side: side,
@@ -25,7 +25,17 @@ class OvalBorder$Mate extends OvalBorder with Mate {
           side: p.get('side').build(),
           eccentricity: p.get('eccentricity').build(),
         );
-    mateUse('side', side, isNamed: true);
-    mateUse('eccentricity', eccentricity, isNamed: true);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'eccentricity',
+      eccentricity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }

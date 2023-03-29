@@ -23,10 +23,10 @@ import 'package:flutter/src/painting/text_painter.dart';
 class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate {
   /// BoxConstraintsTween BoxConstraintsTween({BoxConstraints? begin, BoxConstraints? end})
   BoxConstraintsTween$Mate({
-    /// optionalParameters: {BoxConstraints? begin} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? begin} , default:none
     BoxConstraints? begin,
 
-    /// optionalParameters: {BoxConstraints? end} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? end} , default:none
     BoxConstraints? end,
   }) : super(
           begin: begin,
@@ -38,8 +38,16 @@ class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -47,10 +55,10 @@ class BoxConstraintsTween$Mate extends BoxConstraintsTween with Mate {
 class DecorationTween$Mate extends DecorationTween with Mate {
   /// DecorationTween DecorationTween({Decoration? begin, Decoration? end})
   DecorationTween$Mate({
-    /// optionalParameters: {Decoration? begin} , defaultValue:none
+    /// optionalParameters: {Decoration? begin} , default:none
     Decoration? begin,
 
-    /// optionalParameters: {Decoration? end} , defaultValue:none
+    /// optionalParameters: {Decoration? end} , default:none
     Decoration? end,
   }) : super(
           begin: begin,
@@ -62,8 +70,16 @@ class DecorationTween$Mate extends DecorationTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -71,10 +87,10 @@ class DecorationTween$Mate extends DecorationTween with Mate {
 class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate {
   /// EdgeInsetsTween EdgeInsetsTween({EdgeInsets? begin, EdgeInsets? end})
   EdgeInsetsTween$Mate({
-    /// optionalParameters: {EdgeInsets? begin} , defaultValue:none
+    /// optionalParameters: {EdgeInsets? begin} , default:none
     EdgeInsets? begin,
 
-    /// optionalParameters: {EdgeInsets? end} , defaultValue:none
+    /// optionalParameters: {EdgeInsets? end} , default:none
     EdgeInsets? end,
   }) : super(
           begin: begin,
@@ -86,8 +102,16 @@ class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -95,10 +119,10 @@ class EdgeInsetsTween$Mate extends EdgeInsetsTween with Mate {
 class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate {
   /// EdgeInsetsGeometryTween EdgeInsetsGeometryTween({EdgeInsetsGeometry? begin, EdgeInsetsGeometry? end})
   EdgeInsetsGeometryTween$Mate({
-    /// optionalParameters: {EdgeInsetsGeometry? begin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? begin} , default:none
     EdgeInsetsGeometry? begin,
 
-    /// optionalParameters: {EdgeInsetsGeometry? end} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? end} , default:none
     EdgeInsetsGeometry? end,
   }) : super(
           begin: begin,
@@ -110,8 +134,16 @@ class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -119,10 +151,10 @@ class EdgeInsetsGeometryTween$Mate extends EdgeInsetsGeometryTween with Mate {
 class BorderRadiusTween$Mate extends BorderRadiusTween with Mate {
   /// BorderRadiusTween BorderRadiusTween({BorderRadius? begin, BorderRadius? end})
   BorderRadiusTween$Mate({
-    /// optionalParameters: {BorderRadius? begin} , defaultValue:none
+    /// optionalParameters: {BorderRadius? begin} , default:none
     BorderRadius? begin,
 
-    /// optionalParameters: {BorderRadius? end} , defaultValue:none
+    /// optionalParameters: {BorderRadius? end} , default:none
     BorderRadius? end,
   }) : super(
           begin: begin,
@@ -134,8 +166,16 @@ class BorderRadiusTween$Mate extends BorderRadiusTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -143,10 +183,10 @@ class BorderRadiusTween$Mate extends BorderRadiusTween with Mate {
 class BorderTween$Mate extends BorderTween with Mate {
   /// BorderTween BorderTween({Border? begin, Border? end})
   BorderTween$Mate({
-    /// optionalParameters: {Border? begin} , defaultValue:none
+    /// optionalParameters: {Border? begin} , default:none
     Border? begin,
 
-    /// optionalParameters: {Border? end} , defaultValue:none
+    /// optionalParameters: {Border? end} , default:none
     Border? end,
   }) : super(
           begin: begin,
@@ -158,8 +198,16 @@ class BorderTween$Mate extends BorderTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -167,10 +215,10 @@ class BorderTween$Mate extends BorderTween with Mate {
 class Matrix4Tween$Mate extends Matrix4Tween with Mate {
   /// Matrix4Tween Matrix4Tween({Matrix4? begin, Matrix4? end})
   Matrix4Tween$Mate({
-    /// optionalParameters: {Matrix4? begin} , defaultValue:none
+    /// optionalParameters: {Matrix4? begin} , default:none
     Matrix4? begin,
 
-    /// optionalParameters: {Matrix4? end} , defaultValue:none
+    /// optionalParameters: {Matrix4? end} , default:none
     Matrix4? end,
   }) : super(
           begin: begin,
@@ -182,8 +230,16 @@ class Matrix4Tween$Mate extends Matrix4Tween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -191,10 +247,10 @@ class Matrix4Tween$Mate extends Matrix4Tween with Mate {
 class TextStyleTween$Mate extends TextStyleTween with Mate {
   /// TextStyleTween TextStyleTween({TextStyle? begin, TextStyle? end})
   TextStyleTween$Mate({
-    /// optionalParameters: {TextStyle? begin} , defaultValue:none
+    /// optionalParameters: {TextStyle? begin} , default:none
     TextStyle? begin,
 
-    /// optionalParameters: {TextStyle? end} , defaultValue:none
+    /// optionalParameters: {TextStyle? end} , default:none
     TextStyle? end,
   }) : super(
           begin: begin,
@@ -206,8 +262,16 @@ class TextStyleTween$Mate extends TextStyleTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -215,55 +279,55 @@ class TextStyleTween$Mate extends TextStyleTween with Mate {
 class AnimatedContainer$Mate extends AnimatedContainer with Mate {
   /// AnimatedContainer AnimatedContainer({Key? key, AlignmentGeometry? alignment, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsetsGeometry? margin, Matrix4? transform, AlignmentGeometry? transformAlignment, Widget? child, Clip clipBehavior = Clip.none, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedContainer$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Decoration? decoration} , defaultValue:none
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {Decoration? foregroundDecoration} , defaultValue:none
+    /// optionalParameters: {Decoration? foregroundDecoration} , default:none
     Decoration? foregroundDecoration,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {BoxConstraints? constraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {Matrix4? transform} , defaultValue:none
+    /// optionalParameters: {Matrix4? transform} , default:none
     Matrix4? transform,
 
-    /// optionalParameters: {AlignmentGeometry? transformAlignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? transformAlignment} , default:none
     AlignmentGeometry? transformAlignment,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -305,23 +369,93 @@ class AnimatedContainer$Mate extends AnimatedContainer with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('foregroundDecoration', foregroundDecoration, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('constraints', constraints, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('transform', transform, isNamed: true);
-    mateUse('transformAlignment', transformAlignment, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundDecoration',
+      foregroundDecoration,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'transformAlignment',
+      transformAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -329,22 +463,22 @@ class AnimatedContainer$Mate extends AnimatedContainer with Mate {
 class AnimatedPadding$Mate extends AnimatedPadding with Mate {
   /// AnimatedPadding AnimatedPadding({Key? key, required EdgeInsetsGeometry padding, Widget? child, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPadding$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , defaultValue:none
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -364,12 +498,37 @@ class AnimatedPadding$Mate extends AnimatedPadding with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -377,28 +536,28 @@ class AnimatedPadding$Mate extends AnimatedPadding with Mate {
 class AnimatedAlign$Mate extends AnimatedAlign with Mate {
   /// AnimatedAlign AnimatedAlign({Key? key, required AlignmentGeometry alignment, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedAlign$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required AlignmentGeometry alignment} , defaultValue:none
+    /// optionalParameters: {required AlignmentGeometry alignment} , default:none
     required AlignmentGeometry alignment,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {double? heightFactor} , defaultValue:none
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {double? widthFactor} , defaultValue:none
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -422,14 +581,47 @@ class AnimatedAlign$Mate extends AnimatedAlign with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('heightFactor', heightFactor, isNamed: true);
-    mateUse('widthFactor', widthFactor, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -437,37 +629,37 @@ class AnimatedAlign$Mate extends AnimatedAlign with Mate {
 class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
   /// AnimatedPositioned AnimatedPositioned({Key? key, required Widget child, double? left, double? top, double? right, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositioned$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {double? left} , defaultValue:none
+    /// optionalParameters: {double? left} , default:none
     double? left,
 
-    /// optionalParameters: {double? top} , defaultValue:none
+    /// optionalParameters: {double? top} , default:none
     double? top,
 
-    /// optionalParameters: {double? right} , defaultValue:none
+    /// optionalParameters: {double? right} , default:none
     double? right,
 
-    /// optionalParameters: {double? bottom} , defaultValue:none
+    /// optionalParameters: {double? bottom} , default:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -497,37 +689,82 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('left', left, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('right', right, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 
   /// AnimatedPositioned AnimatedPositioned.fromRect({Key? key, required Widget child, required Rect rect, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositioned$Mate.fromRect({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Rect rect} , defaultValue:none
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super.fromRect(
           key: key,
@@ -547,12 +784,37 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('rect', rect, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -560,37 +822,37 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
 class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional with Mate {
   /// AnimatedPositionedDirectional AnimatedPositionedDirectional({Key? key, required Widget child, double? start, double? top, double? end, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositionedDirectional$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {double? start} , defaultValue:none
+    /// optionalParameters: {double? start} , default:none
     double? start,
 
-    /// optionalParameters: {double? top} , defaultValue:none
+    /// optionalParameters: {double? top} , default:none
     double? top,
 
-    /// optionalParameters: {double? end} , defaultValue:none
+    /// optionalParameters: {double? end} , default:none
     double? end,
 
-    /// optionalParameters: {double? bottom} , defaultValue:none
+    /// optionalParameters: {double? bottom} , default:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -620,17 +882,62 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional w
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('start', start, isNamed: true);
-    mateUse('top', top, isNamed: true);
-    mateUse('end', end, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -638,28 +945,28 @@ class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional w
 class AnimatedScale$Mate extends AnimatedScale with Mate {
   /// AnimatedScale AnimatedScale({Key? key, Widget? child, required double scale, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedScale$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required double scale} , defaultValue:none
+    /// optionalParameters: {required double scale} , default:none
     required double scale,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     Alignment alignment = Alignment.center,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -683,14 +990,48 @@ class AnimatedScale$Mate extends AnimatedScale with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('scale', scale, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -698,28 +1039,28 @@ class AnimatedScale$Mate extends AnimatedScale with Mate {
 class AnimatedRotation$Mate extends AnimatedRotation with Mate {
   /// AnimatedRotation AnimatedRotation({Key? key, Widget? child, required double turns, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedRotation$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required double turns} , defaultValue:none
+    /// optionalParameters: {required double turns} , default:none
     required double turns,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     Alignment alignment = Alignment.center,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -743,14 +1084,48 @@ class AnimatedRotation$Mate extends AnimatedRotation with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('turns', turns, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'turns',
+      turns,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -758,22 +1133,22 @@ class AnimatedRotation$Mate extends AnimatedRotation with Mate {
 class AnimatedSlide$Mate extends AnimatedSlide with Mate {
   /// AnimatedSlide AnimatedSlide({Key? key, Widget? child, required Offset offset, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedSlide$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required Offset offset} , defaultValue:none
+    /// optionalParameters: {required Offset offset} , default:none
     required Offset offset,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -793,12 +1168,37 @@ class AnimatedSlide$Mate extends AnimatedSlide with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -806,25 +1206,25 @@ class AnimatedSlide$Mate extends AnimatedSlide with Mate {
 class AnimatedOpacity$Mate extends AnimatedOpacity with Mate {
   /// AnimatedOpacity AnimatedOpacity({Key? key, Widget? child, required double opacity, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd, bool alwaysIncludeSemantics = false})
   AnimatedOpacity$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required double opacity} , defaultValue:none
+    /// optionalParameters: {required double opacity} , default:none
     required double opacity,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool alwaysIncludeSemantics = false,
   }) : super(
           key: key,
@@ -846,13 +1246,43 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with Mate {
           onEnd: p.get('onEnd').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -860,25 +1290,25 @@ class AnimatedOpacity$Mate extends AnimatedOpacity with Mate {
 class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate {
   /// SliverAnimatedOpacity SliverAnimatedOpacity({Key? key, Widget? sliver, required double opacity, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd, bool alwaysIncludeSemantics = false})
   SliverAnimatedOpacity$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? sliver} , defaultValue:none
+    /// optionalParameters: {Widget? sliver} , default:none
     Widget? sliver,
 
-    /// optionalParameters: {required double opacity} , defaultValue:none
+    /// optionalParameters: {required double opacity} , default:none
     required double opacity,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool alwaysIncludeSemantics = false,
   }) : super(
           key: key,
@@ -900,13 +1330,43 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate {
           onEnd: p.get('onEnd').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -914,40 +1374,40 @@ class SliverAnimatedOpacity$Mate extends SliverAnimatedOpacity with Mate {
 class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate {
   /// AnimatedDefaultTextStyle AnimatedDefaultTextStyle({Key? key, required Widget child, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedDefaultTextStyle$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required TextStyle style} , defaultValue:none
+    /// optionalParameters: {required TextStyle style} , default:none
     required TextStyle style,
 
-    /// optionalParameters: {TextAlign? textAlign} , defaultValue:none
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
+    /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
     TextOverflow overflow = TextOverflow.clip,
 
-    /// optionalParameters: {int? maxLines} , defaultValue:none
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
     TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -979,18 +1439,70 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('style', style, isNamed: true);
-    mateUse('textAlign', textAlign, isNamed: true);
-    mateUse('softWrap', softWrap, isNamed: true);
-    mateUse('overflow', overflow, isNamed: true);
-    mateUse('maxLines', maxLines, isNamed: true);
-    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
-    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+      defaultValue: TextOverflow.clip,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+      defaultValue: TextWidthBasis.parent,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -998,43 +1510,43 @@ class AnimatedDefaultTextStyle$Mate extends AnimatedDefaultTextStyle with Mate {
 class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
   /// AnimatedPhysicalModel AnimatedPhysicalModel({Key? key, required Widget child, required BoxShape shape, Clip clipBehavior = Clip.none, BorderRadius borderRadius = BorderRadius.zero, required double elevation, required Color color, bool animateColor = true, required Color shadowColor, bool animateShadowColor = true, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPhysicalModel$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required BoxShape shape} , defaultValue:none
+    /// optionalParameters: {required BoxShape shape} , default:none
     required BoxShape shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
     BorderRadius borderRadius = BorderRadius.zero,
 
-    /// optionalParameters: {required double elevation} , defaultValue:none
+    /// optionalParameters: {required double elevation} , default:none
     required double elevation,
 
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {bool animateColor = true} , defaultValue:Literal
+    /// optionalParameters: {bool animateColor = true} , default:processed=BooleanLiteralImpl
     bool animateColor = true,
 
-    /// optionalParameters: {required Color shadowColor} , defaultValue:none
+    /// optionalParameters: {required Color shadowColor} , default:none
     required Color shadowColor,
 
-    /// optionalParameters: {bool animateShadowColor = true} , defaultValue:Literal
+    /// optionalParameters: {bool animateShadowColor = true} , default:processed=BooleanLiteralImpl
     bool animateShadowColor = true,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -1068,19 +1580,76 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('animateColor', animateColor, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('animateShadowColor', animateShadowColor, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+      defaultValue: BorderRadius.zero,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'animateColor',
+      animateColor,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'animateShadowColor',
+      animateShadowColor,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }
 
@@ -1088,28 +1657,28 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
 class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox with Mate {
   /// AnimatedFractionallySizedBox AnimatedFractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedFractionallySizedBox$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {double? heightFactor} , defaultValue:none
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {double? widthFactor} , defaultValue:none
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {void Function()? onEnd} , defaultValue:none
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
   }) : super(
           key: key,
@@ -1133,13 +1702,47 @@ class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox wit
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('heightFactor', heightFactor, isNamed: true);
-    mateUse('widthFactor', widthFactor, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('onEnd', onEnd, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
   }
 }

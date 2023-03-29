@@ -19,13 +19,13 @@ import 'package:flutter/src/widgets/sliver.dart';
 class PageController$Mate extends PageController with Mate {
   /// PageController PageController({int initialPage = 0, bool keepPage = true, double viewportFraction = 1.0})
   PageController$Mate({
-    /// optionalParameters: {int initialPage = 0} , defaultValue:Literal
+    /// optionalParameters: {int initialPage = 0} , default:processed=IntegerLiteralImpl
     int initialPage = 0,
 
-    /// optionalParameters: {bool keepPage = true} , defaultValue:Literal
+    /// optionalParameters: {bool keepPage = true} , default:processed=BooleanLiteralImpl
     bool keepPage = true,
 
-    /// optionalParameters: {double viewportFraction = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double viewportFraction = 1.0} , default:processed=DoubleLiteralImpl
     double viewportFraction = 1.0,
   }) : super(
           initialPage: initialPage,
@@ -39,9 +39,24 @@ class PageController$Mate extends PageController with Mate {
           keepPage: p.get('keepPage').build(),
           viewportFraction: p.get('viewportFraction').build(),
         );
-    mateUse('initialPage', initialPage, isNamed: true);
-    mateUse('keepPage', keepPage, isNamed: true);
-    mateUse('viewportFraction', viewportFraction, isNamed: true);
+    mateUse(
+      'initialPage',
+      initialPage,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'keepPage',
+      keepPage,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'viewportFraction',
+      viewportFraction,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -49,25 +64,25 @@ class PageController$Mate extends PageController with Mate {
 class PageMetrics$Mate extends PageMetrics with Mate {
   /// PageMetrics PageMetrics({required double? minScrollExtent, required double? maxScrollExtent, required double? pixels, required double? viewportDimension, required AxisDirection axisDirection, required double viewportFraction, required double devicePixelRatio})
   PageMetrics$Mate({
-    /// optionalParameters: {required double? minScrollExtent} , defaultValue:none
+    /// optionalParameters: {required double? minScrollExtent} , default:none
     required double? minScrollExtent,
 
-    /// optionalParameters: {required double? maxScrollExtent} , defaultValue:none
+    /// optionalParameters: {required double? maxScrollExtent} , default:none
     required double? maxScrollExtent,
 
-    /// optionalParameters: {required double? pixels} , defaultValue:none
+    /// optionalParameters: {required double? pixels} , default:none
     required double? pixels,
 
-    /// optionalParameters: {required double? viewportDimension} , defaultValue:none
+    /// optionalParameters: {required double? viewportDimension} , default:none
     required double? viewportDimension,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , defaultValue:none
+    /// optionalParameters: {required AxisDirection axisDirection} , default:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required double viewportFraction} , defaultValue:none
+    /// optionalParameters: {required double viewportFraction} , default:none
     required double viewportFraction,
 
-    /// optionalParameters: {required double devicePixelRatio} , defaultValue:none
+    /// optionalParameters: {required double devicePixelRatio} , default:none
     required double devicePixelRatio,
   }) : super(
           minScrollExtent: minScrollExtent,
@@ -89,13 +104,41 @@ class PageMetrics$Mate extends PageMetrics with Mate {
           viewportFraction: p.get('viewportFraction').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateUse('minScrollExtent', minScrollExtent, isNamed: true);
-    mateUse('maxScrollExtent', maxScrollExtent, isNamed: true);
-    mateUse('pixels', pixels, isNamed: true);
-    mateUse('viewportDimension', viewportDimension, isNamed: true);
-    mateUse('axisDirection', axisDirection, isNamed: true);
-    mateUse('viewportFraction', viewportFraction, isNamed: true);
-    mateUse('devicePixelRatio', devicePixelRatio, isNamed: true);
+    mateUse(
+      'minScrollExtent',
+      minScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'maxScrollExtent',
+      maxScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'pixels',
+      pixels,
+      isNamed: true,
+    );
+    mateUse(
+      'viewportDimension',
+      viewportDimension,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'viewportFraction',
+      viewportFraction,
+      isNamed: true,
+    );
+    mateUse(
+      'devicePixelRatio',
+      devicePixelRatio,
+      isNamed: true,
+    );
   }
 }
 
@@ -104,13 +147,17 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate {
   /// PageScrollPhysics PageScrollPhysics({ScrollPhysics? parent})
   PageScrollPhysics$Mate(
       {
-      /// optionalParameters: {ScrollPhysics? parent} , defaultValue:none
+      /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
     mateCreateName = 'PageScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
-    mateUse('parent', parent, isNamed: true);
+    mateUse(
+      'parent',
+      parent,
+      isNamed: true,
+    );
   }
 }
 
@@ -118,46 +165,46 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate {
 class PageView$Mate extends PageView with Mate {
   /// PageView PageView({Key? key, Axis scrollDirection = Axis.horizontal, bool reverse = false, PageController? controller, ScrollPhysics? physics, bool pageSnapping = true, void Function(int)? onPageChanged, List<Widget> children = const <Widget>[], DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool allowImplicitScrolling = false, String? restorationId, Clip clipBehavior = Clip.hardEdge, ScrollBehavior? scrollBehavior, bool padEnds = true})
   PageView$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
     Axis scrollDirection = Axis.horizontal,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {PageController? controller} , defaultValue:none
+    /// optionalParameters: {PageController? controller} , default:none
     PageController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool pageSnapping = true} , defaultValue:Literal
+    /// optionalParameters: {bool pageSnapping = true} , default:processed=BooleanLiteralImpl
     bool pageSnapping = true,
 
-    /// optionalParameters: {void Function(int)? onPageChanged} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onPageChanged} , default:none
     ValueChanged<int>? onPageChanged,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool allowImplicitScrolling = false} , defaultValue:Literal
+    /// optionalParameters: {bool allowImplicitScrolling = false} , default:processed=BooleanLiteralImpl
     bool allowImplicitScrolling = false,
 
-    /// optionalParameters: {String? restorationId} , defaultValue:none
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {bool padEnds = true} , defaultValue:Literal
+    /// optionalParameters: {bool padEnds = true} , default:processed=BooleanLiteralImpl
     bool padEnds = true,
   }) : super(
           key: key,
@@ -193,70 +240,133 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('pageSnapping', pageSnapping, isNamed: true);
-    mateUse('onPageChanged', onPageChanged, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('allowImplicitScrolling', allowImplicitScrolling, isNamed: true);
-    mateUse('restorationId', restorationId, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
-    mateUse('padEnds', padEnds, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'pageSnapping',
+      pageSnapping,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onPageChanged',
+      onPageChanged,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'allowImplicitScrolling',
+      allowImplicitScrolling,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'scrollBehavior',
+      scrollBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'padEnds',
+      padEnds,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 
   /// PageView PageView.builder({Key? key, Axis scrollDirection = Axis.horizontal, bool reverse = false, PageController? controller, ScrollPhysics? physics, bool pageSnapping = true, void Function(int)? onPageChanged, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool allowImplicitScrolling = false, String? restorationId, Clip clipBehavior = Clip.hardEdge, ScrollBehavior? scrollBehavior, bool padEnds = true})
   PageView$Mate.builder({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
     Axis scrollDirection = Axis.horizontal,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {PageController? controller} , defaultValue:none
+    /// optionalParameters: {PageController? controller} , default:none
     PageController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool pageSnapping = true} , defaultValue:Literal
+    /// optionalParameters: {bool pageSnapping = true} , default:processed=BooleanLiteralImpl
     bool pageSnapping = true,
 
-    /// optionalParameters: {void Function(int)? onPageChanged} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onPageChanged} , default:none
     ValueChanged<int>? onPageChanged,
 
-    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , default:none
     required NullableIndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {int? itemCount} , defaultValue:none
+    /// optionalParameters: {int? itemCount} , default:none
     int? itemCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool allowImplicitScrolling = false} , defaultValue:Literal
+    /// optionalParameters: {bool allowImplicitScrolling = false} , default:processed=BooleanLiteralImpl
     bool allowImplicitScrolling = false,
 
-    /// optionalParameters: {String? restorationId} , defaultValue:none
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {bool padEnds = true} , defaultValue:Literal
+    /// optionalParameters: {bool padEnds = true} , default:processed=BooleanLiteralImpl
     bool padEnds = true,
   }) : super.builder(
           key: key,
@@ -296,66 +406,137 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('pageSnapping', pageSnapping, isNamed: true);
-    mateUse('onPageChanged', onPageChanged, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
-    mateUse('itemCount', itemCount, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('allowImplicitScrolling', allowImplicitScrolling, isNamed: true);
-    mateUse('restorationId', restorationId, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
-    mateUse('padEnds', padEnds, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'pageSnapping',
+      pageSnapping,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onPageChanged',
+      onPageChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'findChildIndexCallback',
+      findChildIndexCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'itemCount',
+      itemCount,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'allowImplicitScrolling',
+      allowImplicitScrolling,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'scrollBehavior',
+      scrollBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'padEnds',
+      padEnds,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 
   /// PageView PageView.custom({Key? key, Axis scrollDirection = Axis.horizontal, bool reverse = false, PageController? controller, ScrollPhysics? physics, bool pageSnapping = true, void Function(int)? onPageChanged, required SliverChildDelegate childrenDelegate, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool allowImplicitScrolling = false, String? restorationId, Clip clipBehavior = Clip.hardEdge, ScrollBehavior? scrollBehavior, bool padEnds = true})
   PageView$Mate.custom({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
     Axis scrollDirection = Axis.horizontal,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {PageController? controller} , defaultValue:none
+    /// optionalParameters: {PageController? controller} , default:none
     PageController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool pageSnapping = true} , defaultValue:Literal
+    /// optionalParameters: {bool pageSnapping = true} , default:processed=BooleanLiteralImpl
     bool pageSnapping = true,
 
-    /// optionalParameters: {void Function(int)? onPageChanged} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onPageChanged} , default:none
     ValueChanged<int>? onPageChanged,
 
-    /// optionalParameters: {required SliverChildDelegate childrenDelegate} , defaultValue:none
+    /// optionalParameters: {required SliverChildDelegate childrenDelegate} , default:none
     required SliverChildDelegate childrenDelegate,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool allowImplicitScrolling = false} , defaultValue:Literal
+    /// optionalParameters: {bool allowImplicitScrolling = false} , default:processed=BooleanLiteralImpl
     bool allowImplicitScrolling = false,
 
-    /// optionalParameters: {String? restorationId} , defaultValue:none
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {bool padEnds = true} , defaultValue:Literal
+    /// optionalParameters: {bool padEnds = true} , default:processed=BooleanLiteralImpl
     bool padEnds = true,
   }) : super.custom(
           key: key,
@@ -391,19 +572,82 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('pageSnapping', pageSnapping, isNamed: true);
-    mateUse('onPageChanged', onPageChanged, isNamed: true);
-    mateUse('childrenDelegate', childrenDelegate, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('allowImplicitScrolling', allowImplicitScrolling, isNamed: true);
-    mateUse('restorationId', restorationId, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
-    mateUse('padEnds', padEnds, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'pageSnapping',
+      pageSnapping,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onPageChanged',
+      onPageChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'childrenDelegate',
+      childrenDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'allowImplicitScrolling',
+      allowImplicitScrolling,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'scrollBehavior',
+      scrollBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'padEnds',
+      padEnds,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

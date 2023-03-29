@@ -12,16 +12,16 @@ import 'dart:ui';
 class RenderAndroidView$Mate extends RenderAndroidView with Mate {
   /// RenderAndroidView RenderAndroidView({required AndroidViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers, Clip clipBehavior = Clip.hardEdge})
   RenderAndroidView$Mate({
-    /// optionalParameters: {required AndroidViewController viewController} , defaultValue:none
+    /// optionalParameters: {required AndroidViewController viewController} , default:none
     required AndroidViewController viewController,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , defaultValue:none
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , defaultValue:none
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           viewController: viewController,
@@ -37,10 +37,27 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate {
           gestureRecognizers: p.get('gestureRecognizers').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('viewController', viewController, isNamed: true);
-    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
-    mateUse('gestureRecognizers', gestureRecognizers, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'viewController',
+      viewController,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -48,13 +65,13 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate {
 class RenderUiKitView$Mate extends RenderUiKitView with Mate {
   /// RenderUiKitView RenderUiKitView({required UiKitViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   RenderUiKitView$Mate({
-    /// optionalParameters: {required UiKitViewController viewController} , defaultValue:none
+    /// optionalParameters: {required UiKitViewController viewController} , default:none
     required UiKitViewController viewController,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , defaultValue:none
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , defaultValue:none
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           viewController: viewController,
@@ -68,9 +85,21 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateUse('viewController', viewController, isNamed: true);
-    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
-    mateUse('gestureRecognizers', gestureRecognizers, isNamed: true);
+    mateUse(
+      'viewController',
+      viewController,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
   }
 }
 
@@ -78,13 +107,13 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate {
 class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate {
   /// PlatformViewRenderBox PlatformViewRenderBox({required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewRenderBox$Mate({
-    /// optionalParameters: {required PlatformViewController controller} , defaultValue:none
+    /// optionalParameters: {required PlatformViewController controller} , default:none
     required PlatformViewController controller,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , defaultValue:none
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , defaultValue:none
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           controller: controller,
@@ -98,8 +127,20 @@ class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateUse('controller', controller, isNamed: true);
-    mateUse('hitTestBehavior', hitTestBehavior, isNamed: true);
-    mateUse('gestureRecognizers', gestureRecognizers, isNamed: true);
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
   }
 }

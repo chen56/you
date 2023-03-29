@@ -10,13 +10,13 @@ import 'package:flutter/src/foundation/basic_types.dart';
 class PartialStackFrame$Mate extends PartialStackFrame with Mate {
   /// PartialStackFrame PartialStackFrame({required Pattern package, required String className, required String method})
   PartialStackFrame$Mate({
-    /// optionalParameters: {required Pattern package} , defaultValue:none
+    /// optionalParameters: {required Pattern package} , default:none
     required Pattern package,
 
-    /// optionalParameters: {required String className} , defaultValue:none
+    /// optionalParameters: {required String className} , default:none
     required String className,
 
-    /// optionalParameters: {required String method} , defaultValue:none
+    /// optionalParameters: {required String method} , default:none
     required String method,
   }) : super(
           package: package,
@@ -30,9 +30,21 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
           className: p.get('className').build(),
           method: p.get('method').build(),
         );
-    mateUse('package', package, isNamed: true);
-    mateUse('className', className, isNamed: true);
-    mateUse('method', method, isNamed: true);
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
+    mateUse(
+      'className',
+      className,
+      isNamed: true,
+    );
+    mateUse(
+      'method',
+      method,
+      isNamed: true,
+    );
   }
 }
 
@@ -40,10 +52,10 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
 class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Mate {
   /// RepetitiveStackFrameFilter RepetitiveStackFrameFilter({required List<PartialStackFrame> frames, required String replacement})
   RepetitiveStackFrameFilter$Mate({
-    /// optionalParameters: {required List<PartialStackFrame> frames} , defaultValue:none
+    /// optionalParameters: {required List<PartialStackFrame> frames} , default:none
     required List<PartialStackFrame> frames,
 
-    /// optionalParameters: {required String replacement} , defaultValue:none
+    /// optionalParameters: {required String replacement} , default:none
     required String replacement,
   }) : super(
           frames: frames,
@@ -55,8 +67,16 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Ma
           frames: p.get('frames').build(),
           replacement: p.get('replacement').build(),
         );
-    mateUseList('frames', frames, isNamed: true);
-    mateUse('replacement', replacement, isNamed: true);
+    mateUseList(
+      'frames',
+      frames,
+      isNamed: true,
+    );
+    mateUse(
+      'replacement',
+      replacement,
+      isNamed: true,
+    );
   }
 }
 
@@ -71,7 +91,11 @@ class ErrorDescription$Mate extends ErrorDescription with Mate {
     mateCreateName = 'ErrorDescription';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorDescription$Mate(p.get('message').value);
-    mateUse('message', message, isNamed: false);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }
 
@@ -86,7 +110,11 @@ class ErrorSummary$Mate extends ErrorSummary with Mate {
     mateCreateName = 'ErrorSummary';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorSummary$Mate(p.get('message').value);
-    mateUse('message', message, isNamed: false);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }
 
@@ -101,7 +129,11 @@ class ErrorHint$Mate extends ErrorHint with Mate {
     mateCreateName = 'ErrorHint';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorHint$Mate(p.get('message').value);
-    mateUse('message', message, isNamed: false);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }
 
@@ -109,25 +141,25 @@ class ErrorHint$Mate extends ErrorHint with Mate {
 class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
   /// FlutterErrorDetails FlutterErrorDetails({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, Iterable<String> Function(Iterable<String>)? stackFilter, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetails$Mate({
-    /// optionalParameters: {required Object exception} , defaultValue:none
+    /// optionalParameters: {required Object exception} , default:none
     required Object exception,
 
-    /// optionalParameters: {StackTrace? stack} , defaultValue:none
+    /// optionalParameters: {StackTrace? stack} , default:none
     StackTrace? stack,
 
-    /// optionalParameters: {String? library = 'Flutter framework'} , defaultValue:Literal
+    /// optionalParameters: {String? library = 'Flutter framework'} , default:processed=SimpleStringLiteralImpl
     String? library = 'Flutter framework',
 
-    /// optionalParameters: {DiagnosticsNode? context} , defaultValue:none
+    /// optionalParameters: {DiagnosticsNode? context} , default:none
     DiagnosticsNode? context,
 
-    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , defaultValue:none
+    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , default:none
     IterableFilter<String>? stackFilter,
 
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , defaultValue:none
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
     InformationCollector? informationCollector,
 
-    /// optionalParameters: {bool silent = false} , defaultValue:Literal
+    /// optionalParameters: {bool silent = false} , default:processed=BooleanLiteralImpl
     bool silent = false,
   }) : super(
           exception: exception,
@@ -149,13 +181,43 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    mateUse('exception', exception, isNamed: true);
-    mateUse('stack', stack, isNamed: true);
-    mateUse('library', library, isNamed: true);
-    mateUse('context', context, isNamed: true);
-    mateUse('stackFilter', stackFilter, isNamed: true);
-    mateUse('informationCollector', informationCollector, isNamed: true);
-    mateUse('silent', silent, isNamed: true);
+    mateUse(
+      'exception',
+      exception,
+      isNamed: true,
+    );
+    mateUse(
+      'stack',
+      stack,
+      isNamed: true,
+    );
+    mateUse(
+      'library',
+      library,
+      isNamed: true,
+      defaultValue: 'Flutter framework',
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'stackFilter',
+      stackFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'informationCollector',
+      informationCollector,
+      isNamed: true,
+    );
+    mateUse(
+      'silent',
+      silent,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -170,7 +232,11 @@ class FlutterError$Mate extends FlutterError with Mate {
     mateCreateName = 'FlutterError.fromParts';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
-    mateUseList('diagnostics', diagnostics, isNamed: false);
+    mateUseList(
+      'diagnostics',
+      diagnostics,
+      isNamed: false,
+    );
   }
 }
 
@@ -183,10 +249,10 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
 
     /// requiredParameters: StackTrace? stack
     StackTrace? stack, {
-    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , defaultValue:none
+    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , default:none
     IterableFilter<String>? stackFilter,
 
-    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     bool showSeparator = true,
   }) : super(
           name,
@@ -202,20 +268,37 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           stackFilter: p.get('stackFilter').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('stack', stack, isNamed: false);
-    mateUse('stackFilter', stackFilter, isNamed: true);
-    mateUse('showSeparator', showSeparator, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'stack',
+      stack,
+      isNamed: false,
+    );
+    mateUse(
+      'stackFilter',
+      stackFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 
   /// DiagnosticsStackTrace DiagnosticsStackTrace.singleFrame(String name, {required String frame, bool showSeparator = true})
   DiagnosticsStackTrace$Mate.singleFrame(
     /// requiredParameters: String name
     String name, {
-    /// optionalParameters: {required String frame} , defaultValue:none
+    /// optionalParameters: {required String frame} , default:none
     required String frame,
 
-    /// optionalParameters: {bool showSeparator = true} , defaultValue:Literal
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     bool showSeparator = true,
   }) : super.singleFrame(
           name,
@@ -229,8 +312,21 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
           frame: p.get('frame').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    mateUse('name', name, isNamed: false);
-    mateUse('frame', frame, isNamed: true);
-    mateUse('showSeparator', showSeparator, isNamed: true);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'frame',
+      frame,
+      isNamed: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

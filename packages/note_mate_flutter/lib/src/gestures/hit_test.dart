@@ -14,7 +14,11 @@ class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T> with Ma
     mateCreateName = 'HitTestEntry';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HitTestEntry$Mate<T>(p.get('target').value);
-    mateUse('target', target, isNamed: false);
+    mateUse(
+      'target',
+      target,
+      isNamed: false,
+    );
   }
 }
 
@@ -29,6 +33,10 @@ class HitTestResult$Mate extends HitTestResult with Mate {
     mateCreateName = 'HitTestResult.wrap';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HitTestResult$Mate.wrap(p.get('result').value);
-    mateUse('result', result, isNamed: false);
+    mateUse(
+      'result',
+      result,
+      isNamed: false,
+    );
   }
 }

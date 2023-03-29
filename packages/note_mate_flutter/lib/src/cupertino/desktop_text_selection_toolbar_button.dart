@@ -12,13 +12,13 @@ import 'package:flutter/src/widgets/context_menu_button_item.dart';
 class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTextSelectionToolbarButton with Mate {
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   CupertinoDesktopTextSelectionToolbarButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function() onPressed} , default:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -32,23 +32,35 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
   CupertinoDesktopTextSelectionToolbarButton$Mate.text({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required BuildContext context} , defaultValue:none
+    /// optionalParameters: {required BuildContext context} , default:none
     required BuildContext context,
 
-    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function() onPressed} , default:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {required String text} , defaultValue:none
+    /// optionalParameters: {required String text} , default:none
     required String text,
   }) : super.text(
           key: key,
@@ -64,18 +76,34 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('context', context, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('text', text, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
   CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ContextMenuButtonItem buttonItem} , defaultValue:none
+    /// optionalParameters: {required ContextMenuButtonItem buttonItem} , default:none
     required ContextMenuButtonItem buttonItem,
   }) : super.buttonItem(
           key: key,
@@ -87,7 +115,15 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           key: p.get('key').build(),
           buttonItem: p.get('buttonItem').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('buttonItem', buttonItem, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonItem',
+      buttonItem,
+      isNamed: true,
+    );
   }
 }

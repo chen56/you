@@ -11,13 +11,17 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
   /// MenuBarThemeData MenuBarThemeData({MenuStyle? style})
   MenuBarThemeData$Mate(
       {
-      /// optionalParameters: {MenuStyle? style} , defaultValue:none
+      /// optionalParameters: {MenuStyle? style} , default:none
       MenuStyle? style})
       : super(style: style) {
     mateCreateName = 'MenuBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuBarThemeData$Mate(style: p.get('style').build());
-    mateUse('style', style, isNamed: true);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -25,13 +29,13 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
 class MenuBarTheme$Mate extends MenuBarTheme with Mate {
   /// MenuBarTheme MenuBarTheme({Key? key, required MenuBarThemeData data, required Widget child})
   MenuBarTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required MenuBarThemeData data} , defaultValue:none
+    /// optionalParameters: {required MenuBarThemeData data} , default:none
     required MenuBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -45,8 +49,20 @@ class MenuBarTheme$Mate extends MenuBarTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

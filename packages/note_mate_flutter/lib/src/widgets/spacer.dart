@@ -9,10 +9,10 @@ import 'dart:core';
 class Spacer$Mate extends Spacer with Mate {
   /// Spacer Spacer({Key? key, int flex = 1})
   Spacer$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , defaultValue:Literal
+    /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
     int flex = 1,
   }) : super(
           key: key,
@@ -24,7 +24,16 @@ class Spacer$Mate extends Spacer with Mate {
           key: p.get('key').build(),
           flex: p.get('flex').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('flex', flex, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flex',
+      flex,
+      isNamed: true,
+      defaultValue: 1,
+    );
   }
 }

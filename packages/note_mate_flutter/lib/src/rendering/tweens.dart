@@ -9,10 +9,10 @@ import 'package:flutter/src/painting/alignment.dart';
 class FractionalOffsetTween$Mate extends FractionalOffsetTween with Mate {
   /// FractionalOffsetTween FractionalOffsetTween({FractionalOffset? begin, FractionalOffset? end})
   FractionalOffsetTween$Mate({
-    /// optionalParameters: {FractionalOffset? begin} , defaultValue:none
+    /// optionalParameters: {FractionalOffset? begin} , default:none
     FractionalOffset? begin,
 
-    /// optionalParameters: {FractionalOffset? end} , defaultValue:none
+    /// optionalParameters: {FractionalOffset? end} , default:none
     FractionalOffset? end,
   }) : super(
           begin: begin,
@@ -24,8 +24,16 @@ class FractionalOffsetTween$Mate extends FractionalOffsetTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -33,10 +41,10 @@ class FractionalOffsetTween$Mate extends FractionalOffsetTween with Mate {
 class AlignmentTween$Mate extends AlignmentTween with Mate {
   /// AlignmentTween AlignmentTween({Alignment? begin, Alignment? end})
   AlignmentTween$Mate({
-    /// optionalParameters: {Alignment? begin} , defaultValue:none
+    /// optionalParameters: {Alignment? begin} , default:none
     Alignment? begin,
 
-    /// optionalParameters: {Alignment? end} , defaultValue:none
+    /// optionalParameters: {Alignment? end} , default:none
     Alignment? end,
   }) : super(
           begin: begin,
@@ -48,8 +56,16 @@ class AlignmentTween$Mate extends AlignmentTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -57,10 +73,10 @@ class AlignmentTween$Mate extends AlignmentTween with Mate {
 class AlignmentGeometryTween$Mate extends AlignmentGeometryTween with Mate {
   /// AlignmentGeometryTween AlignmentGeometryTween({AlignmentGeometry? begin, AlignmentGeometry? end})
   AlignmentGeometryTween$Mate({
-    /// optionalParameters: {AlignmentGeometry? begin} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? begin} , default:none
     AlignmentGeometry? begin,
 
-    /// optionalParameters: {AlignmentGeometry? end} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? end} , default:none
     AlignmentGeometry? end,
   }) : super(
           begin: begin,
@@ -72,7 +88,15 @@ class AlignmentGeometryTween$Mate extends AlignmentGeometryTween with Mate {
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse('begin', begin, isNamed: true);
-    mateUse('end', end, isNamed: true);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }

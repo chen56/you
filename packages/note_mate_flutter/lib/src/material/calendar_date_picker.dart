@@ -14,31 +14,31 @@ import 'package:flutter/gestures.dart';
 class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
   /// CalendarDatePicker CalendarDatePicker({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, required void Function(DateTime) onDateChanged, void Function(DateTime)? onDisplayedMonthChanged, DatePickerMode initialCalendarMode = DatePickerMode.day, bool Function(DateTime)? selectableDayPredicate})
   CalendarDatePicker$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required DateTime initialDate} , defaultValue:none
+    /// optionalParameters: {required DateTime initialDate} , default:none
     required DateTime initialDate,
 
-    /// optionalParameters: {required DateTime firstDate} , defaultValue:none
+    /// optionalParameters: {required DateTime firstDate} , default:none
     required DateTime firstDate,
 
-    /// optionalParameters: {required DateTime lastDate} , defaultValue:none
+    /// optionalParameters: {required DateTime lastDate} , default:none
     required DateTime lastDate,
 
-    /// optionalParameters: {DateTime? currentDate} , defaultValue:none
+    /// optionalParameters: {DateTime? currentDate} , default:none
     DateTime? currentDate,
 
-    /// optionalParameters: {required void Function(DateTime) onDateChanged} , defaultValue:none
+    /// optionalParameters: {required void Function(DateTime) onDateChanged} , default:none
     required ValueChanged<DateTime> onDateChanged,
 
-    /// optionalParameters: {void Function(DateTime)? onDisplayedMonthChanged} , defaultValue:none
+    /// optionalParameters: {void Function(DateTime)? onDisplayedMonthChanged} , default:none
     ValueChanged<DateTime>? onDisplayedMonthChanged,
 
-    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:processed=PrefixedIdentifierImpl
     DatePickerMode initialCalendarMode = DatePickerMode.day,
 
-    /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , defaultValue:none
+    /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , default:none
     SelectableDayPredicate? selectableDayPredicate,
   }) : super(
           key: key,
@@ -64,15 +64,52 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
           initialCalendarMode: p.get('initialCalendarMode').build(),
           selectableDayPredicate: p.get('selectableDayPredicate').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('initialDate', initialDate, isNamed: true);
-    mateUse('firstDate', firstDate, isNamed: true);
-    mateUse('lastDate', lastDate, isNamed: true);
-    mateUse('currentDate', currentDate, isNamed: true);
-    mateUse('onDateChanged', onDateChanged, isNamed: true);
-    mateUse('onDisplayedMonthChanged', onDisplayedMonthChanged, isNamed: true);
-    mateUse('initialCalendarMode', initialCalendarMode, isNamed: true);
-    mateUse('selectableDayPredicate', selectableDayPredicate, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'initialDate',
+      initialDate,
+      isNamed: true,
+    );
+    mateUse(
+      'firstDate',
+      firstDate,
+      isNamed: true,
+    );
+    mateUse(
+      'lastDate',
+      lastDate,
+      isNamed: true,
+    );
+    mateUse(
+      'currentDate',
+      currentDate,
+      isNamed: true,
+    );
+    mateUse(
+      'onDateChanged',
+      onDateChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onDisplayedMonthChanged',
+      onDisplayedMonthChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'initialCalendarMode',
+      initialCalendarMode,
+      isNamed: true,
+      defaultValue: DatePickerMode.day,
+    );
+    mateUse(
+      'selectableDayPredicate',
+      selectableDayPredicate,
+      isNamed: true,
+    );
   }
 }
 
@@ -80,28 +117,28 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
 class YearPicker$Mate extends YearPicker with Mate {
   /// YearPicker YearPicker({Key? key, DateTime? currentDate, required DateTime firstDate, required DateTime lastDate, DateTime? initialDate, required DateTime selectedDate, required void Function(DateTime) onChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   YearPicker$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {DateTime? currentDate} , defaultValue:none
+    /// optionalParameters: {DateTime? currentDate} , default:none
     DateTime? currentDate,
 
-    /// optionalParameters: {required DateTime firstDate} , defaultValue:none
+    /// optionalParameters: {required DateTime firstDate} , default:none
     required DateTime firstDate,
 
-    /// optionalParameters: {required DateTime lastDate} , defaultValue:none
+    /// optionalParameters: {required DateTime lastDate} , default:none
     required DateTime lastDate,
 
-    /// optionalParameters: {DateTime? initialDate} , defaultValue:none
+    /// optionalParameters: {DateTime? initialDate} , default:none
     DateTime? initialDate,
 
-    /// optionalParameters: {required DateTime selectedDate} , defaultValue:none
+    /// optionalParameters: {required DateTime selectedDate} , default:none
     required DateTime selectedDate,
 
-    /// optionalParameters: {required void Function(DateTime) onChanged} , defaultValue:none
+    /// optionalParameters: {required void Function(DateTime) onChanged} , default:none
     required ValueChanged<DateTime> onChanged,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
   }) : super(
           key: key,
@@ -125,13 +162,46 @@ class YearPicker$Mate extends YearPicker with Mate {
           onChanged: p.get('onChanged').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('currentDate', currentDate, isNamed: true);
-    mateUse('firstDate', firstDate, isNamed: true);
-    mateUse('lastDate', lastDate, isNamed: true);
-    mateUse('initialDate', initialDate, isNamed: true);
-    mateUse('selectedDate', selectedDate, isNamed: true);
-    mateUse('onChanged', onChanged, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'currentDate',
+      currentDate,
+      isNamed: true,
+    );
+    mateUse(
+      'firstDate',
+      firstDate,
+      isNamed: true,
+    );
+    mateUse(
+      'lastDate',
+      lastDate,
+      isNamed: true,
+    );
+    mateUse(
+      'initialDate',
+      initialDate,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedDate',
+      selectedDate,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
   }
 }

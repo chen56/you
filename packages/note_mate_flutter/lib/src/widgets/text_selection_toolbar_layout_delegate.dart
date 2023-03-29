@@ -9,13 +9,13 @@ import 'dart:core';
 class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayoutDelegate with Mate {
   /// TextSelectionToolbarLayoutDelegate TextSelectionToolbarLayoutDelegate({required Offset anchorAbove, required Offset anchorBelow, bool? fitsAbove})
   TextSelectionToolbarLayoutDelegate$Mate({
-    /// optionalParameters: {required Offset anchorAbove} , defaultValue:none
+    /// optionalParameters: {required Offset anchorAbove} , default:none
     required Offset anchorAbove,
 
-    /// optionalParameters: {required Offset anchorBelow} , defaultValue:none
+    /// optionalParameters: {required Offset anchorBelow} , default:none
     required Offset anchorBelow,
 
-    /// optionalParameters: {bool? fitsAbove} , defaultValue:none
+    /// optionalParameters: {bool? fitsAbove} , default:none
     bool? fitsAbove,
   }) : super(
           anchorAbove: anchorAbove,
@@ -29,8 +29,20 @@ class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayout
           anchorBelow: p.get('anchorBelow').build(),
           fitsAbove: p.get('fitsAbove').build(),
         );
-    mateUse('anchorAbove', anchorAbove, isNamed: true);
-    mateUse('anchorBelow', anchorBelow, isNamed: true);
-    mateUse('fitsAbove', fitsAbove, isNamed: true);
+    mateUse(
+      'anchorAbove',
+      anchorAbove,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorBelow',
+      anchorBelow,
+      isNamed: true,
+    );
+    mateUse(
+      'fitsAbove',
+      fitsAbove,
+      isNamed: true,
+    );
   }
 }

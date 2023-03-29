@@ -18,10 +18,10 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     Tolerance tolerance = Tolerance.defaultTolerance,
 
-    /// optionalParameters: {double constantDeceleration = 0} , defaultValue:Literal
+    /// optionalParameters: {double constantDeceleration = 0} , default:processed=IntegerLiteralImpl
     double constantDeceleration = 0,
   }) : super(
           drag,
@@ -39,11 +39,33 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
           tolerance: p.get('tolerance').build(),
           constantDeceleration: p.get('constantDeceleration').build(),
         );
-    mateUse('drag', drag, isNamed: false);
-    mateUse('position', position, isNamed: false);
-    mateUse('velocity', velocity, isNamed: false);
-    mateUse('tolerance', tolerance, isNamed: true);
-    mateUse('constantDeceleration', constantDeceleration, isNamed: true);
+    mateUse(
+      'drag',
+      drag,
+      isNamed: false,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
+    mateUse(
+      'constantDeceleration',
+      constantDeceleration,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -81,10 +103,30 @@ class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation with Mate
           p.get('_minX').value,
           p.get('_maxX').value,
         );
-    mateUse('drag', drag, isNamed: false);
-    mateUse('position', position, isNamed: false);
-    mateUse('velocity', velocity, isNamed: false);
-    mateUse('_minX', _minX, isNamed: false);
-    mateUse('_maxX', _maxX, isNamed: false);
+    mateUse(
+      'drag',
+      drag,
+      isNamed: false,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      '_minX',
+      _minX,
+      isNamed: false,
+    );
+    mateUse(
+      '_maxX',
+      _maxX,
+      isNamed: false,
+    );
   }
 }

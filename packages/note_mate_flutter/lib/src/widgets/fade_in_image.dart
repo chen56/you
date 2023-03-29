@@ -20,64 +20,64 @@ import 'package:flutter/src/services/asset_bundle.dart';
 class FadeInImage$Mate extends FadeInImage with Mate {
   /// FadeInImage FadeInImage({Key? key, required ImageProvider<Object> placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required ImageProvider<Object> image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false})
   FadeInImage$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ImageProvider<Object> placeholder} , defaultValue:none
+    /// optionalParameters: {required ImageProvider<Object> placeholder} , default:none
     required ImageProvider<Object> placeholder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder} , default:none
     ImageErrorWidgetBuilder? placeholderErrorBuilder,
 
-    /// optionalParameters: {required ImageProvider<Object> image} , defaultValue:none
+    /// optionalParameters: {required ImageProvider<Object> image} , default:none
     required ImageProvider<Object> image,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder} , default:none
     ImageErrorWidgetBuilder? imageErrorBuilder,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeFromSemantics = false,
 
-    /// optionalParameters: {String? imageSemanticLabel} , defaultValue:none
+    /// optionalParameters: {String? imageSemanticLabel} , default:none
     String? imageSemanticLabel,
 
-    /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
     Curve fadeOutCurve = Curves.easeOut,
 
-    /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:processed=PrefixedIdentifierImpl
     Curve fadeInCurve = Curves.easeIn,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {BoxFit? fit} , defaultValue:none
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {BoxFit? placeholderFit} , defaultValue:none
+    /// optionalParameters: {BoxFit? placeholderFit} , default:none
     BoxFit? placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {FilterQuality? placeholderFilterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? placeholderFilterQuality} , default:none
     FilterQuality? placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
     bool matchTextDirection = false,
   }) : super(
           key: key,
@@ -125,106 +125,193 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           repeat: p.get('repeat').build(),
           matchTextDirection: p.get('matchTextDirection').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('placeholder', placeholder, isNamed: true);
-    mateUse('placeholderErrorBuilder', placeholderErrorBuilder, isNamed: true);
-    mateUse('image', image, isNamed: true);
-    mateUse('imageErrorBuilder', imageErrorBuilder, isNamed: true);
-    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
-    mateUse('imageSemanticLabel', imageSemanticLabel, isNamed: true);
-    mateUse('fadeOutDuration', fadeOutDuration, isNamed: true);
-    mateUse('fadeOutCurve', fadeOutCurve, isNamed: true);
-    mateUse('fadeInDuration', fadeInDuration, isNamed: true);
-    mateUse('fadeInCurve', fadeInCurve, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('placeholderFit', placeholderFit, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('placeholderFilterQuality', placeholderFilterQuality, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('repeat', repeat, isNamed: true);
-    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholder',
+      placeholder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderErrorBuilder',
+      placeholderErrorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'imageErrorBuilder',
+      imageErrorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'imageSemanticLabel',
+      imageSemanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeOutDuration',
+      fadeOutDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeOutCurve',
+      fadeOutCurve,
+      isNamed: true,
+      defaultValue: Curves.easeOut,
+    );
+    mateUse(
+      'fadeInDuration',
+      fadeInDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeInCurve',
+      fadeInCurve,
+      isNamed: true,
+      defaultValue: Curves.easeIn,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderFit',
+      placeholderFit,
+      isNamed: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'placeholderFilterQuality',
+      placeholderFilterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 
   /// FadeInImage FadeInImage.memoryNetwork({Key? key, required Uint8List placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, double placeholderScale = 1.0, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
   FadeInImage$Mate.memoryNetwork({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Uint8List placeholder} , defaultValue:none
+    /// optionalParameters: {required Uint8List placeholder} , default:none
     required Uint8List placeholder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder} , default:none
     ImageErrorWidgetBuilder? placeholderErrorBuilder,
 
-    /// optionalParameters: {required String image} , defaultValue:none
+    /// optionalParameters: {required String image} , default:none
     required String image,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder} , default:none
     ImageErrorWidgetBuilder? imageErrorBuilder,
 
-    /// optionalParameters: {double placeholderScale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double placeholderScale = 1.0} , default:processed=DoubleLiteralImpl
     double placeholderScale = 1.0,
 
-    /// optionalParameters: {double imageScale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double imageScale = 1.0} , default:processed=DoubleLiteralImpl
     double imageScale = 1.0,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeFromSemantics = false,
 
-    /// optionalParameters: {String? imageSemanticLabel} , defaultValue:none
+    /// optionalParameters: {String? imageSemanticLabel} , default:none
     String? imageSemanticLabel,
 
-    /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
     Curve fadeOutCurve = Curves.easeOut,
 
-    /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:processed=PrefixedIdentifierImpl
     Curve fadeInCurve = Curves.easeIn,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {BoxFit? fit} , defaultValue:none
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {BoxFit? placeholderFit} , defaultValue:none
+    /// optionalParameters: {BoxFit? placeholderFit} , default:none
     BoxFit? placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {FilterQuality? placeholderFilterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? placeholderFilterQuality} , default:none
     FilterQuality? placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
     bool matchTextDirection = false,
 
-    /// optionalParameters: {int? placeholderCacheWidth} , defaultValue:none
+    /// optionalParameters: {int? placeholderCacheWidth} , default:none
     int? placeholderCacheWidth,
 
-    /// optionalParameters: {int? placeholderCacheHeight} , defaultValue:none
+    /// optionalParameters: {int? placeholderCacheHeight} , default:none
     int? placeholderCacheHeight,
 
-    /// optionalParameters: {int? imageCacheWidth} , defaultValue:none
+    /// optionalParameters: {int? imageCacheWidth} , default:none
     int? imageCacheWidth,
 
-    /// optionalParameters: {int? imageCacheHeight} , defaultValue:none
+    /// optionalParameters: {int? imageCacheHeight} , default:none
     int? imageCacheHeight,
   }) : super.memoryNetwork(
           key: key,
@@ -284,115 +371,228 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheWidth: p.get('imageCacheWidth').build(),
           imageCacheHeight: p.get('imageCacheHeight').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('placeholder', placeholder, isNamed: true);
-    mateUse('placeholderErrorBuilder', placeholderErrorBuilder, isNamed: true);
-    mateUse('image', image, isNamed: true);
-    mateUse('imageErrorBuilder', imageErrorBuilder, isNamed: true);
-    mateUse('placeholderScale', placeholderScale, isNamed: true);
-    mateUse('imageScale', imageScale, isNamed: true);
-    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
-    mateUse('imageSemanticLabel', imageSemanticLabel, isNamed: true);
-    mateUse('fadeOutDuration', fadeOutDuration, isNamed: true);
-    mateUse('fadeOutCurve', fadeOutCurve, isNamed: true);
-    mateUse('fadeInDuration', fadeInDuration, isNamed: true);
-    mateUse('fadeInCurve', fadeInCurve, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('placeholderFit', placeholderFit, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('placeholderFilterQuality', placeholderFilterQuality, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('repeat', repeat, isNamed: true);
-    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
-    mateUse('placeholderCacheWidth', placeholderCacheWidth, isNamed: true);
-    mateUse('placeholderCacheHeight', placeholderCacheHeight, isNamed: true);
-    mateUse('imageCacheWidth', imageCacheWidth, isNamed: true);
-    mateUse('imageCacheHeight', imageCacheHeight, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholder',
+      placeholder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderErrorBuilder',
+      placeholderErrorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'imageErrorBuilder',
+      imageErrorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderScale',
+      placeholderScale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'imageScale',
+      imageScale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'imageSemanticLabel',
+      imageSemanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeOutDuration',
+      fadeOutDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeOutCurve',
+      fadeOutCurve,
+      isNamed: true,
+      defaultValue: Curves.easeOut,
+    );
+    mateUse(
+      'fadeInDuration',
+      fadeInDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeInCurve',
+      fadeInCurve,
+      isNamed: true,
+      defaultValue: Curves.easeIn,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderFit',
+      placeholderFit,
+      isNamed: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'placeholderFilterQuality',
+      placeholderFilterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'placeholderCacheWidth',
+      placeholderCacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderCacheHeight',
+      placeholderCacheHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'imageCacheWidth',
+      imageCacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'imageCacheHeight',
+      imageCacheHeight,
+      isNamed: true,
+    );
   }
 
   /// FadeInImage FadeInImage.assetNetwork({Key? key, required String placeholder, Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder, required String image, Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder, AssetBundle? bundle, double? placeholderScale, double imageScale = 1.0, bool excludeFromSemantics = false, String? imageSemanticLabel, Duration fadeOutDuration = const Duration(milliseconds: 300), Curve fadeOutCurve = Curves.easeOut, Duration fadeInDuration = const Duration(milliseconds: 700), Curve fadeInCurve = Curves.easeIn, double? width, double? height, BoxFit? fit, BoxFit? placeholderFit, FilterQuality filterQuality = FilterQuality.low, FilterQuality? placeholderFilterQuality, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, int? placeholderCacheWidth, int? placeholderCacheHeight, int? imageCacheWidth, int? imageCacheHeight})
   FadeInImage$Mate.assetNetwork({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required String placeholder} , defaultValue:none
+    /// optionalParameters: {required String placeholder} , default:none
     required String placeholder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? placeholderErrorBuilder} , default:none
     ImageErrorWidgetBuilder? placeholderErrorBuilder,
 
-    /// optionalParameters: {required String image} , defaultValue:none
+    /// optionalParameters: {required String image} , default:none
     required String image,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder} , defaultValue:none
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? imageErrorBuilder} , default:none
     ImageErrorWidgetBuilder? imageErrorBuilder,
 
-    /// optionalParameters: {AssetBundle? bundle} , defaultValue:none
+    /// optionalParameters: {AssetBundle? bundle} , default:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {double? placeholderScale} , defaultValue:none
+    /// optionalParameters: {double? placeholderScale} , default:none
     double? placeholderScale,
 
-    /// optionalParameters: {double imageScale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double imageScale = 1.0} , default:processed=DoubleLiteralImpl
     double imageScale = 1.0,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
     bool excludeFromSemantics = false,
 
-    /// optionalParameters: {String? imageSemanticLabel} , defaultValue:none
+    /// optionalParameters: {String? imageSemanticLabel} , default:none
     String? imageSemanticLabel,
 
-    /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
     Curve fadeOutCurve = Curves.easeOut,
 
-    /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:processed=PrefixedIdentifierImpl
     Curve fadeInCurve = Curves.easeIn,
 
-    /// optionalParameters: {double? width} , defaultValue:none
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {BoxFit? fit} , defaultValue:none
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {BoxFit? placeholderFit} , defaultValue:none
+    /// optionalParameters: {BoxFit? placeholderFit} , default:none
     BoxFit? placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {FilterQuality? placeholderFilterQuality} , defaultValue:none
+    /// optionalParameters: {FilterQuality? placeholderFilterQuality} , default:none
     FilterQuality? placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {bool matchTextDirection = false} , defaultValue:Literal
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
     bool matchTextDirection = false,
 
-    /// optionalParameters: {int? placeholderCacheWidth} , defaultValue:none
+    /// optionalParameters: {int? placeholderCacheWidth} , default:none
     int? placeholderCacheWidth,
 
-    /// optionalParameters: {int? placeholderCacheHeight} , defaultValue:none
+    /// optionalParameters: {int? placeholderCacheHeight} , default:none
     int? placeholderCacheHeight,
 
-    /// optionalParameters: {int? imageCacheWidth} , defaultValue:none
+    /// optionalParameters: {int? imageCacheWidth} , default:none
     int? imageCacheWidth,
 
-    /// optionalParameters: {int? imageCacheHeight} , defaultValue:none
+    /// optionalParameters: {int? imageCacheHeight} , default:none
     int? imageCacheHeight,
   }) : super.assetNetwork(
           key: key,
@@ -454,32 +654,148 @@ class FadeInImage$Mate extends FadeInImage with Mate {
           imageCacheWidth: p.get('imageCacheWidth').build(),
           imageCacheHeight: p.get('imageCacheHeight').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('placeholder', placeholder, isNamed: true);
-    mateUse('placeholderErrorBuilder', placeholderErrorBuilder, isNamed: true);
-    mateUse('image', image, isNamed: true);
-    mateUse('imageErrorBuilder', imageErrorBuilder, isNamed: true);
-    mateUse('bundle', bundle, isNamed: true);
-    mateUse('placeholderScale', placeholderScale, isNamed: true);
-    mateUse('imageScale', imageScale, isNamed: true);
-    mateUse('excludeFromSemantics', excludeFromSemantics, isNamed: true);
-    mateUse('imageSemanticLabel', imageSemanticLabel, isNamed: true);
-    mateUse('fadeOutDuration', fadeOutDuration, isNamed: true);
-    mateUse('fadeOutCurve', fadeOutCurve, isNamed: true);
-    mateUse('fadeInDuration', fadeInDuration, isNamed: true);
-    mateUse('fadeInCurve', fadeInCurve, isNamed: true);
-    mateUse('width', width, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('fit', fit, isNamed: true);
-    mateUse('placeholderFit', placeholderFit, isNamed: true);
-    mateUse('filterQuality', filterQuality, isNamed: true);
-    mateUse('placeholderFilterQuality', placeholderFilterQuality, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('repeat', repeat, isNamed: true);
-    mateUse('matchTextDirection', matchTextDirection, isNamed: true);
-    mateUse('placeholderCacheWidth', placeholderCacheWidth, isNamed: true);
-    mateUse('placeholderCacheHeight', placeholderCacheHeight, isNamed: true);
-    mateUse('imageCacheWidth', imageCacheWidth, isNamed: true);
-    mateUse('imageCacheHeight', imageCacheHeight, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholder',
+      placeholder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderErrorBuilder',
+      placeholderErrorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'imageErrorBuilder',
+      imageErrorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderScale',
+      placeholderScale,
+      isNamed: true,
+    );
+    mateUse(
+      'imageScale',
+      imageScale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'imageSemanticLabel',
+      imageSemanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeOutDuration',
+      fadeOutDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeOutCurve',
+      fadeOutCurve,
+      isNamed: true,
+      defaultValue: Curves.easeOut,
+    );
+    mateUse(
+      'fadeInDuration',
+      fadeInDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeInCurve',
+      fadeInCurve,
+      isNamed: true,
+      defaultValue: Curves.easeIn,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderFit',
+      placeholderFit,
+      isNamed: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'placeholderFilterQuality',
+      placeholderFilterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'placeholderCacheWidth',
+      placeholderCacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderCacheHeight',
+      placeholderCacheHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'imageCacheWidth',
+      imageCacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'imageCacheHeight',
+      imageCacheHeight,
+      isNamed: true,
+    );
   }
 }

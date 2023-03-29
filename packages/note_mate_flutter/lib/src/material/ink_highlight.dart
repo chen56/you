@@ -15,37 +15,37 @@ import 'package:flutter/src/painting/borders.dart';
 class InkHighlight$Mate extends InkHighlight with Mate {
   /// InkHighlight InkHighlight({required MaterialInkController controller, required RenderBox referenceBox, required Color color, required TextDirection textDirection, BoxShape shape = BoxShape.rectangle, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, Rect Function()? rectCallback, void Function()? onRemoved, Duration fadeDuration = _kDefaultHighlightFadeDuration})
   InkHighlight$Mate({
-    /// optionalParameters: {required MaterialInkController controller} , defaultValue:none
+    /// optionalParameters: {required MaterialInkController controller} , default:none
     required MaterialInkController controller,
 
-    /// optionalParameters: {required RenderBox referenceBox} , defaultValue:none
+    /// optionalParameters: {required RenderBox referenceBox} , default:none
     required RenderBox referenceBox,
 
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
     BoxShape shape = BoxShape.rectangle,
 
-    /// optionalParameters: {double? radius} , defaultValue:none
+    /// optionalParameters: {double? radius} , default:none
     double? radius,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , defaultValue:none
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {ShapeBorder? customBorder} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? customBorder} , default:none
     ShapeBorder? customBorder,
 
-    /// optionalParameters: {Rect Function()? rectCallback} , defaultValue:none
+    /// optionalParameters: {Rect Function()? rectCallback} , default:none
     RectCallback? rectCallback,
 
-    /// optionalParameters: {void Function()? onRemoved} , defaultValue:none
+    /// optionalParameters: {void Function()? onRemoved} , default:none
     VoidCallback? onRemoved,
 
-    /// optionalParameters: {Duration fadeDuration = _kDefaultHighlightFadeDuration} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeDuration = _kDefaultHighlightFadeDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration fadeDuration,
   }) : super(
           controller: controller,
@@ -75,16 +75,61 @@ class InkHighlight$Mate extends InkHighlight with Mate {
           onRemoved: p.get('onRemoved').build(),
           fadeDuration: p.get('fadeDuration').build(),
         );
-    mateUse('controller', controller, isNamed: true);
-    mateUse('referenceBox', referenceBox, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('radius', radius, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('customBorder', customBorder, isNamed: true);
-    mateUse('rectCallback', rectCallback, isNamed: true);
-    mateUse('onRemoved', onRemoved, isNamed: true);
-    mateUse('fadeDuration', fadeDuration, isNamed: true);
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'referenceBox',
+      referenceBox,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+      defaultValue: BoxShape.rectangle,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'customBorder',
+      customBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'rectCallback',
+      rectCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'onRemoved',
+      onRemoved,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeDuration',
+      fadeDuration,
+      isNamed: true,
+    );
   }
 }

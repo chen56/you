@@ -21,70 +21,70 @@ import 'package:flutter/src/widgets/sliver.dart';
 class ReorderableList$Mate extends ReorderableList with Mate {
   /// ReorderableList ReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, EdgeInsetsGeometry? padding, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ReorderableList$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , default:none
     required IndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {required int itemCount} , defaultValue:none
+    /// optionalParameters: {required int itemCount} , default:none
     required int itemCount,
 
-    /// optionalParameters: {required void Function(int, int) onReorder} , defaultValue:none
+    /// optionalParameters: {required void Function(int, int) onReorder} , default:none
     required ReorderCallback onReorder,
 
-    /// optionalParameters: {void Function(int)? onReorderStart} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onReorderStart} , default:none
     void Function(int)? onReorderStart,
 
-    /// optionalParameters: {void Function(int)? onReorderEnd} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
     void Function(int)? onReorderEnd,
 
-    /// optionalParameters: {double? itemExtent} , defaultValue:none
+    /// optionalParameters: {double? itemExtent} , default:none
     double? itemExtent,
 
-    /// optionalParameters: {Widget? prototypeItem} , defaultValue:none
+    /// optionalParameters: {Widget? prototypeItem} , default:none
     Widget? prototypeItem,
 
-    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , defaultValue:none
+    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
     ReorderItemProxyDecorator? proxyDecorator,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     Axis scrollDirection = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {ScrollController? controller} , defaultValue:none
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? primary} , defaultValue:none
+    /// optionalParameters: {bool? primary} , default:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , defaultValue:Literal
+    /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
     bool shrinkWrap = false,
 
-    /// optionalParameters: {double anchor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
     double anchor = 0.0,
 
-    /// optionalParameters: {double? cacheExtent} , defaultValue:none
+    /// optionalParameters: {double? cacheExtent} , default:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
-    /// optionalParameters: {String? restorationId} , defaultValue:none
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
@@ -136,28 +136,123 @@ class ReorderableList$Mate extends ReorderableList with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('itemCount', itemCount, isNamed: true);
-    mateUse('onReorder', onReorder, isNamed: true);
-    mateUse('onReorderStart', onReorderStart, isNamed: true);
-    mateUse('onReorderEnd', onReorderEnd, isNamed: true);
-    mateUse('itemExtent', itemExtent, isNamed: true);
-    mateUse('prototypeItem', prototypeItem, isNamed: true);
-    mateUse('proxyDecorator', proxyDecorator, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('primary', primary, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('shrinkWrap', shrinkWrap, isNamed: true);
-    mateUse('anchor', anchor, isNamed: true);
-    mateUse('cacheExtent', cacheExtent, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('keyboardDismissBehavior', keyboardDismissBehavior, isNamed: true);
-    mateUse('restorationId', restorationId, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'itemCount',
+      itemCount,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorder',
+      onReorder,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderStart',
+      onReorderStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderEnd',
+      onReorderEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'prototypeItem',
+      prototypeItem,
+      isNamed: true,
+    );
+    mateUse(
+      'proxyDecorator',
+      proxyDecorator,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'shrinkWrap',
+      shrinkWrap,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'cacheExtent',
+      cacheExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'keyboardDismissBehavior',
+      keyboardDismissBehavior,
+      isNamed: true,
+      defaultValue: ScrollViewKeyboardDismissBehavior.manual,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -165,34 +260,34 @@ class ReorderableList$Mate extends ReorderableList with Mate {
 class SliverReorderableList$Mate extends SliverReorderableList with Mate {
   /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator})
   SliverReorderableList$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , default:none
     required IndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , defaultValue:none
+    /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
     ChildIndexGetter? findChildIndexCallback,
 
-    /// optionalParameters: {required int itemCount} , defaultValue:none
+    /// optionalParameters: {required int itemCount} , default:none
     required int itemCount,
 
-    /// optionalParameters: {required void Function(int, int) onReorder} , defaultValue:none
+    /// optionalParameters: {required void Function(int, int) onReorder} , default:none
     required ReorderCallback onReorder,
 
-    /// optionalParameters: {void Function(int)? onReorderStart} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onReorderStart} , default:none
     void Function(int)? onReorderStart,
 
-    /// optionalParameters: {void Function(int)? onReorderEnd} , defaultValue:none
+    /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
     void Function(int)? onReorderEnd,
 
-    /// optionalParameters: {double? itemExtent} , defaultValue:none
+    /// optionalParameters: {double? itemExtent} , default:none
     double? itemExtent,
 
-    /// optionalParameters: {Widget? prototypeItem} , defaultValue:none
+    /// optionalParameters: {Widget? prototypeItem} , default:none
     Widget? prototypeItem,
 
-    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , defaultValue:none
+    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
     ReorderItemProxyDecorator? proxyDecorator,
   }) : super(
           key: key,
@@ -220,16 +315,56 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
           prototypeItem: p.get('prototypeItem').build(),
           proxyDecorator: p.get('proxyDecorator').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('itemBuilder', itemBuilder, isNamed: true);
-    mateUse('findChildIndexCallback', findChildIndexCallback, isNamed: true);
-    mateUse('itemCount', itemCount, isNamed: true);
-    mateUse('onReorder', onReorder, isNamed: true);
-    mateUse('onReorderStart', onReorderStart, isNamed: true);
-    mateUse('onReorderEnd', onReorderEnd, isNamed: true);
-    mateUse('itemExtent', itemExtent, isNamed: true);
-    mateUse('prototypeItem', prototypeItem, isNamed: true);
-    mateUse('proxyDecorator', proxyDecorator, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'findChildIndexCallback',
+      findChildIndexCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'itemCount',
+      itemCount,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorder',
+      onReorder,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderStart',
+      onReorderStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderEnd',
+      onReorderEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'prototypeItem',
+      prototypeItem,
+      isNamed: true,
+    );
+    mateUse(
+      'proxyDecorator',
+      proxyDecorator,
+      isNamed: true,
+    );
   }
 }
 
@@ -237,16 +372,16 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
 class ReorderableDragStartListener$Mate extends ReorderableDragStartListener with Mate {
   /// ReorderableDragStartListener ReorderableDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDragStartListener$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required int index} , defaultValue:none
+    /// optionalParameters: {required int index} , default:none
     required int index,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
   }) : super(
           key: key,
@@ -262,10 +397,27 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener wit
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('index', index, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -273,16 +425,16 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener wit
 class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragStartListener with Mate {
   /// ReorderableDelayedDragStartListener ReorderableDelayedDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDelayedDragStartListener$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required int index} , defaultValue:none
+    /// optionalParameters: {required int index} , default:none
     required int index,
 
-    /// optionalParameters: {bool enabled = true} , defaultValue:Literal
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     bool enabled = true,
   }) : super(
           key: key,
@@ -298,9 +450,26 @@ class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragSta
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('index', index, isNamed: true);
-    mateUse('enabled', enabled, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

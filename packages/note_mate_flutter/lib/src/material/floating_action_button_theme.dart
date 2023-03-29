@@ -15,67 +15,67 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData with Mate {
   /// FloatingActionButtonThemeData FloatingActionButtonThemeData({Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? disabledElevation, double? highlightElevation, ShapeBorder? shape, bool? enableFeedback, double? iconSize, BoxConstraints? sizeConstraints, BoxConstraints? smallSizeConstraints, BoxConstraints? largeSizeConstraints, BoxConstraints? extendedSizeConstraints, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, MaterialStateProperty<MouseCursor?>? mouseCursor})
   FloatingActionButtonThemeData$Mate({
-    /// optionalParameters: {Color? foregroundColor} , defaultValue:none
+    /// optionalParameters: {Color? foregroundColor} , default:none
     Color? foregroundColor,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? focusColor} , defaultValue:none
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , defaultValue:none
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , defaultValue:none
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {double? focusElevation} , defaultValue:none
+    /// optionalParameters: {double? focusElevation} , default:none
     double? focusElevation,
 
-    /// optionalParameters: {double? hoverElevation} , defaultValue:none
+    /// optionalParameters: {double? hoverElevation} , default:none
     double? hoverElevation,
 
-    /// optionalParameters: {double? disabledElevation} , defaultValue:none
+    /// optionalParameters: {double? disabledElevation} , default:none
     double? disabledElevation,
 
-    /// optionalParameters: {double? highlightElevation} , defaultValue:none
+    /// optionalParameters: {double? highlightElevation} , default:none
     double? highlightElevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {bool? enableFeedback} , defaultValue:none
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {double? iconSize} , defaultValue:none
+    /// optionalParameters: {double? iconSize} , default:none
     double? iconSize,
 
-    /// optionalParameters: {BoxConstraints? sizeConstraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? sizeConstraints} , default:none
     BoxConstraints? sizeConstraints,
 
-    /// optionalParameters: {BoxConstraints? smallSizeConstraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? smallSizeConstraints} , default:none
     BoxConstraints? smallSizeConstraints,
 
-    /// optionalParameters: {BoxConstraints? largeSizeConstraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? largeSizeConstraints} , default:none
     BoxConstraints? largeSizeConstraints,
 
-    /// optionalParameters: {BoxConstraints? extendedSizeConstraints} , defaultValue:none
+    /// optionalParameters: {BoxConstraints? extendedSizeConstraints} , default:none
     BoxConstraints? extendedSizeConstraints,
 
-    /// optionalParameters: {double? extendedIconLabelSpacing} , defaultValue:none
+    /// optionalParameters: {double? extendedIconLabelSpacing} , default:none
     double? extendedIconLabelSpacing,
 
-    /// optionalParameters: {EdgeInsetsGeometry? extendedPadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? extendedPadding} , default:none
     EdgeInsetsGeometry? extendedPadding,
 
-    /// optionalParameters: {TextStyle? extendedTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? extendedTextStyle} , default:none
     TextStyle? extendedTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
   }) : super(
           foregroundColor: foregroundColor,
@@ -125,26 +125,110 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData w
           extendedTextStyle: p.get('extendedTextStyle').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse('foregroundColor', foregroundColor, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('focusColor', focusColor, isNamed: true);
-    mateUse('hoverColor', hoverColor, isNamed: true);
-    mateUse('splashColor', splashColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('focusElevation', focusElevation, isNamed: true);
-    mateUse('hoverElevation', hoverElevation, isNamed: true);
-    mateUse('disabledElevation', disabledElevation, isNamed: true);
-    mateUse('highlightElevation', highlightElevation, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('enableFeedback', enableFeedback, isNamed: true);
-    mateUse('iconSize', iconSize, isNamed: true);
-    mateUse('sizeConstraints', sizeConstraints, isNamed: true);
-    mateUse('smallSizeConstraints', smallSizeConstraints, isNamed: true);
-    mateUse('largeSizeConstraints', largeSizeConstraints, isNamed: true);
-    mateUse('extendedSizeConstraints', extendedSizeConstraints, isNamed: true);
-    mateUse('extendedIconLabelSpacing', extendedIconLabelSpacing, isNamed: true);
-    mateUse('extendedPadding', extendedPadding, isNamed: true);
-    mateUse('extendedTextStyle', extendedTextStyle, isNamed: true);
-    mateUse('mouseCursor', mouseCursor, isNamed: true);
+    mateUse(
+      'foregroundColor',
+      foregroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'focusElevation',
+      focusElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverElevation',
+      hoverElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledElevation',
+      disabledElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightElevation',
+      highlightElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'iconSize',
+      iconSize,
+      isNamed: true,
+    );
+    mateUse(
+      'sizeConstraints',
+      sizeConstraints,
+      isNamed: true,
+    );
+    mateUse(
+      'smallSizeConstraints',
+      smallSizeConstraints,
+      isNamed: true,
+    );
+    mateUse(
+      'largeSizeConstraints',
+      largeSizeConstraints,
+      isNamed: true,
+    );
+    mateUse(
+      'extendedSizeConstraints',
+      extendedSizeConstraints,
+      isNamed: true,
+    );
+    mateUse(
+      'extendedIconLabelSpacing',
+      extendedIconLabelSpacing,
+      isNamed: true,
+    );
+    mateUse(
+      'extendedPadding',
+      extendedPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'extendedTextStyle',
+      extendedTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
   }
 }

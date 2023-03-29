@@ -12,19 +12,19 @@ import 'package:flutter/src/painting/alignment.dart';
 class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton with Mate {
   /// TextSelectionToolbarTextButton TextSelectionToolbarTextButton({Key? key, required Widget child, required EdgeInsets padding, void Function()? onPressed, AlignmentGeometry? alignment})
   TextSelectionToolbarTextButton$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required EdgeInsets padding} , defaultValue:none
+    /// optionalParameters: {required EdgeInsets padding} , default:none
     required EdgeInsets padding,
 
-    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
   }) : super(
           key: key,
@@ -42,10 +42,30 @@ class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
           onPressed: p.get('onPressed').build(),
           alignment: p.get('alignment').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
   }
 }

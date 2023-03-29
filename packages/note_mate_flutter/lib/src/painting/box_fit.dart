@@ -23,7 +23,15 @@ class FittedSizes$Mate extends FittedSizes with Mate {
           p.get('source').value,
           p.get('destination').value,
         );
-    mateUse('source', source, isNamed: false);
-    mateUse('destination', destination, isNamed: false);
+    mateUse(
+      'source',
+      source,
+      isNamed: false,
+    );
+    mateUse(
+      'destination',
+      destination,
+      isNamed: false,
+    );
   }
 }

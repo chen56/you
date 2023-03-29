@@ -12,10 +12,10 @@ import 'package:flutter/gestures.dart';
 class DragDownDetails$Mate extends DragDownDetails with Mate {
   /// DragDownDetails DragDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   DragDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
   }) : super(
           globalPosition: globalPosition,
@@ -27,8 +27,17 @@ class DragDownDetails$Mate extends DragDownDetails with Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -36,16 +45,16 @@ class DragDownDetails$Mate extends DragDownDetails with Mate {
 class DragStartDetails$Mate extends DragStartDetails with Mate {
   /// DragStartDetails DragStartDetails({Duration? sourceTimeStamp, Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   DragStartDetails$Mate({
-    /// optionalParameters: {Duration? sourceTimeStamp} , defaultValue:none
+    /// optionalParameters: {Duration? sourceTimeStamp} , default:none
     Duration? sourceTimeStamp,
 
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , defaultValue:none
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
   }) : super(
           sourceTimeStamp: sourceTimeStamp,
@@ -61,10 +70,27 @@ class DragStartDetails$Mate extends DragStartDetails with Mate {
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    mateUse('sourceTimeStamp', sourceTimeStamp, isNamed: true);
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
+    mateUse(
+      'sourceTimeStamp',
+      sourceTimeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
   }
 }
 
@@ -72,19 +98,19 @@ class DragStartDetails$Mate extends DragStartDetails with Mate {
 class DragUpdateDetails$Mate extends DragUpdateDetails with Mate {
   /// DragUpdateDetails DragUpdateDetails({Duration? sourceTimeStamp, Offset delta = Offset.zero, double? primaryDelta, required Offset globalPosition, Offset? localPosition})
   DragUpdateDetails$Mate({
-    /// optionalParameters: {Duration? sourceTimeStamp} , defaultValue:none
+    /// optionalParameters: {Duration? sourceTimeStamp} , default:none
     Duration? sourceTimeStamp,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset delta = Offset.zero,
 
-    /// optionalParameters: {double? primaryDelta} , defaultValue:none
+    /// optionalParameters: {double? primaryDelta} , default:none
     double? primaryDelta,
 
-    /// optionalParameters: {required Offset globalPosition} , defaultValue:none
+    /// optionalParameters: {required Offset globalPosition} , default:none
     required Offset globalPosition,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
   }) : super(
           sourceTimeStamp: sourceTimeStamp,
@@ -102,11 +128,32 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse('sourceTimeStamp', sourceTimeStamp, isNamed: true);
-    mateUse('delta', delta, isNamed: true);
-    mateUse('primaryDelta', primaryDelta, isNamed: true);
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
+    mateUse(
+      'sourceTimeStamp',
+      sourceTimeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'delta',
+      delta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'primaryDelta',
+      primaryDelta,
+      isNamed: true,
+    );
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -114,10 +161,10 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate {
 class DragEndDetails$Mate extends DragEndDetails with Mate {
   /// DragEndDetails DragEndDetails({Velocity velocity = Velocity.zero, double? primaryVelocity})
   DragEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
     Velocity velocity = Velocity.zero,
 
-    /// optionalParameters: {double? primaryVelocity} , defaultValue:none
+    /// optionalParameters: {double? primaryVelocity} , default:none
     double? primaryVelocity,
   }) : super(
           velocity: velocity,
@@ -129,7 +176,16 @@ class DragEndDetails$Mate extends DragEndDetails with Mate {
           velocity: p.get('velocity').build(),
           primaryVelocity: p.get('primaryVelocity').build(),
         );
-    mateUse('velocity', velocity, isNamed: true);
-    mateUse('primaryVelocity', primaryVelocity, isNamed: true);
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: true,
+      defaultValue: Velocity.zero,
+    );
+    mateUse(
+      'primaryVelocity',
+      primaryVelocity,
+      isNamed: true,
+    );
   }
 }

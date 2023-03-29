@@ -20,7 +20,11 @@ class IdleScrollActivity$Mate extends IdleScrollActivity with Mate {
     mateCreateName = 'IdleScrollActivity';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IdleScrollActivity$Mate(p.get('delegate').value);
-    mateUse('delegate', delegate, isNamed: false);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
   }
 }
 
@@ -28,10 +32,10 @@ class IdleScrollActivity$Mate extends IdleScrollActivity with Mate {
 class HoldScrollActivity$Mate extends HoldScrollActivity with Mate {
   /// HoldScrollActivity HoldScrollActivity({required ScrollActivityDelegate delegate, void Function()? onHoldCanceled})
   HoldScrollActivity$Mate({
-    /// optionalParameters: {required ScrollActivityDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required ScrollActivityDelegate delegate} , default:none
     required ScrollActivityDelegate delegate,
 
-    /// optionalParameters: {void Function()? onHoldCanceled} , defaultValue:none
+    /// optionalParameters: {void Function()? onHoldCanceled} , default:none
     VoidCallback? onHoldCanceled,
   }) : super(
           delegate: delegate,
@@ -43,8 +47,16 @@ class HoldScrollActivity$Mate extends HoldScrollActivity with Mate {
           delegate: p.get('delegate').build(),
           onHoldCanceled: p.get('onHoldCanceled').build(),
         );
-    mateUse('delegate', delegate, isNamed: true);
-    mateUse('onHoldCanceled', onHoldCanceled, isNamed: true);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'onHoldCanceled',
+      onHoldCanceled,
+      isNamed: true,
+    );
   }
 }
 
@@ -52,19 +64,19 @@ class HoldScrollActivity$Mate extends HoldScrollActivity with Mate {
 class ScrollDragController$Mate extends ScrollDragController with Mate {
   /// ScrollDragController ScrollDragController({required ScrollActivityDelegate delegate, required DragStartDetails details, void Function()? onDragCanceled, double? carriedVelocity, double? motionStartDistanceThreshold})
   ScrollDragController$Mate({
-    /// optionalParameters: {required ScrollActivityDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required ScrollActivityDelegate delegate} , default:none
     required ScrollActivityDelegate delegate,
 
-    /// optionalParameters: {required DragStartDetails details} , defaultValue:none
+    /// optionalParameters: {required DragStartDetails details} , default:none
     required DragStartDetails details,
 
-    /// optionalParameters: {void Function()? onDragCanceled} , defaultValue:none
+    /// optionalParameters: {void Function()? onDragCanceled} , default:none
     VoidCallback? onDragCanceled,
 
-    /// optionalParameters: {double? carriedVelocity} , defaultValue:none
+    /// optionalParameters: {double? carriedVelocity} , default:none
     double? carriedVelocity,
 
-    /// optionalParameters: {double? motionStartDistanceThreshold} , defaultValue:none
+    /// optionalParameters: {double? motionStartDistanceThreshold} , default:none
     double? motionStartDistanceThreshold,
   }) : super(
           delegate: delegate,
@@ -82,11 +94,31 @@ class ScrollDragController$Mate extends ScrollDragController with Mate {
           carriedVelocity: p.get('carriedVelocity').build(),
           motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').build(),
         );
-    mateUse('delegate', delegate, isNamed: true);
-    mateUse('details', details, isNamed: true);
-    mateUse('onDragCanceled', onDragCanceled, isNamed: true);
-    mateUse('carriedVelocity', carriedVelocity, isNamed: true);
-    mateUse('motionStartDistanceThreshold', motionStartDistanceThreshold, isNamed: true);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'details',
+      details,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragCanceled',
+      onDragCanceled,
+      isNamed: true,
+    );
+    mateUse(
+      'carriedVelocity',
+      carriedVelocity,
+      isNamed: true,
+    );
+    mateUse(
+      'motionStartDistanceThreshold',
+      motionStartDistanceThreshold,
+      isNamed: true,
+    );
   }
 }
 
@@ -109,8 +141,16 @@ class DragScrollActivity$Mate extends DragScrollActivity with Mate {
           p.get('delegate').value,
           p.get('controller').value,
         );
-    mateUse('delegate', delegate, isNamed: false);
-    mateUse('controller', controller, isNamed: false);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: false,
+    );
   }
 }
 
@@ -143,10 +183,26 @@ class BallisticScrollActivity$Mate extends BallisticScrollActivity with Mate {
           p.get('vsync').value,
           p.get('shouldIgnorePointer').value,
         );
-    mateUse('delegate', delegate, isNamed: false);
-    mateUse('simulation', simulation, isNamed: false);
-    mateUse('vsync', vsync, isNamed: false);
-    mateUse('shouldIgnorePointer', shouldIgnorePointer, isNamed: false);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
+    mateUse(
+      'simulation',
+      simulation,
+      isNamed: false,
+    );
+    mateUse(
+      'vsync',
+      vsync,
+      isNamed: false,
+    );
+    mateUse(
+      'shouldIgnorePointer',
+      shouldIgnorePointer,
+      isNamed: false,
+    );
   }
 }
 
@@ -156,19 +212,19 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate {
   DrivenScrollActivity$Mate(
     /// requiredParameters: ScrollActivityDelegate delegate
     ScrollActivityDelegate delegate, {
-    /// optionalParameters: {required double from} , defaultValue:none
+    /// optionalParameters: {required double from} , default:none
     required double from,
 
-    /// optionalParameters: {required double to} , defaultValue:none
+    /// optionalParameters: {required double to} , default:none
     required double to,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {required Curve curve} , defaultValue:none
+    /// optionalParameters: {required Curve curve} , default:none
     required Curve curve,
 
-    /// optionalParameters: {required TickerProvider vsync} , defaultValue:none
+    /// optionalParameters: {required TickerProvider vsync} , default:none
     required TickerProvider vsync,
   }) : super(
           delegate,
@@ -188,11 +244,35 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate {
           curve: p.get('curve').build(),
           vsync: p.get('vsync').build(),
         );
-    mateUse('delegate', delegate, isNamed: false);
-    mateUse('from', from, isNamed: true);
-    mateUse('to', to, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('vsync', vsync, isNamed: true);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
+    mateUse(
+      'from',
+      from,
+      isNamed: true,
+    );
+    mateUse(
+      'to',
+      to,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+    );
+    mateUse(
+      'vsync',
+      vsync,
+      isNamed: true,
+    );
   }
 }

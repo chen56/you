@@ -9,10 +9,10 @@ import 'package:flutter/src/foundation/key.dart';
 class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionContextMenu with Mate {
   /// PlatformSelectableRegionContextMenu PlatformSelectableRegionContextMenu({required Widget child, Key? key})
   PlatformSelectableRegionContextMenu$Mate({
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
   }) : super(
           child: child,
@@ -24,7 +24,15 @@ class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionC
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse('child', child, isNamed: true);
-    mateUse('key', key, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }

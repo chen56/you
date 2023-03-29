@@ -11,13 +11,17 @@ class MenuThemeData$Mate extends MenuThemeData with Mate {
   /// MenuThemeData MenuThemeData({MenuStyle? style})
   MenuThemeData$Mate(
       {
-      /// optionalParameters: {MenuStyle? style} , defaultValue:none
+      /// optionalParameters: {MenuStyle? style} , default:none
       MenuStyle? style})
       : super(style: style) {
     mateCreateName = 'MenuThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuThemeData$Mate(style: p.get('style').build());
-    mateUse('style', style, isNamed: true);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -25,13 +29,13 @@ class MenuThemeData$Mate extends MenuThemeData with Mate {
 class MenuTheme$Mate extends MenuTheme with Mate {
   /// MenuTheme MenuTheme({Key? key, required MenuThemeData data, required Widget child})
   MenuTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required MenuThemeData data} , defaultValue:none
+    /// optionalParameters: {required MenuThemeData data} , default:none
     required MenuThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -45,8 +49,20 @@ class MenuTheme$Mate extends MenuTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

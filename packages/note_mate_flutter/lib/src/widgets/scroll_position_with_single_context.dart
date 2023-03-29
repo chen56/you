@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/scroll_position.dart';
 class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleContext with Mate {
   /// ScrollPositionWithSingleContext ScrollPositionWithSingleContext({required ScrollPhysics physics, required ScrollContext context, double? initialPixels = 0.0, bool keepScrollOffset = true, ScrollPosition? oldPosition, String? debugLabel})
   ScrollPositionWithSingleContext$Mate({
-    /// optionalParameters: {required ScrollPhysics physics} , defaultValue:none
+    /// optionalParameters: {required ScrollPhysics physics} , default:none
     required ScrollPhysics physics,
 
-    /// optionalParameters: {required ScrollContext context} , defaultValue:none
+    /// optionalParameters: {required ScrollContext context} , default:none
     required ScrollContext context,
 
-    /// optionalParameters: {double? initialPixels = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double? initialPixels = 0.0} , default:processed=DoubleLiteralImpl
     double? initialPixels = 0.0,
 
-    /// optionalParameters: {bool keepScrollOffset = true} , defaultValue:Literal
+    /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
     bool keepScrollOffset = true,
 
-    /// optionalParameters: {ScrollPosition? oldPosition} , defaultValue:none
+    /// optionalParameters: {ScrollPosition? oldPosition} , default:none
     ScrollPosition? oldPosition,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           physics: physics,
@@ -46,11 +46,37 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           oldPosition: p.get('oldPosition').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('physics', physics, isNamed: true);
-    mateUse('context', context, isNamed: true);
-    mateUse('initialPixels', initialPixels, isNamed: true);
-    mateUse('keepScrollOffset', keepScrollOffset, isNamed: true);
-    mateUse('oldPosition', oldPosition, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'initialPixels',
+      initialPixels,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'keepScrollOffset',
+      keepScrollOffset,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'oldPosition',
+      oldPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }

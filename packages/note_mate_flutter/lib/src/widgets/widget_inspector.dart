@@ -11,13 +11,13 @@ import 'package:flutter/src/foundation/diagnostics.dart';
 class WidgetInspector$Mate extends WidgetInspector with Mate {
   /// WidgetInspector WidgetInspector({Key? key, required Widget child, required Widget Function(BuildContext, void Function())? selectButtonBuilder})
   WidgetInspector$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Widget Function(BuildContext, void Function())? selectButtonBuilder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, void Function())? selectButtonBuilder} , default:none
     required InspectorSelectButtonBuilder? selectButtonBuilder,
   }) : super(
           key: key,
@@ -31,9 +31,21 @@ class WidgetInspector$Mate extends WidgetInspector with Mate {
           child: p.get('child').build(),
           selectButtonBuilder: p.get('selectButtonBuilder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('selectButtonBuilder', selectButtonBuilder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'selectButtonBuilder',
+      selectButtonBuilder,
+      isNamed: true,
+    );
   }
 }
 
@@ -56,8 +68,16 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
           p.get('description').value,
           p.get('url').value,
         );
-    mateUse('description', description, isNamed: false);
-    mateUse('url', url, isNamed: false);
+    mateUse(
+      'description',
+      description,
+      isNamed: false,
+    );
+    mateUse(
+      'url',
+      url,
+      isNamed: false,
+    );
   }
 }
 
@@ -65,28 +85,28 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
 class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate with Mate {
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
-    /// optionalParameters: {String? groupName} , defaultValue:none
+    /// optionalParameters: {String? groupName} , default:none
     String? groupName,
 
-    /// optionalParameters: {bool summaryTree = false} , defaultValue:Literal
+    /// optionalParameters: {bool summaryTree = false} , default:processed=BooleanLiteralImpl
     bool summaryTree = false,
 
-    /// optionalParameters: {int maxDescendantsTruncatableNode = -1} , defaultValue:unprocessed
-    required int maxDescendantsTruncatableNode,
+    /// optionalParameters: {int maxDescendantsTruncatableNode = -1} , default:processed=PrefixExpressionImpl
+    int maxDescendantsTruncatableNode = -1,
 
-    /// optionalParameters: {bool expandPropertyValues = true} , defaultValue:Literal
+    /// optionalParameters: {bool expandPropertyValues = true} , default:processed=BooleanLiteralImpl
     bool expandPropertyValues = true,
 
-    /// optionalParameters: {int subtreeDepth = 1} , defaultValue:Literal
+    /// optionalParameters: {int subtreeDepth = 1} , default:processed=IntegerLiteralImpl
     int subtreeDepth = 1,
 
-    /// optionalParameters: {bool includeProperties = false} , defaultValue:Literal
+    /// optionalParameters: {bool includeProperties = false} , default:processed=BooleanLiteralImpl
     bool includeProperties = false,
 
-    /// optionalParameters: {required WidgetInspectorService service} , defaultValue:none
+    /// optionalParameters: {required WidgetInspectorService service} , default:none
     required WidgetInspectorService service,
 
-    /// optionalParameters: {Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback} , defaultValue:none
+    /// optionalParameters: {Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback} , default:none
     Map<String, Object>? Function(
       DiagnosticsNode,
       InspectorSerializationDelegate,
@@ -113,13 +133,50 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
           service: p.get('service').build(),
           addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
         );
-    mateUse('groupName', groupName, isNamed: true);
-    mateUse('summaryTree', summaryTree, isNamed: true);
-    mateUse('maxDescendantsTruncatableNode', maxDescendantsTruncatableNode, isNamed: true);
-    mateUse('expandPropertyValues', expandPropertyValues, isNamed: true);
-    mateUse('subtreeDepth', subtreeDepth, isNamed: true);
-    mateUse('includeProperties', includeProperties, isNamed: true);
-    mateUse('service', service, isNamed: true);
-    mateUse('addAdditionalPropertiesCallback', addAdditionalPropertiesCallback, isNamed: true);
+    mateUse(
+      'groupName',
+      groupName,
+      isNamed: true,
+    );
+    mateUse(
+      'summaryTree',
+      summaryTree,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maxDescendantsTruncatableNode',
+      maxDescendantsTruncatableNode,
+      isNamed: true,
+      defaultValue: -1,
+    );
+    mateUse(
+      'expandPropertyValues',
+      expandPropertyValues,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'subtreeDepth',
+      subtreeDepth,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'includeProperties',
+      includeProperties,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'service',
+      service,
+      isNamed: true,
+    );
+    mateUse(
+      'addAdditionalPropertiesCallback',
+      addAdditionalPropertiesCallback,
+      isNamed: true,
+    );
   }
 }

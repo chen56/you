@@ -10,19 +10,19 @@ import 'dart:ui';
 class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate {
   /// TextEditingDeltaInsertion TextEditingDeltaInsertion({required String oldText, required String textInserted, required int insertionOffset, required TextSelection selection, required TextRange composing})
   TextEditingDeltaInsertion$Mate({
-    /// optionalParameters: {required String oldText} , defaultValue:none
+    /// optionalParameters: {required String oldText} , default:none
     required String oldText,
 
-    /// optionalParameters: {required String textInserted} , defaultValue:none
+    /// optionalParameters: {required String textInserted} , default:none
     required String textInserted,
 
-    /// optionalParameters: {required int insertionOffset} , defaultValue:none
+    /// optionalParameters: {required int insertionOffset} , default:none
     required int insertionOffset,
 
-    /// optionalParameters: {required TextSelection selection} , defaultValue:none
+    /// optionalParameters: {required TextSelection selection} , default:none
     required TextSelection selection,
 
-    /// optionalParameters: {required TextRange composing} , defaultValue:none
+    /// optionalParameters: {required TextRange composing} , default:none
     required TextRange composing,
   }) : super(
           oldText: oldText,
@@ -40,11 +40,31 @@ class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText, isNamed: true);
-    mateUse('textInserted', textInserted, isNamed: true);
-    mateUse('insertionOffset', insertionOffset, isNamed: true);
-    mateUse('selection', selection, isNamed: true);
-    mateUse('composing', composing, isNamed: true);
+    mateUse(
+      'oldText',
+      oldText,
+      isNamed: true,
+    );
+    mateUse(
+      'textInserted',
+      textInserted,
+      isNamed: true,
+    );
+    mateUse(
+      'insertionOffset',
+      insertionOffset,
+      isNamed: true,
+    );
+    mateUse(
+      'selection',
+      selection,
+      isNamed: true,
+    );
+    mateUse(
+      'composing',
+      composing,
+      isNamed: true,
+    );
   }
 }
 
@@ -52,16 +72,16 @@ class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate
 class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate {
   /// TextEditingDeltaDeletion TextEditingDeltaDeletion({required String oldText, required TextRange deletedRange, required TextSelection selection, required TextRange composing})
   TextEditingDeltaDeletion$Mate({
-    /// optionalParameters: {required String oldText} , defaultValue:none
+    /// optionalParameters: {required String oldText} , default:none
     required String oldText,
 
-    /// optionalParameters: {required TextRange deletedRange} , defaultValue:none
+    /// optionalParameters: {required TextRange deletedRange} , default:none
     required TextRange deletedRange,
 
-    /// optionalParameters: {required TextSelection selection} , defaultValue:none
+    /// optionalParameters: {required TextSelection selection} , default:none
     required TextSelection selection,
 
-    /// optionalParameters: {required TextRange composing} , defaultValue:none
+    /// optionalParameters: {required TextRange composing} , default:none
     required TextRange composing,
   }) : super(
           oldText: oldText,
@@ -77,10 +97,26 @@ class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate {
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText, isNamed: true);
-    mateUse('deletedRange', deletedRange, isNamed: true);
-    mateUse('selection', selection, isNamed: true);
-    mateUse('composing', composing, isNamed: true);
+    mateUse(
+      'oldText',
+      oldText,
+      isNamed: true,
+    );
+    mateUse(
+      'deletedRange',
+      deletedRange,
+      isNamed: true,
+    );
+    mateUse(
+      'selection',
+      selection,
+      isNamed: true,
+    );
+    mateUse(
+      'composing',
+      composing,
+      isNamed: true,
+    );
   }
 }
 
@@ -88,19 +124,19 @@ class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate {
 class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with Mate {
   /// TextEditingDeltaReplacement TextEditingDeltaReplacement({required String oldText, required String replacementText, required TextRange replacedRange, required TextSelection selection, required TextRange composing})
   TextEditingDeltaReplacement$Mate({
-    /// optionalParameters: {required String oldText} , defaultValue:none
+    /// optionalParameters: {required String oldText} , default:none
     required String oldText,
 
-    /// optionalParameters: {required String replacementText} , defaultValue:none
+    /// optionalParameters: {required String replacementText} , default:none
     required String replacementText,
 
-    /// optionalParameters: {required TextRange replacedRange} , defaultValue:none
+    /// optionalParameters: {required TextRange replacedRange} , default:none
     required TextRange replacedRange,
 
-    /// optionalParameters: {required TextSelection selection} , defaultValue:none
+    /// optionalParameters: {required TextSelection selection} , default:none
     required TextSelection selection,
 
-    /// optionalParameters: {required TextRange composing} , defaultValue:none
+    /// optionalParameters: {required TextRange composing} , default:none
     required TextRange composing,
   }) : super(
           oldText: oldText,
@@ -118,11 +154,31 @@ class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with 
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText, isNamed: true);
-    mateUse('replacementText', replacementText, isNamed: true);
-    mateUse('replacedRange', replacedRange, isNamed: true);
-    mateUse('selection', selection, isNamed: true);
-    mateUse('composing', composing, isNamed: true);
+    mateUse(
+      'oldText',
+      oldText,
+      isNamed: true,
+    );
+    mateUse(
+      'replacementText',
+      replacementText,
+      isNamed: true,
+    );
+    mateUse(
+      'replacedRange',
+      replacedRange,
+      isNamed: true,
+    );
+    mateUse(
+      'selection',
+      selection,
+      isNamed: true,
+    );
+    mateUse(
+      'composing',
+      composing,
+      isNamed: true,
+    );
   }
 }
 
@@ -130,13 +186,13 @@ class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with 
 class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate with Mate {
   /// TextEditingDeltaNonTextUpdate TextEditingDeltaNonTextUpdate({required String oldText, required TextSelection selection, required TextRange composing})
   TextEditingDeltaNonTextUpdate$Mate({
-    /// optionalParameters: {required String oldText} , defaultValue:none
+    /// optionalParameters: {required String oldText} , default:none
     required String oldText,
 
-    /// optionalParameters: {required TextSelection selection} , defaultValue:none
+    /// optionalParameters: {required TextSelection selection} , default:none
     required TextSelection selection,
 
-    /// optionalParameters: {required TextRange composing} , defaultValue:none
+    /// optionalParameters: {required TextRange composing} , default:none
     required TextRange composing,
   }) : super(
           oldText: oldText,
@@ -150,8 +206,20 @@ class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate w
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse('oldText', oldText, isNamed: true);
-    mateUse('selection', selection, isNamed: true);
-    mateUse('composing', composing, isNamed: true);
+    mateUse(
+      'oldText',
+      oldText,
+      isNamed: true,
+    );
+    mateUse(
+      'selection',
+      selection,
+      isNamed: true,
+    );
+    mateUse(
+      'composing',
+      composing,
+      isNamed: true,
+    );
   }
 }

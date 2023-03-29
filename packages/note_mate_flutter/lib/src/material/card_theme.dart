@@ -11,25 +11,25 @@ import 'package:flutter/src/painting/borders.dart';
 class CardTheme$Mate extends CardTheme with Mate {
   /// CardTheme CardTheme({Clip? clipBehavior, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, EdgeInsetsGeometry? margin, ShapeBorder? shape})
   CardTheme$Mate({
-    /// optionalParameters: {Clip? clipBehavior} , defaultValue:none
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {ShapeBorder? shape} , defaultValue:none
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
   }) : super(
           clipBehavior: clipBehavior,
@@ -51,12 +51,40 @@ class CardTheme$Mate extends CardTheme with Mate {
           margin: p.get('margin').build(),
           shape: p.get('shape').build(),
         );
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
   }
 }

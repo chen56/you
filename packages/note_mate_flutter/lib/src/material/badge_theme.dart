@@ -14,28 +14,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class BadgeThemeData$Mate extends BadgeThemeData with Mate {
   /// BadgeThemeData BadgeThemeData({Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset})
   BadgeThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , defaultValue:none
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , defaultValue:none
+    /// optionalParameters: {double? smallSize} , default:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , defaultValue:none
+    /// optionalParameters: {double? largeSize} , default:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , defaultValue:none
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , defaultValue:none
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
   }) : super(
           backgroundColor: backgroundColor,
@@ -59,14 +59,46 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
           alignment: p.get('alignment').build(),
           offset: p.get('offset').build(),
         );
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('textColor', textColor, isNamed: true);
-    mateUse('smallSize', smallSize, isNamed: true);
-    mateUse('largeSize', largeSize, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'smallSize',
+      smallSize,
+      isNamed: true,
+    );
+    mateUse(
+      'largeSize',
+      largeSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
   }
 }
 
@@ -74,13 +106,13 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
 class BadgeTheme$Mate extends BadgeTheme with Mate {
   /// BadgeTheme BadgeTheme({Key? key, required BadgeThemeData data, required Widget child})
   BadgeTheme$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required BadgeThemeData data} , defaultValue:none
+    /// optionalParameters: {required BadgeThemeData data} , default:none
     required BadgeThemeData data,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -94,8 +126,20 @@ class BadgeTheme$Mate extends BadgeTheme with Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('data', data, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

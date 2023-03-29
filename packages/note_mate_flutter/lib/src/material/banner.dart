@@ -16,55 +16,55 @@ import 'package:flutter/src/animation/animation.dart';
 class MaterialBanner$Mate extends MaterialBanner with Mate {
   /// MaterialBanner MaterialBanner({Key? key, required Widget content, TextStyle? contentTextStyle, required List<Widget> actions, double? elevation, Widget? leading, Color? backgroundColor, Color? surfaceTintColor, Color? shadowColor, Color? dividerColor, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? leadingPadding, bool forceActionsBelow = false, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end, Animation<double>? animation, void Function()? onVisible})
   MaterialBanner$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget content} , defaultValue:none
+    /// optionalParameters: {required Widget content} , default:none
     required Widget content,
 
-    /// optionalParameters: {TextStyle? contentTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? contentTextStyle} , default:none
     TextStyle? contentTextStyle,
 
-    /// optionalParameters: {required List<Widget> actions} , defaultValue:none
+    /// optionalParameters: {required List<Widget> actions} , default:none
     required List<Widget> actions,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Widget? leading} , defaultValue:none
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? shadowColor} , defaultValue:none
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? dividerColor} , defaultValue:none
+    /// optionalParameters: {Color? dividerColor} , default:none
     Color? dividerColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , default:none
     EdgeInsetsGeometry? leadingPadding,
 
-    /// optionalParameters: {bool forceActionsBelow = false} , defaultValue:Literal
+    /// optionalParameters: {bool forceActionsBelow = false} , default:processed=BooleanLiteralImpl
     bool forceActionsBelow = false,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , default:processed=PrefixedIdentifierImpl
     OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end,
 
-    /// optionalParameters: {Animation<double>? animation} , defaultValue:none
+    /// optionalParameters: {Animation<double>? animation} , default:none
     Animation<double>? animation,
 
-    /// optionalParameters: {void Function()? onVisible} , defaultValue:none
+    /// optionalParameters: {void Function()? onVisible} , default:none
     VoidCallback? onVisible,
   }) : super(
           key: key,
@@ -106,22 +106,92 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
           animation: p.get('animation').build(),
           onVisible: p.get('onVisible').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('content', content, isNamed: true);
-    mateUse('contentTextStyle', contentTextStyle, isNamed: true);
-    mateUseList('actions', actions, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('leading', leading, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('shadowColor', shadowColor, isNamed: true);
-    mateUse('dividerColor', dividerColor, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('margin', margin, isNamed: true);
-    mateUse('leadingPadding', leadingPadding, isNamed: true);
-    mateUse('forceActionsBelow', forceActionsBelow, isNamed: true);
-    mateUse('overflowAlignment', overflowAlignment, isNamed: true);
-    mateUse('animation', animation, isNamed: true);
-    mateUse('onVisible', onVisible, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'content',
+      content,
+      isNamed: true,
+    );
+    mateUse(
+      'contentTextStyle',
+      contentTextStyle,
+      isNamed: true,
+    );
+    mateUseList(
+      'actions',
+      actions,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dividerColor',
+      dividerColor,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingPadding',
+      leadingPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'forceActionsBelow',
+      forceActionsBelow,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'overflowAlignment',
+      overflowAlignment,
+      isNamed: true,
+      defaultValue: OverflowBarAlignment.end,
+    );
+    mateUse(
+      'animation',
+      animation,
+      isNamed: true,
+    );
+    mateUse(
+      'onVisible',
+      onVisible,
+      isNamed: true,
+    );
   }
 }

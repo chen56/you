@@ -10,10 +10,10 @@ import 'dart:core';
 class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate {
   /// UnderlineInputBorder UnderlineInputBorder({BorderSide borderSide = const BorderSide(), BorderRadius borderRadius = const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0))})
   UnderlineInputBorder$Mate({
-    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , defaultValue:unprocessed
+    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderSide borderSide,
 
-    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0))} , defaultValue:unprocessed
+    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0))} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderRadius borderRadius,
   }) : super(
           borderSide: borderSide,
@@ -25,8 +25,16 @@ class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate {
           borderSide: p.get('borderSide').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateUse('borderSide', borderSide, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
+    mateUse(
+      'borderSide',
+      borderSide,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
   }
 }
 
@@ -34,13 +42,13 @@ class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate {
 class OutlineInputBorder$Mate extends OutlineInputBorder with Mate {
   /// OutlineInputBorder OutlineInputBorder({BorderSide borderSide = const BorderSide(), BorderRadius borderRadius = const BorderRadius.all(Radius.circular(4.0)), double gapPadding = 4.0})
   OutlineInputBorder$Mate({
-    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , defaultValue:unprocessed
+    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderSide borderSide,
 
-    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(4.0))} , defaultValue:unprocessed
+    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(4.0))} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderRadius borderRadius,
 
-    /// optionalParameters: {double gapPadding = 4.0} , defaultValue:Literal
+    /// optionalParameters: {double gapPadding = 4.0} , default:processed=DoubleLiteralImpl
     double gapPadding = 4.0,
   }) : super(
           borderSide: borderSide,
@@ -54,8 +62,21 @@ class OutlineInputBorder$Mate extends OutlineInputBorder with Mate {
           borderRadius: p.get('borderRadius').build(),
           gapPadding: p.get('gapPadding').build(),
         );
-    mateUse('borderSide', borderSide, isNamed: true);
-    mateUse('borderRadius', borderRadius, isNamed: true);
-    mateUse('gapPadding', gapPadding, isNamed: true);
+    mateUse(
+      'borderSide',
+      borderSide,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'gapPadding',
+      gapPadding,
+      isNamed: true,
+      defaultValue: 4.0,
+    );
   }
 }

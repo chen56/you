@@ -12,22 +12,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class BannerPainter$Mate extends BannerPainter with Mate {
   /// BannerPainter BannerPainter({required String message, required TextDirection textDirection, required BannerLocation location, required TextDirection layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   BannerPainter$Mate({
-    /// optionalParameters: {required String message} , defaultValue:none
+    /// optionalParameters: {required String message} , default:none
     required String message,
 
-    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {required BannerLocation location} , defaultValue:none
+    /// optionalParameters: {required BannerLocation location} , default:none
     required BannerLocation location,
 
-    /// optionalParameters: {required TextDirection layoutDirection} , defaultValue:none
+    /// optionalParameters: {required TextDirection layoutDirection} , default:none
     required TextDirection layoutDirection,
 
-    /// optionalParameters: {Color color = _kColor} , defaultValue:unprocessed
+    /// optionalParameters: {Color color = _kColor} , default:unprocessed=SimpleIdentifierImpl
     required Color color,
 
-    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , defaultValue:unprocessed
+    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , default:unprocessed=SimpleIdentifierImpl
     required TextStyle textStyle,
   }) : super(
           message: message,
@@ -47,12 +47,36 @@ class BannerPainter$Mate extends BannerPainter with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    mateUse('message', message, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('location', location, isNamed: true);
-    mateUse('layoutDirection', layoutDirection, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse(
+      'message',
+      message,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'location',
+      location,
+      isNamed: true,
+    );
+    mateUse(
+      'layoutDirection',
+      layoutDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
   }
 }
 
@@ -60,28 +84,28 @@ class BannerPainter$Mate extends BannerPainter with Mate {
 class Banner$Mate extends Banner with Mate {
   /// Banner Banner({Key? key, Widget? child, required String message, TextDirection? textDirection, required BannerLocation location, TextDirection? layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   Banner$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required String message} , defaultValue:none
+    /// optionalParameters: {required String message} , default:none
     required String message,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {required BannerLocation location} , defaultValue:none
+    /// optionalParameters: {required BannerLocation location} , default:none
     required BannerLocation location,
 
-    /// optionalParameters: {TextDirection? layoutDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? layoutDirection} , default:none
     TextDirection? layoutDirection,
 
-    /// optionalParameters: {Color color = _kColor} , defaultValue:unprocessed
+    /// optionalParameters: {Color color = _kColor} , default:unprocessed=SimpleIdentifierImpl
     required Color color,
 
-    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , defaultValue:unprocessed
+    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , default:unprocessed=SimpleIdentifierImpl
     required TextStyle textStyle,
   }) : super(
           key: key,
@@ -105,14 +129,46 @@ class Banner$Mate extends Banner with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('message', message, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('location', location, isNamed: true);
-    mateUse('layoutDirection', layoutDirection, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'message',
+      message,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'location',
+      location,
+      isNamed: true,
+    );
+    mateUse(
+      'layoutDirection',
+      layoutDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
   }
 }
 
@@ -120,10 +176,10 @@ class Banner$Mate extends Banner with Mate {
 class CheckedModeBanner$Mate extends CheckedModeBanner with Mate {
   /// CheckedModeBanner CheckedModeBanner({Key? key, required Widget child})
   CheckedModeBanner$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -135,7 +191,15 @@ class CheckedModeBanner$Mate extends CheckedModeBanner with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -20,40 +20,40 @@ import 'package:flutter/src/rendering/viewport_offset.dart';
 class NestedScrollView$Mate extends NestedScrollView with Mate {
   /// NestedScrollView NestedScrollView({Key? key, ScrollController? controller, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollPhysics? physics, required List<Widget> Function(BuildContext, bool) headerSliverBuilder, required Widget body, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool floatHeaderSlivers = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior})
   NestedScrollView$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ScrollController? controller} , defaultValue:none
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     Axis scrollDirection = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , defaultValue:Literal
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
     bool reverse = false,
 
-    /// optionalParameters: {ScrollPhysics? physics} , defaultValue:none
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {required List<Widget> Function(BuildContext, bool) headerSliverBuilder} , defaultValue:none
+    /// optionalParameters: {required List<Widget> Function(BuildContext, bool) headerSliverBuilder} , default:none
     required NestedScrollViewHeaderSliversBuilder headerSliverBuilder,
 
-    /// optionalParameters: {required Widget body} , defaultValue:none
+    /// optionalParameters: {required Widget body} , default:none
     required Widget body,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool floatHeaderSlivers = false} , defaultValue:Literal
+    /// optionalParameters: {bool floatHeaderSlivers = false} , default:processed=BooleanLiteralImpl
     bool floatHeaderSlivers = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {String? restorationId} , defaultValue:none
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , defaultValue:none
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     ScrollBehavior? scrollBehavior,
   }) : super(
           key: key,
@@ -85,18 +85,71 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('scrollDirection', scrollDirection, isNamed: true);
-    mateUse('reverse', reverse, isNamed: true);
-    mateUse('physics', physics, isNamed: true);
-    mateUse('headerSliverBuilder', headerSliverBuilder, isNamed: true);
-    mateUse('body', body, isNamed: true);
-    mateUse('dragStartBehavior', dragStartBehavior, isNamed: true);
-    mateUse('floatHeaderSlivers', floatHeaderSlivers, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
-    mateUse('restorationId', restorationId, isNamed: true);
-    mateUse('scrollBehavior', scrollBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'headerSliverBuilder',
+      headerSliverBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'body',
+      body,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'floatHeaderSlivers',
+      floatHeaderSlivers,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollBehavior',
+      scrollBehavior,
+      isNamed: true,
+    );
   }
 }
 
@@ -104,13 +157,13 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
 class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
   /// SliverOverlapAbsorber SliverOverlapAbsorber({Key? key, required SliverOverlapAbsorberHandle handle, Widget? sliver})
   SliverOverlapAbsorber$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
+    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
     required SliverOverlapAbsorberHandle handle,
 
-    /// optionalParameters: {Widget? sliver} , defaultValue:none
+    /// optionalParameters: {Widget? sliver} , default:none
     Widget? sliver,
   }) : super(
           key: key,
@@ -124,9 +177,21 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('handle', handle, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'handle',
+      handle,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -134,10 +199,10 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
 class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with Mate {
   /// RenderSliverOverlapAbsorber RenderSliverOverlapAbsorber({required SliverOverlapAbsorberHandle handle, RenderSliver? sliver})
   RenderSliverOverlapAbsorber$Mate({
-    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
+    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
     required SliverOverlapAbsorberHandle handle,
 
-    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
+    /// optionalParameters: {RenderSliver? sliver} , default:none
     RenderSliver? sliver,
   }) : super(
           handle: handle,
@@ -149,8 +214,16 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('handle', handle, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'handle',
+      handle,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -158,13 +231,13 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
 class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
   /// SliverOverlapInjector SliverOverlapInjector({Key? key, required SliverOverlapAbsorberHandle handle, Widget? sliver})
   SliverOverlapInjector$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
+    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
     required SliverOverlapAbsorberHandle handle,
 
-    /// optionalParameters: {Widget? sliver} , defaultValue:none
+    /// optionalParameters: {Widget? sliver} , default:none
     Widget? sliver,
   }) : super(
           key: key,
@@ -178,9 +251,21 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('handle', handle, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'handle',
+      handle,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -189,13 +274,17 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with 
   /// RenderSliverOverlapInjector RenderSliverOverlapInjector({required SliverOverlapAbsorberHandle handle})
   RenderSliverOverlapInjector$Mate(
       {
-      /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
+      /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
       required SliverOverlapAbsorberHandle handle})
       : super(handle: handle) {
     mateCreateName = 'RenderSliverOverlapInjector';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
-    mateUse('handle', handle, isNamed: true);
+    mateUse(
+      'handle',
+      handle,
+      isNamed: true,
+    );
   }
 }
 
@@ -203,31 +292,31 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with 
 class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
   /// NestedScrollViewViewport NestedScrollViewViewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, double anchor = 0.0, required ViewportOffset offset, Key? center, List<Widget> slivers = const <Widget>[], required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   NestedScrollViewViewport$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
     AxisDirection axisDirection = AxisDirection.down,
 
-    /// optionalParameters: {AxisDirection? crossAxisDirection} , defaultValue:none
+    /// optionalParameters: {AxisDirection? crossAxisDirection} , default:none
     AxisDirection? crossAxisDirection,
 
-    /// optionalParameters: {double anchor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
     double anchor = 0.0,
 
-    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
+    /// optionalParameters: {required ViewportOffset offset} , default:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {Key? center} , defaultValue:none
+    /// optionalParameters: {Key? center} , default:none
     Key? center,
 
-    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> slivers,
 
-    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
+    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
     required SliverOverlapAbsorberHandle handle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
@@ -253,15 +342,54 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('axisDirection', axisDirection, isNamed: true);
-    mateUse('crossAxisDirection', crossAxisDirection, isNamed: true);
-    mateUse('anchor', anchor, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('center', center, isNamed: true);
-    mateUseList('slivers', slivers, isNamed: true);
-    mateUse('handle', handle, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+      defaultValue: AxisDirection.down,
+    );
+    mateUse(
+      'crossAxisDirection',
+      crossAxisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'center',
+      center,
+      isNamed: true,
+    );
+    mateUseList(
+      'slivers',
+      slivers,
+      isNamed: true,
+    );
+    mateUse(
+      'handle',
+      handle,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -269,29 +397,29 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
 class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport with Mate {
   /// RenderNestedScrollViewViewport RenderNestedScrollViewViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   RenderNestedScrollViewViewport$Mate({
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , defaultValue:is!ConstVariableElement
-    required AxisDirection axisDirection,
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
+    AxisDirection axisDirection = AxisDirection.down,
 
-    /// optionalParameters: {required AxisDirection crossAxisDirection} , defaultValue:none
+    /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
     required AxisDirection crossAxisDirection,
 
-    /// optionalParameters: {required ViewportOffset offset} , defaultValue:none
+    /// optionalParameters: {required ViewportOffset offset} , default:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {double anchor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
     double anchor = 0.0,
 
-    /// optionalParameters: {List<RenderSliver>? children} , defaultValue:none
+    /// optionalParameters: {List<RenderSliver>? children} , default:none
     List<RenderSliver>? children,
 
-    /// optionalParameters: {RenderSliver? center} , defaultValue:none
+    /// optionalParameters: {RenderSliver? center} , default:none
     RenderSliver? center,
 
-    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , defaultValue:none
+    /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
     required SliverOverlapAbsorberHandle handle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:is!ConstVariableElement
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           axisDirection: axisDirection,
           crossAxisDirection: crossAxisDirection,
@@ -314,13 +442,48 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('axisDirection', axisDirection, isNamed: true);
-    mateUse('crossAxisDirection', crossAxisDirection, isNamed: true);
-    mateUse('offset', offset, isNamed: true);
-    mateUse('anchor', anchor, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('center', center, isNamed: true);
-    mateUse('handle', handle, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+      defaultValue: AxisDirection.down,
+    );
+    mateUse(
+      'crossAxisDirection',
+      crossAxisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'center',
+      center,
+      isNamed: true,
+    );
+    mateUse(
+      'handle',
+      handle,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

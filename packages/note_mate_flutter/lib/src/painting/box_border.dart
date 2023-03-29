@@ -9,16 +9,16 @@ import 'package:flutter/painting.dart';
 class Border$Mate extends Border with Mate {
   /// Border Border({BorderSide top = BorderSide.none, BorderSide right = BorderSide.none, BorderSide bottom = BorderSide.none, BorderSide left = BorderSide.none})
   Border$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide top = BorderSide.none,
 
-    /// optionalParameters: {BorderSide right = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide right = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide right = BorderSide.none,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide bottom = BorderSide.none,
 
-    /// optionalParameters: {BorderSide left = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide left = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide left = BorderSide.none,
   }) : super(
           top: top,
@@ -34,10 +34,30 @@ class Border$Mate extends Border with Mate {
           bottom: p.get('bottom').build(),
           left: p.get('left').build(),
         );
-    mateUse('top', top, isNamed: true);
-    mateUse('right', right, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
-    mateUse('left', left, isNamed: true);
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
   }
 
   /// Border Border.fromBorderSide(BorderSide side)
@@ -49,15 +69,19 @@ class Border$Mate extends Border with Mate {
     mateCreateName = 'Border.fromBorderSide';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Border$Mate.fromBorderSide(p.get('side').value);
-    mateUse('side', side, isNamed: false);
+    mateUse(
+      'side',
+      side,
+      isNamed: false,
+    );
   }
 
   /// Border Border.symmetric({BorderSide vertical = BorderSide.none, BorderSide horizontal = BorderSide.none})
   Border$Mate.symmetric({
-    /// optionalParameters: {BorderSide vertical = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide vertical = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide vertical = BorderSide.none,
 
-    /// optionalParameters: {BorderSide horizontal = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide horizontal = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide horizontal = BorderSide.none,
   }) : super.symmetric(
           vertical: vertical,
@@ -69,8 +93,18 @@ class Border$Mate extends Border with Mate {
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
         );
-    mateUse('vertical', vertical, isNamed: true);
-    mateUse('horizontal', horizontal, isNamed: true);
+    mateUse(
+      'vertical',
+      vertical,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'horizontal',
+      horizontal,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
   }
 }
 
@@ -78,16 +112,16 @@ class Border$Mate extends Border with Mate {
 class BorderDirectional$Mate extends BorderDirectional with Mate {
   /// BorderDirectional BorderDirectional({BorderSide top = BorderSide.none, BorderSide start = BorderSide.none, BorderSide end = BorderSide.none, BorderSide bottom = BorderSide.none})
   BorderDirectional$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide top = BorderSide.none,
 
-    /// optionalParameters: {BorderSide start = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide start = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide start = BorderSide.none,
 
-    /// optionalParameters: {BorderSide end = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide end = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide end = BorderSide.none,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     BorderSide bottom = BorderSide.none,
   }) : super(
           top: top,
@@ -103,9 +137,29 @@ class BorderDirectional$Mate extends BorderDirectional with Mate {
           end: p.get('end').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse('top', top, isNamed: true);
-    mateUse('start', start, isNamed: true);
-    mateUse('end', end, isNamed: true);
-    mateUse('bottom', bottom, isNamed: true);
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
   }
 }

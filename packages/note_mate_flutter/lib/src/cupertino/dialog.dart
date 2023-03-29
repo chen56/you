@@ -15,28 +15,28 @@ import 'package:flutter/src/painting/text_style.dart';
 class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
   /// CupertinoAlertDialog CupertinoAlertDialog({Key? key, Widget? title, Widget? content, List<Widget> actions = const <Widget>[], ScrollController? scrollController, ScrollController? actionScrollController, Duration insetAnimationDuration = const Duration(milliseconds: 100), Curve insetAnimationCurve = Curves.decelerate})
   CupertinoAlertDialog$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? title} , defaultValue:none
+    /// optionalParameters: {Widget? title} , default:none
     Widget? title,
 
-    /// optionalParameters: {Widget? content} , defaultValue:none
+    /// optionalParameters: {Widget? content} , default:none
     Widget? content,
 
-    /// optionalParameters: {List<Widget> actions = const <Widget>[]} , defaultValue:unprocessed
+    /// optionalParameters: {List<Widget> actions = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> actions,
 
-    /// optionalParameters: {ScrollController? scrollController} , defaultValue:none
+    /// optionalParameters: {ScrollController? scrollController} , default:none
     ScrollController? scrollController,
 
-    /// optionalParameters: {ScrollController? actionScrollController} , defaultValue:none
+    /// optionalParameters: {ScrollController? actionScrollController} , default:none
     ScrollController? actionScrollController,
 
-    /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , defaultValue:unprocessed
+    /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , default:processed=PrefixedIdentifierImpl
     Curve insetAnimationCurve = Curves.decelerate,
   }) : super(
           key: key,
@@ -60,14 +60,47 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
           insetAnimationDuration: p.get('insetAnimationDuration').build(),
           insetAnimationCurve: p.get('insetAnimationCurve').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('title', title, isNamed: true);
-    mateUse('content', content, isNamed: true);
-    mateUseList('actions', actions, isNamed: true);
-    mateUse('scrollController', scrollController, isNamed: true);
-    mateUse('actionScrollController', actionScrollController, isNamed: true);
-    mateUse('insetAnimationDuration', insetAnimationDuration, isNamed: true);
-    mateUse('insetAnimationCurve', insetAnimationCurve, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'content',
+      content,
+      isNamed: true,
+    );
+    mateUseList(
+      'actions',
+      actions,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollController',
+      scrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'actionScrollController',
+      actionScrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'insetAnimationDuration',
+      insetAnimationDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'insetAnimationCurve',
+      insetAnimationCurve,
+      isNamed: true,
+      defaultValue: Curves.decelerate,
+    );
   }
 }
 
@@ -75,13 +108,13 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
 class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with Mate {
   /// CupertinoPopupSurface CupertinoPopupSurface({Key? key, bool isSurfacePainted = true, Widget? child})
   CupertinoPopupSurface$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool isSurfacePainted = true} , defaultValue:Literal
+    /// optionalParameters: {bool isSurfacePainted = true} , default:processed=BooleanLiteralImpl
     bool isSurfacePainted = true,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -95,9 +128,22 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with Mate {
           isSurfacePainted: p.get('isSurfacePainted').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('isSurfacePainted', isSurfacePainted, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'isSurfacePainted',
+      isSurfacePainted,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -105,25 +151,25 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with Mate {
 class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
   /// CupertinoActionSheet CupertinoActionSheet({Key? key, Widget? title, Widget? message, List<Widget>? actions, ScrollController? messageScrollController, ScrollController? actionScrollController, Widget? cancelButton})
   CupertinoActionSheet$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? title} , defaultValue:none
+    /// optionalParameters: {Widget? title} , default:none
     Widget? title,
 
-    /// optionalParameters: {Widget? message} , defaultValue:none
+    /// optionalParameters: {Widget? message} , default:none
     Widget? message,
 
-    /// optionalParameters: {List<Widget>? actions} , defaultValue:none
+    /// optionalParameters: {List<Widget>? actions} , default:none
     List<Widget>? actions,
 
-    /// optionalParameters: {ScrollController? messageScrollController} , defaultValue:none
+    /// optionalParameters: {ScrollController? messageScrollController} , default:none
     ScrollController? messageScrollController,
 
-    /// optionalParameters: {ScrollController? actionScrollController} , defaultValue:none
+    /// optionalParameters: {ScrollController? actionScrollController} , default:none
     ScrollController? actionScrollController,
 
-    /// optionalParameters: {Widget? cancelButton} , defaultValue:none
+    /// optionalParameters: {Widget? cancelButton} , default:none
     Widget? cancelButton,
   }) : super(
           key: key,
@@ -145,13 +191,41 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
           actionScrollController: p.get('actionScrollController').build(),
           cancelButton: p.get('cancelButton').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('title', title, isNamed: true);
-    mateUse('message', message, isNamed: true);
-    mateUseList('actions', actions, isNamed: true);
-    mateUse('messageScrollController', messageScrollController, isNamed: true);
-    mateUse('actionScrollController', actionScrollController, isNamed: true);
-    mateUse('cancelButton', cancelButton, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'message',
+      message,
+      isNamed: true,
+    );
+    mateUseList(
+      'actions',
+      actions,
+      isNamed: true,
+    );
+    mateUse(
+      'messageScrollController',
+      messageScrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'actionScrollController',
+      actionScrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'cancelButton',
+      cancelButton,
+      isNamed: true,
+    );
   }
 }
 
@@ -159,19 +233,19 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
 class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Mate {
   /// CupertinoActionSheetAction CupertinoActionSheetAction({Key? key, required void Function() onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, required Widget child})
   CupertinoActionSheetAction$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required void Function() onPressed} , defaultValue:none
+    /// optionalParameters: {required void Function() onPressed} , default:none
     required VoidCallback onPressed,
 
-    /// optionalParameters: {bool isDefaultAction = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDefaultAction = false} , default:processed=BooleanLiteralImpl
     bool isDefaultAction = false,
 
-    /// optionalParameters: {bool isDestructiveAction = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDestructiveAction = false} , default:processed=BooleanLiteralImpl
     bool isDestructiveAction = false,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -189,11 +263,33 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Ma
           isDestructiveAction: p.get('isDestructiveAction').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('isDefaultAction', isDefaultAction, isNamed: true);
-    mateUse('isDestructiveAction', isDestructiveAction, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'isDefaultAction',
+      isDefaultAction,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isDestructiveAction',
+      isDestructiveAction,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -201,22 +297,22 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Ma
 class CupertinoDialogAction$Mate extends CupertinoDialogAction with Mate {
   /// CupertinoDialogAction CupertinoDialogAction({Key? key, void Function()? onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, TextStyle? textStyle, required Widget child})
   CupertinoDialogAction$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {void Function()? onPressed} , defaultValue:none
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
 
-    /// optionalParameters: {bool isDefaultAction = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDefaultAction = false} , default:processed=BooleanLiteralImpl
     bool isDefaultAction = false,
 
-    /// optionalParameters: {bool isDestructiveAction = false} , defaultValue:Literal
+    /// optionalParameters: {bool isDestructiveAction = false} , default:processed=BooleanLiteralImpl
     bool isDestructiveAction = false,
 
-    /// optionalParameters: {TextStyle? textStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -236,11 +332,37 @@ class CupertinoDialogAction$Mate extends CupertinoDialogAction with Mate {
           textStyle: p.get('textStyle').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('onPressed', onPressed, isNamed: true);
-    mateUse('isDefaultAction', isDefaultAction, isNamed: true);
-    mateUse('isDestructiveAction', isDestructiveAction, isNamed: true);
-    mateUse('textStyle', textStyle, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'isDefaultAction',
+      isDefaultAction,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isDestructiveAction',
+      isDestructiveAction,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -12,28 +12,28 @@ import 'package:flutter/material.dart';
 class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
   /// FlexibleSpaceBar FlexibleSpaceBar({Key? key, Widget? title, Widget? background, bool? centerTitle, EdgeInsetsGeometry? titlePadding, CollapseMode collapseMode = CollapseMode.parallax, List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground], double expandedTitleScale = 1.5})
   FlexibleSpaceBar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? title} , defaultValue:none
+    /// optionalParameters: {Widget? title} , default:none
     Widget? title,
 
-    /// optionalParameters: {Widget? background} , defaultValue:none
+    /// optionalParameters: {Widget? background} , default:none
     Widget? background,
 
-    /// optionalParameters: {bool? centerTitle} , defaultValue:none
+    /// optionalParameters: {bool? centerTitle} , default:none
     bool? centerTitle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , default:none
     EdgeInsetsGeometry? titlePadding,
 
-    /// optionalParameters: {CollapseMode collapseMode = CollapseMode.parallax} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {CollapseMode collapseMode = CollapseMode.parallax} , default:processed=PrefixedIdentifierImpl
     CollapseMode collapseMode = CollapseMode.parallax,
 
-    /// optionalParameters: {List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground]} , defaultValue:unprocessed
+    /// optionalParameters: {List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground]} , default:unprocessed=ListLiteralImpl
     required List<StretchMode> stretchModes,
 
-    /// optionalParameters: {double expandedTitleScale = 1.5} , defaultValue:Literal
+    /// optionalParameters: {double expandedTitleScale = 1.5} , default:processed=DoubleLiteralImpl
     double expandedTitleScale = 1.5,
   }) : super(
           key: key,
@@ -57,14 +57,48 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
           stretchModes: p.get('stretchModes').build(),
           expandedTitleScale: p.get('expandedTitleScale').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('title', title, isNamed: true);
-    mateUse('background', background, isNamed: true);
-    mateUse('centerTitle', centerTitle, isNamed: true);
-    mateUse('titlePadding', titlePadding, isNamed: true);
-    mateUse('collapseMode', collapseMode, isNamed: true);
-    mateUseList('stretchModes', stretchModes, isNamed: true);
-    mateUse('expandedTitleScale', expandedTitleScale, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'background',
+      background,
+      isNamed: true,
+    );
+    mateUse(
+      'centerTitle',
+      centerTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'titlePadding',
+      titlePadding,
+      isNamed: true,
+    );
+    mateUse(
+      'collapseMode',
+      collapseMode,
+      isNamed: true,
+      defaultValue: CollapseMode.parallax,
+    );
+    mateUseList(
+      'stretchModes',
+      stretchModes,
+      isNamed: true,
+    );
+    mateUse(
+      'expandedTitleScale',
+      expandedTitleScale,
+      isNamed: true,
+      defaultValue: 1.5,
+    );
   }
 }
 
@@ -72,25 +106,25 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
 class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate {
   /// FlexibleSpaceBarSettings FlexibleSpaceBarSettings({Key? key, required double toolbarOpacity, required double minExtent, required double maxExtent, required double currentExtent, required Widget child, bool? isScrolledUnder})
   FlexibleSpaceBarSettings$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double toolbarOpacity} , defaultValue:none
+    /// optionalParameters: {required double toolbarOpacity} , default:none
     required double toolbarOpacity,
 
-    /// optionalParameters: {required double minExtent} , defaultValue:none
+    /// optionalParameters: {required double minExtent} , default:none
     required double minExtent,
 
-    /// optionalParameters: {required double maxExtent} , defaultValue:none
+    /// optionalParameters: {required double maxExtent} , default:none
     required double maxExtent,
 
-    /// optionalParameters: {required double currentExtent} , defaultValue:none
+    /// optionalParameters: {required double currentExtent} , default:none
     required double currentExtent,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {bool? isScrolledUnder} , defaultValue:none
+    /// optionalParameters: {bool? isScrolledUnder} , default:none
     bool? isScrolledUnder,
   }) : super(
           key: key,
@@ -112,12 +146,40 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate {
           child: p.get('child').build(),
           isScrolledUnder: p.get('isScrolledUnder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('toolbarOpacity', toolbarOpacity, isNamed: true);
-    mateUse('minExtent', minExtent, isNamed: true);
-    mateUse('maxExtent', maxExtent, isNamed: true);
-    mateUse('currentExtent', currentExtent, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('isScrolledUnder', isScrolledUnder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarOpacity',
+      toolbarOpacity,
+      isNamed: true,
+    );
+    mateUse(
+      'minExtent',
+      minExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'maxExtent',
+      maxExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'currentExtent',
+      currentExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'isScrolledUnder',
+      isScrolledUnder,
+      isNamed: true,
+    );
   }
 }

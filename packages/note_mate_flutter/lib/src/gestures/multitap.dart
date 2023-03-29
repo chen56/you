@@ -11,14 +11,14 @@ import 'package:flutter/animation.dart';
 class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Mate {
   /// DoubleTapGestureRecognizer DoubleTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   DoubleTapGestureRecognizer$Mate({
-    /// optionalParameters: {Object? debugOwner} , defaultValue:none
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , defaultValue:unprocessed
-    AllowedButtonsFilter? allowedButtonsFilter,
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , default:unprocessed=SimpleIdentifierImpl
+    required AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
           supportedDevices: supportedDevices,
@@ -31,9 +31,21 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner, isNamed: true);
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }
 
@@ -41,16 +53,16 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
 class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate {
   /// MultiTapGestureRecognizer MultiTapGestureRecognizer({Duration longTapDelay = Duration.zero, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   MultiTapGestureRecognizer$Mate({
-    /// optionalParameters: {Duration longTapDelay = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration longTapDelay = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration longTapDelay = Duration.zero,
 
-    /// optionalParameters: {Object? debugOwner} , defaultValue:none
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           longTapDelay: longTapDelay,
@@ -66,10 +78,27 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('longTapDelay', longTapDelay, isNamed: true);
-    mateUse('debugOwner', debugOwner, isNamed: true);
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'longTapDelay',
+      longTapDelay,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }
 
@@ -77,19 +106,19 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
 class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate {
   /// SerialTapDownDetails SerialTapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, required PointerDeviceKind kind, int buttons = 0, int count = 1})
   SerialTapDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {required PointerDeviceKind kind} , defaultValue:none
+    /// optionalParameters: {required PointerDeviceKind kind} , default:none
     required PointerDeviceKind kind,
 
-    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
     int buttons = 0,
 
-    /// optionalParameters: {int count = 1} , defaultValue:Literal
+    /// optionalParameters: {int count = 1} , default:processed=IntegerLiteralImpl
     int count = 1,
   }) : super(
           globalPosition: globalPosition,
@@ -107,11 +136,34 @@ class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate {
           buttons: p.get('buttons').build(),
           count: p.get('count').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('count', count, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'count',
+      count,
+      isNamed: true,
+      defaultValue: 1,
+    );
   }
 }
 
@@ -120,13 +172,18 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate {
   /// SerialTapCancelDetails SerialTapCancelDetails({int count = 1})
   SerialTapCancelDetails$Mate(
       {
-      /// optionalParameters: {int count = 1} , defaultValue:Literal
+      /// optionalParameters: {int count = 1} , default:processed=IntegerLiteralImpl
       int count = 1})
       : super(count: count) {
     mateCreateName = 'SerialTapCancelDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapCancelDetails$Mate(count: p.get('count').build());
-    mateUse('count', count, isNamed: true);
+    mateUse(
+      'count',
+      count,
+      isNamed: true,
+      defaultValue: 1,
+    );
   }
 }
 
@@ -134,16 +191,16 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate {
 class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate {
   /// SerialTapUpDetails SerialTapUpDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind, int count = 1})
   SerialTapUpDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , defaultValue:none
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , defaultValue:none
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
 
-    /// optionalParameters: {int count = 1} , defaultValue:Literal
+    /// optionalParameters: {int count = 1} , default:processed=IntegerLiteralImpl
     int count = 1,
   }) : super(
           globalPosition: globalPosition,
@@ -159,10 +216,28 @@ class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate {
           kind: p.get('kind').build(),
           count: p.get('count').build(),
         );
-    mateUse('globalPosition', globalPosition, isNamed: true);
-    mateUse('localPosition', localPosition, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('count', count, isNamed: true);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
+    mateUse(
+      'count',
+      count,
+      isNamed: true,
+      defaultValue: 1,
+    );
   }
 }
 
@@ -170,13 +245,13 @@ class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate {
 class SerialTapGestureRecognizer$Mate extends SerialTapGestureRecognizer with Mate {
   /// SerialTapGestureRecognizer SerialTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   SerialTapGestureRecognizer$Mate({
-    /// optionalParameters: {Object? debugOwner} , defaultValue:none
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , defaultValue:none
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , defaultValue:none
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           debugOwner: debugOwner,
@@ -190,8 +265,20 @@ class SerialTapGestureRecognizer$Mate extends SerialTapGestureRecognizer with Ma
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse('debugOwner', debugOwner, isNamed: true);
-    mateUse('supportedDevices', supportedDevices, isNamed: true);
-    mateUse('allowedButtonsFilter', allowedButtonsFilter, isNamed: true);
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }

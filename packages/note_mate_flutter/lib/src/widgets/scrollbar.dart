@@ -17,52 +17,52 @@ import 'package:flutter/src/widgets/scroll_notification.dart';
 class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
   /// ScrollbarPainter ScrollbarPainter({required Color color, required Animation<double> fadeoutOpacityAnimation, Color trackColor = const Color(0x00000000), Color trackBorderColor = const Color(0x00000000), TextDirection? textDirection, double thickness = _kScrollbarThickness, EdgeInsets padding = EdgeInsets.zero, double mainAxisMargin = 0.0, double crossAxisMargin = 0.0, Radius? radius, Radius? trackRadius, OutlinedBorder? shape, double minLength = _kMinThumbExtent, double? minOverscrollLength, ScrollbarOrientation? scrollbarOrientation, bool ignorePointer = false})
   ScrollbarPainter$Mate({
-    /// optionalParameters: {required Color color} , defaultValue:none
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {required Animation<double> fadeoutOpacityAnimation} , defaultValue:none
+    /// optionalParameters: {required Animation<double> fadeoutOpacityAnimation} , default:none
     required Animation<double> fadeoutOpacityAnimation,
 
-    /// optionalParameters: {Color trackColor = const Color(0x00000000)} , defaultValue:unprocessed
+    /// optionalParameters: {Color trackColor = const Color(0x00000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color trackColor,
 
-    /// optionalParameters: {Color trackBorderColor = const Color(0x00000000)} , defaultValue:unprocessed
+    /// optionalParameters: {Color trackBorderColor = const Color(0x00000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color trackBorderColor,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {double thickness = _kScrollbarThickness} , defaultValue:unprocessed
+    /// optionalParameters: {double thickness = _kScrollbarThickness} , default:unprocessed=SimpleIdentifierImpl
     required double thickness,
 
-    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     EdgeInsets padding = EdgeInsets.zero,
 
-    /// optionalParameters: {double mainAxisMargin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double mainAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
     double mainAxisMargin = 0.0,
 
-    /// optionalParameters: {double crossAxisMargin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double crossAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
     double crossAxisMargin = 0.0,
 
-    /// optionalParameters: {Radius? radius} , defaultValue:none
+    /// optionalParameters: {Radius? radius} , default:none
     Radius? radius,
 
-    /// optionalParameters: {Radius? trackRadius} , defaultValue:none
+    /// optionalParameters: {Radius? trackRadius} , default:none
     Radius? trackRadius,
 
-    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
+    /// optionalParameters: {OutlinedBorder? shape} , default:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {double minLength = _kMinThumbExtent} , defaultValue:unprocessed
+    /// optionalParameters: {double minLength = _kMinThumbExtent} , default:unprocessed=SimpleIdentifierImpl
     required double minLength,
 
-    /// optionalParameters: {double? minOverscrollLength} , defaultValue:none
+    /// optionalParameters: {double? minOverscrollLength} , default:none
     double? minOverscrollLength,
 
-    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , defaultValue:none
+    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , default:none
     ScrollbarOrientation? scrollbarOrientation,
 
-    /// optionalParameters: {bool ignorePointer = false} , defaultValue:Literal
+    /// optionalParameters: {bool ignorePointer = false} , default:processed=BooleanLiteralImpl
     bool ignorePointer = false,
   }) : super(
           color: color,
@@ -102,22 +102,90 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
           ignorePointer: p.get('ignorePointer').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('fadeoutOpacityAnimation', fadeoutOpacityAnimation, isNamed: true);
-    mateUse('trackColor', trackColor, isNamed: true);
-    mateUse('trackBorderColor', trackBorderColor, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('thickness', thickness, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
-    mateUse('mainAxisMargin', mainAxisMargin, isNamed: true);
-    mateUse('crossAxisMargin', crossAxisMargin, isNamed: true);
-    mateUse('radius', radius, isNamed: true);
-    mateUse('trackRadius', trackRadius, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('minLength', minLength, isNamed: true);
-    mateUse('minOverscrollLength', minOverscrollLength, isNamed: true);
-    mateUse('scrollbarOrientation', scrollbarOrientation, isNamed: true);
-    mateUse('ignorePointer', ignorePointer, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeoutOpacityAnimation',
+      fadeoutOpacityAnimation,
+      isNamed: true,
+    );
+    mateUse(
+      'trackColor',
+      trackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'trackBorderColor',
+      trackBorderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'mainAxisMargin',
+      mainAxisMargin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'crossAxisMargin',
+      crossAxisMargin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'trackRadius',
+      trackRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'minLength',
+      minLength,
+      isNamed: true,
+    );
+    mateUse(
+      'minOverscrollLength',
+      minOverscrollLength,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollbarOrientation',
+      scrollbarOrientation,
+      isNamed: true,
+    );
+    mateUse(
+      'ignorePointer',
+      ignorePointer,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -125,73 +193,73 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
 class RawScrollbar$Mate extends RawScrollbar with Mate {
   /// RawScrollbar RawScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, OutlinedBorder? shape, Radius? radius, double? thickness, Color? thumbColor, double minThumbLength = _kMinThumbExtent, double? minOverscrollLength, bool? trackVisibility, Radius? trackRadius, Color? trackColor, Color? trackBorderColor, Duration fadeDuration = _kScrollbarFadeDuration, Duration timeToFade = _kScrollbarTimeToFade, Duration pressDuration = Duration.zero, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, double mainAxisMargin = 0.0, double crossAxisMargin = 0.0, EdgeInsets? padding, bool? isAlwaysShown})
   RawScrollbar$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {ScrollController? controller} , defaultValue:none
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? thumbVisibility} , defaultValue:none
+    /// optionalParameters: {bool? thumbVisibility} , default:none
     bool? thumbVisibility,
 
-    /// optionalParameters: {OutlinedBorder? shape} , defaultValue:none
+    /// optionalParameters: {OutlinedBorder? shape} , default:none
     OutlinedBorder? shape,
 
-    /// optionalParameters: {Radius? radius} , defaultValue:none
+    /// optionalParameters: {Radius? radius} , default:none
     Radius? radius,
 
-    /// optionalParameters: {double? thickness} , defaultValue:none
+    /// optionalParameters: {double? thickness} , default:none
     double? thickness,
 
-    /// optionalParameters: {Color? thumbColor} , defaultValue:none
+    /// optionalParameters: {Color? thumbColor} , default:none
     Color? thumbColor,
 
-    /// optionalParameters: {double minThumbLength = _kMinThumbExtent} , defaultValue:unprocessed
+    /// optionalParameters: {double minThumbLength = _kMinThumbExtent} , default:unprocessed=SimpleIdentifierImpl
     required double minThumbLength,
 
-    /// optionalParameters: {double? minOverscrollLength} , defaultValue:none
+    /// optionalParameters: {double? minOverscrollLength} , default:none
     double? minOverscrollLength,
 
-    /// optionalParameters: {bool? trackVisibility} , defaultValue:none
+    /// optionalParameters: {bool? trackVisibility} , default:none
     bool? trackVisibility,
 
-    /// optionalParameters: {Radius? trackRadius} , defaultValue:none
+    /// optionalParameters: {Radius? trackRadius} , default:none
     Radius? trackRadius,
 
-    /// optionalParameters: {Color? trackColor} , defaultValue:none
+    /// optionalParameters: {Color? trackColor} , default:none
     Color? trackColor,
 
-    /// optionalParameters: {Color? trackBorderColor} , defaultValue:none
+    /// optionalParameters: {Color? trackBorderColor} , default:none
     Color? trackBorderColor,
 
-    /// optionalParameters: {Duration fadeDuration = _kScrollbarFadeDuration} , defaultValue:unprocessed
+    /// optionalParameters: {Duration fadeDuration = _kScrollbarFadeDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration fadeDuration,
 
-    /// optionalParameters: {Duration timeToFade = _kScrollbarTimeToFade} , defaultValue:unprocessed
+    /// optionalParameters: {Duration timeToFade = _kScrollbarTimeToFade} , default:unprocessed=SimpleIdentifierImpl
     required Duration timeToFade,
 
-    /// optionalParameters: {Duration pressDuration = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration pressDuration = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration pressDuration = Duration.zero,
 
-    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , defaultValue:unprocessed
+    /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
     required ScrollNotificationPredicate notificationPredicate,
 
-    /// optionalParameters: {bool? interactive} , defaultValue:none
+    /// optionalParameters: {bool? interactive} , default:none
     bool? interactive,
 
-    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , defaultValue:none
+    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , default:none
     ScrollbarOrientation? scrollbarOrientation,
 
-    /// optionalParameters: {double mainAxisMargin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double mainAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
     double mainAxisMargin = 0.0,
 
-    /// optionalParameters: {double crossAxisMargin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double crossAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
     double crossAxisMargin = 0.0,
 
-    /// optionalParameters: {EdgeInsets? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsets? padding} , default:none
     EdgeInsets? padding,
   }) : super(
           key: key,
@@ -245,28 +313,123 @@ class RawScrollbar$Mate extends RawScrollbar with Mate {
           crossAxisMargin: p.get('crossAxisMargin').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('controller', controller, isNamed: true);
-    mateUse('thumbVisibility', thumbVisibility, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('radius', radius, isNamed: true);
-    mateUse('thickness', thickness, isNamed: true);
-    mateUse('thumbColor', thumbColor, isNamed: true);
-    mateUse('minThumbLength', minThumbLength, isNamed: true);
-    mateUse('minOverscrollLength', minOverscrollLength, isNamed: true);
-    mateUse('trackVisibility', trackVisibility, isNamed: true);
-    mateUse('trackRadius', trackRadius, isNamed: true);
-    mateUse('trackColor', trackColor, isNamed: true);
-    mateUse('trackBorderColor', trackBorderColor, isNamed: true);
-    mateUse('fadeDuration', fadeDuration, isNamed: true);
-    mateUse('timeToFade', timeToFade, isNamed: true);
-    mateUse('pressDuration', pressDuration, isNamed: true);
-    mateUse('notificationPredicate', notificationPredicate, isNamed: true);
-    mateUse('interactive', interactive, isNamed: true);
-    mateUse('scrollbarOrientation', scrollbarOrientation, isNamed: true);
-    mateUse('mainAxisMargin', mainAxisMargin, isNamed: true);
-    mateUse('crossAxisMargin', crossAxisMargin, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbVisibility',
+      thumbVisibility,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbColor',
+      thumbColor,
+      isNamed: true,
+    );
+    mateUse(
+      'minThumbLength',
+      minThumbLength,
+      isNamed: true,
+    );
+    mateUse(
+      'minOverscrollLength',
+      minOverscrollLength,
+      isNamed: true,
+    );
+    mateUse(
+      'trackVisibility',
+      trackVisibility,
+      isNamed: true,
+    );
+    mateUse(
+      'trackRadius',
+      trackRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'trackColor',
+      trackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'trackBorderColor',
+      trackBorderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'fadeDuration',
+      fadeDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'timeToFade',
+      timeToFade,
+      isNamed: true,
+    );
+    mateUse(
+      'pressDuration',
+      pressDuration,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'notificationPredicate',
+      notificationPredicate,
+      isNamed: true,
+    );
+    mateUse(
+      'interactive',
+      interactive,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollbarOrientation',
+      scrollbarOrientation,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisMargin',
+      mainAxisMargin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'crossAxisMargin',
+      crossAxisMargin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
   }
 }

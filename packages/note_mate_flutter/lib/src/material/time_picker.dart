@@ -12,40 +12,40 @@ import 'package:flutter/src/widgets/media_query.dart';
 class TimePickerDialog$Mate extends TimePickerDialog with Mate {
   /// TimePickerDialog TimePickerDialog({Key? key, required TimeOfDay initialTime, String? cancelText, String? confirmText, String? helpText, String? errorInvalidText, String? hourLabelText, String? minuteLabelText, String? restorationId, TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial, Orientation? orientation, void Function(TimePickerEntryMode)? onEntryModeChanged})
   TimePickerDialog$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TimeOfDay initialTime} , defaultValue:none
+    /// optionalParameters: {required TimeOfDay initialTime} , default:none
     required TimeOfDay initialTime,
 
-    /// optionalParameters: {String? cancelText} , defaultValue:none
+    /// optionalParameters: {String? cancelText} , default:none
     String? cancelText,
 
-    /// optionalParameters: {String? confirmText} , defaultValue:none
+    /// optionalParameters: {String? confirmText} , default:none
     String? confirmText,
 
-    /// optionalParameters: {String? helpText} , defaultValue:none
+    /// optionalParameters: {String? helpText} , default:none
     String? helpText,
 
-    /// optionalParameters: {String? errorInvalidText} , defaultValue:none
+    /// optionalParameters: {String? errorInvalidText} , default:none
     String? errorInvalidText,
 
-    /// optionalParameters: {String? hourLabelText} , defaultValue:none
+    /// optionalParameters: {String? hourLabelText} , default:none
     String? hourLabelText,
 
-    /// optionalParameters: {String? minuteLabelText} , defaultValue:none
+    /// optionalParameters: {String? minuteLabelText} , default:none
     String? minuteLabelText,
 
-    /// optionalParameters: {String? restorationId} , defaultValue:none
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , default:processed=PrefixedIdentifierImpl
     TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial,
 
-    /// optionalParameters: {Orientation? orientation} , defaultValue:none
+    /// optionalParameters: {Orientation? orientation} , default:none
     Orientation? orientation,
 
-    /// optionalParameters: {void Function(TimePickerEntryMode)? onEntryModeChanged} , defaultValue:none
+    /// optionalParameters: {void Function(TimePickerEntryMode)? onEntryModeChanged} , default:none
     EntryModeChangeCallback? onEntryModeChanged,
   }) : super(
           key: key,
@@ -77,17 +77,66 @@ class TimePickerDialog$Mate extends TimePickerDialog with Mate {
           orientation: p.get('orientation').build(),
           onEntryModeChanged: p.get('onEntryModeChanged').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('initialTime', initialTime, isNamed: true);
-    mateUse('cancelText', cancelText, isNamed: true);
-    mateUse('confirmText', confirmText, isNamed: true);
-    mateUse('helpText', helpText, isNamed: true);
-    mateUse('errorInvalidText', errorInvalidText, isNamed: true);
-    mateUse('hourLabelText', hourLabelText, isNamed: true);
-    mateUse('minuteLabelText', minuteLabelText, isNamed: true);
-    mateUse('restorationId', restorationId, isNamed: true);
-    mateUse('initialEntryMode', initialEntryMode, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('onEntryModeChanged', onEntryModeChanged, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'initialTime',
+      initialTime,
+      isNamed: true,
+    );
+    mateUse(
+      'cancelText',
+      cancelText,
+      isNamed: true,
+    );
+    mateUse(
+      'confirmText',
+      confirmText,
+      isNamed: true,
+    );
+    mateUse(
+      'helpText',
+      helpText,
+      isNamed: true,
+    );
+    mateUse(
+      'errorInvalidText',
+      errorInvalidText,
+      isNamed: true,
+    );
+    mateUse(
+      'hourLabelText',
+      hourLabelText,
+      isNamed: true,
+    );
+    mateUse(
+      'minuteLabelText',
+      minuteLabelText,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'initialEntryMode',
+      initialEntryMode,
+      isNamed: true,
+      defaultValue: TimePickerEntryMode.dial,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+    );
+    mateUse(
+      'onEntryModeChanged',
+      onEntryModeChanged,
+      isNamed: true,
+    );
   }
 }

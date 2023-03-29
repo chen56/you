@@ -13,28 +13,28 @@ import 'package:flutter/src/animation/animation.dart';
 class ModalBarrier$Mate extends ModalBarrier with Mate {
   /// ModalBarrier ModalBarrier({Key? key, Color? color, bool dismissible = true, void Function()? onDismiss, String? semanticsLabel, bool? barrierSemanticsDismissible = true, ValueNotifier<EdgeInsets>? clipDetailsNotifier, String? semanticsOnTapHint})
   ModalBarrier$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {bool dismissible = true} , defaultValue:Literal
+    /// optionalParameters: {bool dismissible = true} , default:processed=BooleanLiteralImpl
     bool dismissible = true,
 
-    /// optionalParameters: {void Function()? onDismiss} , defaultValue:none
+    /// optionalParameters: {void Function()? onDismiss} , default:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {bool? barrierSemanticsDismissible = true} , defaultValue:Literal
+    /// optionalParameters: {bool? barrierSemanticsDismissible = true} , default:processed=BooleanLiteralImpl
     bool? barrierSemanticsDismissible = true,
 
-    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , defaultValue:none
+    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , default:none
     ValueNotifier<EdgeInsets>? clipDetailsNotifier,
 
-    /// optionalParameters: {String? semanticsOnTapHint} , defaultValue:none
+    /// optionalParameters: {String? semanticsOnTapHint} , default:none
     String? semanticsOnTapHint,
   }) : super(
           key: key,
@@ -58,14 +58,48 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('dismissible', dismissible, isNamed: true);
-    mateUse('onDismiss', onDismiss, isNamed: true);
-    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
-    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible, isNamed: true);
-    mateUse('clipDetailsNotifier', clipDetailsNotifier, isNamed: true);
-    mateUse('semanticsOnTapHint', semanticsOnTapHint, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'dismissible',
+      dismissible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onDismiss',
+      onDismiss,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierSemanticsDismissible',
+      barrierSemanticsDismissible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'clipDetailsNotifier',
+      clipDetailsNotifier,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsOnTapHint',
+      semanticsOnTapHint,
+      isNamed: true,
+    );
   }
 }
 
@@ -73,28 +107,28 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
 class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
   /// AnimatedModalBarrier AnimatedModalBarrier({Key? key, required Animation<Color?> color, bool dismissible = true, String? semanticsLabel, bool? barrierSemanticsDismissible, void Function()? onDismiss, ValueNotifier<EdgeInsets>? clipDetailsNotifier, String? semanticsOnTapHint})
   AnimatedModalBarrier$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Color?> color} , defaultValue:none
+    /// optionalParameters: {required Animation<Color?> color} , default:none
     required Animation<Color?> color,
 
-    /// optionalParameters: {bool dismissible = true} , defaultValue:Literal
+    /// optionalParameters: {bool dismissible = true} , default:processed=BooleanLiteralImpl
     bool dismissible = true,
 
-    /// optionalParameters: {String? semanticsLabel} , defaultValue:none
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {bool? barrierSemanticsDismissible} , defaultValue:none
+    /// optionalParameters: {bool? barrierSemanticsDismissible} , default:none
     bool? barrierSemanticsDismissible,
 
-    /// optionalParameters: {void Function()? onDismiss} , defaultValue:none
+    /// optionalParameters: {void Function()? onDismiss} , default:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , defaultValue:none
+    /// optionalParameters: {ValueNotifier<EdgeInsets>? clipDetailsNotifier} , default:none
     ValueNotifier<EdgeInsets>? clipDetailsNotifier,
 
-    /// optionalParameters: {String? semanticsOnTapHint} , defaultValue:none
+    /// optionalParameters: {String? semanticsOnTapHint} , default:none
     String? semanticsOnTapHint,
   }) : super(
           key: key,
@@ -118,13 +152,46 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUse('dismissible', dismissible, isNamed: true);
-    mateUse('semanticsLabel', semanticsLabel, isNamed: true);
-    mateUse('barrierSemanticsDismissible', barrierSemanticsDismissible, isNamed: true);
-    mateUse('onDismiss', onDismiss, isNamed: true);
-    mateUse('clipDetailsNotifier', clipDetailsNotifier, isNamed: true);
-    mateUse('semanticsOnTapHint', semanticsOnTapHint, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'dismissible',
+      dismissible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierSemanticsDismissible',
+      barrierSemanticsDismissible,
+      isNamed: true,
+    );
+    mateUse(
+      'onDismiss',
+      onDismiss,
+      isNamed: true,
+    );
+    mateUse(
+      'clipDetailsNotifier',
+      clipDetailsNotifier,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsOnTapHint',
+      semanticsOnTapHint,
+      isNamed: true,
+    );
   }
 }

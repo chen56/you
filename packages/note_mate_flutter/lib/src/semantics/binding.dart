@@ -9,13 +9,13 @@ import 'dart:core';
 class SemanticsActionEvent$Mate extends SemanticsActionEvent with Mate {
   /// SemanticsActionEvent SemanticsActionEvent({required SemanticsAction type, required int nodeId, Object? arguments})
   SemanticsActionEvent$Mate({
-    /// optionalParameters: {required SemanticsAction type} , defaultValue:none
+    /// optionalParameters: {required SemanticsAction type} , default:none
     required SemanticsAction type,
 
-    /// optionalParameters: {required int nodeId} , defaultValue:none
+    /// optionalParameters: {required int nodeId} , default:none
     required int nodeId,
 
-    /// optionalParameters: {Object? arguments} , defaultValue:none
+    /// optionalParameters: {Object? arguments} , default:none
     Object? arguments,
   }) : super(
           type: type,
@@ -29,8 +29,20 @@ class SemanticsActionEvent$Mate extends SemanticsActionEvent with Mate {
           nodeId: p.get('nodeId').build(),
           arguments: p.get('arguments').build(),
         );
-    mateUse('type', type, isNamed: true);
-    mateUse('nodeId', nodeId, isNamed: true);
-    mateUse('arguments', arguments, isNamed: true);
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+    );
+    mateUse(
+      'nodeId',
+      nodeId,
+      isNamed: true,
+    );
+    mateUse(
+      'arguments',
+      arguments,
+      isNamed: true,
+    );
   }
 }

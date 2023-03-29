@@ -11,25 +11,25 @@ import 'package:flutter/physics.dart';
 class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
   /// BouncingScrollSimulation BouncingScrollSimulation({required double position, required double velocity, required double leadingExtent, required double trailingExtent, required SpringDescription spring, double constantDeceleration = 0, Tolerance tolerance = Tolerance.defaultTolerance})
   BouncingScrollSimulation$Mate({
-    /// optionalParameters: {required double position} , defaultValue:none
+    /// optionalParameters: {required double position} , default:none
     required double position,
 
-    /// optionalParameters: {required double velocity} , defaultValue:none
+    /// optionalParameters: {required double velocity} , default:none
     required double velocity,
 
-    /// optionalParameters: {required double leadingExtent} , defaultValue:none
+    /// optionalParameters: {required double leadingExtent} , default:none
     required double leadingExtent,
 
-    /// optionalParameters: {required double trailingExtent} , defaultValue:none
+    /// optionalParameters: {required double trailingExtent} , default:none
     required double trailingExtent,
 
-    /// optionalParameters: {required SpringDescription spring} , defaultValue:none
+    /// optionalParameters: {required SpringDescription spring} , default:none
     required SpringDescription spring,
 
-    /// optionalParameters: {double constantDeceleration = 0} , defaultValue:Literal
+    /// optionalParameters: {double constantDeceleration = 0} , default:processed=IntegerLiteralImpl
     double constantDeceleration = 0,
 
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           position: position,
@@ -51,13 +51,43 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
           constantDeceleration: p.get('constantDeceleration').build(),
           tolerance: p.get('tolerance').build(),
         );
-    mateUse('position', position, isNamed: true);
-    mateUse('velocity', velocity, isNamed: true);
-    mateUse('leadingExtent', leadingExtent, isNamed: true);
-    mateUse('trailingExtent', trailingExtent, isNamed: true);
-    mateUse('spring', spring, isNamed: true);
-    mateUse('constantDeceleration', constantDeceleration, isNamed: true);
-    mateUse('tolerance', tolerance, isNamed: true);
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingExtent',
+      leadingExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'trailingExtent',
+      trailingExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'spring',
+      spring,
+      isNamed: true,
+    );
+    mateUse(
+      'constantDeceleration',
+      constantDeceleration,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
   }
 }
 
@@ -65,16 +95,16 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
 class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate {
   /// ClampingScrollSimulation ClampingScrollSimulation({required double position, required double velocity, double friction = 0.015, Tolerance tolerance = Tolerance.defaultTolerance})
   ClampingScrollSimulation$Mate({
-    /// optionalParameters: {required double position} , defaultValue:none
+    /// optionalParameters: {required double position} , default:none
     required double position,
 
-    /// optionalParameters: {required double velocity} , defaultValue:none
+    /// optionalParameters: {required double velocity} , default:none
     required double velocity,
 
-    /// optionalParameters: {double friction = 0.015} , defaultValue:Literal
+    /// optionalParameters: {double friction = 0.015} , default:processed=DoubleLiteralImpl
     double friction = 0.015,
 
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           position: position,
@@ -90,9 +120,27 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate {
           friction: p.get('friction').build(),
           tolerance: p.get('tolerance').build(),
         );
-    mateUse('position', position, isNamed: true);
-    mateUse('velocity', velocity, isNamed: true);
-    mateUse('friction', friction, isNamed: true);
-    mateUse('tolerance', tolerance, isNamed: true);
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: true,
+    );
+    mateUse(
+      'friction',
+      friction,
+      isNamed: true,
+      defaultValue: 0.015,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
   }
 }

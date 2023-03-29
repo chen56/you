@@ -10,13 +10,13 @@ import 'dart:ui';
 class PreferredSize$Mate extends PreferredSize with Mate {
   /// PreferredSize PreferredSize({Key? key, required Widget child, required Size preferredSize})
   PreferredSize$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Size preferredSize} , defaultValue:none
+    /// optionalParameters: {required Size preferredSize} , default:none
     required Size preferredSize,
   }) : super(
           key: key,
@@ -30,8 +30,20 @@ class PreferredSize$Mate extends PreferredSize with Mate {
           child: p.get('child').build(),
           preferredSize: p.get('preferredSize').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('preferredSize', preferredSize, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'preferredSize',
+      preferredSize,
+      isNamed: true,
+    );
   }
 }

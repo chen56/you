@@ -10,19 +10,19 @@ import 'dart:ui';
 class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
   /// BottomNavigationBarItem BottomNavigationBarItem({required Widget icon, String? label, Widget? activeIcon, Color? backgroundColor, String? tooltip})
   BottomNavigationBarItem$Mate({
-    /// optionalParameters: {required Widget icon} , defaultValue:none
+    /// optionalParameters: {required Widget icon} , default:none
     required Widget icon,
 
-    /// optionalParameters: {String? label} , defaultValue:none
+    /// optionalParameters: {String? label} , default:none
     String? label,
 
-    /// optionalParameters: {Widget? activeIcon} , defaultValue:none
+    /// optionalParameters: {Widget? activeIcon} , default:none
     Widget? activeIcon,
 
-    /// optionalParameters: {Color? backgroundColor} , defaultValue:none
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
   }) : super(
           icon: icon,
@@ -40,10 +40,30 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
           backgroundColor: p.get('backgroundColor').build(),
           tooltip: p.get('tooltip').build(),
         );
-    mateUse('icon', icon, isNamed: true);
-    mateUse('label', label, isNamed: true);
-    mateUse('activeIcon', activeIcon, isNamed: true);
-    mateUse('backgroundColor', backgroundColor, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'activeIcon',
+      activeIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
   }
 }

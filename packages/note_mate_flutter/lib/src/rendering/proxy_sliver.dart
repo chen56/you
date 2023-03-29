@@ -10,13 +10,13 @@ import 'package:flutter/src/animation/animation.dart';
 class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
   /// RenderSliverOpacity RenderSliverOpacity({double opacity = 1.0, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverOpacity$Mate({
-    /// optionalParameters: {double opacity = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double opacity = 1.0} , default:processed=DoubleLiteralImpl
     double opacity = 1.0,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
+    /// optionalParameters: {RenderSliver? sliver} , default:none
     RenderSliver? sliver,
   }) : super(
           opacity: opacity,
@@ -30,9 +30,23 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -40,13 +54,13 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
 class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate {
   /// RenderSliverIgnorePointer RenderSliverIgnorePointer({RenderSliver? sliver, bool ignoring = true, bool? ignoringSemantics})
   RenderSliverIgnorePointer$Mate({
-    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
+    /// optionalParameters: {RenderSliver? sliver} , default:none
     RenderSliver? sliver,
 
-    /// optionalParameters: {bool ignoring = true} , defaultValue:Literal
+    /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
     bool ignoring = true,
 
-    /// optionalParameters: {bool? ignoringSemantics} , defaultValue:none
+    /// optionalParameters: {bool? ignoringSemantics} , default:none
     bool? ignoringSemantics,
   }) : super(
           sliver: sliver,
@@ -60,9 +74,22 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse('sliver', sliver, isNamed: true);
-    mateUse('ignoring', ignoring, isNamed: true);
-    mateUse('ignoringSemantics', ignoringSemantics, isNamed: true);
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
+    mateUse(
+      'ignoring',
+      ignoring,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringSemantics',
+      ignoringSemantics,
+      isNamed: true,
+    );
   }
 }
 
@@ -70,10 +97,10 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
 class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
   /// RenderSliverOffstage RenderSliverOffstage({bool offstage = true, RenderSliver? sliver})
   RenderSliverOffstage$Mate({
-    /// optionalParameters: {bool offstage = true} , defaultValue:Literal
+    /// optionalParameters: {bool offstage = true} , default:processed=BooleanLiteralImpl
     bool offstage = true,
 
-    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
+    /// optionalParameters: {RenderSliver? sliver} , default:none
     RenderSliver? sliver,
   }) : super(
           offstage: offstage,
@@ -85,8 +112,17 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
           offstage: p.get('offstage').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('offstage', offstage, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'offstage',
+      offstage,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -94,13 +130,13 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
 class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with Mate {
   /// RenderSliverAnimatedOpacity RenderSliverAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverAnimatedOpacity$Mate({
-    /// optionalParameters: {required Animation<double> opacity} , defaultValue:none
+    /// optionalParameters: {required Animation<double> opacity} , default:none
     required Animation<double> opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , defaultValue:Literal
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
     bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {RenderSliver? sliver} , defaultValue:none
+    /// optionalParameters: {RenderSliver? sliver} , default:none
     RenderSliver? sliver,
   }) : super(
           opacity: opacity,
@@ -114,8 +150,21 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse('opacity', opacity, isNamed: true);
-    mateUse('alwaysIncludeSemantics', alwaysIncludeSemantics, isNamed: true);
-    mateUse('sliver', sliver, isNamed: true);
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }

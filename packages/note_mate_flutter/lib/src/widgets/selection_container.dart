@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class SelectionContainer$Mate extends SelectionContainer with Mate {
   /// SelectionContainer SelectionContainer({Key? key, SelectionRegistrar? registrar, required SelectionContainerDelegate delegate, required Widget child})
   SelectionContainer$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {SelectionRegistrar? registrar} , defaultValue:none
+    /// optionalParameters: {SelectionRegistrar? registrar} , default:none
     SelectionRegistrar? registrar,
 
-    /// optionalParameters: {required SelectionContainerDelegate delegate} , defaultValue:none
+    /// optionalParameters: {required SelectionContainerDelegate delegate} , default:none
     required SelectionContainerDelegate delegate,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -35,18 +35,34 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('registrar', registrar, isNamed: true);
-    mateUse('delegate', delegate, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'registrar',
+      registrar,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SelectionContainer SelectionContainer.disabled({Key? key, required Widget child})
   SelectionContainer$Mate.disabled({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.disabled(
           key: key,
@@ -58,8 +74,16 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -67,13 +91,13 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
 class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate {
   /// SelectionRegistrarScope SelectionRegistrarScope({Key? key, required SelectionRegistrar registrar, required Widget child})
   SelectionRegistrarScope$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SelectionRegistrar registrar} , defaultValue:none
+    /// optionalParameters: {required SelectionRegistrar registrar} , default:none
     required SelectionRegistrar registrar,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -87,8 +111,20 @@ class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate {
           registrar: p.get('registrar').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('registrar', registrar, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'registrar',
+      registrar,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

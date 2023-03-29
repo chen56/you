@@ -11,22 +11,22 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
   /// BottomAppBarTheme BottomAppBarTheme({Color? color, double? elevation, NotchedShape? shape, double? height, Color? surfaceTintColor, EdgeInsetsGeometry? padding})
   BottomAppBarTheme$Mate({
-    /// optionalParameters: {Color? color} , defaultValue:none
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double? elevation} , defaultValue:none
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {NotchedShape? shape} , defaultValue:none
+    /// optionalParameters: {NotchedShape? shape} , default:none
     NotchedShape? shape,
 
-    /// optionalParameters: {double? height} , defaultValue:none
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Color? surfaceTintColor} , defaultValue:none
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , defaultValue:none
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
   }) : super(
           color: color,
@@ -46,11 +46,35 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           padding: p.get('padding').build(),
         );
-    mateUse('color', color, isNamed: true);
-    mateUse('elevation', elevation, isNamed: true);
-    mateUse('shape', shape, isNamed: true);
-    mateUse('height', height, isNamed: true);
-    mateUse('surfaceTintColor', surfaceTintColor, isNamed: true);
-    mateUse('padding', padding, isNamed: true);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
   }
 }

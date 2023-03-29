@@ -10,10 +10,10 @@ import 'package:flutter/src/rendering/box.dart';
 class LayoutBuilder$Mate extends LayoutBuilder with Mate {
   /// LayoutBuilder LayoutBuilder({Key? key, required Widget Function(BuildContext, BoxConstraints) builder})
   LayoutBuilder$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, BoxConstraints) builder} , defaultValue:none
+    /// optionalParameters: {required Widget Function(BuildContext, BoxConstraints) builder} , default:none
     required Widget Function(
       BuildContext,
       BoxConstraints,
@@ -28,7 +28,15 @@ class LayoutBuilder$Mate extends LayoutBuilder with Mate {
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('builder', builder, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }

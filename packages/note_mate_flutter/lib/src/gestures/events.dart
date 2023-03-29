@@ -10,49 +10,49 @@ import 'package:flutter/animation.dart';
 class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
   /// PointerAddedEvent PointerAddedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerAddedEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distance = 0.0} , default:processed=DoubleLiteralImpl
     double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -90,21 +90,96 @@ class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distance', distance, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -112,43 +187,43 @@ class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
 class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
   /// PointerRemovedEvent PointerRemovedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, PointerRemovedEvent? original, int embedderId = 0})
   PointerRemovedEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {PointerRemovedEvent? original} , defaultValue:none
+    /// optionalParameters: {PointerRemovedEvent? original} , default:none
     PointerRemovedEvent? original,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -182,19 +257,83 @@ class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
           original: p.get('original').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('original', original, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'original',
+      original,
+      isNamed: true,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -202,67 +341,67 @@ class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
 class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
   /// PointerHoverEvent PointerHoverEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool synthesized = false, int embedderId = 0})
   PointerHoverEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset delta = Offset.zero,
 
-    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
     int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distance = 0.0} , default:processed=DoubleLiteralImpl
     double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 0.0} , default:processed=DoubleLiteralImpl
     double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMajor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMinor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -312,27 +451,132 @@ class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('delta', delta, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distance', distance, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('radiusMajor', radiusMajor, isNamed: true);
-    mateUse('radiusMinor', radiusMinor, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'delta',
+      delta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMajor',
+      radiusMajor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMinor',
+      radiusMinor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -340,70 +584,70 @@ class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
 class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
   /// PointerEnterEvent PointerEnterEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerEnterEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset delta = Offset.zero,
 
-    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
     int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distance = 0.0} , default:processed=DoubleLiteralImpl
     double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 0.0} , default:processed=DoubleLiteralImpl
     double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMajor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMinor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {bool down = false} , defaultValue:Literal
+    /// optionalParameters: {bool down = false} , default:processed=BooleanLiteralImpl
     bool down = false,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -455,28 +699,138 @@ class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('delta', delta, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distance', distance, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('radiusMajor', radiusMajor, isNamed: true);
-    mateUse('radiusMinor', radiusMinor, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('down', down, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'delta',
+      delta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMajor',
+      radiusMajor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMinor',
+      radiusMinor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'down',
+      down,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -484,70 +838,70 @@ class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
 class PointerExitEvent$Mate extends PointerExitEvent with Mate {
   /// PointerExitEvent PointerExitEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerExitEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset delta = Offset.zero,
 
-    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
     int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distance = 0.0} , default:processed=DoubleLiteralImpl
     double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 0.0} , default:processed=DoubleLiteralImpl
     double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMajor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMinor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {bool down = false} , defaultValue:Literal
+    /// optionalParameters: {bool down = false} , default:processed=BooleanLiteralImpl
     bool down = false,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -599,28 +953,138 @@ class PointerExitEvent$Mate extends PointerExitEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('delta', delta, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distance', distance, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('radiusMajor', radiusMajor, isNamed: true);
-    mateUse('radiusMinor', radiusMinor, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('down', down, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'delta',
+      delta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMajor',
+      radiusMajor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMinor',
+      radiusMinor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'down',
+      down,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -628,61 +1092,61 @@ class PointerExitEvent$Mate extends PointerExitEvent with Mate {
 class PointerDownEvent$Mate extends PointerDownEvent with Mate {
   /// PointerDownEvent PointerDownEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerDownEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int buttons = kPrimaryButton} , defaultValue:unprocessed
+    /// optionalParameters: {int buttons = kPrimaryButton} , default:unprocessed=SimpleIdentifierImpl
     required int buttons,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressure = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressure = 1.0} , default:processed=DoubleLiteralImpl
     double pressure = 1.0,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 0.0} , default:processed=DoubleLiteralImpl
     double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMajor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMinor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -728,25 +1192,119 @@ class PointerDownEvent$Mate extends PointerDownEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressure', pressure, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('radiusMajor', radiusMajor, isNamed: true);
-    mateUse('radiusMinor', radiusMinor, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressure',
+      pressure,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMajor',
+      radiusMajor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMinor',
+      radiusMinor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -754,70 +1312,70 @@ class PointerDownEvent$Mate extends PointerDownEvent with Mate {
 class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
   /// PointerMoveEvent PointerMoveEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int platformData = 0, bool synthesized = false, int embedderId = 0})
   PointerMoveEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset delta = Offset.zero,
 
-    /// optionalParameters: {int buttons = kPrimaryButton} , defaultValue:unprocessed
+    /// optionalParameters: {int buttons = kPrimaryButton} , default:unprocessed=SimpleIdentifierImpl
     required int buttons,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressure = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressure = 1.0} , default:processed=DoubleLiteralImpl
     double pressure = 1.0,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 0.0} , default:processed=DoubleLiteralImpl
     double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMajor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMinor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {int platformData = 0} , defaultValue:Literal
+    /// optionalParameters: {int platformData = 0} , default:processed=IntegerLiteralImpl
     int platformData = 0,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -869,28 +1427,137 @@ class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
           synthesized: p.get('synthesized').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('delta', delta, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressure', pressure, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('radiusMajor', radiusMajor, isNamed: true);
-    mateUse('radiusMinor', radiusMinor, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('platformData', platformData, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'delta',
+      delta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressure',
+      pressure,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMajor',
+      radiusMajor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMinor',
+      radiusMinor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'platformData',
+      platformData,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -898,64 +1565,64 @@ class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
 class PointerUpEvent$Mate extends PointerUpEvent with Mate {
   /// PointerUpEvent PointerUpEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressure = 0.0, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerUpEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
     int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressure = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double pressure = 0.0} , default:processed=DoubleLiteralImpl
     double pressure = 0.0,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distance = 0.0} , default:processed=DoubleLiteralImpl
     double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 0.0} , default:processed=DoubleLiteralImpl
     double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMajor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMinor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -1003,26 +1670,126 @@ class PointerUpEvent$Mate extends PointerUpEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressure', pressure, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distance', distance, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('radiusMajor', radiusMajor, isNamed: true);
-    mateUse('radiusMinor', radiusMinor, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressure',
+      pressure,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMajor',
+      radiusMajor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMinor',
+      radiusMinor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -1030,22 +1797,22 @@ class PointerUpEvent$Mate extends PointerUpEvent with Mate {
 class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
   /// PointerScrollEvent PointerScrollEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, Offset scrollDelta = Offset.zero, int embedderId = 0})
   PointerScrollEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.mouse,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {Offset scrollDelta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset scrollDelta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset scrollDelta = Offset.zero,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -1065,12 +1832,42 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
           scrollDelta: p.get('scrollDelta').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('scrollDelta', scrollDelta, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.mouse,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'scrollDelta',
+      scrollDelta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -1078,19 +1875,19 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
 class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEvent with Mate {
   /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.mouse,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -1108,11 +1905,36 @@ class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEve
           position: p.get('position').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.mouse,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -1120,22 +1942,22 @@ class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEve
 class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
   /// PointerScaleEvent PointerScaleEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0, double scale = 1.0})
   PointerScaleEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.mouse,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
 
-    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     double scale = 1.0,
   }) : super(
           timeStamp: timeStamp,
@@ -1155,12 +1977,42 @@ class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
           embedderId: p.get('embedderId').build(),
           scale: p.get('scale').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
-    mateUse('scale', scale, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.mouse,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -1168,22 +2020,22 @@ class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
 class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
   /// PointerPanZoomStartEvent PointerPanZoomStartEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomStartEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
   }) : super(
           timeStamp: timeStamp,
@@ -1203,12 +2055,42 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
           embedderId: p.get('embedderId').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -1216,34 +2098,34 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
 class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate {
   /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
 
-    /// optionalParameters: {Offset pan = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset pan = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset pan = Offset.zero,
 
-    /// optionalParameters: {Offset panDelta = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset panDelta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset panDelta = Offset.zero,
 
-    /// optionalParameters: {double scale = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     double scale = 1.0,
 
-    /// optionalParameters: {double rotation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double rotation = 0.0} , default:processed=DoubleLiteralImpl
     double rotation = 0.0,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
   }) : super(
           timeStamp: timeStamp,
@@ -1271,16 +2153,66 @@ class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate
           rotation: p.get('rotation').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
-    mateUse('pan', pan, isNamed: true);
-    mateUse('panDelta', panDelta, isNamed: true);
-    mateUse('scale', scale, isNamed: true);
-    mateUse('rotation', rotation, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'pan',
+      pan,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'panDelta',
+      panDelta,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'rotation',
+      rotation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -1288,22 +2220,22 @@ class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate
 class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
   /// PointerPanZoomEndEvent PointerPanZoomEndEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomEndEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
 
-    /// optionalParameters: {bool synthesized = false} , defaultValue:Literal
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
     bool synthesized = false,
   }) : super(
           timeStamp: timeStamp,
@@ -1323,12 +2255,42 @@ class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
           embedderId: p.get('embedderId').build(),
           synthesized: p.get('synthesized').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
-    mateUse('synthesized', synthesized, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -1336,61 +2298,61 @@ class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
 class PointerCancelEvent$Mate extends PointerCancelEvent with Mate {
   /// PointerCancelEvent PointerCancelEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerCancelEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     Duration timeStamp = Duration.zero,
 
-    /// optionalParameters: {int pointer = 0} , defaultValue:Literal
+    /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     int pointer = 0,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     PointerDeviceKind kind = PointerDeviceKind.touch,
 
-    /// optionalParameters: {int device = 0} , defaultValue:Literal
+    /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     int device = 0,
 
-    /// optionalParameters: {Offset position = Offset.zero} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     Offset position = Offset.zero,
 
-    /// optionalParameters: {int buttons = 0} , defaultValue:Literal
+    /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
     int buttons = 0,
 
-    /// optionalParameters: {bool obscured = false} , defaultValue:Literal
+    /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
     bool obscured = false,
 
-    /// optionalParameters: {double pressureMin = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMin = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMin = 1.0,
 
-    /// optionalParameters: {double pressureMax = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double pressureMax = 1.0} , default:processed=DoubleLiteralImpl
     double pressureMax = 1.0,
 
-    /// optionalParameters: {double distance = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distance = 0.0} , default:processed=DoubleLiteralImpl
     double distance = 0.0,
 
-    /// optionalParameters: {double distanceMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double distanceMax = 0.0} , default:processed=DoubleLiteralImpl
     double distanceMax = 0.0,
 
-    /// optionalParameters: {double size = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double size = 0.0} , default:processed=DoubleLiteralImpl
     double size = 0.0,
 
-    /// optionalParameters: {double radiusMajor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMajor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMajor = 0.0,
 
-    /// optionalParameters: {double radiusMinor = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMinor = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMinor = 0.0,
 
-    /// optionalParameters: {double radiusMin = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMin = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMin = 0.0,
 
-    /// optionalParameters: {double radiusMax = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double radiusMax = 0.0} , default:processed=DoubleLiteralImpl
     double radiusMax = 0.0,
 
-    /// optionalParameters: {double orientation = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double orientation = 0.0} , default:processed=DoubleLiteralImpl
     double orientation = 0.0,
 
-    /// optionalParameters: {double tilt = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double tilt = 0.0} , default:processed=DoubleLiteralImpl
     double tilt = 0.0,
 
-    /// optionalParameters: {int embedderId = 0} , defaultValue:Literal
+    /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     int embedderId = 0,
   }) : super(
           timeStamp: timeStamp,
@@ -1436,24 +2398,119 @@ class PointerCancelEvent$Mate extends PointerCancelEvent with Mate {
           tilt: p.get('tilt').build(),
           embedderId: p.get('embedderId').build(),
         );
-    mateUse('timeStamp', timeStamp, isNamed: true);
-    mateUse('pointer', pointer, isNamed: true);
-    mateUse('kind', kind, isNamed: true);
-    mateUse('device', device, isNamed: true);
-    mateUse('position', position, isNamed: true);
-    mateUse('buttons', buttons, isNamed: true);
-    mateUse('obscured', obscured, isNamed: true);
-    mateUse('pressureMin', pressureMin, isNamed: true);
-    mateUse('pressureMax', pressureMax, isNamed: true);
-    mateUse('distance', distance, isNamed: true);
-    mateUse('distanceMax', distanceMax, isNamed: true);
-    mateUse('size', size, isNamed: true);
-    mateUse('radiusMajor', radiusMajor, isNamed: true);
-    mateUse('radiusMinor', radiusMinor, isNamed: true);
-    mateUse('radiusMin', radiusMin, isNamed: true);
-    mateUse('radiusMax', radiusMax, isNamed: true);
-    mateUse('orientation', orientation, isNamed: true);
-    mateUse('tilt', tilt, isNamed: true);
-    mateUse('embedderId', embedderId, isNamed: true);
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+      defaultValue: Duration.zero,
+    );
+    mateUse(
+      'pointer',
+      pointer,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+      defaultValue: PointerDeviceKind.touch,
+    );
+    mateUse(
+      'device',
+      device,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'buttons',
+      buttons,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'pressureMin',
+      pressureMin,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressureMax',
+      pressureMax,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'distanceMax',
+      distanceMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMajor',
+      radiusMajor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMinor',
+      radiusMinor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMin',
+      radiusMin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'radiusMax',
+      radiusMax,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'tilt',
+      tilt,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'embedderId',
+      embedderId,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }

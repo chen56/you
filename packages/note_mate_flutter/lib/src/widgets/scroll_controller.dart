@@ -8,13 +8,13 @@ import 'dart:core';
 class ScrollController$Mate extends ScrollController with Mate {
   /// ScrollController ScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   ScrollController$Mate({
-    /// optionalParameters: {double initialScrollOffset = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
     double initialScrollOffset = 0.0,
 
-    /// optionalParameters: {bool keepScrollOffset = true} , defaultValue:Literal
+    /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
     bool keepScrollOffset = true,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           initialScrollOffset: initialScrollOffset,
@@ -28,9 +28,23 @@ class ScrollController$Mate extends ScrollController with Mate {
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('initialScrollOffset', initialScrollOffset, isNamed: true);
-    mateUse('keepScrollOffset', keepScrollOffset, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'initialScrollOffset',
+      initialScrollOffset,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'keepScrollOffset',
+      keepScrollOffset,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -38,13 +52,13 @@ class ScrollController$Mate extends ScrollController with Mate {
 class TrackingScrollController$Mate extends TrackingScrollController with Mate {
   /// TrackingScrollController TrackingScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   TrackingScrollController$Mate({
-    /// optionalParameters: {double initialScrollOffset = 0.0} , defaultValue:Literal
+    /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
     double initialScrollOffset = 0.0,
 
-    /// optionalParameters: {bool keepScrollOffset = true} , defaultValue:Literal
+    /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
     bool keepScrollOffset = true,
 
-    /// optionalParameters: {String? debugLabel} , defaultValue:none
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           initialScrollOffset: initialScrollOffset,
@@ -58,8 +72,22 @@ class TrackingScrollController$Mate extends TrackingScrollController with Mate {
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse('initialScrollOffset', initialScrollOffset, isNamed: true);
-    mateUse('keepScrollOffset', keepScrollOffset, isNamed: true);
-    mateUse('debugLabel', debugLabel, isNamed: true);
+    mateUse(
+      'initialScrollOffset',
+      initialScrollOffset,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'keepScrollOffset',
+      keepScrollOffset,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }

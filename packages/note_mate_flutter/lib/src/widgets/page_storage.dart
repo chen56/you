@@ -16,7 +16,11 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate {
     mateCreateName = 'PageStorageKey';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageStorageKey$Mate<T>(p.get('value').value);
-    mateUse('value', value, isNamed: false);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }
 
@@ -24,13 +28,13 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate {
 class PageStorage$Mate extends PageStorage with Mate {
   /// PageStorage PageStorage({Key? key, required PageStorageBucket bucket, required Widget child})
   PageStorage$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required PageStorageBucket bucket} , defaultValue:none
+    /// optionalParameters: {required PageStorageBucket bucket} , default:none
     required PageStorageBucket bucket,
 
-    /// optionalParameters: {required Widget child} , defaultValue:none
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -44,8 +48,20 @@ class PageStorage$Mate extends PageStorage with Mate {
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('bucket', bucket, isNamed: true);
-    mateUse('child', child, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'bucket',
+      bucket,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

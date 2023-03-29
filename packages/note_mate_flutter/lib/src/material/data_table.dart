@@ -18,16 +18,16 @@ import 'package:flutter/src/rendering/table_border.dart';
 class DataColumn$Mate extends DataColumn with Mate {
   /// DataColumn DataColumn({required Widget label, String? tooltip, bool numeric = false, void Function(int, bool)? onSort})
   DataColumn$Mate({
-    /// optionalParameters: {required Widget label} , defaultValue:none
+    /// optionalParameters: {required Widget label} , default:none
     required Widget label,
 
-    /// optionalParameters: {String? tooltip} , defaultValue:none
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {bool numeric = false} , defaultValue:Literal
+    /// optionalParameters: {bool numeric = false} , default:processed=BooleanLiteralImpl
     bool numeric = false,
 
-    /// optionalParameters: {void Function(int, bool)? onSort} , defaultValue:none
+    /// optionalParameters: {void Function(int, bool)? onSort} , default:none
     DataColumnSortCallback? onSort,
   }) : super(
           label: label,
@@ -43,10 +43,27 @@ class DataColumn$Mate extends DataColumn with Mate {
           numeric: p.get('numeric').build(),
           onSort: p.get('onSort').build(),
         );
-    mateUse('label', label, isNamed: true);
-    mateUse('tooltip', tooltip, isNamed: true);
-    mateUse('numeric', numeric, isNamed: true);
-    mateUse('onSort', onSort, isNamed: true);
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'numeric',
+      numeric,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'onSort',
+      onSort,
+      isNamed: true,
+    );
   }
 }
 
@@ -54,22 +71,22 @@ class DataColumn$Mate extends DataColumn with Mate {
 class DataRow$Mate extends DataRow with Mate {
   /// DataRow DataRow({LocalKey? key, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
   DataRow$Mate({
-    /// optionalParameters: {LocalKey? key} , defaultValue:none
+    /// optionalParameters: {LocalKey? key} , default:none
     LocalKey? key,
 
-    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     bool selected = false,
 
-    /// optionalParameters: {void Function(bool?)? onSelectChanged} , defaultValue:none
+    /// optionalParameters: {void Function(bool?)? onSelectChanged} , default:none
     ValueChanged<bool?>? onSelectChanged,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? color} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
     MaterialStateProperty<Color?>? color,
 
-    /// optionalParameters: {required List<DataCell> cells} , defaultValue:none
+    /// optionalParameters: {required List<DataCell> cells} , default:none
     required List<DataCell> cells,
   }) : super(
           key: key,
@@ -89,32 +106,57 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('selected', selected, isNamed: true);
-    mateUse('onSelectChanged', onSelectChanged, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUseList('cells', cells, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'onSelectChanged',
+      onSelectChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUseList(
+      'cells',
+      cells,
+      isNamed: true,
+    );
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, required List<DataCell> cells})
   DataRow$Mate.byIndex({
-    /// optionalParameters: {int? index} , defaultValue:none
+    /// optionalParameters: {int? index} , default:none
     int? index,
 
-    /// optionalParameters: {bool selected = false} , defaultValue:Literal
+    /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     bool selected = false,
 
-    /// optionalParameters: {void Function(bool?)? onSelectChanged} , defaultValue:none
+    /// optionalParameters: {void Function(bool?)? onSelectChanged} , default:none
     ValueChanged<bool?>? onSelectChanged,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? color} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
     MaterialStateProperty<Color?>? color,
 
-    /// optionalParameters: {required List<DataCell> cells} , defaultValue:none
+    /// optionalParameters: {required List<DataCell> cells} , default:none
     required List<DataCell> cells,
   }) : super.byIndex(
           index: index,
@@ -134,12 +176,37 @@ class DataRow$Mate extends DataRow with Mate {
           color: p.get('color').build(),
           cells: p.get('cells').build(),
         );
-    mateUse('index', index, isNamed: true);
-    mateUse('selected', selected, isNamed: true);
-    mateUse('onSelectChanged', onSelectChanged, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('color', color, isNamed: true);
-    mateUseList('cells', cells, isNamed: true);
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'onSelectChanged',
+      onSelectChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUseList(
+      'cells',
+      cells,
+      isNamed: true,
+    );
   }
 }
 
@@ -149,25 +216,25 @@ class DataCell$Mate extends DataCell with Mate {
   DataCell$Mate(
     /// requiredParameters: Widget child
     Widget child, {
-    /// optionalParameters: {bool placeholder = false} , defaultValue:Literal
+    /// optionalParameters: {bool placeholder = false} , default:processed=BooleanLiteralImpl
     bool placeholder = false,
 
-    /// optionalParameters: {bool showEditIcon = false} , defaultValue:Literal
+    /// optionalParameters: {bool showEditIcon = false} , default:processed=BooleanLiteralImpl
     bool showEditIcon = false,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , defaultValue:none
+    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
     GestureTapDownCallback? onTapDown,
 
-    /// optionalParameters: {void Function()? onDoubleTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onDoubleTap} , default:none
     GestureTapCallback? onDoubleTap,
 
-    /// optionalParameters: {void Function()? onTapCancel} , defaultValue:none
+    /// optionalParameters: {void Function()? onTapCancel} , default:none
     GestureTapCancelCallback? onTapCancel,
   }) : super(
           child,
@@ -191,14 +258,48 @@ class DataCell$Mate extends DataCell with Mate {
           onDoubleTap: p.get('onDoubleTap').build(),
           onTapCancel: p.get('onTapCancel').build(),
         );
-    mateUse('child', child, isNamed: false);
-    mateUse('placeholder', placeholder, isNamed: true);
-    mateUse('showEditIcon', showEditIcon, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('onTapDown', onTapDown, isNamed: true);
-    mateUse('onDoubleTap', onDoubleTap, isNamed: true);
-    mateUse('onTapCancel', onTapCancel, isNamed: true);
+    mateUse(
+      'child',
+      child,
+      isNamed: false,
+    );
+    mateUse(
+      'placeholder',
+      placeholder,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'showEditIcon',
+      showEditIcon,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapDown',
+      onTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTap',
+      onDoubleTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapCancel',
+      onTapCancel,
+      isNamed: true,
+    );
   }
 }
 
@@ -206,70 +307,70 @@ class DataCell$Mate extends DataCell with Mate {
 class DataTable$Mate extends DataTable with Mate {
   /// DataTable DataTable({Key? key, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, bool showCheckboxColumn = true, bool showBottomBorder = false, double? dividerThickness, required List<DataRow> rows, double? checkboxHorizontalMargin, TableBorder? border, Clip clipBehavior = Clip.none})
   DataTable$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<DataColumn> columns} , defaultValue:none
+    /// optionalParameters: {required List<DataColumn> columns} , default:none
     required List<DataColumn> columns,
 
-    /// optionalParameters: {int? sortColumnIndex} , defaultValue:none
+    /// optionalParameters: {int? sortColumnIndex} , default:none
     int? sortColumnIndex,
 
-    /// optionalParameters: {bool sortAscending = true} , defaultValue:Literal
+    /// optionalParameters: {bool sortAscending = true} , default:processed=BooleanLiteralImpl
     bool sortAscending = true,
 
-    /// optionalParameters: {void Function(bool?)? onSelectAll} , defaultValue:none
+    /// optionalParameters: {void Function(bool?)? onSelectAll} , default:none
     ValueSetter<bool?>? onSelectAll,
 
-    /// optionalParameters: {Decoration? decoration} , defaultValue:none
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , default:none
     MaterialStateProperty<Color?>? dataRowColor,
 
-    /// optionalParameters: {double? dataRowMinHeight} , defaultValue:none
+    /// optionalParameters: {double? dataRowMinHeight} , default:none
     double? dataRowMinHeight,
 
-    /// optionalParameters: {double? dataRowMaxHeight} , defaultValue:none
+    /// optionalParameters: {double? dataRowMaxHeight} , default:none
     double? dataRowMaxHeight,
 
-    /// optionalParameters: {TextStyle? dataTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? dataTextStyle} , default:none
     TextStyle? dataTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , default:none
     MaterialStateProperty<Color?>? headingRowColor,
 
-    /// optionalParameters: {double? headingRowHeight} , defaultValue:none
+    /// optionalParameters: {double? headingRowHeight} , default:none
     double? headingRowHeight,
 
-    /// optionalParameters: {TextStyle? headingTextStyle} , defaultValue:none
+    /// optionalParameters: {TextStyle? headingTextStyle} , default:none
     TextStyle? headingTextStyle,
 
-    /// optionalParameters: {double? horizontalMargin} , defaultValue:none
+    /// optionalParameters: {double? horizontalMargin} , default:none
     double? horizontalMargin,
 
-    /// optionalParameters: {double? columnSpacing} , defaultValue:none
+    /// optionalParameters: {double? columnSpacing} , default:none
     double? columnSpacing,
 
-    /// optionalParameters: {bool showCheckboxColumn = true} , defaultValue:Literal
+    /// optionalParameters: {bool showCheckboxColumn = true} , default:processed=BooleanLiteralImpl
     bool showCheckboxColumn = true,
 
-    /// optionalParameters: {bool showBottomBorder = false} , defaultValue:Literal
+    /// optionalParameters: {bool showBottomBorder = false} , default:processed=BooleanLiteralImpl
     bool showBottomBorder = false,
 
-    /// optionalParameters: {double? dividerThickness} , defaultValue:none
+    /// optionalParameters: {double? dividerThickness} , default:none
     double? dividerThickness,
 
-    /// optionalParameters: {required List<DataRow> rows} , defaultValue:none
+    /// optionalParameters: {required List<DataRow> rows} , default:none
     required List<DataRow> rows,
 
-    /// optionalParameters: {double? checkboxHorizontalMargin} , defaultValue:none
+    /// optionalParameters: {double? checkboxHorizontalMargin} , default:none
     double? checkboxHorizontalMargin,
 
-    /// optionalParameters: {TableBorder? border} , defaultValue:none
+    /// optionalParameters: {TableBorder? border} , default:none
     TableBorder? border,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
@@ -321,28 +422,120 @@ class DataTable$Mate extends DataTable with Mate {
           border: p.get('border').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUseList('columns', columns, isNamed: true);
-    mateUse('sortColumnIndex', sortColumnIndex, isNamed: true);
-    mateUse('sortAscending', sortAscending, isNamed: true);
-    mateUse('onSelectAll', onSelectAll, isNamed: true);
-    mateUse('decoration', decoration, isNamed: true);
-    mateUse('dataRowColor', dataRowColor, isNamed: true);
-    mateUse('dataRowMinHeight', dataRowMinHeight, isNamed: true);
-    mateUse('dataRowMaxHeight', dataRowMaxHeight, isNamed: true);
-    mateUse('dataTextStyle', dataTextStyle, isNamed: true);
-    mateUse('headingRowColor', headingRowColor, isNamed: true);
-    mateUse('headingRowHeight', headingRowHeight, isNamed: true);
-    mateUse('headingTextStyle', headingTextStyle, isNamed: true);
-    mateUse('horizontalMargin', horizontalMargin, isNamed: true);
-    mateUse('columnSpacing', columnSpacing, isNamed: true);
-    mateUse('showCheckboxColumn', showCheckboxColumn, isNamed: true);
-    mateUse('showBottomBorder', showBottomBorder, isNamed: true);
-    mateUse('dividerThickness', dividerThickness, isNamed: true);
-    mateUseList('rows', rows, isNamed: true);
-    mateUse('checkboxHorizontalMargin', checkboxHorizontalMargin, isNamed: true);
-    mateUse('border', border, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'columns',
+      columns,
+      isNamed: true,
+    );
+    mateUse(
+      'sortColumnIndex',
+      sortColumnIndex,
+      isNamed: true,
+    );
+    mateUse(
+      'sortAscending',
+      sortAscending,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onSelectAll',
+      onSelectAll,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'dataRowColor',
+      dataRowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dataRowMinHeight',
+      dataRowMinHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'dataRowMaxHeight',
+      dataRowMaxHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'dataTextStyle',
+      dataTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'headingRowColor',
+      headingRowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'headingRowHeight',
+      headingRowHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'headingTextStyle',
+      headingTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'horizontalMargin',
+      horizontalMargin,
+      isNamed: true,
+    );
+    mateUse(
+      'columnSpacing',
+      columnSpacing,
+      isNamed: true,
+    );
+    mateUse(
+      'showCheckboxColumn',
+      showCheckboxColumn,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showBottomBorder',
+      showBottomBorder,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'dividerThickness',
+      dividerThickness,
+      isNamed: true,
+    );
+    mateUseList(
+      'rows',
+      rows,
+      isNamed: true,
+    );
+    mateUse(
+      'checkboxHorizontalMargin',
+      checkboxHorizontalMargin,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }
 
@@ -350,25 +543,25 @@ class DataTable$Mate extends DataTable with Mate {
 class TableRowInkWell$Mate extends TableRowInkWell with Mate {
   /// TableRowInkWell TableRowInkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(bool)? onHighlightChanged, MaterialStateProperty<Color?>? overlayColor})
   TableRowInkWell$Mate({
-    /// optionalParameters: {Key? key} , defaultValue:none
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , defaultValue:none
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {void Function()? onTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onDoubleTap} , defaultValue:none
+    /// optionalParameters: {void Function()? onDoubleTap} , default:none
     GestureTapCallback? onDoubleTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , defaultValue:none
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onHighlightChanged} , defaultValue:none
+    /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
     ValueChanged<bool>? onHighlightChanged,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , defaultValue:none
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
   }) : super(
           key: key,
@@ -390,12 +583,40 @@ class TableRowInkWell$Mate extends TableRowInkWell with Mate {
           onHighlightChanged: p.get('onHighlightChanged').build(),
           overlayColor: p.get('overlayColor').build(),
         );
-    mateUse('key', key, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('onTap', onTap, isNamed: true);
-    mateUse('onDoubleTap', onDoubleTap, isNamed: true);
-    mateUse('onLongPress', onLongPress, isNamed: true);
-    mateUse('onHighlightChanged', onHighlightChanged, isNamed: true);
-    mateUse('overlayColor', overlayColor, isNamed: true);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTap',
+      onDoubleTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onHighlightChanged',
+      onHighlightChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
   }
 }

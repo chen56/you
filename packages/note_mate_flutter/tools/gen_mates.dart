@@ -21,9 +21,9 @@ import 'package:note/env.dart';
 main() async {
   _log("## main");
   List<String> include = [
-    "package:flutter",
+    "package:flutter/",
     // "package:flutter/src/material/dialog.dart",
-    "package:flutter/src/material/elevated_button.dart",
+    "package:flutter/src/cupertino/activity_indicator.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
@@ -40,6 +40,7 @@ main() async {
       return path.join("lib", libPath);
     },
     dartFormatter: DartFormatter(pageWidth: 120),
+
   );
 }
 
@@ -187,6 +188,13 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
         ..types.addAll(type.typeArguments.map((e) => typeRef(e, debugRef: debugRef))));
       return ref;
     }
+
+    // if(type is t.TypeParameterType){
+    //   return type.bound.isDynamic
+    //       ?code.refer(type.getDisplayString(withNullability: true))
+    //       :code.refer(type.getDisplayString(withNullability: true), lib?.identifier);
+    // }
+
 
     if (type is t.FunctionType) {
       code.FunctionType ref = code.FunctionType((b) =>
@@ -346,36 +354,53 @@ extension _InterfaceElement on InterfaceElement {
   }
 }
 
-({String info, Code? code}) resolveDefaultValue(ParameterElement param, TypeRefers typeRefers) {
-  if (!param.hasDefaultValue) return (info:"none", code:null);
-  if (param is! ConstVariableElement) {
-    return (info:"is!ConstVariableElement", code:null);
-  }
+({String info, code.Expression? value}) resolveDefaultValue(ParameterElement param,
+    TypeRefers typeRefers) {
+  // guard clause
+  if (!param.hasDefaultValue) return (info:"default:none", value:null);
+  assert(param is ConstVariableElement, "hasDefaultValue , type is ConstVariableElement ");
 
+  // Known situation
   ConstVariableElement constParam = param as ConstVariableElement;
-
-  // TypedLiteral有点麻烦，暂时不处理了，可能带import前缀之类的:
-  //     List<DisplayFeature> displayFeatures = const <ui.DisplayFeature>[],
-  if (constParam.constantInitializer is ast.Literal &&
-      constParam.constantInitializer is! ast.TypedLiteral) {
-    return (info:"Literal", code:Code(param.defaultValueCode!));
-  }
-  if (constParam.constantInitializer is ast.PrefixedIdentifier) {
-    var x = constParam.constantInitializer as ast.PrefixedIdentifier;
-    var ref = typeRefers.elementRef(x.prefix.staticElement!, debugRef: param);
-
-    return (info:"PrefixedIdentifier", code: code
-        .refer("${x.prefix}.${x.identifier}", ref.url)
-        .code);
-  }
 
   if (constParam.constantInitializer == null && constParam is SuperFormalParameterElement) {
     var x = constParam as SuperFormalParameterElement;
-    return resolveDefaultValue(x.superConstructorParameter!, typeRefers);
+    return resolveDefaultValue(x.superConstructorParameter!.declaration, typeRefers);
+  }
+  var init = constParam.constantInitializer!;
+
+  code.Expression? resolveExpression(ast.Expression expression) {
+    // x({int a = -1})
+    if (expression is ast.PrefixExpression) {
+      return resolveExpression(expression.operand);
+    }
+
+    // Simple Literal Expression:   a:1  | a:-1 ...
+    if (expression is ast.Literal &&
+        expression is! ast.TypedLiteral) {
+      return code.refer(param.defaultValueCode!);
+    }
+
+    // Colors.red | XEnum.xxx
+    if (init is ast.PrefixedIdentifier) {
+      var x = init as ast.PrefixedIdentifier;
+      var ref = typeRefers.elementRef(x.prefix.staticElement!, debugRef: param);
+      return code.refer("${x.prefix}.${x.identifier}", ref.url);
+    }
+
+    return null;
   }
 
-  return (info:"unprocessed", code:null);
+  var result = resolveExpression(init);
+  if (result != null) {
+    return (info:"default:processed=${init.runtimeType}", value: result);
+  }
+
+  // Unknown situation
+  return (info:"default:unprocessed=${init.runtimeType}", value:null);
 }
+
+
 // class SyntaxErrorInAssetException
 //   constructor
 //     parameterassetId  AssetId   AssetId assetId
@@ -502,26 +527,20 @@ void _genLibMate({
                     b
                       ..name = param.name
                       ..named = param.isNamed
-                      ..required = param.isRequired
                       ..type = typeRefers.elementRef(param, debugRef: clazz);
                     // default value handle: The default parameter processing is too complicated,
                     // so use whitelist mode, We only deal with what we understand
 
                     var resolveResult = resolveDefaultValue(param, typeRefers);
+
                     b.docs.add(
                         "/// optionalParameters: ${param.getDisplayString(
-                            withNullability: true)} , defaultValue:${resolveResult.info}");
-                    b.defaultTo = resolveResult.code;
-
+                            withNullability: true)} , ${resolveResult.info}");
+                    b.defaultTo = resolveResult.value?.code;
                     //有缺省值的，但无法处理的，就加个required，自己投参吧
-                    if (param.hasDefaultValue) {
-                      if (resolveResult.code == null) {
-                        b.required = param.isRequired ||
-                            param.type.nullabilitySuffix == NullabilitySuffix.none;
-                      } else {
-                        b.required = false;
-                      }
-                    }
+                    b.required = param.hasDefaultValue
+                        ? (resolveResult.value == null ? true : false)
+                        : param.isRequired;
                   })))
               ..initializers.add(
                   refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
@@ -565,33 +584,46 @@ void _genLibMate({
                     .statement,
                 refer("mateBuilder")
                     .assign(Method((b) {
-                  var positionalArgs = parameters.where((e) => e.isPositional).map(
-                          (e) => refer("p.get").call([code.literal(e.name)]).property("value"));
-                  var namedArgs = Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
-                      MapEntry(e.name,
-                          refer("p.get").call([literal(e.name)]).property("build").call([]))));
                   var c = TypeReference((b) =>
                   b
                     ..symbol = mateClassName
                     ..types.addAll(
                         clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
+
+                  var name = constructor.name.isEmpty ? null : constructor.name;
+                  var positionalArgs = parameters.where((e) => e.isPositional).map(
+                          (e) => refer("p.get").call([code.literal(e.name)]).property("value"));
+                  var namedArgs = Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
+                      MapEntry(e.name,
+                          refer("p.get").call([literal(e.name)]).property("build").call([]))));
+                  var invoke = InvokeExpression
+                      .newOf(c, positionalArgs.toList(), namedArgs, [], name)
+                      .code;
+
                   b
                     ..name = ''
                     ..requiredParameters.add(Parameter((b) => b.name = "p"))
                   //缺省构造器的name为"",只有命名构造器有name
-                    ..body = constructor.name.isEmpty
-                        ? c
-                        .newInstance(positionalArgs, namedArgs)
-                        .code
-                        : c
-                        .newInstanceNamed(constructor.name, positionalArgs, namedArgs)
-                        .code;
+                    ..body = invoke;
                 }).closure)
                     .statement,
                 ...parameters.map((e) {
-                  return e.type.isDartCoreList
-                      ? Code("mateUseList('${e.name}', ${e.name}, isNamed:${e.isNamed});")
-                      : Code("mateUse('${e.name}', ${e.name}, isNamed:${e.isNamed});");
+                  var defaultValue = resolveDefaultValue(e, typeRefers);
+                  var methodName = e.type.isDartCoreList ? "mateUseList" : "mateUse";
+                  var positionalArguments = [code.literalString(e.name), code.refer(e.name)];
+                  var namedArguments = {
+                    "isNamed": code.literalBool(e.isNamed),
+                  };
+                  if (defaultValue.value != null) {
+                    namedArguments["defaultValue"] = defaultValue.value!;
+                  }
+                  return code
+                      .refer(methodName)
+                      .call(positionalArguments, namedArguments)
+                      .statement;
+                  // return e.type.isDartCoreList
+                  //     ? Code("mateUseList('${e.name}', ${e.name}, isNamed:${e.isNamed} );")
+                  //     : Code("mateUse('${e.name}', ${e.name}, isNamed:${e.isNamed} );");
                 }),
               ]);
           });
@@ -599,14 +631,9 @@ void _genLibMate({
     })));
   var toFile = writeTo(lib.identifier.replaceFirst("package:flutter/", ""));
 
-  String writeContent = buildLib
-      .accept(
-    DartEmitter(
-      allocator: Allocator(), // reference的 import 不增加前缀 ”_i1“ 这种形式
-      useNullSafetySyntax: true,
-    ),
-  )
-      .toString();
+  var emitter = DartEmitter(allocator: Allocator(), useNullSafetySyntax: true);
+  String writeContent = buildLib.accept(emitter).toString();
+
   writeContent = dartFormatter.format(writeContent);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
   writeFS.file(toFile).writeAsStringSync(writeContent);
@@ -658,9 +685,8 @@ _genEnums({
 
   var toFile = writeTo("mate_enums.dart");
 
-  // reference的 import 不增加前缀 ”_i1“ 这种形式
   String writeContent = lib.accept(emitter).toString();
-  // writeContent = dartFormatter.format(writeContent);
+  writeContent = dartFormatter.format(writeContent);
   writeFS.directory(path.dirname(toFile)).createSync(recursive: true);
   writeFS.file(toFile).writeAsStringSync(writeContent);
 }

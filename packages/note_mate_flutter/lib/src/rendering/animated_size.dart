@@ -15,28 +15,28 @@ import 'package:flutter/src/rendering/box.dart';
 class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
   /// RenderAnimatedSize RenderAnimatedSize({required TickerProvider vsync, required Duration duration, Duration? reverseDuration, Curve curve = Curves.linear, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.hardEdge})
   RenderAnimatedSize$Mate({
-    /// optionalParameters: {required TickerProvider vsync} , defaultValue:none
+    /// optionalParameters: {required TickerProvider vsync} , default:none
     required TickerProvider vsync,
 
-    /// optionalParameters: {required Duration duration} , defaultValue:none
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {Duration? reverseDuration} , defaultValue:none
+    /// optionalParameters: {Duration? reverseDuration} , default:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     Curve curve = Curves.linear,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , defaultValue:none
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {RenderBox? child} , defaultValue:none
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     Clip clipBehavior = Clip.hardEdge,
   }) : super(
           vsync: vsync,
@@ -60,13 +60,48 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse('vsync', vsync, isNamed: true);
-    mateUse('duration', duration, isNamed: true);
-    mateUse('reverseDuration', reverseDuration, isNamed: true);
-    mateUse('curve', curve, isNamed: true);
-    mateUse('alignment', alignment, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('child', child, isNamed: true);
-    mateUse('clipBehavior', clipBehavior, isNamed: true);
+    mateUse(
+      'vsync',
+      vsync,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseDuration',
+      reverseDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

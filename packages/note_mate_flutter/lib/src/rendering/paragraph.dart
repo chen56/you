@@ -22,7 +22,11 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends PlaceholderSpanIndexSemantic
     mateCreateName = 'PlaceholderSpanIndexSemanticsTag';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
-    mateUse('index', index, isNamed: false);
+    mateUse(
+      'index',
+      index,
+      isNamed: false,
+    );
   }
 }
 
@@ -32,43 +36,43 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
   RenderParagraph$Mate(
     /// requiredParameters: InlineSpan text
     InlineSpan text, {
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
     TextAlign textAlign = TextAlign.start,
 
-    /// optionalParameters: {required TextDirection textDirection} , defaultValue:none
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {bool softWrap = true} , defaultValue:Literal
+    /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
     TextOverflow overflow = TextOverflow.clip,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , defaultValue:Literal
+    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
     double textScaleFactor = 1.0,
 
-    /// optionalParameters: {int? maxLines} , defaultValue:none
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {Locale? locale} , defaultValue:none
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , defaultValue:none
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , defaultValue:PrefixedIdentifier
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
     TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , defaultValue:none
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {List<RenderBox>? children} , defaultValue:none
+    /// optionalParameters: {List<RenderBox>? children} , default:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {Color? selectionColor} , defaultValue:none
+    /// optionalParameters: {Color? selectionColor} , default:none
     Color? selectionColor,
 
-    /// optionalParameters: {SelectionRegistrar? registrar} , defaultValue:none
+    /// optionalParameters: {SelectionRegistrar? registrar} , default:none
     SelectionRegistrar? registrar,
   }) : super(
           text,
@@ -104,19 +108,80 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
           selectionColor: p.get('selectionColor').build(),
           registrar: p.get('registrar').build(),
         );
-    mateUse('text', text, isNamed: false);
-    mateUse('textAlign', textAlign, isNamed: true);
-    mateUse('textDirection', textDirection, isNamed: true);
-    mateUse('softWrap', softWrap, isNamed: true);
-    mateUse('overflow', overflow, isNamed: true);
-    mateUse('textScaleFactor', textScaleFactor, isNamed: true);
-    mateUse('maxLines', maxLines, isNamed: true);
-    mateUse('locale', locale, isNamed: true);
-    mateUse('strutStyle', strutStyle, isNamed: true);
-    mateUse('textWidthBasis', textWidthBasis, isNamed: true);
-    mateUse('textHeightBehavior', textHeightBehavior, isNamed: true);
-    mateUseList('children', children, isNamed: true);
-    mateUse('selectionColor', selectionColor, isNamed: true);
-    mateUse('registrar', registrar, isNamed: true);
+    mateUse(
+      'text',
+      text,
+      isNamed: false,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+      defaultValue: TextAlign.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+      defaultValue: TextOverflow.clip,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+      defaultValue: TextWidthBasis.parent,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
+    mateUse(
+      'registrar',
+      registrar,
+      isNamed: true,
+    );
   }
 }
