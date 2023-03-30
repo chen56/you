@@ -5,12 +5,130 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 
-class ColorEditor extends Editor<Color> {}
+class DoubleEditor<T> extends ValueParamEditor<T> {
+  DoubleEditor(super.param, {required super.editors});
 
-class ColorRegister {
-  static final ColorRegister instance = ColorRegister._();
+  @override
+  Widget valueWidget(Param param) {
+    return TextFormField(
+      initialValue: "${param.init}",
+      autofocus: true,
+      decoration: const InputDecoration(
+        hintText: "Text#data",
+      ),
+      onChanged: (value) {
+        var newValue = double.tryParse(value);
+        if (newValue != null) {
+          param.value = newValue;
+        }
+      },
+    );
+  }
+}
+
+class IntEditor<T> extends ValueParamEditor<T> {
+  IntEditor(super.param, {required super.editors});
+
+  @override
+  Widget valueWidget(Param param) {
+    return TextFormField(
+      initialValue: "${param.init}",
+      autofocus: true,
+      decoration: const InputDecoration(
+        hintText: "Text#data",
+      ),
+      onChanged: (value) {
+        var newValue = int.tryParse(value);
+        if (newValue != null) {
+          param.value = newValue;
+        }
+      },
+    );
+  }
+}
+//
+// class EnumEditor extends Editor<Enum> {
+//   final EnumRegister enums;
+//   EnumEditor({required this.enums, required super.editors});
+//
+//   @override
+//   Widget valueWidget(Param param) {
+//     return DropdownButton<Enum>(
+//       alignment: Alignment.topLeft,
+//       value: param.value as Enum,
+//       icon: const Icon(Icons.arrow_downward),
+//       elevation: 16,
+//       style: const TextStyle(color: Colors.deepPurple),
+//       onChanged: (Enum? value) {
+//         param.value = value;
+//       },
+//       items: enums
+//           .getOrEmpty(param.value.runtimeType)
+//           .map((e) => e as Enum)
+//           .map<DropdownMenuItem<Enum>>((Enum value) {
+//         return DropdownMenuItem<Enum>(
+//           value: value,
+//           child: Text(value.name),
+//         );
+//       }).toList(),
+//     );
+//   }
+// }
+
+class EnumEditor2<T> extends ValueParamEditor<T> {
+  final List enums;
+
+  EnumEditor2(super.param, {required this.enums, required super.editors});
+
+  @override
+  Widget valueWidget(Param param) {
+    return DropdownButton<Enum>(
+      alignment: Alignment.topLeft,
+      value: param.value as Enum,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      onChanged: (Enum? value) {
+        param.value = value;
+      },
+      items: enums.map((e) => e as Enum).map<DropdownMenuItem<Enum>>((Enum value) {
+        return DropdownMenuItem<Enum>(
+          value: value,
+          child: Text(value.name),
+        );
+      }).toList(),
+    );
+  }
+}
+
+class ColorEditor<T> extends ValueParamEditor<T> {
+  ColorEditor(super.param, {required super.editors});
+
+  @override
+  code.Expression toCode(T? value) {
+    return _ColorRegister.instance.get(value as Color?);
+  }
+
+  @override
+  Widget valueWidget(Param param) {
+    return Row(
+      children: [
+        Text(param.toCodeExpressionString(editors: editors)),
+        Container(
+          width: 20,
+          height: 20,
+          color: param.value as Color,
+        )
+      ],
+    );
+  }
+}
+
+/// 颜色
+class _ColorRegister {
+  static final _ColorRegister instance = _ColorRegister._();
   Map<Color, code.Expression> colors = {};
-  ColorRegister._() {
+  _ColorRegister._() {
     colors[Colors.black] = _refer("Colors.black");
     colors[Colors.black87] = _refer("Colors.black87");
     colors[Colors.black54] = _refer("Colors.black54");
@@ -95,7 +213,8 @@ class ColorRegister {
     return code.refer(colorEx, "package:flutter/material.dart").expression;
   }
 
-  code.Expression get(Color o) {
+  code.Expression get(Color? o) {
+    if (o == null) return code.literalNull;
     var result = colors[o];
     return result ?? code.refer("'Color(0x${o.value.toRadixString(16).padLeft(8, '0')})';");
   }

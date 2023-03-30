@@ -339,12 +339,17 @@ class _ParamAndCodeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget paramRow(Param param) {
+      var nameWidget = Container(
+        padding: EdgeInsets.only(left: param.level * 15),
+        child: param.nameWidget(editors),
+      );
+
       var row = TextButton(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Flexible(child: editors.nameWidget(context, param)),
-            Flexible(child: editors.valueWidget(context, param)),
+            Flexible(child: nameWidget),
+            Flexible(child: param.valueWidget(editors)),
           ],
         ),
         onPressed: () {},
@@ -361,7 +366,7 @@ class _ParamAndCodeView extends StatelessWidget {
       );
     }
 
-    var paramView2 = Column(
+    var paramView = Column(
       children: [
         ...rootParam
             // hide null value
@@ -372,7 +377,7 @@ class _ParamAndCodeView extends StatelessWidget {
     var codeView = HighlightView(
       // The original code to be highlighted
       // fixme editors
-      rootParam.toSampleCodeString(snippet: false),
+      rootParam.toSampleCodeString(snippet: false, format: true),
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -397,7 +402,7 @@ class _ParamAndCodeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: paramView2),
+            Expanded(child: paramView),
             Expanded(child: codeView),
           ],
         )

@@ -1,14 +1,28 @@
-import 'package:flutter/widgets.dart';
 import 'package:note/utils.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('common.types isSubtype 子类型判断', () {
-    expect(isSubtype<num, int>(), isTrue);
-    expect(isSubtype<num, String>(), isFalse);
+  group("isType", () {
+    test('主要场景：super is not null', () {
+      expect(isType<num, num>(), isTrue);
+      expect(isType<num?, num>(), isTrue);
+
+      expect(isType<int, num>(), isTrue);
+      expect(isType<int?, num>(), isTrue);
+
+      expect(isType<double, num>(), isTrue);
+      expect(isType<double?, num>(), isTrue);
+
+      expect(!isType<String, num>(), isTrue);
+      expect(!isType<String?, num>(), isTrue);
+    });
   });
-  test('common.types isType 类型判断', () {
-    expect(isType(const Center(), TypeIs<Widget>()), isTrue);
+  test('次要场景：super is nullable', () {
+    expect(isType<num, num>(), isTrue);
+    expect(isType<num?, num>(), isTrue);
+
+    expect(isType<int, num>(), isTrue);
+    expect(isType<int?, num>(), isTrue);
   });
 
   test('common.types isNullable 判断', () {

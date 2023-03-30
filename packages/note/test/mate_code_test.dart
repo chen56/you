@@ -8,6 +8,12 @@ import 'package:note/mate_api_experiment.dart';
 
 void main() {
   setUp(() {});
+  String toCode(Mate mate, {format = false}) {
+    var y = ObjectParam.rootFrom(mate);
+    var result = y.toSampleCodeString(format: format);
+    print(result);
+    return result;
+  }
 
   // fixme 省略init为缺省值的参数ContainerMate(clipBehavior: 'Clip.none')
   group("toList()", () {
@@ -23,15 +29,35 @@ void main() {
       );
       var y = ObjectParam.rootFrom(x);
       print(y.toSampleCodeString());
+      expect(
+          toCode(
+              ContainerMate(
+                width: 100,
+                child: ColumnMate(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ContainerMate(),
+                  ],
+                ),
+              ),
+              format: true),
+          """Container(
+  clipBehavior: Clip.none,
+  width: 100.0,
+  child: Column(
+    [Container(clipBehavior: Clip.none)],
+    mainAxisAlignment: MainAxisAlignment.center,
+  ),
+);""");
     });
   });
   group("type:Color", () {
     test('print', () {
-      var x = ContainerMate(
-        color: Colors.green.shade100,
-      );
-      var y = ObjectParam.rootFrom(x);
-      print(y.toSampleCodeString());
+      expect(
+          toCode(ContainerMate(
+            color: Colors.green.shade100,
+          )),
+          """Container(color: Colors.green.shade100, clipBehavior: Clip.none, );""");
     });
   });
 }

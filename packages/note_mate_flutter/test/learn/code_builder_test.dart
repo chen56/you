@@ -142,6 +142,13 @@ void main() {
       ..types.add(refer("String"))).newInstanceNamed("has", []).code;
     expect(_noFormat(y), "ObjectFlagProperty<String>.has()");
   });
+  test('Lambda : void Function()', () {
+    var y = Method((b) => b
+      ..name = ''
+      ..lambda = false
+      ..body = const Code(""));
+    expect(_noFormat(y), "() {  } ");
+  });
 }
 
 String _format(Spec item) {

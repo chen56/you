@@ -19,6 +19,9 @@ void main() {
     expect("name:$name", "name:chen56");
     expect(r"name:$name", "name:\$name", reason: "r means raw string");
   });
+  test('null', () {
+    expect(null.toString(), "null");
+  });
 }
 
 class Animal {}

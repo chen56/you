@@ -37,7 +37,7 @@ class ContainerMate extends Container with Mate {
     mateUse("key", key, isNamed: true);
     mateUse("alignment", alignment, isNamed: true);
     mateUse("color", color, isNamed: true);
-    mateUse("clipBehavior", clipBehavior, isNamed: true);
+    mateUse("clipBehavior", clipBehavior, isNamed: true, defaultValue: Clip.none);
     widthMate = mateUse("width", width, isNamed: true);
     heightMate = mateUse("height", height, isNamed: true);
     mateUse("child", child, isNamed: true);
@@ -67,7 +67,8 @@ class ColumnMate extends Column with Mate {
           children: p.get("children").build(),
         );
     mateUse("key", key, isNamed: true);
-    mateUse("mainAxisAlignment", mainAxisAlignment, isNamed: true);
+    mateUse("mainAxisAlignment", mainAxisAlignment,
+        isNamed: true, defaultValue: MainAxisAlignment.start);
     mateUseList("children", children, isNamed: true);
   }
 }

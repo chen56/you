@@ -1,15 +1,22 @@
-import 'dart:collection';
-
 import 'package:code_builder/code_builder.dart' as code;
 import 'package:dart_style/dart_style.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/src/mate_color.dart';
+import 'package:note/src/buildin_editors.dart';
 import 'package:note/utils.dart' as utils;
+
+final defaultEmitter = code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
+
+// 一般以80个字符为编辑器宽度
+final defaultDartFormatter = DartFormatter(
+  pageWidth: 80,
+);
 
 abstract class Param<T> extends ChangeNotifier {
   String name;
   Param? parent;
   final T init;
+  final dynamic defaultValue;
   // fixme 这个nullable是否可以改成isOptional
   final bool nullable;
   final bool isNamed;
@@ -24,6 +31,10 @@ abstract class Param<T> extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// 是否是一个可见的参数
+  /// Mate中的null参数 或 缺省参数，不需要表现到代码中
+  bool get isShow => init != null && init != defaultValue;
+
   @override
   void notifyListeners() {
     super.notifyListeners();
@@ -37,6 +48,7 @@ abstract class Param<T> extends ChangeNotifier {
     required this.init,
     this.nullable = false,
     this.isNamed = false,
+    this.defaultValue,
   }) : _value = init;
 
   bool get isNullable => nullable;
@@ -86,6 +98,30 @@ abstract class Param<T> extends ChangeNotifier {
   }
 
   code.Expression toCodeExpression({required Editors editors});
+
+  @nonVirtual
+  String toCodeExpressionString({
+    bool format = false,
+    required Editors editors,
+  }) {
+    var emitter_ = editors.emitter;
+    var formatter_ = editors.formatter;
+
+    var c = toCodeExpression(editors: editors);
+    return format
+        ? formatter_.formatStatement(c.statement.accept(emitter_).toString())
+        : c.accept(emitter_).toString();
+  }
+
+  Widget nameWidget(Editors editors) {
+    return getEditor(editors).nameWidget(this);
+  }
+
+  valueWidget(Editors editors) {
+    return getEditor(editors).valueWidget(this);
+  }
+
+  Editor<T> getEditor(Editors editors);
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
@@ -94,9 +130,9 @@ Param<T> _toSingleParam<T>({
   required T init,
   required bool nullable,
   required bool isNamed,
+  dynamic defaultValue,
 }) {
-  assert(!(utils.isSubtype<List, T>() || utils.isSubtype<List?, T>()),
-      "list use useList() : init:$init");
+  assert(!(utils.isType<T, List>()), "list use useList() : init:$init");
 
   if (init is Param<T>) return init;
 
@@ -109,6 +145,7 @@ Param<T> _toSingleParam<T>({
       builderRefer: code.refer(init.mateCreateName, init.matePackageUrl),
       nullable: nullable,
       isNamed: isNamed,
+      defaultValue: defaultValue,
     );
   }
   return ValueParam<T>(
@@ -116,6 +153,7 @@ Param<T> _toSingleParam<T>({
     init: init,
     nullable: nullable,
     isNamed: isNamed,
+    defaultValue: defaultValue,
   );
 }
 
@@ -131,7 +169,7 @@ ListParam<E> _toListParam<E>({
       name: "[$i]",
       init: notNull[i],
       nullable: true,
-      isNamed: isNamed,
+      isNamed: false,
     ));
   }
   return ListParam<E>(name: name, init: notNull, params: params);
@@ -143,6 +181,7 @@ class ValueParam<T> extends Param<T> {
     required super.init,
     super.nullable,
     super.isNamed,
+    super.defaultValue,
   });
 
   @override
@@ -153,16 +192,12 @@ class ValueParam<T> extends Param<T> {
 
   @override
   code.Expression toCodeExpression({required Editors editors}) {
-    return code.literal(value, onError: (o) {
-      if (o is Enum) {
-        return code.refer("$o");
-      }
-      if (o is Color) {
-        return ColorRegister.instance.get(o);
-      }
+    return getEditor(editors).toCode(value);
+  }
 
-      return code.refer("$o");
-    });
+  @override
+  Editor<T> getEditor(Editors editors) {
+    return editors.get<T>(this);
   }
 }
 
@@ -190,12 +225,18 @@ class ListParam<E> extends Param<List<E>> {
   code.Expression toCodeExpression({required Editors editors}) {
     return code.literalList(children.map((e) => e.toCodeExpression(editors: editors)));
   }
+
+  @override
+  Editor<List<E>> getEditor(Editors editors) {
+    return ListParamEditor(this, editors: editors);
+  }
 }
 
 class ObjectParam<T> extends Param<T> {
   final Map<String, Param> _paramMap;
   late final Object Function(ObjectParam param) builder;
   final code.Reference builderRefer;
+
   ObjectParam({
     super.name,
     required super.init,
@@ -204,29 +245,12 @@ class ObjectParam<T> extends Param<T> {
     required this.builderRefer,
     super.nullable,
     super.isNamed,
+    super.defaultValue,
   }) : _paramMap = paramMap ?? {} {
     _paramMap.forEach((key, value) {
       value.parent = this;
     });
   }
-
-  // ObjectParam.copy(ObjectParam other)
-  //     : this(
-  //         name: other.name,
-  //         init: other.init,
-  //         nullable: other.nullable,
-  //         paramMap: other._paramMap.map(
-  //           (key, value) => MapEntry(
-  //             key,
-  //             _convertToParam(
-  //               name: key,
-  //               init: value.init,
-  //               nullable: value.nullable,
-  //             ),
-  //           ),
-  //         ),
-  //         builder: other.builder,
-  //       );
 
   ObjectParam.rootFrom(Mate mate)
       : this(
@@ -235,7 +259,8 @@ class ObjectParam<T> extends Param<T> {
           init: mate as T,
           builder: mate.mateBuilder,
           paramMap: mate._mateParams,
-          nullable: false, //根对象
+          nullable: false,
+          //根对象
           builderRefer: code.refer(mate.mateCreateName, mate.matePackageUrl),
         );
 
@@ -250,6 +275,7 @@ class ObjectParam<T> extends Param<T> {
       nullable: utils.isNullableOf<E>(init),
       init: init,
       isNamed: isNamed,
+      defaultValue: defaultValue,
     );
     _paramMap[name] = param;
     return param;
@@ -283,42 +309,30 @@ class ObjectParam<T> extends Param<T> {
   @override
   Iterable<Param> get children => _paramMap.values;
 
+  /// 为编辑器提供完整的代码
   String toSampleCodeString({
     bool snippet = true,
-    code.DartEmitter? emitter,
-    DartFormatter? formatter,
-    Editors? editors,
-  }) {
-    var emitter_ =
-        emitter ?? code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
-    // 一般以80个字符为编辑器宽度
-    var formatter_ = formatter ??
-        DartFormatter(
-          pageWidth: 80,
-        );
-    String result = toSampleCode(snippet: snippet, editors: editors).accept(emitter_).toString();
-    result = snippet ? formatter_.formatStatement(result) : formatter_.format(result);
-    return result;
-  }
-
-  // fixme 位置参数和命名参数要分离,不然生成的代码都是命名参数了
-  /// 转换成完整的范例代码
-  code.Spec toSampleCode({
-    bool snippet = true,
+    bool format = false,
     Editors? editors,
   }) {
     var editors_ = editors ?? Editors();
 
-    if (snippet) {
-      return toCodeExpression(editors: editors_).statement;
+    var emitter = editors_.emitter;
+    var formatter = editors_.formatter;
+
+    var mateExpression = toCodeExpression(editors: editors_);
+    var runApp = code.refer("runApp", "package:flutter/material.dart");
+    var c = snippet
+        ? mateExpression.statement
+        : code.Library((e) => e
+          ..body.add(code.Method((b) => b
+            ..name = "main"
+            ..body = runApp.call([mateExpression]).code).closure.statement));
+    String result = c.accept(emitter).toString();
+    if (format) {
+      result = snippet ? formatter.formatStatement(result) : formatter.format(result);
     }
-    code.Library lib = code.Library((e) => e
-      ..body.add(code.Method((b) => b
-        ..name = "main"
-        ..body = code
-            .refer("runApp", "package:flutter/material.dart")
-            .call([toCodeExpression(editors: editors_)]).code).closure.statement));
-    return lib;
+    return result;
   }
 
   @override
@@ -333,59 +347,15 @@ class ObjectParam<T> extends Param<T> {
         .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
     return builderRefer.call(positionalArguments, namedArguments);
   }
-}
-
-class DoubleEditor extends Editor<double> {
-  DoubleEditor();
 
   @override
-  Widget valueWidget(BuildContext context, Param param) {
-    return TextFormField(
-      initialValue: "${param.init}",
-      autofocus: true,
-      decoration: const InputDecoration(
-        hintText: "Text#data",
-      ),
-      onChanged: (value) {
-        var newValue = double.tryParse(value);
-        if (newValue != null) {
-          param.value = newValue;
-        }
-      },
-    );
+  Editor<T> getEditor(Editors editors) {
+    return ObjectParamEditor(this, editors: editors);
   }
 }
 
-class EnumEditor extends Editor {
-  final EnumRegister enums;
-  EnumEditor({required this.enums});
-
-  @override
-  Widget valueWidget(BuildContext context, Param param) {
-    return DropdownButton<Enum>(
-      alignment: Alignment.topLeft,
-      value: param.value as Enum,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple),
-      onChanged: (Enum? value) {
-        param.value = value;
-      },
-      items: enums
-          .getOrEmpty(param.value.runtimeType)
-          .map((e) => e as Enum)
-          .map<DropdownMenuItem<Enum>>((Enum value) {
-        return DropdownMenuItem<Enum>(
-          value: value,
-          child: Text(value.name),
-        );
-      }).toList(),
-    );
-  }
-}
-
-class ReadonlyEditor extends Editor<double> {
-  ReadonlyEditor();
+class DefaultValueParamEditor<T> extends ValueParamEditor<T> {
+  DefaultValueParamEditor(super.param, {required super.editors});
 }
 
 mixin Mate {
@@ -401,7 +371,12 @@ mixin Mate {
     dynamic defaultValue,
   }) {
     var param = _toSingleParam(
-        name: name, nullable: utils.isNullableOf<V>(init), init: init, isNamed: isNamed);
+      name: name,
+      nullable: utils.isNullableOf<V>(init),
+      init: init,
+      isNamed: isNamed,
+      defaultValue: defaultValue,
+    );
     _mateParams[name] = param;
     return param;
   }
@@ -430,9 +405,15 @@ mixin Mate {
 }
 
 abstract class Editor<T> {
-  Editor();
+  final Editors editors;
+  final code.DartEmitter emitter;
+  final DartFormatter formatter;
 
-  Widget nameWidget(BuildContext context, Param param) {
+  Editor({required this.editors})
+      : emitter = editors.emitter,
+        formatter = editors.formatter;
+
+  Widget nameWidget(Param<T> param) {
     String type = "${param.init.runtimeType}".replaceAll("\$Mate", "");
     if (param.isRoot) return Text(type);
     if (param.isValue) {
@@ -442,36 +423,119 @@ abstract class Editor<T> {
     }
   }
 
-  Widget valueWidget(BuildContext context, Param param) {
+  Widget valueWidget(Param<T> param) {
     return const Text("");
-    // return Text("${node.param.value.runtimeType}".replaceAll("\$Mate", ""));
+  }
+
+  code.Expression toCode(T value) {
+    return code.literal(value, onError: (o) {
+      return code.refer("$value");
+    });
+  }
+
+  /// sub class should not override
+  @nonVirtual
+  String toCodeString(T value, {format = false}) {
+    var c = toCode(value);
+    // 如果要格式化，转成statement以使其不报错
+    return format
+        ? formatter.formatStatement(c.statement.accept(emitter).toString())
+        : c.accept(emitter).toString();
+  }
+}
+
+typedef EditorBuilder<T> = Editor<T> Function(Param<T> param);
+typedef EditorTest = bool Function<T>(Param<T> param);
+
+class EditorItem<T> {
+  final EditorBuilder<T> builder;
+
+  EditorItem(this.builder);
+
+  bool isMatch<VALUE>(Param<VALUE> param) {
+    return utils.isType<VALUE, T>();
   }
 }
 
 class Editors {
   final EnumRegister enumRegister;
-  Editors({EnumRegister? enumRegister}) : enumRegister = enumRegister ?? EnumRegister();
+  final code.DartEmitter emitter;
+  final DartFormatter formatter;
 
-  Editor _getEditor(Param param) {
-    if (param.init is double) return DoubleEditor();
-    if (param.init is Enum) return EnumEditor(enums: enumRegister);
-    return ReadonlyEditor();
-  }
+  @protected
+  final List<EditorItem> editors = List.empty(growable: true);
 
-  Widget nameWidget(BuildContext context, Param param) {
-    return Container(
-      padding: EdgeInsets.only(left: param.level * 15),
-      child: _getEditor(param).nameWidget(context, param),
-    );
-  }
+  Editors({
+    EnumRegister? enumRegister,
+    code.DartEmitter? emitter,
+    DartFormatter? formatter,
+  })  : enumRegister = enumRegister ?? EnumRegister(),
+        emitter = emitter ?? defaultEmitter,
+        formatter = formatter ?? defaultDartFormatter {}
 
-  Widget valueWidget(BuildContext context, Param param) {
-    return _getEditor(param).valueWidget(context, param);
+  Editor<T> get<T>(ValueParam<T> param, {EditorBuilder<T>? onNotFound}) {
+    if (utils.isType<T, int>()) return IntEditor(param, editors: this);
+    if (utils.isType<T, double>()) return DoubleEditor(param, editors: this);
+    if (utils.isType<T, Color>()) return ColorEditor(param, editors: this);
+    if (utils.isType<T, Enum>()) {
+      return EnumEditor2(param, editors: this, enums: enumRegister.getOrEmpty(T));
+    }
+    if (utils.isType<T, void Function()>()) {
+      var ex = code.Method((b) => b
+        ..name = ''
+        ..lambda = false
+        ..body = const code.Code("")).closure;
+      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    }
+
+    return onNotFound != null
+        ? onNotFound(param)
+        : DefaultValueParamEditor<T>(param, editors: this);
   }
 }
 
-class EnumRegister extends MapBase<Type, List> {
-  @protected
+class ManuallyValueEditor<T> extends ValueParamEditor<T> {
+  code.Expression codeExpression;
+  ManuallyValueEditor(super.param, {required super.editors, required this.codeExpression});
+
+  @override
+  code.Expression toCode(T value) {
+    if (value == null) return code.literalNull;
+    return codeExpression;
+  }
+}
+
+abstract class ValueParamEditor<T> extends Editor<T> {
+  final ValueParam<T> param;
+  ValueParamEditor(this.param, {required super.editors});
+}
+
+class ObjectParamEditor<T> extends Editor<T> {
+  final ObjectParam<T> param;
+
+  ObjectParamEditor(this.param, {required super.editors});
+
+  @override
+  code.Expression toCode(T value) {
+    var filtered = param._paramMap.entries.where((e) => e.value.isShow);
+
+    var positionalArguments = filtered
+        .where((e) => !e.value.isNamed)
+        .map((e) => e.value.toCodeExpression(editors: editors));
+    var namedArguments = Map.fromEntries(filtered
+        .where((e) => e.value.isNamed)
+        .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
+    return param.builderRefer.call(positionalArguments, namedArguments);
+  }
+}
+
+class ListParamEditor<E> extends Editor<List<E>> {
+  final ListParam<E> param;
+
+  ListParamEditor(this.param, {required super.editors});
+}
+
+class EnumRegister {
   final Map<Type, List> enums = {};
 
   EnumRegister({Map<Type, List>? enums}) {
@@ -479,6 +543,7 @@ class EnumRegister extends MapBase<Type, List> {
       enums.addAll(enums);
     }
   }
+
   EnumRegister.list(List<EnumRegister> registers) {
     for (var e in registers) {
       enums.addAll(e.enums);
@@ -487,27 +552,8 @@ class EnumRegister extends MapBase<Type, List> {
 
   List getOrEmpty(Type type) => !enums.containsKey(type) ? [] : enums[type]!;
 
-  @override
-  List? operator [](Object? key) {
-    return enums[key];
-  }
-
-  @override
   void operator []=(Type key, List value) {
     enums[key] = value;
-  }
-
-  @override
-  void clear() {
-    enums.clear();
-  }
-
-  @override
-  Iterable<Type> get keys => enums.keys;
-
-  @override
-  List? remove(Object? key) {
-    return enums.remove(key);
   }
 }
 

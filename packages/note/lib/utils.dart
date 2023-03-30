@@ -4,13 +4,28 @@ import 'package:flutter/widgets.dart';
 
 /// 判断类型Sub是否是Super的子类型
 bool isSubtype<Super, Sub>() {
-  return <Sub>[] is List<Super>;
+  return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
 }
 
-class TypeIs<T> {}
+class TypeOf<T> {}
 
-isType<T>(Object o, TypeIs<T> type) {
-  return o is T;
+isTypeOf<Sub, Super>({
+  required TypeOf<Sub> type,
+  required TypeOf<Super> isType,
+}) {
+  return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
+}
+
+/// result = Sub is Super
+bool isType<Sub, Super>() {
+  return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
+}
+
+// isSuper<int,num>(ofSub:Typeof<int>())
+isSuper<Sub, Super>({
+  required TypeOf<Sub> type,
+}) {
+  return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
 }
 
 /// 判断类型T是否是nullable的:
