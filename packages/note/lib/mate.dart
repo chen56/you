@@ -31,6 +31,13 @@ abstract class Param<T> extends ChangeNotifier {
     notifyListeners();
   }
 
+  void setValue(Object? newValue) {
+    if (newValue == null) {
+      assert(nullable, "nullable=$nullable, null value can set null");
+      if (newValue == null && !nullable) return;
+    }
+  }
+
   /// 是否是一个可见的参数
   /// Mate中的null参数 或 缺省参数，不需要表现到代码中
   bool get isShow => init != null && init != defaultValue;
@@ -97,7 +104,10 @@ abstract class Param<T> extends ChangeNotifier {
     return [this, ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))];
   }
 
-  code.Expression toCodeExpression({required Editors editors});
+  @nonVirtual
+  code.Expression toCodeExpression({required Editors editors}) {
+    return getEditor(editors).toCode();
+  }
 
   @nonVirtual
   String toCodeExpressionString({
@@ -114,14 +124,14 @@ abstract class Param<T> extends ChangeNotifier {
   }
 
   Widget nameWidget(Editors editors) {
-    return getEditor(editors).nameWidget(this);
+    return getEditor(editors).nameWidget();
   }
 
   valueWidget(Editors editors) {
-    return getEditor(editors).valueWidget(this);
+    return getEditor(editors).valueWidget();
   }
 
-  Editor<T> getEditor(Editors editors);
+  Editor getEditor(Editors editors);
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
@@ -191,12 +201,7 @@ class ValueParam<T> extends Param<T> {
   Iterable<Param> get children => List.empty();
 
   @override
-  code.Expression toCodeExpression({required Editors editors}) {
-    return getEditor(editors).toCode(value);
-  }
-
-  @override
-  Editor<T> getEditor(Editors editors) {
+  Editor getEditor(Editors editors) {
     return editors.get<T>(this);
   }
 }
@@ -222,12 +227,7 @@ class ListParam<E> extends Param<List<E>> {
   Iterable<Param<E>> get children => params;
 
   @override
-  code.Expression toCodeExpression({required Editors editors}) {
-    return code.literalList(children.map((e) => e.toCodeExpression(editors: editors)));
-  }
-
-  @override
-  Editor<List<E>> getEditor(Editors editors) {
+  Editor getEditor(Editors editors) {
     return ListParamEditor(this, editors: editors);
   }
 }
@@ -336,26 +336,9 @@ class ObjectParam<T> extends Param<T> {
   }
 
   @override
-  code.Expression toCodeExpression({required Editors editors}) {
-    var filtered = _paramMap.entries.where((e) => e.value.init != null);
-
-    var positionalArguments = filtered
-        .where((e) => !e.value.isNamed)
-        .map((e) => e.value.toCodeExpression(editors: editors));
-    var namedArguments = Map.fromEntries(filtered
-        .where((e) => e.value.isNamed)
-        .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
-    return builderRefer.call(positionalArguments, namedArguments);
-  }
-
-  @override
-  Editor<T> getEditor(Editors editors) {
+  Editor getEditor(Editors editors) {
     return ObjectParamEditor(this, editors: editors);
   }
-}
-
-class DefaultValueParamEditor<T> extends ValueParamEditor<T> {
-  DefaultValueParamEditor(super.param, {required super.editors});
 }
 
 mixin Mate {
@@ -404,16 +387,15 @@ mixin Mate {
   }
 }
 
-abstract class Editor<T> {
+abstract class Editor {
   final Editors editors;
   final code.DartEmitter emitter;
   final DartFormatter formatter;
-
   Editor({required this.editors})
       : emitter = editors.emitter,
         formatter = editors.formatter;
 
-  Widget nameWidget(Param<T> param) {
+  Widget nameWidget() {
     String type = "${param.init.runtimeType}".replaceAll("\$Mate", "");
     if (param.isRoot) return Text(type);
     if (param.isValue) {
@@ -423,20 +405,18 @@ abstract class Editor<T> {
     }
   }
 
-  Widget valueWidget(Param<T> param) {
+  Param get param;
+
+  Widget valueWidget() {
     return const Text("");
   }
 
-  code.Expression toCode(T value) {
-    return code.literal(value, onError: (o) {
-      return code.refer("$value");
-    });
-  }
+  code.Expression toCode();
 
   /// sub class should not override
   @nonVirtual
-  String toCodeString(T value, {format = false}) {
-    var c = toCode(value);
+  String toCodeString({format = false}) {
+    var c = toCode();
     // 如果要格式化，转成statement以使其不报错
     return format
         ? formatter.formatStatement(c.statement.accept(emitter).toString())
@@ -444,26 +424,12 @@ abstract class Editor<T> {
   }
 }
 
-typedef EditorBuilder<T> = Editor<T> Function(Param<T> param);
-typedef EditorTest = bool Function<T>(Param<T> param);
-
-class EditorItem<T> {
-  final EditorBuilder<T> builder;
-
-  EditorItem(this.builder);
-
-  bool isMatch<VALUE>(Param<VALUE> param) {
-    return utils.isType<VALUE, T>();
-  }
-}
+typedef EditorBuilder = Editor Function(Param param);
 
 class Editors {
   final EnumRegister enumRegister;
   final code.DartEmitter emitter;
   final DartFormatter formatter;
-
-  @protected
-  final List<EditorItem> editors = List.empty(growable: true);
 
   Editors({
     EnumRegister? enumRegister,
@@ -473,12 +439,14 @@ class Editors {
         emitter = emitter ?? defaultEmitter,
         formatter = formatter ?? defaultDartFormatter {}
 
-  Editor<T> get<T>(ValueParam<T> param, {EditorBuilder<T>? onNotFound}) {
+  Editor get<T>(ValueParam<T> param, {EditorBuilder? onNotFound}) {
     if (utils.isType<T, int>()) return IntEditor(param, editors: this);
     if (utils.isType<T, double>()) return DoubleEditor(param, editors: this);
+    if (utils.isType<T, bool>()) return BoolEditor(param, editors: this);
+    if (utils.isType<T, String>()) return StringEditor(param, editors: this);
     if (utils.isType<T, Color>()) return ColorEditor(param, editors: this);
     if (utils.isType<T, Enum>()) {
-      return EnumEditor2(param, editors: this, enums: enumRegister.getOrEmpty(T));
+      return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(T));
     }
     if (utils.isType<T, void Function()>()) {
       var ex = code.Method((b) => b
@@ -488,35 +456,24 @@ class Editors {
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
 
-    return onNotFound != null
-        ? onNotFound(param)
-        : DefaultValueParamEditor<T>(param, editors: this);
+    return onNotFound != null ? onNotFound(param) : DefaultValueParamEditor(param, editors: this);
   }
 }
 
-class ManuallyValueEditor<T> extends ValueParamEditor<T> {
-  code.Expression codeExpression;
-  ManuallyValueEditor(super.param, {required super.editors, required this.codeExpression});
-
+abstract class ValueParamEditor extends Editor {
   @override
-  code.Expression toCode(T value) {
-    if (value == null) return code.literalNull;
-    return codeExpression;
-  }
-}
-
-abstract class ValueParamEditor<T> extends Editor<T> {
-  final ValueParam<T> param;
+  final ValueParam param;
   ValueParamEditor(this.param, {required super.editors});
 }
 
-class ObjectParamEditor<T> extends Editor<T> {
-  final ObjectParam<T> param;
+class ObjectParamEditor extends Editor {
+  @override
+  final ObjectParam param;
 
   ObjectParamEditor(this.param, {required super.editors});
 
   @override
-  code.Expression toCode(T value) {
+  code.Expression toCode() {
     var filtered = param._paramMap.entries.where((e) => e.value.isShow);
 
     var positionalArguments = filtered
@@ -529,10 +486,36 @@ class ObjectParamEditor<T> extends Editor<T> {
   }
 }
 
-class ListParamEditor<E> extends Editor<List<E>> {
-  final ListParam<E> param;
+class ListParamEditor extends Editor {
+  @override
+  final ListParam param;
 
   ListParamEditor(this.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return code.literalList(param.children.map((e) => e.toCodeExpression(editors: editors)));
+  }
+}
+
+class ManuallyValueEditor extends ValueParamEditor {
+  code.Expression codeExpression;
+  ManuallyValueEditor(super.param, {required super.editors, required this.codeExpression});
+
+  @override
+  code.Expression toCode() {
+    if (param.value == null) return code.literalNull;
+    return codeExpression;
+  }
+}
+
+class DefaultValueParamEditor extends ValueParamEditor {
+  DefaultValueParamEditor(super.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return code.refer("${param.value}");
+  }
 }
 
 class EnumRegister {
@@ -550,10 +533,21 @@ class EnumRegister {
     }
   }
 
-  List getOrEmpty(Type type) => !enums.containsKey(type) ? [] : enums[type]!;
+  List getOrEmpty(Type type) {
+    return !enums.containsKey(type) ? [] : enums[type]!;
+  }
 
   void operator []=(Type key, List value) {
     enums[key] = value;
+  }
+
+  void register<T>(List<T> values) {
+    enums[T] = values;
+    register_<T?>(values);
+  }
+
+  void register_<T>(List<T> values) {
+    enums[T] = values;
   }
 }
 

@@ -76,7 +76,7 @@ Future<void> genAll({
     _log("allTypes--- $key - runtimeType:${key.runtimeType}  lib:${allTypes[key]!.identifier}");
   }
 
-  _log("## gen enum editor:");
+  _log("## gen enum register:");
   _genEnums(
     writeFS: writeFS,
     dartFormatter: dartFormatter,
@@ -651,19 +651,16 @@ _genEnums({
 
     EnumRegister registerEnum() {
       EnumRegister result = EnumRegister();
-      result[MainAxisAlignment] = MainAxisAlignment.values;
-      result[CrossAxisAlignment] = CrossAxisAlignment.values;
-      result[VerticalDirection] = VerticalDirection.values;
-      result[Clip] = Clip.values;
+      result.register(MainAxisAlignment,MainAxisAlignment.values);
+      result.register(CrossAxisAlignment,CrossAxisAlignment.values);
       return result;
     }
     */
   var emitter = DartEmitter(allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true);
 
   var statements = typeRefers.keys.whereType<EnumElement>().map((e) =>
-  refer("result")
-      .index(typeRefers.elementRef(e, debugRef: e))
-      .assign(typeRefers.elementRef(e, debugRef: e).property("values"))
+  refer("result.register")
+      .call([typeRefers.elementRef(e, debugRef: e).property("values")],)
       .statement);
 
   Library lib = Library(

@@ -18,17 +18,6 @@ void main() {
   // fixme 省略init为缺省值的参数ContainerMate(clipBehavior: 'Clip.none')
   group("toList()", () {
     test('print', () {
-      var x = ContainerMate(
-        width: 100,
-        child: ColumnMate(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ContainerMate(),
-          ],
-        ),
-      );
-      var y = ObjectParam.rootFrom(x);
-      print(y.toSampleCodeString());
       expect(
           toCode(
               ContainerMate(
@@ -42,10 +31,9 @@ void main() {
               ),
               format: true),
           """Container(
-  clipBehavior: Clip.none,
   width: 100.0,
   child: Column(
-    [Container(clipBehavior: Clip.none)],
+    [Container()],
     mainAxisAlignment: MainAxisAlignment.center,
   ),
 );""");
@@ -57,7 +45,12 @@ void main() {
           toCode(ContainerMate(
             color: Colors.green.shade100,
           )),
-          """Container(color: Colors.green.shade100, clipBehavior: Clip.none, );""");
+          """Container(color: Colors.green.shade100);""");
+    });
+  });
+  group("type:String", () {
+    test('print', () {
+      expect(toCode(Text$Mate("hello")), """Text('hello');""");
     });
   });
 }

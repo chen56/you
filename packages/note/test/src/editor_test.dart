@@ -49,8 +49,8 @@ void main() {
       expect(listCode<int?>(null), "[]");
     });
     test("map", () {
-      expect(singleCode<Map>({"a": 1}), "{'a': 1}");
-      expect(singleCode<Map?>({"a": 1}), "{'a': 1}");
+      expect(singleCode<Map>({"a": 1}), "{a: 1}");
+      expect(singleCode<Map?>({"a": 1}), "{a: 1}");
       expect(singleCode<Map?>(null), "null");
     });
     test("enum", () {

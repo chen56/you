@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter_test/flutter_test.dart';
 
 typedef OnClick = void Function();
@@ -29,6 +31,27 @@ void main() {
 
       expect(int == i.runtimeType, true);
       expect(int == i_.runtimeType, true);
+      expect(i.runtimeType == i_.runtimeType, true);
+
+      expect(t == i.runtimeType, true);
+      expect(t == i_.runtimeType, true);
+
+      expect(t_ != i.runtimeType, true);
+      expect(t_ != i_.runtimeType, true);
+
+      expect(t_ != t, true);
+    });
+    test('本质是范型类型T是严格的 Enum ', () {
+      Type getType<T>(T arg) => T;
+
+      TextAlign i = TextAlign.center;
+      TextAlign? i_ = TextAlign.center;
+      Type t = getType<TextAlign>(i);
+      Type t_ = getType<TextAlign?>(i_);
+
+      expect(TextAlign == i.runtimeType, true);
+      expect(TextAlign == i.runtimeType, true);
+      expect(TextAlign == i_.runtimeType, true);
       expect(i.runtimeType == i_.runtimeType, true);
 
       expect(t == i.runtimeType, true);

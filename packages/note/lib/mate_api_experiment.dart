@@ -48,6 +48,324 @@ class ContainerMate extends Container with Mate {
   }
 }
 
+class Text$Mate extends Text with Mate {
+  /// Text Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
+  Text$Mate(
+    /// requiredParameters: String data
+    String data, {
+    /// optionalParameters: {Key? key} , default:none
+    Key? key,
+
+    /// optionalParameters: {TextStyle? style} , default:none
+    TextStyle? style,
+
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
+    StrutStyle? strutStyle,
+
+    /// optionalParameters: {TextAlign? textAlign} , default:none
+    TextAlign? textAlign,
+
+    /// optionalParameters: {TextDirection? textDirection} , default:none
+    TextDirection? textDirection,
+
+    /// optionalParameters: {Locale? locale} , default:none
+    Locale? locale,
+
+    /// optionalParameters: {bool? softWrap} , default:none
+    bool? softWrap,
+
+    /// optionalParameters: {TextOverflow? overflow} , default:none
+    TextOverflow? overflow,
+
+    /// optionalParameters: {double? textScaleFactor} , default:none
+    double? textScaleFactor,
+
+    /// optionalParameters: {int? maxLines} , default:none
+    int? maxLines,
+
+    /// optionalParameters: {String? semanticsLabel} , default:none
+    String? semanticsLabel,
+
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
+    TextWidthBasis? textWidthBasis,
+
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
+    TextHeightBehavior? textHeightBehavior,
+
+    /// optionalParameters: {Color? selectionColor} , default:none
+    Color? selectionColor,
+  }) : super(
+          data,
+          key: key,
+          style: style,
+          strutStyle: strutStyle,
+          textAlign: textAlign,
+          textDirection: textDirection,
+          locale: locale,
+          softWrap: softWrap,
+          overflow: overflow,
+          textScaleFactor: textScaleFactor,
+          maxLines: maxLines,
+          semanticsLabel: semanticsLabel,
+          textWidthBasis: textWidthBasis,
+          textHeightBehavior: textHeightBehavior,
+          selectionColor: selectionColor,
+        ) {
+    mateCreateName = 'Text';
+    matePackageUrl = 'package:flutter/widgets.dart';
+    mateBuilder = (p) => Text$Mate(
+          p.get('data').value,
+          key: p.get('key').build(),
+          style: p.get('style').build(),
+          strutStyle: p.get('strutStyle').build(),
+          textAlign: p.get('textAlign').build(),
+          textDirection: p.get('textDirection').build(),
+          locale: p.get('locale').build(),
+          softWrap: p.get('softWrap').build(),
+          overflow: p.get('overflow').build(),
+          textScaleFactor: p.get('textScaleFactor').build(),
+          maxLines: p.get('maxLines').build(),
+          semanticsLabel: p.get('semanticsLabel').build(),
+          textWidthBasis: p.get('textWidthBasis').build(),
+          textHeightBehavior: p.get('textHeightBehavior').build(),
+          selectionColor: p.get('selectionColor').build(),
+        );
+    mateUse(
+      'data',
+      data,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
+  }
+
+  /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
+  Text$Mate.rich(
+    /// requiredParameters: InlineSpan textSpan
+    InlineSpan textSpan, {
+    /// optionalParameters: {Key? key} , default:none
+    Key? key,
+
+    /// optionalParameters: {TextStyle? style} , default:none
+    TextStyle? style,
+
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
+    StrutStyle? strutStyle,
+
+    /// optionalParameters: {TextAlign? textAlign} , default:none
+    TextAlign? textAlign,
+
+    /// optionalParameters: {TextDirection? textDirection} , default:none
+    TextDirection? textDirection,
+
+    /// optionalParameters: {Locale? locale} , default:none
+    Locale? locale,
+
+    /// optionalParameters: {bool? softWrap} , default:none
+    bool? softWrap,
+
+    /// optionalParameters: {TextOverflow? overflow} , default:none
+    TextOverflow? overflow,
+
+    /// optionalParameters: {double? textScaleFactor} , default:none
+    double? textScaleFactor,
+
+    /// optionalParameters: {int? maxLines} , default:none
+    int? maxLines,
+
+    /// optionalParameters: {String? semanticsLabel} , default:none
+    String? semanticsLabel,
+
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
+    TextWidthBasis? textWidthBasis,
+
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
+    TextHeightBehavior? textHeightBehavior,
+
+    /// optionalParameters: {Color? selectionColor} , default:none
+    Color? selectionColor,
+  }) : super.rich(
+          textSpan,
+          key: key,
+          style: style,
+          strutStyle: strutStyle,
+          textAlign: textAlign,
+          textDirection: textDirection,
+          locale: locale,
+          softWrap: softWrap,
+          overflow: overflow,
+          textScaleFactor: textScaleFactor,
+          maxLines: maxLines,
+          semanticsLabel: semanticsLabel,
+          textWidthBasis: textWidthBasis,
+          textHeightBehavior: textHeightBehavior,
+          selectionColor: selectionColor,
+        ) {
+    mateCreateName = 'Text.rich';
+    matePackageUrl = 'package:flutter/widgets.dart';
+    mateBuilder = (p) => Text$Mate.rich(
+          p.get('textSpan').value,
+          key: p.get('key').build(),
+          style: p.get('style').build(),
+          strutStyle: p.get('strutStyle').build(),
+          textAlign: p.get('textAlign').build(),
+          textDirection: p.get('textDirection').build(),
+          locale: p.get('locale').build(),
+          softWrap: p.get('softWrap').build(),
+          overflow: p.get('overflow').build(),
+          textScaleFactor: p.get('textScaleFactor').build(),
+          maxLines: p.get('maxLines').build(),
+          semanticsLabel: p.get('semanticsLabel').build(),
+          textWidthBasis: p.get('textWidthBasis').build(),
+          textHeightBehavior: p.get('textHeightBehavior').build(),
+          selectionColor: p.get('selectionColor').build(),
+        );
+    mateUse(
+      'textSpan',
+      textSpan,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
+  }
+}
+
 class ColumnMate extends Column with Mate {
   ColumnMate({
     Key? key,

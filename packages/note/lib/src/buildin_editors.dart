@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 
-class DoubleEditor<T> extends ValueParamEditor<T> {
+class DoubleEditor extends ValueParamEditor {
   DoubleEditor(super.param, {required super.editors});
 
   @override
-  Widget valueWidget(Param param) {
+  Widget valueWidget() {
     return TextFormField(
       initialValue: "${param.init}",
       autofocus: true,
@@ -24,13 +24,18 @@ class DoubleEditor<T> extends ValueParamEditor<T> {
       },
     );
   }
+
+  @override
+  code.Expression toCode() {
+    return code.literal(param.value);
+  }
 }
 
-class IntEditor<T> extends ValueParamEditor<T> {
+class IntEditor extends ValueParamEditor {
   IntEditor(super.param, {required super.editors});
 
   @override
-  Widget valueWidget(Param param) {
+  Widget valueWidget() {
     return TextFormField(
       initialValue: "${param.init}",
       autofocus: true,
@@ -44,6 +49,60 @@ class IntEditor<T> extends ValueParamEditor<T> {
         }
       },
     );
+  }
+
+  @override
+  code.Expression toCode() {
+    return code.literal(param.value);
+  }
+}
+
+class BoolEditor extends ValueParamEditor {
+  BoolEditor(super.param, {required super.editors});
+
+  @override
+  Widget valueWidget() {
+    var yesNo = Switch(
+      // This bool value toggles the switch.
+      value: param.value,
+      activeColor: Colors.red,
+      onChanged: (bool value) {
+        param.value = value;
+      },
+    );
+    return Row(
+      children: [Text("${param.value}"), yesNo],
+    );
+  }
+
+  @override
+  code.Expression toCode() {
+    return code.literal(param.value);
+  }
+}
+
+class StringEditor extends ValueParamEditor {
+  StringEditor(super.param, {required super.editors});
+
+  @override
+  Widget valueWidget() {
+    return TextFormField(
+      initialValue: "${param.init}",
+      autofocus: true,
+      decoration: const InputDecoration(
+        hintText: "Text#data",
+      ),
+      onChanged: (value) {
+        if (value != null) {
+          param.value = value;
+        }
+      },
+    );
+  }
+
+  @override
+  code.Expression toCode() {
+    return code.literal(param.value);
   }
 }
 //
@@ -75,13 +134,13 @@ class IntEditor<T> extends ValueParamEditor<T> {
 //   }
 // }
 
-class EnumEditor2<T> extends ValueParamEditor<T> {
+class EnumEditor extends ValueParamEditor {
   final List enums;
 
-  EnumEditor2(super.param, {required this.enums, required super.editors});
+  EnumEditor(super.param, {required this.enums, required super.editors});
 
   @override
-  Widget valueWidget(Param param) {
+  Widget valueWidget() {
     return DropdownButton<Enum>(
       alignment: Alignment.topLeft,
       value: param.value as Enum,
@@ -99,18 +158,23 @@ class EnumEditor2<T> extends ValueParamEditor<T> {
       }).toList(),
     );
   }
+
+  @override
+  code.Expression toCode() {
+    return code.refer("${param.value}");
+  }
 }
 
-class ColorEditor<T> extends ValueParamEditor<T> {
+class ColorEditor<T> extends ValueParamEditor {
   ColorEditor(super.param, {required super.editors});
 
   @override
-  code.Expression toCode(T? value) {
-    return _ColorRegister.instance.get(value as Color?);
+  code.Expression toCode() {
+    return _ColorRegister.instance.get(param.value as Color?);
   }
 
   @override
-  Widget valueWidget(Param param) {
+  Widget valueWidget() {
     return Row(
       children: [
         Text(param.toCodeExpressionString(editors: editors)),
