@@ -12,6 +12,7 @@ import 'package:flutter/src/painting/image_provider.dart';
 import 'package:flutter/src/painting/image_stream.dart';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration_image.dart';
 import 'package:flutter/src/material/material.dart';
 import 'package:flutter/src/rendering/box.dart';
@@ -20,25 +21,25 @@ import 'package:flutter/src/rendering/box.dart';
 class Ink$Mate extends Ink with Mate {
   /// Ink Ink({Key? key, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, double? width, double? height, Widget? child})
   Ink$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -49,6 +50,8 @@ class Ink$Mate extends Ink with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'Ink';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Ink$Mate(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
@@ -58,54 +61,82 @@ class Ink$Mate extends Ink with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('padding', padding);
-    matePut('color', color);
-    matePut('decoration', decoration);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Ink Ink.image({Key? key, EdgeInsetsGeometry? padding, required ImageProvider<Object> image, void Function(Object, StackTrace?)? onImageError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double? width, double? height, Widget? child})
   Ink$Mate.image({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {required ImageProvider<Object> image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageProvider<Object> image} , default:none
     required ImageProvider<Object> image,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onImageError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onImageError} , default:none
     ImageErrorListener? onImageError,
 
-    /// optionalParameters: {ColorFilter? colorFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ColorFilter? colorFilter} , default:none
     ColorFilter? colorFilter,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.image(
           key: key,
@@ -122,6 +153,8 @@ class Ink$Mate extends Ink with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'Ink.image';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Ink$Mate.image(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
@@ -137,19 +170,74 @@ class Ink$Mate extends Ink with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('padding', padding);
-    matePut('image', image);
-    matePut('onImageError', onImageError);
-    matePut('colorFilter', colorFilter);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('centerSlice', centerSlice);
-    matePut('repeat', repeat);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'onImageError',
+      onImageError,
+      isNamed: true,
+    );
+    mateUse(
+      'colorFilter',
+      colorFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -157,19 +245,19 @@ class Ink$Mate extends Ink with Mate {
 class InkDecoration$Mate extends InkDecoration with Mate {
   /// InkDecoration InkDecoration({required Decoration? decoration, required ImageConfiguration configuration, required MaterialInkController controller, required RenderBox referenceBox, void Function()? onRemoved})
   InkDecoration$Mate({
-    /// optionalParameters: {required Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Decoration? decoration} , default:none
     required Decoration? decoration,
 
-    /// optionalParameters: {required ImageConfiguration configuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageConfiguration configuration} , default:none
     required ImageConfiguration configuration,
 
-    /// optionalParameters: {required MaterialInkController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialInkController controller} , default:none
     required MaterialInkController controller,
 
-    /// optionalParameters: {required RenderBox referenceBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox referenceBox} , default:none
     required RenderBox referenceBox,
 
-    /// optionalParameters: {void Function()? onRemoved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onRemoved} , default:none
     VoidCallback? onRemoved,
   }) : super(
           decoration: decoration,
@@ -178,6 +266,8 @@ class InkDecoration$Mate extends InkDecoration with Mate {
           referenceBox: referenceBox,
           onRemoved: onRemoved,
         ) {
+    mateCreateName = 'InkDecoration';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkDecoration$Mate(
           decoration: p.get('decoration').build(),
           configuration: p.get('configuration').build(),
@@ -185,10 +275,30 @@ class InkDecoration$Mate extends InkDecoration with Mate {
           referenceBox: p.get('referenceBox').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    matePut('decoration', decoration);
-    matePut('configuration', configuration);
-    matePut('controller', controller);
-    matePut('referenceBox', referenceBox);
-    matePut('onRemoved', onRemoved);
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'configuration',
+      configuration,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'referenceBox',
+      referenceBox,
+      isNamed: true,
+    );
+    mateUse(
+      'onRemoved',
+      onRemoved,
+      isNamed: true,
+    );
   }
 }

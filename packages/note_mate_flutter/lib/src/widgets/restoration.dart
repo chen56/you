@@ -11,27 +11,41 @@ import 'package:flutter/src/services/restoration.dart';
 class RestorationScope$Mate extends RestorationScope with Mate {
   /// RestorationScope RestorationScope({Key? key, required String? restorationId, required Widget child})
   RestorationScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String? restorationId} , default:none
     required String? restorationId,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           restorationId: restorationId,
           child: child,
         ) {
+    mateCreateName = 'RestorationScope';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorationScope$Mate(
           key: p.get('key').build(),
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('restorationId', restorationId);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -39,27 +53,41 @@ class RestorationScope$Mate extends RestorationScope with Mate {
 class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {RestorationBucket? bucket} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RestorationBucket? bucket} , default:none
     RestorationBucket? bucket,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           bucket: bucket,
           child: child,
         ) {
+    mateCreateName = 'UnmanagedRestorationScope';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UnmanagedRestorationScope$Mate(
           key: p.get('key').build(),
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('bucket', bucket);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'bucket',
+      bucket,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -67,26 +95,40 @@ class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate
 class RootRestorationScope$Mate extends RootRestorationScope with Mate {
   /// RootRestorationScope RootRestorationScope({Key? key, required String? restorationId, required Widget child})
   RootRestorationScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String? restorationId} , default:none
     required String? restorationId,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           restorationId: restorationId,
           child: child,
         ) {
+    mateCreateName = 'RootRestorationScope';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RootRestorationScope$Mate(
           key: p.get('key').build(),
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('restorationId', restorationId);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

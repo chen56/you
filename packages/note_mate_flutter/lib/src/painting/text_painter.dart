@@ -6,21 +6,22 @@ import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/painting/inline_span.dart';
 import 'package:flutter/src/painting/strut_style.dart';
+import 'package:flutter/painting.dart';
 
 /// class PlaceholderDimensions
 class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
   /// PlaceholderDimensions PlaceholderDimensions({required Size size, required PlaceholderAlignment alignment, TextBaseline? baseline, double? baselineOffset})
   PlaceholderDimensions$Mate({
-    /// optionalParameters: {required Size size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size size} , default:none
     required Size size,
 
-    /// optionalParameters: {required PlaceholderAlignment alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlaceholderAlignment alignment} , default:none
     required PlaceholderAlignment alignment,
 
-    /// optionalParameters: {TextBaseline? baseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? baseline} , default:none
     TextBaseline? baseline,
 
-    /// optionalParameters: {double? baselineOffset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? baselineOffset} , default:none
     double? baselineOffset,
   }) : super(
           size: size,
@@ -28,16 +29,34 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
           baseline: baseline,
           baselineOffset: baselineOffset,
         ) {
+    mateCreateName = 'PlaceholderDimensions';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => PlaceholderDimensions$Mate(
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
           baseline: p.get('baseline').build(),
           baselineOffset: p.get('baselineOffset').build(),
         );
-    matePut('size', size);
-    matePut('alignment', alignment);
-    matePut('baseline', baseline);
-    matePut('baselineOffset', baselineOffset);
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'baseline',
+      baseline,
+      isNamed: true,
+    );
+    mateUse(
+      'baselineOffset',
+      baselineOffset,
+      isNamed: true,
+    );
   }
 }
 
@@ -45,34 +64,34 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
 class TextPainter$Mate extends TextPainter with Mate {
   /// TextPainter TextPainter({InlineSpan? text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, double textScaleFactor = 1.0, int? maxLines, String? ellipsis, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior})
   TextPainter$Mate({
-    /// optionalParameters: {InlineSpan? text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InlineSpan? text} , default:none
     InlineSpan? text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , hasDefaultValue:true, defaultValueCode:TextAlign.start
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    TextAlign textAlign = TextAlign.start,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double textScaleFactor,
+    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
+    double textScaleFactor = 1.0,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {String? ellipsis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ellipsis} , default:none
     String? ellipsis,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , hasDefaultValue:true, defaultValueCode:TextWidthBasis.parent
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
   }) : super(
           text: text,
@@ -86,6 +105,8 @@ class TextPainter$Mate extends TextPainter with Mate {
           textWidthBasis: textWidthBasis,
           textHeightBehavior: textHeightBehavior,
         ) {
+    mateCreateName = 'TextPainter';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TextPainter$Mate(
           text: p.get('text').build(),
           textAlign: p.get('textAlign').build(),
@@ -98,15 +119,58 @@ class TextPainter$Mate extends TextPainter with Mate {
           textWidthBasis: p.get('textWidthBasis').build(),
           textHeightBehavior: p.get('textHeightBehavior').build(),
         );
-    matePut('text', text);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('ellipsis', ellipsis);
-    matePut('locale', locale);
-    matePut('strutStyle', strutStyle);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+      defaultValue: TextAlign.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'ellipsis',
+      ellipsis,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+      defaultValue: TextWidthBasis.parent,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
   }
 }

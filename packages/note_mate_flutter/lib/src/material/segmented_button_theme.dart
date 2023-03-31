@@ -10,21 +10,31 @@ import 'package:flutter/src/foundation/key.dart';
 class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate {
   /// SegmentedButtonThemeData SegmentedButtonThemeData({ButtonStyle? style, Widget? selectedIcon})
   SegmentedButtonThemeData$Mate({
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? selectedIcon} , default:none
     Widget? selectedIcon,
   }) : super(
           style: style,
           selectedIcon: selectedIcon,
         ) {
+    mateCreateName = 'SegmentedButtonThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SegmentedButtonThemeData$Mate(
           style: p.get('style').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    matePut('style', style);
-    matePut('selectedIcon', selectedIcon);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedIcon',
+      selectedIcon,
+      isNamed: true,
+    );
   }
 }
 
@@ -32,26 +42,40 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate {
 class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with Mate {
   /// SegmentedButtonTheme SegmentedButtonTheme({Key? key, required SegmentedButtonThemeData data, required Widget child})
   SegmentedButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SegmentedButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SegmentedButtonThemeData data} , default:none
     required SegmentedButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'SegmentedButtonTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SegmentedButtonTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

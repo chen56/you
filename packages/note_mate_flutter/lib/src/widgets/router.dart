@@ -12,21 +12,31 @@ import 'dart:async';
 class RouteInformation$Mate extends RouteInformation with Mate {
   /// RouteInformation RouteInformation({String? location, Object? state})
   RouteInformation$Mate({
-    /// optionalParameters: {String? location} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? location} , default:none
     String? location,
 
-    /// optionalParameters: {Object? state} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? state} , default:none
     Object? state,
   }) : super(
           location: location,
           state: state,
         ) {
+    mateCreateName = 'RouteInformation';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouteInformation$Mate(
           location: p.get('location').build(),
           state: p.get('state').build(),
         );
-    matePut('location', location);
-    matePut('state', state);
+    mateUse(
+      'location',
+      location,
+      isNamed: true,
+    );
+    mateUse(
+      'state',
+      state,
+      isNamed: true,
+    );
   }
 }
 
@@ -34,16 +44,16 @@ class RouteInformation$Mate extends RouteInformation with Mate {
 class RouterConfig$Mate<T> extends RouterConfig<T> with Mate {
   /// RouterConfig<T> RouterConfig({RouteInformationProvider? routeInformationProvider, RouteInformationParser<T>? routeInformationParser, required RouterDelegate<T> routerDelegate, BackButtonDispatcher? backButtonDispatcher})
   RouterConfig$Mate({
-    /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , default:none
     RouteInformationProvider? routeInformationProvider,
 
-    /// optionalParameters: {RouteInformationParser<T>? routeInformationParser} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteInformationParser<T>? routeInformationParser} , default:none
     RouteInformationParser<T>? routeInformationParser,
 
-    /// optionalParameters: {required RouterDelegate<T> routerDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RouterDelegate<T> routerDelegate} , default:none
     required RouterDelegate<T> routerDelegate,
 
-    /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , default:none
     BackButtonDispatcher? backButtonDispatcher,
   }) : super(
           routeInformationProvider: routeInformationProvider,
@@ -51,16 +61,34 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate {
           routerDelegate: routerDelegate,
           backButtonDispatcher: backButtonDispatcher,
         ) {
+    mateCreateName = 'RouterConfig';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouterConfig$Mate<T>(
           routeInformationProvider: p.get('routeInformationProvider').build(),
           routeInformationParser: p.get('routeInformationParser').build(),
           routerDelegate: p.get('routerDelegate').build(),
           backButtonDispatcher: p.get('backButtonDispatcher').build(),
         );
-    matePut('routeInformationProvider', routeInformationProvider);
-    matePut('routeInformationParser', routeInformationParser);
-    matePut('routerDelegate', routerDelegate);
-    matePut('backButtonDispatcher', backButtonDispatcher);
+    mateUse(
+      'routeInformationProvider',
+      routeInformationProvider,
+      isNamed: true,
+    );
+    mateUse(
+      'routeInformationParser',
+      routeInformationParser,
+      isNamed: true,
+    );
+    mateUse(
+      'routerDelegate',
+      routerDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'backButtonDispatcher',
+      backButtonDispatcher,
+      isNamed: true,
+    );
   }
 }
 
@@ -68,22 +96,22 @@ class RouterConfig$Mate<T> extends RouterConfig<T> with Mate {
 class Router$Mate<T> extends Router<T> with Mate {
   /// Router<T> Router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<T>? routeInformationParser, required RouterDelegate<T> routerDelegate, BackButtonDispatcher? backButtonDispatcher, String? restorationScopeId})
   Router$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , default:none
     RouteInformationProvider? routeInformationProvider,
 
-    /// optionalParameters: {RouteInformationParser<T>? routeInformationParser} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteInformationParser<T>? routeInformationParser} , default:none
     RouteInformationParser<T>? routeInformationParser,
 
-    /// optionalParameters: {required RouterDelegate<T> routerDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RouterDelegate<T> routerDelegate} , default:none
     required RouterDelegate<T> routerDelegate,
 
-    /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , default:none
     BackButtonDispatcher? backButtonDispatcher,
 
-    /// optionalParameters: {String? restorationScopeId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationScopeId} , default:none
     String? restorationScopeId,
   }) : super(
           key: key,
@@ -93,6 +121,8 @@ class Router$Mate<T> extends Router<T> with Mate {
           backButtonDispatcher: backButtonDispatcher,
           restorationScopeId: restorationScopeId,
         ) {
+    mateCreateName = 'Router';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Router$Mate<T>(
           key: p.get('key').build(),
           routeInformationProvider: p.get('routeInformationProvider').build(),
@@ -101,12 +131,36 @@ class Router$Mate<T> extends Router<T> with Mate {
           backButtonDispatcher: p.get('backButtonDispatcher').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    matePut('key', key);
-    matePut('routeInformationProvider', routeInformationProvider);
-    matePut('routeInformationParser', routeInformationParser);
-    matePut('routerDelegate', routerDelegate);
-    matePut('backButtonDispatcher', backButtonDispatcher);
-    matePut('restorationScopeId', restorationScopeId);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'routeInformationProvider',
+      routeInformationProvider,
+      isNamed: true,
+    );
+    mateUse(
+      'routeInformationParser',
+      routeInformationParser,
+      isNamed: true,
+    );
+    mateUse(
+      'routerDelegate',
+      routerDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'backButtonDispatcher',
+      backButtonDispatcher,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationScopeId',
+      restorationScopeId,
+      isNamed: true,
+    );
   }
 }
 
@@ -118,8 +172,14 @@ class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate
       /// requiredParameters: BackButtonDispatcher parent
       BackButtonDispatcher parent)
       : super(parent) {
+    mateCreateName = 'ChildBackButtonDispatcher';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ChildBackButtonDispatcher$Mate(p.get('parent').value);
-    matePut('parent', parent);
+    mateUse(
+      'parent',
+      parent,
+      isNamed: false,
+    );
   }
 }
 
@@ -127,27 +187,41 @@ class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate
 class BackButtonListener$Mate extends BackButtonListener with Mate {
   /// BackButtonListener BackButtonListener({Key? key, required Widget child, required Future<bool> Function() onBackButtonPressed})
   BackButtonListener$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Future<bool> Function() onBackButtonPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Future<bool> Function() onBackButtonPressed} , default:none
     required ValueGetter<Future<bool>> onBackButtonPressed,
   }) : super(
           key: key,
           child: child,
           onBackButtonPressed: onBackButtonPressed,
         ) {
+    mateCreateName = 'BackButtonListener';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BackButtonListener$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
           onBackButtonPressed: p.get('onBackButtonPressed').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onBackButtonPressed', onBackButtonPressed);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onBackButtonPressed',
+      onBackButtonPressed,
+      isNamed: true,
+    );
   }
 }
 
@@ -156,11 +230,17 @@ class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProv
   /// PlatformRouteInformationProvider PlatformRouteInformationProvider({required RouteInformation initialRouteInformation})
   PlatformRouteInformationProvider$Mate(
       {
-      /// optionalParameters: {required RouteInformation initialRouteInformation} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required RouteInformation initialRouteInformation} , default:none
       required RouteInformation initialRouteInformation})
       : super(initialRouteInformation: initialRouteInformation) {
+    mateCreateName = 'PlatformRouteInformationProvider';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder =
         (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
-    matePut('initialRouteInformation', initialRouteInformation);
+    mateUse(
+      'initialRouteInformation',
+      initialRouteInformation,
+      isNamed: true,
+    );
   }
 }

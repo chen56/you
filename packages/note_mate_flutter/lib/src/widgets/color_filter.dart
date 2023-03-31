@@ -10,26 +10,40 @@ import 'package:flutter/src/foundation/key.dart';
 class ColorFiltered$Mate extends ColorFiltered with Mate {
   /// ColorFiltered ColorFiltered({required ColorFilter colorFilter, Widget? child, Key? key})
   ColorFiltered$Mate({
-    /// optionalParameters: {required ColorFilter colorFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ColorFilter colorFilter} , default:none
     required ColorFilter colorFilter,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
   }) : super(
           colorFilter: colorFilter,
           child: child,
           key: key,
         ) {
+    mateCreateName = 'ColorFiltered';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ColorFiltered$Mate(
           colorFilter: p.get('colorFilter').build(),
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    matePut('colorFilter', colorFilter);
-    matePut('child', child);
-    matePut('key', key);
+    mateUse(
+      'colorFilter',
+      colorFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }

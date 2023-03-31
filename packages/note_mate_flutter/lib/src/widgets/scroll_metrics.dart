@@ -9,22 +9,22 @@ import 'package:flutter/src/painting/basic_types.dart';
 class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
   /// FixedScrollMetrics FixedScrollMetrics({required double? minScrollExtent, required double? maxScrollExtent, required double? pixels, required double? viewportDimension, required AxisDirection axisDirection, required double devicePixelRatio})
   FixedScrollMetrics$Mate({
-    /// optionalParameters: {required double? minScrollExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? minScrollExtent} , default:none
     required double? minScrollExtent,
 
-    /// optionalParameters: {required double? maxScrollExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? maxScrollExtent} , default:none
     required double? maxScrollExtent,
 
-    /// optionalParameters: {required double? pixels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? pixels} , default:none
     required double? pixels,
 
-    /// optionalParameters: {required double? viewportDimension} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? viewportDimension} , default:none
     required double? viewportDimension,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection axisDirection} , default:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required double devicePixelRatio} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double devicePixelRatio} , default:none
     required double devicePixelRatio,
   }) : super(
           minScrollExtent: minScrollExtent,
@@ -34,6 +34,8 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
           axisDirection: axisDirection,
           devicePixelRatio: devicePixelRatio,
         ) {
+    mateCreateName = 'FixedScrollMetrics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedScrollMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
           maxScrollExtent: p.get('maxScrollExtent').build(),
@@ -42,11 +44,35 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
           axisDirection: p.get('axisDirection').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    matePut('minScrollExtent', minScrollExtent);
-    matePut('maxScrollExtent', maxScrollExtent);
-    matePut('pixels', pixels);
-    matePut('viewportDimension', viewportDimension);
-    matePut('axisDirection', axisDirection);
-    matePut('devicePixelRatio', devicePixelRatio);
+    mateUse(
+      'minScrollExtent',
+      minScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'maxScrollExtent',
+      maxScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'pixels',
+      pixels,
+      isNamed: true,
+    );
+    mateUse(
+      'viewportDimension',
+      viewportDimension,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'devicePixelRatio',
+      devicePixelRatio,
+      isNamed: true,
+    );
   }
 }

@@ -12,33 +12,52 @@ import 'dart:ui';
 class RenderAndroidView$Mate extends RenderAndroidView with Mate {
   /// RenderAndroidView RenderAndroidView({required AndroidViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers, Clip clipBehavior = Clip.hardEdge})
   RenderAndroidView$Mate({
-    /// optionalParameters: {required AndroidViewController viewController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AndroidViewController viewController} , default:none
     required AndroidViewController viewController,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           viewController: viewController,
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderAndroidView';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAndroidView$Mate(
           viewController: p.get('viewController').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('viewController', viewController);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('gestureRecognizers', gestureRecognizers);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'viewController',
+      viewController,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -46,27 +65,41 @@ class RenderAndroidView$Mate extends RenderAndroidView with Mate {
 class RenderUiKitView$Mate extends RenderUiKitView with Mate {
   /// RenderUiKitView RenderUiKitView({required UiKitViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   RenderUiKitView$Mate({
-    /// optionalParameters: {required UiKitViewController viewController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required UiKitViewController viewController} , default:none
     required UiKitViewController viewController,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           viewController: viewController,
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'RenderUiKitView';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderUiKitView$Mate(
           viewController: p.get('viewController').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('viewController', viewController);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateUse(
+      'viewController',
+      viewController,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
   }
 }
 
@@ -74,26 +107,40 @@ class RenderUiKitView$Mate extends RenderUiKitView with Mate {
 class PlatformViewRenderBox$Mate extends PlatformViewRenderBox with Mate {
   /// PlatformViewRenderBox PlatformViewRenderBox({required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewRenderBox$Mate({
-    /// optionalParameters: {required PlatformViewController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewController controller} , default:none
     required PlatformViewController controller,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           controller: controller,
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'PlatformViewRenderBox';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlatformViewRenderBox$Mate(
           controller: p.get('controller').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('controller', controller);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
   }
 }

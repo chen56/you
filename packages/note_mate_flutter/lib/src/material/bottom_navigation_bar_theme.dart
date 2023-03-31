@@ -16,46 +16,46 @@ import 'package:flutter/src/widgets/framework.dart';
 class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData with Mate {
   /// BottomNavigationBarThemeData BottomNavigationBarThemeData({Color? backgroundColor, double? elevation, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, Color? selectedItemColor, Color? unselectedItemColor, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, BottomNavigationBarType? type, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, MaterialStateProperty<MouseCursor?>? mouseCursor})
   BottomNavigationBarThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {IconThemeData? selectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? selectedIconTheme} , default:none
     IconThemeData? selectedIconTheme,
 
-    /// optionalParameters: {IconThemeData? unselectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? unselectedIconTheme} , default:none
     IconThemeData? unselectedIconTheme,
 
-    /// optionalParameters: {Color? selectedItemColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedItemColor} , default:none
     Color? selectedItemColor,
 
-    /// optionalParameters: {Color? unselectedItemColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? unselectedItemColor} , default:none
     Color? unselectedItemColor,
 
-    /// optionalParameters: {TextStyle? selectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? selectedLabelStyle} , default:none
     TextStyle? selectedLabelStyle,
 
-    /// optionalParameters: {TextStyle? unselectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
     TextStyle? unselectedLabelStyle,
 
-    /// optionalParameters: {bool? showSelectedLabels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showSelectedLabels} , default:none
     bool? showSelectedLabels,
 
-    /// optionalParameters: {bool? showUnselectedLabels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showUnselectedLabels} , default:none
     bool? showUnselectedLabels,
 
-    /// optionalParameters: {BottomNavigationBarType? type} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BottomNavigationBarType? type} , default:none
     BottomNavigationBarType? type,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {BottomNavigationBarLandscapeLayout? landscapeLayout} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BottomNavigationBarLandscapeLayout? landscapeLayout} , default:none
     BottomNavigationBarLandscapeLayout? landscapeLayout,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
   }) : super(
           backgroundColor: backgroundColor,
@@ -73,6 +73,8 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
           landscapeLayout: landscapeLayout,
           mouseCursor: mouseCursor,
         ) {
+    mateCreateName = 'BottomNavigationBarThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           elevation: p.get('elevation').build(),
@@ -89,20 +91,76 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
           landscapeLayout: p.get('landscapeLayout').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('selectedIconTheme', selectedIconTheme);
-    matePut('unselectedIconTheme', unselectedIconTheme);
-    matePut('selectedItemColor', selectedItemColor);
-    matePut('unselectedItemColor', unselectedItemColor);
-    matePut('selectedLabelStyle', selectedLabelStyle);
-    matePut('unselectedLabelStyle', unselectedLabelStyle);
-    matePut('showSelectedLabels', showSelectedLabels);
-    matePut('showUnselectedLabels', showUnselectedLabels);
-    matePut('type', type);
-    matePut('enableFeedback', enableFeedback);
-    matePut('landscapeLayout', landscapeLayout);
-    matePut('mouseCursor', mouseCursor);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedIconTheme',
+      selectedIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedIconTheme',
+      unselectedIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedItemColor',
+      selectedItemColor,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedItemColor',
+      unselectedItemColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedLabelStyle',
+      selectedLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedLabelStyle',
+      unselectedLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'showSelectedLabels',
+      showSelectedLabels,
+      isNamed: true,
+    );
+    mateUse(
+      'showUnselectedLabels',
+      showUnselectedLabels,
+      isNamed: true,
+    );
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'landscapeLayout',
+      landscapeLayout,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
   }
 }
 
@@ -110,26 +168,40 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
 class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate {
   /// BottomNavigationBarTheme BottomNavigationBarTheme({Key? key, required BottomNavigationBarThemeData data, required Widget child})
   BottomNavigationBarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required BottomNavigationBarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BottomNavigationBarThemeData data} , default:none
     required BottomNavigationBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'BottomNavigationBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

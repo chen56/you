@@ -14,49 +14,49 @@ import 'package:flutter/src/widgets/framework.dart';
 class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
   /// ToggleButtonsThemeData ToggleButtonsThemeData({TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth})
   ToggleButtonsThemeData$Mate({
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , default:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fillColor} , default:none
     Color? fillColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , default:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {Color? borderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? borderColor} , default:none
     Color? borderColor,
 
-    /// optionalParameters: {Color? selectedBorderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedBorderColor} , default:none
     Color? selectedBorderColor,
 
-    /// optionalParameters: {Color? disabledBorderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledBorderColor} , default:none
     Color? disabledBorderColor,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {double? borderWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? borderWidth} , default:none
     double? borderWidth,
   }) : super(
           textStyle: textStyle,
@@ -75,6 +75,8 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
           borderRadius: borderRadius,
           borderWidth: borderWidth,
         ) {
+    mateCreateName = 'ToggleButtonsThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtonsThemeData$Mate(
           textStyle: p.get('textStyle').build(),
           constraints: p.get('constraints').build(),
@@ -92,21 +94,81 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
           borderRadius: p.get('borderRadius').build(),
           borderWidth: p.get('borderWidth').build(),
         );
-    matePut('textStyle', textStyle);
-    matePut('constraints', constraints);
-    matePut('color', color);
-    matePut('selectedColor', selectedColor);
-    matePut('disabledColor', disabledColor);
-    matePut('fillColor', fillColor);
-    matePut('focusColor', focusColor);
-    matePut('highlightColor', highlightColor);
-    matePut('hoverColor', hoverColor);
-    matePut('splashColor', splashColor);
-    matePut('borderColor', borderColor);
-    matePut('selectedBorderColor', selectedBorderColor);
-    matePut('disabledBorderColor', disabledBorderColor);
-    matePut('borderRadius', borderRadius);
-    matePut('borderWidth', borderWidth);
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledColor',
+      disabledColor,
+      isNamed: true,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightColor',
+      highlightColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderColor',
+      borderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedBorderColor',
+      selectedBorderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledBorderColor',
+      disabledBorderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'borderWidth',
+      borderWidth,
+      isNamed: true,
+    );
   }
 }
 
@@ -114,26 +176,40 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
 class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with Mate {
   /// ToggleButtonsTheme ToggleButtonsTheme({Key? key, required ToggleButtonsThemeData data, required Widget child})
   ToggleButtonsTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ToggleButtonsThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ToggleButtonsThemeData data} , default:none
     required ToggleButtonsThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'ToggleButtonsTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtonsTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

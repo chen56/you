@@ -15,8 +15,14 @@ class NumericFocusOrder$Mate extends NumericFocusOrder with Mate {
       /// requiredParameters: double order
       double order)
       : super(order) {
+    mateCreateName = 'NumericFocusOrder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NumericFocusOrder$Mate(p.get('order').value);
-    matePut('order', order);
+    mateUse(
+      'order',
+      order,
+      isNamed: false,
+    );
   }
 }
 
@@ -28,8 +34,14 @@ class LexicalFocusOrder$Mate extends LexicalFocusOrder with Mate {
       /// requiredParameters: String order
       String order)
       : super(order) {
+    mateCreateName = 'LexicalFocusOrder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LexicalFocusOrder$Mate(p.get('order').value);
-    matePut('order', order);
+    mateUse(
+      'order',
+      order,
+      isNamed: false,
+    );
   }
 }
 
@@ -38,11 +50,17 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
   /// OrderedTraversalPolicy OrderedTraversalPolicy({FocusTraversalPolicy? secondary})
   OrderedTraversalPolicy$Mate(
       {
-      /// optionalParameters: {FocusTraversalPolicy? secondary} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {FocusTraversalPolicy? secondary} , default:none
       FocusTraversalPolicy? secondary})
       : super(secondary: secondary) {
+    mateCreateName = 'OrderedTraversalPolicy';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
-    matePut('secondary', secondary);
+    mateUse(
+      'secondary',
+      secondary,
+      isNamed: true,
+    );
   }
 }
 
@@ -50,27 +68,41 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
 class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
   /// FocusTraversalOrder FocusTraversalOrder({Key? key, required FocusOrder order, required Widget child})
   FocusTraversalOrder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FocusOrder order} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FocusOrder order} , default:none
     required FocusOrder order,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           order: order,
           child: child,
         ) {
+    mateCreateName = 'FocusTraversalOrder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusTraversalOrder$Mate(
           key: p.get('key').build(),
           order: p.get('order').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('order', order);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'order',
+      order,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -78,19 +110,19 @@ class FocusTraversalOrder$Mate extends FocusTraversalOrder with Mate {
 class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
   /// FocusTraversalGroup FocusTraversalGroup({Key? key, FocusTraversalPolicy? policy, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, required Widget child})
   FocusTraversalGroup$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {FocusTraversalPolicy? policy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusTraversalPolicy? policy} , default:none
     FocusTraversalPolicy? policy,
 
-    /// optionalParameters: {bool descendantsAreFocusable = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool descendantsAreFocusable,
+    /// optionalParameters: {bool descendantsAreFocusable = true} , default:processed=BooleanLiteralImpl
+    bool descendantsAreFocusable = true,
 
-    /// optionalParameters: {bool descendantsAreTraversable = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool descendantsAreTraversable,
+    /// optionalParameters: {bool descendantsAreTraversable = true} , default:processed=BooleanLiteralImpl
+    bool descendantsAreTraversable = true,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -99,6 +131,8 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
           descendantsAreTraversable: descendantsAreTraversable,
           child: child,
         ) {
+    mateCreateName = 'FocusTraversalGroup';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusTraversalGroup$Mate(
           key: p.get('key').build(),
           policy: p.get('policy').build(),
@@ -106,11 +140,33 @@ class FocusTraversalGroup$Mate extends FocusTraversalGroup with Mate {
           descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('policy', policy);
-    matePut('descendantsAreFocusable', descendantsAreFocusable);
-    matePut('descendantsAreTraversable', descendantsAreTraversable);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'policy',
+      policy,
+      isNamed: true,
+    );
+    mateUse(
+      'descendantsAreFocusable',
+      descendantsAreFocusable,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'descendantsAreTraversable',
+      descendantsAreTraversable,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -122,8 +178,14 @@ class RequestFocusIntent$Mate extends RequestFocusIntent with Mate {
       /// requiredParameters: FocusNode focusNode
       FocusNode focusNode)
       : super(focusNode) {
+    mateCreateName = 'RequestFocusIntent';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RequestFocusIntent$Mate(p.get('focusNode').value);
-    matePut('focusNode', focusNode);
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: false,
+    );
   }
 }
 
@@ -133,18 +195,29 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
   DirectionalFocusIntent$Mate(
     /// requiredParameters: TraversalDirection direction
     TraversalDirection direction, {
-    /// optionalParameters: {bool ignoreTextFields = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool ignoreTextFields,
+    /// optionalParameters: {bool ignoreTextFields = true} , default:processed=BooleanLiteralImpl
+    bool ignoreTextFields = true,
   }) : super(
           direction,
           ignoreTextFields: ignoreTextFields,
         ) {
+    mateCreateName = 'DirectionalFocusIntent';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DirectionalFocusIntent$Mate(
           p.get('direction').value,
           ignoreTextFields: p.get('ignoreTextFields').build(),
         );
-    matePut('direction', direction);
-    matePut('ignoreTextFields', ignoreTextFields);
+    mateUse(
+      'direction',
+      direction,
+      isNamed: false,
+    );
+    mateUse(
+      'ignoreTextFields',
+      ignoreTextFields,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -152,26 +225,41 @@ class DirectionalFocusIntent$Mate extends DirectionalFocusIntent with Mate {
 class ExcludeFocusTraversal$Mate extends ExcludeFocusTraversal with Mate {
   /// ExcludeFocusTraversal ExcludeFocusTraversal({Key? key, bool excluding = true, required Widget child})
   ExcludeFocusTraversal$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool excluding = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool excluding,
+    /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
+    bool excluding = true,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           excluding: excluding,
           child: child,
         ) {
+    mateCreateName = 'ExcludeFocusTraversal';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExcludeFocusTraversal$Mate(
           key: p.get('key').build(),
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('excluding', excluding);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'excluding',
+      excluding,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

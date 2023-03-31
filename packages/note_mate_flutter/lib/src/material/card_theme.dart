@@ -11,25 +11,25 @@ import 'package:flutter/src/painting/borders.dart';
 class CardTheme$Mate extends CardTheme with Mate {
   /// CardTheme CardTheme({Clip? clipBehavior, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, EdgeInsetsGeometry? margin, ShapeBorder? shape})
   CardTheme$Mate({
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
   }) : super(
           clipBehavior: clipBehavior,
@@ -40,6 +40,8 @@ class CardTheme$Mate extends CardTheme with Mate {
           margin: margin,
           shape: shape,
         ) {
+    mateCreateName = 'CardTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CardTheme$Mate(
           clipBehavior: p.get('clipBehavior').build(),
           color: p.get('color').build(),
@@ -49,12 +51,40 @@ class CardTheme$Mate extends CardTheme with Mate {
           margin: p.get('margin').build(),
           shape: p.get('shape').build(),
         );
-    matePut('clipBehavior', clipBehavior);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('elevation', elevation);
-    matePut('margin', margin);
-    matePut('shape', shape);
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
   }
 }

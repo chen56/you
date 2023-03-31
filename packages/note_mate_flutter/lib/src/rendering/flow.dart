@@ -10,26 +10,41 @@ import 'dart:ui';
 class RenderFlow$Mate extends RenderFlow with Mate {
   /// RenderFlow RenderFlow({List<RenderBox>? children, required FlowDelegate delegate, Clip clipBehavior = Clip.hardEdge})
   RenderFlow$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , default:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {required FlowDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlowDelegate delegate} , default:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           children: children,
           delegate: delegate,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderFlow';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFlow$Mate(
           children: p.get('children').build(),
           delegate: p.get('delegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('children', children);
-    matePut('delegate', delegate);
-    matePut('clipBehavior', clipBehavior);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

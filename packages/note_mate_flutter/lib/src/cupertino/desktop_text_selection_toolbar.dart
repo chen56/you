@@ -11,26 +11,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSelectionToolbar with Mate {
   /// CupertinoDesktopTextSelectionToolbar CupertinoDesktopTextSelectionToolbar({Key? key, required Offset anchor, required List<Widget> children})
   CupertinoDesktopTextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset anchor} , default:none
     required Offset anchor,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
   }) : super(
           key: key,
           anchor: anchor,
           children: children,
         ) {
+    mateCreateName = 'CupertinoDesktopTextSelectionToolbar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDesktopTextSelectionToolbar$Mate(
           key: p.get('key').build(),
           anchor: p.get('anchor').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('anchor', anchor);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }

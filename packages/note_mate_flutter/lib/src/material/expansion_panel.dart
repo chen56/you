@@ -12,19 +12,19 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class ExpansionPanel$Mate extends ExpansionPanel with Mate {
   /// ExpansionPanel ExpansionPanel({required Widget Function(BuildContext, bool) headerBuilder, required Widget body, bool isExpanded = false, bool canTapOnHeader = false, Color? backgroundColor})
   ExpansionPanel$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext, bool) headerBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, bool) headerBuilder} , default:none
     required ExpansionPanelHeaderBuilder headerBuilder,
 
-    /// optionalParameters: {required Widget body} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget body} , default:none
     required Widget body,
 
-    /// optionalParameters: {bool isExpanded = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isExpanded,
+    /// optionalParameters: {bool isExpanded = false} , default:processed=BooleanLiteralImpl
+    bool isExpanded = false,
 
-    /// optionalParameters: {bool canTapOnHeader = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool canTapOnHeader,
+    /// optionalParameters: {bool canTapOnHeader = false} , default:processed=BooleanLiteralImpl
+    bool canTapOnHeader = false,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
   }) : super(
           headerBuilder: headerBuilder,
@@ -33,6 +33,8 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate {
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
+    mateCreateName = 'ExpansionPanel';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanel$Mate(
           headerBuilder: p.get('headerBuilder').build(),
           body: p.get('body').build(),
@@ -40,11 +42,33 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate {
           canTapOnHeader: p.get('canTapOnHeader').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    matePut('headerBuilder', headerBuilder);
-    matePut('body', body);
-    matePut('isExpanded', isExpanded);
-    matePut('canTapOnHeader', canTapOnHeader);
-    matePut('backgroundColor', backgroundColor);
+    mateUse(
+      'headerBuilder',
+      headerBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'body',
+      body,
+      isNamed: true,
+    );
+    mateUse(
+      'isExpanded',
+      isExpanded,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'canTapOnHeader',
+      canTapOnHeader,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -52,19 +76,19 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate {
 class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
   /// ExpansionPanelRadio ExpansionPanelRadio({required Object value, required Widget Function(BuildContext, bool) headerBuilder, required Widget body, bool canTapOnHeader = false, Color? backgroundColor})
   ExpansionPanelRadio$Mate({
-    /// optionalParameters: {required Object value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object value} , default:none
     required Object value,
 
-    /// optionalParameters: {required Widget Function(BuildContext, bool) headerBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, bool) headerBuilder} , default:none
     required ExpansionPanelHeaderBuilder headerBuilder,
 
-    /// optionalParameters: {required Widget body} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget body} , default:none
     required Widget body,
 
-    /// optionalParameters: {bool canTapOnHeader = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool canTapOnHeader,
+    /// optionalParameters: {bool canTapOnHeader = false} , default:processed=BooleanLiteralImpl
+    bool canTapOnHeader = false,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
   }) : super(
           value: value,
@@ -73,6 +97,8 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
+    mateCreateName = 'ExpansionPanelRadio';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelRadio$Mate(
           value: p.get('value').build(),
           headerBuilder: p.get('headerBuilder').build(),
@@ -80,11 +106,32 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
           canTapOnHeader: p.get('canTapOnHeader').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    matePut('value', value);
-    matePut('headerBuilder', headerBuilder);
-    matePut('body', body);
-    matePut('canTapOnHeader', canTapOnHeader);
-    matePut('backgroundColor', backgroundColor);
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'headerBuilder',
+      headerBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'body',
+      body,
+      isNamed: true,
+    );
+    mateUse(
+      'canTapOnHeader',
+      canTapOnHeader,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -92,28 +139,28 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
 class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
   /// ExpansionPanelList ExpansionPanelList({Key? key, List<ExpansionPanel> children = const <ExpansionPanel>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
   ExpansionPanelList$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {List<ExpansionPanel> children = const <ExpansionPanel>[]} , hasDefaultValue:true, defaultValueCode:const <ExpansionPanel>[]
+    /// optionalParameters: {List<ExpansionPanel> children = const <ExpansionPanel>[]} , default:unprocessed=ListLiteralImpl
     required List<ExpansionPanel> children,
 
-    /// optionalParameters: {void Function(int, bool)? expansionCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int, bool)? expansionCallback} , default:none
     ExpansionPanelCallback? expansionCallback,
 
-    /// optionalParameters: {Duration animationDuration = kThemeAnimationDuration} , hasDefaultValue:true, defaultValueCode:kThemeAnimationDuration
+    /// optionalParameters: {Duration animationDuration = kThemeAnimationDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration animationDuration,
 
-    /// optionalParameters: {EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding} , hasDefaultValue:true, defaultValueCode:_kPanelHeaderExpandedDefaultPadding
+    /// optionalParameters: {EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding} , default:unprocessed=SimpleIdentifierImpl
     required EdgeInsets expandedHeaderPadding,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , default:none
     Color? dividerColor,
 
-    /// optionalParameters: {double elevation = 2} , hasDefaultValue:true, defaultValueCode:2
-    required double elevation,
+    /// optionalParameters: {double elevation = 2} , default:processed=IntegerLiteralImpl
+    double elevation = 2,
 
-    /// optionalParameters: {Color? expandIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? expandIconColor} , default:none
     Color? expandIconColor,
   }) : super(
           key: key,
@@ -125,6 +172,8 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
+    mateCreateName = 'ExpansionPanelList';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelList$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -135,43 +184,76 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('expansionCallback', expansionCallback);
-    matePut('animationDuration', animationDuration);
-    matePut('expandedHeaderPadding', expandedHeaderPadding);
-    matePut('dividerColor', dividerColor);
-    matePut('elevation', elevation);
-    matePut('expandIconColor', expandIconColor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'expansionCallback',
+      expansionCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'animationDuration',
+      animationDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'expandedHeaderPadding',
+      expandedHeaderPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'dividerColor',
+      dividerColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 2,
+    );
+    mateUse(
+      'expandIconColor',
+      expandIconColor,
+      isNamed: true,
+    );
   }
 
   /// ExpansionPanelList ExpansionPanelList.radio({Key? key, List<ExpansionPanel> children = const <ExpansionPanelRadio>[], void Function(int, bool)? expansionCallback, Duration animationDuration = kThemeAnimationDuration, Object? initialOpenPanelValue, EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding, Color? dividerColor, double elevation = 2, Color? expandIconColor})
   ExpansionPanelList$Mate.radio({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {List<ExpansionPanel> children = const <ExpansionPanelRadio>[]} , hasDefaultValue:true, defaultValueCode:const <ExpansionPanelRadio>[]
+    /// optionalParameters: {List<ExpansionPanel> children = const <ExpansionPanelRadio>[]} , default:unprocessed=ListLiteralImpl
     required List<ExpansionPanel> children,
 
-    /// optionalParameters: {void Function(int, bool)? expansionCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int, bool)? expansionCallback} , default:none
     ExpansionPanelCallback? expansionCallback,
 
-    /// optionalParameters: {Duration animationDuration = kThemeAnimationDuration} , hasDefaultValue:true, defaultValueCode:kThemeAnimationDuration
+    /// optionalParameters: {Duration animationDuration = kThemeAnimationDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration animationDuration,
 
-    /// optionalParameters: {Object? initialOpenPanelValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? initialOpenPanelValue} , default:none
     Object? initialOpenPanelValue,
 
-    /// optionalParameters: {EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding} , hasDefaultValue:true, defaultValueCode:_kPanelHeaderExpandedDefaultPadding
+    /// optionalParameters: {EdgeInsets expandedHeaderPadding = _kPanelHeaderExpandedDefaultPadding} , default:unprocessed=SimpleIdentifierImpl
     required EdgeInsets expandedHeaderPadding,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , default:none
     Color? dividerColor,
 
-    /// optionalParameters: {double elevation = 2} , hasDefaultValue:true, defaultValueCode:2
-    required double elevation,
+    /// optionalParameters: {double elevation = 2} , default:processed=IntegerLiteralImpl
+    double elevation = 2,
 
-    /// optionalParameters: {Color? expandIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? expandIconColor} , default:none
     Color? expandIconColor,
   }) : super.radio(
           key: key,
@@ -184,6 +266,8 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
+    mateCreateName = 'ExpansionPanelList.radio';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelList$Mate.radio(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -195,14 +279,51 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: p.get('elevation').build(),
           expandIconColor: p.get('expandIconColor').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('expansionCallback', expansionCallback);
-    matePut('animationDuration', animationDuration);
-    matePut('initialOpenPanelValue', initialOpenPanelValue);
-    matePut('expandedHeaderPadding', expandedHeaderPadding);
-    matePut('dividerColor', dividerColor);
-    matePut('elevation', elevation);
-    matePut('expandIconColor', expandIconColor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'expansionCallback',
+      expansionCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'animationDuration',
+      animationDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'initialOpenPanelValue',
+      initialOpenPanelValue,
+      isNamed: true,
+    );
+    mateUse(
+      'expandedHeaderPadding',
+      expandedHeaderPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'dividerColor',
+      dividerColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 2,
+    );
+    mateUse(
+      'expandIconColor',
+      expandIconColor,
+      isNamed: true,
+    );
   }
 }

@@ -8,21 +8,31 @@ import 'dart:core';
 class TimeOfDay$Mate extends TimeOfDay with Mate {
   /// TimeOfDay TimeOfDay({required int hour, required int minute})
   TimeOfDay$Mate({
-    /// optionalParameters: {required int hour} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int hour} , default:none
     required int hour,
 
-    /// optionalParameters: {required int minute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int minute} , default:none
     required int minute,
   }) : super(
           hour: hour,
           minute: minute,
         ) {
+    mateCreateName = 'TimeOfDay';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimeOfDay$Mate(
           hour: p.get('hour').build(),
           minute: p.get('minute').build(),
         );
-    matePut('hour', hour);
-    matePut('minute', minute);
+    mateUse(
+      'hour',
+      hour,
+      isNamed: true,
+    );
+    mateUse(
+      'minute',
+      minute,
+      isNamed: true,
+    );
   }
 
   /// TimeOfDay TimeOfDay.fromDateTime(DateTime time)
@@ -31,8 +41,14 @@ class TimeOfDay$Mate extends TimeOfDay with Mate {
       /// requiredParameters: DateTime time
       DateTime time)
       : super.fromDateTime(time) {
+    mateCreateName = 'TimeOfDay.fromDateTime';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimeOfDay$Mate.fromDateTime(p.get('time').value);
-    matePut('time', time);
+    mateUse(
+      'time',
+      time,
+      isNamed: false,
+    );
   }
 }
 
@@ -44,7 +60,13 @@ class RestorableTimeOfDay$Mate extends RestorableTimeOfDay with Mate {
       /// requiredParameters: TimeOfDay defaultValue
       TimeOfDay defaultValue)
       : super(defaultValue) {
+    mateCreateName = 'RestorableTimeOfDay';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RestorableTimeOfDay$Mate(p.get('defaultValue').value);
-    matePut('defaultValue', defaultValue);
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: false,
+    );
   }
 }

@@ -11,33 +11,52 @@ import 'package:flutter/src/material/button_style.dart';
 class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
   /// ButtonSegment<T> ButtonSegment({required T value, Widget? icon, Widget? label, bool enabled = true})
   ButtonSegment$Mate({
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , default:none
     required T value,
 
-    /// optionalParameters: {Widget? icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {Widget? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? label} , default:none
     Widget? label,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
+    bool enabled = true,
   }) : super(
           value: value,
           icon: icon,
           label: label,
           enabled: enabled,
         ) {
+    mateCreateName = 'ButtonSegment';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonSegment$Mate<T>(
           value: p.get('value').build(),
           icon: p.get('icon').build(),
           label: p.get('label').build(),
           enabled: p.get('enabled').build(),
         );
-    matePut('value', value);
-    matePut('icon', icon);
-    matePut('label', label);
-    matePut('enabled', enabled);
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -45,31 +64,31 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
 class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
   /// SegmentedButton<T> SegmentedButton({Key? key, required List<ButtonSegment<T>> segments, required Set<T> selected, void Function(Set<T>)? onSelectionChanged, bool multiSelectionEnabled = false, bool emptySelectionAllowed = false, ButtonStyle? style, bool showSelectedIcon = true, Widget? selectedIcon})
   SegmentedButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<ButtonSegment<T>> segments} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<ButtonSegment<T>> segments} , default:none
     required List<ButtonSegment<T>> segments,
 
-    /// optionalParameters: {required Set<T> selected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<T> selected} , default:none
     required Set<T> selected,
 
-    /// optionalParameters: {void Function(Set<T>)? onSelectionChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Set<T>)? onSelectionChanged} , default:none
     void Function(Set<T>)? onSelectionChanged,
 
-    /// optionalParameters: {bool multiSelectionEnabled = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool multiSelectionEnabled,
+    /// optionalParameters: {bool multiSelectionEnabled = false} , default:processed=BooleanLiteralImpl
+    bool multiSelectionEnabled = false,
 
-    /// optionalParameters: {bool emptySelectionAllowed = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool emptySelectionAllowed,
+    /// optionalParameters: {bool emptySelectionAllowed = false} , default:processed=BooleanLiteralImpl
+    bool emptySelectionAllowed = false,
 
-    /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? style} , default:none
     ButtonStyle? style,
 
-    /// optionalParameters: {bool showSelectedIcon = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSelectedIcon,
+    /// optionalParameters: {bool showSelectedIcon = true} , default:processed=BooleanLiteralImpl
+    bool showSelectedIcon = true,
 
-    /// optionalParameters: {Widget? selectedIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? selectedIcon} , default:none
     Widget? selectedIcon,
   }) : super(
           key: key,
@@ -82,6 +101,8 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
           showSelectedIcon: showSelectedIcon,
           selectedIcon: selectedIcon,
         ) {
+    mateCreateName = 'SegmentedButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SegmentedButton$Mate<T>(
           key: p.get('key').build(),
           segments: p.get('segments').build(),
@@ -93,14 +114,53 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
           showSelectedIcon: p.get('showSelectedIcon').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    matePut('key', key);
-    matePut('segments', segments);
-    matePut('selected', selected);
-    matePut('onSelectionChanged', onSelectionChanged);
-    matePut('multiSelectionEnabled', multiSelectionEnabled);
-    matePut('emptySelectionAllowed', emptySelectionAllowed);
-    matePut('style', style);
-    matePut('showSelectedIcon', showSelectedIcon);
-    matePut('selectedIcon', selectedIcon);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'segments',
+      segments,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectionChanged',
+      onSelectionChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'multiSelectionEnabled',
+      multiSelectionEnabled,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'emptySelectionAllowed',
+      emptySelectionAllowed,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'showSelectedIcon',
+      showSelectedIcon,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'selectedIcon',
+      selectedIcon,
+      isNamed: true,
+    );
   }
 }

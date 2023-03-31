@@ -11,31 +11,31 @@ import 'dart:core';
 class CupertinoTabView$Mate extends CupertinoTabView with Mate {
   /// CupertinoTabView CupertinoTabView({Key? key, Widget Function(BuildContext)? builder, GlobalKey<NavigatorState>? navigatorKey, String? defaultTitle, Map<String, Widget Function(BuildContext)>? routes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? restorationScopeId})
   CupertinoTabView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget Function(BuildContext)? builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? builder} , default:none
     WidgetBuilder? builder,
 
-    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , default:none
     GlobalKey<NavigatorState>? navigatorKey,
 
-    /// optionalParameters: {String? defaultTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? defaultTitle} , default:none
     String? defaultTitle,
 
-    /// optionalParameters: {Map<String, Widget Function(BuildContext)>? routes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<String, Widget Function(BuildContext)>? routes} , default:none
     Map<String, WidgetBuilder>? routes,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
     RouteFactory? onGenerateRoute,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
     RouteFactory? onUnknownRoute,
 
-    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , hasDefaultValue:true, defaultValueCode:const <NavigatorObserver>[]
+    /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
     required List<NavigatorObserver> navigatorObservers,
 
-    /// optionalParameters: {String? restorationScopeId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationScopeId} , default:none
     String? restorationScopeId,
   }) : super(
           key: key,
@@ -48,6 +48,8 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
           navigatorObservers: navigatorObservers,
           restorationScopeId: restorationScopeId,
         ) {
+    mateCreateName = 'CupertinoTabView';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabView$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
@@ -59,14 +61,50 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
           navigatorObservers: p.get('navigatorObservers').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
-    matePut('navigatorKey', navigatorKey);
-    matePut('defaultTitle', defaultTitle);
-    matePut('routes', routes);
-    matePut('onGenerateRoute', onGenerateRoute);
-    matePut('onUnknownRoute', onUnknownRoute);
-    matePut('navigatorObservers', navigatorObservers);
-    matePut('restorationScopeId', restorationScopeId);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'navigatorKey',
+      navigatorKey,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultTitle',
+      defaultTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'routes',
+      routes,
+      isNamed: true,
+    );
+    mateUse(
+      'onGenerateRoute',
+      onGenerateRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'onUnknownRoute',
+      onUnknownRoute,
+      isNamed: true,
+    );
+    mateUseList(
+      'navigatorObservers',
+      navigatorObservers,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationScopeId',
+      restorationScopeId,
+      isNamed: true,
+    );
   }
 }

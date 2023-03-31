@@ -8,7 +8,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/proxy_box.dart';
 import 'package:flutter/src/rendering/custom_paint.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/border_radius.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/box_border.dart';
 import 'package:vector_math/vector_math_64.dart';
 import 'package:flutter/src/painting/alignment.dart';
@@ -20,6 +22,7 @@ import 'package:flutter/src/rendering/custom_layout.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/basic_types.dart';
 import 'package:flutter/src/rendering/stack.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/rendering/flex.dart';
 import 'package:flutter/src/rendering/wrap.dart';
 import 'package:flutter/src/rendering/flow.dart';
@@ -32,6 +35,7 @@ import 'package:flutter/src/painting/decoration_image.dart';
 import 'package:flutter/src/services/asset_bundle.dart';
 import 'package:flutter/src/services/mouse_tracking.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/semantics/semantics.dart';
 export 'package:flutter/animation.dart';
 export 'package:flutter/painting.dart';
@@ -40,27 +44,41 @@ export 'package:flutter/painting.dart';
 class Directionality$Mate extends Directionality with Mate {
   /// Directionality Directionality({Key? key, required TextDirection textDirection, required Widget child})
   Directionality$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           textDirection: textDirection,
           child: child,
         ) {
+    mateCreateName = 'Directionality';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Directionality$Mate(
           key: p.get('key').build(),
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('textDirection', textDirection);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -68,16 +86,16 @@ class Directionality$Mate extends Directionality with Mate {
 class Opacity$Mate extends Opacity with Mate {
   /// Opacity Opacity({Key? key, required double opacity, bool alwaysIncludeSemantics = false, Widget? child})
   Opacity$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double opacity} , default:none
     required double opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -85,16 +103,35 @@ class Opacity$Mate extends Opacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
+    mateCreateName = 'Opacity';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Opacity$Mate(
           key: p.get('key').build(),
           opacity: p.get('opacity').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -102,16 +139,16 @@ class Opacity$Mate extends Opacity with Mate {
 class ShaderMask$Mate extends ShaderMask with Mate {
   /// ShaderMask ShaderMask({Key? key, required Shader Function(Rect) shaderCallback, BlendMode blendMode = BlendMode.modulate, Widget? child})
   ShaderMask$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Shader Function(Rect) shaderCallback} , default:none
     required ShaderCallback shaderCallback,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , hasDefaultValue:true, defaultValueCode:BlendMode.modulate
-    required BlendMode blendMode,
+    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:processed=PrefixedIdentifierImpl
+    BlendMode blendMode = BlendMode.modulate,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -119,16 +156,35 @@ class ShaderMask$Mate extends ShaderMask with Mate {
           blendMode: blendMode,
           child: child,
         ) {
+    mateCreateName = 'ShaderMask';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShaderMask$Mate(
           key: p.get('key').build(),
           shaderCallback: p.get('shaderCallback').build(),
           blendMode: p.get('blendMode').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('shaderCallback', shaderCallback);
-    matePut('blendMode', blendMode);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'shaderCallback',
+      shaderCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.modulate,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -136,33 +192,52 @@ class ShaderMask$Mate extends ShaderMask with Mate {
 class BackdropFilter$Mate extends BackdropFilter with Mate {
   /// BackdropFilter BackdropFilter({Key? key, required ImageFilter filter, Widget? child, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilter$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ImageFilter filter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageFilter filter} , default:none
     required ImageFilter filter,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , hasDefaultValue:true, defaultValueCode:BlendMode.srcOver
-    required BlendMode blendMode,
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
+    BlendMode blendMode = BlendMode.srcOver,
   }) : super(
           key: key,
           filter: filter,
           child: child,
           blendMode: blendMode,
         ) {
+    mateCreateName = 'BackdropFilter';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BackdropFilter$Mate(
           key: p.get('key').build(),
           filter: p.get('filter').build(),
           child: p.get('child').build(),
           blendMode: p.get('blendMode').build(),
         );
-    matePut('key', key);
-    matePut('filter', filter);
-    matePut('child', child);
-    matePut('blendMode', blendMode);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'filter',
+      filter,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.srcOver,
+    );
   }
 }
 
@@ -170,25 +245,25 @@ class BackdropFilter$Mate extends BackdropFilter with Mate {
 class CustomPaint$Mate extends CustomPaint with Mate {
   /// CustomPaint CustomPaint({Key? key, CustomPainter? painter, CustomPainter? foregroundPainter, Size size = Size.zero, bool isComplex = false, bool willChange = false, Widget? child})
   CustomPaint$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomPainter? painter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? painter} , default:none
     CustomPainter? painter,
 
-    /// optionalParameters: {CustomPainter? foregroundPainter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? foregroundPainter} , default:none
     CustomPainter? foregroundPainter,
 
-    /// optionalParameters: {Size size = Size.zero} , hasDefaultValue:true, defaultValueCode:Size.zero
-    required Size size,
+    /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
+    Size size = Size.zero,
 
-    /// optionalParameters: {bool isComplex = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isComplex,
+    /// optionalParameters: {bool isComplex = false} , default:processed=BooleanLiteralImpl
+    bool isComplex = false,
 
-    /// optionalParameters: {bool willChange = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool willChange,
+    /// optionalParameters: {bool willChange = false} , default:processed=BooleanLiteralImpl
+    bool willChange = false,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -199,6 +274,8 @@ class CustomPaint$Mate extends CustomPaint with Mate {
           willChange: willChange,
           child: child,
         ) {
+    mateCreateName = 'CustomPaint';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CustomPaint$Mate(
           key: p.get('key').build(),
           painter: p.get('painter').build(),
@@ -208,13 +285,44 @@ class CustomPaint$Mate extends CustomPaint with Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('painter', painter);
-    matePut('foregroundPainter', foregroundPainter);
-    matePut('size', size);
-    matePut('isComplex', isComplex);
-    matePut('willChange', willChange);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'painter',
+      painter,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundPainter',
+      foregroundPainter,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: Size.zero,
+    );
+    mateUse(
+      'isComplex',
+      isComplex,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'willChange',
+      willChange,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -222,16 +330,16 @@ class CustomPaint$Mate extends CustomPaint with Mate {
 class ClipRect$Mate extends ClipRect with Mate {
   /// ClipRect ClipRect({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.hardEdge, Widget? child})
   ClipRect$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -239,16 +347,35 @@ class ClipRect$Mate extends ClipRect with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipRect';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClipRect$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -256,19 +383,19 @@ class ClipRect$Mate extends ClipRect with Mate {
 class ClipRRect$Mate extends ClipRRect with Mate {
   /// ClipRRect ClipRRect({Key? key, BorderRadiusGeometry? borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipRRect$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , hasDefaultValue:true, defaultValueCode:BorderRadius.zero
-    BorderRadiusGeometry? borderRadius,
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
+    BorderRadiusGeometry? borderRadius = BorderRadius.zero,
 
-    /// optionalParameters: {CustomClipper<RRect>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
     CustomClipper<RRect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -277,6 +404,8 @@ class ClipRRect$Mate extends ClipRRect with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipRRect';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClipRRect$Mate(
           key: p.get('key').build(),
           borderRadius: p.get('borderRadius').build(),
@@ -284,11 +413,33 @@ class ClipRRect$Mate extends ClipRRect with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('borderRadius', borderRadius);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+      defaultValue: BorderRadius.zero,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -296,16 +447,16 @@ class ClipRRect$Mate extends ClipRRect with Mate {
 class ClipOval$Mate extends ClipOval with Mate {
   /// ClipOval ClipOval({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipOval$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Rect>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     CustomClipper<Rect>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -313,16 +464,35 @@ class ClipOval$Mate extends ClipOval with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipOval';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClipOval$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -330,16 +500,16 @@ class ClipOval$Mate extends ClipOval with Mate {
 class ClipPath$Mate extends ClipPath with Mate {
   /// ClipPath ClipPath({Key? key, CustomClipper<Path>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipPath$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {CustomClipper<Path>? clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomClipper<Path>? clipper} , default:none
     CustomClipper<Path>? clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -347,16 +517,35 @@ class ClipPath$Mate extends ClipPath with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'ClipPath';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClipPath$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -364,28 +553,28 @@ class ClipPath$Mate extends ClipPath with Mate {
 class PhysicalModel$Mate extends PhysicalModel with Mate {
   /// PhysicalModel PhysicalModel({Key? key, BoxShape shape = BoxShape.rectangle, Clip clipBehavior = Clip.none, BorderRadius? borderRadius, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalModel$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , hasDefaultValue:true, defaultValueCode:BoxShape.rectangle
-    required BoxShape shape,
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
+    BoxShape shape = BoxShape.rectangle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {double elevation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
+    double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF000000)
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color shadowColor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -397,6 +586,8 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
           shadowColor: shadowColor,
           child: child,
         ) {
+    mateCreateName = 'PhysicalModel';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PhysicalModel$Mate(
           key: p.get('key').build(),
           shape: p.get('shape').build(),
@@ -407,14 +598,49 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('borderRadius', borderRadius);
-    matePut('elevation', elevation);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+      defaultValue: BoxShape.rectangle,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -422,25 +648,25 @@ class PhysicalModel$Mate extends PhysicalModel with Mate {
 class PhysicalShape$Mate extends PhysicalShape with Mate {
   /// PhysicalShape PhysicalShape({Key? key, required CustomClipper<Path> clipper, Clip clipBehavior = Clip.none, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalShape$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required CustomClipper<Path> clipper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required CustomClipper<Path> clipper} , default:none
     required CustomClipper<Path> clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {double elevation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
+    double elevation = 0.0,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF000000)
+    /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color shadowColor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -451,6 +677,8 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
           shadowColor: shadowColor,
           child: child,
         ) {
+    mateCreateName = 'PhysicalShape';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PhysicalShape$Mate(
           key: p.get('key').build(),
           clipper: p.get('clipper').build(),
@@ -460,13 +688,43 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipper', clipper);
-    matePut('clipBehavior', clipBehavior);
-    matePut('elevation', elevation);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipper',
+      clipper,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -474,25 +732,25 @@ class PhysicalShape$Mate extends PhysicalShape with Mate {
 class Transform$Mate extends Transform with Mate {
   /// Transform Transform({Key? key, required Matrix4 transform, Offset? origin, AlignmentGeometry? alignment, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Matrix4 transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Matrix4 transform} , default:none
     required Matrix4 transform,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -503,6 +761,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Transform$Mate(
           key: p.get('key').build(),
           transform: p.get('transform').build(),
@@ -512,36 +772,65 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('transform', transform);
-    matePut('origin', origin);
-    matePut('alignment', alignment);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.rotate({Key? key, required double angle, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.rotate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double angle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double angle} , default:none
     required double angle,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    AlignmentGeometry? alignment,
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry? alignment = Alignment.center,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.rotate(
           key: key,
@@ -552,6 +841,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.rotate';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Transform$Mate.rotate(
           key: p.get('key').build(),
           angle: p.get('angle').build(),
@@ -561,30 +852,60 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('angle', angle);
-    matePut('origin', origin);
-    matePut('alignment', alignment);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'angle',
+      angle,
+      isNamed: true,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.translate({Key? key, required Offset offset, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.translate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset offset} , default:none
     required Offset offset,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.translate(
           key: key,
@@ -593,6 +914,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.translate';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Transform$Mate.translate(
           key: p.get('key').build(),
           offset: p.get('offset').build(),
@@ -600,40 +923,61 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('offset', offset);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.scale({Key? key, double? scale, double? scaleX, double? scaleY, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.scale({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scale} , default:none
     double? scale,
 
-    /// optionalParameters: {double? scaleX} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scaleX} , default:none
     double? scaleX,
 
-    /// optionalParameters: {double? scaleY} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scaleY} , default:none
     double? scaleY,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    AlignmentGeometry? alignment,
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry? alignment = Alignment.center,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.scale(
           key: key,
@@ -646,6 +990,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.scale';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Transform$Mate.scale(
           key: p.get('key').build(),
           scale: p.get('scale').build(),
@@ -657,38 +1003,76 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('scale', scale);
-    matePut('scaleX', scaleX);
-    matePut('scaleY', scaleY);
-    matePut('origin', origin);
-    matePut('alignment', alignment);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+    );
+    mateUse(
+      'scaleX',
+      scaleX,
+      isNamed: true,
+    );
+    mateUse(
+      'scaleY',
+      scaleY,
+      isNamed: true,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Transform Transform.flip({Key? key, bool flipX = false, bool flipY = false, Offset? origin, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.flip({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool flipX = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool flipX,
+    /// optionalParameters: {bool flipX = false} , default:processed=BooleanLiteralImpl
+    bool flipX = false,
 
-    /// optionalParameters: {bool flipY = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool flipY,
+    /// optionalParameters: {bool flipY = false} , default:processed=BooleanLiteralImpl
+    bool flipY = false,
 
-    /// optionalParameters: {Offset? origin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? origin} , default:none
     Offset? origin,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
+    bool transformHitTests = true,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.flip(
           key: key,
@@ -699,6 +1083,8 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'Transform.flip';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Transform$Mate.flip(
           key: p.get('key').build(),
           flipX: p.get('flipX').build(),
@@ -708,13 +1094,44 @@ class Transform$Mate extends Transform with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('flipX', flipX);
-    matePut('flipY', flipY);
-    matePut('origin', origin);
-    matePut('transformHitTests', transformHitTests);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flipX',
+      flipX,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'flipY',
+      flipY,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'origin',
+      origin,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -722,27 +1139,41 @@ class Transform$Mate extends Transform with Mate {
 class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate {
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           link: link,
           child: child,
         ) {
+    mateCreateName = 'CompositedTransformTarget';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CompositedTransformTarget$Mate(
           key: p.get('key').build(),
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('link', link);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -750,25 +1181,25 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate
 class CompositedTransformFollower$Mate extends CompositedTransformFollower with Mate {
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {bool showWhenUnlinked = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showWhenUnlinked,
+    /// optionalParameters: {bool showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
+    bool showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset offset = Offset.zero,
 
-    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , hasDefaultValue:true, defaultValueCode:Alignment.topLeft
-    required Alignment targetAnchor,
+    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
+    Alignment targetAnchor = Alignment.topLeft,
 
-    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , hasDefaultValue:true, defaultValueCode:Alignment.topLeft
-    required Alignment followerAnchor,
+    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
+    Alignment followerAnchor = Alignment.topLeft,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -779,6 +1210,8 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
           followerAnchor: followerAnchor,
           child: child,
         ) {
+    mateCreateName = 'CompositedTransformFollower';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CompositedTransformFollower$Mate(
           key: p.get('key').build(),
           link: p.get('link').build(),
@@ -788,13 +1221,45 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('link', link);
-    matePut('showWhenUnlinked', showWhenUnlinked);
-    matePut('offset', offset);
-    matePut('targetAnchor', targetAnchor);
-    matePut('followerAnchor', followerAnchor);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'showWhenUnlinked',
+      showWhenUnlinked,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'targetAnchor',
+      targetAnchor,
+      isNamed: true,
+      defaultValue: Alignment.topLeft,
+    );
+    mateUse(
+      'followerAnchor',
+      followerAnchor,
+      isNamed: true,
+      defaultValue: Alignment.topLeft,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -802,19 +1267,19 @@ class CompositedTransformFollower$Mate extends CompositedTransformFollower with 
 class FittedBox$Mate extends FittedBox with Mate {
   /// FittedBox FittedBox({Key? key, BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, Clip clipBehavior = Clip.none, Widget? child})
   FittedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {BoxFit fit = BoxFit.contain} , hasDefaultValue:true, defaultValueCode:BoxFit.contain
-    required BoxFit fit,
+    /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:processed=PrefixedIdentifierImpl
+    BoxFit fit = BoxFit.contain,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -823,6 +1288,8 @@ class FittedBox$Mate extends FittedBox with Mate {
           clipBehavior: clipBehavior,
           child: child,
         ) {
+    mateCreateName = 'FittedBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FittedBox$Mate(
           key: p.get('key').build(),
           fit: p.get('fit').build(),
@@ -830,11 +1297,34 @@ class FittedBox$Mate extends FittedBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: BoxFit.contain,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -842,16 +1332,16 @@ class FittedBox$Mate extends FittedBox with Mate {
 class FractionalTranslation$Mate extends FractionalTranslation with Mate {
   /// FractionalTranslation FractionalTranslation({Key? key, required Offset translation, bool transformHitTests = true, Widget? child})
   FractionalTranslation$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset translation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset translation} , default:none
     required Offset translation,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
+    bool transformHitTests = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -859,16 +1349,35 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
           transformHitTests: transformHitTests,
           child: child,
         ) {
+    mateCreateName = 'FractionalTranslation';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FractionalTranslation$Mate(
           key: p.get('key').build(),
           translation: p.get('translation').build(),
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('translation', translation);
-    matePut('transformHitTests', transformHitTests);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'translation',
+      translation,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -876,27 +1385,41 @@ class FractionalTranslation$Mate extends FractionalTranslation with Mate {
 class RotatedBox$Mate extends RotatedBox with Mate {
   /// RotatedBox RotatedBox({Key? key, required int quarterTurns, Widget? child})
   RotatedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required int quarterTurns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int quarterTurns} , default:none
     required int quarterTurns,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           quarterTurns: quarterTurns,
           child: child,
         ) {
+    mateCreateName = 'RotatedBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RotatedBox$Mate(
           key: p.get('key').build(),
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('quarterTurns', quarterTurns);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'quarterTurns',
+      quarterTurns,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -904,27 +1427,41 @@ class RotatedBox$Mate extends RotatedBox with Mate {
 class Padding$Mate extends Padding with Mate {
   /// Padding Padding({Key? key, required EdgeInsetsGeometry padding, Widget? child})
   Padding$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           padding: padding,
           child: child,
         ) {
+    mateCreateName = 'Padding';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Padding$Mate(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('padding', padding);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -932,19 +1469,19 @@ class Padding$Mate extends Padding with Mate {
 class Align$Mate extends Align with Mate {
   /// Align Align({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   Align$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -953,6 +1490,8 @@ class Align$Mate extends Align with Mate {
           heightFactor: heightFactor,
           child: child,
         ) {
+    mateCreateName = 'Align';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Align$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -960,11 +1499,32 @@ class Align$Mate extends Align with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -972,16 +1532,16 @@ class Align$Mate extends Align with Mate {
 class Center$Mate extends Center with Mate {
   /// Center Center({Key? key, double? widthFactor, double? heightFactor, Widget? child})
   Center$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -989,16 +1549,34 @@ class Center$Mate extends Center with Mate {
           heightFactor: heightFactor,
           child: child,
         ) {
+    mateCreateName = 'Center';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Center$Mate(
           key: p.get('key').build(),
           widthFactor: p.get('widthFactor').build(),
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1006,27 +1584,41 @@ class Center$Mate extends Center with Mate {
 class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
   /// CustomSingleChildLayout CustomSingleChildLayout({Key? key, required SingleChildLayoutDelegate delegate, Widget? child})
   CustomSingleChildLayout$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SingleChildLayoutDelegate delegate} , default:none
     required SingleChildLayoutDelegate delegate,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           delegate: delegate,
           child: child,
         ) {
+    mateCreateName = 'CustomSingleChildLayout';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CustomSingleChildLayout$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1034,27 +1626,41 @@ class CustomSingleChildLayout$Mate extends CustomSingleChildLayout with Mate {
 class LayoutId$Mate extends LayoutId with Mate {
   /// LayoutId LayoutId({Key? key, required Object id, required Widget child})
   LayoutId$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Object id} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object id} , default:none
     required Object id,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           id: id,
           child: child,
         ) {
+    mateCreateName = 'LayoutId';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LayoutId$Mate(
           key: p.get('key').build(),
           id: p.get('id').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('id', id);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'id',
+      id,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1062,27 +1668,41 @@ class LayoutId$Mate extends LayoutId with Mate {
 class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
   /// CustomMultiChildLayout CustomMultiChildLayout({Key? key, required MultiChildLayoutDelegate delegate, List<Widget> children = const <Widget>[]})
   CustomMultiChildLayout$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MultiChildLayoutDelegate delegate} , default:none
     required MultiChildLayoutDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
           delegate: delegate,
           children: children,
         ) {
+    mateCreateName = 'CustomMultiChildLayout';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CustomMultiChildLayout$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1090,16 +1710,16 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
 class SizedBox$Mate extends SizedBox with Mate {
   /// SizedBox SizedBox({Key? key, double? width, double? height, Widget? child})
   SizedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1107,104 +1727,170 @@ class SizedBox$Mate extends SizedBox with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'SizedBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizedBox$Mate(
           key: p.get('key').build(),
           width: p.get('width').build(),
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.expand({Key? key, Widget? child})
   SizedBox$Mate.expand({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.expand(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SizedBox.expand';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizedBox$Mate.expand(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.shrink({Key? key, Widget? child})
   SizedBox$Mate.shrink({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.shrink(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SizedBox.shrink';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizedBox$Mate.shrink(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.fromSize({Key? key, Widget? child, Size? size})
   SizedBox$Mate.fromSize({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Size? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? size} , default:none
     Size? size,
   }) : super.fromSize(
           key: key,
           child: child,
           size: size,
         ) {
+    mateCreateName = 'SizedBox.fromSize';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizedBox$Mate.fromSize(
           key: p.get('key').build(),
           child: p.get('child').build(),
           size: p.get('size').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('size', size);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
   }
 
   /// SizedBox SizedBox.square({Key? key, Widget? child, double? dimension})
   SizedBox$Mate.square({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {double? dimension} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? dimension} , default:none
     double? dimension,
   }) : super.square(
           key: key,
           child: child,
           dimension: dimension,
         ) {
+    mateCreateName = 'SizedBox.square';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizedBox$Mate.square(
           key: p.get('key').build(),
           child: p.get('child').build(),
           dimension: p.get('dimension').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('dimension', dimension);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'dimension',
+      dimension,
+      isNamed: true,
+    );
   }
 }
 
@@ -1212,27 +1898,41 @@ class SizedBox$Mate extends SizedBox with Mate {
 class ConstrainedBox$Mate extends ConstrainedBox with Mate {
   /// ConstrainedBox ConstrainedBox({Key? key, required BoxConstraints constraints, Widget? child})
   ConstrainedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required BoxConstraints constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BoxConstraints constraints} , default:none
     required BoxConstraints constraints,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           constraints: constraints,
           child: child,
         ) {
+    mateCreateName = 'ConstrainedBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ConstrainedBox$Mate(
           key: p.get('key').build(),
           constraints: p.get('constraints').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('constraints', constraints);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1240,26 +1940,26 @@ class ConstrainedBox$Mate extends ConstrainedBox with Mate {
 class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
   /// ConstraintsTransformBox ConstraintsTransformBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, required BoxConstraints Function(BoxConstraints) constraintsTransform, Clip clipBehavior = Clip.none, String debugTransformType = ''})
   ConstraintsTransformBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , default:none
     required BoxConstraintsTransform constraintsTransform,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {String debugTransformType = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String debugTransformType,
+    /// optionalParameters: {String debugTransformType = ''} , default:processed=SimpleStringLiteralImpl
+    String debugTransformType = '',
   }) : super(
           key: key,
           child: child,
@@ -1269,6 +1969,8 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
           clipBehavior: clipBehavior,
           debugTransformType: debugTransformType,
         ) {
+    mateCreateName = 'ConstraintsTransformBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ConstraintsTransformBox$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1278,13 +1980,44 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           debugTransformType: p.get('debugTransformType').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('textDirection', textDirection);
-    matePut('alignment', alignment);
-    matePut('constraintsTransform', constraintsTransform);
-    matePut('clipBehavior', clipBehavior);
-    matePut('debugTransformType', debugTransformType);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'constraintsTransform',
+      constraintsTransform,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'debugTransformType',
+      debugTransformType,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 }
 
@@ -1292,23 +2025,23 @@ class ConstraintsTransformBox$Mate extends ConstraintsTransformBox with Mate {
 class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
   /// UnconstrainedBox UnconstrainedBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, Axis? constrainedAxis, Clip clipBehavior = Clip.none})
   UnconstrainedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Axis? constrainedAxis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Axis? constrainedAxis} , default:none
     Axis? constrainedAxis,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
   }) : super(
           key: key,
           child: child,
@@ -1317,6 +2050,8 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
           constrainedAxis: constrainedAxis,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'UnconstrainedBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UnconstrainedBox$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -1325,12 +2060,38 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
           constrainedAxis: p.get('constrainedAxis').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('textDirection', textDirection);
-    matePut('alignment', alignment);
-    matePut('constrainedAxis', constrainedAxis);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'constrainedAxis',
+      constrainedAxis,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }
 
@@ -1338,19 +2099,19 @@ class UnconstrainedBox$Mate extends UnconstrainedBox with Mate {
 class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
   /// FractionallySizedBox FractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   FractionallySizedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1359,6 +2120,8 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
           heightFactor: heightFactor,
           child: child,
         ) {
+    mateCreateName = 'FractionallySizedBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FractionallySizedBox$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1366,11 +2129,32 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1378,16 +2162,16 @@ class FractionallySizedBox$Mate extends FractionallySizedBox with Mate {
 class LimitedBox$Mate extends LimitedBox with Mate {
   /// LimitedBox LimitedBox({Key? key, double maxWidth = double.infinity, double maxHeight = double.infinity, Widget? child})
   LimitedBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double maxWidth,
+    /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double maxWidth = double.infinity,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double maxHeight,
+    /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double maxHeight = double.infinity,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1395,16 +2179,36 @@ class LimitedBox$Mate extends LimitedBox with Mate {
           maxHeight: maxHeight,
           child: child,
         ) {
+    mateCreateName = 'LimitedBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LimitedBox$Mate(
           key: p.get('key').build(),
           maxWidth: p.get('maxWidth').build(),
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('maxWidth', maxWidth);
-    matePut('maxHeight', maxHeight);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'maxWidth',
+      maxWidth,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'maxHeight',
+      maxHeight,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1412,25 +2216,25 @@ class LimitedBox$Mate extends LimitedBox with Mate {
 class OverflowBox$Mate extends OverflowBox with Mate {
   /// OverflowBox OverflowBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, Widget? child})
   OverflowBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {double? minWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minWidth} , default:none
     double? minWidth,
 
-    /// optionalParameters: {double? maxWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? maxWidth} , default:none
     double? maxWidth,
 
-    /// optionalParameters: {double? minHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minHeight} , default:none
     double? minHeight,
 
-    /// optionalParameters: {double? maxHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? maxHeight} , default:none
     double? maxHeight,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1441,6 +2245,8 @@ class OverflowBox$Mate extends OverflowBox with Mate {
           maxHeight: maxHeight,
           child: child,
         ) {
+    mateCreateName = 'OverflowBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverflowBox$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1450,13 +2256,42 @@ class OverflowBox$Mate extends OverflowBox with Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('minWidth', minWidth);
-    matePut('maxWidth', maxWidth);
-    matePut('minHeight', minHeight);
-    matePut('maxHeight', maxHeight);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'minWidth',
+      minWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'maxWidth',
+      maxWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'minHeight',
+      minHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'maxHeight',
+      maxHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1464,16 +2299,16 @@ class OverflowBox$Mate extends OverflowBox with Mate {
 class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
   /// SizedOverflowBox SizedOverflowBox({Key? key, required Size size, AlignmentGeometry alignment = Alignment.center, Widget? child})
   SizedOverflowBox$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Size size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size size} , default:none
     required Size size,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1481,16 +2316,35 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
           alignment: alignment,
           child: child,
         ) {
+    mateCreateName = 'SizedOverflowBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizedOverflowBox$Mate(
           key: p.get('key').build(),
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('size', size);
-    matePut('alignment', alignment);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1498,27 +2352,42 @@ class SizedOverflowBox$Mate extends SizedOverflowBox with Mate {
 class Offstage$Mate extends Offstage with Mate {
   /// Offstage Offstage({Key? key, bool offstage = true, Widget? child})
   Offstage$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool offstage = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool offstage,
+    /// optionalParameters: {bool offstage = true} , default:processed=BooleanLiteralImpl
+    bool offstage = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           offstage: offstage,
           child: child,
         ) {
+    mateCreateName = 'Offstage';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Offstage$Mate(
           key: p.get('key').build(),
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('offstage', offstage);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'offstage',
+      offstage,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1526,27 +2395,41 @@ class Offstage$Mate extends Offstage with Mate {
 class AspectRatio$Mate extends AspectRatio with Mate {
   /// AspectRatio AspectRatio({Key? key, required double aspectRatio, Widget? child})
   AspectRatio$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double aspectRatio} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double aspectRatio} , default:none
     required double aspectRatio,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           aspectRatio: aspectRatio,
           child: child,
         ) {
+    mateCreateName = 'AspectRatio';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AspectRatio$Mate(
           key: p.get('key').build(),
           aspectRatio: p.get('aspectRatio').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('aspectRatio', aspectRatio);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'aspectRatio',
+      aspectRatio,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1554,16 +2437,16 @@ class AspectRatio$Mate extends AspectRatio with Mate {
 class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
   /// IntrinsicWidth IntrinsicWidth({Key? key, double? stepWidth, double? stepHeight, Widget? child})
   IntrinsicWidth$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? stepWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? stepWidth} , default:none
     double? stepWidth,
 
-    /// optionalParameters: {double? stepHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? stepHeight} , default:none
     double? stepHeight,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1571,16 +2454,34 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
           stepHeight: stepHeight,
           child: child,
         ) {
+    mateCreateName = 'IntrinsicWidth';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IntrinsicWidth$Mate(
           key: p.get('key').build(),
           stepWidth: p.get('stepWidth').build(),
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('stepWidth', stepWidth);
-    matePut('stepHeight', stepHeight);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'stepWidth',
+      stepWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'stepHeight',
+      stepHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1588,21 +2489,31 @@ class IntrinsicWidth$Mate extends IntrinsicWidth with Mate {
 class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
   /// IntrinsicHeight IntrinsicHeight({Key? key, Widget? child})
   IntrinsicHeight$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'IntrinsicHeight';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IntrinsicHeight$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1610,16 +2521,16 @@ class IntrinsicHeight$Mate extends IntrinsicHeight with Mate {
 class Baseline$Mate extends Baseline with Mate {
   /// Baseline Baseline({Key? key, required double baseline, required TextBaseline baselineType, Widget? child})
   Baseline$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double baseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double baseline} , default:none
     required double baseline,
 
-    /// optionalParameters: {required TextBaseline baselineType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextBaseline baselineType} , default:none
     required TextBaseline baselineType,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -1627,16 +2538,34 @@ class Baseline$Mate extends Baseline with Mate {
           baselineType: baselineType,
           child: child,
         ) {
+    mateCreateName = 'Baseline';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Baseline$Mate(
           key: p.get('key').build(),
           baseline: p.get('baseline').build(),
           baselineType: p.get('baselineType').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('baseline', baseline);
-    matePut('baselineType', baselineType);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'baseline',
+      baseline,
+      isNamed: true,
+    );
+    mateUse(
+      'baselineType',
+      baselineType,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1644,21 +2573,31 @@ class Baseline$Mate extends Baseline with Mate {
 class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
   /// SliverToBoxAdapter SliverToBoxAdapter({Key? key, Widget? child})
   SliverToBoxAdapter$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SliverToBoxAdapter';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverToBoxAdapter$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1666,27 +2605,41 @@ class SliverToBoxAdapter$Mate extends SliverToBoxAdapter with Mate {
 class SliverPadding$Mate extends SliverPadding with Mate {
   /// SliverPadding SliverPadding({Key? key, required EdgeInsetsGeometry padding, Widget? sliver})
   SliverPadding$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required EdgeInsetsGeometry padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Widget? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? sliver} , default:none
     Widget? sliver,
   }) : super(
           key: key,
           padding: padding,
           sliver: sliver,
         ) {
+    mateCreateName = 'SliverPadding';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPadding$Mate(
           key: p.get('key').build(),
           padding: p.get('padding').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('key', key);
-    matePut('padding', padding);
-    matePut('sliver', sliver);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -1694,16 +2647,16 @@ class SliverPadding$Mate extends SliverPadding with Mate {
 class ListBody$Mate extends ListBody with Mate {
   /// ListBody ListBody({Key? key, Axis mainAxis = Axis.vertical, bool reverse = false, List<Widget> children = const <Widget>[]})
   ListBody$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis mainAxis = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
-    required Axis mainAxis,
+    /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    Axis mainAxis = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
+    bool reverse = false,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1711,16 +2664,36 @@ class ListBody$Mate extends ListBody with Mate {
           reverse: reverse,
           children: children,
         ) {
+    mateCreateName = 'ListBody';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListBody$Mate(
           key: p.get('key').build(),
           mainAxis: p.get('mainAxis').build(),
           reverse: p.get('reverse').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('mainAxis', mainAxis);
-    matePut('reverse', reverse);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxis',
+      mainAxis,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1728,22 +2701,22 @@ class ListBody$Mate extends ListBody with Mate {
 class Stack$Mate extends Stack with Mate {
   /// Stack Stack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, List<Widget> children = const <Widget>[]})
   Stack$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , hasDefaultValue:true, defaultValueCode:AlignmentDirectional.topStart
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , hasDefaultValue:true, defaultValueCode:StackFit.loose
-    required StackFit fit,
+    /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
+    StackFit fit = StackFit.loose,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1753,6 +2726,8 @@ class Stack$Mate extends Stack with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
+    mateCreateName = 'Stack';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Stack$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1761,12 +2736,39 @@ class Stack$Mate extends Stack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('fit', fit);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.topStart,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: StackFit.loose,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1774,25 +2776,25 @@ class Stack$Mate extends Stack with Mate {
 class IndexedStack$Mate extends IndexedStack with Mate {
   /// IndexedStack IndexedStack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, Clip clipBehavior = Clip.hardEdge, StackFit sizing = StackFit.loose, int? index = 0, List<Widget> children = const <Widget>[]})
   IndexedStack$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , hasDefaultValue:true, defaultValueCode:AlignmentDirectional.topStart
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = AlignmentDirectional.topStart,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {StackFit sizing = StackFit.loose} , hasDefaultValue:true, defaultValueCode:StackFit.loose
-    required StackFit sizing,
+    /// optionalParameters: {StackFit sizing = StackFit.loose} , default:processed=PrefixedIdentifierImpl
+    StackFit sizing = StackFit.loose,
 
-    /// optionalParameters: {int? index = 0} , hasDefaultValue:true, defaultValueCode:0
-    int? index,
+    /// optionalParameters: {int? index = 0} , default:processed=IntegerLiteralImpl
+    int? index = 0,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -1803,6 +2805,8 @@ class IndexedStack$Mate extends IndexedStack with Mate {
           index: index,
           children: children,
         ) {
+    mateCreateName = 'IndexedStack';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IndexedStack$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -1812,13 +2816,45 @@ class IndexedStack$Mate extends IndexedStack with Mate {
           index: p.get('index').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('clipBehavior', clipBehavior);
-    matePut('sizing', sizing);
-    matePut('index', index);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.topStart,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'sizing',
+      sizing,
+      isNamed: true,
+      defaultValue: StackFit.loose,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -1826,28 +2862,28 @@ class IndexedStack$Mate extends IndexedStack with Mate {
 class Positioned$Mate extends Positioned with Mate {
   /// Positioned Positioned({Key? key, double? left, double? top, double? right, double? bottom, double? width, double? height, required Widget child})
   Positioned$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? left} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? left} , default:none
     double? left,
 
-    /// optionalParameters: {double? top} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? top} , default:none
     double? top,
 
-    /// optionalParameters: {double? right} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? right} , default:none
     double? right,
 
-    /// optionalParameters: {double? bottom} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? bottom} , default:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -1859,6 +2895,8 @@ class Positioned$Mate extends Positioned with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'Positioned';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Positioned$Mate(
           key: p.get('key').build(),
           left: p.get('left').build(),
@@ -1869,84 +2907,144 @@ class Positioned$Mate extends Positioned with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Positioned Positioned.fromRect({Key? key, required Rect rect, required Widget child})
   Positioned$Mate.fromRect({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.fromRect(
           key: key,
           rect: rect,
           child: child,
         ) {
+    mateCreateName = 'Positioned.fromRect';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Positioned$Mate.fromRect(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Positioned Positioned.fromRelativeRect({Key? key, required RelativeRect rect, required Widget child})
   Positioned$Mate.fromRelativeRect({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required RelativeRect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RelativeRect rect} , default:none
     required RelativeRect rect,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.fromRelativeRect(
           key: key,
           rect: rect,
           child: child,
         ) {
+    mateCreateName = 'Positioned.fromRelativeRect';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Positioned$Mate.fromRelativeRect(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Positioned Positioned.fill({Key? key, double? left = 0.0, double? top = 0.0, double? right = 0.0, double? bottom = 0.0, required Widget child})
   Positioned$Mate.fill({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? left = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? left,
+    /// optionalParameters: {double? left = 0.0} , default:processed=DoubleLiteralImpl
+    double? left = 0.0,
 
-    /// optionalParameters: {double? top = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? top,
+    /// optionalParameters: {double? top = 0.0} , default:processed=DoubleLiteralImpl
+    double? top = 0.0,
 
-    /// optionalParameters: {double? right = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? right,
+    /// optionalParameters: {double? right = 0.0} , default:processed=DoubleLiteralImpl
+    double? right = 0.0,
 
-    /// optionalParameters: {double? bottom = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? bottom,
+    /// optionalParameters: {double? bottom = 0.0} , default:processed=DoubleLiteralImpl
+    double? bottom = 0.0,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.fill(
           key: key,
@@ -1956,6 +3054,8 @@ class Positioned$Mate extends Positioned with Mate {
           bottom: bottom,
           child: child,
         ) {
+    mateCreateName = 'Positioned.fill';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Positioned$Mate.fill(
           key: p.get('key').build(),
           left: p.get('left').build(),
@@ -1964,12 +3064,40 @@ class Positioned$Mate extends Positioned with Mate {
           bottom: p.get('bottom').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -1977,28 +3105,28 @@ class Positioned$Mate extends Positioned with Mate {
 class PositionedDirectional$Mate extends PositionedDirectional with Mate {
   /// PositionedDirectional PositionedDirectional({Key? key, double? start, double? top, double? end, double? bottom, double? width, double? height, required Widget child})
   PositionedDirectional$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? start} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? start} , default:none
     double? start,
 
-    /// optionalParameters: {double? top} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? top} , default:none
     double? top,
 
-    /// optionalParameters: {double? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? end} , default:none
     double? end,
 
-    /// optionalParameters: {double? bottom} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? bottom} , default:none
     double? bottom,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -2010,6 +3138,8 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'PositionedDirectional';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PositionedDirectional$Mate(
           key: p.get('key').build(),
           start: p.get('start').build(),
@@ -2020,14 +3150,46 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('start', start);
-    matePut('top', top);
-    matePut('end', end);
-    matePut('bottom', bottom);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2035,34 +3197,34 @@ class PositionedDirectional$Mate extends PositionedDirectional with Mate {
 class Flex$Mate extends Flex with Mate {
   /// Flex Flex({Key? key, required Axis direction, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Flex$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Axis direction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Axis direction} , default:none
     required Axis direction,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , hasDefaultValue:true, defaultValueCode:MainAxisAlignment.start
-    required MainAxisAlignment mainAxisAlignment,
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , hasDefaultValue:true, defaultValueCode:MainAxisSize.max
-    required MainAxisSize mainAxisSize,
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
+    MainAxisSize mainAxisSize = MainAxisSize.max,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , hasDefaultValue:true, defaultValueCode:CrossAxisAlignment.center
-    required CrossAxisAlignment crossAxisAlignment,
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
+    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2076,6 +3238,8 @@ class Flex$Mate extends Flex with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
+    mateCreateName = 'Flex';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Flex$Mate(
           key: p.get('key').build(),
           direction: p.get('direction').build(),
@@ -2088,16 +3252,61 @@ class Flex$Mate extends Flex with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('direction', direction);
-    matePut('mainAxisAlignment', mainAxisAlignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('textBaseline', textBaseline);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisAlignment',
+      mainAxisAlignment,
+      isNamed: true,
+      defaultValue: MainAxisAlignment.start,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+      defaultValue: MainAxisSize.max,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: CrossAxisAlignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2105,28 +3314,28 @@ class Flex$Mate extends Flex with Mate {
 class Row$Mate extends Row with Mate {
   /// Row Row({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Row$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , hasDefaultValue:true, defaultValueCode:MainAxisAlignment.start
-    required MainAxisAlignment mainAxisAlignment,
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , hasDefaultValue:true, defaultValueCode:MainAxisSize.max
-    required MainAxisSize mainAxisSize,
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
+    MainAxisSize mainAxisSize = MainAxisSize.max,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , hasDefaultValue:true, defaultValueCode:CrossAxisAlignment.center
-    required CrossAxisAlignment crossAxisAlignment,
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
+    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2138,6 +3347,8 @@ class Row$Mate extends Row with Mate {
           textBaseline: textBaseline,
           children: children,
         ) {
+    mateCreateName = 'Row';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Row$Mate(
           key: p.get('key').build(),
           mainAxisAlignment: p.get('mainAxisAlignment').build(),
@@ -2148,14 +3359,50 @@ class Row$Mate extends Row with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('mainAxisAlignment', mainAxisAlignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('textBaseline', textBaseline);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisAlignment',
+      mainAxisAlignment,
+      isNamed: true,
+      defaultValue: MainAxisAlignment.start,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+      defaultValue: MainAxisSize.max,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: CrossAxisAlignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2163,28 +3410,28 @@ class Row$Mate extends Row with Mate {
 class Column$Mate extends Column with Mate {
   /// Column Column({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Column$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , hasDefaultValue:true, defaultValueCode:MainAxisAlignment.start
-    required MainAxisAlignment mainAxisAlignment,
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , hasDefaultValue:true, defaultValueCode:MainAxisSize.max
-    required MainAxisSize mainAxisSize,
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
+    MainAxisSize mainAxisSize = MainAxisSize.max,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , hasDefaultValue:true, defaultValueCode:CrossAxisAlignment.center
-    required CrossAxisAlignment crossAxisAlignment,
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
+    CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2196,6 +3443,8 @@ class Column$Mate extends Column with Mate {
           textBaseline: textBaseline,
           children: children,
         ) {
+    mateCreateName = 'Column';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Column$Mate(
           key: p.get('key').build(),
           mainAxisAlignment: p.get('mainAxisAlignment').build(),
@@ -2206,14 +3455,50 @@ class Column$Mate extends Column with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('mainAxisAlignment', mainAxisAlignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('textBaseline', textBaseline);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisAlignment',
+      mainAxisAlignment,
+      isNamed: true,
+      defaultValue: MainAxisAlignment.start,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+      defaultValue: MainAxisSize.max,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: CrossAxisAlignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2221,16 +3506,16 @@ class Column$Mate extends Column with Mate {
 class Flexible$Mate extends Flexible with Mate {
   /// Flexible Flexible({Key? key, int flex = 1, FlexFit fit = FlexFit.loose, required Widget child})
   Flexible$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int flex,
+    /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
+    int flex = 1,
 
-    /// optionalParameters: {FlexFit fit = FlexFit.loose} , hasDefaultValue:true, defaultValueCode:FlexFit.loose
-    required FlexFit fit,
+    /// optionalParameters: {FlexFit fit = FlexFit.loose} , default:processed=PrefixedIdentifierImpl
+    FlexFit fit = FlexFit.loose,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -2238,16 +3523,36 @@ class Flexible$Mate extends Flexible with Mate {
           fit: fit,
           child: child,
         ) {
+    mateCreateName = 'Flexible';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Flexible$Mate(
           key: p.get('key').build(),
           flex: p.get('flex').build(),
           fit: p.get('fit').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('flex', flex);
-    matePut('fit', fit);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flex',
+      flex,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+      defaultValue: FlexFit.loose,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2255,27 +3560,42 @@ class Flexible$Mate extends Flexible with Mate {
 class Expanded$Mate extends Expanded with Mate {
   /// Expanded Expanded({Key? key, int flex = 1, required Widget child})
   Expanded$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int flex,
+    /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
+    int flex = 1,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           flex: flex,
           child: child,
         ) {
+    mateCreateName = 'Expanded';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Expanded$Mate(
           key: p.get('key').build(),
           flex: p.get('flex').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('flex', flex);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flex',
+      flex,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2283,37 +3603,37 @@ class Expanded$Mate extends Expanded with Mate {
 class Wrap$Mate extends Wrap with Mate {
   /// Wrap Wrap({Key? key, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Wrap$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , hasDefaultValue:true, defaultValueCode:Axis.horizontal
-    required Axis direction,
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapAlignment.start
-    required WrapAlignment alignment,
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
+    WrapAlignment alignment = WrapAlignment.start,
 
-    /// optionalParameters: {double spacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double spacing,
+    /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
+    double spacing = 0.0,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapAlignment.start
-    required WrapAlignment runAlignment,
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
+    WrapAlignment runAlignment = WrapAlignment.start,
 
-    /// optionalParameters: {double runSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double runSpacing,
+    /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
+    double runSpacing = 0.0,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapCrossAlignment.start
-    required WrapCrossAlignment crossAxisAlignment,
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
+    WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
@@ -2328,6 +3648,8 @@ class Wrap$Mate extends Wrap with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
+    mateCreateName = 'Wrap';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Wrap$Mate(
           key: p.get('key').build(),
           direction: p.get('direction').build(),
@@ -2341,17 +3663,69 @@ class Wrap$Mate extends Wrap with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('direction', direction);
-    matePut('alignment', alignment);
-    matePut('spacing', spacing);
-    matePut('runAlignment', runAlignment);
-    matePut('runSpacing', runSpacing);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('clipBehavior', clipBehavior);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'spacing',
+      spacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'runAlignment',
+      runAlignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'runSpacing',
+      runSpacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: WrapCrossAlignment.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -2359,64 +3733,102 @@ class Wrap$Mate extends Wrap with Mate {
 class Flow$Mate extends Flow with Mate {
   /// Flow Flow({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FlowDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlowDelegate delegate} , default:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           delegate: delegate,
           children: children,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'Flow';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Flow$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('children', children);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 
   /// Flow Flow.unwrapped({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate.unwrapped({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FlowDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlowDelegate delegate} , default:none
     required FlowDelegate delegate,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.unwrapped(
           key: key,
           delegate: delegate,
           children: children,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'Flow.unwrapped';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Flow$Mate.unwrapped(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('children', children);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -2424,46 +3836,46 @@ class Flow$Mate extends Flow with Mate {
 class RichText$Mate extends RichText with Mate {
   /// RichText RichText({Key? key, required InlineSpan text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, SelectionRegistrar? selectionRegistrar, Color? selectionColor})
   RichText$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required InlineSpan text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required InlineSpan text} , default:none
     required InlineSpan text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , hasDefaultValue:true, defaultValueCode:TextAlign.start
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    TextAlign textAlign = TextAlign.start,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool softWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool softWrap,
+    /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
+    bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , hasDefaultValue:true, defaultValueCode:TextOverflow.clip
-    required TextOverflow overflow,
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
+    TextOverflow overflow = TextOverflow.clip,
 
-    /// optionalParameters: {double textScaleFactor = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double textScaleFactor,
+    /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
+    double textScaleFactor = 1.0,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , hasDefaultValue:true, defaultValueCode:TextWidthBasis.parent
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {SelectionRegistrar? selectionRegistrar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SelectionRegistrar? selectionRegistrar} , default:none
     SelectionRegistrar? selectionRegistrar,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , default:none
     Color? selectionColor,
   }) : super(
           key: key,
@@ -2481,6 +3893,8 @@ class RichText$Mate extends RichText with Mate {
           selectionRegistrar: selectionRegistrar,
           selectionColor: selectionColor,
         ) {
+    mateCreateName = 'RichText';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RichText$Mate(
           key: p.get('key').build(),
           text: p.get('text').build(),
@@ -2497,20 +3911,81 @@ class RichText$Mate extends RichText with Mate {
           selectionRegistrar: p.get('selectionRegistrar').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    matePut('key', key);
-    matePut('text', text);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('locale', locale);
-    matePut('strutStyle', strutStyle);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('selectionRegistrar', selectionRegistrar);
-    matePut('selectionColor', selectionColor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+      defaultValue: TextAlign.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+      defaultValue: TextOverflow.clip,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+      defaultValue: TextWidthBasis.parent,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionRegistrar',
+      selectionRegistrar,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -2518,56 +3993,56 @@ class RichText$Mate extends RichText with Mate {
 class RawImage$Mate extends RawImage with Mate {
   /// RawImage RawImage({Key? key, Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool invertColors = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false})
   RawImage$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Image? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Image? image} , default:none
     Image? image,
 
-    /// optionalParameters: {String? debugImageLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugImageLabel} , default:none
     String? debugImageLabel,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
+    double scale = 1.0,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {bool invertColors = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool invertColors,
+    /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
+    bool invertColors = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
+    bool isAntiAlias = false,
   }) : super(
           key: key,
           image: image,
@@ -2587,6 +4062,8 @@ class RawImage$Mate extends RawImage with Mate {
           filterQuality: filterQuality,
           isAntiAlias: isAntiAlias,
         ) {
+    mateCreateName = 'RawImage';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawImage$Mate(
           key: p.get('key').build(),
           image: p.get('image').build(),
@@ -2606,23 +4083,98 @@ class RawImage$Mate extends RawImage with Mate {
           filterQuality: p.get('filterQuality').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    matePut('key', key);
-    matePut('image', image);
-    matePut('debugImageLabel', debugImageLabel);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('scale', scale);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('invertColors', invertColors);
-    matePut('filterQuality', filterQuality);
-    matePut('isAntiAlias', isAntiAlias);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'debugImageLabel',
+      debugImageLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'invertColors',
+      invertColors,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -2630,27 +4182,41 @@ class RawImage$Mate extends RawImage with Mate {
 class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
   /// DefaultAssetBundle DefaultAssetBundle({Key? key, required AssetBundle bundle, required Widget child})
   DefaultAssetBundle$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required AssetBundle bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AssetBundle bundle} , default:none
     required AssetBundle bundle,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           bundle: bundle,
           child: child,
         ) {
+    mateCreateName = 'DefaultAssetBundle';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultAssetBundle$Mate(
           key: p.get('key').build(),
           bundle: p.get('bundle').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('bundle', bundle);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2658,27 +4224,41 @@ class DefaultAssetBundle$Mate extends DefaultAssetBundle with Mate {
 class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
   /// WidgetToRenderBoxAdapter WidgetToRenderBoxAdapter({required RenderBox renderBox, void Function()? onBuild, void Function()? onUnmount})
   WidgetToRenderBoxAdapter$Mate({
-    /// optionalParameters: {required RenderBox renderBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox renderBox} , default:none
     required RenderBox renderBox,
 
-    /// optionalParameters: {void Function()? onBuild} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onBuild} , default:none
     VoidCallback? onBuild,
 
-    /// optionalParameters: {void Function()? onUnmount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onUnmount} , default:none
     VoidCallback? onUnmount,
   }) : super(
           renderBox: renderBox,
           onBuild: onBuild,
           onUnmount: onUnmount,
         ) {
+    mateCreateName = 'WidgetToRenderBoxAdapter';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WidgetToRenderBoxAdapter$Mate(
           renderBox: p.get('renderBox').build(),
           onBuild: p.get('onBuild').build(),
           onUnmount: p.get('onUnmount').build(),
         );
-    matePut('renderBox', renderBox);
-    matePut('onBuild', onBuild);
-    matePut('onUnmount', onUnmount);
+    mateUse(
+      'renderBox',
+      renderBox,
+      isNamed: true,
+    );
+    mateUse(
+      'onBuild',
+      onBuild,
+      isNamed: true,
+    );
+    mateUse(
+      'onUnmount',
+      onUnmount,
+      isNamed: true,
+    );
   }
 }
 
@@ -2686,40 +4266,40 @@ class WidgetToRenderBoxAdapter$Mate extends WidgetToRenderBoxAdapter with Mate {
 class Listener$Mate extends Listener with Mate {
   /// Listener Listener({Key? key, void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   Listener$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , default:none
     PointerDownEventListener? onPointerDown,
 
-    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , default:none
     PointerMoveEventListener? onPointerMove,
 
-    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , default:none
     PointerUpEventListener? onPointerUp,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , default:none
     PointerHoverEventListener? onPointerHover,
 
-    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , default:none
     PointerCancelEventListener? onPointerCancel,
 
-    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , default:none
     PointerPanZoomStartEventListener? onPointerPanZoomStart,
 
-    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , default:none
     PointerPanZoomUpdateEventListener? onPointerPanZoomUpdate,
 
-    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , default:none
     PointerPanZoomEndEventListener? onPointerPanZoomEnd,
 
-    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , default:none
     PointerSignalEventListener? onPointerSignal,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , hasDefaultValue:true, defaultValueCode:HitTestBehavior.deferToChild
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
+    HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -2735,6 +4315,8 @@ class Listener$Mate extends Listener with Mate {
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'Listener';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Listener$Mate(
           key: p.get('key').build(),
           onPointerDown: p.get('onPointerDown').build(),
@@ -2749,18 +4331,67 @@ class Listener$Mate extends Listener with Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onPointerDown', onPointerDown);
-    matePut('onPointerMove', onPointerMove);
-    matePut('onPointerUp', onPointerUp);
-    matePut('onPointerHover', onPointerHover);
-    matePut('onPointerCancel', onPointerCancel);
-    matePut('onPointerPanZoomStart', onPointerPanZoomStart);
-    matePut('onPointerPanZoomUpdate', onPointerPanZoomUpdate);
-    matePut('onPointerPanZoomEnd', onPointerPanZoomEnd);
-    matePut('onPointerSignal', onPointerSignal);
-    matePut('behavior', behavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerDown',
+      onPointerDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerMove',
+      onPointerMove,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerUp',
+      onPointerUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerHover',
+      onPointerHover,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerCancel',
+      onPointerCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomStart',
+      onPointerPanZoomStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomUpdate',
+      onPointerPanZoomUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerPanZoomEnd',
+      onPointerPanZoomEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onPointerSignal',
+      onPointerSignal,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2768,28 +4399,28 @@ class Listener$Mate extends Listener with Mate {
 class MouseRegion$Mate extends MouseRegion with Mate {
   /// MouseRegion MouseRegion({Key? key, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, void Function(PointerHoverEvent)? onHover, MouseCursor cursor = MouseCursor.defer, bool opaque = true, HitTestBehavior? hitTestBehavior, Widget? child})
   MouseRegion$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , default:none
     PointerHoverEventListener? onHover,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , hasDefaultValue:true, defaultValueCode:MouseCursor.defer
-    required MouseCursor cursor,
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
+    MouseCursor cursor = MouseCursor.defer,
 
-    /// optionalParameters: {bool opaque = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool opaque,
+    /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
+    bool opaque = true,
 
-    /// optionalParameters: {HitTestBehavior? hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {HitTestBehavior? hitTestBehavior} , default:none
     HitTestBehavior? hitTestBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -2801,6 +4432,8 @@ class MouseRegion$Mate extends MouseRegion with Mate {
           hitTestBehavior: hitTestBehavior,
           child: child,
         ) {
+    mateCreateName = 'MouseRegion';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MouseRegion$Mate(
           key: p.get('key').build(),
           onEnter: p.get('onEnter').build(),
@@ -2811,14 +4444,48 @@ class MouseRegion$Mate extends MouseRegion with Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('onEnter', onEnter);
-    matePut('onExit', onExit);
-    matePut('onHover', onHover);
-    matePut('cursor', cursor);
-    matePut('opaque', opaque);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnter',
+      onEnter,
+      isNamed: true,
+    );
+    mateUse(
+      'onExit',
+      onExit,
+      isNamed: true,
+    );
+    mateUse(
+      'onHover',
+      onHover,
+      isNamed: true,
+    );
+    mateUse(
+      'cursor',
+      cursor,
+      isNamed: true,
+      defaultValue: MouseCursor.defer,
+    );
+    mateUse(
+      'opaque',
+      opaque,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2826,21 +4493,31 @@ class MouseRegion$Mate extends MouseRegion with Mate {
 class RepaintBoundary$Mate extends RepaintBoundary with Mate {
   /// RepaintBoundary RepaintBoundary({Key? key, Widget? child})
   RepaintBoundary$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'RepaintBoundary';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RepaintBoundary$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2848,16 +4525,16 @@ class RepaintBoundary$Mate extends RepaintBoundary with Mate {
 class IgnorePointer$Mate extends IgnorePointer with Mate {
   /// IgnorePointer IgnorePointer({Key? key, bool ignoring = true, bool? ignoringSemantics, Widget? child})
   IgnorePointer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool ignoring = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool ignoring,
+    /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
+    bool ignoring = true,
 
-    /// optionalParameters: {bool? ignoringSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? ignoringSemantics} , default:none
     bool? ignoringSemantics,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -2865,16 +4542,35 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
           ignoringSemantics: ignoringSemantics,
           child: child,
         ) {
+    mateCreateName = 'IgnorePointer';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IgnorePointer$Mate(
           key: p.get('key').build(),
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('ignoring', ignoring);
-    matePut('ignoringSemantics', ignoringSemantics);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'ignoring',
+      ignoring,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ignoringSemantics',
+      ignoringSemantics,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2882,16 +4578,16 @@ class IgnorePointer$Mate extends IgnorePointer with Mate {
 class AbsorbPointer$Mate extends AbsorbPointer with Mate {
   /// AbsorbPointer AbsorbPointer({Key? key, bool absorbing = true, Widget? child, bool? ignoringSemantics})
   AbsorbPointer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool absorbing = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool absorbing,
+    /// optionalParameters: {bool absorbing = true} , default:processed=BooleanLiteralImpl
+    bool absorbing = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool? ignoringSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? ignoringSemantics} , default:none
     bool? ignoringSemantics,
   }) : super(
           key: key,
@@ -2899,16 +4595,35 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
           child: child,
           ignoringSemantics: ignoringSemantics,
         ) {
+    mateCreateName = 'AbsorbPointer';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AbsorbPointer$Mate(
           key: p.get('key').build(),
           absorbing: p.get('absorbing').build(),
           child: p.get('child').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    matePut('key', key);
-    matePut('absorbing', absorbing);
-    matePut('child', child);
-    matePut('ignoringSemantics', ignoringSemantics);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'absorbing',
+      absorbing,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'ignoringSemantics',
+      ignoringSemantics,
+      isNamed: true,
+    );
   }
 }
 
@@ -2916,16 +4631,16 @@ class AbsorbPointer$Mate extends AbsorbPointer with Mate {
 class MetaData$Mate extends MetaData with Mate {
   /// MetaData MetaData({Key? key, dynamic metaData, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   MetaData$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {dynamic metaData} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic metaData,
+    /// optionalParameters: {dynamic metaData} , default:none
+    dynamic metaData,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , hasDefaultValue:true, defaultValueCode:HitTestBehavior.deferToChild
-    required HitTestBehavior behavior,
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
+    HitTestBehavior behavior = HitTestBehavior.deferToChild,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -2933,16 +4648,35 @@ class MetaData$Mate extends MetaData with Mate {
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'MetaData';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MetaData$Mate(
           key: p.get('key').build(),
           metaData: p.get('metaData').build(),
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('metaData', metaData);
-    matePut('behavior', behavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'metaData',
+      metaData,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+      defaultValue: HitTestBehavior.deferToChild,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -2950,196 +4684,196 @@ class MetaData$Mate extends MetaData with Mate {
 class Semantics$Mate extends Semantics with Mate {
   /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool container = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool container,
+    /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
+    bool container = false,
 
-    /// optionalParameters: {bool explicitChildNodes = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool explicitChildNodes,
+    /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
+    bool explicitChildNodes = false,
 
-    /// optionalParameters: {bool excludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeSemantics,
+    /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeSemantics = false,
 
-    /// optionalParameters: {bool? enabled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enabled} , default:none
     bool? enabled,
 
-    /// optionalParameters: {bool? checked} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? checked} , default:none
     bool? checked,
 
-    /// optionalParameters: {bool? mixed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? mixed} , default:none
     bool? mixed,
 
-    /// optionalParameters: {bool? selected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? selected} , default:none
     bool? selected,
 
-    /// optionalParameters: {bool? toggled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? toggled} , default:none
     bool? toggled,
 
-    /// optionalParameters: {bool? button} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? button} , default:none
     bool? button,
 
-    /// optionalParameters: {bool? slider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? slider} , default:none
     bool? slider,
 
-    /// optionalParameters: {bool? keyboardKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? keyboardKey} , default:none
     bool? keyboardKey,
 
-    /// optionalParameters: {bool? link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? link} , default:none
     bool? link,
 
-    /// optionalParameters: {bool? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? header} , default:none
     bool? header,
 
-    /// optionalParameters: {bool? textField} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? textField} , default:none
     bool? textField,
 
-    /// optionalParameters: {bool? readOnly} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? readOnly} , default:none
     bool? readOnly,
 
-    /// optionalParameters: {bool? focusable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? focusable} , default:none
     bool? focusable,
 
-    /// optionalParameters: {bool? focused} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? focused} , default:none
     bool? focused,
 
-    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? inMutuallyExclusiveGroup} , default:none
     bool? inMutuallyExclusiveGroup,
 
-    /// optionalParameters: {bool? obscured} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? obscured} , default:none
     bool? obscured,
 
-    /// optionalParameters: {bool? multiline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? multiline} , default:none
     bool? multiline,
 
-    /// optionalParameters: {bool? scopesRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? scopesRoute} , default:none
     bool? scopesRoute,
 
-    /// optionalParameters: {bool? namesRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? namesRoute} , default:none
     bool? namesRoute,
 
-    /// optionalParameters: {bool? hidden} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? hidden} , default:none
     bool? hidden,
 
-    /// optionalParameters: {bool? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? image} , default:none
     bool? image,
 
-    /// optionalParameters: {bool? liveRegion} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? liveRegion} , default:none
     bool? liveRegion,
 
-    /// optionalParameters: {int? maxValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxValueLength} , default:none
     int? maxValueLength,
 
-    /// optionalParameters: {int? currentValueLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? currentValueLength} , default:none
     int? currentValueLength,
 
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , default:none
     String? label,
 
-    /// optionalParameters: {AttributedString? attributedLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedLabel} , default:none
     AttributedString? attributedLabel,
 
-    /// optionalParameters: {String? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? value} , default:none
     String? value,
 
-    /// optionalParameters: {AttributedString? attributedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedValue} , default:none
     AttributedString? attributedValue,
 
-    /// optionalParameters: {String? increasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? increasedValue} , default:none
     String? increasedValue,
 
-    /// optionalParameters: {AttributedString? attributedIncreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedIncreasedValue} , default:none
     AttributedString? attributedIncreasedValue,
 
-    /// optionalParameters: {String? decreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? decreasedValue} , default:none
     String? decreasedValue,
 
-    /// optionalParameters: {AttributedString? attributedDecreasedValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedDecreasedValue} , default:none
     AttributedString? attributedDecreasedValue,
 
-    /// optionalParameters: {String? hint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? hint} , default:none
     String? hint,
 
-    /// optionalParameters: {AttributedString? attributedHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AttributedString? attributedHint} , default:none
     AttributedString? attributedHint,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {String? onTapHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? onTapHint} , default:none
     String? onTapHint,
 
-    /// optionalParameters: {String? onLongPressHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? onLongPressHint} , default:none
     String? onLongPressHint,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {SemanticsSortKey? sortKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SemanticsSortKey? sortKey} , default:none
     SemanticsSortKey? sortKey,
 
-    /// optionalParameters: {SemanticsTag? tagForChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SemanticsTag? tagForChildren} , default:none
     SemanticsTag? tagForChildren,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , default:none
     VoidCallback? onTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function()? onScrollLeft} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollLeft} , default:none
     VoidCallback? onScrollLeft,
 
-    /// optionalParameters: {void Function()? onScrollRight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollRight} , default:none
     VoidCallback? onScrollRight,
 
-    /// optionalParameters: {void Function()? onScrollUp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollUp} , default:none
     VoidCallback? onScrollUp,
 
-    /// optionalParameters: {void Function()? onScrollDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollDown} , default:none
     VoidCallback? onScrollDown,
 
-    /// optionalParameters: {void Function()? onIncrease} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onIncrease} , default:none
     VoidCallback? onIncrease,
 
-    /// optionalParameters: {void Function()? onDecrease} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDecrease} , default:none
     VoidCallback? onDecrease,
 
-    /// optionalParameters: {void Function()? onCopy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onCopy} , default:none
     VoidCallback? onCopy,
 
-    /// optionalParameters: {void Function()? onCut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onCut} , default:none
     VoidCallback? onCut,
 
-    /// optionalParameters: {void Function()? onPaste} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPaste} , default:none
     VoidCallback? onPaste,
 
-    /// optionalParameters: {void Function()? onDismiss} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDismiss} , default:none
     VoidCallback? onDismiss,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , default:none
     MoveCursorHandler? onMoveCursorForwardByCharacter,
 
-    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , default:none
     MoveCursorHandler? onMoveCursorBackwardByCharacter,
 
-    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TextSelection)? onSetSelection} , default:none
     SetSelectionHandler? onSetSelection,
 
-    /// optionalParameters: {void Function(String)? onSetText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(String)? onSetText} , default:none
     SetTextHandler? onSetText,
 
-    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , default:none
     VoidCallback? onDidGainAccessibilityFocus,
 
-    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , default:none
     VoidCallback? onDidLoseAccessibilityFocus,
 
-    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , default:none
     Map<CustomSemanticsAction, VoidCallback>? customSemanticsActions,
   }) : super(
           key: key,
@@ -3207,6 +4941,8 @@ class Semantics$Mate extends Semantics with Mate {
           onDidLoseAccessibilityFocus: onDidLoseAccessibilityFocus,
           customSemanticsActions: customSemanticsActions,
         ) {
+    mateCreateName = 'Semantics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Semantics$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -3273,90 +5009,349 @@ class Semantics$Mate extends Semantics with Mate {
           onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('container', container);
-    matePut('explicitChildNodes', explicitChildNodes);
-    matePut('excludeSemantics', excludeSemantics);
-    matePut('enabled', enabled);
-    matePut('checked', checked);
-    matePut('mixed', mixed);
-    matePut('selected', selected);
-    matePut('toggled', toggled);
-    matePut('button', button);
-    matePut('slider', slider);
-    matePut('keyboardKey', keyboardKey);
-    matePut('link', link);
-    matePut('header', header);
-    matePut('textField', textField);
-    matePut('readOnly', readOnly);
-    matePut('focusable', focusable);
-    matePut('focused', focused);
-    matePut('inMutuallyExclusiveGroup', inMutuallyExclusiveGroup);
-    matePut('obscured', obscured);
-    matePut('multiline', multiline);
-    matePut('scopesRoute', scopesRoute);
-    matePut('namesRoute', namesRoute);
-    matePut('hidden', hidden);
-    matePut('image', image);
-    matePut('liveRegion', liveRegion);
-    matePut('maxValueLength', maxValueLength);
-    matePut('currentValueLength', currentValueLength);
-    matePut('label', label);
-    matePut('attributedLabel', attributedLabel);
-    matePut('value', value);
-    matePut('attributedValue', attributedValue);
-    matePut('increasedValue', increasedValue);
-    matePut('attributedIncreasedValue', attributedIncreasedValue);
-    matePut('decreasedValue', decreasedValue);
-    matePut('attributedDecreasedValue', attributedDecreasedValue);
-    matePut('hint', hint);
-    matePut('attributedHint', attributedHint);
-    matePut('tooltip', tooltip);
-    matePut('onTapHint', onTapHint);
-    matePut('onLongPressHint', onLongPressHint);
-    matePut('textDirection', textDirection);
-    matePut('sortKey', sortKey);
-    matePut('tagForChildren', tagForChildren);
-    matePut('onTap', onTap);
-    matePut('onLongPress', onLongPress);
-    matePut('onScrollLeft', onScrollLeft);
-    matePut('onScrollRight', onScrollRight);
-    matePut('onScrollUp', onScrollUp);
-    matePut('onScrollDown', onScrollDown);
-    matePut('onIncrease', onIncrease);
-    matePut('onDecrease', onDecrease);
-    matePut('onCopy', onCopy);
-    matePut('onCut', onCut);
-    matePut('onPaste', onPaste);
-    matePut('onDismiss', onDismiss);
-    matePut('onMoveCursorForwardByCharacter', onMoveCursorForwardByCharacter);
-    matePut('onMoveCursorBackwardByCharacter', onMoveCursorBackwardByCharacter);
-    matePut('onSetSelection', onSetSelection);
-    matePut('onSetText', onSetText);
-    matePut('onDidGainAccessibilityFocus', onDidGainAccessibilityFocus);
-    matePut('onDidLoseAccessibilityFocus', onDidLoseAccessibilityFocus);
-    matePut('customSemanticsActions', customSemanticsActions);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'container',
+      container,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'explicitChildNodes',
+      explicitChildNodes,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'excludeSemantics',
+      excludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+    );
+    mateUse(
+      'checked',
+      checked,
+      isNamed: true,
+    );
+    mateUse(
+      'mixed',
+      mixed,
+      isNamed: true,
+    );
+    mateUse(
+      'selected',
+      selected,
+      isNamed: true,
+    );
+    mateUse(
+      'toggled',
+      toggled,
+      isNamed: true,
+    );
+    mateUse(
+      'button',
+      button,
+      isNamed: true,
+    );
+    mateUse(
+      'slider',
+      slider,
+      isNamed: true,
+    );
+    mateUse(
+      'keyboardKey',
+      keyboardKey,
+      isNamed: true,
+    );
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'header',
+      header,
+      isNamed: true,
+    );
+    mateUse(
+      'textField',
+      textField,
+      isNamed: true,
+    );
+    mateUse(
+      'readOnly',
+      readOnly,
+      isNamed: true,
+    );
+    mateUse(
+      'focusable',
+      focusable,
+      isNamed: true,
+    );
+    mateUse(
+      'focused',
+      focused,
+      isNamed: true,
+    );
+    mateUse(
+      'inMutuallyExclusiveGroup',
+      inMutuallyExclusiveGroup,
+      isNamed: true,
+    );
+    mateUse(
+      'obscured',
+      obscured,
+      isNamed: true,
+    );
+    mateUse(
+      'multiline',
+      multiline,
+      isNamed: true,
+    );
+    mateUse(
+      'scopesRoute',
+      scopesRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'namesRoute',
+      namesRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'hidden',
+      hidden,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'liveRegion',
+      liveRegion,
+      isNamed: true,
+    );
+    mateUse(
+      'maxValueLength',
+      maxValueLength,
+      isNamed: true,
+    );
+    mateUse(
+      'currentValueLength',
+      currentValueLength,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedLabel',
+      attributedLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedValue',
+      attributedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'increasedValue',
+      increasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedIncreasedValue',
+      attributedIncreasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'decreasedValue',
+      decreasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedDecreasedValue',
+      attributedDecreasedValue,
+      isNamed: true,
+    );
+    mateUse(
+      'hint',
+      hint,
+      isNamed: true,
+    );
+    mateUse(
+      'attributedHint',
+      attributedHint,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapHint',
+      onTapHint,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPressHint',
+      onLongPressHint,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'sortKey',
+      sortKey,
+      isNamed: true,
+    );
+    mateUse(
+      'tagForChildren',
+      tagForChildren,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollLeft',
+      onScrollLeft,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollRight',
+      onScrollRight,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollUp',
+      onScrollUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onScrollDown',
+      onScrollDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onIncrease',
+      onIncrease,
+      isNamed: true,
+    );
+    mateUse(
+      'onDecrease',
+      onDecrease,
+      isNamed: true,
+    );
+    mateUse(
+      'onCopy',
+      onCopy,
+      isNamed: true,
+    );
+    mateUse(
+      'onCut',
+      onCut,
+      isNamed: true,
+    );
+    mateUse(
+      'onPaste',
+      onPaste,
+      isNamed: true,
+    );
+    mateUse(
+      'onDismiss',
+      onDismiss,
+      isNamed: true,
+    );
+    mateUse(
+      'onMoveCursorForwardByCharacter',
+      onMoveCursorForwardByCharacter,
+      isNamed: true,
+    );
+    mateUse(
+      'onMoveCursorBackwardByCharacter',
+      onMoveCursorBackwardByCharacter,
+      isNamed: true,
+    );
+    mateUse(
+      'onSetSelection',
+      onSetSelection,
+      isNamed: true,
+    );
+    mateUse(
+      'onSetText',
+      onSetText,
+      isNamed: true,
+    );
+    mateUse(
+      'onDidGainAccessibilityFocus',
+      onDidGainAccessibilityFocus,
+      isNamed: true,
+    );
+    mateUse(
+      'onDidLoseAccessibilityFocus',
+      onDidLoseAccessibilityFocus,
+      isNamed: true,
+    );
+    mateUse(
+      'customSemanticsActions',
+      customSemanticsActions,
+      isNamed: true,
+    );
   }
 
   /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, required SemanticsProperties properties})
   Semantics$Mate.fromProperties({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool container = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool container,
+    /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
+    bool container = false,
 
-    /// optionalParameters: {bool explicitChildNodes = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool explicitChildNodes,
+    /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
+    bool explicitChildNodes = false,
 
-    /// optionalParameters: {bool excludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeSemantics,
+    /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeSemantics = false,
 
-    /// optionalParameters: {required SemanticsProperties properties} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SemanticsProperties properties} , default:none
     required SemanticsProperties properties,
   }) : super.fromProperties(
           key: key,
@@ -3366,6 +5361,8 @@ class Semantics$Mate extends Semantics with Mate {
           excludeSemantics: excludeSemantics,
           properties: properties,
         ) {
+    mateCreateName = 'Semantics.fromProperties';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Semantics$Mate.fromProperties(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -3374,12 +5371,39 @@ class Semantics$Mate extends Semantics with Mate {
           excludeSemantics: p.get('excludeSemantics').build(),
           properties: p.get('properties').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('container', container);
-    matePut('explicitChildNodes', explicitChildNodes);
-    matePut('excludeSemantics', excludeSemantics);
-    matePut('properties', properties);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'container',
+      container,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'explicitChildNodes',
+      explicitChildNodes,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'excludeSemantics',
+      excludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'properties',
+      properties,
+      isNamed: true,
+    );
   }
 }
 
@@ -3387,21 +5411,31 @@ class Semantics$Mate extends Semantics with Mate {
 class MergeSemantics$Mate extends MergeSemantics with Mate {
   /// MergeSemantics MergeSemantics({Key? key, Widget? child})
   MergeSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'MergeSemantics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MergeSemantics$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3409,27 +5443,42 @@ class MergeSemantics$Mate extends MergeSemantics with Mate {
 class BlockSemantics$Mate extends BlockSemantics with Mate {
   /// BlockSemantics BlockSemantics({Key? key, bool blocking = true, Widget? child})
   BlockSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool blocking = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool blocking,
+    /// optionalParameters: {bool blocking = true} , default:processed=BooleanLiteralImpl
+    bool blocking = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           blocking: blocking,
           child: child,
         ) {
+    mateCreateName = 'BlockSemantics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BlockSemantics$Mate(
           key: p.get('key').build(),
           blocking: p.get('blocking').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('blocking', blocking);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'blocking',
+      blocking,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3437,27 +5486,42 @@ class BlockSemantics$Mate extends BlockSemantics with Mate {
 class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
   /// ExcludeSemantics ExcludeSemantics({Key? key, bool excluding = true, Widget? child})
   ExcludeSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool excluding = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool excluding,
+    /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
+    bool excluding = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           excluding: excluding,
           child: child,
         ) {
+    mateCreateName = 'ExcludeSemantics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExcludeSemantics$Mate(
           key: p.get('key').build(),
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('excluding', excluding);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'excluding',
+      excluding,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3465,27 +5529,41 @@ class ExcludeSemantics$Mate extends ExcludeSemantics with Mate {
 class IndexedSemantics$Mate extends IndexedSemantics with Mate {
   /// IndexedSemantics IndexedSemantics({Key? key, required int index, Widget? child})
   IndexedSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required int index} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int index} , default:none
     required int index,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
           index: index,
           child: child,
         ) {
+    mateCreateName = 'IndexedSemantics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IndexedSemantics$Mate(
           key: p.get('key').build(),
           index: p.get('index').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('index', index);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'index',
+      index,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3493,21 +5571,31 @@ class IndexedSemantics$Mate extends IndexedSemantics with Mate {
 class KeyedSubtree$Mate extends KeyedSubtree with Mate {
   /// KeyedSubtree KeyedSubtree({Key? key, required Widget child})
   KeyedSubtree$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'KeyedSubtree';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeyedSubtree$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -3515,21 +5603,31 @@ class KeyedSubtree$Mate extends KeyedSubtree with Mate {
 class Builder$Mate extends Builder with Mate {
   /// Builder Builder({Key? key, required Widget Function(BuildContext) builder})
   Builder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required WidgetBuilder builder,
   }) : super(
           key: key,
           builder: builder,
         ) {
+    mateCreateName = 'Builder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Builder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -3537,21 +5635,31 @@ class Builder$Mate extends Builder with Mate {
 class StatefulBuilder$Mate extends StatefulBuilder with Mate {
   /// StatefulBuilder StatefulBuilder({Key? key, required Widget Function(BuildContext, void Function(void Function())) builder})
   StatefulBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, void Function(void Function())) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, void Function(void Function())) builder} , default:none
     required StatefulWidgetBuilder builder,
   }) : super(
           key: key,
           builder: builder,
         ) {
+    mateCreateName = 'StatefulBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => StatefulBuilder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('builder', builder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -3559,26 +5667,40 @@ class StatefulBuilder$Mate extends StatefulBuilder with Mate {
 class ColoredBox$Mate extends ColoredBox with Mate {
   /// ColoredBox ColoredBox({required Color color, Widget? child, Key? key})
   ColoredBox$Mate({
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
   }) : super(
           color: color,
           child: child,
           key: key,
         ) {
+    mateCreateName = 'ColoredBox';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ColoredBox$Mate(
           color: p.get('color').build(),
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    matePut('color', color);
-    matePut('child', child);
-    matePut('key', key);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }

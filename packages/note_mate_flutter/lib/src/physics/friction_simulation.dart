@@ -4,6 +4,7 @@ import 'package:flutter/src/physics/friction_simulation.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/physics/tolerance.dart';
+import 'package:flutter/physics.dart';
 
 /// class FrictionSimulation extends Simulation
 class FrictionSimulation$Mate extends FrictionSimulation with Mate {
@@ -17,11 +18,11 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , hasDefaultValue:true, defaultValueCode:Tolerance.defaultTolerance
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
+    Tolerance tolerance = Tolerance.defaultTolerance,
 
-    /// optionalParameters: {double constantDeceleration = 0} , hasDefaultValue:true, defaultValueCode:0
-    required double constantDeceleration,
+    /// optionalParameters: {double constantDeceleration = 0} , default:processed=IntegerLiteralImpl
+    double constantDeceleration = 0,
   }) : super(
           drag,
           position,
@@ -29,6 +30,8 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
           tolerance: tolerance,
           constantDeceleration: constantDeceleration,
         ) {
+    mateCreateName = 'FrictionSimulation';
+    matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => FrictionSimulation$Mate(
           p.get('drag').value,
           p.get('position').value,
@@ -36,11 +39,33 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
           tolerance: p.get('tolerance').build(),
           constantDeceleration: p.get('constantDeceleration').build(),
         );
-    matePut('drag', drag);
-    matePut('position', position);
-    matePut('velocity', velocity);
-    matePut('tolerance', tolerance);
-    matePut('constantDeceleration', constantDeceleration);
+    mateUse(
+      'drag',
+      drag,
+      isNamed: false,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
+    mateUse(
+      'constantDeceleration',
+      constantDeceleration,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -69,6 +94,8 @@ class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation with Mate
           _minX,
           _maxX,
         ) {
+    mateCreateName = 'BoundedFrictionSimulation';
+    matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => BoundedFrictionSimulation$Mate(
           p.get('drag').value,
           p.get('position').value,
@@ -76,10 +103,30 @@ class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation with Mate
           p.get('_minX').value,
           p.get('_maxX').value,
         );
-    matePut('drag', drag);
-    matePut('position', position);
-    matePut('velocity', velocity);
-    matePut('_minX', _minX);
-    matePut('_maxX', _maxX);
+    mateUse(
+      'drag',
+      drag,
+      isNamed: false,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      '_minX',
+      _minX,
+      isNamed: false,
+    );
+    mateUse(
+      '_maxX',
+      _maxX,
+      isNamed: false,
+    );
   }
 }

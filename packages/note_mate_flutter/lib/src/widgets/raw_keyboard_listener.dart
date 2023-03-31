@@ -13,22 +13,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
   /// RawKeyboardListener RawKeyboardListener({Key? key, required FocusNode focusNode, bool autofocus = false, bool includeSemantics = true, void Function(RawKeyEvent)? onKey, required Widget child})
   RawKeyboardListener$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FocusNode focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FocusNode focusNode} , default:none
     required FocusNode focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {bool includeSemantics = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool includeSemantics,
+    /// optionalParameters: {bool includeSemantics = true} , default:processed=BooleanLiteralImpl
+    bool includeSemantics = true,
 
-    /// optionalParameters: {void Function(RawKeyEvent)? onKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(RawKeyEvent)? onKey} , default:none
     ValueChanged<RawKeyEvent>? onKey,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -38,6 +38,8 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
           onKey: onKey,
           child: child,
         ) {
+    mateCreateName = 'RawKeyboardListener';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawKeyboardListener$Mate(
           key: p.get('key').build(),
           focusNode: p.get('focusNode').build(),
@@ -46,11 +48,37 @@ class RawKeyboardListener$Mate extends RawKeyboardListener with Mate {
           onKey: p.get('onKey').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('includeSemantics', includeSemantics);
-    matePut('onKey', onKey);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'includeSemantics',
+      includeSemantics,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onKey',
+      onKey,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

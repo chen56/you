@@ -6,34 +6,36 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
+import 'package:flutter/widgets.dart';
 
 /// class AnimatedSwitcher extends StatefulWidget
 class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
   /// AnimatedSwitcher AnimatedSwitcher({Key? key, Widget? child, required Duration duration, Duration? reverseDuration, Curve switchInCurve = Curves.linear, Curve switchOutCurve = Curves.linear, Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder, Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder})
   AnimatedSwitcher$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {Duration? reverseDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? reverseDuration} , default:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Curve switchInCurve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
-    required Curve switchInCurve,
+    /// optionalParameters: {Curve switchInCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    Curve switchInCurve = Curves.linear,
 
-    /// optionalParameters: {Curve switchOutCurve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
-    required Curve switchOutCurve,
+    /// optionalParameters: {Curve switchOutCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    Curve switchOutCurve = Curves.linear,
 
-    /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , hasDefaultValue:true, defaultValueCode:AnimatedSwitcher.defaultTransitionBuilder
-    required AnimatedSwitcherTransitionBuilder transitionBuilder,
+    /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , default:processed=PrefixedIdentifierImpl
+    AnimatedSwitcherTransitionBuilder transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder,
 
-    /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , hasDefaultValue:true, defaultValueCode:AnimatedSwitcher.defaultLayoutBuilder
-    required AnimatedSwitcherLayoutBuilder layoutBuilder,
+    /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , default:processed=PrefixedIdentifierImpl
+    AnimatedSwitcherLayoutBuilder layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder,
   }) : super(
           key: key,
           child: child,
@@ -44,6 +46,8 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
           transitionBuilder: transitionBuilder,
           layoutBuilder: layoutBuilder,
         ) {
+    mateCreateName = 'AnimatedSwitcher';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedSwitcher$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -54,13 +58,49 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
           transitionBuilder: p.get('transitionBuilder').build(),
           layoutBuilder: p.get('layoutBuilder').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('duration', duration);
-    matePut('reverseDuration', reverseDuration);
-    matePut('switchInCurve', switchInCurve);
-    matePut('switchOutCurve', switchOutCurve);
-    matePut('transitionBuilder', transitionBuilder);
-    matePut('layoutBuilder', layoutBuilder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseDuration',
+      reverseDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'switchInCurve',
+      switchInCurve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'switchOutCurve',
+      switchOutCurve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'transitionBuilder',
+      transitionBuilder,
+      isNamed: true,
+      defaultValue: AnimatedSwitcher.defaultTransitionBuilder,
+    );
+    mateUse(
+      'layoutBuilder',
+      layoutBuilder,
+      isNamed: true,
+      defaultValue: AnimatedSwitcher.defaultLayoutBuilder,
+    );
   }
 }

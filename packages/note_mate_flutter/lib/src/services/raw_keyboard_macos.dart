@@ -8,19 +8,19 @@ import 'dart:core';
 class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate {
   /// RawKeyEventDataMacOs RawKeyEventDataMacOs({String characters = '', String charactersIgnoringModifiers = '', int keyCode = 0, int modifiers = 0, int? specifiedLogicalKey})
   RawKeyEventDataMacOs$Mate({
-    /// optionalParameters: {String characters = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String characters,
+    /// optionalParameters: {String characters = ''} , default:processed=SimpleStringLiteralImpl
+    String characters = '',
 
-    /// optionalParameters: {String charactersIgnoringModifiers = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String charactersIgnoringModifiers,
+    /// optionalParameters: {String charactersIgnoringModifiers = ''} , default:processed=SimpleStringLiteralImpl
+    String charactersIgnoringModifiers = '',
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
+    int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
+    int modifiers = 0,
 
-    /// optionalParameters: {int? specifiedLogicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? specifiedLogicalKey} , default:none
     int? specifiedLogicalKey,
   }) : super(
           characters: characters,
@@ -29,6 +29,8 @@ class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate {
           modifiers: modifiers,
           specifiedLogicalKey: specifiedLogicalKey,
         ) {
+    mateCreateName = 'RawKeyEventDataMacOs';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataMacOs$Mate(
           characters: p.get('characters').build(),
           charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').build(),
@@ -36,10 +38,34 @@ class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate {
           modifiers: p.get('modifiers').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    matePut('characters', characters);
-    matePut('charactersIgnoringModifiers', charactersIgnoringModifiers);
-    matePut('keyCode', keyCode);
-    matePut('modifiers', modifiers);
-    matePut('specifiedLogicalKey', specifiedLogicalKey);
+    mateUse(
+      'characters',
+      characters,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'charactersIgnoringModifiers',
+      charactersIgnoringModifiers,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'keyCode',
+      keyCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'modifiers',
+      modifiers,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'specifiedLogicalKey',
+      specifiedLogicalKey,
+      isNamed: true,
+    );
   }
 }

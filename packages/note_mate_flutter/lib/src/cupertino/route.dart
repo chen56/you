@@ -14,23 +14,23 @@ import 'package:flutter/src/widgets/routes.dart';
 class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
   /// CupertinoPageRoute<T> CupertinoPageRoute({required Widget Function(BuildContext) builder, String? title, RouteSettings? settings, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true})
   CupertinoPageRoute$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required WidgetBuilder builder,
 
-    /// optionalParameters: {String? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? title} , default:none
     String? title,
 
-    /// optionalParameters: {RouteSettings? settings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteSettings? settings} , default:none
     RouteSettings? settings,
 
-    /// optionalParameters: {bool maintainState = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool maintainState,
+    /// optionalParameters: {bool maintainState = true} , default:processed=BooleanLiteralImpl
+    bool maintainState = true,
 
-    /// optionalParameters: {bool fullscreenDialog = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool fullscreenDialog,
+    /// optionalParameters: {bool fullscreenDialog = false} , default:processed=BooleanLiteralImpl
+    bool fullscreenDialog = false,
 
-    /// optionalParameters: {bool allowSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowSnapshotting,
+    /// optionalParameters: {bool allowSnapshotting = true} , default:processed=BooleanLiteralImpl
+    bool allowSnapshotting = true,
   }) : super(
           builder: builder,
           title: title,
@@ -39,6 +39,8 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
+    mateCreateName = 'CupertinoPageRoute';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageRoute$Mate<T>(
           builder: p.get('builder').build(),
           title: p.get('title').build(),
@@ -47,12 +49,39 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    matePut('builder', builder);
-    matePut('title', title);
-    matePut('settings', settings);
-    matePut('maintainState', maintainState);
-    matePut('fullscreenDialog', fullscreenDialog);
-    matePut('allowSnapshotting', allowSnapshotting);
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'settings',
+      settings,
+      isNamed: true,
+    );
+    mateUse(
+      'maintainState',
+      maintainState,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'fullscreenDialog',
+      fullscreenDialog,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'allowSnapshotting',
+      allowSnapshotting,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -60,31 +89,31 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
 class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
   /// CupertinoPage<T> CupertinoPage({required Widget child, bool maintainState = true, String? title, bool fullscreenDialog = false, bool allowSnapshotting = true, LocalKey? key, String? name, Object? arguments, String? restorationId})
   CupertinoPage$Mate({
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {bool maintainState = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool maintainState,
+    /// optionalParameters: {bool maintainState = true} , default:processed=BooleanLiteralImpl
+    bool maintainState = true,
 
-    /// optionalParameters: {String? title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? title} , default:none
     String? title,
 
-    /// optionalParameters: {bool fullscreenDialog = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool fullscreenDialog,
+    /// optionalParameters: {bool fullscreenDialog = false} , default:processed=BooleanLiteralImpl
+    bool fullscreenDialog = false,
 
-    /// optionalParameters: {bool allowSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowSnapshotting,
+    /// optionalParameters: {bool allowSnapshotting = true} , default:processed=BooleanLiteralImpl
+    bool allowSnapshotting = true,
 
-    /// optionalParameters: {LocalKey? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LocalKey? key} , default:none
     LocalKey? key,
 
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {Object? arguments} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? arguments} , default:none
     Object? arguments,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
   }) : super(
           child: child,
@@ -97,6 +126,8 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
           arguments: arguments,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'CupertinoPage';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPage$Mate<T>(
           child: p.get('child').build(),
           maintainState: p.get('maintainState').build(),
@@ -108,15 +139,54 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
           arguments: p.get('arguments').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('child', child);
-    matePut('maintainState', maintainState);
-    matePut('title', title);
-    matePut('fullscreenDialog', fullscreenDialog);
-    matePut('allowSnapshotting', allowSnapshotting);
-    matePut('key', key);
-    matePut('name', name);
-    matePut('arguments', arguments);
-    matePut('restorationId', restorationId);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'maintainState',
+      maintainState,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'fullscreenDialog',
+      fullscreenDialog,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'allowSnapshotting',
+      allowSnapshotting,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'arguments',
+      arguments,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
   }
 }
 
@@ -124,19 +194,19 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
 class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
   /// CupertinoPageTransition CupertinoPageTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoPageTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> primaryRouteAnimation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> primaryRouteAnimation} , default:none
     required Animation<double> primaryRouteAnimation,
 
-    /// optionalParameters: {required Animation<double> secondaryRouteAnimation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> secondaryRouteAnimation} , default:none
     required Animation<double> secondaryRouteAnimation,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required bool linearTransition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool linearTransition} , default:none
     required bool linearTransition,
   }) : super(
           key: key,
@@ -145,6 +215,8 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
           child: child,
           linearTransition: linearTransition,
         ) {
+    mateCreateName = 'CupertinoPageTransition';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageTransition$Mate(
           key: p.get('key').build(),
           primaryRouteAnimation: p.get('primaryRouteAnimation').build(),
@@ -152,11 +224,31 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
           child: p.get('child').build(),
           linearTransition: p.get('linearTransition').build(),
         );
-    matePut('key', key);
-    matePut('primaryRouteAnimation', primaryRouteAnimation);
-    matePut('secondaryRouteAnimation', secondaryRouteAnimation);
-    matePut('child', child);
-    matePut('linearTransition', linearTransition);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'primaryRouteAnimation',
+      primaryRouteAnimation,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryRouteAnimation',
+      secondaryRouteAnimation,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'linearTransition',
+      linearTransition,
+      isNamed: true,
+    );
   }
 }
 
@@ -164,19 +256,19 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
 class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialogTransition with Mate {
   /// CupertinoFullscreenDialogTransition CupertinoFullscreenDialogTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoFullscreenDialogTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> primaryRouteAnimation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> primaryRouteAnimation} , default:none
     required Animation<double> primaryRouteAnimation,
 
-    /// optionalParameters: {required Animation<double> secondaryRouteAnimation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> secondaryRouteAnimation} , default:none
     required Animation<double> secondaryRouteAnimation,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required bool linearTransition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool linearTransition} , default:none
     required bool linearTransition,
   }) : super(
           key: key,
@@ -185,6 +277,8 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
           child: child,
           linearTransition: linearTransition,
         ) {
+    mateCreateName = 'CupertinoFullscreenDialogTransition';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFullscreenDialogTransition$Mate(
           key: p.get('key').build(),
           primaryRouteAnimation: p.get('primaryRouteAnimation').build(),
@@ -192,11 +286,31 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
           child: p.get('child').build(),
           linearTransition: p.get('linearTransition').build(),
         );
-    matePut('key', key);
-    matePut('primaryRouteAnimation', primaryRouteAnimation);
-    matePut('secondaryRouteAnimation', secondaryRouteAnimation);
-    matePut('child', child);
-    matePut('linearTransition', linearTransition);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'primaryRouteAnimation',
+      primaryRouteAnimation,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryRouteAnimation',
+      secondaryRouteAnimation,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'linearTransition',
+      linearTransition,
+      isNamed: true,
+    );
   }
 }
 
@@ -204,28 +318,28 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
 class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with Mate {
   /// CupertinoModalPopupRoute<T> CupertinoModalPopupRoute({required Widget Function(BuildContext) builder, String barrierLabel = 'Dismiss', Color? barrierColor = kCupertinoModalBarrierColor, bool barrierDismissible = true, bool semanticsDismissible = false, ImageFilter? filter, RouteSettings? settings, Offset? anchorPoint})
   CupertinoModalPopupRoute$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required WidgetBuilder builder,
 
-    /// optionalParameters: {String barrierLabel = 'Dismiss'} , hasDefaultValue:true, defaultValueCode:'Dismiss'
-    required String barrierLabel,
+    /// optionalParameters: {String barrierLabel = 'Dismiss'} , default:processed=SimpleStringLiteralImpl
+    String barrierLabel = 'Dismiss',
 
-    /// optionalParameters: {Color? barrierColor = kCupertinoModalBarrierColor} , hasDefaultValue:true, defaultValueCode:kCupertinoModalBarrierColor
-    Color? barrierColor,
+    /// optionalParameters: {Color? barrierColor = kCupertinoModalBarrierColor} , default:unprocessed=SimpleIdentifierImpl
+    required Color? barrierColor,
 
-    /// optionalParameters: {bool barrierDismissible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool barrierDismissible,
+    /// optionalParameters: {bool barrierDismissible = true} , default:processed=BooleanLiteralImpl
+    bool barrierDismissible = true,
 
-    /// optionalParameters: {bool semanticsDismissible = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool semanticsDismissible,
+    /// optionalParameters: {bool semanticsDismissible = false} , default:processed=BooleanLiteralImpl
+    bool semanticsDismissible = false,
 
-    /// optionalParameters: {ImageFilter? filter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageFilter? filter} , default:none
     ImageFilter? filter,
 
-    /// optionalParameters: {RouteSettings? settings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteSettings? settings} , default:none
     RouteSettings? settings,
 
-    /// optionalParameters: {Offset? anchorPoint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? anchorPoint} , default:none
     Offset? anchorPoint,
   }) : super(
           builder: builder,
@@ -237,6 +351,8 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
+    mateCreateName = 'CupertinoModalPopupRoute';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoModalPopupRoute$Mate<T>(
           builder: p.get('builder').build(),
           barrierLabel: p.get('barrierLabel').build(),
@@ -247,14 +363,49 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
           settings: p.get('settings').build(),
           anchorPoint: p.get('anchorPoint').build(),
         );
-    matePut('builder', builder);
-    matePut('barrierLabel', barrierLabel);
-    matePut('barrierColor', barrierColor);
-    matePut('barrierDismissible', barrierDismissible);
-    matePut('semanticsDismissible', semanticsDismissible);
-    matePut('filter', filter);
-    matePut('settings', settings);
-    matePut('anchorPoint', anchorPoint);
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierLabel',
+      barrierLabel,
+      isNamed: true,
+      defaultValue: 'Dismiss',
+    );
+    mateUse(
+      'barrierColor',
+      barrierColor,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierDismissible',
+      barrierDismissible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'semanticsDismissible',
+      semanticsDismissible,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filter',
+      filter,
+      isNamed: true,
+    );
+    mateUse(
+      'settings',
+      settings,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorPoint',
+      anchorPoint,
+      isNamed: true,
+    );
   }
 }
 
@@ -262,31 +413,31 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
 class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
   /// CupertinoDialogRoute<T> CupertinoDialogRoute({required Widget Function(BuildContext) builder, required BuildContext context, bool barrierDismissible = true, Color? barrierColor, String? barrierLabel, Duration transitionDuration = const Duration(milliseconds: 250), Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder = _buildCupertinoDialogTransitions, RouteSettings? settings, Offset? anchorPoint})
   CupertinoDialogRoute$Mate({
-    /// optionalParameters: {required Widget Function(BuildContext) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
     required WidgetBuilder builder,
 
-    /// optionalParameters: {required BuildContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BuildContext context} , default:none
     required BuildContext context,
 
-    /// optionalParameters: {bool barrierDismissible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool barrierDismissible,
+    /// optionalParameters: {bool barrierDismissible = true} , default:processed=BooleanLiteralImpl
+    bool barrierDismissible = true,
 
-    /// optionalParameters: {Color? barrierColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? barrierColor} , default:none
     Color? barrierColor,
 
-    /// optionalParameters: {String? barrierLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? barrierLabel} , default:none
     String? barrierLabel,
 
-    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 250)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 250)
+    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 250)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration transitionDuration,
 
-    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder = _buildCupertinoDialogTransitions} , hasDefaultValue:true, defaultValueCode:_buildCupertinoDialogTransitions
-    RouteTransitionsBuilder? transitionBuilder,
+    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder = _buildCupertinoDialogTransitions} , default:unprocessed=SimpleIdentifierImpl
+    required RouteTransitionsBuilder? transitionBuilder,
 
-    /// optionalParameters: {RouteSettings? settings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteSettings? settings} , default:none
     RouteSettings? settings,
 
-    /// optionalParameters: {Offset? anchorPoint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? anchorPoint} , default:none
     Offset? anchorPoint,
   }) : super(
           builder: builder,
@@ -299,6 +450,8 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
+    mateCreateName = 'CupertinoDialogRoute';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDialogRoute$Mate<T>(
           builder: p.get('builder').build(),
           context: p.get('context').build(),
@@ -310,14 +463,51 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
           settings: p.get('settings').build(),
           anchorPoint: p.get('anchorPoint').build(),
         );
-    matePut('builder', builder);
-    matePut('context', context);
-    matePut('barrierDismissible', barrierDismissible);
-    matePut('barrierColor', barrierColor);
-    matePut('barrierLabel', barrierLabel);
-    matePut('transitionDuration', transitionDuration);
-    matePut('transitionBuilder', transitionBuilder);
-    matePut('settings', settings);
-    matePut('anchorPoint', anchorPoint);
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierDismissible',
+      barrierDismissible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'barrierColor',
+      barrierColor,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierLabel',
+      barrierLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionDuration',
+      transitionDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionBuilder',
+      transitionBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'settings',
+      settings,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorPoint',
+      anchorPoint,
+      isNamed: true,
+    );
   }
 }

@@ -49,13 +49,9 @@ class Paths with Navigable, PathsMixin {
   }
 }
 
-Path<void> _root = Path.root();
-var paths = _init();
+var paths = Paths._();
 
+Path<void> _root = Path.root();
 put<C>(String path, PageMeta<C>? meta) {
   return _root.put(path, meta);
-}
-
-Paths _init() {
-  return Paths._();
 }

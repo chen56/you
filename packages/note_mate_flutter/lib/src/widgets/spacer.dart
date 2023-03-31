@@ -9,20 +9,31 @@ import 'dart:core';
 class Spacer$Mate extends Spacer with Mate {
   /// Spacer Spacer({Key? key, int flex = 1})
   Spacer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int flex = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int flex,
+    /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
+    int flex = 1,
   }) : super(
           key: key,
           flex: flex,
         ) {
+    mateCreateName = 'Spacer';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Spacer$Mate(
           key: p.get('key').build(),
           flex: p.get('flex').build(),
         );
-    matePut('key', key);
-    matePut('flex', flex);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'flex',
+      flex,
+      isNamed: true,
+      defaultValue: 1,
+    );
   }
 }

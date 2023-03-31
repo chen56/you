@@ -10,31 +10,31 @@ import 'dart:core';
 class AboutListTile$Mate extends AboutListTile with Mate {
   /// AboutListTile AboutListTile({Key? key, Widget? icon, Widget? child, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese, List<Widget>? aboutBoxChildren, bool? dense})
   AboutListTile$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {String? applicationName} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationName} , default:none
     String? applicationName,
 
-    /// optionalParameters: {String? applicationVersion} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationVersion} , default:none
     String? applicationVersion,
 
-    /// optionalParameters: {Widget? applicationIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? applicationIcon} , default:none
     Widget? applicationIcon,
 
-    /// optionalParameters: {String? applicationLegalese} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationLegalese} , default:none
     String? applicationLegalese,
 
-    /// optionalParameters: {List<Widget>? aboutBoxChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? aboutBoxChildren} , default:none
     List<Widget>? aboutBoxChildren,
 
-    /// optionalParameters: {bool? dense} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? dense} , default:none
     bool? dense,
   }) : super(
           key: key,
@@ -47,6 +47,8 @@ class AboutListTile$Mate extends AboutListTile with Mate {
           aboutBoxChildren: aboutBoxChildren,
           dense: dense,
         ) {
+    mateCreateName = 'AboutListTile';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AboutListTile$Mate(
           key: p.get('key').build(),
           icon: p.get('icon').build(),
@@ -58,15 +60,51 @@ class AboutListTile$Mate extends AboutListTile with Mate {
           aboutBoxChildren: p.get('aboutBoxChildren').build(),
           dense: p.get('dense').build(),
         );
-    matePut('key', key);
-    matePut('icon', icon);
-    matePut('child', child);
-    matePut('applicationName', applicationName);
-    matePut('applicationVersion', applicationVersion);
-    matePut('applicationIcon', applicationIcon);
-    matePut('applicationLegalese', applicationLegalese);
-    matePut('aboutBoxChildren', aboutBoxChildren);
-    matePut('dense', dense);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationName',
+      applicationName,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationVersion',
+      applicationVersion,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationIcon',
+      applicationIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationLegalese',
+      applicationLegalese,
+      isNamed: true,
+    );
+    mateUseList(
+      'aboutBoxChildren',
+      aboutBoxChildren,
+      isNamed: true,
+    );
+    mateUse(
+      'dense',
+      dense,
+      isNamed: true,
+    );
   }
 }
 
@@ -74,22 +112,22 @@ class AboutListTile$Mate extends AboutListTile with Mate {
 class AboutDialog$Mate extends AboutDialog with Mate {
   /// AboutDialog AboutDialog({Key? key, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese, List<Widget>? children})
   AboutDialog$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {String? applicationName} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationName} , default:none
     String? applicationName,
 
-    /// optionalParameters: {String? applicationVersion} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationVersion} , default:none
     String? applicationVersion,
 
-    /// optionalParameters: {Widget? applicationIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? applicationIcon} , default:none
     Widget? applicationIcon,
 
-    /// optionalParameters: {String? applicationLegalese} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationLegalese} , default:none
     String? applicationLegalese,
 
-    /// optionalParameters: {List<Widget>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? children} , default:none
     List<Widget>? children,
   }) : super(
           key: key,
@@ -99,6 +137,8 @@ class AboutDialog$Mate extends AboutDialog with Mate {
           applicationLegalese: applicationLegalese,
           children: children,
         ) {
+    mateCreateName = 'AboutDialog';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AboutDialog$Mate(
           key: p.get('key').build(),
           applicationName: p.get('applicationName').build(),
@@ -107,12 +147,36 @@ class AboutDialog$Mate extends AboutDialog with Mate {
           applicationLegalese: p.get('applicationLegalese').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('applicationName', applicationName);
-    matePut('applicationVersion', applicationVersion);
-    matePut('applicationIcon', applicationIcon);
-    matePut('applicationLegalese', applicationLegalese);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationName',
+      applicationName,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationVersion',
+      applicationVersion,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationIcon',
+      applicationIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationLegalese',
+      applicationLegalese,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -120,19 +184,19 @@ class AboutDialog$Mate extends AboutDialog with Mate {
 class LicensePage$Mate extends LicensePage with Mate {
   /// LicensePage LicensePage({Key? key, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese})
   LicensePage$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {String? applicationName} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationName} , default:none
     String? applicationName,
 
-    /// optionalParameters: {String? applicationVersion} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationVersion} , default:none
     String? applicationVersion,
 
-    /// optionalParameters: {Widget? applicationIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? applicationIcon} , default:none
     Widget? applicationIcon,
 
-    /// optionalParameters: {String? applicationLegalese} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? applicationLegalese} , default:none
     String? applicationLegalese,
   }) : super(
           key: key,
@@ -141,6 +205,8 @@ class LicensePage$Mate extends LicensePage with Mate {
           applicationIcon: applicationIcon,
           applicationLegalese: applicationLegalese,
         ) {
+    mateCreateName = 'LicensePage';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LicensePage$Mate(
           key: p.get('key').build(),
           applicationName: p.get('applicationName').build(),
@@ -148,10 +214,30 @@ class LicensePage$Mate extends LicensePage with Mate {
           applicationIcon: p.get('applicationIcon').build(),
           applicationLegalese: p.get('applicationLegalese').build(),
         );
-    matePut('key', key);
-    matePut('applicationName', applicationName);
-    matePut('applicationVersion', applicationVersion);
-    matePut('applicationIcon', applicationIcon);
-    matePut('applicationLegalese', applicationLegalese);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationName',
+      applicationName,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationVersion',
+      applicationVersion,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationIcon',
+      applicationIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'applicationLegalese',
+      applicationLegalese,
+      isNamed: true,
+    );
   }
 }

@@ -10,33 +10,55 @@ import 'package:flutter/src/gestures/hit_test.dart';
 class BoxConstraints$Mate extends BoxConstraints with Mate {
   /// BoxConstraints BoxConstraints({double minWidth = 0.0, double maxWidth = double.infinity, double minHeight = 0.0, double maxHeight = double.infinity})
   BoxConstraints$Mate({
-    /// optionalParameters: {double minWidth = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double minWidth,
+    /// optionalParameters: {double minWidth = 0.0} , default:processed=DoubleLiteralImpl
+    double minWidth = 0.0,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double maxWidth,
+    /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double maxWidth = double.infinity,
 
-    /// optionalParameters: {double minHeight = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double minHeight,
+    /// optionalParameters: {double minHeight = 0.0} , default:processed=DoubleLiteralImpl
+    double minHeight = 0.0,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double maxHeight,
+    /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double maxHeight = double.infinity,
   }) : super(
           minWidth: minWidth,
           maxWidth: maxWidth,
           minHeight: minHeight,
           maxHeight: maxHeight,
         ) {
+    mateCreateName = 'BoxConstraints';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate(
           minWidth: p.get('minWidth').build(),
           maxWidth: p.get('maxWidth').build(),
           minHeight: p.get('minHeight').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    matePut('minWidth', minWidth);
-    matePut('maxWidth', maxWidth);
-    matePut('minHeight', minHeight);
-    matePut('maxHeight', maxHeight);
+    mateUse(
+      'minWidth',
+      minWidth,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'maxWidth',
+      maxWidth,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'minHeight',
+      minHeight,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'maxHeight',
+      maxHeight,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
   }
 
   /// BoxConstraints BoxConstraints.tight(Size size)
@@ -45,46 +67,74 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       /// requiredParameters: Size size
       Size size)
       : super.tight(size) {
+    mateCreateName = 'BoxConstraints.tight';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tight(p.get('size').value);
-    matePut('size', size);
+    mateUse(
+      'size',
+      size,
+      isNamed: false,
+    );
   }
 
   /// BoxConstraints BoxConstraints.tightFor({double? width, double? height})
   BoxConstraints$Mate.tightFor({
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
   }) : super.tightFor(
           width: width,
           height: height,
         ) {
+    mateCreateName = 'BoxConstraints.tightFor';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightFor(
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    matePut('width', width);
-    matePut('height', height);
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
   }
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
   BoxConstraints$Mate.tightForFinite({
-    /// optionalParameters: {double width = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double width,
+    /// optionalParameters: {double width = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double width = double.infinity,
 
-    /// optionalParameters: {double height = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double height,
+    /// optionalParameters: {double height = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double height = double.infinity,
   }) : super.tightForFinite(
           width: width,
           height: height,
         ) {
+    mateCreateName = 'BoxConstraints.tightForFinite';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightForFinite(
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    matePut('width', width);
-    matePut('height', height);
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
   }
 
   /// BoxConstraints BoxConstraints.loose(Size size)
@@ -93,27 +143,43 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       /// requiredParameters: Size size
       Size size)
       : super.loose(size) {
+    mateCreateName = 'BoxConstraints.loose';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.loose(p.get('size').value);
-    matePut('size', size);
+    mateUse(
+      'size',
+      size,
+      isNamed: false,
+    );
   }
 
   /// BoxConstraints BoxConstraints.expand({double? width, double? height})
   BoxConstraints$Mate.expand({
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
   }) : super.expand(
           width: width,
           height: height,
         ) {
+    mateCreateName = 'BoxConstraints.expand';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.expand(
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    matePut('width', width);
-    matePut('height', height);
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
   }
 }
 
@@ -125,8 +191,14 @@ class BoxHitTestResult$Mate extends BoxHitTestResult with Mate {
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
+    mateCreateName = 'BoxHitTestResult.wrap';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxHitTestResult$Mate.wrap(p.get('result').value);
-    matePut('result', result);
+    mateUse(
+      'result',
+      result,
+      isNamed: false,
+    );
   }
 }
 
@@ -143,11 +215,21 @@ class BoxHitTestEntry$Mate extends BoxHitTestEntry with Mate {
           target,
           localPosition,
         ) {
+    mateCreateName = 'BoxHitTestEntry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxHitTestEntry$Mate(
           p.get('target').value,
           p.get('localPosition').value,
         );
-    matePut('target', target);
-    matePut('localPosition', localPosition);
+    mateUse(
+      'target',
+      target,
+      isNamed: false,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: false,
+    );
   }
 }

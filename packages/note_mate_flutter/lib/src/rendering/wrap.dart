@@ -5,41 +5,43 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:ui';
 
 /// class RenderWrap extends RenderBox with ContainerRenderObjectMixin<RenderBox, WrapParentData>, RenderBoxContainerDefaultsMixin<RenderBox, WrapParentData>
 class RenderWrap$Mate extends RenderWrap with Mate {
   /// RenderWrap RenderWrap({List<RenderBox>? children, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none})
   RenderWrap$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , default:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , hasDefaultValue:true, defaultValueCode:Axis.horizontal
-    required Axis direction,
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapAlignment.start
-    required WrapAlignment alignment,
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
+    WrapAlignment alignment = WrapAlignment.start,
 
-    /// optionalParameters: {double spacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double spacing,
+    /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
+    double spacing = 0.0,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapAlignment.start
-    required WrapAlignment runAlignment,
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
+    WrapAlignment runAlignment = WrapAlignment.start,
 
-    /// optionalParameters: {double runSpacing = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double runSpacing,
+    /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
+    double runSpacing = 0.0,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , hasDefaultValue:true, defaultValueCode:WrapCrossAlignment.start
-    required WrapCrossAlignment crossAxisAlignment,
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
+    WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    VerticalDirection verticalDirection = VerticalDirection.down,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
   }) : super(
           children: children,
           direction: direction,
@@ -52,6 +54,8 @@ class RenderWrap$Mate extends RenderWrap with Mate {
           verticalDirection: verticalDirection,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderWrap';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderWrap$Mate(
           children: p.get('children').build(),
           direction: p.get('direction').build(),
@@ -64,15 +68,63 @@ class RenderWrap$Mate extends RenderWrap with Mate {
           verticalDirection: p.get('verticalDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('children', children);
-    matePut('direction', direction);
-    matePut('alignment', alignment);
-    matePut('spacing', spacing);
-    matePut('runAlignment', runAlignment);
-    matePut('runSpacing', runSpacing);
-    matePut('crossAxisAlignment', crossAxisAlignment);
-    matePut('textDirection', textDirection);
-    matePut('verticalDirection', verticalDirection);
-    matePut('clipBehavior', clipBehavior);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'spacing',
+      spacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'runAlignment',
+      runAlignment,
+      isNamed: true,
+      defaultValue: WrapAlignment.start,
+    );
+    mateUse(
+      'runSpacing',
+      runSpacing,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'crossAxisAlignment',
+      crossAxisAlignment,
+      isNamed: true,
+      defaultValue: WrapCrossAlignment.start,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
   }
 }

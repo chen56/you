@@ -5,34 +5,35 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class SafeArea extends StatelessWidget
 class SafeArea$Mate extends SafeArea with Mate {
   /// SafeArea SafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, bool maintainBottomViewPadding = false, required Widget child})
   SafeArea$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool left = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool left,
+    /// optionalParameters: {bool left = true} , default:processed=BooleanLiteralImpl
+    bool left = true,
 
-    /// optionalParameters: {bool top = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool top,
+    /// optionalParameters: {bool top = true} , default:processed=BooleanLiteralImpl
+    bool top = true,
 
-    /// optionalParameters: {bool right = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool right,
+    /// optionalParameters: {bool right = true} , default:processed=BooleanLiteralImpl
+    bool right = true,
 
-    /// optionalParameters: {bool bottom = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool bottom,
+    /// optionalParameters: {bool bottom = true} , default:processed=BooleanLiteralImpl
+    bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
-    required EdgeInsets minimum,
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    EdgeInsets minimum = EdgeInsets.zero,
 
-    /// optionalParameters: {bool maintainBottomViewPadding = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool maintainBottomViewPadding,
+    /// optionalParameters: {bool maintainBottomViewPadding = false} , default:processed=BooleanLiteralImpl
+    bool maintainBottomViewPadding = false,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -44,6 +45,8 @@ class SafeArea$Mate extends SafeArea with Mate {
           maintainBottomViewPadding: maintainBottomViewPadding,
           child: child,
         ) {
+    mateCreateName = 'SafeArea';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SafeArea$Mate(
           key: p.get('key').build(),
           left: p.get('left').build(),
@@ -54,14 +57,52 @@ class SafeArea$Mate extends SafeArea with Mate {
           maintainBottomViewPadding: p.get('maintainBottomViewPadding').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('minimum', minimum);
-    matePut('maintainBottomViewPadding', maintainBottomViewPadding);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'minimum',
+      minimum,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'maintainBottomViewPadding',
+      maintainBottomViewPadding,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -69,25 +110,25 @@ class SafeArea$Mate extends SafeArea with Mate {
 class SliverSafeArea$Mate extends SliverSafeArea with Mate {
   /// SliverSafeArea SliverSafeArea({Key? key, bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, required Widget sliver})
   SliverSafeArea$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {bool left = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool left,
+    /// optionalParameters: {bool left = true} , default:processed=BooleanLiteralImpl
+    bool left = true,
 
-    /// optionalParameters: {bool top = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool top,
+    /// optionalParameters: {bool top = true} , default:processed=BooleanLiteralImpl
+    bool top = true,
 
-    /// optionalParameters: {bool right = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool right,
+    /// optionalParameters: {bool right = true} , default:processed=BooleanLiteralImpl
+    bool right = true,
 
-    /// optionalParameters: {bool bottom = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool bottom,
+    /// optionalParameters: {bool bottom = true} , default:processed=BooleanLiteralImpl
+    bool bottom = true,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
-    required EdgeInsets minimum,
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    EdgeInsets minimum = EdgeInsets.zero,
 
-    /// optionalParameters: {required Widget sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget sliver} , default:none
     required Widget sliver,
   }) : super(
           key: key,
@@ -98,6 +139,8 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           minimum: minimum,
           sliver: sliver,
         ) {
+    mateCreateName = 'SliverSafeArea';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverSafeArea$Mate(
           key: p.get('key').build(),
           left: p.get('left').build(),
@@ -107,12 +150,45 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           minimum: p.get('minimum').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('key', key);
-    matePut('left', left);
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('minimum', minimum);
-    matePut('sliver', sliver);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'minimum',
+      minimum,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }

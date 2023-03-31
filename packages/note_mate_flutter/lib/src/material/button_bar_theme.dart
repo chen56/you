@@ -14,31 +14,31 @@ import 'package:flutter/src/widgets/framework.dart';
 class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
   /// ButtonBarThemeData ButtonBarThemeData({MainAxisAlignment? alignment, MainAxisSize? mainAxisSize, ButtonTextTheme? buttonTextTheme, double? buttonMinWidth, double? buttonHeight, EdgeInsetsGeometry? buttonPadding, bool? buttonAlignedDropdown, ButtonBarLayoutBehavior? layoutBehavior, VerticalDirection? overflowDirection})
   ButtonBarThemeData$Mate({
-    /// optionalParameters: {MainAxisAlignment? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MainAxisAlignment? alignment} , default:none
     MainAxisAlignment? alignment,
 
-    /// optionalParameters: {MainAxisSize? mainAxisSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MainAxisSize? mainAxisSize} , default:none
     MainAxisSize? mainAxisSize,
 
-    /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , default:none
     ButtonTextTheme? buttonTextTheme,
 
-    /// optionalParameters: {double? buttonMinWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? buttonMinWidth} , default:none
     double? buttonMinWidth,
 
-    /// optionalParameters: {double? buttonHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? buttonHeight} , default:none
     double? buttonHeight,
 
-    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , default:none
     EdgeInsetsGeometry? buttonPadding,
 
-    /// optionalParameters: {bool? buttonAlignedDropdown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? buttonAlignedDropdown} , default:none
     bool? buttonAlignedDropdown,
 
-    /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , default:none
     ButtonBarLayoutBehavior? layoutBehavior,
 
-    /// optionalParameters: {VerticalDirection? overflowDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VerticalDirection? overflowDirection} , default:none
     VerticalDirection? overflowDirection,
   }) : super(
           alignment: alignment,
@@ -51,6 +51,8 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
           layoutBehavior: layoutBehavior,
           overflowDirection: overflowDirection,
         ) {
+    mateCreateName = 'ButtonBarThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBarThemeData$Mate(
           alignment: p.get('alignment').build(),
           mainAxisSize: p.get('mainAxisSize').build(),
@@ -62,15 +64,51 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
           layoutBehavior: p.get('layoutBehavior').build(),
           overflowDirection: p.get('overflowDirection').build(),
         );
-    matePut('alignment', alignment);
-    matePut('mainAxisSize', mainAxisSize);
-    matePut('buttonTextTheme', buttonTextTheme);
-    matePut('buttonMinWidth', buttonMinWidth);
-    matePut('buttonHeight', buttonHeight);
-    matePut('buttonPadding', buttonPadding);
-    matePut('buttonAlignedDropdown', buttonAlignedDropdown);
-    matePut('layoutBehavior', layoutBehavior);
-    matePut('overflowDirection', overflowDirection);
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxisSize',
+      mainAxisSize,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonTextTheme',
+      buttonTextTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonMinWidth',
+      buttonMinWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonHeight',
+      buttonHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonPadding',
+      buttonPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'buttonAlignedDropdown',
+      buttonAlignedDropdown,
+      isNamed: true,
+    );
+    mateUse(
+      'layoutBehavior',
+      layoutBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'overflowDirection',
+      overflowDirection,
+      isNamed: true,
+    );
   }
 }
 
@@ -78,26 +116,40 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
 class ButtonBarTheme$Mate extends ButtonBarTheme with Mate {
   /// ButtonBarTheme ButtonBarTheme({Key? key, required ButtonBarThemeData data, required Widget child})
   ButtonBarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ButtonBarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ButtonBarThemeData data} , default:none
     required ButtonBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'ButtonBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBarTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

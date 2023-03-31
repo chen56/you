@@ -17,8 +17,14 @@ class IdleScrollActivity$Mate extends IdleScrollActivity with Mate {
       /// requiredParameters: ScrollActivityDelegate delegate
       ScrollActivityDelegate delegate)
       : super(delegate) {
+    mateCreateName = 'IdleScrollActivity';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IdleScrollActivity$Mate(p.get('delegate').value);
-    matePut('delegate', delegate);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
   }
 }
 
@@ -26,21 +32,31 @@ class IdleScrollActivity$Mate extends IdleScrollActivity with Mate {
 class HoldScrollActivity$Mate extends HoldScrollActivity with Mate {
   /// HoldScrollActivity HoldScrollActivity({required ScrollActivityDelegate delegate, void Function()? onHoldCanceled})
   HoldScrollActivity$Mate({
-    /// optionalParameters: {required ScrollActivityDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollActivityDelegate delegate} , default:none
     required ScrollActivityDelegate delegate,
 
-    /// optionalParameters: {void Function()? onHoldCanceled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onHoldCanceled} , default:none
     VoidCallback? onHoldCanceled,
   }) : super(
           delegate: delegate,
           onHoldCanceled: onHoldCanceled,
         ) {
+    mateCreateName = 'HoldScrollActivity';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HoldScrollActivity$Mate(
           delegate: p.get('delegate').build(),
           onHoldCanceled: p.get('onHoldCanceled').build(),
         );
-    matePut('delegate', delegate);
-    matePut('onHoldCanceled', onHoldCanceled);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'onHoldCanceled',
+      onHoldCanceled,
+      isNamed: true,
+    );
   }
 }
 
@@ -48,19 +64,19 @@ class HoldScrollActivity$Mate extends HoldScrollActivity with Mate {
 class ScrollDragController$Mate extends ScrollDragController with Mate {
   /// ScrollDragController ScrollDragController({required ScrollActivityDelegate delegate, required DragStartDetails details, void Function()? onDragCanceled, double? carriedVelocity, double? motionStartDistanceThreshold})
   ScrollDragController$Mate({
-    /// optionalParameters: {required ScrollActivityDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollActivityDelegate delegate} , default:none
     required ScrollActivityDelegate delegate,
 
-    /// optionalParameters: {required DragStartDetails details} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DragStartDetails details} , default:none
     required DragStartDetails details,
 
-    /// optionalParameters: {void Function()? onDragCanceled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDragCanceled} , default:none
     VoidCallback? onDragCanceled,
 
-    /// optionalParameters: {double? carriedVelocity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? carriedVelocity} , default:none
     double? carriedVelocity,
 
-    /// optionalParameters: {double? motionStartDistanceThreshold} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? motionStartDistanceThreshold} , default:none
     double? motionStartDistanceThreshold,
   }) : super(
           delegate: delegate,
@@ -69,6 +85,8 @@ class ScrollDragController$Mate extends ScrollDragController with Mate {
           carriedVelocity: carriedVelocity,
           motionStartDistanceThreshold: motionStartDistanceThreshold,
         ) {
+    mateCreateName = 'ScrollDragController';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollDragController$Mate(
           delegate: p.get('delegate').build(),
           details: p.get('details').build(),
@@ -76,11 +94,31 @@ class ScrollDragController$Mate extends ScrollDragController with Mate {
           carriedVelocity: p.get('carriedVelocity').build(),
           motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').build(),
         );
-    matePut('delegate', delegate);
-    matePut('details', details);
-    matePut('onDragCanceled', onDragCanceled);
-    matePut('carriedVelocity', carriedVelocity);
-    matePut('motionStartDistanceThreshold', motionStartDistanceThreshold);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'details',
+      details,
+      isNamed: true,
+    );
+    mateUse(
+      'onDragCanceled',
+      onDragCanceled,
+      isNamed: true,
+    );
+    mateUse(
+      'carriedVelocity',
+      carriedVelocity,
+      isNamed: true,
+    );
+    mateUse(
+      'motionStartDistanceThreshold',
+      motionStartDistanceThreshold,
+      isNamed: true,
+    );
   }
 }
 
@@ -97,12 +135,22 @@ class DragScrollActivity$Mate extends DragScrollActivity with Mate {
           delegate,
           controller,
         ) {
+    mateCreateName = 'DragScrollActivity';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DragScrollActivity$Mate(
           p.get('delegate').value,
           p.get('controller').value,
         );
-    matePut('delegate', delegate);
-    matePut('controller', controller);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: false,
+    );
   }
 }
 
@@ -127,16 +175,34 @@ class BallisticScrollActivity$Mate extends BallisticScrollActivity with Mate {
           vsync,
           shouldIgnorePointer,
         ) {
+    mateCreateName = 'BallisticScrollActivity';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BallisticScrollActivity$Mate(
           p.get('delegate').value,
           p.get('simulation').value,
           p.get('vsync').value,
           p.get('shouldIgnorePointer').value,
         );
-    matePut('delegate', delegate);
-    matePut('simulation', simulation);
-    matePut('vsync', vsync);
-    matePut('shouldIgnorePointer', shouldIgnorePointer);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
+    mateUse(
+      'simulation',
+      simulation,
+      isNamed: false,
+    );
+    mateUse(
+      'vsync',
+      vsync,
+      isNamed: false,
+    );
+    mateUse(
+      'shouldIgnorePointer',
+      shouldIgnorePointer,
+      isNamed: false,
+    );
   }
 }
 
@@ -146,19 +212,19 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate {
   DrivenScrollActivity$Mate(
     /// requiredParameters: ScrollActivityDelegate delegate
     ScrollActivityDelegate delegate, {
-    /// optionalParameters: {required double from} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double from} , default:none
     required double from,
 
-    /// optionalParameters: {required double to} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double to} , default:none
     required double to,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {required Curve curve} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Curve curve} , default:none
     required Curve curve,
 
-    /// optionalParameters: {required TickerProvider vsync} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TickerProvider vsync} , default:none
     required TickerProvider vsync,
   }) : super(
           delegate,
@@ -168,6 +234,8 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate {
           curve: curve,
           vsync: vsync,
         ) {
+    mateCreateName = 'DrivenScrollActivity';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DrivenScrollActivity$Mate(
           p.get('delegate').value,
           from: p.get('from').build(),
@@ -176,11 +244,35 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate {
           curve: p.get('curve').build(),
           vsync: p.get('vsync').build(),
         );
-    matePut('delegate', delegate);
-    matePut('from', from);
-    matePut('to', to);
-    matePut('duration', duration);
-    matePut('curve', curve);
-    matePut('vsync', vsync);
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: false,
+    );
+    mateUse(
+      'from',
+      from,
+      isNamed: true,
+    );
+    mateUse(
+      'to',
+      to,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+    );
+    mateUse(
+      'vsync',
+      vsync,
+      isNamed: true,
+    );
   }
 }

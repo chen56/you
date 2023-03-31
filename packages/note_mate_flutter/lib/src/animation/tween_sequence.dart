@@ -13,8 +13,14 @@ class TweenSequence$Mate<T> extends TweenSequence<T> with Mate {
       /// requiredParameters: List<TweenSequenceItem<T>> items
       List<TweenSequenceItem<T>> items)
       : super(items) {
+    mateCreateName = 'TweenSequence';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TweenSequence$Mate<T>(p.get('items').value);
-    matePut('items', items);
+    mateUseList(
+      'items',
+      items,
+      isNamed: false,
+    );
   }
 }
 
@@ -26,8 +32,14 @@ class FlippedTweenSequence$Mate extends FlippedTweenSequence with Mate {
       /// requiredParameters: List<TweenSequenceItem<double>> items
       List<TweenSequenceItem<double>> items)
       : super(items) {
+    mateCreateName = 'FlippedTweenSequence';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => FlippedTweenSequence$Mate(p.get('items').value);
-    matePut('items', items);
+    mateUseList(
+      'items',
+      items,
+      isNamed: false,
+    );
   }
 }
 
@@ -35,20 +47,30 @@ class FlippedTweenSequence$Mate extends FlippedTweenSequence with Mate {
 class TweenSequenceItem$Mate<T> extends TweenSequenceItem<T> with Mate {
   /// TweenSequenceItem<T> TweenSequenceItem({required Animatable<T> tween, required double weight})
   TweenSequenceItem$Mate({
-    /// optionalParameters: {required Animatable<T> tween} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animatable<T> tween} , default:none
     required Animatable<T> tween,
 
-    /// optionalParameters: {required double weight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double weight} , default:none
     required double weight,
   }) : super(
           tween: tween,
           weight: weight,
         ) {
+    mateCreateName = 'TweenSequenceItem';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TweenSequenceItem$Mate<T>(
           tween: p.get('tween').build(),
           weight: p.get('weight').build(),
         );
-    matePut('tween', tween);
-    matePut('weight', weight);
+    mateUse(
+      'tween',
+      tween,
+      isNamed: true,
+    );
+    mateUse(
+      'weight',
+      weight,
+      isNamed: true,
+    );
   }
 }

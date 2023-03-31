@@ -7,25 +7,26 @@ import 'dart:ui';
 import 'package:flutter/src/semantics/semantics.dart';
 import 'package:vector_math/vector_math_64.dart';
 import 'dart:core';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/rendering/box.dart';
 
 /// class CustomPainterSemantics
 class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
   /// CustomPainterSemantics CustomPainterSemantics({Key? key, required Rect rect, required SemanticsProperties properties, Matrix4? transform, Set<SemanticsTag>? tags})
   CustomPainterSemantics$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {required SemanticsProperties properties} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SemanticsProperties properties} , default:none
     required SemanticsProperties properties,
 
-    /// optionalParameters: {Matrix4? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Matrix4? transform} , default:none
     Matrix4? transform,
 
-    /// optionalParameters: {Set<SemanticsTag>? tags} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<SemanticsTag>? tags} , default:none
     Set<SemanticsTag>? tags,
   }) : super(
           key: key,
@@ -34,6 +35,8 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
           transform: transform,
           tags: tags,
         ) {
+    mateCreateName = 'CustomPainterSemantics';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => CustomPainterSemantics$Mate(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
@@ -41,11 +44,31 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
           transform: p.get('transform').build(),
           tags: p.get('tags').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('properties', properties);
-    matePut('transform', transform);
-    matePut('tags', tags);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'properties',
+      properties,
+      isNamed: true,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'tags',
+      tags,
+      isNamed: true,
+    );
   }
 }
 
@@ -53,22 +76,22 @@ class CustomPainterSemantics$Mate extends CustomPainterSemantics with Mate {
 class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
   /// RenderCustomPaint RenderCustomPaint({CustomPainter? painter, CustomPainter? foregroundPainter, Size preferredSize = Size.zero, bool isComplex = false, bool willChange = false, RenderBox? child})
   RenderCustomPaint$Mate({
-    /// optionalParameters: {CustomPainter? painter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? painter} , default:none
     CustomPainter? painter,
 
-    /// optionalParameters: {CustomPainter? foregroundPainter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CustomPainter? foregroundPainter} , default:none
     CustomPainter? foregroundPainter,
 
-    /// optionalParameters: {Size preferredSize = Size.zero} , hasDefaultValue:true, defaultValueCode:Size.zero
-    required Size preferredSize,
+    /// optionalParameters: {Size preferredSize = Size.zero} , default:processed=PrefixedIdentifierImpl
+    Size preferredSize = Size.zero,
 
-    /// optionalParameters: {bool isComplex = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isComplex,
+    /// optionalParameters: {bool isComplex = false} , default:processed=BooleanLiteralImpl
+    bool isComplex = false,
 
-    /// optionalParameters: {bool willChange = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool willChange,
+    /// optionalParameters: {bool willChange = false} , default:processed=BooleanLiteralImpl
+    bool willChange = false,
 
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
   }) : super(
           painter: painter,
@@ -78,6 +101,8 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
           willChange: willChange,
           child: child,
         ) {
+    mateCreateName = 'RenderCustomPaint';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderCustomPaint$Mate(
           painter: p.get('painter').build(),
           foregroundPainter: p.get('foregroundPainter').build(),
@@ -86,11 +111,38 @@ class RenderCustomPaint$Mate extends RenderCustomPaint with Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    matePut('painter', painter);
-    matePut('foregroundPainter', foregroundPainter);
-    matePut('preferredSize', preferredSize);
-    matePut('isComplex', isComplex);
-    matePut('willChange', willChange);
-    matePut('child', child);
+    mateUse(
+      'painter',
+      painter,
+      isNamed: true,
+    );
+    mateUse(
+      'foregroundPainter',
+      foregroundPainter,
+      isNamed: true,
+    );
+    mateUse(
+      'preferredSize',
+      preferredSize,
+      isNamed: true,
+      defaultValue: Size.zero,
+    );
+    mateUse(
+      'isComplex',
+      isComplex,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'willChange',
+      willChange,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

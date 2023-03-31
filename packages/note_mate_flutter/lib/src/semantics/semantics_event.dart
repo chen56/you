@@ -4,6 +4,7 @@ import 'package:flutter/src/semantics/semantics_event.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'dart:ui';
+import 'package:flutter/semantics.dart';
 
 /// class AnnounceSemanticsEvent extends SemanticsEvent
 class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate {
@@ -14,21 +15,36 @@ class AnnounceSemanticsEvent$Mate extends AnnounceSemanticsEvent with Mate {
 
     /// requiredParameters: TextDirection textDirection
     TextDirection textDirection, {
-    /// optionalParameters: {Assertiveness assertiveness = Assertiveness.polite} , hasDefaultValue:true, defaultValueCode:Assertiveness.polite
-    required Assertiveness assertiveness,
+    /// optionalParameters: {Assertiveness assertiveness = Assertiveness.polite} , default:processed=PrefixedIdentifierImpl
+    Assertiveness assertiveness = Assertiveness.polite,
   }) : super(
           message,
           textDirection,
           assertiveness: assertiveness,
         ) {
+    mateCreateName = 'AnnounceSemanticsEvent';
+    matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => AnnounceSemanticsEvent$Mate(
           p.get('message').value,
           p.get('textDirection').value,
           assertiveness: p.get('assertiveness').build(),
         );
-    matePut('message', message);
-    matePut('textDirection', textDirection);
-    matePut('assertiveness', assertiveness);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: false,
+    );
+    mateUse(
+      'assertiveness',
+      assertiveness,
+      isNamed: true,
+      defaultValue: Assertiveness.polite,
+    );
   }
 }
 
@@ -40,7 +56,13 @@ class TooltipSemanticsEvent$Mate extends TooltipSemanticsEvent with Mate {
       /// requiredParameters: String message
       String message)
       : super(message) {
+    mateCreateName = 'TooltipSemanticsEvent';
+    matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => TooltipSemanticsEvent$Mate(p.get('message').value);
-    matePut('message', message);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }

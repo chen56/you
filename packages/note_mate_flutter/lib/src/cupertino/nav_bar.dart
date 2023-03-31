@@ -13,43 +13,43 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
   /// CupertinoNavigationBar CupertinoNavigationBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag})
   CupertinoNavigationBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {bool automaticallyImplyLeading = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool automaticallyImplyLeading,
+    /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
+    bool automaticallyImplyLeading = true,
 
-    /// optionalParameters: {bool automaticallyImplyMiddle = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool automaticallyImplyMiddle,
+    /// optionalParameters: {bool automaticallyImplyMiddle = true} , default:processed=BooleanLiteralImpl
+    bool automaticallyImplyMiddle = true,
 
-    /// optionalParameters: {String? previousPageTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? previousPageTitle} , default:none
     String? previousPageTitle,
 
-    /// optionalParameters: {Widget? middle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? middle} , default:none
     Widget? middle,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , default:none
     Widget? trailing,
 
-    /// optionalParameters: {Border? border = _kDefaultNavBarBorder} , hasDefaultValue:true, defaultValueCode:_kDefaultNavBarBorder
-    Border? border,
+    /// optionalParameters: {Border? border = _kDefaultNavBarBorder} , default:unprocessed=SimpleIdentifierImpl
+    required Border? border,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Brightness? brightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? brightness} , default:none
     Brightness? brightness,
 
-    /// optionalParameters: {EdgeInsetsDirectional? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsDirectional? padding} , default:none
     EdgeInsetsDirectional? padding,
 
-    /// optionalParameters: {bool transitionBetweenRoutes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transitionBetweenRoutes,
+    /// optionalParameters: {bool transitionBetweenRoutes = true} , default:processed=BooleanLiteralImpl
+    bool transitionBetweenRoutes = true,
 
-    /// optionalParameters: {Object heroTag = _defaultHeroTag} , hasDefaultValue:true, defaultValueCode:_defaultHeroTag
+    /// optionalParameters: {Object heroTag = _defaultHeroTag} , default:unprocessed=SimpleIdentifierImpl
     required Object heroTag,
   }) : super(
           key: key,
@@ -66,6 +66,8 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
           transitionBetweenRoutes: transitionBetweenRoutes,
           heroTag: heroTag,
         ) {
+    mateCreateName = 'CupertinoNavigationBar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoNavigationBar$Mate(
           key: p.get('key').build(),
           leading: p.get('leading').build(),
@@ -81,19 +83,74 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
           transitionBetweenRoutes: p.get('transitionBetweenRoutes').build(),
           heroTag: p.get('heroTag').build(),
         );
-    matePut('key', key);
-    matePut('leading', leading);
-    matePut('automaticallyImplyLeading', automaticallyImplyLeading);
-    matePut('automaticallyImplyMiddle', automaticallyImplyMiddle);
-    matePut('previousPageTitle', previousPageTitle);
-    matePut('middle', middle);
-    matePut('trailing', trailing);
-    matePut('border', border);
-    matePut('backgroundColor', backgroundColor);
-    matePut('brightness', brightness);
-    matePut('padding', padding);
-    matePut('transitionBetweenRoutes', transitionBetweenRoutes);
-    matePut('heroTag', heroTag);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'automaticallyImplyLeading',
+      automaticallyImplyLeading,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'automaticallyImplyMiddle',
+      automaticallyImplyMiddle,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'previousPageTitle',
+      previousPageTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'middle',
+      middle,
+      isNamed: true,
+    );
+    mateUse(
+      'trailing',
+      trailing,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'brightness',
+      brightness,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionBetweenRoutes',
+      transitionBetweenRoutes,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'heroTag',
+      heroTag,
+      isNamed: true,
+    );
   }
 }
 
@@ -101,53 +158,53 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
 class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar with Mate {
   /// CupertinoSliverNavigationBar CupertinoSliverNavigationBar({Key? key, Widget? largeTitle, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyTitle = true, bool alwaysShowMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag, bool stretch = false})
   CupertinoSliverNavigationBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? largeTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? largeTitle} , default:none
     Widget? largeTitle,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {bool automaticallyImplyLeading = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool automaticallyImplyLeading,
+    /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
+    bool automaticallyImplyLeading = true,
 
-    /// optionalParameters: {bool automaticallyImplyTitle = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool automaticallyImplyTitle,
+    /// optionalParameters: {bool automaticallyImplyTitle = true} , default:processed=BooleanLiteralImpl
+    bool automaticallyImplyTitle = true,
 
-    /// optionalParameters: {bool alwaysShowMiddle = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool alwaysShowMiddle,
+    /// optionalParameters: {bool alwaysShowMiddle = true} , default:processed=BooleanLiteralImpl
+    bool alwaysShowMiddle = true,
 
-    /// optionalParameters: {String? previousPageTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? previousPageTitle} , default:none
     String? previousPageTitle,
 
-    /// optionalParameters: {Widget? middle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? middle} , default:none
     Widget? middle,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , default:none
     Widget? trailing,
 
-    /// optionalParameters: {Border? border = _kDefaultNavBarBorder} , hasDefaultValue:true, defaultValueCode:_kDefaultNavBarBorder
-    Border? border,
+    /// optionalParameters: {Border? border = _kDefaultNavBarBorder} , default:unprocessed=SimpleIdentifierImpl
+    required Border? border,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Brightness? brightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? brightness} , default:none
     Brightness? brightness,
 
-    /// optionalParameters: {EdgeInsetsDirectional? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsDirectional? padding} , default:none
     EdgeInsetsDirectional? padding,
 
-    /// optionalParameters: {bool transitionBetweenRoutes = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transitionBetweenRoutes,
+    /// optionalParameters: {bool transitionBetweenRoutes = true} , default:processed=BooleanLiteralImpl
+    bool transitionBetweenRoutes = true,
 
-    /// optionalParameters: {Object heroTag = _defaultHeroTag} , hasDefaultValue:true, defaultValueCode:_defaultHeroTag
+    /// optionalParameters: {Object heroTag = _defaultHeroTag} , default:unprocessed=SimpleIdentifierImpl
     required Object heroTag,
 
-    /// optionalParameters: {bool stretch = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool stretch,
+    /// optionalParameters: {bool stretch = false} , default:processed=BooleanLiteralImpl
+    bool stretch = false,
   }) : super(
           key: key,
           largeTitle: largeTitle,
@@ -166,6 +223,8 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar wit
           heroTag: heroTag,
           stretch: stretch,
         ) {
+    mateCreateName = 'CupertinoSliverNavigationBar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSliverNavigationBar$Mate(
           key: p.get('key').build(),
           largeTitle: p.get('largeTitle').build(),
@@ -184,22 +243,91 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar wit
           heroTag: p.get('heroTag').build(),
           stretch: p.get('stretch').build(),
         );
-    matePut('key', key);
-    matePut('largeTitle', largeTitle);
-    matePut('leading', leading);
-    matePut('automaticallyImplyLeading', automaticallyImplyLeading);
-    matePut('automaticallyImplyTitle', automaticallyImplyTitle);
-    matePut('alwaysShowMiddle', alwaysShowMiddle);
-    matePut('previousPageTitle', previousPageTitle);
-    matePut('middle', middle);
-    matePut('trailing', trailing);
-    matePut('border', border);
-    matePut('backgroundColor', backgroundColor);
-    matePut('brightness', brightness);
-    matePut('padding', padding);
-    matePut('transitionBetweenRoutes', transitionBetweenRoutes);
-    matePut('heroTag', heroTag);
-    matePut('stretch', stretch);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'largeTitle',
+      largeTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'automaticallyImplyLeading',
+      automaticallyImplyLeading,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'automaticallyImplyTitle',
+      automaticallyImplyTitle,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'alwaysShowMiddle',
+      alwaysShowMiddle,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'previousPageTitle',
+      previousPageTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'middle',
+      middle,
+      isNamed: true,
+    );
+    mateUse(
+      'trailing',
+      trailing,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'brightness',
+      brightness,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionBetweenRoutes',
+      transitionBetweenRoutes,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'heroTag',
+      heroTag,
+      isNamed: true,
+    );
+    mateUse(
+      'stretch',
+      stretch,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -207,16 +335,16 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar wit
 class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackButton with Mate {
   /// CupertinoNavigationBarBackButton CupertinoNavigationBarBackButton({Key? key, Color? color, String? previousPageTitle, void Function()? onPressed})
   CupertinoNavigationBarBackButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {String? previousPageTitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? previousPageTitle} , default:none
     String? previousPageTitle,
 
-    /// optionalParameters: {void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onPressed} , default:none
     VoidCallback? onPressed,
   }) : super(
           key: key,
@@ -224,15 +352,33 @@ class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackBu
           previousPageTitle: previousPageTitle,
           onPressed: onPressed,
         ) {
+    mateCreateName = 'CupertinoNavigationBarBackButton';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoNavigationBarBackButton$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
           previousPageTitle: p.get('previousPageTitle').build(),
           onPressed: p.get('onPressed').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('previousPageTitle', previousPageTitle);
-    matePut('onPressed', onPressed);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'previousPageTitle',
+      previousPageTitle,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
   }
 }

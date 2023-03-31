@@ -13,28 +13,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
   /// MaterialBannerThemeData MaterialBannerThemeData({Color? backgroundColor, Color? surfaceTintColor, Color? shadowColor, Color? dividerColor, TextStyle? contentTextStyle, double? elevation, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? leadingPadding})
   MaterialBannerThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , default:none
     Color? dividerColor,
 
-    /// optionalParameters: {TextStyle? contentTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? contentTextStyle} , default:none
     TextStyle? contentTextStyle,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , default:none
     EdgeInsetsGeometry? leadingPadding,
   }) : super(
           backgroundColor: backgroundColor,
@@ -46,6 +46,8 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
           padding: padding,
           leadingPadding: leadingPadding,
         ) {
+    mateCreateName = 'MaterialBannerThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBannerThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           surfaceTintColor: p.get('surfaceTintColor').build(),
@@ -56,14 +58,46 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
           padding: p.get('padding').build(),
           leadingPadding: p.get('leadingPadding').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('shadowColor', shadowColor);
-    matePut('dividerColor', dividerColor);
-    matePut('contentTextStyle', contentTextStyle);
-    matePut('elevation', elevation);
-    matePut('padding', padding);
-    matePut('leadingPadding', leadingPadding);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dividerColor',
+      dividerColor,
+      isNamed: true,
+    );
+    mateUse(
+      'contentTextStyle',
+      contentTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingPadding',
+      leadingPadding,
+      isNamed: true,
+    );
   }
 }
 
@@ -71,26 +105,40 @@ class MaterialBannerThemeData$Mate extends MaterialBannerThemeData with Mate {
 class MaterialBannerTheme$Mate extends MaterialBannerTheme with Mate {
   /// MaterialBannerTheme MaterialBannerTheme({Key? key, MaterialBannerThemeData? data, required Widget child})
   MaterialBannerTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {MaterialBannerThemeData? data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialBannerThemeData? data} , default:none
     MaterialBannerThemeData? data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'MaterialBannerTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBannerTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

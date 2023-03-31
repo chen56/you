@@ -7,37 +7,38 @@ import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 
 /// class CupertinoSwitch extends StatefulWidget
 class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
   /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   CupertinoSwitch$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required bool value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool value} , default:none
     required bool value,
 
-    /// optionalParameters: {required void Function(bool)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(bool)? onChanged} , default:none
     required ValueChanged<bool>? onChanged,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , default:none
     Color? activeColor,
 
-    /// optionalParameters: {Color? trackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? trackColor} , default:none
     Color? trackColor,
 
-    /// optionalParameters: {Color? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? thumbColor} , default:none
     Color? thumbColor,
 
-    /// optionalParameters: {bool? applyTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? applyTheme} , default:none
     bool? applyTheme,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
   }) : super(
           key: key,
           value: value,
@@ -49,6 +50,8 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
           focusColor: focusColor,
           dragStartBehavior: dragStartBehavior,
         ) {
+    mateCreateName = 'CupertinoSwitch';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSwitch$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -60,14 +63,51 @@ class CupertinoSwitch$Mate extends CupertinoSwitch with Mate {
           focusColor: p.get('focusColor').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('onChanged', onChanged);
-    matePut('activeColor', activeColor);
-    matePut('trackColor', trackColor);
-    matePut('thumbColor', thumbColor);
-    matePut('applyTheme', applyTheme);
-    matePut('focusColor', focusColor);
-    matePut('dragStartBehavior', dragStartBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'activeColor',
+      activeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'trackColor',
+      trackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbColor',
+      thumbColor,
+      isNamed: true,
+    );
+    mateUse(
+      'applyTheme',
+      applyTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
   }
 }

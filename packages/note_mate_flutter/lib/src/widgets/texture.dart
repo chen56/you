@@ -10,32 +10,52 @@ import 'dart:ui';
 class Texture$Mate extends Texture with Mate {
   /// Texture Texture({Key? key, required int textureId, bool freeze = false, FilterQuality filterQuality = FilterQuality.low})
   Texture$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required int textureId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int textureId} , default:none
     required int textureId,
 
-    /// optionalParameters: {bool freeze = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool freeze,
+    /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
+    bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           key: key,
           textureId: textureId,
           freeze: freeze,
           filterQuality: filterQuality,
         ) {
+    mateCreateName = 'Texture';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Texture$Mate(
           key: p.get('key').build(),
           textureId: p.get('textureId').build(),
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    matePut('key', key);
-    matePut('textureId', textureId);
-    matePut('freeze', freeze);
-    matePut('filterQuality', filterQuality);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'textureId',
+      textureId,
+      isNamed: true,
+    );
+    mateUse(
+      'freeze',
+      freeze,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
   }
 }

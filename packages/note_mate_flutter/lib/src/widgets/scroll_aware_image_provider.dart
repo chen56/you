@@ -11,20 +11,30 @@ import 'package:flutter/src/painting/image_provider.dart';
 class ScrollAwareImageProvider$Mate<T extends Object> extends ScrollAwareImageProvider<T> with Mate {
   /// ScrollAwareImageProvider<T> ScrollAwareImageProvider({required DisposableBuildContext<State<StatefulWidget>> context, required ImageProvider<T> imageProvider})
   ScrollAwareImageProvider$Mate({
-    /// optionalParameters: {required DisposableBuildContext<State<StatefulWidget>> context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DisposableBuildContext<State<StatefulWidget>> context} , default:none
     required DisposableBuildContext<State<StatefulWidget>> context,
 
-    /// optionalParameters: {required ImageProvider<T> imageProvider} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageProvider<T> imageProvider} , default:none
     required ImageProvider<T> imageProvider,
   }) : super(
           context: context,
           imageProvider: imageProvider,
         ) {
+    mateCreateName = 'ScrollAwareImageProvider';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollAwareImageProvider$Mate<T>(
           context: p.get('context').build(),
           imageProvider: p.get('imageProvider').build(),
         );
-    matePut('context', context);
-    matePut('imageProvider', imageProvider);
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'imageProvider',
+      imageProvider,
+      isNamed: true,
+    );
   }
 }

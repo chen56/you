@@ -15,8 +15,14 @@ class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate
       /// requiredParameters: T value
       T value)
       : super(value) {
+    mateCreateName = 'AlwaysStoppedAnimation';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AlwaysStoppedAnimation$Mate<T>(p.get('value').value);
-    matePut('value', value);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }
 
@@ -28,8 +34,14 @@ class ProxyAnimation$Mate extends ProxyAnimation with Mate {
       /// requiredParameters: [Animation<double>? animation]
       Animation<double>? animation)
       : super(animation) {
+    mateCreateName = 'ProxyAnimation';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ProxyAnimation$Mate(p.get('animation').value);
-    matePut('animation', animation);
+    mateUse(
+      'animation',
+      animation,
+      isNamed: false,
+    );
   }
 }
 
@@ -41,8 +53,14 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate {
       /// requiredParameters: Animation<double> parent
       Animation<double> parent)
       : super(parent) {
+    mateCreateName = 'ReverseAnimation';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ReverseAnimation$Mate(p.get('parent').value);
-    matePut('parent', parent);
+    mateUse(
+      'parent',
+      parent,
+      isNamed: false,
+    );
   }
 }
 
@@ -50,27 +68,41 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate {
 class CurvedAnimation$Mate extends CurvedAnimation with Mate {
   /// CurvedAnimation CurvedAnimation({required Animation<double> parent, required Curve curve, Curve? reverseCurve})
   CurvedAnimation$Mate({
-    /// optionalParameters: {required Animation<double> parent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> parent} , default:none
     required Animation<double> parent,
 
-    /// optionalParameters: {required Curve curve} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Curve curve} , default:none
     required Curve curve,
 
-    /// optionalParameters: {Curve? reverseCurve} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Curve? reverseCurve} , default:none
     Curve? reverseCurve,
   }) : super(
           parent: parent,
           curve: curve,
           reverseCurve: reverseCurve,
         ) {
+    mateCreateName = 'CurvedAnimation';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CurvedAnimation$Mate(
           parent: p.get('parent').build(),
           curve: p.get('curve').build(),
           reverseCurve: p.get('reverseCurve').build(),
         );
-    matePut('parent', parent);
-    matePut('curve', curve);
-    matePut('reverseCurve', reverseCurve);
+    mateUse(
+      'parent',
+      parent,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseCurve',
+      reverseCurve,
+      isNamed: true,
+    );
   }
 }
 
@@ -83,21 +115,35 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate {
 
     /// requiredParameters: Animation<double>? _nextTrain
     Animation<double>? _nextTrain, {
-    /// optionalParameters: {void Function()? onSwitchedTrain} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onSwitchedTrain} , default:none
     VoidCallback? onSwitchedTrain,
   }) : super(
           _currentTrain,
           _nextTrain,
           onSwitchedTrain: onSwitchedTrain,
         ) {
+    mateCreateName = 'TrainHoppingAnimation';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TrainHoppingAnimation$Mate(
           p.get('_currentTrain').value,
           p.get('_nextTrain').value,
           onSwitchedTrain: p.get('onSwitchedTrain').build(),
         );
-    matePut('_currentTrain', _currentTrain);
-    matePut('_nextTrain', _nextTrain);
-    matePut('onSwitchedTrain', onSwitchedTrain);
+    mateUse(
+      '_currentTrain',
+      _currentTrain,
+      isNamed: false,
+    );
+    mateUse(
+      '_nextTrain',
+      _nextTrain,
+      isNamed: false,
+    );
+    mateUse(
+      'onSwitchedTrain',
+      onSwitchedTrain,
+      isNamed: true,
+    );
   }
 }
 
@@ -105,21 +151,31 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate {
 class AnimationMean$Mate extends AnimationMean with Mate {
   /// AnimationMean AnimationMean({required Animation<double> left, required Animation<double> right})
   AnimationMean$Mate({
-    /// optionalParameters: {required Animation<double> left} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> left} , default:none
     required Animation<double> left,
 
-    /// optionalParameters: {required Animation<double> right} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> right} , default:none
     required Animation<double> right,
   }) : super(
           left: left,
           right: right,
         ) {
+    mateCreateName = 'AnimationMean';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMean$Mate(
           left: p.get('left').build(),
           right: p.get('right').build(),
         );
-    matePut('left', left);
-    matePut('right', right);
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+    );
   }
 }
 
@@ -136,12 +192,22 @@ class AnimationMax$Mate<T extends num> extends AnimationMax<T> with Mate {
           first,
           next,
         ) {
+    mateCreateName = 'AnimationMax';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMax$Mate<T>(
           p.get('first').value,
           p.get('next').value,
         );
-    matePut('first', first);
-    matePut('next', next);
+    mateUse(
+      'first',
+      first,
+      isNamed: false,
+    );
+    mateUse(
+      'next',
+      next,
+      isNamed: false,
+    );
   }
 }
 
@@ -158,11 +224,21 @@ class AnimationMin$Mate<T extends num> extends AnimationMin<T> with Mate {
           first,
           next,
         ) {
+    mateCreateName = 'AnimationMin';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMin$Mate<T>(
           p.get('first').value,
           p.get('next').value,
         );
-    matePut('first', first);
-    matePut('next', next);
+    mateUse(
+      'first',
+      first,
+      isNamed: false,
+    );
+    mateUse(
+      'next',
+      next,
+      isNamed: false,
+    );
   }
 }

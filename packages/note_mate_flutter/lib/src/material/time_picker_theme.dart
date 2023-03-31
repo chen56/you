@@ -16,70 +16,70 @@ import 'package:flutter/src/widgets/framework.dart';
 class TimePickerThemeData$Mate extends TimePickerThemeData with Mate {
   /// TimePickerThemeData TimePickerThemeData({Color? backgroundColor, ButtonStyle? cancelButtonStyle, ButtonStyle? confirmButtonStyle, BorderSide? dayPeriodBorderSide, Color? dayPeriodColor, OutlinedBorder? dayPeriodShape, Color? dayPeriodTextColor, TextStyle? dayPeriodTextStyle, Color? dialBackgroundColor, Color? dialHandColor, Color? dialTextColor, TextStyle? dialTextStyle, double? elevation, Color? entryModeIconColor, TextStyle? helpTextStyle, Color? hourMinuteColor, ShapeBorder? hourMinuteShape, Color? hourMinuteTextColor, TextStyle? hourMinuteTextStyle, InputDecorationTheme? inputDecorationTheme, EdgeInsetsGeometry? padding, ShapeBorder? shape})
   TimePickerThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {ButtonStyle? cancelButtonStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? cancelButtonStyle} , default:none
     ButtonStyle? cancelButtonStyle,
 
-    /// optionalParameters: {ButtonStyle? confirmButtonStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ButtonStyle? confirmButtonStyle} , default:none
     ButtonStyle? confirmButtonStyle,
 
-    /// optionalParameters: {BorderSide? dayPeriodBorderSide} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? dayPeriodBorderSide} , default:none
     BorderSide? dayPeriodBorderSide,
 
-    /// optionalParameters: {Color? dayPeriodColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dayPeriodColor} , default:none
     Color? dayPeriodColor,
 
-    /// optionalParameters: {OutlinedBorder? dayPeriodShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {OutlinedBorder? dayPeriodShape} , default:none
     OutlinedBorder? dayPeriodShape,
 
-    /// optionalParameters: {Color? dayPeriodTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dayPeriodTextColor} , default:none
     Color? dayPeriodTextColor,
 
-    /// optionalParameters: {TextStyle? dayPeriodTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? dayPeriodTextStyle} , default:none
     TextStyle? dayPeriodTextStyle,
 
-    /// optionalParameters: {Color? dialBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dialBackgroundColor} , default:none
     Color? dialBackgroundColor,
 
-    /// optionalParameters: {Color? dialHandColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dialHandColor} , default:none
     Color? dialHandColor,
 
-    /// optionalParameters: {Color? dialTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dialTextColor} , default:none
     Color? dialTextColor,
 
-    /// optionalParameters: {TextStyle? dialTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? dialTextStyle} , default:none
     TextStyle? dialTextStyle,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? entryModeIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? entryModeIconColor} , default:none
     Color? entryModeIconColor,
 
-    /// optionalParameters: {TextStyle? helpTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? helpTextStyle} , default:none
     TextStyle? helpTextStyle,
 
-    /// optionalParameters: {Color? hourMinuteColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hourMinuteColor} , default:none
     Color? hourMinuteColor,
 
-    /// optionalParameters: {ShapeBorder? hourMinuteShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? hourMinuteShape} , default:none
     ShapeBorder? hourMinuteShape,
 
-    /// optionalParameters: {Color? hourMinuteTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hourMinuteTextColor} , default:none
     Color? hourMinuteTextColor,
 
-    /// optionalParameters: {TextStyle? hourMinuteTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? hourMinuteTextStyle} , default:none
     TextStyle? hourMinuteTextStyle,
 
-    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , default:none
     InputDecorationTheme? inputDecorationTheme,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
   }) : super(
           backgroundColor: backgroundColor,
@@ -105,6 +105,8 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate {
           padding: padding,
           shape: shape,
         ) {
+    mateCreateName = 'TimePickerThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           cancelButtonStyle: p.get('cancelButtonStyle').build(),
@@ -129,28 +131,116 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate {
           padding: p.get('padding').build(),
           shape: p.get('shape').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('cancelButtonStyle', cancelButtonStyle);
-    matePut('confirmButtonStyle', confirmButtonStyle);
-    matePut('dayPeriodBorderSide', dayPeriodBorderSide);
-    matePut('dayPeriodColor', dayPeriodColor);
-    matePut('dayPeriodShape', dayPeriodShape);
-    matePut('dayPeriodTextColor', dayPeriodTextColor);
-    matePut('dayPeriodTextStyle', dayPeriodTextStyle);
-    matePut('dialBackgroundColor', dialBackgroundColor);
-    matePut('dialHandColor', dialHandColor);
-    matePut('dialTextColor', dialTextColor);
-    matePut('dialTextStyle', dialTextStyle);
-    matePut('elevation', elevation);
-    matePut('entryModeIconColor', entryModeIconColor);
-    matePut('helpTextStyle', helpTextStyle);
-    matePut('hourMinuteColor', hourMinuteColor);
-    matePut('hourMinuteShape', hourMinuteShape);
-    matePut('hourMinuteTextColor', hourMinuteTextColor);
-    matePut('hourMinuteTextStyle', hourMinuteTextStyle);
-    matePut('inputDecorationTheme', inputDecorationTheme);
-    matePut('padding', padding);
-    matePut('shape', shape);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'cancelButtonStyle',
+      cancelButtonStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'confirmButtonStyle',
+      confirmButtonStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'dayPeriodBorderSide',
+      dayPeriodBorderSide,
+      isNamed: true,
+    );
+    mateUse(
+      'dayPeriodColor',
+      dayPeriodColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dayPeriodShape',
+      dayPeriodShape,
+      isNamed: true,
+    );
+    mateUse(
+      'dayPeriodTextColor',
+      dayPeriodTextColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dayPeriodTextStyle',
+      dayPeriodTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'dialBackgroundColor',
+      dialBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dialHandColor',
+      dialHandColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dialTextColor',
+      dialTextColor,
+      isNamed: true,
+    );
+    mateUse(
+      'dialTextStyle',
+      dialTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'entryModeIconColor',
+      entryModeIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'helpTextStyle',
+      helpTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'hourMinuteColor',
+      hourMinuteColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hourMinuteShape',
+      hourMinuteShape,
+      isNamed: true,
+    );
+    mateUse(
+      'hourMinuteTextColor',
+      hourMinuteTextColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hourMinuteTextStyle',
+      hourMinuteTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'inputDecorationTheme',
+      inputDecorationTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
   }
 }
 
@@ -158,26 +248,40 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate {
 class TimePickerTheme$Mate extends TimePickerTheme with Mate {
   /// TimePickerTheme TimePickerTheme({Key? key, required TimePickerThemeData data, required Widget child})
   TimePickerTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TimePickerThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TimePickerThemeData data} , default:none
     required TimePickerThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'TimePickerTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

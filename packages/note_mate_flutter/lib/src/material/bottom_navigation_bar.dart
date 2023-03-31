@@ -15,74 +15,74 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 class BottomNavigationBar$Mate extends BottomNavigationBar with Mate {
   /// BottomNavigationBar BottomNavigationBar({Key? key, required List<BottomNavigationBarItem> items, void Function(int)? onTap, int currentIndex = 0, double? elevation, BottomNavigationBarType? type, Color? fixedColor, Color? backgroundColor, double iconSize = 24.0, Color? selectedItemColor, Color? unselectedItemColor, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, double selectedFontSize = 14.0, double unselectedFontSize = 12.0, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, MouseCursor? mouseCursor, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, bool useLegacyColorScheme = true})
   BottomNavigationBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<BottomNavigationBarItem> items} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<BottomNavigationBarItem> items} , default:none
     required List<BottomNavigationBarItem> items,
 
-    /// optionalParameters: {void Function(int)? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onTap} , default:none
     ValueChanged<int>? onTap,
 
-    /// optionalParameters: {int currentIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int currentIndex,
+    /// optionalParameters: {int currentIndex = 0} , default:processed=IntegerLiteralImpl
+    int currentIndex = 0,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {BottomNavigationBarType? type} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BottomNavigationBarType? type} , default:none
     BottomNavigationBarType? type,
 
-    /// optionalParameters: {Color? fixedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fixedColor} , default:none
     Color? fixedColor,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double iconSize = 24.0} , hasDefaultValue:true, defaultValueCode:24.0
-    required double iconSize,
+    /// optionalParameters: {double iconSize = 24.0} , default:processed=DoubleLiteralImpl
+    double iconSize = 24.0,
 
-    /// optionalParameters: {Color? selectedItemColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedItemColor} , default:none
     Color? selectedItemColor,
 
-    /// optionalParameters: {Color? unselectedItemColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? unselectedItemColor} , default:none
     Color? unselectedItemColor,
 
-    /// optionalParameters: {IconThemeData? selectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? selectedIconTheme} , default:none
     IconThemeData? selectedIconTheme,
 
-    /// optionalParameters: {IconThemeData? unselectedIconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {IconThemeData? unselectedIconTheme} , default:none
     IconThemeData? unselectedIconTheme,
 
-    /// optionalParameters: {double selectedFontSize = 14.0} , hasDefaultValue:true, defaultValueCode:14.0
-    required double selectedFontSize,
+    /// optionalParameters: {double selectedFontSize = 14.0} , default:processed=DoubleLiteralImpl
+    double selectedFontSize = 14.0,
 
-    /// optionalParameters: {double unselectedFontSize = 12.0} , hasDefaultValue:true, defaultValueCode:12.0
-    required double unselectedFontSize,
+    /// optionalParameters: {double unselectedFontSize = 12.0} , default:processed=DoubleLiteralImpl
+    double unselectedFontSize = 12.0,
 
-    /// optionalParameters: {TextStyle? selectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? selectedLabelStyle} , default:none
     TextStyle? selectedLabelStyle,
 
-    /// optionalParameters: {TextStyle? unselectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
     TextStyle? unselectedLabelStyle,
 
-    /// optionalParameters: {bool? showSelectedLabels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showSelectedLabels} , default:none
     bool? showSelectedLabels,
 
-    /// optionalParameters: {bool? showUnselectedLabels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showUnselectedLabels} , default:none
     bool? showUnselectedLabels,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {BottomNavigationBarLandscapeLayout? landscapeLayout} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BottomNavigationBarLandscapeLayout? landscapeLayout} , default:none
     BottomNavigationBarLandscapeLayout? landscapeLayout,
 
-    /// optionalParameters: {bool useLegacyColorScheme = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool useLegacyColorScheme,
+    /// optionalParameters: {bool useLegacyColorScheme = true} , default:processed=BooleanLiteralImpl
+    bool useLegacyColorScheme = true,
   }) : super(
           key: key,
           items: items,
@@ -108,6 +108,8 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with Mate {
           landscapeLayout: landscapeLayout,
           useLegacyColorScheme: useLegacyColorScheme,
         ) {
+    mateCreateName = 'BottomNavigationBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBar$Mate(
           key: p.get('key').build(),
           items: p.get('items').build(),
@@ -133,28 +135,125 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with Mate {
           landscapeLayout: p.get('landscapeLayout').build(),
           useLegacyColorScheme: p.get('useLegacyColorScheme').build(),
         );
-    matePut('key', key);
-    matePut('items', items);
-    matePut('onTap', onTap);
-    matePut('currentIndex', currentIndex);
-    matePut('elevation', elevation);
-    matePut('type', type);
-    matePut('fixedColor', fixedColor);
-    matePut('backgroundColor', backgroundColor);
-    matePut('iconSize', iconSize);
-    matePut('selectedItemColor', selectedItemColor);
-    matePut('unselectedItemColor', unselectedItemColor);
-    matePut('selectedIconTheme', selectedIconTheme);
-    matePut('unselectedIconTheme', unselectedIconTheme);
-    matePut('selectedFontSize', selectedFontSize);
-    matePut('unselectedFontSize', unselectedFontSize);
-    matePut('selectedLabelStyle', selectedLabelStyle);
-    matePut('unselectedLabelStyle', unselectedLabelStyle);
-    matePut('showSelectedLabels', showSelectedLabels);
-    matePut('showUnselectedLabels', showUnselectedLabels);
-    matePut('mouseCursor', mouseCursor);
-    matePut('enableFeedback', enableFeedback);
-    matePut('landscapeLayout', landscapeLayout);
-    matePut('useLegacyColorScheme', useLegacyColorScheme);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'items',
+      items,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'currentIndex',
+      currentIndex,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+    );
+    mateUse(
+      'fixedColor',
+      fixedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconSize',
+      iconSize,
+      isNamed: true,
+      defaultValue: 24.0,
+    );
+    mateUse(
+      'selectedItemColor',
+      selectedItemColor,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedItemColor',
+      unselectedItemColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedIconTheme',
+      selectedIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedIconTheme',
+      unselectedIconTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedFontSize',
+      selectedFontSize,
+      isNamed: true,
+      defaultValue: 14.0,
+    );
+    mateUse(
+      'unselectedFontSize',
+      unselectedFontSize,
+      isNamed: true,
+      defaultValue: 12.0,
+    );
+    mateUse(
+      'selectedLabelStyle',
+      selectedLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedLabelStyle',
+      unselectedLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'showSelectedLabels',
+      showSelectedLabels,
+      isNamed: true,
+    );
+    mateUse(
+      'showUnselectedLabels',
+      showUnselectedLabels,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'landscapeLayout',
+      landscapeLayout,
+      isNamed: true,
+    );
+    mateUse(
+      'useLegacyColorScheme',
+      useLegacyColorScheme,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

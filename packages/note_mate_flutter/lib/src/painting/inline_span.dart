@@ -14,8 +14,15 @@ class Accumulator$Mate extends Accumulator with Mate {
       /// requiredParameters: [int _value = 0]
       int _value)
       : super(_value) {
+    mateCreateName = 'Accumulator';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Accumulator$Mate(p.get('_value').value);
-    matePut('_value', _value);
+    mateUse(
+      '_value',
+      _value,
+      isNamed: false,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -25,16 +32,16 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
   InlineSpanSemanticsInformation$Mate(
     /// requiredParameters: String text
     String text, {
-    /// optionalParameters: {bool isPlaceholder = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isPlaceholder,
+    /// optionalParameters: {bool isPlaceholder = false} , default:processed=BooleanLiteralImpl
+    bool isPlaceholder = false,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {List<StringAttribute> stringAttributes = const <ui.StringAttribute>[]} , hasDefaultValue:true, defaultValueCode:const <ui.StringAttribute>[]
+    /// optionalParameters: {List<StringAttribute> stringAttributes = const <ui.StringAttribute>[]} , default:unprocessed=ListLiteralImpl
     required List<StringAttribute> stringAttributes,
 
-    /// optionalParameters: {GestureRecognizer? recognizer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GestureRecognizer? recognizer} , default:none
     GestureRecognizer? recognizer,
   }) : super(
           text,
@@ -43,6 +50,8 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           stringAttributes: stringAttributes,
           recognizer: recognizer,
         ) {
+    mateCreateName = 'InlineSpanSemanticsInformation';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => InlineSpanSemanticsInformation$Mate(
           p.get('text').value,
           isPlaceholder: p.get('isPlaceholder').build(),
@@ -50,10 +59,31 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           stringAttributes: p.get('stringAttributes').build(),
           recognizer: p.get('recognizer').build(),
         );
-    matePut('text', text);
-    matePut('isPlaceholder', isPlaceholder);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('stringAttributes', stringAttributes);
-    matePut('recognizer', recognizer);
+    mateUse(
+      'text',
+      text,
+      isNamed: false,
+    );
+    mateUse(
+      'isPlaceholder',
+      isPlaceholder,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUseList(
+      'stringAttributes',
+      stringAttributes,
+      isNamed: true,
+    );
+    mateUse(
+      'recognizer',
+      recognizer,
+      isNamed: true,
+    );
   }
 }

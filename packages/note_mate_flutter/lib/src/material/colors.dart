@@ -18,12 +18,22 @@ class MaterialColor$Mate extends MaterialColor with Mate {
           primary,
           swatch,
         ) {
+    mateCreateName = 'MaterialColor';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialColor$Mate(
           p.get('primary').value,
           p.get('swatch').value,
         );
-    matePut('primary', primary);
-    matePut('swatch', swatch);
+    mateUse(
+      'primary',
+      primary,
+      isNamed: false,
+    );
+    mateUse(
+      'swatch',
+      swatch,
+      isNamed: false,
+    );
   }
 }
 
@@ -40,11 +50,21 @@ class MaterialAccentColor$Mate extends MaterialAccentColor with Mate {
           primary,
           swatch,
         ) {
+    mateCreateName = 'MaterialAccentColor';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialAccentColor$Mate(
           p.get('primary').value,
           p.get('swatch').value,
         );
-    matePut('primary', primary);
-    matePut('swatch', swatch);
+    mateUse(
+      'primary',
+      primary,
+      isNamed: false,
+    );
+    mateUse(
+      'swatch',
+      swatch,
+      isNamed: false,
+    );
   }
 }

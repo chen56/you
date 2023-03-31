@@ -10,11 +10,17 @@ class Velocity$Mate extends Velocity with Mate {
   /// Velocity Velocity({required Offset pixelsPerSecond})
   Velocity$Mate(
       {
-      /// optionalParameters: {required Offset pixelsPerSecond} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required Offset pixelsPerSecond} , default:none
       required Offset pixelsPerSecond})
       : super(pixelsPerSecond: pixelsPerSecond) {
+    mateCreateName = 'Velocity';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
-    matePut('pixelsPerSecond', pixelsPerSecond);
+    mateUse(
+      'pixelsPerSecond',
+      pixelsPerSecond,
+      isNamed: true,
+    );
   }
 }
 
@@ -22,16 +28,16 @@ class Velocity$Mate extends Velocity with Mate {
 class VelocityEstimate$Mate extends VelocityEstimate with Mate {
   /// VelocityEstimate VelocityEstimate({required Offset pixelsPerSecond, required double confidence, required Duration duration, required Offset offset})
   VelocityEstimate$Mate({
-    /// optionalParameters: {required Offset pixelsPerSecond} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset pixelsPerSecond} , default:none
     required Offset pixelsPerSecond,
 
-    /// optionalParameters: {required double confidence} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double confidence} , default:none
     required double confidence,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {required Offset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset offset} , default:none
     required Offset offset,
   }) : super(
           pixelsPerSecond: pixelsPerSecond,
@@ -39,16 +45,34 @@ class VelocityEstimate$Mate extends VelocityEstimate with Mate {
           duration: duration,
           offset: offset,
         ) {
+    mateCreateName = 'VelocityEstimate';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VelocityEstimate$Mate(
           pixelsPerSecond: p.get('pixelsPerSecond').build(),
           confidence: p.get('confidence').build(),
           duration: p.get('duration').build(),
           offset: p.get('offset').build(),
         );
-    matePut('pixelsPerSecond', pixelsPerSecond);
-    matePut('confidence', confidence);
-    matePut('duration', duration);
-    matePut('offset', offset);
+    mateUse(
+      'pixelsPerSecond',
+      pixelsPerSecond,
+      isNamed: true,
+    );
+    mateUse(
+      'confidence',
+      confidence,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
   }
 }
 
@@ -60,8 +84,14 @@ class VelocityTracker$Mate extends VelocityTracker with Mate {
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super.withKind(kind) {
+    mateCreateName = 'VelocityTracker.withKind';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VelocityTracker$Mate.withKind(p.get('kind').value);
-    matePut('kind', kind);
+    mateUse(
+      'kind',
+      kind,
+      isNamed: false,
+    );
   }
 }
 
@@ -73,8 +103,14 @@ class IOSScrollViewFlingVelocityTracker$Mate extends IOSScrollViewFlingVelocityT
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super(kind) {
+    mateCreateName = 'IOSScrollViewFlingVelocityTracker';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    matePut('kind', kind);
+    mateUse(
+      'kind',
+      kind,
+      isNamed: false,
+    );
   }
 }
 
@@ -86,7 +122,13 @@ class MacOSScrollViewFlingVelocityTracker$Mate extends MacOSScrollViewFlingVeloc
       /// requiredParameters: PointerDeviceKind kind
       PointerDeviceKind kind)
       : super(kind) {
+    mateCreateName = 'MacOSScrollViewFlingVelocityTracker';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    matePut('kind', kind);
+    mateUse(
+      'kind',
+      kind,
+      isNamed: false,
+    );
   }
 }

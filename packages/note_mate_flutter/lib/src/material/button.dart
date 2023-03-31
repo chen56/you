@@ -9,7 +9,9 @@ import 'dart:core';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/material/theme_data.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/widgets/focus_manager.dart';
@@ -19,86 +21,86 @@ import 'package:flutter/src/widgets/framework.dart';
 class RawMaterialButton$Mate extends RawMaterialButton with Mate {
   /// RawMaterialButton RawMaterialButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHighlightChanged, MouseCursor? mouseCursor, TextStyle? textStyle, Color? fillColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, double elevation = 2.0, double focusElevation = 4.0, double hoverElevation = 4.0, double highlightElevation = 8.0, double disabledElevation = 0.0, EdgeInsetsGeometry padding = EdgeInsets.zero, VisualDensity visualDensity = VisualDensity.standard, BoxConstraints constraints = const BoxConstraints(minWidth: 88.0, minHeight: 36.0), ShapeBorder shape = const RoundedRectangleBorder(), Duration animationDuration = kThemeChangeDuration, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, Widget? child, bool enableFeedback = true})
   RawMaterialButton$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required void Function()? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPressed} , default:none
     required VoidCallback? onPressed,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     VoidCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onHighlightChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
     ValueChanged<bool>? onHighlightChanged,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {Color? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fillColor} , default:none
     Color? fillColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , default:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {double elevation = 2.0} , hasDefaultValue:true, defaultValueCode:2.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 2.0} , default:processed=DoubleLiteralImpl
+    double elevation = 2.0,
 
-    /// optionalParameters: {double focusElevation = 4.0} , hasDefaultValue:true, defaultValueCode:4.0
-    required double focusElevation,
+    /// optionalParameters: {double focusElevation = 4.0} , default:processed=DoubleLiteralImpl
+    double focusElevation = 4.0,
 
-    /// optionalParameters: {double hoverElevation = 4.0} , hasDefaultValue:true, defaultValueCode:4.0
-    required double hoverElevation,
+    /// optionalParameters: {double hoverElevation = 4.0} , default:processed=DoubleLiteralImpl
+    double hoverElevation = 4.0,
 
-    /// optionalParameters: {double highlightElevation = 8.0} , hasDefaultValue:true, defaultValueCode:8.0
-    required double highlightElevation,
+    /// optionalParameters: {double highlightElevation = 8.0} , default:processed=DoubleLiteralImpl
+    double highlightElevation = 8.0,
 
-    /// optionalParameters: {double disabledElevation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double disabledElevation,
+    /// optionalParameters: {double disabledElevation = 0.0} , default:processed=DoubleLiteralImpl
+    double disabledElevation = 0.0,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
-    required EdgeInsetsGeometry padding,
+    /// optionalParameters: {EdgeInsetsGeometry padding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    EdgeInsetsGeometry padding = EdgeInsets.zero,
 
-    /// optionalParameters: {VisualDensity visualDensity = VisualDensity.standard} , hasDefaultValue:true, defaultValueCode:VisualDensity.standard
-    required VisualDensity visualDensity,
+    /// optionalParameters: {VisualDensity visualDensity = VisualDensity.standard} , default:processed=PrefixedIdentifierImpl
+    VisualDensity visualDensity = VisualDensity.standard,
 
-    /// optionalParameters: {BoxConstraints constraints = const BoxConstraints(minWidth: 88.0, minHeight: 36.0)} , hasDefaultValue:true, defaultValueCode:const BoxConstraints(minWidth: 88.0, minHeight: 36.0)
+    /// optionalParameters: {BoxConstraints constraints = const BoxConstraints(minWidth: 88.0, minHeight: 36.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required BoxConstraints constraints,
 
-    /// optionalParameters: {ShapeBorder shape = const RoundedRectangleBorder()} , hasDefaultValue:true, defaultValueCode:const RoundedRectangleBorder()
+    /// optionalParameters: {ShapeBorder shape = const RoundedRectangleBorder()} , default:unprocessed=InstanceCreationExpressionImpl
     required ShapeBorder shape,
 
-    /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , hasDefaultValue:true, defaultValueCode:kThemeChangeDuration
+    /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration animationDuration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     MaterialTapTargetSize? materialTapTargetSize,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool enableFeedback = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableFeedback,
+    /// optionalParameters: {bool enableFeedback = true} , default:processed=BooleanLiteralImpl
+    bool enableFeedback = true,
   }) : super(
           key: key,
           onPressed: onPressed,
@@ -128,6 +130,8 @@ class RawMaterialButton$Mate extends RawMaterialButton with Mate {
           child: child,
           enableFeedback: enableFeedback,
         ) {
+    mateCreateName = 'RawMaterialButton';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RawMaterialButton$Mate(
           key: p.get('key').build(),
           onPressed: p.get('onPressed').build(),
@@ -157,32 +161,150 @@ class RawMaterialButton$Mate extends RawMaterialButton with Mate {
           child: p.get('child').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    matePut('key', key);
-    matePut('onPressed', onPressed);
-    matePut('onLongPress', onLongPress);
-    matePut('onHighlightChanged', onHighlightChanged);
-    matePut('mouseCursor', mouseCursor);
-    matePut('textStyle', textStyle);
-    matePut('fillColor', fillColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('highlightColor', highlightColor);
-    matePut('splashColor', splashColor);
-    matePut('elevation', elevation);
-    matePut('focusElevation', focusElevation);
-    matePut('hoverElevation', hoverElevation);
-    matePut('highlightElevation', highlightElevation);
-    matePut('disabledElevation', disabledElevation);
-    matePut('padding', padding);
-    matePut('visualDensity', visualDensity);
-    matePut('constraints', constraints);
-    matePut('shape', shape);
-    matePut('animationDuration', animationDuration);
-    matePut('clipBehavior', clipBehavior);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
-    matePut('materialTapTargetSize', materialTapTargetSize);
-    matePut('child', child);
-    matePut('enableFeedback', enableFeedback);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onHighlightChanged',
+      onHighlightChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightColor',
+      highlightColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'focusElevation',
+      focusElevation,
+      isNamed: true,
+      defaultValue: 4.0,
+    );
+    mateUse(
+      'hoverElevation',
+      hoverElevation,
+      isNamed: true,
+      defaultValue: 4.0,
+    );
+    mateUse(
+      'highlightElevation',
+      highlightElevation,
+      isNamed: true,
+      defaultValue: 8.0,
+    );
+    mateUse(
+      'disabledElevation',
+      disabledElevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+      defaultValue: VisualDensity.standard,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'animationDuration',
+      animationDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'materialTapTargetSize',
+      materialTapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

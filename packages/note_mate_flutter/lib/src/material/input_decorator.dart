@@ -11,40 +11,41 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/material/input_border.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/painting/borders.dart';
 
 /// class InputDecorator extends StatefulWidget
 class InputDecorator$Mate extends InputDecorator with Mate {
   /// InputDecorator InputDecorator({Key? key, required InputDecoration decoration, TextStyle? baseStyle, TextAlign? textAlign, TextAlignVertical? textAlignVertical, bool isFocused = false, bool isHovering = false, bool expands = false, bool isEmpty = false, Widget? child})
   InputDecorator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required InputDecoration decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required InputDecoration decoration} , default:none
     required InputDecoration decoration,
 
-    /// optionalParameters: {TextStyle? baseStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? baseStyle} , default:none
     TextStyle? baseStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {TextAlignVertical? textAlignVertical} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
     TextAlignVertical? textAlignVertical,
 
-    /// optionalParameters: {bool isFocused = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isFocused,
+    /// optionalParameters: {bool isFocused = false} , default:processed=BooleanLiteralImpl
+    bool isFocused = false,
 
-    /// optionalParameters: {bool isHovering = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isHovering,
+    /// optionalParameters: {bool isHovering = false} , default:processed=BooleanLiteralImpl
+    bool isHovering = false,
 
-    /// optionalParameters: {bool expands = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expands,
+    /// optionalParameters: {bool expands = false} , default:processed=BooleanLiteralImpl
+    bool expands = false,
 
-    /// optionalParameters: {bool isEmpty = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isEmpty,
+    /// optionalParameters: {bool isEmpty = false} , default:processed=BooleanLiteralImpl
+    bool isEmpty = false,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -58,6 +59,8 @@ class InputDecorator$Mate extends InputDecorator with Mate {
           isEmpty: isEmpty,
           child: child,
         ) {
+    mateCreateName = 'InputDecorator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecorator$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),
@@ -70,16 +73,60 @@ class InputDecorator$Mate extends InputDecorator with Mate {
           isEmpty: p.get('isEmpty').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('decoration', decoration);
-    matePut('baseStyle', baseStyle);
-    matePut('textAlign', textAlign);
-    matePut('textAlignVertical', textAlignVertical);
-    matePut('isFocused', isFocused);
-    matePut('isHovering', isHovering);
-    matePut('expands', expands);
-    matePut('isEmpty', isEmpty);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'baseStyle',
+      baseStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlignVertical',
+      textAlignVertical,
+      isNamed: true,
+    );
+    mateUse(
+      'isFocused',
+      isFocused,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isHovering',
+      isHovering,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'expands',
+      expands,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isEmpty',
+      isEmpty,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -87,154 +134,154 @@ class InputDecorator$Mate extends InputDecorator with Mate {
 class InputDecoration$Mate extends InputDecoration with Mate {
   /// InputDecoration InputDecoration({Widget? icon, Color? iconColor, Widget? label, String? labelText, TextStyle? labelStyle, TextStyle? floatingLabelStyle, String? helperText, TextStyle? helperStyle, int? helperMaxLines, String? hintText, TextStyle? hintStyle, TextDirection? hintTextDirection, int? hintMaxLines, String? errorText, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, bool isCollapsed = false, bool? isDense, EdgeInsetsGeometry? contentPadding, Widget? prefixIcon, BoxConstraints? prefixIconConstraints, Widget? prefix, String? prefixText, TextStyle? prefixStyle, Color? prefixIconColor, Widget? suffixIcon, Widget? suffix, String? suffixText, TextStyle? suffixStyle, Color? suffixIconColor, BoxConstraints? suffixIconConstraints, Widget? counter, String? counterText, TextStyle? counterStyle, bool? filled, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool enabled = true, String? semanticCounterText, bool? alignLabelWithHint, BoxConstraints? constraints})
   InputDecoration$Mate({
-    /// optionalParameters: {Widget? icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , default:none
     Color? iconColor,
 
-    /// optionalParameters: {Widget? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? label} , default:none
     Widget? label,
 
-    /// optionalParameters: {String? labelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? labelText} , default:none
     String? labelText,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , default:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {TextStyle? floatingLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? floatingLabelStyle} , default:none
     TextStyle? floatingLabelStyle,
 
-    /// optionalParameters: {String? helperText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? helperText} , default:none
     String? helperText,
 
-    /// optionalParameters: {TextStyle? helperStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? helperStyle} , default:none
     TextStyle? helperStyle,
 
-    /// optionalParameters: {int? helperMaxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? helperMaxLines} , default:none
     int? helperMaxLines,
 
-    /// optionalParameters: {String? hintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? hintText} , default:none
     String? hintText,
 
-    /// optionalParameters: {TextStyle? hintStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? hintStyle} , default:none
     TextStyle? hintStyle,
 
-    /// optionalParameters: {TextDirection? hintTextDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? hintTextDirection} , default:none
     TextDirection? hintTextDirection,
 
-    /// optionalParameters: {int? hintMaxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? hintMaxLines} , default:none
     int? hintMaxLines,
 
-    /// optionalParameters: {String? errorText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorText} , default:none
     String? errorText,
 
-    /// optionalParameters: {TextStyle? errorStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? errorStyle} , default:none
     TextStyle? errorStyle,
 
-    /// optionalParameters: {int? errorMaxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? errorMaxLines} , default:none
     int? errorMaxLines,
 
-    /// optionalParameters: {FloatingLabelBehavior? floatingLabelBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FloatingLabelBehavior? floatingLabelBehavior} , default:none
     FloatingLabelBehavior? floatingLabelBehavior,
 
-    /// optionalParameters: {FloatingLabelAlignment? floatingLabelAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FloatingLabelAlignment? floatingLabelAlignment} , default:none
     FloatingLabelAlignment? floatingLabelAlignment,
 
-    /// optionalParameters: {bool isCollapsed = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isCollapsed,
+    /// optionalParameters: {bool isCollapsed = false} , default:processed=BooleanLiteralImpl
+    bool isCollapsed = false,
 
-    /// optionalParameters: {bool? isDense} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? isDense} , default:none
     bool? isDense,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {Widget? prefixIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prefixIcon} , default:none
     Widget? prefixIcon,
 
-    /// optionalParameters: {BoxConstraints? prefixIconConstraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? prefixIconConstraints} , default:none
     BoxConstraints? prefixIconConstraints,
 
-    /// optionalParameters: {Widget? prefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prefix} , default:none
     Widget? prefix,
 
-    /// optionalParameters: {String? prefixText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? prefixText} , default:none
     String? prefixText,
 
-    /// optionalParameters: {TextStyle? prefixStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? prefixStyle} , default:none
     TextStyle? prefixStyle,
 
-    /// optionalParameters: {Color? prefixIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? prefixIconColor} , default:none
     Color? prefixIconColor,
 
-    /// optionalParameters: {Widget? suffixIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? suffixIcon} , default:none
     Widget? suffixIcon,
 
-    /// optionalParameters: {Widget? suffix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? suffix} , default:none
     Widget? suffix,
 
-    /// optionalParameters: {String? suffixText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? suffixText} , default:none
     String? suffixText,
 
-    /// optionalParameters: {TextStyle? suffixStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? suffixStyle} , default:none
     TextStyle? suffixStyle,
 
-    /// optionalParameters: {Color? suffixIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? suffixIconColor} , default:none
     Color? suffixIconColor,
 
-    /// optionalParameters: {BoxConstraints? suffixIconConstraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? suffixIconConstraints} , default:none
     BoxConstraints? suffixIconConstraints,
 
-    /// optionalParameters: {Widget? counter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? counter} , default:none
     Widget? counter,
 
-    /// optionalParameters: {String? counterText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? counterText} , default:none
     String? counterText,
 
-    /// optionalParameters: {TextStyle? counterStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? counterStyle} , default:none
     TextStyle? counterStyle,
 
-    /// optionalParameters: {bool? filled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? filled} , default:none
     bool? filled,
 
-    /// optionalParameters: {Color? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fillColor} , default:none
     Color? fillColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {InputBorder? errorBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? errorBorder} , default:none
     InputBorder? errorBorder,
 
-    /// optionalParameters: {InputBorder? focusedBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? focusedBorder} , default:none
     InputBorder? focusedBorder,
 
-    /// optionalParameters: {InputBorder? focusedErrorBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? focusedErrorBorder} , default:none
     InputBorder? focusedErrorBorder,
 
-    /// optionalParameters: {InputBorder? disabledBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? disabledBorder} , default:none
     InputBorder? disabledBorder,
 
-    /// optionalParameters: {InputBorder? enabledBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? enabledBorder} , default:none
     InputBorder? enabledBorder,
 
-    /// optionalParameters: {InputBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? border} , default:none
     InputBorder? border,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
+    bool enabled = true,
 
-    /// optionalParameters: {String? semanticCounterText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticCounterText} , default:none
     String? semanticCounterText,
 
-    /// optionalParameters: {bool? alignLabelWithHint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? alignLabelWithHint} , default:none
     bool? alignLabelWithHint,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
   }) : super(
           icon: icon,
@@ -288,6 +335,8 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           alignLabelWithHint: alignLabelWithHint,
           constraints: constraints,
         ) {
+    mateCreateName = 'InputDecoration';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecoration$Mate(
           icon: p.get('icon').build(),
           iconColor: p.get('iconColor').build(),
@@ -340,92 +389,294 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           alignLabelWithHint: p.get('alignLabelWithHint').build(),
           constraints: p.get('constraints').build(),
         );
-    matePut('icon', icon);
-    matePut('iconColor', iconColor);
-    matePut('label', label);
-    matePut('labelText', labelText);
-    matePut('labelStyle', labelStyle);
-    matePut('floatingLabelStyle', floatingLabelStyle);
-    matePut('helperText', helperText);
-    matePut('helperStyle', helperStyle);
-    matePut('helperMaxLines', helperMaxLines);
-    matePut('hintText', hintText);
-    matePut('hintStyle', hintStyle);
-    matePut('hintTextDirection', hintTextDirection);
-    matePut('hintMaxLines', hintMaxLines);
-    matePut('errorText', errorText);
-    matePut('errorStyle', errorStyle);
-    matePut('errorMaxLines', errorMaxLines);
-    matePut('floatingLabelBehavior', floatingLabelBehavior);
-    matePut('floatingLabelAlignment', floatingLabelAlignment);
-    matePut('isCollapsed', isCollapsed);
-    matePut('isDense', isDense);
-    matePut('contentPadding', contentPadding);
-    matePut('prefixIcon', prefixIcon);
-    matePut('prefixIconConstraints', prefixIconConstraints);
-    matePut('prefix', prefix);
-    matePut('prefixText', prefixText);
-    matePut('prefixStyle', prefixStyle);
-    matePut('prefixIconColor', prefixIconColor);
-    matePut('suffixIcon', suffixIcon);
-    matePut('suffix', suffix);
-    matePut('suffixText', suffixText);
-    matePut('suffixStyle', suffixStyle);
-    matePut('suffixIconColor', suffixIconColor);
-    matePut('suffixIconConstraints', suffixIconConstraints);
-    matePut('counter', counter);
-    matePut('counterText', counterText);
-    matePut('counterStyle', counterStyle);
-    matePut('filled', filled);
-    matePut('fillColor', fillColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('errorBorder', errorBorder);
-    matePut('focusedBorder', focusedBorder);
-    matePut('focusedErrorBorder', focusedErrorBorder);
-    matePut('disabledBorder', disabledBorder);
-    matePut('enabledBorder', enabledBorder);
-    matePut('border', border);
-    matePut('enabled', enabled);
-    matePut('semanticCounterText', semanticCounterText);
-    matePut('alignLabelWithHint', alignLabelWithHint);
-    matePut('constraints', constraints);
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'labelText',
+      labelText,
+      isNamed: true,
+    );
+    mateUse(
+      'labelStyle',
+      labelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingLabelStyle',
+      floatingLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'helperText',
+      helperText,
+      isNamed: true,
+    );
+    mateUse(
+      'helperStyle',
+      helperStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'helperMaxLines',
+      helperMaxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'hintText',
+      hintText,
+      isNamed: true,
+    );
+    mateUse(
+      'hintStyle',
+      hintStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'hintTextDirection',
+      hintTextDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'hintMaxLines',
+      hintMaxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'errorText',
+      errorText,
+      isNamed: true,
+    );
+    mateUse(
+      'errorStyle',
+      errorStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'errorMaxLines',
+      errorMaxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingLabelBehavior',
+      floatingLabelBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingLabelAlignment',
+      floatingLabelAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'isCollapsed',
+      isCollapsed,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isDense',
+      isDense,
+      isNamed: true,
+    );
+    mateUse(
+      'contentPadding',
+      contentPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixIcon',
+      prefixIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixIconConstraints',
+      prefixIconConstraints,
+      isNamed: true,
+    );
+    mateUse(
+      'prefix',
+      prefix,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixText',
+      prefixText,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixStyle',
+      prefixStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixIconColor',
+      prefixIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixIcon',
+      suffixIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'suffix',
+      suffix,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixText',
+      suffixText,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixStyle',
+      suffixStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixIconColor',
+      suffixIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixIconConstraints',
+      suffixIconConstraints,
+      isNamed: true,
+    );
+    mateUse(
+      'counter',
+      counter,
+      isNamed: true,
+    );
+    mateUse(
+      'counterText',
+      counterText,
+      isNamed: true,
+    );
+    mateUse(
+      'counterStyle',
+      counterStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'filled',
+      filled,
+      isNamed: true,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'errorBorder',
+      errorBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusedBorder',
+      focusedBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusedErrorBorder',
+      focusedErrorBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledBorder',
+      disabledBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'enabledBorder',
+      enabledBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'semanticCounterText',
+      semanticCounterText,
+      isNamed: true,
+    );
+    mateUse(
+      'alignLabelWithHint',
+      alignLabelWithHint,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
   }
 
   /// InputDecoration InputDecoration.collapsed({required String? hintText, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, TextStyle? hintStyle, TextDirection? hintTextDirection, bool? filled = false, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? border = InputBorder.none, bool enabled = true})
   InputDecoration$Mate.collapsed({
-    /// optionalParameters: {required String? hintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String? hintText} , default:none
     required String? hintText,
 
-    /// optionalParameters: {FloatingLabelBehavior? floatingLabelBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FloatingLabelBehavior? floatingLabelBehavior} , default:none
     FloatingLabelBehavior? floatingLabelBehavior,
 
-    /// optionalParameters: {FloatingLabelAlignment? floatingLabelAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FloatingLabelAlignment? floatingLabelAlignment} , default:none
     FloatingLabelAlignment? floatingLabelAlignment,
 
-    /// optionalParameters: {TextStyle? hintStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? hintStyle} , default:none
     TextStyle? hintStyle,
 
-    /// optionalParameters: {TextDirection? hintTextDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? hintTextDirection} , default:none
     TextDirection? hintTextDirection,
 
-    /// optionalParameters: {bool? filled = false} , hasDefaultValue:true, defaultValueCode:false
-    bool? filled,
+    /// optionalParameters: {bool? filled = false} , default:processed=BooleanLiteralImpl
+    bool? filled = false,
 
-    /// optionalParameters: {Color? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fillColor} , default:none
     Color? fillColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {InputBorder? border = InputBorder.none} , hasDefaultValue:true, defaultValueCode:InputBorder.none
-    InputBorder? border,
+    /// optionalParameters: {InputBorder? border = InputBorder.none} , default:processed=PrefixedIdentifierImpl
+    InputBorder? border = InputBorder.none,
 
-    /// optionalParameters: {bool enabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enabled,
+    /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
+    bool enabled = true,
   }) : super.collapsed(
           hintText: hintText,
           floatingLabelBehavior: floatingLabelBehavior,
@@ -439,6 +690,8 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           border: border,
           enabled: enabled,
         ) {
+    mateCreateName = 'InputDecoration.collapsed';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecoration$Mate.collapsed(
           hintText: p.get('hintText').build(),
           floatingLabelBehavior: p.get('floatingLabelBehavior').build(),
@@ -452,17 +705,64 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           border: p.get('border').build(),
           enabled: p.get('enabled').build(),
         );
-    matePut('hintText', hintText);
-    matePut('floatingLabelBehavior', floatingLabelBehavior);
-    matePut('floatingLabelAlignment', floatingLabelAlignment);
-    matePut('hintStyle', hintStyle);
-    matePut('hintTextDirection', hintTextDirection);
-    matePut('filled', filled);
-    matePut('fillColor', fillColor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('border', border);
-    matePut('enabled', enabled);
+    mateUse(
+      'hintText',
+      hintText,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingLabelBehavior',
+      floatingLabelBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingLabelAlignment',
+      floatingLabelAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'hintStyle',
+      hintStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'hintTextDirection',
+      hintTextDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'filled',
+      filled,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+      defaultValue: InputBorder.none,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -470,100 +770,100 @@ class InputDecoration$Mate extends InputDecoration with Mate {
 class InputDecorationTheme$Mate extends InputDecorationTheme with Mate {
   /// InputDecorationTheme InputDecorationTheme({TextStyle? labelStyle, TextStyle? floatingLabelStyle, TextStyle? helperStyle, int? helperMaxLines, TextStyle? hintStyle, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto, FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start, bool isDense = false, EdgeInsetsGeometry? contentPadding, bool isCollapsed = false, Color? iconColor, TextStyle? prefixStyle, Color? prefixIconColor, TextStyle? suffixStyle, Color? suffixIconColor, TextStyle? counterStyle, bool filled = false, Color? fillColor, BorderSide? activeIndicatorBorder, BorderSide? outlineBorder, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool alignLabelWithHint = false, BoxConstraints? constraints})
   InputDecorationTheme$Mate({
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , default:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {TextStyle? floatingLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? floatingLabelStyle} , default:none
     TextStyle? floatingLabelStyle,
 
-    /// optionalParameters: {TextStyle? helperStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? helperStyle} , default:none
     TextStyle? helperStyle,
 
-    /// optionalParameters: {int? helperMaxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? helperMaxLines} , default:none
     int? helperMaxLines,
 
-    /// optionalParameters: {TextStyle? hintStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? hintStyle} , default:none
     TextStyle? hintStyle,
 
-    /// optionalParameters: {TextStyle? errorStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? errorStyle} , default:none
     TextStyle? errorStyle,
 
-    /// optionalParameters: {int? errorMaxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? errorMaxLines} , default:none
     int? errorMaxLines,
 
-    /// optionalParameters: {FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto} , hasDefaultValue:true, defaultValueCode:FloatingLabelBehavior.auto
-    required FloatingLabelBehavior floatingLabelBehavior,
+    /// optionalParameters: {FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto} , default:processed=PrefixedIdentifierImpl
+    FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto,
 
-    /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , hasDefaultValue:true, defaultValueCode:FloatingLabelAlignment.start
-    required FloatingLabelAlignment floatingLabelAlignment,
+    /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , default:processed=PrefixedIdentifierImpl
+    FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start,
 
-    /// optionalParameters: {bool isDense = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isDense,
+    /// optionalParameters: {bool isDense = false} , default:processed=BooleanLiteralImpl
+    bool isDense = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {bool isCollapsed = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isCollapsed,
+    /// optionalParameters: {bool isCollapsed = false} , default:processed=BooleanLiteralImpl
+    bool isCollapsed = false,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , default:none
     Color? iconColor,
 
-    /// optionalParameters: {TextStyle? prefixStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? prefixStyle} , default:none
     TextStyle? prefixStyle,
 
-    /// optionalParameters: {Color? prefixIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? prefixIconColor} , default:none
     Color? prefixIconColor,
 
-    /// optionalParameters: {TextStyle? suffixStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? suffixStyle} , default:none
     TextStyle? suffixStyle,
 
-    /// optionalParameters: {Color? suffixIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? suffixIconColor} , default:none
     Color? suffixIconColor,
 
-    /// optionalParameters: {TextStyle? counterStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? counterStyle} , default:none
     TextStyle? counterStyle,
 
-    /// optionalParameters: {bool filled = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool filled,
+    /// optionalParameters: {bool filled = false} , default:processed=BooleanLiteralImpl
+    bool filled = false,
 
-    /// optionalParameters: {Color? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fillColor} , default:none
     Color? fillColor,
 
-    /// optionalParameters: {BorderSide? activeIndicatorBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? activeIndicatorBorder} , default:none
     BorderSide? activeIndicatorBorder,
 
-    /// optionalParameters: {BorderSide? outlineBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderSide? outlineBorder} , default:none
     BorderSide? outlineBorder,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {InputBorder? errorBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? errorBorder} , default:none
     InputBorder? errorBorder,
 
-    /// optionalParameters: {InputBorder? focusedBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? focusedBorder} , default:none
     InputBorder? focusedBorder,
 
-    /// optionalParameters: {InputBorder? focusedErrorBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? focusedErrorBorder} , default:none
     InputBorder? focusedErrorBorder,
 
-    /// optionalParameters: {InputBorder? disabledBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? disabledBorder} , default:none
     InputBorder? disabledBorder,
 
-    /// optionalParameters: {InputBorder? enabledBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? enabledBorder} , default:none
     InputBorder? enabledBorder,
 
-    /// optionalParameters: {InputBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InputBorder? border} , default:none
     InputBorder? border,
 
-    /// optionalParameters: {bool alignLabelWithHint = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alignLabelWithHint,
+    /// optionalParameters: {bool alignLabelWithHint = false} , default:processed=BooleanLiteralImpl
+    bool alignLabelWithHint = false,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
   }) : super(
           labelStyle: labelStyle,
@@ -599,6 +899,8 @@ class InputDecorationTheme$Mate extends InputDecorationTheme with Mate {
           alignLabelWithHint: alignLabelWithHint,
           constraints: constraints,
         ) {
+    mateCreateName = 'InputDecorationTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecorationTheme$Mate(
           labelStyle: p.get('labelStyle').build(),
           floatingLabelStyle: p.get('floatingLabelStyle').build(),
@@ -633,37 +935,171 @@ class InputDecorationTheme$Mate extends InputDecorationTheme with Mate {
           alignLabelWithHint: p.get('alignLabelWithHint').build(),
           constraints: p.get('constraints').build(),
         );
-    matePut('labelStyle', labelStyle);
-    matePut('floatingLabelStyle', floatingLabelStyle);
-    matePut('helperStyle', helperStyle);
-    matePut('helperMaxLines', helperMaxLines);
-    matePut('hintStyle', hintStyle);
-    matePut('errorStyle', errorStyle);
-    matePut('errorMaxLines', errorMaxLines);
-    matePut('floatingLabelBehavior', floatingLabelBehavior);
-    matePut('floatingLabelAlignment', floatingLabelAlignment);
-    matePut('isDense', isDense);
-    matePut('contentPadding', contentPadding);
-    matePut('isCollapsed', isCollapsed);
-    matePut('iconColor', iconColor);
-    matePut('prefixStyle', prefixStyle);
-    matePut('prefixIconColor', prefixIconColor);
-    matePut('suffixStyle', suffixStyle);
-    matePut('suffixIconColor', suffixIconColor);
-    matePut('counterStyle', counterStyle);
-    matePut('filled', filled);
-    matePut('fillColor', fillColor);
-    matePut('activeIndicatorBorder', activeIndicatorBorder);
-    matePut('outlineBorder', outlineBorder);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('errorBorder', errorBorder);
-    matePut('focusedBorder', focusedBorder);
-    matePut('focusedErrorBorder', focusedErrorBorder);
-    matePut('disabledBorder', disabledBorder);
-    matePut('enabledBorder', enabledBorder);
-    matePut('border', border);
-    matePut('alignLabelWithHint', alignLabelWithHint);
-    matePut('constraints', constraints);
+    mateUse(
+      'labelStyle',
+      labelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingLabelStyle',
+      floatingLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'helperStyle',
+      helperStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'helperMaxLines',
+      helperMaxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'hintStyle',
+      hintStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'errorStyle',
+      errorStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'errorMaxLines',
+      errorMaxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingLabelBehavior',
+      floatingLabelBehavior,
+      isNamed: true,
+      defaultValue: FloatingLabelBehavior.auto,
+    );
+    mateUse(
+      'floatingLabelAlignment',
+      floatingLabelAlignment,
+      isNamed: true,
+      defaultValue: FloatingLabelAlignment.start,
+    );
+    mateUse(
+      'isDense',
+      isDense,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'contentPadding',
+      contentPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'isCollapsed',
+      isCollapsed,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixStyle',
+      prefixStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixIconColor',
+      prefixIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixStyle',
+      suffixStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixIconColor',
+      suffixIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'counterStyle',
+      counterStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'filled',
+      filled,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'activeIndicatorBorder',
+      activeIndicatorBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'outlineBorder',
+      outlineBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'errorBorder',
+      errorBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusedBorder',
+      focusedBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusedErrorBorder',
+      focusedErrorBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledBorder',
+      disabledBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'enabledBorder',
+      enabledBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'alignLabelWithHint',
+      alignLabelWithHint,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
   }
 }

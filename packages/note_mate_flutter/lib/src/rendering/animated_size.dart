@@ -5,7 +5,9 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/scheduler/ticker.dart';
 import 'dart:core';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'dart:ui';
 import 'package:flutter/src/rendering/box.dart';
 
@@ -13,29 +15,29 @@ import 'package:flutter/src/rendering/box.dart';
 class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
   /// RenderAnimatedSize RenderAnimatedSize({required TickerProvider vsync, required Duration duration, Duration? reverseDuration, Curve curve = Curves.linear, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.hardEdge})
   RenderAnimatedSize$Mate({
-    /// optionalParameters: {required TickerProvider vsync} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TickerProvider vsync} , default:none
     required TickerProvider vsync,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {Duration? reverseDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? reverseDuration} , default:none
     Duration? reverseDuration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    Curve curve = Curves.linear,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           vsync: vsync,
           duration: duration,
@@ -46,6 +48,8 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
           child: child,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'RenderAnimatedSize';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAnimatedSize$Mate(
           vsync: p.get('vsync').build(),
           duration: p.get('duration').build(),
@@ -56,13 +60,48 @@ class RenderAnimatedSize$Mate extends RenderAnimatedSize with Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('vsync', vsync);
-    matePut('duration', duration);
-    matePut('reverseDuration', reverseDuration);
-    matePut('curve', curve);
-    matePut('alignment', alignment);
-    matePut('textDirection', textDirection);
-    matePut('child', child);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'vsync',
+      vsync,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseDuration',
+      reverseDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

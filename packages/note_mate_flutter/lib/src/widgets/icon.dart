@@ -13,34 +13,34 @@ class Icon$Mate extends Icon with Mate {
   Icon$Mate(
     /// requiredParameters: IconData? icon
     IconData? icon, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , default:none
     double? size,
 
-    /// optionalParameters: {double? fill} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fill} , default:none
     double? fill,
 
-    /// optionalParameters: {double? weight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? weight} , default:none
     double? weight,
 
-    /// optionalParameters: {double? grade} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? grade} , default:none
     double? grade,
 
-    /// optionalParameters: {double? opticalSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? opticalSize} , default:none
     double? opticalSize,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {List<Shadow>? shadows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Shadow>? shadows} , default:none
     List<Shadow>? shadows,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
   }) : super(
           icon,
@@ -55,6 +55,8 @@ class Icon$Mate extends Icon with Mate {
           semanticLabel: semanticLabel,
           textDirection: textDirection,
         ) {
+    mateCreateName = 'Icon';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Icon$Mate(
           p.get('icon').value,
           key: p.get('key').build(),
@@ -68,16 +70,60 @@ class Icon$Mate extends Icon with Mate {
           semanticLabel: p.get('semanticLabel').build(),
           textDirection: p.get('textDirection').build(),
         );
-    matePut('icon', icon);
-    matePut('key', key);
-    matePut('size', size);
-    matePut('fill', fill);
-    matePut('weight', weight);
-    matePut('grade', grade);
-    matePut('opticalSize', opticalSize);
-    matePut('color', color);
-    matePut('shadows', shadows);
-    matePut('semanticLabel', semanticLabel);
-    matePut('textDirection', textDirection);
+    mateUse(
+      'icon',
+      icon,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'fill',
+      fill,
+      isNamed: true,
+    );
+    mateUse(
+      'weight',
+      weight,
+      isNamed: true,
+    );
+    mateUse(
+      'grade',
+      grade,
+      isNamed: true,
+    );
+    mateUse(
+      'opticalSize',
+      opticalSize,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
   }
 }

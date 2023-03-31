@@ -15,34 +15,34 @@ import 'package:flutter/src/widgets/framework.dart';
 class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate {
   /// NavigationDrawerThemeData NavigationDrawerThemeData({double? tileHeight, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, Size? indicatorSize, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme})
   NavigationDrawerThemeData$Mate({
-    /// optionalParameters: {double? tileHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? tileHeight} , default:none
     double? tileHeight,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , default:none
     Color? indicatorColor,
 
-    /// optionalParameters: {ShapeBorder? indicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
     ShapeBorder? indicatorShape,
 
-    /// optionalParameters: {Size? indicatorSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? indicatorSize} , default:none
     Size? indicatorSize,
 
-    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , default:none
     MaterialStateProperty<TextStyle?>? labelTextStyle,
 
-    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , default:none
     MaterialStateProperty<IconThemeData?>? iconTheme,
   }) : super(
           tileHeight: tileHeight,
@@ -56,6 +56,8 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: labelTextStyle,
           iconTheme: iconTheme,
         ) {
+    mateCreateName = 'NavigationDrawerThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerThemeData$Mate(
           tileHeight: p.get('tileHeight').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -68,16 +70,56 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: p.get('labelTextStyle').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    matePut('tileHeight', tileHeight);
-    matePut('backgroundColor', backgroundColor);
-    matePut('elevation', elevation);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorShape', indicatorShape);
-    matePut('indicatorSize', indicatorSize);
-    matePut('labelTextStyle', labelTextStyle);
-    matePut('iconTheme', iconTheme);
+    mateUse(
+      'tileHeight',
+      tileHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorColor',
+      indicatorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorShape',
+      indicatorShape,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorSize',
+      indicatorSize,
+      isNamed: true,
+    );
+    mateUse(
+      'labelTextStyle',
+      labelTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'iconTheme',
+      iconTheme,
+      isNamed: true,
+    );
   }
 }
 
@@ -85,26 +127,40 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
 class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
   /// NavigationDrawerTheme NavigationDrawerTheme({Key? key, required NavigationDrawerThemeData data, required Widget child})
   NavigationDrawerTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required NavigationDrawerThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required NavigationDrawerThemeData data} , default:none
     required NavigationDrawerThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'NavigationDrawerTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

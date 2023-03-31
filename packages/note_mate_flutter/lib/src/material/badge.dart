@@ -14,40 +14,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class Badge$Mate extends Badge with Mate {
   /// Badge Badge({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, Widget? label, bool isLabelVisible = true, Widget? child})
   Badge$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? smallSize} , default:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? largeSize} , default:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
 
-    /// optionalParameters: {Widget? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? label} , default:none
     Widget? label,
 
-    /// optionalParameters: {bool isLabelVisible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool isLabelVisible,
+    /// optionalParameters: {bool isLabelVisible = true} , default:processed=BooleanLiteralImpl
+    bool isLabelVisible = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -63,6 +63,8 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: isLabelVisible,
           child: child,
         ) {
+    mateCreateName = 'Badge';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Badge$Mate(
           key: p.get('key').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -77,56 +79,105 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('textColor', textColor);
-    matePut('smallSize', smallSize);
-    matePut('largeSize', largeSize);
-    matePut('textStyle', textStyle);
-    matePut('padding', padding);
-    matePut('alignment', alignment);
-    matePut('offset', offset);
-    matePut('label', label);
-    matePut('isLabelVisible', isLabelVisible);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'smallSize',
+      smallSize,
+      isNamed: true,
+    );
+    mateUse(
+      'largeSize',
+      largeSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'isLabelVisible',
+      isLabelVisible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// Badge Badge.count({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, required int count, bool isLabelVisible = true, Widget? child})
   Badge$Mate.count({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? smallSize} , default:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? largeSize} , default:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
 
-    /// optionalParameters: {required int count} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int count} , default:none
     required int count,
 
-    /// optionalParameters: {bool isLabelVisible = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool isLabelVisible,
+    /// optionalParameters: {bool isLabelVisible = true} , default:processed=BooleanLiteralImpl
+    bool isLabelVisible = true,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super.count(
           key: key,
@@ -142,6 +193,8 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: isLabelVisible,
           child: child,
         ) {
+    mateCreateName = 'Badge.count';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Badge$Mate.count(
           key: p.get('key').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -156,17 +209,66 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('textColor', textColor);
-    matePut('smallSize', smallSize);
-    matePut('largeSize', largeSize);
-    matePut('textStyle', textStyle);
-    matePut('padding', padding);
-    matePut('alignment', alignment);
-    matePut('offset', offset);
-    matePut('count', count);
-    matePut('isLabelVisible', isLabelVisible);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'smallSize',
+      smallSize,
+      isNamed: true,
+    );
+    mateUse(
+      'largeSize',
+      largeSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'count',
+      count,
+      isNamed: true,
+    );
+    mateUse(
+      'isLabelVisible',
+      isLabelVisible,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

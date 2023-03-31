@@ -9,21 +9,22 @@ import 'package:flutter/src/painting/box_shadow.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/animation.dart';
 
 /// class MagnifierInfo
 class MagnifierInfo$Mate extends MagnifierInfo with Mate {
   /// MagnifierInfo MagnifierInfo({required Offset globalGesturePosition, required Rect caretRect, required Rect fieldBounds, required Rect currentLineBoundaries})
   MagnifierInfo$Mate({
-    /// optionalParameters: {required Offset globalGesturePosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset globalGesturePosition} , default:none
     required Offset globalGesturePosition,
 
-    /// optionalParameters: {required Rect caretRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect caretRect} , default:none
     required Rect caretRect,
 
-    /// optionalParameters: {required Rect fieldBounds} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect fieldBounds} , default:none
     required Rect fieldBounds,
 
-    /// optionalParameters: {required Rect currentLineBoundaries} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect currentLineBoundaries} , default:none
     required Rect currentLineBoundaries,
   }) : super(
           globalGesturePosition: globalGesturePosition,
@@ -31,16 +32,34 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate {
           fieldBounds: fieldBounds,
           currentLineBoundaries: currentLineBoundaries,
         ) {
+    mateCreateName = 'MagnifierInfo';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MagnifierInfo$Mate(
           globalGesturePosition: p.get('globalGesturePosition').build(),
           caretRect: p.get('caretRect').build(),
           fieldBounds: p.get('fieldBounds').build(),
           currentLineBoundaries: p.get('currentLineBoundaries').build(),
         );
-    matePut('globalGesturePosition', globalGesturePosition);
-    matePut('caretRect', caretRect);
-    matePut('fieldBounds', fieldBounds);
-    matePut('currentLineBoundaries', currentLineBoundaries);
+    mateUse(
+      'globalGesturePosition',
+      globalGesturePosition,
+      isNamed: true,
+    );
+    mateUse(
+      'caretRect',
+      caretRect,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldBounds',
+      fieldBounds,
+      isNamed: true,
+    );
+    mateUse(
+      'currentLineBoundaries',
+      currentLineBoundaries,
+      isNamed: true,
+    );
   }
 }
 
@@ -48,21 +67,32 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate {
 class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Mate {
   /// TextMagnifierConfiguration TextMagnifierConfiguration({Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder, bool shouldDisplayHandlesInMagnifier = true})
   TextMagnifierConfiguration$Mate({
-    /// optionalParameters: {Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder} , default:none
     MagnifierBuilder? magnifierBuilder,
 
-    /// optionalParameters: {bool shouldDisplayHandlesInMagnifier = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool shouldDisplayHandlesInMagnifier,
+    /// optionalParameters: {bool shouldDisplayHandlesInMagnifier = true} , default:processed=BooleanLiteralImpl
+    bool shouldDisplayHandlesInMagnifier = true,
   }) : super(
           magnifierBuilder: magnifierBuilder,
           shouldDisplayHandlesInMagnifier: shouldDisplayHandlesInMagnifier,
         ) {
+    mateCreateName = 'TextMagnifierConfiguration';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextMagnifierConfiguration$Mate(
           magnifierBuilder: p.get('magnifierBuilder').build(),
           shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').build(),
         );
-    matePut('magnifierBuilder', magnifierBuilder);
-    matePut('shouldDisplayHandlesInMagnifier', shouldDisplayHandlesInMagnifier);
+    mateUse(
+      'magnifierBuilder',
+      magnifierBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'shouldDisplayHandlesInMagnifier',
+      shouldDisplayHandlesInMagnifier,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -71,11 +101,17 @@ class MagnifierController$Mate extends MagnifierController with Mate {
   /// MagnifierController MagnifierController({AnimationController? animationController})
   MagnifierController$Mate(
       {
-      /// optionalParameters: {AnimationController? animationController} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {AnimationController? animationController} , default:none
       AnimationController? animationController})
       : super(animationController: animationController) {
+    mateCreateName = 'MagnifierController';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
-    matePut('animationController', animationController);
+    mateUse(
+      'animationController',
+      animationController,
+      isNamed: true,
+    );
   }
 }
 
@@ -83,27 +119,42 @@ class MagnifierController$Mate extends MagnifierController with Mate {
 class MagnifierDecoration$Mate extends MagnifierDecoration with Mate {
   /// MagnifierDecoration MagnifierDecoration({double opacity = 1, List<BoxShadow>? shadows, ShapeBorder shape = const RoundedRectangleBorder()})
   MagnifierDecoration$Mate({
-    /// optionalParameters: {double opacity = 1} , hasDefaultValue:true, defaultValueCode:1
-    required double opacity,
+    /// optionalParameters: {double opacity = 1} , default:processed=IntegerLiteralImpl
+    double opacity = 1,
 
-    /// optionalParameters: {List<BoxShadow>? shadows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<BoxShadow>? shadows} , default:none
     List<BoxShadow>? shadows,
 
-    /// optionalParameters: {ShapeBorder shape = const RoundedRectangleBorder()} , hasDefaultValue:true, defaultValueCode:const RoundedRectangleBorder()
+    /// optionalParameters: {ShapeBorder shape = const RoundedRectangleBorder()} , default:unprocessed=InstanceCreationExpressionImpl
     required ShapeBorder shape,
   }) : super(
           opacity: opacity,
           shadows: shadows,
           shape: shape,
         ) {
+    mateCreateName = 'MagnifierDecoration';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MagnifierDecoration$Mate(
           opacity: p.get('opacity').build(),
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    matePut('opacity', opacity);
-    matePut('shadows', shadows);
-    matePut('shape', shape);
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
   }
 }
 
@@ -111,22 +162,22 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate {
 class RawMagnifier$Mate extends RawMagnifier with Mate {
   /// RawMagnifier RawMagnifier({Key? key, Widget? child, MagnifierDecoration decoration = const MagnifierDecoration(), Offset focalPointOffset = Offset.zero, double magnificationScale = 1, required Size size})
   RawMagnifier$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {MagnifierDecoration decoration = const MagnifierDecoration()} , hasDefaultValue:true, defaultValueCode:const MagnifierDecoration()
+    /// optionalParameters: {MagnifierDecoration decoration = const MagnifierDecoration()} , default:unprocessed=InstanceCreationExpressionImpl
     required MagnifierDecoration decoration,
 
-    /// optionalParameters: {Offset focalPointOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset focalPointOffset,
+    /// optionalParameters: {Offset focalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset focalPointOffset = Offset.zero,
 
-    /// optionalParameters: {double magnificationScale = 1} , hasDefaultValue:true, defaultValueCode:1
-    required double magnificationScale,
+    /// optionalParameters: {double magnificationScale = 1} , default:processed=IntegerLiteralImpl
+    double magnificationScale = 1,
 
-    /// optionalParameters: {required Size size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size size} , default:none
     required Size size,
   }) : super(
           key: key,
@@ -136,6 +187,8 @@ class RawMagnifier$Mate extends RawMagnifier with Mate {
           magnificationScale: magnificationScale,
           size: size,
         ) {
+    mateCreateName = 'RawMagnifier';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawMagnifier$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -144,11 +197,37 @@ class RawMagnifier$Mate extends RawMagnifier with Mate {
           magnificationScale: p.get('magnificationScale').build(),
           size: p.get('size').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('decoration', decoration);
-    matePut('focalPointOffset', focalPointOffset);
-    matePut('magnificationScale', magnificationScale);
-    matePut('size', size);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'focalPointOffset',
+      focalPointOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'magnificationScale',
+      magnificationScale,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
   }
 }

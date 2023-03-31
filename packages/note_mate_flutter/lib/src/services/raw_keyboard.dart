@@ -8,27 +8,42 @@ import 'dart:core';
 class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate {
   /// RawKeyDownEvent RawKeyDownEvent({required RawKeyEventData data, String? character, bool repeat = false})
   RawKeyDownEvent$Mate({
-    /// optionalParameters: {required RawKeyEventData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RawKeyEventData data} , default:none
     required RawKeyEventData data,
 
-    /// optionalParameters: {String? character} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? character} , default:none
     String? character,
 
-    /// optionalParameters: {bool repeat = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool repeat,
+    /// optionalParameters: {bool repeat = false} , default:processed=BooleanLiteralImpl
+    bool repeat = false,
   }) : super(
           data: data,
           character: character,
           repeat: repeat,
         ) {
+    mateCreateName = 'RawKeyDownEvent';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyDownEvent$Mate(
           data: p.get('data').build(),
           character: p.get('character').build(),
           repeat: p.get('repeat').build(),
         );
-    matePut('data', data);
-    matePut('character', character);
-    matePut('repeat', repeat);
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'character',
+      character,
+      isNamed: true,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -36,20 +51,30 @@ class RawKeyDownEvent$Mate extends RawKeyDownEvent with Mate {
 class RawKeyUpEvent$Mate extends RawKeyUpEvent with Mate {
   /// RawKeyUpEvent RawKeyUpEvent({required RawKeyEventData data, String? character})
   RawKeyUpEvent$Mate({
-    /// optionalParameters: {required RawKeyEventData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RawKeyEventData data} , default:none
     required RawKeyEventData data,
 
-    /// optionalParameters: {String? character} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? character} , default:none
     String? character,
   }) : super(
           data: data,
           character: character,
         ) {
+    mateCreateName = 'RawKeyUpEvent';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyUpEvent$Mate(
           data: p.get('data').build(),
           character: p.get('character').build(),
         );
-    matePut('data', data);
-    matePut('character', character);
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'character',
+      character,
+      isNamed: true,
+    );
   }
 }

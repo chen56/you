@@ -10,21 +10,31 @@ import 'dart:core';
 class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate {
   /// UnderlineInputBorder UnderlineInputBorder({BorderSide borderSide = const BorderSide(), BorderRadius borderRadius = const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0))})
   UnderlineInputBorder$Mate({
-    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , hasDefaultValue:true, defaultValueCode:const BorderSide()
+    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderSide borderSide,
 
-    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0))} , hasDefaultValue:true, defaultValueCode:const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0))
+    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.only(topLeft: Radius.circular(4.0), topRight: Radius.circular(4.0))} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderRadius borderRadius,
   }) : super(
           borderSide: borderSide,
           borderRadius: borderRadius,
         ) {
+    mateCreateName = 'UnderlineInputBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UnderlineInputBorder$Mate(
           borderSide: p.get('borderSide').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    matePut('borderSide', borderSide);
-    matePut('borderRadius', borderRadius);
+    mateUse(
+      'borderSide',
+      borderSide,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
   }
 }
 
@@ -32,26 +42,41 @@ class UnderlineInputBorder$Mate extends UnderlineInputBorder with Mate {
 class OutlineInputBorder$Mate extends OutlineInputBorder with Mate {
   /// OutlineInputBorder OutlineInputBorder({BorderSide borderSide = const BorderSide(), BorderRadius borderRadius = const BorderRadius.all(Radius.circular(4.0)), double gapPadding = 4.0})
   OutlineInputBorder$Mate({
-    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , hasDefaultValue:true, defaultValueCode:const BorderSide()
+    /// optionalParameters: {BorderSide borderSide = const BorderSide()} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderSide borderSide,
 
-    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(4.0))} , hasDefaultValue:true, defaultValueCode:const BorderRadius.all(Radius.circular(4.0))
+    /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(4.0))} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderRadius borderRadius,
 
-    /// optionalParameters: {double gapPadding = 4.0} , hasDefaultValue:true, defaultValueCode:4.0
-    required double gapPadding,
+    /// optionalParameters: {double gapPadding = 4.0} , default:processed=DoubleLiteralImpl
+    double gapPadding = 4.0,
   }) : super(
           borderSide: borderSide,
           borderRadius: borderRadius,
           gapPadding: gapPadding,
         ) {
+    mateCreateName = 'OutlineInputBorder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => OutlineInputBorder$Mate(
           borderSide: p.get('borderSide').build(),
           borderRadius: p.get('borderRadius').build(),
           gapPadding: p.get('gapPadding').build(),
         );
-    matePut('borderSide', borderSide);
-    matePut('borderRadius', borderRadius);
-    matePut('gapPadding', gapPadding);
+    mateUse(
+      'borderSide',
+      borderSide,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'gapPadding',
+      gapPadding,
+      isNamed: true,
+      defaultValue: 4.0,
+    );
   }
 }

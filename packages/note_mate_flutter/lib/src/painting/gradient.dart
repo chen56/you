@@ -4,6 +4,7 @@ import 'package:flutter/src/painting/gradient.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'dart:ui';
 
 /// class GradientRotation extends GradientTransform
@@ -14,8 +15,14 @@ class GradientRotation$Mate extends GradientRotation with Mate {
       /// requiredParameters: double radians
       double radians)
       : super(radians) {
+    mateCreateName = 'GradientRotation';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => GradientRotation$Mate(p.get('radians').value);
-    matePut('radians', radians);
+    mateUse(
+      'radians',
+      radians,
+      isNamed: false,
+    );
   }
 }
 
@@ -23,22 +30,22 @@ class GradientRotation$Mate extends GradientRotation with Mate {
 class LinearGradient$Mate extends LinearGradient with Mate {
   /// LinearGradient LinearGradient({AlignmentGeometry begin = Alignment.centerLeft, AlignmentGeometry end = Alignment.centerRight, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   LinearGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry begin = Alignment.centerLeft} , hasDefaultValue:true, defaultValueCode:Alignment.centerLeft
-    required AlignmentGeometry begin,
+    /// optionalParameters: {AlignmentGeometry begin = Alignment.centerLeft} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry begin = Alignment.centerLeft,
 
-    /// optionalParameters: {AlignmentGeometry end = Alignment.centerRight} , hasDefaultValue:true, defaultValueCode:Alignment.centerRight
-    required AlignmentGeometry end,
+    /// optionalParameters: {AlignmentGeometry end = Alignment.centerRight} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry end = Alignment.centerRight,
 
-    /// optionalParameters: {required List<Color> colors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Color> colors} , default:none
     required List<Color> colors,
 
-    /// optionalParameters: {List<double>? stops} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<double>? stops} , default:none
     List<double>? stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , hasDefaultValue:true, defaultValueCode:TileMode.clamp
-    required TileMode tileMode,
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
+    TileMode tileMode = TileMode.clamp,
 
-    /// optionalParameters: {GradientTransform? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GradientTransform? transform} , default:none
     GradientTransform? transform,
   }) : super(
           begin: begin,
@@ -48,6 +55,8 @@ class LinearGradient$Mate extends LinearGradient with Mate {
           tileMode: tileMode,
           transform: transform,
         ) {
+    mateCreateName = 'LinearGradient';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearGradient$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
@@ -56,12 +65,39 @@ class LinearGradient$Mate extends LinearGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
-    matePut('colors', colors);
-    matePut('stops', stops);
-    matePut('tileMode', tileMode);
-    matePut('transform', transform);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+      defaultValue: Alignment.centerLeft,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+      defaultValue: Alignment.centerRight,
+    );
+    mateUseList(
+      'colors',
+      colors,
+      isNamed: true,
+    );
+    mateUseList(
+      'stops',
+      stops,
+      isNamed: true,
+    );
+    mateUse(
+      'tileMode',
+      tileMode,
+      isNamed: true,
+      defaultValue: TileMode.clamp,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
   }
 }
 
@@ -69,28 +105,28 @@ class LinearGradient$Mate extends LinearGradient with Mate {
 class RadialGradient$Mate extends RadialGradient with Mate {
   /// RadialGradient RadialGradient({AlignmentGeometry center = Alignment.center, double radius = 0.5, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, AlignmentGeometry? focal, double focalRadius = 0.0, GradientTransform? transform})
   RadialGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry center,
+    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry center = Alignment.center,
 
-    /// optionalParameters: {double radius = 0.5} , hasDefaultValue:true, defaultValueCode:0.5
-    required double radius,
+    /// optionalParameters: {double radius = 0.5} , default:processed=DoubleLiteralImpl
+    double radius = 0.5,
 
-    /// optionalParameters: {required List<Color> colors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Color> colors} , default:none
     required List<Color> colors,
 
-    /// optionalParameters: {List<double>? stops} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<double>? stops} , default:none
     List<double>? stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , hasDefaultValue:true, defaultValueCode:TileMode.clamp
-    required TileMode tileMode,
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
+    TileMode tileMode = TileMode.clamp,
 
-    /// optionalParameters: {AlignmentGeometry? focal} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? focal} , default:none
     AlignmentGeometry? focal,
 
-    /// optionalParameters: {double focalRadius = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double focalRadius,
+    /// optionalParameters: {double focalRadius = 0.0} , default:processed=DoubleLiteralImpl
+    double focalRadius = 0.0,
 
-    /// optionalParameters: {GradientTransform? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GradientTransform? transform} , default:none
     GradientTransform? transform,
   }) : super(
           center: center,
@@ -102,6 +138,8 @@ class RadialGradient$Mate extends RadialGradient with Mate {
           focalRadius: focalRadius,
           transform: transform,
         ) {
+    mateCreateName = 'RadialGradient';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => RadialGradient$Mate(
           center: p.get('center').build(),
           radius: p.get('radius').build(),
@@ -112,14 +150,50 @@ class RadialGradient$Mate extends RadialGradient with Mate {
           focalRadius: p.get('focalRadius').build(),
           transform: p.get('transform').build(),
         );
-    matePut('center', center);
-    matePut('radius', radius);
-    matePut('colors', colors);
-    matePut('stops', stops);
-    matePut('tileMode', tileMode);
-    matePut('focal', focal);
-    matePut('focalRadius', focalRadius);
-    matePut('transform', transform);
+    mateUse(
+      'center',
+      center,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+      defaultValue: 0.5,
+    );
+    mateUseList(
+      'colors',
+      colors,
+      isNamed: true,
+    );
+    mateUseList(
+      'stops',
+      stops,
+      isNamed: true,
+    );
+    mateUse(
+      'tileMode',
+      tileMode,
+      isNamed: true,
+      defaultValue: TileMode.clamp,
+    );
+    mateUse(
+      'focal',
+      focal,
+      isNamed: true,
+    );
+    mateUse(
+      'focalRadius',
+      focalRadius,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
   }
 }
 
@@ -127,25 +201,25 @@ class RadialGradient$Mate extends RadialGradient with Mate {
 class SweepGradient$Mate extends SweepGradient with Mate {
   /// SweepGradient SweepGradient({AlignmentGeometry center = Alignment.center, double startAngle = 0.0, double endAngle = math.pi * 2, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   SweepGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry center,
+    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry center = Alignment.center,
 
-    /// optionalParameters: {double startAngle = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double startAngle,
+    /// optionalParameters: {double startAngle = 0.0} , default:processed=DoubleLiteralImpl
+    double startAngle = 0.0,
 
-    /// optionalParameters: {double endAngle = math.pi * 2} , hasDefaultValue:true, defaultValueCode:math.pi * 2
+    /// optionalParameters: {double endAngle = math.pi * 2} , default:unprocessed=BinaryExpressionImpl
     required double endAngle,
 
-    /// optionalParameters: {required List<Color> colors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Color> colors} , default:none
     required List<Color> colors,
 
-    /// optionalParameters: {List<double>? stops} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<double>? stops} , default:none
     List<double>? stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , hasDefaultValue:true, defaultValueCode:TileMode.clamp
-    required TileMode tileMode,
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
+    TileMode tileMode = TileMode.clamp,
 
-    /// optionalParameters: {GradientTransform? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GradientTransform? transform} , default:none
     GradientTransform? transform,
   }) : super(
           center: center,
@@ -156,6 +230,8 @@ class SweepGradient$Mate extends SweepGradient with Mate {
           tileMode: tileMode,
           transform: transform,
         ) {
+    mateCreateName = 'SweepGradient';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => SweepGradient$Mate(
           center: p.get('center').build(),
           startAngle: p.get('startAngle').build(),
@@ -165,12 +241,43 @@ class SweepGradient$Mate extends SweepGradient with Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    matePut('center', center);
-    matePut('startAngle', startAngle);
-    matePut('endAngle', endAngle);
-    matePut('colors', colors);
-    matePut('stops', stops);
-    matePut('tileMode', tileMode);
-    matePut('transform', transform);
+    mateUse(
+      'center',
+      center,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'startAngle',
+      startAngle,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'endAngle',
+      endAngle,
+      isNamed: true,
+    );
+    mateUseList(
+      'colors',
+      colors,
+      isNamed: true,
+    );
+    mateUseList(
+      'stops',
+      stops,
+      isNamed: true,
+    );
+    mateUse(
+      'tileMode',
+      tileMode,
+      isNamed: true,
+      defaultValue: TileMode.clamp,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
   }
 }

@@ -9,20 +9,30 @@ import 'dart:core';
 class RenderSliverFixedExtentList$Mate extends RenderSliverFixedExtentList with Mate {
   /// RenderSliverFixedExtentList RenderSliverFixedExtentList({required RenderSliverBoxChildManager childManager, required double itemExtent})
   RenderSliverFixedExtentList$Mate({
-    /// optionalParameters: {required RenderSliverBoxChildManager childManager} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none
     required RenderSliverBoxChildManager childManager,
 
-    /// optionalParameters: {required double itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double itemExtent} , default:none
     required double itemExtent,
   }) : super(
           childManager: childManager,
           itemExtent: itemExtent,
         ) {
+    mateCreateName = 'RenderSliverFixedExtentList';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFixedExtentList$Mate(
           childManager: p.get('childManager').build(),
           itemExtent: p.get('itemExtent').build(),
         );
-    matePut('childManager', childManager);
-    matePut('itemExtent', itemExtent);
+    mateUse(
+      'childManager',
+      childManager,
+      isNamed: true,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
   }
 }

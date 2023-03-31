@@ -8,31 +8,32 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/cupertino.dart';
 
 /// class CupertinoSlidingSegmentedControl<T> extends StatefulWidget
 class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmentedControl<T> with Mate {
   /// CupertinoSlidingSegmentedControl<T> CupertinoSlidingSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T?) onValueChanged, T? groupValue, Color thumbColor = _kThumbColor, EdgeInsetsGeometry padding = _kHorizontalItemPadding, Color backgroundColor = CupertinoColors.tertiarySystemFill})
   CupertinoSlidingSegmentedControl$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Map<T, Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<T, Widget> children} , default:none
     required Map<T, Widget> children,
 
-    /// optionalParameters: {required void Function(T?) onValueChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(T?) onValueChanged} , default:none
     required ValueChanged<T?> onValueChanged,
 
-    /// optionalParameters: {T? groupValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? groupValue} , default:none
     T? groupValue,
 
-    /// optionalParameters: {Color thumbColor = _kThumbColor} , hasDefaultValue:true, defaultValueCode:_kThumbColor
+    /// optionalParameters: {Color thumbColor = _kThumbColor} , default:unprocessed=SimpleIdentifierImpl
     required Color thumbColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = _kHorizontalItemPadding} , hasDefaultValue:true, defaultValueCode:_kHorizontalItemPadding
+    /// optionalParameters: {EdgeInsetsGeometry padding = _kHorizontalItemPadding} , default:unprocessed=SimpleIdentifierImpl
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.tertiarySystemFill} , hasDefaultValue:true, defaultValueCode:CupertinoColors.tertiarySystemFill
-    required Color backgroundColor,
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.tertiarySystemFill} , default:processed=PrefixedIdentifierImpl
+    Color backgroundColor = CupertinoColors.tertiarySystemFill,
   }) : super(
           key: key,
           children: children,
@@ -42,6 +43,8 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmented
           padding: padding,
           backgroundColor: backgroundColor,
         ) {
+    mateCreateName = 'CupertinoSlidingSegmentedControl';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSlidingSegmentedControl$Mate<T>(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -51,12 +54,41 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmented
           padding: p.get('padding').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('onValueChanged', onValueChanged);
-    matePut('groupValue', groupValue);
-    matePut('thumbColor', thumbColor);
-    matePut('padding', padding);
-    matePut('backgroundColor', backgroundColor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'onValueChanged',
+      onValueChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'groupValue',
+      groupValue,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbColor',
+      thumbColor,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+      defaultValue: CupertinoColors.tertiarySystemFill,
+    );
   }
 }

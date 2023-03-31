@@ -4,57 +4,87 @@ import 'package:flutter/src/physics/spring_simulation.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/physics/tolerance.dart';
+import 'package:flutter/physics.dart';
 
 /// class SpringDescription
 class SpringDescription$Mate extends SpringDescription with Mate {
   /// SpringDescription SpringDescription({required double mass, required double stiffness, required double damping})
   SpringDescription$Mate({
-    /// optionalParameters: {required double mass} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double mass} , default:none
     required double mass,
 
-    /// optionalParameters: {required double stiffness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double stiffness} , default:none
     required double stiffness,
 
-    /// optionalParameters: {required double damping} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double damping} , default:none
     required double damping,
   }) : super(
           mass: mass,
           stiffness: stiffness,
           damping: damping,
         ) {
+    mateCreateName = 'SpringDescription';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SpringDescription$Mate(
           mass: p.get('mass').build(),
           stiffness: p.get('stiffness').build(),
           damping: p.get('damping').build(),
         );
-    matePut('mass', mass);
-    matePut('stiffness', stiffness);
-    matePut('damping', damping);
+    mateUse(
+      'mass',
+      mass,
+      isNamed: true,
+    );
+    mateUse(
+      'stiffness',
+      stiffness,
+      isNamed: true,
+    );
+    mateUse(
+      'damping',
+      damping,
+      isNamed: true,
+    );
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
   SpringDescription$Mate.withDampingRatio({
-    /// optionalParameters: {required double mass} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double mass} , default:none
     required double mass,
 
-    /// optionalParameters: {required double stiffness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double stiffness} , default:none
     required double stiffness,
 
-    /// optionalParameters: {double ratio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double ratio,
+    /// optionalParameters: {double ratio = 1.0} , default:processed=DoubleLiteralImpl
+    double ratio = 1.0,
   }) : super.withDampingRatio(
           mass: mass,
           stiffness: stiffness,
           ratio: ratio,
         ) {
+    mateCreateName = 'SpringDescription.withDampingRatio';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SpringDescription$Mate.withDampingRatio(
           mass: p.get('mass').build(),
           stiffness: p.get('stiffness').build(),
           ratio: p.get('ratio').build(),
         );
-    matePut('mass', mass);
-    matePut('stiffness', stiffness);
-    matePut('ratio', ratio);
+    mateUse(
+      'mass',
+      mass,
+      isNamed: true,
+    );
+    mateUse(
+      'stiffness',
+      stiffness,
+      isNamed: true,
+    );
+    mateUse(
+      'ratio',
+      ratio,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -73,8 +103,8 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , hasDefaultValue:true, defaultValueCode:Tolerance.defaultTolerance
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
+    Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           spring,
           start,
@@ -82,6 +112,8 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
           velocity,
           tolerance: tolerance,
         ) {
+    mateCreateName = 'SpringSimulation';
+    matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => SpringSimulation$Mate(
           p.get('spring').value,
           p.get('start').value,
@@ -89,11 +121,32 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    matePut('spring', spring);
-    matePut('start', start);
-    matePut('end', end);
-    matePut('velocity', velocity);
-    matePut('tolerance', tolerance);
+    mateUse(
+      'spring',
+      spring,
+      isNamed: false,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
   }
 }
 
@@ -112,8 +165,8 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
 
     /// requiredParameters: double velocity
     double velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , hasDefaultValue:true, defaultValueCode:Tolerance.defaultTolerance
-    required Tolerance tolerance,
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
+    Tolerance tolerance = Tolerance.defaultTolerance,
   }) : super(
           spring,
           start,
@@ -121,6 +174,8 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
           velocity,
           tolerance: tolerance,
         ) {
+    mateCreateName = 'ScrollSpringSimulation';
+    matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => ScrollSpringSimulation$Mate(
           p.get('spring').value,
           p.get('start').value,
@@ -128,10 +183,31 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    matePut('spring', spring);
-    matePut('start', start);
-    matePut('end', end);
-    matePut('velocity', velocity);
-    matePut('tolerance', tolerance);
+    mateUse(
+      'spring',
+      spring,
+      isNamed: false,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
+    mateUse(
+      'tolerance',
+      tolerance,
+      isNamed: true,
+      defaultValue: Tolerance.defaultTolerance,
+    );
   }
 }

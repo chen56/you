@@ -6,6 +6,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/widgets/actions.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:ui';
@@ -31,16 +32,34 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
           key3,
           key4,
         ) {
+    mateCreateName = 'KeySet';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeySet$Mate<T>(
           p.get('key1').value,
           p.get('key2').value,
           p.get('key3').value,
           p.get('key4').value,
         );
-    matePut('key1', key1);
-    matePut('key2', key2);
-    matePut('key3', key3);
-    matePut('key4', key4);
+    mateUse(
+      'key1',
+      key1,
+      isNamed: false,
+    );
+    mateUse(
+      'key2',
+      key2,
+      isNamed: false,
+    );
+    mateUse(
+      'key3',
+      key3,
+      isNamed: false,
+    );
+    mateUse(
+      'key4',
+      key4,
+      isNamed: false,
+    );
   }
 
   /// KeySet<T> KeySet.fromSet(Set<T> keys)
@@ -49,8 +68,14 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
       /// requiredParameters: Set<T> keys
       Set<T> keys)
       : super.fromSet(keys) {
+    mateCreateName = 'KeySet.fromSet';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeySet$Mate<T>.fromSet(p.get('keys').value);
-    matePut('keys', keys);
+    mateUse(
+      'keys',
+      keys,
+      isNamed: false,
+    );
   }
 }
 
@@ -75,16 +100,34 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
           key3,
           key4,
         ) {
+    mateCreateName = 'LogicalKeySet';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LogicalKeySet$Mate(
           p.get('key1').value,
           p.get('key2').value,
           p.get('key3').value,
           p.get('key4').value,
         );
-    matePut('key1', key1);
-    matePut('key2', key2);
-    matePut('key3', key3);
-    matePut('key4', key4);
+    mateUse(
+      'key1',
+      key1,
+      isNamed: false,
+    );
+    mateUse(
+      'key2',
+      key2,
+      isNamed: false,
+    );
+    mateUse(
+      'key3',
+      key3,
+      isNamed: false,
+    );
+    mateUse(
+      'key4',
+      key4,
+      isNamed: false,
+    );
   }
 
   /// LogicalKeySet LogicalKeySet.fromSet(Set<LogicalKeyboardKey> keys)
@@ -93,8 +136,14 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
       /// requiredParameters: Set<LogicalKeyboardKey> keys
       Set<LogicalKeyboardKey> keys)
       : super.fromSet(keys) {
+    mateCreateName = 'LogicalKeySet.fromSet';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LogicalKeySet$Mate.fromSet(p.get('keys').value);
-    matePut('keys', keys);
+    mateUse(
+      'keys',
+      keys,
+      isNamed: false,
+    );
   }
 }
 
@@ -107,16 +156,16 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
 
     /// requiredParameters: Map<ShortcutActivator, Intent> value
     Map<ShortcutActivator, Intent> value, {
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {Object defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
+    /// optionalParameters: {Object defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     required Object defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
 
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , default:none
     String? description,
   }) : super(
           name,
@@ -126,6 +175,8 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
           level: level,
           description: description,
         ) {
+    mateCreateName = 'ShortcutMapProperty';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutMapProperty$Mate(
           p.get('name').value,
           p.get('value').value,
@@ -134,12 +185,38 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
           level: p.get('level').build(),
           description: p.get('description').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
-    matePut('description', description);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
   }
 }
 
@@ -149,20 +226,20 @@ class SingleActivator$Mate extends SingleActivator with Mate {
   SingleActivator$Mate(
     /// requiredParameters: LogicalKeyboardKey trigger
     LogicalKeyboardKey trigger, {
-    /// optionalParameters: {bool control = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool control,
+    /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
+    bool control = false,
 
-    /// optionalParameters: {bool shift = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shift,
+    /// optionalParameters: {bool shift = false} , default:processed=BooleanLiteralImpl
+    bool shift = false,
 
-    /// optionalParameters: {bool alt = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alt,
+    /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
+    bool alt = false,
 
-    /// optionalParameters: {bool meta = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool meta,
+    /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
+    bool meta = false,
 
-    /// optionalParameters: {bool includeRepeats = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool includeRepeats,
+    /// optionalParameters: {bool includeRepeats = true} , default:processed=BooleanLiteralImpl
+    bool includeRepeats = true,
   }) : super(
           trigger,
           control: control,
@@ -171,6 +248,8 @@ class SingleActivator$Mate extends SingleActivator with Mate {
           meta: meta,
           includeRepeats: includeRepeats,
         ) {
+    mateCreateName = 'SingleActivator';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SingleActivator$Mate(
           p.get('trigger').value,
           control: p.get('control').build(),
@@ -179,12 +258,41 @@ class SingleActivator$Mate extends SingleActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    matePut('trigger', trigger);
-    matePut('control', control);
-    matePut('shift', shift);
-    matePut('alt', alt);
-    matePut('meta', meta);
-    matePut('includeRepeats', includeRepeats);
+    mateUse(
+      'trigger',
+      trigger,
+      isNamed: false,
+    );
+    mateUse(
+      'control',
+      control,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'shift',
+      shift,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'alt',
+      alt,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'meta',
+      meta,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'includeRepeats',
+      includeRepeats,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -194,17 +302,17 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
   CharacterActivator$Mate(
     /// requiredParameters: String character
     String character, {
-    /// optionalParameters: {bool alt = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alt,
+    /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
+    bool alt = false,
 
-    /// optionalParameters: {bool control = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool control,
+    /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
+    bool control = false,
 
-    /// optionalParameters: {bool meta = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool meta,
+    /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
+    bool meta = false,
 
-    /// optionalParameters: {bool includeRepeats = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool includeRepeats,
+    /// optionalParameters: {bool includeRepeats = true} , default:processed=BooleanLiteralImpl
+    bool includeRepeats = true,
   }) : super(
           character,
           alt: alt,
@@ -212,6 +320,8 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
           meta: meta,
           includeRepeats: includeRepeats,
         ) {
+    mateCreateName = 'CharacterActivator';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CharacterActivator$Mate(
           p.get('character').value,
           alt: p.get('alt').build(),
@@ -219,11 +329,35 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
           meta: p.get('meta').build(),
           includeRepeats: p.get('includeRepeats').build(),
         );
-    matePut('character', character);
-    matePut('alt', alt);
-    matePut('control', control);
-    matePut('meta', meta);
-    matePut('includeRepeats', includeRepeats);
+    mateUse(
+      'character',
+      character,
+      isNamed: false,
+    );
+    mateUse(
+      'alt',
+      alt,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'control',
+      control,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'meta',
+      meta,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'includeRepeats',
+      includeRepeats,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }
 
@@ -231,21 +365,32 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
 class ShortcutManager$Mate extends ShortcutManager with Mate {
   /// ShortcutManager ShortcutManager({Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}, bool modal = false})
   ShortcutManager$Mate({
-    /// optionalParameters: {Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}} , hasDefaultValue:true, defaultValueCode:const <ShortcutActivator, Intent>{}
+    /// optionalParameters: {Map<ShortcutActivator, Intent> shortcuts = const <ShortcutActivator, Intent>{}} , default:unprocessed=SetOrMapLiteralImpl
     required Map<ShortcutActivator, Intent> shortcuts,
 
-    /// optionalParameters: {bool modal = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool modal,
+    /// optionalParameters: {bool modal = false} , default:processed=BooleanLiteralImpl
+    bool modal = false,
   }) : super(
           shortcuts: shortcuts,
           modal: modal,
         ) {
+    mateCreateName = 'ShortcutManager';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutManager$Mate(
           shortcuts: p.get('shortcuts').build(),
           modal: p.get('modal').build(),
         );
-    matePut('shortcuts', shortcuts);
-    matePut('modal', modal);
+    mateUse(
+      'shortcuts',
+      shortcuts,
+      isNamed: true,
+    );
+    mateUse(
+      'modal',
+      modal,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -253,16 +398,16 @@ class ShortcutManager$Mate extends ShortcutManager with Mate {
 class Shortcuts$Mate extends Shortcuts with Mate {
   /// Shortcuts Shortcuts({Key? key, required Map<ShortcutActivator, Intent> shortcuts, required Widget child, String? debugLabel})
   Shortcuts$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Map<ShortcutActivator, Intent> shortcuts} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<ShortcutActivator, Intent> shortcuts} , default:none
     required Map<ShortcutActivator, Intent> shortcuts,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           key: key,
@@ -270,30 +415,48 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: child,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'Shortcuts';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Shortcuts$Mate(
           key: p.get('key').build(),
           shortcuts: p.get('shortcuts').build(),
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('key', key);
-    matePut('shortcuts', shortcuts);
-    matePut('child', child);
-    matePut('debugLabel', debugLabel);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'shortcuts',
+      shortcuts,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 
   /// Shortcuts Shortcuts.manager({Key? key, required ShortcutManager manager, required Widget child, String? debugLabel})
   Shortcuts$Mate.manager({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ShortcutManager manager} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ShortcutManager manager} , default:none
     required ShortcutManager manager,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super.manager(
           key: key,
@@ -301,16 +464,34 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: child,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'Shortcuts.manager';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Shortcuts$Mate.manager(
           key: p.get('key').build(),
           manager: p.get('manager').build(),
           child: p.get('child').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('key', key);
-    matePut('manager', manager);
-    matePut('child', child);
-    matePut('debugLabel', debugLabel);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'manager',
+      manager,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -318,27 +499,41 @@ class Shortcuts$Mate extends Shortcuts with Mate {
 class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
   /// CallbackShortcuts CallbackShortcuts({Key? key, required Map<ShortcutActivator, void Function()> bindings, required Widget child})
   CallbackShortcuts$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Map<ShortcutActivator, void Function()> bindings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<ShortcutActivator, void Function()> bindings} , default:none
     required Map<ShortcutActivator, VoidCallback> bindings,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           bindings: bindings,
           child: child,
         ) {
+    mateCreateName = 'CallbackShortcuts';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CallbackShortcuts$Mate(
           key: p.get('key').build(),
           bindings: p.get('bindings').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('bindings', bindings);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'bindings',
+      bindings,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -346,20 +541,30 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
 class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate {
   /// ShortcutRegistrar ShortcutRegistrar({Key? key, required Widget child})
   ShortcutRegistrar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'ShortcutRegistrar';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutRegistrar$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

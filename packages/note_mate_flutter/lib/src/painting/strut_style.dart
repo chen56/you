@@ -10,37 +10,37 @@ import 'package:flutter/src/painting/text_style.dart';
 class StrutStyle$Mate extends StrutStyle with Mate {
   /// StrutStyle StrutStyle({String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
   StrutStyle$Mate({
-    /// optionalParameters: {String? fontFamily} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fontFamily} , default:none
     String? fontFamily,
 
-    /// optionalParameters: {List<String>? fontFamilyFallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<String>? fontFamilyFallback} , default:none
     List<String>? fontFamilyFallback,
 
-    /// optionalParameters: {double? fontSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fontSize} , default:none
     double? fontSize,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , default:none
     TextLeadingDistribution? leadingDistribution,
 
-    /// optionalParameters: {double? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? leading} , default:none
     double? leading,
 
-    /// optionalParameters: {FontWeight? fontWeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontWeight? fontWeight} , default:none
     FontWeight? fontWeight,
 
-    /// optionalParameters: {FontStyle? fontStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontStyle? fontStyle} , default:none
     FontStyle? fontStyle,
 
-    /// optionalParameters: {bool? forceStrutHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? forceStrutHeight} , default:none
     bool? forceStrutHeight,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , default:none
     String? package,
   }) : super(
           fontFamily: fontFamily,
@@ -55,6 +55,8 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: debugLabel,
           package: package,
         ) {
+    mateCreateName = 'StrutStyle';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StrutStyle$Mate(
           fontFamily: p.get('fontFamily').build(),
           fontFamilyFallback: p.get('fontFamilyFallback').build(),
@@ -68,54 +70,98 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    matePut('fontFamily', fontFamily);
-    matePut('fontFamilyFallback', fontFamilyFallback);
-    matePut('fontSize', fontSize);
-    matePut('height', height);
-    matePut('leadingDistribution', leadingDistribution);
-    matePut('leading', leading);
-    matePut('fontWeight', fontWeight);
-    matePut('fontStyle', fontStyle);
-    matePut('forceStrutHeight', forceStrutHeight);
-    matePut('debugLabel', debugLabel);
-    matePut('package', package);
+    mateUse(
+      'fontFamily',
+      fontFamily,
+      isNamed: true,
+    );
+    mateUseList(
+      'fontFamilyFallback',
+      fontFamilyFallback,
+      isNamed: true,
+    );
+    mateUse(
+      'fontSize',
+      fontSize,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingDistribution',
+      leadingDistribution,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'fontWeight',
+      fontWeight,
+      isNamed: true,
+    );
+    mateUse(
+      'fontStyle',
+      fontStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'forceStrutHeight',
+      forceStrutHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
   }
 
   /// StrutStyle StrutStyle.fromTextStyle(TextStyle textStyle, {String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
   StrutStyle$Mate.fromTextStyle(
     /// requiredParameters: TextStyle textStyle
     TextStyle textStyle, {
-    /// optionalParameters: {String? fontFamily} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fontFamily} , default:none
     String? fontFamily,
 
-    /// optionalParameters: {List<String>? fontFamilyFallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<String>? fontFamilyFallback} , default:none
     List<String>? fontFamilyFallback,
 
-    /// optionalParameters: {double? fontSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fontSize} , default:none
     double? fontSize,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , default:none
     TextLeadingDistribution? leadingDistribution,
 
-    /// optionalParameters: {double? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? leading} , default:none
     double? leading,
 
-    /// optionalParameters: {FontWeight? fontWeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontWeight? fontWeight} , default:none
     FontWeight? fontWeight,
 
-    /// optionalParameters: {FontStyle? fontStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FontStyle? fontStyle} , default:none
     FontStyle? fontStyle,
 
-    /// optionalParameters: {bool? forceStrutHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? forceStrutHeight} , default:none
     bool? forceStrutHeight,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , default:none
     String? package,
   }) : super.fromTextStyle(
           textStyle,
@@ -131,6 +177,8 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: debugLabel,
           package: package,
         ) {
+    mateCreateName = 'StrutStyle.fromTextStyle';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StrutStyle$Mate.fromTextStyle(
           p.get('textStyle').value,
           fontFamily: p.get('fontFamily').build(),
@@ -145,17 +193,65 @@ class StrutStyle$Mate extends StrutStyle with Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    matePut('textStyle', textStyle);
-    matePut('fontFamily', fontFamily);
-    matePut('fontFamilyFallback', fontFamilyFallback);
-    matePut('fontSize', fontSize);
-    matePut('height', height);
-    matePut('leadingDistribution', leadingDistribution);
-    matePut('leading', leading);
-    matePut('fontWeight', fontWeight);
-    matePut('fontStyle', fontStyle);
-    matePut('forceStrutHeight', forceStrutHeight);
-    matePut('debugLabel', debugLabel);
-    matePut('package', package);
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: false,
+    );
+    mateUse(
+      'fontFamily',
+      fontFamily,
+      isNamed: true,
+    );
+    mateUseList(
+      'fontFamilyFallback',
+      fontFamilyFallback,
+      isNamed: true,
+    );
+    mateUse(
+      'fontSize',
+      fontSize,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingDistribution',
+      leadingDistribution,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'fontWeight',
+      fontWeight,
+      isNamed: true,
+    );
+    mateUse(
+      'fontStyle',
+      fontStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'forceStrutHeight',
+      forceStrutHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
   }
 }

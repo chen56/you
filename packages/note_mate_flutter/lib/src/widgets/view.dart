@@ -9,20 +9,30 @@ import 'package:flutter/src/widgets/framework.dart';
 class View$Mate extends View with Mate {
   /// View View({required FlutterView view, required Widget child})
   View$Mate({
-    /// optionalParameters: {required FlutterView view} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlutterView view} , default:none
     required FlutterView view,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           view: view,
           child: child,
         ) {
+    mateCreateName = 'View';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => View$Mate(
           view: p.get('view').build(),
           child: p.get('child').build(),
         );
-    matePut('view', view);
-    matePut('child', child);
+    mateUse(
+      'view',
+      view,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -8,32 +8,54 @@ import 'dart:core';
 class RawKeyEventDataIos$Mate extends RawKeyEventDataIos with Mate {
   /// RawKeyEventDataIos RawKeyEventDataIos({String characters = '', String charactersIgnoringModifiers = '', int keyCode = 0, int modifiers = 0})
   RawKeyEventDataIos$Mate({
-    /// optionalParameters: {String characters = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String characters,
+    /// optionalParameters: {String characters = ''} , default:processed=SimpleStringLiteralImpl
+    String characters = '',
 
-    /// optionalParameters: {String charactersIgnoringModifiers = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String charactersIgnoringModifiers,
+    /// optionalParameters: {String charactersIgnoringModifiers = ''} , default:processed=SimpleStringLiteralImpl
+    String charactersIgnoringModifiers = '',
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
+    int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
+    int modifiers = 0,
   }) : super(
           characters: characters,
           charactersIgnoringModifiers: charactersIgnoringModifiers,
           keyCode: keyCode,
           modifiers: modifiers,
         ) {
+    mateCreateName = 'RawKeyEventDataIos';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataIos$Mate(
           characters: p.get('characters').build(),
           charactersIgnoringModifiers: p.get('charactersIgnoringModifiers').build(),
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
         );
-    matePut('characters', characters);
-    matePut('charactersIgnoringModifiers', charactersIgnoringModifiers);
-    matePut('keyCode', keyCode);
-    matePut('modifiers', modifiers);
+    mateUse(
+      'characters',
+      characters,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'charactersIgnoringModifiers',
+      charactersIgnoringModifiers,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'keyCode',
+      keyCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'modifiers',
+      modifiers,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }

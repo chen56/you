@@ -9,21 +9,31 @@ import 'dart:ui';
 class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription with Mate {
   /// ApplicationSwitcherDescription ApplicationSwitcherDescription({String? label, int? primaryColor})
   ApplicationSwitcherDescription$Mate({
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , default:none
     String? label,
 
-    /// optionalParameters: {int? primaryColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? primaryColor} , default:none
     int? primaryColor,
   }) : super(
           label: label,
           primaryColor: primaryColor,
         ) {
+    mateCreateName = 'ApplicationSwitcherDescription';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ApplicationSwitcherDescription$Mate(
           label: p.get('label').build(),
           primaryColor: p.get('primaryColor').build(),
         );
-    matePut('label', label);
-    matePut('primaryColor', primaryColor);
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'primaryColor',
+      primaryColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -31,28 +41,28 @@ class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
 class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate {
   /// SystemUiOverlayStyle SystemUiOverlayStyle({Color? systemNavigationBarColor, Color? systemNavigationBarDividerColor, Brightness? systemNavigationBarIconBrightness, bool? systemNavigationBarContrastEnforced, Color? statusBarColor, Brightness? statusBarBrightness, Brightness? statusBarIconBrightness, bool? systemStatusBarContrastEnforced})
   SystemUiOverlayStyle$Mate({
-    /// optionalParameters: {Color? systemNavigationBarColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? systemNavigationBarColor} , default:none
     Color? systemNavigationBarColor,
 
-    /// optionalParameters: {Color? systemNavigationBarDividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? systemNavigationBarDividerColor} , default:none
     Color? systemNavigationBarDividerColor,
 
-    /// optionalParameters: {Brightness? systemNavigationBarIconBrightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? systemNavigationBarIconBrightness} , default:none
     Brightness? systemNavigationBarIconBrightness,
 
-    /// optionalParameters: {bool? systemNavigationBarContrastEnforced} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? systemNavigationBarContrastEnforced} , default:none
     bool? systemNavigationBarContrastEnforced,
 
-    /// optionalParameters: {Color? statusBarColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? statusBarColor} , default:none
     Color? statusBarColor,
 
-    /// optionalParameters: {Brightness? statusBarBrightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? statusBarBrightness} , default:none
     Brightness? statusBarBrightness,
 
-    /// optionalParameters: {Brightness? statusBarIconBrightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? statusBarIconBrightness} , default:none
     Brightness? statusBarIconBrightness,
 
-    /// optionalParameters: {bool? systemStatusBarContrastEnforced} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? systemStatusBarContrastEnforced} , default:none
     bool? systemStatusBarContrastEnforced,
   }) : super(
           systemNavigationBarColor: systemNavigationBarColor,
@@ -64,6 +74,8 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate {
           statusBarIconBrightness: statusBarIconBrightness,
           systemStatusBarContrastEnforced: systemStatusBarContrastEnforced,
         ) {
+    mateCreateName = 'SystemUiOverlayStyle';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SystemUiOverlayStyle$Mate(
           systemNavigationBarColor: p.get('systemNavigationBarColor').build(),
           systemNavigationBarDividerColor: p.get('systemNavigationBarDividerColor').build(),
@@ -74,13 +86,45 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate {
           statusBarIconBrightness: p.get('statusBarIconBrightness').build(),
           systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').build(),
         );
-    matePut('systemNavigationBarColor', systemNavigationBarColor);
-    matePut('systemNavigationBarDividerColor', systemNavigationBarDividerColor);
-    matePut('systemNavigationBarIconBrightness', systemNavigationBarIconBrightness);
-    matePut('systemNavigationBarContrastEnforced', systemNavigationBarContrastEnforced);
-    matePut('statusBarColor', statusBarColor);
-    matePut('statusBarBrightness', statusBarBrightness);
-    matePut('statusBarIconBrightness', statusBarIconBrightness);
-    matePut('systemStatusBarContrastEnforced', systemStatusBarContrastEnforced);
+    mateUse(
+      'systemNavigationBarColor',
+      systemNavigationBarColor,
+      isNamed: true,
+    );
+    mateUse(
+      'systemNavigationBarDividerColor',
+      systemNavigationBarDividerColor,
+      isNamed: true,
+    );
+    mateUse(
+      'systemNavigationBarIconBrightness',
+      systemNavigationBarIconBrightness,
+      isNamed: true,
+    );
+    mateUse(
+      'systemNavigationBarContrastEnforced',
+      systemNavigationBarContrastEnforced,
+      isNamed: true,
+    );
+    mateUse(
+      'statusBarColor',
+      statusBarColor,
+      isNamed: true,
+    );
+    mateUse(
+      'statusBarBrightness',
+      statusBarBrightness,
+      isNamed: true,
+    );
+    mateUse(
+      'statusBarIconBrightness',
+      statusBarIconBrightness,
+      isNamed: true,
+    );
+    mateUse(
+      'systemStatusBarContrastEnforced',
+      systemStatusBarContrastEnforced,
+      isNamed: true,
+    );
   }
 }

@@ -19,12 +19,22 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           state,
           data,
         ) {
+    mateCreateName = 'AsyncSnapshot.withData';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AsyncSnapshot$Mate<T>.withData(
           p.get('state').value,
           p.get('data').value,
         );
-    matePut('state', state);
-    matePut('data', data);
+    mateUse(
+      'state',
+      state,
+      isNamed: false,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: false,
+    );
   }
 
   /// AsyncSnapshot<T> AsyncSnapshot.withError(ConnectionState state, Object error, [StackTrace stackTrace = StackTrace.empty])
@@ -42,14 +52,29 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
           error,
           stackTrace,
         ) {
+    mateCreateName = 'AsyncSnapshot.withError';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AsyncSnapshot$Mate<T>.withError(
           p.get('state').value,
           p.get('error').value,
           p.get('stackTrace').value,
         );
-    matePut('state', state);
-    matePut('error', error);
-    matePut('stackTrace', stackTrace);
+    mateUse(
+      'state',
+      state,
+      isNamed: false,
+    );
+    mateUse(
+      'error',
+      error,
+      isNamed: false,
+    );
+    mateUse(
+      'stackTrace',
+      stackTrace,
+      isNamed: false,
+      defaultValue: StackTrace.empty,
+    );
   }
 }
 
@@ -57,16 +82,16 @@ class AsyncSnapshot$Mate<T> extends AsyncSnapshot<T> with Mate {
 class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
   /// StreamBuilder<T> StreamBuilder({Key? key, T? initialData, Stream<T>? stream, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   StreamBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {T? initialData} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? initialData} , default:none
     T? initialData,
 
-    /// optionalParameters: {Stream<T>? stream} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Stream<T>? stream} , default:none
     Stream<T>? stream,
 
-    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , default:none
     required AsyncWidgetBuilder<T> builder,
   }) : super(
           key: key,
@@ -74,16 +99,34 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
           stream: stream,
           builder: builder,
         ) {
+    mateCreateName = 'StreamBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => StreamBuilder$Mate<T>(
           key: p.get('key').build(),
           initialData: p.get('initialData').build(),
           stream: p.get('stream').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('initialData', initialData);
-    matePut('stream', stream);
-    matePut('builder', builder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'initialData',
+      initialData,
+      isNamed: true,
+    );
+    mateUse(
+      'stream',
+      stream,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -91,16 +134,16 @@ class StreamBuilder$Mate<T> extends StreamBuilder<T> with Mate {
 class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
   /// FutureBuilder<T> FutureBuilder({Key? key, Future<T>? future, T? initialData, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   FutureBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Future<T>? future} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Future<T>? future} , default:none
     Future<T>? future,
 
-    /// optionalParameters: {T? initialData} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? initialData} , default:none
     T? initialData,
 
-    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , default:none
     required AsyncWidgetBuilder<T> builder,
   }) : super(
           key: key,
@@ -108,15 +151,33 @@ class FutureBuilder$Mate<T> extends FutureBuilder<T> with Mate {
           initialData: initialData,
           builder: builder,
         ) {
+    mateCreateName = 'FutureBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FutureBuilder$Mate<T>(
           key: p.get('key').build(),
           future: p.get('future').build(),
           initialData: p.get('initialData').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('future', future);
-    matePut('initialData', initialData);
-    matePut('builder', builder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'future',
+      future,
+      isNamed: true,
+    );
+    mateUse(
+      'initialData',
+      initialData,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }

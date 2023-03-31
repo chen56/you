@@ -9,20 +9,20 @@ import 'dart:core';
 class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
   /// PerformanceOverlay PerformanceOverlay({Key? key, int optionsMask = 0, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   PerformanceOverlay$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int optionsMask = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int optionsMask,
+    /// optionalParameters: {int optionsMask = 0} , default:processed=IntegerLiteralImpl
+    int optionsMask = 0,
 
-    /// optionalParameters: {int rasterizerThreshold = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int rasterizerThreshold,
+    /// optionalParameters: {int rasterizerThreshold = 0} , default:processed=IntegerLiteralImpl
+    int rasterizerThreshold = 0,
 
-    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardRasterCacheImages,
+    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
+    bool checkerboardRasterCacheImages = false,
 
-    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardOffscreenLayers,
+    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
+    bool checkerboardOffscreenLayers = false,
   }) : super(
           key: key,
           optionsMask: optionsMask,
@@ -30,6 +30,8 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
+    mateCreateName = 'PerformanceOverlay';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate(
           key: p.get('key').build(),
           optionsMask: p.get('optionsMask').build(),
@@ -37,41 +39,86 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    matePut('key', key);
-    matePut('optionsMask', optionsMask);
-    matePut('rasterizerThreshold', rasterizerThreshold);
-    matePut('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    matePut('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsMask',
+      optionsMask,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'rasterizerThreshold',
+      rasterizerThreshold,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'checkerboardRasterCacheImages',
+      checkerboardRasterCacheImages,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'checkerboardOffscreenLayers',
+      checkerboardOffscreenLayers,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 
   /// PerformanceOverlay PerformanceOverlay.allEnabled({Key? key, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   PerformanceOverlay$Mate.allEnabled({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {int rasterizerThreshold = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int rasterizerThreshold,
+    /// optionalParameters: {int rasterizerThreshold = 0} , default:processed=IntegerLiteralImpl
+    int rasterizerThreshold = 0,
 
-    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardRasterCacheImages,
+    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
+    bool checkerboardRasterCacheImages = false,
 
-    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardOffscreenLayers,
+    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
+    bool checkerboardOffscreenLayers = false,
   }) : super.allEnabled(
           key: key,
           rasterizerThreshold: rasterizerThreshold,
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
+    mateCreateName = 'PerformanceOverlay.allEnabled';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
           key: p.get('key').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    matePut('key', key);
-    matePut('rasterizerThreshold', rasterizerThreshold);
-    matePut('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    matePut('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rasterizerThreshold',
+      rasterizerThreshold,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'checkerboardRasterCacheImages',
+      checkerboardRasterCacheImages,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'checkerboardOffscreenLayers',
+      checkerboardOffscreenLayers,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

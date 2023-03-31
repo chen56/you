@@ -11,16 +11,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class Localizations$Mate extends Localizations with Mate {
   /// Localizations Localizations({Key? key, required Locale locale, required List<LocalizationsDelegate<dynamic>> delegates, Widget? child})
   Localizations$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Locale locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Locale locale} , default:none
     required Locale locale,
 
-    /// optionalParameters: {required List<LocalizationsDelegate<dynamic>> delegates} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<LocalizationsDelegate<dynamic>> delegates} , default:none
     required List<LocalizationsDelegate<dynamic>> delegates,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -28,15 +28,33 @@ class Localizations$Mate extends Localizations with Mate {
           delegates: delegates,
           child: child,
         ) {
+    mateCreateName = 'Localizations';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Localizations$Mate(
           key: p.get('key').build(),
           locale: p.get('locale').build(),
           delegates: p.get('delegates').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('locale', locale);
-    matePut('delegates', delegates);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUseList(
+      'delegates',
+      delegates,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

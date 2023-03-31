@@ -10,7 +10,9 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/services/text_input.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/alignment.dart';
@@ -18,6 +20,7 @@ import 'package:flutter/src/services/text_formatter.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/widgets/tap_region.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/text_selection.dart';
 import 'package:flutter/src/gestures/tap.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
@@ -29,193 +32,193 @@ import 'package:flutter/src/widgets/magnifier.dart';
 class CupertinoTextField$Mate extends CupertinoTextField with Mate {
   /// CupertinoTextField CupertinoTextField({Key? key, TextEditingController? controller, FocusNode? focusNode, BoxDecoration? decoration = _kDefaultRoundedBorderDecoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
   CupertinoTextField$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {TextEditingController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextEditingController? controller} , default:none
     TextEditingController? controller,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {BoxDecoration? decoration = _kDefaultRoundedBorderDecoration} , hasDefaultValue:true, defaultValueCode:_kDefaultRoundedBorderDecoration
-    BoxDecoration? decoration,
+    /// optionalParameters: {BoxDecoration? decoration = _kDefaultRoundedBorderDecoration} , default:unprocessed=SimpleIdentifierImpl
+    required BoxDecoration? decoration,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(7.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.all(7.0)
+    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(7.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {String? placeholder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? placeholder} , default:none
     String? placeholder,
 
-    /// optionalParameters: {TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText)} , hasDefaultValue:true, defaultValueCode:const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText)
-    TextStyle? placeholderStyle,
+    /// optionalParameters: {TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText)} , default:unprocessed=InstanceCreationExpressionImpl
+    required TextStyle? placeholderStyle,
 
-    /// optionalParameters: {Widget? prefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prefix} , default:none
     Widget? prefix,
 
-    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , hasDefaultValue:true, defaultValueCode:OverlayVisibilityMode.always
-    required OverlayVisibilityMode prefixMode,
+    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always,
 
-    /// optionalParameters: {Widget? suffix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? suffix} , default:none
     Widget? suffix,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , hasDefaultValue:true, defaultValueCode:OverlayVisibilityMode.always
-    required OverlayVisibilityMode suffixMode,
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always,
 
-    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , hasDefaultValue:true, defaultValueCode:OverlayVisibilityMode.never
-    required OverlayVisibilityMode clearButtonMode,
+    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:processed=PrefixedIdentifierImpl
+    OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never,
 
-    /// optionalParameters: {TextInputType? keyboardType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextInputType? keyboardType} , default:none
     TextInputType? keyboardType,
 
-    /// optionalParameters: {TextInputAction? textInputAction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextInputAction? textInputAction} , default:none
     TextInputAction? textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , hasDefaultValue:true, defaultValueCode:TextCapitalization.none
-    required TextCapitalization textCapitalization,
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
+    TextCapitalization textCapitalization = TextCapitalization.none,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , hasDefaultValue:true, defaultValueCode:TextAlign.start
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    TextAlign textAlign = TextAlign.start,
 
-    /// optionalParameters: {TextAlignVertical? textAlignVertical} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
     TextAlignVertical? textAlignVertical,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool readOnly = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool readOnly,
+    /// optionalParameters: {bool readOnly = false} , default:processed=BooleanLiteralImpl
+    bool readOnly = false,
 
-    /// optionalParameters: {bool? showCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showCursor} , default:none
     bool? showCursor,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {String obscuringCharacter = '•'} , hasDefaultValue:true, defaultValueCode:'•'
-    required String obscuringCharacter,
+    /// optionalParameters: {String obscuringCharacter = '•'} , default:processed=SimpleStringLiteralImpl
+    String obscuringCharacter = '•',
 
-    /// optionalParameters: {bool obscureText = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscureText,
+    /// optionalParameters: {bool obscureText = false} , default:processed=BooleanLiteralImpl
+    bool obscureText = false,
 
-    /// optionalParameters: {bool autocorrect = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool autocorrect,
+    /// optionalParameters: {bool autocorrect = true} , default:processed=BooleanLiteralImpl
+    bool autocorrect = true,
 
-    /// optionalParameters: {SmartDashesType? smartDashesType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SmartDashesType? smartDashesType} , default:none
     SmartDashesType? smartDashesType,
 
-    /// optionalParameters: {SmartQuotesType? smartQuotesType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SmartQuotesType? smartQuotesType} , default:none
     SmartQuotesType? smartQuotesType,
 
-    /// optionalParameters: {bool enableSuggestions = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableSuggestions,
+    /// optionalParameters: {bool enableSuggestions = true} , default:processed=BooleanLiteralImpl
+    bool enableSuggestions = true,
 
-    /// optionalParameters: {int? maxLines = 1} , hasDefaultValue:true, defaultValueCode:1
-    int? maxLines,
+    /// optionalParameters: {int? maxLines = 1} , default:processed=IntegerLiteralImpl
+    int? maxLines = 1,
 
-    /// optionalParameters: {int? minLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? minLines} , default:none
     int? minLines,
 
-    /// optionalParameters: {bool expands = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expands,
+    /// optionalParameters: {bool expands = false} , default:processed=BooleanLiteralImpl
+    bool expands = false,
 
-    /// optionalParameters: {int? maxLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLength} , default:none
     int? maxLength,
 
-    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , default:none
     MaxLengthEnforcement? maxLengthEnforcement,
 
-    /// optionalParameters: {void Function(String)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(String)? onChanged} , default:none
     ValueChanged<String>? onChanged,
 
-    /// optionalParameters: {void Function()? onEditingComplete} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onEditingComplete} , default:none
     VoidCallback? onEditingComplete,
 
-    /// optionalParameters: {void Function(String)? onSubmitted} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(String)? onSubmitted} , default:none
     ValueChanged<String>? onSubmitted,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     TapRegionCallback? onTapOutside,
 
-    /// optionalParameters: {List<TextInputFormatter>? inputFormatters} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<TextInputFormatter>? inputFormatters} , default:none
     List<TextInputFormatter>? inputFormatters,
 
-    /// optionalParameters: {bool? enabled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enabled} , default:none
     bool? enabled,
 
-    /// optionalParameters: {double cursorWidth = 2.0} , hasDefaultValue:true, defaultValueCode:2.0
-    required double cursorWidth,
+    /// optionalParameters: {double cursorWidth = 2.0} , default:processed=DoubleLiteralImpl
+    double cursorWidth = 2.0,
 
-    /// optionalParameters: {double? cursorHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cursorHeight} , default:none
     double? cursorHeight,
 
-    /// optionalParameters: {Radius cursorRadius = const Radius.circular(2.0)} , hasDefaultValue:true, defaultValueCode:const Radius.circular(2.0)
+    /// optionalParameters: {Radius cursorRadius = const Radius.circular(2.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required Radius cursorRadius,
 
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , default:none
     Color? cursorColor,
 
-    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxHeightStyle.tight
+    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxHeightStyle selectionHeightStyle,
 
-    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxWidthStyle.tight
+    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxWidthStyle selectionWidthStyle,
 
-    /// optionalParameters: {Brightness? keyboardAppearance} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? keyboardAppearance} , default:none
     Brightness? keyboardAppearance,
 
-    /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.all(20.0)
+    /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsets scrollPadding,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool? enableInteractiveSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableInteractiveSelection} , default:none
     bool? enableInteractiveSelection,
 
-    /// optionalParameters: {TextSelectionControls? selectionControls} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
     TextSelectionControls? selectionControls,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {ScrollController? scrollController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? scrollController} , default:none
     ScrollController? scrollController,
 
-    /// optionalParameters: {ScrollPhysics? scrollPhysics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? scrollPhysics} , default:none
     ScrollPhysics? scrollPhysics,
 
-    /// optionalParameters: {Iterable<String>? autofillHints = const <String>[]} , hasDefaultValue:true, defaultValueCode:const <String>[]
-    Iterable<String>? autofillHints,
+    /// optionalParameters: {Iterable<String>? autofillHints = const <String>[]} , default:unprocessed=ListLiteralImpl
+    required Iterable<String>? autofillHints,
 
-    /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , default:none
     ContentInsertionConfiguration? contentInsertionConfiguration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {bool scribbleEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool scribbleEnabled,
+    /// optionalParameters: {bool scribbleEnabled = true} , default:processed=BooleanLiteralImpl
+    bool scribbleEnabled = true,
 
-    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableIMEPersonalizedLearning,
+    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , default:processed=BooleanLiteralImpl
+    bool enableIMEPersonalizedLearning = true,
 
-    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , hasDefaultValue:true, defaultValueCode:_defaultContextMenuBuilder
-    EditableTextContextMenuBuilder? contextMenuBuilder,
+    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , default:unprocessed=SimpleIdentifierImpl
+    required EditableTextContextMenuBuilder? contextMenuBuilder,
 
-    /// optionalParameters: {SpellCheckConfiguration? spellCheckConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SpellCheckConfiguration? spellCheckConfiguration} , default:none
     SpellCheckConfiguration? spellCheckConfiguration,
 
-    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , default:none
     TextMagnifierConfiguration? magnifierConfiguration,
   }) : super(
           key: key,
@@ -282,6 +285,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
+    mateCreateName = 'CupertinoTextField';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextField$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -347,260 +352,530 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('focusNode', focusNode);
-    matePut('decoration', decoration);
-    matePut('padding', padding);
-    matePut('placeholder', placeholder);
-    matePut('placeholderStyle', placeholderStyle);
-    matePut('prefix', prefix);
-    matePut('prefixMode', prefixMode);
-    matePut('suffix', suffix);
-    matePut('suffixMode', suffixMode);
-    matePut('clearButtonMode', clearButtonMode);
-    matePut('keyboardType', keyboardType);
-    matePut('textInputAction', textInputAction);
-    matePut('textCapitalization', textCapitalization);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textAlignVertical', textAlignVertical);
-    matePut('textDirection', textDirection);
-    matePut('readOnly', readOnly);
-    matePut('showCursor', showCursor);
-    matePut('autofocus', autofocus);
-    matePut('obscuringCharacter', obscuringCharacter);
-    matePut('obscureText', obscureText);
-    matePut('autocorrect', autocorrect);
-    matePut('smartDashesType', smartDashesType);
-    matePut('smartQuotesType', smartQuotesType);
-    matePut('enableSuggestions', enableSuggestions);
-    matePut('maxLines', maxLines);
-    matePut('minLines', minLines);
-    matePut('expands', expands);
-    matePut('maxLength', maxLength);
-    matePut('maxLengthEnforcement', maxLengthEnforcement);
-    matePut('onChanged', onChanged);
-    matePut('onEditingComplete', onEditingComplete);
-    matePut('onSubmitted', onSubmitted);
-    matePut('onTapOutside', onTapOutside);
-    matePut('inputFormatters', inputFormatters);
-    matePut('enabled', enabled);
-    matePut('cursorWidth', cursorWidth);
-    matePut('cursorHeight', cursorHeight);
-    matePut('cursorRadius', cursorRadius);
-    matePut('cursorColor', cursorColor);
-    matePut('selectionHeightStyle', selectionHeightStyle);
-    matePut('selectionWidthStyle', selectionWidthStyle);
-    matePut('keyboardAppearance', keyboardAppearance);
-    matePut('scrollPadding', scrollPadding);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('enableInteractiveSelection', enableInteractiveSelection);
-    matePut('selectionControls', selectionControls);
-    matePut('onTap', onTap);
-    matePut('scrollController', scrollController);
-    matePut('scrollPhysics', scrollPhysics);
-    matePut('autofillHints', autofillHints);
-    matePut('contentInsertionConfiguration', contentInsertionConfiguration);
-    matePut('clipBehavior', clipBehavior);
-    matePut('restorationId', restorationId);
-    matePut('scribbleEnabled', scribbleEnabled);
-    matePut('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    matePut('contextMenuBuilder', contextMenuBuilder);
-    matePut('spellCheckConfiguration', spellCheckConfiguration);
-    matePut('magnifierConfiguration', magnifierConfiguration);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholder',
+      placeholder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderStyle',
+      placeholderStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'prefix',
+      prefix,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixMode',
+      prefixMode,
+      isNamed: true,
+      defaultValue: OverlayVisibilityMode.always,
+    );
+    mateUse(
+      'suffix',
+      suffix,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixMode',
+      suffixMode,
+      isNamed: true,
+      defaultValue: OverlayVisibilityMode.always,
+    );
+    mateUse(
+      'clearButtonMode',
+      clearButtonMode,
+      isNamed: true,
+      defaultValue: OverlayVisibilityMode.never,
+    );
+    mateUse(
+      'keyboardType',
+      keyboardType,
+      isNamed: true,
+    );
+    mateUse(
+      'textInputAction',
+      textInputAction,
+      isNamed: true,
+    );
+    mateUse(
+      'textCapitalization',
+      textCapitalization,
+      isNamed: true,
+      defaultValue: TextCapitalization.none,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+      defaultValue: TextAlign.start,
+    );
+    mateUse(
+      'textAlignVertical',
+      textAlignVertical,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'readOnly',
+      readOnly,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'showCursor',
+      showCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'obscuringCharacter',
+      obscuringCharacter,
+      isNamed: true,
+      defaultValue: '•',
+    );
+    mateUse(
+      'obscureText',
+      obscureText,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'autocorrect',
+      autocorrect,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'smartDashesType',
+      smartDashesType,
+      isNamed: true,
+    );
+    mateUse(
+      'smartQuotesType',
+      smartQuotesType,
+      isNamed: true,
+    );
+    mateUse(
+      'enableSuggestions',
+      enableSuggestions,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'minLines',
+      minLines,
+      isNamed: true,
+    );
+    mateUse(
+      'expands',
+      expands,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maxLength',
+      maxLength,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLengthEnforcement',
+      maxLengthEnforcement,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onEditingComplete',
+      onEditingComplete,
+      isNamed: true,
+    );
+    mateUse(
+      'onSubmitted',
+      onSubmitted,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapOutside',
+      onTapOutside,
+      isNamed: true,
+    );
+    mateUseList(
+      'inputFormatters',
+      inputFormatters,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorWidth',
+      cursorWidth,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'cursorHeight',
+      cursorHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorRadius',
+      cursorRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorColor',
+      cursorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionHeightStyle',
+      selectionHeightStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionWidthStyle',
+      selectionWidthStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'keyboardAppearance',
+      keyboardAppearance,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollPadding',
+      scrollPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'enableInteractiveSelection',
+      enableInteractiveSelection,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionControls',
+      selectionControls,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollController',
+      scrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollPhysics',
+      scrollPhysics,
+      isNamed: true,
+    );
+    mateUse(
+      'autofillHints',
+      autofillHints,
+      isNamed: true,
+    );
+    mateUse(
+      'contentInsertionConfiguration',
+      contentInsertionConfiguration,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'scribbleEnabled',
+      scribbleEnabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'enableIMEPersonalizedLearning',
+      enableIMEPersonalizedLearning,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'contextMenuBuilder',
+      contextMenuBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'spellCheckConfiguration',
+      spellCheckConfiguration,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierConfiguration',
+      magnifierConfiguration,
+      isNamed: true,
+    );
   }
 
   /// CupertinoTextField CupertinoTextField.borderless({Key? key, TextEditingController? controller, FocusNode? focusNode, BoxDecoration? decoration, EdgeInsetsGeometry padding = const EdgeInsets.all(7.0), String? placeholder, TextStyle? placeholderStyle = _kDefaultPlaceholderStyle, Widget? prefix, OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always, Widget? suffix, OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always, OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never, TextInputType? keyboardType, TextInputAction? textInputAction, TextCapitalization textCapitalization = TextCapitalization.none, TextStyle? style, StrutStyle? strutStyle, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, TextDirection? textDirection, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, bool autofocus = false, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, MaxLengthEnforcement? maxLengthEnforcement, void Function(String)? onChanged, void Function()? onEditingComplete, void Function(String)? onSubmitted, void Function(PointerDownEvent)? onTapOutside, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Radius cursorRadius = const Radius.circular(2.0), Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool? enableInteractiveSelection, TextSelectionControls? selectionControls, void Function()? onTap, ScrollController? scrollController, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints = const <String>[], ContentInsertionConfiguration? contentInsertionConfiguration, Clip clipBehavior = Clip.hardEdge, String? restorationId, bool scribbleEnabled = true, bool enableIMEPersonalizedLearning = true, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, SpellCheckConfiguration? spellCheckConfiguration, TextMagnifierConfiguration? magnifierConfiguration})
   CupertinoTextField$Mate.borderless({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {TextEditingController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextEditingController? controller} , default:none
     TextEditingController? controller,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {BoxDecoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxDecoration? decoration} , default:none
     BoxDecoration? decoration,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(7.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.all(7.0)
+    /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(7.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsetsGeometry padding,
 
-    /// optionalParameters: {String? placeholder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? placeholder} , default:none
     String? placeholder,
 
-    /// optionalParameters: {TextStyle? placeholderStyle = _kDefaultPlaceholderStyle} , hasDefaultValue:true, defaultValueCode:_kDefaultPlaceholderStyle
-    TextStyle? placeholderStyle,
+    /// optionalParameters: {TextStyle? placeholderStyle = _kDefaultPlaceholderStyle} , default:unprocessed=SimpleIdentifierImpl
+    required TextStyle? placeholderStyle,
 
-    /// optionalParameters: {Widget? prefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prefix} , default:none
     Widget? prefix,
 
-    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , hasDefaultValue:true, defaultValueCode:OverlayVisibilityMode.always
-    required OverlayVisibilityMode prefixMode,
+    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always,
 
-    /// optionalParameters: {Widget? suffix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? suffix} , default:none
     Widget? suffix,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , hasDefaultValue:true, defaultValueCode:OverlayVisibilityMode.always
-    required OverlayVisibilityMode suffixMode,
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always,
 
-    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , hasDefaultValue:true, defaultValueCode:OverlayVisibilityMode.never
-    required OverlayVisibilityMode clearButtonMode,
+    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:processed=PrefixedIdentifierImpl
+    OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never,
 
-    /// optionalParameters: {TextInputType? keyboardType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextInputType? keyboardType} , default:none
     TextInputType? keyboardType,
 
-    /// optionalParameters: {TextInputAction? textInputAction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextInputAction? textInputAction} , default:none
     TextInputAction? textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , hasDefaultValue:true, defaultValueCode:TextCapitalization.none
-    required TextCapitalization textCapitalization,
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
+    TextCapitalization textCapitalization = TextCapitalization.none,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , hasDefaultValue:true, defaultValueCode:TextAlign.start
-    required TextAlign textAlign,
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    TextAlign textAlign = TextAlign.start,
 
-    /// optionalParameters: {TextAlignVertical? textAlignVertical} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
     TextAlignVertical? textAlignVertical,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {bool readOnly = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool readOnly,
+    /// optionalParameters: {bool readOnly = false} , default:processed=BooleanLiteralImpl
+    bool readOnly = false,
 
-    /// optionalParameters: {bool? showCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? showCursor} , default:none
     bool? showCursor,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {String obscuringCharacter = '•'} , hasDefaultValue:true, defaultValueCode:'•'
-    required String obscuringCharacter,
+    /// optionalParameters: {String obscuringCharacter = '•'} , default:processed=SimpleStringLiteralImpl
+    String obscuringCharacter = '•',
 
-    /// optionalParameters: {bool obscureText = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool obscureText,
+    /// optionalParameters: {bool obscureText = false} , default:processed=BooleanLiteralImpl
+    bool obscureText = false,
 
-    /// optionalParameters: {bool autocorrect = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool autocorrect,
+    /// optionalParameters: {bool autocorrect = true} , default:processed=BooleanLiteralImpl
+    bool autocorrect = true,
 
-    /// optionalParameters: {SmartDashesType? smartDashesType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SmartDashesType? smartDashesType} , default:none
     SmartDashesType? smartDashesType,
 
-    /// optionalParameters: {SmartQuotesType? smartQuotesType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SmartQuotesType? smartQuotesType} , default:none
     SmartQuotesType? smartQuotesType,
 
-    /// optionalParameters: {bool enableSuggestions = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableSuggestions,
+    /// optionalParameters: {bool enableSuggestions = true} , default:processed=BooleanLiteralImpl
+    bool enableSuggestions = true,
 
-    /// optionalParameters: {int? maxLines = 1} , hasDefaultValue:true, defaultValueCode:1
-    int? maxLines,
+    /// optionalParameters: {int? maxLines = 1} , default:processed=IntegerLiteralImpl
+    int? maxLines = 1,
 
-    /// optionalParameters: {int? minLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? minLines} , default:none
     int? minLines,
 
-    /// optionalParameters: {bool expands = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expands,
+    /// optionalParameters: {bool expands = false} , default:processed=BooleanLiteralImpl
+    bool expands = false,
 
-    /// optionalParameters: {int? maxLength} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLength} , default:none
     int? maxLength,
 
-    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , default:none
     MaxLengthEnforcement? maxLengthEnforcement,
 
-    /// optionalParameters: {void Function(String)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(String)? onChanged} , default:none
     ValueChanged<String>? onChanged,
 
-    /// optionalParameters: {void Function()? onEditingComplete} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onEditingComplete} , default:none
     VoidCallback? onEditingComplete,
 
-    /// optionalParameters: {void Function(String)? onSubmitted} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(String)? onSubmitted} , default:none
     ValueChanged<String>? onSubmitted,
 
-    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
     TapRegionCallback? onTapOutside,
 
-    /// optionalParameters: {List<TextInputFormatter>? inputFormatters} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<TextInputFormatter>? inputFormatters} , default:none
     List<TextInputFormatter>? inputFormatters,
 
-    /// optionalParameters: {bool? enabled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enabled} , default:none
     bool? enabled,
 
-    /// optionalParameters: {double cursorWidth = 2.0} , hasDefaultValue:true, defaultValueCode:2.0
-    required double cursorWidth,
+    /// optionalParameters: {double cursorWidth = 2.0} , default:processed=DoubleLiteralImpl
+    double cursorWidth = 2.0,
 
-    /// optionalParameters: {double? cursorHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cursorHeight} , default:none
     double? cursorHeight,
 
-    /// optionalParameters: {Radius cursorRadius = const Radius.circular(2.0)} , hasDefaultValue:true, defaultValueCode:const Radius.circular(2.0)
+    /// optionalParameters: {Radius cursorRadius = const Radius.circular(2.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required Radius cursorRadius,
 
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , default:none
     Color? cursorColor,
 
-    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxHeightStyle.tight
+    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxHeightStyle selectionHeightStyle,
 
-    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxWidthStyle.tight
+    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxWidthStyle selectionWidthStyle,
 
-    /// optionalParameters: {Brightness? keyboardAppearance} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? keyboardAppearance} , default:none
     Brightness? keyboardAppearance,
 
-    /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.all(20.0)
+    /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsets scrollPadding,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool? enableInteractiveSelection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableInteractiveSelection} , default:none
     bool? enableInteractiveSelection,
 
-    /// optionalParameters: {TextSelectionControls? selectionControls} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
     TextSelectionControls? selectionControls,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {ScrollController? scrollController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? scrollController} , default:none
     ScrollController? scrollController,
 
-    /// optionalParameters: {ScrollPhysics? scrollPhysics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? scrollPhysics} , default:none
     ScrollPhysics? scrollPhysics,
 
-    /// optionalParameters: {Iterable<String>? autofillHints = const <String>[]} , hasDefaultValue:true, defaultValueCode:const <String>[]
-    Iterable<String>? autofillHints,
+    /// optionalParameters: {Iterable<String>? autofillHints = const <String>[]} , default:unprocessed=ListLiteralImpl
+    required Iterable<String>? autofillHints,
 
-    /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , default:none
     ContentInsertionConfiguration? contentInsertionConfiguration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {bool scribbleEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool scribbleEnabled,
+    /// optionalParameters: {bool scribbleEnabled = true} , default:processed=BooleanLiteralImpl
+    bool scribbleEnabled = true,
 
-    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableIMEPersonalizedLearning,
+    /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , default:processed=BooleanLiteralImpl
+    bool enableIMEPersonalizedLearning = true,
 
-    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , hasDefaultValue:true, defaultValueCode:_defaultContextMenuBuilder
-    EditableTextContextMenuBuilder? contextMenuBuilder,
+    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , default:unprocessed=SimpleIdentifierImpl
+    required EditableTextContextMenuBuilder? contextMenuBuilder,
 
-    /// optionalParameters: {SpellCheckConfiguration? spellCheckConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SpellCheckConfiguration? spellCheckConfiguration} , default:none
     SpellCheckConfiguration? spellCheckConfiguration,
 
-    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , default:none
     TextMagnifierConfiguration? magnifierConfiguration,
   }) : super.borderless(
           key: key,
@@ -667,6 +942,8 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
+    mateCreateName = 'CupertinoTextField.borderless';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextField$Mate.borderless(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -732,68 +1009,338 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('focusNode', focusNode);
-    matePut('decoration', decoration);
-    matePut('padding', padding);
-    matePut('placeholder', placeholder);
-    matePut('placeholderStyle', placeholderStyle);
-    matePut('prefix', prefix);
-    matePut('prefixMode', prefixMode);
-    matePut('suffix', suffix);
-    matePut('suffixMode', suffixMode);
-    matePut('clearButtonMode', clearButtonMode);
-    matePut('keyboardType', keyboardType);
-    matePut('textInputAction', textInputAction);
-    matePut('textCapitalization', textCapitalization);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textAlignVertical', textAlignVertical);
-    matePut('textDirection', textDirection);
-    matePut('readOnly', readOnly);
-    matePut('showCursor', showCursor);
-    matePut('autofocus', autofocus);
-    matePut('obscuringCharacter', obscuringCharacter);
-    matePut('obscureText', obscureText);
-    matePut('autocorrect', autocorrect);
-    matePut('smartDashesType', smartDashesType);
-    matePut('smartQuotesType', smartQuotesType);
-    matePut('enableSuggestions', enableSuggestions);
-    matePut('maxLines', maxLines);
-    matePut('minLines', minLines);
-    matePut('expands', expands);
-    matePut('maxLength', maxLength);
-    matePut('maxLengthEnforcement', maxLengthEnforcement);
-    matePut('onChanged', onChanged);
-    matePut('onEditingComplete', onEditingComplete);
-    matePut('onSubmitted', onSubmitted);
-    matePut('onTapOutside', onTapOutside);
-    matePut('inputFormatters', inputFormatters);
-    matePut('enabled', enabled);
-    matePut('cursorWidth', cursorWidth);
-    matePut('cursorHeight', cursorHeight);
-    matePut('cursorRadius', cursorRadius);
-    matePut('cursorColor', cursorColor);
-    matePut('selectionHeightStyle', selectionHeightStyle);
-    matePut('selectionWidthStyle', selectionWidthStyle);
-    matePut('keyboardAppearance', keyboardAppearance);
-    matePut('scrollPadding', scrollPadding);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('enableInteractiveSelection', enableInteractiveSelection);
-    matePut('selectionControls', selectionControls);
-    matePut('onTap', onTap);
-    matePut('scrollController', scrollController);
-    matePut('scrollPhysics', scrollPhysics);
-    matePut('autofillHints', autofillHints);
-    matePut('contentInsertionConfiguration', contentInsertionConfiguration);
-    matePut('clipBehavior', clipBehavior);
-    matePut('restorationId', restorationId);
-    matePut('scribbleEnabled', scribbleEnabled);
-    matePut('enableIMEPersonalizedLearning', enableIMEPersonalizedLearning);
-    matePut('contextMenuBuilder', contextMenuBuilder);
-    matePut('spellCheckConfiguration', spellCheckConfiguration);
-    matePut('magnifierConfiguration', magnifierConfiguration);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholder',
+      placeholder,
+      isNamed: true,
+    );
+    mateUse(
+      'placeholderStyle',
+      placeholderStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'prefix',
+      prefix,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixMode',
+      prefixMode,
+      isNamed: true,
+      defaultValue: OverlayVisibilityMode.always,
+    );
+    mateUse(
+      'suffix',
+      suffix,
+      isNamed: true,
+    );
+    mateUse(
+      'suffixMode',
+      suffixMode,
+      isNamed: true,
+      defaultValue: OverlayVisibilityMode.always,
+    );
+    mateUse(
+      'clearButtonMode',
+      clearButtonMode,
+      isNamed: true,
+      defaultValue: OverlayVisibilityMode.never,
+    );
+    mateUse(
+      'keyboardType',
+      keyboardType,
+      isNamed: true,
+    );
+    mateUse(
+      'textInputAction',
+      textInputAction,
+      isNamed: true,
+    );
+    mateUse(
+      'textCapitalization',
+      textCapitalization,
+      isNamed: true,
+      defaultValue: TextCapitalization.none,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+      defaultValue: TextAlign.start,
+    );
+    mateUse(
+      'textAlignVertical',
+      textAlignVertical,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'readOnly',
+      readOnly,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'showCursor',
+      showCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'obscuringCharacter',
+      obscuringCharacter,
+      isNamed: true,
+      defaultValue: '•',
+    );
+    mateUse(
+      'obscureText',
+      obscureText,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'autocorrect',
+      autocorrect,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'smartDashesType',
+      smartDashesType,
+      isNamed: true,
+    );
+    mateUse(
+      'smartQuotesType',
+      smartQuotesType,
+      isNamed: true,
+    );
+    mateUse(
+      'enableSuggestions',
+      enableSuggestions,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'minLines',
+      minLines,
+      isNamed: true,
+    );
+    mateUse(
+      'expands',
+      expands,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maxLength',
+      maxLength,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLengthEnforcement',
+      maxLengthEnforcement,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onEditingComplete',
+      onEditingComplete,
+      isNamed: true,
+    );
+    mateUse(
+      'onSubmitted',
+      onSubmitted,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapOutside',
+      onTapOutside,
+      isNamed: true,
+    );
+    mateUseList(
+      'inputFormatters',
+      inputFormatters,
+      isNamed: true,
+    );
+    mateUse(
+      'enabled',
+      enabled,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorWidth',
+      cursorWidth,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'cursorHeight',
+      cursorHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorRadius',
+      cursorRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorColor',
+      cursorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionHeightStyle',
+      selectionHeightStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionWidthStyle',
+      selectionWidthStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'keyboardAppearance',
+      keyboardAppearance,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollPadding',
+      scrollPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'enableInteractiveSelection',
+      enableInteractiveSelection,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionControls',
+      selectionControls,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollController',
+      scrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollPhysics',
+      scrollPhysics,
+      isNamed: true,
+    );
+    mateUse(
+      'autofillHints',
+      autofillHints,
+      isNamed: true,
+    );
+    mateUse(
+      'contentInsertionConfiguration',
+      contentInsertionConfiguration,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'scribbleEnabled',
+      scribbleEnabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'enableIMEPersonalizedLearning',
+      enableIMEPersonalizedLearning,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'contextMenuBuilder',
+      contextMenuBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'spellCheckConfiguration',
+      spellCheckConfiguration,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierConfiguration',
+      magnifierConfiguration,
+      isNamed: true,
+    );
   }
 }

@@ -14,34 +14,34 @@ import 'package:flutter/src/widgets/scrollbar.dart';
 class Scrollbar$Mate extends Scrollbar with Mate {
   /// Scrollbar Scrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, bool? trackVisibility, double? thickness, Radius? radius, bool Function(ScrollNotification)? notificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown, bool? showTrackOnHover, double? hoverThickness})
   Scrollbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {bool? thumbVisibility} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? thumbVisibility} , default:none
     bool? thumbVisibility,
 
-    /// optionalParameters: {bool? trackVisibility} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? trackVisibility} , default:none
     bool? trackVisibility,
 
-    /// optionalParameters: {double? thickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? thickness} , default:none
     double? thickness,
 
-    /// optionalParameters: {Radius? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Radius? radius} , default:none
     Radius? radius,
 
-    /// optionalParameters: {bool Function(ScrollNotification)? notificationPredicate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(ScrollNotification)? notificationPredicate} , default:none
     ScrollNotificationPredicate? notificationPredicate,
 
-    /// optionalParameters: {bool? interactive} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? interactive} , default:none
     bool? interactive,
 
-    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , default:none
     ScrollbarOrientation? scrollbarOrientation,
   }) : super(
           key: key,
@@ -55,6 +55,8 @@ class Scrollbar$Mate extends Scrollbar with Mate {
           interactive: interactive,
           scrollbarOrientation: scrollbarOrientation,
         ) {
+    mateCreateName = 'Scrollbar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Scrollbar$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -67,15 +69,55 @@ class Scrollbar$Mate extends Scrollbar with Mate {
           interactive: p.get('interactive').build(),
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('controller', controller);
-    matePut('thumbVisibility', thumbVisibility);
-    matePut('trackVisibility', trackVisibility);
-    matePut('thickness', thickness);
-    matePut('radius', radius);
-    matePut('notificationPredicate', notificationPredicate);
-    matePut('interactive', interactive);
-    matePut('scrollbarOrientation', scrollbarOrientation);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbVisibility',
+      thumbVisibility,
+      isNamed: true,
+    );
+    mateUse(
+      'trackVisibility',
+      trackVisibility,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'notificationPredicate',
+      notificationPredicate,
+      isNamed: true,
+    );
+    mateUse(
+      'interactive',
+      interactive,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollbarOrientation',
+      scrollbarOrientation,
+      isNamed: true,
+    );
   }
 }

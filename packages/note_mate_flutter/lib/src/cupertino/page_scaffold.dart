@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate {
   /// CupertinoPageScaffold CupertinoPageScaffold({Key? key, ObstructingPreferredSizeWidget? navigationBar, Color? backgroundColor, bool resizeToAvoidBottomInset = true, required Widget child})
   CupertinoPageScaffold$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ObstructingPreferredSizeWidget? navigationBar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ObstructingPreferredSizeWidget? navigationBar} , default:none
     ObstructingPreferredSizeWidget? navigationBar,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool resizeToAvoidBottomInset = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool resizeToAvoidBottomInset,
+    /// optionalParameters: {bool resizeToAvoidBottomInset = true} , default:processed=BooleanLiteralImpl
+    bool resizeToAvoidBottomInset = true,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -32,6 +32,8 @@ class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate {
           resizeToAvoidBottomInset: resizeToAvoidBottomInset,
           child: child,
         ) {
+    mateCreateName = 'CupertinoPageScaffold';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageScaffold$Mate(
           key: p.get('key').build(),
           navigationBar: p.get('navigationBar').build(),
@@ -39,10 +41,31 @@ class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate {
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('navigationBar', navigationBar);
-    matePut('backgroundColor', backgroundColor);
-    matePut('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'navigationBar',
+      navigationBar,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'resizeToAvoidBottomInset',
+      resizeToAvoidBottomInset,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -9,6 +9,7 @@ import 'dart:ui';
 import 'package:flutter/src/animation/animation.dart';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration_image.dart';
 import 'dart:io';
 import 'package:flutter/src/services/asset_bundle.dart';
@@ -18,65 +19,65 @@ import 'dart:typed_data';
 class Image$Mate extends Image with Mate {
   /// Image Image({Key? key, required ImageProvider<Object> image, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low})
   Image$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ImageProvider<Object> image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageProvider<Object> image} , default:none
     required ImageProvider<Object> image,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , default:none
     ImageFrameBuilder? frameBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder} , default:none
     ImageLoadingBuilder? loadingBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , default:none
     ImageErrorWidgetBuilder? errorBuilder,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {bool gaplessPlayback = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool gaplessPlayback,
+    /// optionalParameters: {bool gaplessPlayback = false} , default:processed=BooleanLiteralImpl
+    bool gaplessPlayback = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
+    bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
   }) : super(
           key: key,
           image: image,
@@ -99,6 +100,8 @@ class Image$Mate extends Image with Mate {
           isAntiAlias: isAntiAlias,
           filterQuality: filterQuality,
         ) {
+    mateCreateName = 'Image';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate(
           key: p.get('key').build(),
           image: p.get('image').build(),
@@ -121,99 +124,186 @@ class Image$Mate extends Image with Mate {
           isAntiAlias: p.get('isAntiAlias').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    matePut('key', key);
-    matePut('image', image);
-    matePut('frameBuilder', frameBuilder);
-    matePut('loadingBuilder', loadingBuilder);
-    matePut('errorBuilder', errorBuilder);
-    matePut('semanticLabel', semanticLabel);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('gaplessPlayback', gaplessPlayback);
-    matePut('isAntiAlias', isAntiAlias);
-    matePut('filterQuality', filterQuality);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'frameBuilder',
+      frameBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'loadingBuilder',
+      loadingBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'errorBuilder',
+      errorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'gaplessPlayback',
+      gaplessPlayback,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
   }
 
   /// Image Image.network(String src, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false, Map<String, String>? headers, int? cacheWidth, int? cacheHeight})
   Image$Mate.network(
     /// requiredParameters: String src
     String src, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
+    double scale = 1.0,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , default:none
     ImageFrameBuilder? frameBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget, ImageChunkEvent?)? loadingBuilder} , default:none
     ImageLoadingBuilder? loadingBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , default:none
     ImageErrorWidgetBuilder? errorBuilder,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {bool gaplessPlayback = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool gaplessPlayback,
+    /// optionalParameters: {bool gaplessPlayback = false} , default:processed=BooleanLiteralImpl
+    bool gaplessPlayback = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
+    bool isAntiAlias = false,
 
-    /// optionalParameters: {Map<String, String>? headers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<String, String>? headers} , default:none
     Map<String, String>? headers,
 
-    /// optionalParameters: {int? cacheWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheWidth} , default:none
     int? cacheWidth,
 
-    /// optionalParameters: {int? cacheHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheHeight} , default:none
     int? cacheHeight,
   }) : super.network(
           src,
@@ -241,6 +331,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.network';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.network(
           p.get('src').value,
           key: p.get('key').build(),
@@ -267,97 +359,201 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    matePut('src', src);
-    matePut('key', key);
-    matePut('scale', scale);
-    matePut('frameBuilder', frameBuilder);
-    matePut('loadingBuilder', loadingBuilder);
-    matePut('errorBuilder', errorBuilder);
-    matePut('semanticLabel', semanticLabel);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('gaplessPlayback', gaplessPlayback);
-    matePut('filterQuality', filterQuality);
-    matePut('isAntiAlias', isAntiAlias);
-    matePut('headers', headers);
-    matePut('cacheWidth', cacheWidth);
-    matePut('cacheHeight', cacheHeight);
+    mateUse(
+      'src',
+      src,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'frameBuilder',
+      frameBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'loadingBuilder',
+      loadingBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'errorBuilder',
+      errorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'gaplessPlayback',
+      gaplessPlayback,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'headers',
+      headers,
+      isNamed: true,
+    );
+    mateUse(
+      'cacheWidth',
+      cacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'cacheHeight',
+      cacheHeight,
+      isNamed: true,
+    );
   }
 
   /// Image Image.file(File file, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
   Image$Mate.file(
     /// requiredParameters: File file
     File file, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
+    double scale = 1.0,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , default:none
     ImageFrameBuilder? frameBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , default:none
     ImageErrorWidgetBuilder? errorBuilder,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {bool gaplessPlayback = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool gaplessPlayback,
+    /// optionalParameters: {bool gaplessPlayback = false} , default:processed=BooleanLiteralImpl
+    bool gaplessPlayback = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
+    bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {int? cacheWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheWidth} , default:none
     int? cacheWidth,
 
-    /// optionalParameters: {int? cacheHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheHeight} , default:none
     int? cacheHeight,
   }) : super.file(
           file,
@@ -383,6 +579,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.file';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.file(
           p.get('file').value,
           key: p.get('key').build(),
@@ -407,101 +605,197 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    matePut('file', file);
-    matePut('key', key);
-    matePut('scale', scale);
-    matePut('frameBuilder', frameBuilder);
-    matePut('errorBuilder', errorBuilder);
-    matePut('semanticLabel', semanticLabel);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('gaplessPlayback', gaplessPlayback);
-    matePut('isAntiAlias', isAntiAlias);
-    matePut('filterQuality', filterQuality);
-    matePut('cacheWidth', cacheWidth);
-    matePut('cacheHeight', cacheHeight);
+    mateUse(
+      'file',
+      file,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'frameBuilder',
+      frameBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'errorBuilder',
+      errorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'gaplessPlayback',
+      gaplessPlayback,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'cacheWidth',
+      cacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'cacheHeight',
+      cacheHeight,
+      isNamed: true,
+    );
   }
 
   /// Image Image.asset(String name, {Key? key, AssetBundle? bundle, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? scale, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, String? package, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
   Image$Mate.asset(
     /// requiredParameters: String name
     String name, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AssetBundle? bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AssetBundle? bundle} , default:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , default:none
     ImageFrameBuilder? frameBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , default:none
     ImageErrorWidgetBuilder? errorBuilder,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {double? scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scale} , default:none
     double? scale,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {bool gaplessPlayback = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool gaplessPlayback,
+    /// optionalParameters: {bool gaplessPlayback = false} , default:processed=BooleanLiteralImpl
+    bool gaplessPlayback = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
+    bool isAntiAlias = false,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , default:none
     String? package,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {int? cacheWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheWidth} , default:none
     int? cacheWidth,
 
-    /// optionalParameters: {int? cacheHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheHeight} , default:none
     int? cacheHeight,
   }) : super.asset(
           name,
@@ -529,6 +823,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.asset';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.asset(
           p.get('name').value,
           key: p.get('key').build(),
@@ -555,97 +851,200 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    matePut('name', name);
-    matePut('key', key);
-    matePut('bundle', bundle);
-    matePut('frameBuilder', frameBuilder);
-    matePut('errorBuilder', errorBuilder);
-    matePut('semanticLabel', semanticLabel);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('scale', scale);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('gaplessPlayback', gaplessPlayback);
-    matePut('isAntiAlias', isAntiAlias);
-    matePut('package', package);
-    matePut('filterQuality', filterQuality);
-    matePut('cacheWidth', cacheWidth);
-    matePut('cacheHeight', cacheHeight);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'frameBuilder',
+      frameBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'errorBuilder',
+      errorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'gaplessPlayback',
+      gaplessPlayback,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'cacheWidth',
+      cacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'cacheHeight',
+      cacheHeight,
+      isNamed: true,
+    );
   }
 
   /// Image Image.memory(Uint8List bytes, {Key? key, double scale = 1.0, Widget Function(BuildContext, Widget, int?, bool)? frameBuilder, Widget Function(BuildContext, Object, StackTrace?)? errorBuilder, String? semanticLabel, bool excludeFromSemantics = false, double? width, double? height, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool gaplessPlayback = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low, int? cacheWidth, int? cacheHeight})
   Image$Mate.memory(
     /// requiredParameters: Uint8List bytes
     Uint8List bytes, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
+    double scale = 1.0,
 
-    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Widget, int?, bool)? frameBuilder} , default:none
     ImageFrameBuilder? frameBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, Object, StackTrace?)? errorBuilder} , default:none
     ImageErrorWidgetBuilder? errorBuilder,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Animation<double>? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Animation<double>? opacity} , default:none
     Animation<double>? opacity,
 
-    /// optionalParameters: {BlendMode? colorBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? colorBlendMode} , default:none
     BlendMode? colorBlendMode,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {bool gaplessPlayback = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool gaplessPlayback,
+    /// optionalParameters: {bool gaplessPlayback = false} , default:processed=BooleanLiteralImpl
+    bool gaplessPlayback = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
+    bool isAntiAlias = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {int? cacheWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheWidth} , default:none
     int? cacheWidth,
 
-    /// optionalParameters: {int? cacheHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? cacheHeight} , default:none
     int? cacheHeight,
   }) : super.memory(
           bytes,
@@ -671,6 +1070,8 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
+    mateCreateName = 'Image.memory';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.memory(
           p.get('bytes').value,
           key: p.get('key').build(),
@@ -695,27 +1096,123 @@ class Image$Mate extends Image with Mate {
           cacheWidth: p.get('cacheWidth').build(),
           cacheHeight: p.get('cacheHeight').build(),
         );
-    matePut('bytes', bytes);
-    matePut('key', key);
-    matePut('scale', scale);
-    matePut('frameBuilder', frameBuilder);
-    matePut('errorBuilder', errorBuilder);
-    matePut('semanticLabel', semanticLabel);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('width', width);
-    matePut('height', height);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('colorBlendMode', colorBlendMode);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('repeat', repeat);
-    matePut('centerSlice', centerSlice);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('gaplessPlayback', gaplessPlayback);
-    matePut('isAntiAlias', isAntiAlias);
-    matePut('filterQuality', filterQuality);
-    matePut('cacheWidth', cacheWidth);
-    matePut('cacheHeight', cacheHeight);
+    mateUse(
+      'bytes',
+      bytes,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'frameBuilder',
+      frameBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'errorBuilder',
+      errorBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'colorBlendMode',
+      colorBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'gaplessPlayback',
+      gaplessPlayback,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'cacheWidth',
+      cacheWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'cacheHeight',
+      cacheHeight,
+      isNamed: true,
+    );
   }
 }

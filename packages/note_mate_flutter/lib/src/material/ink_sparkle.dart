@@ -13,40 +13,40 @@ import 'package:flutter/src/painting/borders.dart';
 class InkSparkle$Mate extends InkSparkle with Mate {
   /// InkSparkle InkSparkle({required MaterialInkController controller, required RenderBox referenceBox, required Color color, required Offset position, required TextDirection textDirection, bool containedInkWell = true, Rect Function()? rectCallback, BorderRadius? borderRadius, ShapeBorder? customBorder, double? radius, void Function()? onRemoved, double? turbulenceSeed})
   InkSparkle$Mate({
-    /// optionalParameters: {required MaterialInkController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialInkController controller} , default:none
     required MaterialInkController controller,
 
-    /// optionalParameters: {required RenderBox referenceBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox referenceBox} , default:none
     required RenderBox referenceBox,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {required Offset position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset position} , default:none
     required Offset position,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {bool containedInkWell = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool containedInkWell,
+    /// optionalParameters: {bool containedInkWell = true} , default:processed=BooleanLiteralImpl
+    bool containedInkWell = true,
 
-    /// optionalParameters: {Rect Function()? rectCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect Function()? rectCallback} , default:none
     RectCallback? rectCallback,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {ShapeBorder? customBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? customBorder} , default:none
     ShapeBorder? customBorder,
 
-    /// optionalParameters: {double? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? radius} , default:none
     double? radius,
 
-    /// optionalParameters: {void Function()? onRemoved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onRemoved} , default:none
     VoidCallback? onRemoved,
 
-    /// optionalParameters: {double? turbulenceSeed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? turbulenceSeed} , default:none
     double? turbulenceSeed,
   }) : super(
           controller: controller,
@@ -62,6 +62,8 @@ class InkSparkle$Mate extends InkSparkle with Mate {
           onRemoved: onRemoved,
           turbulenceSeed: turbulenceSeed,
         ) {
+    mateCreateName = 'InkSparkle';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkSparkle$Mate(
           controller: p.get('controller').build(),
           referenceBox: p.get('referenceBox').build(),
@@ -76,17 +78,66 @@ class InkSparkle$Mate extends InkSparkle with Mate {
           onRemoved: p.get('onRemoved').build(),
           turbulenceSeed: p.get('turbulenceSeed').build(),
         );
-    matePut('controller', controller);
-    matePut('referenceBox', referenceBox);
-    matePut('color', color);
-    matePut('position', position);
-    matePut('textDirection', textDirection);
-    matePut('containedInkWell', containedInkWell);
-    matePut('rectCallback', rectCallback);
-    matePut('borderRadius', borderRadius);
-    matePut('customBorder', customBorder);
-    matePut('radius', radius);
-    matePut('onRemoved', onRemoved);
-    matePut('turbulenceSeed', turbulenceSeed);
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'referenceBox',
+      referenceBox,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'containedInkWell',
+      containedInkWell,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'rectCallback',
+      rectCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'customBorder',
+      customBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'onRemoved',
+      onRemoved,
+      isNamed: true,
+    );
+    mateUse(
+      'turbulenceSeed',
+      turbulenceSeed,
+      isNamed: true,
+    );
   }
 }

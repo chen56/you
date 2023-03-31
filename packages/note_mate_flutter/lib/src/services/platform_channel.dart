@@ -16,21 +16,35 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate {
 
     /// requiredParameters: MessageCodec<T> codec
     MessageCodec<T> codec, {
-    /// optionalParameters: {BinaryMessenger? binaryMessenger} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BinaryMessenger? binaryMessenger} , default:none
     BinaryMessenger? binaryMessenger,
   }) : super(
           name,
           codec,
           binaryMessenger: binaryMessenger,
         ) {
+    mateCreateName = 'BasicMessageChannel';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => BasicMessageChannel$Mate<T>(
           p.get('name').value,
           p.get('codec').value,
           binaryMessenger: p.get('binaryMessenger').build(),
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: true,
+    );
   }
 }
 
@@ -51,14 +65,28 @@ class MethodChannel$Mate extends MethodChannel with Mate {
           codec,
           binaryMessenger,
         ) {
+    mateCreateName = 'MethodChannel';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MethodChannel$Mate(
           p.get('name').value,
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: false,
+    );
   }
 }
 
@@ -79,14 +107,28 @@ class OptionalMethodChannel$Mate extends OptionalMethodChannel with Mate {
           codec,
           binaryMessenger,
         ) {
+    mateCreateName = 'OptionalMethodChannel';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => OptionalMethodChannel$Mate(
           p.get('name').value,
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: false,
+    );
   }
 }
 
@@ -107,13 +149,27 @@ class EventChannel$Mate extends EventChannel with Mate {
           codec,
           binaryMessenger,
         ) {
+    mateCreateName = 'EventChannel';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => EventChannel$Mate(
           p.get('name').value,
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    matePut('name', name);
-    matePut('codec', codec);
-    matePut('binaryMessenger', binaryMessenger);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'codec',
+      codec,
+      isNamed: false,
+    );
+    mateUse(
+      'binaryMessenger',
+      binaryMessenger,
+      isNamed: false,
+    );
   }
 }

@@ -5,31 +5,47 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 
 /// class UnderlineTabIndicator extends Decoration
 class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate {
   /// UnderlineTabIndicator UnderlineTabIndicator({BorderRadius? borderRadius, BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white), EdgeInsetsGeometry insets = EdgeInsets.zero})
   UnderlineTabIndicator$Mate({
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white)} , hasDefaultValue:true, defaultValueCode:const BorderSide(width: 2.0, color: Colors.white)
+    /// optionalParameters: {BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white)} , default:unprocessed=InstanceCreationExpressionImpl
     required BorderSide borderSide,
 
-    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
-    required EdgeInsetsGeometry insets,
+    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    EdgeInsetsGeometry insets = EdgeInsets.zero,
   }) : super(
           borderRadius: borderRadius,
           borderSide: borderSide,
           insets: insets,
         ) {
+    mateCreateName = 'UnderlineTabIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UnderlineTabIndicator$Mate(
           borderRadius: p.get('borderRadius').build(),
           borderSide: p.get('borderSide').build(),
           insets: p.get('insets').build(),
         );
-    matePut('borderRadius', borderRadius);
-    matePut('borderSide', borderSide);
-    matePut('insets', insets);
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'borderSide',
+      borderSide,
+      isNamed: true,
+    );
+    mateUse(
+      'insets',
+      insets,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
   }
 }

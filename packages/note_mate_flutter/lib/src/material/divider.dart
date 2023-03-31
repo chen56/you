@@ -10,22 +10,22 @@ import 'dart:ui';
 class Divider$Mate extends Divider with Mate {
   /// Divider Divider({Key? key, double? height, double? thickness, double? indent, double? endIndent, Color? color})
   Divider$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {double? thickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? thickness} , default:none
     double? thickness,
 
-    /// optionalParameters: {double? indent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? indent} , default:none
     double? indent,
 
-    /// optionalParameters: {double? endIndent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? endIndent} , default:none
     double? endIndent,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
   }) : super(
           key: key,
@@ -35,6 +35,8 @@ class Divider$Mate extends Divider with Mate {
           endIndent: endIndent,
           color: color,
         ) {
+    mateCreateName = 'Divider';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Divider$Mate(
           key: p.get('key').build(),
           height: p.get('height').build(),
@@ -43,12 +45,36 @@ class Divider$Mate extends Divider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    matePut('key', key);
-    matePut('height', height);
-    matePut('thickness', thickness);
-    matePut('indent', indent);
-    matePut('endIndent', endIndent);
-    matePut('color', color);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'indent',
+      indent,
+      isNamed: true,
+    );
+    mateUse(
+      'endIndent',
+      endIndent,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
   }
 }
 
@@ -56,22 +82,22 @@ class Divider$Mate extends Divider with Mate {
 class VerticalDivider$Mate extends VerticalDivider with Mate {
   /// VerticalDivider VerticalDivider({Key? key, double? width, double? thickness, double? indent, double? endIndent, Color? color})
   VerticalDivider$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? width} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? width} , default:none
     double? width,
 
-    /// optionalParameters: {double? thickness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? thickness} , default:none
     double? thickness,
 
-    /// optionalParameters: {double? indent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? indent} , default:none
     double? indent,
 
-    /// optionalParameters: {double? endIndent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? endIndent} , default:none
     double? endIndent,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
   }) : super(
           key: key,
@@ -81,6 +107,8 @@ class VerticalDivider$Mate extends VerticalDivider with Mate {
           endIndent: endIndent,
           color: color,
         ) {
+    mateCreateName = 'VerticalDivider';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => VerticalDivider$Mate(
           key: p.get('key').build(),
           width: p.get('width').build(),
@@ -89,11 +117,35 @@ class VerticalDivider$Mate extends VerticalDivider with Mate {
           endIndent: p.get('endIndent').build(),
           color: p.get('color').build(),
         );
-    matePut('key', key);
-    matePut('width', width);
-    matePut('thickness', thickness);
-    matePut('indent', indent);
-    matePut('endIndent', endIndent);
-    matePut('color', color);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+    );
+    mateUse(
+      'thickness',
+      thickness,
+      isNamed: true,
+    );
+    mateUse(
+      'indent',
+      indent,
+      isNamed: true,
+    );
+    mateUse(
+      'endIndent',
+      endIndent,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
   }
 }

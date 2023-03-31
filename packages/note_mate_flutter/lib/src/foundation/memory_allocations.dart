@@ -8,27 +8,41 @@ import 'dart:core';
 class ObjectCreated$Mate extends ObjectCreated with Mate {
   /// ObjectCreated ObjectCreated({required String library, required String className, required Object object})
   ObjectCreated$Mate({
-    /// optionalParameters: {required String library} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String library} , default:none
     required String library,
 
-    /// optionalParameters: {required String className} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String className} , default:none
     required String className,
 
-    /// optionalParameters: {required Object object} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object object} , default:none
     required Object object,
   }) : super(
           library: library,
           className: className,
           object: object,
         ) {
+    mateCreateName = 'ObjectCreated';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectCreated$Mate(
           library: p.get('library').build(),
           className: p.get('className').build(),
           object: p.get('object').build(),
         );
-    matePut('library', library);
-    matePut('className', className);
-    matePut('object', object);
+    mateUse(
+      'library',
+      library,
+      isNamed: true,
+    );
+    mateUse(
+      'className',
+      className,
+      isNamed: true,
+    );
+    mateUse(
+      'object',
+      object,
+      isNamed: true,
+    );
   }
 }
 
@@ -37,10 +51,16 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate {
   /// ObjectDisposed ObjectDisposed({required Object object})
   ObjectDisposed$Mate(
       {
-      /// optionalParameters: {required Object object} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required Object object} , default:none
       required Object object})
       : super(object: object) {
+    mateCreateName = 'ObjectDisposed';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectDisposed$Mate(object: p.get('object').build());
-    matePut('object', object);
+    mateUse(
+      'object',
+      object,
+      isNamed: true,
+    );
   }
 }

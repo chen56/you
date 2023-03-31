@@ -13,16 +13,16 @@ class ImageIcon$Mate extends ImageIcon with Mate {
   ImageIcon$Mate(
     /// requiredParameters: ImageProvider<Object>? image
     ImageProvider<Object>? image, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , default:none
     double? size,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {String? semanticLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticLabel} , default:none
     String? semanticLabel,
   }) : super(
           image,
@@ -31,6 +31,8 @@ class ImageIcon$Mate extends ImageIcon with Mate {
           color: color,
           semanticLabel: semanticLabel,
         ) {
+    mateCreateName = 'ImageIcon';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ImageIcon$Mate(
           p.get('image').value,
           key: p.get('key').build(),
@@ -38,10 +40,30 @@ class ImageIcon$Mate extends ImageIcon with Mate {
           color: p.get('color').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    matePut('image', image);
-    matePut('key', key);
-    matePut('size', size);
-    matePut('color', color);
-    matePut('semanticLabel', semanticLabel);
+    mateUse(
+      'image',
+      image,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticLabel',
+      semanticLabel,
+      isNamed: true,
+    );
   }
 }

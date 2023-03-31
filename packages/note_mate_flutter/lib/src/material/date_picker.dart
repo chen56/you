@@ -5,61 +5,62 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/material/date.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/services/text_input.dart';
 
 /// class DatePickerDialog extends StatefulWidget
 class DatePickerDialog$Mate extends DatePickerDialog with Mate {
   /// DatePickerDialog DatePickerDialog({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId})
   DatePickerDialog$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required DateTime initialDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime initialDate} , default:none
     required DateTime initialDate,
 
-    /// optionalParameters: {required DateTime firstDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime firstDate} , default:none
     required DateTime firstDate,
 
-    /// optionalParameters: {required DateTime lastDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime lastDate} , default:none
     required DateTime lastDate,
 
-    /// optionalParameters: {DateTime? currentDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DateTime? currentDate} , default:none
     DateTime? currentDate,
 
-    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , hasDefaultValue:true, defaultValueCode:DatePickerEntryMode.calendar
-    required DatePickerEntryMode initialEntryMode,
+    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:processed=PrefixedIdentifierImpl
+    DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar,
 
-    /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , default:none
     SelectableDayPredicate? selectableDayPredicate,
 
-    /// optionalParameters: {String? cancelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? cancelText} , default:none
     String? cancelText,
 
-    /// optionalParameters: {String? confirmText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? confirmText} , default:none
     String? confirmText,
 
-    /// optionalParameters: {String? helpText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? helpText} , default:none
     String? helpText,
 
-    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , hasDefaultValue:true, defaultValueCode:DatePickerMode.day
-    required DatePickerMode initialCalendarMode,
+    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:processed=PrefixedIdentifierImpl
+    DatePickerMode initialCalendarMode = DatePickerMode.day,
 
-    /// optionalParameters: {String? errorFormatText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorFormatText} , default:none
     String? errorFormatText,
 
-    /// optionalParameters: {String? errorInvalidText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorInvalidText} , default:none
     String? errorInvalidText,
 
-    /// optionalParameters: {String? fieldHintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldHintText} , default:none
     String? fieldHintText,
 
-    /// optionalParameters: {String? fieldLabelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldLabelText} , default:none
     String? fieldLabelText,
 
-    /// optionalParameters: {TextInputType? keyboardType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextInputType? keyboardType} , default:none
     TextInputType? keyboardType,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
   }) : super(
           key: key,
@@ -80,6 +81,8 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
           keyboardType: keyboardType,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'DatePickerDialog';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerDialog$Mate(
           key: p.get('key').build(),
           initialDate: p.get('initialDate').build(),
@@ -99,23 +102,93 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
           keyboardType: p.get('keyboardType').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('key', key);
-    matePut('initialDate', initialDate);
-    matePut('firstDate', firstDate);
-    matePut('lastDate', lastDate);
-    matePut('currentDate', currentDate);
-    matePut('initialEntryMode', initialEntryMode);
-    matePut('selectableDayPredicate', selectableDayPredicate);
-    matePut('cancelText', cancelText);
-    matePut('confirmText', confirmText);
-    matePut('helpText', helpText);
-    matePut('initialCalendarMode', initialCalendarMode);
-    matePut('errorFormatText', errorFormatText);
-    matePut('errorInvalidText', errorInvalidText);
-    matePut('fieldHintText', fieldHintText);
-    matePut('fieldLabelText', fieldLabelText);
-    matePut('keyboardType', keyboardType);
-    matePut('restorationId', restorationId);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'initialDate',
+      initialDate,
+      isNamed: true,
+    );
+    mateUse(
+      'firstDate',
+      firstDate,
+      isNamed: true,
+    );
+    mateUse(
+      'lastDate',
+      lastDate,
+      isNamed: true,
+    );
+    mateUse(
+      'currentDate',
+      currentDate,
+      isNamed: true,
+    );
+    mateUse(
+      'initialEntryMode',
+      initialEntryMode,
+      isNamed: true,
+      defaultValue: DatePickerEntryMode.calendar,
+    );
+    mateUse(
+      'selectableDayPredicate',
+      selectableDayPredicate,
+      isNamed: true,
+    );
+    mateUse(
+      'cancelText',
+      cancelText,
+      isNamed: true,
+    );
+    mateUse(
+      'confirmText',
+      confirmText,
+      isNamed: true,
+    );
+    mateUse(
+      'helpText',
+      helpText,
+      isNamed: true,
+    );
+    mateUse(
+      'initialCalendarMode',
+      initialCalendarMode,
+      isNamed: true,
+      defaultValue: DatePickerMode.day,
+    );
+    mateUse(
+      'errorFormatText',
+      errorFormatText,
+      isNamed: true,
+    );
+    mateUse(
+      'errorInvalidText',
+      errorInvalidText,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldHintText',
+      fieldHintText,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldLabelText',
+      fieldLabelText,
+      isNamed: true,
+    );
+    mateUse(
+      'keyboardType',
+      keyboardType,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
   }
 }
 
@@ -123,58 +196,58 @@ class DatePickerDialog$Mate extends DatePickerDialog with Mate {
 class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate {
   /// DateRangePickerDialog DateRangePickerDialog({Key? key, DateTimeRange? initialDateRange, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, String? helpText, String? cancelText, String? confirmText, String? saveText, String? errorInvalidRangeText, String? errorFormatText, String? errorInvalidText, String? fieldStartHintText, String? fieldEndHintText, String? fieldStartLabelText, String? fieldEndLabelText, String? restorationId})
   DateRangePickerDialog$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {DateTimeRange? initialDateRange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DateTimeRange? initialDateRange} , default:none
     DateTimeRange? initialDateRange,
 
-    /// optionalParameters: {required DateTime firstDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime firstDate} , default:none
     required DateTime firstDate,
 
-    /// optionalParameters: {required DateTime lastDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime lastDate} , default:none
     required DateTime lastDate,
 
-    /// optionalParameters: {DateTime? currentDate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DateTime? currentDate} , default:none
     DateTime? currentDate,
 
-    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , hasDefaultValue:true, defaultValueCode:DatePickerEntryMode.calendar
-    required DatePickerEntryMode initialEntryMode,
+    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:processed=PrefixedIdentifierImpl
+    DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar,
 
-    /// optionalParameters: {String? helpText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? helpText} , default:none
     String? helpText,
 
-    /// optionalParameters: {String? cancelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? cancelText} , default:none
     String? cancelText,
 
-    /// optionalParameters: {String? confirmText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? confirmText} , default:none
     String? confirmText,
 
-    /// optionalParameters: {String? saveText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? saveText} , default:none
     String? saveText,
 
-    /// optionalParameters: {String? errorInvalidRangeText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorInvalidRangeText} , default:none
     String? errorInvalidRangeText,
 
-    /// optionalParameters: {String? errorFormatText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorFormatText} , default:none
     String? errorFormatText,
 
-    /// optionalParameters: {String? errorInvalidText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorInvalidText} , default:none
     String? errorInvalidText,
 
-    /// optionalParameters: {String? fieldStartHintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldStartHintText} , default:none
     String? fieldStartHintText,
 
-    /// optionalParameters: {String? fieldEndHintText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldEndHintText} , default:none
     String? fieldEndHintText,
 
-    /// optionalParameters: {String? fieldStartLabelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldStartLabelText} , default:none
     String? fieldStartLabelText,
 
-    /// optionalParameters: {String? fieldEndLabelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? fieldEndLabelText} , default:none
     String? fieldEndLabelText,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
   }) : super(
           key: key,
@@ -196,6 +269,8 @@ class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate {
           fieldEndLabelText: fieldEndLabelText,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'DateRangePickerDialog';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DateRangePickerDialog$Mate(
           key: p.get('key').build(),
           initialDateRange: p.get('initialDateRange').build(),
@@ -216,23 +291,96 @@ class DateRangePickerDialog$Mate extends DateRangePickerDialog with Mate {
           fieldEndLabelText: p.get('fieldEndLabelText').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('key', key);
-    matePut('initialDateRange', initialDateRange);
-    matePut('firstDate', firstDate);
-    matePut('lastDate', lastDate);
-    matePut('currentDate', currentDate);
-    matePut('initialEntryMode', initialEntryMode);
-    matePut('helpText', helpText);
-    matePut('cancelText', cancelText);
-    matePut('confirmText', confirmText);
-    matePut('saveText', saveText);
-    matePut('errorInvalidRangeText', errorInvalidRangeText);
-    matePut('errorFormatText', errorFormatText);
-    matePut('errorInvalidText', errorInvalidText);
-    matePut('fieldStartHintText', fieldStartHintText);
-    matePut('fieldEndHintText', fieldEndHintText);
-    matePut('fieldStartLabelText', fieldStartLabelText);
-    matePut('fieldEndLabelText', fieldEndLabelText);
-    matePut('restorationId', restorationId);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'initialDateRange',
+      initialDateRange,
+      isNamed: true,
+    );
+    mateUse(
+      'firstDate',
+      firstDate,
+      isNamed: true,
+    );
+    mateUse(
+      'lastDate',
+      lastDate,
+      isNamed: true,
+    );
+    mateUse(
+      'currentDate',
+      currentDate,
+      isNamed: true,
+    );
+    mateUse(
+      'initialEntryMode',
+      initialEntryMode,
+      isNamed: true,
+      defaultValue: DatePickerEntryMode.calendar,
+    );
+    mateUse(
+      'helpText',
+      helpText,
+      isNamed: true,
+    );
+    mateUse(
+      'cancelText',
+      cancelText,
+      isNamed: true,
+    );
+    mateUse(
+      'confirmText',
+      confirmText,
+      isNamed: true,
+    );
+    mateUse(
+      'saveText',
+      saveText,
+      isNamed: true,
+    );
+    mateUse(
+      'errorInvalidRangeText',
+      errorInvalidRangeText,
+      isNamed: true,
+    );
+    mateUse(
+      'errorFormatText',
+      errorFormatText,
+      isNamed: true,
+    );
+    mateUse(
+      'errorInvalidText',
+      errorInvalidText,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldStartHintText',
+      fieldStartHintText,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldEndHintText',
+      fieldEndHintText,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldStartLabelText',
+      fieldStartLabelText,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldEndLabelText',
+      fieldEndLabelText,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
   }
 }

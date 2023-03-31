@@ -6,6 +6,7 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/animation/tween.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/widgets/value_listenable_builder.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/framework.dart';
@@ -14,25 +15,25 @@ import 'package:flutter/src/widgets/framework.dart';
 class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilder<T> with Mate {
   /// TweenAnimationBuilder<T> TweenAnimationBuilder({Key? key, required Tween<T> tween, required Duration duration, Curve curve = Curves.linear, required Widget Function(BuildContext, T, Widget?) builder, void Function()? onEnd, Widget? child})
   TweenAnimationBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Tween<T> tween} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Tween<T> tween} , default:none
     required Tween<T> tween,
 
-    /// optionalParameters: {required Duration duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration duration} , default:none
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , hasDefaultValue:true, defaultValueCode:Curves.linear
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    Curve curve = Curves.linear,
 
-    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , default:none
     required ValueWidgetBuilder<T> builder,
 
-    /// optionalParameters: {void Function()? onEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onEnd} , default:none
     VoidCallback? onEnd,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -43,6 +44,8 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           onEnd: onEnd,
           child: child,
         ) {
+    mateCreateName = 'TweenAnimationBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TweenAnimationBuilder$Mate<T>(
           key: p.get('key').build(),
           tween: p.get('tween').build(),
@@ -52,12 +55,41 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('tween', tween);
-    matePut('duration', duration);
-    matePut('curve', curve);
-    matePut('builder', builder);
-    matePut('onEnd', onEnd);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'tween',
+      tween,
+      isNamed: true,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.linear,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnd',
+      onEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

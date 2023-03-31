@@ -8,50 +8,51 @@ import 'package:flutter/src/painting/image_stream.dart';
 import 'dart:ui';
 import 'package:flutter/src/painting/box_fit.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 /// class DecorationImage
 class DecorationImage$Mate extends DecorationImage with Mate {
   /// DecorationImage DecorationImage({required ImageProvider<Object> image, void Function(Object, StackTrace?)? onError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double scale = 1.0, double opacity = 1.0, FilterQuality filterQuality = FilterQuality.low, bool invertColors = false, bool isAntiAlias = false})
   DecorationImage$Mate({
-    /// optionalParameters: {required ImageProvider<Object> image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ImageProvider<Object> image} , default:none
     required ImageProvider<Object> image,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , default:none
     ImageErrorListener? onError,
 
-    /// optionalParameters: {ColorFilter? colorFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ColorFilter? colorFilter} , default:none
     ColorFilter? colorFilter,
 
-    /// optionalParameters: {BoxFit? fit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxFit? fit} , default:none
     BoxFit? fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required AlignmentGeometry alignment,
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    AlignmentGeometry alignment = Alignment.center,
 
-    /// optionalParameters: {Rect? centerSlice} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? centerSlice} , default:none
     Rect? centerSlice,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , hasDefaultValue:true, defaultValueCode:ImageRepeat.noRepeat
-    required ImageRepeat repeat,
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    ImageRepeat repeat = ImageRepeat.noRepeat,
 
-    /// optionalParameters: {bool matchTextDirection = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool matchTextDirection,
+    /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
+    bool matchTextDirection = false,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
+    double scale = 1.0,
 
-    /// optionalParameters: {double opacity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double opacity,
+    /// optionalParameters: {double opacity = 1.0} , default:processed=DoubleLiteralImpl
+    double opacity = 1.0,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , hasDefaultValue:true, defaultValueCode:FilterQuality.low
-    required FilterQuality filterQuality,
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    FilterQuality filterQuality = FilterQuality.low,
 
-    /// optionalParameters: {bool invertColors = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool invertColors,
+    /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
+    bool invertColors = false,
 
-    /// optionalParameters: {bool isAntiAlias = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isAntiAlias,
+    /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
+    bool isAntiAlias = false,
   }) : super(
           image: image,
           onError: onError,
@@ -67,6 +68,8 @@ class DecorationImage$Mate extends DecorationImage with Mate {
           invertColors: invertColors,
           isAntiAlias: isAntiAlias,
         ) {
+    mateCreateName = 'DecorationImage';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => DecorationImage$Mate(
           image: p.get('image').build(),
           onError: p.get('onError').build(),
@@ -82,19 +85,79 @@ class DecorationImage$Mate extends DecorationImage with Mate {
           invertColors: p.get('invertColors').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    matePut('image', image);
-    matePut('onError', onError);
-    matePut('colorFilter', colorFilter);
-    matePut('fit', fit);
-    matePut('alignment', alignment);
-    matePut('centerSlice', centerSlice);
-    matePut('repeat', repeat);
-    matePut('matchTextDirection', matchTextDirection);
-    matePut('scale', scale);
-    matePut('opacity', opacity);
-    matePut('filterQuality', filterQuality);
-    matePut('invertColors', invertColors);
-    matePut('isAntiAlias', isAntiAlias);
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'onError',
+      onError,
+      isNamed: true,
+    );
+    mateUse(
+      'colorFilter',
+      colorFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'fit',
+      fit,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'centerSlice',
+      centerSlice,
+      isNamed: true,
+    );
+    mateUse(
+      'repeat',
+      repeat,
+      isNamed: true,
+      defaultValue: ImageRepeat.noRepeat,
+    );
+    mateUse(
+      'matchTextDirection',
+      matchTextDirection,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+      defaultValue: FilterQuality.low,
+    );
+    mateUse(
+      'invertColors',
+      invertColors,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isAntiAlias',
+      isAntiAlias,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -102,26 +165,40 @@ class DecorationImage$Mate extends DecorationImage with Mate {
 class ImageTilingInfo$Mate extends ImageTilingInfo with Mate {
   /// ImageTilingInfo ImageTilingInfo({required TileMode tmx, required TileMode tmy, required Matrix4 transform})
   ImageTilingInfo$Mate({
-    /// optionalParameters: {required TileMode tmx} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TileMode tmx} , default:none
     required TileMode tmx,
 
-    /// optionalParameters: {required TileMode tmy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TileMode tmy} , default:none
     required TileMode tmy,
 
-    /// optionalParameters: {required Matrix4 transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Matrix4 transform} , default:none
     required Matrix4 transform,
   }) : super(
           tmx: tmx,
           tmy: tmy,
           transform: transform,
         ) {
+    mateCreateName = 'ImageTilingInfo';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageTilingInfo$Mate(
           tmx: p.get('tmx').build(),
           tmy: p.get('tmy').build(),
           transform: p.get('transform').build(),
         );
-    matePut('tmx', tmx);
-    matePut('tmy', tmy);
-    matePut('transform', transform);
+    mateUse(
+      'tmx',
+      tmx,
+      isNamed: true,
+    );
+    mateUse(
+      'tmy',
+      tmy,
+      isNamed: true,
+    );
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
   }
 }

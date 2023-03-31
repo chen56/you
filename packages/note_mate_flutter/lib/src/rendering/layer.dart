@@ -4,27 +4,38 @@ import 'package:flutter/src/rendering/layer.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
 import 'dart:core';
+import 'package:flutter/animation.dart';
 import 'package:vector_math/vector_math_64.dart';
 
 /// class AnnotationEntry<T>
 class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate {
   /// AnnotationEntry<T> AnnotationEntry({required T annotation, required Offset localPosition})
   AnnotationEntry$Mate({
-    /// optionalParameters: {required T annotation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T annotation} , default:none
     required T annotation,
 
-    /// optionalParameters: {required Offset localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset localPosition} , default:none
     required Offset localPosition,
   }) : super(
           annotation: annotation,
           localPosition: localPosition,
         ) {
+    mateCreateName = 'AnnotationEntry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => AnnotationEntry$Mate<T>(
           annotation: p.get('annotation').build(),
           localPosition: p.get('localPosition').build(),
         );
-    matePut('annotation', annotation);
-    matePut('localPosition', localPosition);
+    mateUse(
+      'annotation',
+      annotation,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -36,8 +47,14 @@ class LayerHandle$Mate<T extends Layer> extends LayerHandle<T> with Mate {
       /// requiredParameters: [T? _layer]
       T? _layer)
       : super(_layer) {
+    mateCreateName = 'LayerHandle';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => LayerHandle$Mate<T>(p.get('_layer').value);
-    matePut('_layer', _layer);
+    mateUse(
+      '_layer',
+      _layer,
+      isNamed: false,
+    );
   }
 }
 
@@ -49,8 +66,14 @@ class PictureLayer$Mate extends PictureLayer with Mate {
       /// requiredParameters: Rect canvasBounds
       Rect canvasBounds)
       : super(canvasBounds) {
+    mateCreateName = 'PictureLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PictureLayer$Mate(p.get('canvasBounds').value);
-    matePut('canvasBounds', canvasBounds);
+    mateUse(
+      'canvasBounds',
+      canvasBounds,
+      isNamed: false,
+    );
   }
 }
 
@@ -58,16 +81,16 @@ class PictureLayer$Mate extends PictureLayer with Mate {
 class TextureLayer$Mate extends TextureLayer with Mate {
   /// TextureLayer TextureLayer({required Rect rect, required int textureId, bool freeze = false, FilterQuality filterQuality = ui.FilterQuality.low})
   TextureLayer$Mate({
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {required int textureId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int textureId} , default:none
     required int textureId,
 
-    /// optionalParameters: {bool freeze = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool freeze,
+    /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
+    bool freeze = false,
 
-    /// optionalParameters: {FilterQuality filterQuality = ui.FilterQuality.low} , hasDefaultValue:true, defaultValueCode:ui.FilterQuality.low
+    /// optionalParameters: {FilterQuality filterQuality = ui.FilterQuality.low} , default:unprocessed=PropertyAccessImpl
     required FilterQuality filterQuality,
   }) : super(
           rect: rect,
@@ -75,16 +98,35 @@ class TextureLayer$Mate extends TextureLayer with Mate {
           freeze: freeze,
           filterQuality: filterQuality,
         ) {
+    mateCreateName = 'TextureLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TextureLayer$Mate(
           rect: p.get('rect').build(),
           textureId: p.get('textureId').build(),
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    matePut('rect', rect);
-    matePut('textureId', textureId);
-    matePut('freeze', freeze);
-    matePut('filterQuality', filterQuality);
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'textureId',
+      textureId,
+      isNamed: true,
+    );
+    mateUse(
+      'freeze',
+      freeze,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
   }
 }
 
@@ -92,21 +134,31 @@ class TextureLayer$Mate extends TextureLayer with Mate {
 class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
   /// PlatformViewLayer PlatformViewLayer({required Rect rect, required int viewId})
   PlatformViewLayer$Mate({
-    /// optionalParameters: {required Rect rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect rect} , default:none
     required Rect rect,
 
-    /// optionalParameters: {required int viewId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int viewId} , default:none
     required int viewId,
   }) : super(
           rect: rect,
           viewId: viewId,
         ) {
+    mateCreateName = 'PlatformViewLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlatformViewLayer$Mate(
           rect: p.get('rect').build(),
           viewId: p.get('viewId').build(),
         );
-    matePut('rect', rect);
-    matePut('viewId', viewId);
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'viewId',
+      viewId,
+      isNamed: true,
+    );
   }
 }
 
@@ -114,19 +166,19 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
 class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
   /// PerformanceOverlayLayer PerformanceOverlayLayer({required Rect overlayRect, required int optionsMask, required int rasterizerThreshold, required bool checkerboardRasterCacheImages, required bool checkerboardOffscreenLayers})
   PerformanceOverlayLayer$Mate({
-    /// optionalParameters: {required Rect overlayRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Rect overlayRect} , default:none
     required Rect overlayRect,
 
-    /// optionalParameters: {required int optionsMask} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int optionsMask} , default:none
     required int optionsMask,
 
-    /// optionalParameters: {required int rasterizerThreshold} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int rasterizerThreshold} , default:none
     required int rasterizerThreshold,
 
-    /// optionalParameters: {required bool checkerboardRasterCacheImages} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool checkerboardRasterCacheImages} , default:none
     required bool checkerboardRasterCacheImages,
 
-    /// optionalParameters: {required bool checkerboardOffscreenLayers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool checkerboardOffscreenLayers} , default:none
     required bool checkerboardOffscreenLayers,
   }) : super(
           overlayRect: overlayRect,
@@ -135,6 +187,8 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
+    mateCreateName = 'PerformanceOverlayLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PerformanceOverlayLayer$Mate(
           overlayRect: p.get('overlayRect').build(),
           optionsMask: p.get('optionsMask').build(),
@@ -142,11 +196,31 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    matePut('overlayRect', overlayRect);
-    matePut('optionsMask', optionsMask);
-    matePut('rasterizerThreshold', rasterizerThreshold);
-    matePut('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    matePut('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse(
+      'overlayRect',
+      overlayRect,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsMask',
+      optionsMask,
+      isNamed: true,
+    );
+    mateUse(
+      'rasterizerThreshold',
+      rasterizerThreshold,
+      isNamed: true,
+    );
+    mateUse(
+      'checkerboardRasterCacheImages',
+      checkerboardRasterCacheImages,
+      isNamed: true,
+    );
+    mateUse(
+      'checkerboardOffscreenLayers',
+      checkerboardOffscreenLayers,
+      isNamed: true,
+    );
   }
 }
 
@@ -155,11 +229,18 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
   /// OffsetLayer OffsetLayer({Offset offset = Offset.zero})
   OffsetLayer$Mate(
       {
-      /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-      required Offset offset})
+      /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+      Offset offset = Offset.zero})
       : super(offset: offset) {
+    mateCreateName = 'OffsetLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OffsetLayer$Mate(offset: p.get('offset').build());
-    matePut('offset', offset);
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -167,21 +248,32 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
 class ClipRectLayer$Mate extends ClipRectLayer with Mate {
   /// ClipRectLayer ClipRectLayer({Rect? clipRect, Clip clipBehavior = Clip.hardEdge})
   ClipRectLayer$Mate({
-    /// optionalParameters: {Rect? clipRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? clipRect} , default:none
     Rect? clipRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           clipRect: clipRect,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ClipRectLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ClipRectLayer$Mate(
           clipRect: p.get('clipRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('clipRect', clipRect);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'clipRect',
+      clipRect,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -189,21 +281,32 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
 class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
   /// ClipRRectLayer ClipRRectLayer({RRect? clipRRect, Clip clipBehavior = Clip.antiAlias})
   ClipRRectLayer$Mate({
-    /// optionalParameters: {RRect? clipRRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RRect? clipRRect} , default:none
     RRect? clipRRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
   }) : super(
           clipRRect: clipRRect,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ClipRRectLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ClipRRectLayer$Mate(
           clipRRect: p.get('clipRRect').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('clipRRect', clipRRect);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'clipRRect',
+      clipRRect,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
   }
 }
 
@@ -211,21 +314,32 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
 class ClipPathLayer$Mate extends ClipPathLayer with Mate {
   /// ClipPathLayer ClipPathLayer({Path? clipPath, Clip clipBehavior = Clip.antiAlias})
   ClipPathLayer$Mate({
-    /// optionalParameters: {Path? clipPath} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Path? clipPath} , default:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , hasDefaultValue:true, defaultValueCode:Clip.antiAlias
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.antiAlias,
   }) : super(
           clipPath: clipPath,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ClipPathLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ClipPathLayer$Mate(
           clipPath: p.get('clipPath').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('clipPath', clipPath);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'clipPath',
+      clipPath,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.antiAlias,
+    );
   }
 }
 
@@ -234,11 +348,17 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
   /// ColorFilterLayer ColorFilterLayer({ColorFilter? colorFilter})
   ColorFilterLayer$Mate(
       {
-      /// optionalParameters: {ColorFilter? colorFilter} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ColorFilter? colorFilter} , default:none
       ColorFilter? colorFilter})
       : super(colorFilter: colorFilter) {
+    mateCreateName = 'ColorFilterLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
-    matePut('colorFilter', colorFilter);
+    mateUse(
+      'colorFilter',
+      colorFilter,
+      isNamed: true,
+    );
   }
 }
 
@@ -246,21 +366,32 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
 class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
   /// ImageFilterLayer ImageFilterLayer({ImageFilter? imageFilter, Offset offset = Offset.zero})
   ImageFilterLayer$Mate({
-    /// optionalParameters: {ImageFilter? imageFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageFilter? imageFilter} , default:none
     ImageFilter? imageFilter,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset offset = Offset.zero,
   }) : super(
           imageFilter: imageFilter,
           offset: offset,
         ) {
+    mateCreateName = 'ImageFilterLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ImageFilterLayer$Mate(
           imageFilter: p.get('imageFilter').build(),
           offset: p.get('offset').build(),
         );
-    matePut('imageFilter', imageFilter);
-    matePut('offset', offset);
+    mateUse(
+      'imageFilter',
+      imageFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -268,21 +399,32 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
 class TransformLayer$Mate extends TransformLayer with Mate {
   /// TransformLayer TransformLayer({Matrix4? transform, Offset offset = Offset.zero})
   TransformLayer$Mate({
-    /// optionalParameters: {Matrix4? transform} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Matrix4? transform} , default:none
     Matrix4? transform,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset offset = Offset.zero,
   }) : super(
           transform: transform,
           offset: offset,
         ) {
+    mateCreateName = 'TransformLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TransformLayer$Mate(
           transform: p.get('transform').build(),
           offset: p.get('offset').build(),
         );
-    matePut('transform', transform);
-    matePut('offset', offset);
+    mateUse(
+      'transform',
+      transform,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -290,21 +432,32 @@ class TransformLayer$Mate extends TransformLayer with Mate {
 class OpacityLayer$Mate extends OpacityLayer with Mate {
   /// OpacityLayer OpacityLayer({int? alpha, Offset offset = Offset.zero})
   OpacityLayer$Mate({
-    /// optionalParameters: {int? alpha} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? alpha} , default:none
     int? alpha,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset offset = Offset.zero,
   }) : super(
           alpha: alpha,
           offset: offset,
         ) {
+    mateCreateName = 'OpacityLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OpacityLayer$Mate(
           alpha: p.get('alpha').build(),
           offset: p.get('offset').build(),
         );
-    matePut('alpha', alpha);
-    matePut('offset', offset);
+    mateUse(
+      'alpha',
+      alpha,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -312,27 +465,41 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
 class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
   /// ShaderMaskLayer ShaderMaskLayer({Shader? shader, Rect? maskRect, BlendMode? blendMode})
   ShaderMaskLayer$Mate({
-    /// optionalParameters: {Shader? shader} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Shader? shader} , default:none
     Shader? shader,
 
-    /// optionalParameters: {Rect? maskRect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? maskRect} , default:none
     Rect? maskRect,
 
-    /// optionalParameters: {BlendMode? blendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? blendMode} , default:none
     BlendMode? blendMode,
   }) : super(
           shader: shader,
           maskRect: maskRect,
           blendMode: blendMode,
         ) {
+    mateCreateName = 'ShaderMaskLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ShaderMaskLayer$Mate(
           shader: p.get('shader').build(),
           maskRect: p.get('maskRect').build(),
           blendMode: p.get('blendMode').build(),
         );
-    matePut('shader', shader);
-    matePut('maskRect', maskRect);
-    matePut('blendMode', blendMode);
+    mateUse(
+      'shader',
+      shader,
+      isNamed: true,
+    );
+    mateUse(
+      'maskRect',
+      maskRect,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+    );
   }
 }
 
@@ -340,21 +507,32 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
 class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
   /// BackdropFilterLayer BackdropFilterLayer({ImageFilter? filter, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilterLayer$Mate({
-    /// optionalParameters: {ImageFilter? filter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ImageFilter? filter} , default:none
     ImageFilter? filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , hasDefaultValue:true, defaultValueCode:BlendMode.srcOver
-    required BlendMode blendMode,
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
+    BlendMode blendMode = BlendMode.srcOver,
   }) : super(
           filter: filter,
           blendMode: blendMode,
         ) {
+    mateCreateName = 'BackdropFilterLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BackdropFilterLayer$Mate(
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    matePut('filter', filter);
-    matePut('blendMode', blendMode);
+    mateUse(
+      'filter',
+      filter,
+      isNamed: true,
+    );
+    mateUse(
+      'blendMode',
+      blendMode,
+      isNamed: true,
+      defaultValue: BlendMode.srcOver,
+    );
   }
 }
 
@@ -362,19 +540,19 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
 class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
   /// PhysicalModelLayer PhysicalModelLayer({Path? clipPath, Clip clipBehavior = Clip.none, double? elevation, Color? color, Color? shadowColor})
   PhysicalModelLayer$Mate({
-    /// optionalParameters: {Path? clipPath} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Path? clipPath} , default:none
     Path? clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
   }) : super(
           clipPath: clipPath,
@@ -383,6 +561,8 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
           color: color,
           shadowColor: shadowColor,
         ) {
+    mateCreateName = 'PhysicalModelLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PhysicalModelLayer$Mate(
           clipPath: p.get('clipPath').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -390,11 +570,32 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    matePut('clipPath', clipPath);
-    matePut('clipBehavior', clipBehavior);
-    matePut('elevation', elevation);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
+    mateUse(
+      'clipPath',
+      clipPath,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -402,21 +603,32 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
 class LeaderLayer$Mate extends LeaderLayer with Mate {
   /// LeaderLayer LeaderLayer({required LayerLink link, Offset offset = Offset.zero})
   LeaderLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset offset = Offset.zero,
   }) : super(
           link: link,
           offset: offset,
         ) {
+    mateCreateName = 'LeaderLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => LeaderLayer$Mate(
           link: p.get('link').build(),
           offset: p.get('offset').build(),
         );
-    matePut('link', link);
-    matePut('offset', offset);
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -424,33 +636,54 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
 class FollowerLayer$Mate extends FollowerLayer with Mate {
   /// FollowerLayer FollowerLayer({required LayerLink link, bool? showWhenUnlinked = true, Offset? unlinkedOffset = Offset.zero, Offset? linkedOffset = Offset.zero})
   FollowerLayer$Mate({
-    /// optionalParameters: {required LayerLink link} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LayerLink link} , default:none
     required LayerLink link,
 
-    /// optionalParameters: {bool? showWhenUnlinked = true} , hasDefaultValue:true, defaultValueCode:true
-    bool? showWhenUnlinked,
+    /// optionalParameters: {bool? showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
+    bool? showWhenUnlinked = true,
 
-    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    Offset? unlinkedOffset,
+    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset? unlinkedOffset = Offset.zero,
 
-    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    Offset? linkedOffset,
+    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset? linkedOffset = Offset.zero,
   }) : super(
           link: link,
           showWhenUnlinked: showWhenUnlinked,
           unlinkedOffset: unlinkedOffset,
           linkedOffset: linkedOffset,
         ) {
+    mateCreateName = 'FollowerLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FollowerLayer$Mate(
           link: p.get('link').build(),
           showWhenUnlinked: p.get('showWhenUnlinked').build(),
           unlinkedOffset: p.get('unlinkedOffset').build(),
           linkedOffset: p.get('linkedOffset').build(),
         );
-    matePut('link', link);
-    matePut('showWhenUnlinked', showWhenUnlinked);
-    matePut('unlinkedOffset', unlinkedOffset);
-    matePut('linkedOffset', linkedOffset);
+    mateUse(
+      'link',
+      link,
+      isNamed: true,
+    );
+    mateUse(
+      'showWhenUnlinked',
+      showWhenUnlinked,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'unlinkedOffset',
+      unlinkedOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'linkedOffset',
+      linkedOffset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
   }
 }
 
@@ -460,29 +693,48 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
   AnnotatedRegionLayer$Mate(
     /// requiredParameters: T value
     T value, {
-    /// optionalParameters: {Size? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Size? size} , default:none
     Size? size,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
 
-    /// optionalParameters: {bool opaque = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool opaque,
+    /// optionalParameters: {bool opaque = false} , default:processed=BooleanLiteralImpl
+    bool opaque = false,
   }) : super(
           value,
           size: size,
           offset: offset,
           opaque: opaque,
         ) {
+    mateCreateName = 'AnnotatedRegionLayer';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => AnnotatedRegionLayer$Mate<T>(
           p.get('value').value,
           size: p.get('size').build(),
           offset: p.get('offset').build(),
           opaque: p.get('opaque').build(),
         );
-    matePut('value', value);
-    matePut('size', size);
-    matePut('offset', offset);
-    matePut('opaque', opaque);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'opaque',
+      opaque,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

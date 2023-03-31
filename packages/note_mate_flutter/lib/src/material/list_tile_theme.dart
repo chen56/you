@@ -18,61 +18,61 @@ import 'package:flutter/src/widgets/framework.dart';
 class ListTileThemeData$Mate extends ListTileThemeData with Mate {
   /// ListTileThemeData ListTileThemeData({bool? dense, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, Color? tileColor, Color? selectedTileColor, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity, ListTileTitleAlignment? titleAlignment})
   ListTileThemeData$Mate({
-    /// optionalParameters: {bool? dense} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? dense} , default:none
     bool? dense,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ListTileStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ListTileStyle? style} , default:none
     ListTileStyle? style,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , default:none
     Color? iconColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {TextStyle? titleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? titleTextStyle} , default:none
     TextStyle? titleTextStyle,
 
-    /// optionalParameters: {TextStyle? subtitleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? subtitleTextStyle} , default:none
     TextStyle? subtitleTextStyle,
 
-    /// optionalParameters: {TextStyle? leadingAndTrailingTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? leadingAndTrailingTextStyle} , default:none
     TextStyle? leadingAndTrailingTextStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tileColor} , default:none
     Color? tileColor,
 
-    /// optionalParameters: {Color? selectedTileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedTileColor} , default:none
     Color? selectedTileColor,
 
-    /// optionalParameters: {double? horizontalTitleGap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? horizontalTitleGap} , default:none
     double? horizontalTitleGap,
 
-    /// optionalParameters: {double? minVerticalPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minVerticalPadding} , default:none
     double? minVerticalPadding,
 
-    /// optionalParameters: {double? minLeadingWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minLeadingWidth} , default:none
     double? minLeadingWidth,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {VisualDensity? visualDensity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {VisualDensity? visualDensity} , default:none
     VisualDensity? visualDensity,
 
-    /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , default:none
     ListTileTitleAlignment? titleAlignment,
   }) : super(
           dense: dense,
@@ -95,6 +95,8 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
           visualDensity: visualDensity,
           titleAlignment: titleAlignment,
         ) {
+    mateCreateName = 'ListTileThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTileThemeData$Mate(
           dense: p.get('dense').build(),
           shape: p.get('shape').build(),
@@ -116,25 +118,101 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
           visualDensity: p.get('visualDensity').build(),
           titleAlignment: p.get('titleAlignment').build(),
         );
-    matePut('dense', dense);
-    matePut('shape', shape);
-    matePut('style', style);
-    matePut('selectedColor', selectedColor);
-    matePut('iconColor', iconColor);
-    matePut('textColor', textColor);
-    matePut('titleTextStyle', titleTextStyle);
-    matePut('subtitleTextStyle', subtitleTextStyle);
-    matePut('leadingAndTrailingTextStyle', leadingAndTrailingTextStyle);
-    matePut('contentPadding', contentPadding);
-    matePut('tileColor', tileColor);
-    matePut('selectedTileColor', selectedTileColor);
-    matePut('horizontalTitleGap', horizontalTitleGap);
-    matePut('minVerticalPadding', minVerticalPadding);
-    matePut('minLeadingWidth', minLeadingWidth);
-    matePut('enableFeedback', enableFeedback);
-    matePut('mouseCursor', mouseCursor);
-    matePut('visualDensity', visualDensity);
-    matePut('titleAlignment', titleAlignment);
+    mateUse(
+      'dense',
+      dense,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'titleTextStyle',
+      titleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'subtitleTextStyle',
+      subtitleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'leadingAndTrailingTextStyle',
+      leadingAndTrailingTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'contentPadding',
+      contentPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'tileColor',
+      tileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedTileColor',
+      selectedTileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'horizontalTitleGap',
+      horizontalTitleGap,
+      isNamed: true,
+    );
+    mateUse(
+      'minVerticalPadding',
+      minVerticalPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'minLeadingWidth',
+      minLeadingWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'visualDensity',
+      visualDensity,
+      isNamed: true,
+    );
+    mateUse(
+      'titleAlignment',
+      titleAlignment,
+      isNamed: true,
+    );
   }
 }
 
@@ -142,55 +220,55 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
 class ListTileTheme$Mate extends ListTileTheme with Mate {
   /// ListTileTheme ListTileTheme({Key? key, ListTileThemeData? data, bool? dense, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, EdgeInsetsGeometry? contentPadding, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, required Widget child})
   ListTileTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ListTileThemeData? data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ListTileThemeData? data} , default:none
     ListTileThemeData? data,
 
-    /// optionalParameters: {bool? dense} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? dense} , default:none
     bool? dense,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ListTileStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ListTileStyle? style} , default:none
     ListTileStyle? style,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , default:none
     Color? iconColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
     EdgeInsetsGeometry? contentPadding,
 
-    /// optionalParameters: {Color? tileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? tileColor} , default:none
     Color? tileColor,
 
-    /// optionalParameters: {Color? selectedTileColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedTileColor} , default:none
     Color? selectedTileColor,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
 
-    /// optionalParameters: {double? horizontalTitleGap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? horizontalTitleGap} , default:none
     double? horizontalTitleGap,
 
-    /// optionalParameters: {double? minVerticalPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minVerticalPadding} , default:none
     double? minVerticalPadding,
 
-    /// optionalParameters: {double? minLeadingWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minLeadingWidth} , default:none
     double? minLeadingWidth,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -211,6 +289,8 @@ class ListTileTheme$Mate extends ListTileTheme with Mate {
           minLeadingWidth: minLeadingWidth,
           child: child,
         ) {
+    mateCreateName = 'ListTileTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTileTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
@@ -230,22 +310,90 @@ class ListTileTheme$Mate extends ListTileTheme with Mate {
           minLeadingWidth: p.get('minLeadingWidth').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('dense', dense);
-    matePut('shape', shape);
-    matePut('style', style);
-    matePut('selectedColor', selectedColor);
-    matePut('iconColor', iconColor);
-    matePut('textColor', textColor);
-    matePut('contentPadding', contentPadding);
-    matePut('tileColor', tileColor);
-    matePut('selectedTileColor', selectedTileColor);
-    matePut('enableFeedback', enableFeedback);
-    matePut('mouseCursor', mouseCursor);
-    matePut('horizontalTitleGap', horizontalTitleGap);
-    matePut('minVerticalPadding', minVerticalPadding);
-    matePut('minLeadingWidth', minLeadingWidth);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'dense',
+      dense,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'contentPadding',
+      contentPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'tileColor',
+      tileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedTileColor',
+      selectedTileColor,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'horizontalTitleGap',
+      horizontalTitleGap,
+      isNamed: true,
+    );
+    mateUse(
+      'minVerticalPadding',
+      minVerticalPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'minLeadingWidth',
+      minLeadingWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

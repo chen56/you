@@ -10,27 +10,41 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class ForcePressDetails$Mate extends ForcePressDetails with Mate {
   /// ForcePressDetails ForcePressDetails({required Offset globalPosition, Offset? localPosition, required double pressure})
   ForcePressDetails$Mate({
-    /// optionalParameters: {required Offset globalPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset globalPosition} , default:none
     required Offset globalPosition,
 
-    /// optionalParameters: {Offset? localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {required double pressure} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double pressure} , default:none
     required double pressure,
   }) : super(
           globalPosition: globalPosition,
           localPosition: localPosition,
           pressure: pressure,
         ) {
+    mateCreateName = 'ForcePressDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ForcePressDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
           pressure: p.get('pressure').build(),
         );
-    matePut('globalPosition', globalPosition);
-    matePut('localPosition', localPosition);
-    matePut('pressure', pressure);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'pressure',
+      pressure,
+      isNamed: true,
+    );
   }
 }
 
@@ -38,22 +52,22 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
 class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with Mate {
   /// ForcePressGestureRecognizer ForcePressGestureRecognizer({double startPressure = 0.4, double peakPressure = 0.85, double Function(double, double, double) interpolation = _inverseLerp, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ForcePressGestureRecognizer$Mate({
-    /// optionalParameters: {double startPressure = 0.4} , hasDefaultValue:true, defaultValueCode:0.4
-    required double startPressure,
+    /// optionalParameters: {double startPressure = 0.4} , default:processed=DoubleLiteralImpl
+    double startPressure = 0.4,
 
-    /// optionalParameters: {double peakPressure = 0.85} , hasDefaultValue:true, defaultValueCode:0.85
-    required double peakPressure,
+    /// optionalParameters: {double peakPressure = 0.85} , default:processed=DoubleLiteralImpl
+    double peakPressure = 0.85,
 
-    /// optionalParameters: {double Function(double, double, double) interpolation = _inverseLerp} , hasDefaultValue:true, defaultValueCode:_inverseLerp
+    /// optionalParameters: {double Function(double, double, double) interpolation = _inverseLerp} , default:unprocessed=SimpleIdentifierImpl
     required GestureForceInterpolation interpolation,
 
-    /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           startPressure: startPressure,
@@ -63,6 +77,8 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'ForcePressGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ForcePressGestureRecognizer$Mate(
           startPressure: p.get('startPressure').build(),
           peakPressure: p.get('peakPressure').build(),
@@ -71,11 +87,37 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    matePut('startPressure', startPressure);
-    matePut('peakPressure', peakPressure);
-    matePut('interpolation', interpolation);
-    matePut('debugOwner', debugOwner);
-    matePut('supportedDevices', supportedDevices);
-    matePut('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse(
+      'startPressure',
+      startPressure,
+      isNamed: true,
+      defaultValue: 0.4,
+    );
+    mateUse(
+      'peakPressure',
+      peakPressure,
+      isNamed: true,
+      defaultValue: 0.85,
+    );
+    mateUse(
+      'interpolation',
+      interpolation,
+      isNamed: true,
+    );
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }

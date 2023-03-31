@@ -11,16 +11,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class Title$Mate extends Title with Mate {
   /// Title Title({Key? key, String title = '', required Color color, required Widget child})
   Title$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {String title = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String title,
+    /// optionalParameters: {String title = ''} , default:processed=SimpleStringLiteralImpl
+    String title = '',
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -28,15 +28,34 @@ class Title$Mate extends Title with Mate {
           color: color,
           child: child,
         ) {
+    mateCreateName = 'Title';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Title$Mate(
           key: p.get('key').build(),
           title: p.get('title').build(),
           color: p.get('color').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('title', title);
-    matePut('color', color);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

@@ -8,25 +8,25 @@ import 'dart:core';
 class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
   /// RawKeyEventDataLinux RawKeyEventDataLinux({required KeyHelper keyHelper, int unicodeScalarValues = 0, int scanCode = 0, int keyCode = 0, int modifiers = 0, required bool isDown, int? specifiedLogicalKey})
   RawKeyEventDataLinux$Mate({
-    /// optionalParameters: {required KeyHelper keyHelper} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required KeyHelper keyHelper} , default:none
     required KeyHelper keyHelper,
 
-    /// optionalParameters: {int unicodeScalarValues = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int unicodeScalarValues,
+    /// optionalParameters: {int unicodeScalarValues = 0} , default:processed=IntegerLiteralImpl
+    int unicodeScalarValues = 0,
 
-    /// optionalParameters: {int scanCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int scanCode,
+    /// optionalParameters: {int scanCode = 0} , default:processed=IntegerLiteralImpl
+    int scanCode = 0,
 
-    /// optionalParameters: {int keyCode = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int keyCode,
+    /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
+    int keyCode = 0,
 
-    /// optionalParameters: {int modifiers = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int modifiers,
+    /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
+    int modifiers = 0,
 
-    /// optionalParameters: {required bool isDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool isDown} , default:none
     required bool isDown,
 
-    /// optionalParameters: {int? specifiedLogicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? specifiedLogicalKey} , default:none
     int? specifiedLogicalKey,
   }) : super(
           keyHelper: keyHelper,
@@ -37,6 +37,8 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
           isDown: isDown,
           specifiedLogicalKey: specifiedLogicalKey,
         ) {
+    mateCreateName = 'RawKeyEventDataLinux';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataLinux$Mate(
           keyHelper: p.get('keyHelper').build(),
           unicodeScalarValues: p.get('unicodeScalarValues').build(),
@@ -46,12 +48,44 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
           isDown: p.get('isDown').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    matePut('keyHelper', keyHelper);
-    matePut('unicodeScalarValues', unicodeScalarValues);
-    matePut('scanCode', scanCode);
-    matePut('keyCode', keyCode);
-    matePut('modifiers', modifiers);
-    matePut('isDown', isDown);
-    matePut('specifiedLogicalKey', specifiedLogicalKey);
+    mateUse(
+      'keyHelper',
+      keyHelper,
+      isNamed: true,
+    );
+    mateUse(
+      'unicodeScalarValues',
+      unicodeScalarValues,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'scanCode',
+      scanCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'keyCode',
+      keyCode,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'modifiers',
+      modifiers,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'isDown',
+      isDown,
+      isNamed: true,
+    );
+    mateUse(
+      'specifiedLogicalKey',
+      specifiedLogicalKey,
+      isNamed: true,
+    );
   }
 }

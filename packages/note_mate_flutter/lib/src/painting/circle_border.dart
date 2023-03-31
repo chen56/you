@@ -3,26 +3,39 @@
 import 'package:flutter/src/painting/circle_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 
 /// class CircleBorder extends OutlinedBorder
 class CircleBorder$Mate extends CircleBorder with Mate {
   /// CircleBorder CircleBorder({BorderSide side = BorderSide.none, double eccentricity = 0.0})
   CircleBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double eccentricity = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double eccentricity,
+    /// optionalParameters: {double eccentricity = 0.0} , default:processed=DoubleLiteralImpl
+    double eccentricity = 0.0,
   }) : super(
           side: side,
           eccentricity: eccentricity,
         ) {
+    mateCreateName = 'CircleBorder';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => CircleBorder$Mate(
           side: p.get('side').build(),
           eccentricity: p.get('eccentricity').build(),
         );
-    matePut('side', side);
-    matePut('eccentricity', eccentricity);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'eccentricity',
+      eccentricity,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
   }
 }

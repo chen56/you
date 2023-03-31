@@ -17,12 +17,22 @@ class MethodCall$Mate extends MethodCall with Mate {
           method,
           arguments,
         ) {
+    mateCreateName = 'MethodCall';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MethodCall$Mate(
           p.get('method').value,
           p.get('arguments').value,
         );
-    matePut('method', method);
-    matePut('arguments', arguments);
+    mateUse(
+      'method',
+      method,
+      isNamed: false,
+    );
+    mateUse(
+      'arguments',
+      arguments,
+      isNamed: false,
+    );
   }
 }
 
@@ -30,16 +40,16 @@ class MethodCall$Mate extends MethodCall with Mate {
 class PlatformException$Mate extends PlatformException with Mate {
   /// PlatformException PlatformException({required String code, String? message, dynamic details, String? stacktrace})
   PlatformException$Mate({
-    /// optionalParameters: {required String code} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String code} , default:none
     required String code,
 
-    /// optionalParameters: {String? message} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? message} , default:none
     String? message,
 
-    /// optionalParameters: {dynamic details} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic details,
+    /// optionalParameters: {dynamic details} , default:none
+    dynamic details,
 
-    /// optionalParameters: {String? stacktrace} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? stacktrace} , default:none
     String? stacktrace,
   }) : super(
           code: code,
@@ -47,16 +57,34 @@ class PlatformException$Mate extends PlatformException with Mate {
           details: details,
           stacktrace: stacktrace,
         ) {
+    mateCreateName = 'PlatformException';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => PlatformException$Mate(
           code: p.get('code').build(),
           message: p.get('message').build(),
           details: p.get('details').build(),
           stacktrace: p.get('stacktrace').build(),
         );
-    matePut('code', code);
-    matePut('message', message);
-    matePut('details', details);
-    matePut('stacktrace', stacktrace);
+    mateUse(
+      'code',
+      code,
+      isNamed: true,
+    );
+    mateUse(
+      'message',
+      message,
+      isNamed: true,
+    );
+    mateUse(
+      'details',
+      details,
+      isNamed: true,
+    );
+    mateUse(
+      'stacktrace',
+      stacktrace,
+      isNamed: true,
+    );
   }
 }
 
@@ -68,7 +96,13 @@ class MissingPluginException$Mate extends MissingPluginException with Mate {
       /// requiredParameters: [String? message]
       String? message)
       : super(message) {
+    mateCreateName = 'MissingPluginException';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MissingPluginException$Mate(p.get('message').value);
-    matePut('message', message);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }

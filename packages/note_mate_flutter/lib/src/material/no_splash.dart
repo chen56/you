@@ -10,16 +10,16 @@ import 'dart:ui';
 class NoSplash$Mate extends NoSplash with Mate {
   /// NoSplash NoSplash({required MaterialInkController controller, required RenderBox referenceBox, required Color color, void Function()? onRemoved})
   NoSplash$Mate({
-    /// optionalParameters: {required MaterialInkController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialInkController controller} , default:none
     required MaterialInkController controller,
 
-    /// optionalParameters: {required RenderBox referenceBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox referenceBox} , default:none
     required RenderBox referenceBox,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {void Function()? onRemoved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onRemoved} , default:none
     VoidCallback? onRemoved,
   }) : super(
           controller: controller,
@@ -27,15 +27,33 @@ class NoSplash$Mate extends NoSplash with Mate {
           color: color,
           onRemoved: onRemoved,
         ) {
+    mateCreateName = 'NoSplash';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NoSplash$Mate(
           controller: p.get('controller').build(),
           referenceBox: p.get('referenceBox').build(),
           color: p.get('color').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    matePut('controller', controller);
-    matePut('referenceBox', referenceBox);
-    matePut('color', color);
-    matePut('onRemoved', onRemoved);
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'referenceBox',
+      referenceBox,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'onRemoved',
+      onRemoved,
+      isNamed: true,
+    );
   }
 }

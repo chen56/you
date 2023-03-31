@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:vector_math/vector_math_64.dart';
 import 'package:flutter/src/foundation/diagnostics.dart';
+import 'package:flutter/foundation.dart';
 
 /// class TransformProperty extends DiagnosticsProperty<Matrix4>
 class TransformProperty$Mate extends TransformProperty with Mate {
@@ -15,14 +16,14 @@ class TransformProperty$Mate extends TransformProperty with Mate {
 
     /// requiredParameters: Matrix4? value
     Matrix4? value, {
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -30,6 +31,8 @@ class TransformProperty$Mate extends TransformProperty with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
+    mateCreateName = 'TransformProperty';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TransformProperty$Mate(
           p.get('name').value,
           p.get('value').value,
@@ -37,10 +40,32 @@ class TransformProperty$Mate extends TransformProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }

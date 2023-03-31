@@ -8,20 +8,30 @@ import 'dart:ui';
 class OffsetPair$Mate extends OffsetPair with Mate {
   /// OffsetPair OffsetPair({required Offset local, required Offset global})
   OffsetPair$Mate({
-    /// optionalParameters: {required Offset local} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset local} , default:none
     required Offset local,
 
-    /// optionalParameters: {required Offset global} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset global} , default:none
     required Offset global,
   }) : super(
           local: local,
           global: global,
         ) {
+    mateCreateName = 'OffsetPair';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => OffsetPair$Mate(
           local: p.get('local').build(),
           global: p.get('global').build(),
         );
-    matePut('local', local);
-    matePut('global', global);
+    mateUse(
+      'local',
+      local,
+      isNamed: true,
+    );
+    mateUse(
+      'global',
+      global,
+      isNamed: true,
+    );
   }
 }

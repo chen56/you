@@ -3,85 +3,86 @@
 import 'package:flutter/src/foundation/diagnostics.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
+import 'package:flutter/foundation.dart';
 
 /// class TextTreeConfiguration
 class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
   /// TextTreeConfiguration TextTreeConfiguration({required String prefixLineOne, required String prefixOtherLines, required String prefixLastChildLineOne, required String prefixOtherLinesRootNode, required String linkCharacter, required String propertyPrefixIfChildren, required String propertyPrefixNoChildren, String lineBreak = '\n', bool lineBreakProperties = true, String afterName = ':', String afterDescriptionIfBody = '', String afterDescription = '', String beforeProperties = '', String afterProperties = '', String mandatoryAfterProperties = '', String propertySeparator = '', String bodyIndent = '', String footer = '', bool showChildren = true, bool addBlankLineIfNoChildren = true, bool isNameOnOwnLine = false, bool isBlankLineBetweenPropertiesAndChildren = true, String beforeName = '', String suffixLineOne = '', String mandatoryFooter = ''})
   TextTreeConfiguration$Mate({
-    /// optionalParameters: {required String prefixLineOne} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixLineOne} , default:none
     required String prefixLineOne,
 
-    /// optionalParameters: {required String prefixOtherLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixOtherLines} , default:none
     required String prefixOtherLines,
 
-    /// optionalParameters: {required String prefixLastChildLineOne} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixLastChildLineOne} , default:none
     required String prefixLastChildLineOne,
 
-    /// optionalParameters: {required String prefixOtherLinesRootNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String prefixOtherLinesRootNode} , default:none
     required String prefixOtherLinesRootNode,
 
-    /// optionalParameters: {required String linkCharacter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String linkCharacter} , default:none
     required String linkCharacter,
 
-    /// optionalParameters: {required String propertyPrefixIfChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String propertyPrefixIfChildren} , default:none
     required String propertyPrefixIfChildren,
 
-    /// optionalParameters: {required String propertyPrefixNoChildren} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String propertyPrefixNoChildren} , default:none
     required String propertyPrefixNoChildren,
 
-    /// optionalParameters: {String lineBreak = '\n'} , hasDefaultValue:true, defaultValueCode:'\n'
-    required String lineBreak,
+    /// optionalParameters: {String lineBreak = '\n'} , default:processed=SimpleStringLiteralImpl
+    String lineBreak = '\n',
 
-    /// optionalParameters: {bool lineBreakProperties = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool lineBreakProperties,
+    /// optionalParameters: {bool lineBreakProperties = true} , default:processed=BooleanLiteralImpl
+    bool lineBreakProperties = true,
 
-    /// optionalParameters: {String afterName = ':'} , hasDefaultValue:true, defaultValueCode:':'
-    required String afterName,
+    /// optionalParameters: {String afterName = ':'} , default:processed=SimpleStringLiteralImpl
+    String afterName = ':',
 
-    /// optionalParameters: {String afterDescriptionIfBody = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String afterDescriptionIfBody,
+    /// optionalParameters: {String afterDescriptionIfBody = ''} , default:processed=SimpleStringLiteralImpl
+    String afterDescriptionIfBody = '',
 
-    /// optionalParameters: {String afterDescription = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String afterDescription,
+    /// optionalParameters: {String afterDescription = ''} , default:processed=SimpleStringLiteralImpl
+    String afterDescription = '',
 
-    /// optionalParameters: {String beforeProperties = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String beforeProperties,
+    /// optionalParameters: {String beforeProperties = ''} , default:processed=SimpleStringLiteralImpl
+    String beforeProperties = '',
 
-    /// optionalParameters: {String afterProperties = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String afterProperties,
+    /// optionalParameters: {String afterProperties = ''} , default:processed=SimpleStringLiteralImpl
+    String afterProperties = '',
 
-    /// optionalParameters: {String mandatoryAfterProperties = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String mandatoryAfterProperties,
+    /// optionalParameters: {String mandatoryAfterProperties = ''} , default:processed=SimpleStringLiteralImpl
+    String mandatoryAfterProperties = '',
 
-    /// optionalParameters: {String propertySeparator = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String propertySeparator,
+    /// optionalParameters: {String propertySeparator = ''} , default:processed=SimpleStringLiteralImpl
+    String propertySeparator = '',
 
-    /// optionalParameters: {String bodyIndent = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String bodyIndent,
+    /// optionalParameters: {String bodyIndent = ''} , default:processed=SimpleStringLiteralImpl
+    String bodyIndent = '',
 
-    /// optionalParameters: {String footer = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String footer,
+    /// optionalParameters: {String footer = ''} , default:processed=SimpleStringLiteralImpl
+    String footer = '',
 
-    /// optionalParameters: {bool showChildren = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showChildren,
+    /// optionalParameters: {bool showChildren = true} , default:processed=BooleanLiteralImpl
+    bool showChildren = true,
 
-    /// optionalParameters: {bool addBlankLineIfNoChildren = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool addBlankLineIfNoChildren,
+    /// optionalParameters: {bool addBlankLineIfNoChildren = true} , default:processed=BooleanLiteralImpl
+    bool addBlankLineIfNoChildren = true,
 
-    /// optionalParameters: {bool isNameOnOwnLine = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isNameOnOwnLine,
+    /// optionalParameters: {bool isNameOnOwnLine = false} , default:processed=BooleanLiteralImpl
+    bool isNameOnOwnLine = false,
 
-    /// optionalParameters: {bool isBlankLineBetweenPropertiesAndChildren = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool isBlankLineBetweenPropertiesAndChildren,
+    /// optionalParameters: {bool isBlankLineBetweenPropertiesAndChildren = true} , default:processed=BooleanLiteralImpl
+    bool isBlankLineBetweenPropertiesAndChildren = true,
 
-    /// optionalParameters: {String beforeName = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String beforeName,
+    /// optionalParameters: {String beforeName = ''} , default:processed=SimpleStringLiteralImpl
+    String beforeName = '',
 
-    /// optionalParameters: {String suffixLineOne = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String suffixLineOne,
+    /// optionalParameters: {String suffixLineOne = ''} , default:processed=SimpleStringLiteralImpl
+    String suffixLineOne = '',
 
-    /// optionalParameters: {String mandatoryFooter = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String mandatoryFooter,
+    /// optionalParameters: {String mandatoryFooter = ''} , default:processed=SimpleStringLiteralImpl
+    String mandatoryFooter = '',
   }) : super(
           prefixLineOne: prefixLineOne,
           prefixOtherLines: prefixOtherLines,
@@ -109,6 +110,8 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           suffixLineOne: suffixLineOne,
           mandatoryFooter: mandatoryFooter,
         ) {
+    mateCreateName = 'TextTreeConfiguration';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => TextTreeConfiguration$Mate(
           prefixLineOne: p.get('prefixLineOne').build(),
           prefixOtherLines: p.get('prefixOtherLines').build(),
@@ -136,31 +139,149 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
         );
-    matePut('prefixLineOne', prefixLineOne);
-    matePut('prefixOtherLines', prefixOtherLines);
-    matePut('prefixLastChildLineOne', prefixLastChildLineOne);
-    matePut('prefixOtherLinesRootNode', prefixOtherLinesRootNode);
-    matePut('linkCharacter', linkCharacter);
-    matePut('propertyPrefixIfChildren', propertyPrefixIfChildren);
-    matePut('propertyPrefixNoChildren', propertyPrefixNoChildren);
-    matePut('lineBreak', lineBreak);
-    matePut('lineBreakProperties', lineBreakProperties);
-    matePut('afterName', afterName);
-    matePut('afterDescriptionIfBody', afterDescriptionIfBody);
-    matePut('afterDescription', afterDescription);
-    matePut('beforeProperties', beforeProperties);
-    matePut('afterProperties', afterProperties);
-    matePut('mandatoryAfterProperties', mandatoryAfterProperties);
-    matePut('propertySeparator', propertySeparator);
-    matePut('bodyIndent', bodyIndent);
-    matePut('footer', footer);
-    matePut('showChildren', showChildren);
-    matePut('addBlankLineIfNoChildren', addBlankLineIfNoChildren);
-    matePut('isNameOnOwnLine', isNameOnOwnLine);
-    matePut('isBlankLineBetweenPropertiesAndChildren', isBlankLineBetweenPropertiesAndChildren);
-    matePut('beforeName', beforeName);
-    matePut('suffixLineOne', suffixLineOne);
-    matePut('mandatoryFooter', mandatoryFooter);
+    mateUse(
+      'prefixLineOne',
+      prefixLineOne,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixOtherLines',
+      prefixOtherLines,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixLastChildLineOne',
+      prefixLastChildLineOne,
+      isNamed: true,
+    );
+    mateUse(
+      'prefixOtherLinesRootNode',
+      prefixOtherLinesRootNode,
+      isNamed: true,
+    );
+    mateUse(
+      'linkCharacter',
+      linkCharacter,
+      isNamed: true,
+    );
+    mateUse(
+      'propertyPrefixIfChildren',
+      propertyPrefixIfChildren,
+      isNamed: true,
+    );
+    mateUse(
+      'propertyPrefixNoChildren',
+      propertyPrefixNoChildren,
+      isNamed: true,
+    );
+    mateUse(
+      'lineBreak',
+      lineBreak,
+      isNamed: true,
+      defaultValue: '\n',
+    );
+    mateUse(
+      'lineBreakProperties',
+      lineBreakProperties,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'afterName',
+      afterName,
+      isNamed: true,
+      defaultValue: ':',
+    );
+    mateUse(
+      'afterDescriptionIfBody',
+      afterDescriptionIfBody,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'afterDescription',
+      afterDescription,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'beforeProperties',
+      beforeProperties,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'afterProperties',
+      afterProperties,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'mandatoryAfterProperties',
+      mandatoryAfterProperties,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'propertySeparator',
+      propertySeparator,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'bodyIndent',
+      bodyIndent,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'footer',
+      footer,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'showChildren',
+      showChildren,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'addBlankLineIfNoChildren',
+      addBlankLineIfNoChildren,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'isNameOnOwnLine',
+      isNameOnOwnLine,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'isBlankLineBetweenPropertiesAndChildren',
+      isBlankLineBetweenPropertiesAndChildren,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'beforeName',
+      beforeName,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'suffixLineOne',
+      suffixLineOne,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'mandatoryFooter',
+      mandatoryFooter,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 }
 
@@ -168,33 +289,55 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
 class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
   /// TextTreeRenderer TextTreeRenderer({DiagnosticLevel minLevel = DiagnosticLevel.debug, int wrapWidth = 100, int wrapWidthProperties = 65, int maxDescendentsTruncatableNode = -1})
   TextTreeRenderer$Mate({
-    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.debug
-    required DiagnosticLevel minLevel,
+    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel minLevel = DiagnosticLevel.debug,
 
-    /// optionalParameters: {int wrapWidth = 100} , hasDefaultValue:true, defaultValueCode:100
-    required int wrapWidth,
+    /// optionalParameters: {int wrapWidth = 100} , default:processed=IntegerLiteralImpl
+    int wrapWidth = 100,
 
-    /// optionalParameters: {int wrapWidthProperties = 65} , hasDefaultValue:true, defaultValueCode:65
-    required int wrapWidthProperties,
+    /// optionalParameters: {int wrapWidthProperties = 65} , default:processed=IntegerLiteralImpl
+    int wrapWidthProperties = 65,
 
-    /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , hasDefaultValue:true, defaultValueCode:-1
-    required int maxDescendentsTruncatableNode,
+    /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , default:processed=PrefixExpressionImpl
+    int maxDescendentsTruncatableNode = -1,
   }) : super(
           minLevel: minLevel,
           wrapWidth: wrapWidth,
           wrapWidthProperties: wrapWidthProperties,
           maxDescendentsTruncatableNode: maxDescendentsTruncatableNode,
         ) {
+    mateCreateName = 'TextTreeRenderer';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => TextTreeRenderer$Mate(
           minLevel: p.get('minLevel').build(),
           wrapWidth: p.get('wrapWidth').build(),
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
           maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
         );
-    matePut('minLevel', minLevel);
-    matePut('wrapWidth', wrapWidth);
-    matePut('wrapWidthProperties', wrapWidthProperties);
-    matePut('maxDescendentsTruncatableNode', maxDescendentsTruncatableNode);
+    mateUse(
+      'minLevel',
+      minLevel,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.debug,
+    );
+    mateUse(
+      'wrapWidth',
+      wrapWidth,
+      isNamed: true,
+      defaultValue: 100,
+    );
+    mateUse(
+      'wrapWidthProperties',
+      wrapWidthProperties,
+      isNamed: true,
+      defaultValue: 65,
+    );
+    mateUse(
+      'maxDescendentsTruncatableNode',
+      maxDescendentsTruncatableNode,
+      isNamed: true,
+      defaultValue: -1,
+    );
   }
 }
 
@@ -207,27 +350,47 @@ class MessageProperty$Mate extends MessageProperty with Mate {
 
     /// requiredParameters: String message
     String message, {
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           message,
           style: style,
           level: level,
         ) {
+    mateCreateName = 'MessageProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => MessageProperty$Mate(
           p.get('name').value,
           p.get('message').value,
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('message', message);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -240,29 +403,29 @@ class StringProperty$Mate extends StringProperty with Mate {
 
     /// requiredParameters: String? value
     String? value, {
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {bool quoted = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool quoted,
+    /// optionalParameters: {bool quoted = true} , default:processed=BooleanLiteralImpl
+    bool quoted = true,
 
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -275,6 +438,8 @@ class StringProperty$Mate extends StringProperty with Mate {
           style: style,
           level: level,
         ) {
+    mateCreateName = 'StringProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => StringProperty$Mate(
           p.get('name').value,
           p.get('value').value,
@@ -287,16 +452,60 @@ class StringProperty$Mate extends StringProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('description', description);
-    matePut('tooltip', tooltip);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('quoted', quoted);
-    matePut('ifEmpty', ifEmpty);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'quoted',
+      quoted,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -309,26 +518,26 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
 
     /// requiredParameters: double? value
     double? value, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -340,6 +549,8 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           style: style,
           level: level,
         ) {
+    mateCreateName = 'DoubleProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DoubleProperty$Mate(
           p.get('name').value,
           p.get('value').value,
@@ -351,15 +562,54 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifNull', ifNull);
-    matePut('unit', unit);
-    matePut('tooltip', tooltip);
-    matePut('defaultValue', defaultValue);
-    matePut('showName', showName);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 
   /// DoubleProperty DoubleProperty.lazy(String name, double? Function() computeValue, {String? ifNull, bool showName = true, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
@@ -369,23 +619,23 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
 
     /// requiredParameters: double? Function() computeValue
     ComputePropertyValueCallback<double> computeValue, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super.lazy(
           name,
           computeValue,
@@ -396,6 +646,8 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
+    mateCreateName = 'DoubleProperty.lazy';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DoubleProperty$Mate.lazy(
           p.get('name').value,
           p.get('computeValue').value,
@@ -406,14 +658,48 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('computeValue', computeValue);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('unit', unit);
-    matePut('tooltip', tooltip);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'computeValue',
+      computeValue,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -426,23 +712,23 @@ class IntProperty$Mate extends IntProperty with Mate {
 
     /// requiredParameters: int? value
     int? value, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -453,6 +739,8 @@ class IntProperty$Mate extends IntProperty with Mate {
           style: style,
           level: level,
         ) {
+    mateCreateName = 'IntProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => IntProperty$Mate(
           p.get('name').value,
           p.get('value').value,
@@ -463,14 +751,49 @@ class IntProperty$Mate extends IntProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('unit', unit);
-    matePut('defaultValue', defaultValue);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -483,20 +806,20 @@ class PercentProperty$Mate extends PercentProperty with Mate {
 
     /// requiredParameters: double? fraction
     double? fraction, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {String? unit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? unit} , default:none
     String? unit,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           fraction,
@@ -506,6 +829,8 @@ class PercentProperty$Mate extends PercentProperty with Mate {
           unit: unit,
           level: level,
         ) {
+    mateCreateName = 'PercentProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => PercentProperty$Mate(
           p.get('name').value,
           p.get('fraction').value,
@@ -515,13 +840,43 @@ class PercentProperty$Mate extends PercentProperty with Mate {
           unit: p.get('unit').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('fraction', fraction);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('tooltip', tooltip);
-    matePut('unit', unit);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'fraction',
+      fraction,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'unit',
+      unit,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -531,23 +886,23 @@ class FlagProperty$Mate extends FlagProperty with Mate {
   FlagProperty$Mate(
     /// requiredParameters: String name
     String name, {
-    /// optionalParameters: {required bool? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool? value} , default:none
     required bool? value,
 
-    /// optionalParameters: {String? ifTrue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifTrue} , default:none
     String? ifTrue,
 
-    /// optionalParameters: {String? ifFalse} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifFalse} , default:none
     String? ifFalse,
 
-    /// optionalParameters: {bool showName = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showName,
+    /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
+    bool showName = false,
 
-    /// optionalParameters: {Object? defaultValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? defaultValue} , default:none
     Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value: value,
@@ -557,6 +912,8 @@ class FlagProperty$Mate extends FlagProperty with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
+    mateCreateName = 'FlagProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlagProperty$Mate(
           p.get('name').value,
           value: p.get('value').build(),
@@ -566,13 +923,43 @@ class FlagProperty$Mate extends FlagProperty with Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifTrue', ifTrue);
-    matePut('ifFalse', ifFalse);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'ifTrue',
+      ifTrue,
+      isNamed: true,
+    );
+    mateUse(
+      'ifFalse',
+      ifFalse,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -585,26 +972,26 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
 
     /// requiredParameters: Iterable<T>? value
     Iterable<T>? value, {
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty = '[]'} , hasDefaultValue:true, defaultValueCode:'[]'
-    String? ifEmpty,
+    /// optionalParameters: {String? ifEmpty = '[]'} , default:processed=SimpleStringLiteralImpl
+    String? ifEmpty = '[]',
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -616,6 +1003,8 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
           showSeparator: showSeparator,
           level: level,
         ) {
+    mateCreateName = 'IterableProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => IterableProperty$Mate<T>(
           p.get('name').value,
           p.get('value').value,
@@ -627,15 +1016,56 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('defaultValue', defaultValue);
-    matePut('ifNull', ifNull);
-    matePut('ifEmpty', ifEmpty);
-    matePut('style', style);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+      defaultValue: '[]',
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -648,27 +1078,46 @@ class EnumProperty$Mate<T> extends EnumProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
           defaultValue: defaultValue,
           level: level,
         ) {
+    mateCreateName = 'EnumProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => EnumProperty$Mate<T>(
           p.get('name').value,
           p.get('value').value,
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('defaultValue', defaultValue);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -681,17 +1130,17 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {String? ifPresent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifPresent} , default:none
     String? ifPresent,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showName,
+    /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
+    bool showName = false,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -700,6 +1149,8 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           showName: showName,
           level: level,
         ) {
+    mateCreateName = 'ObjectFlagProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectFlagProperty$Mate<T>(
           p.get('name').value,
           p.get('value').value,
@@ -708,12 +1159,38 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           showName: p.get('showName').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifPresent', ifPresent);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifPresent',
+      ifPresent,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 
   /// ObjectFlagProperty<T> ObjectFlagProperty.has(String name, T? value, {DiagnosticLevel level = DiagnosticLevel.info})
@@ -723,21 +1200,36 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super.has(
           name,
           value,
           level: level,
         ) {
+    mateCreateName = 'ObjectFlagProperty.has';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectFlagProperty$Mate<T>.has(
           p.get('name').value,
           p.get('value').value,
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -750,17 +1242,17 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
 
     /// requiredParameters: Map<String, T?> value
     Map<String, T?> value, {
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -769,6 +1261,8 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
           showSeparator: showSeparator,
           level: level,
         ) {
+    mateCreateName = 'FlagsSummary';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlagsSummary$Mate<T>(
           p.get('name').value,
           p.get('value').value,
@@ -777,12 +1271,39 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifEmpty', ifEmpty);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -795,47 +1316,47 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 
     /// requiredParameters: T? value
     T? value, {
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {bool missingIfNull = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool missingIfNull,
+    /// optionalParameters: {bool missingIfNull = false} , default:processed=BooleanLiteralImpl
+    bool missingIfNull = false,
 
-    /// optionalParameters: {String? linePrefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? linePrefix} , default:none
     String? linePrefix,
 
-    /// optionalParameters: {bool expandableValue = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expandableValue,
+    /// optionalParameters: {bool expandableValue = false} , default:processed=BooleanLiteralImpl
+    bool expandableValue = false,
 
-    /// optionalParameters: {bool allowWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowWrap,
+    /// optionalParameters: {bool allowWrap = true} , default:processed=BooleanLiteralImpl
+    bool allowWrap = true,
 
-    /// optionalParameters: {bool allowNameWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowNameWrap,
+    /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
+    bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -854,6 +1375,8 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: style,
           level: level,
         ) {
+    mateCreateName = 'DiagnosticsProperty';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsProperty$Mate<T>(
           p.get('name').value,
           p.get('value').value,
@@ -872,22 +1395,94 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('description', description);
-    matePut('ifNull', ifNull);
-    matePut('ifEmpty', ifEmpty);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('defaultValue', defaultValue);
-    matePut('tooltip', tooltip);
-    matePut('missingIfNull', missingIfNull);
-    matePut('linePrefix', linePrefix);
-    matePut('expandableValue', expandableValue);
-    matePut('allowWrap', allowWrap);
-    matePut('allowNameWrap', allowNameWrap);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'missingIfNull',
+      missingIfNull,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'linePrefix',
+      linePrefix,
+      isNamed: true,
+    );
+    mateUse(
+      'expandableValue',
+      expandableValue,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'allowWrap',
+      allowWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'allowNameWrap',
+      allowNameWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 
   /// DiagnosticsProperty<T> DiagnosticsProperty.lazy(String? name, T? Function() computeValue, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
@@ -897,44 +1492,44 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 
     /// requiredParameters: T? Function() computeValue
     ComputePropertyValueCallback<T> computeValue, {
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {String? ifEmpty} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifEmpty} , default:none
     String? ifEmpty,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
 
-    /// optionalParameters: {bool missingIfNull = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool missingIfNull,
+    /// optionalParameters: {bool missingIfNull = false} , default:processed=BooleanLiteralImpl
+    bool missingIfNull = false,
 
-    /// optionalParameters: {bool expandableValue = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool expandableValue,
+    /// optionalParameters: {bool expandableValue = false} , default:processed=BooleanLiteralImpl
+    bool expandableValue = false,
 
-    /// optionalParameters: {bool allowWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowWrap,
+    /// optionalParameters: {bool allowWrap = true} , default:processed=BooleanLiteralImpl
+    bool allowWrap = true,
 
-    /// optionalParameters: {bool allowNameWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowNameWrap,
+    /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
+    bool allowNameWrap = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super.lazy(
           name,
           computeValue,
@@ -952,6 +1547,8 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: style,
           level: level,
         ) {
+    mateCreateName = 'DiagnosticsProperty.lazy';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsProperty$Mate<T>.lazy(
           p.get('name').value,
           p.get('computeValue').value,
@@ -969,21 +1566,89 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('computeValue', computeValue);
-    matePut('description', description);
-    matePut('ifNull', ifNull);
-    matePut('ifEmpty', ifEmpty);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('defaultValue', defaultValue);
-    matePut('tooltip', tooltip);
-    matePut('missingIfNull', missingIfNull);
-    matePut('expandableValue', expandableValue);
-    matePut('allowWrap', allowWrap);
-    matePut('allowNameWrap', allowNameWrap);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'computeValue',
+      computeValue,
+      isNamed: false,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'ifEmpty',
+      ifEmpty,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
+    mateUse(
+      'missingIfNull',
+      missingIfNull,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'expandableValue',
+      expandableValue,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'allowWrap',
+      allowWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'allowNameWrap',
+      allowNameWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }
 
@@ -991,27 +1656,41 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNode<T> with Mate {
   /// DiagnosticableNode<T> DiagnosticableNode({String? name, required T value, required DiagnosticsTreeStyle? style})
   DiagnosticableNode$Mate({
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {required T value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required T value} , default:none
     required T value,
 
-    /// optionalParameters: {required DiagnosticsTreeStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DiagnosticsTreeStyle? style} , default:none
     required DiagnosticsTreeStyle? style,
   }) : super(
           name: name,
           value: value,
           style: style,
         ) {
+    mateCreateName = 'DiagnosticableNode';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticableNode$Mate<T>(
           name: p.get('name').build(),
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('style', style);
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -1019,27 +1698,41 @@ class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNo
 class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
   /// DiagnosticableTreeNode DiagnosticableTreeNode({String? name, required DiagnosticableTree value, required DiagnosticsTreeStyle? style})
   DiagnosticableTreeNode$Mate({
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {required DiagnosticableTree value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DiagnosticableTree value} , default:none
     required DiagnosticableTree value,
 
-    /// optionalParameters: {required DiagnosticsTreeStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DiagnosticsTreeStyle? style} , default:none
     required DiagnosticsTreeStyle? style,
   }) : super(
           name: name,
           value: value,
           style: style,
         ) {
+    mateCreateName = 'DiagnosticableTreeNode';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticableTreeNode$Mate(
           name: p.get('name').build(),
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('style', style);
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -1051,8 +1744,14 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
       /// requiredParameters: List<DiagnosticsNode> properties
       List<DiagnosticsNode> properties)
       : super.fromProperties(properties) {
+    mateCreateName = 'DiagnosticPropertiesBuilder.fromProperties';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
-    matePut('properties', properties);
+    mateUseList(
+      'properties',
+      properties,
+      isNamed: false,
+    );
   }
 }
 
@@ -1060,37 +1759,37 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with 
 class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
   /// DiagnosticsBlock DiagnosticsBlock({String? name, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace, bool showName = true, bool showSeparator = true, String? linePrefix, Object? value, String? description, DiagnosticLevel level = DiagnosticLevel.info, bool allowTruncate = false, List<DiagnosticsNode> children = const <DiagnosticsNode>[], List<DiagnosticsNode> properties = const <DiagnosticsNode>[]})
   DiagnosticsBlock$Mate({
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.whitespace
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
 
-    /// optionalParameters: {String? linePrefix} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? linePrefix} , default:none
     String? linePrefix,
 
-    /// optionalParameters: {Object? value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? value} , default:none
     Object? value,
 
-    /// optionalParameters: {String? description} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? description} , default:none
     String? description,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
 
-    /// optionalParameters: {bool allowTruncate = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool allowTruncate,
+    /// optionalParameters: {bool allowTruncate = false} , default:processed=BooleanLiteralImpl
+    bool allowTruncate = false,
 
-    /// optionalParameters: {List<DiagnosticsNode> children = const <DiagnosticsNode>[]} , hasDefaultValue:true, defaultValueCode:const <DiagnosticsNode>[]
+    /// optionalParameters: {List<DiagnosticsNode> children = const <DiagnosticsNode>[]} , default:unprocessed=ListLiteralImpl
     required List<DiagnosticsNode> children,
 
-    /// optionalParameters: {List<DiagnosticsNode> properties = const <DiagnosticsNode>[]} , hasDefaultValue:true, defaultValueCode:const <DiagnosticsNode>[]
+    /// optionalParameters: {List<DiagnosticsNode> properties = const <DiagnosticsNode>[]} , default:unprocessed=ListLiteralImpl
     required List<DiagnosticsNode> properties,
   }) : super(
           name: name,
@@ -1105,6 +1804,8 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
           children: children,
           properties: properties,
         ) {
+    mateCreateName = 'DiagnosticsBlock';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsBlock$Mate(
           name: p.get('name').build(),
           style: p.get('style').build(),
@@ -1118,16 +1819,65 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
           children: p.get('children').build(),
           properties: p.get('properties').build(),
         );
-    matePut('name', name);
-    matePut('style', style);
-    matePut('showName', showName);
-    matePut('showSeparator', showSeparator);
-    matePut('linePrefix', linePrefix);
-    matePut('value', value);
-    matePut('description', description);
-    matePut('level', level);
-    matePut('allowTruncate', allowTruncate);
-    matePut('children', children);
-    matePut('properties', properties);
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.whitespace,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'linePrefix',
+      linePrefix,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'description',
+      description,
+      isNamed: true,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
+    mateUse(
+      'allowTruncate',
+      allowTruncate,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUseList(
+      'properties',
+      properties,
+      isNamed: true,
+    );
   }
 }

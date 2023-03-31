@@ -8,87 +8,90 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/reorderable_list.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/scroll_view.dart';
+import 'package:flutter/widgets.dart';
 import 'dart:ui';
 
 /// class ReorderableListView extends StatefulWidget
 class ReorderableListView$Mate extends ReorderableListView with Mate {
   /// ReorderableListView ReorderableListView({Key? key, required List<Widget> children, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ReorderableListView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {required void Function(int, int) onReorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(int, int) onReorder} , default:none
     required ReorderCallback onReorder,
 
-    /// optionalParameters: {void Function(int)? onReorderStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onReorderStart} , default:none
     void Function(int)? onReorderStart,
 
-    /// optionalParameters: {void Function(int)? onReorderEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
     void Function(int)? onReorderEnd,
 
-    /// optionalParameters: {double? itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? itemExtent} , default:none
     double? itemExtent,
 
-    /// optionalParameters: {Widget? prototypeItem} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prototypeItem} , default:none
     Widget? prototypeItem,
 
-    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
     ReorderItemProxyDecorator? proxyDecorator,
 
-    /// optionalParameters: {bool buildDefaultDragHandles = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool buildDefaultDragHandles,
+    /// optionalParameters: {bool buildDefaultDragHandles = true} , default:processed=BooleanLiteralImpl
+    bool buildDefaultDragHandles = true,
 
-    /// optionalParameters: {EdgeInsets? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsets? padding} , default:none
     EdgeInsets? padding,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , default:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? footer} , default:none
     Widget? footer,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    Axis scrollDirection = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? scrollController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? scrollController} , default:none
     ScrollController? scrollController,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , default:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {double anchor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double anchor,
+    /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
+    double anchor = 0.0,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , default:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           children: children,
@@ -115,6 +118,8 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ReorderableListView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableListView$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -141,108 +146,212 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('onReorder', onReorder);
-    matePut('onReorderStart', onReorderStart);
-    matePut('onReorderEnd', onReorderEnd);
-    matePut('itemExtent', itemExtent);
-    matePut('prototypeItem', prototypeItem);
-    matePut('proxyDecorator', proxyDecorator);
-    matePut('buildDefaultDragHandles', buildDefaultDragHandles);
-    matePut('padding', padding);
-    matePut('header', header);
-    matePut('footer', footer);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('scrollController', scrollController);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('anchor', anchor);
-    matePut('cacheExtent', cacheExtent);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorder',
+      onReorder,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderStart',
+      onReorderStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderEnd',
+      onReorderEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'prototypeItem',
+      prototypeItem,
+      isNamed: true,
+    );
+    mateUse(
+      'proxyDecorator',
+      proxyDecorator,
+      isNamed: true,
+    );
+    mateUse(
+      'buildDefaultDragHandles',
+      buildDefaultDragHandles,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'header',
+      header,
+      isNamed: true,
+    );
+    mateUse(
+      'footer',
+      footer,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'scrollController',
+      scrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'shrinkWrap',
+      shrinkWrap,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'cacheExtent',
+      cacheExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'keyboardDismissBehavior',
+      keyboardDismissBehavior,
+      isNamed: true,
+      defaultValue: ScrollViewKeyboardDismissBehavior.manual,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 
   /// ReorderableListView ReorderableListView.builder({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ReorderableListView$Mate.builder({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , default:none
     required IndexedWidgetBuilder itemBuilder,
 
-    /// optionalParameters: {required int itemCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int itemCount} , default:none
     required int itemCount,
 
-    /// optionalParameters: {required void Function(int, int) onReorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(int, int) onReorder} , default:none
     required ReorderCallback onReorder,
 
-    /// optionalParameters: {void Function(int)? onReorderStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onReorderStart} , default:none
     void Function(int)? onReorderStart,
 
-    /// optionalParameters: {void Function(int)? onReorderEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
     void Function(int)? onReorderEnd,
 
-    /// optionalParameters: {double? itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? itemExtent} , default:none
     double? itemExtent,
 
-    /// optionalParameters: {Widget? prototypeItem} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? prototypeItem} , default:none
     Widget? prototypeItem,
 
-    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
     ReorderItemProxyDecorator? proxyDecorator,
 
-    /// optionalParameters: {bool buildDefaultDragHandles = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool buildDefaultDragHandles,
+    /// optionalParameters: {bool buildDefaultDragHandles = true} , default:processed=BooleanLiteralImpl
+    bool buildDefaultDragHandles = true,
 
-    /// optionalParameters: {EdgeInsets? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsets? padding} , default:none
     EdgeInsets? padding,
 
-    /// optionalParameters: {Widget? header} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? header} , default:none
     Widget? header,
 
-    /// optionalParameters: {Widget? footer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? footer} , default:none
     Widget? footer,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
-    required Axis scrollDirection,
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    Axis scrollDirection = Axis.vertical,
 
-    /// optionalParameters: {bool reverse = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reverse,
+    /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
+    bool reverse = false,
 
-    /// optionalParameters: {ScrollController? scrollController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? scrollController} , default:none
     ScrollController? scrollController,
 
-    /// optionalParameters: {bool? primary} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? primary} , default:none
     bool? primary,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {bool shrinkWrap = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool shrinkWrap,
+    /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
+    bool shrinkWrap = false,
 
-    /// optionalParameters: {double anchor = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double anchor,
+    /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
+    double anchor = 0.0,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , default:none
     double? cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , hasDefaultValue:true, defaultValueCode:ScrollViewKeyboardDismissBehavior.manual
-    required ScrollViewKeyboardDismissBehavior keyboardDismissBehavior,
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super.builder(
           key: key,
           itemBuilder: itemBuilder,
@@ -270,6 +379,8 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ReorderableListView.builder';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableListView$Mate.builder(
           key: p.get('key').build(),
           itemBuilder: p.get('itemBuilder').build(),
@@ -297,30 +408,138 @@ class ReorderableListView$Mate extends ReorderableListView with Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('itemBuilder', itemBuilder);
-    matePut('itemCount', itemCount);
-    matePut('onReorder', onReorder);
-    matePut('onReorderStart', onReorderStart);
-    matePut('onReorderEnd', onReorderEnd);
-    matePut('itemExtent', itemExtent);
-    matePut('prototypeItem', prototypeItem);
-    matePut('proxyDecorator', proxyDecorator);
-    matePut('buildDefaultDragHandles', buildDefaultDragHandles);
-    matePut('padding', padding);
-    matePut('header', header);
-    matePut('footer', footer);
-    matePut('scrollDirection', scrollDirection);
-    matePut('reverse', reverse);
-    matePut('scrollController', scrollController);
-    matePut('primary', primary);
-    matePut('physics', physics);
-    matePut('shrinkWrap', shrinkWrap);
-    matePut('anchor', anchor);
-    matePut('cacheExtent', cacheExtent);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('keyboardDismissBehavior', keyboardDismissBehavior);
-    matePut('restorationId', restorationId);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'itemBuilder',
+      itemBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'itemCount',
+      itemCount,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorder',
+      onReorder,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderStart',
+      onReorderStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onReorderEnd',
+      onReorderEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'prototypeItem',
+      prototypeItem,
+      isNamed: true,
+    );
+    mateUse(
+      'proxyDecorator',
+      proxyDecorator,
+      isNamed: true,
+    );
+    mateUse(
+      'buildDefaultDragHandles',
+      buildDefaultDragHandles,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'header',
+      header,
+      isNamed: true,
+    );
+    mateUse(
+      'footer',
+      footer,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollDirection',
+      scrollDirection,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'reverse',
+      reverse,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'scrollController',
+      scrollController,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'shrinkWrap',
+      shrinkWrap,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'cacheExtent',
+      cacheExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'keyboardDismissBehavior',
+      keyboardDismissBehavior,
+      isNamed: true,
+      defaultValue: ScrollViewKeyboardDismissBehavior.manual,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

@@ -3,32 +3,33 @@
 import 'package:flutter/src/rendering/table_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 
 /// class TableBorder
 class TableBorder$Mate extends TableBorder with Mate {
   /// TableBorder TableBorder({BorderSide top = BorderSide.none, BorderSide right = BorderSide.none, BorderSide bottom = BorderSide.none, BorderSide left = BorderSide.none, BorderSide horizontalInside = BorderSide.none, BorderSide verticalInside = BorderSide.none, BorderRadius borderRadius = BorderRadius.zero})
   TableBorder$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide top,
+    /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide top = BorderSide.none,
 
-    /// optionalParameters: {BorderSide right = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide right,
+    /// optionalParameters: {BorderSide right = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide right = BorderSide.none,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide bottom,
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide bottom = BorderSide.none,
 
-    /// optionalParameters: {BorderSide left = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide left,
+    /// optionalParameters: {BorderSide left = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide left = BorderSide.none,
 
-    /// optionalParameters: {BorderSide horizontalInside = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide horizontalInside,
+    /// optionalParameters: {BorderSide horizontalInside = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide horizontalInside = BorderSide.none,
 
-    /// optionalParameters: {BorderSide verticalInside = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide verticalInside,
+    /// optionalParameters: {BorderSide verticalInside = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide verticalInside = BorderSide.none,
 
-    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , hasDefaultValue:true, defaultValueCode:BorderRadius.zero
-    required BorderRadius borderRadius,
+    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
+    BorderRadius borderRadius = BorderRadius.zero,
   }) : super(
           top: top,
           right: right,
@@ -38,6 +39,8 @@ class TableBorder$Mate extends TableBorder with Mate {
           verticalInside: verticalInside,
           borderRadius: borderRadius,
         ) {
+    mateCreateName = 'TableBorder';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TableBorder$Mate(
           top: p.get('top').build(),
           right: p.get('right').build(),
@@ -47,12 +50,47 @@ class TableBorder$Mate extends TableBorder with Mate {
           verticalInside: p.get('verticalInside').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    matePut('top', top);
-    matePut('right', right);
-    matePut('bottom', bottom);
-    matePut('left', left);
-    matePut('horizontalInside', horizontalInside);
-    matePut('verticalInside', verticalInside);
-    matePut('borderRadius', borderRadius);
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'horizontalInside',
+      horizontalInside,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'verticalInside',
+      verticalInside,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+      defaultValue: BorderRadius.zero,
+    );
   }
 }

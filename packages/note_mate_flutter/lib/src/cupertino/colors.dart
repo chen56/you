@@ -9,31 +9,31 @@ import 'dart:ui';
 class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
   /// CupertinoDynamicColor CupertinoDynamicColor({String? debugLabel, required Color color, required Color darkColor, required Color highContrastColor, required Color darkHighContrastColor, required Color elevatedColor, required Color darkElevatedColor, required Color highContrastElevatedColor, required Color darkHighContrastElevatedColor})
   CupertinoDynamicColor$Mate({
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {required Color darkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color darkColor} , default:none
     required Color darkColor,
 
-    /// optionalParameters: {required Color highContrastColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color highContrastColor} , default:none
     required Color highContrastColor,
 
-    /// optionalParameters: {required Color darkHighContrastColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color darkHighContrastColor} , default:none
     required Color darkHighContrastColor,
 
-    /// optionalParameters: {required Color elevatedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color elevatedColor} , default:none
     required Color elevatedColor,
 
-    /// optionalParameters: {required Color darkElevatedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color darkElevatedColor} , default:none
     required Color darkElevatedColor,
 
-    /// optionalParameters: {required Color highContrastElevatedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color highContrastElevatedColor} , default:none
     required Color highContrastElevatedColor,
 
-    /// optionalParameters: {required Color darkHighContrastElevatedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color darkHighContrastElevatedColor} , default:none
     required Color darkHighContrastElevatedColor,
   }) : super(
           debugLabel: debugLabel,
@@ -46,6 +46,8 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           highContrastElevatedColor: highContrastElevatedColor,
           darkHighContrastElevatedColor: darkHighContrastElevatedColor,
         ) {
+    mateCreateName = 'CupertinoDynamicColor';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate(
           debugLabel: p.get('debugLabel').build(),
           color: p.get('color').build(),
@@ -57,32 +59,68 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           highContrastElevatedColor: p.get('highContrastElevatedColor').build(),
           darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').build(),
         );
-    matePut('debugLabel', debugLabel);
-    matePut('color', color);
-    matePut('darkColor', darkColor);
-    matePut('highContrastColor', highContrastColor);
-    matePut('darkHighContrastColor', darkHighContrastColor);
-    matePut('elevatedColor', elevatedColor);
-    matePut('darkElevatedColor', darkElevatedColor);
-    matePut('highContrastElevatedColor', highContrastElevatedColor);
-    matePut('darkHighContrastElevatedColor', darkHighContrastElevatedColor);
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'darkColor',
+      darkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highContrastColor',
+      highContrastColor,
+      isNamed: true,
+    );
+    mateUse(
+      'darkHighContrastColor',
+      darkHighContrastColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevatedColor',
+      elevatedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'darkElevatedColor',
+      darkElevatedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highContrastElevatedColor',
+      highContrastElevatedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'darkHighContrastElevatedColor',
+      darkHighContrastElevatedColor,
+      isNamed: true,
+    );
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightnessAndContrast({String? debugLabel, required Color color, required Color darkColor, required Color highContrastColor, required Color darkHighContrastColor})
   CupertinoDynamicColor$Mate.withBrightnessAndContrast({
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {required Color darkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color darkColor} , default:none
     required Color darkColor,
 
-    /// optionalParameters: {required Color highContrastColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color highContrastColor} , default:none
     required Color highContrastColor,
 
-    /// optionalParameters: {required Color darkHighContrastColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color darkHighContrastColor} , default:none
     required Color darkHighContrastColor,
   }) : super.withBrightnessAndContrast(
           debugLabel: debugLabel,
@@ -91,6 +129,8 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           highContrastColor: highContrastColor,
           darkHighContrastColor: darkHighContrastColor,
         ) {
+    mateCreateName = 'CupertinoDynamicColor.withBrightnessAndContrast';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate.withBrightnessAndContrast(
           debugLabel: p.get('debugLabel').build(),
           color: p.get('color').build(),
@@ -98,35 +138,69 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           highContrastColor: p.get('highContrastColor').build(),
           darkHighContrastColor: p.get('darkHighContrastColor').build(),
         );
-    matePut('debugLabel', debugLabel);
-    matePut('color', color);
-    matePut('darkColor', darkColor);
-    matePut('highContrastColor', highContrastColor);
-    matePut('darkHighContrastColor', darkHighContrastColor);
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'darkColor',
+      darkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highContrastColor',
+      highContrastColor,
+      isNamed: true,
+    );
+    mateUse(
+      'darkHighContrastColor',
+      darkHighContrastColor,
+      isNamed: true,
+    );
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightness({String? debugLabel, required Color color, required Color darkColor})
   CupertinoDynamicColor$Mate.withBrightness({
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {required Color darkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color darkColor} , default:none
     required Color darkColor,
   }) : super.withBrightness(
           debugLabel: debugLabel,
           color: color,
           darkColor: darkColor,
         ) {
+    mateCreateName = 'CupertinoDynamicColor.withBrightness';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate.withBrightness(
           debugLabel: p.get('debugLabel').build(),
           color: p.get('color').build(),
           darkColor: p.get('darkColor').build(),
         );
-    matePut('debugLabel', debugLabel);
-    matePut('color', color);
-    matePut('darkColor', darkColor);
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'darkColor',
+      darkColor,
+      isNamed: true,
+    );
   }
 }

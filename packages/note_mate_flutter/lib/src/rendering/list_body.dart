@@ -5,25 +5,37 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 
 /// class RenderListBody extends RenderBox with ContainerRenderObjectMixin<RenderBox, ListBodyParentData>, RenderBoxContainerDefaultsMixin<RenderBox, ListBodyParentData>
 class RenderListBody$Mate extends RenderListBody with Mate {
   /// RenderListBody RenderListBody({List<RenderBox>? children, AxisDirection axisDirection = AxisDirection.down})
   RenderListBody$Mate({
-    /// optionalParameters: {List<RenderBox>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<RenderBox>? children} , default:none
     List<RenderBox>? children,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
-    required AxisDirection axisDirection,
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
+    AxisDirection axisDirection = AxisDirection.down,
   }) : super(
           children: children,
           axisDirection: axisDirection,
         ) {
+    mateCreateName = 'RenderListBody';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderListBody$Mate(
           children: p.get('children').build(),
           axisDirection: p.get('axisDirection').build(),
         );
-    matePut('children', children);
-    matePut('axisDirection', axisDirection);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+      defaultValue: AxisDirection.down,
+    );
   }
 }

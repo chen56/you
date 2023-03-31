@@ -4,53 +4,56 @@ import 'package:flutter/src/widgets/scrollable.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/scroll_metrics.dart';
+import 'package:flutter/widgets.dart';
 
 /// class Scrollable extends StatefulWidget
 class Scrollable$Mate extends Scrollable with Mate {
   /// Scrollable Scrollable({Key? key, AxisDirection axisDirection = AxisDirection.down, ScrollController? controller, ScrollPhysics? physics, required Widget Function(BuildContext, ViewportOffset) viewportBuilder, double Function(ScrollIncrementDetails)? incrementCalculator, bool excludeFromSemantics = false, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, String? restorationId, ScrollBehavior? scrollBehavior, Clip clipBehavior = Clip.hardEdge})
   Scrollable$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , hasDefaultValue:true, defaultValueCode:AxisDirection.down
-    required AxisDirection axisDirection,
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
+    AxisDirection axisDirection = AxisDirection.down,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {required Widget Function(BuildContext, ViewportOffset) viewportBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, ViewportOffset) viewportBuilder} , default:none
     required ViewportBuilder viewportBuilder,
 
-    /// optionalParameters: {double Function(ScrollIncrementDetails)? incrementCalculator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double Function(ScrollIncrementDetails)? incrementCalculator} , default:none
     ScrollIncrementCalculator? incrementCalculator,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {int? semanticChildCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? semanticChildCount} , default:none
     int? semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           axisDirection: axisDirection,
@@ -65,6 +68,8 @@ class Scrollable$Mate extends Scrollable with Mate {
           scrollBehavior: scrollBehavior,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'Scrollable';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Scrollable$Mate(
           key: p.get('key').build(),
           axisDirection: p.get('axisDirection').build(),
@@ -79,18 +84,70 @@ class Scrollable$Mate extends Scrollable with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('axisDirection', axisDirection);
-    matePut('controller', controller);
-    matePut('physics', physics);
-    matePut('viewportBuilder', viewportBuilder);
-    matePut('incrementCalculator', incrementCalculator);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('semanticChildCount', semanticChildCount);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('restorationId', restorationId);
-    matePut('scrollBehavior', scrollBehavior);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+      defaultValue: AxisDirection.down,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'viewportBuilder',
+      viewportBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'incrementCalculator',
+      incrementCalculator,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'semanticChildCount',
+      semanticChildCount,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollBehavior',
+      scrollBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -100,24 +157,38 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
   EdgeDraggingAutoScroller$Mate(
     /// requiredParameters: ScrollableState scrollable
     ScrollableState scrollable, {
-    /// optionalParameters: {void Function()? onScrollViewScrolled} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onScrollViewScrolled} , default:none
     VoidCallback? onScrollViewScrolled,
 
-    /// optionalParameters: {double velocityScalar = _kDefaultAutoScrollVelocityScalar} , hasDefaultValue:true, defaultValueCode:_kDefaultAutoScrollVelocityScalar
+    /// optionalParameters: {double velocityScalar = _kDefaultAutoScrollVelocityScalar} , default:unprocessed=SimpleIdentifierImpl
     required double velocityScalar,
   }) : super(
           scrollable,
           onScrollViewScrolled: onScrollViewScrolled,
           velocityScalar: velocityScalar,
         ) {
+    mateCreateName = 'EdgeDraggingAutoScroller';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => EdgeDraggingAutoScroller$Mate(
           p.get('scrollable').value,
           onScrollViewScrolled: p.get('onScrollViewScrolled').build(),
           velocityScalar: p.get('velocityScalar').build(),
         );
-    matePut('scrollable', scrollable);
-    matePut('onScrollViewScrolled', onScrollViewScrolled);
-    matePut('velocityScalar', velocityScalar);
+    mateUse(
+      'scrollable',
+      scrollable,
+      isNamed: false,
+    );
+    mateUse(
+      'onScrollViewScrolled',
+      onScrollViewScrolled,
+      isNamed: true,
+    );
+    mateUse(
+      'velocityScalar',
+      velocityScalar,
+      isNamed: true,
+    );
   }
 }
 
@@ -125,27 +196,41 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
 class ScrollableDetails$Mate extends ScrollableDetails with Mate {
   /// ScrollableDetails ScrollableDetails({required AxisDirection direction, required ScrollController controller, Clip? clipBehavior})
   ScrollableDetails$Mate({
-    /// optionalParameters: {required AxisDirection direction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection direction} , default:none
     required AxisDirection direction,
 
-    /// optionalParameters: {required ScrollController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollController controller} , default:none
     required ScrollController controller,
 
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
   }) : super(
           direction: direction,
           controller: controller,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ScrollableDetails';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollableDetails$Mate(
           direction: p.get('direction').build(),
           controller: p.get('controller').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('direction', direction);
-    matePut('controller', controller);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
   }
 }
 
@@ -153,21 +238,31 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate {
 class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
   /// ScrollIncrementDetails ScrollIncrementDetails({required ScrollIncrementType type, required ScrollMetrics metrics})
   ScrollIncrementDetails$Mate({
-    /// optionalParameters: {required ScrollIncrementType type} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollIncrementType type} , default:none
     required ScrollIncrementType type,
 
-    /// optionalParameters: {required ScrollMetrics metrics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollMetrics metrics} , default:none
     required ScrollMetrics metrics,
   }) : super(
           type: type,
           metrics: metrics,
         ) {
+    mateCreateName = 'ScrollIncrementDetails';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollIncrementDetails$Mate(
           type: p.get('type').build(),
           metrics: p.get('metrics').build(),
         );
-    matePut('type', type);
-    matePut('metrics', metrics);
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+    );
+    mateUse(
+      'metrics',
+      metrics,
+      isNamed: true,
+    );
   }
 }
 
@@ -175,20 +270,31 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
 class ScrollIntent$Mate extends ScrollIntent with Mate {
   /// ScrollIntent ScrollIntent({required AxisDirection direction, ScrollIncrementType type = ScrollIncrementType.line})
   ScrollIntent$Mate({
-    /// optionalParameters: {required AxisDirection direction} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection direction} , default:none
     required AxisDirection direction,
 
-    /// optionalParameters: {ScrollIncrementType type = ScrollIncrementType.line} , hasDefaultValue:true, defaultValueCode:ScrollIncrementType.line
-    required ScrollIncrementType type,
+    /// optionalParameters: {ScrollIncrementType type = ScrollIncrementType.line} , default:processed=PrefixedIdentifierImpl
+    ScrollIncrementType type = ScrollIncrementType.line,
   }) : super(
           direction: direction,
           type: type,
         ) {
+    mateCreateName = 'ScrollIntent';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollIntent$Mate(
           direction: p.get('direction').build(),
           type: p.get('type').build(),
         );
-    matePut('direction', direction);
-    matePut('type', type);
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+    );
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+      defaultValue: ScrollIncrementType.line,
+    );
   }
 }

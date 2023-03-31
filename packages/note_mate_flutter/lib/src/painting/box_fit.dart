@@ -17,11 +17,21 @@ class FittedSizes$Mate extends FittedSizes with Mate {
           source,
           destination,
         ) {
+    mateCreateName = 'FittedSizes';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => FittedSizes$Mate(
           p.get('source').value,
           p.get('destination').value,
         );
-    matePut('source', source);
-    matePut('destination', destination);
+    mateUse(
+      'source',
+      source,
+      isNamed: false,
+    );
+    mateUse(
+      'destination',
+      destination,
+      isNamed: false,
+    );
   }
 }

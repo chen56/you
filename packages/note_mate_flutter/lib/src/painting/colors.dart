@@ -5,6 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/foundation/diagnostics.dart';
+import 'package:flutter/foundation.dart';
 
 /// class HSVColor
 class HSVColor$Mate extends HSVColor with Mate {
@@ -27,16 +28,34 @@ class HSVColor$Mate extends HSVColor with Mate {
           saturation,
           value,
         ) {
+    mateCreateName = 'HSVColor.fromAHSV';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => HSVColor$Mate.fromAHSV(
           p.get('alpha').value,
           p.get('hue').value,
           p.get('saturation').value,
           p.get('value').value,
         );
-    matePut('alpha', alpha);
-    matePut('hue', hue);
-    matePut('saturation', saturation);
-    matePut('value', value);
+    mateUse(
+      'alpha',
+      alpha,
+      isNamed: false,
+    );
+    mateUse(
+      'hue',
+      hue,
+      isNamed: false,
+    );
+    mateUse(
+      'saturation',
+      saturation,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }
 
@@ -61,16 +80,34 @@ class HSLColor$Mate extends HSLColor with Mate {
           saturation,
           lightness,
         ) {
+    mateCreateName = 'HSLColor.fromAHSL';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => HSLColor$Mate.fromAHSL(
           p.get('alpha').value,
           p.get('hue').value,
           p.get('saturation').value,
           p.get('lightness').value,
         );
-    matePut('alpha', alpha);
-    matePut('hue', hue);
-    matePut('saturation', saturation);
-    matePut('lightness', lightness);
+    mateUse(
+      'alpha',
+      alpha,
+      isNamed: false,
+    );
+    mateUse(
+      'hue',
+      hue,
+      isNamed: false,
+    );
+    mateUse(
+      'saturation',
+      saturation,
+      isNamed: false,
+    );
+    mateUse(
+      'lightness',
+      lightness,
+      isNamed: false,
+    );
   }
 }
 
@@ -87,12 +124,22 @@ class ColorSwatch$Mate<T> extends ColorSwatch<T> with Mate {
           primary,
           _swatch,
         ) {
+    mateCreateName = 'ColorSwatch';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ColorSwatch$Mate<T>(
           p.get('primary').value,
           p.get('_swatch').value,
         );
-    matePut('primary', primary);
-    matePut('_swatch', _swatch);
+    mateUse(
+      'primary',
+      primary,
+      isNamed: false,
+    );
+    mateUse(
+      '_swatch',
+      _swatch,
+      isNamed: false,
+    );
   }
 }
 
@@ -105,17 +152,17 @@ class ColorProperty$Mate extends ColorProperty with Mate {
 
     /// requiredParameters: Color? value
     Color? value, {
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , hasDefaultValue:true, defaultValueCode:kNoDefaultValue
-    Object? defaultValue,
+    /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
+    required Object? defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -124,6 +171,8 @@ class ColorProperty$Mate extends ColorProperty with Mate {
           style: style,
           level: level,
         ) {
+    mateCreateName = 'ColorProperty';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ColorProperty$Mate(
           p.get('name').value,
           p.get('value').value,
@@ -132,11 +181,38 @@ class ColorProperty$Mate extends ColorProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('showName', showName);
-    matePut('defaultValue', defaultValue);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'defaultValue',
+      defaultValue,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }

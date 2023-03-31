@@ -13,8 +13,14 @@ class BorderRadius$Mate extends BorderRadius with Mate {
       /// requiredParameters: Radius radius
       Radius radius)
       : super.all(radius) {
+    mateCreateName = 'BorderRadius.all';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.all(p.get('radius').value);
-    matePut('radius', radius);
+    mateUse(
+      'radius',
+      radius,
+      isNamed: false,
+    );
   }
 
   /// BorderRadius BorderRadius.circular(double radius)
@@ -23,77 +29,129 @@ class BorderRadius$Mate extends BorderRadius with Mate {
       /// requiredParameters: double radius
       double radius)
       : super.circular(radius) {
+    mateCreateName = 'BorderRadius.circular';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.circular(p.get('radius').value);
-    matePut('radius', radius);
+    mateUse(
+      'radius',
+      radius,
+      isNamed: false,
+    );
   }
 
   /// BorderRadius BorderRadius.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
   BorderRadius$Mate.vertical({
-    /// optionalParameters: {Radius top = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius top,
+    /// optionalParameters: {Radius top = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius top = Radius.zero,
 
-    /// optionalParameters: {Radius bottom = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius bottom,
+    /// optionalParameters: {Radius bottom = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius bottom = Radius.zero,
   }) : super.vertical(
           top: top,
           bottom: bottom,
         ) {
+    mateCreateName = 'BorderRadius.vertical';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.vertical(
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    matePut('top', top);
-    matePut('bottom', bottom);
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
   }
 
   /// BorderRadius BorderRadius.horizontal({Radius left = Radius.zero, Radius right = Radius.zero})
   BorderRadius$Mate.horizontal({
-    /// optionalParameters: {Radius left = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius left,
+    /// optionalParameters: {Radius left = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius left = Radius.zero,
 
-    /// optionalParameters: {Radius right = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius right,
+    /// optionalParameters: {Radius right = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius right = Radius.zero,
   }) : super.horizontal(
           left: left,
           right: right,
         ) {
+    mateCreateName = 'BorderRadius.horizontal';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.horizontal(
           left: p.get('left').build(),
           right: p.get('right').build(),
         );
-    matePut('left', left);
-    matePut('right', right);
+    mateUse(
+      'left',
+      left,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'right',
+      right,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
   }
 
   /// BorderRadius BorderRadius.only({Radius topLeft = Radius.zero, Radius topRight = Radius.zero, Radius bottomLeft = Radius.zero, Radius bottomRight = Radius.zero})
   BorderRadius$Mate.only({
-    /// optionalParameters: {Radius topLeft = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius topLeft,
+    /// optionalParameters: {Radius topLeft = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius topLeft = Radius.zero,
 
-    /// optionalParameters: {Radius topRight = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius topRight,
+    /// optionalParameters: {Radius topRight = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius topRight = Radius.zero,
 
-    /// optionalParameters: {Radius bottomLeft = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius bottomLeft,
+    /// optionalParameters: {Radius bottomLeft = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius bottomLeft = Radius.zero,
 
-    /// optionalParameters: {Radius bottomRight = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius bottomRight,
+    /// optionalParameters: {Radius bottomRight = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius bottomRight = Radius.zero,
   }) : super.only(
           topLeft: topLeft,
           topRight: topRight,
           bottomLeft: bottomLeft,
           bottomRight: bottomRight,
         ) {
+    mateCreateName = 'BorderRadius.only';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.only(
           topLeft: p.get('topLeft').build(),
           topRight: p.get('topRight').build(),
           bottomLeft: p.get('bottomLeft').build(),
           bottomRight: p.get('bottomRight').build(),
         );
-    matePut('topLeft', topLeft);
-    matePut('topRight', topRight);
-    matePut('bottomLeft', bottomLeft);
-    matePut('bottomRight', bottomRight);
+    mateUse(
+      'topLeft',
+      topLeft,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'topRight',
+      topRight,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'bottomLeft',
+      bottomLeft,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'bottomRight',
+      bottomRight,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
   }
 }
 
@@ -105,8 +163,14 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       /// requiredParameters: Radius radius
       Radius radius)
       : super.all(radius) {
+    mateCreateName = 'BorderRadiusDirectional.all';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
-    matePut('radius', radius);
+    mateUse(
+      'radius',
+      radius,
+      isNamed: false,
+    );
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.circular(double radius)
@@ -115,76 +179,128 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       /// requiredParameters: double radius
       double radius)
       : super.circular(radius) {
+    mateCreateName = 'BorderRadiusDirectional.circular';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
-    matePut('radius', radius);
+    mateUse(
+      'radius',
+      radius,
+      isNamed: false,
+    );
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
   BorderRadiusDirectional$Mate.vertical({
-    /// optionalParameters: {Radius top = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius top,
+    /// optionalParameters: {Radius top = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius top = Radius.zero,
 
-    /// optionalParameters: {Radius bottom = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius bottom,
+    /// optionalParameters: {Radius bottom = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius bottom = Radius.zero,
   }) : super.vertical(
           top: top,
           bottom: bottom,
         ) {
+    mateCreateName = 'BorderRadiusDirectional.vertical';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.vertical(
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    matePut('top', top);
-    matePut('bottom', bottom);
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.horizontal({Radius start = Radius.zero, Radius end = Radius.zero})
   BorderRadiusDirectional$Mate.horizontal({
-    /// optionalParameters: {Radius start = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius start,
+    /// optionalParameters: {Radius start = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius start = Radius.zero,
 
-    /// optionalParameters: {Radius end = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius end,
+    /// optionalParameters: {Radius end = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius end = Radius.zero,
   }) : super.horizontal(
           start: start,
           end: end,
         ) {
+    mateCreateName = 'BorderRadiusDirectional.horizontal';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.horizontal(
           start: p.get('start').build(),
           end: p.get('end').build(),
         );
-    matePut('start', start);
-    matePut('end', end);
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
   }
 
   /// BorderRadiusDirectional BorderRadiusDirectional.only({Radius topStart = Radius.zero, Radius topEnd = Radius.zero, Radius bottomStart = Radius.zero, Radius bottomEnd = Radius.zero})
   BorderRadiusDirectional$Mate.only({
-    /// optionalParameters: {Radius topStart = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius topStart,
+    /// optionalParameters: {Radius topStart = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius topStart = Radius.zero,
 
-    /// optionalParameters: {Radius topEnd = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius topEnd,
+    /// optionalParameters: {Radius topEnd = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius topEnd = Radius.zero,
 
-    /// optionalParameters: {Radius bottomStart = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius bottomStart,
+    /// optionalParameters: {Radius bottomStart = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius bottomStart = Radius.zero,
 
-    /// optionalParameters: {Radius bottomEnd = Radius.zero} , hasDefaultValue:true, defaultValueCode:Radius.zero
-    required Radius bottomEnd,
+    /// optionalParameters: {Radius bottomEnd = Radius.zero} , default:processed=PrefixedIdentifierImpl
+    Radius bottomEnd = Radius.zero,
   }) : super.only(
           topStart: topStart,
           topEnd: topEnd,
           bottomStart: bottomStart,
           bottomEnd: bottomEnd,
         ) {
+    mateCreateName = 'BorderRadiusDirectional.only';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.only(
           topStart: p.get('topStart').build(),
           topEnd: p.get('topEnd').build(),
           bottomStart: p.get('bottomStart').build(),
           bottomEnd: p.get('bottomEnd').build(),
         );
-    matePut('topStart', topStart);
-    matePut('topEnd', topEnd);
-    matePut('bottomStart', bottomStart);
-    matePut('bottomEnd', bottomEnd);
+    mateUse(
+      'topStart',
+      topStart,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'topEnd',
+      topEnd,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'bottomStart',
+      bottomStart,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
+    mateUse(
+      'bottomEnd',
+      bottomEnd,
+      isNamed: true,
+      defaultValue: Radius.zero,
+    );
   }
 }

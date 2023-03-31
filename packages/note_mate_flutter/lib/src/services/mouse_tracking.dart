@@ -3,38 +3,59 @@
 import 'package:flutter/src/services/mouse_tracking.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
+import 'package:flutter/services.dart';
 import 'dart:core';
 
 /// class MouseTrackerAnnotation with Diagnosticable
 class MouseTrackerAnnotation$Mate extends MouseTrackerAnnotation with Mate {
   /// MouseTrackerAnnotation MouseTrackerAnnotation({void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, MouseCursor cursor = MouseCursor.defer, bool validForMouseTracker = true})
   MouseTrackerAnnotation$Mate({
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , hasDefaultValue:true, defaultValueCode:MouseCursor.defer
-    required MouseCursor cursor,
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
+    MouseCursor cursor = MouseCursor.defer,
 
-    /// optionalParameters: {bool validForMouseTracker = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool validForMouseTracker,
+    /// optionalParameters: {bool validForMouseTracker = true} , default:processed=BooleanLiteralImpl
+    bool validForMouseTracker = true,
   }) : super(
           onEnter: onEnter,
           onExit: onExit,
           cursor: cursor,
           validForMouseTracker: validForMouseTracker,
         ) {
+    mateCreateName = 'MouseTrackerAnnotation';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MouseTrackerAnnotation$Mate(
           onEnter: p.get('onEnter').build(),
           onExit: p.get('onExit').build(),
           cursor: p.get('cursor').build(),
           validForMouseTracker: p.get('validForMouseTracker').build(),
         );
-    matePut('onEnter', onEnter);
-    matePut('onExit', onExit);
-    matePut('cursor', cursor);
-    matePut('validForMouseTracker', validForMouseTracker);
+    mateUse(
+      'onEnter',
+      onEnter,
+      isNamed: true,
+    );
+    mateUse(
+      'onExit',
+      onExit,
+      isNamed: true,
+    );
+    mateUse(
+      'cursor',
+      cursor,
+      isNamed: true,
+      defaultValue: MouseCursor.defer,
+    );
+    mateUse(
+      'validForMouseTracker',
+      validForMouseTracker,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

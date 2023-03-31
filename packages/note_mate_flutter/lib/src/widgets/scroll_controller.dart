@@ -8,27 +8,43 @@ import 'dart:core';
 class ScrollController$Mate extends ScrollController with Mate {
   /// ScrollController ScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   ScrollController$Mate({
-    /// optionalParameters: {double initialScrollOffset = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double initialScrollOffset,
+    /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
+    double initialScrollOffset = 0.0,
 
-    /// optionalParameters: {bool keepScrollOffset = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool keepScrollOffset,
+    /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
+    bool keepScrollOffset = true,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           initialScrollOffset: initialScrollOffset,
           keepScrollOffset: keepScrollOffset,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'ScrollController';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollController$Mate(
           initialScrollOffset: p.get('initialScrollOffset').build(),
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('initialScrollOffset', initialScrollOffset);
-    matePut('keepScrollOffset', keepScrollOffset);
-    matePut('debugLabel', debugLabel);
+    mateUse(
+      'initialScrollOffset',
+      initialScrollOffset,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'keepScrollOffset',
+      keepScrollOffset,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -36,26 +52,42 @@ class ScrollController$Mate extends ScrollController with Mate {
 class TrackingScrollController$Mate extends TrackingScrollController with Mate {
   /// TrackingScrollController TrackingScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   TrackingScrollController$Mate({
-    /// optionalParameters: {double initialScrollOffset = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double initialScrollOffset,
+    /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
+    double initialScrollOffset = 0.0,
 
-    /// optionalParameters: {bool keepScrollOffset = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool keepScrollOffset,
+    /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
+    bool keepScrollOffset = true,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           initialScrollOffset: initialScrollOffset,
           keepScrollOffset: keepScrollOffset,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'TrackingScrollController';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TrackingScrollController$Mate(
           initialScrollOffset: p.get('initialScrollOffset').build(),
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('initialScrollOffset', initialScrollOffset);
-    matePut('keepScrollOffset', keepScrollOffset);
-    matePut('debugLabel', debugLabel);
+    mateUse(
+      'initialScrollOffset',
+      initialScrollOffset,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'keepScrollOffset',
+      keepScrollOffset,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }

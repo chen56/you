@@ -11,22 +11,22 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
   /// BottomAppBarTheme BottomAppBarTheme({Color? color, double? elevation, NotchedShape? shape, double? height, Color? surfaceTintColor, EdgeInsetsGeometry? padding})
   BottomAppBarTheme$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {NotchedShape? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {NotchedShape? shape} , default:none
     NotchedShape? shape,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
   }) : super(
           color: color,
@@ -36,6 +36,8 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
           surfaceTintColor: surfaceTintColor,
           padding: padding,
         ) {
+    mateCreateName = 'BottomAppBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomAppBarTheme$Mate(
           color: p.get('color').build(),
           elevation: p.get('elevation').build(),
@@ -44,11 +46,35 @@ class BottomAppBarTheme$Mate extends BottomAppBarTheme with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           padding: p.get('padding').build(),
         );
-    matePut('color', color);
-    matePut('elevation', elevation);
-    matePut('shape', shape);
-    matePut('height', height);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('padding', padding);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
   }
 }

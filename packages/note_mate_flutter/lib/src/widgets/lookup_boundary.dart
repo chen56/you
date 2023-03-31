@@ -9,20 +9,30 @@ import 'package:flutter/src/widgets/framework.dart';
 class LookupBoundary$Mate extends LookupBoundary with Mate {
   /// LookupBoundary LookupBoundary({Key? key, required Widget child})
   LookupBoundary$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'LookupBoundary';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LookupBoundary$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

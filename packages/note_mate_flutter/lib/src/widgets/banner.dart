@@ -12,22 +12,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class BannerPainter$Mate extends BannerPainter with Mate {
   /// BannerPainter BannerPainter({required String message, required TextDirection textDirection, required BannerLocation location, required TextDirection layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   BannerPainter$Mate({
-    /// optionalParameters: {required String message} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String message} , default:none
     required String message,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {required BannerLocation location} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BannerLocation location} , default:none
     required BannerLocation location,
 
-    /// optionalParameters: {required TextDirection layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection layoutDirection} , default:none
     required TextDirection layoutDirection,
 
-    /// optionalParameters: {Color color = _kColor} , hasDefaultValue:true, defaultValueCode:_kColor
+    /// optionalParameters: {Color color = _kColor} , default:unprocessed=SimpleIdentifierImpl
     required Color color,
 
-    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , hasDefaultValue:true, defaultValueCode:_kTextStyle
+    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , default:unprocessed=SimpleIdentifierImpl
     required TextStyle textStyle,
   }) : super(
           message: message,
@@ -37,6 +37,8 @@ class BannerPainter$Mate extends BannerPainter with Mate {
           color: color,
           textStyle: textStyle,
         ) {
+    mateCreateName = 'BannerPainter';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BannerPainter$Mate(
           message: p.get('message').build(),
           textDirection: p.get('textDirection').build(),
@@ -45,12 +47,36 @@ class BannerPainter$Mate extends BannerPainter with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    matePut('message', message);
-    matePut('textDirection', textDirection);
-    matePut('location', location);
-    matePut('layoutDirection', layoutDirection);
-    matePut('color', color);
-    matePut('textStyle', textStyle);
+    mateUse(
+      'message',
+      message,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'location',
+      location,
+      isNamed: true,
+    );
+    mateUse(
+      'layoutDirection',
+      layoutDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
   }
 }
 
@@ -58,28 +84,28 @@ class BannerPainter$Mate extends BannerPainter with Mate {
 class Banner$Mate extends Banner with Mate {
   /// Banner Banner({Key? key, Widget? child, required String message, TextDirection? textDirection, required BannerLocation location, TextDirection? layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   Banner$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {required String message} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String message} , default:none
     required String message,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {required BannerLocation location} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BannerLocation location} , default:none
     required BannerLocation location,
 
-    /// optionalParameters: {TextDirection? layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? layoutDirection} , default:none
     TextDirection? layoutDirection,
 
-    /// optionalParameters: {Color color = _kColor} , hasDefaultValue:true, defaultValueCode:_kColor
+    /// optionalParameters: {Color color = _kColor} , default:unprocessed=SimpleIdentifierImpl
     required Color color,
 
-    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , hasDefaultValue:true, defaultValueCode:_kTextStyle
+    /// optionalParameters: {TextStyle textStyle = _kTextStyle} , default:unprocessed=SimpleIdentifierImpl
     required TextStyle textStyle,
   }) : super(
           key: key,
@@ -91,6 +117,8 @@ class Banner$Mate extends Banner with Mate {
           color: color,
           textStyle: textStyle,
         ) {
+    mateCreateName = 'Banner';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Banner$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -101,14 +129,46 @@ class Banner$Mate extends Banner with Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('message', message);
-    matePut('textDirection', textDirection);
-    matePut('location', location);
-    matePut('layoutDirection', layoutDirection);
-    matePut('color', color);
-    matePut('textStyle', textStyle);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'message',
+      message,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'location',
+      location,
+      isNamed: true,
+    );
+    mateUse(
+      'layoutDirection',
+      layoutDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
   }
 }
 
@@ -116,20 +176,30 @@ class Banner$Mate extends Banner with Mate {
 class CheckedModeBanner$Mate extends CheckedModeBanner with Mate {
   /// CheckedModeBanner CheckedModeBanner({Key? key, required Widget child})
   CheckedModeBanner$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'CheckedModeBanner';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CheckedModeBanner$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

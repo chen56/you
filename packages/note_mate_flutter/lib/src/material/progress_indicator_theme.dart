@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Mate {
   /// ProgressIndicatorThemeData ProgressIndicatorThemeData({Color? color, Color? linearTrackColor, double? linearMinHeight, Color? circularTrackColor, Color? refreshBackgroundColor})
   ProgressIndicatorThemeData$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? linearTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? linearTrackColor} , default:none
     Color? linearTrackColor,
 
-    /// optionalParameters: {double? linearMinHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? linearMinHeight} , default:none
     double? linearMinHeight,
 
-    /// optionalParameters: {Color? circularTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? circularTrackColor} , default:none
     Color? circularTrackColor,
 
-    /// optionalParameters: {Color? refreshBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? refreshBackgroundColor} , default:none
     Color? refreshBackgroundColor,
   }) : super(
           color: color,
@@ -32,6 +32,8 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
           circularTrackColor: circularTrackColor,
           refreshBackgroundColor: refreshBackgroundColor,
         ) {
+    mateCreateName = 'ProgressIndicatorThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ProgressIndicatorThemeData$Mate(
           color: p.get('color').build(),
           linearTrackColor: p.get('linearTrackColor').build(),
@@ -39,11 +41,31 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
           circularTrackColor: p.get('circularTrackColor').build(),
           refreshBackgroundColor: p.get('refreshBackgroundColor').build(),
         );
-    matePut('color', color);
-    matePut('linearTrackColor', linearTrackColor);
-    matePut('linearMinHeight', linearMinHeight);
-    matePut('circularTrackColor', circularTrackColor);
-    matePut('refreshBackgroundColor', refreshBackgroundColor);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'linearTrackColor',
+      linearTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'linearMinHeight',
+      linearMinHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'circularTrackColor',
+      circularTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'refreshBackgroundColor',
+      refreshBackgroundColor,
+      isNamed: true,
+    );
   }
 }
 
@@ -51,26 +73,40 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
 class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with Mate {
   /// ProgressIndicatorTheme ProgressIndicatorTheme({Key? key, required ProgressIndicatorThemeData data, required Widget child})
   ProgressIndicatorTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ProgressIndicatorThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ProgressIndicatorThemeData data} , default:none
     required ProgressIndicatorThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'ProgressIndicatorTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ProgressIndicatorTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

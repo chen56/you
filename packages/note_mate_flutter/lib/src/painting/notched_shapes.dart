@@ -17,11 +17,21 @@ class AutomaticNotchedShape$Mate extends AutomaticNotchedShape with Mate {
           host,
           guest,
         ) {
+    mateCreateName = 'AutomaticNotchedShape';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => AutomaticNotchedShape$Mate(
           p.get('host').value,
           p.get('guest').value,
         );
-    matePut('host', host);
-    matePut('guest', guest);
+    mateUse(
+      'host',
+      host,
+      isNamed: false,
+    );
+    mateUse(
+      'guest',
+      guest,
+      isNamed: false,
+    );
   }
 }

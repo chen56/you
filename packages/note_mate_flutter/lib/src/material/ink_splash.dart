@@ -13,37 +13,37 @@ import 'package:flutter/src/painting/borders.dart';
 class InkSplash$Mate extends InkSplash with Mate {
   /// InkSplash InkSplash({required MaterialInkController controller, required RenderBox referenceBox, required TextDirection textDirection, Offset? position, required Color color, bool containedInkWell = false, Rect Function()? rectCallback, BorderRadius? borderRadius, ShapeBorder? customBorder, double? radius, void Function()? onRemoved})
   InkSplash$Mate({
-    /// optionalParameters: {required MaterialInkController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MaterialInkController controller} , default:none
     required MaterialInkController controller,
 
-    /// optionalParameters: {required RenderBox referenceBox} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RenderBox referenceBox} , default:none
     required RenderBox referenceBox,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {Offset? position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? position} , default:none
     Offset? position,
 
-    /// optionalParameters: {required Color color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color color} , default:none
     required Color color,
 
-    /// optionalParameters: {bool containedInkWell = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool containedInkWell,
+    /// optionalParameters: {bool containedInkWell = false} , default:processed=BooleanLiteralImpl
+    bool containedInkWell = false,
 
-    /// optionalParameters: {Rect Function()? rectCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect Function()? rectCallback} , default:none
     RectCallback? rectCallback,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {ShapeBorder? customBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? customBorder} , default:none
     ShapeBorder? customBorder,
 
-    /// optionalParameters: {double? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? radius} , default:none
     double? radius,
 
-    /// optionalParameters: {void Function()? onRemoved} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onRemoved} , default:none
     VoidCallback? onRemoved,
   }) : super(
           controller: controller,
@@ -58,6 +58,8 @@ class InkSplash$Mate extends InkSplash with Mate {
           radius: radius,
           onRemoved: onRemoved,
         ) {
+    mateCreateName = 'InkSplash';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkSplash$Mate(
           controller: p.get('controller').build(),
           referenceBox: p.get('referenceBox').build(),
@@ -71,16 +73,61 @@ class InkSplash$Mate extends InkSplash with Mate {
           radius: p.get('radius').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    matePut('controller', controller);
-    matePut('referenceBox', referenceBox);
-    matePut('textDirection', textDirection);
-    matePut('position', position);
-    matePut('color', color);
-    matePut('containedInkWell', containedInkWell);
-    matePut('rectCallback', rectCallback);
-    matePut('borderRadius', borderRadius);
-    matePut('customBorder', customBorder);
-    matePut('radius', radius);
-    matePut('onRemoved', onRemoved);
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'referenceBox',
+      referenceBox,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'containedInkWell',
+      containedInkWell,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'rectCallback',
+      rectCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'customBorder',
+      customBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'onRemoved',
+      onRemoved,
+      isNamed: true,
+    );
   }
 }

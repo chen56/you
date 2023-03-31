@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class SelectionContainer$Mate extends SelectionContainer with Mate {
   /// SelectionContainer SelectionContainer({Key? key, SelectionRegistrar? registrar, required SelectionContainerDelegate delegate, required Widget child})
   SelectionContainer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {SelectionRegistrar? registrar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SelectionRegistrar? registrar} , default:none
     SelectionRegistrar? registrar,
 
-    /// optionalParameters: {required SelectionContainerDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SelectionContainerDelegate delegate} , default:none
     required SelectionContainerDelegate delegate,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -27,35 +27,63 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           delegate: delegate,
           child: child,
         ) {
+    mateCreateName = 'SelectionContainer';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectionContainer$Mate(
           key: p.get('key').build(),
           registrar: p.get('registrar').build(),
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('registrar', registrar);
-    matePut('delegate', delegate);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'registrar',
+      registrar,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// SelectionContainer SelectionContainer.disabled({Key? key, required Widget child})
   SelectionContainer$Mate.disabled({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.disabled(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SelectionContainer.disabled';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectionContainer$Mate.disabled(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -63,26 +91,40 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
 class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate {
   /// SelectionRegistrarScope SelectionRegistrarScope({Key? key, required SelectionRegistrar registrar, required Widget child})
   SelectionRegistrarScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SelectionRegistrar registrar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SelectionRegistrar registrar} , default:none
     required SelectionRegistrar registrar,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           registrar: registrar,
           child: child,
         ) {
+    mateCreateName = 'SelectionRegistrarScope';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectionRegistrarScope$Mate(
           key: p.get('key').build(),
           registrar: p.get('registrar').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('registrar', registrar);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'registrar',
+      registrar,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

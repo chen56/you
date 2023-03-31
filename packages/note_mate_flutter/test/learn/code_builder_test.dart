@@ -22,29 +22,44 @@ void main() {
       )
       ..body.add(Class((b) => b
         ..name = "A"
-        ..constructors.add(Constructor(
+        ..methods.add(Method(
           (b) => b
-            ..name = null
+            ..name = "ss"
+            // ..optionalParameters.add(Parameter(
+            //   (b) => b
+            //     ..type = refer("Class", "package:a/a.dart")
+            //     ..name = "b"
+            //     ..named = false
+            //     ..required = false,
+            // ))
             ..optionalParameters.add(Parameter(
               (b) => b
-                ..type = refer("Class", "package:a/a.dart")
-                ..name = "b"
+                ..type = refer("int?")
+                ..name = "c"
                 ..named = true
-                ..required = true,
+                ..required = false,
             ))
             ..optionalParameters.add(Parameter(
               (b) => b
-                ..type = refer("int")
-                ..name = "c"
+                ..type = refer("int?")
+                ..name = "d"
                 ..named = false
                 ..required = false,
             ))
-            ..requiredParameters.add(Parameter((b) => b
-                  ..type = refer("int")
-                  ..name = "a"
-                  ..named = true
-                // ..required = true,
-                )),
+            ..requiredParameters.add(Parameter(
+              (b) => b
+                ..type = refer("int?")
+                ..name = "a"
+                ..named = true
+                ..required = false,
+            ))
+            ..requiredParameters.add(Parameter(
+              (b) => b
+                ..type = refer("int")
+                ..name = "b"
+                ..named = true
+                ..required = false,
+            )),
         )))));
 
     print(_format(lib));
@@ -127,6 +142,13 @@ void main() {
       ..types.add(refer("String"))).newInstanceNamed("has", []).code;
     expect(_noFormat(y), "ObjectFlagProperty<String>.has()");
   });
+  test('Lambda : void Function()', () {
+    var y = Method((b) => b
+      ..name = ''
+      ..lambda = false
+      ..body = const Code(""));
+    expect(_noFormat(y), "() {  } ");
+  });
 }
 
 String _format(Spec item) {
@@ -141,3 +163,13 @@ String _noFormat(Spec item) {
 //   int, {int s},[
 //   String,
 // ])? func;
+// class A {
+//   A([
+//     int? b,
+//     int? c,
+//   ]);
+//   A.a(int? aa,[
+//     int? b,
+//     int? c,
+//   ],{int? ss});
+// }

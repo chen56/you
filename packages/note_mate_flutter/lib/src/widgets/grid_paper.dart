@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class GridPaper$Mate extends GridPaper with Mate {
   /// GridPaper GridPaper({Key? key, Color color = const Color(0x7FC3E8F3), double interval = 100.0, int divisions = 2, int subdivisions = 5, Widget? child})
   GridPaper$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color color = const Color(0x7FC3E8F3)} , hasDefaultValue:true, defaultValueCode:const Color(0x7FC3E8F3)
+    /// optionalParameters: {Color color = const Color(0x7FC3E8F3)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {double interval = 100.0} , hasDefaultValue:true, defaultValueCode:100.0
-    required double interval,
+    /// optionalParameters: {double interval = 100.0} , default:processed=DoubleLiteralImpl
+    double interval = 100.0,
 
-    /// optionalParameters: {int divisions = 2} , hasDefaultValue:true, defaultValueCode:2
-    required int divisions,
+    /// optionalParameters: {int divisions = 2} , default:processed=IntegerLiteralImpl
+    int divisions = 2,
 
-    /// optionalParameters: {int subdivisions = 5} , hasDefaultValue:true, defaultValueCode:5
-    required int subdivisions,
+    /// optionalParameters: {int subdivisions = 5} , default:processed=IntegerLiteralImpl
+    int subdivisions = 5,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -36,6 +36,8 @@ class GridPaper$Mate extends GridPaper with Mate {
           subdivisions: subdivisions,
           child: child,
         ) {
+    mateCreateName = 'GridPaper';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridPaper$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
@@ -44,11 +46,38 @@ class GridPaper$Mate extends GridPaper with Mate {
           subdivisions: p.get('subdivisions').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('interval', interval);
-    matePut('divisions', divisions);
-    matePut('subdivisions', subdivisions);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'interval',
+      interval,
+      isNamed: true,
+      defaultValue: 100.0,
+    );
+    mateUse(
+      'divisions',
+      divisions,
+      isNamed: true,
+      defaultValue: 2,
+    );
+    mateUse(
+      'subdivisions',
+      subdivisions,
+      isNamed: true,
+      defaultValue: 5,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

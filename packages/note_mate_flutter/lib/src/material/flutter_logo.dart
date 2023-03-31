@@ -6,29 +6,31 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/painting/flutter_logo.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/animation/curves.dart';
+import 'package:flutter/animation.dart';
 
 /// class FlutterLogo extends StatelessWidget
 class FlutterLogo$Mate extends FlutterLogo with Mate {
   /// FlutterLogo FlutterLogo({Key? key, double? size, Color textColor = const Color(0xFF757575), FlutterLogoStyle style = FlutterLogoStyle.markOnly, Duration duration = const Duration(milliseconds: 750), Curve curve = Curves.fastOutSlowIn})
   FlutterLogo$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , default:none
     double? size,
 
-    /// optionalParameters: {Color textColor = const Color(0xFF757575)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF757575)
+    /// optionalParameters: {Color textColor = const Color(0xFF757575)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color textColor,
 
-    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , hasDefaultValue:true, defaultValueCode:FlutterLogoStyle.markOnly
-    required FlutterLogoStyle style,
+    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , default:processed=PrefixedIdentifierImpl
+    FlutterLogoStyle style = FlutterLogoStyle.markOnly,
 
-    /// optionalParameters: {Duration duration = const Duration(milliseconds: 750)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 750)
+    /// optionalParameters: {Duration duration = const Duration(milliseconds: 750)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration duration,
 
-    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , hasDefaultValue:true, defaultValueCode:Curves.fastOutSlowIn
-    required Curve curve,
+    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , default:processed=PrefixedIdentifierImpl
+    Curve curve = Curves.fastOutSlowIn,
   }) : super(
           key: key,
           size: size,
@@ -37,6 +39,8 @@ class FlutterLogo$Mate extends FlutterLogo with Mate {
           duration: duration,
           curve: curve,
         ) {
+    mateCreateName = 'FlutterLogo';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlutterLogo$Mate(
           key: p.get('key').build(),
           size: p.get('size').build(),
@@ -45,11 +49,37 @@ class FlutterLogo$Mate extends FlutterLogo with Mate {
           duration: p.get('duration').build(),
           curve: p.get('curve').build(),
         );
-    matePut('key', key);
-    matePut('size', size);
-    matePut('textColor', textColor);
-    matePut('style', style);
-    matePut('duration', duration);
-    matePut('curve', curve);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: FlutterLogoStyle.markOnly,
+    );
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'curve',
+      curve,
+      isNamed: true,
+      defaultValue: Curves.fastOutSlowIn,
+    );
   }
 }

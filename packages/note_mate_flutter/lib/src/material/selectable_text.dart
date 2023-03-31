@@ -9,6 +9,7 @@ import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/widgets/text_selection.dart';
 import 'package:flutter/src/gestures/tap.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
@@ -23,88 +24,88 @@ class SelectableText$Mate extends SelectableText with Mate {
   SelectableText$Mate(
     /// requiredParameters: String data
     String data, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {double? textScaleFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? textScaleFactor} , default:none
     double? textScaleFactor,
 
-    /// optionalParameters: {bool showCursor = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showCursor,
+    /// optionalParameters: {bool showCursor = false} , default:processed=BooleanLiteralImpl
+    bool showCursor = false,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {int? minLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? minLines} , default:none
     int? minLines,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {double cursorWidth = 2.0} , hasDefaultValue:true, defaultValueCode:2.0
-    required double cursorWidth,
+    /// optionalParameters: {double cursorWidth = 2.0} , default:processed=DoubleLiteralImpl
+    double cursorWidth = 2.0,
 
-    /// optionalParameters: {double? cursorHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cursorHeight} , default:none
     double? cursorHeight,
 
-    /// optionalParameters: {Radius? cursorRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Radius? cursorRadius} , default:none
     Radius? cursorRadius,
 
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , default:none
     Color? cursorColor,
 
-    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxHeightStyle.tight
+    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxHeightStyle selectionHeightStyle,
 
-    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxWidthStyle.tight
+    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxWidthStyle selectionWidthStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool enableInteractiveSelection = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableInteractiveSelection,
+    /// optionalParameters: {bool enableInteractiveSelection = true} , default:processed=BooleanLiteralImpl
+    bool enableInteractiveSelection = true,
 
-    /// optionalParameters: {TextSelectionControls? selectionControls} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
     TextSelectionControls? selectionControls,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {ScrollPhysics? scrollPhysics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? scrollPhysics} , default:none
     ScrollPhysics? scrollPhysics,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {TextWidthBasis? textWidthBasis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
     TextWidthBasis? textWidthBasis,
 
-    /// optionalParameters: {void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged} , default:none
     SelectionChangedCallback? onSelectionChanged,
 
-    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , hasDefaultValue:true, defaultValueCode:_defaultContextMenuBuilder
-    EditableTextContextMenuBuilder? contextMenuBuilder,
+    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , default:unprocessed=SimpleIdentifierImpl
+    required EditableTextContextMenuBuilder? contextMenuBuilder,
 
-    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , default:none
     TextMagnifierConfiguration? magnifierConfiguration,
   }) : super(
           data,
@@ -137,6 +138,8 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
+    mateCreateName = 'SelectableText';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectableText$Mate(
           p.get('data').value,
           key: p.get('key').build(),
@@ -168,123 +171,244 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    matePut('data', data);
-    matePut('key', key);
-    matePut('focusNode', focusNode);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('showCursor', showCursor);
-    matePut('autofocus', autofocus);
-    matePut('minLines', minLines);
-    matePut('maxLines', maxLines);
-    matePut('cursorWidth', cursorWidth);
-    matePut('cursorHeight', cursorHeight);
-    matePut('cursorRadius', cursorRadius);
-    matePut('cursorColor', cursorColor);
-    matePut('selectionHeightStyle', selectionHeightStyle);
-    matePut('selectionWidthStyle', selectionWidthStyle);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('enableInteractiveSelection', enableInteractiveSelection);
-    matePut('selectionControls', selectionControls);
-    matePut('onTap', onTap);
-    matePut('scrollPhysics', scrollPhysics);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('onSelectionChanged', onSelectionChanged);
-    matePut('contextMenuBuilder', contextMenuBuilder);
-    matePut('magnifierConfiguration', magnifierConfiguration);
+    mateUse(
+      'data',
+      data,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'showCursor',
+      showCursor,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'minLines',
+      minLines,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorWidth',
+      cursorWidth,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'cursorHeight',
+      cursorHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorRadius',
+      cursorRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorColor',
+      cursorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionHeightStyle',
+      selectionHeightStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionWidthStyle',
+      selectionWidthStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'enableInteractiveSelection',
+      enableInteractiveSelection,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'selectionControls',
+      selectionControls,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollPhysics',
+      scrollPhysics,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectionChanged',
+      onSelectionChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'contextMenuBuilder',
+      contextMenuBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierConfiguration',
+      magnifierConfiguration,
+      isNamed: true,
+    );
   }
 
   /// SelectableText SelectableText.rich(TextSpan textSpan, {Key? key, FocusNode? focusNode, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, double? textScaleFactor, bool showCursor = false, bool autofocus = false, ToolbarOptions? toolbarOptions, int? minLines, int? maxLines, double cursorWidth = 2.0, double? cursorHeight, Radius? cursorRadius, Color? cursorColor, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, void Function()? onTap, ScrollPhysics? scrollPhysics, String? semanticsLabel, TextHeightBehavior? textHeightBehavior, TextWidthBasis? textWidthBasis, void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged, Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration})
   SelectableText$Mate.rich(
     /// requiredParameters: TextSpan textSpan
     TextSpan textSpan, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {double? textScaleFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? textScaleFactor} , default:none
     double? textScaleFactor,
 
-    /// optionalParameters: {bool showCursor = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool showCursor,
+    /// optionalParameters: {bool showCursor = false} , default:processed=BooleanLiteralImpl
+    bool showCursor = false,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {int? minLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? minLines} , default:none
     int? minLines,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {double cursorWidth = 2.0} , hasDefaultValue:true, defaultValueCode:2.0
-    required double cursorWidth,
+    /// optionalParameters: {double cursorWidth = 2.0} , default:processed=DoubleLiteralImpl
+    double cursorWidth = 2.0,
 
-    /// optionalParameters: {double? cursorHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cursorHeight} , default:none
     double? cursorHeight,
 
-    /// optionalParameters: {Radius? cursorRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Radius? cursorRadius} , default:none
     Radius? cursorRadius,
 
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , default:none
     Color? cursorColor,
 
-    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxHeightStyle.tight
+    /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxHeightStyle selectionHeightStyle,
 
-    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , hasDefaultValue:true, defaultValueCode:ui.BoxWidthStyle.tight
+    /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , default:unprocessed=PropertyAccessImpl
     required BoxWidthStyle selectionWidthStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool enableInteractiveSelection = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableInteractiveSelection,
+    /// optionalParameters: {bool enableInteractiveSelection = true} , default:processed=BooleanLiteralImpl
+    bool enableInteractiveSelection = true,
 
-    /// optionalParameters: {TextSelectionControls? selectionControls} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
     TextSelectionControls? selectionControls,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {ScrollPhysics? scrollPhysics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? scrollPhysics} , default:none
     ScrollPhysics? scrollPhysics,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {TextWidthBasis? textWidthBasis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
     TextWidthBasis? textWidthBasis,
 
-    /// optionalParameters: {void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TextSelection, SelectionChangedCause?)? onSelectionChanged} , default:none
     SelectionChangedCallback? onSelectionChanged,
 
-    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , hasDefaultValue:true, defaultValueCode:_defaultContextMenuBuilder
-    EditableTextContextMenuBuilder? contextMenuBuilder,
+    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , default:unprocessed=SimpleIdentifierImpl
+    required EditableTextContextMenuBuilder? contextMenuBuilder,
 
-    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , default:none
     TextMagnifierConfiguration? magnifierConfiguration,
   }) : super.rich(
           textSpan,
@@ -317,6 +441,8 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
+    mateCreateName = 'SelectableText.rich';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectableText$Mate.rich(
           p.get('textSpan').value,
           key: p.get('key').build(),
@@ -348,34 +474,155 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    matePut('textSpan', textSpan);
-    matePut('key', key);
-    matePut('focusNode', focusNode);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('showCursor', showCursor);
-    matePut('autofocus', autofocus);
-    matePut('minLines', minLines);
-    matePut('maxLines', maxLines);
-    matePut('cursorWidth', cursorWidth);
-    matePut('cursorHeight', cursorHeight);
-    matePut('cursorRadius', cursorRadius);
-    matePut('cursorColor', cursorColor);
-    matePut('selectionHeightStyle', selectionHeightStyle);
-    matePut('selectionWidthStyle', selectionWidthStyle);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('enableInteractiveSelection', enableInteractiveSelection);
-    matePut('selectionControls', selectionControls);
-    matePut('onTap', onTap);
-    matePut('scrollPhysics', scrollPhysics);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('onSelectionChanged', onSelectionChanged);
-    matePut('contextMenuBuilder', contextMenuBuilder);
-    matePut('magnifierConfiguration', magnifierConfiguration);
+    mateUse(
+      'textSpan',
+      textSpan,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'showCursor',
+      showCursor,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'minLines',
+      minLines,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorWidth',
+      cursorWidth,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'cursorHeight',
+      cursorHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorRadius',
+      cursorRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorColor',
+      cursorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionHeightStyle',
+      selectionHeightStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionWidthStyle',
+      selectionWidthStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'enableInteractiveSelection',
+      enableInteractiveSelection,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'selectionControls',
+      selectionControls,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollPhysics',
+      scrollPhysics,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectionChanged',
+      onSelectionChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'contextMenuBuilder',
+      contextMenuBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'magnifierConfiguration',
+      magnifierConfiguration,
+      isNamed: true,
+    );
   }
 }

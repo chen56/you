@@ -11,26 +11,40 @@ import 'package:flutter/src/widgets/context_menu_button_item.dart';
 class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar with Mate {
   /// SpellCheckSuggestionsToolbar SpellCheckSuggestionsToolbar({Key? key, required Offset anchor, required List<ContextMenuButtonItem> buttonItems})
   SpellCheckSuggestionsToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset anchor} , default:none
     required Offset anchor,
 
-    /// optionalParameters: {required List<ContextMenuButtonItem> buttonItems} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<ContextMenuButtonItem> buttonItems} , default:none
     required List<ContextMenuButtonItem> buttonItems,
   }) : super(
           key: key,
           anchor: anchor,
           buttonItems: buttonItems,
         ) {
+    mateCreateName = 'SpellCheckSuggestionsToolbar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SpellCheckSuggestionsToolbar$Mate(
           key: p.get('key').build(),
           anchor: p.get('anchor').build(),
           buttonItems: p.get('buttonItems').build(),
         );
-    matePut('key', key);
-    matePut('anchor', anchor);
-    matePut('buttonItems', buttonItems);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchor',
+      anchor,
+      isNamed: true,
+    );
+    mateUseList(
+      'buttonItems',
+      buttonItems,
+      isNamed: true,
+    );
   }
 }

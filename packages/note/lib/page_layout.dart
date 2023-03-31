@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
+import 'package:note/src/flutter_highlight.dart';
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
@@ -283,7 +285,7 @@ class _PagePen extends Pen {
   }
 
   @override
-  void sampleMate(Mate widgetMate) {
+  void sampleMate<T extends Mate>(T widgetMate) {
     _contents.add(_MateSample(
       rootParam: ObjectParam.rootFrom(widgetMate),
       editors: editors,
@@ -311,13 +313,13 @@ class _MateSample extends StatelessWidget {
         listenable: rootParam,
         builder: (context, _) {
           var renderView = rootParam.build() as Widget;
-          var paramView = _ParamView(
+          var paramAndCodeView = _ParamAndCodeView(
             rootParam: rootParam,
             editors: editors,
           );
           return Column(
             children: [
-              paramView,
+              paramAndCodeView,
               renderView,
             ],
           );
@@ -327,45 +329,84 @@ class _MateSample extends StatelessWidget {
   }
 }
 
-class _ParamView extends StatelessWidget {
+class _ParamAndCodeView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
 
   // ignore: unused_element
-  _ParamView({super.key, required this.rootParam, required this.editors});
+  _ParamAndCodeView({super.key, required this.rootParam, required this.editors});
 
   @override
   Widget build(BuildContext context) {
-    var paramTable = DataTable(
-      dataRowMinHeight: 25,
-      dataRowMaxHeight: 25,
-      // hide header
-      headingRowHeight: 0,
-      columns: const [
-        DataColumn(label: Text("")),
-        DataColumn(label: Text("")),
-      ],
-      rows: [
+    Widget paramRow(Param param) {
+      var nameWidget = Container(
+        padding: EdgeInsets.only(left: param.level * 15),
+        child: param.nameWidget(editors),
+      );
+
+      var row = TextButton(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Flexible(child: nameWidget),
+            Flexible(child: param.valueWidget(editors)),
+          ],
+        ),
+        onPressed: () {},
+      );
+      // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
+      return Padding(
+        // 缩进模仿树形
+        padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
+        child: Container(
+          decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
+          height: 25,
+          child: row,
+        ),
+      );
+    }
+
+    var paramView = Column(
+      children: [
         ...rootParam
             // hide null value
             .flat(test: (param) => param.init != null)
-            .map(
-              (e) => DataRow(
-                cells: [
-                  DataCell(editors.nameWidget(context, e)),
-                  DataCell(editors.valueWidget(context, e)),
-                ],
-              ),
-            )
-            .toList()
+            .map(paramRow)
       ],
+    );
+    var codeView = HighlightView(
+      // The original code to be highlighted
+      // fixme editors
+      rootParam.toSampleCodeString(snippet: false, format: true),
+
+      // Specify language
+      // It is recommended to give it a value for performance
+      language: 'dart',
+
+      // Specify highlight theme
+      // All available themes are listed in `themes` folder
+      theme: vs2015Theme,
+
+      // Specify padding
+      padding: const EdgeInsets.all(6),
+
+      // Specify text style
     );
     return ExpansionTile(
       initiallyExpanded: false,
       expandedAlignment: Alignment.topLeft,
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: Row(children: const [Text("显示代码")]),
-      children: [paramTable],
+      title: const Row(children: [Text("显示代码")]),
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(child: paramView),
+            Expanded(child: codeView),
+          ],
+        )
+      ],
     );
   }
 }

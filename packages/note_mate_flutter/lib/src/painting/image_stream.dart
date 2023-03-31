@@ -11,27 +11,42 @@ import 'package:flutter/src/foundation/assertions.dart';
 class ImageInfo$Mate extends ImageInfo with Mate {
   /// ImageInfo ImageInfo({required Image image, double scale = 1.0, String? debugLabel})
   ImageInfo$Mate({
-    /// optionalParameters: {required Image image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Image image} , default:none
     required Image image,
 
-    /// optionalParameters: {double scale = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double scale,
+    /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
+    double scale = 1.0,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           image: image,
           scale: scale,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'ImageInfo';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageInfo$Mate(
           image: p.get('image').build(),
           scale: p.get('scale').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('image', image);
-    matePut('scale', scale);
-    matePut('debugLabel', debugLabel);
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -41,24 +56,38 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
   ImageStreamListener$Mate(
     /// requiredParameters: void Function(ImageInfo, bool) onImage
     ImageListener onImage, {
-    /// optionalParameters: {void Function(ImageChunkEvent)? onChunk} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ImageChunkEvent)? onChunk} , default:none
     ImageChunkListener? onChunk,
 
-    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(Object, StackTrace?)? onError} , default:none
     ImageErrorListener? onError,
   }) : super(
           onImage,
           onChunk: onChunk,
           onError: onError,
         ) {
+    mateCreateName = 'ImageStreamListener';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageStreamListener$Mate(
           p.get('onImage').value,
           onChunk: p.get('onChunk').build(),
           onError: p.get('onError').build(),
         );
-    matePut('onImage', onImage);
-    matePut('onChunk', onChunk);
-    matePut('onError', onError);
+    mateUse(
+      'onImage',
+      onImage,
+      isNamed: false,
+    );
+    mateUse(
+      'onChunk',
+      onChunk,
+      isNamed: true,
+    );
+    mateUse(
+      'onError',
+      onError,
+      isNamed: true,
+    );
   }
 }
 
@@ -66,21 +95,31 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
 class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
   /// ImageChunkEvent ImageChunkEvent({required int cumulativeBytesLoaded, required int? expectedTotalBytes})
   ImageChunkEvent$Mate({
-    /// optionalParameters: {required int cumulativeBytesLoaded} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int cumulativeBytesLoaded} , default:none
     required int cumulativeBytesLoaded,
 
-    /// optionalParameters: {required int? expectedTotalBytes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int? expectedTotalBytes} , default:none
     required int? expectedTotalBytes,
   }) : super(
           cumulativeBytesLoaded: cumulativeBytesLoaded,
           expectedTotalBytes: expectedTotalBytes,
         ) {
+    mateCreateName = 'ImageChunkEvent';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageChunkEvent$Mate(
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
           expectedTotalBytes: p.get('expectedTotalBytes').build(),
         );
-    matePut('cumulativeBytesLoaded', cumulativeBytesLoaded);
-    matePut('expectedTotalBytes', expectedTotalBytes);
+    mateUse(
+      'cumulativeBytesLoaded',
+      cumulativeBytesLoaded,
+      isNamed: true,
+    );
+    mateUse(
+      'expectedTotalBytes',
+      expectedTotalBytes,
+      isNamed: true,
+    );
   }
 }
 
@@ -90,18 +129,28 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
   OneFrameImageStreamCompleter$Mate(
     /// requiredParameters: Future<ImageInfo> image
     Future<ImageInfo> image, {
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
     InformationCollector? informationCollector,
   }) : super(
           image,
           informationCollector: informationCollector,
         ) {
+    mateCreateName = 'OneFrameImageStreamCompleter';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => OneFrameImageStreamCompleter$Mate(
           p.get('image').value,
           informationCollector: p.get('informationCollector').build(),
         );
-    matePut('image', image);
-    matePut('informationCollector', informationCollector);
+    mateUse(
+      'image',
+      image,
+      isNamed: false,
+    );
+    mateUse(
+      'informationCollector',
+      informationCollector,
+      isNamed: true,
+    );
   }
 }
 
@@ -109,19 +158,19 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
 class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter with Mate {
   /// MultiFrameImageStreamCompleter MultiFrameImageStreamCompleter({required Future<Codec> codec, required double scale, String? debugLabel, Stream<ImageChunkEvent>? chunkEvents, Iterable<DiagnosticsNode> Function()? informationCollector})
   MultiFrameImageStreamCompleter$Mate({
-    /// optionalParameters: {required Future<Codec> codec} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Future<Codec> codec} , default:none
     required Future<Codec> codec,
 
-    /// optionalParameters: {required double scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double scale} , default:none
     required double scale,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
 
-    /// optionalParameters: {Stream<ImageChunkEvent>? chunkEvents} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Stream<ImageChunkEvent>? chunkEvents} , default:none
     Stream<ImageChunkEvent>? chunkEvents,
 
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
     InformationCollector? informationCollector,
   }) : super(
           codec: codec,
@@ -130,6 +179,8 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: chunkEvents,
           informationCollector: informationCollector,
         ) {
+    mateCreateName = 'MultiFrameImageStreamCompleter';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => MultiFrameImageStreamCompleter$Mate(
           codec: p.get('codec').build(),
           scale: p.get('scale').build(),
@@ -137,10 +188,30 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: p.get('chunkEvents').build(),
           informationCollector: p.get('informationCollector').build(),
         );
-    matePut('codec', codec);
-    matePut('scale', scale);
-    matePut('debugLabel', debugLabel);
-    matePut('chunkEvents', chunkEvents);
-    matePut('informationCollector', informationCollector);
+    mateUse(
+      'codec',
+      codec,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'chunkEvents',
+      chunkEvents,
+      isNamed: true,
+    );
+    mateUse(
+      'informationCollector',
+      informationCollector,
+      isNamed: true,
+    );
   }
 }

@@ -13,35 +13,35 @@ import 'package:flutter/src/painting/box_border.dart';
 class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
   /// CupertinoTabBar CupertinoTabBar({Key? key, required List<BottomNavigationBarItem> items, void Function(int)? onTap, int currentIndex = 0, Color? backgroundColor, Color? activeColor, Color inactiveColor = _kDefaultTabBarInactiveColor, double iconSize = 30.0, double height = _kTabBarHeight, Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))})
   CupertinoTabBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<BottomNavigationBarItem> items} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<BottomNavigationBarItem> items} , default:none
     required List<BottomNavigationBarItem> items,
 
-    /// optionalParameters: {void Function(int)? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onTap} , default:none
     ValueChanged<int>? onTap,
 
-    /// optionalParameters: {int currentIndex = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int currentIndex,
+    /// optionalParameters: {int currentIndex = 0} , default:processed=IntegerLiteralImpl
+    int currentIndex = 0,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , default:none
     Color? activeColor,
 
-    /// optionalParameters: {Color inactiveColor = _kDefaultTabBarInactiveColor} , hasDefaultValue:true, defaultValueCode:_kDefaultTabBarInactiveColor
+    /// optionalParameters: {Color inactiveColor = _kDefaultTabBarInactiveColor} , default:unprocessed=SimpleIdentifierImpl
     required Color inactiveColor,
 
-    /// optionalParameters: {double iconSize = 30.0} , hasDefaultValue:true, defaultValueCode:30.0
-    required double iconSize,
+    /// optionalParameters: {double iconSize = 30.0} , default:processed=DoubleLiteralImpl
+    double iconSize = 30.0,
 
-    /// optionalParameters: {double height = _kTabBarHeight} , hasDefaultValue:true, defaultValueCode:_kTabBarHeight
+    /// optionalParameters: {double height = _kTabBarHeight} , default:unprocessed=SimpleIdentifierImpl
     required double height,
 
-    /// optionalParameters: {Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))} , hasDefaultValue:true, defaultValueCode:const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))
-    Border? border,
+    /// optionalParameters: {Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))} , default:unprocessed=InstanceCreationExpressionImpl
+    required Border? border,
   }) : super(
           key: key,
           items: items,
@@ -54,6 +54,8 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
           height: height,
           border: border,
         ) {
+    mateCreateName = 'CupertinoTabBar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabBar$Mate(
           key: p.get('key').build(),
           items: p.get('items').build(),
@@ -66,15 +68,57 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
           height: p.get('height').build(),
           border: p.get('border').build(),
         );
-    matePut('key', key);
-    matePut('items', items);
-    matePut('onTap', onTap);
-    matePut('currentIndex', currentIndex);
-    matePut('backgroundColor', backgroundColor);
-    matePut('activeColor', activeColor);
-    matePut('inactiveColor', inactiveColor);
-    matePut('iconSize', iconSize);
-    matePut('height', height);
-    matePut('border', border);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'items',
+      items,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'currentIndex',
+      currentIndex,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'activeColor',
+      activeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'inactiveColor',
+      inactiveColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconSize',
+      iconSize,
+      isNamed: true,
+      defaultValue: 30.0,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
   }
 }

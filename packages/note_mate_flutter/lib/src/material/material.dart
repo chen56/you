@@ -3,6 +3,7 @@
 import 'package:flutter/src/material/material.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/material.dart';
 import 'dart:core';
 import 'dart:ui';
 import 'package:flutter/src/painting/text_style.dart';
@@ -14,43 +15,43 @@ import 'package:flutter/src/widgets/framework.dart';
 class Material$Mate extends Material with Mate {
   /// Material Material({Key? key, MaterialType type = MaterialType.canvas, double elevation = 0.0, Color? color, Color? shadowColor, Color? surfaceTintColor, TextStyle? textStyle, BorderRadiusGeometry? borderRadius, ShapeBorder? shape, bool borderOnForeground = true, Clip clipBehavior = Clip.none, Duration animationDuration = kThemeChangeDuration, Widget? child})
   Material$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {MaterialType type = MaterialType.canvas} , hasDefaultValue:true, defaultValueCode:MaterialType.canvas
-    required MaterialType type,
+    /// optionalParameters: {MaterialType type = MaterialType.canvas} , default:processed=PrefixedIdentifierImpl
+    MaterialType type = MaterialType.canvas,
 
-    /// optionalParameters: {double elevation = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
+    double elevation = 0.0,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , default:none
     BorderRadiusGeometry? borderRadius,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {bool borderOnForeground = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool borderOnForeground,
+    /// optionalParameters: {bool borderOnForeground = true} , default:processed=BooleanLiteralImpl
+    bool borderOnForeground = true,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , hasDefaultValue:true, defaultValueCode:kThemeChangeDuration
+    /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , default:unprocessed=SimpleIdentifierImpl
     required Duration animationDuration,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -67,6 +68,8 @@ class Material$Mate extends Material with Mate {
           animationDuration: animationDuration,
           child: child,
         ) {
+    mateCreateName = 'Material';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Material$Mate(
           key: p.get('key').build(),
           type: p.get('type').build(),
@@ -82,19 +85,75 @@ class Material$Mate extends Material with Mate {
           animationDuration: p.get('animationDuration').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('type', type);
-    matePut('elevation', elevation);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('textStyle', textStyle);
-    matePut('borderRadius', borderRadius);
-    matePut('shape', shape);
-    matePut('borderOnForeground', borderOnForeground);
-    matePut('clipBehavior', clipBehavior);
-    matePut('animationDuration', animationDuration);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'type',
+      type,
+      isNamed: true,
+      defaultValue: MaterialType.canvas,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'borderOnForeground',
+      borderOnForeground,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'animationDuration',
+      animationDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -102,20 +161,30 @@ class Material$Mate extends Material with Mate {
 class ShapeBorderTween$Mate extends ShapeBorderTween with Mate {
   /// ShapeBorderTween ShapeBorderTween({ShapeBorder? begin, ShapeBorder? end})
   ShapeBorderTween$Mate({
-    /// optionalParameters: {ShapeBorder? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? begin} , default:none
     ShapeBorder? begin,
 
-    /// optionalParameters: {ShapeBorder? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? end} , default:none
     ShapeBorder? end,
   }) : super(
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'ShapeBorderTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShapeBorderTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }

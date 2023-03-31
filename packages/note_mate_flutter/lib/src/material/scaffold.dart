@@ -10,28 +10,40 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/preferred_size.dart';
 import 'package:flutter/src/material/floating_action_button_location.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/material/drawer.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 
 /// class ScaffoldMessenger extends StatefulWidget
 class ScaffoldMessenger$Mate extends ScaffoldMessenger with Mate {
   /// ScaffoldMessenger ScaffoldMessenger({Key? key, required Widget child})
   ScaffoldMessenger$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'ScaffoldMessenger';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldMessenger$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -39,34 +51,34 @@ class ScaffoldMessenger$Mate extends ScaffoldMessenger with Mate {
 class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry with Mate {
   /// ScaffoldPrelayoutGeometry ScaffoldPrelayoutGeometry({required Size bottomSheetSize, required double contentBottom, required double contentTop, required Size floatingActionButtonSize, required EdgeInsets minInsets, required EdgeInsets minViewPadding, required Size scaffoldSize, required Size snackBarSize, required Size materialBannerSize, required TextDirection textDirection})
   ScaffoldPrelayoutGeometry$Mate({
-    /// optionalParameters: {required Size bottomSheetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size bottomSheetSize} , default:none
     required Size bottomSheetSize,
 
-    /// optionalParameters: {required double contentBottom} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double contentBottom} , default:none
     required double contentBottom,
 
-    /// optionalParameters: {required double contentTop} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double contentTop} , default:none
     required double contentTop,
 
-    /// optionalParameters: {required Size floatingActionButtonSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size floatingActionButtonSize} , default:none
     required Size floatingActionButtonSize,
 
-    /// optionalParameters: {required EdgeInsets minInsets} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsets minInsets} , default:none
     required EdgeInsets minInsets,
 
-    /// optionalParameters: {required EdgeInsets minViewPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EdgeInsets minViewPadding} , default:none
     required EdgeInsets minViewPadding,
 
-    /// optionalParameters: {required Size scaffoldSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size scaffoldSize} , default:none
     required Size scaffoldSize,
 
-    /// optionalParameters: {required Size snackBarSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size snackBarSize} , default:none
     required Size snackBarSize,
 
-    /// optionalParameters: {required Size materialBannerSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size materialBannerSize} , default:none
     required Size materialBannerSize,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
   }) : super(
           bottomSheetSize: bottomSheetSize,
@@ -80,6 +92,8 @@ class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry with Mate
           materialBannerSize: materialBannerSize,
           textDirection: textDirection,
         ) {
+    mateCreateName = 'ScaffoldPrelayoutGeometry';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldPrelayoutGeometry$Mate(
           bottomSheetSize: p.get('bottomSheetSize').build(),
           contentBottom: p.get('contentBottom').build(),
@@ -92,16 +106,56 @@ class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry with Mate
           materialBannerSize: p.get('materialBannerSize').build(),
           textDirection: p.get('textDirection').build(),
         );
-    matePut('bottomSheetSize', bottomSheetSize);
-    matePut('contentBottom', contentBottom);
-    matePut('contentTop', contentTop);
-    matePut('floatingActionButtonSize', floatingActionButtonSize);
-    matePut('minInsets', minInsets);
-    matePut('minViewPadding', minViewPadding);
-    matePut('scaffoldSize', scaffoldSize);
-    matePut('snackBarSize', snackBarSize);
-    matePut('materialBannerSize', materialBannerSize);
-    matePut('textDirection', textDirection);
+    mateUse(
+      'bottomSheetSize',
+      bottomSheetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'contentBottom',
+      contentBottom,
+      isNamed: true,
+    );
+    mateUse(
+      'contentTop',
+      contentTop,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingActionButtonSize',
+      floatingActionButtonSize,
+      isNamed: true,
+    );
+    mateUse(
+      'minInsets',
+      minInsets,
+      isNamed: true,
+    );
+    mateUse(
+      'minViewPadding',
+      minViewPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'scaffoldSize',
+      scaffoldSize,
+      isNamed: true,
+    );
+    mateUse(
+      'snackBarSize',
+      snackBarSize,
+      isNamed: true,
+    );
+    mateUse(
+      'materialBannerSize',
+      materialBannerSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
   }
 }
 
@@ -109,21 +163,31 @@ class ScaffoldPrelayoutGeometry$Mate extends ScaffoldPrelayoutGeometry with Mate
 class ScaffoldGeometry$Mate extends ScaffoldGeometry with Mate {
   /// ScaffoldGeometry ScaffoldGeometry({double? bottomNavigationBarTop, Rect? floatingActionButtonArea})
   ScaffoldGeometry$Mate({
-    /// optionalParameters: {double? bottomNavigationBarTop} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? bottomNavigationBarTop} , default:none
     double? bottomNavigationBarTop,
 
-    /// optionalParameters: {Rect? floatingActionButtonArea} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? floatingActionButtonArea} , default:none
     Rect? floatingActionButtonArea,
   }) : super(
           bottomNavigationBarTop: bottomNavigationBarTop,
           floatingActionButtonArea: floatingActionButtonArea,
         ) {
+    mateCreateName = 'ScaffoldGeometry';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldGeometry$Mate(
           bottomNavigationBarTop: p.get('bottomNavigationBarTop').build(),
           floatingActionButtonArea: p.get('floatingActionButtonArea').build(),
         );
-    matePut('bottomNavigationBarTop', bottomNavigationBarTop);
-    matePut('floatingActionButtonArea', floatingActionButtonArea);
+    mateUse(
+      'bottomNavigationBarTop',
+      bottomNavigationBarTop,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingActionButtonArea',
+      floatingActionButtonArea,
+      isNamed: true,
+    );
   }
 }
 
@@ -131,79 +195,79 @@ class ScaffoldGeometry$Mate extends ScaffoldGeometry with Mate {
 class Scaffold$Mate extends Scaffold with Mate {
   /// Scaffold Scaffold({Key? key, PreferredSizeWidget? appBar, Widget? body, Widget? floatingActionButton, FloatingActionButtonLocation? floatingActionButtonLocation, FloatingActionButtonAnimator? floatingActionButtonAnimator, List<Widget>? persistentFooterButtons, AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd, Widget? drawer, void Function(bool)? onDrawerChanged, Widget? endDrawer, void Function(bool)? onEndDrawerChanged, Widget? bottomNavigationBar, Widget? bottomSheet, Color? backgroundColor, bool? resizeToAvoidBottomInset, bool primary = true, DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start, bool extendBody = false, bool extendBodyBehindAppBar = false, Color? drawerScrimColor, double? drawerEdgeDragWidth, bool drawerEnableOpenDragGesture = true, bool endDrawerEnableOpenDragGesture = true, String? restorationId})
   Scaffold$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {PreferredSizeWidget? appBar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {PreferredSizeWidget? appBar} , default:none
     PreferredSizeWidget? appBar,
 
-    /// optionalParameters: {Widget? body} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? body} , default:none
     Widget? body,
 
-    /// optionalParameters: {Widget? floatingActionButton} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? floatingActionButton} , default:none
     Widget? floatingActionButton,
 
-    /// optionalParameters: {FloatingActionButtonLocation? floatingActionButtonLocation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FloatingActionButtonLocation? floatingActionButtonLocation} , default:none
     FloatingActionButtonLocation? floatingActionButtonLocation,
 
-    /// optionalParameters: {FloatingActionButtonAnimator? floatingActionButtonAnimator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FloatingActionButtonAnimator? floatingActionButtonAnimator} , default:none
     FloatingActionButtonAnimator? floatingActionButtonAnimator,
 
-    /// optionalParameters: {List<Widget>? persistentFooterButtons} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? persistentFooterButtons} , default:none
     List<Widget>? persistentFooterButtons,
 
-    /// optionalParameters: {AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd} , hasDefaultValue:true, defaultValueCode:AlignmentDirectional.centerEnd
-    required AlignmentDirectional persistentFooterAlignment,
+    /// optionalParameters: {AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd} , default:processed=PrefixedIdentifierImpl
+    AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd,
 
-    /// optionalParameters: {Widget? drawer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? drawer} , default:none
     Widget? drawer,
 
-    /// optionalParameters: {void Function(bool)? onDrawerChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onDrawerChanged} , default:none
     DrawerCallback? onDrawerChanged,
 
-    /// optionalParameters: {Widget? endDrawer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? endDrawer} , default:none
     Widget? endDrawer,
 
-    /// optionalParameters: {void Function(bool)? onEndDrawerChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onEndDrawerChanged} , default:none
     DrawerCallback? onEndDrawerChanged,
 
-    /// optionalParameters: {Widget? bottomNavigationBar} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? bottomNavigationBar} , default:none
     Widget? bottomNavigationBar,
 
-    /// optionalParameters: {Widget? bottomSheet} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? bottomSheet} , default:none
     Widget? bottomSheet,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {bool? resizeToAvoidBottomInset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? resizeToAvoidBottomInset} , default:none
     bool? resizeToAvoidBottomInset,
 
-    /// optionalParameters: {bool primary = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool primary,
+    /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
+    bool primary = true,
 
-    /// optionalParameters: {DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior drawerDragStartBehavior,
+    /// optionalParameters: {DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {bool extendBody = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool extendBody,
+    /// optionalParameters: {bool extendBody = false} , default:processed=BooleanLiteralImpl
+    bool extendBody = false,
 
-    /// optionalParameters: {bool extendBodyBehindAppBar = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool extendBodyBehindAppBar,
+    /// optionalParameters: {bool extendBodyBehindAppBar = false} , default:processed=BooleanLiteralImpl
+    bool extendBodyBehindAppBar = false,
 
-    /// optionalParameters: {Color? drawerScrimColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? drawerScrimColor} , default:none
     Color? drawerScrimColor,
 
-    /// optionalParameters: {double? drawerEdgeDragWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? drawerEdgeDragWidth} , default:none
     double? drawerEdgeDragWidth,
 
-    /// optionalParameters: {bool drawerEnableOpenDragGesture = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool drawerEnableOpenDragGesture,
+    /// optionalParameters: {bool drawerEnableOpenDragGesture = true} , default:processed=BooleanLiteralImpl
+    bool drawerEnableOpenDragGesture = true,
 
-    /// optionalParameters: {bool endDrawerEnableOpenDragGesture = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool endDrawerEnableOpenDragGesture,
+    /// optionalParameters: {bool endDrawerEnableOpenDragGesture = true} , default:processed=BooleanLiteralImpl
+    bool endDrawerEnableOpenDragGesture = true,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
   }) : super(
           key: key,
@@ -232,6 +296,8 @@ class Scaffold$Mate extends Scaffold with Mate {
           endDrawerEnableOpenDragGesture: endDrawerEnableOpenDragGesture,
           restorationId: restorationId,
         ) {
+    mateCreateName = 'Scaffold';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Scaffold$Mate(
           key: p.get('key').build(),
           appBar: p.get('appBar').build(),
@@ -259,30 +325,137 @@ class Scaffold$Mate extends Scaffold with Mate {
           endDrawerEnableOpenDragGesture: p.get('endDrawerEnableOpenDragGesture').build(),
           restorationId: p.get('restorationId').build(),
         );
-    matePut('key', key);
-    matePut('appBar', appBar);
-    matePut('body', body);
-    matePut('floatingActionButton', floatingActionButton);
-    matePut('floatingActionButtonLocation', floatingActionButtonLocation);
-    matePut('floatingActionButtonAnimator', floatingActionButtonAnimator);
-    matePut('persistentFooterButtons', persistentFooterButtons);
-    matePut('persistentFooterAlignment', persistentFooterAlignment);
-    matePut('drawer', drawer);
-    matePut('onDrawerChanged', onDrawerChanged);
-    matePut('endDrawer', endDrawer);
-    matePut('onEndDrawerChanged', onEndDrawerChanged);
-    matePut('bottomNavigationBar', bottomNavigationBar);
-    matePut('bottomSheet', bottomSheet);
-    matePut('backgroundColor', backgroundColor);
-    matePut('resizeToAvoidBottomInset', resizeToAvoidBottomInset);
-    matePut('primary', primary);
-    matePut('drawerDragStartBehavior', drawerDragStartBehavior);
-    matePut('extendBody', extendBody);
-    matePut('extendBodyBehindAppBar', extendBodyBehindAppBar);
-    matePut('drawerScrimColor', drawerScrimColor);
-    matePut('drawerEdgeDragWidth', drawerEdgeDragWidth);
-    matePut('drawerEnableOpenDragGesture', drawerEnableOpenDragGesture);
-    matePut('endDrawerEnableOpenDragGesture', endDrawerEnableOpenDragGesture);
-    matePut('restorationId', restorationId);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'appBar',
+      appBar,
+      isNamed: true,
+    );
+    mateUse(
+      'body',
+      body,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingActionButton',
+      floatingActionButton,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingActionButtonLocation',
+      floatingActionButtonLocation,
+      isNamed: true,
+    );
+    mateUse(
+      'floatingActionButtonAnimator',
+      floatingActionButtonAnimator,
+      isNamed: true,
+    );
+    mateUseList(
+      'persistentFooterButtons',
+      persistentFooterButtons,
+      isNamed: true,
+    );
+    mateUse(
+      'persistentFooterAlignment',
+      persistentFooterAlignment,
+      isNamed: true,
+      defaultValue: AlignmentDirectional.centerEnd,
+    );
+    mateUse(
+      'drawer',
+      drawer,
+      isNamed: true,
+    );
+    mateUse(
+      'onDrawerChanged',
+      onDrawerChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'endDrawer',
+      endDrawer,
+      isNamed: true,
+    );
+    mateUse(
+      'onEndDrawerChanged',
+      onEndDrawerChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'bottomNavigationBar',
+      bottomNavigationBar,
+      isNamed: true,
+    );
+    mateUse(
+      'bottomSheet',
+      bottomSheet,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'resizeToAvoidBottomInset',
+      resizeToAvoidBottomInset,
+      isNamed: true,
+    );
+    mateUse(
+      'primary',
+      primary,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'drawerDragStartBehavior',
+      drawerDragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'extendBody',
+      extendBody,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'extendBodyBehindAppBar',
+      extendBodyBehindAppBar,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'drawerScrimColor',
+      drawerScrimColor,
+      isNamed: true,
+    );
+    mateUse(
+      'drawerEdgeDragWidth',
+      drawerEdgeDragWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'drawerEnableOpenDragGesture',
+      drawerEnableOpenDragGesture,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'endDrawerEnableOpenDragGesture',
+      endDrawerEnableOpenDragGesture,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
   }
 }

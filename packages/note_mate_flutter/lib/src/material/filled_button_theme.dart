@@ -11,11 +11,17 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate {
   /// FilledButtonThemeData FilledButtonThemeData({ButtonStyle? style})
   FilledButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ButtonStyle? style} , default:none
       ButtonStyle? style})
       : super(style: style) {
+    mateCreateName = 'FilledButtonThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButtonThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -23,26 +29,40 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate {
 class FilledButtonTheme$Mate extends FilledButtonTheme with Mate {
   /// FilledButtonTheme FilledButtonTheme({Key? key, required FilledButtonThemeData data, required Widget child})
   FilledButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FilledButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FilledButtonThemeData data} , default:none
     required FilledButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'FilledButtonTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButtonTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

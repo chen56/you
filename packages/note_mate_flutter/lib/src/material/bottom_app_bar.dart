@@ -13,34 +13,34 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class BottomAppBar$Mate extends BottomAppBar with Mate {
   /// BottomAppBar BottomAppBar({Key? key, Color? color, double? elevation, NotchedShape? shape, Clip clipBehavior = Clip.none, double notchMargin = 4.0, Widget? child, EdgeInsetsGeometry? padding, Color? surfaceTintColor, double? height})
   BottomAppBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {NotchedShape? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {NotchedShape? shape} , default:none
     NotchedShape? shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , hasDefaultValue:true, defaultValueCode:Clip.none
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.none,
 
-    /// optionalParameters: {double notchMargin = 4.0} , hasDefaultValue:true, defaultValueCode:4.0
-    required double notchMargin,
+    /// optionalParameters: {double notchMargin = 4.0} , default:processed=DoubleLiteralImpl
+    double notchMargin = 4.0,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
   }) : super(
           key: key,
@@ -54,6 +54,8 @@ class BottomAppBar$Mate extends BottomAppBar with Mate {
           surfaceTintColor: surfaceTintColor,
           height: height,
         ) {
+    mateCreateName = 'BottomAppBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomAppBar$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
@@ -66,15 +68,57 @@ class BottomAppBar$Mate extends BottomAppBar with Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           height: p.get('height').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('elevation', elevation);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('notchMargin', notchMargin);
-    matePut('child', child);
-    matePut('padding', padding);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('height', height);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.none,
+    );
+    mateUse(
+      'notchMargin',
+      notchMargin,
+      isNamed: true,
+      defaultValue: 4.0,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
   }
 }

@@ -9,20 +9,30 @@ import 'package:flutter/src/widgets/framework.dart';
 class SharedAppData$Mate extends SharedAppData with Mate {
   /// SharedAppData SharedAppData({Key? key, required Widget child})
   SharedAppData$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'SharedAppData';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SharedAppData$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

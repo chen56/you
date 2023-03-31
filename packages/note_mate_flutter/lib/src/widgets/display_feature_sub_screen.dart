@@ -10,26 +10,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with Mate {
   /// DisplayFeatureSubScreen DisplayFeatureSubScreen({Key? key, Offset? anchorPoint, required Widget child})
   DisplayFeatureSubScreen$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Offset? anchorPoint} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? anchorPoint} , default:none
     Offset? anchorPoint,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           anchorPoint: anchorPoint,
           child: child,
         ) {
+    mateCreateName = 'DisplayFeatureSubScreen';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DisplayFeatureSubScreen$Mate(
           key: p.get('key').build(),
           anchorPoint: p.get('anchorPoint').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('anchorPoint', anchorPoint);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorPoint',
+      anchorPoint,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

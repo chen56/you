@@ -14,43 +14,43 @@ import 'package:flutter/src/widgets/framework.dart';
 class TooltipThemeData$Mate extends TooltipThemeData with Mate {
   /// TooltipThemeData TooltipThemeData({double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback})
   TooltipThemeData$Mate({
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {double? verticalOffset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? verticalOffset} , default:none
     double? verticalOffset,
 
-    /// optionalParameters: {bool? preferBelow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? preferBelow} , default:none
     bool? preferBelow,
 
-    /// optionalParameters: {bool? excludeFromSemantics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? excludeFromSemantics} , default:none
     bool? excludeFromSemantics,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {Duration? waitDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? waitDuration} , default:none
     Duration? waitDuration,
 
-    /// optionalParameters: {Duration? showDuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? showDuration} , default:none
     Duration? showDuration,
 
-    /// optionalParameters: {TooltipTriggerMode? triggerMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TooltipTriggerMode? triggerMode} , default:none
     TooltipTriggerMode? triggerMode,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
   }) : super(
           height: height,
@@ -67,6 +67,8 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
           triggerMode: triggerMode,
           enableFeedback: enableFeedback,
         ) {
+    mateCreateName = 'TooltipThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TooltipThemeData$Mate(
           height: p.get('height').build(),
           padding: p.get('padding').build(),
@@ -82,19 +84,71 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    matePut('height', height);
-    matePut('padding', padding);
-    matePut('margin', margin);
-    matePut('verticalOffset', verticalOffset);
-    matePut('preferBelow', preferBelow);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('decoration', decoration);
-    matePut('textStyle', textStyle);
-    matePut('textAlign', textAlign);
-    matePut('waitDuration', waitDuration);
-    matePut('showDuration', showDuration);
-    matePut('triggerMode', triggerMode);
-    matePut('enableFeedback', enableFeedback);
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalOffset',
+      verticalOffset,
+      isNamed: true,
+    );
+    mateUse(
+      'preferBelow',
+      preferBelow,
+      isNamed: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'waitDuration',
+      waitDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'showDuration',
+      showDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'triggerMode',
+      triggerMode,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
   }
 }
 
@@ -102,26 +156,40 @@ class TooltipThemeData$Mate extends TooltipThemeData with Mate {
 class TooltipTheme$Mate extends TooltipTheme with Mate {
   /// TooltipTheme TooltipTheme({Key? key, required TooltipThemeData data, required Widget child})
   TooltipTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TooltipThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TooltipThemeData data} , default:none
     required TooltipThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'TooltipTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TooltipTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

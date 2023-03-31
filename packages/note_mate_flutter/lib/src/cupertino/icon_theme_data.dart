@@ -9,28 +9,28 @@ import 'dart:ui';
 class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
   /// CupertinoIconThemeData CupertinoIconThemeData({double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, double? opacity, List<Shadow>? shadows})
   CupertinoIconThemeData$Mate({
-    /// optionalParameters: {double? size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? size} , default:none
     double? size,
 
-    /// optionalParameters: {double? fill} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? fill} , default:none
     double? fill,
 
-    /// optionalParameters: {double? weight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? weight} , default:none
     double? weight,
 
-    /// optionalParameters: {double? grade} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? grade} , default:none
     double? grade,
 
-    /// optionalParameters: {double? opticalSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? opticalSize} , default:none
     double? opticalSize,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double? opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? opacity} , default:none
     double? opacity,
 
-    /// optionalParameters: {List<Shadow>? shadows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Shadow>? shadows} , default:none
     List<Shadow>? shadows,
   }) : super(
           size: size,
@@ -42,6 +42,8 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
           opacity: opacity,
           shadows: shadows,
         ) {
+    mateCreateName = 'CupertinoIconThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoIconThemeData$Mate(
           size: p.get('size').build(),
           fill: p.get('fill').build(),
@@ -52,13 +54,45 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
           opacity: p.get('opacity').build(),
           shadows: p.get('shadows').build(),
         );
-    matePut('size', size);
-    matePut('fill', fill);
-    matePut('weight', weight);
-    matePut('grade', grade);
-    matePut('opticalSize', opticalSize);
-    matePut('color', color);
-    matePut('opacity', opacity);
-    matePut('shadows', shadows);
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'fill',
+      fill,
+      isNamed: true,
+    );
+    mateUse(
+      'weight',
+      weight,
+      isNamed: true,
+    );
+    mateUse(
+      'grade',
+      grade,
+      isNamed: true,
+    );
+    mateUse(
+      'opticalSize',
+      opticalSize,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
   }
 }

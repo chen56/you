@@ -12,8 +12,14 @@ class CachingIterable$Mate<E> extends CachingIterable<E> with Mate {
       /// requiredParameters: Iterator<E> _prefillIterator
       Iterator<E> _prefillIterator)
       : super(_prefillIterator) {
+    mateCreateName = 'CachingIterable';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
-    matePut('_prefillIterator', _prefillIterator);
+    mateUse(
+      '_prefillIterator',
+      _prefillIterator,
+      isNamed: false,
+    );
   }
 }
 
@@ -25,7 +31,13 @@ class Factory$Mate<T> extends Factory<T> with Mate {
       /// requiredParameters: T Function() constructor
       ValueGetter<T> constructor)
       : super(constructor) {
+    mateCreateName = 'Factory';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Factory$Mate<T>(p.get('constructor').value);
-    matePut('constructor', constructor);
+    mateUse(
+      'constructor',
+      constructor,
+      isNamed: false,
+    );
   }
 }

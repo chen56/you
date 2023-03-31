@@ -8,32 +8,54 @@ import 'dart:core';
 class RenderPerformanceOverlay$Mate extends RenderPerformanceOverlay with Mate {
   /// RenderPerformanceOverlay RenderPerformanceOverlay({int optionsMask = 0, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   RenderPerformanceOverlay$Mate({
-    /// optionalParameters: {int optionsMask = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int optionsMask,
+    /// optionalParameters: {int optionsMask = 0} , default:processed=IntegerLiteralImpl
+    int optionsMask = 0,
 
-    /// optionalParameters: {int rasterizerThreshold = 0} , hasDefaultValue:true, defaultValueCode:0
-    required int rasterizerThreshold,
+    /// optionalParameters: {int rasterizerThreshold = 0} , default:processed=IntegerLiteralImpl
+    int rasterizerThreshold = 0,
 
-    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardRasterCacheImages,
+    /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
+    bool checkerboardRasterCacheImages = false,
 
-    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool checkerboardOffscreenLayers,
+    /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
+    bool checkerboardOffscreenLayers = false,
   }) : super(
           optionsMask: optionsMask,
           rasterizerThreshold: rasterizerThreshold,
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
+    mateCreateName = 'RenderPerformanceOverlay';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPerformanceOverlay$Mate(
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    matePut('optionsMask', optionsMask);
-    matePut('rasterizerThreshold', rasterizerThreshold);
-    matePut('checkerboardRasterCacheImages', checkerboardRasterCacheImages);
-    matePut('checkerboardOffscreenLayers', checkerboardOffscreenLayers);
+    mateUse(
+      'optionsMask',
+      optionsMask,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'rasterizerThreshold',
+      rasterizerThreshold,
+      isNamed: true,
+      defaultValue: 0,
+    );
+    mateUse(
+      'checkerboardRasterCacheImages',
+      checkerboardRasterCacheImages,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'checkerboardOffscreenLayers',
+      checkerboardOffscreenLayers,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

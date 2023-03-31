@@ -17,12 +17,22 @@ class LicenseParagraph$Mate extends LicenseParagraph with Mate {
           text,
           indent,
         ) {
+    mateCreateName = 'LicenseParagraph';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => LicenseParagraph$Mate(
           p.get('text').value,
           p.get('indent').value,
         );
-    matePut('text', text);
-    matePut('indent', indent);
+    mateUse(
+      'text',
+      text,
+      isNamed: false,
+    );
+    mateUse(
+      'indent',
+      indent,
+      isNamed: false,
+    );
   }
 }
 
@@ -39,11 +49,21 @@ class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Ma
           packages,
           text,
         ) {
+    mateCreateName = 'LicenseEntryWithLineBreaks';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => LicenseEntryWithLineBreaks$Mate(
           p.get('packages').value,
           p.get('text').value,
         );
-    matePut('packages', packages);
-    matePut('text', text);
+    mateUseList(
+      'packages',
+      packages,
+      isNamed: false,
+    );
+    mateUse(
+      'text',
+      text,
+      isNamed: false,
+    );
   }
 }

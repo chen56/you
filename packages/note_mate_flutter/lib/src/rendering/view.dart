@@ -3,6 +3,7 @@
 import 'package:flutter/src/rendering/view.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 
@@ -10,21 +11,33 @@ import 'package:flutter/src/rendering/box.dart';
 class ViewConfiguration$Mate extends ViewConfiguration with Mate {
   /// ViewConfiguration ViewConfiguration({Size size = Size.zero, double devicePixelRatio = 1.0})
   ViewConfiguration$Mate({
-    /// optionalParameters: {Size size = Size.zero} , hasDefaultValue:true, defaultValueCode:Size.zero
-    required Size size,
+    /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
+    Size size = Size.zero,
 
-    /// optionalParameters: {double devicePixelRatio = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double devicePixelRatio,
+    /// optionalParameters: {double devicePixelRatio = 1.0} , default:processed=DoubleLiteralImpl
+    double devicePixelRatio = 1.0,
   }) : super(
           size: size,
           devicePixelRatio: devicePixelRatio,
         ) {
+    mateCreateName = 'ViewConfiguration';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ViewConfiguration$Mate(
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    matePut('size', size);
-    matePut('devicePixelRatio', devicePixelRatio);
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: Size.zero,
+    );
+    mateUse(
+      'devicePixelRatio',
+      devicePixelRatio,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -32,26 +45,40 @@ class ViewConfiguration$Mate extends ViewConfiguration with Mate {
 class RenderView$Mate extends RenderView with Mate {
   /// RenderView RenderView({RenderBox? child, required ViewConfiguration configuration, required FlutterView window})
   RenderView$Mate({
-    /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RenderBox? child} , default:none
     RenderBox? child,
 
-    /// optionalParameters: {required ViewConfiguration configuration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewConfiguration configuration} , default:none
     required ViewConfiguration configuration,
 
-    /// optionalParameters: {required FlutterView window} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FlutterView window} , default:none
     required FlutterView window,
   }) : super(
           child: child,
           configuration: configuration,
           window: window,
         ) {
+    mateCreateName = 'RenderView';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderView$Mate(
           child: p.get('child').build(),
           configuration: p.get('configuration').build(),
           window: p.get('window').build(),
         );
-    matePut('child', child);
-    matePut('configuration', configuration);
-    matePut('window', window);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'configuration',
+      configuration,
+      isNamed: true,
+    );
+    mateUse(
+      'window',
+      window,
+      isNamed: true,
+    );
   }
 }

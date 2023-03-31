@@ -11,11 +11,17 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate {
   /// TextButtonThemeData TextButtonThemeData({ButtonStyle? style})
   TextButtonThemeData$Mate(
       {
-      /// optionalParameters: {ButtonStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ButtonStyle? style} , default:none
       ButtonStyle? style})
       : super(style: style) {
+    mateCreateName = 'TextButtonThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextButtonThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -23,26 +29,40 @@ class TextButtonThemeData$Mate extends TextButtonThemeData with Mate {
 class TextButtonTheme$Mate extends TextButtonTheme with Mate {
   /// TextButtonTheme TextButtonTheme({Key? key, required TextButtonThemeData data, required Widget child})
   TextButtonTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TextButtonThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextButtonThemeData data} , default:none
     required TextButtonThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'TextButtonTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextButtonTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

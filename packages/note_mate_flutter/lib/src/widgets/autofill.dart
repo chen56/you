@@ -4,31 +4,47 @@ import 'package:flutter/src/widgets/autofill.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/widgets.dart';
 
 /// class AutofillGroup extends StatefulWidget
 class AutofillGroup$Mate extends AutofillGroup with Mate {
   /// AutofillGroup AutofillGroup({Key? key, required Widget child, AutofillContextAction onDisposeAction = AutofillContextAction.commit})
   AutofillGroup$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , hasDefaultValue:true, defaultValueCode:AutofillContextAction.commit
-    required AutofillContextAction onDisposeAction,
+    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , default:processed=PrefixedIdentifierImpl
+    AutofillContextAction onDisposeAction = AutofillContextAction.commit,
   }) : super(
           key: key,
           child: child,
           onDisposeAction: onDisposeAction,
         ) {
+    mateCreateName = 'AutofillGroup';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutofillGroup$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
           onDisposeAction: p.get('onDisposeAction').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onDisposeAction', onDisposeAction);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onDisposeAction',
+      onDisposeAction,
+      isNamed: true,
+      defaultValue: AutofillContextAction.commit,
+    );
   }
 }

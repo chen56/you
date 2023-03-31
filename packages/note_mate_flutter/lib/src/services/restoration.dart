@@ -8,64 +8,98 @@ import 'dart:core';
 class RestorationBucket$Mate extends RestorationBucket with Mate {
   /// RestorationBucket RestorationBucket.empty({required String restorationId, required Object? debugOwner})
   RestorationBucket$Mate.empty({
-    /// optionalParameters: {required String restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String restorationId} , default:none
     required String restorationId,
 
-    /// optionalParameters: {required Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object? debugOwner} , default:none
     required Object? debugOwner,
   }) : super.empty(
           restorationId: restorationId,
           debugOwner: debugOwner,
         ) {
+    mateCreateName = 'RestorationBucket.empty';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RestorationBucket$Mate.empty(
           restorationId: p.get('restorationId').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    matePut('restorationId', restorationId);
-    matePut('debugOwner', debugOwner);
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
   }
 
   /// RestorationBucket RestorationBucket.root({required RestorationManager manager, required Map<Object?, Object?>? rawData})
   RestorationBucket$Mate.root({
-    /// optionalParameters: {required RestorationManager manager} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RestorationManager manager} , default:none
     required RestorationManager manager,
 
-    /// optionalParameters: {required Map<Object?, Object?>? rawData} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<Object?, Object?>? rawData} , default:none
     required Map<Object?, Object?>? rawData,
   }) : super.root(
           manager: manager,
           rawData: rawData,
         ) {
+    mateCreateName = 'RestorationBucket.root';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RestorationBucket$Mate.root(
           manager: p.get('manager').build(),
           rawData: p.get('rawData').build(),
         );
-    matePut('manager', manager);
-    matePut('rawData', rawData);
+    mateUse(
+      'manager',
+      manager,
+      isNamed: true,
+    );
+    mateUse(
+      'rawData',
+      rawData,
+      isNamed: true,
+    );
   }
 
   /// RestorationBucket RestorationBucket.child({required String restorationId, required RestorationBucket parent, required Object? debugOwner})
   RestorationBucket$Mate.child({
-    /// optionalParameters: {required String restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String restorationId} , default:none
     required String restorationId,
 
-    /// optionalParameters: {required RestorationBucket parent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required RestorationBucket parent} , default:none
     required RestorationBucket parent,
 
-    /// optionalParameters: {required Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object? debugOwner} , default:none
     required Object? debugOwner,
   }) : super.child(
           restorationId: restorationId,
           parent: parent,
           debugOwner: debugOwner,
         ) {
+    mateCreateName = 'RestorationBucket.child';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RestorationBucket$Mate.child(
           restorationId: p.get('restorationId').build(),
           parent: p.get('parent').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    matePut('restorationId', restorationId);
-    matePut('parent', parent);
-    matePut('debugOwner', debugOwner);
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'parent',
+      parent,
+      isNamed: true,
+    );
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
   }
 }

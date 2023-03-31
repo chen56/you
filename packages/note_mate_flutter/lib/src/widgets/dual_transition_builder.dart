@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
   /// DualTransitionBuilder DualTransitionBuilder({Key? key, required Animation<double> animation, required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder, required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder, Widget? child})
   DualTransitionBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> animation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> animation} , default:none
     required Animation<double> animation,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder} , default:none
     required AnimatedTransitionBuilder forwardBuilder,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder} , default:none
     required AnimatedTransitionBuilder reverseBuilder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -32,6 +32,8 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
           reverseBuilder: reverseBuilder,
           child: child,
         ) {
+    mateCreateName = 'DualTransitionBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DualTransitionBuilder$Mate(
           key: p.get('key').build(),
           animation: p.get('animation').build(),
@@ -39,10 +41,30 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
           reverseBuilder: p.get('reverseBuilder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('animation', animation);
-    matePut('forwardBuilder', forwardBuilder);
-    matePut('reverseBuilder', reverseBuilder);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'animation',
+      animation,
+      isNamed: true,
+    );
+    mateUse(
+      'forwardBuilder',
+      forwardBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseBuilder',
+      reverseBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

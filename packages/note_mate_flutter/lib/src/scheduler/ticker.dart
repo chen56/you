@@ -10,18 +10,28 @@ class Ticker$Mate extends Ticker with Mate {
   Ticker$Mate(
     /// requiredParameters: void Function(Duration) _onTick
     TickerCallback _onTick, {
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           _onTick,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'Ticker';
+    matePackageUrl = 'package:flutter/scheduler.dart';
     mateBuilder = (p) => Ticker$Mate(
           p.get('_onTick').value,
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('_onTick', _onTick);
-    matePut('debugLabel', debugLabel);
+    mateUse(
+      '_onTick',
+      _onTick,
+      isNamed: false,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }
 
@@ -33,7 +43,13 @@ class TickerCanceled$Mate extends TickerCanceled with Mate {
       /// requiredParameters: [Ticker? ticker]
       Ticker? ticker)
       : super(ticker) {
+    mateCreateName = 'TickerCanceled';
+    matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TickerCanceled$Mate(p.get('ticker').value);
-    matePut('ticker', ticker);
+    mateUse(
+      'ticker',
+      ticker,
+      isNamed: false,
+    );
   }
 }

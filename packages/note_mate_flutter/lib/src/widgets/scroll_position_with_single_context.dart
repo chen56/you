@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/scroll_position.dart';
 class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleContext with Mate {
   /// ScrollPositionWithSingleContext ScrollPositionWithSingleContext({required ScrollPhysics physics, required ScrollContext context, double? initialPixels = 0.0, bool keepScrollOffset = true, ScrollPosition? oldPosition, String? debugLabel})
   ScrollPositionWithSingleContext$Mate({
-    /// optionalParameters: {required ScrollPhysics physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollPhysics physics} , default:none
     required ScrollPhysics physics,
 
-    /// optionalParameters: {required ScrollContext context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollContext context} , default:none
     required ScrollContext context,
 
-    /// optionalParameters: {double? initialPixels = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    double? initialPixels,
+    /// optionalParameters: {double? initialPixels = 0.0} , default:processed=DoubleLiteralImpl
+    double? initialPixels = 0.0,
 
-    /// optionalParameters: {bool keepScrollOffset = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool keepScrollOffset,
+    /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
+    bool keepScrollOffset = true,
 
-    /// optionalParameters: {ScrollPosition? oldPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPosition? oldPosition} , default:none
     ScrollPosition? oldPosition,
 
-    /// optionalParameters: {String? debugLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? debugLabel} , default:none
     String? debugLabel,
   }) : super(
           physics: physics,
@@ -36,6 +36,8 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           oldPosition: oldPosition,
           debugLabel: debugLabel,
         ) {
+    mateCreateName = 'ScrollPositionWithSingleContext';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollPositionWithSingleContext$Mate(
           physics: p.get('physics').build(),
           context: p.get('context').build(),
@@ -44,11 +46,37 @@ class ScrollPositionWithSingleContext$Mate extends ScrollPositionWithSingleConte
           oldPosition: p.get('oldPosition').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    matePut('physics', physics);
-    matePut('context', context);
-    matePut('initialPixels', initialPixels);
-    matePut('keepScrollOffset', keepScrollOffset);
-    matePut('oldPosition', oldPosition);
-    matePut('debugLabel', debugLabel);
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'initialPixels',
+      initialPixels,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'keepScrollOffset',
+      keepScrollOffset,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'oldPosition',
+      oldPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'debugLabel',
+      debugLabel,
+      isNamed: true,
+    );
   }
 }

@@ -3,37 +3,38 @@
 import 'package:flutter/src/cupertino/text_theme.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/painting/text_style.dart';
 
 /// class CupertinoTextThemeData with Diagnosticable
 class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
   /// CupertinoTextThemeData CupertinoTextThemeData({Color primaryColor = CupertinoColors.systemBlue, TextStyle? textStyle, TextStyle? actionTextStyle, TextStyle? tabLabelTextStyle, TextStyle? navTitleTextStyle, TextStyle? navLargeTitleTextStyle, TextStyle? navActionTextStyle, TextStyle? pickerTextStyle, TextStyle? dateTimePickerTextStyle})
   CupertinoTextThemeData$Mate({
-    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , hasDefaultValue:true, defaultValueCode:CupertinoColors.systemBlue
-    required Color primaryColor,
+    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , default:processed=PrefixedIdentifierImpl
+    Color primaryColor = CupertinoColors.systemBlue,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {TextStyle? actionTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? actionTextStyle} , default:none
     TextStyle? actionTextStyle,
 
-    /// optionalParameters: {TextStyle? tabLabelTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? tabLabelTextStyle} , default:none
     TextStyle? tabLabelTextStyle,
 
-    /// optionalParameters: {TextStyle? navTitleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? navTitleTextStyle} , default:none
     TextStyle? navTitleTextStyle,
 
-    /// optionalParameters: {TextStyle? navLargeTitleTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? navLargeTitleTextStyle} , default:none
     TextStyle? navLargeTitleTextStyle,
 
-    /// optionalParameters: {TextStyle? navActionTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? navActionTextStyle} , default:none
     TextStyle? navActionTextStyle,
 
-    /// optionalParameters: {TextStyle? pickerTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? pickerTextStyle} , default:none
     TextStyle? pickerTextStyle,
 
-    /// optionalParameters: {TextStyle? dateTimePickerTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? dateTimePickerTextStyle} , default:none
     TextStyle? dateTimePickerTextStyle,
   }) : super(
           primaryColor: primaryColor,
@@ -46,6 +47,8 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
           pickerTextStyle: pickerTextStyle,
           dateTimePickerTextStyle: dateTimePickerTextStyle,
         ) {
+    mateCreateName = 'CupertinoTextThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextThemeData$Mate(
           primaryColor: p.get('primaryColor').build(),
           textStyle: p.get('textStyle').build(),
@@ -57,14 +60,51 @@ class CupertinoTextThemeData$Mate extends CupertinoTextThemeData with Mate {
           pickerTextStyle: p.get('pickerTextStyle').build(),
           dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').build(),
         );
-    matePut('primaryColor', primaryColor);
-    matePut('textStyle', textStyle);
-    matePut('actionTextStyle', actionTextStyle);
-    matePut('tabLabelTextStyle', tabLabelTextStyle);
-    matePut('navTitleTextStyle', navTitleTextStyle);
-    matePut('navLargeTitleTextStyle', navLargeTitleTextStyle);
-    matePut('navActionTextStyle', navActionTextStyle);
-    matePut('pickerTextStyle', pickerTextStyle);
-    matePut('dateTimePickerTextStyle', dateTimePickerTextStyle);
+    mateUse(
+      'primaryColor',
+      primaryColor,
+      isNamed: true,
+      defaultValue: CupertinoColors.systemBlue,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'actionTextStyle',
+      actionTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'tabLabelTextStyle',
+      tabLabelTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'navTitleTextStyle',
+      navTitleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'navLargeTitleTextStyle',
+      navLargeTitleTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'navActionTextStyle',
+      navActionTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'pickerTextStyle',
+      pickerTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'dateTimePickerTextStyle',
+      dateTimePickerTextStyle,
+      isNamed: true,
+    );
   }
 }

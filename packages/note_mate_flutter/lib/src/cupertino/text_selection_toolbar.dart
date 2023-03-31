@@ -11,19 +11,19 @@ import 'package:flutter/src/widgets/framework.dart';
 class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar with Mate {
   /// CupertinoTextSelectionToolbar CupertinoTextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, required List<Widget> children, Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder})
   CupertinoTextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Offset anchorAbove} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset anchorAbove} , default:none
     required Offset anchorAbove,
 
-    /// optionalParameters: {required Offset anchorBelow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset anchorBelow} , default:none
     required Offset anchorBelow,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder} , hasDefaultValue:true, defaultValueCode:_defaultToolbarBuilder
+    /// optionalParameters: {Widget Function(BuildContext, Offset, bool, Widget) toolbarBuilder = _defaultToolbarBuilder} , default:unprocessed=SimpleIdentifierImpl
     required CupertinoToolbarBuilder toolbarBuilder,
   }) : super(
           key: key,
@@ -32,6 +32,8 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar w
           children: children,
           toolbarBuilder: toolbarBuilder,
         ) {
+    mateCreateName = 'CupertinoTextSelectionToolbar';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbar$Mate(
           key: p.get('key').build(),
           anchorAbove: p.get('anchorAbove').build(),
@@ -39,10 +41,30 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar w
           children: p.get('children').build(),
           toolbarBuilder: p.get('toolbarBuilder').build(),
         );
-    matePut('key', key);
-    matePut('anchorAbove', anchorAbove);
-    matePut('anchorBelow', anchorBelow);
-    matePut('children', children);
-    matePut('toolbarBuilder', toolbarBuilder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorAbove',
+      anchorAbove,
+      isNamed: true,
+    );
+    mateUse(
+      'anchorBelow',
+      anchorBelow,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'toolbarBuilder',
+      toolbarBuilder,
+      isNamed: true,
+    );
   }
 }

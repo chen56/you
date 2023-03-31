@@ -11,23 +11,37 @@ class AssetImage$Mate extends AssetImage with Mate {
   AssetImage$Mate(
     /// requiredParameters: String assetName
     String assetName, {
-    /// optionalParameters: {AssetBundle? bundle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AssetBundle? bundle} , default:none
     AssetBundle? bundle,
 
-    /// optionalParameters: {String? package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? package} , default:none
     String? package,
   }) : super(
           assetName,
           bundle: bundle,
           package: package,
         ) {
+    mateCreateName = 'AssetImage';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => AssetImage$Mate(
           p.get('assetName').value,
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    matePut('assetName', assetName);
-    matePut('bundle', bundle);
-    matePut('package', package);
+    mateUse(
+      'assetName',
+      assetName,
+      isNamed: false,
+    );
+    mateUse(
+      'bundle',
+      bundle,
+      isNamed: true,
+    );
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
   }
 }

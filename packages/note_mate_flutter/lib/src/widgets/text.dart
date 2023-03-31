@@ -7,6 +7,7 @@ import 'package:flutter/src/painting/text_style.dart';
 import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/painting/text_painter.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/strut_style.dart';
 import 'package:flutter/src/painting/inline_span.dart';
@@ -15,31 +16,31 @@ import 'package:flutter/src/painting/inline_span.dart';
 class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
   /// DefaultTextStyle DefaultTextStyle({Key? key, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, required Widget child})
   DefaultTextStyle$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TextStyle style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextStyle style} , default:none
     required TextStyle style,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {bool softWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool softWrap,
+    /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
+    bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , hasDefaultValue:true, defaultValueCode:TextOverflow.clip
-    required TextOverflow overflow,
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
+    TextOverflow overflow = TextOverflow.clip,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , hasDefaultValue:true, defaultValueCode:TextWidthBasis.parent
-    required TextWidthBasis textWidthBasis,
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
+    TextWidthBasis textWidthBasis = TextWidthBasis.parent,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -52,6 +53,8 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
+    mateCreateName = 'DefaultTextStyle';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate(
           key: p.get('key').build(),
           style: p.get('style').build(),
@@ -63,25 +66,70 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('style', style);
-    matePut('textAlign', textAlign);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('maxLines', maxLines);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+      defaultValue: TextOverflow.clip,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+      defaultValue: TextWidthBasis.parent,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// DefaultTextStyle DefaultTextStyle.fallback({Key? key})
   DefaultTextStyle$Mate.fallback(
       {
-      /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super.fallback(key: key) {
+    mateCreateName = 'DefaultTextStyle.fallback';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
-    matePut('key', key);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }
 
@@ -89,27 +137,41 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
 class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TextHeightBehavior textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextHeightBehavior textHeightBehavior} , default:none
     required TextHeightBehavior textHeightBehavior,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
+    mateCreateName = 'DefaultTextHeightBehavior';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextHeightBehavior$Mate(
           key: p.get('key').build(),
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -119,46 +181,46 @@ class Text$Mate extends Text with Mate {
   Text$Mate(
     /// requiredParameters: String data
     String data, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {bool? softWrap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? softWrap} , default:none
     bool? softWrap,
 
-    /// optionalParameters: {TextOverflow? overflow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextOverflow? overflow} , default:none
     TextOverflow? overflow,
 
-    /// optionalParameters: {double? textScaleFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? textScaleFactor} , default:none
     double? textScaleFactor,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {TextWidthBasis? textWidthBasis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
     TextWidthBasis? textWidthBasis,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , default:none
     Color? selectionColor,
   }) : super(
           data,
@@ -177,6 +239,8 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
+    mateCreateName = 'Text';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Text$Mate(
           p.get('data').value,
           key: p.get('key').build(),
@@ -194,67 +258,127 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    matePut('data', data);
-    matePut('key', key);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('locale', locale);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('selectionColor', selectionColor);
+    mateUse(
+      'data',
+      data,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
   }
 
   /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
   Text$Mate.rich(
     /// requiredParameters: InlineSpan textSpan
     InlineSpan textSpan, {
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {StrutStyle? strutStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StrutStyle? strutStyle} , default:none
     StrutStyle? strutStyle,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {bool? softWrap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? softWrap} , default:none
     bool? softWrap,
 
-    /// optionalParameters: {TextOverflow? overflow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextOverflow? overflow} , default:none
     TextOverflow? overflow,
 
-    /// optionalParameters: {double? textScaleFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? textScaleFactor} , default:none
     double? textScaleFactor,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {TextWidthBasis? textWidthBasis} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
     TextWidthBasis? textWidthBasis,
 
-    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     TextHeightBehavior? textHeightBehavior,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , default:none
     Color? selectionColor,
   }) : super.rich(
           textSpan,
@@ -273,6 +397,8 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
+    mateCreateName = 'Text.rich';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Text$Mate.rich(
           p.get('textSpan').value,
           key: p.get('key').build(),
@@ -290,20 +416,80 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    matePut('textSpan', textSpan);
-    matePut('key', key);
-    matePut('style', style);
-    matePut('strutStyle', strutStyle);
-    matePut('textAlign', textAlign);
-    matePut('textDirection', textDirection);
-    matePut('locale', locale);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('textScaleFactor', textScaleFactor);
-    matePut('maxLines', maxLines);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('textWidthBasis', textWidthBasis);
-    matePut('textHeightBehavior', textHeightBehavior);
-    matePut('selectionColor', selectionColor);
+    mateUse(
+      'textSpan',
+      textSpan,
+      isNamed: false,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'strutStyle',
+      strutStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+    );
+    mateUse(
+      'textScaleFactor',
+      textScaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'textWidthBasis',
+      textWidthBasis,
+      isNamed: true,
+    );
+    mateUse(
+      'textHeightBehavior',
+      textHeightBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
   }
 }

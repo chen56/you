@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/icon_data.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/diagnostics.dart';
+import 'package:flutter/foundation.dart';
 
 /// class IconDataProperty extends DiagnosticsProperty<IconData>
 class IconDataProperty$Mate extends IconDataProperty with Mate {
@@ -14,17 +15,17 @@ class IconDataProperty$Mate extends IconDataProperty with Mate {
 
     /// requiredParameters: IconData? value
     IconData? value, {
-    /// optionalParameters: {String? ifNull} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? ifNull} , default:none
     String? ifNull,
 
-    /// optionalParameters: {bool showName = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showName,
+    /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
+    bool showName = true,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , hasDefaultValue:true, defaultValueCode:DiagnosticsTreeStyle.singleLine
-    required DiagnosticsTreeStyle style,
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , hasDefaultValue:true, defaultValueCode:DiagnosticLevel.info
-    required DiagnosticLevel level,
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    DiagnosticLevel level = DiagnosticLevel.info,
   }) : super(
           name,
           value,
@@ -33,6 +34,8 @@ class IconDataProperty$Mate extends IconDataProperty with Mate {
           style: style,
           level: level,
         ) {
+    mateCreateName = 'IconDataProperty';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IconDataProperty$Mate(
           p.get('name').value,
           p.get('value').value,
@@ -41,11 +44,38 @@ class IconDataProperty$Mate extends IconDataProperty with Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    matePut('name', name);
-    matePut('value', value);
-    matePut('ifNull', ifNull);
-    matePut('showName', showName);
-    matePut('style', style);
-    matePut('level', level);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
+    mateUse(
+      'ifNull',
+      ifNull,
+      isNamed: true,
+    );
+    mateUse(
+      'showName',
+      showName,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: DiagnosticsTreeStyle.singleLine,
+    );
+    mateUse(
+      'level',
+      level,
+      isNamed: true,
+      defaultValue: DiagnosticLevel.info,
+    );
   }
 }

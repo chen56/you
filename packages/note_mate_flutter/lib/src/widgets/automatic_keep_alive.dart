@@ -10,21 +10,31 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 class AutomaticKeepAlive$Mate extends AutomaticKeepAlive with Mate {
   /// AutomaticKeepAlive AutomaticKeepAlive({Key? key, required Widget child})
   AutomaticKeepAlive$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'AutomaticKeepAlive';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutomaticKeepAlive$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -36,7 +46,13 @@ class KeepAliveNotification$Mate extends KeepAliveNotification with Mate {
       /// requiredParameters: Listenable handle
       Listenable handle)
       : super(handle) {
+    mateCreateName = 'KeepAliveNotification';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeepAliveNotification$Mate(p.get('handle').value);
-    matePut('handle', handle);
+    mateUse(
+      'handle',
+      handle,
+      isNamed: false,
+    );
   }
 }

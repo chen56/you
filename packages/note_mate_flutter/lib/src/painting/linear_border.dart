@@ -4,26 +4,39 @@ import 'package:flutter/src/painting/linear_border.dart';
 import 'package:note/mate.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 
 /// class LinearBorderEdge
 class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
   /// LinearBorderEdge LinearBorderEdge({double size = 1.0, double alignment = 0.0})
   LinearBorderEdge$Mate({
-    /// optionalParameters: {double size = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double size,
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
+    double size = 1.0,
 
-    /// optionalParameters: {double alignment = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double alignment,
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
+    double alignment = 0.0,
   }) : super(
           size: size,
           alignment: alignment,
         ) {
+    mateCreateName = 'LinearBorderEdge';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorderEdge$Mate(
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
         );
-    matePut('size', size);
-    matePut('alignment', alignment);
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
   }
 }
 
@@ -31,19 +44,19 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
 class LinearBorder$Mate extends LinearBorder with Mate {
   /// LinearBorder LinearBorder({BorderSide side = BorderSide.none, LinearBorderEdge? start, LinearBorderEdge? end, LinearBorderEdge? top, LinearBorderEdge? bottom})
   LinearBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {LinearBorderEdge? start} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LinearBorderEdge? start} , default:none
     LinearBorderEdge? start,
 
-    /// optionalParameters: {LinearBorderEdge? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LinearBorderEdge? end} , default:none
     LinearBorderEdge? end,
 
-    /// optionalParameters: {LinearBorderEdge? top} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LinearBorderEdge? top} , default:none
     LinearBorderEdge? top,
 
-    /// optionalParameters: {LinearBorderEdge? bottom} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LinearBorderEdge? bottom} , default:none
     LinearBorderEdge? bottom,
   }) : super(
           side: side,
@@ -52,6 +65,8 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           top: top,
           bottom: bottom,
         ) {
+    mateCreateName = 'LinearBorder';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate(
           side: p.get('side').build(),
           start: p.get('start').build(),
@@ -59,110 +74,199 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    matePut('side', side);
-    matePut('start', start);
-    matePut('end', end);
-    matePut('top', top);
-    matePut('bottom', bottom);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
+    mateUse(
+      'top',
+      top,
+      isNamed: true,
+    );
+    mateUse(
+      'bottom',
+      bottom,
+      isNamed: true,
+    );
   }
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.start({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double alignment,
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
+    double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double size,
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
+    double size = 1.0,
   }) : super.start(
           side: side,
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.start';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.start(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    matePut('side', side);
-    matePut('alignment', alignment);
-    matePut('size', size);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.end({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double alignment,
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
+    double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double size,
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
+    double size = 1.0,
   }) : super.end(
           side: side,
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.end';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.end(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    matePut('side', side);
-    matePut('alignment', alignment);
-    matePut('size', size);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.top({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double alignment,
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
+    double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double size,
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
+    double size = 1.0,
   }) : super.top(
           side: side,
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.top';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.top(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    matePut('side', side);
-    matePut('alignment', alignment);
-    matePut('size', size);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.bottom({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double alignment = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double alignment,
+    /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
+    double alignment = 0.0,
 
-    /// optionalParameters: {double size = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double size,
+    /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
+    double size = 1.0,
   }) : super.bottom(
           side: side,
           alignment: alignment,
           size: size,
         ) {
+    mateCreateName = 'LinearBorder.bottom';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.bottom(
           side: p.get('side').build(),
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    matePut('side', side);
-    matePut('alignment', alignment);
-    matePut('size', size);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }

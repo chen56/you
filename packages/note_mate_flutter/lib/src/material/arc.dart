@@ -8,21 +8,31 @@ import 'dart:ui';
 class MaterialPointArcTween$Mate extends MaterialPointArcTween with Mate {
   /// MaterialPointArcTween MaterialPointArcTween({Offset? begin, Offset? end})
   MaterialPointArcTween$Mate({
-    /// optionalParameters: {Offset? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? begin} , default:none
     Offset? begin,
 
-    /// optionalParameters: {Offset? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? end} , default:none
     Offset? end,
   }) : super(
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'MaterialPointArcTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialPointArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -30,21 +40,31 @@ class MaterialPointArcTween$Mate extends MaterialPointArcTween with Mate {
 class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
   /// MaterialRectArcTween MaterialRectArcTween({Rect? begin, Rect? end})
   MaterialRectArcTween$Mate({
-    /// optionalParameters: {Rect? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? begin} , default:none
     Rect? begin,
 
-    /// optionalParameters: {Rect? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? end} , default:none
     Rect? end,
   }) : super(
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'MaterialRectArcTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialRectArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -52,20 +72,30 @@ class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
 class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween with Mate {
   /// MaterialRectCenterArcTween MaterialRectCenterArcTween({Rect? begin, Rect? end})
   MaterialRectCenterArcTween$Mate({
-    /// optionalParameters: {Rect? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? begin} , default:none
     Rect? begin,
 
-    /// optionalParameters: {Rect? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Rect? end} , default:none
     Rect? end,
   }) : super(
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'MaterialRectCenterArcTween';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialRectCenterArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }

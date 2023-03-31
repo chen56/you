@@ -3,7 +3,9 @@
 import 'package:flutter/src/gestures/long_press.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'package:flutter/src/gestures/velocity_tracker.dart';
+import 'package:flutter/gestures.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/recognizer.dart';
 
@@ -11,27 +13,42 @@ import 'package:flutter/src/gestures/recognizer.dart';
 class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
   /// LongPressDownDetails LongPressDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   LongPressDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {PointerDeviceKind? kind} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {PointerDeviceKind? kind} , default:none
     PointerDeviceKind? kind,
   }) : super(
           globalPosition: globalPosition,
           localPosition: localPosition,
           kind: kind,
         ) {
+    mateCreateName = 'LongPressDownDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressDownDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    matePut('globalPosition', globalPosition);
-    matePut('localPosition', localPosition);
-    matePut('kind', kind);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'kind',
+      kind,
+      isNamed: true,
+    );
   }
 }
 
@@ -39,21 +56,32 @@ class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
 class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
   /// LongPressStartDetails LongPressStartDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   LongPressStartDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
   }) : super(
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
+    mateCreateName = 'LongPressStartDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressStartDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    matePut('globalPosition', globalPosition);
-    matePut('localPosition', localPosition);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -61,16 +89,16 @@ class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
 class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Mate {
   /// LongPressMoveUpdateDetails LongPressMoveUpdateDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Offset offsetFromOrigin = Offset.zero, Offset? localOffsetFromOrigin})
   LongPressMoveUpdateDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {Offset offsetFromOrigin = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset offsetFromOrigin,
+    /// optionalParameters: {Offset offsetFromOrigin = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset offsetFromOrigin = Offset.zero,
 
-    /// optionalParameters: {Offset? localOffsetFromOrigin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localOffsetFromOrigin} , default:none
     Offset? localOffsetFromOrigin,
   }) : super(
           globalPosition: globalPosition,
@@ -78,16 +106,36 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
           offsetFromOrigin: offsetFromOrigin,
           localOffsetFromOrigin: localOffsetFromOrigin,
         ) {
+    mateCreateName = 'LongPressMoveUpdateDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressMoveUpdateDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
           offsetFromOrigin: p.get('offsetFromOrigin').build(),
           localOffsetFromOrigin: p.get('localOffsetFromOrigin').build(),
         );
-    matePut('globalPosition', globalPosition);
-    matePut('localPosition', localPosition);
-    matePut('offsetFromOrigin', offsetFromOrigin);
-    matePut('localOffsetFromOrigin', localOffsetFromOrigin);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'offsetFromOrigin',
+      offsetFromOrigin,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localOffsetFromOrigin',
+      localOffsetFromOrigin,
+      isNamed: true,
+    );
   }
 }
 
@@ -95,27 +143,43 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
 class LongPressEndDetails$Mate extends LongPressEndDetails with Mate {
   /// LongPressEndDetails LongPressEndDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Velocity velocity = Velocity.zero})
   LongPressEndDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset globalPosition,
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset globalPosition = Offset.zero,
 
-    /// optionalParameters: {Offset? localPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? localPosition} , default:none
     Offset? localPosition,
 
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , hasDefaultValue:true, defaultValueCode:Velocity.zero
-    required Velocity velocity,
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
+    Velocity velocity = Velocity.zero,
   }) : super(
           globalPosition: globalPosition,
           localPosition: localPosition,
           velocity: velocity,
         ) {
+    mateCreateName = 'LongPressEndDetails';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressEndDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
           velocity: p.get('velocity').build(),
         );
-    matePut('globalPosition', globalPosition);
-    matePut('localPosition', localPosition);
-    matePut('velocity', velocity);
+    mateUse(
+      'globalPosition',
+      globalPosition,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'localPosition',
+      localPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: true,
+      defaultValue: Velocity.zero,
+    );
   }
 }
 
@@ -123,20 +187,20 @@ class LongPressEndDetails$Mate extends LongPressEndDetails with Mate {
 class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Mate {
   /// LongPressGestureRecognizer LongPressGestureRecognizer({Duration? duration, double? postAcceptSlopTolerance = null, Set<PointerDeviceKind>? supportedDevices, Object? debugOwner, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   LongPressGestureRecognizer$Mate({
-    /// optionalParameters: {Duration? duration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Duration? duration} , default:none
     Duration? duration,
 
-    /// optionalParameters: {double? postAcceptSlopTolerance = null} , hasDefaultValue:true, defaultValueCode:null
-    double? postAcceptSlopTolerance,
+    /// optionalParameters: {double? postAcceptSlopTolerance = null} , default:processed=NullLiteralImpl
+    double? postAcceptSlopTolerance = null,
 
-    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
     Set<PointerDeviceKind>? supportedDevices,
 
-    /// optionalParameters: {Object? debugOwner} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? debugOwner} , default:none
     Object? debugOwner,
 
-    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , hasDefaultValue:true, defaultValueCode:_defaultButtonAcceptBehavior
-    AllowedButtonsFilter? allowedButtonsFilter,
+    /// optionalParameters: {bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior} , default:unprocessed=SimpleIdentifierImpl
+    required AllowedButtonsFilter? allowedButtonsFilter,
   }) : super(
           duration: duration,
           postAcceptSlopTolerance: postAcceptSlopTolerance,
@@ -144,6 +208,8 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
           debugOwner: debugOwner,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
+    mateCreateName = 'LongPressGestureRecognizer';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressGestureRecognizer$Mate(
           duration: p.get('duration').build(),
           postAcceptSlopTolerance: p.get('postAcceptSlopTolerance').build(),
@@ -151,10 +217,31 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
           debugOwner: p.get('debugOwner').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    matePut('duration', duration);
-    matePut('postAcceptSlopTolerance', postAcceptSlopTolerance);
-    matePut('supportedDevices', supportedDevices);
-    matePut('debugOwner', debugOwner);
-    matePut('allowedButtonsFilter', allowedButtonsFilter);
+    mateUse(
+      'duration',
+      duration,
+      isNamed: true,
+    );
+    mateUse(
+      'postAcceptSlopTolerance',
+      postAcceptSlopTolerance,
+      isNamed: true,
+      defaultValue: null,
+    );
+    mateUse(
+      'supportedDevices',
+      supportedDevices,
+      isNamed: true,
+    );
+    mateUse(
+      'debugOwner',
+      debugOwner,
+      isNamed: true,
+    );
+    mateUse(
+      'allowedButtonsFilter',
+      allowedButtonsFilter,
+      isNamed: true,
+    );
   }
 }

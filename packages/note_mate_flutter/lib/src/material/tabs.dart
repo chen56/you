@@ -8,9 +8,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/material/tab_controller.dart';
 import 'dart:ui';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/decoration.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/src/material/material_state.dart';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
@@ -23,22 +25,22 @@ import 'package:flutter/src/painting/borders.dart';
 class Tab$Mate extends Tab with Mate {
   /// Tab Tab({Key? key, String? text, Widget? icon, EdgeInsetsGeometry iconMargin = const EdgeInsets.only(bottom: 10.0), double? height, Widget? child})
   Tab$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {String? text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? text} , default:none
     String? text,
 
-    /// optionalParameters: {Widget? icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? icon} , default:none
     Widget? icon,
 
-    /// optionalParameters: {EdgeInsetsGeometry iconMargin = const EdgeInsets.only(bottom: 10.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.only(bottom: 10.0)
+    /// optionalParameters: {EdgeInsetsGeometry iconMargin = const EdgeInsets.only(bottom: 10.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required EdgeInsetsGeometry iconMargin,
 
-    /// optionalParameters: {double? height} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? height} , default:none
     double? height,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -48,6 +50,8 @@ class Tab$Mate extends Tab with Mate {
           height: height,
           child: child,
         ) {
+    mateCreateName = 'Tab';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Tab$Mate(
           key: p.get('key').build(),
           text: p.get('text').build(),
@@ -56,12 +60,36 @@ class Tab$Mate extends Tab with Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('text', text);
-    matePut('icon', icon);
-    matePut('iconMargin', iconMargin);
-    matePut('height', height);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'iconMargin',
+      iconMargin,
+      isNamed: true,
+    );
+    mateUse(
+      'height',
+      height,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -69,79 +97,79 @@ class Tab$Mate extends Tab with Mate {
 class TabBar$Mate extends TabBar with Mate {
   /// TabBar TabBar({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius})
   TabBar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> tabs} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> tabs} , default:none
     required List<Widget> tabs,
 
-    /// optionalParameters: {TabController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TabController? controller} , default:none
     TabController? controller,
 
-    /// optionalParameters: {bool isScrollable = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isScrollable,
+    /// optionalParameters: {bool isScrollable = false} , default:processed=BooleanLiteralImpl
+    bool isScrollable = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , default:none
     Color? indicatorColor,
 
-    /// optionalParameters: {bool automaticIndicatorColorAdjustment = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool automaticIndicatorColorAdjustment,
+    /// optionalParameters: {bool automaticIndicatorColorAdjustment = true} , default:processed=BooleanLiteralImpl
+    bool automaticIndicatorColorAdjustment = true,
 
-    /// optionalParameters: {double indicatorWeight = 2.0} , hasDefaultValue:true, defaultValueCode:2.0
-    required double indicatorWeight,
+    /// optionalParameters: {double indicatorWeight = 2.0} , default:processed=DoubleLiteralImpl
+    double indicatorWeight = 2.0,
 
-    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
-    required EdgeInsetsGeometry indicatorPadding,
+    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero,
 
-    /// optionalParameters: {Decoration? indicator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? indicator} , default:none
     Decoration? indicator,
 
-    /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , default:none
     TabBarIndicatorSize? indicatorSize,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , default:none
     Color? dividerColor,
 
-    /// optionalParameters: {Color? labelColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? labelColor} , default:none
     Color? labelColor,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , default:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {Color? unselectedLabelColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? unselectedLabelColor} , default:none
     Color? unselectedLabelColor,
 
-    /// optionalParameters: {TextStyle? unselectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
     TextStyle? unselectedLabelStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {bool? enableFeedback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? enableFeedback} , default:none
     bool? enableFeedback,
 
-    /// optionalParameters: {void Function(int)? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onTap} , default:none
     ValueChanged<int>? onTap,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
     InteractiveInkFeatureFactory? splashFactory,
 
-    /// optionalParameters: {BorderRadius? splashBorderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? splashBorderRadius} , default:none
     BorderRadius? splashBorderRadius,
   }) : super(
           key: key,
@@ -170,6 +198,8 @@ class TabBar$Mate extends TabBar with Mate {
           splashFactory: splashFactory,
           splashBorderRadius: splashBorderRadius,
         ) {
+    mateCreateName = 'TabBar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBar$Mate(
           key: p.get('key').build(),
           tabs: p.get('tabs').build(),
@@ -197,31 +227,136 @@ class TabBar$Mate extends TabBar with Mate {
           splashFactory: p.get('splashFactory').build(),
           splashBorderRadius: p.get('splashBorderRadius').build(),
         );
-    matePut('key', key);
-    matePut('tabs', tabs);
-    matePut('controller', controller);
-    matePut('isScrollable', isScrollable);
-    matePut('padding', padding);
-    matePut('indicatorColor', indicatorColor);
-    matePut('automaticIndicatorColorAdjustment', automaticIndicatorColorAdjustment);
-    matePut('indicatorWeight', indicatorWeight);
-    matePut('indicatorPadding', indicatorPadding);
-    matePut('indicator', indicator);
-    matePut('indicatorSize', indicatorSize);
-    matePut('dividerColor', dividerColor);
-    matePut('labelColor', labelColor);
-    matePut('labelStyle', labelStyle);
-    matePut('labelPadding', labelPadding);
-    matePut('unselectedLabelColor', unselectedLabelColor);
-    matePut('unselectedLabelStyle', unselectedLabelStyle);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('overlayColor', overlayColor);
-    matePut('mouseCursor', mouseCursor);
-    matePut('enableFeedback', enableFeedback);
-    matePut('onTap', onTap);
-    matePut('physics', physics);
-    matePut('splashFactory', splashFactory);
-    matePut('splashBorderRadius', splashBorderRadius);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'tabs',
+      tabs,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'isScrollable',
+      isScrollable,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorColor',
+      indicatorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'automaticIndicatorColorAdjustment',
+      automaticIndicatorColorAdjustment,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'indicatorWeight',
+      indicatorWeight,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'indicatorPadding',
+      indicatorPadding,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'indicator',
+      indicator,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorSize',
+      indicatorSize,
+      isNamed: true,
+    );
+    mateUse(
+      'dividerColor',
+      dividerColor,
+      isNamed: true,
+    );
+    mateUse(
+      'labelColor',
+      labelColor,
+      isNamed: true,
+    );
+    mateUse(
+      'labelStyle',
+      labelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'labelPadding',
+      labelPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedLabelColor',
+      unselectedLabelColor,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedLabelStyle',
+      unselectedLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'splashFactory',
+      splashFactory,
+      isNamed: true,
+    );
+    mateUse(
+      'splashBorderRadius',
+      splashBorderRadius,
+      isNamed: true,
+    );
   }
 }
 
@@ -229,26 +364,26 @@ class TabBar$Mate extends TabBar with Mate {
 class TabBarView$Mate extends TabBarView with Mate {
   /// TabBarView TabBarView({Key? key, required List<Widget> children, TabController? controller, ScrollPhysics? physics, DragStartBehavior dragStartBehavior = DragStartBehavior.start, double viewportFraction = 1.0, Clip clipBehavior = Clip.hardEdge})
   TabBarView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {TabController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TabController? controller} , default:none
     TabController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , hasDefaultValue:true, defaultValueCode:DragStartBehavior.start
-    required DragStartBehavior dragStartBehavior,
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
-    /// optionalParameters: {double viewportFraction = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double viewportFraction,
+    /// optionalParameters: {double viewportFraction = 1.0} , default:processed=DoubleLiteralImpl
+    double viewportFraction = 1.0,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           children: children,
@@ -258,6 +393,8 @@ class TabBarView$Mate extends TabBarView with Mate {
           viewportFraction: viewportFraction,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'TabBarView';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBarView$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -267,13 +404,44 @@ class TabBarView$Mate extends TabBarView with Mate {
           viewportFraction: p.get('viewportFraction').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('controller', controller);
-    matePut('physics', physics);
-    matePut('dragStartBehavior', dragStartBehavior);
-    matePut('viewportFraction', viewportFraction);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'dragStartBehavior',
+      dragStartBehavior,
+      isNamed: true,
+      defaultValue: DragStartBehavior.start,
+    );
+    mateUse(
+      'viewportFraction',
+      viewportFraction,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -281,20 +449,20 @@ class TabBarView$Mate extends TabBarView with Mate {
 class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
   /// TabPageSelectorIndicator TabPageSelectorIndicator({Key? key, required Color backgroundColor, required Color borderColor, required double size, BorderStyle borderStyle = BorderStyle.solid})
   TabPageSelectorIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Color backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color backgroundColor} , default:none
     required Color backgroundColor,
 
-    /// optionalParameters: {required Color borderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Color borderColor} , default:none
     required Color borderColor,
 
-    /// optionalParameters: {required double size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double size} , default:none
     required double size,
 
-    /// optionalParameters: {BorderStyle borderStyle = BorderStyle.solid} , hasDefaultValue:true, defaultValueCode:BorderStyle.solid
-    required BorderStyle borderStyle,
+    /// optionalParameters: {BorderStyle borderStyle = BorderStyle.solid} , default:processed=PrefixedIdentifierImpl
+    BorderStyle borderStyle = BorderStyle.solid,
   }) : super(
           key: key,
           backgroundColor: backgroundColor,
@@ -302,6 +470,8 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
           size: size,
           borderStyle: borderStyle,
         ) {
+    mateCreateName = 'TabPageSelectorIndicator';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelectorIndicator$Mate(
           key: p.get('key').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -309,11 +479,32 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
           size: p.get('size').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    matePut('key', key);
-    matePut('backgroundColor', backgroundColor);
-    matePut('borderColor', borderColor);
-    matePut('size', size);
-    matePut('borderStyle', borderStyle);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderColor',
+      borderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'borderStyle',
+      borderStyle,
+      isNamed: true,
+      defaultValue: BorderStyle.solid,
+    );
   }
 }
 
@@ -321,22 +512,22 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
 class TabPageSelector$Mate extends TabPageSelector with Mate {
   /// TabPageSelector TabPageSelector({Key? key, TabController? controller, double indicatorSize = 12.0, Color? color, Color? selectedColor, BorderStyle? borderStyle})
   TabPageSelector$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {TabController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TabController? controller} , default:none
     TabController? controller,
 
-    /// optionalParameters: {double indicatorSize = 12.0} , hasDefaultValue:true, defaultValueCode:12.0
-    required double indicatorSize,
+    /// optionalParameters: {double indicatorSize = 12.0} , default:processed=DoubleLiteralImpl
+    double indicatorSize = 12.0,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {BorderStyle? borderStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderStyle? borderStyle} , default:none
     BorderStyle? borderStyle,
   }) : super(
           key: key,
@@ -346,6 +537,8 @@ class TabPageSelector$Mate extends TabPageSelector with Mate {
           selectedColor: selectedColor,
           borderStyle: borderStyle,
         ) {
+    mateCreateName = 'TabPageSelector';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelector$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -354,11 +547,36 @@ class TabPageSelector$Mate extends TabPageSelector with Mate {
           selectedColor: p.get('selectedColor').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('indicatorSize', indicatorSize);
-    matePut('color', color);
-    matePut('selectedColor', selectedColor);
-    matePut('borderStyle', borderStyle);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorSize',
+      indicatorSize,
+      isNamed: true,
+      defaultValue: 12.0,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderStyle',
+      borderStyle,
+      isNamed: true,
+    );
   }
 }

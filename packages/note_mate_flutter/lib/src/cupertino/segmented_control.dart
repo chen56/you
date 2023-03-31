@@ -13,31 +13,31 @@ import 'package:flutter/src/painting/edge_insets.dart';
 class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmentedControl<T> with Mate {
   /// CupertinoSegmentedControl<T> CupertinoSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T) onValueChanged, T? groupValue, Color? unselectedColor, Color? selectedColor, Color? borderColor, Color? pressedColor, EdgeInsetsGeometry? padding})
   CupertinoSegmentedControl$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Map<T, Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Map<T, Widget> children} , default:none
     required Map<T, Widget> children,
 
-    /// optionalParameters: {required void Function(T) onValueChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(T) onValueChanged} , default:none
     required ValueChanged<T> onValueChanged,
 
-    /// optionalParameters: {T? groupValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {T? groupValue} , default:none
     T? groupValue,
 
-    /// optionalParameters: {Color? unselectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? unselectedColor} , default:none
     Color? unselectedColor,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? borderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? borderColor} , default:none
     Color? borderColor,
 
-    /// optionalParameters: {Color? pressedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? pressedColor} , default:none
     Color? pressedColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
   }) : super(
           key: key,
@@ -50,6 +50,8 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
           pressedColor: pressedColor,
           padding: padding,
         ) {
+    mateCreateName = 'CupertinoSegmentedControl';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSegmentedControl$Mate<T>(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -61,14 +63,50 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
           pressedColor: p.get('pressedColor').build(),
           padding: p.get('padding').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('onValueChanged', onValueChanged);
-    matePut('groupValue', groupValue);
-    matePut('unselectedColor', unselectedColor);
-    matePut('selectedColor', selectedColor);
-    matePut('borderColor', borderColor);
-    matePut('pressedColor', pressedColor);
-    matePut('padding', padding);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'onValueChanged',
+      onValueChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'groupValue',
+      groupValue,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedColor',
+      unselectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderColor',
+      borderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'pressedColor',
+      pressedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
   }
 }

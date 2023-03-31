@@ -9,32 +9,52 @@ import 'dart:core';
 class SliverPersistentHeader$Mate extends SliverPersistentHeader with Mate {
   /// SliverPersistentHeader SliverPersistentHeader({Key? key, required SliverPersistentHeaderDelegate delegate, bool pinned = false, bool floating = false})
   SliverPersistentHeader$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SliverPersistentHeaderDelegate delegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliverPersistentHeaderDelegate delegate} , default:none
     required SliverPersistentHeaderDelegate delegate,
 
-    /// optionalParameters: {bool pinned = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool pinned,
+    /// optionalParameters: {bool pinned = false} , default:processed=BooleanLiteralImpl
+    bool pinned = false,
 
-    /// optionalParameters: {bool floating = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool floating,
+    /// optionalParameters: {bool floating = false} , default:processed=BooleanLiteralImpl
+    bool floating = false,
   }) : super(
           key: key,
           delegate: delegate,
           pinned: pinned,
           floating: floating,
         ) {
+    mateCreateName = 'SliverPersistentHeader';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPersistentHeader$Mate(
           key: p.get('key').build(),
           delegate: p.get('delegate').build(),
           pinned: p.get('pinned').build(),
           floating: p.get('floating').build(),
         );
-    matePut('key', key);
-    matePut('delegate', delegate);
-    matePut('pinned', pinned);
-    matePut('floating', floating);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'delegate',
+      delegate,
+      isNamed: true,
+    );
+    mateUse(
+      'pinned',
+      pinned,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'floating',
+      floating,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

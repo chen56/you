@@ -5,34 +5,35 @@ import 'package:flutter/src/material/autocomplete.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/autocomplete.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/services/text_input.dart';
 
 /// class Autocomplete<T extends Object> extends StatelessWidget
 class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
   /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, TextEditingValue? initialValue})
   Autocomplete$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , default:none
     required AutocompleteOptionsBuilder<T> optionsBuilder,
 
-    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , hasDefaultValue:true, defaultValueCode:RawAutocomplete.defaultStringForOption
-    required AutocompleteOptionToString<T> displayStringForOption,
+    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , default:processed=PrefixedIdentifierImpl
+    AutocompleteOptionToString<T> displayStringForOption = RawAutocomplete.defaultStringForOption,
 
-    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , hasDefaultValue:true, defaultValueCode:_defaultFieldViewBuilder
+    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , default:unprocessed=SimpleIdentifierImpl
     required AutocompleteFieldViewBuilder fieldViewBuilder,
 
-    /// optionalParameters: {void Function(T)? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(T)? onSelected} , default:none
     AutocompleteOnSelected<T>? onSelected,
 
-    /// optionalParameters: {double optionsMaxHeight = 200.0} , hasDefaultValue:true, defaultValueCode:200.0
-    required double optionsMaxHeight,
+    /// optionalParameters: {double optionsMaxHeight = 200.0} , default:processed=DoubleLiteralImpl
+    double optionsMaxHeight = 200.0,
 
-    /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , default:none
     AutocompleteOptionsViewBuilder<T>? optionsViewBuilder,
 
-    /// optionalParameters: {TextEditingValue? initialValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextEditingValue? initialValue} , default:none
     TextEditingValue? initialValue,
   }) : super(
           key: key,
@@ -44,6 +45,8 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
           optionsViewBuilder: optionsViewBuilder,
           initialValue: initialValue,
         ) {
+    mateCreateName = 'Autocomplete';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Autocomplete$Mate<T>(
           key: p.get('key').build(),
           optionsBuilder: p.get('optionsBuilder').build(),
@@ -54,13 +57,47 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
           initialValue: p.get('initialValue').build(),
         );
-    matePut('key', key);
-    matePut('optionsBuilder', optionsBuilder);
-    matePut('displayStringForOption', displayStringForOption);
-    matePut('fieldViewBuilder', fieldViewBuilder);
-    matePut('onSelected', onSelected);
-    matePut('optionsMaxHeight', optionsMaxHeight);
-    matePut('optionsViewBuilder', optionsViewBuilder);
-    matePut('initialValue', initialValue);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsBuilder',
+      optionsBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'displayStringForOption',
+      displayStringForOption,
+      isNamed: true,
+      defaultValue: RawAutocomplete.defaultStringForOption,
+    );
+    mateUse(
+      'fieldViewBuilder',
+      fieldViewBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelected',
+      onSelected,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsMaxHeight',
+      optionsMaxHeight,
+      isNamed: true,
+      defaultValue: 200.0,
+    );
+    mateUse(
+      'optionsViewBuilder',
+      optionsViewBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'initialValue',
+      initialValue,
+      isNamed: true,
+    );
   }
 }

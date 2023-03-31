@@ -9,34 +9,35 @@ import 'package:flutter/src/painting/border_radius.dart';
 import 'dart:core';
 import 'package:flutter/src/painting/box_shadow.dart';
 import 'package:flutter/src/painting/gradient.dart';
+import 'package:flutter/painting.dart';
 
 /// class BoxDecoration extends Decoration
 class BoxDecoration$Mate extends BoxDecoration with Mate {
   /// BoxDecoration BoxDecoration({Color? color, DecorationImage? image, BoxBorder? border, BorderRadiusGeometry? borderRadius, List<BoxShadow>? boxShadow, Gradient? gradient, BlendMode? backgroundBlendMode, BoxShape shape = BoxShape.rectangle})
   BoxDecoration$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {DecorationImage? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DecorationImage? image} , default:none
     DecorationImage? image,
 
-    /// optionalParameters: {BoxBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxBorder? border} , default:none
     BoxBorder? border,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius} , default:none
     BorderRadiusGeometry? borderRadius,
 
-    /// optionalParameters: {List<BoxShadow>? boxShadow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<BoxShadow>? boxShadow} , default:none
     List<BoxShadow>? boxShadow,
 
-    /// optionalParameters: {Gradient? gradient} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Gradient? gradient} , default:none
     Gradient? gradient,
 
-    /// optionalParameters: {BlendMode? backgroundBlendMode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BlendMode? backgroundBlendMode} , default:none
     BlendMode? backgroundBlendMode,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , hasDefaultValue:true, defaultValueCode:BoxShape.rectangle
-    required BoxShape shape,
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
+    BoxShape shape = BoxShape.rectangle,
   }) : super(
           color: color,
           image: image,
@@ -47,6 +48,8 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
           backgroundBlendMode: backgroundBlendMode,
           shape: shape,
         ) {
+    mateCreateName = 'BoxDecoration';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BoxDecoration$Mate(
           color: p.get('color').build(),
           image: p.get('image').build(),
@@ -57,13 +60,46 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
           backgroundBlendMode: p.get('backgroundBlendMode').build(),
           shape: p.get('shape').build(),
         );
-    matePut('color', color);
-    matePut('image', image);
-    matePut('border', border);
-    matePut('borderRadius', borderRadius);
-    matePut('boxShadow', boxShadow);
-    matePut('gradient', gradient);
-    matePut('backgroundBlendMode', backgroundBlendMode);
-    matePut('shape', shape);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUseList(
+      'boxShadow',
+      boxShadow,
+      isNamed: true,
+    );
+    mateUse(
+      'gradient',
+      gradient,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundBlendMode',
+      backgroundBlendMode,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+      defaultValue: BoxShape.rectangle,
+    );
   }
 }

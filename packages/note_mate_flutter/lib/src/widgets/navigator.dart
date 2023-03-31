@@ -6,6 +6,7 @@ import 'dart:core';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/heroes.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/widgets.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/focus_traversal.dart';
 
@@ -13,21 +14,31 @@ import 'package:flutter/src/widgets/focus_traversal.dart';
 class RouteSettings$Mate extends RouteSettings with Mate {
   /// RouteSettings RouteSettings({String? name, Object? arguments})
   RouteSettings$Mate({
-    /// optionalParameters: {String? name} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? name} , default:none
     String? name,
 
-    /// optionalParameters: {Object? arguments} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Object? arguments} , default:none
     Object? arguments,
   }) : super(
           name: name,
           arguments: arguments,
         ) {
+    mateCreateName = 'RouteSettings';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouteSettings$Mate(
           name: p.get('name').build(),
           arguments: p.get('arguments').build(),
         );
-    matePut('name', name);
-    matePut('arguments', arguments);
+    mateUse(
+      'name',
+      name,
+      isNamed: true,
+    );
+    mateUse(
+      'arguments',
+      arguments,
+      isNamed: true,
+    );
   }
 }
 
@@ -35,46 +46,70 @@ class RouteSettings$Mate extends RouteSettings with Mate {
 class HeroControllerScope$Mate extends HeroControllerScope with Mate {
   /// HeroControllerScope HeroControllerScope({Key? key, required HeroController controller, required Widget child})
   HeroControllerScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required HeroController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required HeroController controller} , default:none
     required HeroController controller,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           controller: controller,
           child: child,
         ) {
+    mateCreateName = 'HeroControllerScope';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// HeroControllerScope HeroControllerScope.none({Key? key, required Widget child})
   HeroControllerScope$Mate.none({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super.none(
           key: key,
           child: child,
         ) {
+    mateCreateName = 'HeroControllerScope.none';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate.none(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -82,46 +117,46 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
 class Navigator$Mate extends Navigator with Mate {
   /// Navigator Navigator({Key? key, List<Page<dynamic>> pages = const <Page<dynamic>>[], bool Function(Route<dynamic>, dynamic)? onPopPage, String? initialRoute, List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, TransitionDelegate<dynamic> transitionDelegate = const DefaultTransitionDelegate<dynamic>(), bool reportsRouteUpdateToEngine = false, Clip clipBehavior = Clip.hardEdge, List<NavigatorObserver> observers = const <NavigatorObserver>[], bool requestFocus = true, String? restorationScopeId, TraversalEdgeBehavior routeTraversalEdgeBehavior = kDefaultRouteTraversalEdgeBehavior})
   Navigator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {List<Page<dynamic>> pages = const <Page<dynamic>>[]} , hasDefaultValue:true, defaultValueCode:const <Page<dynamic>>[]
+    /// optionalParameters: {List<Page<dynamic>> pages = const <Page<dynamic>>[]} , default:unprocessed=ListLiteralImpl
     required List<Page<dynamic>> pages,
 
-    /// optionalParameters: {bool Function(Route<dynamic>, dynamic)? onPopPage} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool Function(Route<dynamic>, dynamic)? onPopPage} , default:none
     PopPageCallback? onPopPage,
 
-    /// optionalParameters: {String? initialRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? initialRoute} , default:none
     String? initialRoute,
 
-    /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , hasDefaultValue:true, defaultValueCode:Navigator.defaultGenerateInitialRoutes
-    required RouteListFactory onGenerateInitialRoutes,
+    /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , default:processed=PrefixedIdentifierImpl
+    RouteListFactory onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
     RouteFactory? onGenerateRoute,
 
-    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
     RouteFactory? onUnknownRoute,
 
-    /// optionalParameters: {TransitionDelegate<dynamic> transitionDelegate = const DefaultTransitionDelegate<dynamic>()} , hasDefaultValue:true, defaultValueCode:const DefaultTransitionDelegate<dynamic>()
+    /// optionalParameters: {TransitionDelegate<dynamic> transitionDelegate = const DefaultTransitionDelegate<dynamic>()} , default:unprocessed=InstanceCreationExpressionImpl
     required TransitionDelegate<dynamic> transitionDelegate,
 
-    /// optionalParameters: {bool reportsRouteUpdateToEngine = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool reportsRouteUpdateToEngine,
+    /// optionalParameters: {bool reportsRouteUpdateToEngine = false} , default:processed=BooleanLiteralImpl
+    bool reportsRouteUpdateToEngine = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {List<NavigatorObserver> observers = const <NavigatorObserver>[]} , hasDefaultValue:true, defaultValueCode:const <NavigatorObserver>[]
+    /// optionalParameters: {List<NavigatorObserver> observers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
     required List<NavigatorObserver> observers,
 
-    /// optionalParameters: {bool requestFocus = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool requestFocus,
+    /// optionalParameters: {bool requestFocus = true} , default:processed=BooleanLiteralImpl
+    bool requestFocus = true,
 
-    /// optionalParameters: {String? restorationScopeId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationScopeId} , default:none
     String? restorationScopeId,
 
-    /// optionalParameters: {TraversalEdgeBehavior routeTraversalEdgeBehavior = kDefaultRouteTraversalEdgeBehavior} , hasDefaultValue:true, defaultValueCode:kDefaultRouteTraversalEdgeBehavior
+    /// optionalParameters: {TraversalEdgeBehavior routeTraversalEdgeBehavior = kDefaultRouteTraversalEdgeBehavior} , default:unprocessed=SimpleIdentifierImpl
     required TraversalEdgeBehavior routeTraversalEdgeBehavior,
   }) : super(
           key: key,
@@ -139,6 +174,8 @@ class Navigator$Mate extends Navigator with Mate {
           restorationScopeId: restorationScopeId,
           routeTraversalEdgeBehavior: routeTraversalEdgeBehavior,
         ) {
+    mateCreateName = 'Navigator';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Navigator$Mate(
           key: p.get('key').build(),
           pages: p.get('pages').build(),
@@ -155,20 +192,80 @@ class Navigator$Mate extends Navigator with Mate {
           restorationScopeId: p.get('restorationScopeId').build(),
           routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
         );
-    matePut('key', key);
-    matePut('pages', pages);
-    matePut('onPopPage', onPopPage);
-    matePut('initialRoute', initialRoute);
-    matePut('onGenerateInitialRoutes', onGenerateInitialRoutes);
-    matePut('onGenerateRoute', onGenerateRoute);
-    matePut('onUnknownRoute', onUnknownRoute);
-    matePut('transitionDelegate', transitionDelegate);
-    matePut('reportsRouteUpdateToEngine', reportsRouteUpdateToEngine);
-    matePut('clipBehavior', clipBehavior);
-    matePut('observers', observers);
-    matePut('requestFocus', requestFocus);
-    matePut('restorationScopeId', restorationScopeId);
-    matePut('routeTraversalEdgeBehavior', routeTraversalEdgeBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'pages',
+      pages,
+      isNamed: true,
+    );
+    mateUse(
+      'onPopPage',
+      onPopPage,
+      isNamed: true,
+    );
+    mateUse(
+      'initialRoute',
+      initialRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'onGenerateInitialRoutes',
+      onGenerateInitialRoutes,
+      isNamed: true,
+      defaultValue: Navigator.defaultGenerateInitialRoutes,
+    );
+    mateUse(
+      'onGenerateRoute',
+      onGenerateRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'onUnknownRoute',
+      onUnknownRoute,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionDelegate',
+      transitionDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'reportsRouteUpdateToEngine',
+      reportsRouteUpdateToEngine,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUseList(
+      'observers',
+      observers,
+      isNamed: true,
+    );
+    mateUse(
+      'requestFocus',
+      requestFocus,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'restorationScopeId',
+      restorationScopeId,
+      isNamed: true,
+    );
+    mateUse(
+      'routeTraversalEdgeBehavior',
+      routeTraversalEdgeBehavior,
+      isNamed: true,
+    );
   }
 }
 
@@ -176,26 +273,40 @@ class Navigator$Mate extends Navigator with Mate {
 class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate {
   /// RestorableRouteFuture<T> RestorableRouteFuture({NavigatorState Function(BuildContext) navigatorFinder = _defaultNavigatorFinder, required String Function(NavigatorState, Object?) onPresent, void Function(T)? onComplete})
   RestorableRouteFuture$Mate({
-    /// optionalParameters: {NavigatorState Function(BuildContext) navigatorFinder = _defaultNavigatorFinder} , hasDefaultValue:true, defaultValueCode:_defaultNavigatorFinder
+    /// optionalParameters: {NavigatorState Function(BuildContext) navigatorFinder = _defaultNavigatorFinder} , default:unprocessed=SimpleIdentifierImpl
     required NavigatorFinderCallback navigatorFinder,
 
-    /// optionalParameters: {required String Function(NavigatorState, Object?) onPresent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String Function(NavigatorState, Object?) onPresent} , default:none
     required RoutePresentationCallback onPresent,
 
-    /// optionalParameters: {void Function(T)? onComplete} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(T)? onComplete} , default:none
     RouteCompletionCallback<T>? onComplete,
   }) : super(
           navigatorFinder: navigatorFinder,
           onPresent: onPresent,
           onComplete: onComplete,
         ) {
+    mateCreateName = 'RestorableRouteFuture';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableRouteFuture$Mate<T>(
           navigatorFinder: p.get('navigatorFinder').build(),
           onPresent: p.get('onPresent').build(),
           onComplete: p.get('onComplete').build(),
         );
-    matePut('navigatorFinder', navigatorFinder);
-    matePut('onPresent', onPresent);
-    matePut('onComplete', onComplete);
+    mateUse(
+      'navigatorFinder',
+      navigatorFinder,
+      isNamed: true,
+    );
+    mateUse(
+      'onPresent',
+      onPresent,
+      isNamed: true,
+    );
+    mateUse(
+      'onComplete',
+      onComplete,
+      isNamed: true,
+    );
   }
 }

@@ -14,28 +14,28 @@ import 'package:flutter/src/widgets/framework.dart';
 class BadgeThemeData$Mate extends BadgeThemeData with Mate {
   /// BadgeThemeData BadgeThemeData({Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset})
   BadgeThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {double? smallSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? smallSize} , default:none
     double? smallSize,
 
-    /// optionalParameters: {double? largeSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? largeSize} , default:none
     double? largeSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {EdgeInsetsGeometry? padding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     EdgeInsetsGeometry? padding,
 
-    /// optionalParameters: {AlignmentGeometry? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? alignment} , default:none
     AlignmentGeometry? alignment,
 
-    /// optionalParameters: {Offset? offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? offset} , default:none
     Offset? offset,
   }) : super(
           backgroundColor: backgroundColor,
@@ -47,6 +47,8 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
           alignment: alignment,
           offset: offset,
         ) {
+    mateCreateName = 'BadgeThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BadgeThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           textColor: p.get('textColor').build(),
@@ -57,14 +59,46 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
           alignment: p.get('alignment').build(),
           offset: p.get('offset').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('textColor', textColor);
-    matePut('smallSize', smallSize);
-    matePut('largeSize', largeSize);
-    matePut('textStyle', textStyle);
-    matePut('padding', padding);
-    matePut('alignment', alignment);
-    matePut('offset', offset);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'smallSize',
+      smallSize,
+      isNamed: true,
+    );
+    mateUse(
+      'largeSize',
+      largeSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'padding',
+      padding,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
   }
 }
 
@@ -72,26 +106,40 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
 class BadgeTheme$Mate extends BadgeTheme with Mate {
   /// BadgeTheme BadgeTheme({Key? key, required BadgeThemeData data, required Widget child})
   BadgeTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required BadgeThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required BadgeThemeData data} , default:none
     required BadgeThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'BadgeTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BadgeTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

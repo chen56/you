@@ -9,26 +9,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class ScrollConfiguration$Mate extends ScrollConfiguration with Mate {
   /// ScrollConfiguration ScrollConfiguration({Key? key, required ScrollBehavior behavior, required Widget child})
   ScrollConfiguration$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ScrollBehavior behavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollBehavior behavior} , default:none
     required ScrollBehavior behavior,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           behavior: behavior,
           child: child,
         ) {
+    mateCreateName = 'ScrollConfiguration';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollConfiguration$Mate(
           key: p.get('key').build(),
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('behavior', behavior);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'behavior',
+      behavior,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

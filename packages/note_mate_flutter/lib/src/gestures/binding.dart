@@ -12,29 +12,29 @@ import 'package:flutter/src/foundation/assertions.dart';
 class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDetailsForPointerEventDispatcher with Mate {
   /// FlutterErrorDetailsForPointerEventDispatcher FlutterErrorDetailsForPointerEventDispatcher({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, PointerEvent? event, HitTestEntry<HitTestTarget>? hitTestEntry, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetailsForPointerEventDispatcher$Mate({
-    /// optionalParameters: {required Object exception} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object exception} , default:none
     required Object exception,
 
-    /// optionalParameters: {StackTrace? stack} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StackTrace? stack} , default:none
     StackTrace? stack,
 
-    /// optionalParameters: {String? library = 'Flutter framework'} , hasDefaultValue:true, defaultValueCode:'Flutter framework'
-    String? library,
+    /// optionalParameters: {String? library = 'Flutter framework'} , default:processed=SimpleStringLiteralImpl
+    String? library = 'Flutter framework',
 
-    /// optionalParameters: {DiagnosticsNode? context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DiagnosticsNode? context} , default:none
     DiagnosticsNode? context,
 
-    /// optionalParameters: {PointerEvent? event} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {PointerEvent? event} , default:none
     PointerEvent? event,
 
-    /// optionalParameters: {HitTestEntry<HitTestTarget>? hitTestEntry} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {HitTestEntry<HitTestTarget>? hitTestEntry} , default:none
     HitTestEntry<HitTestTarget>? hitTestEntry,
 
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
     InformationCollector? informationCollector,
 
-    /// optionalParameters: {bool silent = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool silent,
+    /// optionalParameters: {bool silent = false} , default:processed=BooleanLiteralImpl
+    bool silent = false,
   }) : super(
           exception: exception,
           stack: stack,
@@ -45,6 +45,8 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: informationCollector,
           silent: silent,
         ) {
+    mateCreateName = 'FlutterErrorDetailsForPointerEventDispatcher';
+    matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => FlutterErrorDetailsForPointerEventDispatcher$Mate(
           exception: p.get('exception').build(),
           stack: p.get('stack').build(),
@@ -55,13 +57,47 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    matePut('exception', exception);
-    matePut('stack', stack);
-    matePut('library', library);
-    matePut('context', context);
-    matePut('event', event);
-    matePut('hitTestEntry', hitTestEntry);
-    matePut('informationCollector', informationCollector);
-    matePut('silent', silent);
+    mateUse(
+      'exception',
+      exception,
+      isNamed: true,
+    );
+    mateUse(
+      'stack',
+      stack,
+      isNamed: true,
+    );
+    mateUse(
+      'library',
+      library,
+      isNamed: true,
+      defaultValue: 'Flutter framework',
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'event',
+      event,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestEntry',
+      hitTestEntry,
+      isNamed: true,
+    );
+    mateUse(
+      'informationCollector',
+      informationCollector,
+      isNamed: true,
+    );
+    mateUse(
+      'silent',
+      silent,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

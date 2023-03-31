@@ -6,6 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/services/platform_views.dart';
 import 'package:flutter/src/rendering/platform_view.dart';
+import 'package:flutter/rendering.dart';
 import 'dart:ui';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter/src/gestures/recognizer.dart';
@@ -15,32 +16,32 @@ import 'package:flutter/src/services/message_codec.dart';
 class AndroidView$Mate extends AndroidView with Mate {
   /// AndroidView AndroidView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Clip clipBehavior = Clip.hardEdge})
   AndroidView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , default:none
     required String viewType,
 
-    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , default:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , hasDefaultValue:true, defaultValueCode:PlatformViewHitTestBehavior.opaque
-    required PlatformViewHitTestBehavior hitTestBehavior,
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
+    PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque,
 
-    /// optionalParameters: {TextDirection? layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? layoutDirection} , default:none
     TextDirection? layoutDirection,
 
-    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , default:none
     Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers,
 
-    /// optionalParameters: {dynamic creationParams} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic creationParams,
+    /// optionalParameters: {dynamic creationParams} , default:none
+    dynamic creationParams,
 
-    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , default:none
     MessageCodec<dynamic>? creationParamsCodec,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           viewType: viewType,
@@ -52,6 +53,8 @@ class AndroidView$Mate extends AndroidView with Mate {
           creationParamsCodec: creationParamsCodec,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'AndroidView';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AndroidView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -63,15 +66,53 @@ class AndroidView$Mate extends AndroidView with Mate {
           creationParamsCodec: p.get('creationParamsCodec').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('viewType', viewType);
-    matePut('onPlatformViewCreated', onPlatformViewCreated);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('layoutDirection', layoutDirection);
-    matePut('gestureRecognizers', gestureRecognizers);
-    matePut('creationParams', creationParams);
-    matePut('creationParamsCodec', creationParamsCodec);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'viewType',
+      viewType,
+      isNamed: true,
+    );
+    mateUse(
+      'onPlatformViewCreated',
+      onPlatformViewCreated,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+      defaultValue: PlatformViewHitTestBehavior.opaque,
+    );
+    mateUse(
+      'layoutDirection',
+      layoutDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
+    mateUse(
+      'creationParams',
+      creationParams,
+      isNamed: true,
+    );
+    mateUse(
+      'creationParamsCodec',
+      creationParamsCodec,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }
 
@@ -79,28 +120,28 @@ class AndroidView$Mate extends AndroidView with Mate {
 class UiKitView$Mate extends UiKitView with Mate {
   /// UiKitView UiKitView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated, PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque, TextDirection? layoutDirection, dynamic creationParams, MessageCodec<dynamic>? creationParamsCodec, Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers})
   UiKitView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , default:none
     required String viewType,
 
-    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , default:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , hasDefaultValue:true, defaultValueCode:PlatformViewHitTestBehavior.opaque
-    required PlatformViewHitTestBehavior hitTestBehavior,
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
+    PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque,
 
-    /// optionalParameters: {TextDirection? layoutDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? layoutDirection} , default:none
     TextDirection? layoutDirection,
 
-    /// optionalParameters: {dynamic creationParams} , hasDefaultValue:false, defaultValueCode:null
-    required dynamic creationParams,
+    /// optionalParameters: {dynamic creationParams} , default:none
+    dynamic creationParams,
 
-    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , default:none
     MessageCodec<dynamic>? creationParamsCodec,
 
-    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers} , default:none
     Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers,
   }) : super(
           key: key,
@@ -112,6 +153,8 @@ class UiKitView$Mate extends UiKitView with Mate {
           creationParamsCodec: creationParamsCodec,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'UiKitView';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UiKitView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
@@ -122,14 +165,47 @@ class UiKitView$Mate extends UiKitView with Mate {
           creationParamsCodec: p.get('creationParamsCodec').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('key', key);
-    matePut('viewType', viewType);
-    matePut('onPlatformViewCreated', onPlatformViewCreated);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('layoutDirection', layoutDirection);
-    matePut('creationParams', creationParams);
-    matePut('creationParamsCodec', creationParamsCodec);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'viewType',
+      viewType,
+      isNamed: true,
+    );
+    mateUse(
+      'onPlatformViewCreated',
+      onPlatformViewCreated,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+      defaultValue: PlatformViewHitTestBehavior.opaque,
+    );
+    mateUse(
+      'layoutDirection',
+      layoutDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'creationParams',
+      creationParams,
+      isNamed: true,
+    );
+    mateUse(
+      'creationParamsCodec',
+      creationParamsCodec,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
   }
 }
 
@@ -137,27 +213,41 @@ class UiKitView$Mate extends UiKitView with Mate {
 class HtmlElementView$Mate extends HtmlElementView with Mate {
   /// HtmlElementView HtmlElementView({Key? key, required String viewType, void Function(int)? onPlatformViewCreated})
   HtmlElementView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , default:none
     required String viewType,
 
-    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPlatformViewCreated} , default:none
     PlatformViewCreatedCallback? onPlatformViewCreated,
   }) : super(
           key: key,
           viewType: viewType,
           onPlatformViewCreated: onPlatformViewCreated,
         ) {
+    mateCreateName = 'HtmlElementView';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HtmlElementView$Mate(
           key: p.get('key').build(),
           viewType: p.get('viewType').build(),
           onPlatformViewCreated: p.get('onPlatformViewCreated').build(),
         );
-    matePut('key', key);
-    matePut('viewType', viewType);
-    matePut('onPlatformViewCreated', onPlatformViewCreated);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'viewType',
+      viewType,
+      isNamed: true,
+    );
+    mateUse(
+      'onPlatformViewCreated',
+      onPlatformViewCreated,
+      isNamed: true,
+    );
   }
 }
 
@@ -165,16 +255,16 @@ class HtmlElementView$Mate extends HtmlElementView with Mate {
 class PlatformViewLink$Mate extends PlatformViewLink with Mate {
   /// PlatformViewLink PlatformViewLink({Key? key, required Widget Function(BuildContext, PlatformViewController) surfaceFactory, required PlatformViewController Function(PlatformViewCreationParams) onCreatePlatformView, required String viewType})
   PlatformViewLink$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, PlatformViewController) surfaceFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, PlatformViewController) surfaceFactory} , default:none
     required PlatformViewSurfaceFactory surfaceFactory,
 
-    /// optionalParameters: {required PlatformViewController Function(PlatformViewCreationParams) onCreatePlatformView} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewController Function(PlatformViewCreationParams) onCreatePlatformView} , default:none
     required CreatePlatformViewCallback onCreatePlatformView,
 
-    /// optionalParameters: {required String viewType} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String viewType} , default:none
     required String viewType,
   }) : super(
           key: key,
@@ -182,16 +272,34 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
           onCreatePlatformView: onCreatePlatformView,
           viewType: viewType,
         ) {
+    mateCreateName = 'PlatformViewLink';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformViewLink$Mate(
           key: p.get('key').build(),
           surfaceFactory: p.get('surfaceFactory').build(),
           onCreatePlatformView: p.get('onCreatePlatformView').build(),
           viewType: p.get('viewType').build(),
         );
-    matePut('key', key);
-    matePut('surfaceFactory', surfaceFactory);
-    matePut('onCreatePlatformView', onCreatePlatformView);
-    matePut('viewType', viewType);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceFactory',
+      surfaceFactory,
+      isNamed: true,
+    );
+    mateUse(
+      'onCreatePlatformView',
+      onCreatePlatformView,
+      isNamed: true,
+    );
+    mateUse(
+      'viewType',
+      viewType,
+      isNamed: true,
+    );
   }
 }
 
@@ -199,16 +307,16 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
 class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
   /// PlatformViewSurface PlatformViewSurface({Key? key, required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewSurface$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required PlatformViewController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewController controller} , default:none
     required PlatformViewController controller,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           key: key,
@@ -216,16 +324,34 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'PlatformViewSurface';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformViewSurface$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
   }
 }
 
@@ -233,16 +359,16 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
 class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
   /// AndroidViewSurface AndroidViewSurface({Key? key, required AndroidViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   AndroidViewSurface$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required AndroidViewController controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AndroidViewController controller} , default:none
     required AndroidViewController controller,
 
-    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
     required PlatformViewHitTestBehavior hitTestBehavior,
 
-    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers,
   }) : super(
           key: key,
@@ -250,15 +376,33 @@ class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
+    mateCreateName = 'AndroidViewSurface';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AndroidViewSurface$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('hitTestBehavior', hitTestBehavior);
-    matePut('gestureRecognizers', gestureRecognizers);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'hitTestBehavior',
+      hitTestBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'gestureRecognizers',
+      gestureRecognizers,
+      isNamed: true,
+    );
   }
 }

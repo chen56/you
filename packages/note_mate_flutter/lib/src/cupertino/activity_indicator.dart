@@ -10,16 +10,16 @@ import 'dart:core';
 class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Mate {
   /// CupertinoActivityIndicator CupertinoActivityIndicator({Key? key, Color? color, bool animating = true, double radius = _kDefaultIndicatorRadius})
   CupertinoActivityIndicator$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {bool animating = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool animating,
+    /// optionalParameters: {bool animating = true} , default:processed=BooleanLiteralImpl
+    bool animating = true,
 
-    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , hasDefaultValue:true, defaultValueCode:_kDefaultIndicatorRadius
+    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , default:unprocessed=SimpleIdentifierImpl
     required double radius,
   }) : super(
           key: key,
@@ -27,46 +27,84 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           animating: animating,
           radius: radius,
         ) {
+    mateCreateName = 'CupertinoActivityIndicator';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
           animating: p.get('animating').build(),
           radius: p.get('radius').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('animating', animating);
-    matePut('radius', radius);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'animating',
+      animating,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
   }
 
   /// CupertinoActivityIndicator CupertinoActivityIndicator.partiallyRevealed({Key? key, Color? color, double radius = _kDefaultIndicatorRadius, double progress = 1.0})
   CupertinoActivityIndicator$Mate.partiallyRevealed({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , hasDefaultValue:true, defaultValueCode:_kDefaultIndicatorRadius
+    /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , default:unprocessed=SimpleIdentifierImpl
     required double radius,
 
-    /// optionalParameters: {double progress = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double progress,
+    /// optionalParameters: {double progress = 1.0} , default:processed=DoubleLiteralImpl
+    double progress = 1.0,
   }) : super.partiallyRevealed(
           key: key,
           color: color,
           radius: radius,
           progress: progress,
         ) {
+    mateCreateName = 'CupertinoActivityIndicator.partiallyRevealed';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate.partiallyRevealed(
           key: p.get('key').build(),
           color: p.get('color').build(),
           radius: p.get('radius').build(),
           progress: p.get('progress').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('radius', radius);
-    matePut('progress', progress);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'progress',
+      progress,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }

@@ -9,26 +9,40 @@ import 'dart:ui';
 class ImageSizeInfo$Mate extends ImageSizeInfo with Mate {
   /// ImageSizeInfo ImageSizeInfo({String? source, required Size displaySize, required Size imageSize})
   ImageSizeInfo$Mate({
-    /// optionalParameters: {String? source} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? source} , default:none
     String? source,
 
-    /// optionalParameters: {required Size displaySize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size displaySize} , default:none
     required Size displaySize,
 
-    /// optionalParameters: {required Size imageSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size imageSize} , default:none
     required Size imageSize,
   }) : super(
           source: source,
           displaySize: displaySize,
           imageSize: imageSize,
         ) {
+    mateCreateName = 'ImageSizeInfo';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageSizeInfo$Mate(
           source: p.get('source').build(),
           displaySize: p.get('displaySize').build(),
           imageSize: p.get('imageSize').build(),
         );
-    matePut('source', source);
-    matePut('displaySize', displaySize);
-    matePut('imageSize', imageSize);
+    mateUse(
+      'source',
+      source,
+      isNamed: true,
+    );
+    mateUse(
+      'displaySize',
+      displaySize,
+      isNamed: true,
+    );
+    mateUse(
+      'imageSize',
+      imageSize,
+      isNamed: true,
+    );
   }
 }

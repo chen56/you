@@ -14,34 +14,34 @@ import 'dart:ui';
 class TextSpan$Mate extends TextSpan with Mate {
   /// TextSpan TextSpan({String? text, List<InlineSpan>? children, TextStyle? style, GestureRecognizer? recognizer, MouseCursor? mouseCursor, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, String? semanticsLabel, Locale? locale, bool? spellOut})
   TextSpan$Mate({
-    /// optionalParameters: {String? text} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? text} , default:none
     String? text,
 
-    /// optionalParameters: {List<InlineSpan>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<InlineSpan>? children} , default:none
     List<InlineSpan>? children,
 
-    /// optionalParameters: {TextStyle? style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? style} , default:none
     TextStyle? style,
 
-    /// optionalParameters: {GestureRecognizer? recognizer} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {GestureRecognizer? recognizer} , default:none
     GestureRecognizer? recognizer,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
     PointerEnterEventListener? onEnter,
 
-    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     PointerExitEventListener? onExit,
 
-    /// optionalParameters: {String? semanticsLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? semanticsLabel} , default:none
     String? semanticsLabel,
 
-    /// optionalParameters: {Locale? locale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Locale? locale} , default:none
     Locale? locale,
 
-    /// optionalParameters: {bool? spellOut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? spellOut} , default:none
     bool? spellOut,
   }) : super(
           text: text,
@@ -55,6 +55,8 @@ class TextSpan$Mate extends TextSpan with Mate {
           locale: locale,
           spellOut: spellOut,
         ) {
+    mateCreateName = 'TextSpan';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TextSpan$Mate(
           text: p.get('text').build(),
           children: p.get('children').build(),
@@ -67,15 +69,55 @@ class TextSpan$Mate extends TextSpan with Mate {
           locale: p.get('locale').build(),
           spellOut: p.get('spellOut').build(),
         );
-    matePut('text', text);
-    matePut('children', children);
-    matePut('style', style);
-    matePut('recognizer', recognizer);
-    matePut('mouseCursor', mouseCursor);
-    matePut('onEnter', onEnter);
-    matePut('onExit', onExit);
-    matePut('semanticsLabel', semanticsLabel);
-    matePut('locale', locale);
-    matePut('spellOut', spellOut);
+    mateUse(
+      'text',
+      text,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'recognizer',
+      recognizer,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'onEnter',
+      onEnter,
+      isNamed: true,
+    );
+    mateUse(
+      'onExit',
+      onExit,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticsLabel',
+      semanticsLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'locale',
+      locale,
+      isNamed: true,
+    );
+    mateUse(
+      'spellOut',
+      spellOut,
+      isNamed: true,
+    );
   }
 }

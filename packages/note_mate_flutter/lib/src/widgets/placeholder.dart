@@ -11,22 +11,22 @@ import 'package:flutter/src/widgets/framework.dart';
 class Placeholder$Mate extends Placeholder with Mate {
   /// Placeholder Placeholder({Key? key, Color color = const Color(0xFF455A64), double strokeWidth = 2.0, double fallbackWidth = 400.0, double fallbackHeight = 400.0, Widget? child})
   Placeholder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color color = const Color(0xFF455A64)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF455A64)
+    /// optionalParameters: {Color color = const Color(0xFF455A64)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {double strokeWidth = 2.0} , hasDefaultValue:true, defaultValueCode:2.0
-    required double strokeWidth,
+    /// optionalParameters: {double strokeWidth = 2.0} , default:processed=DoubleLiteralImpl
+    double strokeWidth = 2.0,
 
-    /// optionalParameters: {double fallbackWidth = 400.0} , hasDefaultValue:true, defaultValueCode:400.0
-    required double fallbackWidth,
+    /// optionalParameters: {double fallbackWidth = 400.0} , default:processed=DoubleLiteralImpl
+    double fallbackWidth = 400.0,
 
-    /// optionalParameters: {double fallbackHeight = 400.0} , hasDefaultValue:true, defaultValueCode:400.0
-    required double fallbackHeight,
+    /// optionalParameters: {double fallbackHeight = 400.0} , default:processed=DoubleLiteralImpl
+    double fallbackHeight = 400.0,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -36,6 +36,8 @@ class Placeholder$Mate extends Placeholder with Mate {
           fallbackHeight: fallbackHeight,
           child: child,
         ) {
+    mateCreateName = 'Placeholder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Placeholder$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
@@ -44,11 +46,38 @@ class Placeholder$Mate extends Placeholder with Mate {
           fallbackHeight: p.get('fallbackHeight').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('strokeWidth', strokeWidth);
-    matePut('fallbackWidth', fallbackWidth);
-    matePut('fallbackHeight', fallbackHeight);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'strokeWidth',
+      strokeWidth,
+      isNamed: true,
+      defaultValue: 2.0,
+    );
+    mateUse(
+      'fallbackWidth',
+      fallbackWidth,
+      isNamed: true,
+      defaultValue: 400.0,
+    );
+    mateUse(
+      'fallbackHeight',
+      fallbackHeight,
+      isNamed: true,
+      defaultValue: 400.0,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

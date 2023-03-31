@@ -8,10 +8,12 @@ import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/painting/alignment.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/basic_types.dart';
 import 'package:flutter/src/rendering/stack.dart';
 import 'package:flutter/src/painting/decoration.dart';
 import 'package:flutter/src/rendering/proxy_box.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/src/painting/text_painter.dart';
 import 'package:flutter/src/foundation/change_notifier.dart';
@@ -20,19 +22,19 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 class SlideTransition$Mate extends SlideTransition with Mate {
   /// SlideTransition SlideTransition({Key? key, required Animation<Offset> position, bool transformHitTests = true, TextDirection? textDirection, Widget? child})
   SlideTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Offset> position} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<Offset> position} , default:none
     required Animation<Offset> position,
 
-    /// optionalParameters: {bool transformHitTests = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool transformHitTests,
+    /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
+    bool transformHitTests = true,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -41,6 +43,8 @@ class SlideTransition$Mate extends SlideTransition with Mate {
           textDirection: textDirection,
           child: child,
         ) {
+    mateCreateName = 'SlideTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SlideTransition$Mate(
           key: p.get('key').build(),
           position: p.get('position').build(),
@@ -48,11 +52,32 @@ class SlideTransition$Mate extends SlideTransition with Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('position', position);
-    matePut('transformHitTests', transformHitTests);
-    matePut('textDirection', textDirection);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+    );
+    mateUse(
+      'transformHitTests',
+      transformHitTests,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -60,19 +85,19 @@ class SlideTransition$Mate extends SlideTransition with Mate {
 class ScaleTransition$Mate extends ScaleTransition with Mate {
   /// ScaleTransition ScaleTransition({Key? key, required Animation<double> scale, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   ScaleTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> scale} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> scale} , default:none
     required Animation<double> scale,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required Alignment alignment,
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    Alignment alignment = Alignment.center,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -81,6 +106,8 @@ class ScaleTransition$Mate extends ScaleTransition with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'ScaleTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScaleTransition$Mate(
           key: p.get('key').build(),
           scale: p.get('scale').build(),
@@ -88,11 +115,32 @@ class ScaleTransition$Mate extends ScaleTransition with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('scale', scale);
-    matePut('alignment', alignment);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'scale',
+      scale,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -100,19 +148,19 @@ class ScaleTransition$Mate extends ScaleTransition with Mate {
 class RotationTransition$Mate extends RotationTransition with Mate {
   /// RotationTransition RotationTransition({Key? key, required Animation<double> turns, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Widget? child})
   RotationTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> turns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> turns} , default:none
     required Animation<double> turns,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , hasDefaultValue:true, defaultValueCode:Alignment.center
-    required Alignment alignment,
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    Alignment alignment = Alignment.center,
 
-    /// optionalParameters: {FilterQuality? filterQuality} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FilterQuality? filterQuality} , default:none
     FilterQuality? filterQuality,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -121,6 +169,8 @@ class RotationTransition$Mate extends RotationTransition with Mate {
           filterQuality: filterQuality,
           child: child,
         ) {
+    mateCreateName = 'RotationTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RotationTransition$Mate(
           key: p.get('key').build(),
           turns: p.get('turns').build(),
@@ -128,11 +178,32 @@ class RotationTransition$Mate extends RotationTransition with Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('turns', turns);
-    matePut('alignment', alignment);
-    matePut('filterQuality', filterQuality);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'turns',
+      turns,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+      defaultValue: Alignment.center,
+    );
+    mateUse(
+      'filterQuality',
+      filterQuality,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -140,19 +211,19 @@ class RotationTransition$Mate extends RotationTransition with Mate {
 class SizeTransition$Mate extends SizeTransition with Mate {
   /// SizeTransition SizeTransition({Key? key, Axis axis = Axis.vertical, required Animation<double> sizeFactor, double axisAlignment = 0.0, Widget? child})
   SizeTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis axis = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
-    required Axis axis,
+    /// optionalParameters: {Axis axis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    Axis axis = Axis.vertical,
 
-    /// optionalParameters: {required Animation<double> sizeFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> sizeFactor} , default:none
     required Animation<double> sizeFactor,
 
-    /// optionalParameters: {double axisAlignment = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double axisAlignment,
+    /// optionalParameters: {double axisAlignment = 0.0} , default:processed=DoubleLiteralImpl
+    double axisAlignment = 0.0,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -161,6 +232,8 @@ class SizeTransition$Mate extends SizeTransition with Mate {
           axisAlignment: axisAlignment,
           child: child,
         ) {
+    mateCreateName = 'SizeTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizeTransition$Mate(
           key: p.get('key').build(),
           axis: p.get('axis').build(),
@@ -168,11 +241,33 @@ class SizeTransition$Mate extends SizeTransition with Mate {
           axisAlignment: p.get('axisAlignment').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('axis', axis);
-    matePut('sizeFactor', sizeFactor);
-    matePut('axisAlignment', axisAlignment);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'axis',
+      axis,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'sizeFactor',
+      sizeFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'axisAlignment',
+      axisAlignment,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -180,16 +275,16 @@ class SizeTransition$Mate extends SizeTransition with Mate {
 class FadeTransition$Mate extends FadeTransition with Mate {
   /// FadeTransition FadeTransition({Key? key, required Animation<double> opacity, bool alwaysIncludeSemantics = false, Widget? child})
   FadeTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> opacity} , default:none
     required Animation<double> opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -197,16 +292,35 @@ class FadeTransition$Mate extends FadeTransition with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           child: child,
         ) {
+    mateCreateName = 'FadeTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FadeTransition$Mate(
           key: p.get('key').build(),
           opacity: p.get('opacity').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -214,16 +328,16 @@ class FadeTransition$Mate extends FadeTransition with Mate {
 class SliverFadeTransition$Mate extends SliverFadeTransition with Mate {
   /// SliverFadeTransition SliverFadeTransition({Key? key, required Animation<double> opacity, bool alwaysIncludeSemantics = false, Widget? sliver})
   SliverFadeTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<double> opacity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<double> opacity} , default:none
     required Animation<double> opacity,
 
-    /// optionalParameters: {bool alwaysIncludeSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool alwaysIncludeSemantics,
+    /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
+    bool alwaysIncludeSemantics = false,
 
-    /// optionalParameters: {Widget? sliver} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? sliver} , default:none
     Widget? sliver,
   }) : super(
           key: key,
@@ -231,16 +345,35 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
+    mateCreateName = 'SliverFadeTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverFadeTransition$Mate(
           key: p.get('key').build(),
           opacity: p.get('opacity').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    matePut('key', key);
-    matePut('opacity', opacity);
-    matePut('alwaysIncludeSemantics', alwaysIncludeSemantics);
-    matePut('sliver', sliver);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'opacity',
+      opacity,
+      isNamed: true,
+    );
+    mateUse(
+      'alwaysIncludeSemantics',
+      alwaysIncludeSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'sliver',
+      sliver,
+      isNamed: true,
+    );
   }
 }
 
@@ -248,21 +381,31 @@ class SliverFadeTransition$Mate extends SliverFadeTransition with Mate {
 class RelativeRectTween$Mate extends RelativeRectTween with Mate {
   /// RelativeRectTween RelativeRectTween({RelativeRect? begin, RelativeRect? end})
   RelativeRectTween$Mate({
-    /// optionalParameters: {RelativeRect? begin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RelativeRect? begin} , default:none
     RelativeRect? begin,
 
-    /// optionalParameters: {RelativeRect? end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RelativeRect? end} , default:none
     RelativeRect? end,
   }) : super(
           begin: begin,
           end: end,
         ) {
+    mateCreateName = 'RelativeRectTween';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RelativeRectTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    matePut('begin', begin);
-    matePut('end', end);
+    mateUse(
+      'begin',
+      begin,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }
 
@@ -270,27 +413,41 @@ class RelativeRectTween$Mate extends RelativeRectTween with Mate {
 class PositionedTransition$Mate extends PositionedTransition with Mate {
   /// PositionedTransition PositionedTransition({Key? key, required Animation<RelativeRect> rect, required Widget child})
   PositionedTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<RelativeRect> rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<RelativeRect> rect} , default:none
     required Animation<RelativeRect> rect,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           rect: rect,
           child: child,
         ) {
+    mateCreateName = 'PositionedTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PositionedTransition$Mate(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -298,16 +455,16 @@ class PositionedTransition$Mate extends PositionedTransition with Mate {
 class RelativePositionedTransition$Mate extends RelativePositionedTransition with Mate {
   /// RelativePositionedTransition RelativePositionedTransition({Key? key, required Animation<Rect?> rect, required Size size, required Widget child})
   RelativePositionedTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Rect?> rect} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<Rect?> rect} , default:none
     required Animation<Rect?> rect,
 
-    /// optionalParameters: {required Size size} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size size} , default:none
     required Size size,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -315,16 +472,34 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition wit
           size: size,
           child: child,
         ) {
+    mateCreateName = 'RelativePositionedTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RelativePositionedTransition$Mate(
           key: p.get('key').build(),
           rect: p.get('rect').build(),
           size: p.get('size').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('rect', rect);
-    matePut('size', size);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'rect',
+      rect,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -332,16 +507,16 @@ class RelativePositionedTransition$Mate extends RelativePositionedTransition wit
 class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate {
   /// DecoratedBoxTransition DecoratedBoxTransition({Key? key, required Animation<Decoration> decoration, DecorationPosition position = DecorationPosition.background, required Widget child})
   DecoratedBoxTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<Decoration> decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<Decoration> decoration} , default:none
     required Animation<Decoration> decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , hasDefaultValue:true, defaultValueCode:DecorationPosition.background
-    required DecorationPosition position,
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
+    DecorationPosition position = DecorationPosition.background,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -349,16 +524,35 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate {
           position: position,
           child: child,
         ) {
+    mateCreateName = 'DecoratedBoxTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DecoratedBoxTransition$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('decoration', decoration);
-    matePut('position', position);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'position',
+      position,
+      isNamed: true,
+      defaultValue: DecorationPosition.background,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -366,19 +560,19 @@ class DecoratedBoxTransition$Mate extends DecoratedBoxTransition with Mate {
 class AlignTransition$Mate extends AlignTransition with Mate {
   /// AlignTransition AlignTransition({Key? key, required Animation<AlignmentGeometry> alignment, required Widget child, double? widthFactor, double? heightFactor})
   AlignTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<AlignmentGeometry> alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<AlignmentGeometry> alignment} , default:none
     required Animation<AlignmentGeometry> alignment,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {double? widthFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? widthFactor} , default:none
     double? widthFactor,
 
-    /// optionalParameters: {double? heightFactor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? heightFactor} , default:none
     double? heightFactor,
   }) : super(
           key: key,
@@ -387,6 +581,8 @@ class AlignTransition$Mate extends AlignTransition with Mate {
           widthFactor: widthFactor,
           heightFactor: heightFactor,
         ) {
+    mateCreateName = 'AlignTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AlignTransition$Mate(
           key: p.get('key').build(),
           alignment: p.get('alignment').build(),
@@ -394,11 +590,31 @@ class AlignTransition$Mate extends AlignTransition with Mate {
           widthFactor: p.get('widthFactor').build(),
           heightFactor: p.get('heightFactor').build(),
         );
-    matePut('key', key);
-    matePut('alignment', alignment);
-    matePut('child', child);
-    matePut('widthFactor', widthFactor);
-    matePut('heightFactor', heightFactor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'widthFactor',
+      widthFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'heightFactor',
+      heightFactor,
+      isNamed: true,
+    );
   }
 }
 
@@ -406,25 +622,25 @@ class AlignTransition$Mate extends AlignTransition with Mate {
 class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Mate {
   /// DefaultTextStyleTransition DefaultTextStyleTransition({Key? key, required Animation<TextStyle> style, required Widget child, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines})
   DefaultTextStyleTransition$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Animation<TextStyle> style} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Animation<TextStyle> style} , default:none
     required Animation<TextStyle> style,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {TextAlign? textAlign} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextAlign? textAlign} , default:none
     TextAlign? textAlign,
 
-    /// optionalParameters: {bool softWrap = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool softWrap,
+    /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
+    bool softWrap = true,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , hasDefaultValue:true, defaultValueCode:TextOverflow.clip
-    required TextOverflow overflow,
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
+    TextOverflow overflow = TextOverflow.clip,
 
-    /// optionalParameters: {int? maxLines} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? maxLines} , default:none
     int? maxLines,
   }) : super(
           key: key,
@@ -435,6 +651,8 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Ma
           overflow: overflow,
           maxLines: maxLines,
         ) {
+    mateCreateName = 'DefaultTextStyleTransition';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextStyleTransition$Mate(
           key: p.get('key').build(),
           style: p.get('style').build(),
@@ -444,13 +662,43 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Ma
           overflow: p.get('overflow').build(),
           maxLines: p.get('maxLines').build(),
         );
-    matePut('key', key);
-    matePut('style', style);
-    matePut('child', child);
-    matePut('textAlign', textAlign);
-    matePut('softWrap', softWrap);
-    matePut('overflow', overflow);
-    matePut('maxLines', maxLines);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'textAlign',
+      textAlign,
+      isNamed: true,
+    );
+    mateUse(
+      'softWrap',
+      softWrap,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'overflow',
+      overflow,
+      isNamed: true,
+      defaultValue: TextOverflow.clip,
+    );
+    mateUse(
+      'maxLines',
+      maxLines,
+      isNamed: true,
+    );
   }
 }
 
@@ -458,16 +706,16 @@ class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Ma
 class ListenableBuilder$Mate extends ListenableBuilder with Mate {
   /// ListenableBuilder ListenableBuilder({Key? key, required Listenable listenable, required Widget Function(BuildContext, Widget?) builder, Widget? child})
   ListenableBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Listenable listenable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Listenable listenable} , default:none
     required Listenable listenable,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , default:none
     required TransitionBuilder builder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -475,16 +723,34 @@ class ListenableBuilder$Mate extends ListenableBuilder with Mate {
           builder: builder,
           child: child,
         ) {
+    mateCreateName = 'ListenableBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListenableBuilder$Mate(
           key: p.get('key').build(),
           listenable: p.get('listenable').build(),
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('listenable', listenable);
-    matePut('builder', builder);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'listenable',
+      listenable,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -492,16 +758,16 @@ class ListenableBuilder$Mate extends ListenableBuilder with Mate {
 class AnimatedBuilder$Mate extends AnimatedBuilder with Mate {
   /// AnimatedBuilder AnimatedBuilder({Key? key, required Listenable animation, required Widget Function(BuildContext, Widget?) builder, Widget? child})
   AnimatedBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Listenable animation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Listenable animation} , default:none
     required Listenable animation,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Widget?) builder} , default:none
     required TransitionBuilder builder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -509,15 +775,33 @@ class AnimatedBuilder$Mate extends AnimatedBuilder with Mate {
           builder: builder,
           child: child,
         ) {
+    mateCreateName = 'AnimatedBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedBuilder$Mate(
           key: p.get('key').build(),
           animation: p.get('animation').build(),
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('animation', animation);
-    matePut('builder', builder);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'animation',
+      animation,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

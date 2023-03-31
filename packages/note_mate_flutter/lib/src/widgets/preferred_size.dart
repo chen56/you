@@ -10,26 +10,40 @@ import 'dart:ui';
 class PreferredSize$Mate extends PreferredSize with Mate {
   /// PreferredSize PreferredSize({Key? key, required Widget child, required Size preferredSize})
   PreferredSize$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Size preferredSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Size preferredSize} , default:none
     required Size preferredSize,
   }) : super(
           key: key,
           child: child,
           preferredSize: preferredSize,
         ) {
+    mateCreateName = 'PreferredSize';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PreferredSize$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
           preferredSize: p.get('preferredSize').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('preferredSize', preferredSize);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'preferredSize',
+      preferredSize,
+      isNamed: true,
+    );
   }
 }

@@ -11,27 +11,41 @@ import 'package:flutter/src/foundation/diagnostics.dart';
 class WidgetInspector$Mate extends WidgetInspector with Mate {
   /// WidgetInspector WidgetInspector({Key? key, required Widget child, required Widget Function(BuildContext, void Function())? selectButtonBuilder})
   WidgetInspector$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Widget Function(BuildContext, void Function())? selectButtonBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, void Function())? selectButtonBuilder} , default:none
     required InspectorSelectButtonBuilder? selectButtonBuilder,
   }) : super(
           key: key,
           child: child,
           selectButtonBuilder: selectButtonBuilder,
         ) {
+    mateCreateName = 'WidgetInspector';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WidgetInspector$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
           selectButtonBuilder: p.get('selectButtonBuilder').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('selectButtonBuilder', selectButtonBuilder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'selectButtonBuilder',
+      selectButtonBuilder,
+      isNamed: true,
+    );
   }
 }
 
@@ -48,12 +62,22 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
           description,
           url,
         ) {
+    mateCreateName = 'DevToolsDeepLinkProperty';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DevToolsDeepLinkProperty$Mate(
           p.get('description').value,
           p.get('url').value,
         );
-    matePut('description', description);
-    matePut('url', url);
+    mateUse(
+      'description',
+      description,
+      isNamed: false,
+    );
+    mateUse(
+      'url',
+      url,
+      isNamed: false,
+    );
   }
 }
 
@@ -61,28 +85,28 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
 class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate with Mate {
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
-    /// optionalParameters: {String? groupName} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? groupName} , default:none
     String? groupName,
 
-    /// optionalParameters: {bool summaryTree = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool summaryTree,
+    /// optionalParameters: {bool summaryTree = false} , default:processed=BooleanLiteralImpl
+    bool summaryTree = false,
 
-    /// optionalParameters: {int maxDescendantsTruncatableNode = -1} , hasDefaultValue:true, defaultValueCode:-1
-    required int maxDescendantsTruncatableNode,
+    /// optionalParameters: {int maxDescendantsTruncatableNode = -1} , default:processed=PrefixExpressionImpl
+    int maxDescendantsTruncatableNode = -1,
 
-    /// optionalParameters: {bool expandPropertyValues = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool expandPropertyValues,
+    /// optionalParameters: {bool expandPropertyValues = true} , default:processed=BooleanLiteralImpl
+    bool expandPropertyValues = true,
 
-    /// optionalParameters: {int subtreeDepth = 1} , hasDefaultValue:true, defaultValueCode:1
-    required int subtreeDepth,
+    /// optionalParameters: {int subtreeDepth = 1} , default:processed=IntegerLiteralImpl
+    int subtreeDepth = 1,
 
-    /// optionalParameters: {bool includeProperties = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool includeProperties,
+    /// optionalParameters: {bool includeProperties = false} , default:processed=BooleanLiteralImpl
+    bool includeProperties = false,
 
-    /// optionalParameters: {required WidgetInspectorService service} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required WidgetInspectorService service} , default:none
     required WidgetInspectorService service,
 
-    /// optionalParameters: {Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback} , default:none
     Map<String, Object>? Function(
       DiagnosticsNode,
       InspectorSerializationDelegate,
@@ -97,6 +121,8 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
           service: service,
           addAdditionalPropertiesCallback: addAdditionalPropertiesCallback,
         ) {
+    mateCreateName = 'InspectorSerializationDelegate';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
           groupName: p.get('groupName').build(),
           summaryTree: p.get('summaryTree').build(),
@@ -107,13 +133,50 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
           service: p.get('service').build(),
           addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
         );
-    matePut('groupName', groupName);
-    matePut('summaryTree', summaryTree);
-    matePut('maxDescendantsTruncatableNode', maxDescendantsTruncatableNode);
-    matePut('expandPropertyValues', expandPropertyValues);
-    matePut('subtreeDepth', subtreeDepth);
-    matePut('includeProperties', includeProperties);
-    matePut('service', service);
-    matePut('addAdditionalPropertiesCallback', addAdditionalPropertiesCallback);
+    mateUse(
+      'groupName',
+      groupName,
+      isNamed: true,
+    );
+    mateUse(
+      'summaryTree',
+      summaryTree,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maxDescendantsTruncatableNode',
+      maxDescendantsTruncatableNode,
+      isNamed: true,
+      defaultValue: -1,
+    );
+    mateUse(
+      'expandPropertyValues',
+      expandPropertyValues,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'subtreeDepth',
+      subtreeDepth,
+      isNamed: true,
+      defaultValue: 1,
+    );
+    mateUse(
+      'includeProperties',
+      includeProperties,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'service',
+      service,
+      isNamed: true,
+    );
+    mateUse(
+      'addAdditionalPropertiesCallback',
+      addAdditionalPropertiesCallback,
+      isNamed: true,
+    );
   }
 }

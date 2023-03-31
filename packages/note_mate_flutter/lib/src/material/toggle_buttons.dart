@@ -13,85 +13,86 @@ import 'dart:ui';
 import 'package:flutter/src/widgets/focus_manager.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 
 /// class ToggleButtons extends StatelessWidget
 class ToggleButtons$Mate extends ToggleButtons with Mate {
   /// ToggleButtons ToggleButtons({Key? key, required List<Widget> children, required List<bool> isSelected, void Function(int)? onPressed, MouseCursor? mouseCursor, MaterialTapTargetSize? tapTargetSize, TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, List<FocusNode>? focusNodes, bool renderBorder = true, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth, Axis direction = Axis.horizontal, VerticalDirection verticalDirection = VerticalDirection.down})
   ToggleButtons$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
 
-    /// optionalParameters: {required List<bool> isSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<bool> isSelected} , default:none
     required List<bool> isSelected,
 
-    /// optionalParameters: {void Function(int)? onPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onPressed} , default:none
     void Function(int)? onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {MaterialTapTargetSize? tapTargetSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialTapTargetSize? tapTargetSize} , default:none
     MaterialTapTargetSize? tapTargetSize,
 
-    /// optionalParameters: {TextStyle? textStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? textStyle} , default:none
     TextStyle? textStyle,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? selectedColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedColor} , default:none
     Color? selectedColor,
 
-    /// optionalParameters: {Color? disabledColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledColor} , default:none
     Color? disabledColor,
 
-    /// optionalParameters: {Color? fillColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? fillColor} , default:none
     Color? fillColor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , default:none
     Color? highlightColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {List<FocusNode>? focusNodes} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<FocusNode>? focusNodes} , default:none
     List<FocusNode>? focusNodes,
 
-    /// optionalParameters: {bool renderBorder = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool renderBorder,
+    /// optionalParameters: {bool renderBorder = true} , default:processed=BooleanLiteralImpl
+    bool renderBorder = true,
 
-    /// optionalParameters: {Color? borderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? borderColor} , default:none
     Color? borderColor,
 
-    /// optionalParameters: {Color? selectedBorderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectedBorderColor} , default:none
     Color? selectedBorderColor,
 
-    /// optionalParameters: {Color? disabledBorderColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledBorderColor} , default:none
     Color? disabledBorderColor,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {double? borderWidth} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? borderWidth} , default:none
     double? borderWidth,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , hasDefaultValue:true, defaultValueCode:Axis.horizontal
-    required Axis direction,
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    Axis direction = Axis.horizontal,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , hasDefaultValue:true, defaultValueCode:VerticalDirection.down
-    required VerticalDirection verticalDirection,
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    VerticalDirection verticalDirection = VerticalDirection.down,
   }) : super(
           key: key,
           children: children,
@@ -119,6 +120,8 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
           direction: direction,
           verticalDirection: verticalDirection,
         ) {
+    mateCreateName = 'ToggleButtons';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtons$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -146,30 +149,133 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
           direction: p.get('direction').build(),
           verticalDirection: p.get('verticalDirection').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('isSelected', isSelected);
-    matePut('onPressed', onPressed);
-    matePut('mouseCursor', mouseCursor);
-    matePut('tapTargetSize', tapTargetSize);
-    matePut('textStyle', textStyle);
-    matePut('constraints', constraints);
-    matePut('color', color);
-    matePut('selectedColor', selectedColor);
-    matePut('disabledColor', disabledColor);
-    matePut('fillColor', fillColor);
-    matePut('focusColor', focusColor);
-    matePut('highlightColor', highlightColor);
-    matePut('hoverColor', hoverColor);
-    matePut('splashColor', splashColor);
-    matePut('focusNodes', focusNodes);
-    matePut('renderBorder', renderBorder);
-    matePut('borderColor', borderColor);
-    matePut('selectedBorderColor', selectedBorderColor);
-    matePut('disabledBorderColor', disabledBorderColor);
-    matePut('borderRadius', borderRadius);
-    matePut('borderWidth', borderWidth);
-    matePut('direction', direction);
-    matePut('verticalDirection', verticalDirection);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUseList(
+      'isSelected',
+      isSelected,
+      isNamed: true,
+    );
+    mateUse(
+      'onPressed',
+      onPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'tapTargetSize',
+      tapTargetSize,
+      isNamed: true,
+    );
+    mateUse(
+      'textStyle',
+      textStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedColor',
+      selectedColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledColor',
+      disabledColor,
+      isNamed: true,
+    );
+    mateUse(
+      'fillColor',
+      fillColor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightColor',
+      highlightColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUseList(
+      'focusNodes',
+      focusNodes,
+      isNamed: true,
+    );
+    mateUse(
+      'renderBorder',
+      renderBorder,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'borderColor',
+      borderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectedBorderColor',
+      selectedBorderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledBorderColor',
+      disabledBorderColor,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'borderWidth',
+      borderWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'direction',
+      direction,
+      isNamed: true,
+      defaultValue: Axis.horizontal,
+    );
+    mateUse(
+      'verticalDirection',
+      verticalDirection,
+      isNamed: true,
+      defaultValue: VerticalDirection.down,
+    );
   }
 }

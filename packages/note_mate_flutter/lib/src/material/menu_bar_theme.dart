@@ -11,11 +11,17 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
   /// MenuBarThemeData MenuBarThemeData({MenuStyle? style})
   MenuBarThemeData$Mate(
       {
-      /// optionalParameters: {MenuStyle? style} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {MenuStyle? style} , default:none
       MenuStyle? style})
       : super(style: style) {
+    mateCreateName = 'MenuBarThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuBarThemeData$Mate(style: p.get('style').build());
-    matePut('style', style);
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+    );
   }
 }
 
@@ -23,26 +29,40 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
 class MenuBarTheme$Mate extends MenuBarTheme with Mate {
   /// MenuBarTheme MenuBarTheme({Key? key, required MenuBarThemeData data, required Widget child})
   MenuBarTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required MenuBarThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required MenuBarThemeData data} , default:none
     required MenuBarThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'MenuBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuBarTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

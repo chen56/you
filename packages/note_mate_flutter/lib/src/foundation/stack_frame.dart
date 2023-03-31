@@ -8,34 +8,34 @@ import 'dart:core';
 class StackFrame$Mate extends StackFrame with Mate {
   /// StackFrame StackFrame({required int number, required int column, required int line, required String packageScheme, required String package, required String packagePath, String className = '', required String method, bool isConstructor = false, required String source})
   StackFrame$Mate({
-    /// optionalParameters: {required int number} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int number} , default:none
     required int number,
 
-    /// optionalParameters: {required int column} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int column} , default:none
     required int column,
 
-    /// optionalParameters: {required int line} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int line} , default:none
     required int line,
 
-    /// optionalParameters: {required String packageScheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String packageScheme} , default:none
     required String packageScheme,
 
-    /// optionalParameters: {required String package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String package} , default:none
     required String package,
 
-    /// optionalParameters: {required String packagePath} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String packagePath} , default:none
     required String packagePath,
 
-    /// optionalParameters: {String className = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String className,
+    /// optionalParameters: {String className = ''} , default:processed=SimpleStringLiteralImpl
+    String className = '',
 
-    /// optionalParameters: {required String method} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String method} , default:none
     required String method,
 
-    /// optionalParameters: {bool isConstructor = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool isConstructor,
+    /// optionalParameters: {bool isConstructor = false} , default:processed=BooleanLiteralImpl
+    bool isConstructor = false,
 
-    /// optionalParameters: {required String source} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String source} , default:none
     required String source,
   }) : super(
           number: number,
@@ -49,6 +49,8 @@ class StackFrame$Mate extends StackFrame with Mate {
           isConstructor: isConstructor,
           source: source,
         ) {
+    mateCreateName = 'StackFrame';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => StackFrame$Mate(
           number: p.get('number').build(),
           column: p.get('column').build(),
@@ -61,15 +63,57 @@ class StackFrame$Mate extends StackFrame with Mate {
           isConstructor: p.get('isConstructor').build(),
           source: p.get('source').build(),
         );
-    matePut('number', number);
-    matePut('column', column);
-    matePut('line', line);
-    matePut('packageScheme', packageScheme);
-    matePut('package', package);
-    matePut('packagePath', packagePath);
-    matePut('className', className);
-    matePut('method', method);
-    matePut('isConstructor', isConstructor);
-    matePut('source', source);
+    mateUse(
+      'number',
+      number,
+      isNamed: true,
+    );
+    mateUse(
+      'column',
+      column,
+      isNamed: true,
+    );
+    mateUse(
+      'line',
+      line,
+      isNamed: true,
+    );
+    mateUse(
+      'packageScheme',
+      packageScheme,
+      isNamed: true,
+    );
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
+    mateUse(
+      'packagePath',
+      packagePath,
+      isNamed: true,
+    );
+    mateUse(
+      'className',
+      className,
+      isNamed: true,
+      defaultValue: '',
+    );
+    mateUse(
+      'method',
+      method,
+      isNamed: true,
+    );
+    mateUse(
+      'isConstructor',
+      isConstructor,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'source',
+      source,
+      isNamed: true,
+    );
   }
 }

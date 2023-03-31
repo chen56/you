@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
   /// DefaultSelectionStyle DefaultSelectionStyle({Key? key, Color? cursorColor, Color? selectionColor, required Widget child})
   DefaultSelectionStyle$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? cursorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? cursorColor} , default:none
     Color? cursorColor,
 
-    /// optionalParameters: {Color? selectionColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? selectionColor} , default:none
     Color? selectionColor,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -27,25 +27,49 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
           selectionColor: selectionColor,
           child: child,
         ) {
+    mateCreateName = 'DefaultSelectionStyle';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultSelectionStyle$Mate(
           key: p.get('key').build(),
           cursorColor: p.get('cursorColor').build(),
           selectionColor: p.get('selectionColor').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('cursorColor', cursorColor);
-    matePut('selectionColor', selectionColor);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'cursorColor',
+      cursorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionColor',
+      selectionColor,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// DefaultSelectionStyle DefaultSelectionStyle.fallback({Key? key})
   DefaultSelectionStyle$Mate.fallback(
       {
-      /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super.fallback(key: key) {
+    mateCreateName = 'DefaultSelectionStyle.fallback';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
-    matePut('key', key);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }

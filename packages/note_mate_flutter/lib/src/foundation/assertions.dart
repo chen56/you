@@ -10,27 +10,41 @@ import 'package:flutter/src/foundation/basic_types.dart';
 class PartialStackFrame$Mate extends PartialStackFrame with Mate {
   /// PartialStackFrame PartialStackFrame({required Pattern package, required String className, required String method})
   PartialStackFrame$Mate({
-    /// optionalParameters: {required Pattern package} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Pattern package} , default:none
     required Pattern package,
 
-    /// optionalParameters: {required String className} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String className} , default:none
     required String className,
 
-    /// optionalParameters: {required String method} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String method} , default:none
     required String method,
   }) : super(
           package: package,
           className: className,
           method: method,
         ) {
+    mateCreateName = 'PartialStackFrame';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => PartialStackFrame$Mate(
           package: p.get('package').build(),
           className: p.get('className').build(),
           method: p.get('method').build(),
         );
-    matePut('package', package);
-    matePut('className', className);
-    matePut('method', method);
+    mateUse(
+      'package',
+      package,
+      isNamed: true,
+    );
+    mateUse(
+      'className',
+      className,
+      isNamed: true,
+    );
+    mateUse(
+      'method',
+      method,
+      isNamed: true,
+    );
   }
 }
 
@@ -38,21 +52,31 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
 class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Mate {
   /// RepetitiveStackFrameFilter RepetitiveStackFrameFilter({required List<PartialStackFrame> frames, required String replacement})
   RepetitiveStackFrameFilter$Mate({
-    /// optionalParameters: {required List<PartialStackFrame> frames} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<PartialStackFrame> frames} , default:none
     required List<PartialStackFrame> frames,
 
-    /// optionalParameters: {required String replacement} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String replacement} , default:none
     required String replacement,
   }) : super(
           frames: frames,
           replacement: replacement,
         ) {
+    mateCreateName = 'RepetitiveStackFrameFilter';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => RepetitiveStackFrameFilter$Mate(
           frames: p.get('frames').build(),
           replacement: p.get('replacement').build(),
         );
-    matePut('frames', frames);
-    matePut('replacement', replacement);
+    mateUseList(
+      'frames',
+      frames,
+      isNamed: true,
+    );
+    mateUse(
+      'replacement',
+      replacement,
+      isNamed: true,
+    );
   }
 }
 
@@ -64,8 +88,14 @@ class ErrorDescription$Mate extends ErrorDescription with Mate {
       /// requiredParameters: String message
       String message)
       : super(message) {
+    mateCreateName = 'ErrorDescription';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorDescription$Mate(p.get('message').value);
-    matePut('message', message);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }
 
@@ -77,8 +107,14 @@ class ErrorSummary$Mate extends ErrorSummary with Mate {
       /// requiredParameters: String message
       String message)
       : super(message) {
+    mateCreateName = 'ErrorSummary';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorSummary$Mate(p.get('message').value);
-    matePut('message', message);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }
 
@@ -90,8 +126,14 @@ class ErrorHint$Mate extends ErrorHint with Mate {
       /// requiredParameters: String message
       String message)
       : super(message) {
+    mateCreateName = 'ErrorHint';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ErrorHint$Mate(p.get('message').value);
-    matePut('message', message);
+    mateUse(
+      'message',
+      message,
+      isNamed: false,
+    );
   }
 }
 
@@ -99,26 +141,26 @@ class ErrorHint$Mate extends ErrorHint with Mate {
 class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
   /// FlutterErrorDetails FlutterErrorDetails({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, Iterable<String> Function(Iterable<String>)? stackFilter, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetails$Mate({
-    /// optionalParameters: {required Object exception} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Object exception} , default:none
     required Object exception,
 
-    /// optionalParameters: {StackTrace? stack} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {StackTrace? stack} , default:none
     StackTrace? stack,
 
-    /// optionalParameters: {String? library = 'Flutter framework'} , hasDefaultValue:true, defaultValueCode:'Flutter framework'
-    String? library,
+    /// optionalParameters: {String? library = 'Flutter framework'} , default:processed=SimpleStringLiteralImpl
+    String? library = 'Flutter framework',
 
-    /// optionalParameters: {DiagnosticsNode? context} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DiagnosticsNode? context} , default:none
     DiagnosticsNode? context,
 
-    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , default:none
     IterableFilter<String>? stackFilter,
 
-    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
     InformationCollector? informationCollector,
 
-    /// optionalParameters: {bool silent = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool silent,
+    /// optionalParameters: {bool silent = false} , default:processed=BooleanLiteralImpl
+    bool silent = false,
   }) : super(
           exception: exception,
           stack: stack,
@@ -128,6 +170,8 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
           informationCollector: informationCollector,
           silent: silent,
         ) {
+    mateCreateName = 'FlutterErrorDetails';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlutterErrorDetails$Mate(
           exception: p.get('exception').build(),
           stack: p.get('stack').build(),
@@ -137,13 +181,43 @@ class FlutterErrorDetails$Mate extends FlutterErrorDetails with Mate {
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    matePut('exception', exception);
-    matePut('stack', stack);
-    matePut('library', library);
-    matePut('context', context);
-    matePut('stackFilter', stackFilter);
-    matePut('informationCollector', informationCollector);
-    matePut('silent', silent);
+    mateUse(
+      'exception',
+      exception,
+      isNamed: true,
+    );
+    mateUse(
+      'stack',
+      stack,
+      isNamed: true,
+    );
+    mateUse(
+      'library',
+      library,
+      isNamed: true,
+      defaultValue: 'Flutter framework',
+    );
+    mateUse(
+      'context',
+      context,
+      isNamed: true,
+    );
+    mateUse(
+      'stackFilter',
+      stackFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'informationCollector',
+      informationCollector,
+      isNamed: true,
+    );
+    mateUse(
+      'silent',
+      silent,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -155,8 +229,14 @@ class FlutterError$Mate extends FlutterError with Mate {
       /// requiredParameters: List<DiagnosticsNode> diagnostics
       List<DiagnosticsNode> diagnostics)
       : super.fromParts(diagnostics) {
+    mateCreateName = 'FlutterError.fromParts';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
-    matePut('diagnostics', diagnostics);
+    mateUseList(
+      'diagnostics',
+      diagnostics,
+      isNamed: false,
+    );
   }
 }
 
@@ -169,50 +249,84 @@ class DiagnosticsStackTrace$Mate extends DiagnosticsStackTrace with Mate {
 
     /// requiredParameters: StackTrace? stack
     StackTrace? stack, {
-    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Iterable<String> Function(Iterable<String>)? stackFilter} , default:none
     IterableFilter<String>? stackFilter,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
   }) : super(
           name,
           stack,
           stackFilter: stackFilter,
           showSeparator: showSeparator,
         ) {
+    mateCreateName = 'DiagnosticsStackTrace';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsStackTrace$Mate(
           p.get('name').value,
           p.get('stack').value,
           stackFilter: p.get('stackFilter').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    matePut('name', name);
-    matePut('stack', stack);
-    matePut('stackFilter', stackFilter);
-    matePut('showSeparator', showSeparator);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'stack',
+      stack,
+      isNamed: false,
+    );
+    mateUse(
+      'stackFilter',
+      stackFilter,
+      isNamed: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 
   /// DiagnosticsStackTrace DiagnosticsStackTrace.singleFrame(String name, {required String frame, bool showSeparator = true})
   DiagnosticsStackTrace$Mate.singleFrame(
     /// requiredParameters: String name
     String name, {
-    /// optionalParameters: {required String frame} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required String frame} , default:none
     required String frame,
 
-    /// optionalParameters: {bool showSeparator = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool showSeparator,
+    /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
+    bool showSeparator = true,
   }) : super.singleFrame(
           name,
           frame: frame,
           showSeparator: showSeparator,
         ) {
+    mateCreateName = 'DiagnosticsStackTrace.singleFrame';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsStackTrace$Mate.singleFrame(
           p.get('name').value,
           frame: p.get('frame').build(),
           showSeparator: p.get('showSeparator').build(),
         );
-    matePut('name', name);
-    matePut('frame', frame);
-    matePut('showSeparator', showSeparator);
+    mateUse(
+      'name',
+      name,
+      isNamed: false,
+    );
+    mateUse(
+      'frame',
+      frame,
+      isNamed: true,
+    );
+    mateUse(
+      'showSeparator',
+      showSeparator,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

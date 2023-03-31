@@ -15,62 +15,62 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 class Slider$Mate extends Slider with Mate {
   /// Slider Slider({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
   Slider$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double value} , default:none
     required double value,
 
-    /// optionalParameters: {double? secondaryTrackValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? secondaryTrackValue} , default:none
     double? secondaryTrackValue,
 
-    /// optionalParameters: {required void Function(double)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(double)? onChanged} , default:none
     required ValueChanged<double>? onChanged,
 
-    /// optionalParameters: {void Function(double)? onChangeStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(double)? onChangeStart} , default:none
     ValueChanged<double>? onChangeStart,
 
-    /// optionalParameters: {void Function(double)? onChangeEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(double)? onChangeEnd} , default:none
     ValueChanged<double>? onChangeEnd,
 
-    /// optionalParameters: {double min = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double min,
+    /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
+    double min = 0.0,
 
-    /// optionalParameters: {double max = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double max,
+    /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
+    double max = 1.0,
 
-    /// optionalParameters: {int? divisions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? divisions} , default:none
     int? divisions,
 
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , default:none
     String? label,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , default:none
     Color? activeColor,
 
-    /// optionalParameters: {Color? inactiveColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveColor} , default:none
     Color? inactiveColor,
 
-    /// optionalParameters: {Color? secondaryActiveColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryActiveColor} , default:none
     Color? secondaryActiveColor,
 
-    /// optionalParameters: {Color? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? thumbColor} , default:none
     Color? thumbColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {String Function(double)? semanticFormatterCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String Function(double)? semanticFormatterCallback} , default:none
     SemanticFormatterCallback? semanticFormatterCallback,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
   }) : super(
           key: key,
           value: value,
@@ -92,6 +92,8 @@ class Slider$Mate extends Slider with Mate {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
+    mateCreateName = 'Slider';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Slider$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -113,85 +115,164 @@ class Slider$Mate extends Slider with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('secondaryTrackValue', secondaryTrackValue);
-    matePut('onChanged', onChanged);
-    matePut('onChangeStart', onChangeStart);
-    matePut('onChangeEnd', onChangeEnd);
-    matePut('min', min);
-    matePut('max', max);
-    matePut('divisions', divisions);
-    matePut('label', label);
-    matePut('activeColor', activeColor);
-    matePut('inactiveColor', inactiveColor);
-    matePut('secondaryActiveColor', secondaryActiveColor);
-    matePut('thumbColor', thumbColor);
-    matePut('overlayColor', overlayColor);
-    matePut('mouseCursor', mouseCursor);
-    matePut('semanticFormatterCallback', semanticFormatterCallback);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryTrackValue',
+      secondaryTrackValue,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeStart',
+      onChangeStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeEnd',
+      onChangeEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'min',
+      min,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'max',
+      max,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'divisions',
+      divisions,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'activeColor',
+      activeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'inactiveColor',
+      inactiveColor,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryActiveColor',
+      secondaryActiveColor,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbColor',
+      thumbColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticFormatterCallback',
+      semanticFormatterCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 
   /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
   Slider$Mate.adaptive({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double value} , default:none
     required double value,
 
-    /// optionalParameters: {double? secondaryTrackValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? secondaryTrackValue} , default:none
     double? secondaryTrackValue,
 
-    /// optionalParameters: {required void Function(double)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(double)? onChanged} , default:none
     required ValueChanged<double>? onChanged,
 
-    /// optionalParameters: {void Function(double)? onChangeStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(double)? onChangeStart} , default:none
     ValueChanged<double>? onChangeStart,
 
-    /// optionalParameters: {void Function(double)? onChangeEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(double)? onChangeEnd} , default:none
     ValueChanged<double>? onChangeEnd,
 
-    /// optionalParameters: {double min = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double min,
+    /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
+    double min = 0.0,
 
-    /// optionalParameters: {double max = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double max,
+    /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
+    double max = 1.0,
 
-    /// optionalParameters: {int? divisions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? divisions} , default:none
     int? divisions,
 
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , default:none
     String? label,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , default:none
     Color? activeColor,
 
-    /// optionalParameters: {Color? inactiveColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveColor} , default:none
     Color? inactiveColor,
 
-    /// optionalParameters: {Color? secondaryActiveColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryActiveColor} , default:none
     Color? secondaryActiveColor,
 
-    /// optionalParameters: {Color? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? thumbColor} , default:none
     Color? thumbColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {String Function(double)? semanticFormatterCallback} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String Function(double)? semanticFormatterCallback} , default:none
     SemanticFormatterCallback? semanticFormatterCallback,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
   }) : super.adaptive(
           key: key,
           value: value,
@@ -213,6 +294,8 @@ class Slider$Mate extends Slider with Mate {
           focusNode: focusNode,
           autofocus: autofocus,
         ) {
+    mateCreateName = 'Slider.adaptive';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Slider$Mate.adaptive(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -234,24 +317,103 @@ class Slider$Mate extends Slider with Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('secondaryTrackValue', secondaryTrackValue);
-    matePut('onChanged', onChanged);
-    matePut('onChangeStart', onChangeStart);
-    matePut('onChangeEnd', onChangeEnd);
-    matePut('min', min);
-    matePut('max', max);
-    matePut('divisions', divisions);
-    matePut('label', label);
-    matePut('mouseCursor', mouseCursor);
-    matePut('activeColor', activeColor);
-    matePut('inactiveColor', inactiveColor);
-    matePut('secondaryActiveColor', secondaryActiveColor);
-    matePut('thumbColor', thumbColor);
-    matePut('overlayColor', overlayColor);
-    matePut('semanticFormatterCallback', semanticFormatterCallback);
-    matePut('focusNode', focusNode);
-    matePut('autofocus', autofocus);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryTrackValue',
+      secondaryTrackValue,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeStart',
+      onChangeStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeEnd',
+      onChangeEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'min',
+      min,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'max',
+      max,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'divisions',
+      divisions,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'activeColor',
+      activeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'inactiveColor',
+      inactiveColor,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryActiveColor',
+      secondaryActiveColor,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbColor',
+      thumbColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticFormatterCallback',
+      semanticFormatterCallback,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }

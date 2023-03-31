@@ -12,40 +12,40 @@ import 'package:flutter/src/rendering/box.dart';
 class SliverConstraints$Mate extends SliverConstraints with Mate {
   /// SliverConstraints SliverConstraints({required AxisDirection axisDirection, required GrowthDirection growthDirection, required ScrollDirection userScrollDirection, required double scrollOffset, required double precedingScrollExtent, required double overlap, required double remainingPaintExtent, required double crossAxisExtent, required AxisDirection crossAxisDirection, required double viewportMainAxisExtent, required double remainingCacheExtent, required double cacheOrigin})
   SliverConstraints$Mate({
-    /// optionalParameters: {required AxisDirection axisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection axisDirection} , default:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required GrowthDirection growthDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required GrowthDirection growthDirection} , default:none
     required GrowthDirection growthDirection,
 
-    /// optionalParameters: {required ScrollDirection userScrollDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ScrollDirection userScrollDirection} , default:none
     required ScrollDirection userScrollDirection,
 
-    /// optionalParameters: {required double scrollOffset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double scrollOffset} , default:none
     required double scrollOffset,
 
-    /// optionalParameters: {required double precedingScrollExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double precedingScrollExtent} , default:none
     required double precedingScrollExtent,
 
-    /// optionalParameters: {required double overlap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double overlap} , default:none
     required double overlap,
 
-    /// optionalParameters: {required double remainingPaintExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double remainingPaintExtent} , default:none
     required double remainingPaintExtent,
 
-    /// optionalParameters: {required double crossAxisExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double crossAxisExtent} , default:none
     required double crossAxisExtent,
 
-    /// optionalParameters: {required AxisDirection crossAxisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
     required AxisDirection crossAxisDirection,
 
-    /// optionalParameters: {required double viewportMainAxisExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double viewportMainAxisExtent} , default:none
     required double viewportMainAxisExtent,
 
-    /// optionalParameters: {required double remainingCacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double remainingCacheExtent} , default:none
     required double remainingCacheExtent,
 
-    /// optionalParameters: {required double cacheOrigin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double cacheOrigin} , default:none
     required double cacheOrigin,
   }) : super(
           axisDirection: axisDirection,
@@ -61,6 +61,8 @@ class SliverConstraints$Mate extends SliverConstraints with Mate {
           remainingCacheExtent: remainingCacheExtent,
           cacheOrigin: cacheOrigin,
         ) {
+    mateCreateName = 'SliverConstraints';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverConstraints$Mate(
           axisDirection: p.get('axisDirection').build(),
           growthDirection: p.get('growthDirection').build(),
@@ -75,18 +77,66 @@ class SliverConstraints$Mate extends SliverConstraints with Mate {
           remainingCacheExtent: p.get('remainingCacheExtent').build(),
           cacheOrigin: p.get('cacheOrigin').build(),
         );
-    matePut('axisDirection', axisDirection);
-    matePut('growthDirection', growthDirection);
-    matePut('userScrollDirection', userScrollDirection);
-    matePut('scrollOffset', scrollOffset);
-    matePut('precedingScrollExtent', precedingScrollExtent);
-    matePut('overlap', overlap);
-    matePut('remainingPaintExtent', remainingPaintExtent);
-    matePut('crossAxisExtent', crossAxisExtent);
-    matePut('crossAxisDirection', crossAxisDirection);
-    matePut('viewportMainAxisExtent', viewportMainAxisExtent);
-    matePut('remainingCacheExtent', remainingCacheExtent);
-    matePut('cacheOrigin', cacheOrigin);
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'growthDirection',
+      growthDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'userScrollDirection',
+      userScrollDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollOffset',
+      scrollOffset,
+      isNamed: true,
+    );
+    mateUse(
+      'precedingScrollExtent',
+      precedingScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'overlap',
+      overlap,
+      isNamed: true,
+    );
+    mateUse(
+      'remainingPaintExtent',
+      remainingPaintExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'crossAxisExtent',
+      crossAxisExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'crossAxisDirection',
+      crossAxisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'viewportMainAxisExtent',
+      viewportMainAxisExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'remainingCacheExtent',
+      remainingCacheExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'cacheOrigin',
+      cacheOrigin,
+      isNamed: true,
+    );
   }
 }
 
@@ -94,37 +144,37 @@ class SliverConstraints$Mate extends SliverConstraints with Mate {
 class SliverGeometry$Mate extends SliverGeometry with Mate {
   /// SliverGeometry SliverGeometry({double scrollExtent = 0.0, double paintExtent = 0.0, double paintOrigin = 0.0, double? layoutExtent, double maxPaintExtent = 0.0, double maxScrollObstructionExtent = 0.0, double? hitTestExtent, bool? visible, bool hasVisualOverflow = false, double? scrollOffsetCorrection, double? cacheExtent})
   SliverGeometry$Mate({
-    /// optionalParameters: {double scrollExtent = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double scrollExtent,
+    /// optionalParameters: {double scrollExtent = 0.0} , default:processed=DoubleLiteralImpl
+    double scrollExtent = 0.0,
 
-    /// optionalParameters: {double paintExtent = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double paintExtent,
+    /// optionalParameters: {double paintExtent = 0.0} , default:processed=DoubleLiteralImpl
+    double paintExtent = 0.0,
 
-    /// optionalParameters: {double paintOrigin = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double paintOrigin,
+    /// optionalParameters: {double paintOrigin = 0.0} , default:processed=DoubleLiteralImpl
+    double paintOrigin = 0.0,
 
-    /// optionalParameters: {double? layoutExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? layoutExtent} , default:none
     double? layoutExtent,
 
-    /// optionalParameters: {double maxPaintExtent = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double maxPaintExtent,
+    /// optionalParameters: {double maxPaintExtent = 0.0} , default:processed=DoubleLiteralImpl
+    double maxPaintExtent = 0.0,
 
-    /// optionalParameters: {double maxScrollObstructionExtent = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double maxScrollObstructionExtent,
+    /// optionalParameters: {double maxScrollObstructionExtent = 0.0} , default:processed=DoubleLiteralImpl
+    double maxScrollObstructionExtent = 0.0,
 
-    /// optionalParameters: {double? hitTestExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? hitTestExtent} , default:none
     double? hitTestExtent,
 
-    /// optionalParameters: {bool? visible} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? visible} , default:none
     bool? visible,
 
-    /// optionalParameters: {bool hasVisualOverflow = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool hasVisualOverflow,
+    /// optionalParameters: {bool hasVisualOverflow = false} , default:processed=BooleanLiteralImpl
+    bool hasVisualOverflow = false,
 
-    /// optionalParameters: {double? scrollOffsetCorrection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? scrollOffsetCorrection} , default:none
     double? scrollOffsetCorrection,
 
-    /// optionalParameters: {double? cacheExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? cacheExtent} , default:none
     double? cacheExtent,
   }) : super(
           scrollExtent: scrollExtent,
@@ -139,6 +189,8 @@ class SliverGeometry$Mate extends SliverGeometry with Mate {
           scrollOffsetCorrection: scrollOffsetCorrection,
           cacheExtent: cacheExtent,
         ) {
+    mateCreateName = 'SliverGeometry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGeometry$Mate(
           scrollExtent: p.get('scrollExtent').build(),
           paintExtent: p.get('paintExtent').build(),
@@ -152,17 +204,67 @@ class SliverGeometry$Mate extends SliverGeometry with Mate {
           scrollOffsetCorrection: p.get('scrollOffsetCorrection').build(),
           cacheExtent: p.get('cacheExtent').build(),
         );
-    matePut('scrollExtent', scrollExtent);
-    matePut('paintExtent', paintExtent);
-    matePut('paintOrigin', paintOrigin);
-    matePut('layoutExtent', layoutExtent);
-    matePut('maxPaintExtent', maxPaintExtent);
-    matePut('maxScrollObstructionExtent', maxScrollObstructionExtent);
-    matePut('hitTestExtent', hitTestExtent);
-    matePut('visible', visible);
-    matePut('hasVisualOverflow', hasVisualOverflow);
-    matePut('scrollOffsetCorrection', scrollOffsetCorrection);
-    matePut('cacheExtent', cacheExtent);
+    mateUse(
+      'scrollExtent',
+      scrollExtent,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'paintExtent',
+      paintExtent,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'paintOrigin',
+      paintOrigin,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'layoutExtent',
+      layoutExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'maxPaintExtent',
+      maxPaintExtent,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'maxScrollObstructionExtent',
+      maxScrollObstructionExtent,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'hitTestExtent',
+      hitTestExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'visible',
+      visible,
+      isNamed: true,
+    );
+    mateUse(
+      'hasVisualOverflow',
+      hasVisualOverflow,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'scrollOffsetCorrection',
+      scrollOffsetCorrection,
+      isNamed: true,
+    );
+    mateUse(
+      'cacheExtent',
+      cacheExtent,
+      isNamed: true,
+    );
   }
 }
 
@@ -174,8 +276,14 @@ class SliverHitTestResult$Mate extends SliverHitTestResult with Mate {
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
+    mateCreateName = 'SliverHitTestResult.wrap';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverHitTestResult$Mate.wrap(p.get('result').value);
-    matePut('result', result);
+    mateUse(
+      'result',
+      result,
+      isNamed: false,
+    );
   }
 }
 
@@ -185,24 +293,38 @@ class SliverHitTestEntry$Mate extends SliverHitTestEntry with Mate {
   SliverHitTestEntry$Mate(
     /// requiredParameters: RenderSliver target
     RenderSliver target, {
-    /// optionalParameters: {required double mainAxisPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double mainAxisPosition} , default:none
     required double mainAxisPosition,
 
-    /// optionalParameters: {required double crossAxisPosition} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double crossAxisPosition} , default:none
     required double crossAxisPosition,
   }) : super(
           target,
           mainAxisPosition: mainAxisPosition,
           crossAxisPosition: crossAxisPosition,
         ) {
+    mateCreateName = 'SliverHitTestEntry';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverHitTestEntry$Mate(
           p.get('target').value,
           mainAxisPosition: p.get('mainAxisPosition').build(),
           crossAxisPosition: p.get('crossAxisPosition').build(),
         );
-    matePut('target', target);
-    matePut('mainAxisPosition', mainAxisPosition);
-    matePut('crossAxisPosition', crossAxisPosition);
+    mateUse(
+      'target',
+      target,
+      isNamed: false,
+    );
+    mateUse(
+      'mainAxisPosition',
+      mainAxisPosition,
+      isNamed: true,
+    );
+    mateUse(
+      'crossAxisPosition',
+      crossAxisPosition,
+      isNamed: true,
+    );
   }
 }
 
@@ -211,10 +333,16 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate {
   /// RenderSliverToBoxAdapter RenderSliverToBoxAdapter({RenderBox? child})
   RenderSliverToBoxAdapter$Mate(
       {
-      /// optionalParameters: {RenderBox? child} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {RenderBox? child} , default:none
       RenderBox? child})
       : super(child: child) {
+    mateCreateName = 'RenderSliverToBoxAdapter';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
-    matePut('child', child);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

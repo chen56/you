@@ -8,43 +8,44 @@ import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 import 'dart:ui';
+import 'package:flutter/material.dart';
 
 /// class UserAccountsDrawerHeader extends StatefulWidget
 class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
   /// UserAccountsDrawerHeader UserAccountsDrawerHeader({Key? key, Decoration? decoration, EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0), Widget? currentAccountPicture, List<Widget>? otherAccountsPictures, Size currentAccountPictureSize = const Size.square(72.0), Size otherAccountsPicturesSize = const Size.square(40.0), required Widget? accountName, required Widget? accountEmail, void Function()? onDetailsPressed, Color arrowColor = Colors.white})
   UserAccountsDrawerHeader$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0)} , hasDefaultValue:true, defaultValueCode:const EdgeInsets.only(bottom: 8.0)
-    EdgeInsetsGeometry? margin,
+    /// optionalParameters: {EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0)} , default:unprocessed=InstanceCreationExpressionImpl
+    required EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {Widget? currentAccountPicture} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? currentAccountPicture} , default:none
     Widget? currentAccountPicture,
 
-    /// optionalParameters: {List<Widget>? otherAccountsPictures} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Widget>? otherAccountsPictures} , default:none
     List<Widget>? otherAccountsPictures,
 
-    /// optionalParameters: {Size currentAccountPictureSize = const Size.square(72.0)} , hasDefaultValue:true, defaultValueCode:const Size.square(72.0)
+    /// optionalParameters: {Size currentAccountPictureSize = const Size.square(72.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required Size currentAccountPictureSize,
 
-    /// optionalParameters: {Size otherAccountsPicturesSize = const Size.square(40.0)} , hasDefaultValue:true, defaultValueCode:const Size.square(40.0)
+    /// optionalParameters: {Size otherAccountsPicturesSize = const Size.square(40.0)} , default:unprocessed=InstanceCreationExpressionImpl
     required Size otherAccountsPicturesSize,
 
-    /// optionalParameters: {required Widget? accountName} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? accountName} , default:none
     required Widget? accountName,
 
-    /// optionalParameters: {required Widget? accountEmail} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? accountEmail} , default:none
     required Widget? accountEmail,
 
-    /// optionalParameters: {void Function()? onDetailsPressed} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDetailsPressed} , default:none
     VoidCallback? onDetailsPressed,
 
-    /// optionalParameters: {Color arrowColor = Colors.white} , hasDefaultValue:true, defaultValueCode:Colors.white
-    required Color arrowColor,
+    /// optionalParameters: {Color arrowColor = Colors.white} , default:processed=PrefixedIdentifierImpl
+    Color arrowColor = Colors.white,
   }) : super(
           key: key,
           decoration: decoration,
@@ -58,6 +59,8 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
           onDetailsPressed: onDetailsPressed,
           arrowColor: arrowColor,
         ) {
+    mateCreateName = 'UserAccountsDrawerHeader';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UserAccountsDrawerHeader$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),
@@ -71,16 +74,61 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
           onDetailsPressed: p.get('onDetailsPressed').build(),
           arrowColor: p.get('arrowColor').build(),
         );
-    matePut('key', key);
-    matePut('decoration', decoration);
-    matePut('margin', margin);
-    matePut('currentAccountPicture', currentAccountPicture);
-    matePut('otherAccountsPictures', otherAccountsPictures);
-    matePut('currentAccountPictureSize', currentAccountPictureSize);
-    matePut('otherAccountsPicturesSize', otherAccountsPicturesSize);
-    matePut('accountName', accountName);
-    matePut('accountEmail', accountEmail);
-    matePut('onDetailsPressed', onDetailsPressed);
-    matePut('arrowColor', arrowColor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'currentAccountPicture',
+      currentAccountPicture,
+      isNamed: true,
+    );
+    mateUseList(
+      'otherAccountsPictures',
+      otherAccountsPictures,
+      isNamed: true,
+    );
+    mateUse(
+      'currentAccountPictureSize',
+      currentAccountPictureSize,
+      isNamed: true,
+    );
+    mateUse(
+      'otherAccountsPicturesSize',
+      otherAccountsPicturesSize,
+      isNamed: true,
+    );
+    mateUse(
+      'accountName',
+      accountName,
+      isNamed: true,
+    );
+    mateUse(
+      'accountEmail',
+      accountEmail,
+      isNamed: true,
+    );
+    mateUse(
+      'onDetailsPressed',
+      onDetailsPressed,
+      isNamed: true,
+    );
+    mateUse(
+      'arrowColor',
+      arrowColor,
+      isNamed: true,
+      defaultValue: Colors.white,
+    );
   }
 }

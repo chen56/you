@@ -9,32 +9,47 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/rendering/table.dart';
 import 'dart:ui';
 import 'package:flutter/src/rendering/table_border.dart';
+import 'package:flutter/rendering.dart';
 
 /// class TableRow
 class TableRow$Mate extends TableRow with Mate {
   /// TableRow TableRow({LocalKey? key, Decoration? decoration, List<Widget> children = const <Widget>[]})
   TableRow$Mate({
-    /// optionalParameters: {LocalKey? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {LocalKey? key} , default:none
     LocalKey? key,
 
-    /// optionalParameters: {Decoration? decoration} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? decoration} , default:none
     Decoration? decoration,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
   }) : super(
           key: key,
           decoration: decoration,
           children: children,
         ) {
+    mateCreateName = 'TableRow';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TableRow$Mate(
           key: p.get('key').build(),
           decoration: p.get('decoration').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('decoration', decoration);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'decoration',
+      decoration,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -42,28 +57,28 @@ class TableRow$Mate extends TableRow with Mate {
 class Table$Mate extends Table with Mate {
   /// Table Table({Key? key, List<TableRow> children = const <TableRow>[], Map<int, TableColumnWidth>? columnWidths, TableColumnWidth defaultColumnWidth = const FlexColumnWidth(), TextDirection? textDirection, TableBorder? border, TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top, TextBaseline? textBaseline})
   Table$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {List<TableRow> children = const <TableRow>[]} , hasDefaultValue:true, defaultValueCode:const <TableRow>[]
+    /// optionalParameters: {List<TableRow> children = const <TableRow>[]} , default:unprocessed=ListLiteralImpl
     required List<TableRow> children,
 
-    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , default:none
     Map<int, TableColumnWidth>? columnWidths,
 
-    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , hasDefaultValue:true, defaultValueCode:const FlexColumnWidth()
+    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , default:unprocessed=InstanceCreationExpressionImpl
     required TableColumnWidth defaultColumnWidth,
 
-    /// optionalParameters: {TextDirection? textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextDirection? textDirection} , default:none
     TextDirection? textDirection,
 
-    /// optionalParameters: {TableBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TableBorder? border} , default:none
     TableBorder? border,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , hasDefaultValue:true, defaultValueCode:TableCellVerticalAlignment.top
-    required TableCellVerticalAlignment defaultVerticalAlignment,
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
+    TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
   }) : super(
           key: key,
@@ -75,6 +90,8 @@ class Table$Mate extends Table with Mate {
           defaultVerticalAlignment: defaultVerticalAlignment,
           textBaseline: textBaseline,
         ) {
+    mateCreateName = 'Table';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Table$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
@@ -85,14 +102,47 @@ class Table$Mate extends Table with Mate {
           defaultVerticalAlignment: p.get('defaultVerticalAlignment').build(),
           textBaseline: p.get('textBaseline').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('columnWidths', columnWidths);
-    matePut('defaultColumnWidth', defaultColumnWidth);
-    matePut('textDirection', textDirection);
-    matePut('border', border);
-    matePut('defaultVerticalAlignment', defaultVerticalAlignment);
-    matePut('textBaseline', textBaseline);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'columnWidths',
+      columnWidths,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultColumnWidth',
+      defaultColumnWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultVerticalAlignment',
+      defaultVerticalAlignment,
+      isNamed: true,
+      defaultValue: TableCellVerticalAlignment.top,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
   }
 }
 
@@ -100,26 +150,40 @@ class Table$Mate extends Table with Mate {
 class TableCell$Mate extends TableCell with Mate {
   /// TableCell TableCell({Key? key, TableCellVerticalAlignment? verticalAlignment, required Widget child})
   TableCell$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {TableCellVerticalAlignment? verticalAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TableCellVerticalAlignment? verticalAlignment} , default:none
     TableCellVerticalAlignment? verticalAlignment,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           verticalAlignment: verticalAlignment,
           child: child,
         ) {
+    mateCreateName = 'TableCell';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TableCell$Mate(
           key: p.get('key').build(),
           verticalAlignment: p.get('verticalAlignment').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('verticalAlignment', verticalAlignment);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'verticalAlignment',
+      verticalAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

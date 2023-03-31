@@ -3,26 +3,39 @@
 import 'package:flutter/src/painting/oval_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 
 /// class OvalBorder extends CircleBorder
 class OvalBorder$Mate extends OvalBorder with Mate {
   /// OvalBorder OvalBorder({BorderSide side = BorderSide.none, double eccentricity = 1.0})
   OvalBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-    required BorderSide side,
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    BorderSide side = BorderSide.none,
 
-    /// optionalParameters: {double eccentricity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double eccentricity,
+    /// optionalParameters: {double eccentricity = 1.0} , default:processed=DoubleLiteralImpl
+    double eccentricity = 1.0,
   }) : super(
           side: side,
           eccentricity: eccentricity,
         ) {
+    mateCreateName = 'OvalBorder';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => OvalBorder$Mate(
           side: p.get('side').build(),
           eccentricity: p.get('eccentricity').build(),
         );
-    matePut('side', side);
-    matePut('eccentricity', eccentricity);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
+    mateUse(
+      'eccentricity',
+      eccentricity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
   }
 }

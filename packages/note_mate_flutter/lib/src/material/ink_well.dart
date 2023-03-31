@@ -10,6 +10,7 @@ import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:core';
 import 'package:flutter/src/services/mouse_cursor.dart';
 import 'package:flutter/src/painting/box_border.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/src/painting/border_radius.dart';
 import 'package:flutter/src/painting/borders.dart';
 import 'dart:ui';
@@ -20,91 +21,91 @@ import 'package:flutter/src/widgets/focus_manager.dart';
 class InkResponse$Mate extends InkResponse with Mate {
   /// InkResponse InkResponse({Key? key, Widget? child, void Function()? onTap, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onDoubleTap, void Function()? onLongPress, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, bool containedInkWell = false, BoxShape highlightShape = BoxShape.circle, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, bool enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
   InkResponse$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
     GestureTapDownCallback? onTapDown,
 
-    /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , default:none
     GestureTapUpCallback? onTapUp,
 
-    /// optionalParameters: {void Function()? onTapCancel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTapCancel} , default:none
     GestureTapCallback? onTapCancel,
 
-    /// optionalParameters: {void Function()? onDoubleTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDoubleTap} , default:none
     GestureTapCallback? onDoubleTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(bool)? onHighlightChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
     ValueChanged<bool>? onHighlightChanged,
 
-    /// optionalParameters: {void Function(bool)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHover} , default:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {bool containedInkWell = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool containedInkWell,
+    /// optionalParameters: {bool containedInkWell = false} , default:processed=BooleanLiteralImpl
+    bool containedInkWell = false,
 
-    /// optionalParameters: {BoxShape highlightShape = BoxShape.circle} , hasDefaultValue:true, defaultValueCode:BoxShape.circle
-    required BoxShape highlightShape,
+    /// optionalParameters: {BoxShape highlightShape = BoxShape.circle} , default:processed=PrefixedIdentifierImpl
+    BoxShape highlightShape = BoxShape.circle,
 
-    /// optionalParameters: {double? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? radius} , default:none
     double? radius,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {ShapeBorder? customBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? customBorder} , default:none
     ShapeBorder? customBorder,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , default:none
     Color? highlightColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
     InteractiveInkFeatureFactory? splashFactory,
 
-    /// optionalParameters: {bool enableFeedback = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool enableFeedback,
+    /// optionalParameters: {bool enableFeedback = true} , default:processed=BooleanLiteralImpl
+    bool enableFeedback = true,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool canRequestFocus = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool canRequestFocus,
+    /// optionalParameters: {bool canRequestFocus = true} , default:processed=BooleanLiteralImpl
+    bool canRequestFocus = true,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStatesController? statesController} , default:none
     MaterialStatesController? statesController,
   }) : super(
           key: key,
@@ -137,6 +138,8 @@ class InkResponse$Mate extends InkResponse with Mate {
           autofocus: autofocus,
           statesController: statesController,
         ) {
+    mateCreateName = 'InkResponse';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkResponse$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -168,35 +171,157 @@ class InkResponse$Mate extends InkResponse with Mate {
           autofocus: p.get('autofocus').build(),
           statesController: p.get('statesController').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onTap', onTap);
-    matePut('onTapDown', onTapDown);
-    matePut('onTapUp', onTapUp);
-    matePut('onTapCancel', onTapCancel);
-    matePut('onDoubleTap', onDoubleTap);
-    matePut('onLongPress', onLongPress);
-    matePut('onHighlightChanged', onHighlightChanged);
-    matePut('onHover', onHover);
-    matePut('mouseCursor', mouseCursor);
-    matePut('containedInkWell', containedInkWell);
-    matePut('highlightShape', highlightShape);
-    matePut('radius', radius);
-    matePut('borderRadius', borderRadius);
-    matePut('customBorder', customBorder);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('highlightColor', highlightColor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashColor', splashColor);
-    matePut('splashFactory', splashFactory);
-    matePut('enableFeedback', enableFeedback);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('focusNode', focusNode);
-    matePut('canRequestFocus', canRequestFocus);
-    matePut('onFocusChange', onFocusChange);
-    matePut('autofocus', autofocus);
-    matePut('statesController', statesController);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapDown',
+      onTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapUp',
+      onTapUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapCancel',
+      onTapCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTap',
+      onDoubleTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onHighlightChanged',
+      onHighlightChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onHover',
+      onHover,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'containedInkWell',
+      containedInkWell,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'highlightShape',
+      highlightShape,
+      isNamed: true,
+      defaultValue: BoxShape.circle,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'customBorder',
+      customBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightColor',
+      highlightColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashFactory',
+      splashFactory,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'canRequestFocus',
+      canRequestFocus,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onFocusChange',
+      onFocusChange,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'statesController',
+      statesController,
+      isNamed: true,
+    );
   }
 }
 
@@ -204,85 +329,85 @@ class InkResponse$Mate extends InkResponse with Mate {
 class InkWell$Mate extends InkWell with Mate {
   /// InkWell InkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, bool? enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
   InkWell$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {void Function()? onTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTap} , default:none
     GestureTapCallback? onTap,
 
-    /// optionalParameters: {void Function()? onDoubleTap} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onDoubleTap} , default:none
     GestureTapCallback? onDoubleTap,
 
-    /// optionalParameters: {void Function()? onLongPress} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onLongPress} , default:none
     GestureLongPressCallback? onLongPress,
 
-    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
     GestureTapDownCallback? onTapDown,
 
-    /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , default:none
     GestureTapUpCallback? onTapUp,
 
-    /// optionalParameters: {void Function()? onTapCancel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function()? onTapCancel} , default:none
     GestureTapCallback? onTapCancel,
 
-    /// optionalParameters: {void Function(bool)? onHighlightChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
     ValueChanged<bool>? onHighlightChanged,
 
-    /// optionalParameters: {void Function(bool)? onHover} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onHover} , default:none
     ValueChanged<bool>? onHover,
 
-    /// optionalParameters: {MouseCursor? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MouseCursor? mouseCursor} , default:none
     MouseCursor? mouseCursor,
 
-    /// optionalParameters: {Color? focusColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? focusColor} , default:none
     Color? focusColor,
 
-    /// optionalParameters: {Color? hoverColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? hoverColor} , default:none
     Color? hoverColor,
 
-    /// optionalParameters: {Color? highlightColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? highlightColor} , default:none
     Color? highlightColor,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {Color? splashColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? splashColor} , default:none
     Color? splashColor,
 
-    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
     InteractiveInkFeatureFactory? splashFactory,
 
-    /// optionalParameters: {double? radius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? radius} , default:none
     double? radius,
 
-    /// optionalParameters: {BorderRadius? borderRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BorderRadius? borderRadius} , default:none
     BorderRadius? borderRadius,
 
-    /// optionalParameters: {ShapeBorder? customBorder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? customBorder} , default:none
     ShapeBorder? customBorder,
 
-    /// optionalParameters: {bool? enableFeedback = true} , hasDefaultValue:true, defaultValueCode:true
-    bool? enableFeedback,
+    /// optionalParameters: {bool? enableFeedback = true} , default:processed=BooleanLiteralImpl
+    bool? enableFeedback = true,
 
-    /// optionalParameters: {bool excludeFromSemantics = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool excludeFromSemantics,
+    /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
+    bool excludeFromSemantics = false,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {bool canRequestFocus = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool canRequestFocus,
+    /// optionalParameters: {bool canRequestFocus = true} , default:processed=BooleanLiteralImpl
+    bool canRequestFocus = true,
 
-    /// optionalParameters: {void Function(bool)? onFocusChange} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
     ValueChanged<bool>? onFocusChange,
 
-    /// optionalParameters: {bool autofocus = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool autofocus,
+    /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
+    bool autofocus = false,
 
-    /// optionalParameters: {MaterialStatesController? statesController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStatesController? statesController} , default:none
     MaterialStatesController? statesController,
   }) : super(
           key: key,
@@ -313,6 +438,8 @@ class InkWell$Mate extends InkWell with Mate {
           autofocus: autofocus,
           statesController: statesController,
         ) {
+    mateCreateName = 'InkWell';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkWell$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
@@ -342,32 +469,144 @@ class InkWell$Mate extends InkWell with Mate {
           autofocus: p.get('autofocus').build(),
           statesController: p.get('statesController').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onTap', onTap);
-    matePut('onDoubleTap', onDoubleTap);
-    matePut('onLongPress', onLongPress);
-    matePut('onTapDown', onTapDown);
-    matePut('onTapUp', onTapUp);
-    matePut('onTapCancel', onTapCancel);
-    matePut('onHighlightChanged', onHighlightChanged);
-    matePut('onHover', onHover);
-    matePut('mouseCursor', mouseCursor);
-    matePut('focusColor', focusColor);
-    matePut('hoverColor', hoverColor);
-    matePut('highlightColor', highlightColor);
-    matePut('overlayColor', overlayColor);
-    matePut('splashColor', splashColor);
-    matePut('splashFactory', splashFactory);
-    matePut('radius', radius);
-    matePut('borderRadius', borderRadius);
-    matePut('customBorder', customBorder);
-    matePut('enableFeedback', enableFeedback);
-    matePut('excludeFromSemantics', excludeFromSemantics);
-    matePut('focusNode', focusNode);
-    matePut('canRequestFocus', canRequestFocus);
-    matePut('onFocusChange', onFocusChange);
-    matePut('autofocus', autofocus);
-    matePut('statesController', statesController);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onTap',
+      onTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onDoubleTap',
+      onDoubleTap,
+      isNamed: true,
+    );
+    mateUse(
+      'onLongPress',
+      onLongPress,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapDown',
+      onTapDown,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapUp',
+      onTapUp,
+      isNamed: true,
+    );
+    mateUse(
+      'onTapCancel',
+      onTapCancel,
+      isNamed: true,
+    );
+    mateUse(
+      'onHighlightChanged',
+      onHighlightChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onHover',
+      onHover,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
+    mateUse(
+      'focusColor',
+      focusColor,
+      isNamed: true,
+    );
+    mateUse(
+      'hoverColor',
+      hoverColor,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightColor',
+      highlightColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashColor',
+      splashColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashFactory',
+      splashFactory,
+      isNamed: true,
+    );
+    mateUse(
+      'radius',
+      radius,
+      isNamed: true,
+    );
+    mateUse(
+      'borderRadius',
+      borderRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'customBorder',
+      customBorder,
+      isNamed: true,
+    );
+    mateUse(
+      'enableFeedback',
+      enableFeedback,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'excludeFromSemantics',
+      excludeFromSemantics,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'canRequestFocus',
+      canRequestFocus,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'onFocusChange',
+      onFocusChange,
+      isNamed: true,
+    );
+    mateUse(
+      'autofocus',
+      autofocus,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'statesController',
+      statesController,
+      isNamed: true,
+    );
   }
 }

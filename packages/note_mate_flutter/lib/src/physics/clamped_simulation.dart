@@ -11,17 +11,17 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
   ClampedSimulation$Mate(
     /// requiredParameters: Simulation simulation
     Simulation simulation, {
-    /// optionalParameters: {double xMin = double.negativeInfinity} , hasDefaultValue:true, defaultValueCode:double.negativeInfinity
-    required double xMin,
+    /// optionalParameters: {double xMin = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
+    double xMin = double.negativeInfinity,
 
-    /// optionalParameters: {double xMax = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double xMax,
+    /// optionalParameters: {double xMax = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double xMax = double.infinity,
 
-    /// optionalParameters: {double dxMin = double.negativeInfinity} , hasDefaultValue:true, defaultValueCode:double.negativeInfinity
-    required double dxMin,
+    /// optionalParameters: {double dxMin = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
+    double dxMin = double.negativeInfinity,
 
-    /// optionalParameters: {double dxMax = double.infinity} , hasDefaultValue:true, defaultValueCode:double.infinity
-    required double dxMax,
+    /// optionalParameters: {double dxMax = double.infinity} , default:processed=PrefixedIdentifierImpl
+    double dxMax = double.infinity,
   }) : super(
           simulation,
           xMin: xMin,
@@ -29,6 +29,8 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
           dxMin: dxMin,
           dxMax: dxMax,
         ) {
+    mateCreateName = 'ClampedSimulation';
+    matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => ClampedSimulation$Mate(
           p.get('simulation').value,
           xMin: p.get('xMin').build(),
@@ -36,10 +38,34 @@ class ClampedSimulation$Mate extends ClampedSimulation with Mate {
           dxMin: p.get('dxMin').build(),
           dxMax: p.get('dxMax').build(),
         );
-    matePut('simulation', simulation);
-    matePut('xMin', xMin);
-    matePut('xMax', xMax);
-    matePut('dxMin', dxMin);
-    matePut('dxMax', dxMax);
+    mateUse(
+      'simulation',
+      simulation,
+      isNamed: false,
+    );
+    mateUse(
+      'xMin',
+      xMin,
+      isNamed: true,
+      defaultValue: double.negativeInfinity,
+    );
+    mateUse(
+      'xMax',
+      xMax,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
+    mateUse(
+      'dxMin',
+      dxMin,
+      isNamed: true,
+      defaultValue: double.negativeInfinity,
+    );
+    mateUse(
+      'dxMax',
+      dxMax,
+      isNamed: true,
+      defaultValue: double.infinity,
+    );
   }
 }

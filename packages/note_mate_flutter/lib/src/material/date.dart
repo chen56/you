@@ -8,20 +8,30 @@ import 'dart:core';
 class DateTimeRange$Mate extends DateTimeRange with Mate {
   /// DateTimeRange DateTimeRange({required DateTime start, required DateTime end})
   DateTimeRange$Mate({
-    /// optionalParameters: {required DateTime start} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime start} , default:none
     required DateTime start,
 
-    /// optionalParameters: {required DateTime end} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required DateTime end} , default:none
     required DateTime end,
   }) : super(
           start: start,
           end: end,
         ) {
+    mateCreateName = 'DateTimeRange';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DateTimeRange$Mate(
           start: p.get('start').build(),
           end: p.get('end').build(),
         );
-    matePut('start', start);
-    matePut('end', end);
+    mateUse(
+      'start',
+      start,
+      isNamed: true,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: true,
+    );
   }
 }

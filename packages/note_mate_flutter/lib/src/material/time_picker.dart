@@ -5,46 +5,47 @@ import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/material/time.dart';
 import 'dart:core';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/media_query.dart';
 
 /// class TimePickerDialog extends StatefulWidget
 class TimePickerDialog$Mate extends TimePickerDialog with Mate {
   /// TimePickerDialog TimePickerDialog({Key? key, required TimeOfDay initialTime, String? cancelText, String? confirmText, String? helpText, String? errorInvalidText, String? hourLabelText, String? minuteLabelText, String? restorationId, TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial, Orientation? orientation, void Function(TimePickerEntryMode)? onEntryModeChanged})
   TimePickerDialog$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required TimeOfDay initialTime} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TimeOfDay initialTime} , default:none
     required TimeOfDay initialTime,
 
-    /// optionalParameters: {String? cancelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? cancelText} , default:none
     String? cancelText,
 
-    /// optionalParameters: {String? confirmText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? confirmText} , default:none
     String? confirmText,
 
-    /// optionalParameters: {String? helpText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? helpText} , default:none
     String? helpText,
 
-    /// optionalParameters: {String? errorInvalidText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? errorInvalidText} , default:none
     String? errorInvalidText,
 
-    /// optionalParameters: {String? hourLabelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? hourLabelText} , default:none
     String? hourLabelText,
 
-    /// optionalParameters: {String? minuteLabelText} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? minuteLabelText} , default:none
     String? minuteLabelText,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , hasDefaultValue:true, defaultValueCode:TimePickerEntryMode.dial
-    required TimePickerEntryMode initialEntryMode,
+    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , default:processed=PrefixedIdentifierImpl
+    TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial,
 
-    /// optionalParameters: {Orientation? orientation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Orientation? orientation} , default:none
     Orientation? orientation,
 
-    /// optionalParameters: {void Function(TimePickerEntryMode)? onEntryModeChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(TimePickerEntryMode)? onEntryModeChanged} , default:none
     EntryModeChangeCallback? onEntryModeChanged,
   }) : super(
           key: key,
@@ -60,6 +61,8 @@ class TimePickerDialog$Mate extends TimePickerDialog with Mate {
           orientation: orientation,
           onEntryModeChanged: onEntryModeChanged,
         ) {
+    mateCreateName = 'TimePickerDialog';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerDialog$Mate(
           key: p.get('key').build(),
           initialTime: p.get('initialTime').build(),
@@ -74,17 +77,66 @@ class TimePickerDialog$Mate extends TimePickerDialog with Mate {
           orientation: p.get('orientation').build(),
           onEntryModeChanged: p.get('onEntryModeChanged').build(),
         );
-    matePut('key', key);
-    matePut('initialTime', initialTime);
-    matePut('cancelText', cancelText);
-    matePut('confirmText', confirmText);
-    matePut('helpText', helpText);
-    matePut('errorInvalidText', errorInvalidText);
-    matePut('hourLabelText', hourLabelText);
-    matePut('minuteLabelText', minuteLabelText);
-    matePut('restorationId', restorationId);
-    matePut('initialEntryMode', initialEntryMode);
-    matePut('orientation', orientation);
-    matePut('onEntryModeChanged', onEntryModeChanged);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'initialTime',
+      initialTime,
+      isNamed: true,
+    );
+    mateUse(
+      'cancelText',
+      cancelText,
+      isNamed: true,
+    );
+    mateUse(
+      'confirmText',
+      confirmText,
+      isNamed: true,
+    );
+    mateUse(
+      'helpText',
+      helpText,
+      isNamed: true,
+    );
+    mateUse(
+      'errorInvalidText',
+      errorInvalidText,
+      isNamed: true,
+    );
+    mateUse(
+      'hourLabelText',
+      hourLabelText,
+      isNamed: true,
+    );
+    mateUse(
+      'minuteLabelText',
+      minuteLabelText,
+      isNamed: true,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'initialEntryMode',
+      initialEntryMode,
+      isNamed: true,
+      defaultValue: TimePickerEntryMode.dial,
+    );
+    mateUse(
+      'orientation',
+      orientation,
+      isNamed: true,
+    );
+    mateUse(
+      'onEntryModeChanged',
+      onEntryModeChanged,
+      isNamed: true,
+    );
   }
 }

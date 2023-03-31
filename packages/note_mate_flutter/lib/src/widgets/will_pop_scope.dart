@@ -10,26 +10,40 @@ import 'package:flutter/src/widgets/navigator.dart';
 class WillPopScope$Mate extends WillPopScope with Mate {
   /// WillPopScope WillPopScope({Key? key, required Widget child, required Future<bool> Function()? onWillPop})
   WillPopScope$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {required Future<bool> Function()? onWillPop} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Future<bool> Function()? onWillPop} , default:none
     required WillPopCallback? onWillPop,
   }) : super(
           key: key,
           child: child,
           onWillPop: onWillPop,
         ) {
+    mateCreateName = 'WillPopScope';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WillPopScope$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
           onWillPop: p.get('onWillPop').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('onWillPop', onWillPop);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'onWillPop',
+      onWillPop,
+      isNamed: true,
+    );
   }
 }

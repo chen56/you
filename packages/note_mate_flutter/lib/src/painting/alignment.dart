@@ -17,12 +17,22 @@ class Alignment$Mate extends Alignment with Mate {
           x,
           y,
         ) {
+    mateCreateName = 'Alignment';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Alignment$Mate(
           p.get('x').value,
           p.get('y').value,
         );
-    matePut('x', x);
-    matePut('y', y);
+    mateUse(
+      'x',
+      x,
+      isNamed: false,
+    );
+    mateUse(
+      'y',
+      y,
+      isNamed: false,
+    );
   }
 }
 
@@ -39,12 +49,22 @@ class AlignmentDirectional$Mate extends AlignmentDirectional with Mate {
           start,
           y,
         ) {
+    mateCreateName = 'AlignmentDirectional';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => AlignmentDirectional$Mate(
           p.get('start').value,
           p.get('y').value,
         );
-    matePut('start', start);
-    matePut('y', y);
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'y',
+      y,
+      isNamed: false,
+    );
   }
 }
 
@@ -53,10 +73,16 @@ class TextAlignVertical$Mate extends TextAlignVertical with Mate {
   /// TextAlignVertical TextAlignVertical({required double y})
   TextAlignVertical$Mate(
       {
-      /// optionalParameters: {required double y} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required double y} , default:none
       required double y})
       : super(y: y) {
+    mateCreateName = 'TextAlignVertical';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TextAlignVertical$Mate(y: p.get('y').build());
-    matePut('y', y);
+    mateUse(
+      'y',
+      y,
+      isNamed: true,
+    );
   }
 }

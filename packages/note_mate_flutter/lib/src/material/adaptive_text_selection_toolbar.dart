@@ -17,75 +17,103 @@ import 'package:flutter/src/widgets/selectable_region.dart';
 class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar with Mate {
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<Widget>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget>? children} , default:none
     required List<Widget>? children,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super(
           key: key,
           children: children,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate(
           key: p.get('key').build(),
           children: p.get('children').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('children', children);
-    matePut('anchors', anchors);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.buttonItems({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required List<ContextMenuButtonItem>? buttonItems} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<ContextMenuButtonItem>? buttonItems} , default:none
     required List<ContextMenuButtonItem>? buttonItems,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.buttonItems(
           key: key,
           buttonItems: buttonItems,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.buttonItems';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.buttonItems(
           key: p.get('key').build(),
           buttonItems: p.get('buttonItems').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('buttonItems', buttonItems);
-    matePut('anchors', anchors);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUseList(
+      'buttonItems',
+      buttonItems,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.editable({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ClipboardStatus clipboardStatus} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ClipboardStatus clipboardStatus} , default:none
     required ClipboardStatus clipboardStatus,
 
-    /// optionalParameters: {required void Function()? onCopy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onCopy} , default:none
     required VoidCallback? onCopy,
 
-    /// optionalParameters: {required void Function()? onCut} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onCut} , default:none
     required VoidCallback? onCut,
 
-    /// optionalParameters: {required void Function()? onPaste} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onPaste} , default:none
     required VoidCallback? onPaste,
 
-    /// optionalParameters: {required void Function()? onSelectAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function()? onSelectAll} , default:none
     required VoidCallback? onSelectAll,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.editable(
           key: key,
@@ -96,6 +124,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           onSelectAll: onSelectAll,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.editable';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.editable(
           key: p.get('key').build(),
           clipboardStatus: p.get('clipboardStatus').build(),
@@ -105,49 +135,87 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           onSelectAll: p.get('onSelectAll').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('clipboardStatus', clipboardStatus);
-    matePut('onCopy', onCopy);
-    matePut('onCut', onCut);
-    matePut('onPaste', onPaste);
-    matePut('onSelectAll', onSelectAll);
-    matePut('anchors', anchors);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipboardStatus',
+      clipboardStatus,
+      isNamed: true,
+    );
+    mateUse(
+      'onCopy',
+      onCopy,
+      isNamed: true,
+    );
+    mateUse(
+      'onCut',
+      onCut,
+      isNamed: true,
+    );
+    mateUse(
+      'onPaste',
+      onPaste,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectAll',
+      onSelectAll,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
   AdaptiveTextSelectionToolbar$Mate.editableText({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required EditableTextState editableTextState} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required EditableTextState editableTextState} , default:none
     required EditableTextState editableTextState,
   }) : super.editableText(
           key: key,
           editableTextState: editableTextState,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.editableText';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.editableText(
           key: p.get('key').build(),
           editableTextState: p.get('editableTextState').build(),
         );
-    matePut('key', key);
-    matePut('editableTextState', editableTextState);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'editableTextState',
+      editableTextState,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate.selectable({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required void Function() onCopy} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onCopy} , default:none
     required VoidCallback onCopy,
 
-    /// optionalParameters: {required void Function() onSelectAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function() onSelectAll} , default:none
     required VoidCallback onSelectAll,
 
-    /// optionalParameters: {required SelectionGeometry selectionGeometry} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SelectionGeometry selectionGeometry} , default:none
     required SelectionGeometry selectionGeometry,
 
-    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
     required TextSelectionToolbarAnchors anchors,
   }) : super.selectable(
           key: key,
@@ -156,6 +224,8 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           selectionGeometry: selectionGeometry,
           anchors: anchors,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.selectable';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.selectable(
           key: p.get('key').build(),
           onCopy: p.get('onCopy').build(),
@@ -163,29 +233,59 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar wit
           selectionGeometry: p.get('selectionGeometry').build(),
           anchors: p.get('anchors').build(),
         );
-    matePut('key', key);
-    matePut('onCopy', onCopy);
-    matePut('onSelectAll', onSelectAll);
-    matePut('selectionGeometry', selectionGeometry);
-    matePut('anchors', anchors);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'onCopy',
+      onCopy,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelectAll',
+      onSelectAll,
+      isNamed: true,
+    );
+    mateUse(
+      'selectionGeometry',
+      selectionGeometry,
+      isNamed: true,
+    );
+    mateUse(
+      'anchors',
+      anchors,
+      isNamed: true,
+    );
   }
 
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar.selectableRegion({Key? key, required SelectableRegionState selectableRegionState})
   AdaptiveTextSelectionToolbar$Mate.selectableRegion({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SelectableRegionState selectableRegionState} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SelectableRegionState selectableRegionState} , default:none
     required SelectableRegionState selectableRegionState,
   }) : super.selectableRegion(
           key: key,
           selectableRegionState: selectableRegionState,
         ) {
+    mateCreateName = 'AdaptiveTextSelectionToolbar.selectableRegion';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AdaptiveTextSelectionToolbar$Mate.selectableRegion(
           key: p.get('key').build(),
           selectableRegionState: p.get('selectableRegionState').build(),
         );
-    matePut('key', key);
-    matePut('selectableRegionState', selectableRegionState);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'selectableRegionState',
+      selectableRegionState,
+      isNamed: true,
+    );
   }
 }

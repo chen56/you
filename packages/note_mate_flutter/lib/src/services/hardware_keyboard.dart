@@ -10,20 +10,20 @@ import 'package:flutter/src/services/raw_keyboard.dart';
 class KeyDownEvent$Mate extends KeyDownEvent with Mate {
   /// KeyDownEvent KeyDownEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp, bool synthesized = false})
   KeyDownEvent$Mate({
-    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required PhysicalKeyboardKey physicalKey,
 
-    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , default:none
     required LogicalKeyboardKey logicalKey,
 
-    /// optionalParameters: {String? character} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? character} , default:none
     String? character,
 
-    /// optionalParameters: {required Duration timeStamp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration timeStamp} , default:none
     required Duration timeStamp,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
+    bool synthesized = false,
   }) : super(
           physicalKey: physicalKey,
           logicalKey: logicalKey,
@@ -31,6 +31,8 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
           timeStamp: timeStamp,
           synthesized: synthesized,
         ) {
+    mateCreateName = 'KeyDownEvent';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyDownEvent$Mate(
           physicalKey: p.get('physicalKey').build(),
           logicalKey: p.get('logicalKey').build(),
@@ -38,11 +40,32 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    matePut('physicalKey', physicalKey);
-    matePut('logicalKey', logicalKey);
-    matePut('character', character);
-    matePut('timeStamp', timeStamp);
-    matePut('synthesized', synthesized);
+    mateUse(
+      'physicalKey',
+      physicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'logicalKey',
+      logicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'character',
+      character,
+      isNamed: true,
+    );
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -50,33 +73,52 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
 class KeyUpEvent$Mate extends KeyUpEvent with Mate {
   /// KeyUpEvent KeyUpEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, required Duration timeStamp, bool synthesized = false})
   KeyUpEvent$Mate({
-    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required PhysicalKeyboardKey physicalKey,
 
-    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , default:none
     required LogicalKeyboardKey logicalKey,
 
-    /// optionalParameters: {required Duration timeStamp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration timeStamp} , default:none
     required Duration timeStamp,
 
-    /// optionalParameters: {bool synthesized = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool synthesized,
+    /// optionalParameters: {bool synthesized = false} , default:processed=BooleanLiteralImpl
+    bool synthesized = false,
   }) : super(
           physicalKey: physicalKey,
           logicalKey: logicalKey,
           timeStamp: timeStamp,
           synthesized: synthesized,
         ) {
+    mateCreateName = 'KeyUpEvent';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyUpEvent$Mate(
           physicalKey: p.get('physicalKey').build(),
           logicalKey: p.get('logicalKey').build(),
           timeStamp: p.get('timeStamp').build(),
           synthesized: p.get('synthesized').build(),
         );
-    matePut('physicalKey', physicalKey);
-    matePut('logicalKey', logicalKey);
-    matePut('timeStamp', timeStamp);
-    matePut('synthesized', synthesized);
+    mateUse(
+      'physicalKey',
+      physicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'logicalKey',
+      logicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+    );
+    mateUse(
+      'synthesized',
+      synthesized,
+      isNamed: true,
+      defaultValue: false,
+    );
   }
 }
 
@@ -84,16 +126,16 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate {
 class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate {
   /// KeyRepeatEvent KeyRepeatEvent({required PhysicalKeyboardKey physicalKey, required LogicalKeyboardKey logicalKey, String? character, required Duration timeStamp})
   KeyRepeatEvent$Mate({
-    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required PhysicalKeyboardKey physicalKey} , default:none
     required PhysicalKeyboardKey physicalKey,
 
-    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LogicalKeyboardKey logicalKey} , default:none
     required LogicalKeyboardKey logicalKey,
 
-    /// optionalParameters: {String? character} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? character} , default:none
     String? character,
 
-    /// optionalParameters: {required Duration timeStamp} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Duration timeStamp} , default:none
     required Duration timeStamp,
   }) : super(
           physicalKey: physicalKey,
@@ -101,16 +143,34 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate {
           character: character,
           timeStamp: timeStamp,
         ) {
+    mateCreateName = 'KeyRepeatEvent';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyRepeatEvent$Mate(
           physicalKey: p.get('physicalKey').build(),
           logicalKey: p.get('logicalKey').build(),
           character: p.get('character').build(),
           timeStamp: p.get('timeStamp').build(),
         );
-    matePut('physicalKey', physicalKey);
-    matePut('logicalKey', logicalKey);
-    matePut('character', character);
-    matePut('timeStamp', timeStamp);
+    mateUse(
+      'physicalKey',
+      physicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'logicalKey',
+      logicalKey,
+      isNamed: true,
+    );
+    mateUse(
+      'character',
+      character,
+      isNamed: true,
+    );
+    mateUse(
+      'timeStamp',
+      timeStamp,
+      isNamed: true,
+    );
   }
 }
 
@@ -127,12 +187,22 @@ class KeyMessage$Mate extends KeyMessage with Mate {
           events,
           rawEvent,
         ) {
+    mateCreateName = 'KeyMessage';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyMessage$Mate(
           p.get('events').value,
           p.get('rawEvent').value,
         );
-    matePut('events', events);
-    matePut('rawEvent', rawEvent);
+    mateUseList(
+      'events',
+      events,
+      isNamed: false,
+    );
+    mateUse(
+      'rawEvent',
+      rawEvent,
+      isNamed: false,
+    );
   }
 }
 
@@ -149,11 +219,21 @@ class KeyEventManager$Mate extends KeyEventManager with Mate {
           _hardwareKeyboard,
           _rawKeyboard,
         ) {
+    mateCreateName = 'KeyEventManager';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyEventManager$Mate(
           p.get('_hardwareKeyboard').value,
           p.get('_rawKeyboard').value,
         );
-    matePut('_hardwareKeyboard', _hardwareKeyboard);
-    matePut('_rawKeyboard', _rawKeyboard);
+    mateUse(
+      '_hardwareKeyboard',
+      _hardwareKeyboard,
+      isNamed: false,
+    );
+    mateUse(
+      '_rawKeyboard',
+      _rawKeyboard,
+      isNamed: false,
+    );
   }
 }

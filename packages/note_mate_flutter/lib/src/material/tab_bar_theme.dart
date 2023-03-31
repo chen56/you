@@ -15,40 +15,40 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 class TabBarTheme$Mate extends TabBarTheme with Mate {
   /// TabBarTheme TabBarTheme({Decoration? indicator, Color? indicatorColor, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, EdgeInsetsGeometry? labelPadding, TextStyle? labelStyle, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, MaterialStateProperty<Color?>? overlayColor, InteractiveInkFeatureFactory? splashFactory, MaterialStateProperty<MouseCursor?>? mouseCursor})
   TabBarTheme$Mate({
-    /// optionalParameters: {Decoration? indicator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Decoration? indicator} , default:none
     Decoration? indicator,
 
-    /// optionalParameters: {Color? indicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? indicatorColor} , default:none
     Color? indicatorColor,
 
-    /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , default:none
     TabBarIndicatorSize? indicatorSize,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , default:none
     Color? dividerColor,
 
-    /// optionalParameters: {Color? labelColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? labelColor} , default:none
     Color? labelColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
     EdgeInsetsGeometry? labelPadding,
 
-    /// optionalParameters: {TextStyle? labelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? labelStyle} , default:none
     TextStyle? labelStyle,
 
-    /// optionalParameters: {Color? unselectedLabelColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? unselectedLabelColor} , default:none
     Color? unselectedLabelColor,
 
-    /// optionalParameters: {TextStyle? unselectedLabelStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
     TextStyle? unselectedLabelStyle,
 
-    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
     MaterialStateProperty<Color?>? overlayColor,
 
-    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
     InteractiveInkFeatureFactory? splashFactory,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
   }) : super(
           indicator: indicator,
@@ -64,6 +64,8 @@ class TabBarTheme$Mate extends TabBarTheme with Mate {
           splashFactory: splashFactory,
           mouseCursor: mouseCursor,
         ) {
+    mateCreateName = 'TabBarTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBarTheme$Mate(
           indicator: p.get('indicator').build(),
           indicatorColor: p.get('indicatorColor').build(),
@@ -78,17 +80,65 @@ class TabBarTheme$Mate extends TabBarTheme with Mate {
           splashFactory: p.get('splashFactory').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    matePut('indicator', indicator);
-    matePut('indicatorColor', indicatorColor);
-    matePut('indicatorSize', indicatorSize);
-    matePut('dividerColor', dividerColor);
-    matePut('labelColor', labelColor);
-    matePut('labelPadding', labelPadding);
-    matePut('labelStyle', labelStyle);
-    matePut('unselectedLabelColor', unselectedLabelColor);
-    matePut('unselectedLabelStyle', unselectedLabelStyle);
-    matePut('overlayColor', overlayColor);
-    matePut('splashFactory', splashFactory);
-    matePut('mouseCursor', mouseCursor);
+    mateUse(
+      'indicator',
+      indicator,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorColor',
+      indicatorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'indicatorSize',
+      indicatorSize,
+      isNamed: true,
+    );
+    mateUse(
+      'dividerColor',
+      dividerColor,
+      isNamed: true,
+    );
+    mateUse(
+      'labelColor',
+      labelColor,
+      isNamed: true,
+    );
+    mateUse(
+      'labelPadding',
+      labelPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'labelStyle',
+      labelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedLabelColor',
+      unselectedLabelColor,
+      isNamed: true,
+    );
+    mateUse(
+      'unselectedLabelStyle',
+      unselectedLabelStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'splashFactory',
+      splashFactory,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
   }
 }

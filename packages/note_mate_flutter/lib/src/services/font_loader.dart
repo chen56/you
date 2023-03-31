@@ -12,7 +12,13 @@ class FontLoader$Mate extends FontLoader with Mate {
       /// requiredParameters: String family
       String family)
       : super(family) {
+    mateCreateName = 'FontLoader';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FontLoader$Mate(p.get('family').value);
-    matePut('family', family);
+    mateUse(
+      'family',
+      family,
+      isNamed: false,
+    );
   }
 }

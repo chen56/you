@@ -4,7 +4,9 @@ import 'package:flutter/src/widgets/interactive_viewer.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'dart:ui';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
+import 'package:flutter/painting.dart';
 import 'dart:core';
 import 'package:flutter/src/gestures/scale.dart';
 import 'package:flutter/src/painting/alignment.dart';
@@ -15,58 +17,58 @@ import 'package:vector_math/vector_math_64.dart';
 class InteractiveViewer$Mate extends InteractiveViewer with Mate {
   /// InteractiveViewer InteractiveViewer({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, bool constrained = true, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = kDefaultMouseScrollToScaleFactor, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget child})
   InteractiveViewer$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , hasDefaultValue:true, defaultValueCode:PanAxis.free
-    required PanAxis panAxis,
+    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:processed=PrefixedIdentifierImpl
+    PanAxis panAxis = PanAxis.free,
 
-    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
-    required EdgeInsets boundaryMargin,
+    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    EdgeInsets boundaryMargin = EdgeInsets.zero,
 
-    /// optionalParameters: {bool constrained = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool constrained,
+    /// optionalParameters: {bool constrained = true} , default:processed=BooleanLiteralImpl
+    bool constrained = true,
 
-    /// optionalParameters: {double maxScale = 2.5} , hasDefaultValue:true, defaultValueCode:2.5
-    required double maxScale,
+    /// optionalParameters: {double maxScale = 2.5} , default:processed=DoubleLiteralImpl
+    double maxScale = 2.5,
 
-    /// optionalParameters: {double minScale = 0.8} , hasDefaultValue:true, defaultValueCode:0.8
-    required double minScale,
+    /// optionalParameters: {double minScale = 0.8} , default:processed=DoubleLiteralImpl
+    double minScale = 0.8,
 
-    /// optionalParameters: {double interactionEndFrictionCoefficient = _kDrag} , hasDefaultValue:true, defaultValueCode:_kDrag
+    /// optionalParameters: {double interactionEndFrictionCoefficient = _kDrag} , default:unprocessed=SimpleIdentifierImpl
     required double interactionEndFrictionCoefficient,
 
-    /// optionalParameters: {void Function(ScaleEndDetails)? onInteractionEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ScaleEndDetails)? onInteractionEnd} , default:none
     GestureScaleEndCallback? onInteractionEnd,
 
-    /// optionalParameters: {void Function(ScaleStartDetails)? onInteractionStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ScaleStartDetails)? onInteractionStart} , default:none
     GestureScaleStartCallback? onInteractionStart,
 
-    /// optionalParameters: {void Function(ScaleUpdateDetails)? onInteractionUpdate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ScaleUpdateDetails)? onInteractionUpdate} , default:none
     GestureScaleUpdateCallback? onInteractionUpdate,
 
-    /// optionalParameters: {bool panEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool panEnabled,
+    /// optionalParameters: {bool panEnabled = true} , default:processed=BooleanLiteralImpl
+    bool panEnabled = true,
 
-    /// optionalParameters: {bool scaleEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool scaleEnabled,
+    /// optionalParameters: {bool scaleEnabled = true} , default:processed=BooleanLiteralImpl
+    bool scaleEnabled = true,
 
-    /// optionalParameters: {double scaleFactor = kDefaultMouseScrollToScaleFactor} , hasDefaultValue:true, defaultValueCode:kDefaultMouseScrollToScaleFactor
+    /// optionalParameters: {double scaleFactor = kDefaultMouseScrollToScaleFactor} , default:unprocessed=SimpleIdentifierImpl
     required double scaleFactor,
 
-    /// optionalParameters: {TransformationController? transformationController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TransformationController? transformationController} , default:none
     TransformationController? transformationController,
 
-    /// optionalParameters: {Alignment? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Alignment? alignment} , default:none
     Alignment? alignment,
 
-    /// optionalParameters: {bool trackpadScrollCausesScale = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool trackpadScrollCausesScale,
+    /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
+    bool trackpadScrollCausesScale = false,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
@@ -88,6 +90,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           child: child,
         ) {
+    mateCreateName = 'InteractiveViewer';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate(
           key: p.get('key').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -108,77 +112,158 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('clipBehavior', clipBehavior);
-    matePut('panAxis', panAxis);
-    matePut('boundaryMargin', boundaryMargin);
-    matePut('constrained', constrained);
-    matePut('maxScale', maxScale);
-    matePut('minScale', minScale);
-    matePut('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
-    matePut('onInteractionEnd', onInteractionEnd);
-    matePut('onInteractionStart', onInteractionStart);
-    matePut('onInteractionUpdate', onInteractionUpdate);
-    matePut('panEnabled', panEnabled);
-    matePut('scaleEnabled', scaleEnabled);
-    matePut('scaleFactor', scaleFactor);
-    matePut('transformationController', transformationController);
-    matePut('alignment', alignment);
-    matePut('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'panAxis',
+      panAxis,
+      isNamed: true,
+      defaultValue: PanAxis.free,
+    );
+    mateUse(
+      'boundaryMargin',
+      boundaryMargin,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'constrained',
+      constrained,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'maxScale',
+      maxScale,
+      isNamed: true,
+      defaultValue: 2.5,
+    );
+    mateUse(
+      'minScale',
+      minScale,
+      isNamed: true,
+      defaultValue: 0.8,
+    );
+    mateUse(
+      'interactionEndFrictionCoefficient',
+      interactionEndFrictionCoefficient,
+      isNamed: true,
+    );
+    mateUse(
+      'onInteractionEnd',
+      onInteractionEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onInteractionStart',
+      onInteractionStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onInteractionUpdate',
+      onInteractionUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'panEnabled',
+      panEnabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'scaleEnabled',
+      scaleEnabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'scaleFactor',
+      scaleFactor,
+      isNamed: true,
+    );
+    mateUse(
+      'transformationController',
+      transformationController,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'trackpadScrollCausesScale',
+      trackpadScrollCausesScale,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 
   /// InteractiveViewer InteractiveViewer.builder({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = 200.0, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget Function(BuildContext, Quad) builder})
   InteractiveViewer$Mate.builder({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , hasDefaultValue:true, defaultValueCode:PanAxis.free
-    required PanAxis panAxis,
+    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:processed=PrefixedIdentifierImpl
+    PanAxis panAxis = PanAxis.free,
 
-    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , hasDefaultValue:true, defaultValueCode:EdgeInsets.zero
-    required EdgeInsets boundaryMargin,
+    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    EdgeInsets boundaryMargin = EdgeInsets.zero,
 
-    /// optionalParameters: {double maxScale = 2.5} , hasDefaultValue:true, defaultValueCode:2.5
-    required double maxScale,
+    /// optionalParameters: {double maxScale = 2.5} , default:processed=DoubleLiteralImpl
+    double maxScale = 2.5,
 
-    /// optionalParameters: {double minScale = 0.8} , hasDefaultValue:true, defaultValueCode:0.8
-    required double minScale,
+    /// optionalParameters: {double minScale = 0.8} , default:processed=DoubleLiteralImpl
+    double minScale = 0.8,
 
-    /// optionalParameters: {double interactionEndFrictionCoefficient = _kDrag} , hasDefaultValue:true, defaultValueCode:_kDrag
+    /// optionalParameters: {double interactionEndFrictionCoefficient = _kDrag} , default:unprocessed=SimpleIdentifierImpl
     required double interactionEndFrictionCoefficient,
 
-    /// optionalParameters: {void Function(ScaleEndDetails)? onInteractionEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ScaleEndDetails)? onInteractionEnd} , default:none
     GestureScaleEndCallback? onInteractionEnd,
 
-    /// optionalParameters: {void Function(ScaleStartDetails)? onInteractionStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ScaleStartDetails)? onInteractionStart} , default:none
     GestureScaleStartCallback? onInteractionStart,
 
-    /// optionalParameters: {void Function(ScaleUpdateDetails)? onInteractionUpdate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(ScaleUpdateDetails)? onInteractionUpdate} , default:none
     GestureScaleUpdateCallback? onInteractionUpdate,
 
-    /// optionalParameters: {bool panEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool panEnabled,
+    /// optionalParameters: {bool panEnabled = true} , default:processed=BooleanLiteralImpl
+    bool panEnabled = true,
 
-    /// optionalParameters: {bool scaleEnabled = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool scaleEnabled,
+    /// optionalParameters: {bool scaleEnabled = true} , default:processed=BooleanLiteralImpl
+    bool scaleEnabled = true,
 
-    /// optionalParameters: {double scaleFactor = 200.0} , hasDefaultValue:true, defaultValueCode:200.0
-    required double scaleFactor,
+    /// optionalParameters: {double scaleFactor = 200.0} , default:processed=DoubleLiteralImpl
+    double scaleFactor = 200.0,
 
-    /// optionalParameters: {TransformationController? transformationController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TransformationController? transformationController} , default:none
     TransformationController? transformationController,
 
-    /// optionalParameters: {Alignment? alignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Alignment? alignment} , default:none
     Alignment? alignment,
 
-    /// optionalParameters: {bool trackpadScrollCausesScale = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool trackpadScrollCausesScale,
+    /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
+    bool trackpadScrollCausesScale = false,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Quad) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Quad) builder} , default:none
     required InteractiveViewerWidgetBuilder builder,
   }) : super.builder(
           key: key,
@@ -199,6 +284,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           builder: builder,
         ) {
+    mateCreateName = 'InteractiveViewer.builder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate.builder(
           key: p.get('key').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -218,23 +305,100 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           builder: p.get('builder').build(),
         );
-    matePut('key', key);
-    matePut('clipBehavior', clipBehavior);
-    matePut('panAxis', panAxis);
-    matePut('boundaryMargin', boundaryMargin);
-    matePut('maxScale', maxScale);
-    matePut('minScale', minScale);
-    matePut('interactionEndFrictionCoefficient', interactionEndFrictionCoefficient);
-    matePut('onInteractionEnd', onInteractionEnd);
-    matePut('onInteractionStart', onInteractionStart);
-    matePut('onInteractionUpdate', onInteractionUpdate);
-    matePut('panEnabled', panEnabled);
-    matePut('scaleEnabled', scaleEnabled);
-    matePut('scaleFactor', scaleFactor);
-    matePut('transformationController', transformationController);
-    matePut('alignment', alignment);
-    matePut('trackpadScrollCausesScale', trackpadScrollCausesScale);
-    matePut('builder', builder);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'panAxis',
+      panAxis,
+      isNamed: true,
+      defaultValue: PanAxis.free,
+    );
+    mateUse(
+      'boundaryMargin',
+      boundaryMargin,
+      isNamed: true,
+      defaultValue: EdgeInsets.zero,
+    );
+    mateUse(
+      'maxScale',
+      maxScale,
+      isNamed: true,
+      defaultValue: 2.5,
+    );
+    mateUse(
+      'minScale',
+      minScale,
+      isNamed: true,
+      defaultValue: 0.8,
+    );
+    mateUse(
+      'interactionEndFrictionCoefficient',
+      interactionEndFrictionCoefficient,
+      isNamed: true,
+    );
+    mateUse(
+      'onInteractionEnd',
+      onInteractionEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'onInteractionStart',
+      onInteractionStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onInteractionUpdate',
+      onInteractionUpdate,
+      isNamed: true,
+    );
+    mateUse(
+      'panEnabled',
+      panEnabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'scaleEnabled',
+      scaleEnabled,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'scaleFactor',
+      scaleFactor,
+      isNamed: true,
+      defaultValue: 200.0,
+    );
+    mateUse(
+      'transformationController',
+      transformationController,
+      isNamed: true,
+    );
+    mateUse(
+      'alignment',
+      alignment,
+      isNamed: true,
+    );
+    mateUse(
+      'trackpadScrollCausesScale',
+      trackpadScrollCausesScale,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
   }
 }
 
@@ -246,7 +410,13 @@ class TransformationController$Mate extends TransformationController with Mate {
       /// requiredParameters: [Matrix4? value]
       Matrix4? value)
       : super(value) {
+    mateCreateName = 'TransformationController';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
-    matePut('value', value);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }

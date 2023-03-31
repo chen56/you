@@ -12,27 +12,41 @@ import 'dart:core';
 class CupertinoTheme$Mate extends CupertinoTheme with Mate {
   /// CupertinoTheme CupertinoTheme({Key? key, required CupertinoThemeData data, required Widget child})
   CupertinoTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required CupertinoThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required CupertinoThemeData data} , default:none
     required CupertinoThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'CupertinoTheme';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -40,25 +54,25 @@ class CupertinoTheme$Mate extends CupertinoTheme with Mate {
 class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
   /// CupertinoThemeData CupertinoThemeData({Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll})
   CupertinoThemeData$Mate({
-    /// optionalParameters: {Brightness? brightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? brightness} , default:none
     Brightness? brightness,
 
-    /// optionalParameters: {Color? primaryColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryColor} , default:none
     Color? primaryColor,
 
-    /// optionalParameters: {Color? primaryContrastingColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryContrastingColor} , default:none
     Color? primaryContrastingColor,
 
-    /// optionalParameters: {CupertinoTextThemeData? textTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CupertinoTextThemeData? textTheme} , default:none
     CupertinoTextThemeData? textTheme,
 
-    /// optionalParameters: {Color? barBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? barBackgroundColor} , default:none
     Color? barBackgroundColor,
 
-    /// optionalParameters: {Color? scaffoldBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scaffoldBackgroundColor} , default:none
     Color? scaffoldBackgroundColor,
 
-    /// optionalParameters: {bool? applyThemeToAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? applyThemeToAll} , default:none
     bool? applyThemeToAll,
   }) : super(
           brightness: brightness,
@@ -69,6 +83,8 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           applyThemeToAll: applyThemeToAll,
         ) {
+    mateCreateName = 'CupertinoThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThemeData$Mate(
           brightness: p.get('brightness').build(),
           primaryColor: p.get('primaryColor').build(),
@@ -78,13 +94,41 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').build(),
           applyThemeToAll: p.get('applyThemeToAll').build(),
         );
-    matePut('brightness', brightness);
-    matePut('primaryColor', primaryColor);
-    matePut('primaryContrastingColor', primaryContrastingColor);
-    matePut('textTheme', textTheme);
-    matePut('barBackgroundColor', barBackgroundColor);
-    matePut('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    matePut('applyThemeToAll', applyThemeToAll);
+    mateUse(
+      'brightness',
+      brightness,
+      isNamed: true,
+    );
+    mateUse(
+      'primaryColor',
+      primaryColor,
+      isNamed: true,
+    );
+    mateUse(
+      'primaryContrastingColor',
+      primaryContrastingColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textTheme',
+      textTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'barBackgroundColor',
+      barBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'scaffoldBackgroundColor',
+      scaffoldBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'applyThemeToAll',
+      applyThemeToAll,
+      isNamed: true,
+    );
   }
 
   /// CupertinoThemeData CupertinoThemeData.raw(Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll)
@@ -118,6 +162,8 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           scaffoldBackgroundColor,
           applyThemeToAll,
         ) {
+    mateCreateName = 'CupertinoThemeData.raw';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThemeData$Mate.raw(
           p.get('brightness').value,
           p.get('primaryColor').value,
@@ -127,13 +173,41 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
           p.get('scaffoldBackgroundColor').value,
           p.get('applyThemeToAll').value,
         );
-    matePut('brightness', brightness);
-    matePut('primaryColor', primaryColor);
-    matePut('primaryContrastingColor', primaryContrastingColor);
-    matePut('textTheme', textTheme);
-    matePut('barBackgroundColor', barBackgroundColor);
-    matePut('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    matePut('applyThemeToAll', applyThemeToAll);
+    mateUse(
+      'brightness',
+      brightness,
+      isNamed: false,
+    );
+    mateUse(
+      'primaryColor',
+      primaryColor,
+      isNamed: false,
+    );
+    mateUse(
+      'primaryContrastingColor',
+      primaryContrastingColor,
+      isNamed: false,
+    );
+    mateUse(
+      'textTheme',
+      textTheme,
+      isNamed: false,
+    );
+    mateUse(
+      'barBackgroundColor',
+      barBackgroundColor,
+      isNamed: false,
+    );
+    mateUse(
+      'scaffoldBackgroundColor',
+      scaffoldBackgroundColor,
+      isNamed: false,
+    );
+    mateUse(
+      'applyThemeToAll',
+      applyThemeToAll,
+      isNamed: false,
+    );
   }
 }
 
@@ -141,25 +215,25 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
 class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with Mate {
   /// NoDefaultCupertinoThemeData NoDefaultCupertinoThemeData({Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll})
   NoDefaultCupertinoThemeData$Mate({
-    /// optionalParameters: {Brightness? brightness} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Brightness? brightness} , default:none
     Brightness? brightness,
 
-    /// optionalParameters: {Color? primaryColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryColor} , default:none
     Color? primaryColor,
 
-    /// optionalParameters: {Color? primaryContrastingColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? primaryContrastingColor} , default:none
     Color? primaryContrastingColor,
 
-    /// optionalParameters: {CupertinoTextThemeData? textTheme} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CupertinoTextThemeData? textTheme} , default:none
     CupertinoTextThemeData? textTheme,
 
-    /// optionalParameters: {Color? barBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? barBackgroundColor} , default:none
     Color? barBackgroundColor,
 
-    /// optionalParameters: {Color? scaffoldBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? scaffoldBackgroundColor} , default:none
     Color? scaffoldBackgroundColor,
 
-    /// optionalParameters: {bool? applyThemeToAll} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {bool? applyThemeToAll} , default:none
     bool? applyThemeToAll,
   }) : super(
           brightness: brightness,
@@ -170,6 +244,8 @@ class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with 
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           applyThemeToAll: applyThemeToAll,
         ) {
+    mateCreateName = 'NoDefaultCupertinoThemeData';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => NoDefaultCupertinoThemeData$Mate(
           brightness: p.get('brightness').build(),
           primaryColor: p.get('primaryColor').build(),
@@ -179,12 +255,40 @@ class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with 
           scaffoldBackgroundColor: p.get('scaffoldBackgroundColor').build(),
           applyThemeToAll: p.get('applyThemeToAll').build(),
         );
-    matePut('brightness', brightness);
-    matePut('primaryColor', primaryColor);
-    matePut('primaryContrastingColor', primaryContrastingColor);
-    matePut('textTheme', textTheme);
-    matePut('barBackgroundColor', barBackgroundColor);
-    matePut('scaffoldBackgroundColor', scaffoldBackgroundColor);
-    matePut('applyThemeToAll', applyThemeToAll);
+    mateUse(
+      'brightness',
+      brightness,
+      isNamed: true,
+    );
+    mateUse(
+      'primaryColor',
+      primaryColor,
+      isNamed: true,
+    );
+    mateUse(
+      'primaryContrastingColor',
+      primaryContrastingColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textTheme',
+      textTheme,
+      isNamed: true,
+    );
+    mateUse(
+      'barBackgroundColor',
+      barBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'scaffoldBackgroundColor',
+      scaffoldBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'applyThemeToAll',
+      applyThemeToAll,
+      isNamed: true,
+    );
   }
 }

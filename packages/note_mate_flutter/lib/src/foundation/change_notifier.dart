@@ -11,7 +11,13 @@ class ValueNotifier$Mate<T> extends ValueNotifier<T> with Mate {
       /// requiredParameters: T _value
       T _value)
       : super(_value) {
+    mateCreateName = 'ValueNotifier';
+    matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ValueNotifier$Mate<T>(p.get('_value').value);
-    matePut('_value', _value);
+    mateUse(
+      '_value',
+      _value,
+      isNamed: false,
+    );
   }
 }

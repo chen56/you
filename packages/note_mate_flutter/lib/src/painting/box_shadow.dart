@@ -3,26 +3,27 @@
 import 'package:flutter/src/painting/box_shadow.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
+import 'package:flutter/animation.dart';
 import 'dart:core';
 
 /// class BoxShadow extends Shadow
 class BoxShadow$Mate extends BoxShadow with Mate {
   /// BoxShadow BoxShadow({Color color = const Color(_kColorDefault), Offset offset = Offset.zero, double blurRadius = 0.0, double spreadRadius = 0.0, BlurStyle blurStyle = BlurStyle.normal})
   BoxShadow$Mate({
-    /// optionalParameters: {Color color = const Color(_kColorDefault)} , hasDefaultValue:true, defaultValueCode:const Color(_kColorDefault)
+    /// optionalParameters: {Color color = const Color(_kColorDefault)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , hasDefaultValue:true, defaultValueCode:Offset.zero
-    required Offset offset,
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    Offset offset = Offset.zero,
 
-    /// optionalParameters: {double blurRadius = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double blurRadius,
+    /// optionalParameters: {double blurRadius = 0.0} , default:processed=DoubleLiteralImpl
+    double blurRadius = 0.0,
 
-    /// optionalParameters: {double spreadRadius = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double spreadRadius,
+    /// optionalParameters: {double spreadRadius = 0.0} , default:processed=DoubleLiteralImpl
+    double spreadRadius = 0.0,
 
-    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , hasDefaultValue:true, defaultValueCode:BlurStyle.normal
-    required BlurStyle blurStyle,
+    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , default:processed=PrefixedIdentifierImpl
+    BlurStyle blurStyle = BlurStyle.normal,
   }) : super(
           color: color,
           offset: offset,
@@ -30,6 +31,8 @@ class BoxShadow$Mate extends BoxShadow with Mate {
           spreadRadius: spreadRadius,
           blurStyle: blurStyle,
         ) {
+    mateCreateName = 'BoxShadow';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BoxShadow$Mate(
           color: p.get('color').build(),
           offset: p.get('offset').build(),
@@ -37,10 +40,34 @@ class BoxShadow$Mate extends BoxShadow with Mate {
           spreadRadius: p.get('spreadRadius').build(),
           blurStyle: p.get('blurStyle').build(),
         );
-    matePut('color', color);
-    matePut('offset', offset);
-    matePut('blurRadius', blurRadius);
-    matePut('spreadRadius', spreadRadius);
-    matePut('blurStyle', blurStyle);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+      defaultValue: Offset.zero,
+    );
+    mateUse(
+      'blurRadius',
+      blurRadius,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'spreadRadius',
+      spreadRadius,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'blurStyle',
+      blurStyle,
+      isNamed: true,
+      defaultValue: BlurStyle.normal,
+    );
   }
 }

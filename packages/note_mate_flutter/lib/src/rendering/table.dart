@@ -7,6 +7,8 @@ import 'dart:ui';
 import 'package:flutter/src/rendering/table_border.dart';
 import 'package:flutter/src/painting/decoration.dart';
 import 'package:flutter/src/painting/image_provider.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/rendering/box.dart';
 
 /// class IntrinsicColumnWidth extends TableColumnWidth
@@ -14,11 +16,17 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate {
   /// IntrinsicColumnWidth IntrinsicColumnWidth({double? flex})
   IntrinsicColumnWidth$Mate(
       {
-      /// optionalParameters: {double? flex} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {double? flex} , default:none
       double? flex})
       : super(flex: flex) {
+    mateCreateName = 'IntrinsicColumnWidth';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
-    matePut('flex', flex);
+    mateUse(
+      'flex',
+      flex,
+      isNamed: true,
+    );
   }
 }
 
@@ -30,8 +38,14 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate {
       /// requiredParameters: double value
       double value)
       : super(value) {
+    mateCreateName = 'FixedColumnWidth';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
-    matePut('value', value);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }
 
@@ -43,8 +57,14 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate {
       /// requiredParameters: double value
       double value)
       : super(value) {
+    mateCreateName = 'FractionColumnWidth';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
-    matePut('value', value);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+    );
   }
 }
 
@@ -56,8 +76,15 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate {
       /// requiredParameters: [double value = 1.0]
       double value)
       : super(value) {
+    mateCreateName = 'FlexColumnWidth';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
-    matePut('value', value);
+    mateUse(
+      'value',
+      value,
+      isNamed: false,
+      defaultValue: 1.0,
+    );
   }
 }
 
@@ -74,12 +101,22 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate {
           a,
           b,
         ) {
+    mateCreateName = 'MaxColumnWidth';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => MaxColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
         );
-    matePut('a', a);
-    matePut('b', b);
+    mateUse(
+      'a',
+      a,
+      isNamed: false,
+    );
+    mateUse(
+      'b',
+      b,
+      isNamed: false,
+    );
   }
 }
 
@@ -96,12 +133,22 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
           a,
           b,
         ) {
+    mateCreateName = 'MinColumnWidth';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => MinColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
         );
-    matePut('a', a);
-    matePut('b', b);
+    mateUse(
+      'a',
+      a,
+      isNamed: false,
+    );
+    mateUse(
+      'b',
+      b,
+      isNamed: false,
+    );
   }
 }
 
@@ -109,37 +156,37 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
 class RenderTable$Mate extends RenderTable with Mate {
   /// RenderTable RenderTable({int? columns, int? rows, Map<int, TableColumnWidth>? columnWidths, TableColumnWidth defaultColumnWidth = const FlexColumnWidth(), required TextDirection textDirection, TableBorder? border, List<Decoration?>? rowDecorations, ImageConfiguration configuration = ImageConfiguration.empty, TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top, TextBaseline? textBaseline, List<List<RenderBox>>? children})
   RenderTable$Mate({
-    /// optionalParameters: {int? columns} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? columns} , default:none
     int? columns,
 
-    /// optionalParameters: {int? rows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? rows} , default:none
     int? rows,
 
-    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , default:none
     Map<int, TableColumnWidth>? columnWidths,
 
-    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , hasDefaultValue:true, defaultValueCode:const FlexColumnWidth()
+    /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , default:unprocessed=InstanceCreationExpressionImpl
     required TableColumnWidth defaultColumnWidth,
 
-    /// optionalParameters: {required TextDirection textDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required TextDirection textDirection} , default:none
     required TextDirection textDirection,
 
-    /// optionalParameters: {TableBorder? border} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TableBorder? border} , default:none
     TableBorder? border,
 
-    /// optionalParameters: {List<Decoration?>? rowDecorations} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<Decoration?>? rowDecorations} , default:none
     List<Decoration?>? rowDecorations,
 
-    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , hasDefaultValue:true, defaultValueCode:ImageConfiguration.empty
-    required ImageConfiguration configuration,
+    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:processed=PrefixedIdentifierImpl
+    ImageConfiguration configuration = ImageConfiguration.empty,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , hasDefaultValue:true, defaultValueCode:TableCellVerticalAlignment.top
-    required TableCellVerticalAlignment defaultVerticalAlignment,
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
+    TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top,
 
-    /// optionalParameters: {TextBaseline? textBaseline} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
 
-    /// optionalParameters: {List<List<RenderBox>>? children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<List<RenderBox>>? children} , default:none
     List<List<RenderBox>>? children,
   }) : super(
           columns: columns,
@@ -154,6 +201,8 @@ class RenderTable$Mate extends RenderTable with Mate {
           textBaseline: textBaseline,
           children: children,
         ) {
+    mateCreateName = 'RenderTable';
+    matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderTable$Mate(
           columns: p.get('columns').build(),
           rows: p.get('rows').build(),
@@ -167,16 +216,62 @@ class RenderTable$Mate extends RenderTable with Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    matePut('columns', columns);
-    matePut('rows', rows);
-    matePut('columnWidths', columnWidths);
-    matePut('defaultColumnWidth', defaultColumnWidth);
-    matePut('textDirection', textDirection);
-    matePut('border', border);
-    matePut('rowDecorations', rowDecorations);
-    matePut('configuration', configuration);
-    matePut('defaultVerticalAlignment', defaultVerticalAlignment);
-    matePut('textBaseline', textBaseline);
-    matePut('children', children);
+    mateUse(
+      'columns',
+      columns,
+      isNamed: true,
+    );
+    mateUse(
+      'rows',
+      rows,
+      isNamed: true,
+    );
+    mateUse(
+      'columnWidths',
+      columnWidths,
+      isNamed: true,
+    );
+    mateUse(
+      'defaultColumnWidth',
+      defaultColumnWidth,
+      isNamed: true,
+    );
+    mateUse(
+      'textDirection',
+      textDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'border',
+      border,
+      isNamed: true,
+    );
+    mateUseList(
+      'rowDecorations',
+      rowDecorations,
+      isNamed: true,
+    );
+    mateUse(
+      'configuration',
+      configuration,
+      isNamed: true,
+      defaultValue: ImageConfiguration.empty,
+    );
+    mateUse(
+      'defaultVerticalAlignment',
+      defaultVerticalAlignment,
+      isNamed: true,
+      defaultValue: TableCellVerticalAlignment.top,
+    );
+    mateUse(
+      'textBaseline',
+      textBaseline,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }

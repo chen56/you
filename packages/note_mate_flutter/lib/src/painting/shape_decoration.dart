@@ -13,19 +13,19 @@ import 'package:flutter/src/painting/borders.dart';
 class ShapeDecoration$Mate extends ShapeDecoration with Mate {
   /// ShapeDecoration ShapeDecoration({Color? color, DecorationImage? image, Gradient? gradient, List<BoxShadow>? shadows, required ShapeBorder shape})
   ShapeDecoration$Mate({
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {DecorationImage? image} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {DecorationImage? image} , default:none
     DecorationImage? image,
 
-    /// optionalParameters: {Gradient? gradient} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Gradient? gradient} , default:none
     Gradient? gradient,
 
-    /// optionalParameters: {List<BoxShadow>? shadows} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {List<BoxShadow>? shadows} , default:none
     List<BoxShadow>? shadows,
 
-    /// optionalParameters: {required ShapeBorder shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ShapeBorder shape} , default:none
     required ShapeBorder shape,
   }) : super(
           color: color,
@@ -34,6 +34,8 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
           shadows: shadows,
           shape: shape,
         ) {
+    mateCreateName = 'ShapeDecoration';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ShapeDecoration$Mate(
           color: p.get('color').build(),
           image: p.get('image').build(),
@@ -41,10 +43,30 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    matePut('color', color);
-    matePut('image', image);
-    matePut('gradient', gradient);
-    matePut('shadows', shadows);
-    matePut('shape', shape);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'image',
+      image,
+      isNamed: true,
+    );
+    mateUse(
+      'gradient',
+      gradient,
+      isNamed: true,
+    );
+    mateUseList(
+      'shadows',
+      shadows,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
   }
 }

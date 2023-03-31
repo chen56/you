@@ -8,6 +8,7 @@ import 'package:flutter/src/painting/basic_types.dart';
 import 'package:flutter/src/widgets/scroll_physics.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/scroll_controller.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
 import 'package:flutter/src/widgets/scroll_configuration.dart';
@@ -18,11 +19,17 @@ class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Ma
   /// ListWheelChildListDelegate ListWheelChildListDelegate({required List<Widget> children})
   ListWheelChildListDelegate$Mate(
       {
-      /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required List<Widget> children} , default:none
       required List<Widget> children})
       : super(children: children) {
+    mateCreateName = 'ListWheelChildListDelegate';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build());
-    matePut('children', children);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -31,11 +38,17 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
   /// ListWheelChildLoopingListDelegate ListWheelChildLoopingListDelegate({required List<Widget> children})
   ListWheelChildLoopingListDelegate$Mate(
       {
-      /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {required List<Widget> children} , default:none
       required List<Widget> children})
       : super(children: children) {
+    mateCreateName = 'ListWheelChildLoopingListDelegate';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
-    matePut('children', children);
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 }
 
@@ -43,21 +56,31 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
 class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate with Mate {
   /// ListWheelChildBuilderDelegate ListWheelChildBuilderDelegate({required Widget? Function(BuildContext, int) builder, int? childCount})
   ListWheelChildBuilderDelegate$Mate({
-    /// optionalParameters: {required Widget? Function(BuildContext, int) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget? Function(BuildContext, int) builder} , default:none
     required NullableIndexedWidgetBuilder builder,
 
-    /// optionalParameters: {int? childCount} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? childCount} , default:none
     int? childCount,
   }) : super(
           builder: builder,
           childCount: childCount,
         ) {
+    mateCreateName = 'ListWheelChildBuilderDelegate';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildBuilderDelegate$Mate(
           builder: p.get('builder').build(),
           childCount: p.get('childCount').build(),
         );
-    matePut('builder', builder);
-    matePut('childCount', childCount);
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'childCount',
+      childCount,
+      isNamed: true,
+    );
   }
 }
 
@@ -66,11 +89,18 @@ class FixedExtentScrollController$Mate extends FixedExtentScrollController with 
   /// FixedExtentScrollController FixedExtentScrollController({int initialItem = 0})
   FixedExtentScrollController$Mate(
       {
-      /// optionalParameters: {int initialItem = 0} , hasDefaultValue:true, defaultValueCode:0
-      required int initialItem})
+      /// optionalParameters: {int initialItem = 0} , default:processed=IntegerLiteralImpl
+      int initialItem = 0})
       : super(initialItem: initialItem) {
+    mateCreateName = 'FixedExtentScrollController';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
-    matePut('initialItem', initialItem);
+    mateUse(
+      'initialItem',
+      initialItem,
+      isNamed: true,
+      defaultValue: 0,
+    );
   }
 }
 
@@ -78,25 +108,25 @@ class FixedExtentScrollController$Mate extends FixedExtentScrollController with 
 class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
   /// FixedExtentMetrics FixedExtentMetrics({required double? minScrollExtent, required double? maxScrollExtent, required double? pixels, required double? viewportDimension, required AxisDirection axisDirection, required int itemIndex, required double devicePixelRatio})
   FixedExtentMetrics$Mate({
-    /// optionalParameters: {required double? minScrollExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? minScrollExtent} , default:none
     required double? minScrollExtent,
 
-    /// optionalParameters: {required double? maxScrollExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? maxScrollExtent} , default:none
     required double? maxScrollExtent,
 
-    /// optionalParameters: {required double? pixels} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? pixels} , default:none
     required double? pixels,
 
-    /// optionalParameters: {required double? viewportDimension} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double? viewportDimension} , default:none
     required double? viewportDimension,
 
-    /// optionalParameters: {required AxisDirection axisDirection} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required AxisDirection axisDirection} , default:none
     required AxisDirection axisDirection,
 
-    /// optionalParameters: {required int itemIndex} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required int itemIndex} , default:none
     required int itemIndex,
 
-    /// optionalParameters: {required double devicePixelRatio} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double devicePixelRatio} , default:none
     required double devicePixelRatio,
   }) : super(
           minScrollExtent: minScrollExtent,
@@ -107,6 +137,8 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
           itemIndex: itemIndex,
           devicePixelRatio: devicePixelRatio,
         ) {
+    mateCreateName = 'FixedExtentMetrics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
           maxScrollExtent: p.get('maxScrollExtent').build(),
@@ -116,13 +148,41 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
           itemIndex: p.get('itemIndex').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    matePut('minScrollExtent', minScrollExtent);
-    matePut('maxScrollExtent', maxScrollExtent);
-    matePut('pixels', pixels);
-    matePut('viewportDimension', viewportDimension);
-    matePut('axisDirection', axisDirection);
-    matePut('itemIndex', itemIndex);
-    matePut('devicePixelRatio', devicePixelRatio);
+    mateUse(
+      'minScrollExtent',
+      minScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'maxScrollExtent',
+      maxScrollExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'pixels',
+      pixels,
+      isNamed: true,
+    );
+    mateUse(
+      'viewportDimension',
+      viewportDimension,
+      isNamed: true,
+    );
+    mateUse(
+      'axisDirection',
+      axisDirection,
+      isNamed: true,
+    );
+    mateUse(
+      'itemIndex',
+      itemIndex,
+      isNamed: true,
+    );
+    mateUse(
+      'devicePixelRatio',
+      devicePixelRatio,
+      isNamed: true,
+    );
   }
 }
 
@@ -131,11 +191,17 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate {
   /// FixedExtentScrollPhysics FixedExtentScrollPhysics({ScrollPhysics? parent})
   FixedExtentScrollPhysics$Mate(
       {
-      /// optionalParameters: {ScrollPhysics? parent} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
+    mateCreateName = 'FixedExtentScrollPhysics';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
-    matePut('parent', parent);
+    mateUse(
+      'parent',
+      parent,
+      isNamed: true,
+    );
   }
 }
 
@@ -143,55 +209,55 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate {
 class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
   /// ListWheelScrollView ListWheelScrollView({Key? key, ScrollController? controller, ScrollPhysics? physics, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, void Function(int)? onSelectedItemChanged, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, required List<Widget> children})
   ListWheelScrollView$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , hasDefaultValue:true, defaultValueCode:RenderListWheelViewport.defaultDiameterRatio
-    required double diameterRatio,
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:processed=PrefixedIdentifierImpl
+    double diameterRatio = RenderListWheelViewport.defaultDiameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , hasDefaultValue:true, defaultValueCode:RenderListWheelViewport.defaultPerspective
-    required double perspective,
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:processed=PrefixedIdentifierImpl
+    double perspective = RenderListWheelViewport.defaultPerspective,
 
-    /// optionalParameters: {double offAxisFraction = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double offAxisFraction,
+    /// optionalParameters: {double offAxisFraction = 0.0} , default:processed=DoubleLiteralImpl
+    double offAxisFraction = 0.0,
 
-    /// optionalParameters: {bool useMagnifier = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool useMagnifier,
+    /// optionalParameters: {bool useMagnifier = false} , default:processed=BooleanLiteralImpl
+    bool useMagnifier = false,
 
-    /// optionalParameters: {double magnification = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double magnification,
+    /// optionalParameters: {double magnification = 1.0} , default:processed=DoubleLiteralImpl
+    double magnification = 1.0,
 
-    /// optionalParameters: {double overAndUnderCenterOpacity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double overAndUnderCenterOpacity,
+    /// optionalParameters: {double overAndUnderCenterOpacity = 1.0} , default:processed=DoubleLiteralImpl
+    double overAndUnderCenterOpacity = 1.0,
 
-    /// optionalParameters: {required double itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double itemExtent} , default:none
     required double itemExtent,
 
-    /// optionalParameters: {double squeeze = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double squeeze,
+    /// optionalParameters: {double squeeze = 1.0} , default:processed=DoubleLiteralImpl
+    double squeeze = 1.0,
 
-    /// optionalParameters: {void Function(int)? onSelectedItemChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onSelectedItemChanged} , default:none
     ValueChanged<int>? onSelectedItemChanged,
 
-    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool renderChildrenOutsideViewport,
+    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , default:processed=BooleanLiteralImpl
+    bool renderChildrenOutsideViewport = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {required List<Widget> children} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required List<Widget> children} , default:none
     required List<Widget> children,
   }) : super(
           key: key,
@@ -212,6 +278,8 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: scrollBehavior,
           children: children,
         ) {
+    mateCreateName = 'ListWheelScrollView';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -231,76 +299,153 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           children: p.get('children').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('physics', physics);
-    matePut('diameterRatio', diameterRatio);
-    matePut('perspective', perspective);
-    matePut('offAxisFraction', offAxisFraction);
-    matePut('useMagnifier', useMagnifier);
-    matePut('magnification', magnification);
-    matePut('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    matePut('itemExtent', itemExtent);
-    matePut('squeeze', squeeze);
-    matePut('onSelectedItemChanged', onSelectedItemChanged);
-    matePut('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    matePut('clipBehavior', clipBehavior);
-    matePut('restorationId', restorationId);
-    matePut('scrollBehavior', scrollBehavior);
-    matePut('children', children);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'diameterRatio',
+      diameterRatio,
+      isNamed: true,
+      defaultValue: RenderListWheelViewport.defaultDiameterRatio,
+    );
+    mateUse(
+      'perspective',
+      perspective,
+      isNamed: true,
+      defaultValue: RenderListWheelViewport.defaultPerspective,
+    );
+    mateUse(
+      'offAxisFraction',
+      offAxisFraction,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'useMagnifier',
+      useMagnifier,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'magnification',
+      magnification,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'overAndUnderCenterOpacity',
+      overAndUnderCenterOpacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'squeeze',
+      squeeze,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'onSelectedItemChanged',
+      onSelectedItemChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'renderChildrenOutsideViewport',
+      renderChildrenOutsideViewport,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollBehavior',
+      scrollBehavior,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
   }
 
   /// ListWheelScrollView ListWheelScrollView.useDelegate({Key? key, ScrollController? controller, ScrollPhysics? physics, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, void Function(int)? onSelectedItemChanged, bool renderChildrenOutsideViewport = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior, required ListWheelChildDelegate childDelegate})
   ListWheelScrollView$Mate.useDelegate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {ScrollController? controller} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollController? controller} , default:none
     ScrollController? controller,
 
-    /// optionalParameters: {ScrollPhysics? physics} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollPhysics? physics} , default:none
     ScrollPhysics? physics,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , hasDefaultValue:true, defaultValueCode:RenderListWheelViewport.defaultDiameterRatio
-    required double diameterRatio,
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:processed=PrefixedIdentifierImpl
+    double diameterRatio = RenderListWheelViewport.defaultDiameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , hasDefaultValue:true, defaultValueCode:RenderListWheelViewport.defaultPerspective
-    required double perspective,
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:processed=PrefixedIdentifierImpl
+    double perspective = RenderListWheelViewport.defaultPerspective,
 
-    /// optionalParameters: {double offAxisFraction = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double offAxisFraction,
+    /// optionalParameters: {double offAxisFraction = 0.0} , default:processed=DoubleLiteralImpl
+    double offAxisFraction = 0.0,
 
-    /// optionalParameters: {bool useMagnifier = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool useMagnifier,
+    /// optionalParameters: {bool useMagnifier = false} , default:processed=BooleanLiteralImpl
+    bool useMagnifier = false,
 
-    /// optionalParameters: {double magnification = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double magnification,
+    /// optionalParameters: {double magnification = 1.0} , default:processed=DoubleLiteralImpl
+    double magnification = 1.0,
 
-    /// optionalParameters: {double overAndUnderCenterOpacity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double overAndUnderCenterOpacity,
+    /// optionalParameters: {double overAndUnderCenterOpacity = 1.0} , default:processed=DoubleLiteralImpl
+    double overAndUnderCenterOpacity = 1.0,
 
-    /// optionalParameters: {required double itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double itemExtent} , default:none
     required double itemExtent,
 
-    /// optionalParameters: {double squeeze = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double squeeze,
+    /// optionalParameters: {double squeeze = 1.0} , default:processed=DoubleLiteralImpl
+    double squeeze = 1.0,
 
-    /// optionalParameters: {void Function(int)? onSelectedItemChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(int)? onSelectedItemChanged} , default:none
     ValueChanged<int>? onSelectedItemChanged,
 
-    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool renderChildrenOutsideViewport,
+    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , default:processed=BooleanLiteralImpl
+    bool renderChildrenOutsideViewport = false,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
 
-    /// optionalParameters: {String? restorationId} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
 
-    /// optionalParameters: {ScrollBehavior? scrollBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     ScrollBehavior? scrollBehavior,
 
-    /// optionalParameters: {required ListWheelChildDelegate childDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ListWheelChildDelegate childDelegate} , default:none
     required ListWheelChildDelegate childDelegate,
   }) : super.useDelegate(
           key: key,
@@ -321,6 +466,8 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: scrollBehavior,
           childDelegate: childDelegate,
         ) {
+    mateCreateName = 'ListWheelScrollView.useDelegate';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate.useDelegate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
@@ -340,23 +487,100 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           childDelegate: p.get('childDelegate').build(),
         );
-    matePut('key', key);
-    matePut('controller', controller);
-    matePut('physics', physics);
-    matePut('diameterRatio', diameterRatio);
-    matePut('perspective', perspective);
-    matePut('offAxisFraction', offAxisFraction);
-    matePut('useMagnifier', useMagnifier);
-    matePut('magnification', magnification);
-    matePut('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    matePut('itemExtent', itemExtent);
-    matePut('squeeze', squeeze);
-    matePut('onSelectedItemChanged', onSelectedItemChanged);
-    matePut('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    matePut('clipBehavior', clipBehavior);
-    matePut('restorationId', restorationId);
-    matePut('scrollBehavior', scrollBehavior);
-    matePut('childDelegate', childDelegate);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'controller',
+      controller,
+      isNamed: true,
+    );
+    mateUse(
+      'physics',
+      physics,
+      isNamed: true,
+    );
+    mateUse(
+      'diameterRatio',
+      diameterRatio,
+      isNamed: true,
+      defaultValue: RenderListWheelViewport.defaultDiameterRatio,
+    );
+    mateUse(
+      'perspective',
+      perspective,
+      isNamed: true,
+      defaultValue: RenderListWheelViewport.defaultPerspective,
+    );
+    mateUse(
+      'offAxisFraction',
+      offAxisFraction,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'useMagnifier',
+      useMagnifier,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'magnification',
+      magnification,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'overAndUnderCenterOpacity',
+      overAndUnderCenterOpacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'squeeze',
+      squeeze,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'onSelectedItemChanged',
+      onSelectedItemChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'renderChildrenOutsideViewport',
+      renderChildrenOutsideViewport,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
+    mateUse(
+      'restorationId',
+      restorationId,
+      isNamed: true,
+    );
+    mateUse(
+      'scrollBehavior',
+      scrollBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'childDelegate',
+      childDelegate,
+      isNamed: true,
+    );
   }
 }
 
@@ -368,8 +592,14 @@ class ListWheelElement$Mate extends ListWheelElement with Mate {
       /// requiredParameters: ListWheelViewport widget
       ListWheelViewport widget)
       : super(widget) {
+    mateCreateName = 'ListWheelElement';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelElement$Mate(p.get('widget').value);
-    matePut('widget', widget);
+    mateUse(
+      'widget',
+      widget,
+      isNamed: false,
+    );
   }
 }
 
@@ -377,44 +607,44 @@ class ListWheelElement$Mate extends ListWheelElement with Mate {
 class ListWheelViewport$Mate extends ListWheelViewport with Mate {
   /// ListWheelViewport ListWheelViewport({Key? key, double diameterRatio = RenderListWheelViewport.defaultDiameterRatio, double perspective = RenderListWheelViewport.defaultPerspective, double offAxisFraction = 0.0, bool useMagnifier = false, double magnification = 1.0, double overAndUnderCenterOpacity = 1.0, required double itemExtent, double squeeze = 1.0, bool renderChildrenOutsideViewport = false, required ViewportOffset offset, required ListWheelChildDelegate childDelegate, Clip clipBehavior = Clip.hardEdge})
   ListWheelViewport$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , hasDefaultValue:true, defaultValueCode:RenderListWheelViewport.defaultDiameterRatio
-    required double diameterRatio,
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:processed=PrefixedIdentifierImpl
+    double diameterRatio = RenderListWheelViewport.defaultDiameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , hasDefaultValue:true, defaultValueCode:RenderListWheelViewport.defaultPerspective
-    required double perspective,
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:processed=PrefixedIdentifierImpl
+    double perspective = RenderListWheelViewport.defaultPerspective,
 
-    /// optionalParameters: {double offAxisFraction = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double offAxisFraction,
+    /// optionalParameters: {double offAxisFraction = 0.0} , default:processed=DoubleLiteralImpl
+    double offAxisFraction = 0.0,
 
-    /// optionalParameters: {bool useMagnifier = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool useMagnifier,
+    /// optionalParameters: {bool useMagnifier = false} , default:processed=BooleanLiteralImpl
+    bool useMagnifier = false,
 
-    /// optionalParameters: {double magnification = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double magnification,
+    /// optionalParameters: {double magnification = 1.0} , default:processed=DoubleLiteralImpl
+    double magnification = 1.0,
 
-    /// optionalParameters: {double overAndUnderCenterOpacity = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double overAndUnderCenterOpacity,
+    /// optionalParameters: {double overAndUnderCenterOpacity = 1.0} , default:processed=DoubleLiteralImpl
+    double overAndUnderCenterOpacity = 1.0,
 
-    /// optionalParameters: {required double itemExtent} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double itemExtent} , default:none
     required double itemExtent,
 
-    /// optionalParameters: {double squeeze = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double squeeze,
+    /// optionalParameters: {double squeeze = 1.0} , default:processed=DoubleLiteralImpl
+    double squeeze = 1.0,
 
-    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool renderChildrenOutsideViewport,
+    /// optionalParameters: {bool renderChildrenOutsideViewport = false} , default:processed=BooleanLiteralImpl
+    bool renderChildrenOutsideViewport = false,
 
-    /// optionalParameters: {required ViewportOffset offset} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ViewportOffset offset} , default:none
     required ViewportOffset offset,
 
-    /// optionalParameters: {required ListWheelChildDelegate childDelegate} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ListWheelChildDelegate childDelegate} , default:none
     required ListWheelChildDelegate childDelegate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , hasDefaultValue:true, defaultValueCode:Clip.hardEdge
-    required Clip clipBehavior,
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    Clip clipBehavior = Clip.hardEdge,
   }) : super(
           key: key,
           diameterRatio: diameterRatio,
@@ -430,6 +660,8 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           childDelegate: childDelegate,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ListWheelViewport';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelViewport$Mate(
           key: p.get('key').build(),
           diameterRatio: p.get('diameterRatio').build(),
@@ -445,18 +677,79 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           childDelegate: p.get('childDelegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('key', key);
-    matePut('diameterRatio', diameterRatio);
-    matePut('perspective', perspective);
-    matePut('offAxisFraction', offAxisFraction);
-    matePut('useMagnifier', useMagnifier);
-    matePut('magnification', magnification);
-    matePut('overAndUnderCenterOpacity', overAndUnderCenterOpacity);
-    matePut('itemExtent', itemExtent);
-    matePut('squeeze', squeeze);
-    matePut('renderChildrenOutsideViewport', renderChildrenOutsideViewport);
-    matePut('offset', offset);
-    matePut('childDelegate', childDelegate);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'diameterRatio',
+      diameterRatio,
+      isNamed: true,
+      defaultValue: RenderListWheelViewport.defaultDiameterRatio,
+    );
+    mateUse(
+      'perspective',
+      perspective,
+      isNamed: true,
+      defaultValue: RenderListWheelViewport.defaultPerspective,
+    );
+    mateUse(
+      'offAxisFraction',
+      offAxisFraction,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'useMagnifier',
+      useMagnifier,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'magnification',
+      magnification,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'overAndUnderCenterOpacity',
+      overAndUnderCenterOpacity,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'itemExtent',
+      itemExtent,
+      isNamed: true,
+    );
+    mateUse(
+      'squeeze',
+      squeeze,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'renderChildrenOutsideViewport',
+      renderChildrenOutsideViewport,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'offset',
+      offset,
+      isNamed: true,
+    );
+    mateUse(
+      'childDelegate',
+      childDelegate,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+      defaultValue: Clip.hardEdge,
+    );
   }
 }

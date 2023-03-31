@@ -10,16 +10,16 @@ import 'package:flutter/src/widgets/framework.dart';
 class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Mate {
   /// ValueListenableBuilder<T> ValueListenableBuilder({Key? key, required ValueListenable<T> valueListenable, required Widget Function(BuildContext, T, Widget?) builder, Widget? child})
   ValueListenableBuilder$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ValueListenable<T> valueListenable} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ValueListenable<T> valueListenable} , default:none
     required ValueListenable<T> valueListenable,
 
-    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , default:none
     required ValueWidgetBuilder<T> builder,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
   }) : super(
           key: key,
@@ -27,15 +27,33 @@ class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Mate
           builder: builder,
           child: child,
         ) {
+    mateCreateName = 'ValueListenableBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ValueListenableBuilder$Mate<T>(
           key: p.get('key').build(),
           valueListenable: p.get('valueListenable').build(),
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('valueListenable', valueListenable);
-    matePut('builder', builder);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'valueListenable',
+      valueListenable,
+      isNamed: true,
+    );
+    mateUse(
+      'builder',
+      builder,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

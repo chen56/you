@@ -10,22 +10,22 @@ import 'dart:core';
 class NavigationToolbar$Mate extends NavigationToolbar with Mate {
   /// NavigationToolbar NavigationToolbar({Key? key, Widget? leading, Widget? middle, Widget? trailing, bool centerMiddle = true, double middleSpacing = kMiddleSpacing})
   NavigationToolbar$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {Widget? middle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? middle} , default:none
     Widget? middle,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , default:none
     Widget? trailing,
 
-    /// optionalParameters: {bool centerMiddle = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool centerMiddle,
+    /// optionalParameters: {bool centerMiddle = true} , default:processed=BooleanLiteralImpl
+    bool centerMiddle = true,
 
-    /// optionalParameters: {double middleSpacing = kMiddleSpacing} , hasDefaultValue:true, defaultValueCode:kMiddleSpacing
+    /// optionalParameters: {double middleSpacing = kMiddleSpacing} , default:unprocessed=SimpleIdentifierImpl
     required double middleSpacing,
   }) : super(
           key: key,
@@ -35,6 +35,8 @@ class NavigationToolbar$Mate extends NavigationToolbar with Mate {
           centerMiddle: centerMiddle,
           middleSpacing: middleSpacing,
         ) {
+    mateCreateName = 'NavigationToolbar';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NavigationToolbar$Mate(
           key: p.get('key').build(),
           leading: p.get('leading').build(),
@@ -43,11 +45,36 @@ class NavigationToolbar$Mate extends NavigationToolbar with Mate {
           centerMiddle: p.get('centerMiddle').build(),
           middleSpacing: p.get('middleSpacing').build(),
         );
-    matePut('key', key);
-    matePut('leading', leading);
-    matePut('middle', middle);
-    matePut('trailing', trailing);
-    matePut('centerMiddle', centerMiddle);
-    matePut('middleSpacing', middleSpacing);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'middle',
+      middle,
+      isNamed: true,
+    );
+    mateUse(
+      'trailing',
+      trailing,
+      isNamed: true,
+    );
+    mateUse(
+      'centerMiddle',
+      centerMiddle,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'middleSpacing',
+      middleSpacing,
+      isNamed: true,
+    );
   }
 }

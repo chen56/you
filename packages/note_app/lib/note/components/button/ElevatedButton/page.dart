@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
+import 'package:note_mate_flutter/cupertino.dart';
+import 'package:note_mate_flutter/material.dart';
 
 import '1.elevated_button.dart';
 
@@ -20,6 +22,10 @@ build(Pen pen, BuildContext context) {
 - c
 
   ''');
+
+  pen.sampleMate(Wrap$Mate(children: [
+    ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+  ]));
 
   pen.sampleFile(const Sample1());
 

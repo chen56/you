@@ -10,19 +10,19 @@ import 'dart:ui';
 class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
   /// BottomNavigationBarItem BottomNavigationBarItem({required Widget icon, String? label, Widget? activeIcon, Color? backgroundColor, String? tooltip})
   BottomNavigationBarItem$Mate({
-    /// optionalParameters: {required Widget icon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget icon} , default:none
     required Widget icon,
 
-    /// optionalParameters: {String? label} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? label} , default:none
     String? label,
 
-    /// optionalParameters: {Widget? activeIcon} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? activeIcon} , default:none
     Widget? activeIcon,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {String? tooltip} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? tooltip} , default:none
     String? tooltip,
   }) : super(
           icon: icon,
@@ -31,6 +31,8 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
           backgroundColor: backgroundColor,
           tooltip: tooltip,
         ) {
+    mateCreateName = 'BottomNavigationBarItem';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BottomNavigationBarItem$Mate(
           icon: p.get('icon').build(),
           label: p.get('label').build(),
@@ -38,10 +40,30 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
           backgroundColor: p.get('backgroundColor').build(),
           tooltip: p.get('tooltip').build(),
         );
-    matePut('icon', icon);
-    matePut('label', label);
-    matePut('activeIcon', activeIcon);
-    matePut('backgroundColor', backgroundColor);
-    matePut('tooltip', tooltip);
+    mateUse(
+      'icon',
+      icon,
+      isNamed: true,
+    );
+    mateUse(
+      'label',
+      label,
+      isNamed: true,
+    );
+    mateUse(
+      'activeIcon',
+      activeIcon,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'tooltip',
+      tooltip,
+      isNamed: true,
+    );
   }
 }

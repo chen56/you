@@ -14,27 +14,41 @@ import 'package:flutter/src/services/mouse_cursor.dart';
 class SliderTheme$Mate extends SliderTheme with Mate {
   /// SliderTheme SliderTheme({Key? key, required SliderThemeData data, required Widget child})
   SliderTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required SliderThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required SliderThemeData data} , default:none
     required SliderThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'SliderTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliderTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }
 
@@ -42,94 +56,94 @@ class SliderTheme$Mate extends SliderTheme with Mate {
 class SliderThemeData$Mate extends SliderThemeData with Mate {
   /// SliderThemeData SliderThemeData({double? trackHeight, Color? activeTrackColor, Color? inactiveTrackColor, Color? secondaryActiveTrackColor, Color? disabledActiveTrackColor, Color? disabledInactiveTrackColor, Color? disabledSecondaryActiveTrackColor, Color? activeTickMarkColor, Color? inactiveTickMarkColor, Color? disabledActiveTickMarkColor, Color? disabledInactiveTickMarkColor, Color? thumbColor, Color? overlappingShapeStrokeColor, Color? disabledThumbColor, Color? overlayColor, Color? valueIndicatorColor, SliderComponentShape? overlayShape, SliderTickMarkShape? tickMarkShape, SliderComponentShape? thumbShape, SliderTrackShape? trackShape, SliderComponentShape? valueIndicatorShape, RangeSliderTickMarkShape? rangeTickMarkShape, RangeSliderThumbShape? rangeThumbShape, RangeSliderTrackShape? rangeTrackShape, RangeSliderValueIndicatorShape? rangeValueIndicatorShape, ShowValueIndicator? showValueIndicator, TextStyle? valueIndicatorTextStyle, double? minThumbSeparation, Thumb? Function(TextDirection, RangeValues, double, Size, Size, double)? thumbSelector, MaterialStateProperty<MouseCursor?>? mouseCursor})
   SliderThemeData$Mate({
-    /// optionalParameters: {double? trackHeight} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? trackHeight} , default:none
     double? trackHeight,
 
-    /// optionalParameters: {Color? activeTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeTrackColor} , default:none
     Color? activeTrackColor,
 
-    /// optionalParameters: {Color? inactiveTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveTrackColor} , default:none
     Color? inactiveTrackColor,
 
-    /// optionalParameters: {Color? secondaryActiveTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? secondaryActiveTrackColor} , default:none
     Color? secondaryActiveTrackColor,
 
-    /// optionalParameters: {Color? disabledActiveTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledActiveTrackColor} , default:none
     Color? disabledActiveTrackColor,
 
-    /// optionalParameters: {Color? disabledInactiveTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledInactiveTrackColor} , default:none
     Color? disabledInactiveTrackColor,
 
-    /// optionalParameters: {Color? disabledSecondaryActiveTrackColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledSecondaryActiveTrackColor} , default:none
     Color? disabledSecondaryActiveTrackColor,
 
-    /// optionalParameters: {Color? activeTickMarkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeTickMarkColor} , default:none
     Color? activeTickMarkColor,
 
-    /// optionalParameters: {Color? inactiveTickMarkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? inactiveTickMarkColor} , default:none
     Color? inactiveTickMarkColor,
 
-    /// optionalParameters: {Color? disabledActiveTickMarkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledActiveTickMarkColor} , default:none
     Color? disabledActiveTickMarkColor,
 
-    /// optionalParameters: {Color? disabledInactiveTickMarkColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledInactiveTickMarkColor} , default:none
     Color? disabledInactiveTickMarkColor,
 
-    /// optionalParameters: {Color? thumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? thumbColor} , default:none
     Color? thumbColor,
 
-    /// optionalParameters: {Color? overlappingShapeStrokeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? overlappingShapeStrokeColor} , default:none
     Color? overlappingShapeStrokeColor,
 
-    /// optionalParameters: {Color? disabledThumbColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? disabledThumbColor} , default:none
     Color? disabledThumbColor,
 
-    /// optionalParameters: {Color? overlayColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? overlayColor} , default:none
     Color? overlayColor,
 
-    /// optionalParameters: {Color? valueIndicatorColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? valueIndicatorColor} , default:none
     Color? valueIndicatorColor,
 
-    /// optionalParameters: {SliderComponentShape? overlayShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SliderComponentShape? overlayShape} , default:none
     SliderComponentShape? overlayShape,
 
-    /// optionalParameters: {SliderTickMarkShape? tickMarkShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SliderTickMarkShape? tickMarkShape} , default:none
     SliderTickMarkShape? tickMarkShape,
 
-    /// optionalParameters: {SliderComponentShape? thumbShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SliderComponentShape? thumbShape} , default:none
     SliderComponentShape? thumbShape,
 
-    /// optionalParameters: {SliderTrackShape? trackShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SliderTrackShape? trackShape} , default:none
     SliderTrackShape? trackShape,
 
-    /// optionalParameters: {SliderComponentShape? valueIndicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SliderComponentShape? valueIndicatorShape} , default:none
     SliderComponentShape? valueIndicatorShape,
 
-    /// optionalParameters: {RangeSliderTickMarkShape? rangeTickMarkShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RangeSliderTickMarkShape? rangeTickMarkShape} , default:none
     RangeSliderTickMarkShape? rangeTickMarkShape,
 
-    /// optionalParameters: {RangeSliderThumbShape? rangeThumbShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RangeSliderThumbShape? rangeThumbShape} , default:none
     RangeSliderThumbShape? rangeThumbShape,
 
-    /// optionalParameters: {RangeSliderTrackShape? rangeTrackShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RangeSliderTrackShape? rangeTrackShape} , default:none
     RangeSliderTrackShape? rangeTrackShape,
 
-    /// optionalParameters: {RangeSliderValueIndicatorShape? rangeValueIndicatorShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RangeSliderValueIndicatorShape? rangeValueIndicatorShape} , default:none
     RangeSliderValueIndicatorShape? rangeValueIndicatorShape,
 
-    /// optionalParameters: {ShowValueIndicator? showValueIndicator} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShowValueIndicator? showValueIndicator} , default:none
     ShowValueIndicator? showValueIndicator,
 
-    /// optionalParameters: {TextStyle? valueIndicatorTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? valueIndicatorTextStyle} , default:none
     TextStyle? valueIndicatorTextStyle,
 
-    /// optionalParameters: {double? minThumbSeparation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? minThumbSeparation} , default:none
     double? minThumbSeparation,
 
-    /// optionalParameters: {Thumb? Function(TextDirection, RangeValues, double, Size, Size, double)? thumbSelector} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Thumb? Function(TextDirection, RangeValues, double, Size, Size, double)? thumbSelector} , default:none
     RangeThumbSelector? thumbSelector,
 
-    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
     MaterialStateProperty<MouseCursor?>? mouseCursor,
   }) : super(
           trackHeight: trackHeight,
@@ -163,6 +177,8 @@ class SliderThemeData$Mate extends SliderThemeData with Mate {
           thumbSelector: thumbSelector,
           mouseCursor: mouseCursor,
         ) {
+    mateCreateName = 'SliderThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliderThemeData$Mate(
           trackHeight: p.get('trackHeight').build(),
           activeTrackColor: p.get('activeTrackColor').build(),
@@ -195,36 +211,156 @@ class SliderThemeData$Mate extends SliderThemeData with Mate {
           thumbSelector: p.get('thumbSelector').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    matePut('trackHeight', trackHeight);
-    matePut('activeTrackColor', activeTrackColor);
-    matePut('inactiveTrackColor', inactiveTrackColor);
-    matePut('secondaryActiveTrackColor', secondaryActiveTrackColor);
-    matePut('disabledActiveTrackColor', disabledActiveTrackColor);
-    matePut('disabledInactiveTrackColor', disabledInactiveTrackColor);
-    matePut('disabledSecondaryActiveTrackColor', disabledSecondaryActiveTrackColor);
-    matePut('activeTickMarkColor', activeTickMarkColor);
-    matePut('inactiveTickMarkColor', inactiveTickMarkColor);
-    matePut('disabledActiveTickMarkColor', disabledActiveTickMarkColor);
-    matePut('disabledInactiveTickMarkColor', disabledInactiveTickMarkColor);
-    matePut('thumbColor', thumbColor);
-    matePut('overlappingShapeStrokeColor', overlappingShapeStrokeColor);
-    matePut('disabledThumbColor', disabledThumbColor);
-    matePut('overlayColor', overlayColor);
-    matePut('valueIndicatorColor', valueIndicatorColor);
-    matePut('overlayShape', overlayShape);
-    matePut('tickMarkShape', tickMarkShape);
-    matePut('thumbShape', thumbShape);
-    matePut('trackShape', trackShape);
-    matePut('valueIndicatorShape', valueIndicatorShape);
-    matePut('rangeTickMarkShape', rangeTickMarkShape);
-    matePut('rangeThumbShape', rangeThumbShape);
-    matePut('rangeTrackShape', rangeTrackShape);
-    matePut('rangeValueIndicatorShape', rangeValueIndicatorShape);
-    matePut('showValueIndicator', showValueIndicator);
-    matePut('valueIndicatorTextStyle', valueIndicatorTextStyle);
-    matePut('minThumbSeparation', minThumbSeparation);
-    matePut('thumbSelector', thumbSelector);
-    matePut('mouseCursor', mouseCursor);
+    mateUse(
+      'trackHeight',
+      trackHeight,
+      isNamed: true,
+    );
+    mateUse(
+      'activeTrackColor',
+      activeTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'inactiveTrackColor',
+      inactiveTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryActiveTrackColor',
+      secondaryActiveTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledActiveTrackColor',
+      disabledActiveTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledInactiveTrackColor',
+      disabledInactiveTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledSecondaryActiveTrackColor',
+      disabledSecondaryActiveTrackColor,
+      isNamed: true,
+    );
+    mateUse(
+      'activeTickMarkColor',
+      activeTickMarkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'inactiveTickMarkColor',
+      inactiveTickMarkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledActiveTickMarkColor',
+      disabledActiveTickMarkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledInactiveTickMarkColor',
+      disabledInactiveTickMarkColor,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbColor',
+      thumbColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlappingShapeStrokeColor',
+      overlappingShapeStrokeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'disabledThumbColor',
+      disabledThumbColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayColor',
+      overlayColor,
+      isNamed: true,
+    );
+    mateUse(
+      'valueIndicatorColor',
+      valueIndicatorColor,
+      isNamed: true,
+    );
+    mateUse(
+      'overlayShape',
+      overlayShape,
+      isNamed: true,
+    );
+    mateUse(
+      'tickMarkShape',
+      tickMarkShape,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbShape',
+      thumbShape,
+      isNamed: true,
+    );
+    mateUse(
+      'trackShape',
+      trackShape,
+      isNamed: true,
+    );
+    mateUse(
+      'valueIndicatorShape',
+      valueIndicatorShape,
+      isNamed: true,
+    );
+    mateUse(
+      'rangeTickMarkShape',
+      rangeTickMarkShape,
+      isNamed: true,
+    );
+    mateUse(
+      'rangeThumbShape',
+      rangeThumbShape,
+      isNamed: true,
+    );
+    mateUse(
+      'rangeTrackShape',
+      rangeTrackShape,
+      isNamed: true,
+    );
+    mateUse(
+      'rangeValueIndicatorShape',
+      rangeValueIndicatorShape,
+      isNamed: true,
+    );
+    mateUse(
+      'showValueIndicator',
+      showValueIndicator,
+      isNamed: true,
+    );
+    mateUse(
+      'valueIndicatorTextStyle',
+      valueIndicatorTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'minThumbSeparation',
+      minThumbSeparation,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbSelector',
+      thumbSelector,
+      isNamed: true,
+    );
+    mateUse(
+      'mouseCursor',
+      mouseCursor,
+      isNamed: true,
+    );
   }
 }
 
@@ -233,11 +369,17 @@ class RoundSliderTickMarkShape$Mate extends RoundSliderTickMarkShape with Mate {
   /// RoundSliderTickMarkShape RoundSliderTickMarkShape({double? tickMarkRadius})
   RoundSliderTickMarkShape$Mate(
       {
-      /// optionalParameters: {double? tickMarkRadius} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {double? tickMarkRadius} , default:none
       double? tickMarkRadius})
       : super(tickMarkRadius: tickMarkRadius) {
+    mateCreateName = 'RoundSliderTickMarkShape';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
-    matePut('tickMarkRadius', tickMarkRadius);
+    mateUse(
+      'tickMarkRadius',
+      tickMarkRadius,
+      isNamed: true,
+    );
   }
 }
 
@@ -246,11 +388,17 @@ class RoundRangeSliderTickMarkShape$Mate extends RoundRangeSliderTickMarkShape w
   /// RoundRangeSliderTickMarkShape RoundRangeSliderTickMarkShape({double? tickMarkRadius})
   RoundRangeSliderTickMarkShape$Mate(
       {
-      /// optionalParameters: {double? tickMarkRadius} , hasDefaultValue:false, defaultValueCode:null
+      /// optionalParameters: {double? tickMarkRadius} , default:none
       double? tickMarkRadius})
       : super(tickMarkRadius: tickMarkRadius) {
+    mateCreateName = 'RoundRangeSliderTickMarkShape';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundRangeSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
-    matePut('tickMarkRadius', tickMarkRadius);
+    mateUse(
+      'tickMarkRadius',
+      tickMarkRadius,
+      isNamed: true,
+    );
   }
 }
 
@@ -258,33 +406,54 @@ class RoundRangeSliderTickMarkShape$Mate extends RoundRangeSliderTickMarkShape w
 class RoundSliderThumbShape$Mate extends RoundSliderThumbShape with Mate {
   /// RoundSliderThumbShape RoundSliderThumbShape({double enabledThumbRadius = 10.0, double? disabledThumbRadius, double elevation = 1.0, double pressedElevation = 6.0})
   RoundSliderThumbShape$Mate({
-    /// optionalParameters: {double enabledThumbRadius = 10.0} , hasDefaultValue:true, defaultValueCode:10.0
-    required double enabledThumbRadius,
+    /// optionalParameters: {double enabledThumbRadius = 10.0} , default:processed=DoubleLiteralImpl
+    double enabledThumbRadius = 10.0,
 
-    /// optionalParameters: {double? disabledThumbRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? disabledThumbRadius} , default:none
     double? disabledThumbRadius,
 
-    /// optionalParameters: {double elevation = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 1.0} , default:processed=DoubleLiteralImpl
+    double elevation = 1.0,
 
-    /// optionalParameters: {double pressedElevation = 6.0} , hasDefaultValue:true, defaultValueCode:6.0
-    required double pressedElevation,
+    /// optionalParameters: {double pressedElevation = 6.0} , default:processed=DoubleLiteralImpl
+    double pressedElevation = 6.0,
   }) : super(
           enabledThumbRadius: enabledThumbRadius,
           disabledThumbRadius: disabledThumbRadius,
           elevation: elevation,
           pressedElevation: pressedElevation,
         ) {
+    mateCreateName = 'RoundSliderThumbShape';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderThumbShape$Mate(
           enabledThumbRadius: p.get('enabledThumbRadius').build(),
           disabledThumbRadius: p.get('disabledThumbRadius').build(),
           elevation: p.get('elevation').build(),
           pressedElevation: p.get('pressedElevation').build(),
         );
-    matePut('enabledThumbRadius', enabledThumbRadius);
-    matePut('disabledThumbRadius', disabledThumbRadius);
-    matePut('elevation', elevation);
-    matePut('pressedElevation', pressedElevation);
+    mateUse(
+      'enabledThumbRadius',
+      enabledThumbRadius,
+      isNamed: true,
+      defaultValue: 10.0,
+    );
+    mateUse(
+      'disabledThumbRadius',
+      disabledThumbRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressedElevation',
+      pressedElevation,
+      isNamed: true,
+      defaultValue: 6.0,
+    );
   }
 }
 
@@ -292,33 +461,54 @@ class RoundSliderThumbShape$Mate extends RoundSliderThumbShape with Mate {
 class RoundRangeSliderThumbShape$Mate extends RoundRangeSliderThumbShape with Mate {
   /// RoundRangeSliderThumbShape RoundRangeSliderThumbShape({double enabledThumbRadius = 10.0, double? disabledThumbRadius, double elevation = 1.0, double pressedElevation = 6.0})
   RoundRangeSliderThumbShape$Mate({
-    /// optionalParameters: {double enabledThumbRadius = 10.0} , hasDefaultValue:true, defaultValueCode:10.0
-    required double enabledThumbRadius,
+    /// optionalParameters: {double enabledThumbRadius = 10.0} , default:processed=DoubleLiteralImpl
+    double enabledThumbRadius = 10.0,
 
-    /// optionalParameters: {double? disabledThumbRadius} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? disabledThumbRadius} , default:none
     double? disabledThumbRadius,
 
-    /// optionalParameters: {double elevation = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double elevation,
+    /// optionalParameters: {double elevation = 1.0} , default:processed=DoubleLiteralImpl
+    double elevation = 1.0,
 
-    /// optionalParameters: {double pressedElevation = 6.0} , hasDefaultValue:true, defaultValueCode:6.0
-    required double pressedElevation,
+    /// optionalParameters: {double pressedElevation = 6.0} , default:processed=DoubleLiteralImpl
+    double pressedElevation = 6.0,
   }) : super(
           enabledThumbRadius: enabledThumbRadius,
           disabledThumbRadius: disabledThumbRadius,
           elevation: elevation,
           pressedElevation: pressedElevation,
         ) {
+    mateCreateName = 'RoundRangeSliderThumbShape';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundRangeSliderThumbShape$Mate(
           enabledThumbRadius: p.get('enabledThumbRadius').build(),
           disabledThumbRadius: p.get('disabledThumbRadius').build(),
           elevation: p.get('elevation').build(),
           pressedElevation: p.get('pressedElevation').build(),
         );
-    matePut('enabledThumbRadius', enabledThumbRadius);
-    matePut('disabledThumbRadius', disabledThumbRadius);
-    matePut('elevation', elevation);
-    matePut('pressedElevation', pressedElevation);
+    mateUse(
+      'enabledThumbRadius',
+      enabledThumbRadius,
+      isNamed: true,
+      defaultValue: 10.0,
+    );
+    mateUse(
+      'disabledThumbRadius',
+      disabledThumbRadius,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'pressedElevation',
+      pressedElevation,
+      isNamed: true,
+      defaultValue: 6.0,
+    );
   }
 }
 
@@ -327,11 +517,18 @@ class RoundSliderOverlayShape$Mate extends RoundSliderOverlayShape with Mate {
   /// RoundSliderOverlayShape RoundSliderOverlayShape({double overlayRadius = 24.0})
   RoundSliderOverlayShape$Mate(
       {
-      /// optionalParameters: {double overlayRadius = 24.0} , hasDefaultValue:true, defaultValueCode:24.0
-      required double overlayRadius})
+      /// optionalParameters: {double overlayRadius = 24.0} , default:processed=DoubleLiteralImpl
+      double overlayRadius = 24.0})
       : super(overlayRadius: overlayRadius) {
+    mateCreateName = 'RoundSliderOverlayShape';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderOverlayShape$Mate(overlayRadius: p.get('overlayRadius').build());
-    matePut('overlayRadius', overlayRadius);
+    mateUse(
+      'overlayRadius',
+      overlayRadius,
+      isNamed: true,
+      defaultValue: 24.0,
+    );
   }
 }
 
@@ -348,12 +545,22 @@ class RangeValues$Mate extends RangeValues with Mate {
           start,
           end,
         ) {
+    mateCreateName = 'RangeValues';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RangeValues$Mate(
           p.get('start').value,
           p.get('end').value,
         );
-    matePut('start', start);
-    matePut('end', end);
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: false,
+    );
   }
 }
 
@@ -370,11 +577,21 @@ class RangeLabels$Mate extends RangeLabels with Mate {
           start,
           end,
         ) {
+    mateCreateName = 'RangeLabels';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RangeLabels$Mate(
           p.get('start').value,
           p.get('end').value,
         );
-    matePut('start', start);
-    matePut('end', end);
+    mateUse(
+      'start',
+      start,
+      isNamed: false,
+    );
+    mateUse(
+      'end',
+      end,
+      isNamed: false,
+    );
   }
 }

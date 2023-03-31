@@ -13,38 +13,38 @@ import 'package:flutter/src/widgets/framework.dart';
 class Card$Mate extends Card with Mate {
   /// Card Card({Key? key, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, ShapeBorder? shape, bool borderOnForeground = true, EdgeInsetsGeometry? margin, Clip? clipBehavior, Widget? child, bool semanticContainer = true})
   Card$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
 
-    /// optionalParameters: {Color? shadowColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? shadowColor} , default:none
     Color? shadowColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {bool borderOnForeground = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool borderOnForeground,
+    /// optionalParameters: {bool borderOnForeground = true} , default:processed=BooleanLiteralImpl
+    bool borderOnForeground = true,
 
-    /// optionalParameters: {EdgeInsetsGeometry? margin} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     EdgeInsetsGeometry? margin,
 
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {Widget? child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? child} , default:none
     Widget? child,
 
-    /// optionalParameters: {bool semanticContainer = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool semanticContainer,
+    /// optionalParameters: {bool semanticContainer = true} , default:processed=BooleanLiteralImpl
+    bool semanticContainer = true,
   }) : super(
           key: key,
           color: color,
@@ -58,6 +58,8 @@ class Card$Mate extends Card with Mate {
           child: child,
           semanticContainer: semanticContainer,
         ) {
+    mateCreateName = 'Card';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Card$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
@@ -71,16 +73,62 @@ class Card$Mate extends Card with Mate {
           child: p.get('child').build(),
           semanticContainer: p.get('semanticContainer').build(),
         );
-    matePut('key', key);
-    matePut('color', color);
-    matePut('shadowColor', shadowColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('elevation', elevation);
-    matePut('shape', shape);
-    matePut('borderOnForeground', borderOnForeground);
-    matePut('margin', margin);
-    matePut('clipBehavior', clipBehavior);
-    matePut('child', child);
-    matePut('semanticContainer', semanticContainer);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'shadowColor',
+      shadowColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'borderOnForeground',
+      borderOnForeground,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'margin',
+      margin,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'semanticContainer',
+      semanticContainer,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

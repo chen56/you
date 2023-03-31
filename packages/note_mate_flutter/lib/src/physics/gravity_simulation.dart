@@ -25,15 +25,33 @@ class GravitySimulation$Mate extends GravitySimulation with Mate {
           endDistance,
           velocity,
         ) {
+    mateCreateName = 'GravitySimulation';
+    matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => GravitySimulation$Mate(
           p.get('acceleration').value,
           p.get('distance').value,
           p.get('endDistance').value,
           p.get('velocity').value,
         );
-    matePut('acceleration', acceleration);
-    matePut('distance', distance);
-    matePut('endDistance', endDistance);
-    matePut('velocity', velocity);
+    mateUse(
+      'acceleration',
+      acceleration,
+      isNamed: false,
+    );
+    mateUse(
+      'distance',
+      distance,
+      isNamed: false,
+    );
+    mateUse(
+      'endDistance',
+      endDistance,
+      isNamed: false,
+    );
+    mateUse(
+      'velocity',
+      velocity,
+      isNamed: false,
+    );
   }
 }

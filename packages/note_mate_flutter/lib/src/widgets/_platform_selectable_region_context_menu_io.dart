@@ -9,20 +9,30 @@ import 'package:flutter/src/foundation/key.dart';
 class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionContextMenu with Mate {
   /// PlatformSelectableRegionContextMenu PlatformSelectableRegionContextMenu({required Widget child, Key? key})
   PlatformSelectableRegionContextMenu$Mate({
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
   }) : super(
           child: child,
           key: key,
         ) {
+    mateCreateName = 'PlatformSelectableRegionContextMenu';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformSelectableRegionContextMenu$Mate(
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    matePut('child', child);
-    matePut('key', key);
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
   }
 }

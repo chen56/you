@@ -13,40 +13,40 @@ import 'package:flutter/src/widgets/framework.dart';
 class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
   /// ExpansionTileThemeData ExpansionTileThemeData({Color? backgroundColor, Color? collapsedBackgroundColor, EdgeInsetsGeometry? tilePadding, AlignmentGeometry? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? iconColor, Color? collapsedIconColor, Color? textColor, Color? collapsedTextColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior})
   ExpansionTileThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? collapsedBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedBackgroundColor} , default:none
     Color? collapsedBackgroundColor,
 
-    /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , default:none
     EdgeInsetsGeometry? tilePadding,
 
-    /// optionalParameters: {AlignmentGeometry? expandedAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {AlignmentGeometry? expandedAlignment} , default:none
     AlignmentGeometry? expandedAlignment,
 
-    /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , default:none
     EdgeInsetsGeometry? childrenPadding,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , default:none
     Color? iconColor,
 
-    /// optionalParameters: {Color? collapsedIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedIconColor} , default:none
     Color? collapsedIconColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {Color? collapsedTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedTextColor} , default:none
     Color? collapsedTextColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ShapeBorder? collapsedShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? collapsedShape} , default:none
     ShapeBorder? collapsedShape,
 
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
   }) : super(
           backgroundColor: backgroundColor,
@@ -62,6 +62,8 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
           collapsedShape: collapsedShape,
           clipBehavior: clipBehavior,
         ) {
+    mateCreateName = 'ExpansionTileThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTileThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           collapsedBackgroundColor: p.get('collapsedBackgroundColor').build(),
@@ -76,18 +78,66 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
           collapsedShape: p.get('collapsedShape').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('collapsedBackgroundColor', collapsedBackgroundColor);
-    matePut('tilePadding', tilePadding);
-    matePut('expandedAlignment', expandedAlignment);
-    matePut('childrenPadding', childrenPadding);
-    matePut('iconColor', iconColor);
-    matePut('collapsedIconColor', collapsedIconColor);
-    matePut('textColor', textColor);
-    matePut('collapsedTextColor', collapsedTextColor);
-    matePut('shape', shape);
-    matePut('collapsedShape', collapsedShape);
-    matePut('clipBehavior', clipBehavior);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedBackgroundColor',
+      collapsedBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'tilePadding',
+      tilePadding,
+      isNamed: true,
+    );
+    mateUse(
+      'expandedAlignment',
+      expandedAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'childrenPadding',
+      childrenPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedIconColor',
+      collapsedIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedTextColor',
+      collapsedTextColor,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedShape',
+      collapsedShape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
   }
 }
 
@@ -95,26 +145,40 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
 class ExpansionTileTheme$Mate extends ExpansionTileTheme with Mate {
   /// ExpansionTileTheme ExpansionTileTheme({Key? key, required ExpansionTileThemeData data, required Widget child})
   ExpansionTileTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ExpansionTileThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ExpansionTileThemeData data} , default:none
     required ExpansionTileThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'ExpansionTileTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTileTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

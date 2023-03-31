@@ -12,7 +12,13 @@ class DisposableBuildContext$Mate<T extends State<StatefulWidget>> extends Dispo
       /// requiredParameters: T _state
       T _state)
       : super(_state) {
+    mateCreateName = 'DisposableBuildContext';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DisposableBuildContext$Mate<T>(p.get('_state').value);
-    matePut('_state', _state);
+    mateUse(
+      '_state',
+      _state,
+      isNamed: false,
+    );
   }
 }

@@ -9,16 +9,16 @@ import 'package:flutter/src/foundation/key.dart';
 class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
   /// ActionIconThemeData ActionIconThemeData({Widget Function(BuildContext)? backButtonIconBuilder, Widget Function(BuildContext)? closeButtonIconBuilder, Widget Function(BuildContext)? drawerButtonIconBuilder, Widget Function(BuildContext)? endDrawerButtonIconBuilder})
   ActionIconThemeData$Mate({
-    /// optionalParameters: {Widget Function(BuildContext)? backButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? backButtonIconBuilder} , default:none
     WidgetBuilder? backButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? closeButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? closeButtonIconBuilder} , default:none
     WidgetBuilder? closeButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? drawerButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? drawerButtonIconBuilder} , default:none
     WidgetBuilder? drawerButtonIconBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext)? endDrawerButtonIconBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext)? endDrawerButtonIconBuilder} , default:none
     WidgetBuilder? endDrawerButtonIconBuilder,
   }) : super(
           backButtonIconBuilder: backButtonIconBuilder,
@@ -26,16 +26,34 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
           drawerButtonIconBuilder: drawerButtonIconBuilder,
           endDrawerButtonIconBuilder: endDrawerButtonIconBuilder,
         ) {
+    mateCreateName = 'ActionIconThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ActionIconThemeData$Mate(
           backButtonIconBuilder: p.get('backButtonIconBuilder').build(),
           closeButtonIconBuilder: p.get('closeButtonIconBuilder').build(),
           drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
           endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
         );
-    matePut('backButtonIconBuilder', backButtonIconBuilder);
-    matePut('closeButtonIconBuilder', closeButtonIconBuilder);
-    matePut('drawerButtonIconBuilder', drawerButtonIconBuilder);
-    matePut('endDrawerButtonIconBuilder', endDrawerButtonIconBuilder);
+    mateUse(
+      'backButtonIconBuilder',
+      backButtonIconBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'closeButtonIconBuilder',
+      closeButtonIconBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'drawerButtonIconBuilder',
+      drawerButtonIconBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'endDrawerButtonIconBuilder',
+      endDrawerButtonIconBuilder,
+      isNamed: true,
+    );
   }
 }
 
@@ -43,26 +61,40 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
 class ActionIconTheme$Mate extends ActionIconTheme with Mate {
   /// ActionIconTheme ActionIconTheme({Key? key, required ActionIconThemeData data, required Widget child})
   ActionIconTheme$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ActionIconThemeData data} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ActionIconThemeData data} , default:none
     required ActionIconThemeData data,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           data: data,
           child: child,
         ) {
+    mateCreateName = 'ActionIconTheme';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ActionIconTheme$Mate(
           key: p.get('key').build(),
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('data', data);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'data',
+      data,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

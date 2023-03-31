@@ -14,31 +14,31 @@ import 'package:flutter/src/widgets/framework.dart';
 class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mate {
   /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
   RawAutocomplete$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder} , default:none
     required AutocompleteOptionsViewBuilder<T> optionsViewBuilder,
 
-    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , default:none
     required AutocompleteOptionsBuilder<T> optionsBuilder,
 
-    /// optionalParameters: {String Function(T) displayStringForOption = defaultStringForOption} , hasDefaultValue:true, defaultValueCode:defaultStringForOption
+    /// optionalParameters: {String Function(T) displayStringForOption = defaultStringForOption} , default:unprocessed=SimpleIdentifierImpl
     required AutocompleteOptionToString<T> displayStringForOption,
 
-    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder} , default:none
     AutocompleteFieldViewBuilder? fieldViewBuilder,
 
-    /// optionalParameters: {FocusNode? focusNode} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {FocusNode? focusNode} , default:none
     FocusNode? focusNode,
 
-    /// optionalParameters: {void Function(T)? onSelected} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(T)? onSelected} , default:none
     AutocompleteOnSelected<T>? onSelected,
 
-    /// optionalParameters: {TextEditingController? textEditingController} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextEditingController? textEditingController} , default:none
     TextEditingController? textEditingController,
 
-    /// optionalParameters: {TextEditingValue? initialValue} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextEditingValue? initialValue} , default:none
     TextEditingValue? initialValue,
   }) : super(
           key: key,
@@ -51,6 +51,8 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
           textEditingController: textEditingController,
           initialValue: initialValue,
         ) {
+    mateCreateName = 'RawAutocomplete';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawAutocomplete$Mate<T>(
           key: p.get('key').build(),
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
@@ -62,15 +64,51 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
           textEditingController: p.get('textEditingController').build(),
           initialValue: p.get('initialValue').build(),
         );
-    matePut('key', key);
-    matePut('optionsViewBuilder', optionsViewBuilder);
-    matePut('optionsBuilder', optionsBuilder);
-    matePut('displayStringForOption', displayStringForOption);
-    matePut('fieldViewBuilder', fieldViewBuilder);
-    matePut('focusNode', focusNode);
-    matePut('onSelected', onSelected);
-    matePut('textEditingController', textEditingController);
-    matePut('initialValue', initialValue);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsViewBuilder',
+      optionsViewBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'optionsBuilder',
+      optionsBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'displayStringForOption',
+      displayStringForOption,
+      isNamed: true,
+    );
+    mateUse(
+      'fieldViewBuilder',
+      fieldViewBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'focusNode',
+      focusNode,
+      isNamed: true,
+    );
+    mateUse(
+      'onSelected',
+      onSelected,
+      isNamed: true,
+    );
+    mateUse(
+      'textEditingController',
+      textEditingController,
+      isNamed: true,
+    );
+    mateUse(
+      'initialValue',
+      initialValue,
+      isNamed: true,
+    );
   }
 }
 
@@ -78,26 +116,40 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
 class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption with Mate {
   /// AutocompleteHighlightedOption AutocompleteHighlightedOption({Key? key, required ValueNotifier<int> highlightIndexNotifier, required Widget child})
   AutocompleteHighlightedOption$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required ValueNotifier<int> highlightIndexNotifier} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required ValueNotifier<int> highlightIndexNotifier} , default:none
     required ValueNotifier<int> highlightIndexNotifier,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
   }) : super(
           key: key,
           highlightIndexNotifier: highlightIndexNotifier,
           child: child,
         ) {
+    mateCreateName = 'AutocompleteHighlightedOption';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutocompleteHighlightedOption$Mate(
           key: p.get('key').build(),
           highlightIndexNotifier: p.get('highlightIndexNotifier').build(),
           child: p.get('child').build(),
         );
-    matePut('key', key);
-    matePut('highlightIndexNotifier', highlightIndexNotifier);
-    matePut('child', child);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'highlightIndexNotifier',
+      highlightIndexNotifier,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
   }
 }

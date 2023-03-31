@@ -4,21 +4,22 @@ import 'package:flutter/src/painting/borders.dart';
 import 'package:note/mate.dart';
 import 'dart:ui';
 import 'dart:core';
+import 'package:flutter/painting.dart';
 
 /// class BorderSide with Diagnosticable
 class BorderSide$Mate extends BorderSide with Mate {
   /// BorderSide BorderSide({Color color = const Color(0xFF000000), double width = 1.0, BorderStyle style = BorderStyle.solid, double strokeAlign = strokeAlignInside})
   BorderSide$Mate({
-    /// optionalParameters: {Color color = const Color(0xFF000000)} , hasDefaultValue:true, defaultValueCode:const Color(0xFF000000)
+    /// optionalParameters: {Color color = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
     required Color color,
 
-    /// optionalParameters: {double width = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double width,
+    /// optionalParameters: {double width = 1.0} , default:processed=DoubleLiteralImpl
+    double width = 1.0,
 
-    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , hasDefaultValue:true, defaultValueCode:BorderStyle.solid
-    required BorderStyle style,
+    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , default:processed=PrefixedIdentifierImpl
+    BorderStyle style = BorderStyle.solid,
 
-    /// optionalParameters: {double strokeAlign = strokeAlignInside} , hasDefaultValue:true, defaultValueCode:strokeAlignInside
+    /// optionalParameters: {double strokeAlign = strokeAlignInside} , default:unprocessed=SimpleIdentifierImpl
     required double strokeAlign,
   }) : super(
           color: color,
@@ -26,15 +27,35 @@ class BorderSide$Mate extends BorderSide with Mate {
           style: style,
           strokeAlign: strokeAlign,
         ) {
+    mateCreateName = 'BorderSide';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderSide$Mate(
           color: p.get('color').build(),
           width: p.get('width').build(),
           style: p.get('style').build(),
           strokeAlign: p.get('strokeAlign').build(),
         );
-    matePut('color', color);
-    matePut('width', width);
-    matePut('style', style);
-    matePut('strokeAlign', strokeAlign);
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
+    mateUse(
+      'width',
+      width,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'style',
+      style,
+      isNamed: true,
+      defaultValue: BorderStyle.solid,
+    );
+    mateUse(
+      'strokeAlign',
+      strokeAlign,
+      isNamed: true,
+    );
   }
 }

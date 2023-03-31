@@ -3,16 +3,24 @@
 import 'package:flutter/src/painting/stadium_border.dart';
 import 'package:note/mate.dart';
 import 'package:flutter/src/painting/borders.dart';
+import 'package:flutter/painting.dart';
 
 /// class StadiumBorder extends OutlinedBorder
 class StadiumBorder$Mate extends StadiumBorder with Mate {
   /// StadiumBorder StadiumBorder({BorderSide side = BorderSide.none})
   StadiumBorder$Mate(
       {
-      /// optionalParameters: {BorderSide side = BorderSide.none} , hasDefaultValue:true, defaultValueCode:BorderSide.none
-      required BorderSide side})
+      /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+      BorderSide side = BorderSide.none})
       : super(side: side) {
+    mateCreateName = 'StadiumBorder';
+    matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StadiumBorder$Mate(side: p.get('side').build());
-    matePut('side', side);
+    mateUse(
+      'side',
+      side,
+      isNamed: true,
+      defaultValue: BorderSide.none,
+    );
   }
 }

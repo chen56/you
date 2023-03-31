@@ -8,20 +8,30 @@ import 'dart:ui';
 class TextSelectionToolbarAnchors$Mate extends TextSelectionToolbarAnchors with Mate {
   /// TextSelectionToolbarAnchors TextSelectionToolbarAnchors({required Offset primaryAnchor, Offset? secondaryAnchor})
   TextSelectionToolbarAnchors$Mate({
-    /// optionalParameters: {required Offset primaryAnchor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Offset primaryAnchor} , default:none
     required Offset primaryAnchor,
 
-    /// optionalParameters: {Offset? secondaryAnchor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Offset? secondaryAnchor} , default:none
     Offset? secondaryAnchor,
   }) : super(
           primaryAnchor: primaryAnchor,
           secondaryAnchor: secondaryAnchor,
         ) {
+    mateCreateName = 'TextSelectionToolbarAnchors';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextSelectionToolbarAnchors$Mate(
           primaryAnchor: p.get('primaryAnchor').build(),
           secondaryAnchor: p.get('secondaryAnchor').build(),
         );
-    matePut('primaryAnchor', primaryAnchor);
-    matePut('secondaryAnchor', secondaryAnchor);
+    mateUse(
+      'primaryAnchor',
+      primaryAnchor,
+      isNamed: true,
+    );
+    mateUse(
+      'secondaryAnchor',
+      secondaryAnchor,
+      isNamed: true,
+    );
   }
 }

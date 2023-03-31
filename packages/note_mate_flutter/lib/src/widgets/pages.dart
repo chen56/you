@@ -11,41 +11,41 @@ import 'dart:ui';
 class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate {
   /// PageRouteBuilder<T> PageRouteBuilder({RouteSettings? settings, required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder, Widget Function(BuildContext, Animation<double>, Animation<double>, Widget) transitionsBuilder = _defaultTransitionsBuilder, Duration transitionDuration = const Duration(milliseconds: 300), Duration reverseTransitionDuration = const Duration(milliseconds: 300), bool opaque = true, bool barrierDismissible = false, Color? barrierColor, String? barrierLabel, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true})
   PageRouteBuilder$Mate({
-    /// optionalParameters: {RouteSettings? settings} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {RouteSettings? settings} , default:none
     RouteSettings? settings,
 
-    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder} , default:none
     required RoutePageBuilder pageBuilder,
 
-    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget) transitionsBuilder = _defaultTransitionsBuilder} , hasDefaultValue:true, defaultValueCode:_defaultTransitionsBuilder
+    /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget) transitionsBuilder = _defaultTransitionsBuilder} , default:unprocessed=SimpleIdentifierImpl
     required RouteTransitionsBuilder transitionsBuilder,
 
-    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 300)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 300)
+    /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration transitionDuration,
 
-    /// optionalParameters: {Duration reverseTransitionDuration = const Duration(milliseconds: 300)} , hasDefaultValue:true, defaultValueCode:const Duration(milliseconds: 300)
+    /// optionalParameters: {Duration reverseTransitionDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     required Duration reverseTransitionDuration,
 
-    /// optionalParameters: {bool opaque = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool opaque,
+    /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
+    bool opaque = true,
 
-    /// optionalParameters: {bool barrierDismissible = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool barrierDismissible,
+    /// optionalParameters: {bool barrierDismissible = false} , default:processed=BooleanLiteralImpl
+    bool barrierDismissible = false,
 
-    /// optionalParameters: {Color? barrierColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? barrierColor} , default:none
     Color? barrierColor,
 
-    /// optionalParameters: {String? barrierLabel} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {String? barrierLabel} , default:none
     String? barrierLabel,
 
-    /// optionalParameters: {bool maintainState = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool maintainState,
+    /// optionalParameters: {bool maintainState = true} , default:processed=BooleanLiteralImpl
+    bool maintainState = true,
 
-    /// optionalParameters: {bool fullscreenDialog = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool fullscreenDialog,
+    /// optionalParameters: {bool fullscreenDialog = false} , default:processed=BooleanLiteralImpl
+    bool fullscreenDialog = false,
 
-    /// optionalParameters: {bool allowSnapshotting = true} , hasDefaultValue:true, defaultValueCode:true
-    required bool allowSnapshotting,
+    /// optionalParameters: {bool allowSnapshotting = true} , default:processed=BooleanLiteralImpl
+    bool allowSnapshotting = true,
   }) : super(
           settings: settings,
           pageBuilder: pageBuilder,
@@ -60,6 +60,8 @@ class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate {
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
+    mateCreateName = 'PageRouteBuilder';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageRouteBuilder$Mate<T>(
           settings: p.get('settings').build(),
           pageBuilder: p.get('pageBuilder').build(),
@@ -74,17 +76,70 @@ class PageRouteBuilder$Mate<T> extends PageRouteBuilder<T> with Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    matePut('settings', settings);
-    matePut('pageBuilder', pageBuilder);
-    matePut('transitionsBuilder', transitionsBuilder);
-    matePut('transitionDuration', transitionDuration);
-    matePut('reverseTransitionDuration', reverseTransitionDuration);
-    matePut('opaque', opaque);
-    matePut('barrierDismissible', barrierDismissible);
-    matePut('barrierColor', barrierColor);
-    matePut('barrierLabel', barrierLabel);
-    matePut('maintainState', maintainState);
-    matePut('fullscreenDialog', fullscreenDialog);
-    matePut('allowSnapshotting', allowSnapshotting);
+    mateUse(
+      'settings',
+      settings,
+      isNamed: true,
+    );
+    mateUse(
+      'pageBuilder',
+      pageBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionsBuilder',
+      transitionsBuilder,
+      isNamed: true,
+    );
+    mateUse(
+      'transitionDuration',
+      transitionDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'reverseTransitionDuration',
+      reverseTransitionDuration,
+      isNamed: true,
+    );
+    mateUse(
+      'opaque',
+      opaque,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'barrierDismissible',
+      barrierDismissible,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'barrierColor',
+      barrierColor,
+      isNamed: true,
+    );
+    mateUse(
+      'barrierLabel',
+      barrierLabel,
+      isNamed: true,
+    );
+    mateUse(
+      'maintainState',
+      maintainState,
+      isNamed: true,
+      defaultValue: true,
+    );
+    mateUse(
+      'fullscreenDialog',
+      fullscreenDialog,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'allowSnapshotting',
+      allowSnapshotting,
+      isNamed: true,
+      defaultValue: true,
+    );
   }
 }

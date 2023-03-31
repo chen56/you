@@ -10,60 +10,97 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
   FilteringTextInputFormatter$Mate(
     /// requiredParameters: Pattern filterPattern
     Pattern filterPattern, {
-    /// optionalParameters: {required bool allow} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required bool allow} , default:none
     required bool allow,
 
-    /// optionalParameters: {String replacementString = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String replacementString,
+    /// optionalParameters: {String replacementString = ''} , default:processed=SimpleStringLiteralImpl
+    String replacementString = '',
   }) : super(
           filterPattern,
           allow: allow,
           replacementString: replacementString,
         ) {
+    mateCreateName = 'FilteringTextInputFormatter';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FilteringTextInputFormatter$Mate(
           p.get('filterPattern').value,
           allow: p.get('allow').build(),
           replacementString: p.get('replacementString').build(),
         );
-    matePut('filterPattern', filterPattern);
-    matePut('allow', allow);
-    matePut('replacementString', replacementString);
+    mateUse(
+      'filterPattern',
+      filterPattern,
+      isNamed: false,
+    );
+    mateUse(
+      'allow',
+      allow,
+      isNamed: true,
+    );
+    mateUse(
+      'replacementString',
+      replacementString,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.allow(Pattern filterPattern, {String replacementString = ''})
   FilteringTextInputFormatter$Mate.allow(
     /// requiredParameters: Pattern filterPattern
     Pattern filterPattern, {
-    /// optionalParameters: {String replacementString = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String replacementString,
+    /// optionalParameters: {String replacementString = ''} , default:processed=SimpleStringLiteralImpl
+    String replacementString = '',
   }) : super.allow(
           filterPattern,
           replacementString: replacementString,
         ) {
+    mateCreateName = 'FilteringTextInputFormatter.allow';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FilteringTextInputFormatter$Mate.allow(
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    matePut('filterPattern', filterPattern);
-    matePut('replacementString', replacementString);
+    mateUse(
+      'filterPattern',
+      filterPattern,
+      isNamed: false,
+    );
+    mateUse(
+      'replacementString',
+      replacementString,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 
   /// FilteringTextInputFormatter FilteringTextInputFormatter.deny(Pattern filterPattern, {String replacementString = ''})
   FilteringTextInputFormatter$Mate.deny(
     /// requiredParameters: Pattern filterPattern
     Pattern filterPattern, {
-    /// optionalParameters: {String replacementString = ''} , hasDefaultValue:true, defaultValueCode:''
-    required String replacementString,
+    /// optionalParameters: {String replacementString = ''} , default:processed=SimpleStringLiteralImpl
+    String replacementString = '',
   }) : super.deny(
           filterPattern,
           replacementString: replacementString,
         ) {
+    mateCreateName = 'FilteringTextInputFormatter.deny';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FilteringTextInputFormatter$Mate.deny(
           p.get('filterPattern').value,
           replacementString: p.get('replacementString').build(),
         );
-    matePut('filterPattern', filterPattern);
-    matePut('replacementString', replacementString);
+    mateUse(
+      'filterPattern',
+      filterPattern,
+      isNamed: false,
+    );
+    mateUse(
+      'replacementString',
+      replacementString,
+      isNamed: true,
+      defaultValue: '',
+    );
   }
 }
 
@@ -73,17 +110,27 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
   LengthLimitingTextInputFormatter$Mate(
     /// requiredParameters: int? maxLength
     int? maxLength, {
-    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {MaxLengthEnforcement? maxLengthEnforcement} , default:none
     MaxLengthEnforcement? maxLengthEnforcement,
   }) : super(
           maxLength,
           maxLengthEnforcement: maxLengthEnforcement,
         ) {
+    mateCreateName = 'LengthLimitingTextInputFormatter';
+    matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => LengthLimitingTextInputFormatter$Mate(
           p.get('maxLength').value,
           maxLengthEnforcement: p.get('maxLengthEnforcement').build(),
         );
-    matePut('maxLength', maxLength);
-    matePut('maxLengthEnforcement', maxLengthEnforcement);
+    mateUse(
+      'maxLength',
+      maxLength,
+      isNamed: false,
+    );
+    mateUse(
+      'maxLengthEnforcement',
+      maxLengthEnforcement,
+      isNamed: true,
+    );
   }
 }

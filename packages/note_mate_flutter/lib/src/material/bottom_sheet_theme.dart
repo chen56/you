@@ -11,31 +11,31 @@ import 'package:flutter/src/rendering/box.dart';
 class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate {
   /// BottomSheetThemeData BottomSheetThemeData({Color? backgroundColor, Color? surfaceTintColor, double? elevation, Color? modalBackgroundColor, Color? modalBarrierColor, double? modalElevation, ShapeBorder? shape, Clip? clipBehavior, BoxConstraints? constraints})
   BottomSheetThemeData$Mate({
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? surfaceTintColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? surfaceTintColor} , default:none
     Color? surfaceTintColor,
 
-    /// optionalParameters: {double? elevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? elevation} , default:none
     double? elevation,
 
-    /// optionalParameters: {Color? modalBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? modalBackgroundColor} , default:none
     Color? modalBackgroundColor,
 
-    /// optionalParameters: {Color? modalBarrierColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? modalBarrierColor} , default:none
     Color? modalBarrierColor,
 
-    /// optionalParameters: {double? modalElevation} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {double? modalElevation} , default:none
     double? modalElevation,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {BoxConstraints? constraints} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {BoxConstraints? constraints} , default:none
     BoxConstraints? constraints,
   }) : super(
           backgroundColor: backgroundColor,
@@ -48,6 +48,8 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate {
           clipBehavior: clipBehavior,
           constraints: constraints,
         ) {
+    mateCreateName = 'BottomSheetThemeData';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomSheetThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
           surfaceTintColor: p.get('surfaceTintColor').build(),
@@ -59,14 +61,50 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           constraints: p.get('constraints').build(),
         );
-    matePut('backgroundColor', backgroundColor);
-    matePut('surfaceTintColor', surfaceTintColor);
-    matePut('elevation', elevation);
-    matePut('modalBackgroundColor', modalBackgroundColor);
-    matePut('modalBarrierColor', modalBarrierColor);
-    matePut('modalElevation', modalElevation);
-    matePut('shape', shape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('constraints', constraints);
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'surfaceTintColor',
+      surfaceTintColor,
+      isNamed: true,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+    );
+    mateUse(
+      'modalBackgroundColor',
+      modalBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'modalBarrierColor',
+      modalBarrierColor,
+      isNamed: true,
+    );
+    mateUse(
+      'modalElevation',
+      modalElevation,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'constraints',
+      constraints,
+      isNamed: true,
+    );
   }
 }

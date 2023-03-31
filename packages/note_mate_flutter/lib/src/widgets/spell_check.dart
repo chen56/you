@@ -10,26 +10,40 @@ import 'package:flutter/src/widgets/editable_text.dart';
 class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
   /// SpellCheckConfiguration SpellCheckConfiguration({SpellCheckService? spellCheckService, TextStyle? misspelledTextStyle, Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder})
   SpellCheckConfiguration$Mate({
-    /// optionalParameters: {SpellCheckService? spellCheckService} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {SpellCheckService? spellCheckService} , default:none
     SpellCheckService? spellCheckService,
 
-    /// optionalParameters: {TextStyle? misspelledTextStyle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {TextStyle? misspelledTextStyle} , default:none
     TextStyle? misspelledTextStyle,
 
-    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder} , default:none
     EditableTextContextMenuBuilder? spellCheckSuggestionsToolbarBuilder,
   }) : super(
           spellCheckService: spellCheckService,
           misspelledTextStyle: misspelledTextStyle,
           spellCheckSuggestionsToolbarBuilder: spellCheckSuggestionsToolbarBuilder,
         ) {
+    mateCreateName = 'SpellCheckConfiguration';
+    matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SpellCheckConfiguration$Mate(
           spellCheckService: p.get('spellCheckService').build(),
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
           spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
-    matePut('spellCheckService', spellCheckService);
-    matePut('misspelledTextStyle', misspelledTextStyle);
-    matePut('spellCheckSuggestionsToolbarBuilder', spellCheckSuggestionsToolbarBuilder);
+    mateUse(
+      'spellCheckService',
+      spellCheckService,
+      isNamed: true,
+    );
+    mateUse(
+      'misspelledTextStyle',
+      misspelledTextStyle,
+      isNamed: true,
+    );
+    mateUse(
+      'spellCheckSuggestionsToolbarBuilder',
+      spellCheckSuggestionsToolbarBuilder,
+      isNamed: true,
+    );
   }
 }

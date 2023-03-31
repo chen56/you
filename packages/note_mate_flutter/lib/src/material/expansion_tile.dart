@@ -17,73 +17,73 @@ import 'package:flutter/src/material/list_tile.dart';
 class ExpansionTile$Mate extends ExpansionTile with Mate {
   /// ExpansionTile ExpansionTile({Key? key, Widget? leading, required Widget title, Widget? subtitle, void Function(bool)? onExpansionChanged, List<Widget> children = const <Widget>[], Widget? trailing, bool initiallyExpanded = false, bool maintainState = false, EdgeInsetsGeometry? tilePadding, CrossAxisAlignment? expandedCrossAxisAlignment, Alignment? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? backgroundColor, Color? collapsedBackgroundColor, Color? textColor, Color? collapsedTextColor, Color? iconColor, Color? collapsedIconColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior, ListTileControlAffinity? controlAffinity})
   ExpansionTile$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Widget? leading} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? leading} , default:none
     Widget? leading,
 
-    /// optionalParameters: {required Widget title} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget title} , default:none
     required Widget title,
 
-    /// optionalParameters: {Widget? subtitle} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? subtitle} , default:none
     Widget? subtitle,
 
-    /// optionalParameters: {void Function(bool)? onExpansionChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(bool)? onExpansionChanged} , default:none
     ValueChanged<bool>? onExpansionChanged,
 
-    /// optionalParameters: {List<Widget> children = const <Widget>[]} , hasDefaultValue:true, defaultValueCode:const <Widget>[]
+    /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
 
-    /// optionalParameters: {Widget? trailing} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Widget? trailing} , default:none
     Widget? trailing,
 
-    /// optionalParameters: {bool initiallyExpanded = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool initiallyExpanded,
+    /// optionalParameters: {bool initiallyExpanded = false} , default:processed=BooleanLiteralImpl
+    bool initiallyExpanded = false,
 
-    /// optionalParameters: {bool maintainState = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool maintainState,
+    /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
+    bool maintainState = false,
 
-    /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , default:none
     EdgeInsetsGeometry? tilePadding,
 
-    /// optionalParameters: {CrossAxisAlignment? expandedCrossAxisAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {CrossAxisAlignment? expandedCrossAxisAlignment} , default:none
     CrossAxisAlignment? expandedCrossAxisAlignment,
 
-    /// optionalParameters: {Alignment? expandedAlignment} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Alignment? expandedAlignment} , default:none
     Alignment? expandedAlignment,
 
-    /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , default:none
     EdgeInsetsGeometry? childrenPadding,
 
-    /// optionalParameters: {Color? backgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? backgroundColor} , default:none
     Color? backgroundColor,
 
-    /// optionalParameters: {Color? collapsedBackgroundColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedBackgroundColor} , default:none
     Color? collapsedBackgroundColor,
 
-    /// optionalParameters: {Color? textColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? textColor} , default:none
     Color? textColor,
 
-    /// optionalParameters: {Color? collapsedTextColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedTextColor} , default:none
     Color? collapsedTextColor,
 
-    /// optionalParameters: {Color? iconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? iconColor} , default:none
     Color? iconColor,
 
-    /// optionalParameters: {Color? collapsedIconColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? collapsedIconColor} , default:none
     Color? collapsedIconColor,
 
-    /// optionalParameters: {ShapeBorder? shape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? shape} , default:none
     ShapeBorder? shape,
 
-    /// optionalParameters: {ShapeBorder? collapsedShape} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ShapeBorder? collapsedShape} , default:none
     ShapeBorder? collapsedShape,
 
-    /// optionalParameters: {Clip? clipBehavior} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Clip? clipBehavior} , default:none
     Clip? clipBehavior,
 
-    /// optionalParameters: {ListTileControlAffinity? controlAffinity} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {ListTileControlAffinity? controlAffinity} , default:none
     ListTileControlAffinity? controlAffinity,
   }) : super(
           key: key,
@@ -110,6 +110,8 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           clipBehavior: clipBehavior,
           controlAffinity: controlAffinity,
         ) {
+    mateCreateName = 'ExpansionTile';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTile$Mate(
           key: p.get('key').build(),
           leading: p.get('leading').build(),
@@ -135,28 +137,122 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           controlAffinity: p.get('controlAffinity').build(),
         );
-    matePut('key', key);
-    matePut('leading', leading);
-    matePut('title', title);
-    matePut('subtitle', subtitle);
-    matePut('onExpansionChanged', onExpansionChanged);
-    matePut('children', children);
-    matePut('trailing', trailing);
-    matePut('initiallyExpanded', initiallyExpanded);
-    matePut('maintainState', maintainState);
-    matePut('tilePadding', tilePadding);
-    matePut('expandedCrossAxisAlignment', expandedCrossAxisAlignment);
-    matePut('expandedAlignment', expandedAlignment);
-    matePut('childrenPadding', childrenPadding);
-    matePut('backgroundColor', backgroundColor);
-    matePut('collapsedBackgroundColor', collapsedBackgroundColor);
-    matePut('textColor', textColor);
-    matePut('collapsedTextColor', collapsedTextColor);
-    matePut('iconColor', iconColor);
-    matePut('collapsedIconColor', collapsedIconColor);
-    matePut('shape', shape);
-    matePut('collapsedShape', collapsedShape);
-    matePut('clipBehavior', clipBehavior);
-    matePut('controlAffinity', controlAffinity);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'leading',
+      leading,
+      isNamed: true,
+    );
+    mateUse(
+      'title',
+      title,
+      isNamed: true,
+    );
+    mateUse(
+      'subtitle',
+      subtitle,
+      isNamed: true,
+    );
+    mateUse(
+      'onExpansionChanged',
+      onExpansionChanged,
+      isNamed: true,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'trailing',
+      trailing,
+      isNamed: true,
+    );
+    mateUse(
+      'initiallyExpanded',
+      initiallyExpanded,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'maintainState',
+      maintainState,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUse(
+      'tilePadding',
+      tilePadding,
+      isNamed: true,
+    );
+    mateUse(
+      'expandedCrossAxisAlignment',
+      expandedCrossAxisAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'expandedAlignment',
+      expandedAlignment,
+      isNamed: true,
+    );
+    mateUse(
+      'childrenPadding',
+      childrenPadding,
+      isNamed: true,
+    );
+    mateUse(
+      'backgroundColor',
+      backgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedBackgroundColor',
+      collapsedBackgroundColor,
+      isNamed: true,
+    );
+    mateUse(
+      'textColor',
+      textColor,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedTextColor',
+      collapsedTextColor,
+      isNamed: true,
+    );
+    mateUse(
+      'iconColor',
+      iconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedIconColor',
+      collapsedIconColor,
+      isNamed: true,
+    );
+    mateUse(
+      'shape',
+      shape,
+      isNamed: true,
+    );
+    mateUse(
+      'collapsedShape',
+      collapsedShape,
+      isNamed: true,
+    );
+    mateUse(
+      'clipBehavior',
+      clipBehavior,
+      isNamed: true,
+    );
+    mateUse(
+      'controlAffinity',
+      controlAffinity,
+      isNamed: true,
+    );
   }
 }

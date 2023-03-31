@@ -7,32 +7,47 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:ui';
 import 'dart:core';
 import 'package:flutter/src/painting/basic_types.dart';
+import 'package:flutter/painting.dart';
 
 /// class MaterialSlice extends MergeableMaterialItem
 class MaterialSlice$Mate extends MaterialSlice with Mate {
   /// MaterialSlice MaterialSlice({required LocalKey key, required Widget child, Color? color})
   MaterialSlice$Mate({
-    /// optionalParameters: {required LocalKey key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LocalKey key} , default:none
     required LocalKey key,
 
-    /// optionalParameters: {required Widget child} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required Widget child} , default:none
     required Widget child,
 
-    /// optionalParameters: {Color? color} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? color} , default:none
     Color? color,
   }) : super(
           key: key,
           child: child,
           color: color,
         ) {
+    mateCreateName = 'MaterialSlice';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialSlice$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
           color: p.get('color').build(),
         );
-    matePut('key', key);
-    matePut('child', child);
-    matePut('color', color);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'child',
+      child,
+      isNamed: true,
+    );
+    mateUse(
+      'color',
+      color,
+      isNamed: true,
+    );
   }
 }
 
@@ -40,21 +55,32 @@ class MaterialSlice$Mate extends MaterialSlice with Mate {
 class MaterialGap$Mate extends MaterialGap with Mate {
   /// MaterialGap MaterialGap({required LocalKey key, double size = 16.0})
   MaterialGap$Mate({
-    /// optionalParameters: {required LocalKey key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required LocalKey key} , default:none
     required LocalKey key,
 
-    /// optionalParameters: {double size = 16.0} , hasDefaultValue:true, defaultValueCode:16.0
-    required double size,
+    /// optionalParameters: {double size = 16.0} , default:processed=DoubleLiteralImpl
+    double size = 16.0,
   }) : super(
           key: key,
           size: size,
         ) {
+    mateCreateName = 'MaterialGap';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialGap$Mate(
           key: p.get('key').build(),
           size: p.get('size').build(),
         );
-    matePut('key', key);
-    matePut('size', size);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'size',
+      size,
+      isNamed: true,
+      defaultValue: 16.0,
+    );
   }
 }
 
@@ -62,22 +88,22 @@ class MaterialGap$Mate extends MaterialGap with Mate {
 class MergeableMaterial$Mate extends MergeableMaterial with Mate {
   /// MergeableMaterial MergeableMaterial({Key? key, Axis mainAxis = Axis.vertical, double elevation = 2, bool hasDividers = false, List<MergeableMaterialItem> children = const <MergeableMaterialItem>[], Color? dividerColor})
   MergeableMaterial$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {Axis mainAxis = Axis.vertical} , hasDefaultValue:true, defaultValueCode:Axis.vertical
-    required Axis mainAxis,
+    /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    Axis mainAxis = Axis.vertical,
 
-    /// optionalParameters: {double elevation = 2} , hasDefaultValue:true, defaultValueCode:2
-    required double elevation,
+    /// optionalParameters: {double elevation = 2} , default:processed=IntegerLiteralImpl
+    double elevation = 2,
 
-    /// optionalParameters: {bool hasDividers = false} , hasDefaultValue:true, defaultValueCode:false
-    required bool hasDividers,
+    /// optionalParameters: {bool hasDividers = false} , default:processed=BooleanLiteralImpl
+    bool hasDividers = false,
 
-    /// optionalParameters: {List<MergeableMaterialItem> children = const <MergeableMaterialItem>[]} , hasDefaultValue:true, defaultValueCode:const <MergeableMaterialItem>[]
+    /// optionalParameters: {List<MergeableMaterialItem> children = const <MergeableMaterialItem>[]} , default:unprocessed=ListLiteralImpl
     required List<MergeableMaterialItem> children,
 
-    /// optionalParameters: {Color? dividerColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? dividerColor} , default:none
     Color? dividerColor,
   }) : super(
           key: key,
@@ -87,6 +113,8 @@ class MergeableMaterial$Mate extends MergeableMaterial with Mate {
           children: children,
           dividerColor: dividerColor,
         ) {
+    mateCreateName = 'MergeableMaterial';
+    matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MergeableMaterial$Mate(
           key: p.get('key').build(),
           mainAxis: p.get('mainAxis').build(),
@@ -95,11 +123,38 @@ class MergeableMaterial$Mate extends MergeableMaterial with Mate {
           children: p.get('children').build(),
           dividerColor: p.get('dividerColor').build(),
         );
-    matePut('key', key);
-    matePut('mainAxis', mainAxis);
-    matePut('elevation', elevation);
-    matePut('hasDividers', hasDividers);
-    matePut('children', children);
-    matePut('dividerColor', dividerColor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'mainAxis',
+      mainAxis,
+      isNamed: true,
+      defaultValue: Axis.vertical,
+    );
+    mateUse(
+      'elevation',
+      elevation,
+      isNamed: true,
+      defaultValue: 2,
+    );
+    mateUse(
+      'hasDividers',
+      hasDividers,
+      isNamed: true,
+      defaultValue: false,
+    );
+    mateUseList(
+      'children',
+      children,
+      isNamed: true,
+    );
+    mateUse(
+      'dividerColor',
+      dividerColor,
+      isNamed: true,
+    );
   }
 }

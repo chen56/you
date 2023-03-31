@@ -6,40 +6,41 @@ import 'package:flutter/src/foundation/key.dart';
 import 'dart:core';
 import 'package:flutter/src/foundation/basic_types.dart';
 import 'dart:ui';
+import 'package:flutter/cupertino.dart';
 
 /// class CupertinoSlider extends StatefulWidget
 class CupertinoSlider$Mate extends CupertinoSlider with Mate {
   /// CupertinoSlider CupertinoSlider({Key? key, required double value, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, Color? activeColor, Color thumbColor = CupertinoColors.white})
   CupertinoSlider$Mate({
-    /// optionalParameters: {Key? key} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Key? key} , default:none
     Key? key,
 
-    /// optionalParameters: {required double value} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required double value} , default:none
     required double value,
 
-    /// optionalParameters: {required void Function(double)? onChanged} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {required void Function(double)? onChanged} , default:none
     required ValueChanged<double>? onChanged,
 
-    /// optionalParameters: {void Function(double)? onChangeStart} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(double)? onChangeStart} , default:none
     ValueChanged<double>? onChangeStart,
 
-    /// optionalParameters: {void Function(double)? onChangeEnd} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {void Function(double)? onChangeEnd} , default:none
     ValueChanged<double>? onChangeEnd,
 
-    /// optionalParameters: {double min = 0.0} , hasDefaultValue:true, defaultValueCode:0.0
-    required double min,
+    /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
+    double min = 0.0,
 
-    /// optionalParameters: {double max = 1.0} , hasDefaultValue:true, defaultValueCode:1.0
-    required double max,
+    /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
+    double max = 1.0,
 
-    /// optionalParameters: {int? divisions} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {int? divisions} , default:none
     int? divisions,
 
-    /// optionalParameters: {Color? activeColor} , hasDefaultValue:false, defaultValueCode:null
+    /// optionalParameters: {Color? activeColor} , default:none
     Color? activeColor,
 
-    /// optionalParameters: {Color thumbColor = CupertinoColors.white} , hasDefaultValue:true, defaultValueCode:CupertinoColors.white
-    required Color thumbColor,
+    /// optionalParameters: {Color thumbColor = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
+    Color thumbColor = CupertinoColors.white,
   }) : super(
           key: key,
           value: value,
@@ -52,6 +53,8 @@ class CupertinoSlider$Mate extends CupertinoSlider with Mate {
           activeColor: activeColor,
           thumbColor: thumbColor,
         ) {
+    mateCreateName = 'CupertinoSlider';
+    matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSlider$Mate(
           key: p.get('key').build(),
           value: p.get('value').build(),
@@ -64,15 +67,58 @@ class CupertinoSlider$Mate extends CupertinoSlider with Mate {
           activeColor: p.get('activeColor').build(),
           thumbColor: p.get('thumbColor').build(),
         );
-    matePut('key', key);
-    matePut('value', value);
-    matePut('onChanged', onChanged);
-    matePut('onChangeStart', onChangeStart);
-    matePut('onChangeEnd', onChangeEnd);
-    matePut('min', min);
-    matePut('max', max);
-    matePut('divisions', divisions);
-    matePut('activeColor', activeColor);
-    matePut('thumbColor', thumbColor);
+    mateUse(
+      'key',
+      key,
+      isNamed: true,
+    );
+    mateUse(
+      'value',
+      value,
+      isNamed: true,
+    );
+    mateUse(
+      'onChanged',
+      onChanged,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeStart',
+      onChangeStart,
+      isNamed: true,
+    );
+    mateUse(
+      'onChangeEnd',
+      onChangeEnd,
+      isNamed: true,
+    );
+    mateUse(
+      'min',
+      min,
+      isNamed: true,
+      defaultValue: 0.0,
+    );
+    mateUse(
+      'max',
+      max,
+      isNamed: true,
+      defaultValue: 1.0,
+    );
+    mateUse(
+      'divisions',
+      divisions,
+      isNamed: true,
+    );
+    mateUse(
+      'activeColor',
+      activeColor,
+      isNamed: true,
+    );
+    mateUse(
+      'thumbColor',
+      thumbColor,
+      isNamed: true,
+      defaultValue: CupertinoColors.white,
+    );
   }
 }
