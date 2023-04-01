@@ -230,10 +230,11 @@ enable_experiment="--enable-experiment=records,patterns"
 #          # 用括号()开启子进程执行，可以不影响当前进程的环境
 #          ( cd "$project" ;  run "$@" ; )
 #        done
-        (cd packages/learn_dart ;              run "$@" ; )
+        (cd packages/learn_dart ;        run "$@" ; )
         (cd packages/note ;              run "$@" ; )
         (cd packages/note_mate_flutter ; run "$@" ; )
         (cd packages/note_app ;          run "$@" ; )
+        (cd packages/note_test ;         run "$@" ; )
    }
 }
 

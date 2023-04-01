@@ -1,10 +1,9 @@
 // ignore_for_file: unnecessary_type_check
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:note/mate_api_experiment.dart';
+import 'package:note_mate_flutter/material.dart';
 
 void main() {
   setUp(() {});
@@ -19,10 +18,10 @@ void main() {
     test('print', () {
       expect(
           toCode(
-              ColumnMate(
+              Column$Mate(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ContainerMate(),
+                  Container$Mate(),
                 ],
               ),
               format: true),
@@ -35,7 +34,7 @@ void main() {
   group("type:Color", () {
     test('print', () {
       expect(
-          toCode(ContainerMate(
+          toCode(Container$Mate(
             color: Colors.green.shade100,
           )),
           """Container(color: Colors.green.shade100);""");
