@@ -26,7 +26,7 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           right,
           bottom,
         ) {
-    mateCreateName = 'EdgeInsets.fromLTRB';
+    mateBuilderName = 'EdgeInsets.fromLTRB';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsets$Mate.fromLTRB(
           p.get('left').value,
@@ -62,7 +62,7 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
       /// requiredParameters: double value
       double value)
       : super.all(value) {
-    mateCreateName = 'EdgeInsets.all';
+    mateBuilderName = 'EdgeInsets.all';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsets$Mate.all(p.get('value').value);
     mateUse(
@@ -91,7 +91,7 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           right: right,
           bottom: bottom,
         ) {
-    mateCreateName = 'EdgeInsets.only';
+    mateBuilderName = 'EdgeInsets.only';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsets$Mate.only(
           left: p.get('left').build(),
@@ -136,7 +136,7 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           vertical: vertical,
           horizontal: horizontal,
         ) {
-    mateCreateName = 'EdgeInsets.symmetric';
+    mateBuilderName = 'EdgeInsets.symmetric';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsets$Mate.symmetric(
           vertical: p.get('vertical').build(),
@@ -167,7 +167,7 @@ class EdgeInsets$Mate extends EdgeInsets with Mate {
           padding,
           devicePixelRatio,
         ) {
-    mateCreateName = 'EdgeInsets.fromViewPadding';
+    mateBuilderName = 'EdgeInsets.fromViewPadding';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsets$Mate.fromViewPadding(
           p.get('padding').value,
@@ -207,7 +207,7 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           end,
           bottom,
         ) {
-    mateCreateName = 'EdgeInsetsDirectional.fromSTEB';
+    mateBuilderName = 'EdgeInsetsDirectional.fromSTEB';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsetsDirectional$Mate.fromSTEB(
           p.get('start').value,
@@ -256,7 +256,7 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           end: end,
           bottom: bottom,
         ) {
-    mateCreateName = 'EdgeInsetsDirectional.only';
+    mateBuilderName = 'EdgeInsetsDirectional.only';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsetsDirectional$Mate.only(
           start: p.get('start').build(),
@@ -301,7 +301,7 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
           horizontal: horizontal,
           vertical: vertical,
         ) {
-    mateCreateName = 'EdgeInsetsDirectional.symmetric';
+    mateBuilderName = 'EdgeInsetsDirectional.symmetric';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsetsDirectional$Mate.symmetric(
           horizontal: p.get('horizontal').build(),
@@ -327,7 +327,7 @@ class EdgeInsetsDirectional$Mate extends EdgeInsetsDirectional with Mate {
       /// requiredParameters: double value
       double value)
       : super.all(value) {
-    mateCreateName = 'EdgeInsetsDirectional.all';
+    mateBuilderName = 'EdgeInsetsDirectional.all';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => EdgeInsetsDirectional$Mate.all(p.get('value').value);
     mateUse(

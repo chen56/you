@@ -52,7 +52,7 @@ class OverflowBar$Mate extends OverflowBar with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateCreateName = 'OverflowBar';
+    mateBuilderName = 'OverflowBar';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverflowBar$Mate(
           key: p.get('key').build(),

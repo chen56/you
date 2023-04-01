@@ -25,7 +25,7 @@ class RawKeyEventDataWindows$Mate extends RawKeyEventDataWindows with Mate {
           characterCodePoint: characterCodePoint,
           modifiers: modifiers,
         ) {
-    mateCreateName = 'RawKeyEventDataWindows';
+    mateBuilderName = 'RawKeyEventDataWindows';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataWindows$Mate(
           keyCode: p.get('keyCode').build(),

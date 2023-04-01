@@ -23,7 +23,7 @@ class RouteSettings$Mate extends RouteSettings with Mate {
           name: name,
           arguments: arguments,
         ) {
-    mateCreateName = 'RouteSettings';
+    mateBuilderName = 'RouteSettings';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouteSettings$Mate(
           name: p.get('name').build(),
@@ -59,7 +59,7 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           controller: controller,
           child: child,
         ) {
-    mateCreateName = 'HeroControllerScope';
+    mateBuilderName = 'HeroControllerScope';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate(
           key: p.get('key').build(),
@@ -94,7 +94,7 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           key: key,
           child: child,
         ) {
-    mateCreateName = 'HeroControllerScope.none';
+    mateBuilderName = 'HeroControllerScope.none';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate.none(
           key: p.get('key').build(),
@@ -130,7 +130,8 @@ class Navigator$Mate extends Navigator with Mate {
     String? initialRoute,
 
     /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , default:processed=PrefixedIdentifierImpl
-    RouteListFactory onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes,
+    RouteListFactory onGenerateInitialRoutes =
+        Navigator.defaultGenerateInitialRoutes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
     RouteFactory? onGenerateRoute,
@@ -174,7 +175,7 @@ class Navigator$Mate extends Navigator with Mate {
           restorationScopeId: restorationScopeId,
           routeTraversalEdgeBehavior: routeTraversalEdgeBehavior,
         ) {
-    mateCreateName = 'Navigator';
+    mateBuilderName = 'Navigator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Navigator$Mate(
           key: p.get('key').build(),
@@ -185,12 +186,14 @@ class Navigator$Mate extends Navigator with Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
           transitionDelegate: p.get('transitionDelegate').build(),
-          reportsRouteUpdateToEngine: p.get('reportsRouteUpdateToEngine').build(),
+          reportsRouteUpdateToEngine:
+              p.get('reportsRouteUpdateToEngine').build(),
           clipBehavior: p.get('clipBehavior').build(),
           observers: p.get('observers').build(),
           requestFocus: p.get('requestFocus').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
-          routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
+          routeTraversalEdgeBehavior:
+              p.get('routeTraversalEdgeBehavior').build(),
         );
     mateUse(
       'key',
@@ -286,7 +289,7 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate {
           onPresent: onPresent,
           onComplete: onComplete,
         ) {
-    mateCreateName = 'RestorableRouteFuture';
+    mateBuilderName = 'RestorableRouteFuture';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableRouteFuture$Mate<T>(
           navigatorFinder: p.get('navigatorFinder').build(),

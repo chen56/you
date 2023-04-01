@@ -23,7 +23,7 @@ class AutofillGroup$Mate extends AutofillGroup with Mate {
           child: child,
           onDisposeAction: onDisposeAction,
         ) {
-    mateCreateName = 'AutofillGroup';
+    mateBuilderName = 'AutofillGroup';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutofillGroup$Mate(
           key: p.get('key').build(),

@@ -27,7 +27,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           minHeight: minHeight,
           maxHeight: maxHeight,
         ) {
-    mateCreateName = 'BoxConstraints';
+    mateBuilderName = 'BoxConstraints';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate(
           minWidth: p.get('minWidth').build(),
@@ -67,7 +67,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       /// requiredParameters: Size size
       Size size)
       : super.tight(size) {
-    mateCreateName = 'BoxConstraints.tight';
+    mateBuilderName = 'BoxConstraints.tight';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tight(p.get('size').value);
     mateUse(
@@ -88,7 +88,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: width,
           height: height,
         ) {
-    mateCreateName = 'BoxConstraints.tightFor';
+    mateBuilderName = 'BoxConstraints.tightFor';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightFor(
           width: p.get('width').build(),
@@ -117,7 +117,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: width,
           height: height,
         ) {
-    mateCreateName = 'BoxConstraints.tightForFinite';
+    mateBuilderName = 'BoxConstraints.tightForFinite';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightForFinite(
           width: p.get('width').build(),
@@ -143,7 +143,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
       /// requiredParameters: Size size
       Size size)
       : super.loose(size) {
-    mateCreateName = 'BoxConstraints.loose';
+    mateBuilderName = 'BoxConstraints.loose';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.loose(p.get('size').value);
     mateUse(
@@ -164,7 +164,7 @@ class BoxConstraints$Mate extends BoxConstraints with Mate {
           width: width,
           height: height,
         ) {
-    mateCreateName = 'BoxConstraints.expand';
+    mateBuilderName = 'BoxConstraints.expand';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxConstraints$Mate.expand(
           width: p.get('width').build(),
@@ -191,7 +191,7 @@ class BoxHitTestResult$Mate extends BoxHitTestResult with Mate {
       /// requiredParameters: HitTestResult result
       HitTestResult result)
       : super.wrap(result) {
-    mateCreateName = 'BoxHitTestResult.wrap';
+    mateBuilderName = 'BoxHitTestResult.wrap';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxHitTestResult$Mate.wrap(p.get('result').value);
     mateUse(
@@ -215,7 +215,7 @@ class BoxHitTestEntry$Mate extends BoxHitTestEntry with Mate {
           target,
           localPosition,
         ) {
-    mateCreateName = 'BoxHitTestEntry';
+    mateBuilderName = 'BoxHitTestEntry';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxHitTestEntry$Mate(
           p.get('target').value,

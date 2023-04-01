@@ -17,7 +17,7 @@ class AndroidPointerProperties$Mate extends AndroidPointerProperties with Mate {
           id: id,
           toolType: toolType,
         ) {
-    mateCreateName = 'AndroidPointerProperties';
+    mateBuilderName = 'AndroidPointerProperties';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => AndroidPointerProperties$Mate(
           id: p.get('id').build(),
@@ -77,7 +77,7 @@ class AndroidPointerCoords$Mate extends AndroidPointerCoords with Mate {
           x: x,
           y: y,
         ) {
-    mateCreateName = 'AndroidPointerCoords';
+    mateBuilderName = 'AndroidPointerCoords';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => AndroidPointerCoords$Mate(
           orientation: p.get('orientation').build(),
@@ -203,7 +203,7 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate {
           flags: flags,
           motionEventId: motionEventId,
         ) {
-    mateCreateName = 'AndroidMotionEvent';
+    mateBuilderName = 'AndroidMotionEvent';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => AndroidMotionEvent$Mate(
           downTime: p.get('downTime').build(),

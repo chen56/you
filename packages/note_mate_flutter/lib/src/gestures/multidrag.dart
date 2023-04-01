@@ -7,7 +7,8 @@ import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class ImmediateMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGestureRecognizer with Mate {
+class ImmediateMultiDragGestureRecognizer$Mate
+    extends ImmediateMultiDragGestureRecognizer with Mate {
   /// ImmediateMultiDragGestureRecognizer ImmediateMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   ImmediateMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -23,7 +24,7 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'ImmediateMultiDragGestureRecognizer';
+    mateBuilderName = 'ImmediateMultiDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ImmediateMultiDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
@@ -49,7 +50,8 @@ class ImmediateMultiDragGestureRecognizer$Mate extends ImmediateMultiDragGesture
 }
 
 /// class HorizontalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestureRecognizer with Mate {
+class HorizontalMultiDragGestureRecognizer$Mate
+    extends HorizontalMultiDragGestureRecognizer with Mate {
   /// HorizontalMultiDragGestureRecognizer HorizontalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   HorizontalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -65,7 +67,7 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'HorizontalMultiDragGestureRecognizer';
+    mateBuilderName = 'HorizontalMultiDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HorizontalMultiDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
@@ -91,7 +93,8 @@ class HorizontalMultiDragGestureRecognizer$Mate extends HorizontalMultiDragGestu
 }
 
 /// class VerticalMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRecognizer with Mate {
+class VerticalMultiDragGestureRecognizer$Mate
+    extends VerticalMultiDragGestureRecognizer with Mate {
   /// VerticalMultiDragGestureRecognizer VerticalMultiDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   VerticalMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -107,7 +110,7 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'VerticalMultiDragGestureRecognizer';
+    mateBuilderName = 'VerticalMultiDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VerticalMultiDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
@@ -133,7 +136,8 @@ class VerticalMultiDragGestureRecognizer$Mate extends VerticalMultiDragGestureRe
 }
 
 /// class DelayedMultiDragGestureRecognizer extends MultiDragGestureRecognizer
-class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureRecognizer with Mate {
+class DelayedMultiDragGestureRecognizer$Mate
+    extends DelayedMultiDragGestureRecognizer with Mate {
   /// DelayedMultiDragGestureRecognizer DelayedMultiDragGestureRecognizer({Duration delay = kLongPressTimeout, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   DelayedMultiDragGestureRecognizer$Mate({
     /// optionalParameters: {Duration delay = kLongPressTimeout} , default:unprocessed=SimpleIdentifierImpl
@@ -153,7 +157,7 @@ class DelayedMultiDragGestureRecognizer$Mate extends DelayedMultiDragGestureReco
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'DelayedMultiDragGestureRecognizer';
+    mateBuilderName = 'DelayedMultiDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DelayedMultiDragGestureRecognizer$Mate(
           delay: p.get('delay').build(),

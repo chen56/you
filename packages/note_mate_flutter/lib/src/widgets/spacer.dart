@@ -18,7 +18,7 @@ class Spacer$Mate extends Spacer with Mate {
           key: key,
           flex: flex,
         ) {
-    mateCreateName = 'Spacer';
+    mateBuilderName = 'Spacer';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Spacer$Mate(
           key: p.get('key').build(),

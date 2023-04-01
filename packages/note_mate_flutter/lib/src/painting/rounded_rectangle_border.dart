@@ -19,7 +19,7 @@ class RoundedRectangleBorder$Mate extends RoundedRectangleBorder with Mate {
           side: side,
           borderRadius: borderRadius,
         ) {
-    mateCreateName = 'RoundedRectangleBorder';
+    mateBuilderName = 'RoundedRectangleBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => RoundedRectangleBorder$Mate(
           side: p.get('side').build(),

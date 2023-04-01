@@ -39,7 +39,7 @@ class FlutterLogo$Mate extends FlutterLogo with Mate {
           duration: duration,
           curve: curve,
         ) {
-    mateCreateName = 'FlutterLogo';
+    mateBuilderName = 'FlutterLogo';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlutterLogo$Mate(
           key: p.get('key').build(),

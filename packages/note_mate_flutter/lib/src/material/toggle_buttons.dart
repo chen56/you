@@ -120,7 +120,7 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
           direction: direction,
           verticalDirection: verticalDirection,
         ) {
-    mateCreateName = 'ToggleButtons';
+    mateBuilderName = 'ToggleButtons';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtons$Mate(
           key: p.get('key').build(),

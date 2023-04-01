@@ -45,7 +45,7 @@ class SafeArea$Mate extends SafeArea with Mate {
           maintainBottomViewPadding: maintainBottomViewPadding,
           child: child,
         ) {
-    mateCreateName = 'SafeArea';
+    mateBuilderName = 'SafeArea';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SafeArea$Mate(
           key: p.get('key').build(),
@@ -139,7 +139,7 @@ class SliverSafeArea$Mate extends SliverSafeArea with Mate {
           minimum: minimum,
           sliver: sliver,
         ) {
-    mateCreateName = 'SliverSafeArea';
+    mateBuilderName = 'SliverSafeArea';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverSafeArea$Mate(
           key: p.get('key').build(),

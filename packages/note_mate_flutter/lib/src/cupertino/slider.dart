@@ -53,7 +53,7 @@ class CupertinoSlider$Mate extends CupertinoSlider with Mate {
           activeColor: activeColor,
           thumbColor: thumbColor,
         ) {
-    mateCreateName = 'CupertinoSlider';
+    mateBuilderName = 'CupertinoSlider';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSlider$Mate(
           key: p.get('key').build(),

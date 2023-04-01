@@ -13,7 +13,7 @@ class PageStorageKey$Mate<T> extends PageStorageKey<T> with Mate {
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateCreateName = 'PageStorageKey';
+    mateBuilderName = 'PageStorageKey';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageStorageKey$Mate<T>(p.get('value').value);
     mateUse(
@@ -41,7 +41,7 @@ class PageStorage$Mate extends PageStorage with Mate {
           bucket: bucket,
           child: child,
         ) {
-    mateCreateName = 'PageStorage';
+    mateBuilderName = 'PageStorage';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageStorage$Mate(
           key: p.get('key').build(),

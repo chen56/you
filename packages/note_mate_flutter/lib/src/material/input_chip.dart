@@ -155,7 +155,7 @@ class InputChip$Mate extends InputChip with Mate {
           checkmarkColor: checkmarkColor,
           avatarBorder: avatarBorder,
         ) {
-    mateCreateName = 'InputChip';
+    mateBuilderName = 'InputChip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputChip$Mate(
           key: p.get('key').build(),
@@ -169,7 +169,8 @@ class InputChip$Mate extends InputChip with Mate {
           deleteIcon: p.get('deleteIcon').build(),
           onDeleted: p.get('onDeleted').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
-          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
+          deleteButtonTooltipMessage:
+              p.get('deleteButtonTooltipMessage').build(),
           onPressed: p.get('onPressed').build(),
           pressElevation: p.get('pressElevation').build(),
           disabledColor: p.get('disabledColor').build(),

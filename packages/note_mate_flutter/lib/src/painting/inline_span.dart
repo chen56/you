@@ -14,7 +14,7 @@ class Accumulator$Mate extends Accumulator with Mate {
       /// requiredParameters: [int _value = 0]
       int _value)
       : super(_value) {
-    mateCreateName = 'Accumulator';
+    mateBuilderName = 'Accumulator';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => Accumulator$Mate(p.get('_value').value);
     mateUse(
@@ -27,7 +27,8 @@ class Accumulator$Mate extends Accumulator with Mate {
 }
 
 /// class InlineSpanSemanticsInformation
-class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation with Mate {
+class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
+    with Mate {
   /// InlineSpanSemanticsInformation InlineSpanSemanticsInformation(String text, {bool isPlaceholder = false, String? semanticsLabel, List<StringAttribute> stringAttributes = const <ui.StringAttribute>[], GestureRecognizer? recognizer})
   InlineSpanSemanticsInformation$Mate(
     /// requiredParameters: String text
@@ -50,7 +51,7 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
           stringAttributes: stringAttributes,
           recognizer: recognizer,
         ) {
-    mateCreateName = 'InlineSpanSemanticsInformation';
+    mateBuilderName = 'InlineSpanSemanticsInformation';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => InlineSpanSemanticsInformation$Mate(
           p.get('text').value,

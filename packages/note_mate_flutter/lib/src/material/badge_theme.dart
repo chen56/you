@@ -47,7 +47,7 @@ class BadgeThemeData$Mate extends BadgeThemeData with Mate {
           alignment: alignment,
           offset: offset,
         ) {
-    mateCreateName = 'BadgeThemeData';
+    mateBuilderName = 'BadgeThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BadgeThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
@@ -119,7 +119,7 @@ class BadgeTheme$Mate extends BadgeTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'BadgeTheme';
+    mateBuilderName = 'BadgeTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BadgeTheme$Mate(
           key: p.get('key').build(),

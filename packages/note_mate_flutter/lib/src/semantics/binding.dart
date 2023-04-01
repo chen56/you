@@ -22,7 +22,7 @@ class SemanticsActionEvent$Mate extends SemanticsActionEvent with Mate {
           nodeId: nodeId,
           arguments: arguments,
         ) {
-    mateCreateName = 'SemanticsActionEvent';
+    mateBuilderName = 'SemanticsActionEvent';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsActionEvent$Mate(
           type: p.get('type').build(),

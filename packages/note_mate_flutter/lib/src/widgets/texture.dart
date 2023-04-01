@@ -27,7 +27,7 @@ class Texture$Mate extends Texture with Mate {
           freeze: freeze,
           filterQuality: filterQuality,
         ) {
-    mateCreateName = 'Texture';
+    mateBuilderName = 'Texture';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Texture$Mate(
           key: p.get('key').build(),

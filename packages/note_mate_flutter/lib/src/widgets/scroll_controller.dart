@@ -21,7 +21,7 @@ class ScrollController$Mate extends ScrollController with Mate {
           keepScrollOffset: keepScrollOffset,
           debugLabel: debugLabel,
         ) {
-    mateCreateName = 'ScrollController';
+    mateBuilderName = 'ScrollController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollController$Mate(
           initialScrollOffset: p.get('initialScrollOffset').build(),
@@ -65,7 +65,7 @@ class TrackingScrollController$Mate extends TrackingScrollController with Mate {
           keepScrollOffset: keepScrollOffset,
           debugLabel: debugLabel,
         ) {
-    mateCreateName = 'TrackingScrollController';
+    mateBuilderName = 'TrackingScrollController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TrackingScrollController$Mate(
           initialScrollOffset: p.get('initialScrollOffset').build(),

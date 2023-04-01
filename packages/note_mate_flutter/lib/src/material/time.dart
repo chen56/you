@@ -17,7 +17,7 @@ class TimeOfDay$Mate extends TimeOfDay with Mate {
           hour: hour,
           minute: minute,
         ) {
-    mateCreateName = 'TimeOfDay';
+    mateBuilderName = 'TimeOfDay';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimeOfDay$Mate(
           hour: p.get('hour').build(),
@@ -41,7 +41,7 @@ class TimeOfDay$Mate extends TimeOfDay with Mate {
       /// requiredParameters: DateTime time
       DateTime time)
       : super.fromDateTime(time) {
-    mateCreateName = 'TimeOfDay.fromDateTime';
+    mateBuilderName = 'TimeOfDay.fromDateTime';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimeOfDay$Mate.fromDateTime(p.get('time').value);
     mateUse(
@@ -60,7 +60,7 @@ class RestorableTimeOfDay$Mate extends RestorableTimeOfDay with Mate {
       /// requiredParameters: TimeOfDay defaultValue
       TimeOfDay defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableTimeOfDay';
+    mateBuilderName = 'RestorableTimeOfDay';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RestorableTimeOfDay$Mate(p.get('defaultValue').value);
     mateUse(

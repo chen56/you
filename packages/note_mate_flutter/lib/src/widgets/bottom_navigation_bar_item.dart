@@ -31,7 +31,7 @@ class BottomNavigationBarItem$Mate extends BottomNavigationBarItem with Mate {
           backgroundColor: backgroundColor,
           tooltip: tooltip,
         ) {
-    mateCreateName = 'BottomNavigationBarItem';
+    mateBuilderName = 'BottomNavigationBarItem';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BottomNavigationBarItem$Mate(
           icon: p.get('icon').build(),

@@ -22,7 +22,7 @@ class ListWheelChildListDelegate$Mate extends ListWheelChildListDelegate with Ma
       /// optionalParameters: {required List<Widget> children} , default:none
       required List<Widget> children})
       : super(children: children) {
-    mateCreateName = 'ListWheelChildListDelegate';
+    mateBuilderName = 'ListWheelChildListDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildListDelegate$Mate(children: p.get('children').build());
     mateUseList(
@@ -41,9 +41,10 @@ class ListWheelChildLoopingListDelegate$Mate extends ListWheelChildLoopingListDe
       /// optionalParameters: {required List<Widget> children} , default:none
       required List<Widget> children})
       : super(children: children) {
-    mateCreateName = 'ListWheelChildLoopingListDelegate';
+    mateBuilderName = 'ListWheelChildLoopingListDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
+    mateBuilder =
+        (p) => ListWheelChildLoopingListDelegate$Mate(children: p.get('children').build());
     mateUseList(
       'children',
       children,
@@ -65,7 +66,7 @@ class ListWheelChildBuilderDelegate$Mate extends ListWheelChildBuilderDelegate w
           builder: builder,
           childCount: childCount,
         ) {
-    mateCreateName = 'ListWheelChildBuilderDelegate';
+    mateBuilderName = 'ListWheelChildBuilderDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelChildBuilderDelegate$Mate(
           builder: p.get('builder').build(),
@@ -92,9 +93,10 @@ class FixedExtentScrollController$Mate extends FixedExtentScrollController with 
       /// optionalParameters: {int initialItem = 0} , default:processed=IntegerLiteralImpl
       int initialItem = 0})
       : super(initialItem: initialItem) {
-    mateCreateName = 'FixedExtentScrollController';
+    mateBuilderName = 'FixedExtentScrollController';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
+    mateBuilder =
+        (p) => FixedExtentScrollController$Mate(initialItem: p.get('initialItem').build());
     mateUse(
       'initialItem',
       initialItem,
@@ -137,7 +139,7 @@ class FixedExtentMetrics$Mate extends FixedExtentMetrics with Mate {
           itemIndex: itemIndex,
           devicePixelRatio: devicePixelRatio,
         ) {
-    mateCreateName = 'FixedExtentMetrics';
+    mateBuilderName = 'FixedExtentMetrics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
@@ -194,7 +196,7 @@ class FixedExtentScrollPhysics$Mate extends FixedExtentScrollPhysics with Mate {
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateCreateName = 'FixedExtentScrollPhysics';
+    mateBuilderName = 'FixedExtentScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedExtentScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
@@ -278,7 +280,7 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: scrollBehavior,
           children: children,
         ) {
-    mateCreateName = 'ListWheelScrollView';
+    mateBuilderName = 'ListWheelScrollView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate(
           key: p.get('key').build(),
@@ -466,7 +468,7 @@ class ListWheelScrollView$Mate extends ListWheelScrollView with Mate {
           scrollBehavior: scrollBehavior,
           childDelegate: childDelegate,
         ) {
-    mateCreateName = 'ListWheelScrollView.useDelegate';
+    mateBuilderName = 'ListWheelScrollView.useDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelScrollView$Mate.useDelegate(
           key: p.get('key').build(),
@@ -592,7 +594,7 @@ class ListWheelElement$Mate extends ListWheelElement with Mate {
       /// requiredParameters: ListWheelViewport widget
       ListWheelViewport widget)
       : super(widget) {
-    mateCreateName = 'ListWheelElement';
+    mateBuilderName = 'ListWheelElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelElement$Mate(p.get('widget').value);
     mateUse(
@@ -660,7 +662,7 @@ class ListWheelViewport$Mate extends ListWheelViewport with Mate {
           childDelegate: childDelegate,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ListWheelViewport';
+    mateBuilderName = 'ListWheelViewport';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListWheelViewport$Mate(
           key: p.get('key').build(),

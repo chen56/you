@@ -26,7 +26,7 @@ class SliverPersistentHeader$Mate extends SliverPersistentHeader with Mate {
           pinned: pinned,
           floating: floating,
         ) {
-    mateCreateName = 'SliverPersistentHeader';
+    mateBuilderName = 'SliverPersistentHeader';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPersistentHeader$Mate(
           key: p.get('key').build(),

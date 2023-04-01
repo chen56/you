@@ -46,7 +46,7 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           clipDetailsNotifier: clipDetailsNotifier,
           semanticsOnTapHint: semanticsOnTapHint,
         ) {
-    mateCreateName = 'ModalBarrier';
+    mateBuilderName = 'ModalBarrier';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ModalBarrier$Mate(
           key: p.get('key').build(),
@@ -54,7 +54,8 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           dismissible: p.get('dismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible:
+              p.get('barrierSemanticsDismissible').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
@@ -140,14 +141,15 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
           clipDetailsNotifier: clipDetailsNotifier,
           semanticsOnTapHint: semanticsOnTapHint,
         ) {
-    mateCreateName = 'AnimatedModalBarrier';
+    mateBuilderName = 'AnimatedModalBarrier';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedModalBarrier$Mate(
           key: p.get('key').build(),
           color: p.get('color').build(),
           dismissible: p.get('dismissible').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible:
+              p.get('barrierSemanticsDismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),

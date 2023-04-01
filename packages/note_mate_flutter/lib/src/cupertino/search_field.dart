@@ -140,7 +140,7 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
           autocorrect: autocorrect,
           enabled: enabled,
         ) {
-    mateCreateName = 'CupertinoSearchTextField';
+    mateBuilderName = 'CupertinoSearchTextField';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSearchTextField$Mate(
           key: p.get('key').build(),
@@ -167,7 +167,8 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
           focusNode: p.get('focusNode').build(),
           smartQuotesType: p.get('smartQuotesType').build(),
           smartDashesType: p.get('smartDashesType').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           autofocus: p.get('autofocus').build(),
           onTap: p.get('onTap').build(),
           autocorrect: p.get('autocorrect').build(),

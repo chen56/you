@@ -27,7 +27,7 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           delegate: delegate,
           child: child,
         ) {
-    mateCreateName = 'SelectionContainer';
+    mateBuilderName = 'SelectionContainer';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectionContainer$Mate(
           key: p.get('key').build(),
@@ -68,7 +68,7 @@ class SelectionContainer$Mate extends SelectionContainer with Mate {
           key: key,
           child: child,
         ) {
-    mateCreateName = 'SelectionContainer.disabled';
+    mateBuilderName = 'SelectionContainer.disabled';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectionContainer$Mate.disabled(
           key: p.get('key').build(),
@@ -104,7 +104,7 @@ class SelectionRegistrarScope$Mate extends SelectionRegistrarScope with Mate {
           registrar: registrar,
           child: child,
         ) {
-    mateCreateName = 'SelectionRegistrarScope';
+    mateBuilderName = 'SelectionRegistrarScope';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectionRegistrarScope$Mate(
           key: p.get('key').build(),

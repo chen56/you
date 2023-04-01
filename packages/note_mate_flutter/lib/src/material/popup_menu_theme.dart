@@ -56,7 +56,7 @@ class PopupMenuThemeData$Mate extends PopupMenuThemeData with Mate {
           mouseCursor: mouseCursor,
           position: position,
         ) {
-    mateCreateName = 'PopupMenuThemeData';
+    mateBuilderName = 'PopupMenuThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuThemeData$Mate(
           color: p.get('color').build(),
@@ -140,7 +140,7 @@ class PopupMenuTheme$Mate extends PopupMenuTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'PopupMenuTheme';
+    mateBuilderName = 'PopupMenuTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuTheme$Mate(
           key: p.get('key').build(),

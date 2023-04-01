@@ -23,7 +23,7 @@ class PreferredSize$Mate extends PreferredSize with Mate {
           child: child,
           preferredSize: preferredSize,
         ) {
-    mateCreateName = 'PreferredSize';
+    mateBuilderName = 'PreferredSize';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PreferredSize$Mate(
           key: p.get('key').build(),

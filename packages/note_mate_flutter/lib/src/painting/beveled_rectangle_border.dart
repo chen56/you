@@ -19,7 +19,7 @@ class BeveledRectangleBorder$Mate extends BeveledRectangleBorder with Mate {
           side: side,
           borderRadius: borderRadius,
         ) {
-    mateCreateName = 'BeveledRectangleBorder';
+    mateBuilderName = 'BeveledRectangleBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BeveledRectangleBorder$Mate(
           side: p.get('side').build(),

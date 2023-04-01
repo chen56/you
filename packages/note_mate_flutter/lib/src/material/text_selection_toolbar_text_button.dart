@@ -9,7 +9,8 @@ import 'dart:ui';
 import 'package:flutter/src/painting/alignment.dart';
 
 /// class TextSelectionToolbarTextButton extends StatelessWidget
-class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton with Mate {
+class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
+    with Mate {
   /// TextSelectionToolbarTextButton TextSelectionToolbarTextButton({Key? key, required Widget child, required EdgeInsets padding, void Function()? onPressed, AlignmentGeometry? alignment})
   TextSelectionToolbarTextButton$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -33,7 +34,7 @@ class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
           onPressed: onPressed,
           alignment: alignment,
         ) {
-    mateCreateName = 'TextSelectionToolbarTextButton';
+    mateBuilderName = 'TextSelectionToolbarTextButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionToolbarTextButton$Mate(
           key: p.get('key').build(),

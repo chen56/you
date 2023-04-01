@@ -149,7 +149,7 @@ class CheckboxListTile$Mate extends CheckboxListTile with Mate {
           onFocusChange: onFocusChange,
           enableFeedback: enableFeedback,
         ) {
-    mateCreateName = 'CheckboxListTile';
+    mateBuilderName = 'CheckboxListTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckboxListTile$Mate(
           key: p.get('key').build(),

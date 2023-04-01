@@ -13,7 +13,7 @@ class RestorableNum$Mate<T extends num> extends RestorableNum<T> with Mate {
       /// requiredParameters: T defaultValue
       T defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableNum';
+    mateBuilderName = 'RestorableNum';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableNum$Mate<T>(p.get('defaultValue').value);
     mateUse(
@@ -32,7 +32,7 @@ class RestorableDouble$Mate extends RestorableDouble with Mate {
       /// requiredParameters: double defaultValue
       double defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableDouble';
+    mateBuilderName = 'RestorableDouble';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDouble$Mate(p.get('defaultValue').value);
     mateUse(
@@ -51,7 +51,7 @@ class RestorableInt$Mate extends RestorableInt with Mate {
       /// requiredParameters: int defaultValue
       int defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableInt';
+    mateBuilderName = 'RestorableInt';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableInt$Mate(p.get('defaultValue').value);
     mateUse(
@@ -70,7 +70,7 @@ class RestorableString$Mate extends RestorableString with Mate {
       /// requiredParameters: String defaultValue
       String defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableString';
+    mateBuilderName = 'RestorableString';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableString$Mate(p.get('defaultValue').value);
     mateUse(
@@ -89,7 +89,7 @@ class RestorableBool$Mate extends RestorableBool with Mate {
       /// requiredParameters: bool defaultValue
       bool defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableBool';
+    mateBuilderName = 'RestorableBool';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableBool$Mate(p.get('defaultValue').value);
     mateUse(
@@ -108,7 +108,7 @@ class RestorableBoolN$Mate extends RestorableBoolN with Mate {
       /// requiredParameters: bool? defaultValue
       bool? defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableBoolN';
+    mateBuilderName = 'RestorableBoolN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableBoolN$Mate(p.get('defaultValue').value);
     mateUse(
@@ -127,7 +127,7 @@ class RestorableNumN$Mate<T extends num?> extends RestorableNumN<T> with Mate {
       /// requiredParameters: T defaultValue
       T defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableNumN';
+    mateBuilderName = 'RestorableNumN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableNumN$Mate<T>(p.get('defaultValue').value);
     mateUse(
@@ -146,7 +146,7 @@ class RestorableDoubleN$Mate extends RestorableDoubleN with Mate {
       /// requiredParameters: double? defaultValue
       double? defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableDoubleN';
+    mateBuilderName = 'RestorableDoubleN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDoubleN$Mate(p.get('defaultValue').value);
     mateUse(
@@ -165,7 +165,7 @@ class RestorableIntN$Mate extends RestorableIntN with Mate {
       /// requiredParameters: int? defaultValue
       int? defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableIntN';
+    mateBuilderName = 'RestorableIntN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableIntN$Mate(p.get('defaultValue').value);
     mateUse(
@@ -184,7 +184,7 @@ class RestorableStringN$Mate extends RestorableStringN with Mate {
       /// requiredParameters: String? defaultValue
       String? defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableStringN';
+    mateBuilderName = 'RestorableStringN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableStringN$Mate(p.get('defaultValue').value);
     mateUse(
@@ -203,7 +203,7 @@ class RestorableDateTime$Mate extends RestorableDateTime with Mate {
       /// requiredParameters: DateTime defaultValue
       DateTime defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableDateTime';
+    mateBuilderName = 'RestorableDateTime';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDateTime$Mate(p.get('defaultValue').value);
     mateUse(
@@ -222,7 +222,7 @@ class RestorableDateTimeN$Mate extends RestorableDateTimeN with Mate {
       /// requiredParameters: DateTime? defaultValue
       DateTime? defaultValue)
       : super(defaultValue) {
-    mateCreateName = 'RestorableDateTimeN';
+    mateBuilderName = 'RestorableDateTimeN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableDateTimeN$Mate(p.get('defaultValue').value);
     mateUse(
@@ -234,16 +234,18 @@ class RestorableDateTimeN$Mate extends RestorableDateTimeN with Mate {
 }
 
 /// class RestorableTextEditingController extends RestorableChangeNotifier<TextEditingController>
-class RestorableTextEditingController$Mate extends RestorableTextEditingController with Mate {
+class RestorableTextEditingController$Mate
+    extends RestorableTextEditingController with Mate {
   /// RestorableTextEditingController RestorableTextEditingController.fromValue(TextEditingValue value)
   RestorableTextEditingController$Mate.fromValue(
 
       /// requiredParameters: TextEditingValue value
       TextEditingValue value)
       : super.fromValue(value) {
-    mateCreateName = 'RestorableTextEditingController.fromValue';
+    mateBuilderName = 'RestorableTextEditingController.fromValue';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => RestorableTextEditingController$Mate.fromValue(p.get('value').value);
+    mateBuilder = (p) =>
+        RestorableTextEditingController$Mate.fromValue(p.get('value').value);
     mateUse(
       'value',
       value,
@@ -253,7 +255,8 @@ class RestorableTextEditingController$Mate extends RestorableTextEditingControll
 }
 
 /// class RestorableEnumN<T extends Enum> extends RestorableValue<T?>
-class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate {
+class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T>
+    with Mate {
   /// RestorableEnumN<T> RestorableEnumN(T? defaultValue, {required Iterable<T> values})
   RestorableEnumN$Mate(
     /// requiredParameters: T? defaultValue
@@ -264,7 +267,7 @@ class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate 
           defaultValue,
           values: values,
         ) {
-    mateCreateName = 'RestorableEnumN';
+    mateBuilderName = 'RestorableEnumN';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableEnumN$Mate<T>(
           p.get('defaultValue').value,
@@ -295,7 +298,7 @@ class RestorableEnum$Mate<T extends Enum> extends RestorableEnum<T> with Mate {
           defaultValue,
           values: values,
         ) {
-    mateCreateName = 'RestorableEnum';
+    mateBuilderName = 'RestorableEnum';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableEnum$Mate<T>(
           p.get('defaultValue').value,

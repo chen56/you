@@ -33,7 +33,7 @@ class ActionListener$Mate extends ActionListener with Mate {
           action: action,
           child: child,
         ) {
-    mateCreateName = 'ActionListener';
+    mateBuilderName = 'ActionListener';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ActionListener$Mate(
           key: p.get('key').build(),
@@ -65,16 +65,18 @@ class ActionListener$Mate extends ActionListener with Mate {
 }
 
 /// class CallbackAction<T extends Intent> extends Action<T>
-class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate {
+class CallbackAction$Mate<T extends Intent> extends CallbackAction<T>
+    with Mate {
   /// CallbackAction<T> CallbackAction({required Object? Function(T) onInvoke})
   CallbackAction$Mate(
       {
       /// optionalParameters: {required Object? Function(T) onInvoke} , default:none
       required OnInvokeCallback<T> onInvoke})
       : super(onInvoke: onInvoke) {
-    mateCreateName = 'CallbackAction';
+    mateBuilderName = 'CallbackAction';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
+    mateBuilder =
+        (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
     mateUse(
       'onInvoke',
       onInvoke,
@@ -104,7 +106,7 @@ class Actions$Mate extends Actions with Mate {
           actions: actions,
           child: child,
         ) {
-    mateCreateName = 'Actions';
+    mateBuilderName = 'Actions';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Actions$Mate(
           key: p.get('key').build(),
@@ -196,7 +198,7 @@ class FocusableActionDetector$Mate extends FocusableActionDetector with Mate {
           includeFocusSemantics: includeFocusSemantics,
           child: child,
         ) {
-    mateCreateName = 'FocusableActionDetector';
+    mateBuilderName = 'FocusableActionDetector';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusableActionDetector$Mate(
           key: p.get('key').build(),
@@ -301,7 +303,7 @@ class VoidCallbackIntent$Mate extends VoidCallbackIntent with Mate {
       /// requiredParameters: void Function() callback
       VoidCallback callback)
       : super(callback) {
-    mateCreateName = 'VoidCallbackIntent';
+    mateBuilderName = 'VoidCallbackIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => VoidCallbackIntent$Mate(p.get('callback').value);
     mateUse(
@@ -320,9 +322,10 @@ class DoNothingAction$Mate extends DoNothingAction with Mate {
       /// optionalParameters: {bool consumesKey = true} , default:processed=BooleanLiteralImpl
       bool consumesKey = true})
       : super(consumesKey: consumesKey) {
-    mateCreateName = 'DoNothingAction';
+    mateBuilderName = 'DoNothingAction';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
+    mateBuilder =
+        (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
     mateUse(
       'consumesKey',
       consumesKey,
@@ -340,9 +343,10 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate {
       /// optionalParameters: {required List<Intent> orderedIntents} , default:none
       required List<Intent> orderedIntents})
       : super(orderedIntents: orderedIntents) {
-    mateCreateName = 'PrioritizedIntents';
+    mateBuilderName = 'PrioritizedIntents';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
+    mateBuilder = (p) => PrioritizedIntents$Mate(
+        orderedIntents: p.get('orderedIntents').build());
     mateUseList(
       'orderedIntents',
       orderedIntents,

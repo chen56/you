@@ -64,7 +64,7 @@ class TabBarTheme$Mate extends TabBarTheme with Mate {
           splashFactory: splashFactory,
           mouseCursor: mouseCursor,
         ) {
-    mateCreateName = 'TabBarTheme';
+    mateBuilderName = 'TabBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBarTheme$Mate(
           indicator: p.get('indicator').build(),

@@ -45,7 +45,7 @@ class ExpandIcon$Mate extends ExpandIcon with Mate {
           disabledColor: disabledColor,
           expandedColor: expandedColor,
         ) {
-    mateCreateName = 'ExpandIcon';
+    mateBuilderName = 'ExpandIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpandIcon$Mate(
           key: p.get('key').build(),

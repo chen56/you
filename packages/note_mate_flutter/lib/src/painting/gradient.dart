@@ -15,7 +15,7 @@ class GradientRotation$Mate extends GradientRotation with Mate {
       /// requiredParameters: double radians
       double radians)
       : super(radians) {
-    mateCreateName = 'GradientRotation';
+    mateBuilderName = 'GradientRotation';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => GradientRotation$Mate(p.get('radians').value);
     mateUse(
@@ -55,7 +55,7 @@ class LinearGradient$Mate extends LinearGradient with Mate {
           tileMode: tileMode,
           transform: transform,
         ) {
-    mateCreateName = 'LinearGradient';
+    mateBuilderName = 'LinearGradient';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearGradient$Mate(
           begin: p.get('begin').build(),
@@ -138,7 +138,7 @@ class RadialGradient$Mate extends RadialGradient with Mate {
           focalRadius: focalRadius,
           transform: transform,
         ) {
-    mateCreateName = 'RadialGradient';
+    mateBuilderName = 'RadialGradient';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => RadialGradient$Mate(
           center: p.get('center').build(),
@@ -230,7 +230,7 @@ class SweepGradient$Mate extends SweepGradient with Mate {
           tileMode: tileMode,
           transform: transform,
         ) {
-    mateCreateName = 'SweepGradient';
+    mateBuilderName = 'SweepGradient';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => SweepGradient$Mate(
           center: p.get('center').build(),

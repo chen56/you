@@ -15,9 +15,10 @@ class DeleteCharacterIntent$Mate extends DeleteCharacterIntent with Mate {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'DeleteCharacterIntent';
+    mateBuilderName = 'DeleteCharacterIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').build());
+    mateBuilder =
+        (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -27,16 +28,18 @@ class DeleteCharacterIntent$Mate extends DeleteCharacterIntent with Mate {
 }
 
 /// class DeleteToNextWordBoundaryIntent extends DirectionalTextEditingIntent
-class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent with Mate {
+class DeleteToNextWordBoundaryIntent$Mate extends DeleteToNextWordBoundaryIntent
+    with Mate {
   /// DeleteToNextWordBoundaryIntent DeleteToNextWordBoundaryIntent({required bool forward})
   DeleteToNextWordBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'DeleteToNextWordBoundaryIntent';
+    mateBuilderName = 'DeleteToNextWordBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').build());
+    mateBuilder = (p) =>
+        DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -53,9 +56,10 @@ class DeleteToLineBreakIntent$Mate extends DeleteToLineBreakIntent with Mate {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'DeleteToLineBreakIntent';
+    mateBuilderName = 'DeleteToLineBreakIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').build());
+    mateBuilder =
+        (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -65,7 +69,8 @@ class DeleteToLineBreakIntent$Mate extends DeleteToLineBreakIntent with Mate {
 }
 
 /// class ExtendSelectionByCharacterIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIntent with Mate {
+class ExtendSelectionByCharacterIntent$Mate
+    extends ExtendSelectionByCharacterIntent with Mate {
   /// ExtendSelectionByCharacterIntent ExtendSelectionByCharacterIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionByCharacterIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -77,7 +82,7 @@ class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIn
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateCreateName = 'ExtendSelectionByCharacterIntent';
+    mateBuilderName = 'ExtendSelectionByCharacterIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionByCharacterIntent$Mate(
           forward: p.get('forward').build(),
@@ -97,7 +102,8 @@ class ExtendSelectionByCharacterIntent$Mate extends ExtendSelectionByCharacterIn
 }
 
 /// class ExtendSelectionToNextWordBoundaryIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNextWordBoundaryIntent with Mate {
+class ExtendSelectionToNextWordBoundaryIntent$Mate
+    extends ExtendSelectionToNextWordBoundaryIntent with Mate {
   /// ExtendSelectionToNextWordBoundaryIntent ExtendSelectionToNextWordBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToNextWordBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -109,7 +115,7 @@ class ExtendSelectionToNextWordBoundaryIntent$Mate extends ExtendSelectionToNext
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateCreateName = 'ExtendSelectionToNextWordBoundaryIntent';
+    mateBuilderName = 'ExtendSelectionToNextWordBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionToNextWordBoundaryIntent$Mate(
           forward: p.get('forward').build(),
@@ -137,9 +143,11 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'ExtendSelectionToNextWordBoundaryOrCaretLocationIntent';
+    mateBuilderName = 'ExtendSelectionToNextWordBoundaryOrCaretLocationIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
+    mateBuilder = (p) =>
+        ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(
+            forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -149,16 +157,18 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
 }
 
 /// class ExpandSelectionToDocumentBoundaryIntent extends DirectionalCaretMovementIntent
-class ExpandSelectionToDocumentBoundaryIntent$Mate extends ExpandSelectionToDocumentBoundaryIntent with Mate {
+class ExpandSelectionToDocumentBoundaryIntent$Mate
+    extends ExpandSelectionToDocumentBoundaryIntent with Mate {
   /// ExpandSelectionToDocumentBoundaryIntent ExpandSelectionToDocumentBoundaryIntent({required bool forward})
   ExpandSelectionToDocumentBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'ExpandSelectionToDocumentBoundaryIntent';
+    mateBuilderName = 'ExpandSelectionToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
+    mateBuilder = (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(
+        forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -168,16 +178,18 @@ class ExpandSelectionToDocumentBoundaryIntent$Mate extends ExpandSelectionToDocu
 }
 
 /// class ExpandSelectionToLineBreakIntent extends DirectionalCaretMovementIntent
-class ExpandSelectionToLineBreakIntent$Mate extends ExpandSelectionToLineBreakIntent with Mate {
+class ExpandSelectionToLineBreakIntent$Mate
+    extends ExpandSelectionToLineBreakIntent with Mate {
   /// ExpandSelectionToLineBreakIntent ExpandSelectionToLineBreakIntent({required bool forward})
   ExpandSelectionToLineBreakIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'ExpandSelectionToLineBreakIntent';
+    mateBuilderName = 'ExpandSelectionToLineBreakIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').build());
+    mateBuilder = (p) => ExpandSelectionToLineBreakIntent$Mate(
+        forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -187,7 +199,8 @@ class ExpandSelectionToLineBreakIntent$Mate extends ExpandSelectionToLineBreakIn
 }
 
 /// class ExtendSelectionToLineBreakIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIntent with Mate {
+class ExtendSelectionToLineBreakIntent$Mate
+    extends ExtendSelectionToLineBreakIntent with Mate {
   /// ExtendSelectionToLineBreakIntent ExtendSelectionToLineBreakIntent({required bool forward, required bool collapseSelection, bool collapseAtReversal = false, bool continuesAtWrap = false})
   ExtendSelectionToLineBreakIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -207,7 +220,7 @@ class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIn
           collapseAtReversal: collapseAtReversal,
           continuesAtWrap: continuesAtWrap,
         ) {
-    mateCreateName = 'ExtendSelectionToLineBreakIntent';
+    mateBuilderName = 'ExtendSelectionToLineBreakIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionToLineBreakIntent$Mate(
           forward: p.get('forward').build(),
@@ -241,8 +254,8 @@ class ExtendSelectionToLineBreakIntent$Mate extends ExtendSelectionToLineBreakIn
 }
 
 /// class ExtendSelectionVerticallyToAdjacentLineIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelectionVerticallyToAdjacentLineIntent
-    with Mate {
+class ExtendSelectionVerticallyToAdjacentLineIntent$Mate
+    extends ExtendSelectionVerticallyToAdjacentLineIntent with Mate {
   /// ExtendSelectionVerticallyToAdjacentLineIntent ExtendSelectionVerticallyToAdjacentLineIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionVerticallyToAdjacentLineIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -254,7 +267,7 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelection
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateCreateName = 'ExtendSelectionVerticallyToAdjacentLineIntent';
+    mateBuilderName = 'ExtendSelectionVerticallyToAdjacentLineIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionVerticallyToAdjacentLineIntent$Mate(
           forward: p.get('forward').build(),
@@ -274,8 +287,8 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends ExtendSelection
 }
 
 /// class ExtendSelectionVerticallyToAdjacentPageIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelectionVerticallyToAdjacentPageIntent
-    with Mate {
+class ExtendSelectionVerticallyToAdjacentPageIntent$Mate
+    extends ExtendSelectionVerticallyToAdjacentPageIntent with Mate {
   /// ExtendSelectionVerticallyToAdjacentPageIntent ExtendSelectionVerticallyToAdjacentPageIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionVerticallyToAdjacentPageIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -287,7 +300,7 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelection
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateCreateName = 'ExtendSelectionVerticallyToAdjacentPageIntent';
+    mateBuilderName = 'ExtendSelectionVerticallyToAdjacentPageIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionVerticallyToAdjacentPageIntent$Mate(
           forward: p.get('forward').build(),
@@ -307,7 +320,8 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends ExtendSelection
 }
 
 /// class ExtendSelectionToNextParagraphBoundaryIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionToNextParagraphBoundaryIntent with Mate {
+class ExtendSelectionToNextParagraphBoundaryIntent$Mate
+    extends ExtendSelectionToNextParagraphBoundaryIntent with Mate {
   /// ExtendSelectionToNextParagraphBoundaryIntent ExtendSelectionToNextParagraphBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToNextParagraphBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -319,7 +333,7 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionT
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateCreateName = 'ExtendSelectionToNextParagraphBoundaryIntent';
+    mateBuilderName = 'ExtendSelectionToNextParagraphBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionToNextParagraphBoundaryIntent$Mate(
           forward: p.get('forward').build(),
@@ -340,17 +354,20 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends ExtendSelectionT
 
 /// class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent extends DirectionalCaretMovementIntent
 class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
-    extends ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent with Mate {
+    extends ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent
+    with Mate {
   /// ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent({required bool forward})
   ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent';
+    mateBuilderName =
+        'ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
+    mateBuilder = (p) =>
+        ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(
+            forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -360,7 +377,8 @@ class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
 }
 
 /// class ExtendSelectionToDocumentBoundaryIntent extends DirectionalCaretMovementIntent
-class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocumentBoundaryIntent with Mate {
+class ExtendSelectionToDocumentBoundaryIntent$Mate
+    extends ExtendSelectionToDocumentBoundaryIntent with Mate {
   /// ExtendSelectionToDocumentBoundaryIntent ExtendSelectionToDocumentBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToDocumentBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -372,7 +390,7 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocu
           forward: forward,
           collapseSelection: collapseSelection,
         ) {
-    mateCreateName = 'ExtendSelectionToDocumentBoundaryIntent';
+    mateBuilderName = 'ExtendSelectionToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ExtendSelectionToDocumentBoundaryIntent$Mate(
           forward: p.get('forward').build(),
@@ -392,16 +410,18 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends ExtendSelectionToDocu
 }
 
 /// class ScrollToDocumentBoundaryIntent extends DirectionalTextEditingIntent
-class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent with Mate {
+class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent
+    with Mate {
   /// ScrollToDocumentBoundaryIntent ScrollToDocumentBoundaryIntent({required bool forward})
   ScrollToDocumentBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'ScrollToDocumentBoundaryIntent';
+    mateBuilderName = 'ScrollToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
+    mateBuilder = (p) =>
+        ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -411,16 +431,18 @@ class ScrollToDocumentBoundaryIntent$Mate extends ScrollToDocumentBoundaryIntent
 }
 
 /// class ExtendSelectionByPageIntent extends DirectionalTextEditingIntent
-class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent with Mate {
+class ExtendSelectionByPageIntent$Mate extends ExtendSelectionByPageIntent
+    with Mate {
   /// ExtendSelectionByPageIntent ExtendSelectionByPageIntent({required bool forward})
   ExtendSelectionByPageIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
       required bool forward})
       : super(forward: forward) {
-    mateCreateName = 'ExtendSelectionByPageIntent';
+    mateBuilderName = 'ExtendSelectionByPageIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').build());
+    mateBuilder = (p) =>
+        ExtendSelectionByPageIntent$Mate(forward: p.get('forward').build());
     mateUse(
       'forward',
       forward,
@@ -437,7 +459,7 @@ class SelectAllTextIntent$Mate extends SelectAllTextIntent with Mate {
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateCreateName = 'SelectAllTextIntent';
+    mateBuilderName = 'SelectAllTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectAllTextIntent$Mate(p.get('cause').value);
     mateUse(
@@ -456,7 +478,7 @@ class CopySelectionTextIntent$Mate extends CopySelectionTextIntent with Mate {
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super.cut(cause) {
-    mateCreateName = 'CopySelectionTextIntent.cut';
+    mateBuilderName = 'CopySelectionTextIntent.cut';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CopySelectionTextIntent$Mate.cut(p.get('cause').value);
     mateUse(
@@ -475,7 +497,7 @@ class PasteTextIntent$Mate extends PasteTextIntent with Mate {
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateCreateName = 'PasteTextIntent';
+    mateBuilderName = 'PasteTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PasteTextIntent$Mate(p.get('cause').value);
     mateUse(
@@ -494,7 +516,7 @@ class RedoTextIntent$Mate extends RedoTextIntent with Mate {
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateCreateName = 'RedoTextIntent';
+    mateBuilderName = 'RedoTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RedoTextIntent$Mate(p.get('cause').value);
     mateUse(
@@ -526,7 +548,7 @@ class ReplaceTextIntent$Mate extends ReplaceTextIntent with Mate {
           replacementRange,
           cause,
         ) {
-    mateCreateName = 'ReplaceTextIntent';
+    mateBuilderName = 'ReplaceTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ReplaceTextIntent$Mate(
           p.get('currentTextEditingValue').value,
@@ -565,7 +587,7 @@ class UndoTextIntent$Mate extends UndoTextIntent with Mate {
       /// requiredParameters: SelectionChangedCause cause
       SelectionChangedCause cause)
       : super(cause) {
-    mateCreateName = 'UndoTextIntent';
+    mateBuilderName = 'UndoTextIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UndoTextIntent$Mate(p.get('cause').value);
     mateUse(
@@ -593,7 +615,7 @@ class UpdateSelectionIntent$Mate extends UpdateSelectionIntent with Mate {
           newSelection,
           cause,
         ) {
-    mateCreateName = 'UpdateSelectionIntent';
+    mateBuilderName = 'UpdateSelectionIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UpdateSelectionIntent$Mate(
           p.get('currentTextEditingValue').value,

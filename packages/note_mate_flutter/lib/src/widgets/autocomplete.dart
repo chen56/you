@@ -11,7 +11,8 @@ import 'package:flutter/src/foundation/change_notifier.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class RawAutocomplete<T extends Object> extends StatefulWidget
-class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mate {
+class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T>
+    with Mate {
   /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
   RawAutocomplete$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -51,7 +52,7 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
           textEditingController: textEditingController,
           initialValue: initialValue,
         ) {
-    mateCreateName = 'RawAutocomplete';
+    mateBuilderName = 'RawAutocomplete';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawAutocomplete$Mate<T>(
           key: p.get('key').build(),
@@ -113,7 +114,8 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
 }
 
 /// class AutocompleteHighlightedOption extends InheritedNotifier<ValueNotifier<int>>
-class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption with Mate {
+class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption
+    with Mate {
   /// AutocompleteHighlightedOption AutocompleteHighlightedOption({Key? key, required ValueNotifier<int> highlightIndexNotifier, required Widget child})
   AutocompleteHighlightedOption$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -129,7 +131,7 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption w
           highlightIndexNotifier: highlightIndexNotifier,
           child: child,
         ) {
-    mateCreateName = 'AutocompleteHighlightedOption';
+    mateBuilderName = 'AutocompleteHighlightedOption';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutocompleteHighlightedOption$Mate(
           key: p.get('key').build(),

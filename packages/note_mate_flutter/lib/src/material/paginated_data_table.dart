@@ -118,7 +118,7 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
           controller: controller,
           primary: primary,
         ) {
-    mateCreateName = 'PaginatedDataTable';
+    mateBuilderName = 'PaginatedDataTable';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PaginatedDataTable$Mate(
           key: p.get('key').build(),

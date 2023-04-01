@@ -17,7 +17,7 @@ class DateTimeRange$Mate extends DateTimeRange with Mate {
           start: start,
           end: end,
         ) {
-    mateCreateName = 'DateTimeRange';
+    mateBuilderName = 'DateTimeRange';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DateTimeRange$Mate(
           start: p.get('start').build(),

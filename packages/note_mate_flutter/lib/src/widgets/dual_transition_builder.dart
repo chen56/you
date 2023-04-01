@@ -32,7 +32,7 @@ class DualTransitionBuilder$Mate extends DualTransitionBuilder with Mate {
           reverseBuilder: reverseBuilder,
           child: child,
         ) {
-    mateCreateName = 'DualTransitionBuilder';
+    mateBuilderName = 'DualTransitionBuilder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DualTransitionBuilder$Mate(
           key: p.get('key').build(),

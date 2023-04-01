@@ -16,7 +16,7 @@ class Ticker$Mate extends Ticker with Mate {
           _onTick,
           debugLabel: debugLabel,
         ) {
-    mateCreateName = 'Ticker';
+    mateBuilderName = 'Ticker';
     matePackageUrl = 'package:flutter/scheduler.dart';
     mateBuilder = (p) => Ticker$Mate(
           p.get('_onTick').value,
@@ -43,7 +43,7 @@ class TickerCanceled$Mate extends TickerCanceled with Mate {
       /// requiredParameters: [Ticker? ticker]
       Ticker? ticker)
       : super(ticker) {
-    mateCreateName = 'TickerCanceled';
+    mateBuilderName = 'TickerCanceled';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TickerCanceled$Mate(p.get('ticker').value);
     mateUse(

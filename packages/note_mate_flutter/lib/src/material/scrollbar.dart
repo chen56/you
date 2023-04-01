@@ -55,7 +55,7 @@ class Scrollbar$Mate extends Scrollbar with Mate {
           interactive: interactive,
           scrollbarOrientation: scrollbarOrientation,
         ) {
-    mateCreateName = 'Scrollbar';
+    mateBuilderName = 'Scrollbar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Scrollbar$Mate(
           key: p.get('key').build(),

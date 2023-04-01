@@ -45,7 +45,7 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
           stretchModes: stretchModes,
           expandedTitleScale: expandedTitleScale,
         ) {
-    mateCreateName = 'FlexibleSpaceBar';
+    mateBuilderName = 'FlexibleSpaceBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlexibleSpaceBar$Mate(
           key: p.get('key').build(),
@@ -135,7 +135,7 @@ class FlexibleSpaceBarSettings$Mate extends FlexibleSpaceBarSettings with Mate {
           child: child,
           isScrolledUnder: isScrolledUnder,
         ) {
-    mateCreateName = 'FlexibleSpaceBarSettings';
+    mateBuilderName = 'FlexibleSpaceBarSettings';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlexibleSpaceBarSettings$Mate(
           key: p.get('key').build(),

@@ -26,7 +26,7 @@ class LongPressDownDetails$Mate extends LongPressDownDetails with Mate {
           localPosition: localPosition,
           kind: kind,
         ) {
-    mateCreateName = 'LongPressDownDetails';
+    mateBuilderName = 'LongPressDownDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressDownDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -65,7 +65,7 @@ class LongPressStartDetails$Mate extends LongPressStartDetails with Mate {
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
-    mateCreateName = 'LongPressStartDetails';
+    mateBuilderName = 'LongPressStartDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressStartDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -106,7 +106,7 @@ class LongPressMoveUpdateDetails$Mate extends LongPressMoveUpdateDetails with Ma
           offsetFromOrigin: offsetFromOrigin,
           localOffsetFromOrigin: localOffsetFromOrigin,
         ) {
-    mateCreateName = 'LongPressMoveUpdateDetails';
+    mateBuilderName = 'LongPressMoveUpdateDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressMoveUpdateDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -156,7 +156,7 @@ class LongPressEndDetails$Mate extends LongPressEndDetails with Mate {
           localPosition: localPosition,
           velocity: velocity,
         ) {
-    mateCreateName = 'LongPressEndDetails';
+    mateBuilderName = 'LongPressEndDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressEndDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -208,7 +208,7 @@ class LongPressGestureRecognizer$Mate extends LongPressGestureRecognizer with Ma
           debugOwner: debugOwner,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'LongPressGestureRecognizer';
+    mateBuilderName = 'LongPressGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressGestureRecognizer$Mate(
           duration: p.get('duration').build(),

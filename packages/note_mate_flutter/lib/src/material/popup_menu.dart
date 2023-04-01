@@ -28,7 +28,7 @@ class PopupMenuDivider$Mate extends PopupMenuDivider with Mate {
           key: key,
           height: height,
         ) {
-    mateCreateName = 'PopupMenuDivider';
+    mateBuilderName = 'PopupMenuDivider';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuDivider$Mate(
           key: p.get('key').build(),
@@ -92,7 +92,7 @@ class PopupMenuItem$Mate<T> extends PopupMenuItem<T> with Mate {
           mouseCursor: mouseCursor,
           child: child,
         ) {
-    mateCreateName = 'PopupMenuItem';
+    mateBuilderName = 'PopupMenuItem';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuItem$Mate<T>(
           key: p.get('key').build(),
@@ -197,7 +197,7 @@ class CheckedPopupMenuItem$Mate<T> extends CheckedPopupMenuItem<T> with Mate {
           mouseCursor: mouseCursor,
           child: child,
         ) {
-    mateCreateName = 'CheckedPopupMenuItem';
+    mateBuilderName = 'CheckedPopupMenuItem';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckedPopupMenuItem$Mate<T>(
           key: p.get('key').build(),
@@ -351,7 +351,7 @@ class PopupMenuButton$Mate<T> extends PopupMenuButton<T> with Mate {
           position: position,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'PopupMenuButton';
+    mateBuilderName = 'PopupMenuButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuButton$Mate<T>(
           key: p.get('key').build(),

@@ -19,7 +19,7 @@ class IntrinsicColumnWidth$Mate extends IntrinsicColumnWidth with Mate {
       /// optionalParameters: {double? flex} , default:none
       double? flex})
       : super(flex: flex) {
-    mateCreateName = 'IntrinsicColumnWidth';
+    mateBuilderName = 'IntrinsicColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
     mateUse(
@@ -38,7 +38,7 @@ class FixedColumnWidth$Mate extends FixedColumnWidth with Mate {
       /// requiredParameters: double value
       double value)
       : super(value) {
-    mateCreateName = 'FixedColumnWidth';
+    mateBuilderName = 'FixedColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
     mateUse(
@@ -57,7 +57,7 @@ class FractionColumnWidth$Mate extends FractionColumnWidth with Mate {
       /// requiredParameters: double value
       double value)
       : super(value) {
-    mateCreateName = 'FractionColumnWidth';
+    mateBuilderName = 'FractionColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
     mateUse(
@@ -76,7 +76,7 @@ class FlexColumnWidth$Mate extends FlexColumnWidth with Mate {
       /// requiredParameters: [double value = 1.0]
       double value)
       : super(value) {
-    mateCreateName = 'FlexColumnWidth';
+    mateBuilderName = 'FlexColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
     mateUse(
@@ -101,7 +101,7 @@ class MaxColumnWidth$Mate extends MaxColumnWidth with Mate {
           a,
           b,
         ) {
-    mateCreateName = 'MaxColumnWidth';
+    mateBuilderName = 'MaxColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => MaxColumnWidth$Mate(
           p.get('a').value,
@@ -133,7 +133,7 @@ class MinColumnWidth$Mate extends MinColumnWidth with Mate {
           a,
           b,
         ) {
-    mateCreateName = 'MinColumnWidth';
+    mateBuilderName = 'MinColumnWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => MinColumnWidth$Mate(
           p.get('a').value,
@@ -181,7 +181,8 @@ class RenderTable$Mate extends RenderTable with Mate {
     ImageConfiguration configuration = ImageConfiguration.empty,
 
     /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
-    TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top,
+    TableCellVerticalAlignment defaultVerticalAlignment =
+        TableCellVerticalAlignment.top,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
@@ -201,7 +202,7 @@ class RenderTable$Mate extends RenderTable with Mate {
           textBaseline: textBaseline,
           children: children,
         ) {
-    mateCreateName = 'RenderTable';
+    mateBuilderName = 'RenderTable';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderTable$Mate(
           columns: p.get('columns').build(),

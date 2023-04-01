@@ -154,7 +154,7 @@ Param<T> _toSingleParam<T>({
       init: init,
       paramMap: init._mateParams,
       builder: init.mateBuilder,
-      builderRefer: code.refer(init.mateCreateName, init.matePackageUrl),
+      builderRefer: code.refer(init.mateBuilderName, init.matePackageUrl),
       nullable: nullable,
       isNamed: isNamed,
       defaultValue: defaultValue,
@@ -268,7 +268,7 @@ class ObjectParam<T> extends Param<T> {
           paramMap: mate._mateParams,
           nullable: false,
           //根对象
-          builderRefer: code.refer(mate.mateCreateName, mate.matePackageUrl),
+          builderRefer: code.refer(mate.mateBuilderName, mate.matePackageUrl),
         );
 
   Param<E> use<E>(
@@ -356,7 +356,7 @@ class BuilderArg<T> {
 mixin Mate {
   final Map<String, Param> _mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
-  late final String mateCreateName;
+  late final String mateBuilderName;
   late final String matePackageUrl;
 
   BuilderArg<V> mateUse<V>(

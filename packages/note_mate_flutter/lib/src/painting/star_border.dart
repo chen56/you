@@ -39,7 +39,7 @@ class StarBorder$Mate extends StarBorder with Mate {
           rotation: rotation,
           squash: squash,
         ) {
-    mateCreateName = 'StarBorder';
+    mateBuilderName = 'StarBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StarBorder$Mate(
           side: p.get('side').build(),
@@ -117,7 +117,7 @@ class StarBorder$Mate extends StarBorder with Mate {
           rotation: rotation,
           squash: squash,
         ) {
-    mateCreateName = 'StarBorder.polygon';
+    mateBuilderName = 'StarBorder.polygon';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => StarBorder$Mate.polygon(
           side: p.get('side').build(),

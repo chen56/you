@@ -33,7 +33,7 @@ class Form$Mate extends Form with Mate {
           onChanged: onChanged,
           autovalidateMode: autovalidateMode,
         ) {
-    mateCreateName = 'Form';
+    mateBuilderName = 'Form';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Form$Mate(
           key: p.get('key').build(),
@@ -107,7 +107,7 @@ class FormField$Mate<T> extends FormField<T> with Mate {
           autovalidateMode: autovalidateMode,
           restorationId: restorationId,
         ) {
-    mateCreateName = 'FormField';
+    mateBuilderName = 'FormField';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FormField$Mate<T>(
           key: p.get('key').build(),

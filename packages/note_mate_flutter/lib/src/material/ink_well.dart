@@ -138,7 +138,7 @@ class InkResponse$Mate extends InkResponse with Mate {
           autofocus: autofocus,
           statesController: statesController,
         ) {
-    mateCreateName = 'InkResponse';
+    mateBuilderName = 'InkResponse';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkResponse$Mate(
           key: p.get('key').build(),
@@ -438,7 +438,7 @@ class InkWell$Mate extends InkWell with Mate {
           autofocus: autofocus,
           statesController: statesController,
         ) {
-    mateCreateName = 'InkWell';
+    mateBuilderName = 'InkWell';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkWell$Mate(
           key: p.get('key').build(),

@@ -573,7 +573,7 @@ void _genLibMate({
                 //             .code).closure,
                 //     }))
                 //     .statement,
-                refer("mateCreateName")
+                refer("mateBuilderName")
                     .assign(literalString(constructor.displayName))
                     .statement,
                 refer("matePackageUrl")

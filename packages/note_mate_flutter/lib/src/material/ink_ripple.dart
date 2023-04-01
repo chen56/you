@@ -58,7 +58,7 @@ class InkRipple$Mate extends InkRipple with Mate {
           radius: radius,
           onRemoved: onRemoved,
         ) {
-    mateCreateName = 'InkRipple';
+    mateBuilderName = 'InkRipple';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkRipple$Mate(
           controller: p.get('controller').build(),

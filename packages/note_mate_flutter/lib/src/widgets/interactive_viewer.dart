@@ -90,7 +90,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           child: child,
         ) {
-    mateCreateName = 'InteractiveViewer';
+    mateBuilderName = 'InteractiveViewer';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate(
           key: p.get('key').build(),
@@ -100,7 +100,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           constrained: p.get('constrained').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient:
+              p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -284,7 +285,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           builder: builder,
         ) {
-    mateCreateName = 'InteractiveViewer.builder';
+    mateBuilderName = 'InteractiveViewer.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate.builder(
           key: p.get('key').build(),
@@ -293,7 +294,8 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           boundaryMargin: p.get('boundaryMargin').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient:
+              p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -410,7 +412,7 @@ class TransformationController$Mate extends TransformationController with Mate {
       /// requiredParameters: [Matrix4? value]
       Matrix4? value)
       : super(value) {
-    mateCreateName = 'TransformationController';
+    mateBuilderName = 'TransformationController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
     mateUse(

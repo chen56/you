@@ -68,7 +68,7 @@ class MenuStyle$Mate extends MenuStyle with Mate {
           visualDensity: visualDensity,
           alignment: alignment,
         ) {
-    mateCreateName = 'MenuStyle';
+    mateBuilderName = 'MenuStyle';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuStyle$Mate(
           backgroundColor: p.get('backgroundColor').build(),

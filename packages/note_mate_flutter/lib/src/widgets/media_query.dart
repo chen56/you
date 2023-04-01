@@ -85,7 +85,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           gestureSettings: gestureSettings,
           displayFeatures: displayFeatures,
         ) {
-    mateCreateName = 'MediaQueryData';
+    mateBuilderName = 'MediaQueryData';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MediaQueryData$Mate(
           size: p.get('size').build(),
@@ -218,7 +218,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
           view,
           platformData: platformData,
         ) {
-    mateCreateName = 'MediaQueryData.fromView';
+    mateBuilderName = 'MediaQueryData.fromView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MediaQueryData$Mate.fromView(
           p.get('view').value,
@@ -254,7 +254,7 @@ class MediaQuery$Mate extends MediaQuery with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'MediaQuery';
+    mateBuilderName = 'MediaQuery';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MediaQuery$Mate(
           key: p.get('key').build(),

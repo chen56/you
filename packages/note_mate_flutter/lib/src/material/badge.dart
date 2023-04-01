@@ -63,7 +63,7 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: isLabelVisible,
           child: child,
         ) {
-    mateCreateName = 'Badge';
+    mateBuilderName = 'Badge';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Badge$Mate(
           key: p.get('key').build(),
@@ -193,7 +193,7 @@ class Badge$Mate extends Badge with Mate {
           isLabelVisible: isLabelVisible,
           child: child,
         ) {
-    mateCreateName = 'Badge.count';
+    mateBuilderName = 'Badge.count';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Badge$Mate.count(
           key: p.get('key').build(),

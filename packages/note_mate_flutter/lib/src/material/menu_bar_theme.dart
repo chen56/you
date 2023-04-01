@@ -14,7 +14,7 @@ class MenuBarThemeData$Mate extends MenuBarThemeData with Mate {
       /// optionalParameters: {MenuStyle? style} , default:none
       MenuStyle? style})
       : super(style: style) {
-    mateCreateName = 'MenuBarThemeData';
+    mateBuilderName = 'MenuBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuBarThemeData$Mate(style: p.get('style').build());
     mateUse(
@@ -42,7 +42,7 @@ class MenuBarTheme$Mate extends MenuBarTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'MenuBarTheme';
+    mateBuilderName = 'MenuBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuBarTheme$Mate(
           key: p.get('key').build(),

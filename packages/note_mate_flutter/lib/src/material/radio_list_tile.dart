@@ -133,7 +133,7 @@ class RadioListTile$Mate<T> extends RadioListTile<T> with Mate {
           onFocusChange: onFocusChange,
           enableFeedback: enableFeedback,
         ) {
-    mateCreateName = 'RadioListTile';
+    mateBuilderName = 'RadioListTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RadioListTile$Mate<T>(
           key: p.get('key').build(),

@@ -28,7 +28,7 @@ class HSVColor$Mate extends HSVColor with Mate {
           saturation,
           value,
         ) {
-    mateCreateName = 'HSVColor.fromAHSV';
+    mateBuilderName = 'HSVColor.fromAHSV';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => HSVColor$Mate.fromAHSV(
           p.get('alpha').value,
@@ -80,7 +80,7 @@ class HSLColor$Mate extends HSLColor with Mate {
           saturation,
           lightness,
         ) {
-    mateCreateName = 'HSLColor.fromAHSL';
+    mateBuilderName = 'HSLColor.fromAHSL';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => HSLColor$Mate.fromAHSL(
           p.get('alpha').value,
@@ -124,7 +124,7 @@ class ColorSwatch$Mate<T> extends ColorSwatch<T> with Mate {
           primary,
           _swatch,
         ) {
-    mateCreateName = 'ColorSwatch';
+    mateBuilderName = 'ColorSwatch';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ColorSwatch$Mate<T>(
           p.get('primary').value,
@@ -171,7 +171,7 @@ class ColorProperty$Mate extends ColorProperty with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'ColorProperty';
+    mateBuilderName = 'ColorProperty';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ColorProperty$Mate(
           p.get('name').value,

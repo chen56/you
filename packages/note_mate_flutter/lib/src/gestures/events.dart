@@ -71,7 +71,7 @@ class PointerAddedEvent$Mate extends PointerAddedEvent with Mate {
           tilt: tilt,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerAddedEvent';
+    mateBuilderName = 'PointerAddedEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerAddedEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -240,7 +240,7 @@ class PointerRemovedEvent$Mate extends PointerRemovedEvent with Mate {
           original: original,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerRemovedEvent';
+    mateBuilderName = 'PointerRemovedEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerRemovedEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -426,7 +426,7 @@ class PointerHoverEvent$Mate extends PointerHoverEvent with Mate {
           synthesized: synthesized,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerHoverEvent';
+    mateBuilderName = 'PointerHoverEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerHoverEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -673,7 +673,7 @@ class PointerEnterEvent$Mate extends PointerEnterEvent with Mate {
           synthesized: synthesized,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerEnterEvent';
+    mateBuilderName = 'PointerEnterEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerEnterEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -927,7 +927,7 @@ class PointerExitEvent$Mate extends PointerExitEvent with Mate {
           synthesized: synthesized,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerExitEvent';
+    mateBuilderName = 'PointerExitEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerExitEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -1169,7 +1169,7 @@ class PointerDownEvent$Mate extends PointerDownEvent with Mate {
           tilt: tilt,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerDownEvent';
+    mateBuilderName = 'PointerDownEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerDownEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -1401,7 +1401,7 @@ class PointerMoveEvent$Mate extends PointerMoveEvent with Mate {
           synthesized: synthesized,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerMoveEvent';
+    mateBuilderName = 'PointerMoveEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerMoveEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -1646,7 +1646,7 @@ class PointerUpEvent$Mate extends PointerUpEvent with Mate {
           tilt: tilt,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerUpEvent';
+    mateBuilderName = 'PointerUpEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerUpEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -1822,7 +1822,7 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
           scrollDelta: scrollDelta,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerScrollEvent';
+    mateBuilderName = 'PointerScrollEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerScrollEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -1872,7 +1872,8 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
 }
 
 /// class PointerScrollInertiaCancelEvent extends PointerSignalEvent with _PointerEventDescription, _CopyPointerScrollInertiaCancelEvent
-class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEvent with Mate {
+class PointerScrollInertiaCancelEvent$Mate
+    extends PointerScrollInertiaCancelEvent with Mate {
   /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
@@ -1896,7 +1897,7 @@ class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEve
           position: position,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerScrollInertiaCancelEvent';
+    mateBuilderName = 'PointerScrollInertiaCancelEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerScrollInertiaCancelEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -1967,7 +1968,7 @@ class PointerScaleEvent$Mate extends PointerScaleEvent with Mate {
           embedderId: embedderId,
           scale: scale,
         ) {
-    mateCreateName = 'PointerScaleEvent';
+    mateBuilderName = 'PointerScaleEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerScaleEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -2045,7 +2046,7 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
           embedderId: embedderId,
           synthesized: synthesized,
         ) {
-    mateCreateName = 'PointerPanZoomStartEvent';
+    mateBuilderName = 'PointerPanZoomStartEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerPanZoomStartEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -2095,7 +2096,8 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
 }
 
 /// class PointerPanZoomUpdateEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomUpdateEvent
-class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate {
+class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent
+    with Mate {
   /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
@@ -2139,7 +2141,7 @@ class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate
           rotation: rotation,
           synthesized: synthesized,
         ) {
-    mateCreateName = 'PointerPanZoomUpdateEvent';
+    mateBuilderName = 'PointerPanZoomUpdateEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerPanZoomUpdateEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -2245,7 +2247,7 @@ class PointerPanZoomEndEvent$Mate extends PointerPanZoomEndEvent with Mate {
           embedderId: embedderId,
           synthesized: synthesized,
         ) {
-    mateCreateName = 'PointerPanZoomEndEvent';
+    mateBuilderName = 'PointerPanZoomEndEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerPanZoomEndEvent$Mate(
           timeStamp: p.get('timeStamp').build(),
@@ -2375,7 +2377,7 @@ class PointerCancelEvent$Mate extends PointerCancelEvent with Mate {
           tilt: tilt,
           embedderId: embedderId,
         ) {
-    mateCreateName = 'PointerCancelEvent';
+    mateBuilderName = 'PointerCancelEvent';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PointerCancelEvent$Mate(
           timeStamp: p.get('timeStamp').build(),

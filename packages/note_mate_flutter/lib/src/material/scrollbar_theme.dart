@@ -57,7 +57,7 @@ class ScrollbarThemeData$Mate extends ScrollbarThemeData with Mate {
           minThumbLength: minThumbLength,
           interactive: interactive,
         ) {
-    mateCreateName = 'ScrollbarThemeData';
+    mateBuilderName = 'ScrollbarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollbarThemeData$Mate(
           thumbVisibility: p.get('thumbVisibility').build(),
@@ -147,7 +147,7 @@ class ScrollbarTheme$Mate extends ScrollbarTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'ScrollbarTheme';
+    mateBuilderName = 'ScrollbarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollbarTheme$Mate(
           key: p.get('key').build(),

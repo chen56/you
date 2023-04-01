@@ -52,7 +52,7 @@ class CheckboxThemeData$Mate extends CheckboxThemeData with Mate {
           shape: shape,
           side: side,
         ) {
-    mateCreateName = 'CheckboxThemeData';
+    mateBuilderName = 'CheckboxThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckboxThemeData$Mate(
           mouseCursor: p.get('mouseCursor').build(),
@@ -130,7 +130,7 @@ class CheckboxTheme$Mate extends CheckboxTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'CheckboxTheme';
+    mateBuilderName = 'CheckboxTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckboxTheme$Mate(
           key: p.get('key').build(),

@@ -8,7 +8,8 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/rendering/sliver_grid.dart';
 
 /// class SliverChildBuilderDelegate extends SliverChildDelegate
-class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate with Mate {
+class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate
+    with Mate {
   /// SliverChildBuilderDelegate SliverChildBuilderDelegate(Widget? Function(BuildContext, int) builder, {int? Function(Key)? findChildIndexCallback, int? childCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
   SliverChildBuilderDelegate$Mate(
     /// requiredParameters: Widget? Function(BuildContext, int) builder
@@ -43,7 +44,7 @@ class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate with Ma
           semanticIndexCallback: semanticIndexCallback,
           semanticIndexOffset: semanticIndexOffset,
         ) {
-    mateCreateName = 'SliverChildBuilderDelegate';
+    mateBuilderName = 'SliverChildBuilderDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverChildBuilderDelegate$Mate(
           p.get('builder').value,
@@ -130,7 +131,7 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate {
           semanticIndexCallback: semanticIndexCallback,
           semanticIndexOffset: semanticIndexOffset,
         ) {
-    mateCreateName = 'SliverChildListDelegate';
+    mateBuilderName = 'SliverChildListDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverChildListDelegate$Mate(
           p.get('children').value,
@@ -202,7 +203,7 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate {
           semanticIndexCallback: semanticIndexCallback,
           semanticIndexOffset: semanticIndexOffset,
         ) {
-    mateCreateName = 'SliverChildListDelegate.fixed';
+    mateBuilderName = 'SliverChildListDelegate.fixed';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverChildListDelegate$Mate.fixed(
           p.get('children').value,
@@ -262,7 +263,7 @@ class SliverList$Mate extends SliverList with Mate {
           key: key,
           delegate: delegate,
         ) {
-    mateCreateName = 'SliverList';
+    mateBuilderName = 'SliverList';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverList$Mate(
           key: p.get('key').build(),
@@ -311,7 +312,7 @@ class SliverList$Mate extends SliverList with Mate {
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverList.builder';
+    mateBuilderName = 'SliverList.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverList$Mate.builder(
           key: p.get('key').build(),
@@ -397,7 +398,7 @@ class SliverList$Mate extends SliverList with Mate {
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverList.separated';
+    mateBuilderName = 'SliverList.separated';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverList$Mate.separated(
           key: p.get('key').build(),
@@ -477,7 +478,7 @@ class SliverList$Mate extends SliverList with Mate {
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverList.list';
+    mateBuilderName = 'SliverList.list';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverList$Mate.list(
           key: p.get('key').build(),
@@ -534,7 +535,7 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate {
           delegate: delegate,
           itemExtent: itemExtent,
         ) {
-    mateCreateName = 'SliverFixedExtentList';
+    mateBuilderName = 'SliverFixedExtentList';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverFixedExtentList$Mate(
           key: p.get('key').build(),
@@ -593,7 +594,7 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate {
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverFixedExtentList.builder';
+    mateBuilderName = 'SliverFixedExtentList.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverFixedExtentList$Mate.builder(
           key: p.get('key').build(),
@@ -677,7 +678,7 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate {
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverFixedExtentList.list';
+    mateBuilderName = 'SliverFixedExtentList.list';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverFixedExtentList$Mate.list(
           key: p.get('key').build(),
@@ -740,7 +741,7 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           delegate: delegate,
           gridDelegate: gridDelegate,
         ) {
-    mateCreateName = 'SliverGrid';
+    mateBuilderName = 'SliverGrid';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverGrid$Mate(
           key: p.get('key').build(),
@@ -799,7 +800,7 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverGrid.builder';
+    mateBuilderName = 'SliverGrid.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverGrid$Mate.builder(
           key: p.get('key').build(),
@@ -883,7 +884,7 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           childAspectRatio: childAspectRatio,
           children: children,
         ) {
-    mateCreateName = 'SliverGrid.count';
+    mateBuilderName = 'SliverGrid.count';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverGrid$Mate.count(
           key: p.get('key').build(),
@@ -955,7 +956,7 @@ class SliverGrid$Mate extends SliverGrid with Mate {
           childAspectRatio: childAspectRatio,
           children: children,
         ) {
-    mateCreateName = 'SliverGrid.extent';
+    mateBuilderName = 'SliverGrid.extent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverGrid$Mate.extent(
           key: p.get('key').build(),
@@ -1002,7 +1003,8 @@ class SliverGrid$Mate extends SliverGrid with Mate {
 }
 
 /// class SliverMultiBoxAdaptorElement extends RenderObjectElement implements RenderSliverBoxChildManager
-class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement with Mate {
+class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement
+    with Mate {
   /// SliverMultiBoxAdaptorElement SliverMultiBoxAdaptorElement(SliverMultiBoxAdaptorWidget widget, {bool replaceMovedChildren = false})
   SliverMultiBoxAdaptorElement$Mate(
     /// requiredParameters: SliverMultiBoxAdaptorWidget widget
@@ -1013,7 +1015,7 @@ class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement wit
           widget,
           replaceMovedChildren: replaceMovedChildren,
         ) {
-    mateCreateName = 'SliverMultiBoxAdaptorElement';
+    mateBuilderName = 'SliverMultiBoxAdaptorElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverMultiBoxAdaptorElement$Mate(
           p.get('widget').value,
@@ -1054,7 +1056,7 @@ class SliverOpacity$Mate extends SliverOpacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateCreateName = 'SliverOpacity';
+    mateBuilderName = 'SliverOpacity';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverOpacity$Mate(
           key: p.get('key').build(),
@@ -1107,7 +1109,7 @@ class SliverIgnorePointer$Mate extends SliverIgnorePointer with Mate {
           ignoringSemantics: ignoringSemantics,
           sliver: sliver,
         ) {
-    mateCreateName = 'SliverIgnorePointer';
+    mateBuilderName = 'SliverIgnorePointer';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverIgnorePointer$Mate(
           key: p.get('key').build(),
@@ -1156,7 +1158,7 @@ class SliverOffstage$Mate extends SliverOffstage with Mate {
           offstage: offstage,
           sliver: sliver,
         ) {
-    mateCreateName = 'SliverOffstage';
+    mateBuilderName = 'SliverOffstage';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverOffstage$Mate(
           key: p.get('key').build(),
@@ -1199,7 +1201,7 @@ class KeepAlive$Mate extends KeepAlive with Mate {
           keepAlive: keepAlive,
           child: child,
         ) {
-    mateCreateName = 'KeepAlive';
+    mateBuilderName = 'KeepAlive';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeepAlive$Mate(
           key: p.get('key').build(),

@@ -23,7 +23,7 @@ class RevealedOffset$Mate extends RevealedOffset with Mate {
           offset: offset,
           rect: rect,
         ) {
-    mateCreateName = 'RevealedOffset';
+    mateBuilderName = 'RevealedOffset';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RevealedOffset$Mate(
           offset: p.get('offset').build(),
@@ -83,7 +83,7 @@ class RenderViewport$Mate extends RenderViewport with Mate {
           cacheExtentStyle: cacheExtentStyle,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'RenderViewport';
+    mateBuilderName = 'RenderViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderViewport$Mate(
           axisDirection: p.get('axisDirection').build(),
@@ -149,7 +149,8 @@ class RenderViewport$Mate extends RenderViewport with Mate {
 }
 
 /// class RenderShrinkWrappingViewport extends RenderViewportBase<SliverLogicalContainerParentData>
-class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport with Mate {
+class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport
+    with Mate {
   /// RenderShrinkWrappingViewport RenderShrinkWrappingViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<RenderSliver>? children})
   RenderShrinkWrappingViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
@@ -173,7 +174,7 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport wit
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateCreateName = 'RenderShrinkWrappingViewport';
+    mateBuilderName = 'RenderShrinkWrappingViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderShrinkWrappingViewport$Mate(
           axisDirection: p.get('axisDirection').build(),

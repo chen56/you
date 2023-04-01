@@ -59,7 +59,7 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
           onDetailsPressed: onDetailsPressed,
           arrowColor: arrowColor,
         ) {
-    mateCreateName = 'UserAccountsDrawerHeader';
+    mateBuilderName = 'UserAccountsDrawerHeader';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UserAccountsDrawerHeader$Mate(
           key: p.get('key').build(),

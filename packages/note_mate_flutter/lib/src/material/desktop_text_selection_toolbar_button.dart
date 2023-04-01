@@ -8,7 +8,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 
 /// class DesktopTextSelectionToolbarButton extends StatelessWidget
-class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbarButton with Mate {
+class DesktopTextSelectionToolbarButton$Mate
+    extends DesktopTextSelectionToolbarButton with Mate {
   /// DesktopTextSelectionToolbarButton DesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   DesktopTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -24,7 +25,7 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: onPressed,
           child: child,
         ) {
-    mateCreateName = 'DesktopTextSelectionToolbarButton';
+    mateBuilderName = 'DesktopTextSelectionToolbarButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbarButton$Mate(
           key: p.get('key').build(),
@@ -67,7 +68,7 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: onPressed,
           text: text,
         ) {
-    mateCreateName = 'DesktopTextSelectionToolbarButton.text';
+    mateBuilderName = 'DesktopTextSelectionToolbarButton.text';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbarButton$Mate.text(
           key: p.get('key').build(),

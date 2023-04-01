@@ -19,7 +19,8 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
     required AutocompleteOptionsBuilder<T> optionsBuilder,
 
     /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , default:processed=PrefixedIdentifierImpl
-    AutocompleteOptionToString<T> displayStringForOption = RawAutocomplete.defaultStringForOption,
+    AutocompleteOptionToString<T> displayStringForOption =
+        RawAutocomplete.defaultStringForOption,
 
     /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , default:unprocessed=SimpleIdentifierImpl
     required AutocompleteFieldViewBuilder fieldViewBuilder,
@@ -45,7 +46,7 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
           optionsViewBuilder: optionsViewBuilder,
           initialValue: initialValue,
         ) {
-    mateCreateName = 'Autocomplete';
+    mateBuilderName = 'Autocomplete';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Autocomplete$Mate<T>(
           key: p.get('key').build(),

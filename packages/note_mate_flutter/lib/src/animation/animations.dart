@@ -15,7 +15,7 @@ class AlwaysStoppedAnimation$Mate<T> extends AlwaysStoppedAnimation<T> with Mate
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateCreateName = 'AlwaysStoppedAnimation';
+    mateBuilderName = 'AlwaysStoppedAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AlwaysStoppedAnimation$Mate<T>(p.get('value').value);
     mateUse(
@@ -34,7 +34,7 @@ class ProxyAnimation$Mate extends ProxyAnimation with Mate {
       /// requiredParameters: [Animation<double>? animation]
       Animation<double>? animation)
       : super(animation) {
-    mateCreateName = 'ProxyAnimation';
+    mateBuilderName = 'ProxyAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ProxyAnimation$Mate(p.get('animation').value);
     mateUse(
@@ -53,7 +53,7 @@ class ReverseAnimation$Mate extends ReverseAnimation with Mate {
       /// requiredParameters: Animation<double> parent
       Animation<double> parent)
       : super(parent) {
-    mateCreateName = 'ReverseAnimation';
+    mateBuilderName = 'ReverseAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ReverseAnimation$Mate(p.get('parent').value);
     mateUse(
@@ -81,7 +81,7 @@ class CurvedAnimation$Mate extends CurvedAnimation with Mate {
           curve: curve,
           reverseCurve: reverseCurve,
         ) {
-    mateCreateName = 'CurvedAnimation';
+    mateBuilderName = 'CurvedAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CurvedAnimation$Mate(
           parent: p.get('parent').build(),
@@ -122,7 +122,7 @@ class TrainHoppingAnimation$Mate extends TrainHoppingAnimation with Mate {
           _nextTrain,
           onSwitchedTrain: onSwitchedTrain,
         ) {
-    mateCreateName = 'TrainHoppingAnimation';
+    mateBuilderName = 'TrainHoppingAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TrainHoppingAnimation$Mate(
           p.get('_currentTrain').value,
@@ -160,7 +160,7 @@ class AnimationMean$Mate extends AnimationMean with Mate {
           left: left,
           right: right,
         ) {
-    mateCreateName = 'AnimationMean';
+    mateBuilderName = 'AnimationMean';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMean$Mate(
           left: p.get('left').build(),
@@ -192,7 +192,7 @@ class AnimationMax$Mate<T extends num> extends AnimationMax<T> with Mate {
           first,
           next,
         ) {
-    mateCreateName = 'AnimationMax';
+    mateBuilderName = 'AnimationMax';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMax$Mate<T>(
           p.get('first').value,
@@ -224,7 +224,7 @@ class AnimationMin$Mate<T extends num> extends AnimationMin<T> with Mate {
           first,
           next,
         ) {
-    mateCreateName = 'AnimationMin';
+    mateBuilderName = 'AnimationMin';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMin$Mate<T>(
           p.get('first').value,

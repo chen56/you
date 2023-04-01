@@ -19,7 +19,7 @@ class SegmentedButtonThemeData$Mate extends SegmentedButtonThemeData with Mate {
           style: style,
           selectedIcon: selectedIcon,
         ) {
-    mateCreateName = 'SegmentedButtonThemeData';
+    mateBuilderName = 'SegmentedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SegmentedButtonThemeData$Mate(
           style: p.get('style').build(),
@@ -55,7 +55,7 @@ class SegmentedButtonTheme$Mate extends SegmentedButtonTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'SegmentedButtonTheme';
+    mateBuilderName = 'SegmentedButtonTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SegmentedButtonTheme$Mate(
           key: p.get('key').build(),

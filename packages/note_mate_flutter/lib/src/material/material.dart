@@ -68,7 +68,7 @@ class Material$Mate extends Material with Mate {
           animationDuration: animationDuration,
           child: child,
         ) {
-    mateCreateName = 'Material';
+    mateBuilderName = 'Material';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Material$Mate(
           key: p.get('key').build(),
@@ -170,7 +170,7 @@ class ShapeBorderTween$Mate extends ShapeBorderTween with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'ShapeBorderTween';
+    mateBuilderName = 'ShapeBorderTween';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShapeBorderTween$Mate(
           begin: p.get('begin').build(),

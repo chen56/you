@@ -105,12 +105,13 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           showChildren: showChildren,
           addBlankLineIfNoChildren: addBlankLineIfNoChildren,
           isNameOnOwnLine: isNameOnOwnLine,
-          isBlankLineBetweenPropertiesAndChildren: isBlankLineBetweenPropertiesAndChildren,
+          isBlankLineBetweenPropertiesAndChildren:
+              isBlankLineBetweenPropertiesAndChildren,
           beforeName: beforeName,
           suffixLineOne: suffixLineOne,
           mandatoryFooter: mandatoryFooter,
         ) {
-    mateCreateName = 'TextTreeConfiguration';
+    mateBuilderName = 'TextTreeConfiguration';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => TextTreeConfiguration$Mate(
           prefixLineOne: p.get('prefixLineOne').build(),
@@ -134,7 +135,8 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           showChildren: p.get('showChildren').build(),
           addBlankLineIfNoChildren: p.get('addBlankLineIfNoChildren').build(),
           isNameOnOwnLine: p.get('isNameOnOwnLine').build(),
-          isBlankLineBetweenPropertiesAndChildren: p.get('isBlankLineBetweenPropertiesAndChildren').build(),
+          isBlankLineBetweenPropertiesAndChildren:
+              p.get('isBlankLineBetweenPropertiesAndChildren').build(),
           beforeName: p.get('beforeName').build(),
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
@@ -306,13 +308,14 @@ class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
           wrapWidthProperties: wrapWidthProperties,
           maxDescendentsTruncatableNode: maxDescendentsTruncatableNode,
         ) {
-    mateCreateName = 'TextTreeRenderer';
+    mateBuilderName = 'TextTreeRenderer';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => TextTreeRenderer$Mate(
           minLevel: p.get('minLevel').build(),
           wrapWidth: p.get('wrapWidth').build(),
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
-          maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
+          maxDescendentsTruncatableNode:
+              p.get('maxDescendentsTruncatableNode').build(),
         );
     mateUse(
       'minLevel',
@@ -361,7 +364,7 @@ class MessageProperty$Mate extends MessageProperty with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'MessageProperty';
+    mateBuilderName = 'MessageProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => MessageProperty$Mate(
           p.get('name').value,
@@ -438,7 +441,7 @@ class StringProperty$Mate extends StringProperty with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'StringProperty';
+    mateBuilderName = 'StringProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => StringProperty$Mate(
           p.get('name').value,
@@ -549,7 +552,7 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'DoubleProperty';
+    mateBuilderName = 'DoubleProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DoubleProperty$Mate(
           p.get('name').value,
@@ -646,7 +649,7 @@ class DoubleProperty$Mate extends DoubleProperty with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
-    mateCreateName = 'DoubleProperty.lazy';
+    mateBuilderName = 'DoubleProperty.lazy';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DoubleProperty$Mate.lazy(
           p.get('name').value,
@@ -739,7 +742,7 @@ class IntProperty$Mate extends IntProperty with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'IntProperty';
+    mateBuilderName = 'IntProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => IntProperty$Mate(
           p.get('name').value,
@@ -829,7 +832,7 @@ class PercentProperty$Mate extends PercentProperty with Mate {
           unit: unit,
           level: level,
         ) {
-    mateCreateName = 'PercentProperty';
+    mateBuilderName = 'PercentProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => PercentProperty$Mate(
           p.get('name').value,
@@ -912,7 +915,7 @@ class FlagProperty$Mate extends FlagProperty with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
-    mateCreateName = 'FlagProperty';
+    mateBuilderName = 'FlagProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlagProperty$Mate(
           p.get('name').value,
@@ -1003,7 +1006,7 @@ class IterableProperty$Mate<T> extends IterableProperty<T> with Mate {
           showSeparator: showSeparator,
           level: level,
         ) {
-    mateCreateName = 'IterableProperty';
+    mateBuilderName = 'IterableProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => IterableProperty$Mate<T>(
           p.get('name').value,
@@ -1089,7 +1092,7 @@ class EnumProperty$Mate<T> extends EnumProperty<T> with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
-    mateCreateName = 'EnumProperty';
+    mateBuilderName = 'EnumProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => EnumProperty$Mate<T>(
           p.get('name').value,
@@ -1149,7 +1152,7 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           showName: showName,
           level: level,
         ) {
-    mateCreateName = 'ObjectFlagProperty';
+    mateBuilderName = 'ObjectFlagProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectFlagProperty$Mate<T>(
           p.get('name').value,
@@ -1207,7 +1210,7 @@ class ObjectFlagProperty$Mate<T> extends ObjectFlagProperty<T> with Mate {
           value,
           level: level,
         ) {
-    mateCreateName = 'ObjectFlagProperty.has';
+    mateBuilderName = 'ObjectFlagProperty.has';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectFlagProperty$Mate<T>.has(
           p.get('name').value,
@@ -1261,7 +1264,7 @@ class FlagsSummary$Mate<T> extends FlagsSummary<T> with Mate {
           showSeparator: showSeparator,
           level: level,
         ) {
-    mateCreateName = 'FlagsSummary';
+    mateBuilderName = 'FlagsSummary';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlagsSummary$Mate<T>(
           p.get('name').value,
@@ -1375,7 +1378,7 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'DiagnosticsProperty';
+    mateBuilderName = 'DiagnosticsProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsProperty$Mate<T>(
           p.get('name').value,
@@ -1547,7 +1550,7 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'DiagnosticsProperty.lazy';
+    mateBuilderName = 'DiagnosticsProperty.lazy';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsProperty$Mate<T>.lazy(
           p.get('name').value,
@@ -1653,7 +1656,8 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 }
 
 /// class DiagnosticableNode<T extends Diagnosticable> extends DiagnosticsNode
-class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNode<T> with Mate {
+class DiagnosticableNode$Mate<T extends Diagnosticable>
+    extends DiagnosticableNode<T> with Mate {
   /// DiagnosticableNode<T> DiagnosticableNode({String? name, required T value, required DiagnosticsTreeStyle? style})
   DiagnosticableNode$Mate({
     /// optionalParameters: {String? name} , default:none
@@ -1669,7 +1673,7 @@ class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNo
           value: value,
           style: style,
         ) {
-    mateCreateName = 'DiagnosticableNode';
+    mateBuilderName = 'DiagnosticableNode';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticableNode$Mate<T>(
           name: p.get('name').build(),
@@ -1711,7 +1715,7 @@ class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
           value: value,
           style: style,
         ) {
-    mateCreateName = 'DiagnosticableTreeNode';
+    mateBuilderName = 'DiagnosticableTreeNode';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticableTreeNode$Mate(
           name: p.get('name').build(),
@@ -1737,16 +1741,18 @@ class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
 }
 
 /// class DiagnosticPropertiesBuilder
-class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with Mate {
+class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder
+    with Mate {
   /// DiagnosticPropertiesBuilder DiagnosticPropertiesBuilder.fromProperties(List<DiagnosticsNode> properties)
   DiagnosticPropertiesBuilder$Mate.fromProperties(
 
       /// requiredParameters: List<DiagnosticsNode> properties
       List<DiagnosticsNode> properties)
       : super.fromProperties(properties) {
-    mateCreateName = 'DiagnosticPropertiesBuilder.fromProperties';
+    mateBuilderName = 'DiagnosticPropertiesBuilder.fromProperties';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
+    mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(
+        p.get('properties').value);
     mateUseList(
       'properties',
       properties,
@@ -1804,7 +1810,7 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
           children: children,
           properties: properties,
         ) {
-    mateCreateName = 'DiagnosticsBlock';
+    mateBuilderName = 'DiagnosticsBlock';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsBlock$Mate(
           name: p.get('name').build(),

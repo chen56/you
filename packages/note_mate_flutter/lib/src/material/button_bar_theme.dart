@@ -51,7 +51,7 @@ class ButtonBarThemeData$Mate extends ButtonBarThemeData with Mate {
           layoutBehavior: layoutBehavior,
           overflowDirection: overflowDirection,
         ) {
-    mateCreateName = 'ButtonBarThemeData';
+    mateBuilderName = 'ButtonBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBarThemeData$Mate(
           alignment: p.get('alignment').build(),
@@ -129,7 +129,7 @@ class ButtonBarTheme$Mate extends ButtonBarTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'ButtonBarTheme';
+    mateBuilderName = 'ButtonBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBarTheme$Mate(
           key: p.get('key').build(),

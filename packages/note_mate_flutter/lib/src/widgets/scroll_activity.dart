@@ -17,7 +17,7 @@ class IdleScrollActivity$Mate extends IdleScrollActivity with Mate {
       /// requiredParameters: ScrollActivityDelegate delegate
       ScrollActivityDelegate delegate)
       : super(delegate) {
-    mateCreateName = 'IdleScrollActivity';
+    mateBuilderName = 'IdleScrollActivity';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IdleScrollActivity$Mate(p.get('delegate').value);
     mateUse(
@@ -41,7 +41,7 @@ class HoldScrollActivity$Mate extends HoldScrollActivity with Mate {
           delegate: delegate,
           onHoldCanceled: onHoldCanceled,
         ) {
-    mateCreateName = 'HoldScrollActivity';
+    mateBuilderName = 'HoldScrollActivity';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HoldScrollActivity$Mate(
           delegate: p.get('delegate').build(),
@@ -85,7 +85,7 @@ class ScrollDragController$Mate extends ScrollDragController with Mate {
           carriedVelocity: carriedVelocity,
           motionStartDistanceThreshold: motionStartDistanceThreshold,
         ) {
-    mateCreateName = 'ScrollDragController';
+    mateBuilderName = 'ScrollDragController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollDragController$Mate(
           delegate: p.get('delegate').build(),
@@ -135,7 +135,7 @@ class DragScrollActivity$Mate extends DragScrollActivity with Mate {
           delegate,
           controller,
         ) {
-    mateCreateName = 'DragScrollActivity';
+    mateBuilderName = 'DragScrollActivity';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DragScrollActivity$Mate(
           p.get('delegate').value,
@@ -175,7 +175,7 @@ class BallisticScrollActivity$Mate extends BallisticScrollActivity with Mate {
           vsync,
           shouldIgnorePointer,
         ) {
-    mateCreateName = 'BallisticScrollActivity';
+    mateBuilderName = 'BallisticScrollActivity';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BallisticScrollActivity$Mate(
           p.get('delegate').value,
@@ -234,7 +234,7 @@ class DrivenScrollActivity$Mate extends DrivenScrollActivity with Mate {
           curve: curve,
           vsync: vsync,
         ) {
-    mateCreateName = 'DrivenScrollActivity';
+    mateBuilderName = 'DrivenScrollActivity';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DrivenScrollActivity$Mate(
           p.get('delegate').value,

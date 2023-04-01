@@ -48,7 +48,7 @@ class SwitchThemeData$Mate extends SwitchThemeData with Mate {
           splashRadius: splashRadius,
           thumbIcon: thumbIcon,
         ) {
-    mateCreateName = 'SwitchThemeData';
+    mateBuilderName = 'SwitchThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SwitchThemeData$Mate(
           thumbColor: p.get('thumbColor').build(),
@@ -120,7 +120,7 @@ class SwitchTheme$Mate extends SwitchTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'SwitchTheme';
+    mateBuilderName = 'SwitchTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SwitchTheme$Mate(
           key: p.get('key').build(),

@@ -62,7 +62,7 @@ class ExpansionTileThemeData$Mate extends ExpansionTileThemeData with Mate {
           collapsedShape: collapsedShape,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ExpansionTileThemeData';
+    mateBuilderName = 'ExpansionTileThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTileThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
@@ -158,7 +158,7 @@ class ExpansionTileTheme$Mate extends ExpansionTileTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'ExpansionTileTheme';
+    mateBuilderName = 'ExpansionTileTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTileTheme$Mate(
           key: p.get('key').build(),

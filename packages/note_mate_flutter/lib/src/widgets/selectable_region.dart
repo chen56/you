@@ -31,7 +31,8 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
     required Widget child,
 
     /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
+    TextMagnifierConfiguration magnifierConfiguration =
+        TextMagnifierConfiguration.disabled,
 
     /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , default:none
     ValueChanged<SelectedContent?>? onSelectionChanged,
@@ -44,7 +45,7 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
           magnifierConfiguration: magnifierConfiguration,
           onSelectionChanged: onSelectionChanged,
         ) {
-    mateCreateName = 'SelectableRegion';
+    mateBuilderName = 'SelectableRegion';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SelectableRegion$Mate(
           key: p.get('key').build(),

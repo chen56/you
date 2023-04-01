@@ -35,7 +35,7 @@ class GridTileBar$Mate extends GridTileBar with Mate {
           subtitle: subtitle,
           trailing: trailing,
         ) {
-    mateCreateName = 'GridTileBar';
+    mateBuilderName = 'GridTileBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridTileBar$Mate(
           key: p.get('key').build(),

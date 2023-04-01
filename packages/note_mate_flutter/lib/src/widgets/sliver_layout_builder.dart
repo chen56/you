@@ -17,12 +17,13 @@ class SliverLayoutBuilder$Mate extends SliverLayoutBuilder with Mate {
     required Widget Function(
       BuildContext,
       SliverConstraints,
-    ) builder,
+    )
+        builder,
   }) : super(
           key: key,
           builder: builder,
         ) {
-    mateCreateName = 'SliverLayoutBuilder';
+    mateBuilderName = 'SliverLayoutBuilder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverLayoutBuilder$Mate(
           key: p.get('key').build(),

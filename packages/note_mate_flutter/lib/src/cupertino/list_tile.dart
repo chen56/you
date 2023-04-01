@@ -62,7 +62,7 @@ class CupertinoListTile$Mate extends CupertinoListTile with Mate {
           leadingSize: leadingSize,
           leadingToTitle: leadingToTitle,
         ) {
-    mateCreateName = 'CupertinoListTile';
+    mateBuilderName = 'CupertinoListTile';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListTile$Mate(
           key: p.get('key').build(),
@@ -191,7 +191,7 @@ class CupertinoListTile$Mate extends CupertinoListTile with Mate {
           leadingSize: leadingSize,
           leadingToTitle: leadingToTitle,
         ) {
-    mateCreateName = 'CupertinoListTile.notched';
+    mateBuilderName = 'CupertinoListTile.notched';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListTile$Mate.notched(
           key: p.get('key').build(),
@@ -278,9 +278,10 @@ class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with Mate {
       /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super(key: key) {
-    mateCreateName = 'CupertinoListTileChevron';
+    mateBuilderName = 'CupertinoListTileChevron';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
+    mateBuilder =
+        (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
     mateUse(
       'key',
       key,

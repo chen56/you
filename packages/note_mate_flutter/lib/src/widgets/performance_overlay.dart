@@ -30,14 +30,16 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
-    mateCreateName = 'PerformanceOverlay';
+    mateBuilderName = 'PerformanceOverlay';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate(
           key: p.get('key').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
     mateUse(
       'key',
@@ -89,13 +91,15 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
-    mateCreateName = 'PerformanceOverlay.allEnabled';
+    mateBuilderName = 'PerformanceOverlay.allEnabled';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
           key: p.get('key').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
         );
     mateUse(
       'key',

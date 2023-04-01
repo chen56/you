@@ -26,7 +26,7 @@ class RenderPadding$Mate extends RenderPadding with Mate {
           textDirection: textDirection,
           child: child,
         ) {
-    mateCreateName = 'RenderPadding';
+    mateBuilderName = 'RenderPadding';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPadding$Mate(
           padding: p.get('padding').build(),
@@ -76,7 +76,7 @@ class RenderPositionedBox$Mate extends RenderPositionedBox with Mate {
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateCreateName = 'RenderPositionedBox';
+    mateBuilderName = 'RenderPositionedBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPositionedBox$Mate(
           child: p.get('child').build(),
@@ -115,7 +115,8 @@ class RenderPositionedBox$Mate extends RenderPositionedBox with Mate {
 }
 
 /// class RenderConstrainedOverflowBox extends RenderAligningShiftedBox
-class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox with Mate {
+class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox
+    with Mate {
   /// RenderConstrainedOverflowBox RenderConstrainedOverflowBox({RenderBox? child, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderConstrainedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -147,7 +148,7 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox wit
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateCreateName = 'RenderConstrainedOverflowBox';
+    mateBuilderName = 'RenderConstrainedOverflowBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderConstrainedOverflowBox$Mate(
           child: p.get('child').build(),
@@ -198,7 +199,8 @@ class RenderConstrainedOverflowBox$Mate extends RenderConstrainedOverflowBox wit
 }
 
 /// class RenderConstraintsTransformBox extends RenderAligningShiftedBox with DebugOverflowIndicatorMixin
-class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox with Mate {
+class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox
+    with Mate {
   /// RenderConstraintsTransformBox RenderConstraintsTransformBox({required AlignmentGeometry alignment = Alignment.center, required TextDirection? textDirection, required BoxConstraints Function(BoxConstraints) constraintsTransform, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderConstraintsTransformBox$Mate({
     /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
@@ -222,7 +224,7 @@ class RenderConstraintsTransformBox$Mate extends RenderConstraintsTransformBox w
           child: child,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'RenderConstraintsTransformBox';
+    mateBuilderName = 'RenderConstraintsTransformBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderConstraintsTransformBox$Mate(
           alignment: p.get('alignment').build(),
@@ -282,7 +284,7 @@ class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate {
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateCreateName = 'RenderSizedOverflowBox';
+    mateBuilderName = 'RenderSizedOverflowBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSizedOverflowBox$Mate(
           child: p.get('child').build(),
@@ -315,7 +317,8 @@ class RenderSizedOverflowBox$Mate extends RenderSizedOverflowBox with Mate {
 }
 
 /// class RenderFractionallySizedOverflowBox extends RenderAligningShiftedBox
-class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOverflowBox with Mate {
+class RenderFractionallySizedOverflowBox$Mate
+    extends RenderFractionallySizedOverflowBox with Mate {
   /// RenderFractionallySizedOverflowBox RenderFractionallySizedOverflowBox({RenderBox? child, double? widthFactor, double? heightFactor, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderFractionallySizedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -339,7 +342,7 @@ class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOve
           alignment: alignment,
           textDirection: textDirection,
         ) {
-    mateCreateName = 'RenderFractionallySizedOverflowBox';
+    mateBuilderName = 'RenderFractionallySizedOverflowBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFractionallySizedOverflowBox$Mate(
           child: p.get('child').build(),
@@ -378,7 +381,8 @@ class RenderFractionallySizedOverflowBox$Mate extends RenderFractionallySizedOve
 }
 
 /// class RenderCustomSingleChildLayoutBox extends RenderShiftedBox
-class RenderCustomSingleChildLayoutBox$Mate extends RenderCustomSingleChildLayoutBox with Mate {
+class RenderCustomSingleChildLayoutBox$Mate
+    extends RenderCustomSingleChildLayoutBox with Mate {
   /// RenderCustomSingleChildLayoutBox RenderCustomSingleChildLayoutBox({RenderBox? child, required SingleChildLayoutDelegate delegate})
   RenderCustomSingleChildLayoutBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -390,7 +394,7 @@ class RenderCustomSingleChildLayoutBox$Mate extends RenderCustomSingleChildLayou
           child: child,
           delegate: delegate,
         ) {
-    mateCreateName = 'RenderCustomSingleChildLayoutBox';
+    mateBuilderName = 'RenderCustomSingleChildLayoutBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderCustomSingleChildLayoutBox$Mate(
           child: p.get('child').build(),
@@ -426,7 +430,7 @@ class RenderBaseline$Mate extends RenderBaseline with Mate {
           baseline: baseline,
           baselineType: baselineType,
         ) {
-    mateCreateName = 'RenderBaseline';
+    mateBuilderName = 'RenderBaseline';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderBaseline$Mate(
           child: p.get('child').build(),

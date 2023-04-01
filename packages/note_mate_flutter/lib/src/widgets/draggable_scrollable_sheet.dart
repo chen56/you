@@ -51,7 +51,7 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
           controller: controller,
           builder: builder,
         ) {
-    mateCreateName = 'DraggableScrollableSheet';
+    mateBuilderName = 'DraggableScrollableSheet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableScrollableSheet$Mate(
           key: p.get('key').build(),
@@ -124,7 +124,8 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
 }
 
 /// class DraggableScrollableNotification extends Notification with ViewportNotificationMixin
-class DraggableScrollableNotification$Mate extends DraggableScrollableNotification with Mate {
+class DraggableScrollableNotification$Mate
+    extends DraggableScrollableNotification with Mate {
   /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context})
   DraggableScrollableNotification$Mate({
     /// optionalParameters: {required double extent} , default:none
@@ -148,7 +149,7 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
           initialExtent: initialExtent,
           context: context,
         ) {
-    mateCreateName = 'DraggableScrollableNotification';
+    mateBuilderName = 'DraggableScrollableNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableScrollableNotification$Mate(
           extent: p.get('extent').build(),
@@ -186,7 +187,8 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
 }
 
 /// class DraggableScrollableActuator extends StatelessWidget
-class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with Mate {
+class DraggableScrollableActuator$Mate extends DraggableScrollableActuator
+    with Mate {
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -198,7 +200,7 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with 
           key: key,
           child: child,
         ) {
-    mateCreateName = 'DraggableScrollableActuator';
+    mateBuilderName = 'DraggableScrollableActuator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableScrollableActuator$Mate(
           key: p.get('key').build(),

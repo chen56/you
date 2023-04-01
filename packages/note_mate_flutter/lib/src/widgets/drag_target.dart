@@ -98,7 +98,7 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
           hitTestBehavior: hitTestBehavior,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'Draggable';
+    mateBuilderName = 'Draggable';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Draggable$Mate<T>(
           key: p.get('key').build(),
@@ -231,7 +231,8 @@ class Draggable$Mate<T extends Object> extends Draggable<T> with Mate {
 }
 
 /// class LongPressDraggable<T extends Object> extends Draggable<T>
-class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> with Mate {
+class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T>
+    with Mate {
   /// LongPressDraggable<T> LongPressDraggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool hapticFeedbackOnStart = true, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, Duration delay = kLongPressTimeout, bool Function(int)? allowedButtonsFilter})
   LongPressDraggable$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -311,7 +312,7 @@ class LongPressDraggable$Mate<T extends Object> extends LongPressDraggable<T> wi
           delay: delay,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'LongPressDraggable';
+    mateBuilderName = 'LongPressDraggable';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LongPressDraggable$Mate<T>(
           key: p.get('key').build(),
@@ -453,7 +454,7 @@ class DraggableDetails$Mate extends DraggableDetails with Mate {
           velocity: velocity,
           offset: offset,
         ) {
-    mateCreateName = 'DraggableDetails';
+    mateBuilderName = 'DraggableDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableDetails$Mate(
           wasAccepted: p.get('wasAccepted').build(),
@@ -492,7 +493,7 @@ class DragTargetDetails$Mate<T> extends DragTargetDetails<T> with Mate {
           data: data,
           offset: offset,
         ) {
-    mateCreateName = 'DragTargetDetails';
+    mateBuilderName = 'DragTargetDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DragTargetDetails$Mate<T>(
           data: p.get('data').build(),
@@ -548,7 +549,7 @@ class DragTarget$Mate<T extends Object> extends DragTarget<T> with Mate {
           onMove: onMove,
           hitTestBehavior: hitTestBehavior,
         ) {
-    mateCreateName = 'DragTarget';
+    mateBuilderName = 'DragTarget';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DragTarget$Mate<T>(
           key: p.get('key').build(),

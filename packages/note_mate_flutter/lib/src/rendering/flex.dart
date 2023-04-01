@@ -50,7 +50,7 @@ class RenderFlex$Mate extends RenderFlex with Mate {
           textBaseline: textBaseline,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'RenderFlex';
+    mateBuilderName = 'RenderFlex';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFlex$Mate(
           children: p.get('children').build(),

@@ -21,7 +21,7 @@ class TextInputType$Mate extends TextInputType with Mate {
           signed: signed,
           decimal: decimal,
         ) {
-    mateCreateName = 'TextInputType.numberWithOptions';
+    mateBuilderName = 'TextInputType.numberWithOptions';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextInputType$Mate.numberWithOptions(
           signed: p.get('signed').build(),
@@ -83,7 +83,8 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
     TextCapitalization textCapitalization = TextCapitalization.none,
 
     /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled,
+    AutofillConfiguration autofillConfiguration =
+        AutofillConfiguration.disabled,
 
     /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , default:processed=BooleanLiteralImpl
     bool enableIMEPersonalizedLearning = true,
@@ -111,7 +112,7 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
           allowedMimeTypes: allowedMimeTypes,
           enableDeltaModel: enableDeltaModel,
         ) {
-    mateCreateName = 'TextInputConfiguration';
+    mateBuilderName = 'TextInputConfiguration';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextInputConfiguration$Mate(
           inputType: p.get('inputType').build(),
@@ -121,13 +122,15 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
           smartDashesType: p.get('smartDashesType').build(),
           smartQuotesType: p.get('smartQuotesType').build(),
           enableSuggestions: p.get('enableSuggestions').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           actionLabel: p.get('actionLabel').build(),
           inputAction: p.get('inputAction').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           textCapitalization: p.get('textCapitalization').build(),
           autofillConfiguration: p.get('autofillConfiguration').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
           enableDeltaModel: p.get('enableDeltaModel').build(),
         );
@@ -239,7 +242,7 @@ class RawFloatingCursorPoint$Mate extends RawFloatingCursorPoint with Mate {
           offset: offset,
           state: state,
         ) {
-    mateCreateName = 'RawFloatingCursorPoint';
+    mateBuilderName = 'RawFloatingCursorPoint';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawFloatingCursorPoint$Mate(
           offset: p.get('offset').build(),
@@ -275,7 +278,7 @@ class TextEditingValue$Mate extends TextEditingValue with Mate {
           selection: selection,
           composing: composing,
         ) {
-    mateCreateName = 'TextEditingValue';
+    mateBuilderName = 'TextEditingValue';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingValue$Mate(
           text: p.get('text').build(),
@@ -319,7 +322,7 @@ class SelectionRect$Mate extends SelectionRect with Mate {
           bounds: bounds,
           direction: direction,
         ) {
-    mateCreateName = 'SelectionRect';
+    mateBuilderName = 'SelectionRect';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SelectionRect$Mate(
           position: p.get('position').build(),

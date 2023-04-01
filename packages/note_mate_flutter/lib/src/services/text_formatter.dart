@@ -5,7 +5,8 @@ import 'package:note/mate.dart';
 import 'dart:core';
 
 /// class FilteringTextInputFormatter extends TextInputFormatter
-class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with Mate {
+class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter
+    with Mate {
   /// FilteringTextInputFormatter FilteringTextInputFormatter(Pattern filterPattern, {required bool allow, String replacementString = ''})
   FilteringTextInputFormatter$Mate(
     /// requiredParameters: Pattern filterPattern
@@ -20,7 +21,7 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           allow: allow,
           replacementString: replacementString,
         ) {
-    mateCreateName = 'FilteringTextInputFormatter';
+    mateBuilderName = 'FilteringTextInputFormatter';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FilteringTextInputFormatter$Mate(
           p.get('filterPattern').value,
@@ -55,7 +56,7 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           filterPattern,
           replacementString: replacementString,
         ) {
-    mateCreateName = 'FilteringTextInputFormatter.allow';
+    mateBuilderName = 'FilteringTextInputFormatter.allow';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FilteringTextInputFormatter$Mate.allow(
           p.get('filterPattern').value,
@@ -84,7 +85,7 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
           filterPattern,
           replacementString: replacementString,
         ) {
-    mateCreateName = 'FilteringTextInputFormatter.deny';
+    mateBuilderName = 'FilteringTextInputFormatter.deny';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FilteringTextInputFormatter$Mate.deny(
           p.get('filterPattern').value,
@@ -105,7 +106,8 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with 
 }
 
 /// class LengthLimitingTextInputFormatter extends TextInputFormatter
-class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputFormatter with Mate {
+class LengthLimitingTextInputFormatter$Mate
+    extends LengthLimitingTextInputFormatter with Mate {
   /// LengthLimitingTextInputFormatter LengthLimitingTextInputFormatter(int? maxLength, {MaxLengthEnforcement? maxLengthEnforcement})
   LengthLimitingTextInputFormatter$Mate(
     /// requiredParameters: int? maxLength
@@ -116,7 +118,7 @@ class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputForma
           maxLength,
           maxLengthEnforcement: maxLengthEnforcement,
         ) {
-    mateCreateName = 'LengthLimitingTextInputFormatter';
+    mateBuilderName = 'LengthLimitingTextInputFormatter';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => LengthLimitingTextInputFormatter$Mate(
           p.get('maxLength').value,

@@ -20,7 +20,7 @@ class LocalHistoryEntry$Mate extends LocalHistoryEntry with Mate {
           onRemove: onRemove,
           impliesAppBarDismissal: impliesAppBarDismissal,
         ) {
-    mateCreateName = 'LocalHistoryEntry';
+    mateBuilderName = 'LocalHistoryEntry';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LocalHistoryEntry$Mate(
           onRemove: p.get('onRemove').build(),
@@ -81,7 +81,7 @@ class RawDialogRoute$Mate<T> extends RawDialogRoute<T> with Mate {
           anchorPoint: anchorPoint,
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
-    mateCreateName = 'RawDialogRoute';
+    mateBuilderName = 'RawDialogRoute';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawDialogRoute$Mate<T>(
           pageBuilder: p.get('pageBuilder').build(),

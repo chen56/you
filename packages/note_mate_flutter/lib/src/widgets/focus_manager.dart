@@ -39,7 +39,7 @@ class FocusNode$Mate extends FocusNode with Mate {
           descendantsAreFocusable: descendantsAreFocusable,
           descendantsAreTraversable: descendantsAreTraversable,
         ) {
-    mateCreateName = 'FocusNode';
+    mateBuilderName = 'FocusNode';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusNode$Mate(
           debugLabel: p.get('debugLabel').build(),
@@ -112,7 +112,8 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate {
     bool canRequestFocus = true,
 
     /// optionalParameters: {TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop} , default:processed=PrefixedIdentifierImpl
-    TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop,
+    TraversalEdgeBehavior traversalEdgeBehavior =
+        TraversalEdgeBehavior.closedLoop,
   }) : super(
           debugLabel: debugLabel,
           onKeyEvent: onKeyEvent,
@@ -121,7 +122,7 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate {
           canRequestFocus: canRequestFocus,
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
-    mateCreateName = 'FocusScopeNode';
+    mateBuilderName = 'FocusScopeNode';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FocusScopeNode$Mate(
           debugLabel: p.get('debugLabel').build(),

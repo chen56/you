@@ -85,7 +85,7 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           materialTapTargetSize: materialTapTargetSize,
           child: child,
         ) {
-    mateCreateName = 'ButtonTheme';
+    mateBuilderName = 'ButtonTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonTheme$Mate(
           key: p.get('key').build(),
@@ -213,7 +213,7 @@ class ButtonTheme$Mate extends ButtonTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'ButtonTheme.fromButtonThemeData';
+    mateBuilderName = 'ButtonTheme.fromButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonTheme$Mate.fromButtonThemeData(
           key: p.get('key').build(),
@@ -303,7 +303,7 @@ class ButtonThemeData$Mate extends ButtonThemeData with Mate {
           colorScheme: colorScheme,
           materialTapTargetSize: materialTapTargetSize,
         ) {
-    mateCreateName = 'ButtonThemeData';
+    mateBuilderName = 'ButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonThemeData$Mate(
           textTheme: p.get('textTheme').build(),

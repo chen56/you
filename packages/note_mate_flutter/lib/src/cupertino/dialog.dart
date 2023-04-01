@@ -48,7 +48,7 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
           insetAnimationDuration: insetAnimationDuration,
           insetAnimationCurve: insetAnimationCurve,
         ) {
-    mateCreateName = 'CupertinoAlertDialog';
+    mateBuilderName = 'CupertinoAlertDialog';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAlertDialog$Mate(
           key: p.get('key').build(),
@@ -121,7 +121,7 @@ class CupertinoPopupSurface$Mate extends CupertinoPopupSurface with Mate {
           isSurfacePainted: isSurfacePainted,
           child: child,
         ) {
-    mateCreateName = 'CupertinoPopupSurface';
+    mateBuilderName = 'CupertinoPopupSurface';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPopupSurface$Mate(
           key: p.get('key').build(),
@@ -180,7 +180,7 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
           actionScrollController: actionScrollController,
           cancelButton: cancelButton,
         ) {
-    mateCreateName = 'CupertinoActionSheet';
+    mateBuilderName = 'CupertinoActionSheet';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActionSheet$Mate(
           key: p.get('key').build(),
@@ -230,7 +230,8 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
 }
 
 /// class CupertinoActionSheetAction extends StatelessWidget
-class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Mate {
+class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
+    with Mate {
   /// CupertinoActionSheetAction CupertinoActionSheetAction({Key? key, required void Function() onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, required Widget child})
   CupertinoActionSheetAction$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -254,7 +255,7 @@ class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Ma
           isDestructiveAction: isDestructiveAction,
           child: child,
         ) {
-    mateCreateName = 'CupertinoActionSheetAction';
+    mateBuilderName = 'CupertinoActionSheetAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActionSheetAction$Mate(
           key: p.get('key').build(),
@@ -322,7 +323,7 @@ class CupertinoDialogAction$Mate extends CupertinoDialogAction with Mate {
           textStyle: textStyle,
           child: child,
         ) {
-    mateCreateName = 'CupertinoDialogAction';
+    mateBuilderName = 'CupertinoDialogAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDialogAction$Mate(
           key: p.get('key').build(),

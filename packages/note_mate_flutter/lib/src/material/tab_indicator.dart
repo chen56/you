@@ -24,7 +24,7 @@ class UnderlineTabIndicator$Mate extends UnderlineTabIndicator with Mate {
           borderSide: borderSide,
           insets: insets,
         ) {
-    mateCreateName = 'UnderlineTabIndicator';
+    mateBuilderName = 'UnderlineTabIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UnderlineTabIndicator$Mate(
           borderRadius: p.get('borderRadius').build(),

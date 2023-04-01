@@ -61,7 +61,7 @@ class TimePickerDialog$Mate extends TimePickerDialog with Mate {
           orientation: orientation,
           onEntryModeChanged: onEntryModeChanged,
         ) {
-    mateCreateName = 'TimePickerDialog';
+    mateBuilderName = 'TimePickerDialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerDialog$Mate(
           key: p.get('key').build(),

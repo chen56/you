@@ -18,7 +18,7 @@ class SemanticsTag$Mate extends SemanticsTag with Mate {
       /// requiredParameters: String name
       String name)
       : super(name) {
-    mateCreateName = 'SemanticsTag';
+    mateBuilderName = 'SemanticsTag';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsTag$Mate(p.get('name').value);
     mateUse(
@@ -37,9 +37,10 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate {
       /// optionalParameters: {required String label} , default:none
       required String label})
       : super(label: label) {
-    mateCreateName = 'CustomSemanticsAction';
+    mateBuilderName = 'CustomSemanticsAction';
     matePackageUrl = 'package:flutter/semantics.dart';
-    mateBuilder = (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
+    mateBuilder =
+        (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
     mateUse(
       'label',
       label,
@@ -58,7 +59,7 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate {
           hint: hint,
           action: action,
         ) {
-    mateCreateName = 'CustomSemanticsAction.overridingAction';
+    mateBuilderName = 'CustomSemanticsAction.overridingAction';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => CustomSemanticsAction$Mate.overridingAction(
           hint: p.get('hint').build(),
@@ -89,7 +90,7 @@ class AttributedString$Mate extends AttributedString with Mate {
           string,
           attributes: attributes,
         ) {
-    mateCreateName = 'AttributedString';
+    mateBuilderName = 'AttributedString';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => AttributedString$Mate(
           p.get('string').value,
@@ -140,7 +141,7 @@ class AttributedStringProperty$Mate extends AttributedStringProperty with Mate {
           level: level,
           description: description,
         ) {
-    mateCreateName = 'AttributedStringProperty';
+    mateBuilderName = 'AttributedStringProperty';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => AttributedStringProperty$Mate(
           p.get('name').value,
@@ -293,7 +294,7 @@ class SemanticsData$Mate extends SemanticsData with Mate {
           transform: transform,
           customSemanticsActionIds: customSemanticsActionIds,
         ) {
-    mateCreateName = 'SemanticsData';
+    mateBuilderName = 'SemanticsData';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsData$Mate(
           flags: p.get('flags').build(),
@@ -457,7 +458,7 @@ class SemanticsHintOverrides$Mate extends SemanticsHintOverrides with Mate {
           onTapHint: onTapHint,
           onLongPressHint: onLongPressHint,
         ) {
-    mateCreateName = 'SemanticsHintOverrides';
+    mateBuilderName = 'SemanticsHintOverrides';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsHintOverrides$Mate(
           onTapHint: p.get('onTapHint').build(),
@@ -721,7 +722,7 @@ class SemanticsProperties$Mate extends SemanticsProperties with Mate {
           onDismiss: onDismiss,
           customSemanticsActions: customSemanticsActions,
         ) {
-    mateCreateName = 'SemanticsProperties';
+    mateBuilderName = 'SemanticsProperties';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsProperties$Mate(
           enabled: p.get('enabled').build(),
@@ -774,14 +775,19 @@ class SemanticsProperties$Mate extends SemanticsProperties with Mate {
           onCopy: p.get('onCopy').build(),
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
-          onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').build(),
-          onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').build(),
+          onMoveCursorForwardByCharacter:
+              p.get('onMoveCursorForwardByCharacter').build(),
+          onMoveCursorBackwardByCharacter:
+              p.get('onMoveCursorBackwardByCharacter').build(),
           onMoveCursorForwardByWord: p.get('onMoveCursorForwardByWord').build(),
-          onMoveCursorBackwardByWord: p.get('onMoveCursorBackwardByWord').build(),
+          onMoveCursorBackwardByWord:
+              p.get('onMoveCursorBackwardByWord').build(),
           onSetSelection: p.get('onSetSelection').build(),
           onSetText: p.get('onSetText').build(),
-          onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').build(),
-          onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
+          onDidGainAccessibilityFocus:
+              p.get('onDidGainAccessibilityFocus').build(),
+          onDidLoseAccessibilityFocus:
+              p.get('onDidLoseAccessibilityFocus').build(),
           onDismiss: p.get('onDismiss').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
@@ -1101,7 +1107,7 @@ class SemanticsNode$Mate extends SemanticsNode with Mate {
           key: key,
           showOnScreen: showOnScreen,
         ) {
-    mateCreateName = 'SemanticsNode';
+    mateBuilderName = 'SemanticsNode';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsNode$Mate(
           key: p.get('key').build(),
@@ -1134,7 +1140,7 @@ class SemanticsNode$Mate extends SemanticsNode with Mate {
           showOnScreen: showOnScreen,
           owner: owner,
         ) {
-    mateCreateName = 'SemanticsNode.root';
+    mateBuilderName = 'SemanticsNode.root';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsNode$Mate.root(
           key: p.get('key').build(),
@@ -1167,9 +1173,10 @@ class SemanticsOwner$Mate extends SemanticsOwner with Mate {
       /// optionalParameters: {required void Function(SemanticsUpdate) onSemanticsUpdate} , default:none
       required SemanticsUpdateCallback onSemanticsUpdate})
       : super(onSemanticsUpdate: onSemanticsUpdate) {
-    mateCreateName = 'SemanticsOwner';
+    mateBuilderName = 'SemanticsOwner';
     matePackageUrl = 'package:flutter/semantics.dart';
-    mateBuilder = (p) => SemanticsOwner$Mate(onSemanticsUpdate: p.get('onSemanticsUpdate').build());
+    mateBuilder = (p) => SemanticsOwner$Mate(
+        onSemanticsUpdate: p.get('onSemanticsUpdate').build());
     mateUse(
       'onSemanticsUpdate',
       onSemanticsUpdate,
@@ -1190,7 +1197,7 @@ class OrdinalSortKey$Mate extends OrdinalSortKey with Mate {
           order,
           name: name,
         ) {
-    mateCreateName = 'OrdinalSortKey';
+    mateBuilderName = 'OrdinalSortKey';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => OrdinalSortKey$Mate(
           p.get('order').value,

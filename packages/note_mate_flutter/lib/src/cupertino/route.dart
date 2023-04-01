@@ -39,7 +39,7 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
-    mateCreateName = 'CupertinoPageRoute';
+    mateBuilderName = 'CupertinoPageRoute';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageRoute$Mate<T>(
           builder: p.get('builder').build(),
@@ -126,7 +126,7 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
           arguments: arguments,
           restorationId: restorationId,
         ) {
-    mateCreateName = 'CupertinoPage';
+    mateBuilderName = 'CupertinoPage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPage$Mate<T>(
           child: p.get('child').build(),
@@ -215,7 +215,7 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
           child: child,
           linearTransition: linearTransition,
         ) {
-    mateCreateName = 'CupertinoPageTransition';
+    mateBuilderName = 'CupertinoPageTransition';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageTransition$Mate(
           key: p.get('key').build(),
@@ -253,7 +253,8 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
 }
 
 /// class CupertinoFullscreenDialogTransition extends StatelessWidget
-class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialogTransition with Mate {
+class CupertinoFullscreenDialogTransition$Mate
+    extends CupertinoFullscreenDialogTransition with Mate {
   /// CupertinoFullscreenDialogTransition CupertinoFullscreenDialogTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoFullscreenDialogTransition$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -277,7 +278,7 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
           child: child,
           linearTransition: linearTransition,
         ) {
-    mateCreateName = 'CupertinoFullscreenDialogTransition';
+    mateBuilderName = 'CupertinoFullscreenDialogTransition';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFullscreenDialogTransition$Mate(
           key: p.get('key').build(),
@@ -315,7 +316,8 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
 }
 
 /// class CupertinoModalPopupRoute<T> extends PopupRoute<T>
-class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with Mate {
+class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T>
+    with Mate {
   /// CupertinoModalPopupRoute<T> CupertinoModalPopupRoute({required Widget Function(BuildContext) builder, String barrierLabel = 'Dismiss', Color? barrierColor = kCupertinoModalBarrierColor, bool barrierDismissible = true, bool semanticsDismissible = false, ImageFilter? filter, RouteSettings? settings, Offset? anchorPoint})
   CupertinoModalPopupRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
@@ -351,7 +353,7 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
-    mateCreateName = 'CupertinoModalPopupRoute';
+    mateBuilderName = 'CupertinoModalPopupRoute';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoModalPopupRoute$Mate<T>(
           builder: p.get('builder').build(),
@@ -450,7 +452,7 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
-    mateCreateName = 'CupertinoDialogRoute';
+    mateBuilderName = 'CupertinoDialogRoute';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDialogRoute$Mate<T>(
           builder: p.get('builder').build(),

@@ -29,7 +29,7 @@ class PlaceholderDimensions$Mate extends PlaceholderDimensions with Mate {
           baseline: baseline,
           baselineOffset: baselineOffset,
         ) {
-    mateCreateName = 'PlaceholderDimensions';
+    mateBuilderName = 'PlaceholderDimensions';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => PlaceholderDimensions$Mate(
           size: p.get('size').build(),
@@ -105,7 +105,7 @@ class TextPainter$Mate extends TextPainter with Mate {
           textWidthBasis: textWidthBasis,
           textHeightBehavior: textHeightBehavior,
         ) {
-    mateCreateName = 'TextPainter';
+    mateBuilderName = 'TextPainter';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TextPainter$Mate(
           text: p.get('text').build(),

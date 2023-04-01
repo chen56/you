@@ -285,7 +285,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'CupertinoTextField';
+    mateBuilderName = 'CupertinoTextField';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextField$Mate(
           key: p.get('key').build(),
@@ -337,17 +337,20 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
           autofillHints: p.get('autofillHints').build(),
-          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          contentInsertionConfiguration:
+              p.get('contentInsertionConfiguration').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
@@ -942,7 +945,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'CupertinoTextField.borderless';
+    mateBuilderName = 'CupertinoTextField.borderless';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextField$Mate.borderless(
           key: p.get('key').build(),
@@ -994,17 +997,20 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection:
+              p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
           autofillHints: p.get('autofillHints').build(),
-          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
+          contentInsertionConfiguration:
+              p.get('contentInsertionConfiguration').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning:
+              p.get('enableIMEPersonalizedLearning').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),

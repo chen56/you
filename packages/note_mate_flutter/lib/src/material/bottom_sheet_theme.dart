@@ -48,7 +48,7 @@ class BottomSheetThemeData$Mate extends BottomSheetThemeData with Mate {
           clipBehavior: clipBehavior,
           constraints: constraints,
         ) {
-    mateCreateName = 'BottomSheetThemeData';
+    mateBuilderName = 'BottomSheetThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomSheetThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),

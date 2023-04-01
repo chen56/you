@@ -46,7 +46,7 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           highContrastElevatedColor: highContrastElevatedColor,
           darkHighContrastElevatedColor: darkHighContrastElevatedColor,
         ) {
-    mateCreateName = 'CupertinoDynamicColor';
+    mateBuilderName = 'CupertinoDynamicColor';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate(
           debugLabel: p.get('debugLabel').build(),
@@ -57,7 +57,8 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           elevatedColor: p.get('elevatedColor').build(),
           darkElevatedColor: p.get('darkElevatedColor').build(),
           highContrastElevatedColor: p.get('highContrastElevatedColor').build(),
-          darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').build(),
+          darkHighContrastElevatedColor:
+              p.get('darkHighContrastElevatedColor').build(),
         );
     mateUse(
       'debugLabel',
@@ -129,7 +130,7 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           highContrastColor: highContrastColor,
           darkHighContrastColor: darkHighContrastColor,
         ) {
-    mateCreateName = 'CupertinoDynamicColor.withBrightnessAndContrast';
+    mateBuilderName = 'CupertinoDynamicColor.withBrightnessAndContrast';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate.withBrightnessAndContrast(
           debugLabel: p.get('debugLabel').build(),
@@ -180,7 +181,7 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           color: color,
           darkColor: darkColor,
         ) {
-    mateCreateName = 'CupertinoDynamicColor.withBrightness';
+    mateBuilderName = 'CupertinoDynamicColor.withBrightness';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate.withBrightness(
           debugLabel: p.get('debugLabel').build(),

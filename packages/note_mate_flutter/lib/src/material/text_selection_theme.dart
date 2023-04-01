@@ -23,7 +23,7 @@ class TextSelectionThemeData$Mate extends TextSelectionThemeData with Mate {
           selectionColor: selectionColor,
           selectionHandleColor: selectionHandleColor,
         ) {
-    mateCreateName = 'TextSelectionThemeData';
+    mateBuilderName = 'TextSelectionThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionThemeData$Mate(
           cursorColor: p.get('cursorColor').build(),
@@ -65,7 +65,7 @@ class TextSelectionTheme$Mate extends TextSelectionTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'TextSelectionTheme';
+    mateBuilderName = 'TextSelectionTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionTheme$Mate(
           key: p.get('key').build(),

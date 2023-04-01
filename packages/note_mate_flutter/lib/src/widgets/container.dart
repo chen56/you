@@ -35,7 +35,7 @@ class DecoratedBox$Mate extends DecoratedBox with Mate {
           position: position,
           child: child,
         ) {
-    mateCreateName = 'DecoratedBox';
+    mateBuilderName = 'DecoratedBox';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DecoratedBox$Mate(
           key: p.get('key').build(),
@@ -128,7 +128,7 @@ class Container$Mate extends Container with Mate {
           child: child,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'Container';
+    mateBuilderName = 'Container';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Container$Mate(
           key: p.get('key').build(),

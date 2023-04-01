@@ -54,7 +54,8 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
     String? restorationId,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
   }) : super(
           key: key,
           scrollDirection: scrollDirection,
@@ -69,7 +70,7 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
           restorationId: restorationId,
           keyboardDismissBehavior: keyboardDismissBehavior,
         ) {
-    mateCreateName = 'SingleChildScrollView';
+    mateBuilderName = 'SingleChildScrollView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SingleChildScrollView$Mate(
           key: p.get('key').build(),

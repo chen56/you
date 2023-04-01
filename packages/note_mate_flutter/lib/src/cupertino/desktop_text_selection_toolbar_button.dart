@@ -9,7 +9,8 @@ import 'dart:core';
 import 'package:flutter/src/widgets/context_menu_button_item.dart';
 
 /// class CupertinoDesktopTextSelectionToolbarButton extends StatefulWidget
-class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTextSelectionToolbarButton with Mate {
+class CupertinoDesktopTextSelectionToolbarButton$Mate
+    extends CupertinoDesktopTextSelectionToolbarButton with Mate {
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   CupertinoDesktopTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -25,7 +26,7 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: onPressed,
           child: child,
         ) {
-    mateCreateName = 'CupertinoDesktopTextSelectionToolbarButton';
+    mateBuilderName = 'CupertinoDesktopTextSelectionToolbarButton';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDesktopTextSelectionToolbarButton$Mate(
           key: p.get('key').build(),
@@ -68,7 +69,7 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           onPressed: onPressed,
           text: text,
         ) {
-    mateCreateName = 'CupertinoDesktopTextSelectionToolbarButton.text';
+    mateBuilderName = 'CupertinoDesktopTextSelectionToolbarButton.text';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.text(
           key: p.get('key').build(),
@@ -109,12 +110,13 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends CupertinoDesktopTe
           key: key,
           buttonItem: buttonItem,
         ) {
-    mateCreateName = 'CupertinoDesktopTextSelectionToolbarButton.buttonItem';
+    mateBuilderName = 'CupertinoDesktopTextSelectionToolbarButton.buttonItem';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder = (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem(
-          key: p.get('key').build(),
-          buttonItem: p.get('buttonItem').build(),
-        );
+    mateBuilder =
+        (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem(
+              key: p.get('key').build(),
+              buttonItem: p.get('buttonItem').build(),
+            );
     mateUse(
       'key',
       key,

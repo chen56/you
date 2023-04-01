@@ -31,7 +31,7 @@ class TransformProperty$Mate extends TransformProperty with Mate {
           defaultValue: defaultValue,
           level: level,
         ) {
-    mateCreateName = 'TransformProperty';
+    mateBuilderName = 'TransformProperty';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TransformProperty$Mate(
           p.get('name').value,

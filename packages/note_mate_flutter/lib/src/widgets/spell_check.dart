@@ -21,14 +21,16 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
   }) : super(
           spellCheckService: spellCheckService,
           misspelledTextStyle: misspelledTextStyle,
-          spellCheckSuggestionsToolbarBuilder: spellCheckSuggestionsToolbarBuilder,
+          spellCheckSuggestionsToolbarBuilder:
+              spellCheckSuggestionsToolbarBuilder,
         ) {
-    mateCreateName = 'SpellCheckConfiguration';
+    mateBuilderName = 'SpellCheckConfiguration';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SpellCheckConfiguration$Mate(
           spellCheckService: p.get('spellCheckService').build(),
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
-          spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
+          spellCheckSuggestionsToolbarBuilder:
+              p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
     mateUse(
       'spellCheckService',

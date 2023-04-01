@@ -105,7 +105,7 @@ class TimePickerThemeData$Mate extends TimePickerThemeData with Mate {
           padding: padding,
           shape: shape,
         ) {
-    mateCreateName = 'TimePickerThemeData';
+    mateBuilderName = 'TimePickerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
@@ -261,7 +261,7 @@ class TimePickerTheme$Mate extends TimePickerTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'TimePickerTheme';
+    mateBuilderName = 'TimePickerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerTheme$Mate(
           key: p.get('key').build(),

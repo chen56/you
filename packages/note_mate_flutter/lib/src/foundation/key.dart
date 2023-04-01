@@ -11,7 +11,7 @@ class ValueKey$Mate<T> extends ValueKey<T> with Mate {
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateCreateName = 'ValueKey';
+    mateBuilderName = 'ValueKey';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ValueKey$Mate<T>(p.get('value').value);
     mateUse(

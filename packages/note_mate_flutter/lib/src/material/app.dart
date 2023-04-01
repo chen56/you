@@ -168,7 +168,7 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateCreateName = 'MaterialApp';
+    mateBuilderName = 'MaterialApp';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialApp$Mate(
           key: p.get('key').build(),
@@ -194,15 +194,19 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           themeAnimationCurve: p.get('themeAnimationCurve').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback:
+              p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           debugShowMaterialGrid: p.get('debugShowMaterialGrid').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
-          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
+          debugShowCheckedModeBanner:
+              p.get('debugShowCheckedModeBanner').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
@@ -534,7 +538,7 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateCreateName = 'MaterialApp.router';
+    mateBuilderName = 'MaterialApp.router';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialApp$Mate.router(
           key: p.get('key').build(),
@@ -557,15 +561,19 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           themeAnimationCurve: p.get('themeAnimationCurve').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback:
+              p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           debugShowMaterialGrid: p.get('debugShowMaterialGrid').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages:
+              p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers:
+              p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
-          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
+          debugShowCheckedModeBanner:
+              p.get('debugShowCheckedModeBanner').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),

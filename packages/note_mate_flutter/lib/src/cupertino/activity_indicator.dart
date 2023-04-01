@@ -7,7 +7,8 @@ import 'dart:ui';
 import 'dart:core';
 
 /// class CupertinoActivityIndicator extends StatefulWidget
-class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Mate {
+class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
+    with Mate {
   /// CupertinoActivityIndicator CupertinoActivityIndicator({Key? key, Color? color, bool animating = true, double radius = _kDefaultIndicatorRadius})
   CupertinoActivityIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -27,7 +28,7 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           animating: animating,
           radius: radius,
         ) {
-    mateCreateName = 'CupertinoActivityIndicator';
+    mateBuilderName = 'CupertinoActivityIndicator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate(
           key: p.get('key').build(),
@@ -77,7 +78,7 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           radius: radius,
           progress: progress,
         ) {
-    mateCreateName = 'CupertinoActivityIndicator.partiallyRevealed';
+    mateBuilderName = 'CupertinoActivityIndicator.partiallyRevealed';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate.partiallyRevealed(
           key: p.get('key').build(),

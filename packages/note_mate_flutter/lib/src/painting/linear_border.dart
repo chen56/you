@@ -19,7 +19,7 @@ class LinearBorderEdge$Mate extends LinearBorderEdge with Mate {
           size: size,
           alignment: alignment,
         ) {
-    mateCreateName = 'LinearBorderEdge';
+    mateBuilderName = 'LinearBorderEdge';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorderEdge$Mate(
           size: p.get('size').build(),
@@ -65,7 +65,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           top: top,
           bottom: bottom,
         ) {
-    mateCreateName = 'LinearBorder';
+    mateBuilderName = 'LinearBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate(
           side: p.get('side').build(),
@@ -117,7 +117,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
-    mateCreateName = 'LinearBorder.start';
+    mateBuilderName = 'LinearBorder.start';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.start(
           side: p.get('side').build(),
@@ -159,7 +159,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
-    mateCreateName = 'LinearBorder.end';
+    mateBuilderName = 'LinearBorder.end';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.end(
           side: p.get('side').build(),
@@ -201,7 +201,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
-    mateCreateName = 'LinearBorder.top';
+    mateBuilderName = 'LinearBorder.top';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.top(
           side: p.get('side').build(),
@@ -243,7 +243,7 @@ class LinearBorder$Mate extends LinearBorder with Mate {
           alignment: alignment,
           size: size,
         ) {
-    mateCreateName = 'LinearBorder.bottom';
+    mateBuilderName = 'LinearBorder.bottom';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => LinearBorder$Mate.bottom(
           side: p.get('side').build(),

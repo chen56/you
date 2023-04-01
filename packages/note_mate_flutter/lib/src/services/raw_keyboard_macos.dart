@@ -29,7 +29,7 @@ class RawKeyEventDataMacOs$Mate extends RawKeyEventDataMacOs with Mate {
           modifiers: modifiers,
           specifiedLogicalKey: specifiedLogicalKey,
         ) {
-    mateCreateName = 'RawKeyEventDataMacOs';
+    mateBuilderName = 'RawKeyEventDataMacOs';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataMacOs$Mate(
           characters: p.get('characters').build(),

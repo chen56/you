@@ -110,7 +110,7 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           clipBehavior: clipBehavior,
           controlAffinity: controlAffinity,
         ) {
-    mateCreateName = 'ExpansionTile';
+    mateBuilderName = 'ExpansionTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTile$Mate(
           key: p.get('key').build(),
@@ -123,7 +123,8 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           initiallyExpanded: p.get('initiallyExpanded').build(),
           maintainState: p.get('maintainState').build(),
           tilePadding: p.get('tilePadding').build(),
-          expandedCrossAxisAlignment: p.get('expandedCrossAxisAlignment').build(),
+          expandedCrossAxisAlignment:
+              p.get('expandedCrossAxisAlignment').build(),
           expandedAlignment: p.get('expandedAlignment').build(),
           childrenPadding: p.get('childrenPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),

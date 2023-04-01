@@ -23,7 +23,7 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: stiffness,
           damping: damping,
         ) {
-    mateCreateName = 'SpringDescription';
+    mateBuilderName = 'SpringDescription';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SpringDescription$Mate(
           mass: p.get('mass').build(),
@@ -62,7 +62,7 @@ class SpringDescription$Mate extends SpringDescription with Mate {
           stiffness: stiffness,
           ratio: ratio,
         ) {
-    mateCreateName = 'SpringDescription.withDampingRatio';
+    mateBuilderName = 'SpringDescription.withDampingRatio';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SpringDescription$Mate.withDampingRatio(
           mass: p.get('mass').build(),
@@ -112,7 +112,7 @@ class SpringSimulation$Mate extends SpringSimulation with Mate {
           velocity,
           tolerance: tolerance,
         ) {
-    mateCreateName = 'SpringSimulation';
+    mateBuilderName = 'SpringSimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => SpringSimulation$Mate(
           p.get('spring').value,
@@ -174,7 +174,7 @@ class ScrollSpringSimulation$Mate extends ScrollSpringSimulation with Mate {
           velocity,
           tolerance: tolerance,
         ) {
-    mateCreateName = 'ScrollSpringSimulation';
+    mateBuilderName = 'ScrollSpringSimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => ScrollSpringSimulation$Mate(
           p.get('spring').value,

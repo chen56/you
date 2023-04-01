@@ -65,7 +65,8 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -91,7 +92,7 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'CustomScrollView';
+    mateBuilderName = 'CustomScrollView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CustomScrollView$Mate(
           key: p.get('key').build(),
@@ -263,7 +264,8 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -292,7 +294,7 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ListView';
+    mateBuilderName = 'ListView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate(
           key: p.get('key').build(),
@@ -487,7 +489,8 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -518,7 +521,7 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ListView.builder';
+    mateBuilderName = 'ListView.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate.builder(
           key: p.get('key').build(),
@@ -719,7 +722,8 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -748,7 +752,7 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ListView.separated';
+    mateBuilderName = 'ListView.separated';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate.separated(
           key: p.get('key').build(),
@@ -928,7 +932,8 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -954,7 +959,7 @@ class ListView$Mate extends ListView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ListView.custom';
+    mateBuilderName = 'ListView.custom';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ListView$Mate.custom(
           key: p.get('key').build(),
@@ -1125,7 +1130,8 @@ class GridView$Mate extends GridView with Mate {
     Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1150,7 +1156,7 @@ class GridView$Mate extends GridView with Mate {
           keyboardDismissBehavior: keyboardDismissBehavior,
           restorationId: restorationId,
         ) {
-    mateCreateName = 'GridView';
+    mateBuilderName = 'GridView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate(
           key: p.get('key').build(),
@@ -1336,7 +1342,8 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1366,7 +1373,7 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'GridView.builder';
+    mateBuilderName = 'GridView.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.builder(
           key: p.get('key').build(),
@@ -1549,7 +1556,8 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1574,7 +1582,7 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'GridView.custom';
+    mateBuilderName = 'GridView.custom';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.custom(
           key: p.get('key').build(),
@@ -1742,7 +1750,8 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1773,7 +1782,7 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'GridView.count';
+    mateBuilderName = 'GridView.count';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.count(
           key: p.get('key').build(),
@@ -1983,7 +1992,8 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
+        ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -2014,7 +2024,7 @@ class GridView$Mate extends GridView with Mate {
           restorationId: restorationId,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'GridView.extent';
+    mateBuilderName = 'GridView.extent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GridView$Mate.extent(
           key: p.get('key').build(),

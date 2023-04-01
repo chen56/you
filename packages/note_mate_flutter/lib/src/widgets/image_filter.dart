@@ -28,7 +28,7 @@ class ImageFiltered$Mate extends ImageFiltered with Mate {
           child: child,
           enabled: enabled,
         ) {
-    mateCreateName = 'ImageFiltered';
+    mateBuilderName = 'ImageFiltered';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ImageFiltered$Mate(
           key: p.get('key').build(),

@@ -37,7 +37,7 @@ class CupertinoContextMenuAction$Mate extends CupertinoContextMenuAction with Ma
           onPressed: onPressed,
           trailingIcon: trailingIcon,
         ) {
-    mateCreateName = 'CupertinoContextMenuAction';
+    mateBuilderName = 'CupertinoContextMenuAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoContextMenuAction$Mate(
           key: p.get('key').build(),

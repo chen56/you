@@ -23,7 +23,7 @@ class ContextMenuButtonItem$Mate extends ContextMenuButtonItem with Mate {
           type: type,
           label: label,
         ) {
-    mateCreateName = 'ContextMenuButtonItem';
+    mateBuilderName = 'ContextMenuButtonItem';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ContextMenuButtonItem$Mate(
           onPressed: p.get('onPressed').build(),

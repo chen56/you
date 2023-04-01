@@ -28,7 +28,7 @@ class Localizations$Mate extends Localizations with Mate {
           delegates: delegates,
           child: child,
         ) {
-    mateCreateName = 'Localizations';
+    mateBuilderName = 'Localizations';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Localizations$Mate(
           key: p.get('key').build(),

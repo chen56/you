@@ -64,7 +64,7 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateCreateName = 'RenderListWheelViewport';
+    mateBuilderName = 'RenderListWheelViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderListWheelViewport$Mate(
           childManager: p.get('childManager').build(),
@@ -77,7 +77,8 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
           overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
-          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport:
+              p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );

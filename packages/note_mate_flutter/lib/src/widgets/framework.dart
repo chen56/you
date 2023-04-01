@@ -16,7 +16,7 @@ class ObjectKey$Mate extends ObjectKey with Mate {
       /// requiredParameters: Object? value
       Object? value)
       : super(value) {
-    mateCreateName = 'ObjectKey';
+    mateBuilderName = 'ObjectKey';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ObjectKey$Mate(p.get('value').value);
     mateUse(
@@ -28,14 +28,15 @@ class ObjectKey$Mate extends ObjectKey with Mate {
 }
 
 /// class LabeledGlobalKey<T extends State<StatefulWidget>> extends GlobalKey<T>
-class LabeledGlobalKey$Mate<T extends State<StatefulWidget>> extends LabeledGlobalKey<T> with Mate {
+class LabeledGlobalKey$Mate<T extends State<StatefulWidget>>
+    extends LabeledGlobalKey<T> with Mate {
   /// LabeledGlobalKey<T> LabeledGlobalKey(String? _debugLabel)
   LabeledGlobalKey$Mate(
 
       /// requiredParameters: String? _debugLabel
       String? _debugLabel)
       : super(_debugLabel) {
-    mateCreateName = 'LabeledGlobalKey';
+    mateBuilderName = 'LabeledGlobalKey';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LabeledGlobalKey$Mate<T>(p.get('_debugLabel').value);
     mateUse(
@@ -47,14 +48,15 @@ class LabeledGlobalKey$Mate<T extends State<StatefulWidget>> extends LabeledGlob
 }
 
 /// class GlobalObjectKey<T extends State<StatefulWidget>> extends GlobalKey<T>
-class GlobalObjectKey$Mate<T extends State<StatefulWidget>> extends GlobalObjectKey<T> with Mate {
+class GlobalObjectKey$Mate<T extends State<StatefulWidget>>
+    extends GlobalObjectKey<T> with Mate {
   /// GlobalObjectKey<T> GlobalObjectKey(Object value)
   GlobalObjectKey$Mate(
 
       /// requiredParameters: Object value
       Object value)
       : super(value) {
-    mateCreateName = 'GlobalObjectKey';
+    mateBuilderName = 'GlobalObjectKey';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GlobalObjectKey$Mate<T>(p.get('value').value);
     mateUse(
@@ -78,7 +80,7 @@ class BuildOwner$Mate extends BuildOwner with Mate {
           onBuildScheduled: onBuildScheduled,
           focusManager: focusManager,
         ) {
-    mateCreateName = 'BuildOwner';
+    mateBuilderName = 'BuildOwner';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BuildOwner$Mate(
           onBuildScheduled: p.get('onBuildScheduled').build(),
@@ -105,7 +107,7 @@ class ErrorWidget$Mate extends ErrorWidget with Mate {
       /// requiredParameters: Object exception
       Object exception)
       : super(exception) {
-    mateCreateName = 'ErrorWidget';
+    mateBuilderName = 'ErrorWidget';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ErrorWidget$Mate(p.get('exception').value);
     mateUse(
@@ -126,7 +128,7 @@ class ErrorWidget$Mate extends ErrorWidget with Mate {
           message: message,
           error: error,
         ) {
-    mateCreateName = 'ErrorWidget.withDetails';
+    mateBuilderName = 'ErrorWidget.withDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ErrorWidget$Mate.withDetails(
           message: p.get('message').build(),
@@ -154,7 +156,7 @@ class StatelessElement$Mate extends StatelessElement with Mate {
       /// requiredParameters: StatelessWidget widget
       StatelessWidget widget)
       : super(widget) {
-    mateCreateName = 'StatelessElement';
+    mateBuilderName = 'StatelessElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => StatelessElement$Mate(p.get('widget').value);
     mateUse(
@@ -173,7 +175,7 @@ class StatefulElement$Mate extends StatefulElement with Mate {
       /// requiredParameters: StatefulWidget widget
       StatefulWidget widget)
       : super(widget) {
-    mateCreateName = 'StatefulElement';
+    mateBuilderName = 'StatefulElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => StatefulElement$Mate(p.get('widget').value);
     mateUse(
@@ -185,14 +187,15 @@ class StatefulElement$Mate extends StatefulElement with Mate {
 }
 
 /// class ParentDataElement<T extends ParentData> extends ProxyElement
-class ParentDataElement$Mate<T extends ParentData> extends ParentDataElement<T> with Mate {
+class ParentDataElement$Mate<T extends ParentData> extends ParentDataElement<T>
+    with Mate {
   /// ParentDataElement<T> ParentDataElement(ParentDataWidget<T> widget)
   ParentDataElement$Mate(
 
       /// requiredParameters: ParentDataWidget<T> widget
       ParentDataWidget<T> widget)
       : super(widget) {
-    mateCreateName = 'ParentDataElement';
+    mateBuilderName = 'ParentDataElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ParentDataElement$Mate<T>(p.get('widget').value);
     mateUse(
@@ -211,7 +214,7 @@ class InheritedElement$Mate extends InheritedElement with Mate {
       /// requiredParameters: InheritedWidget widget
       InheritedWidget widget)
       : super(widget) {
-    mateCreateName = 'InheritedElement';
+    mateBuilderName = 'InheritedElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InheritedElement$Mate(p.get('widget').value);
     mateUse(
@@ -230,7 +233,7 @@ class LeafRenderObjectElement$Mate extends LeafRenderObjectElement with Mate {
       /// requiredParameters: LeafRenderObjectWidget widget
       LeafRenderObjectWidget widget)
       : super(widget) {
-    mateCreateName = 'LeafRenderObjectElement';
+    mateBuilderName = 'LeafRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LeafRenderObjectElement$Mate(p.get('widget').value);
     mateUse(
@@ -242,16 +245,18 @@ class LeafRenderObjectElement$Mate extends LeafRenderObjectElement with Mate {
 }
 
 /// class SingleChildRenderObjectElement extends RenderObjectElement
-class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement with Mate {
+class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
+    with Mate {
   /// SingleChildRenderObjectElement SingleChildRenderObjectElement(SingleChildRenderObjectWidget widget)
   SingleChildRenderObjectElement$Mate(
 
       /// requiredParameters: SingleChildRenderObjectWidget widget
       SingleChildRenderObjectWidget widget)
       : super(widget) {
-    mateCreateName = 'SingleChildRenderObjectElement';
+    mateBuilderName = 'SingleChildRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
+    mateBuilder =
+        (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
     mateUse(
       'widget',
       widget,
@@ -261,16 +266,18 @@ class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
 }
 
 /// class MultiChildRenderObjectElement extends RenderObjectElement
-class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement with Mate {
+class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement
+    with Mate {
   /// MultiChildRenderObjectElement MultiChildRenderObjectElement(MultiChildRenderObjectWidget widget)
   MultiChildRenderObjectElement$Mate(
 
       /// requiredParameters: MultiChildRenderObjectWidget widget
       MultiChildRenderObjectWidget widget)
       : super(widget) {
-    mateCreateName = 'MultiChildRenderObjectElement';
+    mateBuilderName = 'MultiChildRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
+    mateBuilder =
+        (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
     mateUse(
       'widget',
       widget,
@@ -287,7 +294,7 @@ class DebugCreator$Mate extends DebugCreator with Mate {
       /// requiredParameters: Element element
       Element element)
       : super(element) {
-    mateCreateName = 'DebugCreator';
+    mateBuilderName = 'DebugCreator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DebugCreator$Mate(p.get('element').value);
     mateUse(
@@ -311,7 +318,7 @@ class IndexedSlot$Mate<T extends Element?> extends IndexedSlot<T> with Mate {
           index,
           value,
         ) {
-    mateCreateName = 'IndexedSlot';
+    mateBuilderName = 'IndexedSlot';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IndexedSlot$Mate<T>(
           p.get('index').value,

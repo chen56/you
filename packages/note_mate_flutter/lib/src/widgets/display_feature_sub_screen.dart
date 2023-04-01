@@ -23,7 +23,7 @@ class DisplayFeatureSubScreen$Mate extends DisplayFeatureSubScreen with Mate {
           anchorPoint: anchorPoint,
           child: child,
         ) {
-    mateCreateName = 'DisplayFeatureSubScreen';
+    mateBuilderName = 'DisplayFeatureSubScreen';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DisplayFeatureSubScreen$Mate(
           key: p.get('key').build(),

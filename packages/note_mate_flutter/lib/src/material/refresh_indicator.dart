@@ -47,7 +47,8 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
     double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth,
 
     /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
-    RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge,
+    RefreshIndicatorTriggerMode triggerMode =
+        RefreshIndicatorTriggerMode.onEdge,
   }) : super(
           key: key,
           child: child,
@@ -62,7 +63,7 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: strokeWidth,
           triggerMode: triggerMode,
         ) {
-    mateCreateName = 'RefreshIndicator';
+    mateBuilderName = 'RefreshIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshIndicator$Mate(
           key: p.get('key').build(),
@@ -180,7 +181,8 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
     double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth,
 
     /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
-    RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge,
+    RefreshIndicatorTriggerMode triggerMode =
+        RefreshIndicatorTriggerMode.onEdge,
   }) : super.adaptive(
           key: key,
           child: child,
@@ -195,7 +197,7 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: strokeWidth,
           triggerMode: triggerMode,
         ) {
-    mateCreateName = 'RefreshIndicator.adaptive';
+    mateBuilderName = 'RefreshIndicator.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshIndicator$Mate.adaptive(
           key: p.get('key').build(),

@@ -27,7 +27,7 @@ class Theme$Mate extends Theme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'Theme';
+    mateBuilderName = 'Theme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Theme$Mate(
           key: p.get('key').build(),
@@ -65,7 +65,7 @@ class ThemeDataTween$Mate extends ThemeDataTween with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'ThemeDataTween';
+    mateBuilderName = 'ThemeDataTween';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ThemeDataTween$Mate(
           begin: p.get('begin').build(),
@@ -113,7 +113,7 @@ class AnimatedTheme$Mate extends AnimatedTheme with Mate {
           onEnd: onEnd,
           child: child,
         ) {
-    mateCreateName = 'AnimatedTheme';
+    mateBuilderName = 'AnimatedTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedTheme$Mate(
           key: p.get('key').build(),

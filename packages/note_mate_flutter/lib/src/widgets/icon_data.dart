@@ -34,7 +34,7 @@ class IconDataProperty$Mate extends IconDataProperty with Mate {
           style: style,
           level: level,
         ) {
-    mateCreateName = 'IconDataProperty';
+    mateBuilderName = 'IconDataProperty';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => IconDataProperty$Mate(
           p.get('name').value,

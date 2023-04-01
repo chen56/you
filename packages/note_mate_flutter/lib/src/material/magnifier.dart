@@ -25,7 +25,7 @@ class TextMagnifier$Mate extends TextMagnifier with Mate {
           key: key,
           magnifierInfo: magnifierInfo,
         ) {
-    mateCreateName = 'TextMagnifier';
+    mateBuilderName = 'TextMagnifier';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextMagnifier$Mate(
           key: p.get('key').build(),
@@ -73,11 +73,12 @@ class Magnifier$Mate extends Magnifier with Mate {
           shadows: shadows,
           size: size,
         ) {
-    mateCreateName = 'Magnifier';
+    mateBuilderName = 'Magnifier';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Magnifier$Mate(
           key: p.get('key').build(),
-          additionalFocalPointOffset: p.get('additionalFocalPointOffset').build(),
+          additionalFocalPointOffset:
+              p.get('additionalFocalPointOffset').build(),
           borderRadius: p.get('borderRadius').build(),
           filmColor: p.get('filmColor').build(),
           shadows: p.get('shadows').build(),

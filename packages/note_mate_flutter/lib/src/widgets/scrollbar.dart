@@ -82,7 +82,7 @@ class ScrollbarPainter$Mate extends ScrollbarPainter with Mate {
           scrollbarOrientation: scrollbarOrientation,
           ignorePointer: ignorePointer,
         ) {
-    mateCreateName = 'ScrollbarPainter';
+    mateBuilderName = 'ScrollbarPainter';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollbarPainter$Mate(
           color: p.get('color').build(),
@@ -286,7 +286,7 @@ class RawScrollbar$Mate extends RawScrollbar with Mate {
           crossAxisMargin: crossAxisMargin,
           padding: padding,
         ) {
-    mateCreateName = 'RawScrollbar';
+    mateBuilderName = 'RawScrollbar';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawScrollbar$Mate(
           key: p.get('key').build(),

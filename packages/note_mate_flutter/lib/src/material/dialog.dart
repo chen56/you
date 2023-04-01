@@ -73,7 +73,7 @@ class Dialog$Mate extends Dialog with Mate {
           alignment: alignment,
           child: child,
         ) {
-    mateCreateName = 'Dialog';
+    mateBuilderName = 'Dialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Dialog$Mate(
           key: p.get('key').build(),
@@ -176,7 +176,7 @@ class Dialog$Mate extends Dialog with Mate {
           insetAnimationCurve: insetAnimationCurve,
           child: child,
         ) {
-    mateCreateName = 'Dialog.fullscreen';
+    mateBuilderName = 'Dialog.fullscreen';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Dialog$Mate.fullscreen(
           key: p.get('key').build(),
@@ -328,7 +328,7 @@ class AlertDialog$Mate extends AlertDialog with Mate {
           alignment: alignment,
           scrollable: scrollable,
         ) {
-    mateCreateName = 'AlertDialog';
+    mateBuilderName = 'AlertDialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AlertDialog$Mate(
           key: p.get('key').build(),
@@ -346,7 +346,8 @@ class AlertDialog$Mate extends AlertDialog with Mate {
           actionsAlignment: p.get('actionsAlignment').build(),
           actionsOverflowAlignment: p.get('actionsOverflowAlignment').build(),
           actionsOverflowDirection: p.get('actionsOverflowDirection').build(),
-          actionsOverflowButtonSpacing: p.get('actionsOverflowButtonSpacing').build(),
+          actionsOverflowButtonSpacing:
+              p.get('actionsOverflowButtonSpacing').build(),
           buttonPadding: p.get('buttonPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),
           elevation: p.get('elevation').build(),
@@ -520,7 +521,7 @@ class SimpleDialogOption$Mate extends SimpleDialogOption with Mate {
           padding: padding,
           child: child,
         ) {
-    mateCreateName = 'SimpleDialogOption';
+    mateBuilderName = 'SimpleDialogOption';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SimpleDialogOption$Mate(
           key: p.get('key').build(),
@@ -616,7 +617,7 @@ class SimpleDialog$Mate extends SimpleDialog with Mate {
           shape: shape,
           alignment: alignment,
         ) {
-    mateCreateName = 'SimpleDialog';
+    mateBuilderName = 'SimpleDialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SimpleDialog$Mate(
           key: p.get('key').build(),
@@ -759,7 +760,7 @@ class DialogRoute$Mate<T> extends DialogRoute<T> with Mate {
           anchorPoint: anchorPoint,
           traversalEdgeBehavior: traversalEdgeBehavior,
         ) {
-    mateCreateName = 'DialogRoute';
+    mateBuilderName = 'DialogRoute';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DialogRoute$Mate<T>(
           context: p.get('context').build(),

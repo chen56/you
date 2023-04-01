@@ -13,7 +13,7 @@ class BorderRadius$Mate extends BorderRadius with Mate {
       /// requiredParameters: Radius radius
       Radius radius)
       : super.all(radius) {
-    mateCreateName = 'BorderRadius.all';
+    mateBuilderName = 'BorderRadius.all';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.all(p.get('radius').value);
     mateUse(
@@ -29,7 +29,7 @@ class BorderRadius$Mate extends BorderRadius with Mate {
       /// requiredParameters: double radius
       double radius)
       : super.circular(radius) {
-    mateCreateName = 'BorderRadius.circular';
+    mateBuilderName = 'BorderRadius.circular';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.circular(p.get('radius').value);
     mateUse(
@@ -50,7 +50,7 @@ class BorderRadius$Mate extends BorderRadius with Mate {
           top: top,
           bottom: bottom,
         ) {
-    mateCreateName = 'BorderRadius.vertical';
+    mateBuilderName = 'BorderRadius.vertical';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.vertical(
           top: p.get('top').build(),
@@ -81,7 +81,7 @@ class BorderRadius$Mate extends BorderRadius with Mate {
           left: left,
           right: right,
         ) {
-    mateCreateName = 'BorderRadius.horizontal';
+    mateBuilderName = 'BorderRadius.horizontal';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.horizontal(
           left: p.get('left').build(),
@@ -120,7 +120,7 @@ class BorderRadius$Mate extends BorderRadius with Mate {
           bottomLeft: bottomLeft,
           bottomRight: bottomRight,
         ) {
-    mateCreateName = 'BorderRadius.only';
+    mateBuilderName = 'BorderRadius.only';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadius$Mate.only(
           topLeft: p.get('topLeft').build(),
@@ -163,9 +163,10 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       /// requiredParameters: Radius radius
       Radius radius)
       : super.all(radius) {
-    mateCreateName = 'BorderRadiusDirectional.all';
+    mateBuilderName = 'BorderRadiusDirectional.all';
     matePackageUrl = 'package:flutter/painting.dart';
-    mateBuilder = (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
+    mateBuilder =
+        (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
     mateUse(
       'radius',
       radius,
@@ -179,9 +180,10 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       /// requiredParameters: double radius
       double radius)
       : super.circular(radius) {
-    mateCreateName = 'BorderRadiusDirectional.circular';
+    mateBuilderName = 'BorderRadiusDirectional.circular';
     matePackageUrl = 'package:flutter/painting.dart';
-    mateBuilder = (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
+    mateBuilder =
+        (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
     mateUse(
       'radius',
       radius,
@@ -200,7 +202,7 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
           top: top,
           bottom: bottom,
         ) {
-    mateCreateName = 'BorderRadiusDirectional.vertical';
+    mateBuilderName = 'BorderRadiusDirectional.vertical';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.vertical(
           top: p.get('top').build(),
@@ -231,7 +233,7 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
           start: start,
           end: end,
         ) {
-    mateCreateName = 'BorderRadiusDirectional.horizontal';
+    mateBuilderName = 'BorderRadiusDirectional.horizontal';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.horizontal(
           start: p.get('start').build(),
@@ -270,7 +272,7 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
           bottomStart: bottomStart,
           bottomEnd: bottomEnd,
         ) {
-    mateCreateName = 'BorderRadiusDirectional.only';
+    mateBuilderName = 'BorderRadiusDirectional.only';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BorderRadiusDirectional$Mate.only(
           topStart: p.get('topStart').build(),

@@ -48,7 +48,7 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
           backgroundBlendMode: backgroundBlendMode,
           shape: shape,
         ) {
-    mateCreateName = 'BoxDecoration';
+    mateBuilderName = 'BoxDecoration';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BoxDecoration$Mate(
           color: p.get('color').build(),

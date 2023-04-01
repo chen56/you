@@ -57,7 +57,7 @@ class Viewport$Mate extends Viewport with Mate {
           clipBehavior: clipBehavior,
           slivers: slivers,
         ) {
-    mateCreateName = 'Viewport';
+    mateBuilderName = 'Viewport';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Viewport$Mate(
           key: p.get('key').build(),
@@ -157,7 +157,7 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
           clipBehavior: clipBehavior,
           slivers: slivers,
         ) {
-    mateCreateName = 'ShrinkWrappingViewport';
+    mateBuilderName = 'ShrinkWrappingViewport';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShrinkWrappingViewport$Mate(
           key: p.get('key').build(),

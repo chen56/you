@@ -21,7 +21,7 @@ class RawKeyEventDataFuchsia$Mate extends RawKeyEventDataFuchsia with Mate {
           codePoint: codePoint,
           modifiers: modifiers,
         ) {
-    mateCreateName = 'RawKeyEventDataFuchsia';
+    mateBuilderName = 'RawKeyEventDataFuchsia';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataFuchsia$Mate(
           hidUsage: p.get('hidUsage').build(),

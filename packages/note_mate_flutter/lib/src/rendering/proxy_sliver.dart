@@ -23,7 +23,7 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateCreateName = 'RenderSliverOpacity';
+    mateBuilderName = 'RenderSliverOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverOpacity$Mate(
           opacity: p.get('opacity').build(),
@@ -51,7 +51,8 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
 }
 
 /// class RenderSliverIgnorePointer extends RenderProxySliver
-class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate {
+class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer
+    with Mate {
   /// RenderSliverIgnorePointer RenderSliverIgnorePointer({RenderSliver? sliver, bool ignoring = true, bool? ignoringSemantics})
   RenderSliverIgnorePointer$Mate({
     /// optionalParameters: {RenderSliver? sliver} , default:none
@@ -67,7 +68,7 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
           ignoring: ignoring,
           ignoringSemantics: ignoringSemantics,
         ) {
-    mateCreateName = 'RenderSliverIgnorePointer';
+    mateBuilderName = 'RenderSliverIgnorePointer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverIgnorePointer$Mate(
           sliver: p.get('sliver').build(),
@@ -106,7 +107,7 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
           offstage: offstage,
           sliver: sliver,
         ) {
-    mateCreateName = 'RenderSliverOffstage';
+    mateBuilderName = 'RenderSliverOffstage';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverOffstage$Mate(
           offstage: p.get('offstage').build(),
@@ -127,7 +128,8 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
 }
 
 /// class RenderSliverAnimatedOpacity extends RenderProxySliver with RenderAnimatedOpacityMixin<RenderSliver>
-class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with Mate {
+class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity
+    with Mate {
   /// RenderSliverAnimatedOpacity RenderSliverAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverAnimatedOpacity$Mate({
     /// optionalParameters: {required Animation<double> opacity} , default:none
@@ -143,7 +145,7 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateCreateName = 'RenderSliverAnimatedOpacity';
+    mateBuilderName = 'RenderSliverAnimatedOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverAnimatedOpacity$Mate(
           opacity: p.get('opacity').build(),

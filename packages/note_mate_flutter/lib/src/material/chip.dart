@@ -108,7 +108,7 @@ class Chip$Mate extends Chip with Mate {
           surfaceTintColor: surfaceTintColor,
           iconTheme: iconTheme,
         ) {
-    mateCreateName = 'Chip';
+    mateBuilderName = 'Chip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Chip$Mate(
           key: p.get('key').build(),
@@ -119,7 +119,8 @@ class Chip$Mate extends Chip with Mate {
           deleteIcon: p.get('deleteIcon').build(),
           onDeleted: p.get('onDeleted').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
-          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
+          deleteButtonTooltipMessage:
+              p.get('deleteButtonTooltipMessage').build(),
           side: p.get('side').build(),
           shape: p.get('shape').build(),
           clipBehavior: p.get('clipBehavior').build(),
@@ -398,7 +399,7 @@ class RawChip$Mate extends RawChip with Mate {
           checkmarkColor: checkmarkColor,
           avatarBorder: avatarBorder,
         ) {
-    mateCreateName = 'RawChip';
+    mateBuilderName = 'RawChip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RawChip$Mate(
           key: p.get('key').build(),
@@ -412,7 +413,8 @@ class RawChip$Mate extends RawChip with Mate {
           deleteIcon: p.get('deleteIcon').build(),
           onDeleted: p.get('onDeleted').build(),
           deleteIconColor: p.get('deleteIconColor').build(),
-          deleteButtonTooltipMessage: p.get('deleteButtonTooltipMessage').build(),
+          deleteButtonTooltipMessage:
+              p.get('deleteButtonTooltipMessage').build(),
           onPressed: p.get('onPressed').build(),
           onSelected: p.get('onSelected').build(),
           pressElevation: p.get('pressElevation').build(),

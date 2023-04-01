@@ -47,7 +47,7 @@ class CupertinoTextMagnifier$Mate extends CupertinoTextMagnifier with Mate {
           horizontalScreenEdgePadding: horizontalScreenEdgePadding,
           magnifierInfo: magnifierInfo,
         ) {
-    mateCreateName = 'CupertinoTextMagnifier';
+    mateBuilderName = 'CupertinoTextMagnifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextMagnifier$Mate(
           key: p.get('key').build(),
@@ -133,7 +133,7 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
           borderSide: borderSide,
           inOutAnimation: inOutAnimation,
         ) {
-    mateCreateName = 'CupertinoMagnifier';
+    mateBuilderName = 'CupertinoMagnifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoMagnifier$Mate(
           key: p.get('key').build(),
