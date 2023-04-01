@@ -1021,8 +1021,7 @@ class ToSourceVisitor implements AstVisitor<void> {
   }
 
   @override
-  void visitPatternVariableDeclarationStatement(
-      PatternVariableDeclarationStatement node) {
+  void visitPatternVariableDeclarationStatement(PatternVariableDeclarationStatement node) {
     _visitNode(node.declaration);
     sink.write(';');
   }
@@ -1095,24 +1094,21 @@ class ToSourceVisitor implements AstVisitor<void> {
   }
 
   @override
-  void visitRecordTypeAnnotationNamedField(
-      RecordTypeAnnotationNamedField node) {
+  void visitRecordTypeAnnotationNamedField(RecordTypeAnnotationNamedField node) {
     _visitNode(node.type);
     sink.write(' ');
     sink.write(node.name);
   }
 
   @override
-  void visitRecordTypeAnnotationNamedFields(
-      RecordTypeAnnotationNamedFields node) {
+  void visitRecordTypeAnnotationNamedFields(RecordTypeAnnotationNamedFields node) {
     sink.write('{');
     _visitNodeList(node.fields, separator: ', ');
     sink.write('}');
   }
 
   @override
-  void visitRecordTypeAnnotationPositionalField(
-      RecordTypeAnnotationPositionalField node) {
+  void visitRecordTypeAnnotationPositionalField(RecordTypeAnnotationPositionalField node) {
     _visitNode(node.type);
     if (node.name != null) {
       sink.write(' ');
@@ -1121,8 +1117,7 @@ class ToSourceVisitor implements AstVisitor<void> {
   }
 
   @override
-  void visitRedirectingConstructorInvocation(
-      RedirectingConstructorInvocation node) {
+  void visitRedirectingConstructorInvocation(RedirectingConstructorInvocation node) {
     sink.write('this');
     _visitNode(node.constructorName, prefix: '.');
     _visitNode(node.argumentList);
@@ -1340,7 +1335,7 @@ class ToSourceVisitor implements AstVisitor<void> {
   @override
   void visitTypeParameter(TypeParameter node) {
     _visitNodeList(node.metadata, separator: ' ', suffix: ' ');
-    // TODO (kallentu) : Clean up TypeParameterImpl casting once variance is
+    // TO DO (kallentu) : Clean up TypeParameterImpl casting once variance is
     // added to the interface.
 
     // var varianceKeyword = (node as TypeParameter).varianceKeyword;

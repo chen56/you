@@ -1,15 +1,16 @@
 // ignore_for_file: unnecessary_type_check
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:code_builder/code_builder.dart' as code;
 
 typedef OnClick = void Function();
+// ignore: camel_case_types
 typedef OnClick_ = void Function(int?)?;
 
 void isInt<T>() {
+  // ignore: avoid_print
   print("${T == int}");
 }
 

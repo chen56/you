@@ -6,7 +6,7 @@ void main() => runApp(MyApp());
 
 // https://api.flutter-io.cn/flutter/material/Divider-class.html
 class MyApp extends StatelessWidget {
-  ScrollController controller = ScrollController();
+  final ScrollController controller = ScrollController();
 
   MyApp({super.key});
 
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
 
 class MarkdownView extends StatelessWidget {
   final String content;
-  ScrollController controller = ScrollController();
+  final ScrollController controller = ScrollController();
 
   MarkdownView({super.key, required this.content});
 
@@ -88,7 +88,7 @@ class _CenteredHeaderBuilder extends MarkdownElementBuilder {
     return Column(
       children: [
         heading,
-        Divider(height: 20, thickness: 1),
+        const Divider(height: 20, thickness: 1),
       ],
     );
   }

@@ -8,7 +8,6 @@ void main() {
 }
 
 class HomeScreen extends StatelessWidget with Screen<void, void> {
-  @override
   final void args = null;
 
   HomeScreen({super.key});
@@ -156,6 +155,8 @@ class NavigatorV2State extends State<NavigatorV2> {
 
 /// A: Screen参数类型，R: push返回值类型
 class MyPage<A, R> extends MaterialPage<R> {
+  final Screen<A, R> screen;
+
   MyPage({
     // super.key,
     // super.name,
@@ -165,7 +166,6 @@ class MyPage<A, R> extends MaterialPage<R> {
           name: screen.runtimeType.toString(),
           key: ValueKey(screen.runtimeType.toString()), //key的临时用法
         );
-  Screen<A, R> screen;
 }
 
 /// A: Screen参数类型，R: push返回值类型

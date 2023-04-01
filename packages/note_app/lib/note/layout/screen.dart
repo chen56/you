@@ -10,10 +10,9 @@ class MyHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Directionality(
+    return const Directionality(
       textDirection: TextDirection.ltr,
-      child:
-          Column(mainAxisAlignment: MainAxisAlignment.start, children: const [
+      child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         Text(
             "datadatadatadatadatadatadatadatassssssssssssssssdatadatadatadatadatadatadatadatassssssssssssssssdatadatadatadatadatadatadatadatassssssssssssssss"),
         Text(

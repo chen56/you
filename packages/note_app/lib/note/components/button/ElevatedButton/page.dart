@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
-import 'package:note_mate_flutter/cupertino.dart';
 import 'package:note_mate_flutter/material.dart';
 
-import '1.elevated_button.dart';
+import 'package:note_app/note/components/button/ElevatedButton/1.elevated_button.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "ElevatedButton",

@@ -4,7 +4,6 @@ import 'package:analyzer/dart/analysis/features.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/analysis/utilities.dart';
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:analyzer/dart/ast/token.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:note_app/draft/dart/analyzer/to_source_visitor.dart';
 
@@ -42,14 +41,9 @@ class X extends GeneralizingAstVisitor {
         node is ConstructorFieldInitializer) {
       return null;
     }
-    String cut(Object? o, int length) {
-      if (o == null) return "null";
-      String s = o.toString();
-      return s.length >= length ? s.substring(0, length) : s;
-    }
 
-    print(
-        "${"  |" * level(node)}+${node.runtimeType}  (${node.beginToken} .. ${node.endToken}) child:> ${cut(node.childEntities, 30)} -  - ${cut(node.toString(), 30)}   ");
+    // print(
+    //     "${"  |" * level(node)}+${node.runtimeType}  (${node.beginToken} .. ${node.endToken}) child:> ${cut(node.childEntities, 30)} -  - ${cut(node.toString(), 30)}   ");
     if (node is SimpleFormalParameter) {
       // print("----SimpleFormalParameter ${node.childEntities}");
     }
@@ -58,9 +52,8 @@ class X extends GeneralizingAstVisitor {
       if (c is AstNode) {
         c.accept(this);
       } else {
-        Token t = c as Token;
-        print(
-            "${"  |" * (level(node) + 1)}-${t.runtimeType}  (${t.type} .. ${t.lexeme}) - ${cut(t.toString(), 30)}   ");
+        // print(
+        //     "${"  |" * (level(node) + 1)}-${t.runtimeType}  (${t.type} .. ${t.lexeme}) - ${cut(t.toString(), 30)}   ");
       }
     }
     return null;

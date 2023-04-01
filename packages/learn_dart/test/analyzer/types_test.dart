@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter_test/flutter_test.dart';
 
 typedef OnClick = void Function();
+// ignore: camel_case_types
 typedef OnClick_ = void Function()?;
 
 class Value<T> {

@@ -68,7 +68,6 @@ abstract class Param<T> extends ChangeNotifier {
 
   Iterable<Param> get children;
 
-  //fixme release模式下 runtimeType被混淆了
   String get displayName {
     if (isRoot && this is ObjectParam) {
       var toThis = this as ObjectParam;
@@ -126,12 +125,12 @@ abstract class Param<T> extends ChangeNotifier {
         : c.accept(emitter_).toString();
   }
 
-  Widget nameWidget(Editors editors) {
-    return getEditor(editors).nameWidget();
+  Widget nameWidget(BuildContext context, Editors editors) {
+    return getEditor(editors).nameWidget(context);
   }
 
-  valueWidget(Editors editors) {
-    return getEditor(editors).valueWidget();
+  valueWidget(BuildContext context, Editors editors) {
+    return getEditor(editors).valueWidget(context);
   }
 
   Editor getEditor(Editors editors);
@@ -185,7 +184,12 @@ ListParam<E> _toListParam<E>({
       isNamed: false,
     ));
   }
-  return ListParam<E>(name: name, init: notNull, params: params);
+  return ListParam<E>(
+    name: name,
+    init: notNull,
+    params: params,
+    isNamed: isNamed,
+  );
 }
 
 class ValueParam<T> extends Param<T> {
@@ -399,7 +403,7 @@ abstract class Editor {
         formatter = editors.formatter;
 
   @nonVirtual
-  Widget nameWidget() {
+  Widget nameWidget(BuildContext context) {
     if (param.parent is ListParam && param is ObjectParam) {
       return Text("${0}->${(param as ObjectParam).builderRefer.symbol} ");
     }
@@ -408,7 +412,7 @@ abstract class Editor {
 
   Param get param;
 
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return const Text("");
   }
 
@@ -438,10 +442,22 @@ class Editors {
     DartFormatter? formatter,
   })  : enumRegister = enumRegister ?? EnumRegister(),
         emitter = emitter ?? defaultEmitter,
-        formatter = formatter ?? defaultDartFormatter {}
+        formatter = formatter ?? defaultDartFormatter;
 
   Editor get<T>(ValueParam<T> param, {EditorBuilder? onNotFound}) {
-    // fixme to case
+    // 20230401 dart2js compile error: can not use patterns.
+    // flutter build web --enable-experiment=records,patterns --release --web-renderer html --base-href "/note/"
+    // --------------------------------------------------
+    // Error: Expected an identifier, but got 'switch'.
+    // var isPrimary = switch (color) {
+    // ^^^^^^
+    // --------------------------------------------------
+    // var xx = switch (T) {
+    // int => IntEditor(param, editors: this),
+    // _ => onNotFound != null ? onNotFound(param) : DefaultValueParamEditor(param, editors: this)
+    // };
+    // return xx;
+
     if (utils.isType<T, int>()) return IntEditor(param, editors: this);
     if (utils.isType<T, double>()) return DoubleEditor(param, editors: this);
     if (utils.isType<T, bool>()) return BoolEditor(param, editors: this);
@@ -469,7 +485,7 @@ abstract class ValueParamEditor extends Editor {
   ValueParamEditor(this.param, {required super.editors});
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return Text(
       toCodeString(),
     );
@@ -493,6 +509,11 @@ class ObjectParamEditor extends Editor {
         .where((e) => e.value.isNamed)
         .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
     return param.builderRefer.call(positionalArguments, namedArguments);
+  }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return param.isRoot ? const Text("") : Text("${param.builderRefer.symbol}");
   }
 }
 

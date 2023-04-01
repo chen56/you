@@ -200,17 +200,16 @@ enable_experiment="--enable-experiment=records,patterns"
 /gen?() {
   /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
-    (cd packages/note_app ;          run dart run tools/gen_pages.dart; )
-    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart; )
+    (cd packages/note_app ;          run dart run $enable_experiment tools/gen_pages.dart; )
+    (cd packages/note_mate_flutter ; run dart run $enable_experiment tools/gen_mates.dart; )
   }
 }
 /regen?() {
   /regen?shortHelp() { cat <<<"先删除old, 再代码生成"; }
   /regen() {
-    run rm packages/note_app/lib/pages.g.dart
+    run rm -f packages/note_app/lib/pages.g.dart
     run rm -rf packages/note_mate_flutter/lib
-    (cd packages/note_app ;          run dart run tools/gen_pages.dart ; )
-    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart ; )
+    /gen
   }
 }
 
@@ -231,10 +230,11 @@ enable_experiment="--enable-experiment=records,patterns"
 #          # 用括号()开启子进程执行，可以不影响当前进程的环境
 #          ( cd "$project" ;  run "$@" ; )
 #        done
-        (cd packages/learn_dart ;              run "$@" ; )
+        (cd packages/learn_dart ;        run "$@" ; )
         (cd packages/note ;              run "$@" ; )
         (cd packages/note_mate_flutter ; run "$@" ; )
         (cd packages/note_app ;          run "$@" ; )
+        (cd packages/note_test ;         run "$@" ; )
    }
 }
 

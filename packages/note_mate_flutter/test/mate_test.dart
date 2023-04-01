@@ -28,6 +28,7 @@ void main() {
     });
 
     test('First Test', () {
+      // ignore: avoid_print
       print(entryLib);
     });
   });

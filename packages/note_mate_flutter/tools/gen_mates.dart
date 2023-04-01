@@ -383,9 +383,8 @@ extension _InterfaceElement on InterfaceElement {
 
     // Colors.red | XEnum.xxx
     if (init is ast.PrefixedIdentifier) {
-      var x = init as ast.PrefixedIdentifier;
-      var ref = typeRefers.elementRef(x.prefix.staticElement!, debugRef: param);
-      return code.refer("${x.prefix}.${x.identifier}", ref.url);
+      var ref = typeRefers.elementRef(init.prefix.staticElement!, debugRef: param);
+      return code.refer("${init.prefix}.${init.identifier}", ref.url);
     }
 
     return null;

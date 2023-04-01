@@ -110,6 +110,7 @@ String _flatLibPath(String packageName) {
   //     .join("");
   return result
       .replaceAll(RegExp("/page.dart\$"), "") // 后缀
+      // ignore: unnecessary_string_escapes
       .replaceAll(RegExp("/\\d+\."), "/") // 1.note-self -> note-self
       .replaceAll("/", "_")
       .replaceAll(".", "_")

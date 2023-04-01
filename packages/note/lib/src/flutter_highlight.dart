@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:highlight/highlight.dart' show highlight, Node;
 
 /// ------------------------------------------------------------------------------
@@ -34,11 +33,12 @@ class HighlightView extends StatelessWidget {
 
   HighlightView(
     String input, {
+    super.key,
     this.language,
     this.theme = const {},
     this.padding,
     this.textStyle,
-    int tabSize = 8, // TODO: https://github.com/flutter/flutter/issues/50087
+    int tabSize = 8, // TO DO?: https://github.com/flutter/flutter/issues/50087
   }) : source = input.replaceAll('\t', ' ' * tabSize);
 
   List<TextSpan> _convert(List<Node> nodes) {
@@ -46,6 +46,7 @@ class HighlightView extends StatelessWidget {
     var currentSpans = spans;
     List<List<TextSpan>> stack = [];
 
+    // ignore: no_leading_underscores_for_local_identifiers
     _traverse(Node node) {
       if (node.value != null) {
         currentSpans.add(node.className == null
@@ -57,12 +58,12 @@ class HighlightView extends StatelessWidget {
         stack.add(currentSpans);
         currentSpans = tmp;
 
-        node.children!.forEach((n) {
+        for (var n in node.children!) {
           _traverse(n);
           if (n == node.children!.last) {
             currentSpans = stack.isEmpty ? spans : stack.removeLast();
           }
-        });
+        }
       }
     }
 
@@ -77,13 +78,13 @@ class HighlightView extends StatelessWidget {
   static const _defaultFontColor = Color(0xff000000);
   static const _defaultBackgroundColor = Color(0xffffffff);
 
-  // TODO: dart:io is not available at web platform currently
   // See: https://github.com/flutter/flutter/issues/39998
   // So we just use monospace here for now
   static const _defaultFontFamily = 'monospace';
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     var _textStyle = TextStyle(
       fontFamily: _defaultFontFamily,
       color: theme[_rootKey]?.color ?? _defaultFontColor,

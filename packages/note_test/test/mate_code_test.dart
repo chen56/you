@@ -1,48 +1,41 @@
 // ignore_for_file: unnecessary_type_check
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:note/mate_api_experiment.dart';
+import 'package:note_mate_flutter/material.dart';
 
 void main() {
   setUp(() {});
   String toCode(Mate mate, {format = false}) {
     var y = ObjectParam.rootFrom(mate);
     var result = y.toSampleCodeString(format: format);
+    // ignore: avoid_print
     print(result);
     return result;
   }
 
-  // fixme 省略init为缺省值的参数ContainerMate(clipBehavior: 'Clip.none')
   group("toList()", () {
     test('print', () {
       expect(
           toCode(
-              ContainerMate(
-                width: 100,
-                child: ColumnMate(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ContainerMate(),
-                  ],
-                ),
+              Column$Mate(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container$Mate(),
+                ],
               ),
               format: true),
-          """Container(
-  width: 100.0,
-  child: Column(
-    [Container()],
-    mainAxisAlignment: MainAxisAlignment.center,
-  ),
+          """Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [Container()],
 );""");
     });
   });
   group("type:Color", () {
     test('print', () {
       expect(
-          toCode(ContainerMate(
+          toCode(Container$Mate(
             color: Colors.green.shade100,
           )),
           """Container(color: Colors.green.shade100);""");

@@ -1,11 +1,10 @@
 // ignore_for_file: unnecessary_type_check
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:note/mate_api_experiment.dart';
 import 'package:code_builder/code_builder.dart' as code;
+import 'package:note_mate_flutter/material.dart';
 
 void main() {
   late ObjectParam obj;
@@ -77,19 +76,19 @@ void main() {
 
   group("declare(Meta)", () {
     test('declare(Meta)', () {
-      Param<Container> p = obj.use("mate", ContainerMate(width: 100));
+      Param<Container> p = obj.use("mate", Container$Mate(width: 100));
       expect(p, obj.get("mate"));
 
-      expect(p.value is ContainerMate, true);
+      expect(p.value is Container$Mate, true);
       expect(!p.isNullable, true);
       expect(p.isObject, true);
     });
 
     test('declare(Meta?)', () {
-      Param<Container?> p = obj.use<Container?>("mate", ContainerMate(width: 100));
+      Param<Container?> p = obj.use<Container?>("mate", Container$Mate(width: 100));
       expect(p, obj.get("mate"));
 
-      expect(p.value is ContainerMate, true);
+      expect(p.value is Container$Mate, true);
       expect(p.isNullable, true);
       expect(p.isObject, true);
     });
@@ -131,42 +130,6 @@ void main() {
       // no error
       List<int> build = p.build();
       expect(build, []);
-    });
-  });
-
-  group("print test()", () {
-    test('list', () {
-      var x = ColumnMate(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          ContainerMate(
-            width: 100,
-            child: CenterMate(
-              widthFactor: 100,
-            ),
-          ),
-          ContainerMate(
-            width: 100,
-            child: CenterMate(
-              widthFactor: 100,
-            ),
-          ),
-        ],
-      );
-      var y = ObjectParam.rootFrom(x);
-      y.flat(test: (e) => true).forEach((e) {
-        // ignore: avoid_print
-        print("${"  " * e.level} ${e.name}");
-      });
-    });
-    test("function", () {
-      var x = (ElevatedButton(
-        onPressed: () {},
-        autofocus: false,
-        clipBehavior: Clip.none,
-        child: Text('ElevatedButton'),
-      ));
-      print("${x.onPressed.runtimeType}");
     });
   });
 }

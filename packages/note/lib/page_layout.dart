@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
@@ -33,7 +32,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   late final _PagePen pen;
   final ScrollController controller = ScrollController(initialScrollOffset: 0);
 
-  _PageScreenState() {}
+  _PageScreenState();
 
   @override
   void initState() {
@@ -334,14 +333,14 @@ class _ParamAndCodeView extends StatelessWidget {
   final Editors editors;
 
   // ignore: unused_element
-  _ParamAndCodeView({super.key, required this.rootParam, required this.editors});
+  const _ParamAndCodeView({super.key, required this.rootParam, required this.editors});
 
   @override
   Widget build(BuildContext context) {
     Widget paramRow(Param param) {
       var nameWidget = Container(
         padding: EdgeInsets.only(left: param.level * 15),
-        child: param.nameWidget(editors),
+        child: param.nameWidget(context, editors),
       );
 
       var row = TextButton(
@@ -349,7 +348,7 @@ class _ParamAndCodeView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Flexible(child: nameWidget),
-            Flexible(child: param.valueWidget(editors)),
+            Flexible(child: param.valueWidget(context, editors)),
           ],
         ),
         onPressed: () {},
@@ -359,7 +358,7 @@ class _ParamAndCodeView extends StatelessWidget {
         // 缩进模仿树形
         padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
         child: Container(
-          decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
+          decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
           height: 25,
           child: row,
         ),
@@ -370,13 +369,12 @@ class _ParamAndCodeView extends StatelessWidget {
       children: [
         ...rootParam
             // hide null value
-            .flat(test: (param) => param.init != null)
+            .flat(test: (param) => param.isShow)
             .map(paramRow)
       ],
     );
     var codeView = HighlightView(
       // The original code to be highlighted
-      // fixme editors
       rootParam.toSampleCodeString(snippet: false, format: true),
 
       // Specify language
