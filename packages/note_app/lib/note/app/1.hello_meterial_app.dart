@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 main() {
   runApp(const MyHomepage());
@@ -20,7 +19,7 @@ class _MyHomepageState extends State<MyHomepage> {
     return MaterialApp(
       title: 'Learn Flutter with Samples',
       home: Scaffold(
-        appBar: AppBar(title: Text('最简单的原生state管理 ')),
+        appBar: AppBar(title: const Text('最简单的原生state管理 ')),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _index,
           onTap: (newIndex) {

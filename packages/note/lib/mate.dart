@@ -125,12 +125,12 @@ abstract class Param<T> extends ChangeNotifier {
         : c.accept(emitter_).toString();
   }
 
-  Widget nameWidget(Editors editors) {
-    return getEditor(editors).nameWidget();
+  Widget nameWidget(BuildContext context, Editors editors) {
+    return getEditor(editors).nameWidget(context);
   }
 
-  valueWidget(Editors editors) {
-    return getEditor(editors).valueWidget();
+  valueWidget(BuildContext context, Editors editors) {
+    return getEditor(editors).valueWidget(context);
   }
 
   Editor getEditor(Editors editors);
@@ -403,7 +403,7 @@ abstract class Editor {
         formatter = editors.formatter;
 
   @nonVirtual
-  Widget nameWidget() {
+  Widget nameWidget(BuildContext context) {
     if (param.parent is ListParam && param is ObjectParam) {
       return Text("${0}->${(param as ObjectParam).builderRefer.symbol} ");
     }
@@ -413,7 +413,7 @@ abstract class Editor {
   Param get param;
 
   // fixme add Context arg: use by Theme.of(context)
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return const Text("");
   }
 
@@ -443,7 +443,7 @@ class Editors {
     DartFormatter? formatter,
   })  : enumRegister = enumRegister ?? EnumRegister(),
         emitter = emitter ?? defaultEmitter,
-        formatter = formatter ?? defaultDartFormatter {}
+        formatter = formatter ?? defaultDartFormatter;
 
   Editor get<T>(ValueParam<T> param, {EditorBuilder? onNotFound}) {
     // 20230401 dart2js compile error: can not use patterns.
@@ -486,7 +486,7 @@ abstract class ValueParamEditor extends Editor {
   ValueParamEditor(this.param, {required super.editors});
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return Text(
       toCodeString(),
     );
@@ -513,7 +513,7 @@ class ObjectParamEditor extends Editor {
   }
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return param.isRoot ? const Text("") : Text("${param.builderRefer.symbol}");
   }
 }

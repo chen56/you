@@ -39,29 +39,31 @@ main() async {
   );
 
   for (final context in collection.contexts) {
-    print(
-        '---------------------context:  ${context.contextRoot.root.path} ----------------------- ');
+    log('---------------------context:  ${context.contextRoot.root.path} ----------------------- ');
     for (final filePath in context.contextRoot.analyzedFiles()) {
       if (!filePath.endsWith('.dart')) {
         continue;
       }
-      print("========== file: $filePath ============");
+      log("========== file: $filePath ============");
       CompilationUnitElement fileElement =
           (await context.currentSession.getUnitElement(filePath) as UnitElementResult).element;
       for (var c in fileElement.classes) {
         if (c.name.startsWith("_")) {
           continue;
         }
-        print("  class: $c");
+        log("  class: $c");
         for (var co in c.constructors) {
-          print(
-              "    constructor: ${co.name} isGenerative:${co.isGenerative} isDefaultConstructor:${co.isDefaultConstructor} isConst:${co.isConst} ");
+          log("    constructor: ${co.name} isGenerative:${co.isGenerative} isDefaultConstructor:${co.isDefaultConstructor} isConst:${co.isConst} ");
           for (ParameterElement p in co.parameters) {
-            print(
-                "      parameter: ${p} , type:${p.type}  ,defaultValueCode:${p.defaultValueCode} , typeParameters:${p.typeParameters} ,  runtimeType:${p.runtimeType}, isSuperFormal:${p.isSuperFormal}, hasImplicitType:${p.hasImplicitType}  children:${p.children}   getDisplayString:${p.getDisplayString(withNullability: true, multiline: false)} , ");
+            log("      parameter: $p , type:${p.type}  ,defaultValueCode:${p.defaultValueCode} , typeParameters:${p.typeParameters} ,  runtimeType:${p.runtimeType}, isSuperFormal:${p.isSuperFormal}, hasImplicitType:${p.hasImplicitType}  children:${p.children}   getDisplayString:${p.getDisplayString(withNullability: true, multiline: false)} , ");
           }
         }
       }
     }
   }
+}
+
+void log(Object? s) {
+  // ignore: avoid_print
+  print("log: $s");
 }

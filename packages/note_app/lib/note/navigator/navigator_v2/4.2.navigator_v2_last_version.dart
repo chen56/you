@@ -36,7 +36,7 @@ class Paths {
 Paths rules = Paths._();
 
 class App extends StatelessWidget {
-  MyRouterDelegate delegate =
+  final MyRouterDelegate delegate =
       MyRouterDelegate(rules: rules.list, first: rules.home, notFound: rules.notFound);
 
   App({super.key});
@@ -69,6 +69,8 @@ class HomeScreen extends StatelessWidget with Screen<void> {
               """String answer=await HelpScreen(question: "how about v2?").push(context)"""),
           onPressed: () async {
             String? answer = await HelpScreen(question: "how about v2?").push(context);
+            // ignore: use_build_context_synchronously
+            if (!context.mounted) return;
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               duration: const Duration(milliseconds: 2000),
               content: Text('answer: ${answer ?? "null(点了系统返回按钮)"}'),
@@ -401,13 +403,14 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
     logger.log("${delegate.runtimeType}(id:${identityHashCode(delegate)}).$msg");
   }
 }
+
 class Logger extends ChangeNotifier {
   final List<String> messages = List.empty(growable: true);
   Element? logView;
 
   log(Object? object) {
-    String message="${DateTime.now()} - $object";
-    if(kDebugMode){
+    String message = "${DateTime.now()} - $object";
+    if (kDebugMode) {
       print(message);
     }
     messages.add(message);

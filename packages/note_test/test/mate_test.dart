@@ -1,7 +1,6 @@
 // ignore_for_file: unnecessary_type_check
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:note/mate_api_experiment.dart';
@@ -158,15 +157,6 @@ void main() {
         // ignore: avoid_print
         print("${"  " * e.level} ${e.name}");
       });
-    });
-    test("function", () {
-      var x = (ElevatedButton(
-        onPressed: () {},
-        autofocus: false,
-        clipBehavior: Clip.none,
-        child: Text('ElevatedButton'),
-      ));
-      print("${x.onPressed.runtimeType}");
     });
   });
 }

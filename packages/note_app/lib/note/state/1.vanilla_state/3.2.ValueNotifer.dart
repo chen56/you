@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 main() {
@@ -66,8 +65,8 @@ class ChildWrite extends StatelessWidget {
   ChildWrite({super.key});
 
   @override
-  Widget build(BuildContext ctx) {
-    App state = App.of(ctx);
+  Widget build(BuildContext context) {
+    App state = App.of(context);
     return ValueListenableBuilder(
       valueListenable: state.size,
       builder: (context, value, child) => ElevatedButton(
@@ -75,8 +74,13 @@ class ChildWrite extends StatelessWidget {
           onPressed: () {
             state.size.value += 10;
 
-            print(WidgetInspectorService.instance.getRootWidgetSummaryTree("groupName"));
+            log(WidgetInspectorService.instance.getRootWidgetSummaryTree("groupName"));
           }),
     );
+  }
+
+  void log(Object? o) {
+    // ignore: avoid_print
+    print("log: $o");
   }
 }

@@ -9,10 +9,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var header = DrawerHeader(
-      decoration: const BoxDecoration(color: Colors.blue),
+    var header = const DrawerHeader(
+      decoration: BoxDecoration(color: Colors.blue),
       child: Column(
-        children: const [Icon(Icons.person), Text("Header默认较高，可以配合其他组件调节.可以配合其他组件调节")],
+        children: [Icon(Icons.person), Text("Header默认较高，可以配合其他组件调节.可以配合其他组件调节")],
       ),
     );
     var drawer = Drawer(

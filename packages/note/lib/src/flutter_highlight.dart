@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:highlight/highlight.dart' show highlight, Node;
 
 /// ------------------------------------------------------------------------------
@@ -34,6 +33,7 @@ class HighlightView extends StatelessWidget {
 
   HighlightView(
     String input, {
+    super.key,
     this.language,
     this.theme = const {},
     this.padding,
@@ -46,6 +46,7 @@ class HighlightView extends StatelessWidget {
     var currentSpans = spans;
     List<List<TextSpan>> stack = [];
 
+    // ignore: no_leading_underscores_for_local_identifiers
     _traverse(Node node) {
       if (node.value != null) {
         currentSpans.add(node.className == null
@@ -57,12 +58,12 @@ class HighlightView extends StatelessWidget {
         stack.add(currentSpans);
         currentSpans = tmp;
 
-        node.children!.forEach((n) {
+        for (var n in node.children!) {
           _traverse(n);
           if (n == node.children!.last) {
             currentSpans = stack.isEmpty ? spans : stack.removeLast();
           }
-        });
+        }
       }
     }
 
@@ -83,6 +84,7 @@ class HighlightView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     var _textStyle = TextStyle(
       fontFamily: _defaultFontFamily,
       color: theme[_rootKey]?.color ?? _defaultFontColor,

@@ -33,6 +33,7 @@ void main() {
     expect(null is List<int?>, isFalse);
 
     expect(null is int, isFalse);
+    // ignore: unnecessary_type_check
     expect(null is int?, isTrue);
   });
 }

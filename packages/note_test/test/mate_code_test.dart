@@ -10,6 +10,7 @@ void main() {
   String toCode(Mate mate, {format = false}) {
     var y = ObjectParam.rootFrom(mate);
     var result = y.toSampleCodeString(format: format);
+    // ignore: avoid_print
     print(result);
     return result;
   }

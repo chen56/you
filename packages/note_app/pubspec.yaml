@@ -21,7 +21,8 @@ dependencies:
 
   flutter_highlight: ^0.7.0
   highlight: ^0.7.0
-#  analyzer: ">=5.0.0 <6.0.0"
+
+  analyzer: ^5.10.0
 
   note:
   note_mate_flutter:

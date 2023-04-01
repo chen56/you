@@ -20,7 +20,7 @@ class ParentState extends State<Parent> {
       color: Colors.white,
       child: Column(children: [
         ElevatedButton(
-            child: Text("Parent: counter++, counter:${counter}  hashcode:$hashCode"),
+            child: Text("Parent: counter++, counter:$counter  hashcode:$hashCode"),
             onPressed: () => setState(() => counter++)),
         Center(
           child: Child(counter),

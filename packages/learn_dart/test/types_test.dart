@@ -46,7 +46,9 @@ void main() {
       DiagnosticLevel? c = DiagnosticLevel.debug;
       expect(isEnum<DiagnosticLevel>(DiagnosticLevel.debug), true);
       expect(isEnum(e), true);
+      // ignore: unnecessary_type_check
       expect(e is Enum, true);
+      // ignore: unnecessary_type_check
       expect(c is Enum, true);
       expect(isEnum(c), true);
     });

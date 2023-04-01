@@ -1,15 +1,12 @@
-import 'dart:ui';
-
 import 'package:code_builder/code_builder.dart' as code;
 import 'package:flutter/material.dart';
-// import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 
 class DoubleEditor extends ValueParamEditor {
   DoubleEditor(super.param, {required super.editors});
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return TextFormField(
       initialValue: "${param.init}",
       autofocus: true,
@@ -35,7 +32,7 @@ class IntEditor extends ValueParamEditor {
   IntEditor(super.param, {required super.editors});
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return TextFormField(
       initialValue: "${param.init}",
       autofocus: true,
@@ -61,7 +58,7 @@ class BoolEditor extends ValueParamEditor {
   BoolEditor(super.param, {required super.editors});
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     var yesNo = Switch(
       // This bool value toggles the switch.
       value: param.value,
@@ -85,7 +82,7 @@ class StringEditor extends ValueParamEditor {
   StringEditor(super.param, {required super.editors});
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return TextFormField(
       initialValue: "${param.init}",
       autofocus: true,
@@ -93,9 +90,7 @@ class StringEditor extends ValueParamEditor {
         hintText: "Text#data",
       ),
       onChanged: (value) {
-        if (value != null) {
-          param.value = value;
-        }
+        param.value = value;
       },
     );
   }
@@ -140,7 +135,7 @@ class EnumEditor extends ValueParamEditor {
   EnumEditor(super.param, {required this.enums, required super.editors});
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return DropdownButton<Enum>(
       alignment: Alignment.topLeft,
       value: param.value as Enum,
@@ -174,7 +169,7 @@ class ColorEditor<T> extends ValueParamEditor {
   }
 
   @override
-  Widget valueWidget() {
+  Widget valueWidget(BuildContext context) {
     return Row(
       children: [
         Text(param.toCodeExpressionString(editors: editors)),
