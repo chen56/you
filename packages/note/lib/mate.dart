@@ -70,7 +70,10 @@ abstract class Param<T> extends ChangeNotifier {
 
   //fixme release模式下 runtimeType被混淆了
   String get displayName {
-    if (isRoot) return "${init.runtimeType}".replaceAll("\$Mate", "");
+    if (isRoot && this is ObjectParam) {
+      var toThis = this as ObjectParam;
+      return "${toThis.builderRefer.symbol}";
+    }
     return name;
   }
 
@@ -395,14 +398,12 @@ abstract class Editor {
       : emitter = editors.emitter,
         formatter = editors.formatter;
 
+  @nonVirtual
   Widget nameWidget() {
-    String type = "${param.init.runtimeType}".replaceAll("\$Mate", "");
-    if (param.isRoot) return Text(type);
-    if (param.isValue) {
-      return Text("${param.name}:");
-    } else {
-      return Text("${param.name}: $type");
+    if (param.parent is ListParam && param is ObjectParam) {
+      return Text("${0}->${(param as ObjectParam).builderRefer.symbol} ");
     }
+    return Text("${param.displayName}${param.isRoot ? '' : ': '} ");
   }
 
   Param get param;
@@ -440,6 +441,7 @@ class Editors {
         formatter = formatter ?? defaultDartFormatter {}
 
   Editor get<T>(ValueParam<T> param, {EditorBuilder? onNotFound}) {
+    // fixme to case
     if (utils.isType<T, int>()) return IntEditor(param, editors: this);
     if (utils.isType<T, double>()) return DoubleEditor(param, editors: this);
     if (utils.isType<T, bool>()) return BoolEditor(param, editors: this);
@@ -448,6 +450,7 @@ class Editors {
     if (utils.isType<T, Enum>()) {
       return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(T));
     }
+
     if (utils.isType<T, void Function()>()) {
       var ex = code.Method((b) => b
         ..name = ''
@@ -464,6 +467,13 @@ abstract class ValueParamEditor extends Editor {
   @override
   final ValueParam param;
   ValueParamEditor(this.param, {required super.editors});
+
+  @override
+  Widget valueWidget() {
+    return Text(
+      toCodeString(),
+    );
+  }
 }
 
 class ObjectParamEditor extends Editor {
