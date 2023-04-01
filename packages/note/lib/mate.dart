@@ -412,7 +412,6 @@ abstract class Editor {
 
   Param get param;
 
-  // fixme add Context arg: use by Theme.of(context)
   Widget valueWidget(BuildContext context) {
     return const Text("");
   }
