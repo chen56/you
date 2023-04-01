@@ -1,11 +1,11 @@
 {
-    "name": "web",
-    "short_name": "web",
+    "name": "flutter_note",
+    "short_name": "flutter_note",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Flutter Note is a notepad tools and Site use flutter and dart.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
