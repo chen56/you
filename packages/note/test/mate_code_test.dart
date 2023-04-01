@@ -15,27 +15,20 @@ void main() {
     return result;
   }
 
-  // fixme 省略init为缺省值的参数ContainerMate(clipBehavior: 'Clip.none')
   group("toList()", () {
     test('print', () {
       expect(
           toCode(
-              ContainerMate(
-                width: 100,
-                child: ColumnMate(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ContainerMate(),
-                  ],
-                ),
+              ColumnMate(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ContainerMate(),
+                ],
               ),
               format: true),
-          """Container(
-  width: 100.0,
-  child: Column(
-    [Container()],
-    mainAxisAlignment: MainAxisAlignment.center,
-  ),
+          """Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [Container()],
 );""");
     });
   });

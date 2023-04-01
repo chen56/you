@@ -200,17 +200,16 @@ enable_experiment="--enable-experiment=records,patterns"
 /gen?() {
   /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
-    (cd packages/note_app ;          run dart run tools/gen_pages.dart; )
-    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart; )
+    (cd packages/note_app ;          run dart run $enable_experiment tools/gen_pages.dart; )
+    (cd packages/note_mate_flutter ; run dart run $enable_experiment tools/gen_mates.dart; )
   }
 }
 /regen?() {
   /regen?shortHelp() { cat <<<"先删除old, 再代码生成"; }
   /regen() {
-    run rm packages/note_app/lib/pages.g.dart
+    run rm -f packages/note_app/lib/pages.g.dart
     run rm -rf packages/note_mate_flutter/lib
-    (cd packages/note_app ;          run dart run tools/gen_pages.dart ; )
-    (cd packages/note_mate_flutter ; run dart run tools/gen_mates.dart ; )
+    /gen
   }
 }
 

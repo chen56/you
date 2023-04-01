@@ -37,8 +37,6 @@ import 'package:note_app/pages.g.dart';
 class Paths with Navigable, PathsMixin {
   late final Path<void> initial;
   Paths._() {
-    // todo reset to note
-    // initial = note
     initial = note_welcome_note_self;
   }
 

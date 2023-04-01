@@ -370,13 +370,12 @@ class _ParamAndCodeView extends StatelessWidget {
       children: [
         ...rootParam
             // hide null value
-            .flat(test: (param) => param.init != null)
+            .flat(test: (param) => param.isShow)
             .map(paramRow)
       ],
     );
     var codeView = HighlightView(
       // The original code to be highlighted
-      // fixme editors
       rootParam.toSampleCodeString(snippet: false, format: true),
 
       // Specify language

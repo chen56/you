@@ -38,7 +38,7 @@ class HighlightView extends StatelessWidget {
     this.theme = const {},
     this.padding,
     this.textStyle,
-    int tabSize = 8, // TODO: https://github.com/flutter/flutter/issues/50087
+    int tabSize = 8, // TO DO?: https://github.com/flutter/flutter/issues/50087
   }) : source = input.replaceAll('\t', ' ' * tabSize);
 
   List<TextSpan> _convert(List<Node> nodes) {
@@ -77,7 +77,6 @@ class HighlightView extends StatelessWidget {
   static const _defaultFontColor = Color(0xff000000);
   static const _defaultBackgroundColor = Color(0xffffffff);
 
-  // TODO: dart:io is not available at web platform currently
   // See: https://github.com/flutter/flutter/issues/39998
   // So we just use monospace here for now
   static const _defaultFontFamily = 'monospace';

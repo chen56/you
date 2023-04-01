@@ -68,7 +68,6 @@ abstract class Param<T> extends ChangeNotifier {
 
   Iterable<Param> get children;
 
-  //fixme release模式下 runtimeType被混淆了
   String get displayName {
     if (isRoot && this is ObjectParam) {
       var toThis = this as ObjectParam;
@@ -185,7 +184,12 @@ ListParam<E> _toListParam<E>({
       isNamed: false,
     ));
   }
-  return ListParam<E>(name: name, init: notNull, params: params);
+  return ListParam<E>(
+    name: name,
+    init: notNull,
+    params: params,
+    isNamed: isNamed,
+  );
 }
 
 class ValueParam<T> extends Param<T> {
@@ -441,7 +445,19 @@ class Editors {
         formatter = formatter ?? defaultDartFormatter {}
 
   Editor get<T>(ValueParam<T> param, {EditorBuilder? onNotFound}) {
-    // fixme to case
+    // 20230401 dart2js compile error: can not use patterns.
+    // flutter build web --enable-experiment=records,patterns --release --web-renderer html --base-href "/note/"
+    // --------------------------------------------------
+    // Error: Expected an identifier, but got 'switch'.
+    // var isPrimary = switch (color) {
+    // ^^^^^^
+    // --------------------------------------------------
+    // var xx = switch (T) {
+    // int => IntEditor(param, editors: this),
+    // _ => onNotFound != null ? onNotFound(param) : DefaultValueParamEditor(param, editors: this)
+    // };
+    // return xx;
+
     if (utils.isType<T, int>()) return IntEditor(param, editors: this);
     if (utils.isType<T, double>()) return DoubleEditor(param, editors: this);
     if (utils.isType<T, bool>()) return BoolEditor(param, editors: this);
@@ -493,6 +509,11 @@ class ObjectParamEditor extends Editor {
         .where((e) => e.value.isNamed)
         .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
     return param.builderRefer.call(positionalArguments, namedArguments);
+  }
+
+  @override
+  Widget valueWidget() {
+    return param.isRoot ? const Text("") : Text("${param.builderRefer.symbol}");
   }
 }
 
