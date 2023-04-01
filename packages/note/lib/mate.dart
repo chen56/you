@@ -348,13 +348,18 @@ class ObjectParam<T> extends Param<T> {
   }
 }
 
+class BuilderArg<T> {
+  final Param param;
+  BuilderArg(this.param);
+}
+
 mixin Mate {
   final Map<String, Param> _mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
   late final String mateCreateName;
   late final String matePackageUrl;
 
-  Param<V> mateUse<V>(
+  BuilderArg<V> mateUse<V>(
     String name,
     V init, {
     required bool isNamed,
@@ -368,13 +373,13 @@ mixin Mate {
       defaultValue: defaultValue,
     );
     _mateParams[name] = param;
-    return param;
+    return BuilderArg(param);
   }
 
   /// 为简化list参数，不按原可空与否处理，而统一为：
   /// - 进来的init为可空List<E>?
   /// - 出去的返回值为非空List<E>
-  Param<List<E>> mateUseList<E>(
+  BuilderArg<List<E>> mateUseList<E>(
     String name,
     List<E>? init, {
     required bool isNamed,
@@ -386,11 +391,12 @@ mixin Mate {
       isNamed: isNamed,
     );
     _mateParams[name] = param;
-    return param;
+    return BuilderArg(param);
   }
 
-  Param<C> mateGet<C>(String name) {
-    return _mateParams[name] as Param<C>;
+  BuilderArg<C> mateGet<C>(String name) {
+    // return _mateParams[name] as Param<C>;
+    return BuilderArg(_mateParams[name] as Param<C>);
   }
 
   ObjectParam toObjectParam() {
