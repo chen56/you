@@ -392,6 +392,10 @@ mixin Mate {
   Param<C> mateGet<C>(String name) {
     return _mateParams[name] as Param<C>;
   }
+
+  ObjectParam toObjectParam() {
+    return ObjectParam.rootFrom(this);
+  }
 }
 
 abstract class Editor {
