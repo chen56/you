@@ -205,8 +205,7 @@ class RenderIntrinsicHeight$Mate extends RenderIntrinsicHeight with Mate {
       : super(child: child) {
     mateBuilderName = 'RenderIntrinsicHeight';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
     mateUse(
       'child',
       child,
@@ -975,8 +974,7 @@ class RenderFittedBox$Mate extends RenderFittedBox with Mate {
 }
 
 /// class RenderFractionalTranslation extends RenderProxyBox
-class RenderFractionalTranslation$Mate extends RenderFractionalTranslation
-    with Mate {
+class RenderFractionalTranslation$Mate extends RenderFractionalTranslation with Mate {
   /// RenderFractionalTranslation RenderFractionalTranslation({required Offset translation, bool transformHitTests = true, RenderBox? child})
   RenderFractionalTranslation$Mate({
     /// optionalParameters: {required Offset translation} , default:none
@@ -1247,8 +1245,7 @@ class RenderRepaintBoundary$Mate extends RenderRepaintBoundary with Mate {
       : super(child: child) {
     mateBuilderName = 'RenderRepaintBoundary';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
     mateUse(
       'child',
       child,
@@ -1420,8 +1417,7 @@ class RenderMetaData$Mate extends RenderMetaData with Mate {
 }
 
 /// class RenderSemanticsGestureHandler extends RenderProxyBoxWithHitTestBehavior
-class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
-    with Mate {
+class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler with Mate {
   /// RenderSemanticsGestureHandler RenderSemanticsGestureHandler({RenderBox? child, void Function()? onTap, void Function()? onLongPress, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragUpdateDetails)? onVerticalDragUpdate, double scrollFactor = 0.8, HitTestBehavior behavior = HitTestBehavior.deferToChild})
   RenderSemanticsGestureHandler$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1505,8 +1501,7 @@ class RenderSemanticsGestureHandler$Mate extends RenderSemanticsGestureHandler
 }
 
 /// class RenderSemanticsAnnotations extends RenderProxyBox
-class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations
-    with Mate {
+class RenderSemanticsAnnotations$Mate extends RenderSemanticsAnnotations with Mate {
   /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, TextDirection? textDirection})
   RenderSemanticsAnnotations$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1623,8 +1618,7 @@ class RenderMergeSemantics$Mate extends RenderMergeSemantics with Mate {
       : super(child: child) {
     mateBuilderName = 'RenderMergeSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
     mateUse(
       'child',
       child,
@@ -1807,8 +1801,7 @@ class RenderFollowerLayer$Mate extends RenderFollowerLayer with Mate {
 }
 
 /// class RenderAnnotatedRegion<T extends Object> extends RenderProxyBox
-class RenderAnnotatedRegion$Mate<T extends Object>
-    extends RenderAnnotatedRegion<T> with Mate {
+class RenderAnnotatedRegion$Mate<T extends Object> extends RenderAnnotatedRegion<T> with Mate {
   /// RenderAnnotatedRegion<T> RenderAnnotatedRegion({required T value, required bool sized, RenderBox? child})
   RenderAnnotatedRegion$Mate({
     /// optionalParameters: {required T value} , default:none

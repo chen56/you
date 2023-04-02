@@ -100,7 +100,7 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
       isNamed: true,
       defaultValue: false,
     );
-    mateUseList(
+    mateUse(
       'snapSizes',
       snapSizes,
       isNamed: true,
@@ -124,8 +124,7 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
 }
 
 /// class DraggableScrollableNotification extends Notification with ViewportNotificationMixin
-class DraggableScrollableNotification$Mate
-    extends DraggableScrollableNotification with Mate {
+class DraggableScrollableNotification$Mate extends DraggableScrollableNotification with Mate {
   /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context})
   DraggableScrollableNotification$Mate({
     /// optionalParameters: {required double extent} , default:none
@@ -187,8 +186,7 @@ class DraggableScrollableNotification$Mate
 }
 
 /// class DraggableScrollableActuator extends StatelessWidget
-class DraggableScrollableActuator$Mate extends DraggableScrollableActuator
-    with Mate {
+class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with Mate {
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({
     /// optionalParameters: {Key? key} , default:none

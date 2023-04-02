@@ -1872,8 +1872,7 @@ class PointerScrollEvent$Mate extends PointerScrollEvent with Mate {
 }
 
 /// class PointerScrollInertiaCancelEvent extends PointerSignalEvent with _PointerEventDescription, _CopyPointerScrollInertiaCancelEvent
-class PointerScrollInertiaCancelEvent$Mate
-    extends PointerScrollInertiaCancelEvent with Mate {
+class PointerScrollInertiaCancelEvent$Mate extends PointerScrollInertiaCancelEvent with Mate {
   /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
@@ -2096,8 +2095,7 @@ class PointerPanZoomStartEvent$Mate extends PointerPanZoomStartEvent with Mate {
 }
 
 /// class PointerPanZoomUpdateEvent extends PointerEvent with _PointerEventDescription, _CopyPointerPanZoomUpdateEvent
-class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent
-    with Mate {
+class PointerPanZoomUpdateEvent$Mate extends PointerPanZoomUpdateEvent with Mate {
   /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
     /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl

@@ -65,8 +65,7 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -172,7 +171,7 @@ class CustomScrollView$Mate extends CustomScrollView with Mate {
       cacheExtent,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'slivers',
       slivers,
       isNamed: true,
@@ -264,8 +263,7 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -394,7 +392,7 @@ class ListView$Mate extends ListView with Mate {
       cacheExtent,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -489,8 +487,7 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -722,8 +719,7 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -932,8 +928,7 @@ class ListView$Mate extends ListView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1130,8 +1125,7 @@ class GridView$Mate extends GridView with Mate {
     Clip clipBehavior = Clip.hardEdge,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1250,7 +1244,7 @@ class GridView$Mate extends GridView with Mate {
       cacheExtent,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -1342,8 +1336,7 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1556,8 +1549,7 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1750,8 +1742,7 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -1897,7 +1888,7 @@ class GridView$Mate extends GridView with Mate {
       cacheExtent,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -1992,8 +1983,7 @@ class GridView$Mate extends GridView with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -2139,7 +2129,7 @@ class GridView$Mate extends GridView with Mate {
       cacheExtent,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

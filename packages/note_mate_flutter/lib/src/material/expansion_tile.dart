@@ -123,8 +123,7 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           initiallyExpanded: p.get('initiallyExpanded').build(),
           maintainState: p.get('maintainState').build(),
           tilePadding: p.get('tilePadding').build(),
-          expandedCrossAxisAlignment:
-              p.get('expandedCrossAxisAlignment').build(),
+          expandedCrossAxisAlignment: p.get('expandedCrossAxisAlignment').build(),
           expandedAlignment: p.get('expandedAlignment').build(),
           childrenPadding: p.get('childrenPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),
@@ -163,7 +162,7 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
       onExpansionChanged,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

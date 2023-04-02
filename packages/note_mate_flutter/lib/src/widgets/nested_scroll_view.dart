@@ -196,8 +196,7 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
 }
 
 /// class RenderSliverOverlapAbsorber extends RenderSliver with RenderObjectWithChildMixin<RenderSliver>
-class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber
-    with Mate {
+class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with Mate {
   /// RenderSliverOverlapAbsorber RenderSliverOverlapAbsorber({required SliverOverlapAbsorberHandle handle, RenderSliver? sliver})
   RenderSliverOverlapAbsorber$Mate({
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
@@ -271,8 +270,7 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
 }
 
 /// class RenderSliverOverlapInjector extends RenderSliver
-class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector
-    with Mate {
+class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with Mate {
   /// RenderSliverOverlapInjector RenderSliverOverlapInjector({required SliverOverlapAbsorberHandle handle})
   RenderSliverOverlapInjector$Mate(
       {
@@ -281,8 +279,7 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector
       : super(handle: handle) {
     mateBuilderName = 'RenderSliverOverlapInjector';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
+    mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
     mateUse(
       'handle',
       handle,
@@ -377,7 +374,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
       center,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'slivers',
       slivers,
       isNamed: true,
@@ -397,8 +394,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
 }
 
 /// class RenderNestedScrollViewViewport extends RenderViewport
-class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
-    with Mate {
+class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport with Mate {
   /// RenderNestedScrollViewViewport RenderNestedScrollViewViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   RenderNestedScrollViewViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
@@ -468,7 +464,7 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
       isNamed: true,
       defaultValue: 0.0,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

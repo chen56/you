@@ -96,8 +96,7 @@ class TextSelection$Mate extends TextSelection with Mate {
       : super.fromPosition(position) {
     mateBuilderName = 'TextSelection.fromPosition';
     matePackageUrl = 'package:flutter/semantics.dart';
-    mateBuilder =
-        (p) => TextSelection$Mate.fromPosition(p.get('position').value);
+    mateBuilder = (p) => TextSelection$Mate.fromPosition(p.get('position').value);
     mateUse(
       'position',
       position,

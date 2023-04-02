@@ -8,8 +8,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/rendering/sliver_grid.dart';
 
 /// class SliverChildBuilderDelegate extends SliverChildDelegate
-class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate
-    with Mate {
+class SliverChildBuilderDelegate$Mate extends SliverChildBuilderDelegate with Mate {
   /// SliverChildBuilderDelegate SliverChildBuilderDelegate(Widget? Function(BuildContext, int) builder, {int? Function(Key)? findChildIndexCallback, int? childCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
   SliverChildBuilderDelegate$Mate(
     /// requiredParameters: Widget? Function(BuildContext, int) builder
@@ -141,7 +140,7 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate {
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: false,
@@ -213,7 +212,7 @@ class SliverChildListDelegate$Mate extends SliverChildListDelegate with Mate {
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: false,
@@ -492,7 +491,7 @@ class SliverList$Mate extends SliverList with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -693,7 +692,7 @@ class SliverFixedExtentList$Mate extends SliverFixedExtentList with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -922,7 +921,7 @@ class SliverGrid$Mate extends SliverGrid with Mate {
       isNamed: true,
       defaultValue: 1.0,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -994,7 +993,7 @@ class SliverGrid$Mate extends SliverGrid with Mate {
       isNamed: true,
       defaultValue: 1.0,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -1003,8 +1002,7 @@ class SliverGrid$Mate extends SliverGrid with Mate {
 }
 
 /// class SliverMultiBoxAdaptorElement extends RenderObjectElement implements RenderSliverBoxChildManager
-class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement
-    with Mate {
+class SliverMultiBoxAdaptorElement$Mate extends SliverMultiBoxAdaptorElement with Mate {
   /// SliverMultiBoxAdaptorElement SliverMultiBoxAdaptorElement(SliverMultiBoxAdaptorWidget widget, {bool replaceMovedChildren = false})
   SliverMultiBoxAdaptorElement$Mate(
     /// requiredParameters: SliverMultiBoxAdaptorWidget widget

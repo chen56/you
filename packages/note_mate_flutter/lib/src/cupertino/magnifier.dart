@@ -165,7 +165,7 @@ class CupertinoMagnifier$Mate extends CupertinoMagnifier with Mate {
       isNamed: true,
       defaultValue: Offset.zero,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

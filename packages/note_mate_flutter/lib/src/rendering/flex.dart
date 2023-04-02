@@ -63,7 +63,7 @@ class RenderFlex$Mate extends RenderFlex with Mate {
           textBaseline: p.get('textBaseline').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

@@ -1136,8 +1136,7 @@ class Transform$Mate extends Transform with Mate {
 }
 
 /// class CompositedTransformTarget extends SingleChildRenderObjectWidget
-class CompositedTransformTarget$Mate extends CompositedTransformTarget
-    with Mate {
+class CompositedTransformTarget$Mate extends CompositedTransformTarget with Mate {
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1179,8 +1178,7 @@ class CompositedTransformTarget$Mate extends CompositedTransformTarget
 }
 
 /// class CompositedTransformFollower extends SingleChildRenderObjectWidget
-class CompositedTransformFollower$Mate extends CompositedTransformFollower
-    with Mate {
+class CompositedTransformFollower$Mate extends CompositedTransformFollower with Mate {
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1700,7 +1698,7 @@ class CustomMultiChildLayout$Mate extends CustomMultiChildLayout with Mate {
       delegate,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -2691,7 +2689,7 @@ class ListBody$Mate extends ListBody with Mate {
       isNamed: true,
       defaultValue: false,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -2766,7 +2764,7 @@ class Stack$Mate extends Stack with Mate {
       isNamed: true,
       defaultValue: Clip.hardEdge,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -2852,7 +2850,7 @@ class IndexedStack$Mate extends IndexedStack with Mate {
       isNamed: true,
       defaultValue: 0,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -3304,7 +3302,7 @@ class Flex$Mate extends Flex with Mate {
       isNamed: true,
       defaultValue: Clip.none,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -3400,7 +3398,7 @@ class Row$Mate extends Row with Mate {
       textBaseline,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -3496,7 +3494,7 @@ class Column$Mate extends Column with Mate {
       textBaseline,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -3723,7 +3721,7 @@ class Wrap$Mate extends Wrap with Mate {
       isNamed: true,
       defaultValue: Clip.none,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -3770,7 +3768,7 @@ class Flow$Mate extends Flow with Mate {
       delegate,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -3820,7 +3818,7 @@ class Flow$Mate extends Flow with Mate {
       delegate,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -5003,16 +5001,12 @@ class Semantics$Mate extends Semantics with Mate {
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
           onDismiss: p.get('onDismiss').build(),
-          onMoveCursorForwardByCharacter:
-              p.get('onMoveCursorForwardByCharacter').build(),
-          onMoveCursorBackwardByCharacter:
-              p.get('onMoveCursorBackwardByCharacter').build(),
+          onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').build(),
+          onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').build(),
           onSetSelection: p.get('onSetSelection').build(),
           onSetText: p.get('onSetText').build(),
-          onDidGainAccessibilityFocus:
-              p.get('onDidGainAccessibilityFocus').build(),
-          onDidLoseAccessibilityFocus:
-              p.get('onDidLoseAccessibilityFocus').build(),
+          onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').build(),
+          onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
     mateUse(

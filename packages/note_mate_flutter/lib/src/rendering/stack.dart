@@ -95,7 +95,7 @@ class RenderStack$Mate extends RenderStack with Mate {
           fit: p.get('fit').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -165,7 +165,7 @@ class RenderIndexedStack$Mate extends RenderIndexedStack with Mate {
           clipBehavior: p.get('clipBehavior').build(),
           index: p.get('index').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

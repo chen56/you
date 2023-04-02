@@ -49,8 +49,7 @@ class PartialStackFrame$Mate extends PartialStackFrame with Mate {
 }
 
 /// class RepetitiveStackFrameFilter extends StackFilter
-class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter
-    with Mate {
+class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter with Mate {
   /// RepetitiveStackFrameFilter RepetitiveStackFrameFilter({required List<PartialStackFrame> frames, required String replacement})
   RepetitiveStackFrameFilter$Mate({
     /// optionalParameters: {required List<PartialStackFrame> frames} , default:none
@@ -68,7 +67,7 @@ class RepetitiveStackFrameFilter$Mate extends RepetitiveStackFrameFilter
           frames: p.get('frames').build(),
           replacement: p.get('replacement').build(),
         );
-    mateUseList(
+    mateUse(
       'frames',
       frames,
       isNamed: true,
@@ -232,9 +231,8 @@ class FlutterError$Mate extends FlutterError with Mate {
       : super.fromParts(diagnostics) {
     mateBuilderName = 'FlutterError.fromParts';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder =
-        (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
-    mateUseList(
+    mateBuilder = (p) => FlutterError$Mate.fromParts(p.get('diagnostics').value);
+    mateUse(
       'diagnostics',
       diagnostics,
       isNamed: false,

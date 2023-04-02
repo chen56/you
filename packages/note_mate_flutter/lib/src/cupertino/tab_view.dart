@@ -96,7 +96,7 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
       onUnknownRoute,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'navigatorObservers',
       navigatorObservers,
       isNamed: true,

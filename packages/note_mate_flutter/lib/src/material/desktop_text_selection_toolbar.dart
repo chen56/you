@@ -8,8 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class DesktopTextSelectionToolbar extends StatelessWidget
-class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar
-    with Mate {
+class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar with Mate {
   /// DesktopTextSelectionToolbar DesktopTextSelectionToolbar({Key? key, required Offset anchor, required List<Widget> children})
   DesktopTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -42,7 +41,7 @@ class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar
       anchor,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

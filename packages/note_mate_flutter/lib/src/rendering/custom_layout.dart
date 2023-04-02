@@ -6,8 +6,7 @@ import 'dart:core';
 import 'package:flutter/src/rendering/box.dart';
 
 /// class RenderCustomMultiChildLayoutBox extends RenderBox with ContainerRenderObjectMixin<RenderBox, MultiChildLayoutParentData>, RenderBoxContainerDefaultsMixin<RenderBox, MultiChildLayoutParentData>
-class RenderCustomMultiChildLayoutBox$Mate
-    extends RenderCustomMultiChildLayoutBox with Mate {
+class RenderCustomMultiChildLayoutBox$Mate extends RenderCustomMultiChildLayoutBox with Mate {
   /// RenderCustomMultiChildLayoutBox RenderCustomMultiChildLayoutBox({List<RenderBox>? children, required MultiChildLayoutDelegate delegate})
   RenderCustomMultiChildLayoutBox$Mate({
     /// optionalParameters: {List<RenderBox>? children} , default:none
@@ -25,7 +24,7 @@ class RenderCustomMultiChildLayoutBox$Mate
           children: p.get('children').build(),
           delegate: p.get('delegate').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

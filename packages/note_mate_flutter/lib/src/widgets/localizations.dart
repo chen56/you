@@ -46,7 +46,7 @@ class Localizations$Mate extends Localizations with Mate {
       locale,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'delegates',
       delegates,
       isNamed: true,

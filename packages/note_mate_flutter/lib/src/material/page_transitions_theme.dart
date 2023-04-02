@@ -6,8 +6,7 @@ import 'dart:core';
 import 'package:flutter/src/foundation/platform.dart';
 
 /// class ZoomPageTransitionsBuilder extends PageTransitionsBuilder
-class ZoomPageTransitionsBuilder$Mate extends ZoomPageTransitionsBuilder
-    with Mate {
+class ZoomPageTransitionsBuilder$Mate extends ZoomPageTransitionsBuilder with Mate {
   /// ZoomPageTransitionsBuilder ZoomPageTransitionsBuilder({bool allowEnterRouteSnapshotting = true})
   ZoomPageTransitionsBuilder$Mate(
       {
@@ -16,9 +15,8 @@ class ZoomPageTransitionsBuilder$Mate extends ZoomPageTransitionsBuilder
       : super(allowEnterRouteSnapshotting: allowEnterRouteSnapshotting) {
     mateBuilderName = 'ZoomPageTransitionsBuilder';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => ZoomPageTransitionsBuilder$Mate(
-        allowEnterRouteSnapshotting:
-            p.get('allowEnterRouteSnapshotting').build());
+    mateBuilder = (p) =>
+        ZoomPageTransitionsBuilder$Mate(allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').build());
     mateUse(
       'allowEnterRouteSnapshotting',
       allowEnterRouteSnapshotting,
@@ -38,8 +36,7 @@ class PageTransitionsTheme$Mate extends PageTransitionsTheme with Mate {
       : super(builders: builders) {
     mateBuilderName = 'PageTransitionsTheme';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build());
+    mateBuilder = (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build());
     mateUse(
       'builders',
       builders,

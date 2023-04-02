@@ -165,8 +165,7 @@ class Router$Mate<T> extends Router<T> with Mate {
 }
 
 /// class ChildBackButtonDispatcher extends BackButtonDispatcher
-class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher
-    with Mate {
+class ChildBackButtonDispatcher$Mate extends ChildBackButtonDispatcher with Mate {
   /// ChildBackButtonDispatcher ChildBackButtonDispatcher(BackButtonDispatcher parent)
   ChildBackButtonDispatcher$Mate(
 
@@ -227,8 +226,7 @@ class BackButtonListener$Mate extends BackButtonListener with Mate {
 }
 
 /// class PlatformRouteInformationProvider extends RouteInformationProvider with WidgetsBindingObserver, ChangeNotifier
-class PlatformRouteInformationProvider$Mate
-    extends PlatformRouteInformationProvider with Mate {
+class PlatformRouteInformationProvider$Mate extends PlatformRouteInformationProvider with Mate {
   /// PlatformRouteInformationProvider PlatformRouteInformationProvider({required RouteInformation initialRouteInformation})
   PlatformRouteInformationProvider$Mate(
       {
@@ -237,8 +235,8 @@ class PlatformRouteInformationProvider$Mate
       : super(initialRouteInformation: initialRouteInformation) {
     mateBuilderName = 'PlatformRouteInformationProvider';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => PlatformRouteInformationProvider$Mate(
-        initialRouteInformation: p.get('initialRouteInformation').build());
+    mateBuilder =
+        (p) => PlatformRouteInformationProvider$Mate(initialRouteInformation: p.get('initialRouteInformation').build());
     mateUse(
       'initialRouteInformation',
       initialRouteInformation,

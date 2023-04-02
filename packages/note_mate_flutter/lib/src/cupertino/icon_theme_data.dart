@@ -89,7 +89,7 @@ class CupertinoIconThemeData$Mate extends CupertinoIconThemeData with Mate {
       opacity,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

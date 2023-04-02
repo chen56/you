@@ -4,8 +4,7 @@ import 'package:flutter/src/gestures/hit_test.dart';
 import 'package:note/mate.dart';
 
 /// class HitTestEntry<T extends HitTestTarget>
-class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T>
-    with Mate {
+class HitTestEntry$Mate<T extends HitTestTarget> extends HitTestEntry<T> with Mate {
   /// HitTestEntry<T> HitTestEntry(T target)
   HitTestEntry$Mate(
 

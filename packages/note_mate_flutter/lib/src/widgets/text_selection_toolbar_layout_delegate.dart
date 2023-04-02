@@ -6,8 +6,7 @@ import 'dart:ui';
 import 'dart:core';
 
 /// class TextSelectionToolbarLayoutDelegate extends SingleChildLayoutDelegate
-class TextSelectionToolbarLayoutDelegate$Mate
-    extends TextSelectionToolbarLayoutDelegate with Mate {
+class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayoutDelegate with Mate {
   /// TextSelectionToolbarLayoutDelegate TextSelectionToolbarLayoutDelegate({required Offset anchorAbove, required Offset anchorBelow, bool? fitsAbove})
   TextSelectionToolbarLayoutDelegate$Mate({
     /// optionalParameters: {required Offset anchorAbove} , default:none

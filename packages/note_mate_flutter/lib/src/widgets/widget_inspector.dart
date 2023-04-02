@@ -82,8 +82,7 @@ class DevToolsDeepLinkProperty$Mate extends DevToolsDeepLinkProperty with Mate {
 }
 
 /// class InspectorSerializationDelegate implements DiagnosticsSerializationDelegate
-class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
-    with Mate {
+class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate with Mate {
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
     /// optionalParameters: {String? groupName} , default:none
@@ -111,8 +110,7 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     Map<String, Object>? Function(
       DiagnosticsNode,
       InspectorSerializationDelegate,
-    )?
-        addAdditionalPropertiesCallback,
+    )? addAdditionalPropertiesCallback,
   }) : super(
           groupName: groupName,
           summaryTree: summaryTree,
@@ -128,14 +126,12 @@ class InspectorSerializationDelegate$Mate extends InspectorSerializationDelegate
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
           groupName: p.get('groupName').build(),
           summaryTree: p.get('summaryTree').build(),
-          maxDescendantsTruncatableNode:
-              p.get('maxDescendantsTruncatableNode').build(),
+          maxDescendantsTruncatableNode: p.get('maxDescendantsTruncatableNode').build(),
           expandPropertyValues: p.get('expandPropertyValues').build(),
           subtreeDepth: p.get('subtreeDepth').build(),
           includeProperties: p.get('includeProperties').build(),
           service: p.get('service').build(),
-          addAdditionalPropertiesCallback:
-              p.get('addAdditionalPropertiesCallback').build(),
+          addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
         );
     mateUse(
       'groupName',

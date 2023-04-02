@@ -181,8 +181,7 @@ class RenderTable$Mate extends RenderTable with Mate {
     ImageConfiguration configuration = ImageConfiguration.empty,
 
     /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
-    TableCellVerticalAlignment defaultVerticalAlignment =
-        TableCellVerticalAlignment.top,
+    TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
@@ -247,7 +246,7 @@ class RenderTable$Mate extends RenderTable with Mate {
       border,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'rowDecorations',
       rowDecorations,
       isNamed: true,
@@ -269,7 +268,7 @@ class RenderTable$Mate extends RenderTable with Mate {
       textBaseline,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

@@ -79,8 +79,7 @@ class ReorderableList$Mate extends ReorderableList with Mate {
     DragStartBehavior dragStartBehavior = DragStartBehavior.start,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior =
-        ScrollViewKeyboardDismissBehavior.manual,
+    ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
 
     /// optionalParameters: {String? restorationId} , default:none
     String? restorationId,
@@ -370,8 +369,7 @@ class SliverReorderableList$Mate extends SliverReorderableList with Mate {
 }
 
 /// class ReorderableDragStartListener extends StatelessWidget
-class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
-    with Mate {
+class ReorderableDragStartListener$Mate extends ReorderableDragStartListener with Mate {
   /// ReorderableDragStartListener ReorderableDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDragStartListener$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -424,8 +422,7 @@ class ReorderableDragStartListener$Mate extends ReorderableDragStartListener
 }
 
 /// class ReorderableDelayedDragStartListener extends ReorderableDragStartListener
-class ReorderableDelayedDragStartListener$Mate
-    extends ReorderableDelayedDragStartListener with Mate {
+class ReorderableDelayedDragStartListener$Mate extends ReorderableDelayedDragStartListener with Mate {
   /// ReorderableDelayedDragStartListener ReorderableDelayedDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDelayedDragStartListener$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -130,8 +130,7 @@ class Navigator$Mate extends Navigator with Mate {
     String? initialRoute,
 
     /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , default:processed=PrefixedIdentifierImpl
-    RouteListFactory onGenerateInitialRoutes =
-        Navigator.defaultGenerateInitialRoutes,
+    RouteListFactory onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
     RouteFactory? onGenerateRoute,
@@ -186,21 +185,19 @@ class Navigator$Mate extends Navigator with Mate {
           onGenerateRoute: p.get('onGenerateRoute').build(),
           onUnknownRoute: p.get('onUnknownRoute').build(),
           transitionDelegate: p.get('transitionDelegate').build(),
-          reportsRouteUpdateToEngine:
-              p.get('reportsRouteUpdateToEngine').build(),
+          reportsRouteUpdateToEngine: p.get('reportsRouteUpdateToEngine').build(),
           clipBehavior: p.get('clipBehavior').build(),
           observers: p.get('observers').build(),
           requestFocus: p.get('requestFocus').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
-          routeTraversalEdgeBehavior:
-              p.get('routeTraversalEdgeBehavior').build(),
+          routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
         );
     mateUse(
       'key',
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'pages',
       pages,
       isNamed: true,
@@ -248,7 +245,7 @@ class Navigator$Mate extends Navigator with Mate {
       isNamed: true,
       defaultValue: Clip.hardEdge,
     );
-    mateUseList(
+    mateUse(
       'observers',
       observers,
       isNamed: true,

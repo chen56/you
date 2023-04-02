@@ -39,8 +39,7 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       : super(text: text) {
     mateBuilderName = 'TextEditingController';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => TextEditingController$Mate(text: p.get('text').build());
+    mateBuilder = (p) => TextEditingController$Mate(text: p.get('text').build());
     mateUse(
       'text',
       text,
@@ -56,8 +55,7 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       : super.fromValue(value) {
     mateBuilderName = 'TextEditingController.fromValue';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => TextEditingController$Mate.fromValue(p.get('value').value);
+    mateBuilder = (p) => TextEditingController$Mate.fromValue(p.get('value').value);
     mateUse(
       'value',
       value,
@@ -123,8 +121,7 @@ class ToolbarOptions$Mate extends ToolbarOptions with Mate {
 }
 
 /// class ContentInsertionConfiguration
-class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration
-    with Mate {
+class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration with Mate {
   /// ContentInsertionConfiguration ContentInsertionConfiguration({required void Function(KeyboardInsertedContent) onContentInserted, List<String> allowedMimeTypes = kDefaultContentInsertionMimeTypes})
   ContentInsertionConfiguration$Mate({
     /// optionalParameters: {required void Function(KeyboardInsertedContent) onContentInserted} , default:none
@@ -147,7 +144,7 @@ class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration
       onContentInserted,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'allowedMimeTypes',
       allowedMimeTypes,
       isNamed: true,
@@ -361,8 +358,7 @@ class EditableText$Mate extends EditableText with Mate {
     SpellCheckConfiguration? spellCheckConfiguration,
 
     /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    TextMagnifierConfiguration magnifierConfiguration =
-        TextMagnifierConfiguration.disabled,
+    TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
   }) : super(
           key: key,
           controller: controller,
@@ -489,22 +485,18 @@ class EditableText$Mate extends EditableText with Mate {
           scrollPadding: p.get('scrollPadding').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           scrollController: p.get('scrollController').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
-          autocorrectionTextRectColor:
-              p.get('autocorrectionTextRectColor').build(),
+          autocorrectionTextRectColor: p.get('autocorrectionTextRectColor').build(),
           autofillHints: p.get('autofillHints').build(),
           autofillClient: p.get('autofillClient').build(),
           clipBehavior: p.get('clipBehavior').build(),
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
           scribbleEnabled: p.get('scribbleEnabled').build(),
-          enableIMEPersonalizedLearning:
-              p.get('enableIMEPersonalizedLearning').build(),
-          contentInsertionConfiguration:
-              p.get('contentInsertionConfiguration').build(),
+          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
+          contentInsertionConfiguration: p.get('contentInsertionConfiguration').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           spellCheckConfiguration: p.get('spellCheckConfiguration').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
@@ -717,7 +709,7 @@ class EditableText$Mate extends EditableText with Mate {
       onTapOutside,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,

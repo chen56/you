@@ -36,10 +36,8 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
           key: p.get('key').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
     mateUse(
       'key',
@@ -96,10 +94,8 @@ class PerformanceOverlay$Mate extends PerformanceOverlay with Mate {
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
           key: p.get('key').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
     mateUse(
       'key',

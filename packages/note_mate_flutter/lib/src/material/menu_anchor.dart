@@ -142,7 +142,7 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
       isNamed: true,
       defaultValue: true,
     );
-    mateUseList(
+    mateUse(
       'menuChildren',
       menuChildren,
       isNamed: true,
@@ -215,7 +215,7 @@ class MenuBar$Mate extends MenuBar with Mate {
       controller,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -826,7 +826,7 @@ class SubmenuButton$Mate extends SubmenuButton with Mate {
       trailingIcon,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'menuChildren',
       menuChildren,
       isNamed: true,
@@ -849,8 +849,7 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate {
       : super(controller: controller) {
     mateBuilderName = 'DismissMenuAction';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
+    mateBuilder = (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
     mateUse(
       'controller',
       controller,
@@ -860,8 +859,7 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate {
 }
 
 /// class MenuAcceleratorCallbackBinding extends InheritedWidget
-class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
-    with Mate {
+class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding with Mate {
   /// MenuAcceleratorCallbackBinding MenuAcceleratorCallbackBinding({Key? key, void Function()? onInvoke, bool hasSubmenu = false, required Widget child})
   MenuAcceleratorCallbackBinding$Mate({
     /// optionalParameters: {Key? key} , default:none

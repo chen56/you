@@ -346,8 +346,7 @@ class AlertDialog$Mate extends AlertDialog with Mate {
           actionsAlignment: p.get('actionsAlignment').build(),
           actionsOverflowAlignment: p.get('actionsOverflowAlignment').build(),
           actionsOverflowDirection: p.get('actionsOverflowDirection').build(),
-          actionsOverflowButtonSpacing:
-              p.get('actionsOverflowButtonSpacing').build(),
+          actionsOverflowButtonSpacing: p.get('actionsOverflowButtonSpacing').build(),
           buttonPadding: p.get('buttonPadding').build(),
           backgroundColor: p.get('backgroundColor').build(),
           elevation: p.get('elevation').build(),
@@ -410,7 +409,7 @@ class AlertDialog$Mate extends AlertDialog with Mate {
       contentTextStyle,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,
@@ -656,7 +655,7 @@ class SimpleDialog$Mate extends SimpleDialog with Mate {
       titleTextStyle,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

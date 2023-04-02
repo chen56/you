@@ -819,8 +819,7 @@ class AnimatedPositioned$Mate extends AnimatedPositioned with Mate {
 }
 
 /// class AnimatedPositionedDirectional extends ImplicitlyAnimatedWidget
-class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional
-    with Mate {
+class AnimatedPositionedDirectional$Mate extends AnimatedPositionedDirectional with Mate {
   /// AnimatedPositionedDirectional AnimatedPositionedDirectional({Key? key, required Widget child, double? start, double? top, double? end, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -1655,8 +1654,7 @@ class AnimatedPhysicalModel$Mate extends AnimatedPhysicalModel with Mate {
 }
 
 /// class AnimatedFractionallySizedBox extends ImplicitlyAnimatedWidget
-class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox
-    with Mate {
+class AnimatedFractionallySizedBox$Mate extends AnimatedFractionallySizedBox with Mate {
   /// AnimatedFractionallySizedBox AnimatedFractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedFractionallySizedBox$Mate({
     /// optionalParameters: {Key? key} , default:none

@@ -112,8 +112,7 @@ class FocusScopeNode$Mate extends FocusScopeNode with Mate {
     bool canRequestFocus = true,
 
     /// optionalParameters: {TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop} , default:processed=PrefixedIdentifierImpl
-    TraversalEdgeBehavior traversalEdgeBehavior =
-        TraversalEdgeBehavior.closedLoop,
+    TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop,
   }) : super(
           debugLabel: debugLabel,
           onKeyEvent: onKeyEvent,

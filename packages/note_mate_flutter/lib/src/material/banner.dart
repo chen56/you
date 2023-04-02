@@ -121,7 +121,7 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
       contentTextStyle,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,

@@ -7,8 +7,7 @@ import 'dart:ui';
 import 'package:flutter/src/gestures/recognizer.dart';
 
 /// class VerticalDragGestureRecognizer extends DragGestureRecognizer
-class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
-    with Mate {
+class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer with Mate {
   /// VerticalDragGestureRecognizer VerticalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   VerticalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -50,8 +49,7 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer
 }
 
 /// class HorizontalDragGestureRecognizer extends DragGestureRecognizer
-class HorizontalDragGestureRecognizer$Mate
-    extends HorizontalDragGestureRecognizer with Mate {
+class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecognizer with Mate {
   /// HorizontalDragGestureRecognizer HorizontalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter = _defaultButtonAcceptBehavior})
   HorizontalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none

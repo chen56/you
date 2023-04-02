@@ -197,8 +197,7 @@ class SliverGeometry$Mate extends SliverGeometry with Mate {
           paintOrigin: p.get('paintOrigin').build(),
           layoutExtent: p.get('layoutExtent').build(),
           maxPaintExtent: p.get('maxPaintExtent').build(),
-          maxScrollObstructionExtent:
-              p.get('maxScrollObstructionExtent').build(),
+          maxScrollObstructionExtent: p.get('maxScrollObstructionExtent').build(),
           hitTestExtent: p.get('hitTestExtent').build(),
           visible: p.get('visible').build(),
           hasVisualOverflow: p.get('hasVisualOverflow').build(),
@@ -339,8 +338,7 @@ class RenderSliverToBoxAdapter$Mate extends RenderSliverToBoxAdapter with Mate {
       : super(child: child) {
     mateBuilderName = 'RenderSliverToBoxAdapter';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
+    mateBuilder = (p) => RenderSliverToBoxAdapter$Mate(child: p.get('child').build());
     mateUse(
       'child',
       child,

@@ -167,25 +167,17 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
           yearForegroundColor: p.get('yearForegroundColor').build(),
           yearBackgroundColor: p.get('yearBackgroundColor').build(),
           yearOverlayColor: p.get('yearOverlayColor').build(),
-          rangePickerBackgroundColor:
-              p.get('rangePickerBackgroundColor').build(),
+          rangePickerBackgroundColor: p.get('rangePickerBackgroundColor').build(),
           rangePickerElevation: p.get('rangePickerElevation').build(),
           rangePickerShadowColor: p.get('rangePickerShadowColor').build(),
-          rangePickerSurfaceTintColor:
-              p.get('rangePickerSurfaceTintColor').build(),
+          rangePickerSurfaceTintColor: p.get('rangePickerSurfaceTintColor').build(),
           rangePickerShape: p.get('rangePickerShape').build(),
-          rangePickerHeaderBackgroundColor:
-              p.get('rangePickerHeaderBackgroundColor').build(),
-          rangePickerHeaderForegroundColor:
-              p.get('rangePickerHeaderForegroundColor').build(),
-          rangePickerHeaderHeadlineStyle:
-              p.get('rangePickerHeaderHeadlineStyle').build(),
-          rangePickerHeaderHelpStyle:
-              p.get('rangePickerHeaderHelpStyle').build(),
-          rangeSelectionBackgroundColor:
-              p.get('rangeSelectionBackgroundColor').build(),
-          rangeSelectionOverlayColor:
-              p.get('rangeSelectionOverlayColor').build(),
+          rangePickerHeaderBackgroundColor: p.get('rangePickerHeaderBackgroundColor').build(),
+          rangePickerHeaderForegroundColor: p.get('rangePickerHeaderForegroundColor').build(),
+          rangePickerHeaderHeadlineStyle: p.get('rangePickerHeaderHeadlineStyle').build(),
+          rangePickerHeaderHelpStyle: p.get('rangePickerHeaderHelpStyle').build(),
+          rangeSelectionBackgroundColor: p.get('rangeSelectionBackgroundColor').build(),
+          rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
         );
     mateUse(
       'backgroundColor',

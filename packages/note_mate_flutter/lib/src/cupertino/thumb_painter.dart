@@ -32,7 +32,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
       isNamed: true,
       defaultValue: CupertinoColors.white,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,
@@ -62,7 +62,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
       isNamed: true,
       defaultValue: CupertinoColors.white,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

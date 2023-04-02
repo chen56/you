@@ -5,8 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:ui';
 
 /// class SpellCheckSuggestionsToolbarLayoutDelegate extends SingleChildLayoutDelegate
-class SpellCheckSuggestionsToolbarLayoutDelegate$Mate
-    extends SpellCheckSuggestionsToolbarLayoutDelegate with Mate {
+class SpellCheckSuggestionsToolbarLayoutDelegate$Mate extends SpellCheckSuggestionsToolbarLayoutDelegate with Mate {
   /// SpellCheckSuggestionsToolbarLayoutDelegate SpellCheckSuggestionsToolbarLayoutDelegate({required Offset anchor})
   SpellCheckSuggestionsToolbarLayoutDelegate$Mate(
       {
@@ -15,8 +14,7 @@ class SpellCheckSuggestionsToolbarLayoutDelegate$Mate
       : super(anchor: anchor) {
     mateBuilderName = 'SpellCheckSuggestionsToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(
-        anchor: p.get('anchor').build());
+    mateBuilder = (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
     mateUse(
       'anchor',
       anchor,

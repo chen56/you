@@ -5,8 +5,7 @@ import 'package:flutter/src/widgets/disposable_build_context.dart';
 import 'package:note/mate.dart';
 
 /// class DisposableBuildContext<T extends State<StatefulWidget>>
-class DisposableBuildContext$Mate<T extends State<StatefulWidget>>
-    extends DisposableBuildContext<T> with Mate {
+class DisposableBuildContext$Mate<T extends State<StatefulWidget>> extends DisposableBuildContext<T> with Mate {
   /// DisposableBuildContext<T> DisposableBuildContext(T _state)
   DisposableBuildContext$Mate(
 

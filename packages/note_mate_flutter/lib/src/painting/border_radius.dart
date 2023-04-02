@@ -165,8 +165,7 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       : super.all(radius) {
     mateBuilderName = 'BorderRadiusDirectional.all';
     matePackageUrl = 'package:flutter/painting.dart';
-    mateBuilder =
-        (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
+    mateBuilder = (p) => BorderRadiusDirectional$Mate.all(p.get('radius').value);
     mateUse(
       'radius',
       radius,
@@ -182,8 +181,7 @@ class BorderRadiusDirectional$Mate extends BorderRadiusDirectional with Mate {
       : super.circular(radius) {
     mateBuilderName = 'BorderRadiusDirectional.circular';
     matePackageUrl = 'package:flutter/painting.dart';
-    mateBuilder =
-        (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
+    mateBuilder = (p) => BorderRadiusDirectional$Mate.circular(p.get('radius').value);
     mateUse(
       'radius',
       radius,

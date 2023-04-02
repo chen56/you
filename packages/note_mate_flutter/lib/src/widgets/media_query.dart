@@ -201,7 +201,7 @@ class MediaQueryData$Mate extends MediaQueryData with Mate {
       gestureSettings,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'displayFeatures',
       displayFeatures,
       isNamed: true,

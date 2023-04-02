@@ -75,7 +75,7 @@ class CupertinoAlertDialog$Mate extends CupertinoAlertDialog with Mate {
       content,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,
@@ -206,7 +206,7 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
       message,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,
@@ -230,8 +230,7 @@ class CupertinoActionSheet$Mate extends CupertinoActionSheet with Mate {
 }
 
 /// class CupertinoActionSheetAction extends StatelessWidget
-class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction
-    with Mate {
+class CupertinoActionSheetAction$Mate extends CupertinoActionSheetAction with Mate {
   /// CupertinoActionSheetAction CupertinoActionSheetAction({Key? key, required void Function() onPressed, bool isDefaultAction = false, bool isDestructiveAction = false, required Widget child})
   CupertinoActionSheetAction$Mate({
     /// optionalParameters: {Key? key} , default:none

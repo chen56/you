@@ -94,7 +94,7 @@ class UserAccountsDrawerHeader$Mate extends UserAccountsDrawerHeader with Mate {
       currentAccountPicture,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'otherAccountsPictures',
       otherAccountsPictures,
       isNamed: true,

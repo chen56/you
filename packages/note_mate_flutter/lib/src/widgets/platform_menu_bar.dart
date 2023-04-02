@@ -127,8 +127,7 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
 }
 
 /// class DefaultPlatformMenuDelegate extends PlatformMenuDelegate
-class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate
-    with Mate {
+class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with Mate {
   /// DefaultPlatformMenuDelegate DefaultPlatformMenuDelegate({MethodChannel? channel})
   DefaultPlatformMenuDelegate$Mate(
       {
@@ -137,8 +136,7 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate
       : super(channel: channel) {
     mateBuilderName = 'DefaultPlatformMenuDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
+    mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
     mateUse(
       'channel',
       channel,
@@ -176,7 +174,7 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'menus',
       menus,
       isNamed: true,
@@ -233,7 +231,7 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
       onClose,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'menus',
       menus,
       isNamed: true,
@@ -251,9 +249,8 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
       : super(members: members) {
     mateBuilderName = 'PlatformMenuItemGroup';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
-    mateUseList(
+    mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
+    mateUse(
       'members',
       members,
       isNamed: true,

@@ -132,7 +132,7 @@ class DataRow$Mate extends DataRow with Mate {
       color,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'cells',
       cells,
       isNamed: true,
@@ -202,7 +202,7 @@ class DataRow$Mate extends DataRow with Mate {
       color,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'cells',
       cells,
       isNamed: true,
@@ -427,7 +427,7 @@ class DataTable$Mate extends DataTable with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'columns',
       columns,
       isNamed: true,
@@ -515,7 +515,7 @@ class DataTable$Mate extends DataTable with Mate {
       dividerThickness,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'rows',
       rows,
       isNamed: true,

@@ -95,7 +95,7 @@ class AboutListTile$Mate extends AboutListTile with Mate {
       applicationLegalese,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'aboutBoxChildren',
       aboutBoxChildren,
       isNamed: true,
@@ -172,7 +172,7 @@ class AboutDialog$Mate extends AboutDialog with Mate {
       applicationLegalese,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

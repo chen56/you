@@ -8,8 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class CupertinoDesktopTextSelectionToolbar extends StatelessWidget
-class CupertinoDesktopTextSelectionToolbar$Mate
-    extends CupertinoDesktopTextSelectionToolbar with Mate {
+class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSelectionToolbar with Mate {
   /// CupertinoDesktopTextSelectionToolbar CupertinoDesktopTextSelectionToolbar({Key? key, required Offset anchor, required List<Widget> children})
   CupertinoDesktopTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -42,7 +41,7 @@ class CupertinoDesktopTextSelectionToolbar$Mate
       anchor,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

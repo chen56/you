@@ -264,8 +264,7 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate {
     VoidCallback? onSelectionHandleTapped,
 
     /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    TextMagnifierConfiguration magnifierConfiguration =
-        TextMagnifierConfiguration.disabled,
+    TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
   }) : super(
           context: context,
           debugRequiredFor: debugRequiredFor,
@@ -397,7 +396,7 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate {
       toolbarVisible,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'selectionEndpoints',
       selectionEndpoints,
       isNamed: true,
@@ -453,8 +452,7 @@ class SelectionOverlay$Mate extends SelectionOverlay with Mate {
 }
 
 /// class TextSelectionGestureDetectorBuilder
-class TextSelectionGestureDetectorBuilder$Mate
-    extends TextSelectionGestureDetectorBuilder with Mate {
+class TextSelectionGestureDetectorBuilder$Mate extends TextSelectionGestureDetectorBuilder with Mate {
   /// TextSelectionGestureDetectorBuilder TextSelectionGestureDetectorBuilder({required TextSelectionGestureDetectorBuilderDelegate delegate})
   TextSelectionGestureDetectorBuilder$Mate(
       {
@@ -463,8 +461,7 @@ class TextSelectionGestureDetectorBuilder$Mate
       : super(delegate: delegate) {
     mateBuilderName = 'TextSelectionGestureDetectorBuilder';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(
-        delegate: p.get('delegate').build());
+    mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').build());
     mateUse(
       'delegate',
       delegate,
@@ -474,8 +471,7 @@ class TextSelectionGestureDetectorBuilder$Mate
 }
 
 /// class TextSelectionGestureDetector extends StatefulWidget
-class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector
-    with Mate {
+class TextSelectionGestureDetector$Mate extends TextSelectionGestureDetector with Mate {
   /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -666,8 +662,7 @@ class ClipboardStatusNotifier$Mate extends ClipboardStatusNotifier with Mate {
       : super(value: value) {
     mateBuilderName = 'ClipboardStatusNotifier';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
+    mateBuilder = (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
     mateUse(
       'value',
       value,

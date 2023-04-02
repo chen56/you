@@ -39,7 +39,7 @@ class AutofillConfiguration$Mate extends AutofillConfiguration with Mate {
       uniqueIdentifier,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'autofillHints',
       autofillHints,
       isNamed: true,

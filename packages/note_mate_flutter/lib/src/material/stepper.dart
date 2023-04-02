@@ -206,7 +206,7 @@ class Stepper$Mate extends Stepper with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'steps',
       steps,
       isNamed: true,

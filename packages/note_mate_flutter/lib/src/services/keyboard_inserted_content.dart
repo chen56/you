@@ -54,8 +54,7 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
       : super.fromJson(metadata) {
     mateBuilderName = 'KeyboardInsertedContent.fromJson';
     matePackageUrl = 'package:flutter/services.dart';
-    mateBuilder =
-        (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
+    mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
     mateUse(
       'metadata',
       metadata,

@@ -795,8 +795,7 @@ class InputDecorationTheme$Mate extends InputDecorationTheme with Mate {
     FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto,
 
     /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , default:processed=PrefixedIdentifierImpl
-    FloatingLabelAlignment floatingLabelAlignment =
-        FloatingLabelAlignment.start,
+    FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start,
 
     /// optionalParameters: {bool isDense = false} , default:processed=BooleanLiteralImpl
     bool isDense = false,

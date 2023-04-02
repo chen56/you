@@ -32,8 +32,7 @@ class ActionIconThemeData$Mate extends ActionIconThemeData with Mate {
           backButtonIconBuilder: p.get('backButtonIconBuilder').build(),
           closeButtonIconBuilder: p.get('closeButtonIconBuilder').build(),
           drawerButtonIconBuilder: p.get('drawerButtonIconBuilder').build(),
-          endDrawerButtonIconBuilder:
-              p.get('endDrawerButtonIconBuilder').build(),
+          endDrawerButtonIconBuilder: p.get('endDrawerButtonIconBuilder').build(),
         );
     mateUse(
       'backButtonIconBuilder',

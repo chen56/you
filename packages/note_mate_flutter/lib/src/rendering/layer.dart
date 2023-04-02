@@ -193,10 +193,8 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
           overlayRect: p.get('overlayRect').build(),
           optionsMask: p.get('optionsMask').build(),
           rasterizerThreshold: p.get('rasterizerThreshold').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
     mateUse(
       'overlayRect',
@@ -355,8 +353,7 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
       : super(colorFilter: colorFilter) {
     mateBuilderName = 'ColorFilterLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
+    mateBuilder = (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
     mateUse(
       'colorFilter',
       colorFilter,
@@ -691,8 +688,7 @@ class FollowerLayer$Mate extends FollowerLayer with Mate {
 }
 
 /// class AnnotatedRegionLayer<T extends Object> extends ContainerLayer
-class AnnotatedRegionLayer$Mate<T extends Object>
-    extends AnnotatedRegionLayer<T> with Mate {
+class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T> with Mate {
   /// AnnotatedRegionLayer<T> AnnotatedRegionLayer(T value, {Size? size, Offset? offset, bool opaque = false})
   AnnotatedRegionLayer$Mate(
     /// requiredParameters: T value

@@ -47,8 +47,7 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
     double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth,
 
     /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
-    RefreshIndicatorTriggerMode triggerMode =
-        RefreshIndicatorTriggerMode.onEdge,
+    RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge,
   }) : super(
           key: key,
           child: child,
@@ -181,8 +180,7 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
     double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth,
 
     /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
-    RefreshIndicatorTriggerMode triggerMode =
-        RefreshIndicatorTriggerMode.onEdge,
+    RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge,
   }) : super.adaptive(
           key: key,
           child: child,

@@ -73,7 +73,7 @@ class CupertinoTabBar$Mate extends CupertinoTabBar with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: true,

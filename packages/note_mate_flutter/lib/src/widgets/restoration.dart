@@ -50,8 +50,7 @@ class RestorationScope$Mate extends RestorationScope with Mate {
 }
 
 /// class UnmanagedRestorationScope extends InheritedWidget
-class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope
-    with Mate {
+class UnmanagedRestorationScope$Mate extends UnmanagedRestorationScope with Mate {
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
     /// optionalParameters: {Key? key} , default:none

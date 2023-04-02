@@ -134,7 +134,7 @@ class ButtonBar$Mate extends ButtonBar with Mate {
       overflowButtonSpacing,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

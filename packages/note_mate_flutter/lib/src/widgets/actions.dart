@@ -65,8 +65,7 @@ class ActionListener$Mate extends ActionListener with Mate {
 }
 
 /// class CallbackAction<T extends Intent> extends Action<T>
-class CallbackAction$Mate<T extends Intent> extends CallbackAction<T>
-    with Mate {
+class CallbackAction$Mate<T extends Intent> extends CallbackAction<T> with Mate {
   /// CallbackAction<T> CallbackAction({required Object? Function(T) onInvoke})
   CallbackAction$Mate(
       {
@@ -75,8 +74,7 @@ class CallbackAction$Mate<T extends Intent> extends CallbackAction<T>
       : super(onInvoke: onInvoke) {
     mateBuilderName = 'CallbackAction';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
+    mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
     mateUse(
       'onInvoke',
       onInvoke,
@@ -324,8 +322,7 @@ class DoNothingAction$Mate extends DoNothingAction with Mate {
       : super(consumesKey: consumesKey) {
     mateBuilderName = 'DoNothingAction';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
+    mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
     mateUse(
       'consumesKey',
       consumesKey,
@@ -345,9 +342,8 @@ class PrioritizedIntents$Mate extends PrioritizedIntents with Mate {
       : super(orderedIntents: orderedIntents) {
     mateBuilderName = 'PrioritizedIntents';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => PrioritizedIntents$Mate(
-        orderedIntents: p.get('orderedIntents').build());
-    mateUseList(
+    mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
+    mateUse(
       'orderedIntents',
       orderedIntents,
       isNamed: true,

@@ -234,8 +234,7 @@ class RestorableDateTimeN$Mate extends RestorableDateTimeN with Mate {
 }
 
 /// class RestorableTextEditingController extends RestorableChangeNotifier<TextEditingController>
-class RestorableTextEditingController$Mate
-    extends RestorableTextEditingController with Mate {
+class RestorableTextEditingController$Mate extends RestorableTextEditingController with Mate {
   /// RestorableTextEditingController RestorableTextEditingController.fromValue(TextEditingValue value)
   RestorableTextEditingController$Mate.fromValue(
 
@@ -244,8 +243,7 @@ class RestorableTextEditingController$Mate
       : super.fromValue(value) {
     mateBuilderName = 'RestorableTextEditingController.fromValue';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        RestorableTextEditingController$Mate.fromValue(p.get('value').value);
+    mateBuilder = (p) => RestorableTextEditingController$Mate.fromValue(p.get('value').value);
     mateUse(
       'value',
       value,
@@ -255,8 +253,7 @@ class RestorableTextEditingController$Mate
 }
 
 /// class RestorableEnumN<T extends Enum> extends RestorableValue<T?>
-class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T>
-    with Mate {
+class RestorableEnumN$Mate<T extends Enum> extends RestorableEnumN<T> with Mate {
   /// RestorableEnumN<T> RestorableEnumN(T? defaultValue, {required Iterable<T> values})
   RestorableEnumN$Mate(
     /// requiredParameters: T? defaultValue

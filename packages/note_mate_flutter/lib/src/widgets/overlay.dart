@@ -80,7 +80,7 @@ class Overlay$Mate extends Overlay with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'initialEntries',
       initialEntries,
       isNamed: true,
@@ -104,8 +104,7 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate {
       : super(debugLabel: debugLabel) {
     mateBuilderName = 'OverlayPortalController';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
+    mateBuilder = (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
     mateUse(
       'debugLabel',
       debugLabel,

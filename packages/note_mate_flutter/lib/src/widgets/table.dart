@@ -45,7 +45,7 @@ class TableRow$Mate extends TableRow with Mate {
       decoration,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -76,8 +76,7 @@ class Table$Mate extends Table with Mate {
     TableBorder? border,
 
     /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
-    TableCellVerticalAlignment defaultVerticalAlignment =
-        TableCellVerticalAlignment.top,
+    TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
     TextBaseline? textBaseline,
@@ -108,7 +107,7 @@ class Table$Mate extends Table with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

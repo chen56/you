@@ -40,8 +40,7 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
     mateBuilder = (p) => PrimaryScrollController$Mate(
           key: p.get('key').build(),
           controller: p.get('controller').build(),
-          automaticallyInheritForPlatforms:
-              p.get('automaticallyInheritForPlatforms').build(),
+          automaticallyInheritForPlatforms: p.get('automaticallyInheritForPlatforms').build(),
           scrollDirection: p.get('scrollDirection').build(),
           child: p.get('child').build(),
         );

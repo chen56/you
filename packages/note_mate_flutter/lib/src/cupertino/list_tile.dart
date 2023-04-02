@@ -280,8 +280,7 @@ class CupertinoListTileChevron$Mate extends CupertinoListTileChevron with Mate {
       : super(key: key) {
     mateBuilderName = 'CupertinoListTileChevron';
     matePackageUrl = 'package:flutter/cupertino.dart';
-    mateBuilder =
-        (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
+    mateBuilder = (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
     mateUse(
       'key',
       key,

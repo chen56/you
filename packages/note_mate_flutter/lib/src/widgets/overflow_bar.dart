@@ -110,7 +110,7 @@ class OverflowBar$Mate extends OverflowBar with Mate {
       isNamed: true,
       defaultValue: Clip.none,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

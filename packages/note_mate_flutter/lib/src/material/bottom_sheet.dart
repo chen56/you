@@ -235,8 +235,7 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
           enableDrag: p.get('enableDrag').build(),
           isScrollControlled: p.get('isScrollControlled').build(),
           settings: p.get('settings').build(),
-          transitionAnimationController:
-              p.get('transitionAnimationController').build(),
+          transitionAnimationController: p.get('transitionAnimationController').build(),
           anchorPoint: p.get('anchorPoint').build(),
           useSafeArea: p.get('useSafeArea').build(),
         );

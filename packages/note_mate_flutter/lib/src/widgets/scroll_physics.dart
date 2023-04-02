@@ -24,8 +24,7 @@ class ScrollPhysics$Mate extends ScrollPhysics with Mate {
 }
 
 /// class RangeMaintainingScrollPhysics extends ScrollPhysics
-class RangeMaintainingScrollPhysics$Mate extends RangeMaintainingScrollPhysics
-    with Mate {
+class RangeMaintainingScrollPhysics$Mate extends RangeMaintainingScrollPhysics with Mate {
   /// RangeMaintainingScrollPhysics RangeMaintainingScrollPhysics({ScrollPhysics? parent})
   RangeMaintainingScrollPhysics$Mate(
       {
@@ -34,8 +33,7 @@ class RangeMaintainingScrollPhysics$Mate extends RangeMaintainingScrollPhysics
       : super(parent: parent) {
     mateBuilderName = 'RangeMaintainingScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
       'parent',
       parent,
@@ -87,8 +85,7 @@ class ClampingScrollPhysics$Mate extends ClampingScrollPhysics with Mate {
       : super(parent: parent) {
     mateBuilderName = 'ClampingScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
       'parent',
       parent,
@@ -98,8 +95,7 @@ class ClampingScrollPhysics$Mate extends ClampingScrollPhysics with Mate {
 }
 
 /// class AlwaysScrollableScrollPhysics extends ScrollPhysics
-class AlwaysScrollableScrollPhysics$Mate extends AlwaysScrollableScrollPhysics
-    with Mate {
+class AlwaysScrollableScrollPhysics$Mate extends AlwaysScrollableScrollPhysics with Mate {
   /// AlwaysScrollableScrollPhysics AlwaysScrollableScrollPhysics({ScrollPhysics? parent})
   AlwaysScrollableScrollPhysics$Mate(
       {
@@ -108,8 +104,7 @@ class AlwaysScrollableScrollPhysics$Mate extends AlwaysScrollableScrollPhysics
       : super(parent: parent) {
     mateBuilderName = 'AlwaysScrollableScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
       'parent',
       parent,
@@ -119,8 +114,7 @@ class AlwaysScrollableScrollPhysics$Mate extends AlwaysScrollableScrollPhysics
 }
 
 /// class NeverScrollableScrollPhysics extends ScrollPhysics
-class NeverScrollableScrollPhysics$Mate extends NeverScrollableScrollPhysics
-    with Mate {
+class NeverScrollableScrollPhysics$Mate extends NeverScrollableScrollPhysics with Mate {
   /// NeverScrollableScrollPhysics NeverScrollableScrollPhysics({ScrollPhysics? parent})
   NeverScrollableScrollPhysics$Mate(
       {
@@ -129,8 +123,7 @@ class NeverScrollableScrollPhysics$Mate extends NeverScrollableScrollPhysics
       : super(parent: parent) {
     mateBuilderName = 'NeverScrollableScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        NeverScrollableScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => NeverScrollableScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
       'parent',
       parent,

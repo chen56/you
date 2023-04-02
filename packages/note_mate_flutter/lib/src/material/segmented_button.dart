@@ -119,7 +119,7 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'segments',
       segments,
       isNamed: true,

@@ -29,7 +29,7 @@ class SuggestionSpan$Mate extends SuggestionSpan with Mate {
       range,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'suggestions',
       suggestions,
       isNamed: false,
@@ -61,7 +61,7 @@ class SpellCheckResults$Mate extends SpellCheckResults with Mate {
       spellCheckedText,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'suggestionSpans',
       suggestionSpans,
       isNamed: false,

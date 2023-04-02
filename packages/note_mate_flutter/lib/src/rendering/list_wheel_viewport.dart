@@ -77,8 +77,7 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
           overAndUnderCenterOpacity: p.get('overAndUnderCenterOpacity').build(),
           itemExtent: p.get('itemExtent').build(),
           squeeze: p.get('squeeze').build(),
-          renderChildrenOutsideViewport:
-              p.get('renderChildrenOutsideViewport').build(),
+          renderChildrenOutsideViewport: p.get('renderChildrenOutsideViewport').build(),
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
@@ -149,7 +148,7 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
       isNamed: true,
       defaultValue: Clip.none,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

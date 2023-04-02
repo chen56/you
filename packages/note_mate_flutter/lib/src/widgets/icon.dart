@@ -110,7 +110,7 @@ class Icon$Mate extends Icon with Mate {
       color,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

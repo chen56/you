@@ -189,7 +189,7 @@ class AppBar$Mate extends AppBar with Mate {
       title,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,
@@ -527,7 +527,7 @@ class SliverAppBar$Mate extends SliverAppBar with Mate {
       title,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,

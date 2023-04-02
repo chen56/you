@@ -160,8 +160,7 @@ class SelectableText$Mate extends SelectableText with Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -464,8 +463,7 @@ class SelectableText$Mate extends SelectableText with Mate {
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           onTap: p.get('onTap').build(),
           scrollPhysics: p.get('scrollPhysics').build(),

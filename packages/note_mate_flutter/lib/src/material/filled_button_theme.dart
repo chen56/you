@@ -16,8 +16,7 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate {
       : super(style: style) {
     mateBuilderName = 'FilledButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => FilledButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => FilledButtonThemeData$Mate(style: p.get('style').build());
     mateUse(
       'style',
       style,

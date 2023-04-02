@@ -100,8 +100,7 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
 }
 
 /// class CircularProgressIndicator extends ProgressIndicator
-class CircularProgressIndicator$Mate extends CircularProgressIndicator
-    with Mate {
+class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate {
   /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none

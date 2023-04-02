@@ -7,8 +7,7 @@ import 'dart:ui';
 import 'dart:core';
 
 /// class CupertinoActivityIndicator extends StatefulWidget
-class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator
-    with Mate {
+class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Mate {
   /// CupertinoActivityIndicator CupertinoActivityIndicator({Key? key, Color? color, bool animating = true, double radius = _kDefaultIndicatorRadius})
   CupertinoActivityIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none

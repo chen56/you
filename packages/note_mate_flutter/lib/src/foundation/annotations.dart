@@ -15,7 +15,7 @@ class Category$Mate extends Category with Mate {
     mateBuilderName = 'Category';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Category$Mate(p.get('sections').value);
-    mateUseList(
+    mateUse(
       'sections',
       sections,
       isNamed: false,

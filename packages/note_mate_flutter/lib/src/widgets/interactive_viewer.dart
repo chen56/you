@@ -100,8 +100,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           constrained: p.get('constrained').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient:
-              p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),
@@ -294,8 +293,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           boundaryMargin: p.get('boundaryMargin').build(),
           maxScale: p.get('maxScale').build(),
           minScale: p.get('minScale').build(),
-          interactionEndFrictionCoefficient:
-              p.get('interactionEndFrictionCoefficient').build(),
+          interactionEndFrictionCoefficient: p.get('interactionEndFrictionCoefficient').build(),
           onInteractionEnd: p.get('onInteractionEnd').build(),
           onInteractionStart: p.get('onInteractionStart').build(),
           onInteractionUpdate: p.get('onInteractionUpdate').build(),

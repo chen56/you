@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:code_builder/code_builder.dart' as code;
 
 typedef OnClick = void Function();
 // ignore: camel_case_types
@@ -23,12 +22,11 @@ void main() {
   }
 
   String listCode<E>(List<E>? init) {
-    return obj.useList("x", init).toCodeExpressionString(editors: editors);
+    return obj.use("x", init).toCodeExpressionString(editors: editors);
   }
 
   setUp(() {
-    obj = ObjectParam(
-        init: Container(), builder: (m) => Container(), builderRefer: code.refer("Container"));
+    obj = ObjectParam.root();
   });
   group("editors", () {
     test("core type", () {

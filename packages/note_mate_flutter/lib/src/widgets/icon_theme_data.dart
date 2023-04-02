@@ -89,7 +89,7 @@ class IconThemeData$Mate extends IconThemeData with Mate {
       opacity,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

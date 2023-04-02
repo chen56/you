@@ -242,12 +242,12 @@ class AndroidMotionEvent$Mate extends AndroidMotionEvent with Mate {
       pointerCount,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'pointerProperties',
       pointerProperties,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'pointerCoords',
       pointerCoords,
       isNamed: true,

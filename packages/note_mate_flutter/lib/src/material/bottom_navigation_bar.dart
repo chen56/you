@@ -140,7 +140,7 @@ class BottomNavigationBar$Mate extends BottomNavigationBar with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: true,

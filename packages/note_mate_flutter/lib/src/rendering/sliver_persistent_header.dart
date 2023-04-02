@@ -8,8 +8,7 @@ import 'package:flutter/src/animation/curves.dart';
 import 'package:flutter/animation.dart';
 
 /// class OverScrollHeaderStretchConfiguration
-class OverScrollHeaderStretchConfiguration$Mate
-    extends OverScrollHeaderStretchConfiguration with Mate {
+class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchConfiguration with Mate {
   /// OverScrollHeaderStretchConfiguration OverScrollHeaderStretchConfiguration({double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger})
   OverScrollHeaderStretchConfiguration$Mate({
     /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
@@ -42,8 +41,7 @@ class OverScrollHeaderStretchConfiguration$Mate
 }
 
 /// class PersistentHeaderShowOnScreenConfiguration
-class PersistentHeaderShowOnScreenConfiguration$Mate
-    extends PersistentHeaderShowOnScreenConfiguration with Mate {
+class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderShowOnScreenConfiguration with Mate {
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
     /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
@@ -77,8 +75,7 @@ class PersistentHeaderShowOnScreenConfiguration$Mate
 }
 
 /// class FloatingHeaderSnapConfiguration
-class FloatingHeaderSnapConfiguration$Mate
-    extends FloatingHeaderSnapConfiguration with Mate {
+class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfiguration with Mate {
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
     /// optionalParameters: {Curve curve = Curves.ease} , default:processed=PrefixedIdentifierImpl

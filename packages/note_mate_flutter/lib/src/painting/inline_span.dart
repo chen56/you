@@ -27,8 +27,7 @@ class Accumulator$Mate extends Accumulator with Mate {
 }
 
 /// class InlineSpanSemanticsInformation
-class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
-    with Mate {
+class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation with Mate {
   /// InlineSpanSemanticsInformation InlineSpanSemanticsInformation(String text, {bool isPlaceholder = false, String? semanticsLabel, List<StringAttribute> stringAttributes = const <ui.StringAttribute>[], GestureRecognizer? recognizer})
   InlineSpanSemanticsInformation$Mate(
     /// requiredParameters: String text
@@ -76,7 +75,7 @@ class InlineSpanSemanticsInformation$Mate extends InlineSpanSemanticsInformation
       semanticsLabel,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'stringAttributes',
       stringAttributes,
       isNamed: true,

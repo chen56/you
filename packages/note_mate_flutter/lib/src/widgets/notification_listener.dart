@@ -6,8 +6,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class NotificationListener<T extends Notification> extends ProxyWidget
-class NotificationListener$Mate<T extends Notification>
-    extends NotificationListener<T> with Mate {
+class NotificationListener$Mate<T extends Notification> extends NotificationListener<T> with Mate {
   /// NotificationListener<T> NotificationListener({Key? key, required Widget child, bool Function(T)? onNotification})
   NotificationListener$Mate({
     /// optionalParameters: {Key? key} , default:none

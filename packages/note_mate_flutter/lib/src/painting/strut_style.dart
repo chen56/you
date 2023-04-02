@@ -75,7 +75,7 @@ class StrutStyle$Mate extends StrutStyle with Mate {
       fontFamily,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'fontFamilyFallback',
       fontFamilyFallback,
       isNamed: true,
@@ -203,7 +203,7 @@ class StrutStyle$Mate extends StrutStyle with Mate {
       fontFamily,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'fontFamilyFallback',
       fontFamilyFallback,
       isNamed: true,

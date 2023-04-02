@@ -17,8 +17,7 @@ class LayoutBuilder$Mate extends LayoutBuilder with Mate {
     required Widget Function(
       BuildContext,
       BoxConstraints,
-    )
-        builder,
+    ) builder,
   }) : super(
           key: key,
           builder: builder,

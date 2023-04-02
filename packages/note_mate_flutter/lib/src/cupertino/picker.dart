@@ -137,7 +137,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
       onSelectedItemChanged,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -299,8 +299,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
 }
 
 /// class CupertinoPickerDefaultSelectionOverlay extends StatelessWidget
-class CupertinoPickerDefaultSelectionOverlay$Mate
-    extends CupertinoPickerDefaultSelectionOverlay with Mate {
+class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefaultSelectionOverlay with Mate {
   /// CupertinoPickerDefaultSelectionOverlay CupertinoPickerDefaultSelectionOverlay({Key? key, Color background = CupertinoColors.tertiarySystemFill, bool capStartEdge = true, bool capEndEdge = true})
   CupertinoPickerDefaultSelectionOverlay$Mate({
     /// optionalParameters: {Key? key} , default:none

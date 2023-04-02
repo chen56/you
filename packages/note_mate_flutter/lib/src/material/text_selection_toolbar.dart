@@ -62,7 +62,7 @@ class TextSelectionToolbar$Mate extends TextSelectionToolbar with Mate {
       toolbarBuilder,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

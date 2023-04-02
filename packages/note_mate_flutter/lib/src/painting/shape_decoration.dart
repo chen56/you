@@ -58,7 +58,7 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
       gradient,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

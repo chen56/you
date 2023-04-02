@@ -263,8 +263,7 @@ class RenderEditable$Mate extends RenderEditable with Mate {
           devicePixelRatio: p.get('devicePixelRatio').build(),
           selectionHeightStyle: p.get('selectionHeightStyle').build(),
           selectionWidthStyle: p.get('selectionWidthStyle').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           floatingCursorAddedMargin: p.get('floatingCursorAddedMargin').build(),
           promptRectRange: p.get('promptRectRange').build(),
           promptRectColor: p.get('promptRectColor').build(),
@@ -499,7 +498,7 @@ class RenderEditable$Mate extends RenderEditable with Mate {
       foregroundPainter,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

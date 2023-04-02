@@ -147,7 +147,7 @@ class NavigationRail$Mate extends NavigationRail with Mate {
       trailing,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'destinations',
       destinations,
       isNamed: true,
@@ -226,8 +226,7 @@ class NavigationRail$Mate extends NavigationRail with Mate {
 }
 
 /// class NavigationRailDestination
-class NavigationRailDestination$Mate extends NavigationRailDestination
-    with Mate {
+class NavigationRailDestination$Mate extends NavigationRailDestination with Mate {
   /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
   NavigationRailDestination$Mate({
     /// optionalParameters: {required Widget icon} , default:none

@@ -54,8 +54,7 @@ class ModalBarrier$Mate extends ModalBarrier with Mate {
           dismissible: p.get('dismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible:
-              p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),
         );
@@ -148,8 +147,7 @@ class AnimatedModalBarrier$Mate extends AnimatedModalBarrier with Mate {
           color: p.get('color').build(),
           dismissible: p.get('dismissible').build(),
           semanticsLabel: p.get('semanticsLabel').build(),
-          barrierSemanticsDismissible:
-              p.get('barrierSemanticsDismissible').build(),
+          barrierSemanticsDismissible: p.get('barrierSemanticsDismissible').build(),
           onDismiss: p.get('onDismiss').build(),
           clipDetailsNotifier: p.get('clipDetailsNotifier').build(),
           semanticsOnTapHint: p.get('semanticsOnTapHint').build(),

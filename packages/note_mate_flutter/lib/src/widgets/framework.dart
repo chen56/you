@@ -28,8 +28,7 @@ class ObjectKey$Mate extends ObjectKey with Mate {
 }
 
 /// class LabeledGlobalKey<T extends State<StatefulWidget>> extends GlobalKey<T>
-class LabeledGlobalKey$Mate<T extends State<StatefulWidget>>
-    extends LabeledGlobalKey<T> with Mate {
+class LabeledGlobalKey$Mate<T extends State<StatefulWidget>> extends LabeledGlobalKey<T> with Mate {
   /// LabeledGlobalKey<T> LabeledGlobalKey(String? _debugLabel)
   LabeledGlobalKey$Mate(
 
@@ -48,8 +47,7 @@ class LabeledGlobalKey$Mate<T extends State<StatefulWidget>>
 }
 
 /// class GlobalObjectKey<T extends State<StatefulWidget>> extends GlobalKey<T>
-class GlobalObjectKey$Mate<T extends State<StatefulWidget>>
-    extends GlobalObjectKey<T> with Mate {
+class GlobalObjectKey$Mate<T extends State<StatefulWidget>> extends GlobalObjectKey<T> with Mate {
   /// GlobalObjectKey<T> GlobalObjectKey(Object value)
   GlobalObjectKey$Mate(
 
@@ -187,8 +185,7 @@ class StatefulElement$Mate extends StatefulElement with Mate {
 }
 
 /// class ParentDataElement<T extends ParentData> extends ProxyElement
-class ParentDataElement$Mate<T extends ParentData> extends ParentDataElement<T>
-    with Mate {
+class ParentDataElement$Mate<T extends ParentData> extends ParentDataElement<T> with Mate {
   /// ParentDataElement<T> ParentDataElement(ParentDataWidget<T> widget)
   ParentDataElement$Mate(
 
@@ -245,8 +242,7 @@ class LeafRenderObjectElement$Mate extends LeafRenderObjectElement with Mate {
 }
 
 /// class SingleChildRenderObjectElement extends RenderObjectElement
-class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
-    with Mate {
+class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement with Mate {
   /// SingleChildRenderObjectElement SingleChildRenderObjectElement(SingleChildRenderObjectWidget widget)
   SingleChildRenderObjectElement$Mate(
 
@@ -255,8 +251,7 @@ class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
       : super(widget) {
     mateBuilderName = 'SingleChildRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
+    mateBuilder = (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
     mateUse(
       'widget',
       widget,
@@ -266,8 +261,7 @@ class SingleChildRenderObjectElement$Mate extends SingleChildRenderObjectElement
 }
 
 /// class MultiChildRenderObjectElement extends RenderObjectElement
-class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement
-    with Mate {
+class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement with Mate {
   /// MultiChildRenderObjectElement MultiChildRenderObjectElement(MultiChildRenderObjectWidget widget)
   MultiChildRenderObjectElement$Mate(
 
@@ -276,8 +270,7 @@ class MultiChildRenderObjectElement$Mate extends MultiChildRenderObjectElement
       : super(widget) {
     mateBuilderName = 'MultiChildRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
+    mateBuilder = (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
     mateUse(
       'widget',
       widget,

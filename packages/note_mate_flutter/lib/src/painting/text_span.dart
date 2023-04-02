@@ -74,7 +74,7 @@ class TextSpan$Mate extends TextSpan with Mate {
       text,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

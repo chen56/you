@@ -124,8 +124,7 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
       : super.fallback(key: key) {
     mateBuilderName = 'DefaultTextStyle.fallback';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
+    mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
     mateUse(
       'key',
       key,
@@ -135,8 +134,7 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
 }
 
 /// class DefaultTextHeightBehavior extends InheritedTheme
-class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior
-    with Mate {
+class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate {
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
     /// optionalParameters: {Key? key} , default:none

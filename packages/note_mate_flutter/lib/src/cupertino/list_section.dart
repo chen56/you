@@ -84,7 +84,7 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -216,7 +216,7 @@ class CupertinoListSection$Mate extends CupertinoListSection with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

@@ -91,8 +91,7 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
 }
 
 /// class DropdownButtonHideUnderline extends InheritedWidget
-class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline
-    with Mate {
+class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with Mate {
   /// DropdownButtonHideUnderline DropdownButtonHideUnderline({Key? key, required Widget child})
   DropdownButtonHideUnderline$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -272,7 +271,7 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: true,
@@ -412,8 +411,7 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
 }
 
 /// class DropdownButtonFormField<T> extends FormField<T>
-class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T>
-    with Mate {
+class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Mate {
   /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButtonFormField$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -576,7 +574,7 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T>
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: true,

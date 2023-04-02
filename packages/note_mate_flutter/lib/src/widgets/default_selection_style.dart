@@ -65,8 +65,7 @@ class DefaultSelectionStyle$Mate extends DefaultSelectionStyle with Mate {
       : super.fallback(key: key) {
     mateBuilderName = 'DefaultSelectionStyle.fallback';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
+    mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
     mateUse(
       'key',
       key,

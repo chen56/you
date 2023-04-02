@@ -189,7 +189,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -284,7 +284,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

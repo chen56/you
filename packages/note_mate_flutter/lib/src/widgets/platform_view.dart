@@ -26,8 +26,7 @@ class AndroidView$Mate extends AndroidView with Mate {
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
     /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
-    PlatformViewHitTestBehavior hitTestBehavior =
-        PlatformViewHitTestBehavior.opaque,
+    PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque,
 
     /// optionalParameters: {TextDirection? layoutDirection} , default:none
     TextDirection? layoutDirection,
@@ -131,8 +130,7 @@ class UiKitView$Mate extends UiKitView with Mate {
     PlatformViewCreatedCallback? onPlatformViewCreated,
 
     /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
-    PlatformViewHitTestBehavior hitTestBehavior =
-        PlatformViewHitTestBehavior.opaque,
+    PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque,
 
     /// optionalParameters: {TextDirection? layoutDirection} , default:none
     TextDirection? layoutDirection,

@@ -5,8 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 
 /// class MaterialStatePropertyAll<T> implements MaterialStateProperty<T>
-class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T>
-    with Mate {
+class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T> with Mate {
   /// MaterialStatePropertyAll<T> MaterialStatePropertyAll(T value)
   MaterialStatePropertyAll$Mate(
 

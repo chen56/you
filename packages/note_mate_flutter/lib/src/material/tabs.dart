@@ -207,8 +207,7 @@ class TabBar$Mate extends TabBar with Mate {
           isScrollable: p.get('isScrollable').build(),
           padding: p.get('padding').build(),
           indicatorColor: p.get('indicatorColor').build(),
-          automaticIndicatorColorAdjustment:
-              p.get('automaticIndicatorColorAdjustment').build(),
+          automaticIndicatorColorAdjustment: p.get('automaticIndicatorColorAdjustment').build(),
           indicatorWeight: p.get('indicatorWeight').build(),
           indicatorPadding: p.get('indicatorPadding').build(),
           indicator: p.get('indicator').build(),
@@ -233,7 +232,7 @@ class TabBar$Mate extends TabBar with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'tabs',
       tabs,
       isNamed: true,
@@ -410,7 +409,7 @@ class TabBarView$Mate extends TabBarView with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

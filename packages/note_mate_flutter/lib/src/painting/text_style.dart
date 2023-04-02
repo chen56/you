@@ -216,17 +216,17 @@ class TextStyle$Mate extends TextStyle with Mate {
       background,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'fontFeatures',
       fontFeatures,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'fontVariations',
       fontVariations,
       isNamed: true,
@@ -261,7 +261,7 @@ class TextStyle$Mate extends TextStyle with Mate {
       fontFamily,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'fontFamilyFallback',
       fontFamilyFallback,
       isNamed: true,

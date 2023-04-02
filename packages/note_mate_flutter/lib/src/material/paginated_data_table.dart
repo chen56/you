@@ -157,12 +157,12 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
       header,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'columns',
       columns,
       isNamed: true,
@@ -239,7 +239,7 @@ class PaginatedDataTable$Mate extends PaginatedDataTable with Mate {
       rowsPerPage,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'availableRowsPerPage',
       availableRowsPerPage,
       isNamed: true,

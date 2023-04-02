@@ -30,7 +30,7 @@ class RenderFlow$Mate extends RenderFlow with Mate {
           delegate: p.get('delegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

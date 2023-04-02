@@ -70,8 +70,7 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
 }
 
 /// class BoundedFrictionSimulation extends FrictionSimulation
-class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation
-    with Mate {
+class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation with Mate {
   /// BoundedFrictionSimulation BoundedFrictionSimulation(double drag, double position, double velocity, double _minX, double _maxX)
   BoundedFrictionSimulation$Mate(
     /// requiredParameters: double drag

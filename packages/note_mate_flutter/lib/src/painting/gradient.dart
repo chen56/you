@@ -77,12 +77,12 @@ class LinearGradient$Mate extends LinearGradient with Mate {
       isNamed: true,
       defaultValue: Alignment.centerRight,
     );
-    mateUseList(
+    mateUse(
       'colors',
       colors,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'stops',
       stops,
       isNamed: true,
@@ -162,12 +162,12 @@ class RadialGradient$Mate extends RadialGradient with Mate {
       isNamed: true,
       defaultValue: 0.5,
     );
-    mateUseList(
+    mateUse(
       'colors',
       colors,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'stops',
       stops,
       isNamed: true,
@@ -258,12 +258,12 @@ class SweepGradient$Mate extends SweepGradient with Mate {
       endAngle,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'colors',
       colors,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'stops',
       stops,
       isNamed: true,

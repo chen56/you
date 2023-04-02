@@ -11,22 +11,43 @@ build(Pen pen, BuildContext context) {
   pen.markdown('''
 # note 机制【实验阶段】
 
-## 可拖动组件，快速实验
+## 可调参范例
 
-```dart
-  pen.widgetMate(
-    ContainerMate(
-      width: 100,
-      height: 100,
-      color: Colors.green,
-    )..widthMate.value = 1,
-  );
-```
+学习flutter/dart这类UI技术，如果有好的范例讲解展示，会极大加速学习。
+
+> 🔔  王道范例五要素：
+> - 说明要简洁，没事少打字
+> - 范例可展示，讲解UI技术，不展示出来，贴个图或半天显示不出来急死人
+> - 参数可调整，范例width:200,我改2000会不会报错
+> - 代码可同步，调参后的代码要能动态同步
+> - 要快
+
+官网及很多github范例库并不具备以上要素，要么一堆范例代码无讲解，无展示，要么一堆可展示，半天找不到代码，
+还有官网大量DartPad范例，完美体现了dart编译速度慢这种语言特点，龟速一样，查阅UI文档，就是想快速
+纵览其外观形状，结果等半天，长啥样都出不来，急死人，在耐心丧失前的加载成功率为13% o(一︿一+)o
+
+本note中的UI范例，支持参数调节，可快速展示实验。
+
+请您点击开下面范例小箭头，修改Container.width，观察范例展示及代码的变化：
   ''');
-  pen.markdown(r'''
-## xxx
+
+  pen.markdown('''
+### num参数
   ''');
-  // print("${pen.runtimeType}");
+  pen.sampleMate(Container$Mate(
+    height: 100,
+    child: Text$Mate("请修改height,调节高度"),
+  ));
+
+  pen.markdown('''
+### String参数
+  ''');
+
+  pen.sampleMate(Text$Mate("我是Text.data,修改我"));
+
+  pen.markdown('''
+### Color参数
+  ''');
   pen.sampleMate(Container$Mate(
     width: 200,
     height: 100,
@@ -35,49 +56,32 @@ build(Pen pen, BuildContext context) {
     child: Center$Mate(
       child: Container$Mate(
         width: 100,
-        height: 100,
+        height: 50,
         color: Colors.red.shade400,
         clipBehavior: Clip.none,
-        // child: const Text("s"),
-        child: null,
       ),
     ),
   ));
-  pen.sampleMate(Text$Mate("s", softWrap: true, textAlign: TextAlign.center));
-  // pen.sampleMate(Wrap$Mate(children: [
-  //   ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-  // ]));
-  pen.sampleMate(ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")));
+
+  pen.markdown('''
+### bool参数
+  ''');
+  pen.sampleMate(Container$Mate(
+    width: 100,
+    // height: 100,
+    color: Colors.blue.shade100,
+    child: Text$Mate("修改Text.softWrap: 自动换行", softWrap: true),
+  ));
 
   pen.markdown(r'''
-## xxx
+### 列表参数 
   ''');
 
-  // root
-  //   Container.new
-  //     width
-  //     child: Container.new
-  //       width
-  // 这里可以放一些比较复杂的共享MateNode的场景，比如多个组件同width
-  // pen.widget((params) {
-  //   Param<double> width = params.put("width", 200.0);
-  //   Param<double> height = params.put("height", 200.0);
-  //
-  //   return Container(
-  //     width: width.value,
-  //     height: height.value,
-  //     color: Colors.green,
-  //     clipBehavior: Clip.none,
-  //     child: Container(
-  //       width: width.value,
-  //       height: height.value,
-  //       color: Colors.blue,
-  //       clipBehavior: Clip.none,
-  //     ),
-  //   );
-  // });
+  pen.sampleMate(Row$Mate(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
+      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+    ],
+  ));
 }
-
-// class y {}
-//
-// class x extends y with String {}

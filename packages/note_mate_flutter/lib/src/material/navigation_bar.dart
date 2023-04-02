@@ -101,7 +101,7 @@ class NavigationBar$Mate extends NavigationBar with Mate {
       isNamed: true,
       defaultValue: 0,
     );
-    mateUseList(
+    mateUse(
       'destinations',
       destinations,
       isNamed: true,

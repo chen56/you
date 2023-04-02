@@ -120,7 +120,7 @@ class Viewport$Mate extends Viewport with Mate {
       isNamed: true,
       defaultValue: Clip.hardEdge,
     );
-    mateUseList(
+    mateUse(
       'slivers',
       slivers,
       isNamed: true,
@@ -194,7 +194,7 @@ class ShrinkWrappingViewport$Mate extends ShrinkWrappingViewport with Mate {
       isNamed: true,
       defaultValue: Clip.hardEdge,
     );
-    mateUseList(
+    mateUse(
       'slivers',
       slivers,
       isNamed: true,

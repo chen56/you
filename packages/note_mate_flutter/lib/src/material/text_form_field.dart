@@ -292,8 +292,7 @@ class TextFormField$Mate extends TextFormField with Mate {
           cursorColor: p.get('cursorColor').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           scrollPadding: p.get('scrollPadding').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           selectionControls: p.get('selectionControls').build(),
           buildCounter: p.get('buildCounter').build(),
           scrollPhysics: p.get('scrollPhysics').build(),
@@ -301,8 +300,7 @@ class TextFormField$Mate extends TextFormField with Mate {
           autovalidateMode: p.get('autovalidateMode').build(),
           scrollController: p.get('scrollController').build(),
           restorationId: p.get('restorationId').build(),
-          enableIMEPersonalizedLearning:
-              p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
           mouseCursor: p.get('mouseCursor').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
@@ -487,7 +485,7 @@ class TextFormField$Mate extends TextFormField with Mate {
       validator,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,

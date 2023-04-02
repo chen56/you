@@ -47,17 +47,17 @@ class LeastSquaresSolver$Mate extends LeastSquaresSolver with Mate {
           p.get('y').value,
           p.get('w').value,
         );
-    mateUseList(
+    mateUse(
       'x',
       x,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'y',
       y,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'w',
       w,
       isNamed: false,

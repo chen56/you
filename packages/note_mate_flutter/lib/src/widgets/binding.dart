@@ -7,8 +7,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 
 /// class RenderObjectToWidgetAdapter<T extends RenderObject> extends RenderObjectWidget
-class RenderObjectToWidgetAdapter$Mate<T extends RenderObject>
-    extends RenderObjectToWidgetAdapter<T> with Mate {
+class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObjectToWidgetAdapter<T> with Mate {
   /// RenderObjectToWidgetAdapter<T> RenderObjectToWidgetAdapter({Widget? child, required RenderObjectWithChildMixin<T> container, String? debugShortDescription})
   RenderObjectToWidgetAdapter$Mate({
     /// optionalParameters: {Widget? child} , default:none
@@ -50,8 +49,7 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject>
 }
 
 /// class RenderObjectToWidgetElement<T extends RenderObject> extends RootRenderObjectElement
-class RenderObjectToWidgetElement$Mate<T extends RenderObject>
-    extends RenderObjectToWidgetElement<T> with Mate {
+class RenderObjectToWidgetElement$Mate<T extends RenderObject> extends RenderObjectToWidgetElement<T> with Mate {
   /// RenderObjectToWidgetElement<T> RenderObjectToWidgetElement(RenderObjectToWidgetAdapter<T> widget)
   RenderObjectToWidgetElement$Mate(
 
@@ -60,8 +58,7 @@ class RenderObjectToWidgetElement$Mate<T extends RenderObject>
       : super(widget) {
     mateBuilderName = 'RenderObjectToWidgetElement';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
+    mateBuilder = (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
     mateUse(
       'widget',
       widget,

@@ -40,7 +40,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,
@@ -90,7 +90,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,

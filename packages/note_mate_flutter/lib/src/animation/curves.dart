@@ -260,7 +260,7 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: p.get('startHandle').build(),
           endHandle: p.get('endHandle').build(),
         );
-    mateUseList(
+    mateUse(
       'controlPoints',
       controlPoints,
       isNamed: false,
@@ -309,7 +309,7 @@ class CatmullRomSpline$Mate extends CatmullRomSpline with Mate {
           startHandle: p.get('startHandle').build(),
           endHandle: p.get('endHandle').build(),
         );
-    mateUseList(
+    mateUse(
       'controlPoints',
       controlPoints,
       isNamed: false,
@@ -351,7 +351,7 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
         );
-    mateUseList(
+    mateUse(
       'controlPoints',
       controlPoints,
       isNamed: false,
@@ -380,7 +380,7 @@ class CatmullRomCurve$Mate extends CatmullRomCurve with Mate {
           p.get('controlPoints').value,
           tension: p.get('tension').build(),
         );
-    mateUseList(
+    mateUse(
       'controlPoints',
       controlPoints,
       isNamed: false,

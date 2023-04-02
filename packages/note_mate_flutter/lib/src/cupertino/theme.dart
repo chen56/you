@@ -212,8 +212,7 @@ class CupertinoThemeData$Mate extends CupertinoThemeData with Mate {
 }
 
 /// class NoDefaultCupertinoThemeData
-class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData
-    with Mate {
+class NoDefaultCupertinoThemeData$Mate extends NoDefaultCupertinoThemeData with Mate {
   /// NoDefaultCupertinoThemeData NoDefaultCupertinoThemeData({Brightness? brightness, Color? primaryColor, Color? primaryContrastingColor, CupertinoTextThemeData? textTheme, Color? barBackgroundColor, Color? scaffoldBackgroundColor, bool? applyThemeToAll})
   NoDefaultCupertinoThemeData$Mate({
     /// optionalParameters: {Brightness? brightness} , default:none

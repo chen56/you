@@ -57,8 +57,7 @@ class CupertinoDynamicColor$Mate extends CupertinoDynamicColor with Mate {
           elevatedColor: p.get('elevatedColor').build(),
           darkElevatedColor: p.get('darkElevatedColor').build(),
           highContrastElevatedColor: p.get('highContrastElevatedColor').build(),
-          darkHighContrastElevatedColor:
-              p.get('darkHighContrastElevatedColor').build(),
+          darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').build(),
         );
     mateUse(
       'debugLabel',

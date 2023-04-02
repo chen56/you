@@ -8,8 +8,7 @@ import 'dart:core';
 import 'package:flutter/src/widgets/context_menu_button_item.dart';
 
 /// class SpellCheckSuggestionsToolbar extends StatelessWidget
-class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar
-    with Mate {
+class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar with Mate {
   /// SpellCheckSuggestionsToolbar SpellCheckSuggestionsToolbar({Key? key, required Offset anchor, required List<ContextMenuButtonItem> buttonItems})
   SpellCheckSuggestionsToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -42,7 +41,7 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar
       anchor,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'buttonItems',
       buttonItems,
       isNamed: true,

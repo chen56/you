@@ -5,8 +5,7 @@ import 'package:note/mate.dart';
 import 'dart:core';
 
 /// class FilteringTextInputFormatter extends TextInputFormatter
-class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter
-    with Mate {
+class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter with Mate {
   /// FilteringTextInputFormatter FilteringTextInputFormatter(Pattern filterPattern, {required bool allow, String replacementString = ''})
   FilteringTextInputFormatter$Mate(
     /// requiredParameters: Pattern filterPattern
@@ -106,8 +105,7 @@ class FilteringTextInputFormatter$Mate extends FilteringTextInputFormatter
 }
 
 /// class LengthLimitingTextInputFormatter extends TextInputFormatter
-class LengthLimitingTextInputFormatter$Mate
-    extends LengthLimitingTextInputFormatter with Mate {
+class LengthLimitingTextInputFormatter$Mate extends LengthLimitingTextInputFormatter with Mate {
   /// LengthLimitingTextInputFormatter LengthLimitingTextInputFormatter(int? maxLength, {MaxLengthEnforcement? maxLengthEnforcement})
   LengthLimitingTextInputFormatter$Mate(
     /// requiredParameters: int? maxLength

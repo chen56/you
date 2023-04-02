@@ -105,8 +105,7 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           showChildren: showChildren,
           addBlankLineIfNoChildren: addBlankLineIfNoChildren,
           isNameOnOwnLine: isNameOnOwnLine,
-          isBlankLineBetweenPropertiesAndChildren:
-              isBlankLineBetweenPropertiesAndChildren,
+          isBlankLineBetweenPropertiesAndChildren: isBlankLineBetweenPropertiesAndChildren,
           beforeName: beforeName,
           suffixLineOne: suffixLineOne,
           mandatoryFooter: mandatoryFooter,
@@ -135,8 +134,7 @@ class TextTreeConfiguration$Mate extends TextTreeConfiguration with Mate {
           showChildren: p.get('showChildren').build(),
           addBlankLineIfNoChildren: p.get('addBlankLineIfNoChildren').build(),
           isNameOnOwnLine: p.get('isNameOnOwnLine').build(),
-          isBlankLineBetweenPropertiesAndChildren:
-              p.get('isBlankLineBetweenPropertiesAndChildren').build(),
+          isBlankLineBetweenPropertiesAndChildren: p.get('isBlankLineBetweenPropertiesAndChildren').build(),
           beforeName: p.get('beforeName').build(),
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
@@ -314,8 +312,7 @@ class TextTreeRenderer$Mate extends TextTreeRenderer with Mate {
           minLevel: p.get('minLevel').build(),
           wrapWidth: p.get('wrapWidth').build(),
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
-          maxDescendentsTruncatableNode:
-              p.get('maxDescendentsTruncatableNode').build(),
+          maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
         );
     mateUse(
       'minLevel',
@@ -1656,8 +1653,7 @@ class DiagnosticsProperty$Mate<T> extends DiagnosticsProperty<T> with Mate {
 }
 
 /// class DiagnosticableNode<T extends Diagnosticable> extends DiagnosticsNode
-class DiagnosticableNode$Mate<T extends Diagnosticable>
-    extends DiagnosticableNode<T> with Mate {
+class DiagnosticableNode$Mate<T extends Diagnosticable> extends DiagnosticableNode<T> with Mate {
   /// DiagnosticableNode<T> DiagnosticableNode({String? name, required T value, required DiagnosticsTreeStyle? style})
   DiagnosticableNode$Mate({
     /// optionalParameters: {String? name} , default:none
@@ -1741,8 +1737,7 @@ class DiagnosticableTreeNode$Mate extends DiagnosticableTreeNode with Mate {
 }
 
 /// class DiagnosticPropertiesBuilder
-class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder
-    with Mate {
+class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder with Mate {
   /// DiagnosticPropertiesBuilder DiagnosticPropertiesBuilder.fromProperties(List<DiagnosticsNode> properties)
   DiagnosticPropertiesBuilder$Mate.fromProperties(
 
@@ -1751,9 +1746,8 @@ class DiagnosticPropertiesBuilder$Mate extends DiagnosticPropertiesBuilder
       : super.fromProperties(properties) {
     mateBuilderName = 'DiagnosticPropertiesBuilder.fromProperties';
     matePackageUrl = 'package:flutter/foundation.dart';
-    mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(
-        p.get('properties').value);
-    mateUseList(
+    mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
+    mateUse(
       'properties',
       properties,
       isNamed: false,
@@ -1875,12 +1869,12 @@ class DiagnosticsBlock$Mate extends DiagnosticsBlock with Mate {
       isNamed: true,
       defaultValue: false,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'properties',
       properties,
       isNamed: true,

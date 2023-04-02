@@ -253,8 +253,7 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
 }
 
 /// class CupertinoFullscreenDialogTransition extends StatelessWidget
-class CupertinoFullscreenDialogTransition$Mate
-    extends CupertinoFullscreenDialogTransition with Mate {
+class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialogTransition with Mate {
   /// CupertinoFullscreenDialogTransition CupertinoFullscreenDialogTransition({Key? key, required Animation<double> primaryRouteAnimation, required Animation<double> secondaryRouteAnimation, required Widget child, required bool linearTransition})
   CupertinoFullscreenDialogTransition$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -316,8 +315,7 @@ class CupertinoFullscreenDialogTransition$Mate
 }
 
 /// class CupertinoModalPopupRoute<T> extends PopupRoute<T>
-class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T>
-    with Mate {
+class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with Mate {
   /// CupertinoModalPopupRoute<T> CupertinoModalPopupRoute({required Widget Function(BuildContext) builder, String barrierLabel = 'Dismiss', Color? barrierColor = kCupertinoModalBarrierColor, bool barrierDismissible = true, bool semanticsDismissible = false, ImageFilter? filter, RouteSettings? settings, Offset? anchorPoint})
   CupertinoModalPopupRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none

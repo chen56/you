@@ -68,7 +68,7 @@ class RenderWrap$Mate extends RenderWrap with Mate {
           verticalDirection: p.get('verticalDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

@@ -13,14 +13,25 @@ final defaultDartFormatter = DartFormatter(
 );
 
 abstract class Param<T> extends ChangeNotifier {
-  String name;
+  final String name;
   Param? parent;
   final T init;
   final dynamic defaultValue;
-  // fixme 这个nullable是否可以改成isOptional
   final bool nullable;
   final bool isNamed;
+  final Editors editors;
+
   T _value;
+
+  Param({
+    required this.name,
+    required this.init,
+    this.parent,
+    required this.nullable,
+    required this.isNamed,
+    this.defaultValue,
+    required this.editors,
+  }) : _value = init;
 
   T get value => _value;
 
@@ -50,21 +61,13 @@ abstract class Param<T> extends ChangeNotifier {
 
   T build();
 
-  Param({
-    this.name = "",
-    required this.init,
-    this.nullable = false,
-    this.isNamed = false,
-    this.defaultValue,
-  }) : _value = init;
-
   bool get isNullable => nullable;
 
   bool get isValue => this is ValueParam;
 
   bool get isObject => this is ObjectParam;
 
-  bool get isList => this is ListParam;
+  bool get isList => this is ListParam2;
 
   Iterable<Param> get children;
 
@@ -137,7 +140,9 @@ abstract class Param<T> extends ChangeNotifier {
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
-Param<T> _toSingleParam<T>({
+
+// dart3 switch patterns : use idea, click class name can not navigation to source
+Param<T> _toParam<T>({
   required String name,
   required T init,
   required bool nullable,
@@ -145,64 +150,60 @@ Param<T> _toSingleParam<T>({
   dynamic defaultValue,
   required Editors editors,
 }) {
-  assert(!(utils.isType<T, List>()), "list use useList() : init:$init");
-
+  if (utils.isType<T, List>()) {
+    List<Param> params = [];
+    if (init != null) {
+      List notNull = init as List;
+      for (int i = 0; i < notNull.length; i++) {
+        assert(notNull[i] != null, "list element [$i] should not be null init: $init");
+        params.add(_toParam(
+          name: "$i",
+          init: notNull[i],
+          nullable: false,
+          isNamed: false,
+          editors: editors,
+        ));
+      }
+    }
+    return ListParam2<T>(
+      name: name,
+      init: init,
+      params: params,
+      nullable: nullable,
+      isNamed: isNamed,
+      editors: editors,
+    );
+  }
   if (init is Param<T>) return init;
 
   if (init is Mate) {
-    return ObjectParam<T>(
+    return ObjectParam.fromMate(
+      init,
       name: name,
-      init: init,
-      paramMap: init._mateParams.map((key, value) => MapEntry(key, value.toParam(editors))),
-      builder: init.mateBuilder,
-      builderRefer: code.refer(init.mateBuilderName, init.matePackageUrl),
-      nullable: nullable,
       isNamed: isNamed,
-      defaultValue: defaultValue,
+      nullable: nullable,
+      editors: editors,
     );
   }
+
   return ValueParam<T>(
     name: name,
     init: init,
     nullable: nullable,
     isNamed: isNamed,
     defaultValue: defaultValue,
-  );
-}
-
-ListParam<E> _toListParam<E>({
-  required String name,
-  required List<E>? init,
-  required bool isNamed,
-  required Editors editors,
-}) {
-  List<E> notNull = init ?? [];
-  List<Param<E>> params = [];
-  for (int i = 0; i < notNull.length; i++) {
-    assert(notNull[i] != null, "list element [$i] should not be null init: $init");
-    params.add(_toSingleParam(
-      name: "$i",
-      init: notNull[i],
-      nullable: false,
-      isNamed: false,
-      editors: editors,
-    ));
-  }
-  return ListParam<E>(
-    name: name,
-    init: notNull,
-    params: params,
-    isNamed: isNamed,
+    editors: editors,
   );
 }
 
 class ValueParam<T> extends Param<T> {
   ValueParam({
-    super.name,
+    required super.name,
     required super.init,
-    super.nullable,
-    super.isNamed,
+    required super.nullable,
+    required super.isNamed,
     super.defaultValue,
+    required super.editors,
   });
 
   @override
@@ -217,41 +218,18 @@ class ValueParam<T> extends Param<T> {
   }
 }
 
-class ListParam<E> extends Param<List<E>> {
-  late final List<Param<E>> params;
-
-  ListParam({
-    super.name,
-    required super.init,
-    required this.params,
-    super.isNamed,
-  }) : super(nullable: false) {
-    for (var e in params) {
-      e.parent = this;
-    }
-  }
-
-  @override
-  List<E> build() => params.map((e) => e.build()).toList();
-
-  @override
-  Iterable<Param<E>> get children => params;
-
-  @override
-  Editor getEditor(Editors editors) {
-    return ListParamEditor(this, editors: editors);
-  }
-}
-
 class ListParam2<T> extends Param<T> {
   late final List<Param> params;
 
   ListParam2({
-    super.name,
+    required super.name,
     required super.init,
     required this.params,
-    super.isNamed,
-  }) : super(nullable: false) {
+    required super.isNamed,
+    required super.nullable,
+    super.defaultValue,
+    required super.editors,
+  }) {
     for (var e in params) {
       e.parent = this;
     }
@@ -261,7 +239,7 @@ class ListParam2<T> extends Param<T> {
   T build() {
     if (init == null) return null as T;
 
-    // 直接返回map后的list会转型错误：
+    // 直接返回map后的list会转型错误：🔔⚠️❗️💡👉
     //     exception : return params.map((e)=>e.build()).toList() as T
     // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
     return utils.castList<T>(from: params.map((e) => e.build()), to: init as List);
@@ -278,21 +256,22 @@ class ListParam2<T> extends Param<T> {
 
 class ObjectParam<T> extends Param<T> {
   final Map<String, Param> _paramMap;
-  late final Object Function(ObjectParam param) builder;
+  final Object Function(ObjectParam param) builder;
   final code.Reference builderRefer;
 
   ObjectParam({
-    super.name,
+    required super.name,
     required super.init,
     required this.builder,
-    Map<String, Param>? paramMap,
+    required Map<String, Param> paramMap,
     required this.builderRefer,
-    super.nullable,
-    super.isNamed,
+    required super.nullable,
+    required super.isNamed,
     super.defaultValue,
-  }) : _paramMap = paramMap ?? {} {
-    _paramMap.forEach((key, value) {
-      value.parent = this;
+    required super.editors,
+  }) : _paramMap = paramMap {
+    _paramMap.forEach((name, param) {
+      param.parent = this;
     });
   }
 
@@ -303,10 +282,46 @@ class ObjectParam<T> extends Param<T> {
           init: mate as T,
           builder: mate.mateBuilder,
           paramMap: mate._mateParams
-              .map((key, value) => MapEntry(key, value.toParam(editors ?? Editors()))),
+              .map((key, value) => MapEntry(key, value.toParam(editors: editors ?? Editors()))),
           nullable: false,
+          isNamed: false,
           //根对象
           builderRefer: code.refer(mate.mateBuilderName, mate.matePackageUrl),
+          editors: editors ?? Editors(),
+        );
+
+  ObjectParam.fromMate(
+    Mate mate, {
+    required String name,
+    required bool nullable,
+    required bool isNamed,
+    required Editors editors,
+    dynamic defaultValue,
+  }) : this(
+          name: name,
+          init: mate as T,
+          builder: mate.mateBuilder,
+          paramMap: mate._mateParams
+              .map((name, buildArg) => MapEntry(name, buildArg.toParam(editors: editors))),
+          nullable: nullable,
+          isNamed: isNamed,
+          builderRefer: code.refer(mate.mateBuilderName, mate.matePackageUrl),
+          defaultValue: defaultValue,
+          editors: editors,
+        );
+
+  ObjectParam.root({Editors? editors})
+      : this(
+          name: "",
+          //根对象无name
+          init: "root" as T,
+          paramMap: {},
+          nullable: false,
+          isNamed: false,
+          builder: (s) => "root",
+          //根对象
+          builderRefer: code.refer("ObjectParam", "package:note/mate.dart"),
+          editors: editors ?? Editors(),
         );
 
   Param<E> use<E>(
@@ -314,38 +329,13 @@ class ObjectParam<T> extends Param<T> {
     E init, {
     bool isNamed = true,
     dynamic defaultValue,
-    Editors? editors,
   }) {
-    //fixme 和mateUse统一
-    editors ??= Editors();
-    var param = _toSingleParam<E>(
+    var param = _toParam<E>(
       name: name,
       nullable: utils.isNullableOf<E>(init),
       init: init,
       isNamed: isNamed,
       defaultValue: defaultValue,
-      editors: editors,
-    );
-    _paramMap[name] = param;
-    return param;
-  }
-
-  /// 为简化list参数，不按原可空与否处理，而统一为：
-  /// - 进来的init为可空List<E>?
-  /// - 出去的返回值为非空List<E>
-  ListParam<E> useList<E>(
-    String name,
-    List<E>? init, {
-    bool isNamed = true,
-    dynamic defaultValue,
-    Editors? editors,
-  }) {
-    //fixme 和mateUse统一
-    editors ??= Editors();
-    var param = _toListParam(
-      name: name,
-      init: init,
-      isNamed: isNamed,
       editors: editors,
     );
     _paramMap[name] = param;
@@ -404,6 +394,7 @@ class BuilderArg<T> {
   final Object? defaultValue;
   final T init;
   late final bool nullable;
+
   BuilderArg({
     required this.name,
     required this.init,
@@ -413,7 +404,7 @@ class BuilderArg<T> {
     nullable = utils.isNullable<T>();
   }
 
-  Param<T> toParam(Editors editors) {
+  Param<T> toParam({required Editors editors}) {
     return _toParam(
       name: name,
       init: init,
@@ -421,52 +412,6 @@ class BuilderArg<T> {
       isNamed: isNamed,
       defaultValue: defaultValue,
       editors: editors,
-    );
-  }
-
-// dart3 switch patterns : use idea, click class name can not navigation to source
-  static Param<T> _toParam<T>({
-    required String name,
-    required T init,
-    required bool nullable,
-    required bool isNamed,
-    dynamic defaultValue,
-    required Editors editors,
-  }) {
-    if (utils.isType<T, List>()) {
-      List<Param> params = [];
-      if (init != null) {
-        List notNull = init as List;
-        for (int i = 0; i < notNull.length; i++) {
-          assert(notNull[i] != null, "list element [$i] should not be null init: $init");
-          params.add(_toParam(
-            name: "$i",
-            init: notNull[i],
-            nullable: false,
-            isNamed: false,
-            editors: editors,
-          ));
-        }
-      }
-      return ListParam2<T>(
-        name: name,
-        init: init,
-        params: params,
-        isNamed: isNamed,
-      );
-    }
-    if (init is Param<T>) return init;
-
-    if (init is Mate) {
-      return init.toObjectParam<T>(editors: editors);
-    }
-
-    return ValueParam<T>(
-      name: name,
-      init: init,
-      nullable: nullable,
-      isNamed: isNamed,
-      defaultValue: defaultValue,
     );
   }
 }
@@ -494,25 +439,11 @@ mixin Mate {
     return param;
   }
 
-  /// 为简化list参数，不按原可空与否处理，而统一为：
-  /// - 进来的init为可空List<E>?
-  /// - 出去的返回值为非空List<E>
-  /// fixme remove mateUseList
-  BuilderArg<List<E>> mateUseList<E>(
-    String name,
-    List<E>? init, {
-    required bool isNamed,
-    dynamic defaultValue,
-  }) {
-    List<E> notNull = init ?? [];
-    return mateUse<List<E>>(name, notNull, isNamed: isNamed, defaultValue: defaultValue);
-  }
-
   BuilderArg<C> mateGet<C>(String name) {
     return _mateParams[name] as BuilderArg<C>;
   }
 
-  ObjectParam<T> toObjectParam<T>({required Editors editors}) {
+  ObjectParam<T> toRootParam<T>({required Editors editors}) {
     return ObjectParam.rootFromMate(this, editors: editors);
   }
 }
@@ -521,13 +452,14 @@ abstract class Editor {
   final Editors editors;
   final code.DartEmitter emitter;
   final DartFormatter formatter;
+
   Editor({required this.editors})
       : emitter = editors.emitter,
         formatter = editors.formatter;
 
   @nonVirtual
   Widget nameWidget(BuildContext context) {
-    if (param.parent is ListParam && param is ObjectParam) {
+    if (param.parent is ListParam2 && param is ObjectParam) {
       return Text("${0}->${(param as ObjectParam).builderRefer.symbol} ");
     }
     return Text("${param.displayName}${param.isRoot ? '' : ': '} ");
@@ -605,6 +537,7 @@ class Editors {
 abstract class ValueParamEditor extends Editor {
   @override
   final ValueParam param;
+
   ValueParamEditor(this.param, {required super.editors});
 
   @override
@@ -640,18 +573,6 @@ class ObjectParamEditor extends Editor {
   }
 }
 
-class ListParamEditor extends Editor {
-  @override
-  final ListParam param;
-
-  ListParamEditor(this.param, {required super.editors});
-
-  @override
-  code.Expression toCode() {
-    return code.literalList(param.children.map((e) => e.toCodeExpression(editors: editors)));
-  }
-}
-
 class ListParamEditor2 extends Editor {
   @override
   final ListParam2 param;
@@ -666,6 +587,7 @@ class ListParamEditor2 extends Editor {
 
 class ManuallyValueEditor extends ValueParamEditor {
   code.Expression codeExpression;
+
   ManuallyValueEditor(super.param, {required super.editors, required this.codeExpression});
 
   @override

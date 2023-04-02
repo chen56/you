@@ -8,8 +8,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'dart:core';
 
 /// class SliverPrototypeExtentList extends SliverMultiBoxAdaptorWidget
-class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList
-    with Mate {
+class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate {
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -183,7 +182,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

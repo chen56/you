@@ -286,7 +286,7 @@ class _PagePen extends Pen {
   @override
   void sampleMate(Mate widgetMate) {
     _contents.add(_MateSample(
-      rootParam: widgetMate.toObjectParam(editors: editors),
+      rootParam: widgetMate.toRootParam(editors: editors),
       editors: editors,
     ));
   }

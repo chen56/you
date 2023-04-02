@@ -146,7 +146,7 @@ class MergeableMaterial$Mate extends MergeableMaterial with Mate {
       isNamed: true,
       defaultValue: false,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

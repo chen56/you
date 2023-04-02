@@ -73,7 +73,7 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -123,8 +123,7 @@ class NavigationDrawer$Mate extends NavigationDrawer with Mate {
 }
 
 /// class NavigationDrawerDestination extends StatelessWidget
-class NavigationDrawerDestination$Mate extends NavigationDrawerDestination
-    with Mate {
+class NavigationDrawerDestination$Mate extends NavigationDrawerDestination with Mate {
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , default:none

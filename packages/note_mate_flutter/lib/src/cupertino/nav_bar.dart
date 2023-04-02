@@ -155,8 +155,7 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
 }
 
 /// class CupertinoSliverNavigationBar extends StatefulWidget
-class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar
-    with Mate {
+class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar with Mate {
   /// CupertinoSliverNavigationBar CupertinoSliverNavigationBar({Key? key, Widget? largeTitle, Widget? leading, bool automaticallyImplyLeading = true, bool automaticallyImplyTitle = true, bool alwaysShowMiddle = true, String? previousPageTitle, Widget? middle, Widget? trailing, Border? border = _kDefaultNavBarBorder, Color? backgroundColor, Brightness? brightness, EdgeInsetsDirectional? padding, bool transitionBetweenRoutes = true, Object heroTag = _defaultHeroTag, bool stretch = false})
   CupertinoSliverNavigationBar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -333,8 +332,7 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar
 }
 
 /// class CupertinoNavigationBarBackButton extends StatelessWidget
-class CupertinoNavigationBarBackButton$Mate
-    extends CupertinoNavigationBarBackButton with Mate {
+class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackButton with Mate {
   /// CupertinoNavigationBarBackButton CupertinoNavigationBarBackButton({Key? key, Color? color, String? previousPageTitle, void Function()? onPressed})
   CupertinoNavigationBarBackButton$Mate({
     /// optionalParameters: {Key? key} , default:none

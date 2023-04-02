@@ -32,12 +32,10 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
     Curve switchOutCurve = Curves.linear,
 
     /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , default:processed=PrefixedIdentifierImpl
-    AnimatedSwitcherTransitionBuilder transitionBuilder =
-        AnimatedSwitcher.defaultTransitionBuilder,
+    AnimatedSwitcherTransitionBuilder transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder,
 
     /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , default:processed=PrefixedIdentifierImpl
-    AnimatedSwitcherLayoutBuilder layoutBuilder =
-        AnimatedSwitcher.defaultLayoutBuilder,
+    AnimatedSwitcherLayoutBuilder layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder,
   }) : super(
           key: key,
           child: child,

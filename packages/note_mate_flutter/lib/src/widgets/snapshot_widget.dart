@@ -17,8 +17,7 @@ class SnapshotController$Mate extends SnapshotController with Mate {
       : super(allowSnapshotting: allowSnapshotting) {
     mateBuilderName = 'SnapshotController';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => SnapshotController$Mate(
-        allowSnapshotting: p.get('allowSnapshotting').build());
+    mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
     mateUse(
       'allowSnapshotting',
       allowSnapshotting,

@@ -193,7 +193,7 @@ class KeyMessage$Mate extends KeyMessage with Mate {
           p.get('events').value,
           p.get('rawEvent').value,
         );
-    mateUseList(
+    mateUse(
       'events',
       events,
       isNamed: false,

@@ -16,8 +16,7 @@ class OutlinedButtonThemeData$Mate extends OutlinedButtonThemeData with Mate {
       : super(style: style) {
     mateBuilderName = 'OutlinedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => OutlinedButtonThemeData$Mate(style: p.get('style').build());
     mateUse(
       'style',
       style,

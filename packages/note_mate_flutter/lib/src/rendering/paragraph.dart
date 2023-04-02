@@ -12,8 +12,7 @@ import 'package:flutter/src/rendering/box.dart';
 import 'package:flutter/src/rendering/selection.dart';
 
 /// class PlaceholderSpanIndexSemanticsTag extends SemanticsTag
-class PlaceholderSpanIndexSemanticsTag$Mate
-    extends PlaceholderSpanIndexSemanticsTag with Mate {
+class PlaceholderSpanIndexSemanticsTag$Mate extends PlaceholderSpanIndexSemanticsTag with Mate {
   /// PlaceholderSpanIndexSemanticsTag PlaceholderSpanIndexSemanticsTag(int index)
   PlaceholderSpanIndexSemanticsTag$Mate(
 
@@ -22,8 +21,7 @@ class PlaceholderSpanIndexSemanticsTag$Mate
       : super(index) {
     mateBuilderName = 'PlaceholderSpanIndexSemanticsTag';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
+    mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
     mateUse(
       'index',
       index,
@@ -170,7 +168,7 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
       textHeightBehavior,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

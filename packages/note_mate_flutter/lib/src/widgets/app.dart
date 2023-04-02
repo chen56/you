@@ -159,21 +159,16 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback:
-              p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
           debugShowWidgetInspector: p.get('debugShowWidgetInspector').build(),
-          debugShowCheckedModeBanner:
-              p.get('debugShowCheckedModeBanner').build(),
-          inspectorSelectButtonBuilder:
-              p.get('inspectorSelectButtonBuilder').build(),
+          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
+          inspectorSelectButtonBuilder: p.get('inspectorSelectButtonBuilder').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
@@ -203,7 +198,7 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
       onUnknownRoute,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'navigatorObservers',
       navigatorObservers,
       isNamed: true,
@@ -460,21 +455,16 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           color: p.get('color').build(),
           locale: p.get('locale').build(),
           localizationsDelegates: p.get('localizationsDelegates').build(),
-          localeListResolutionCallback:
-              p.get('localeListResolutionCallback').build(),
+          localeListResolutionCallback: p.get('localeListResolutionCallback').build(),
           localeResolutionCallback: p.get('localeResolutionCallback').build(),
           supportedLocales: p.get('supportedLocales').build(),
           showPerformanceOverlay: p.get('showPerformanceOverlay').build(),
-          checkerboardRasterCacheImages:
-              p.get('checkerboardRasterCacheImages').build(),
-          checkerboardOffscreenLayers:
-              p.get('checkerboardOffscreenLayers').build(),
+          checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
+          checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
           showSemanticsDebugger: p.get('showSemanticsDebugger').build(),
           debugShowWidgetInspector: p.get('debugShowWidgetInspector').build(),
-          debugShowCheckedModeBanner:
-              p.get('debugShowCheckedModeBanner').build(),
-          inspectorSelectButtonBuilder:
-              p.get('inspectorSelectButtonBuilder').build(),
+          debugShowCheckedModeBanner: p.get('debugShowCheckedModeBanner').build(),
+          inspectorSelectButtonBuilder: p.get('inspectorSelectButtonBuilder').build(),
           shortcuts: p.get('shortcuts').build(),
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),

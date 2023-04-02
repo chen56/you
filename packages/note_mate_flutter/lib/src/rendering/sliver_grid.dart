@@ -58,8 +58,7 @@ class SliverGridGeometry$Mate extends SliverGridGeometry with Mate {
 }
 
 /// class SliverGridRegularTileLayout extends SliverGridLayout
-class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout
-    with Mate {
+class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout with Mate {
   /// SliverGridRegularTileLayout SliverGridRegularTileLayout({required int crossAxisCount, required double mainAxisStride, required double crossAxisStride, required double childMainAxisExtent, required double childCrossAxisExtent, required bool reverseCrossAxis})
   SliverGridRegularTileLayout$Mate({
     /// optionalParameters: {required int crossAxisCount} , default:none
@@ -131,8 +130,7 @@ class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout
 }
 
 /// class SliverGridDelegateWithFixedCrossAxisCount extends SliverGridDelegate
-class SliverGridDelegateWithFixedCrossAxisCount$Mate
-    extends SliverGridDelegateWithFixedCrossAxisCount with Mate {
+class SliverGridDelegateWithFixedCrossAxisCount$Mate extends SliverGridDelegateWithFixedCrossAxisCount with Mate {
   /// SliverGridDelegateWithFixedCrossAxisCount SliverGridDelegateWithFixedCrossAxisCount({required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, double? mainAxisExtent})
   SliverGridDelegateWithFixedCrossAxisCount$Mate({
     /// optionalParameters: {required int crossAxisCount} , default:none
@@ -197,8 +195,7 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate
 }
 
 /// class SliverGridDelegateWithMaxCrossAxisExtent extends SliverGridDelegate
-class SliverGridDelegateWithMaxCrossAxisExtent$Mate
-    extends SliverGridDelegateWithMaxCrossAxisExtent with Mate {
+class SliverGridDelegateWithMaxCrossAxisExtent$Mate extends SliverGridDelegateWithMaxCrossAxisExtent with Mate {
   /// SliverGridDelegateWithMaxCrossAxisExtent SliverGridDelegateWithMaxCrossAxisExtent({required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, double? mainAxisExtent})
   SliverGridDelegateWithMaxCrossAxisExtent$Mate({
     /// optionalParameters: {required double maxCrossAxisExtent} , default:none

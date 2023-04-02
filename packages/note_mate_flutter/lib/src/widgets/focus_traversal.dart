@@ -55,8 +55,7 @@ class OrderedTraversalPolicy$Mate extends OrderedTraversalPolicy with Mate {
       : super(secondary: secondary) {
     mateBuilderName = 'OrderedTraversalPolicy';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) =>
-        OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
+    mateBuilder = (p) => OrderedTraversalPolicy$Mate(secondary: p.get('secondary').build());
     mateUse(
       'secondary',
       secondary,

@@ -31,8 +31,7 @@ class SelectableRegion$Mate extends SelectableRegion with Mate {
     required Widget child,
 
     /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    TextMagnifierConfiguration magnifierConfiguration =
-        TextMagnifierConfiguration.disabled,
+    TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled,
 
     /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , default:none
     ValueChanged<SelectedContent?>? onSelectionChanged,

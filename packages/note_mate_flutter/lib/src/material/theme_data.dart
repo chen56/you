@@ -383,8 +383,7 @@ class ThemeData$Mate extends ThemeData with Mate {
     mateBuilderName = 'ThemeData.raw';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ThemeData$Mate.raw(
-          applyElevationOverlayColor:
-              p.get('applyElevationOverlayColor').build(),
+          applyElevationOverlayColor: p.get('applyElevationOverlayColor').build(),
           cupertinoOverrideTheme: p.get('cupertinoOverrideTheme').build(),
           extensions: p.get('extensions').build(),
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
@@ -863,8 +862,7 @@ class ThemeData$Mate extends ThemeData with Mate {
 }
 
 /// class MaterialBasedCupertinoThemeData extends CupertinoThemeData
-class MaterialBasedCupertinoThemeData$Mate
-    extends MaterialBasedCupertinoThemeData with Mate {
+class MaterialBasedCupertinoThemeData$Mate extends MaterialBasedCupertinoThemeData with Mate {
   /// MaterialBasedCupertinoThemeData MaterialBasedCupertinoThemeData({required ThemeData materialTheme})
   MaterialBasedCupertinoThemeData$Mate(
       {
@@ -873,8 +871,7 @@ class MaterialBasedCupertinoThemeData$Mate
       : super(materialTheme: materialTheme) {
     mateBuilderName = 'MaterialBasedCupertinoThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(
-        materialTheme: p.get('materialTheme').build());
+    mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.get('materialTheme').build());
     mateUse(
       'materialTheme',
       materialTheme,

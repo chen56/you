@@ -179,8 +179,7 @@ class ListTile$Mate extends ListTile with Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle:
-              p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           enabled: p.get('enabled').build(),
           onTap: p.get('onTap').build(),

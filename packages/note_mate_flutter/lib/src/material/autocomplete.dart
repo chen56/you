@@ -19,8 +19,7 @@ class Autocomplete$Mate<T extends Object> extends Autocomplete<T> with Mate {
     required AutocompleteOptionsBuilder<T> optionsBuilder,
 
     /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , default:processed=PrefixedIdentifierImpl
-    AutocompleteOptionToString<T> displayStringForOption =
-        RawAutocomplete.defaultStringForOption,
+    AutocompleteOptionToString<T> displayStringForOption = RawAutocomplete.defaultStringForOption,
 
     /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , default:unprocessed=SimpleIdentifierImpl
     required AutocompleteFieldViewBuilder fieldViewBuilder,

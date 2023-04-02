@@ -106,8 +106,7 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
           textColor: p.get('textColor').build(),
           titleTextStyle: p.get('titleTextStyle').build(),
           subtitleTextStyle: p.get('subtitleTextStyle').build(),
-          leadingAndTrailingTextStyle:
-              p.get('leadingAndTrailingTextStyle').build(),
+          leadingAndTrailingTextStyle: p.get('leadingAndTrailingTextStyle').build(),
           contentPadding: p.get('contentPadding').build(),
           tileColor: p.get('tileColor').build(),
           selectedTileColor: p.get('selectedTileColor').build(),

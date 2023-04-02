@@ -452,8 +452,7 @@ class PositionedTransition$Mate extends PositionedTransition with Mate {
 }
 
 /// class RelativePositionedTransition extends AnimatedWidget
-class RelativePositionedTransition$Mate extends RelativePositionedTransition
-    with Mate {
+class RelativePositionedTransition$Mate extends RelativePositionedTransition with Mate {
   /// RelativePositionedTransition RelativePositionedTransition({Key? key, required Animation<Rect?> rect, required Size size, required Widget child})
   RelativePositionedTransition$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -620,8 +619,7 @@ class AlignTransition$Mate extends AlignTransition with Mate {
 }
 
 /// class DefaultTextStyleTransition extends AnimatedWidget
-class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition
-    with Mate {
+class DefaultTextStyleTransition$Mate extends DefaultTextStyleTransition with Mate {
   /// DefaultTextStyleTransition DefaultTextStyleTransition({Key? key, required Animation<TextStyle> style, required Widget child, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines})
   DefaultTextStyleTransition$Mate({
     /// optionalParameters: {Key? key} , default:none

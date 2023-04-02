@@ -83,8 +83,7 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
     TextCapitalization textCapitalization = TextCapitalization.none,
 
     /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    AutofillConfiguration autofillConfiguration =
-        AutofillConfiguration.disabled,
+    AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled,
 
     /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , default:processed=BooleanLiteralImpl
     bool enableIMEPersonalizedLearning = true,
@@ -122,15 +121,13 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
           smartDashesType: p.get('smartDashesType').build(),
           smartQuotesType: p.get('smartQuotesType').build(),
           enableSuggestions: p.get('enableSuggestions').build(),
-          enableInteractiveSelection:
-              p.get('enableInteractiveSelection').build(),
+          enableInteractiveSelection: p.get('enableInteractiveSelection').build(),
           actionLabel: p.get('actionLabel').build(),
           inputAction: p.get('inputAction').build(),
           keyboardAppearance: p.get('keyboardAppearance').build(),
           textCapitalization: p.get('textCapitalization').build(),
           autofillConfiguration: p.get('autofillConfiguration').build(),
-          enableIMEPersonalizedLearning:
-              p.get('enableIMEPersonalizedLearning').build(),
+          enableIMEPersonalizedLearning: p.get('enableIMEPersonalizedLearning').build(),
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
           enableDeltaModel: p.get('enableDeltaModel').build(),
         );
@@ -215,7 +212,7 @@ class TextInputConfiguration$Mate extends TextInputConfiguration with Mate {
       isNamed: true,
       defaultValue: true,
     );
-    mateUseList(
+    mateUse(
       'allowedMimeTypes',
       allowedMimeTypes,
       isNamed: true,

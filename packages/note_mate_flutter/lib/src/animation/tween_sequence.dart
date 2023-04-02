@@ -16,7 +16,7 @@ class TweenSequence$Mate<T> extends TweenSequence<T> with Mate {
     mateBuilderName = 'TweenSequence';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TweenSequence$Mate<T>(p.get('items').value);
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: false,
@@ -35,7 +35,7 @@ class FlippedTweenSequence$Mate extends FlippedTweenSequence with Mate {
     mateBuilderName = 'FlippedTweenSequence';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => FlippedTweenSequence$Mate(p.get('items').value);
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: false,

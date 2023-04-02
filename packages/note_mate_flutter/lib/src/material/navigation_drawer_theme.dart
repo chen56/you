@@ -12,8 +12,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 /// class NavigationDrawerThemeData with Diagnosticable
-class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData
-    with Mate {
+class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate {
   /// NavigationDrawerThemeData NavigationDrawerThemeData({double? tileHeight, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, Size? indicatorSize, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme})
   NavigationDrawerThemeData$Mate({
     /// optionalParameters: {double? tileHeight} , default:none

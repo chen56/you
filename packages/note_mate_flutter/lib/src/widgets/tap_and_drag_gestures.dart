@@ -373,8 +373,7 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
 }
 
 /// class TapAndDragGestureRecognizer extends OneSequenceGestureRecognizer with _TapStatusTrackerMixin
-class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer
-    with Mate {
+class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with Mate {
   /// TapAndDragGestureRecognizer TapAndDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   TapAndDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none

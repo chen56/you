@@ -88,7 +88,7 @@ class FlexibleSpaceBar$Mate extends FlexibleSpaceBar with Mate {
       isNamed: true,
       defaultValue: CollapseMode.parallax,
     );
-    mateUseList(
+    mateUse(
       'stretchModes',
       stretchModes,
       isNamed: true,

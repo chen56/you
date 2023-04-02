@@ -15,8 +15,7 @@ class SelectedContent$Mate extends SelectedContent with Mate {
       : super(plainText: plainText) {
     mateBuilderName = 'SelectedContent';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder =
-        (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
+    mateBuilder = (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
     mateUse(
       'plainText',
       plainText,
@@ -35,8 +34,7 @@ class SelectWordSelectionEvent$Mate extends SelectWordSelectionEvent with Mate {
       : super(globalPosition: globalPosition) {
     mateBuilderName = 'SelectWordSelectionEvent';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectWordSelectionEvent$Mate(
-        globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').build());
     mateUse(
       'globalPosition',
       globalPosition,
@@ -55,8 +53,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate {
       : super.forStart(globalPosition: globalPosition) {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forStart';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(
-        globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').build());
     mateUse(
       'globalPosition',
       globalPosition,
@@ -72,8 +69,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate {
       : super.forEnd(globalPosition: globalPosition) {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forEnd';
     matePackageUrl = 'package:flutter/rendering.dart';
-    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(
-        globalPosition: p.get('globalPosition').build());
+    mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').build());
     mateUse(
       'globalPosition',
       globalPosition,
@@ -83,8 +79,7 @@ class SelectionEdgeUpdateEvent$Mate extends SelectionEdgeUpdateEvent with Mate {
 }
 
 /// class GranularlyExtendSelectionEvent extends SelectionEvent
-class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
-    with Mate {
+class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent with Mate {
   /// GranularlyExtendSelectionEvent GranularlyExtendSelectionEvent({required bool forward, required bool isEnd, required TextGranularity granularity})
   GranularlyExtendSelectionEvent$Mate({
     /// optionalParameters: {required bool forward} , default:none
@@ -126,8 +121,7 @@ class GranularlyExtendSelectionEvent$Mate extends GranularlyExtendSelectionEvent
 }
 
 /// class DirectionallyExtendSelectionEvent extends SelectionEvent
-class DirectionallyExtendSelectionEvent$Mate
-    extends DirectionallyExtendSelectionEvent with Mate {
+class DirectionallyExtendSelectionEvent$Mate extends DirectionallyExtendSelectionEvent with Mate {
   /// DirectionallyExtendSelectionEvent DirectionallyExtendSelectionEvent({required double dx, required bool isEnd, required SelectionExtendDirection direction})
   DirectionallyExtendSelectionEvent$Mate({
     /// optionalParameters: {required double dx} , default:none

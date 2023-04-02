@@ -64,8 +64,7 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate {
 }
 
 /// class TextMagnifierConfiguration
-class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration
-    with Mate {
+class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Mate {
   /// TextMagnifierConfiguration TextMagnifierConfiguration({Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder, bool shouldDisplayHandlesInMagnifier = true})
   TextMagnifierConfiguration$Mate({
     /// optionalParameters: {Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder} , default:none
@@ -81,8 +80,7 @@ class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextMagnifierConfiguration$Mate(
           magnifierBuilder: p.get('magnifierBuilder').build(),
-          shouldDisplayHandlesInMagnifier:
-              p.get('shouldDisplayHandlesInMagnifier').build(),
+          shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').build(),
         );
     mateUse(
       'magnifierBuilder',
@@ -108,8 +106,7 @@ class MagnifierController$Mate extends MagnifierController with Mate {
       : super(animationController: animationController) {
     mateBuilderName = 'MagnifierController';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder = (p) => MagnifierController$Mate(
-        animationController: p.get('animationController').build());
+    mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
     mateUse(
       'animationController',
       animationController,
@@ -148,7 +145,7 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate {
       isNamed: true,
       defaultValue: 1,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

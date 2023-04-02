@@ -4,8 +4,7 @@ import 'package:flutter/src/widgets/slotted_render_object_widget.dart';
 import 'package:note/mate.dart';
 
 /// class SlottedRenderObjectElement<S> extends RenderObjectElement
-class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S>
-    with Mate {
+class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S> with Mate {
   /// SlottedRenderObjectElement<S> SlottedRenderObjectElement(SlottedMultiChildRenderObjectWidgetMixin<S> widget)
   SlottedRenderObjectElement$Mate(
 
@@ -14,8 +13,7 @@ class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S>
       : super(widget) {
     mateBuilderName = 'SlottedRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => SlottedRenderObjectElement$Mate<S>(p.get('widget').value);
+    mateBuilder = (p) => SlottedRenderObjectElement$Mate<S>(p.get('widget').value);
     mateUse(
       'widget',
       widget,

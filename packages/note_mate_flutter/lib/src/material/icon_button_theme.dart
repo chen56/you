@@ -16,8 +16,7 @@ class IconButtonThemeData$Mate extends IconButtonThemeData with Mate {
       : super(style: style) {
     mateBuilderName = 'IconButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => IconButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => IconButtonThemeData$Mate(style: p.get('style').build());
     mateUse(
       'style',
       style,

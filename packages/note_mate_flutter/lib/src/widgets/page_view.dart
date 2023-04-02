@@ -152,8 +152,7 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate {
       : super(parent: parent) {
     mateBuilderName = 'PageScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
-    mateBuilder =
-        (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
+    mateBuilder = (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
       'parent',
       parent,
@@ -279,7 +278,7 @@ class PageView$Mate extends PageView with Mate {
       onPageChanged,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

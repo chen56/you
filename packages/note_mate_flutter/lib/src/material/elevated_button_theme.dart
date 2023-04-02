@@ -16,8 +16,7 @@ class ElevatedButtonThemeData$Mate extends ElevatedButtonThemeData with Mate {
       : super(style: style) {
     mateBuilderName = 'ElevatedButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
-    mateBuilder =
-        (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
+    mateBuilder = (p) => ElevatedButtonThemeData$Mate(style: p.get('style').build());
     mateUse(
       'style',
       style,

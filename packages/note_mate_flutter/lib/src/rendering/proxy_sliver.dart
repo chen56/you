@@ -51,8 +51,7 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
 }
 
 /// class RenderSliverIgnorePointer extends RenderProxySliver
-class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer
-    with Mate {
+class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate {
   /// RenderSliverIgnorePointer RenderSliverIgnorePointer({RenderSliver? sliver, bool ignoring = true, bool? ignoringSemantics})
   RenderSliverIgnorePointer$Mate({
     /// optionalParameters: {RenderSliver? sliver} , default:none
@@ -128,8 +127,7 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
 }
 
 /// class RenderSliverAnimatedOpacity extends RenderProxySliver with RenderAnimatedOpacityMixin<RenderSliver>
-class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity
-    with Mate {
+class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with Mate {
   /// RenderSliverAnimatedOpacity RenderSliverAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverAnimatedOpacity$Mate({
     /// optionalParameters: {required Animation<double> opacity} , default:none

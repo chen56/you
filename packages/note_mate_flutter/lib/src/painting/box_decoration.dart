@@ -80,7 +80,7 @@ class BoxDecoration$Mate extends BoxDecoration with Mate {
       borderRadius,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'boxShadow',
       boxShadow,
       isNamed: true,

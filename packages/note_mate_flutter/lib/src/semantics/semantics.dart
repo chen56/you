@@ -39,8 +39,7 @@ class CustomSemanticsAction$Mate extends CustomSemanticsAction with Mate {
       : super(label: label) {
     mateBuilderName = 'CustomSemanticsAction';
     matePackageUrl = 'package:flutter/semantics.dart';
-    mateBuilder =
-        (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
+    mateBuilder = (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
     mateUse(
       'label',
       label,
@@ -101,7 +100,7 @@ class AttributedString$Mate extends AttributedString with Mate {
       string,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'attributes',
       attributes,
       isNamed: true,
@@ -437,7 +436,7 @@ class SemanticsData$Mate extends SemanticsData with Mate {
       transform,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'customSemanticsActionIds',
       customSemanticsActionIds,
       isNamed: true,
@@ -775,19 +774,14 @@ class SemanticsProperties$Mate extends SemanticsProperties with Mate {
           onCopy: p.get('onCopy').build(),
           onCut: p.get('onCut').build(),
           onPaste: p.get('onPaste').build(),
-          onMoveCursorForwardByCharacter:
-              p.get('onMoveCursorForwardByCharacter').build(),
-          onMoveCursorBackwardByCharacter:
-              p.get('onMoveCursorBackwardByCharacter').build(),
+          onMoveCursorForwardByCharacter: p.get('onMoveCursorForwardByCharacter').build(),
+          onMoveCursorBackwardByCharacter: p.get('onMoveCursorBackwardByCharacter').build(),
           onMoveCursorForwardByWord: p.get('onMoveCursorForwardByWord').build(),
-          onMoveCursorBackwardByWord:
-              p.get('onMoveCursorBackwardByWord').build(),
+          onMoveCursorBackwardByWord: p.get('onMoveCursorBackwardByWord').build(),
           onSetSelection: p.get('onSetSelection').build(),
           onSetText: p.get('onSetText').build(),
-          onDidGainAccessibilityFocus:
-              p.get('onDidGainAccessibilityFocus').build(),
-          onDidLoseAccessibilityFocus:
-              p.get('onDidLoseAccessibilityFocus').build(),
+          onDidGainAccessibilityFocus: p.get('onDidGainAccessibilityFocus').build(),
+          onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           onDismiss: p.get('onDismiss').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
@@ -1175,8 +1169,7 @@ class SemanticsOwner$Mate extends SemanticsOwner with Mate {
       : super(onSemanticsUpdate: onSemanticsUpdate) {
     mateBuilderName = 'SemanticsOwner';
     matePackageUrl = 'package:flutter/semantics.dart';
-    mateBuilder = (p) => SemanticsOwner$Mate(
-        onSemanticsUpdate: p.get('onSemanticsUpdate').build());
+    mateBuilder = (p) => SemanticsOwner$Mate(onSemanticsUpdate: p.get('onSemanticsUpdate').build());
     mateUse(
       'onSemanticsUpdate',
       onSemanticsUpdate,

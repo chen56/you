@@ -65,7 +65,7 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -157,7 +157,7 @@ class CupertinoFormSection$Mate extends CupertinoFormSection with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

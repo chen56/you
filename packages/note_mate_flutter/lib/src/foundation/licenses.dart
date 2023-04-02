@@ -37,8 +37,7 @@ class LicenseParagraph$Mate extends LicenseParagraph with Mate {
 }
 
 /// class LicenseEntryWithLineBreaks extends LicenseEntry
-class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks
-    with Mate {
+class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks with Mate {
   /// LicenseEntryWithLineBreaks LicenseEntryWithLineBreaks(List<String> packages, String text)
   LicenseEntryWithLineBreaks$Mate(
     /// requiredParameters: List<String> packages
@@ -56,7 +55,7 @@ class LicenseEntryWithLineBreaks$Mate extends LicenseEntryWithLineBreaks
           p.get('packages').value,
           p.get('text').value,
         );
-    mateUseList(
+    mateUse(
       'packages',
       packages,
       isNamed: false,

@@ -14,8 +14,7 @@ import 'package:flutter/src/rendering/selection.dart';
 import 'package:flutter/src/widgets/selectable_region.dart';
 
 /// class AdaptiveTextSelectionToolbar extends StatelessWidget
-class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
-    with Mate {
+class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar with Mate {
   /// AdaptiveTextSelectionToolbar AdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   AdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
@@ -43,7 +42,7 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -82,7 +81,7 @@ class AdaptiveTextSelectionToolbar$Mate extends AdaptiveTextSelectionToolbar
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'buttonItems',
       buttonItems,
       isNamed: true,

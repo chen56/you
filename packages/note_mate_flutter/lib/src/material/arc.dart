@@ -69,8 +69,7 @@ class MaterialRectArcTween$Mate extends MaterialRectArcTween with Mate {
 }
 
 /// class MaterialRectCenterArcTween extends RectTween
-class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween
-    with Mate {
+class MaterialRectCenterArcTween$Mate extends MaterialRectCenterArcTween with Mate {
   /// MaterialRectCenterArcTween MaterialRectCenterArcTween({Rect? begin, Rect? end})
   MaterialRectCenterArcTween$Mate({
     /// optionalParameters: {Rect? begin} , default:none

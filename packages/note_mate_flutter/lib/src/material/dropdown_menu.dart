@@ -282,7 +282,7 @@ class DropdownMenu$Mate<T> extends DropdownMenu<T> with Mate {
       requestFocusOnTap,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'dropdownMenuEntries',
       dropdownMenuEntries,
       isNamed: true,
