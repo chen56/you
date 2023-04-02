@@ -3337,6 +3337,7 @@ class Row$Mate extends Row with Mate {
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     required List<Widget> children,
+    required List<String> strings,
   }) : super(
           key: key,
           mainAxisAlignment: mainAxisAlignment,
@@ -3358,6 +3359,7 @@ class Row$Mate extends Row with Mate {
           verticalDirection: p.get('verticalDirection').build(),
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
+          strings: p.get('strings').build(),
         );
     mateUse(
       'key',
@@ -3401,6 +3403,11 @@ class Row$Mate extends Row with Mate {
     mateUse(
       'children',
       children,
+      isNamed: true,
+    );
+    mateUse(
+      'strings',
+      strings,
       isNamed: true,
     );
   }

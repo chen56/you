@@ -26,7 +26,7 @@ void main() {
   }
 
   setUp(() {
-    obj = ObjectParam.root();
+    obj = ObjectParam.root(editors: Editors());
   });
   group("editors", () {
     test("core type", () {

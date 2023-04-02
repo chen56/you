@@ -8,7 +8,7 @@ import 'package:note_mate_flutter/material.dart';
 void main() {
   setUp(() {});
   String toCode(Mate mate, {format = false}) {
-    var y = ObjectParam.rootFromMate(mate);
+    var y = ObjectParam.rootFromMate(mate, editors: Editors());
     var result = y.toSampleCodeString(format: format);
     // ignore: avoid_print
     print(result);

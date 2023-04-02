@@ -9,7 +9,7 @@ void main() {
   late ObjectParam root;
 
   setUp(() {
-    root = ObjectParam.root();
+    root = ObjectParam.root(editors: Editors());
   });
   group("范型", () {
     test('declare(enum)', () {
