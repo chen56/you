@@ -15,7 +15,7 @@ bool isNullable<T>() {
 }
 
 bool isNullableOf<T>(T t) {
-  return null is T;
+  return null is T || t == null;
 }
 
 // 集合的直接类型转换会报错：

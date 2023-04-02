@@ -13,29 +13,24 @@ final defaultDartFormatter = DartFormatter(
 );
 
 abstract class Param<T> extends ChangeNotifier {
-  final String name;
-  final T init;
   final Param? _parent;
-  final dynamic defaultValue;
-  final bool nullable;
-  final bool isNamed;
   final Editors editors;
-  final BuilderArg builderArg;
+  final BuilderArg<T> builderArg;
   T _value;
 
   Param({
     required this.builderArg,
-    required this.name,
-    required this.init,
     Param? parent,
-    required this.nullable,
-    required this.isNamed,
-    this.defaultValue,
     required this.editors,
-  })  : _value = init,
+  })  : _value = builderArg.init,
         _parent = parent;
 
   T get value => _value;
+  String get name => builderArg.name;
+  T get init => builderArg.init;
+  bool get nullable => builderArg.nullable;
+  bool get isNamed => builderArg.isNamed;
+  dynamic get defaultValue => builderArg.defaultValue;
 
   set value(T newValue) {
     if (newValue == null && !nullable) return;
@@ -148,24 +143,14 @@ abstract class Param<T> extends ChangeNotifier {
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
 Param<T> _toParam<T>({
-  required BuilderArg builderArg,
-  required String name,
-  required T init,
+  required BuilderArg<T> builderArg,
   required Param parent,
-  required bool nullable,
-  required bool isNamed,
-  dynamic defaultValue,
   required Editors editors,
 }) {
   if (utils.isType<T, List>()) {
     var result = ListParam<T>(
-      name: name,
-      init: init,
       builderArg: builderArg,
       parent: parent,
-      nullable: nullable,
-      isNamed: isNamed,
-      defaultValue: defaultValue,
       editors: editors,
     );
 
@@ -173,27 +158,18 @@ Param<T> _toParam<T>({
   }
   // if (init is Param<T>) return init;
 
-  if (init is Mate) {
+  if (builderArg.init is Mate) {
     return ObjectParam._fromMate(
-      name,
-      init,
+      builderArg.init as Mate,
       builderArg: builderArg,
       parent: parent,
-      isNamed: isNamed,
-      nullable: nullable,
-      defaultValue: defaultValue,
       editors: editors,
     );
   }
 
   return ValueParam<T>(
-    name: name,
-    init: init,
     builderArg: builderArg,
     parent: parent,
-    nullable: nullable,
-    isNamed: isNamed,
-    defaultValue: defaultValue,
     editors: editors,
   );
 }
@@ -201,12 +177,7 @@ Param<T> _toParam<T>({
 class ValueParam<T> extends Param<T> {
   ValueParam({
     required super.builderArg,
-    required super.name,
-    required super.init,
     required Param parent,
-    required super.nullable,
-    required super.isNamed,
-    super.defaultValue,
     required super.editors,
   }) : super(parent: parent);
 
@@ -221,13 +192,8 @@ class ListParam<T> extends Param<T> {
   final List<Param> params = List.empty(growable: true);
 
   ListParam({
-    required super.name,
-    required super.init,
     required super.builderArg,
     required Param parent,
-    required super.isNamed,
-    required super.nullable,
-    super.defaultValue,
     required super.editors,
   }) : super(parent: parent) {
     if (init != null) {
@@ -235,12 +201,13 @@ class ListParam<T> extends Param<T> {
       for (int i = 0; i < notNull.length; i++) {
         assert(notNull[i] != null, "list element [$i] should not be null init: $init");
         params.add(_toParam(
-          builderArg: BuilderArg(name: name, init: init, isNamed: isNamed, isFromUse: false),
-          name: "$i",
-          init: notNull[i],
+          builderArg: BuilderArg(
+              name: "$i",
+              init: notNull[i],
+              isNamed: false,
+              isFromUse: false,
+              defaultValue: defaultValue),
           parent: this,
-          nullable: false,
-          isNamed: false,
           editors: editors,
         ));
       }
@@ -267,16 +234,11 @@ class ObjectParam<T> extends Param<T> {
   final code.Reference builderRefer;
 
   ObjectParam._({
-    required super.name,
-    required super.init,
     required super.builderArg,
     super.parent,
     required this.builder,
     required Map<String, BuilderArg> args,
     required this.builderRefer,
-    required super.nullable,
-    required super.isNamed,
-    super.defaultValue,
     required super.editors,
   }) {
     _params.addAll(
@@ -285,26 +247,31 @@ class ObjectParam<T> extends Param<T> {
 
   Map<String, Param> get params => _params;
 
-  ObjectParam.rootFromMate(Mate init, {required Editors editors})
+  ObjectParam.rootFromMate(T init, {required Editors editors})
       : this._fromMate(
+          init as Mate,
           //根对象无name
-          "",
-          init,
-          builderArg: BuilderArg(name: "", init: init, isNamed: false, isFromUse: false),
-          nullable: false,
-          isNamed: false,
+          builderArg: BuilderArg(
+            name: "",
+            init: init,
+            isNamed: false,
+            isFromUse: false,
+            defaultValue: init,
+          ),
           editors: editors,
         );
 
   ObjectParam.root({required Editors editors})
       : this._(
-          //根对象无name
-          name: "",
-          init: "root" as T,
-          builderArg: BuilderArg(name: "", init: "", isNamed: false, isFromUse: false),
+          builderArg: BuilderArg<T>(
+            //根对象无name
+            name: "",
+            init: "" as T,
+            isNamed: false,
+            isFromUse: false,
+            defaultValue: "",
+          ),
           args: {},
-          nullable: false,
-          isNamed: false,
           //暂时没想好这个咋弄
           builder: (s) => "root",
           //根对象
@@ -313,25 +280,16 @@ class ObjectParam<T> extends Param<T> {
         );
 
   ObjectParam._fromMate(
-    String name,
     Mate init, {
-    required BuilderArg builderArg,
+    required BuilderArg<T> builderArg,
     Param? parent,
-    required bool nullable,
-    required bool isNamed,
     required Editors editors,
-    dynamic defaultValue,
   }) : this._(
-          name: name,
-          init: init as T,
           builderArg: builderArg,
           parent: parent,
           builder: init.mateBuilder,
           args: init._mateParams,
-          nullable: nullable,
-          isNamed: isNamed,
           builderRefer: code.refer(init.mateBuilderName, init.matePackageUrl),
-          defaultValue: defaultValue,
           editors: editors,
         );
 
@@ -342,13 +300,14 @@ class ObjectParam<T> extends Param<T> {
     dynamic defaultValue,
   }) {
     var param = _toParam<E>(
-      builderArg: BuilderArg(name: name, init: init, isNamed: isNamed, isFromUse: true),
-      name: name,
-      init: init,
+      builderArg: BuilderArg(
+        name: name,
+        init: init,
+        isNamed: isNamed,
+        isFromUse: true,
+        defaultValue: defaultValue,
+      ),
       parent: this,
-      nullable: utils.isNullableOf<E>(init),
-      isNamed: isNamed,
-      defaultValue: defaultValue,
       editors: editors,
     );
     _params[name] = param;
@@ -414,18 +373,13 @@ class BuilderArg<T> {
     required this.isFromUse,
     this.defaultValue,
   }) {
-    nullable = utils.isNullable<T>();
+    nullable = utils.isNullableOf<T>(init);
   }
 
   Param<T> toParam({required Param parent, required Editors editors}) {
     return _toParam(
       builderArg: this,
-      name: name,
-      init: init,
       parent: parent,
-      nullable: nullable,
-      isNamed: isNamed,
-      defaultValue: defaultValue,
       editors: editors,
     );
   }
@@ -463,7 +417,7 @@ mixin Mate {
     return _mateParams[name] as BuilderArg<C>;
   }
 
-  ObjectParam<T> toRootParam<T>({required Editors editors}) {
+  ObjectParam toRootParam({required Editors editors}) {
     return ObjectParam.rootFromMate(this, editors: editors);
   }
 }
