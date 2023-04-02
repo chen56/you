@@ -16,18 +16,18 @@ void isInt<T>() {
 void main() {
   late ObjectParam obj;
   Editors editors = Editors(emitter: defaultEmitter, formatter: defaultDartFormatter);
+  setUp(() {
+    obj = ObjectParam.root(editors: editors);
+  });
 
   String singleCode<T>(T? init) {
-    return obj.use("x", init).toCodeExpressionString(editors: editors);
+    return obj.use("x", init).toCodeExpressionString();
   }
 
   String listCode<E>(List<E>? init) {
-    return obj.use("x", init).toCodeExpressionString(editors: editors);
+    return obj.use("x", init).toCodeExpressionString();
   }
 
-  setUp(() {
-    obj = ObjectParam.root(editors: Editors());
-  });
   group("editors", () {
     test("core type", () {
       expect(singleCode<double>(2), "2.0");

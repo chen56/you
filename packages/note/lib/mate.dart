@@ -12,27 +12,29 @@ final defaultDartFormatter = DartFormatter(
   pageWidth: 80,
 );
 
-abstract class Param<T> extends ChangeNotifier {
+abstract class Param extends ChangeNotifier {
   final Param? _parent;
   final Editors editors;
-  final BuilderArg<T> builderArg;
-  T _value;
+  final BuilderArg builderArg;
+  dynamic _value;
 
   Param({
     required this.builderArg,
     Param? parent,
     required this.editors,
   })  : _value = builderArg.init,
-        _parent = parent;
+        _parent = parent {
+    builderArg.param = this;
+  }
 
-  T get value => _value;
+  dynamic get value => _value;
   String get name => builderArg.name;
-  T get init => builderArg.init;
+  dynamic get init => builderArg.init;
   bool get nullable => builderArg.nullable;
   bool get isNamed => builderArg.isNamed;
   dynamic get defaultValue => builderArg.defaultValue;
 
-  set value(T newValue) {
+  set value(dynamic newValue) {
     if (newValue == null && !nullable) return;
 
     _value = newValue;
@@ -56,7 +58,7 @@ abstract class Param<T> extends ChangeNotifier {
     _parent?.notifyListeners();
   }
 
-  T build();
+  dynamic build();
 
   bool get isNullable => nullable;
 
@@ -116,7 +118,6 @@ abstract class Param<T> extends ChangeNotifier {
   @nonVirtual
   String toCodeExpressionString({
     bool format = false,
-    required Editors editors,
   }) {
     var emitter_ = editors.emitter;
     var formatter_ = editors.formatter;
@@ -142,13 +143,13 @@ abstract class Param<T> extends ChangeNotifier {
 }
 
 // dart3 switch patterns : use idea, click class name can not navigation to source
-Param<T> _toParam<T>({
+Param _toParam<T>({
   required BuilderArg<T> builderArg,
   required Param parent,
   required Editors editors,
 }) {
   if (utils.isType<T, List>()) {
-    var result = ListParam<T>(
+    var result = ListParam(
       builderArg: builderArg,
       parent: parent,
       editors: editors,
@@ -167,14 +168,14 @@ Param<T> _toParam<T>({
     );
   }
 
-  return ValueParam<T>(
+  return ValueParam(
     builderArg: builderArg,
     parent: parent,
     editors: editors,
   );
 }
 
-class ValueParam<T> extends Param<T> {
+class ValueParam extends Param {
   ValueParam({
     required super.builderArg,
     required Param parent,
@@ -182,13 +183,13 @@ class ValueParam<T> extends Param<T> {
   }) : super(parent: parent);
 
   @override
-  T build() => _value;
+  dynamic build() => _value;
 
   @override
   Iterable<Param> get children => List.empty();
 }
 
-class ListParam<T> extends Param<T> {
+class ListParam extends Param {
   final List<Param> params = List.empty(growable: true);
 
   ListParam({
@@ -215,20 +216,20 @@ class ListParam<T> extends Param<T> {
   }
 
   @override
-  T build() {
-    if (init == null) return null as T;
+  dynamic build() {
+    if (init == null) return null as dynamic;
 
     // 直接返回map后的list会转型错误：🔔⚠️❗️💡👉
     //     exception : return params.map((e)=>e.build()).toList() as T
     // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
-    return utils.castList<T>(from: params.map((e) => e.build()), to: init as List);
+    return utils.castList<dynamic>(from: params.map((e) => e.build()), to: init as List);
   }
 
   @override
   Iterable<Param> get children => params;
 }
 
-class ObjectParam<T> extends Param<T> {
+class ObjectParam extends Param {
   final Map<String, Param> _params = {};
   final Object Function(ObjectParam param) builder;
   final code.Reference builderRefer;
@@ -247,7 +248,7 @@ class ObjectParam<T> extends Param<T> {
 
   Map<String, Param> get params => _params;
 
-  ObjectParam.rootFromMate(T init, {required Editors editors})
+  ObjectParam.rootFromMate(dynamic init, {required Editors editors})
       : this._fromMate(
           init as Mate,
           //根对象无name
@@ -263,10 +264,10 @@ class ObjectParam<T> extends Param<T> {
 
   ObjectParam.root({required Editors editors})
       : this._(
-          builderArg: BuilderArg<T>(
+          builderArg: BuilderArg(
             //根对象无name
             name: "",
-            init: "" as T,
+            init: "",
             isNamed: false,
             isFromUse: false,
             defaultValue: "",
@@ -281,7 +282,7 @@ class ObjectParam<T> extends Param<T> {
 
   ObjectParam._fromMate(
     Mate init, {
-    required BuilderArg<T> builderArg,
+    required BuilderArg builderArg,
     Param? parent,
     required Editors editors,
   }) : this._(
@@ -293,33 +294,34 @@ class ObjectParam<T> extends Param<T> {
           editors: editors,
         );
 
-  Param<E> use<E>(
+  BuilderArg<E> use<E>(
     String name,
     E init, {
     bool isNamed = true,
     dynamic defaultValue,
   }) {
+    var result = BuilderArg<E>(
+      name: name,
+      init: init,
+      isNamed: isNamed,
+      isFromUse: true,
+      defaultValue: defaultValue,
+    );
     var param = _toParam<E>(
-      builderArg: BuilderArg(
-        name: name,
-        init: init,
-        isNamed: isNamed,
-        isFromUse: true,
-        defaultValue: defaultValue,
-      ),
+      builderArg: result,
       parent: this,
       editors: editors,
     );
     _params[name] = param;
-    return param;
+    return result;
   }
 
-  Param<E> get<E>(String name) {
-    return _params[name] as Param<E>;
+  BuilderArg<E> get<E>(String name) {
+    return _params[name]!.builderArg as BuilderArg<E>;
   }
 
   @override
-  T build() => builder(this) as T;
+  dynamic build() => builder(this);
 
   @override
   Iterable<Param> get children => _params.values;
@@ -353,7 +355,7 @@ class ObjectParam<T> extends Param<T> {
 
 /// what use of BuilderArg class:
 /// - hold arg type T
-/// - mateUse use/get interface
+/// - mateUse use/get public interface
 /// this class is a transition state of the parameter tree
 class BuilderArg<T> {
   final String name;
@@ -361,6 +363,7 @@ class BuilderArg<T> {
   final Object? defaultValue;
   final T init;
   late final bool nullable;
+  late final Param param;
 
   /// is create from [ObjectParam.use] or [Mate.mateUse]
   /// if create by use , <T> is known
@@ -376,7 +379,17 @@ class BuilderArg<T> {
     nullable = utils.isNullableOf<T>(init);
   }
 
-  Param<T> toParam({required Param parent, required Editors editors}) {
+  T get value => param.value;
+
+  bool get isNullable => nullable;
+
+  get isValue => param.isValue;
+
+  get isList => param.isList;
+
+  get isObject => param.isObject;
+
+  Param toParam({required Param parent, required Editors editors}) {
     return _toParam(
       builderArg: this,
       parent: parent,
@@ -387,6 +400,10 @@ class BuilderArg<T> {
   Editor getEditor(Param param, Editors editors) {
     return editors.get<T>(param);
   }
+
+  T build() => param.build();
+
+  String toCodeExpressionString() => param.toCodeExpressionString();
 }
 
 mixin Mate {

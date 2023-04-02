@@ -13,20 +13,12 @@ void main() {
   });
   group("范型", () {
     test('declare(enum)', () {
-      Param<Clip> p = root.use("arg", Clip.none);
+      BuilderArg<Clip> p = root.use("arg", Clip.none);
       expect(p, root.get("arg"));
 
       expect(p.value, Clip.none);
       expect(!p.isNullable, true);
       expect(p.isValue, true);
-
-      Clip c = Clip.none;
-
-      expect(c is Enum, true);
-      expect(p.init is Enum, true);
-
-      Param pp = p;
-      expect(pp.init is Enum, true);
     });
   });
   group("Enums", () {
@@ -47,7 +39,7 @@ void main() {
 
   group("declare(value)", () {
     test('declare(value)', () {
-      Param<double> p = root.use("width", 1);
+      BuilderArg<double> p = root.use("width", 1);
       expect(p, root.get("width"));
 
       expect(p.value, 1);
@@ -55,7 +47,7 @@ void main() {
       expect(p.isValue, true);
     });
     test('declare(value? )', () {
-      Param<double?> p = root.use<double?>("width", 1);
+      BuilderArg<double?> p = root.use<double?>("width", 1);
       expect(p, root.get("width"));
 
       expect(p.value, 1);
@@ -63,7 +55,7 @@ void main() {
       expect(p.isValue, true);
     });
     test('declare(null)', () {
-      Param<double?> p = root.use<double?>("width", null);
+      BuilderArg<double?> p = root.use<double?>("width", null);
       expect(root.get("width"), p);
 
       expect(p.value, null);
@@ -74,7 +66,7 @@ void main() {
 
   group("declare(Meta)", () {
     test('declare(Meta)', () {
-      Param<Container> p = root.use("mate", Container$Mate(width: 100));
+      BuilderArg<Container> p = root.use("mate", Container$Mate(width: 100));
       expect(p, root.get("mate"));
 
       expect(p.value is Container$Mate, true);
@@ -83,7 +75,7 @@ void main() {
     });
 
     test('declare(Meta?)', () {
-      Param<Container?> p = root.use<Container?>("mate", Container$Mate(width: 100));
+      BuilderArg<Container?> p = root.use<Container?>("mate", Container$Mate(width: 100));
       expect(p, root.get("mate"));
 
       expect(p.value is Container$Mate, true);
@@ -93,7 +85,7 @@ void main() {
 
     test('declare(null)', () {
       // null值无法识别其是否是Mate，所以只能作为ValueParam处理
-      Param<Container?> p = root.use<Container?>("mate", null);
+      BuilderArg<Container?> p = root.use<Container?>("mate", null);
       expect(p, root.get("mate"));
 
       expect(p.value == null, true);
@@ -105,7 +97,7 @@ void main() {
   group("declare(List)", () {
     test('putList<List?>()', () {
       List<int> origin = [1, 2];
-      Param<List<int>> p = root.use("list", origin);
+      BuilderArg<List<int>> p = root.use("list", origin);
       expect(p, root.get("list"));
 
       expect(p.value is List, true);
@@ -118,7 +110,7 @@ void main() {
     });
 
     test('declare<List?>(null)', () {
-      Param<List<int>?> p = root.use("list", null);
+      BuilderArg<List<int>?> p = root.use("list", null);
       expect(p, root.get("list"));
 
       expect(p.value, null);

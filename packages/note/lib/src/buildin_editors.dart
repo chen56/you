@@ -172,7 +172,7 @@ class ColorEditor<T> extends ValueParamEditor {
   Widget valueWidget(BuildContext context) {
     return Row(
       children: [
-        Text(param.toCodeExpressionString(editors: editors)),
+        Text(param.toCodeExpressionString()),
         Container(
           width: 20,
           height: 20,
