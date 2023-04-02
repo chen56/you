@@ -21,7 +21,7 @@ class DragDownDetails$Mate extends DragDownDetails with Mate {
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
-    mateCreateName = 'DragDownDetails';
+    mateBuilderName = 'DragDownDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DragDownDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -62,7 +62,7 @@ class DragStartDetails$Mate extends DragStartDetails with Mate {
           localPosition: localPosition,
           kind: kind,
         ) {
-    mateCreateName = 'DragStartDetails';
+    mateBuilderName = 'DragStartDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DragStartDetails$Mate(
           sourceTimeStamp: p.get('sourceTimeStamp').build(),
@@ -119,7 +119,7 @@ class DragUpdateDetails$Mate extends DragUpdateDetails with Mate {
           globalPosition: globalPosition,
           localPosition: localPosition,
         ) {
-    mateCreateName = 'DragUpdateDetails';
+    mateBuilderName = 'DragUpdateDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DragUpdateDetails$Mate(
           sourceTimeStamp: p.get('sourceTimeStamp').build(),
@@ -170,7 +170,7 @@ class DragEndDetails$Mate extends DragEndDetails with Mate {
           velocity: velocity,
           primaryVelocity: primaryVelocity,
         ) {
-    mateCreateName = 'DragEndDetails';
+    mateBuilderName = 'DragEndDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DragEndDetails$Mate(
           velocity: p.get('velocity').build(),

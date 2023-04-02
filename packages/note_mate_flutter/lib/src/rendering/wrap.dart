@@ -54,7 +54,7 @@ class RenderWrap$Mate extends RenderWrap with Mate {
           verticalDirection: verticalDirection,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'RenderWrap';
+    mateBuilderName = 'RenderWrap';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderWrap$Mate(
           children: p.get('children').build(),
@@ -68,7 +68,7 @@ class RenderWrap$Mate extends RenderWrap with Mate {
           verticalDirection: p.get('verticalDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

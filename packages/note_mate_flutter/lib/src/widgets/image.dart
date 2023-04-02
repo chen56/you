@@ -100,7 +100,7 @@ class Image$Mate extends Image with Mate {
           isAntiAlias: isAntiAlias,
           filterQuality: filterQuality,
         ) {
-    mateCreateName = 'Image';
+    mateBuilderName = 'Image';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate(
           key: p.get('key').build(),
@@ -331,7 +331,7 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateCreateName = 'Image.network';
+    mateBuilderName = 'Image.network';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.network(
           p.get('src').value,
@@ -579,7 +579,7 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateCreateName = 'Image.file';
+    mateBuilderName = 'Image.file';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.file(
           p.get('file').value,
@@ -823,7 +823,7 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateCreateName = 'Image.asset';
+    mateBuilderName = 'Image.asset';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.asset(
           p.get('name').value,
@@ -1070,7 +1070,7 @@ class Image$Mate extends Image with Mate {
           cacheWidth: cacheWidth,
           cacheHeight: cacheHeight,
         ) {
-    mateCreateName = 'Image.memory';
+    mateBuilderName = 'Image.memory';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Image$Mate.memory(
           p.get('bytes').value,

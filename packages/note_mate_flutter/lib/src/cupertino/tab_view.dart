@@ -48,7 +48,7 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
           navigatorObservers: navigatorObservers,
           restorationScopeId: restorationScopeId,
         ) {
-    mateCreateName = 'CupertinoTabView';
+    mateBuilderName = 'CupertinoTabView';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabView$Mate(
           key: p.get('key').build(),
@@ -96,7 +96,7 @@ class CupertinoTabView$Mate extends CupertinoTabView with Mate {
       onUnknownRoute,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'navigatorObservers',
       navigatorObservers,
       isNamed: true,

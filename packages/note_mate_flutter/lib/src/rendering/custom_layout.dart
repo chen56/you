@@ -18,13 +18,13 @@ class RenderCustomMultiChildLayoutBox$Mate extends RenderCustomMultiChildLayoutB
           children: children,
           delegate: delegate,
         ) {
-    mateCreateName = 'RenderCustomMultiChildLayoutBox';
+    mateBuilderName = 'RenderCustomMultiChildLayoutBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderCustomMultiChildLayoutBox$Mate(
           children: p.get('children').build(),
           delegate: p.get('delegate').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

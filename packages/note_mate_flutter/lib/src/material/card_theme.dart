@@ -40,7 +40,7 @@ class CardTheme$Mate extends CardTheme with Mate {
           margin: margin,
           shape: shape,
         ) {
-    mateCreateName = 'CardTheme';
+    mateBuilderName = 'CardTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CardTheme$Mate(
           clipBehavior: p.get('clipBehavior').build(),

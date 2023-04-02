@@ -18,7 +18,7 @@ class PlatformSelectableRegionContextMenu$Mate extends PlatformSelectableRegionC
           child: child,
           key: key,
         ) {
-    mateCreateName = 'PlatformSelectableRegionContextMenu';
+    mateBuilderName = 'PlatformSelectableRegionContextMenu';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformSelectableRegionContextMenu$Mate(
           child: p.get('child').build(),

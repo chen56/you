@@ -12,7 +12,7 @@ class MaterialStatePropertyAll$Mate<T> extends MaterialStatePropertyAll<T> with 
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateCreateName = 'MaterialStatePropertyAll';
+    mateBuilderName = 'MaterialStatePropertyAll';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialStatePropertyAll$Mate<T>(p.get('value').value);
     mateUse(
@@ -31,7 +31,7 @@ class MaterialStatesController$Mate extends MaterialStatesController with Mate {
       /// requiredParameters: [Set<MaterialState>? value]
       Set<MaterialState>? value)
       : super(value) {
-    mateCreateName = 'MaterialStatesController';
+    mateBuilderName = 'MaterialStatesController';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialStatesController$Mate(p.get('value').value);
     mateUse(

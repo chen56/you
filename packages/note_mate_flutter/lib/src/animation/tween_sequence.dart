@@ -13,10 +13,10 @@ class TweenSequence$Mate<T> extends TweenSequence<T> with Mate {
       /// requiredParameters: List<TweenSequenceItem<T>> items
       List<TweenSequenceItem<T>> items)
       : super(items) {
-    mateCreateName = 'TweenSequence';
+    mateBuilderName = 'TweenSequence';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TweenSequence$Mate<T>(p.get('items').value);
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: false,
@@ -32,10 +32,10 @@ class FlippedTweenSequence$Mate extends FlippedTweenSequence with Mate {
       /// requiredParameters: List<TweenSequenceItem<double>> items
       List<TweenSequenceItem<double>> items)
       : super(items) {
-    mateCreateName = 'FlippedTweenSequence';
+    mateBuilderName = 'FlippedTweenSequence';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => FlippedTweenSequence$Mate(p.get('items').value);
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: false,
@@ -56,7 +56,7 @@ class TweenSequenceItem$Mate<T> extends TweenSequenceItem<T> with Mate {
           tween: tween,
           weight: weight,
         ) {
-    mateCreateName = 'TweenSequenceItem';
+    mateBuilderName = 'TweenSequenceItem';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TweenSequenceItem$Mate<T>(
           tween: p.get('tween').build(),

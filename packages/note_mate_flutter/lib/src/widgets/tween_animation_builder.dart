@@ -44,7 +44,7 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends TweenAnimationBuilde
           onEnd: onEnd,
           child: child,
         ) {
-    mateCreateName = 'TweenAnimationBuilder';
+    mateBuilderName = 'TweenAnimationBuilder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TweenAnimationBuilder$Mate<T>(
           key: p.get('key').build(),

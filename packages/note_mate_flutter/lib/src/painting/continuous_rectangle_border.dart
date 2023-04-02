@@ -19,7 +19,7 @@ class ContinuousRectangleBorder$Mate extends ContinuousRectangleBorder with Mate
           side: side,
           borderRadius: borderRadius,
         ) {
-    mateCreateName = 'ContinuousRectangleBorder';
+    mateBuilderName = 'ContinuousRectangleBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ContinuousRectangleBorder$Mate(
           side: p.get('side').build(),

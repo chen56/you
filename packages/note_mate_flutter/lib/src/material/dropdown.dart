@@ -45,7 +45,7 @@ class DropdownMenuItem$Mate<T> extends DropdownMenuItem<T> with Mate {
           alignment: alignment,
           child: child,
         ) {
-    mateCreateName = 'DropdownMenuItem';
+    mateBuilderName = 'DropdownMenuItem';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuItem$Mate<T>(
           key: p.get('key').build(),
@@ -103,7 +103,7 @@ class DropdownButtonHideUnderline$Mate extends DropdownButtonHideUnderline with 
           key: key,
           child: child,
         ) {
-    mateCreateName = 'DropdownButtonHideUnderline';
+    mateBuilderName = 'DropdownButtonHideUnderline';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButtonHideUnderline$Mate(
           key: p.get('key').build(),
@@ -235,7 +235,7 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
           borderRadius: borderRadius,
           padding: padding,
         ) {
-    mateCreateName = 'DropdownButton';
+    mateBuilderName = 'DropdownButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButton$Mate<T>(
           key: p.get('key').build(),
@@ -271,7 +271,7 @@ class DropdownButton$Mate<T> extends DropdownButton<T> with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: true,
@@ -535,7 +535,7 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Ma
           borderRadius: borderRadius,
           padding: padding,
         ) {
-    mateCreateName = 'DropdownButtonFormField';
+    mateBuilderName = 'DropdownButtonFormField';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButtonFormField$Mate<T>(
           key: p.get('key').build(),
@@ -574,7 +574,7 @@ class DropdownButtonFormField$Mate<T> extends DropdownButtonFormField<T> with Ma
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'items',
       items,
       isNamed: true,

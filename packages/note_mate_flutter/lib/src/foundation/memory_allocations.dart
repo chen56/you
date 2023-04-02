@@ -21,7 +21,7 @@ class ObjectCreated$Mate extends ObjectCreated with Mate {
           className: className,
           object: object,
         ) {
-    mateCreateName = 'ObjectCreated';
+    mateBuilderName = 'ObjectCreated';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectCreated$Mate(
           library: p.get('library').build(),
@@ -54,7 +54,7 @@ class ObjectDisposed$Mate extends ObjectDisposed with Mate {
       /// optionalParameters: {required Object object} , default:none
       required Object object})
       : super(object: object) {
-    mateCreateName = 'ObjectDisposed';
+    mateBuilderName = 'ObjectDisposed';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectDisposed$Mate(object: p.get('object').build());
     mateUse(

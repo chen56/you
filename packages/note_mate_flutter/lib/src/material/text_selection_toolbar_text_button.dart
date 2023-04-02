@@ -33,7 +33,7 @@ class TextSelectionToolbarTextButton$Mate extends TextSelectionToolbarTextButton
           onPressed: onPressed,
           alignment: alignment,
         ) {
-    mateCreateName = 'TextSelectionToolbarTextButton';
+    mateBuilderName = 'TextSelectionToolbarTextButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionToolbarTextButton$Mate(
           key: p.get('key').build(),

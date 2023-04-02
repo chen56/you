@@ -18,7 +18,7 @@ class SizeChangedLayoutNotifier$Mate extends SizeChangedLayoutNotifier with Mate
           key: key,
           child: child,
         ) {
-    mateCreateName = 'SizeChangedLayoutNotifier';
+    mateBuilderName = 'SizeChangedLayoutNotifier';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SizeChangedLayoutNotifier$Mate(
           key: p.get('key').build(),

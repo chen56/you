@@ -49,7 +49,7 @@ class StackFrame$Mate extends StackFrame with Mate {
           isConstructor: isConstructor,
           source: source,
         ) {
-    mateCreateName = 'StackFrame';
+    mateBuilderName = 'StackFrame';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => StackFrame$Mate(
           number: p.get('number').build(),

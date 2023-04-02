@@ -24,7 +24,7 @@ class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar with 
           anchor: anchor,
           children: children,
         ) {
-    mateCreateName = 'DesktopTextSelectionToolbar';
+    mateBuilderName = 'DesktopTextSelectionToolbar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbar$Mate(
           key: p.get('key').build(),
@@ -41,7 +41,7 @@ class DesktopTextSelectionToolbar$Mate extends DesktopTextSelectionToolbar with 
       anchor,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

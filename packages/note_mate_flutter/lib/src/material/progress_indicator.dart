@@ -44,7 +44,7 @@ class LinearProgressIndicator$Mate extends LinearProgressIndicator with Mate {
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
-    mateCreateName = 'LinearProgressIndicator';
+    mateBuilderName = 'LinearProgressIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearProgressIndicator$Mate(
           key: p.get('key').build(),
@@ -136,7 +136,7 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
-    mateCreateName = 'CircularProgressIndicator';
+    mateBuilderName = 'CircularProgressIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircularProgressIndicator$Mate(
           key: p.get('key').build(),
@@ -222,7 +222,7 @@ class CircularProgressIndicator$Mate extends CircularProgressIndicator with Mate
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
-    mateCreateName = 'CircularProgressIndicator.adaptive';
+    mateBuilderName = 'CircularProgressIndicator.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircularProgressIndicator$Mate.adaptive(
           key: p.get('key').build(),
@@ -309,7 +309,7 @@ class RefreshProgressIndicator$Mate extends RefreshProgressIndicator with Mate {
           semanticsLabel: semanticsLabel,
           semanticsValue: semanticsValue,
         ) {
-    mateCreateName = 'RefreshProgressIndicator';
+    mateBuilderName = 'RefreshProgressIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshProgressIndicator$Mate(
           key: p.get('key').build(),

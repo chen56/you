@@ -23,7 +23,7 @@ class VerticalDragGestureRecognizer$Mate extends VerticalDragGestureRecognizer w
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'VerticalDragGestureRecognizer';
+    mateBuilderName = 'VerticalDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VerticalDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
@@ -65,7 +65,7 @@ class HorizontalDragGestureRecognizer$Mate extends HorizontalDragGestureRecogniz
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'HorizontalDragGestureRecognizer';
+    mateBuilderName = 'HorizontalDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HorizontalDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
@@ -107,7 +107,7 @@ class PanGestureRecognizer$Mate extends PanGestureRecognizer with Mate {
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'PanGestureRecognizer';
+    mateBuilderName = 'PanGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PanGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),

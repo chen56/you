@@ -110,7 +110,7 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
           clipBehavior: clipBehavior,
           controlAffinity: controlAffinity,
         ) {
-    mateCreateName = 'ExpansionTile';
+    mateBuilderName = 'ExpansionTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTile$Mate(
           key: p.get('key').build(),
@@ -162,7 +162,7 @@ class ExpansionTile$Mate extends ExpansionTile with Mate {
       onExpansionChanged,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

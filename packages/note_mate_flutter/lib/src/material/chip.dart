@@ -108,7 +108,7 @@ class Chip$Mate extends Chip with Mate {
           surfaceTintColor: surfaceTintColor,
           iconTheme: iconTheme,
         ) {
-    mateCreateName = 'Chip';
+    mateBuilderName = 'Chip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Chip$Mate(
           key: p.get('key').build(),
@@ -398,7 +398,7 @@ class RawChip$Mate extends RawChip with Mate {
           checkmarkColor: checkmarkColor,
           avatarBorder: avatarBorder,
         ) {
-    mateCreateName = 'RawChip';
+    mateBuilderName = 'RawChip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RawChip$Mate(
           key: p.get('key').build(),

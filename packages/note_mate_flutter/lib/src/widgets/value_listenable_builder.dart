@@ -27,7 +27,7 @@ class ValueListenableBuilder$Mate<T> extends ValueListenableBuilder<T> with Mate
           builder: builder,
           child: child,
         ) {
-    mateCreateName = 'ValueListenableBuilder';
+    mateBuilderName = 'ValueListenableBuilder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ValueListenableBuilder$Mate<T>(
           key: p.get('key').build(),

@@ -63,7 +63,7 @@ class AnimatedCrossFade$Mate extends AnimatedCrossFade with Mate {
           layoutBuilder: layoutBuilder,
           excludeBottomFocus: excludeBottomFocus,
         ) {
-    mateCreateName = 'AnimatedCrossFade';
+    mateBuilderName = 'AnimatedCrossFade';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedCrossFade$Mate(
           key: p.get('key').build(),

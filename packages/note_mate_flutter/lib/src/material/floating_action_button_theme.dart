@@ -100,7 +100,7 @@ class FloatingActionButtonThemeData$Mate extends FloatingActionButtonThemeData w
           extendedTextStyle: extendedTextStyle,
           mouseCursor: mouseCursor,
         ) {
-    mateCreateName = 'FloatingActionButtonThemeData';
+    mateBuilderName = 'FloatingActionButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FloatingActionButtonThemeData$Mate(
           foregroundColor: p.get('foregroundColor').build(),

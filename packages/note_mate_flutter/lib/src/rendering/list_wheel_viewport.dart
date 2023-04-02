@@ -64,7 +64,7 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateCreateName = 'RenderListWheelViewport';
+    mateBuilderName = 'RenderListWheelViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderListWheelViewport$Mate(
           childManager: p.get('childManager').build(),
@@ -148,7 +148,7 @@ class RenderListWheelViewport$Mate extends RenderListWheelViewport with Mate {
       isNamed: true,
       defaultValue: Clip.none,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

@@ -32,7 +32,7 @@ class PageController$Mate extends PageController with Mate {
           keepPage: keepPage,
           viewportFraction: viewportFraction,
         ) {
-    mateCreateName = 'PageController';
+    mateBuilderName = 'PageController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageController$Mate(
           initialPage: p.get('initialPage').build(),
@@ -93,7 +93,7 @@ class PageMetrics$Mate extends PageMetrics with Mate {
           viewportFraction: viewportFraction,
           devicePixelRatio: devicePixelRatio,
         ) {
-    mateCreateName = 'PageMetrics';
+    mateBuilderName = 'PageMetrics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),
@@ -150,7 +150,7 @@ class PageScrollPhysics$Mate extends PageScrollPhysics with Mate {
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateCreateName = 'PageScrollPhysics';
+    mateBuilderName = 'PageScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
@@ -222,7 +222,7 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: scrollBehavior,
           padEnds: padEnds,
         ) {
-    mateCreateName = 'PageView';
+    mateBuilderName = 'PageView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageView$Mate(
           key: p.get('key').build(),
@@ -278,7 +278,7 @@ class PageView$Mate extends PageView with Mate {
       onPageChanged,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -386,7 +386,7 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: scrollBehavior,
           padEnds: padEnds,
         ) {
-    mateCreateName = 'PageView.builder';
+    mateBuilderName = 'PageView.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageView$Mate.builder(
           key: p.get('key').build(),
@@ -554,7 +554,7 @@ class PageView$Mate extends PageView with Mate {
           scrollBehavior: scrollBehavior,
           padEnds: padEnds,
         ) {
-    mateCreateName = 'PageView.custom';
+    mateBuilderName = 'PageView.custom';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PageView$Mate.custom(
           key: p.get('key').build(),

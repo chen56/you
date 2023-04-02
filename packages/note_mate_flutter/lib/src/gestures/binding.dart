@@ -45,7 +45,7 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends FlutterErrorDeta
           informationCollector: informationCollector,
           silent: silent,
         ) {
-    mateCreateName = 'FlutterErrorDetailsForPointerEventDispatcher';
+    mateBuilderName = 'FlutterErrorDetailsForPointerEventDispatcher';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => FlutterErrorDetailsForPointerEventDispatcher$Mate(
           exception: p.get('exception').build(),

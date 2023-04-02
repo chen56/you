@@ -24,7 +24,7 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar wit
           anchor: anchor,
           buttonItems: buttonItems,
         ) {
-    mateCreateName = 'SpellCheckSuggestionsToolbar';
+    mateBuilderName = 'SpellCheckSuggestionsToolbar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SpellCheckSuggestionsToolbar$Mate(
           key: p.get('key').build(),
@@ -41,7 +41,7 @@ class SpellCheckSuggestionsToolbar$Mate extends SpellCheckSuggestionsToolbar wit
       anchor,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'buttonItems',
       buttonItems,
       isNamed: true,

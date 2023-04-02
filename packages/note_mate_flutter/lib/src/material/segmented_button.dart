@@ -28,7 +28,7 @@ class ButtonSegment$Mate<T> extends ButtonSegment<T> with Mate {
           label: label,
           enabled: enabled,
         ) {
-    mateCreateName = 'ButtonSegment';
+    mateBuilderName = 'ButtonSegment';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonSegment$Mate<T>(
           value: p.get('value').build(),
@@ -101,7 +101,7 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
           showSelectedIcon: showSelectedIcon,
           selectedIcon: selectedIcon,
         ) {
-    mateCreateName = 'SegmentedButton';
+    mateBuilderName = 'SegmentedButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SegmentedButton$Mate<T>(
           key: p.get('key').build(),
@@ -119,7 +119,7 @@ class SegmentedButton$Mate<T> extends SegmentedButton<T> with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'segments',
       segments,
       isNamed: true,

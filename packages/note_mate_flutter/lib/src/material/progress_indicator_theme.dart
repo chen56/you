@@ -32,7 +32,7 @@ class ProgressIndicatorThemeData$Mate extends ProgressIndicatorThemeData with Ma
           circularTrackColor: circularTrackColor,
           refreshBackgroundColor: refreshBackgroundColor,
         ) {
-    mateCreateName = 'ProgressIndicatorThemeData';
+    mateBuilderName = 'ProgressIndicatorThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ProgressIndicatorThemeData$Mate(
           color: p.get('color').build(),
@@ -86,7 +86,7 @@ class ProgressIndicatorTheme$Mate extends ProgressIndicatorTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'ProgressIndicatorTheme';
+    mateBuilderName = 'ProgressIndicatorTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ProgressIndicatorTheme$Mate(
           key: p.get('key').build(),

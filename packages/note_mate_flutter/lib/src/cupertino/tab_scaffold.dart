@@ -16,7 +16,7 @@ class CupertinoTabController$Mate extends CupertinoTabController with Mate {
       /// optionalParameters: {int initialIndex = 0} , default:processed=IntegerLiteralImpl
       int initialIndex = 0})
       : super(initialIndex: initialIndex) {
-    mateCreateName = 'CupertinoTabController';
+    mateBuilderName = 'CupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
     mateUse(
@@ -61,7 +61,7 @@ class CupertinoTabScaffold$Mate extends CupertinoTabScaffold with Mate {
           resizeToAvoidBottomInset: resizeToAvoidBottomInset,
           restorationId: restorationId,
         ) {
-    mateCreateName = 'CupertinoTabScaffold';
+    mateBuilderName = 'CupertinoTabScaffold';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabScaffold$Mate(
           key: p.get('key').build(),
@@ -119,7 +119,7 @@ class RestorableCupertinoTabController$Mate extends RestorableCupertinoTabContro
       /// optionalParameters: {int initialIndex = 0} , default:processed=IntegerLiteralImpl
       int initialIndex = 0})
       : super(initialIndex: initialIndex) {
-    mateCreateName = 'RestorableCupertinoTabController';
+    mateBuilderName = 'RestorableCupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
     mateUse(

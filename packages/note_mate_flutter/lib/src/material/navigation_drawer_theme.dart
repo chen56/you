@@ -56,7 +56,7 @@ class NavigationDrawerThemeData$Mate extends NavigationDrawerThemeData with Mate
           labelTextStyle: labelTextStyle,
           iconTheme: iconTheme,
         ) {
-    mateCreateName = 'NavigationDrawerThemeData';
+    mateBuilderName = 'NavigationDrawerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerThemeData$Mate(
           tileHeight: p.get('tileHeight').build(),
@@ -140,7 +140,7 @@ class NavigationDrawerTheme$Mate extends NavigationDrawerTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'NavigationDrawerTheme';
+    mateBuilderName = 'NavigationDrawerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerTheme$Mate(
           key: p.get('key').build(),

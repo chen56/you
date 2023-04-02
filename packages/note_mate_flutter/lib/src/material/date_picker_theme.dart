@@ -143,7 +143,7 @@ class DatePickerThemeData$Mate extends DatePickerThemeData with Mate {
           rangeSelectionBackgroundColor: rangeSelectionBackgroundColor,
           rangeSelectionOverlayColor: rangeSelectionOverlayColor,
         ) {
-    mateCreateName = 'DatePickerThemeData';
+    mateBuilderName = 'DatePickerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
@@ -359,7 +359,7 @@ class DatePickerTheme$Mate extends DatePickerTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'DatePickerTheme';
+    mateBuilderName = 'DatePickerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerTheme$Mate(
           key: p.get('key').build(),

@@ -34,7 +34,7 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
           shadows: shadows,
           shape: shape,
         ) {
-    mateCreateName = 'ShapeDecoration';
+    mateBuilderName = 'ShapeDecoration';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ShapeDecoration$Mate(
           color: p.get('color').build(),
@@ -58,7 +58,7 @@ class ShapeDecoration$Mate extends ShapeDecoration with Mate {
       gradient,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

@@ -24,7 +24,7 @@ class OverlayEntry$Mate extends OverlayEntry with Mate {
           opaque: opaque,
           maintainState: maintainState,
         ) {
-    mateCreateName = 'OverlayEntry';
+    mateBuilderName = 'OverlayEntry';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayEntry$Mate(
           builder: p.get('builder').build(),
@@ -68,7 +68,7 @@ class Overlay$Mate extends Overlay with Mate {
           initialEntries: initialEntries,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'Overlay';
+    mateBuilderName = 'Overlay';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Overlay$Mate(
           key: p.get('key').build(),
@@ -80,7 +80,7 @@ class Overlay$Mate extends Overlay with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'initialEntries',
       initialEntries,
       isNamed: true,
@@ -102,7 +102,7 @@ class OverlayPortalController$Mate extends OverlayPortalController with Mate {
       /// optionalParameters: {String? debugLabel} , default:none
       String? debugLabel})
       : super(debugLabel: debugLabel) {
-    mateCreateName = 'OverlayPortalController';
+    mateBuilderName = 'OverlayPortalController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
     mateUse(
@@ -134,7 +134,7 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           overlayChildBuilder: overlayChildBuilder,
           child: child,
         ) {
-    mateCreateName = 'OverlayPortal';
+    mateBuilderName = 'OverlayPortal';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayPortal$Mate(
           key: p.get('key').build(),
@@ -183,7 +183,7 @@ class OverlayPortal$Mate extends OverlayPortal with Mate {
           overlayChildBuilder: overlayChildBuilder,
           child: child,
         ) {
-    mateCreateName = 'OverlayPortal.targetsRootOverlay';
+    mateBuilderName = 'OverlayPortal.targetsRootOverlay';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverlayPortal$Mate.targetsRootOverlay(
           key: p.get('key').build(),

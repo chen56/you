@@ -71,7 +71,7 @@ class RangeSlider$Mate extends RangeSlider with Mate {
           mouseCursor: mouseCursor,
           semanticFormatterCallback: semanticFormatterCallback,
         ) {
-    mateCreateName = 'RangeSlider';
+    mateBuilderName = 'RangeSlider';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RangeSlider$Mate(
           key: p.get('key').build(),

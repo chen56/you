@@ -24,7 +24,7 @@ class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSele
           anchor: anchor,
           children: children,
         ) {
-    mateCreateName = 'CupertinoDesktopTextSelectionToolbar';
+    mateBuilderName = 'CupertinoDesktopTextSelectionToolbar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDesktopTextSelectionToolbar$Mate(
           key: p.get('key').build(),
@@ -41,7 +41,7 @@ class CupertinoDesktopTextSelectionToolbar$Mate extends CupertinoDesktopTextSele
       anchor,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

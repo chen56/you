@@ -14,7 +14,7 @@ class FilledButtonThemeData$Mate extends FilledButtonThemeData with Mate {
       /// optionalParameters: {ButtonStyle? style} , default:none
       ButtonStyle? style})
       : super(style: style) {
-    mateCreateName = 'FilledButtonThemeData';
+    mateBuilderName = 'FilledButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButtonThemeData$Mate(style: p.get('style').build());
     mateUse(
@@ -42,7 +42,7 @@ class FilledButtonTheme$Mate extends FilledButtonTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'FilledButtonTheme';
+    mateBuilderName = 'FilledButtonTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButtonTheme$Mate(
           key: p.get('key').build(),

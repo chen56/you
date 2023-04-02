@@ -23,7 +23,7 @@ class RevealedOffset$Mate extends RevealedOffset with Mate {
           offset: offset,
           rect: rect,
         ) {
-    mateCreateName = 'RevealedOffset';
+    mateBuilderName = 'RevealedOffset';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RevealedOffset$Mate(
           offset: p.get('offset').build(),
@@ -83,7 +83,7 @@ class RenderViewport$Mate extends RenderViewport with Mate {
           cacheExtentStyle: cacheExtentStyle,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'RenderViewport';
+    mateBuilderName = 'RenderViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderViewport$Mate(
           axisDirection: p.get('axisDirection').build(),
@@ -118,7 +118,7 @@ class RenderViewport$Mate extends RenderViewport with Mate {
       isNamed: true,
       defaultValue: 0.0,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -173,7 +173,7 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport wit
           clipBehavior: clipBehavior,
           children: children,
         ) {
-    mateCreateName = 'RenderShrinkWrappingViewport';
+    mateBuilderName = 'RenderShrinkWrappingViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderShrinkWrappingViewport$Mate(
           axisDirection: p.get('axisDirection').build(),
@@ -204,7 +204,7 @@ class RenderShrinkWrappingViewport$Mate extends RenderShrinkWrappingViewport wit
       isNamed: true,
       defaultValue: Clip.hardEdge,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

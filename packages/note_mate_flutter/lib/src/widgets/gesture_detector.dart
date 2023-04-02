@@ -30,7 +30,7 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends GestureRecognizer>
           _constructor,
           _initializer,
         ) {
-    mateCreateName = 'GestureRecognizerFactoryWithHandlers';
+    mateBuilderName = 'GestureRecognizerFactoryWithHandlers';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GestureRecognizerFactoryWithHandlers$Mate<T>(
           p.get('_constructor').value,
@@ -314,7 +314,7 @@ class GestureDetector$Mate extends GestureDetector with Mate {
           trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
           supportedDevices: supportedDevices,
         ) {
-    mateCreateName = 'GestureDetector';
+    mateBuilderName = 'GestureDetector';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GestureDetector$Mate(
           key: p.get('key').build(),
@@ -743,7 +743,7 @@ class RawGestureDetector$Mate extends RawGestureDetector with Mate {
           excludeFromSemantics: excludeFromSemantics,
           semantics: semantics,
         ) {
-    mateCreateName = 'RawGestureDetector';
+    mateBuilderName = 'RawGestureDetector';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawGestureDetector$Mate(
           key: p.get('key').build(),

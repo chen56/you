@@ -24,7 +24,7 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: onPressed,
           child: child,
         ) {
-    mateCreateName = 'DesktopTextSelectionToolbarButton';
+    mateBuilderName = 'DesktopTextSelectionToolbarButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbarButton$Mate(
           key: p.get('key').build(),
@@ -67,7 +67,7 @@ class DesktopTextSelectionToolbarButton$Mate extends DesktopTextSelectionToolbar
           onPressed: onPressed,
           text: text,
         ) {
-    mateCreateName = 'DesktopTextSelectionToolbarButton.text';
+    mateBuilderName = 'DesktopTextSelectionToolbarButton.text';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbarButton$Mate.text(
           key: p.get('key').build(),

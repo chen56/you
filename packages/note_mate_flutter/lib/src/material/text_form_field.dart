@@ -247,7 +247,7 @@ class TextFormField$Mate extends TextFormField with Mate {
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'TextFormField';
+    mateBuilderName = 'TextFormField';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextFormField$Mate(
           key: p.get('key').build(),
@@ -485,7 +485,7 @@ class TextFormField$Mate extends TextFormField with Mate {
       validator,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,

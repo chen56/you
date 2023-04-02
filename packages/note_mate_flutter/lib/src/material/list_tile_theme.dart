@@ -95,7 +95,7 @@ class ListTileThemeData$Mate extends ListTileThemeData with Mate {
           visualDensity: visualDensity,
           titleAlignment: titleAlignment,
         ) {
-    mateCreateName = 'ListTileThemeData';
+    mateBuilderName = 'ListTileThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTileThemeData$Mate(
           dense: p.get('dense').build(),
@@ -289,7 +289,7 @@ class ListTileTheme$Mate extends ListTileTheme with Mate {
           minLeadingWidth: minLeadingWidth,
           child: child,
         ) {
-    mateCreateName = 'ListTileTheme';
+    mateBuilderName = 'ListTileTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTileTheme$Mate(
           key: p.get('key').build(),

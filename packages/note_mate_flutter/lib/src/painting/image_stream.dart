@@ -24,7 +24,7 @@ class ImageInfo$Mate extends ImageInfo with Mate {
           scale: scale,
           debugLabel: debugLabel,
         ) {
-    mateCreateName = 'ImageInfo';
+    mateBuilderName = 'ImageInfo';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageInfo$Mate(
           image: p.get('image').build(),
@@ -66,7 +66,7 @@ class ImageStreamListener$Mate extends ImageStreamListener with Mate {
           onChunk: onChunk,
           onError: onError,
         ) {
-    mateCreateName = 'ImageStreamListener';
+    mateBuilderName = 'ImageStreamListener';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageStreamListener$Mate(
           p.get('onImage').value,
@@ -104,7 +104,7 @@ class ImageChunkEvent$Mate extends ImageChunkEvent with Mate {
           cumulativeBytesLoaded: cumulativeBytesLoaded,
           expectedTotalBytes: expectedTotalBytes,
         ) {
-    mateCreateName = 'ImageChunkEvent';
+    mateBuilderName = 'ImageChunkEvent';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageChunkEvent$Mate(
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
@@ -135,7 +135,7 @@ class OneFrameImageStreamCompleter$Mate extends OneFrameImageStreamCompleter wit
           image,
           informationCollector: informationCollector,
         ) {
-    mateCreateName = 'OneFrameImageStreamCompleter';
+    mateBuilderName = 'OneFrameImageStreamCompleter';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => OneFrameImageStreamCompleter$Mate(
           p.get('image').value,
@@ -179,7 +179,7 @@ class MultiFrameImageStreamCompleter$Mate extends MultiFrameImageStreamCompleter
           chunkEvents: chunkEvents,
           informationCollector: informationCollector,
         ) {
-    mateCreateName = 'MultiFrameImageStreamCompleter';
+    mateBuilderName = 'MultiFrameImageStreamCompleter';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => MultiFrameImageStreamCompleter$Mate(
           codec: p.get('codec').build(),

@@ -23,7 +23,7 @@ class WillPopScope$Mate extends WillPopScope with Mate {
           child: child,
           onWillPop: onWillPop,
         ) {
-    mateCreateName = 'WillPopScope';
+    mateBuilderName = 'WillPopScope';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WillPopScope$Mate(
           key: p.get('key').build(),

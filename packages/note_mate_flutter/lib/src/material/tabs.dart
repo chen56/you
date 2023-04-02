@@ -50,7 +50,7 @@ class Tab$Mate extends Tab with Mate {
           height: height,
           child: child,
         ) {
-    mateCreateName = 'Tab';
+    mateBuilderName = 'Tab';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Tab$Mate(
           key: p.get('key').build(),
@@ -198,7 +198,7 @@ class TabBar$Mate extends TabBar with Mate {
           splashFactory: splashFactory,
           splashBorderRadius: splashBorderRadius,
         ) {
-    mateCreateName = 'TabBar';
+    mateBuilderName = 'TabBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBar$Mate(
           key: p.get('key').build(),
@@ -232,7 +232,7 @@ class TabBar$Mate extends TabBar with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'tabs',
       tabs,
       isNamed: true,
@@ -393,7 +393,7 @@ class TabBarView$Mate extends TabBarView with Mate {
           viewportFraction: viewportFraction,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'TabBarView';
+    mateBuilderName = 'TabBarView';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBarView$Mate(
           key: p.get('key').build(),
@@ -409,7 +409,7 @@ class TabBarView$Mate extends TabBarView with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -470,7 +470,7 @@ class TabPageSelectorIndicator$Mate extends TabPageSelectorIndicator with Mate {
           size: size,
           borderStyle: borderStyle,
         ) {
-    mateCreateName = 'TabPageSelectorIndicator';
+    mateBuilderName = 'TabPageSelectorIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelectorIndicator$Mate(
           key: p.get('key').build(),
@@ -537,7 +537,7 @@ class TabPageSelector$Mate extends TabPageSelector with Mate {
           selectedColor: selectedColor,
           borderStyle: borderStyle,
         ) {
-    mateCreateName = 'TabPageSelector';
+    mateBuilderName = 'TabPageSelector';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelector$Mate(
           key: p.get('key').build(),

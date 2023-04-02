@@ -68,7 +68,7 @@ class DecorationImage$Mate extends DecorationImage with Mate {
           invertColors: invertColors,
           isAntiAlias: isAntiAlias,
         ) {
-    mateCreateName = 'DecorationImage';
+    mateBuilderName = 'DecorationImage';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => DecorationImage$Mate(
           image: p.get('image').build(),
@@ -178,7 +178,7 @@ class ImageTilingInfo$Mate extends ImageTilingInfo with Mate {
           tmy: tmy,
           transform: transform,
         ) {
-    mateCreateName = 'ImageTilingInfo';
+    mateBuilderName = 'ImageTilingInfo';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageTilingInfo$Mate(
           tmx: p.get('tmx').build(),

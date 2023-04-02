@@ -380,7 +380,7 @@ class ThemeData$Mate extends ThemeData with Mate {
           toggleButtonsTheme: toggleButtonsTheme,
           tooltipTheme: tooltipTheme,
         ) {
-    mateCreateName = 'ThemeData.raw';
+    mateBuilderName = 'ThemeData.raw';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ThemeData$Mate.raw(
           applyElevationOverlayColor: p.get('applyElevationOverlayColor').build(),
@@ -869,7 +869,7 @@ class MaterialBasedCupertinoThemeData$Mate extends MaterialBasedCupertinoThemeDa
       /// optionalParameters: {required ThemeData materialTheme} , default:none
       required ThemeData materialTheme})
       : super(materialTheme: materialTheme) {
-    mateCreateName = 'MaterialBasedCupertinoThemeData';
+    mateBuilderName = 'MaterialBasedCupertinoThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.get('materialTheme').build());
     mateUse(
@@ -893,7 +893,7 @@ class VisualDensity$Mate extends VisualDensity with Mate {
           horizontal: horizontal,
           vertical: vertical,
         ) {
-    mateCreateName = 'VisualDensity';
+    mateBuilderName = 'VisualDensity';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => VisualDensity$Mate(
           horizontal: p.get('horizontal').build(),

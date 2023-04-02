@@ -23,14 +23,14 @@ class RenderFlow$Mate extends RenderFlow with Mate {
           delegate: delegate,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'RenderFlow';
+    mateBuilderName = 'RenderFlow';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFlow$Mate(
           children: p.get('children').build(),
           delegate: p.get('delegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

@@ -50,7 +50,7 @@ class Ink$Mate extends Ink with Mate {
           height: height,
           child: child,
         ) {
-    mateCreateName = 'Ink';
+    mateBuilderName = 'Ink';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Ink$Mate(
           key: p.get('key').build(),
@@ -153,7 +153,7 @@ class Ink$Mate extends Ink with Mate {
           height: height,
           child: child,
         ) {
-    mateCreateName = 'Ink.image';
+    mateBuilderName = 'Ink.image';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Ink$Mate.image(
           key: p.get('key').build(),
@@ -266,7 +266,7 @@ class InkDecoration$Mate extends InkDecoration with Mate {
           referenceBox: referenceBox,
           onRemoved: onRemoved,
         ) {
-    mateCreateName = 'InkDecoration';
+    mateBuilderName = 'InkDecoration';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkDecoration$Mate(
           decoration: p.get('decoration').build(),

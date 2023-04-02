@@ -30,7 +30,7 @@ class CupertinoSliverRefreshControl$Mate extends CupertinoSliverRefreshControl w
           builder: builder,
           onRefresh: onRefresh,
         ) {
-    mateCreateName = 'CupertinoSliverRefreshControl';
+    mateBuilderName = 'CupertinoSliverRefreshControl';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSliverRefreshControl$Mate(
           key: p.get('key').build(),

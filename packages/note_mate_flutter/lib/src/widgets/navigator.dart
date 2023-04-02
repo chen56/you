@@ -23,7 +23,7 @@ class RouteSettings$Mate extends RouteSettings with Mate {
           name: name,
           arguments: arguments,
         ) {
-    mateCreateName = 'RouteSettings';
+    mateBuilderName = 'RouteSettings';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RouteSettings$Mate(
           name: p.get('name').build(),
@@ -59,7 +59,7 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           controller: controller,
           child: child,
         ) {
-    mateCreateName = 'HeroControllerScope';
+    mateBuilderName = 'HeroControllerScope';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate(
           key: p.get('key').build(),
@@ -94,7 +94,7 @@ class HeroControllerScope$Mate extends HeroControllerScope with Mate {
           key: key,
           child: child,
         ) {
-    mateCreateName = 'HeroControllerScope.none';
+    mateBuilderName = 'HeroControllerScope.none';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HeroControllerScope$Mate.none(
           key: p.get('key').build(),
@@ -174,7 +174,7 @@ class Navigator$Mate extends Navigator with Mate {
           restorationScopeId: restorationScopeId,
           routeTraversalEdgeBehavior: routeTraversalEdgeBehavior,
         ) {
-    mateCreateName = 'Navigator';
+    mateBuilderName = 'Navigator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Navigator$Mate(
           key: p.get('key').build(),
@@ -197,7 +197,7 @@ class Navigator$Mate extends Navigator with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'pages',
       pages,
       isNamed: true,
@@ -245,7 +245,7 @@ class Navigator$Mate extends Navigator with Mate {
       isNamed: true,
       defaultValue: Clip.hardEdge,
     );
-    mateUseList(
+    mateUse(
       'observers',
       observers,
       isNamed: true,
@@ -286,7 +286,7 @@ class RestorableRouteFuture$Mate<T> extends RestorableRouteFuture<T> with Mate {
           onPresent: onPresent,
           onComplete: onComplete,
         ) {
-    mateCreateName = 'RestorableRouteFuture';
+    mateBuilderName = 'RestorableRouteFuture';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RestorableRouteFuture$Mate<T>(
           navigatorFinder: p.get('navigatorFinder').build(),

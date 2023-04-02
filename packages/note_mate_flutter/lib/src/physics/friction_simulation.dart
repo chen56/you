@@ -30,7 +30,7 @@ class FrictionSimulation$Mate extends FrictionSimulation with Mate {
           tolerance: tolerance,
           constantDeceleration: constantDeceleration,
         ) {
-    mateCreateName = 'FrictionSimulation';
+    mateBuilderName = 'FrictionSimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => FrictionSimulation$Mate(
           p.get('drag').value,
@@ -94,7 +94,7 @@ class BoundedFrictionSimulation$Mate extends BoundedFrictionSimulation with Mate
           _minX,
           _maxX,
         ) {
-    mateCreateName = 'BoundedFrictionSimulation';
+    mateBuilderName = 'BoundedFrictionSimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => BoundedFrictionSimulation$Mate(
           p.get('drag').value,

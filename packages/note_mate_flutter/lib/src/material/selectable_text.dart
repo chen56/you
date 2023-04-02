@@ -138,7 +138,7 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'SelectableText';
+    mateBuilderName = 'SelectableText';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectableText$Mate(
           p.get('data').value,
@@ -441,7 +441,7 @@ class SelectableText$Mate extends SelectableText with Mate {
           contextMenuBuilder: contextMenuBuilder,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'SelectableText.rich';
+    mateBuilderName = 'SelectableText.rich';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectableText$Mate.rich(
           p.get('textSpan').value,

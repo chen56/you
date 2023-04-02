@@ -22,7 +22,7 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
           uri: uri,
           data: data,
         ) {
-    mateCreateName = 'KeyboardInsertedContent';
+    mateBuilderName = 'KeyboardInsertedContent';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate(
           mimeType: p.get('mimeType').build(),
@@ -52,7 +52,7 @@ class KeyboardInsertedContent$Mate extends KeyboardInsertedContent with Mate {
       /// requiredParameters: Map<String, dynamic> metadata
       Map<String, dynamic> metadata)
       : super.fromJson(metadata) {
-    mateCreateName = 'KeyboardInsertedContent.fromJson';
+    mateBuilderName = 'KeyboardInsertedContent.fromJson';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
     mateUse(

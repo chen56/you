@@ -54,7 +54,7 @@ class DialogTheme$Mate extends DialogTheme with Mate {
           contentTextStyle: contentTextStyle,
           actionsPadding: actionsPadding,
         ) {
-    mateCreateName = 'DialogTheme';
+    mateBuilderName = 'DialogTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DialogTheme$Mate(
           backgroundColor: p.get('backgroundColor').build(),

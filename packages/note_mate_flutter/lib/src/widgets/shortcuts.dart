@@ -32,7 +32,7 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
           key3,
           key4,
         ) {
-    mateCreateName = 'KeySet';
+    mateBuilderName = 'KeySet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeySet$Mate<T>(
           p.get('key1').value,
@@ -68,7 +68,7 @@ class KeySet$Mate<T extends KeyboardKey> extends KeySet<T> with Mate {
       /// requiredParameters: Set<T> keys
       Set<T> keys)
       : super.fromSet(keys) {
-    mateCreateName = 'KeySet.fromSet';
+    mateBuilderName = 'KeySet.fromSet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeySet$Mate<T>.fromSet(p.get('keys').value);
     mateUse(
@@ -100,7 +100,7 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
           key3,
           key4,
         ) {
-    mateCreateName = 'LogicalKeySet';
+    mateBuilderName = 'LogicalKeySet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LogicalKeySet$Mate(
           p.get('key1').value,
@@ -136,7 +136,7 @@ class LogicalKeySet$Mate extends LogicalKeySet with Mate {
       /// requiredParameters: Set<LogicalKeyboardKey> keys
       Set<LogicalKeyboardKey> keys)
       : super.fromSet(keys) {
-    mateCreateName = 'LogicalKeySet.fromSet';
+    mateBuilderName = 'LogicalKeySet.fromSet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LogicalKeySet$Mate.fromSet(p.get('keys').value);
     mateUse(
@@ -175,7 +175,7 @@ class ShortcutMapProperty$Mate extends ShortcutMapProperty with Mate {
           level: level,
           description: description,
         ) {
-    mateCreateName = 'ShortcutMapProperty';
+    mateBuilderName = 'ShortcutMapProperty';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutMapProperty$Mate(
           p.get('name').value,
@@ -248,7 +248,7 @@ class SingleActivator$Mate extends SingleActivator with Mate {
           meta: meta,
           includeRepeats: includeRepeats,
         ) {
-    mateCreateName = 'SingleActivator';
+    mateBuilderName = 'SingleActivator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SingleActivator$Mate(
           p.get('trigger').value,
@@ -320,7 +320,7 @@ class CharacterActivator$Mate extends CharacterActivator with Mate {
           meta: meta,
           includeRepeats: includeRepeats,
         ) {
-    mateCreateName = 'CharacterActivator';
+    mateBuilderName = 'CharacterActivator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CharacterActivator$Mate(
           p.get('character').value,
@@ -374,7 +374,7 @@ class ShortcutManager$Mate extends ShortcutManager with Mate {
           shortcuts: shortcuts,
           modal: modal,
         ) {
-    mateCreateName = 'ShortcutManager';
+    mateBuilderName = 'ShortcutManager';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutManager$Mate(
           shortcuts: p.get('shortcuts').build(),
@@ -415,7 +415,7 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: child,
           debugLabel: debugLabel,
         ) {
-    mateCreateName = 'Shortcuts';
+    mateBuilderName = 'Shortcuts';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Shortcuts$Mate(
           key: p.get('key').build(),
@@ -464,7 +464,7 @@ class Shortcuts$Mate extends Shortcuts with Mate {
           child: child,
           debugLabel: debugLabel,
         ) {
-    mateCreateName = 'Shortcuts.manager';
+    mateBuilderName = 'Shortcuts.manager';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Shortcuts$Mate.manager(
           key: p.get('key').build(),
@@ -512,7 +512,7 @@ class CallbackShortcuts$Mate extends CallbackShortcuts with Mate {
           bindings: bindings,
           child: child,
         ) {
-    mateCreateName = 'CallbackShortcuts';
+    mateBuilderName = 'CallbackShortcuts';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => CallbackShortcuts$Mate(
           key: p.get('key').build(),
@@ -550,7 +550,7 @@ class ShortcutRegistrar$Mate extends ShortcutRegistrar with Mate {
           key: key,
           child: child,
         ) {
-    mateCreateName = 'ShortcutRegistrar';
+    mateBuilderName = 'ShortcutRegistrar';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutRegistrar$Mate(
           key: p.get('key').build(),

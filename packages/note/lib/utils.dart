@@ -2,29 +2,8 @@ import 'dart:collection';
 
 import 'package:flutter/widgets.dart';
 
-/// 判断类型Sub是否是Super的子类型
-bool isSubtype<Super, Sub>() {
-  return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
-}
-
-class TypeOf<T> {}
-
-isTypeOf<Sub, Super>({
-  required TypeOf<Sub> type,
-  required TypeOf<Super> isType,
-}) {
-  return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
-}
-
 /// result = Sub is Super
 bool isType<Sub, Super>() {
-  return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
-}
-
-// isSuper<int,num>(ofSub:Typeof<int>())
-isSuper<Sub, Super>({
-  required TypeOf<Sub> type,
-}) {
   return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
 }
 
@@ -36,7 +15,26 @@ bool isNullable<T>() {
 }
 
 bool isNullableOf<T>(T t) {
-  return null is T;
+  return null is T || t == null;
+}
+
+// 集合的直接类型转换会报错：
+//     exception : return params.map((e)=>e.build()).toList() as T
+// 可以利用原类型集合复制出来做基础，再填充，然后转型就不会错了。
+R castList<R>({required Iterable from, required List to}) {
+  assert(to is R, "arg to:$to , type should be $R");
+//copy same type list
+  var result = to.sublist(0, 0);
+// or
+// var result = to.toList()..clear();
+
+// fill
+  for (var e in from) {
+    result.add(e);
+  }
+
+//cast, no exception ,because : to is R == true
+  return result as R;
 }
 
 class ListenableMap extends MapBase<String, Object> with ChangeNotifier {

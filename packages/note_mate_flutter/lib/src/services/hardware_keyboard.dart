@@ -31,7 +31,7 @@ class KeyDownEvent$Mate extends KeyDownEvent with Mate {
           timeStamp: timeStamp,
           synthesized: synthesized,
         ) {
-    mateCreateName = 'KeyDownEvent';
+    mateBuilderName = 'KeyDownEvent';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyDownEvent$Mate(
           physicalKey: p.get('physicalKey').build(),
@@ -90,7 +90,7 @@ class KeyUpEvent$Mate extends KeyUpEvent with Mate {
           timeStamp: timeStamp,
           synthesized: synthesized,
         ) {
-    mateCreateName = 'KeyUpEvent';
+    mateBuilderName = 'KeyUpEvent';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyUpEvent$Mate(
           physicalKey: p.get('physicalKey').build(),
@@ -143,7 +143,7 @@ class KeyRepeatEvent$Mate extends KeyRepeatEvent with Mate {
           character: character,
           timeStamp: timeStamp,
         ) {
-    mateCreateName = 'KeyRepeatEvent';
+    mateBuilderName = 'KeyRepeatEvent';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyRepeatEvent$Mate(
           physicalKey: p.get('physicalKey').build(),
@@ -187,13 +187,13 @@ class KeyMessage$Mate extends KeyMessage with Mate {
           events,
           rawEvent,
         ) {
-    mateCreateName = 'KeyMessage';
+    mateBuilderName = 'KeyMessage';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyMessage$Mate(
           p.get('events').value,
           p.get('rawEvent').value,
         );
-    mateUseList(
+    mateUse(
       'events',
       events,
       isNamed: false,
@@ -219,7 +219,7 @@ class KeyEventManager$Mate extends KeyEventManager with Mate {
           _hardwareKeyboard,
           _rawKeyboard,
         ) {
-    mateCreateName = 'KeyEventManager';
+    mateBuilderName = 'KeyEventManager';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => KeyEventManager$Mate(
           p.get('_hardwareKeyboard').value,

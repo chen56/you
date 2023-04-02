@@ -23,7 +23,7 @@ class RenderSliverOpacity$Mate extends RenderSliverOpacity with Mate {
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateCreateName = 'RenderSliverOpacity';
+    mateBuilderName = 'RenderSliverOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverOpacity$Mate(
           opacity: p.get('opacity').build(),
@@ -67,7 +67,7 @@ class RenderSliverIgnorePointer$Mate extends RenderSliverIgnorePointer with Mate
           ignoring: ignoring,
           ignoringSemantics: ignoringSemantics,
         ) {
-    mateCreateName = 'RenderSliverIgnorePointer';
+    mateBuilderName = 'RenderSliverIgnorePointer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverIgnorePointer$Mate(
           sliver: p.get('sliver').build(),
@@ -106,7 +106,7 @@ class RenderSliverOffstage$Mate extends RenderSliverOffstage with Mate {
           offstage: offstage,
           sliver: sliver,
         ) {
-    mateCreateName = 'RenderSliverOffstage';
+    mateBuilderName = 'RenderSliverOffstage';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverOffstage$Mate(
           offstage: p.get('offstage').build(),
@@ -143,7 +143,7 @@ class RenderSliverAnimatedOpacity$Mate extends RenderSliverAnimatedOpacity with 
           alwaysIncludeSemantics: alwaysIncludeSemantics,
           sliver: sliver,
         ) {
-    mateCreateName = 'RenderSliverAnimatedOpacity';
+    mateBuilderName = 'RenderSliverAnimatedOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverAnimatedOpacity$Mate(
           opacity: p.get('opacity').build(),

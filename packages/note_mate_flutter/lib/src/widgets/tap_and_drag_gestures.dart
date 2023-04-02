@@ -35,7 +35,7 @@ class TapDragDownDetails$Mate extends TapDragDownDetails with Mate {
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateCreateName = 'TapDragDownDetails';
+    mateBuilderName = 'TapDragDownDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragDownDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -97,7 +97,7 @@ class TapDragUpDetails$Mate extends TapDragUpDetails with Mate {
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateCreateName = 'TapDragUpDetails';
+    mateBuilderName = 'TapDragUpDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragUpDetails$Mate(
           kind: p.get('kind').build(),
@@ -163,7 +163,7 @@ class TapDragStartDetails$Mate extends TapDragStartDetails with Mate {
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateCreateName = 'TapDragStartDetails';
+    mateBuilderName = 'TapDragStartDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragStartDetails$Mate(
           sourceTimeStamp: p.get('sourceTimeStamp').build(),
@@ -251,7 +251,7 @@ class TapDragUpdateDetails$Mate extends TapDragUpdateDetails with Mate {
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateCreateName = 'TapDragUpdateDetails';
+    mateBuilderName = 'TapDragUpdateDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragUpdateDetails$Mate(
           sourceTimeStamp: p.get('sourceTimeStamp').build(),
@@ -340,7 +340,7 @@ class TapDragEndDetails$Mate extends TapDragEndDetails with Mate {
           consecutiveTapCount: consecutiveTapCount,
           keysPressedOnDown: keysPressedOnDown,
         ) {
-    mateCreateName = 'TapDragEndDetails';
+    mateBuilderName = 'TapDragEndDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapDragEndDetails$Mate(
           velocity: p.get('velocity').build(),
@@ -389,7 +389,7 @@ class TapAndDragGestureRecognizer$Mate extends TapAndDragGestureRecognizer with 
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'TapAndDragGestureRecognizer';
+    mateBuilderName = 'TapAndDragGestureRecognizer';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TapAndDragGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),

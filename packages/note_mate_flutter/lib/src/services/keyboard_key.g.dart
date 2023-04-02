@@ -12,7 +12,7 @@ class LogicalKeyboardKey$Mate extends LogicalKeyboardKey with Mate {
       /// requiredParameters: int keyId
       int keyId)
       : super(keyId) {
-    mateCreateName = 'LogicalKeyboardKey';
+    mateBuilderName = 'LogicalKeyboardKey';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => LogicalKeyboardKey$Mate(p.get('keyId').value);
     mateUse(
@@ -31,7 +31,7 @@ class PhysicalKeyboardKey$Mate extends PhysicalKeyboardKey with Mate {
       /// requiredParameters: int usbHidUsage
       int usbHidUsage)
       : super(usbHidUsage) {
-    mateCreateName = 'PhysicalKeyboardKey';
+    mateBuilderName = 'PhysicalKeyboardKey';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => PhysicalKeyboardKey$Mate(p.get('usbHidUsage').value);
     mateUse(

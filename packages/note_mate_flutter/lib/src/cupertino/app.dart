@@ -132,7 +132,7 @@ class CupertinoApp$Mate extends CupertinoApp with Mate {
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateCreateName = 'CupertinoApp';
+    mateBuilderName = 'CupertinoApp';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoApp$Mate(
           key: p.get('key').build(),
@@ -209,7 +209,7 @@ class CupertinoApp$Mate extends CupertinoApp with Mate {
       onUnknownRoute,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'navigatorObservers',
       navigatorObservers,
       isNamed: true,
@@ -415,7 +415,7 @@ class CupertinoApp$Mate extends CupertinoApp with Mate {
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateCreateName = 'CupertinoApp.router';
+    mateBuilderName = 'CupertinoApp.router';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoApp$Mate.router(
           key: p.get('key').build(),

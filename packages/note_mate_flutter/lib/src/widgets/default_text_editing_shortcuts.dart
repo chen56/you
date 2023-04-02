@@ -18,7 +18,7 @@ class DefaultTextEditingShortcuts$Mate extends DefaultTextEditingShortcuts with 
           key: key,
           child: child,
         ) {
-    mateCreateName = 'DefaultTextEditingShortcuts';
+    mateBuilderName = 'DefaultTextEditingShortcuts';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextEditingShortcuts$Mate(
           key: p.get('key').build(),

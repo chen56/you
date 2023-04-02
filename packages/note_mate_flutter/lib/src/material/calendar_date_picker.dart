@@ -51,7 +51,7 @@ class CalendarDatePicker$Mate extends CalendarDatePicker with Mate {
           initialCalendarMode: initialCalendarMode,
           selectableDayPredicate: selectableDayPredicate,
         ) {
-    mateCreateName = 'CalendarDatePicker';
+    mateBuilderName = 'CalendarDatePicker';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CalendarDatePicker$Mate(
           key: p.get('key').build(),
@@ -150,7 +150,7 @@ class YearPicker$Mate extends YearPicker with Mate {
           onChanged: onChanged,
           dragStartBehavior: dragStartBehavior,
         ) {
-    mateCreateName = 'YearPicker';
+    mateBuilderName = 'YearPicker';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => YearPicker$Mate(
           key: p.get('key').build(),

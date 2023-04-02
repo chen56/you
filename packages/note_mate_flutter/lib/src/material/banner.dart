@@ -85,7 +85,7 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
           animation: animation,
           onVisible: onVisible,
         ) {
-    mateCreateName = 'MaterialBanner';
+    mateBuilderName = 'MaterialBanner';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBanner$Mate(
           key: p.get('key').build(),
@@ -121,7 +121,7 @@ class MaterialBanner$Mate extends MaterialBanner with Mate {
       contentTextStyle,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,

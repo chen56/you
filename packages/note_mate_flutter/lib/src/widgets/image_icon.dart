@@ -31,7 +31,7 @@ class ImageIcon$Mate extends ImageIcon with Mate {
           color: color,
           semanticLabel: semanticLabel,
         ) {
-    mateCreateName = 'ImageIcon';
+    mateBuilderName = 'ImageIcon';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ImageIcon$Mate(
           p.get('image').value,

@@ -27,7 +27,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
           child: child,
           enableHapticFeedback: enableHapticFeedback,
         ) {
-    mateCreateName = 'CupertinoContextMenu';
+    mateBuilderName = 'CupertinoContextMenu';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoContextMenu$Mate(
           key: p.get('key').build(),
@@ -40,7 +40,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,
@@ -77,7 +77,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
           builder: builder,
           enableHapticFeedback: enableHapticFeedback,
         ) {
-    mateCreateName = 'CupertinoContextMenu.builder';
+    mateBuilderName = 'CupertinoContextMenu.builder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoContextMenu$Mate.builder(
           key: p.get('key').build(),
@@ -90,7 +90,7 @@ class CupertinoContextMenu$Mate extends CupertinoContextMenu with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'actions',
       actions,
       isNamed: true,

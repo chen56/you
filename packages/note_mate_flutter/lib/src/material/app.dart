@@ -168,7 +168,7 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateCreateName = 'MaterialApp';
+    mateBuilderName = 'MaterialApp';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialApp$Mate(
           key: p.get('key').build(),
@@ -253,7 +253,7 @@ class MaterialApp$Mate extends MaterialApp with Mate {
       onUnknownRoute,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'navigatorObservers',
       navigatorObservers,
       isNamed: true,
@@ -534,7 +534,7 @@ class MaterialApp$Mate extends MaterialApp with Mate {
           restorationScopeId: restorationScopeId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateCreateName = 'MaterialApp.router';
+    mateBuilderName = 'MaterialApp.router';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialApp$Mate.router(
           key: p.get('key').build(),

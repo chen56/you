@@ -22,7 +22,7 @@ class TextSelectionToolbarLayoutDelegate$Mate extends TextSelectionToolbarLayout
           anchorBelow: anchorBelow,
           fitsAbove: fitsAbove,
         ) {
-    mateCreateName = 'TextSelectionToolbarLayoutDelegate';
+    mateBuilderName = 'TextSelectionToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextSelectionToolbarLayoutDelegate$Mate(
           anchorAbove: p.get('anchorAbove').build(),

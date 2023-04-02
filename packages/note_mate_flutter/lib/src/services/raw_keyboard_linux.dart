@@ -37,7 +37,7 @@ class RawKeyEventDataLinux$Mate extends RawKeyEventDataLinux with Mate {
           isDown: isDown,
           specifiedLogicalKey: specifiedLogicalKey,
         ) {
-    mateCreateName = 'RawKeyEventDataLinux';
+    mateBuilderName = 'RawKeyEventDataLinux';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataLinux$Mate(
           keyHelper: p.get('keyHelper').build(),

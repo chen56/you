@@ -30,7 +30,7 @@ class TextSelectionPoint$Mate extends TextSelectionPoint with Mate {
           point,
           direction,
         ) {
-    mateCreateName = 'TextSelectionPoint';
+    mateBuilderName = 'TextSelectionPoint';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TextSelectionPoint$Mate(
           p.get('point').value,
@@ -226,7 +226,7 @@ class RenderEditable$Mate extends RenderEditable with Mate {
           foregroundPainter: foregroundPainter,
           children: children,
         ) {
-    mateCreateName = 'RenderEditable';
+    mateBuilderName = 'RenderEditable';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderEditable$Mate(
           text: p.get('text').build(),
@@ -498,7 +498,7 @@ class RenderEditable$Mate extends RenderEditable with Mate {
       foregroundPainter,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

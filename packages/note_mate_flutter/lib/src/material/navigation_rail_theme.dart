@@ -68,7 +68,7 @@ class NavigationRailThemeData$Mate extends NavigationRailThemeData with Mate {
           minWidth: minWidth,
           minExtendedWidth: minExtendedWidth,
         ) {
-    mateCreateName = 'NavigationRailThemeData';
+    mateBuilderName = 'NavigationRailThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRailThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
@@ -170,7 +170,7 @@ class NavigationRailTheme$Mate extends NavigationRailTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'NavigationRailTheme';
+    mateBuilderName = 'NavigationRailTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRailTheme$Mate(
           key: p.get('key').build(),

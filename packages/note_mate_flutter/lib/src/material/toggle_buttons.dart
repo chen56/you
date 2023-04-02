@@ -120,7 +120,7 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
           direction: direction,
           verticalDirection: verticalDirection,
         ) {
-    mateCreateName = 'ToggleButtons';
+    mateBuilderName = 'ToggleButtons';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtons$Mate(
           key: p.get('key').build(),
@@ -154,12 +154,12 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'isSelected',
       isSelected,
       isNamed: true,
@@ -229,7 +229,7 @@ class ToggleButtons$Mate extends ToggleButtons with Mate {
       splashColor,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'focusNodes',
       focusNodes,
       isNamed: true,

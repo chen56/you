@@ -32,7 +32,7 @@ class MagnifierInfo$Mate extends MagnifierInfo with Mate {
           fieldBounds: fieldBounds,
           currentLineBoundaries: currentLineBoundaries,
         ) {
-    mateCreateName = 'MagnifierInfo';
+    mateBuilderName = 'MagnifierInfo';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MagnifierInfo$Mate(
           globalGesturePosition: p.get('globalGesturePosition').build(),
@@ -76,7 +76,7 @@ class TextMagnifierConfiguration$Mate extends TextMagnifierConfiguration with Ma
           magnifierBuilder: magnifierBuilder,
           shouldDisplayHandlesInMagnifier: shouldDisplayHandlesInMagnifier,
         ) {
-    mateCreateName = 'TextMagnifierConfiguration';
+    mateBuilderName = 'TextMagnifierConfiguration';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextMagnifierConfiguration$Mate(
           magnifierBuilder: p.get('magnifierBuilder').build(),
@@ -104,7 +104,7 @@ class MagnifierController$Mate extends MagnifierController with Mate {
       /// optionalParameters: {AnimationController? animationController} , default:none
       AnimationController? animationController})
       : super(animationController: animationController) {
-    mateCreateName = 'MagnifierController';
+    mateBuilderName = 'MagnifierController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
     mateUse(
@@ -132,7 +132,7 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate {
           shadows: shadows,
           shape: shape,
         ) {
-    mateCreateName = 'MagnifierDecoration';
+    mateBuilderName = 'MagnifierDecoration';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => MagnifierDecoration$Mate(
           opacity: p.get('opacity').build(),
@@ -145,7 +145,7 @@ class MagnifierDecoration$Mate extends MagnifierDecoration with Mate {
       isNamed: true,
       defaultValue: 1,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,
@@ -187,7 +187,7 @@ class RawMagnifier$Mate extends RawMagnifier with Mate {
           magnificationScale: magnificationScale,
           size: size,
         ) {
-    mateCreateName = 'RawMagnifier';
+    mateBuilderName = 'RawMagnifier';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawMagnifier$Mate(
           key: p.get('key').build(),

@@ -83,7 +83,7 @@ class RenderImage$Mate extends RenderImage with Mate {
           isAntiAlias: isAntiAlias,
           filterQuality: filterQuality,
         ) {
-    mateCreateName = 'RenderImage';
+    mateBuilderName = 'RenderImage';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderImage$Mate(
           image: p.get('image').build(),

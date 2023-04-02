@@ -140,7 +140,7 @@ class CupertinoSearchTextField$Mate extends CupertinoSearchTextField with Mate {
           autocorrect: autocorrect,
           enabled: enabled,
         ) {
-    mateCreateName = 'CupertinoSearchTextField';
+    mateBuilderName = 'CupertinoSearchTextField';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSearchTextField$Mate(
           key: p.get('key').build(),

@@ -25,7 +25,7 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: onPressed,
           child: child,
         ) {
-    mateCreateName = 'CupertinoTextSelectionToolbarButton';
+    mateBuilderName = 'CupertinoTextSelectionToolbarButton';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbarButton$Mate(
           key: p.get('key').build(),
@@ -64,7 +64,7 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           onPressed: onPressed,
           text: text,
         ) {
-    mateCreateName = 'CupertinoTextSelectionToolbarButton.text';
+    mateBuilderName = 'CupertinoTextSelectionToolbarButton.text';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbarButton$Mate.text(
           key: p.get('key').build(),
@@ -99,7 +99,7 @@ class CupertinoTextSelectionToolbarButton$Mate extends CupertinoTextSelectionToo
           key: key,
           buttonItem: buttonItem,
         ) {
-    mateCreateName = 'CupertinoTextSelectionToolbarButton.buttonItem';
+    mateBuilderName = 'CupertinoTextSelectionToolbarButton.buttonItem';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbarButton$Mate.buttonItem(
           key: p.get('key').build(),

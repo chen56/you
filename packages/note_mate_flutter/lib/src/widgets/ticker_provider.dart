@@ -23,7 +23,7 @@ class TickerMode$Mate extends TickerMode with Mate {
           enabled: enabled,
           child: child,
         ) {
-    mateCreateName = 'TickerMode';
+    mateBuilderName = 'TickerMode';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TickerMode$Mate(
           key: p.get('key').build(),

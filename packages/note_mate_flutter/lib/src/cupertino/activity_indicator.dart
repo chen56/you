@@ -27,7 +27,7 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           animating: animating,
           radius: radius,
         ) {
-    mateCreateName = 'CupertinoActivityIndicator';
+    mateBuilderName = 'CupertinoActivityIndicator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate(
           key: p.get('key').build(),
@@ -77,7 +77,7 @@ class CupertinoActivityIndicator$Mate extends CupertinoActivityIndicator with Ma
           radius: radius,
           progress: progress,
         ) {
-    mateCreateName = 'CupertinoActivityIndicator.partiallyRevealed';
+    mateBuilderName = 'CupertinoActivityIndicator.partiallyRevealed';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate.partiallyRevealed(
           key: p.get('key').build(),

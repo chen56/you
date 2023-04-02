@@ -69,7 +69,7 @@ class SingleChildScrollView$Mate extends SingleChildScrollView with Mate {
           restorationId: restorationId,
           keyboardDismissBehavior: keyboardDismissBehavior,
         ) {
-    mateCreateName = 'SingleChildScrollView';
+    mateBuilderName = 'SingleChildScrollView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SingleChildScrollView$Mate(
           key: p.get('key').build(),

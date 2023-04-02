@@ -51,7 +51,7 @@ class RawAutocomplete$Mate<T extends Object> extends RawAutocomplete<T> with Mat
           textEditingController: textEditingController,
           initialValue: initialValue,
         ) {
-    mateCreateName = 'RawAutocomplete';
+    mateBuilderName = 'RawAutocomplete';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RawAutocomplete$Mate<T>(
           key: p.get('key').build(),
@@ -129,7 +129,7 @@ class AutocompleteHighlightedOption$Mate extends AutocompleteHighlightedOption w
           highlightIndexNotifier: highlightIndexNotifier,
           child: child,
         ) {
-    mateCreateName = 'AutocompleteHighlightedOption';
+    mateBuilderName = 'AutocompleteHighlightedOption';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AutocompleteHighlightedOption$Mate(
           key: p.get('key').build(),

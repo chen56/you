@@ -90,7 +90,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           child: child,
         ) {
-    mateCreateName = 'InteractiveViewer';
+    mateBuilderName = 'InteractiveViewer';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate(
           key: p.get('key').build(),
@@ -284,7 +284,7 @@ class InteractiveViewer$Mate extends InteractiveViewer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           builder: builder,
         ) {
-    mateCreateName = 'InteractiveViewer.builder';
+    mateBuilderName = 'InteractiveViewer.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => InteractiveViewer$Mate.builder(
           key: p.get('key').build(),
@@ -410,7 +410,7 @@ class TransformationController$Mate extends TransformationController with Mate {
       /// requiredParameters: [Matrix4? value]
       Matrix4? value)
       : super(value) {
-    mateCreateName = 'TransformationController';
+    mateBuilderName = 'TransformationController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
     mateUse(

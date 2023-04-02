@@ -32,7 +32,7 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar w
           children: children,
           toolbarBuilder: toolbarBuilder,
         ) {
-    mateCreateName = 'CupertinoTextSelectionToolbar';
+    mateBuilderName = 'CupertinoTextSelectionToolbar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextSelectionToolbar$Mate(
           key: p.get('key').build(),
@@ -56,7 +56,7 @@ class CupertinoTextSelectionToolbar$Mate extends CupertinoTextSelectionToolbar w
       anchorBelow,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

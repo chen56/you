@@ -69,7 +69,7 @@ class NestedScrollView$Mate extends NestedScrollView with Mate {
           restorationId: restorationId,
           scrollBehavior: scrollBehavior,
         ) {
-    mateCreateName = 'NestedScrollView';
+    mateBuilderName = 'NestedScrollView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NestedScrollView$Mate(
           key: p.get('key').build(),
@@ -170,7 +170,7 @@ class SliverOverlapAbsorber$Mate extends SliverOverlapAbsorber with Mate {
           handle: handle,
           sliver: sliver,
         ) {
-    mateCreateName = 'SliverOverlapAbsorber';
+    mateBuilderName = 'SliverOverlapAbsorber';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverOverlapAbsorber$Mate(
           key: p.get('key').build(),
@@ -208,7 +208,7 @@ class RenderSliverOverlapAbsorber$Mate extends RenderSliverOverlapAbsorber with 
           handle: handle,
           sliver: sliver,
         ) {
-    mateCreateName = 'RenderSliverOverlapAbsorber';
+    mateBuilderName = 'RenderSliverOverlapAbsorber';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderSliverOverlapAbsorber$Mate(
           handle: p.get('handle').build(),
@@ -244,7 +244,7 @@ class SliverOverlapInjector$Mate extends SliverOverlapInjector with Mate {
           handle: handle,
           sliver: sliver,
         ) {
-    mateCreateName = 'SliverOverlapInjector';
+    mateBuilderName = 'SliverOverlapInjector';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverOverlapInjector$Mate(
           key: p.get('key').build(),
@@ -277,7 +277,7 @@ class RenderSliverOverlapInjector$Mate extends RenderSliverOverlapInjector with 
       /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
       required SliverOverlapAbsorberHandle handle})
       : super(handle: handle) {
-    mateCreateName = 'RenderSliverOverlapInjector';
+    mateBuilderName = 'RenderSliverOverlapInjector';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
     mateUse(
@@ -329,7 +329,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
           handle: handle,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'NestedScrollViewViewport';
+    mateBuilderName = 'NestedScrollViewViewport';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NestedScrollViewViewport$Mate(
           key: p.get('key').build(),
@@ -374,7 +374,7 @@ class NestedScrollViewViewport$Mate extends NestedScrollViewViewport with Mate {
       center,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'slivers',
       slivers,
       isNamed: true,
@@ -430,7 +430,7 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
           handle: handle,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'RenderNestedScrollViewViewport';
+    mateBuilderName = 'RenderNestedScrollViewViewport';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderNestedScrollViewViewport$Mate(
           axisDirection: p.get('axisDirection').build(),
@@ -464,7 +464,7 @@ class RenderNestedScrollViewViewport$Mate extends RenderNestedScrollViewViewport
       isNamed: true,
       defaultValue: 0.0,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

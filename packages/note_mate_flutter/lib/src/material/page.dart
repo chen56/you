@@ -32,7 +32,7 @@ class MaterialPageRoute$Mate<T> extends MaterialPageRoute<T> with Mate {
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
-    mateCreateName = 'MaterialPageRoute';
+    mateBuilderName = 'MaterialPageRoute';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialPageRoute$Mate<T>(
           builder: p.get('builder').build(),
@@ -109,7 +109,7 @@ class MaterialPage$Mate<T> extends MaterialPage<T> with Mate {
           arguments: arguments,
           restorationId: restorationId,
         ) {
-    mateCreateName = 'MaterialPage';
+    mateBuilderName = 'MaterialPage';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialPage$Mate<T>(
           child: p.get('child').build(),

@@ -20,7 +20,7 @@ class AnnotationEntry$Mate<T> extends AnnotationEntry<T> with Mate {
           annotation: annotation,
           localPosition: localPosition,
         ) {
-    mateCreateName = 'AnnotationEntry';
+    mateBuilderName = 'AnnotationEntry';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => AnnotationEntry$Mate<T>(
           annotation: p.get('annotation').build(),
@@ -47,7 +47,7 @@ class LayerHandle$Mate<T extends Layer> extends LayerHandle<T> with Mate {
       /// requiredParameters: [T? _layer]
       T? _layer)
       : super(_layer) {
-    mateCreateName = 'LayerHandle';
+    mateBuilderName = 'LayerHandle';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => LayerHandle$Mate<T>(p.get('_layer').value);
     mateUse(
@@ -66,7 +66,7 @@ class PictureLayer$Mate extends PictureLayer with Mate {
       /// requiredParameters: Rect canvasBounds
       Rect canvasBounds)
       : super(canvasBounds) {
-    mateCreateName = 'PictureLayer';
+    mateBuilderName = 'PictureLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PictureLayer$Mate(p.get('canvasBounds').value);
     mateUse(
@@ -98,7 +98,7 @@ class TextureLayer$Mate extends TextureLayer with Mate {
           freeze: freeze,
           filterQuality: filterQuality,
         ) {
-    mateCreateName = 'TextureLayer';
+    mateBuilderName = 'TextureLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TextureLayer$Mate(
           rect: p.get('rect').build(),
@@ -143,7 +143,7 @@ class PlatformViewLayer$Mate extends PlatformViewLayer with Mate {
           rect: rect,
           viewId: viewId,
         ) {
-    mateCreateName = 'PlatformViewLayer';
+    mateBuilderName = 'PlatformViewLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlatformViewLayer$Mate(
           rect: p.get('rect').build(),
@@ -187,7 +187,7 @@ class PerformanceOverlayLayer$Mate extends PerformanceOverlayLayer with Mate {
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
-    mateCreateName = 'PerformanceOverlayLayer';
+    mateBuilderName = 'PerformanceOverlayLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PerformanceOverlayLayer$Mate(
           overlayRect: p.get('overlayRect').build(),
@@ -232,7 +232,7 @@ class OffsetLayer$Mate extends OffsetLayer with Mate {
       /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
       Offset offset = Offset.zero})
       : super(offset: offset) {
-    mateCreateName = 'OffsetLayer';
+    mateBuilderName = 'OffsetLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OffsetLayer$Mate(offset: p.get('offset').build());
     mateUse(
@@ -257,7 +257,7 @@ class ClipRectLayer$Mate extends ClipRectLayer with Mate {
           clipRect: clipRect,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ClipRectLayer';
+    mateBuilderName = 'ClipRectLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ClipRectLayer$Mate(
           clipRect: p.get('clipRect').build(),
@@ -290,7 +290,7 @@ class ClipRRectLayer$Mate extends ClipRRectLayer with Mate {
           clipRRect: clipRRect,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ClipRRectLayer';
+    mateBuilderName = 'ClipRRectLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ClipRRectLayer$Mate(
           clipRRect: p.get('clipRRect').build(),
@@ -323,7 +323,7 @@ class ClipPathLayer$Mate extends ClipPathLayer with Mate {
           clipPath: clipPath,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ClipPathLayer';
+    mateBuilderName = 'ClipPathLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ClipPathLayer$Mate(
           clipPath: p.get('clipPath').build(),
@@ -351,7 +351,7 @@ class ColorFilterLayer$Mate extends ColorFilterLayer with Mate {
       /// optionalParameters: {ColorFilter? colorFilter} , default:none
       ColorFilter? colorFilter})
       : super(colorFilter: colorFilter) {
-    mateCreateName = 'ColorFilterLayer';
+    mateBuilderName = 'ColorFilterLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ColorFilterLayer$Mate(colorFilter: p.get('colorFilter').build());
     mateUse(
@@ -375,7 +375,7 @@ class ImageFilterLayer$Mate extends ImageFilterLayer with Mate {
           imageFilter: imageFilter,
           offset: offset,
         ) {
-    mateCreateName = 'ImageFilterLayer';
+    mateBuilderName = 'ImageFilterLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ImageFilterLayer$Mate(
           imageFilter: p.get('imageFilter').build(),
@@ -408,7 +408,7 @@ class TransformLayer$Mate extends TransformLayer with Mate {
           transform: transform,
           offset: offset,
         ) {
-    mateCreateName = 'TransformLayer';
+    mateBuilderName = 'TransformLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TransformLayer$Mate(
           transform: p.get('transform').build(),
@@ -441,7 +441,7 @@ class OpacityLayer$Mate extends OpacityLayer with Mate {
           alpha: alpha,
           offset: offset,
         ) {
-    mateCreateName = 'OpacityLayer';
+    mateBuilderName = 'OpacityLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OpacityLayer$Mate(
           alpha: p.get('alpha').build(),
@@ -478,7 +478,7 @@ class ShaderMaskLayer$Mate extends ShaderMaskLayer with Mate {
           maskRect: maskRect,
           blendMode: blendMode,
         ) {
-    mateCreateName = 'ShaderMaskLayer';
+    mateBuilderName = 'ShaderMaskLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ShaderMaskLayer$Mate(
           shader: p.get('shader').build(),
@@ -516,7 +516,7 @@ class BackdropFilterLayer$Mate extends BackdropFilterLayer with Mate {
           filter: filter,
           blendMode: blendMode,
         ) {
-    mateCreateName = 'BackdropFilterLayer';
+    mateBuilderName = 'BackdropFilterLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BackdropFilterLayer$Mate(
           filter: p.get('filter').build(),
@@ -561,7 +561,7 @@ class PhysicalModelLayer$Mate extends PhysicalModelLayer with Mate {
           color: color,
           shadowColor: shadowColor,
         ) {
-    mateCreateName = 'PhysicalModelLayer';
+    mateBuilderName = 'PhysicalModelLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PhysicalModelLayer$Mate(
           clipPath: p.get('clipPath').build(),
@@ -612,7 +612,7 @@ class LeaderLayer$Mate extends LeaderLayer with Mate {
           link: link,
           offset: offset,
         ) {
-    mateCreateName = 'LeaderLayer';
+    mateBuilderName = 'LeaderLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => LeaderLayer$Mate(
           link: p.get('link').build(),
@@ -653,7 +653,7 @@ class FollowerLayer$Mate extends FollowerLayer with Mate {
           unlinkedOffset: unlinkedOffset,
           linkedOffset: linkedOffset,
         ) {
-    mateCreateName = 'FollowerLayer';
+    mateBuilderName = 'FollowerLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FollowerLayer$Mate(
           link: p.get('link').build(),
@@ -707,7 +707,7 @@ class AnnotatedRegionLayer$Mate<T extends Object> extends AnnotatedRegionLayer<T
           offset: offset,
           opaque: opaque,
         ) {
-    mateCreateName = 'AnnotatedRegionLayer';
+    mateBuilderName = 'AnnotatedRegionLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => AnnotatedRegionLayer$Mate<T>(
           p.get('value').value,

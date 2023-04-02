@@ -26,7 +26,7 @@ class SliverGridGeometry$Mate extends SliverGridGeometry with Mate {
           mainAxisExtent: mainAxisExtent,
           crossAxisExtent: crossAxisExtent,
         ) {
-    mateCreateName = 'SliverGridGeometry';
+    mateBuilderName = 'SliverGridGeometry';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridGeometry$Mate(
           scrollOffset: p.get('scrollOffset').build(),
@@ -86,7 +86,7 @@ class SliverGridRegularTileLayout$Mate extends SliverGridRegularTileLayout with 
           childCrossAxisExtent: childCrossAxisExtent,
           reverseCrossAxis: reverseCrossAxis,
         ) {
-    mateCreateName = 'SliverGridRegularTileLayout';
+    mateBuilderName = 'SliverGridRegularTileLayout';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridRegularTileLayout$Mate(
           crossAxisCount: p.get('crossAxisCount').build(),
@@ -154,7 +154,7 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate extends SliverGridDelegateW
           childAspectRatio: childAspectRatio,
           mainAxisExtent: mainAxisExtent,
         ) {
-    mateCreateName = 'SliverGridDelegateWithFixedCrossAxisCount';
+    mateBuilderName = 'SliverGridDelegateWithFixedCrossAxisCount';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridDelegateWithFixedCrossAxisCount$Mate(
           crossAxisCount: p.get('crossAxisCount').build(),
@@ -219,7 +219,7 @@ class SliverGridDelegateWithMaxCrossAxisExtent$Mate extends SliverGridDelegateWi
           childAspectRatio: childAspectRatio,
           mainAxisExtent: mainAxisExtent,
         ) {
-    mateCreateName = 'SliverGridDelegateWithMaxCrossAxisExtent';
+    mateBuilderName = 'SliverGridDelegateWithMaxCrossAxisExtent';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridDelegateWithMaxCrossAxisExtent$Mate(
           maxCrossAxisExtent: p.get('maxCrossAxisExtent').build(),
@@ -272,7 +272,7 @@ class RenderSliverGrid$Mate extends RenderSliverGrid with Mate {
           childManager: childManager,
           gridDelegate: gridDelegate,
         ) {
-    mateCreateName = 'RenderSliverGrid';
+    mateBuilderName = 'RenderSliverGrid';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverGrid$Mate(
           childManager: p.get('childManager').build(),

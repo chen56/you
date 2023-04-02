@@ -161,7 +161,7 @@ class ListTile$Mate extends ListTile with Mate {
           minLeadingWidth: minLeadingWidth,
           titleAlignment: titleAlignment,
         ) {
-    mateCreateName = 'ListTile';
+    mateBuilderName = 'ListTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTile$Mate(
           key: p.get('key').build(),

@@ -33,7 +33,7 @@ class ExpansionPanel$Mate extends ExpansionPanel with Mate {
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
-    mateCreateName = 'ExpansionPanel';
+    mateBuilderName = 'ExpansionPanel';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanel$Mate(
           headerBuilder: p.get('headerBuilder').build(),
@@ -97,7 +97,7 @@ class ExpansionPanelRadio$Mate extends ExpansionPanelRadio with Mate {
           canTapOnHeader: canTapOnHeader,
           backgroundColor: backgroundColor,
         ) {
-    mateCreateName = 'ExpansionPanelRadio';
+    mateBuilderName = 'ExpansionPanelRadio';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelRadio$Mate(
           value: p.get('value').build(),
@@ -172,7 +172,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
-    mateCreateName = 'ExpansionPanelList';
+    mateBuilderName = 'ExpansionPanelList';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelList$Mate(
           key: p.get('key').build(),
@@ -189,7 +189,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -266,7 +266,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
           elevation: elevation,
           expandIconColor: expandIconColor,
         ) {
-    mateCreateName = 'ExpansionPanelList.radio';
+    mateBuilderName = 'ExpansionPanelList.radio';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionPanelList$Mate.radio(
           key: p.get('key').build(),
@@ -284,7 +284,7 @@ class ExpansionPanelList$Mate extends ExpansionPanelList with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

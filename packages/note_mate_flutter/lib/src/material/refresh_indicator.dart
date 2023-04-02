@@ -62,7 +62,7 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: strokeWidth,
           triggerMode: triggerMode,
         ) {
-    mateCreateName = 'RefreshIndicator';
+    mateBuilderName = 'RefreshIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshIndicator$Mate(
           key: p.get('key').build(),
@@ -195,7 +195,7 @@ class RefreshIndicator$Mate extends RefreshIndicator with Mate {
           strokeWidth: strokeWidth,
           triggerMode: triggerMode,
         ) {
-    mateCreateName = 'RefreshIndicator.adaptive';
+    mateBuilderName = 'RefreshIndicator.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshIndicator$Mate.adaptive(
           key: p.get('key').build(),

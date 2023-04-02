@@ -25,7 +25,7 @@ class RenderPerformanceOverlay$Mate extends RenderPerformanceOverlay with Mate {
           checkerboardRasterCacheImages: checkerboardRasterCacheImages,
           checkerboardOffscreenLayers: checkerboardOffscreenLayers,
         ) {
-    mateCreateName = 'RenderPerformanceOverlay';
+    mateBuilderName = 'RenderPerformanceOverlay';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPerformanceOverlay$Mate(
           optionsMask: p.get('optionsMask').build(),

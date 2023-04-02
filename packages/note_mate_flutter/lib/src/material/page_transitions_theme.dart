@@ -13,7 +13,7 @@ class ZoomPageTransitionsBuilder$Mate extends ZoomPageTransitionsBuilder with Ma
       /// optionalParameters: {bool allowEnterRouteSnapshotting = true} , default:processed=BooleanLiteralImpl
       bool allowEnterRouteSnapshotting = true})
       : super(allowEnterRouteSnapshotting: allowEnterRouteSnapshotting) {
-    mateCreateName = 'ZoomPageTransitionsBuilder';
+    mateBuilderName = 'ZoomPageTransitionsBuilder';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) =>
         ZoomPageTransitionsBuilder$Mate(allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').build());
@@ -34,7 +34,7 @@ class PageTransitionsTheme$Mate extends PageTransitionsTheme with Mate {
       /// optionalParameters: {Map<TargetPlatform, PageTransitionsBuilder> builders = _defaultBuilders} , default:unprocessed=SimpleIdentifierImpl
       required Map<TargetPlatform, PageTransitionsBuilder> builders})
       : super(builders: builders) {
-    mateCreateName = 'PageTransitionsTheme';
+    mateBuilderName = 'PageTransitionsTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build());
     mateUse(

@@ -11,7 +11,7 @@ class SlottedRenderObjectElement$Mate<S> extends SlottedRenderObjectElement<S> w
       /// requiredParameters: SlottedMultiChildRenderObjectWidgetMixin<S> widget
       SlottedMultiChildRenderObjectWidgetMixin<S> widget)
       : super(widget) {
-    mateCreateName = 'SlottedRenderObjectElement';
+    mateBuilderName = 'SlottedRenderObjectElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SlottedRenderObjectElement$Mate<S>(p.get('widget').value);
     mateUse(

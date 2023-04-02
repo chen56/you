@@ -62,7 +62,7 @@ class InkSparkle$Mate extends InkSparkle with Mate {
           onRemoved: onRemoved,
           turbulenceSeed: turbulenceSeed,
         ) {
-    mateCreateName = 'InkSparkle';
+    mateBuilderName = 'InkSparkle';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkSparkle$Mate(
           controller: p.get('controller').build(),

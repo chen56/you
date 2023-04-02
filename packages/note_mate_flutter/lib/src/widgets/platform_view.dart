@@ -53,7 +53,7 @@ class AndroidView$Mate extends AndroidView with Mate {
           creationParamsCodec: creationParamsCodec,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'AndroidView';
+    mateBuilderName = 'AndroidView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AndroidView$Mate(
           key: p.get('key').build(),
@@ -153,7 +153,7 @@ class UiKitView$Mate extends UiKitView with Mate {
           creationParamsCodec: creationParamsCodec,
           gestureRecognizers: gestureRecognizers,
         ) {
-    mateCreateName = 'UiKitView';
+    mateBuilderName = 'UiKitView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UiKitView$Mate(
           key: p.get('key').build(),
@@ -226,7 +226,7 @@ class HtmlElementView$Mate extends HtmlElementView with Mate {
           viewType: viewType,
           onPlatformViewCreated: onPlatformViewCreated,
         ) {
-    mateCreateName = 'HtmlElementView';
+    mateBuilderName = 'HtmlElementView';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => HtmlElementView$Mate(
           key: p.get('key').build(),
@@ -272,7 +272,7 @@ class PlatformViewLink$Mate extends PlatformViewLink with Mate {
           onCreatePlatformView: onCreatePlatformView,
           viewType: viewType,
         ) {
-    mateCreateName = 'PlatformViewLink';
+    mateBuilderName = 'PlatformViewLink';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformViewLink$Mate(
           key: p.get('key').build(),
@@ -324,7 +324,7 @@ class PlatformViewSurface$Mate extends PlatformViewSurface with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
-    mateCreateName = 'PlatformViewSurface';
+    mateBuilderName = 'PlatformViewSurface';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformViewSurface$Mate(
           key: p.get('key').build(),
@@ -376,7 +376,7 @@ class AndroidViewSurface$Mate extends AndroidViewSurface with Mate {
           hitTestBehavior: hitTestBehavior,
           gestureRecognizers: gestureRecognizers,
         ) {
-    mateCreateName = 'AndroidViewSurface';
+    mateBuilderName = 'AndroidViewSurface';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AndroidViewSurface$Mate(
           key: p.get('key').build(),

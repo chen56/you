@@ -60,7 +60,7 @@ class FilledButton$Mate extends FilledButton with Mate {
           statesController: statesController,
           child: child,
         ) {
-    mateCreateName = 'FilledButton';
+    mateBuilderName = 'FilledButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButton$Mate(
           key: p.get('key').build(),
@@ -181,7 +181,7 @@ class FilledButton$Mate extends FilledButton with Mate {
           statesController: statesController,
           child: child,
         ) {
-    mateCreateName = 'FilledButton.tonal';
+    mateBuilderName = 'FilledButton.tonal';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButton$Mate.tonal(
           key: p.get('key').build(),

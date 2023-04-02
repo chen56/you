@@ -22,7 +22,7 @@ class NotificationListener$Mate<T extends Notification> extends NotificationList
           child: child,
           onNotification: onNotification,
         ) {
-    mateCreateName = 'NotificationListener';
+    mateBuilderName = 'NotificationListener';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NotificationListener$Mate<T>(
           key: p.get('key').build(),

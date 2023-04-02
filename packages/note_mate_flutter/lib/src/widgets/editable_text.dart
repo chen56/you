@@ -37,7 +37,7 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       /// optionalParameters: {String? text} , default:none
       String? text})
       : super(text: text) {
-    mateCreateName = 'TextEditingController';
+    mateBuilderName = 'TextEditingController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextEditingController$Mate(text: p.get('text').build());
     mateUse(
@@ -53,7 +53,7 @@ class TextEditingController$Mate extends TextEditingController with Mate {
       /// requiredParameters: TextEditingValue? value
       TextEditingValue? value)
       : super.fromValue(value) {
-    mateCreateName = 'TextEditingController.fromValue';
+    mateBuilderName = 'TextEditingController.fromValue';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextEditingController$Mate.fromValue(p.get('value').value);
     mateUse(
@@ -85,7 +85,7 @@ class ToolbarOptions$Mate extends ToolbarOptions with Mate {
           paste: paste,
           selectAll: selectAll,
         ) {
-    mateCreateName = 'ToolbarOptions';
+    mateBuilderName = 'ToolbarOptions';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ToolbarOptions$Mate(
           copy: p.get('copy').build(),
@@ -133,7 +133,7 @@ class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration w
           onContentInserted: onContentInserted,
           allowedMimeTypes: allowedMimeTypes,
         ) {
-    mateCreateName = 'ContentInsertionConfiguration';
+    mateBuilderName = 'ContentInsertionConfiguration';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ContentInsertionConfiguration$Mate(
           onContentInserted: p.get('onContentInserted').build(),
@@ -144,7 +144,7 @@ class ContentInsertionConfiguration$Mate extends ContentInsertionConfiguration w
       onContentInserted,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'allowedMimeTypes',
       allowedMimeTypes,
       isNamed: true,
@@ -429,7 +429,7 @@ class EditableText$Mate extends EditableText with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'EditableText';
+    mateBuilderName = 'EditableText';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => EditableText$Mate(
           key: p.get('key').build(),
@@ -709,7 +709,7 @@ class EditableText$Mate extends EditableText with Mate {
       onTapOutside,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,

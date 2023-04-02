@@ -97,7 +97,7 @@ class NavigationRail$Mate extends NavigationRail with Mate {
           indicatorColor: indicatorColor,
           indicatorShape: indicatorShape,
         ) {
-    mateCreateName = 'NavigationRail';
+    mateBuilderName = 'NavigationRail';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRail$Mate(
           key: p.get('key').build(),
@@ -147,7 +147,7 @@ class NavigationRail$Mate extends NavigationRail with Mate {
       trailing,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'destinations',
       destinations,
       isNamed: true,
@@ -254,7 +254,7 @@ class NavigationRailDestination$Mate extends NavigationRailDestination with Mate
           label: label,
           padding: padding,
         ) {
-    mateCreateName = 'NavigationRailDestination';
+    mateBuilderName = 'NavigationRailDestination';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRailDestination$Mate(
           icon: p.get('icon').build(),

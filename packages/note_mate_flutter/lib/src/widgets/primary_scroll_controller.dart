@@ -35,7 +35,7 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           scrollDirection: scrollDirection,
           child: child,
         ) {
-    mateCreateName = 'PrimaryScrollController';
+    mateBuilderName = 'PrimaryScrollController';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate(
           key: p.get('key').build(),
@@ -83,7 +83,7 @@ class PrimaryScrollController$Mate extends PrimaryScrollController with Mate {
           key: key,
           child: child,
         ) {
-    mateCreateName = 'PrimaryScrollController.none';
+    mateBuilderName = 'PrimaryScrollController.none';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate.none(
           key: p.get('key').build(),

@@ -19,7 +19,7 @@ class OvalBorder$Mate extends OvalBorder with Mate {
           side: side,
           eccentricity: eccentricity,
         ) {
-    mateCreateName = 'OvalBorder';
+    mateBuilderName = 'OvalBorder';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => OvalBorder$Mate(
           side: p.get('side').build(),

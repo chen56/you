@@ -39,7 +39,7 @@ class RadioThemeData$Mate extends RadioThemeData with Mate {
           materialTapTargetSize: materialTapTargetSize,
           visualDensity: visualDensity,
         ) {
-    mateCreateName = 'RadioThemeData';
+    mateBuilderName = 'RadioThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RadioThemeData$Mate(
           mouseCursor: p.get('mouseCursor').build(),
@@ -99,7 +99,7 @@ class RadioTheme$Mate extends RadioTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'RadioTheme';
+    mateBuilderName = 'RadioTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RadioTheme$Mate(
           key: p.get('key').build(),

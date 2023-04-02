@@ -18,7 +18,7 @@ class SharedAppData$Mate extends SharedAppData with Mate {
           key: key,
           child: child,
         ) {
-    mateCreateName = 'SharedAppData';
+    mateBuilderName = 'SharedAppData';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SharedAppData$Mate(
           key: p.get('key').build(),

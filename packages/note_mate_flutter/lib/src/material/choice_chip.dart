@@ -123,7 +123,7 @@ class ChoiceChip$Mate extends ChoiceChip with Mate {
           selectedShadowColor: selectedShadowColor,
           avatarBorder: avatarBorder,
         ) {
-    mateCreateName = 'ChoiceChip';
+    mateBuilderName = 'ChoiceChip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ChoiceChip$Mate(
           key: p.get('key').build(),

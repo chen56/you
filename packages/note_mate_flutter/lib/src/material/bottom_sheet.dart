@@ -65,7 +65,7 @@ class BottomSheet$Mate extends BottomSheet with Mate {
           onClosing: onClosing,
           builder: builder,
         ) {
-    mateCreateName = 'BottomSheet';
+    mateBuilderName = 'BottomSheet';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomSheet$Mate(
           key: p.get('key').build(),
@@ -218,7 +218,7 @@ class ModalBottomSheetRoute$Mate<T> extends ModalBottomSheetRoute<T> with Mate {
           anchorPoint: anchorPoint,
           useSafeArea: useSafeArea,
         ) {
-    mateCreateName = 'ModalBottomSheetRoute';
+    mateBuilderName = 'ModalBottomSheetRoute';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ModalBottomSheetRoute$Mate<T>(
           builder: p.get('builder').build(),

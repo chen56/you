@@ -35,7 +35,7 @@ class DataColumn$Mate extends DataColumn with Mate {
           numeric: numeric,
           onSort: onSort,
         ) {
-    mateCreateName = 'DataColumn';
+    mateBuilderName = 'DataColumn';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataColumn$Mate(
           label: p.get('label').build(),
@@ -96,7 +96,7 @@ class DataRow$Mate extends DataRow with Mate {
           color: color,
           cells: cells,
         ) {
-    mateCreateName = 'DataRow';
+    mateBuilderName = 'DataRow';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataRow$Mate(
           key: p.get('key').build(),
@@ -132,7 +132,7 @@ class DataRow$Mate extends DataRow with Mate {
       color,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'cells',
       cells,
       isNamed: true,
@@ -166,7 +166,7 @@ class DataRow$Mate extends DataRow with Mate {
           color: color,
           cells: cells,
         ) {
-    mateCreateName = 'DataRow.byIndex';
+    mateBuilderName = 'DataRow.byIndex';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataRow$Mate.byIndex(
           index: p.get('index').build(),
@@ -202,7 +202,7 @@ class DataRow$Mate extends DataRow with Mate {
       color,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'cells',
       cells,
       isNamed: true,
@@ -246,7 +246,7 @@ class DataCell$Mate extends DataCell with Mate {
           onDoubleTap: onDoubleTap,
           onTapCancel: onTapCancel,
         ) {
-    mateCreateName = 'DataCell';
+    mateBuilderName = 'DataCell';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataCell$Mate(
           p.get('child').value,
@@ -396,7 +396,7 @@ class DataTable$Mate extends DataTable with Mate {
           border: border,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'DataTable';
+    mateBuilderName = 'DataTable';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataTable$Mate(
           key: p.get('key').build(),
@@ -427,7 +427,7 @@ class DataTable$Mate extends DataTable with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'columns',
       columns,
       isNamed: true,
@@ -515,7 +515,7 @@ class DataTable$Mate extends DataTable with Mate {
       dividerThickness,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'rows',
       rows,
       isNamed: true,
@@ -572,7 +572,7 @@ class TableRowInkWell$Mate extends TableRowInkWell with Mate {
           onHighlightChanged: onHighlightChanged,
           overlayColor: overlayColor,
         ) {
-    mateCreateName = 'TableRowInkWell';
+    mateBuilderName = 'TableRowInkWell';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TableRowInkWell$Mate(
           key: p.get('key').build(),

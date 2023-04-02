@@ -18,7 +18,7 @@ class ApplicationSwitcherDescription$Mate extends ApplicationSwitcherDescription
           label: label,
           primaryColor: primaryColor,
         ) {
-    mateCreateName = 'ApplicationSwitcherDescription';
+    mateBuilderName = 'ApplicationSwitcherDescription';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ApplicationSwitcherDescription$Mate(
           label: p.get('label').build(),
@@ -74,7 +74,7 @@ class SystemUiOverlayStyle$Mate extends SystemUiOverlayStyle with Mate {
           statusBarIconBrightness: statusBarIconBrightness,
           systemStatusBarContrastEnforced: systemStatusBarContrastEnforced,
         ) {
-    mateCreateName = 'SystemUiOverlayStyle';
+    mateBuilderName = 'SystemUiOverlayStyle';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SystemUiOverlayStyle$Mate(
           systemNavigationBarColor: p.get('systemNavigationBarColor').build(),

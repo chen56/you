@@ -22,7 +22,7 @@ class TextureBox$Mate extends TextureBox with Mate {
           freeze: freeze,
           filterQuality: filterQuality,
         ) {
-    mateCreateName = 'TextureBox';
+    mateBuilderName = 'TextureBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TextureBox$Mate(
           textureId: p.get('textureId').build(),

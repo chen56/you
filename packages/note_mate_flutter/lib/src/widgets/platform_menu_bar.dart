@@ -30,7 +30,7 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           control: control,
           meta: meta,
         ) {
-    mateCreateName = 'ShortcutSerialization.character';
+    mateBuilderName = 'ShortcutSerialization.character';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutSerialization$Mate.character(
           p.get('character').value,
@@ -85,7 +85,7 @@ class ShortcutSerialization$Mate extends ShortcutSerialization with Mate {
           meta: meta,
           shift: shift,
         ) {
-    mateCreateName = 'ShortcutSerialization.modifier';
+    mateBuilderName = 'ShortcutSerialization.modifier';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ShortcutSerialization$Mate.modifier(
           p.get('trigger').value,
@@ -134,7 +134,7 @@ class DefaultPlatformMenuDelegate$Mate extends DefaultPlatformMenuDelegate with 
       /// optionalParameters: {MethodChannel? channel} , default:none
       MethodChannel? channel})
       : super(channel: channel) {
-    mateCreateName = 'DefaultPlatformMenuDelegate';
+    mateBuilderName = 'DefaultPlatformMenuDelegate';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
     mateUse(
@@ -162,7 +162,7 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
           menus: menus,
           child: child,
         ) {
-    mateCreateName = 'PlatformMenuBar';
+    mateBuilderName = 'PlatformMenuBar';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformMenuBar$Mate(
           key: p.get('key').build(),
@@ -174,7 +174,7 @@ class PlatformMenuBar$Mate extends PlatformMenuBar with Mate {
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'menus',
       menus,
       isNamed: true,
@@ -208,7 +208,7 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
           onClose: onClose,
           menus: menus,
         ) {
-    mateCreateName = 'PlatformMenu';
+    mateBuilderName = 'PlatformMenu';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformMenu$Mate(
           label: p.get('label').build(),
@@ -231,7 +231,7 @@ class PlatformMenu$Mate extends PlatformMenu with Mate {
       onClose,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'menus',
       menus,
       isNamed: true,
@@ -247,10 +247,10 @@ class PlatformMenuItemGroup$Mate extends PlatformMenuItemGroup with Mate {
       /// optionalParameters: {required List<PlatformMenuItem> members} , default:none
       required List<PlatformMenuItem> members})
       : super(members: members) {
-    mateCreateName = 'PlatformMenuItemGroup';
+    mateBuilderName = 'PlatformMenuItemGroup';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
-    mateUseList(
+    mateUse(
       'members',
       members,
       isNamed: true,
@@ -279,7 +279,7 @@ class PlatformMenuItem$Mate extends PlatformMenuItem with Mate {
           onSelected: onSelected,
           onSelectedIntent: onSelectedIntent,
         ) {
-    mateCreateName = 'PlatformMenuItem';
+    mateBuilderName = 'PlatformMenuItem';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformMenuItem$Mate(
           label: p.get('label').build(),
@@ -323,7 +323,7 @@ class PlatformProvidedMenuItem$Mate extends PlatformProvidedMenuItem with Mate {
           type: type,
           enabled: enabled,
         ) {
-    mateCreateName = 'PlatformProvidedMenuItem';
+    mateBuilderName = 'PlatformProvidedMenuItem';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => PlatformProvidedMenuItem$Mate(
           type: p.get('type').build(),

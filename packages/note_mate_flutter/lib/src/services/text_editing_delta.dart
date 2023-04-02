@@ -31,7 +31,7 @@ class TextEditingDeltaInsertion$Mate extends TextEditingDeltaInsertion with Mate
           selection: selection,
           composing: composing,
         ) {
-    mateCreateName = 'TextEditingDeltaInsertion';
+    mateBuilderName = 'TextEditingDeltaInsertion';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaInsertion$Mate(
           oldText: p.get('oldText').build(),
@@ -89,7 +89,7 @@ class TextEditingDeltaDeletion$Mate extends TextEditingDeltaDeletion with Mate {
           selection: selection,
           composing: composing,
         ) {
-    mateCreateName = 'TextEditingDeltaDeletion';
+    mateBuilderName = 'TextEditingDeltaDeletion';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaDeletion$Mate(
           oldText: p.get('oldText').build(),
@@ -145,7 +145,7 @@ class TextEditingDeltaReplacement$Mate extends TextEditingDeltaReplacement with 
           selection: selection,
           composing: composing,
         ) {
-    mateCreateName = 'TextEditingDeltaReplacement';
+    mateBuilderName = 'TextEditingDeltaReplacement';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaReplacement$Mate(
           oldText: p.get('oldText').build(),
@@ -199,7 +199,7 @@ class TextEditingDeltaNonTextUpdate$Mate extends TextEditingDeltaNonTextUpdate w
           selection: selection,
           composing: composing,
         ) {
-    mateCreateName = 'TextEditingDeltaNonTextUpdate';
+    mateBuilderName = 'TextEditingDeltaNonTextUpdate';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaNonTextUpdate$Mate(
           oldText: p.get('oldText').build(),

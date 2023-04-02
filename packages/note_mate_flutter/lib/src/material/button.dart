@@ -130,7 +130,7 @@ class RawMaterialButton$Mate extends RawMaterialButton with Mate {
           child: child,
           enableFeedback: enableFeedback,
         ) {
-    mateCreateName = 'RawMaterialButton';
+    mateBuilderName = 'RawMaterialButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RawMaterialButton$Mate(
           key: p.get('key').build(),

@@ -17,7 +17,7 @@ class TextSelectionToolbarAnchors$Mate extends TextSelectionToolbarAnchors with 
           primaryAnchor: primaryAnchor,
           secondaryAnchor: secondaryAnchor,
         ) {
-    mateCreateName = 'TextSelectionToolbarAnchors';
+    mateBuilderName = 'TextSelectionToolbarAnchors';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => TextSelectionToolbarAnchors$Mate(
           primaryAnchor: p.get('primaryAnchor').build(),

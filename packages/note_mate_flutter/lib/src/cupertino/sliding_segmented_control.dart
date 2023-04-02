@@ -43,7 +43,7 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends CupertinoSlidingSegmented
           padding: padding,
           backgroundColor: backgroundColor,
         ) {
-    mateCreateName = 'CupertinoSlidingSegmentedControl';
+    mateBuilderName = 'CupertinoSlidingSegmentedControl';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSlidingSegmentedControl$Mate<T>(
           key: p.get('key').build(),

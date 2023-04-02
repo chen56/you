@@ -18,7 +18,7 @@ class MaterialColor$Mate extends MaterialColor with Mate {
           primary,
           swatch,
         ) {
-    mateCreateName = 'MaterialColor';
+    mateBuilderName = 'MaterialColor';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialColor$Mate(
           p.get('primary').value,
@@ -50,7 +50,7 @@ class MaterialAccentColor$Mate extends MaterialAccentColor with Mate {
           primary,
           swatch,
         ) {
-    mateCreateName = 'MaterialAccentColor';
+    mateBuilderName = 'MaterialAccentColor';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialAccentColor$Mate(
           p.get('primary').value,

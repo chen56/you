@@ -40,7 +40,7 @@ class BouncingScrollSimulation$Mate extends BouncingScrollSimulation with Mate {
           constantDeceleration: constantDeceleration,
           tolerance: tolerance,
         ) {
-    mateCreateName = 'BouncingScrollSimulation';
+    mateBuilderName = 'BouncingScrollSimulation';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BouncingScrollSimulation$Mate(
           position: p.get('position').build(),
@@ -112,7 +112,7 @@ class ClampingScrollSimulation$Mate extends ClampingScrollSimulation with Mate {
           friction: friction,
           tolerance: tolerance,
         ) {
-    mateCreateName = 'ClampingScrollSimulation';
+    mateBuilderName = 'ClampingScrollSimulation';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClampingScrollSimulation$Mate(
           position: p.get('position').build(),

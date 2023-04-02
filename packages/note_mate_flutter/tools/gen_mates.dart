@@ -573,7 +573,7 @@ void _genLibMate({
                 //             .code).closure,
                 //     }))
                 //     .statement,
-                refer("mateCreateName")
+                refer("mateBuilderName")
                     .assign(literalString(constructor.displayName))
                     .statement,
                 refer("matePackageUrl")
@@ -608,7 +608,7 @@ void _genLibMate({
                     .statement,
                 ...parameters.map((e) {
                   var defaultValue = resolveDefaultValue(e, typeRefers);
-                  var methodName = e.type.isDartCoreList ? "mateUseList" : "mateUse";
+                  var methodName = "mateUse";
                   var positionalArguments = [code.literalString(e.name), code.refer(e.name)];
                   var namedArguments = {
                     "isNamed": code.literalBool(e.isNamed),

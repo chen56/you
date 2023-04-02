@@ -24,7 +24,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           delegate: delegate,
           prototypeItem: prototypeItem,
         ) {
-    mateCreateName = 'SliverPrototypeExtentList';
+    mateBuilderName = 'SliverPrototypeExtentList';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate(
           key: p.get('key').build(),
@@ -83,7 +83,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverPrototypeExtentList.builder';
+    mateBuilderName = 'SliverPrototypeExtentList.builder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.builder(
           key: p.get('key').build(),
@@ -167,7 +167,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
           addRepaintBoundaries: addRepaintBoundaries,
           addSemanticIndexes: addSemanticIndexes,
         ) {
-    mateCreateName = 'SliverPrototypeExtentList.list';
+    mateBuilderName = 'SliverPrototypeExtentList.list';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.list(
           key: p.get('key').build(),
@@ -182,7 +182,7 @@ class SliverPrototypeExtentList$Mate extends SliverPrototypeExtentList with Mate
       key,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

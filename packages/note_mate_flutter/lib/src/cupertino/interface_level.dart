@@ -22,7 +22,7 @@ class CupertinoUserInterfaceLevel$Mate extends CupertinoUserInterfaceLevel with 
           data: data,
           child: child,
         ) {
-    mateCreateName = 'CupertinoUserInterfaceLevel';
+    mateBuilderName = 'CupertinoUserInterfaceLevel';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoUserInterfaceLevel$Mate(
           key: p.get('key').build(),

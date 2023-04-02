@@ -17,7 +17,7 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           restorationId: restorationId,
           debugOwner: debugOwner,
         ) {
-    mateCreateName = 'RestorationBucket.empty';
+    mateBuilderName = 'RestorationBucket.empty';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RestorationBucket$Mate.empty(
           restorationId: p.get('restorationId').build(),
@@ -46,7 +46,7 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           manager: manager,
           rawData: rawData,
         ) {
-    mateCreateName = 'RestorationBucket.root';
+    mateBuilderName = 'RestorationBucket.root';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RestorationBucket$Mate.root(
           manager: p.get('manager').build(),
@@ -79,7 +79,7 @@ class RestorationBucket$Mate extends RestorationBucket with Mate {
           parent: parent,
           debugOwner: debugOwner,
         ) {
-    mateCreateName = 'RestorationBucket.child';
+    mateBuilderName = 'RestorationBucket.child';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RestorationBucket$Mate.child(
           restorationId: p.get('restorationId').build(),

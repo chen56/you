@@ -172,7 +172,7 @@ class ColorEditor<T> extends ValueParamEditor {
   Widget valueWidget(BuildContext context) {
     return Row(
       children: [
-        Text(param.toCodeExpressionString(editors: editors)),
+        Text(param.toCodeExpressionString()),
         Container(
           width: 20,
           height: 20,
@@ -276,5 +276,79 @@ class _ColorRegister {
     if (o == null) return code.literalNull;
     var result = colors[o];
     return result ?? code.refer("'Color(0x${o.value.toRadixString(16).padLeft(8, '0')})';");
+  }
+}
+
+abstract class ValueParamEditor extends Editor {
+  @override
+  final ValueParam param;
+
+  ValueParamEditor(this.param, {required super.editors});
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return Text(
+      toCodeString(),
+    );
+  }
+}
+
+class ObjectParamEditor extends Editor {
+  @override
+  final ObjectParam param;
+
+  ObjectParamEditor(this.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    var filtered = param.params.entries.where((e) => e.value.isShow);
+
+    var positionalArguments = filtered
+        .where((e) => !e.value.isNamed)
+        .map((e) => e.value.toCodeExpression(editors: editors));
+    var namedArguments = Map.fromEntries(filtered
+        .where((e) => e.value.isNamed)
+        .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
+    return param.builderRefer.call(positionalArguments, namedArguments);
+  }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    if (param.isRoot) return const Text("");
+
+    return param.parent is ListParam ? const Text("") : Text("${param.builderRefer.symbol}");
+  }
+}
+
+class ListParamEditor extends Editor {
+  @override
+  final ListParam param;
+
+  ListParamEditor(this.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return code.literalList(param.children.map((e) => e.toCodeExpression(editors: editors)));
+  }
+}
+
+class ManuallyValueEditor extends ValueParamEditor {
+  code.Expression codeExpression;
+
+  ManuallyValueEditor(super.param, {required super.editors, required this.codeExpression});
+
+  @override
+  code.Expression toCode() {
+    if (param.value == null) return code.literalNull;
+    return codeExpression;
+  }
+}
+
+class DefaultValueParamEditor extends ValueParamEditor {
+  DefaultValueParamEditor(super.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return code.refer("${param.value}");
   }
 }

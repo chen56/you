@@ -19,7 +19,7 @@ class Tween$Mate<T extends Object?> extends Tween<T> with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'Tween';
+    mateBuilderName = 'Tween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => Tween$Mate<T>(
           begin: p.get('begin').build(),
@@ -46,7 +46,7 @@ class ReverseTween$Mate<T extends Object?> extends ReverseTween<T> with Mate {
       /// requiredParameters: Tween<T> parent
       Tween<T> parent)
       : super(parent) {
-    mateCreateName = 'ReverseTween';
+    mateBuilderName = 'ReverseTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ReverseTween$Mate<T>(p.get('parent').value);
     mateUse(
@@ -70,7 +70,7 @@ class ColorTween$Mate extends ColorTween with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'ColorTween';
+    mateBuilderName = 'ColorTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ColorTween$Mate(
           begin: p.get('begin').build(),
@@ -102,7 +102,7 @@ class SizeTween$Mate extends SizeTween with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'SizeTween';
+    mateBuilderName = 'SizeTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SizeTween$Mate(
           begin: p.get('begin').build(),
@@ -134,7 +134,7 @@ class RectTween$Mate extends RectTween with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'RectTween';
+    mateBuilderName = 'RectTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => RectTween$Mate(
           begin: p.get('begin').build(),
@@ -166,7 +166,7 @@ class IntTween$Mate extends IntTween with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'IntTween';
+    mateBuilderName = 'IntTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => IntTween$Mate(
           begin: p.get('begin').build(),
@@ -198,7 +198,7 @@ class StepTween$Mate extends StepTween with Mate {
           begin: begin,
           end: end,
         ) {
-    mateCreateName = 'StepTween';
+    mateBuilderName = 'StepTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => StepTween$Mate(
           begin: p.get('begin').build(),
@@ -225,7 +225,7 @@ class ConstantTween$Mate<T> extends ConstantTween<T> with Mate {
       /// requiredParameters: T value
       T value)
       : super(value) {
-    mateCreateName = 'ConstantTween';
+    mateBuilderName = 'ConstantTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ConstantTween$Mate<T>(p.get('value').value);
     mateUse(
@@ -244,7 +244,7 @@ class CurveTween$Mate extends CurveTween with Mate {
       /// optionalParameters: {required Curve curve} , default:none
       required Curve curve})
       : super(curve: curve) {
-    mateCreateName = 'CurveTween';
+    mateBuilderName = 'CurveTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CurveTween$Mate(curve: p.get('curve').build());
     mateUse(

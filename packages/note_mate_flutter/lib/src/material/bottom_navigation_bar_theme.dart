@@ -73,7 +73,7 @@ class BottomNavigationBarThemeData$Mate extends BottomNavigationBarThemeData wit
           landscapeLayout: landscapeLayout,
           mouseCursor: mouseCursor,
         ) {
-    mateCreateName = 'BottomNavigationBarThemeData';
+    mateBuilderName = 'BottomNavigationBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),
@@ -181,7 +181,7 @@ class BottomNavigationBarTheme$Mate extends BottomNavigationBarTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'BottomNavigationBarTheme';
+    mateBuilderName = 'BottomNavigationBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarTheme$Mate(
           key: p.get('key').build(),

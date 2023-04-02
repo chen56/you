@@ -38,7 +38,7 @@ class SnackBarAction$Mate extends SnackBarAction with Mate {
           label: label,
           onPressed: onPressed,
         ) {
-    mateCreateName = 'SnackBarAction';
+    mateBuilderName = 'SnackBarAction';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SnackBarAction$Mate(
           key: p.get('key').build(),
@@ -152,7 +152,7 @@ class SnackBar$Mate extends SnackBar with Mate {
           dismissDirection: dismissDirection,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'SnackBar';
+    mateBuilderName = 'SnackBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SnackBar$Mate(
           key: p.get('key').build(),

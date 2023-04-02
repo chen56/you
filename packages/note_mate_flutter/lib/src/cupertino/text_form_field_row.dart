@@ -224,7 +224,7 @@ class CupertinoTextFormFieldRow$Mate extends CupertinoTextFormFieldRow with Mate
           placeholderStyle: placeholderStyle,
           contextMenuBuilder: contextMenuBuilder,
         ) {
-    mateCreateName = 'CupertinoTextFormFieldRow';
+    mateBuilderName = 'CupertinoTextFormFieldRow';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextFormFieldRow$Mate(
           key: p.get('key').build(),
@@ -457,7 +457,7 @@ class CupertinoTextFormFieldRow$Mate extends CupertinoTextFormFieldRow with Mate
       validator,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,

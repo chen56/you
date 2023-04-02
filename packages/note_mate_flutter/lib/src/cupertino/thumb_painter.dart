@@ -20,7 +20,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
           color: color,
           shadows: shadows,
         ) {
-    mateCreateName = 'CupertinoThumbPainter';
+    mateBuilderName = 'CupertinoThumbPainter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThumbPainter$Mate(
           color: p.get('color').build(),
@@ -32,7 +32,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
       isNamed: true,
       defaultValue: CupertinoColors.white,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,
@@ -50,7 +50,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
           color: color,
           shadows: shadows,
         ) {
-    mateCreateName = 'CupertinoThumbPainter.switchThumb';
+    mateBuilderName = 'CupertinoThumbPainter.switchThumb';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThumbPainter$Mate.switchThumb(
           color: p.get('color').build(),
@@ -62,7 +62,7 @@ class CupertinoThumbPainter$Mate extends CupertinoThumbPainter with Mate {
       isNamed: true,
       defaultValue: CupertinoColors.white,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

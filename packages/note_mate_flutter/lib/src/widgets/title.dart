@@ -28,7 +28,7 @@ class Title$Mate extends Title with Mate {
           color: color,
           child: child,
         ) {
-    mateCreateName = 'Title';
+    mateBuilderName = 'Title';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Title$Mate(
           key: p.get('key').build(),

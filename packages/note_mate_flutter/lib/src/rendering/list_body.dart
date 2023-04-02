@@ -20,13 +20,13 @@ class RenderListBody$Mate extends RenderListBody with Mate {
           children: children,
           axisDirection: axisDirection,
         ) {
-    mateCreateName = 'RenderListBody';
+    mateBuilderName = 'RenderListBody';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderListBody$Mate(
           children: p.get('children').build(),
           axisDirection: p.get('axisDirection').build(),
         );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

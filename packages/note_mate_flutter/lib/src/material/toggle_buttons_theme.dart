@@ -75,7 +75,7 @@ class ToggleButtonsThemeData$Mate extends ToggleButtonsThemeData with Mate {
           borderRadius: borderRadius,
           borderWidth: borderWidth,
         ) {
-    mateCreateName = 'ToggleButtonsThemeData';
+    mateBuilderName = 'ToggleButtonsThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtonsThemeData$Mate(
           textStyle: p.get('textStyle').build(),
@@ -189,7 +189,7 @@ class ToggleButtonsTheme$Mate extends ToggleButtonsTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'ToggleButtonsTheme';
+    mateBuilderName = 'ToggleButtonsTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtonsTheme$Mate(
           key: p.get('key').build(),

@@ -32,7 +32,7 @@ class CupertinoPageScaffold$Mate extends CupertinoPageScaffold with Mate {
           resizeToAvoidBottomInset: resizeToAvoidBottomInset,
           child: child,
         ) {
-    mateCreateName = 'CupertinoPageScaffold';
+    mateBuilderName = 'CupertinoPageScaffold';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageScaffold$Mate(
           key: p.get('key').build(),

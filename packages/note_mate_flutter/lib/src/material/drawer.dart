@@ -51,7 +51,7 @@ class Drawer$Mate extends Drawer with Mate {
           child: child,
           semanticLabel: semanticLabel,
         ) {
-    mateCreateName = 'Drawer';
+    mateBuilderName = 'Drawer';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Drawer$Mate(
           key: p.get('key').build(),
@@ -153,7 +153,7 @@ class DrawerController$Mate extends DrawerController with Mate {
           edgeDragWidth: edgeDragWidth,
           enableOpenDragGesture: enableOpenDragGesture,
         ) {
-    mateCreateName = 'DrawerController';
+    mateBuilderName = 'DrawerController';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerController$Mate(
           key: p.get('key').build(),

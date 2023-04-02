@@ -46,7 +46,7 @@ class AnimatedSwitcher$Mate extends AnimatedSwitcher with Mate {
           transitionBuilder: transitionBuilder,
           layoutBuilder: layoutBuilder,
         ) {
-    mateCreateName = 'AnimatedSwitcher';
+    mateBuilderName = 'AnimatedSwitcher';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedSwitcher$Mate(
           key: p.get('key').build(),

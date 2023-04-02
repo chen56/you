@@ -18,7 +18,7 @@ class SuggestionSpan$Mate extends SuggestionSpan with Mate {
           range,
           suggestions,
         ) {
-    mateCreateName = 'SuggestionSpan';
+    mateBuilderName = 'SuggestionSpan';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SuggestionSpan$Mate(
           p.get('range').value,
@@ -29,7 +29,7 @@ class SuggestionSpan$Mate extends SuggestionSpan with Mate {
       range,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'suggestions',
       suggestions,
       isNamed: false,
@@ -50,7 +50,7 @@ class SpellCheckResults$Mate extends SpellCheckResults with Mate {
           spellCheckedText,
           suggestionSpans,
         ) {
-    mateCreateName = 'SpellCheckResults';
+    mateBuilderName = 'SpellCheckResults';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SpellCheckResults$Mate(
           p.get('spellCheckedText').value,
@@ -61,7 +61,7 @@ class SpellCheckResults$Mate extends SpellCheckResults with Mate {
       spellCheckedText,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'suggestionSpans',
       suggestionSpans,
       isNamed: false,

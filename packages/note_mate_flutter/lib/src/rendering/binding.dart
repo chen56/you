@@ -12,7 +12,7 @@ class RenderingFlutterBinding$Mate extends RenderingFlutterBinding with Mate {
       /// optionalParameters: {RenderBox? root} , default:none
       RenderBox? root})
       : super(root: root) {
-    mateCreateName = 'RenderingFlutterBinding';
+    mateBuilderName = 'RenderingFlutterBinding';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderingFlutterBinding$Mate(root: p.get('root').build());
     mateUse(

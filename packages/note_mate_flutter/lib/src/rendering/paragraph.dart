@@ -19,7 +19,7 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends PlaceholderSpanIndexSemantic
       /// requiredParameters: int index
       int index)
       : super(index) {
-    mateCreateName = 'PlaceholderSpanIndexSemanticsTag';
+    mateBuilderName = 'PlaceholderSpanIndexSemanticsTag';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
     mateUse(
@@ -90,7 +90,7 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
           selectionColor: selectionColor,
           registrar: registrar,
         ) {
-    mateCreateName = 'RenderParagraph';
+    mateBuilderName = 'RenderParagraph';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderParagraph$Mate(
           p.get('text').value,
@@ -168,7 +168,7 @@ class RenderParagraph$Mate extends RenderParagraph with Mate {
       textHeightBehavior,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

@@ -22,7 +22,7 @@ class LayoutBuilder$Mate extends LayoutBuilder with Mate {
           key: key,
           builder: builder,
         ) {
-    mateCreateName = 'LayoutBuilder';
+    mateBuilderName = 'LayoutBuilder';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => LayoutBuilder$Mate(
           key: p.get('key').build(),

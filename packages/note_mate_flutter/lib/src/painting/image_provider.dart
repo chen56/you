@@ -39,7 +39,7 @@ class ImageConfiguration$Mate extends ImageConfiguration with Mate {
           size: size,
           platform: platform,
         ) {
-    mateCreateName = 'ImageConfiguration';
+    mateBuilderName = 'ImageConfiguration';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ImageConfiguration$Mate(
           bundle: p.get('bundle').build(),
@@ -99,7 +99,7 @@ class AssetBundleImageKey$Mate extends AssetBundleImageKey with Mate {
           name: name,
           scale: scale,
         ) {
-    mateCreateName = 'AssetBundleImageKey';
+    mateBuilderName = 'AssetBundleImageKey';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => AssetBundleImageKey$Mate(
           bundle: p.get('bundle').build(),
@@ -148,7 +148,7 @@ class ResizeImage$Mate extends ResizeImage with Mate {
           policy: policy,
           allowUpscaling: allowUpscaling,
         ) {
-    mateCreateName = 'ResizeImage';
+    mateBuilderName = 'ResizeImage';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ResizeImage$Mate(
           p.get('imageProvider').value,
@@ -199,7 +199,7 @@ class FileImage$Mate extends FileImage with Mate {
           file,
           scale: scale,
         ) {
-    mateCreateName = 'FileImage';
+    mateBuilderName = 'FileImage';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => FileImage$Mate(
           p.get('file').value,
@@ -231,7 +231,7 @@ class MemoryImage$Mate extends MemoryImage with Mate {
           bytes,
           scale: scale,
         ) {
-    mateCreateName = 'MemoryImage';
+    mateBuilderName = 'MemoryImage';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => MemoryImage$Mate(
           p.get('bytes').value,
@@ -271,7 +271,7 @@ class ExactAssetImage$Mate extends ExactAssetImage with Mate {
           bundle: bundle,
           package: package,
         ) {
-    mateCreateName = 'ExactAssetImage';
+    mateBuilderName = 'ExactAssetImage';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => ExactAssetImage$Mate(
           p.get('assetName').value,
@@ -316,7 +316,7 @@ class NetworkImageLoadException$Mate extends NetworkImageLoadException with Mate
           statusCode: statusCode,
           uri: uri,
         ) {
-    mateCreateName = 'NetworkImageLoadException';
+    mateBuilderName = 'NetworkImageLoadException';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => NetworkImageLoadException$Mate(
           statusCode: p.get('statusCode').build(),

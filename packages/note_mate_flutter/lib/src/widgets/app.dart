@@ -139,7 +139,7 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           actions: actions,
           restorationScopeId: restorationScopeId,
         ) {
-    mateCreateName = 'WidgetsApp';
+    mateBuilderName = 'WidgetsApp';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WidgetsApp$Mate(
           key: p.get('key').build(),
@@ -198,7 +198,7 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
       onUnknownRoute,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'navigatorObservers',
       navigatorObservers,
       isNamed: true,
@@ -439,7 +439,7 @@ class WidgetsApp$Mate extends WidgetsApp with Mate {
           actions: actions,
           restorationScopeId: restorationScopeId,
         ) {
-    mateCreateName = 'WidgetsApp.router';
+    mateBuilderName = 'WidgetsApp.router';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => WidgetsApp$Mate.router(
           key: p.get('key').build(),

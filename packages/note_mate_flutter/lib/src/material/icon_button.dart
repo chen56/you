@@ -111,7 +111,7 @@ class IconButton$Mate extends IconButton with Mate {
           selectedIcon: selectedIcon,
           icon: icon,
         ) {
-    mateCreateName = 'IconButton';
+    mateBuilderName = 'IconButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IconButton$Mate(
           key: p.get('key').build(),

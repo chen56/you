@@ -285,7 +285,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'CupertinoTextField';
+    mateBuilderName = 'CupertinoTextField';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextField$Mate(
           key: p.get('key').build(),
@@ -555,7 +555,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
       onTapOutside,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,
@@ -942,7 +942,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'CupertinoTextField.borderless';
+    mateBuilderName = 'CupertinoTextField.borderless';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextField$Mate.borderless(
           key: p.get('key').build(),
@@ -1212,7 +1212,7 @@ class CupertinoTextField$Mate extends CupertinoTextField with Mate {
       onTapOutside,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,

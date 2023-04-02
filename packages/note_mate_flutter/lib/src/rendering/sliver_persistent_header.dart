@@ -20,7 +20,7 @@ class OverScrollHeaderStretchConfiguration$Mate extends OverScrollHeaderStretchC
           stretchTriggerOffset: stretchTriggerOffset,
           onStretchTrigger: onStretchTrigger,
         ) {
-    mateCreateName = 'OverScrollHeaderStretchConfiguration';
+    mateBuilderName = 'OverScrollHeaderStretchConfiguration';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OverScrollHeaderStretchConfiguration$Mate(
           stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
@@ -53,7 +53,7 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends PersistentHeaderSho
           minShowOnScreenExtent: minShowOnScreenExtent,
           maxShowOnScreenExtent: maxShowOnScreenExtent,
         ) {
-    mateCreateName = 'PersistentHeaderShowOnScreenConfiguration';
+    mateBuilderName = 'PersistentHeaderShowOnScreenConfiguration';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PersistentHeaderShowOnScreenConfiguration$Mate(
           minShowOnScreenExtent: p.get('minShowOnScreenExtent').build(),
@@ -87,7 +87,7 @@ class FloatingHeaderSnapConfiguration$Mate extends FloatingHeaderSnapConfigurati
           curve: curve,
           duration: duration,
         ) {
-    mateCreateName = 'FloatingHeaderSnapConfiguration';
+    mateBuilderName = 'FloatingHeaderSnapConfiguration';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FloatingHeaderSnapConfiguration$Mate(
           curve: p.get('curve').build(),

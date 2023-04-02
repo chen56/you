@@ -67,7 +67,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           selectionOverlay: selectionOverlay,
           looping: looping,
         ) {
-    mateCreateName = 'CupertinoPicker';
+    mateBuilderName = 'CupertinoPicker';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPicker$Mate(
           key: p.get('key').build(),
@@ -137,7 +137,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
       onSelectedItemChanged,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -210,7 +210,7 @@ class CupertinoPicker$Mate extends CupertinoPicker with Mate {
           childCount: childCount,
           selectionOverlay: selectionOverlay,
         ) {
-    mateCreateName = 'CupertinoPicker.builder';
+    mateBuilderName = 'CupertinoPicker.builder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPicker$Mate.builder(
           key: p.get('key').build(),
@@ -319,7 +319,7 @@ class CupertinoPickerDefaultSelectionOverlay$Mate extends CupertinoPickerDefault
           capStartEdge: capStartEdge,
           capEndEdge: capEndEdge,
         ) {
-    mateCreateName = 'CupertinoPickerDefaultSelectionOverlay';
+    mateBuilderName = 'CupertinoPickerDefaultSelectionOverlay';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPickerDefaultSelectionOverlay$Mate(
           key: p.get('key').build(),

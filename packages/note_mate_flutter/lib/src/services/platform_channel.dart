@@ -23,7 +23,7 @@ class BasicMessageChannel$Mate<T> extends BasicMessageChannel<T> with Mate {
           codec,
           binaryMessenger: binaryMessenger,
         ) {
-    mateCreateName = 'BasicMessageChannel';
+    mateBuilderName = 'BasicMessageChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => BasicMessageChannel$Mate<T>(
           p.get('name').value,
@@ -65,7 +65,7 @@ class MethodChannel$Mate extends MethodChannel with Mate {
           codec,
           binaryMessenger,
         ) {
-    mateCreateName = 'MethodChannel';
+    mateBuilderName = 'MethodChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MethodChannel$Mate(
           p.get('name').value,
@@ -107,7 +107,7 @@ class OptionalMethodChannel$Mate extends OptionalMethodChannel with Mate {
           codec,
           binaryMessenger,
         ) {
-    mateCreateName = 'OptionalMethodChannel';
+    mateBuilderName = 'OptionalMethodChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => OptionalMethodChannel$Mate(
           p.get('name').value,
@@ -149,7 +149,7 @@ class EventChannel$Mate extends EventChannel with Mate {
           codec,
           binaryMessenger,
         ) {
-    mateCreateName = 'EventChannel';
+    mateBuilderName = 'EventChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => EventChannel$Mate(
           p.get('name').value,

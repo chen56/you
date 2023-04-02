@@ -55,7 +55,7 @@ class Icon$Mate extends Icon with Mate {
           semanticLabel: semanticLabel,
           textDirection: textDirection,
         ) {
-    mateCreateName = 'Icon';
+    mateBuilderName = 'Icon';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Icon$Mate(
           p.get('icon').value,
@@ -110,7 +110,7 @@ class Icon$Mate extends Icon with Mate {
       color,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'shadows',
       shadows,
       isNamed: true,

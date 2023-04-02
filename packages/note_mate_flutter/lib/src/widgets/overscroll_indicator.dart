@@ -42,7 +42,7 @@ class GlowingOverscrollIndicator$Mate extends GlowingOverscrollIndicator with Ma
           notificationPredicate: notificationPredicate,
           child: child,
         ) {
-    mateCreateName = 'GlowingOverscrollIndicator';
+    mateBuilderName = 'GlowingOverscrollIndicator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => GlowingOverscrollIndicator$Mate(
           key: p.get('key').build(),
@@ -118,7 +118,7 @@ class StretchingOverscrollIndicator$Mate extends StretchingOverscrollIndicator w
           clipBehavior: clipBehavior,
           child: child,
         ) {
-    mateCreateName = 'StretchingOverscrollIndicator';
+    mateBuilderName = 'StretchingOverscrollIndicator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => StretchingOverscrollIndicator$Mate(
           key: p.get('key').build(),
@@ -164,7 +164,7 @@ class OverscrollIndicatorNotification$Mate extends OverscrollIndicatorNotificati
       /// optionalParameters: {required bool leading} , default:none
       required bool leading})
       : super(leading: leading) {
-    mateCreateName = 'OverscrollIndicatorNotification';
+    mateBuilderName = 'OverscrollIndicatorNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
     mateUse(

@@ -71,7 +71,7 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
           builder: builder,
           child: child,
         ) {
-    mateCreateName = 'MenuAnchor';
+    mateBuilderName = 'MenuAnchor';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuAnchor$Mate(
           key: p.get('key').build(),
@@ -142,7 +142,7 @@ class MenuAnchor$Mate extends MenuAnchor with Mate {
       isNamed: true,
       defaultValue: true,
     );
-    mateUseList(
+    mateUse(
       'menuChildren',
       menuChildren,
       isNamed: true,
@@ -185,7 +185,7 @@ class MenuBar$Mate extends MenuBar with Mate {
           controller: controller,
           children: children,
         ) {
-    mateCreateName = 'MenuBar';
+    mateBuilderName = 'MenuBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuBar$Mate(
           key: p.get('key').build(),
@@ -215,7 +215,7 @@ class MenuBar$Mate extends MenuBar with Mate {
       controller,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,
@@ -280,7 +280,7 @@ class MenuItemButton$Mate extends MenuItemButton with Mate {
           trailingIcon: trailingIcon,
           child: child,
         ) {
-    mateCreateName = 'MenuItemButton';
+    mateBuilderName = 'MenuItemButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuItemButton$Mate(
           key: p.get('key').build(),
@@ -428,7 +428,7 @@ class CheckboxMenuButton$Mate extends CheckboxMenuButton with Mate {
           trailingIcon: trailingIcon,
           child: child,
         ) {
-    mateCreateName = 'CheckboxMenuButton';
+    mateBuilderName = 'CheckboxMenuButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckboxMenuButton$Mate(
           key: p.get('key').build(),
@@ -583,7 +583,7 @@ class RadioMenuButton$Mate<T> extends RadioMenuButton<T> with Mate {
           trailingIcon: trailingIcon,
           child: child,
         ) {
-    mateCreateName = 'RadioMenuButton';
+    mateBuilderName = 'RadioMenuButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RadioMenuButton$Mate<T>(
           key: p.get('key').build(),
@@ -741,7 +741,7 @@ class SubmenuButton$Mate extends SubmenuButton with Mate {
           menuChildren: menuChildren,
           child: child,
         ) {
-    mateCreateName = 'SubmenuButton';
+    mateBuilderName = 'SubmenuButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SubmenuButton$Mate(
           key: p.get('key').build(),
@@ -826,7 +826,7 @@ class SubmenuButton$Mate extends SubmenuButton with Mate {
       trailingIcon,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'menuChildren',
       menuChildren,
       isNamed: true,
@@ -847,7 +847,7 @@ class DismissMenuAction$Mate extends DismissMenuAction with Mate {
       /// optionalParameters: {required MenuController controller} , default:none
       required MenuController controller})
       : super(controller: controller) {
-    mateCreateName = 'DismissMenuAction';
+    mateBuilderName = 'DismissMenuAction';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DismissMenuAction$Mate(controller: p.get('controller').build());
     mateUse(
@@ -879,7 +879,7 @@ class MenuAcceleratorCallbackBinding$Mate extends MenuAcceleratorCallbackBinding
           hasSubmenu: hasSubmenu,
           child: child,
         ) {
-    mateCreateName = 'MenuAcceleratorCallbackBinding';
+    mateBuilderName = 'MenuAcceleratorCallbackBinding';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuAcceleratorCallbackBinding$Mate(
           key: p.get('key').build(),
@@ -927,7 +927,7 @@ class MenuAcceleratorLabel$Mate extends MenuAcceleratorLabel with Mate {
           key: key,
           builder: builder,
         ) {
-    mateCreateName = 'MenuAcceleratorLabel';
+    mateBuilderName = 'MenuAcceleratorLabel';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuAcceleratorLabel$Mate(
           p.get('label').value,

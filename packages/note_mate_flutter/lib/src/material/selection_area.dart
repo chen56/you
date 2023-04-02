@@ -44,7 +44,7 @@ class SelectionArea$Mate extends SelectionArea with Mate {
           onSelectionChanged: onSelectionChanged,
           child: child,
         ) {
-    mateCreateName = 'SelectionArea';
+    mateBuilderName = 'SelectionArea';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectionArea$Mate(
           key: p.get('key').build(),

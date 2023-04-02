@@ -50,7 +50,7 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends CupertinoSegmente
           pressedColor: pressedColor,
           padding: padding,
         ) {
-    mateCreateName = 'CupertinoSegmentedControl';
+    mateBuilderName = 'CupertinoSegmentedControl';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSegmentedControl$Mate<T>(
           key: p.get('key').build(),

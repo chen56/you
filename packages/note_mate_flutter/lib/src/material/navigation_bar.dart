@@ -68,7 +68,7 @@ class NavigationBar$Mate extends NavigationBar with Mate {
           height: height,
           labelBehavior: labelBehavior,
         ) {
-    mateCreateName = 'NavigationBar';
+    mateBuilderName = 'NavigationBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationBar$Mate(
           key: p.get('key').build(),
@@ -101,7 +101,7 @@ class NavigationBar$Mate extends NavigationBar with Mate {
       isNamed: true,
       defaultValue: 0,
     );
-    mateUseList(
+    mateUse(
       'destinations',
       destinations,
       isNamed: true,
@@ -179,7 +179,7 @@ class NavigationDestination$Mate extends NavigationDestination with Mate {
           label: label,
           tooltip: tooltip,
         ) {
-    mateCreateName = 'NavigationDestination';
+    mateBuilderName = 'NavigationDestination';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDestination$Mate(
           key: p.get('key').build(),
@@ -249,7 +249,7 @@ class NavigationIndicator$Mate extends NavigationIndicator with Mate {
           borderRadius: borderRadius,
           shape: shape,
         ) {
-    mateCreateName = 'NavigationIndicator';
+    mateBuilderName = 'NavigationIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationIndicator$Mate(
           key: p.get('key').build(),

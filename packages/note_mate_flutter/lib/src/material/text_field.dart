@@ -268,7 +268,7 @@ class TextField$Mate extends TextField with Mate {
           spellCheckConfiguration: spellCheckConfiguration,
           magnifierConfiguration: magnifierConfiguration,
         ) {
-    mateCreateName = 'TextField';
+    mateBuilderName = 'TextField';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextField$Mate(
           key: p.get('key').build(),
@@ -491,7 +491,7 @@ class TextField$Mate extends TextField with Mate {
       onAppPrivateCommand,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'inputFormatters',
       inputFormatters,
       isNamed: true,

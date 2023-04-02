@@ -18,7 +18,7 @@ class RenderSliverFixedExtentList$Mate extends RenderSliverFixedExtentList with 
           childManager: childManager,
           itemExtent: itemExtent,
         ) {
-    mateCreateName = 'RenderSliverFixedExtentList';
+    mateBuilderName = 'RenderSliverFixedExtentList';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFixedExtentList$Mate(
           childManager: p.get('childManager').build(),

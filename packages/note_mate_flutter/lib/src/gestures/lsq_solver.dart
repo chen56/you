@@ -12,7 +12,7 @@ class PolynomialFit$Mate extends PolynomialFit with Mate {
       /// requiredParameters: int degree
       int degree)
       : super(degree) {
-    mateCreateName = 'PolynomialFit';
+    mateBuilderName = 'PolynomialFit';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PolynomialFit$Mate(p.get('degree').value);
     mateUse(
@@ -40,24 +40,24 @@ class LeastSquaresSolver$Mate extends LeastSquaresSolver with Mate {
           y,
           w,
         ) {
-    mateCreateName = 'LeastSquaresSolver';
+    mateBuilderName = 'LeastSquaresSolver';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LeastSquaresSolver$Mate(
           p.get('x').value,
           p.get('y').value,
           p.get('w').value,
         );
-    mateUseList(
+    mateUse(
       'x',
       x,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'y',
       y,
       isNamed: false,
     );
-    mateUseList(
+    mateUse(
       'w',
       w,
       isNamed: false,

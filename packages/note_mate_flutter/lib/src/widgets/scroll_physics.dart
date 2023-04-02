@@ -12,7 +12,7 @@ class ScrollPhysics$Mate extends ScrollPhysics with Mate {
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateCreateName = 'ScrollPhysics';
+    mateBuilderName = 'ScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
@@ -31,7 +31,7 @@ class RangeMaintainingScrollPhysics$Mate extends RangeMaintainingScrollPhysics w
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateCreateName = 'RangeMaintainingScrollPhysics';
+    mateBuilderName = 'RangeMaintainingScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RangeMaintainingScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
@@ -55,7 +55,7 @@ class BouncingScrollPhysics$Mate extends BouncingScrollPhysics with Mate {
           decelerationRate: decelerationRate,
           parent: parent,
         ) {
-    mateCreateName = 'BouncingScrollPhysics';
+    mateBuilderName = 'BouncingScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => BouncingScrollPhysics$Mate(
           decelerationRate: p.get('decelerationRate').build(),
@@ -83,7 +83,7 @@ class ClampingScrollPhysics$Mate extends ClampingScrollPhysics with Mate {
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateCreateName = 'ClampingScrollPhysics';
+    mateBuilderName = 'ClampingScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ClampingScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
@@ -102,7 +102,7 @@ class AlwaysScrollableScrollPhysics$Mate extends AlwaysScrollableScrollPhysics w
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateCreateName = 'AlwaysScrollableScrollPhysics';
+    mateBuilderName = 'AlwaysScrollableScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AlwaysScrollableScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(
@@ -121,7 +121,7 @@ class NeverScrollableScrollPhysics$Mate extends NeverScrollableScrollPhysics wit
       /// optionalParameters: {ScrollPhysics? parent} , default:none
       ScrollPhysics? parent})
       : super(parent: parent) {
-    mateCreateName = 'NeverScrollableScrollPhysics';
+    mateBuilderName = 'NeverScrollableScrollPhysics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => NeverScrollableScrollPhysics$Mate(parent: p.get('parent').build());
     mateUse(

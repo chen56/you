@@ -22,7 +22,7 @@ class ScrollConfiguration$Mate extends ScrollConfiguration with Mate {
           behavior: behavior,
           child: child,
         ) {
-    mateCreateName = 'ScrollConfiguration';
+    mateBuilderName = 'ScrollConfiguration';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollConfiguration$Mate(
           key: p.get('key').build(),

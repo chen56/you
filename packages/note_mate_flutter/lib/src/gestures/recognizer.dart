@@ -17,7 +17,7 @@ class OffsetPair$Mate extends OffsetPair with Mate {
           local: local,
           global: global,
         ) {
-    mateCreateName = 'OffsetPair';
+    mateBuilderName = 'OffsetPair';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => OffsetPair$Mate(
           local: p.get('local').build(),

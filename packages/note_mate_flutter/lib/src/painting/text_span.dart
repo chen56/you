@@ -55,7 +55,7 @@ class TextSpan$Mate extends TextSpan with Mate {
           locale: locale,
           spellOut: spellOut,
         ) {
-    mateCreateName = 'TextSpan';
+    mateBuilderName = 'TextSpan';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => TextSpan$Mate(
           text: p.get('text').build(),
@@ -74,7 +74,7 @@ class TextSpan$Mate extends TextSpan with Mate {
       text,
       isNamed: true,
     );
-    mateUseList(
+    mateUse(
       'children',
       children,
       isNamed: true,

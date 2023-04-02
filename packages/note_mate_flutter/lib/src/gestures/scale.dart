@@ -26,7 +26,7 @@ class ScaleStartDetails$Mate extends ScaleStartDetails with Mate {
           localFocalPoint: localFocalPoint,
           pointerCount: pointerCount,
         ) {
-    mateCreateName = 'ScaleStartDetails';
+    mateBuilderName = 'ScaleStartDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleStartDetails$Mate(
           focalPoint: p.get('focalPoint').build(),
@@ -90,7 +90,7 @@ class ScaleUpdateDetails$Mate extends ScaleUpdateDetails with Mate {
           pointerCount: pointerCount,
           focalPointDelta: focalPointDelta,
         ) {
-    mateCreateName = 'ScaleUpdateDetails';
+    mateBuilderName = 'ScaleUpdateDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleUpdateDetails$Mate(
           focalPoint: p.get('focalPoint').build(),
@@ -169,7 +169,7 @@ class ScaleEndDetails$Mate extends ScaleEndDetails with Mate {
           scaleVelocity: scaleVelocity,
           pointerCount: pointerCount,
         ) {
-    mateCreateName = 'ScaleEndDetails';
+    mateBuilderName = 'ScaleEndDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleEndDetails$Mate(
           velocity: p.get('velocity').build(),
@@ -226,7 +226,7 @@ class ScaleGestureRecognizer$Mate extends ScaleGestureRecognizer with Mate {
           trackpadScrollCausesScale: trackpadScrollCausesScale,
           trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
         ) {
-    mateCreateName = 'ScaleGestureRecognizer';
+    mateBuilderName = 'ScaleGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),

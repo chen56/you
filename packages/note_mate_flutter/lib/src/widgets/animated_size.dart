@@ -44,7 +44,7 @@ class AnimatedSize$Mate extends AnimatedSize with Mate {
           reverseDuration: reverseDuration,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'AnimatedSize';
+    mateBuilderName = 'AnimatedSize';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => AnimatedSize$Mate(
           key: p.get('key').build(),

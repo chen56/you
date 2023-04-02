@@ -77,7 +77,7 @@ class Dismissible$Mate extends Dismissible with Mate {
           dragStartBehavior: dragStartBehavior,
           behavior: behavior,
         ) {
-    mateCreateName = 'Dismissible';
+    mateBuilderName = 'Dismissible';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Dismissible$Mate(
           key: p.get('key').build(),
@@ -199,7 +199,7 @@ class DismissUpdateDetails$Mate extends DismissUpdateDetails with Mate {
           previousReached: previousReached,
           progress: progress,
         ) {
-    mateCreateName = 'DismissUpdateDetails';
+    mateBuilderName = 'DismissUpdateDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DismissUpdateDetails$Mate(
           direction: p.get('direction').build(),

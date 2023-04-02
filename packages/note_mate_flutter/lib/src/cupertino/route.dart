@@ -39,7 +39,7 @@ class CupertinoPageRoute$Mate<T> extends CupertinoPageRoute<T> with Mate {
           fullscreenDialog: fullscreenDialog,
           allowSnapshotting: allowSnapshotting,
         ) {
-    mateCreateName = 'CupertinoPageRoute';
+    mateBuilderName = 'CupertinoPageRoute';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageRoute$Mate<T>(
           builder: p.get('builder').build(),
@@ -126,7 +126,7 @@ class CupertinoPage$Mate<T> extends CupertinoPage<T> with Mate {
           arguments: arguments,
           restorationId: restorationId,
         ) {
-    mateCreateName = 'CupertinoPage';
+    mateBuilderName = 'CupertinoPage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPage$Mate<T>(
           child: p.get('child').build(),
@@ -215,7 +215,7 @@ class CupertinoPageTransition$Mate extends CupertinoPageTransition with Mate {
           child: child,
           linearTransition: linearTransition,
         ) {
-    mateCreateName = 'CupertinoPageTransition';
+    mateBuilderName = 'CupertinoPageTransition';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageTransition$Mate(
           key: p.get('key').build(),
@@ -277,7 +277,7 @@ class CupertinoFullscreenDialogTransition$Mate extends CupertinoFullscreenDialog
           child: child,
           linearTransition: linearTransition,
         ) {
-    mateCreateName = 'CupertinoFullscreenDialogTransition';
+    mateBuilderName = 'CupertinoFullscreenDialogTransition';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFullscreenDialogTransition$Mate(
           key: p.get('key').build(),
@@ -351,7 +351,7 @@ class CupertinoModalPopupRoute$Mate<T> extends CupertinoModalPopupRoute<T> with 
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
-    mateCreateName = 'CupertinoModalPopupRoute';
+    mateBuilderName = 'CupertinoModalPopupRoute';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoModalPopupRoute$Mate<T>(
           builder: p.get('builder').build(),
@@ -450,7 +450,7 @@ class CupertinoDialogRoute$Mate<T> extends CupertinoDialogRoute<T> with Mate {
           settings: settings,
           anchorPoint: anchorPoint,
         ) {
-    mateCreateName = 'CupertinoDialogRoute';
+    mateBuilderName = 'CupertinoDialogRoute';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDialogRoute$Mate<T>(
           builder: p.get('builder').build(),

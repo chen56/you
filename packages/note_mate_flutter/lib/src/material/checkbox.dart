@@ -93,7 +93,7 @@ class Checkbox$Mate extends Checkbox with Mate {
           side: side,
           isError: isError,
         ) {
-    mateCreateName = 'Checkbox';
+    mateBuilderName = 'Checkbox';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Checkbox$Mate(
           key: p.get('key').build(),

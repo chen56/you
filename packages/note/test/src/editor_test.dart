@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:code_builder/code_builder.dart' as code;
 
 typedef OnClick = void Function();
 // ignore: camel_case_types
@@ -17,19 +16,18 @@ void isInt<T>() {
 void main() {
   late ObjectParam obj;
   Editors editors = Editors(emitter: defaultEmitter, formatter: defaultDartFormatter);
+  setUp(() {
+    obj = ObjectParam.root(editors: editors);
+  });
 
   String singleCode<T>(T? init) {
-    return obj.use("x", init).toCodeExpressionString(editors: editors);
+    return obj.use("x", init).toCodeExpressionString();
   }
 
   String listCode<E>(List<E>? init) {
-    return obj.useList("x", init).toCodeExpressionString(editors: editors);
+    return obj.use("x", init).toCodeExpressionString();
   }
 
-  setUp(() {
-    obj = ObjectParam(
-        init: Container(), builder: (m) => Container(), builderRefer: code.refer("Container"));
-  });
   group("editors", () {
     test("core type", () {
       expect(singleCode<double>(2), "2.0");

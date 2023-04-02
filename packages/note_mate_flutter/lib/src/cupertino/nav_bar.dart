@@ -66,7 +66,7 @@ class CupertinoNavigationBar$Mate extends CupertinoNavigationBar with Mate {
           transitionBetweenRoutes: transitionBetweenRoutes,
           heroTag: heroTag,
         ) {
-    mateCreateName = 'CupertinoNavigationBar';
+    mateBuilderName = 'CupertinoNavigationBar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoNavigationBar$Mate(
           key: p.get('key').build(),
@@ -223,7 +223,7 @@ class CupertinoSliverNavigationBar$Mate extends CupertinoSliverNavigationBar wit
           heroTag: heroTag,
           stretch: stretch,
         ) {
-    mateCreateName = 'CupertinoSliverNavigationBar';
+    mateBuilderName = 'CupertinoSliverNavigationBar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSliverNavigationBar$Mate(
           key: p.get('key').build(),
@@ -352,7 +352,7 @@ class CupertinoNavigationBarBackButton$Mate extends CupertinoNavigationBarBackBu
           previousPageTitle: previousPageTitle,
           onPressed: onPressed,
         ) {
-    mateCreateName = 'CupertinoNavigationBarBackButton';
+    mateBuilderName = 'CupertinoNavigationBarBackButton';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoNavigationBarBackButton$Mate(
           key: p.get('key').build(),

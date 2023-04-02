@@ -24,7 +24,7 @@ class DoubleTapGestureRecognizer$Mate extends DoubleTapGestureRecognizer with Ma
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'DoubleTapGestureRecognizer';
+    mateBuilderName = 'DoubleTapGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DoubleTapGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),
@@ -70,7 +70,7 @@ class MultiTapGestureRecognizer$Mate extends MultiTapGestureRecognizer with Mate
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'MultiTapGestureRecognizer';
+    mateBuilderName = 'MultiTapGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => MultiTapGestureRecognizer$Mate(
           longTapDelay: p.get('longTapDelay').build(),
@@ -127,7 +127,7 @@ class SerialTapDownDetails$Mate extends SerialTapDownDetails with Mate {
           buttons: buttons,
           count: count,
         ) {
-    mateCreateName = 'SerialTapDownDetails';
+    mateBuilderName = 'SerialTapDownDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapDownDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -175,7 +175,7 @@ class SerialTapCancelDetails$Mate extends SerialTapCancelDetails with Mate {
       /// optionalParameters: {int count = 1} , default:processed=IntegerLiteralImpl
       int count = 1})
       : super(count: count) {
-    mateCreateName = 'SerialTapCancelDetails';
+    mateBuilderName = 'SerialTapCancelDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapCancelDetails$Mate(count: p.get('count').build());
     mateUse(
@@ -208,7 +208,7 @@ class SerialTapUpDetails$Mate extends SerialTapUpDetails with Mate {
           kind: kind,
           count: count,
         ) {
-    mateCreateName = 'SerialTapUpDetails';
+    mateBuilderName = 'SerialTapUpDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapUpDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -258,7 +258,7 @@ class SerialTapGestureRecognizer$Mate extends SerialTapGestureRecognizer with Ma
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'SerialTapGestureRecognizer';
+    mateBuilderName = 'SerialTapGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapGestureRecognizer$Mate(
           debugOwner: p.get('debugOwner').build(),

@@ -68,7 +68,7 @@ class Scrollable$Mate extends Scrollable with Mate {
           scrollBehavior: scrollBehavior,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'Scrollable';
+    mateBuilderName = 'Scrollable';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Scrollable$Mate(
           key: p.get('key').build(),
@@ -167,7 +167,7 @@ class EdgeDraggingAutoScroller$Mate extends EdgeDraggingAutoScroller with Mate {
           onScrollViewScrolled: onScrollViewScrolled,
           velocityScalar: velocityScalar,
         ) {
-    mateCreateName = 'EdgeDraggingAutoScroller';
+    mateBuilderName = 'EdgeDraggingAutoScroller';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => EdgeDraggingAutoScroller$Mate(
           p.get('scrollable').value,
@@ -209,7 +209,7 @@ class ScrollableDetails$Mate extends ScrollableDetails with Mate {
           controller: controller,
           clipBehavior: clipBehavior,
         ) {
-    mateCreateName = 'ScrollableDetails';
+    mateBuilderName = 'ScrollableDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollableDetails$Mate(
           direction: p.get('direction').build(),
@@ -247,7 +247,7 @@ class ScrollIncrementDetails$Mate extends ScrollIncrementDetails with Mate {
           type: type,
           metrics: metrics,
         ) {
-    mateCreateName = 'ScrollIncrementDetails';
+    mateBuilderName = 'ScrollIncrementDetails';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollIncrementDetails$Mate(
           type: p.get('type').build(),
@@ -279,7 +279,7 @@ class ScrollIntent$Mate extends ScrollIntent with Mate {
           direction: direction,
           type: type,
         ) {
-    mateCreateName = 'ScrollIntent';
+    mateBuilderName = 'ScrollIntent';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollIntent$Mate(
           direction: p.get('direction').build(),

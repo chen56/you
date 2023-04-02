@@ -12,7 +12,7 @@ class SpellCheckSuggestionsToolbarLayoutDelegate$Mate extends SpellCheckSuggesti
       /// optionalParameters: {required Offset anchor} , default:none
       required Offset anchor})
       : super(anchor: anchor) {
-    mateCreateName = 'SpellCheckSuggestionsToolbarLayoutDelegate';
+    mateBuilderName = 'SpellCheckSuggestionsToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SpellCheckSuggestionsToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
     mateUse(

@@ -106,7 +106,7 @@ class ActionChip$Mate extends ActionChip with Mate {
           surfaceTintColor: surfaceTintColor,
           iconTheme: iconTheme,
         ) {
-    mateCreateName = 'ActionChip';
+    mateBuilderName = 'ActionChip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ActionChip$Mate(
           key: p.get('key').build(),

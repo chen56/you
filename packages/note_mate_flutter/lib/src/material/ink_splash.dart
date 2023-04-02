@@ -58,7 +58,7 @@ class InkSplash$Mate extends InkSplash with Mate {
           radius: radius,
           onRemoved: onRemoved,
         ) {
-    mateCreateName = 'InkSplash';
+    mateBuilderName = 'InkSplash';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkSplash$Mate(
           controller: p.get('controller').build(),

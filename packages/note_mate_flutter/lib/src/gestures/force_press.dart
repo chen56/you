@@ -23,7 +23,7 @@ class ForcePressDetails$Mate extends ForcePressDetails with Mate {
           localPosition: localPosition,
           pressure: pressure,
         ) {
-    mateCreateName = 'ForcePressDetails';
+    mateBuilderName = 'ForcePressDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ForcePressDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
@@ -77,7 +77,7 @@ class ForcePressGestureRecognizer$Mate extends ForcePressGestureRecognizer with 
           supportedDevices: supportedDevices,
           allowedButtonsFilter: allowedButtonsFilter,
         ) {
-    mateCreateName = 'ForcePressGestureRecognizer';
+    mateBuilderName = 'ForcePressGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ForcePressGestureRecognizer$Mate(
           startPressure: p.get('startPressure').build(),

@@ -23,7 +23,7 @@ class RenderObjectToWidgetAdapter$Mate<T extends RenderObject> extends RenderObj
           container: container,
           debugShortDescription: debugShortDescription,
         ) {
-    mateCreateName = 'RenderObjectToWidgetAdapter';
+    mateBuilderName = 'RenderObjectToWidgetAdapter';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderObjectToWidgetAdapter$Mate<T>(
           child: p.get('child').build(),
@@ -56,7 +56,7 @@ class RenderObjectToWidgetElement$Mate<T extends RenderObject> extends RenderObj
       /// requiredParameters: RenderObjectToWidgetAdapter<T> widget
       RenderObjectToWidgetAdapter<T> widget)
       : super(widget) {
-    mateCreateName = 'RenderObjectToWidgetElement';
+    mateBuilderName = 'RenderObjectToWidgetElement';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
     mateUse(

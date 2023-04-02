@@ -25,7 +25,7 @@ class ScrollStartNotification$Mate extends ScrollStartNotification with Mate {
           context: context,
           dragDetails: dragDetails,
         ) {
-    mateCreateName = 'ScrollStartNotification';
+    mateBuilderName = 'ScrollStartNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollStartNotification$Mate(
           metrics: p.get('metrics').build(),
@@ -75,7 +75,7 @@ class ScrollUpdateNotification$Mate extends ScrollUpdateNotification with Mate {
           scrollDelta: scrollDelta,
           depth: depth,
         ) {
-    mateCreateName = 'ScrollUpdateNotification';
+    mateBuilderName = 'ScrollUpdateNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollUpdateNotification$Mate(
           metrics: p.get('metrics').build(),
@@ -137,7 +137,7 @@ class OverscrollNotification$Mate extends OverscrollNotification with Mate {
           overscroll: overscroll,
           velocity: velocity,
         ) {
-    mateCreateName = 'OverscrollNotification';
+    mateBuilderName = 'OverscrollNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => OverscrollNotification$Mate(
           metrics: p.get('metrics').build(),
@@ -192,7 +192,7 @@ class ScrollEndNotification$Mate extends ScrollEndNotification with Mate {
           context: context,
           dragDetails: dragDetails,
         ) {
-    mateCreateName = 'ScrollEndNotification';
+    mateBuilderName = 'ScrollEndNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollEndNotification$Mate(
           metrics: p.get('metrics').build(),
@@ -234,7 +234,7 @@ class UserScrollNotification$Mate extends UserScrollNotification with Mate {
           context: context,
           direction: direction,
         ) {
-    mateCreateName = 'UserScrollNotification';
+    mateBuilderName = 'UserScrollNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => UserScrollNotification$Mate(
           metrics: p.get('metrics').build(),

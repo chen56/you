@@ -61,7 +61,7 @@ class SnackBarThemeData$Mate extends SnackBarThemeData with Mate {
           closeIconColor: closeIconColor,
           actionOverflowThreshold: actionOverflowThreshold,
         ) {
-    mateCreateName = 'SnackBarThemeData';
+    mateBuilderName = 'SnackBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SnackBarThemeData$Mate(
           backgroundColor: p.get('backgroundColor').build(),

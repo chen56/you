@@ -34,7 +34,7 @@ class FixedScrollMetrics$Mate extends FixedScrollMetrics with Mate {
           axisDirection: axisDirection,
           devicePixelRatio: devicePixelRatio,
         ) {
-    mateCreateName = 'FixedScrollMetrics';
+    mateBuilderName = 'FixedScrollMetrics';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => FixedScrollMetrics$Mate(
           minScrollExtent: p.get('minScrollExtent').build(),

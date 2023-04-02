@@ -38,7 +38,7 @@ class KeyboardListener$Mate extends KeyboardListener with Mate {
           onKeyEvent: onKeyEvent,
           child: child,
         ) {
-    mateCreateName = 'KeyboardListener';
+    mateBuilderName = 'KeyboardListener';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => KeyboardListener$Mate(
           key: p.get('key').build(),

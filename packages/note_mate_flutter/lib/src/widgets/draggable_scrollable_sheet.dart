@@ -51,7 +51,7 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
           controller: controller,
           builder: builder,
         ) {
-    mateCreateName = 'DraggableScrollableSheet';
+    mateBuilderName = 'DraggableScrollableSheet';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableScrollableSheet$Mate(
           key: p.get('key').build(),
@@ -100,7 +100,7 @@ class DraggableScrollableSheet$Mate extends DraggableScrollableSheet with Mate {
       isNamed: true,
       defaultValue: false,
     );
-    mateUseList(
+    mateUse(
       'snapSizes',
       snapSizes,
       isNamed: true,
@@ -148,7 +148,7 @@ class DraggableScrollableNotification$Mate extends DraggableScrollableNotificati
           initialExtent: initialExtent,
           context: context,
         ) {
-    mateCreateName = 'DraggableScrollableNotification';
+    mateBuilderName = 'DraggableScrollableNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableScrollableNotification$Mate(
           extent: p.get('extent').build(),
@@ -198,7 +198,7 @@ class DraggableScrollableActuator$Mate extends DraggableScrollableActuator with 
           key: key,
           child: child,
         ) {
-    mateCreateName = 'DraggableScrollableActuator';
+    mateBuilderName = 'DraggableScrollableActuator';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DraggableScrollableActuator$Mate(
           key: p.get('key').build(),

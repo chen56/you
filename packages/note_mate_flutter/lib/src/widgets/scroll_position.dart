@@ -18,7 +18,7 @@ class ScrollMetricsNotification$Mate extends ScrollMetricsNotification with Mate
           metrics: metrics,
           context: context,
         ) {
-    mateCreateName = 'ScrollMetricsNotification';
+    mateBuilderName = 'ScrollMetricsNotification';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => ScrollMetricsNotification$Mate(
           metrics: p.get('metrics').build(),

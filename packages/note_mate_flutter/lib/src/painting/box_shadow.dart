@@ -31,7 +31,7 @@ class BoxShadow$Mate extends BoxShadow with Mate {
           spreadRadius: spreadRadius,
           blurStyle: blurStyle,
         ) {
-    mateCreateName = 'BoxShadow';
+    mateBuilderName = 'BoxShadow';
     matePackageUrl = 'package:flutter/painting.dart';
     mateBuilder = (p) => BoxShadow$Mate(
           color: p.get('color').build(),

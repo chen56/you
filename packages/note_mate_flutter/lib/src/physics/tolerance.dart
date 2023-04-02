@@ -21,7 +21,7 @@ class Tolerance$Mate extends Tolerance with Mate {
           time: time,
           velocity: velocity,
         ) {
-    mateCreateName = 'Tolerance';
+    mateBuilderName = 'Tolerance';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => Tolerance$Mate(
           distance: p.get('distance').build(),

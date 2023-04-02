@@ -3,32 +3,22 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:code_builder/code_builder.dart' as code;
 import 'package:note_mate_flutter/material.dart';
 
 void main() {
-  late ObjectParam obj;
+  late ObjectParam root;
 
   setUp(() {
-    obj = ObjectParam(
-        init: Container(), builder: (m) => Container(), builderRefer: code.refer("Container"));
+    root = ObjectParam.root(editors: Editors());
   });
   group("范型", () {
     test('declare(enum)', () {
-      Param<Clip> p = obj.use("arg", Clip.none);
-      expect(p, obj.get("arg"));
+      BuilderArg<Clip> p = root.use("arg", Clip.none);
+      expect(p, root.get("arg"));
 
       expect(p.value, Clip.none);
       expect(!p.isNullable, true);
       expect(p.isValue, true);
-
-      Clip c = Clip.none;
-
-      expect(c is Enum, true);
-      expect(p.init is Enum, true);
-
-      Param pp = p;
-      expect(pp.init is Enum, true);
     });
   });
   group("Enums", () {
@@ -49,24 +39,24 @@ void main() {
 
   group("declare(value)", () {
     test('declare(value)', () {
-      Param<double> p = obj.use("width", 1);
-      expect(p, obj.get("width"));
+      BuilderArg<double> p = root.use("width", 1);
+      expect(p, root.get("width"));
 
       expect(p.value, 1);
       expect(!p.isNullable, true);
       expect(p.isValue, true);
     });
     test('declare(value? )', () {
-      Param<double?> p = obj.use<double?>("width", 1);
-      expect(p, obj.get("width"));
+      BuilderArg<double?> p = root.use<double?>("width", 1);
+      expect(p, root.get("width"));
 
       expect(p.value, 1);
       expect(p.isNullable, true);
       expect(p.isValue, true);
     });
     test('declare(null)', () {
-      Param<double?> p = obj.use<double?>("width", null);
-      expect(obj.get("width"), p);
+      BuilderArg<double?> p = root.use<double?>("width", null);
+      expect(root.get("width"), p);
 
       expect(p.value, null);
       expect(p.isNullable, true);
@@ -76,8 +66,8 @@ void main() {
 
   group("declare(Meta)", () {
     test('declare(Meta)', () {
-      Param<Container> p = obj.use("mate", Container$Mate(width: 100));
-      expect(p, obj.get("mate"));
+      BuilderArg<Container> p = root.use("mate", Container$Mate(width: 100));
+      expect(p, root.get("mate"));
 
       expect(p.value is Container$Mate, true);
       expect(!p.isNullable, true);
@@ -85,8 +75,8 @@ void main() {
     });
 
     test('declare(Meta?)', () {
-      Param<Container?> p = obj.use<Container?>("mate", Container$Mate(width: 100));
-      expect(p, obj.get("mate"));
+      BuilderArg<Container?> p = root.use<Container?>("mate", Container$Mate(width: 100));
+      expect(p, root.get("mate"));
 
       expect(p.value is Container$Mate, true);
       expect(p.isNullable, true);
@@ -95,8 +85,8 @@ void main() {
 
     test('declare(null)', () {
       // null值无法识别其是否是Mate，所以只能作为ValueParam处理
-      Param<Container?> p = obj.use<Container?>("mate", null);
-      expect(p, obj.get("mate"));
+      BuilderArg<Container?> p = root.use<Container?>("mate", null);
+      expect(p, root.get("mate"));
 
       expect(p.value == null, true);
       expect(p.isNullable, true);
@@ -107,8 +97,8 @@ void main() {
   group("declare(List)", () {
     test('putList<List?>()', () {
       List<int> origin = [1, 2];
-      Param<List<int>> p = obj.useList("list", origin);
-      expect(p, obj.get("list"));
+      BuilderArg<List<int>> p = root.use("list", origin);
+      expect(p, root.get("list"));
 
       expect(p.value is List, true);
       expect(!p.isNullable, true, reason: "ListParam统一为init可空，返回非空");
@@ -120,16 +110,15 @@ void main() {
     });
 
     test('declare<List?>(null)', () {
-      ListParam<int> p = obj.useList("list", null);
-      expect(p, obj.get("list"));
+      BuilderArg<List<int>?> p = root.use("list", null);
+      expect(p, root.get("list"));
 
-      expect(p.value, [], reason: "ListParam统一为init可空，返回非空");
-      expect(p.isNullable, false, reason: "ListParam统一为init可空，返回非空");
+      expect(p.value, null);
+      expect(p.isNullable, true);
       expect(p.isList, true);
 
-      // no error
-      List<int> build = p.build();
-      expect(build, []);
+      List<int>? build = p.build();
+      expect(build, null);
     });
   });
 }

@@ -23,7 +23,7 @@ class SpellCheckConfiguration$Mate extends SpellCheckConfiguration with Mate {
           misspelledTextStyle: misspelledTextStyle,
           spellCheckSuggestionsToolbarBuilder: spellCheckSuggestionsToolbarBuilder,
         ) {
-    mateCreateName = 'SpellCheckConfiguration';
+    mateBuilderName = 'SpellCheckConfiguration';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => SpellCheckConfiguration$Mate(
           spellCheckService: p.get('spellCheckService').build(),

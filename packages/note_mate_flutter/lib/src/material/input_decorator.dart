@@ -59,7 +59,7 @@ class InputDecorator$Mate extends InputDecorator with Mate {
           isEmpty: isEmpty,
           child: child,
         ) {
-    mateCreateName = 'InputDecorator';
+    mateBuilderName = 'InputDecorator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecorator$Mate(
           key: p.get('key').build(),
@@ -335,7 +335,7 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           alignLabelWithHint: alignLabelWithHint,
           constraints: constraints,
         ) {
-    mateCreateName = 'InputDecoration';
+    mateBuilderName = 'InputDecoration';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecoration$Mate(
           icon: p.get('icon').build(),
@@ -690,7 +690,7 @@ class InputDecoration$Mate extends InputDecoration with Mate {
           border: border,
           enabled: enabled,
         ) {
-    mateCreateName = 'InputDecoration.collapsed';
+    mateBuilderName = 'InputDecoration.collapsed';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecoration$Mate.collapsed(
           hintText: p.get('hintText').build(),
@@ -899,7 +899,7 @@ class InputDecorationTheme$Mate extends InputDecorationTheme with Mate {
           alignLabelWithHint: alignLabelWithHint,
           constraints: constraints,
         ) {
-    mateCreateName = 'InputDecorationTheme';
+    mateBuilderName = 'InputDecorationTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecorationTheme$Mate(
           labelStyle: p.get('labelStyle').build(),

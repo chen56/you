@@ -27,7 +27,7 @@ class SliderTheme$Mate extends SliderTheme with Mate {
           data: data,
           child: child,
         ) {
-    mateCreateName = 'SliderTheme';
+    mateBuilderName = 'SliderTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliderTheme$Mate(
           key: p.get('key').build(),
@@ -177,7 +177,7 @@ class SliderThemeData$Mate extends SliderThemeData with Mate {
           thumbSelector: thumbSelector,
           mouseCursor: mouseCursor,
         ) {
-    mateCreateName = 'SliderThemeData';
+    mateBuilderName = 'SliderThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliderThemeData$Mate(
           trackHeight: p.get('trackHeight').build(),
@@ -372,7 +372,7 @@ class RoundSliderTickMarkShape$Mate extends RoundSliderTickMarkShape with Mate {
       /// optionalParameters: {double? tickMarkRadius} , default:none
       double? tickMarkRadius})
       : super(tickMarkRadius: tickMarkRadius) {
-    mateCreateName = 'RoundSliderTickMarkShape';
+    mateBuilderName = 'RoundSliderTickMarkShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
     mateUse(
@@ -391,7 +391,7 @@ class RoundRangeSliderTickMarkShape$Mate extends RoundRangeSliderTickMarkShape w
       /// optionalParameters: {double? tickMarkRadius} , default:none
       double? tickMarkRadius})
       : super(tickMarkRadius: tickMarkRadius) {
-    mateCreateName = 'RoundRangeSliderTickMarkShape';
+    mateBuilderName = 'RoundRangeSliderTickMarkShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundRangeSliderTickMarkShape$Mate(tickMarkRadius: p.get('tickMarkRadius').build());
     mateUse(
@@ -423,7 +423,7 @@ class RoundSliderThumbShape$Mate extends RoundSliderThumbShape with Mate {
           elevation: elevation,
           pressedElevation: pressedElevation,
         ) {
-    mateCreateName = 'RoundSliderThumbShape';
+    mateBuilderName = 'RoundSliderThumbShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderThumbShape$Mate(
           enabledThumbRadius: p.get('enabledThumbRadius').build(),
@@ -478,7 +478,7 @@ class RoundRangeSliderThumbShape$Mate extends RoundRangeSliderThumbShape with Ma
           elevation: elevation,
           pressedElevation: pressedElevation,
         ) {
-    mateCreateName = 'RoundRangeSliderThumbShape';
+    mateBuilderName = 'RoundRangeSliderThumbShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundRangeSliderThumbShape$Mate(
           enabledThumbRadius: p.get('enabledThumbRadius').build(),
@@ -520,7 +520,7 @@ class RoundSliderOverlayShape$Mate extends RoundSliderOverlayShape with Mate {
       /// optionalParameters: {double overlayRadius = 24.0} , default:processed=DoubleLiteralImpl
       double overlayRadius = 24.0})
       : super(overlayRadius: overlayRadius) {
-    mateCreateName = 'RoundSliderOverlayShape';
+    mateBuilderName = 'RoundSliderOverlayShape';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RoundSliderOverlayShape$Mate(overlayRadius: p.get('overlayRadius').build());
     mateUse(
@@ -545,7 +545,7 @@ class RangeValues$Mate extends RangeValues with Mate {
           start,
           end,
         ) {
-    mateCreateName = 'RangeValues';
+    mateBuilderName = 'RangeValues';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RangeValues$Mate(
           p.get('start').value,
@@ -577,7 +577,7 @@ class RangeLabels$Mate extends RangeLabels with Mate {
           start,
           end,
         ) {
-    mateCreateName = 'RangeLabels';
+    mateBuilderName = 'RangeLabels';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RangeLabels$Mate(
           p.get('start').value,

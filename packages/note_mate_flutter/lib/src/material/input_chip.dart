@@ -155,7 +155,7 @@ class InputChip$Mate extends InputChip with Mate {
           checkmarkColor: checkmarkColor,
           avatarBorder: avatarBorder,
         ) {
-    mateCreateName = 'InputChip';
+    mateBuilderName = 'InputChip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputChip$Mate(
           key: p.get('key').build(),

@@ -53,7 +53,7 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
-    mateCreateName = 'DefaultTextStyle';
+    mateBuilderName = 'DefaultTextStyle';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate(
           key: p.get('key').build(),
@@ -122,7 +122,7 @@ class DefaultTextStyle$Mate extends DefaultTextStyle with Mate {
       /// optionalParameters: {Key? key} , default:none
       Key? key})
       : super.fallback(key: key) {
-    mateCreateName = 'DefaultTextStyle.fallback';
+    mateBuilderName = 'DefaultTextStyle.fallback';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
     mateUse(
@@ -150,7 +150,7 @@ class DefaultTextHeightBehavior$Mate extends DefaultTextHeightBehavior with Mate
           textHeightBehavior: textHeightBehavior,
           child: child,
         ) {
-    mateCreateName = 'DefaultTextHeightBehavior';
+    mateBuilderName = 'DefaultTextHeightBehavior';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => DefaultTextHeightBehavior$Mate(
           key: p.get('key').build(),
@@ -239,7 +239,7 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
-    mateCreateName = 'Text';
+    mateBuilderName = 'Text';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Text$Mate(
           p.get('data').value,
@@ -397,7 +397,7 @@ class Text$Mate extends Text with Mate {
           textHeightBehavior: textHeightBehavior,
           selectionColor: selectionColor,
         ) {
-    mateCreateName = 'Text.rich';
+    mateBuilderName = 'Text.rich';
     matePackageUrl = 'package:flutter/widgets.dart';
     mateBuilder = (p) => Text$Mate.rich(
           p.get('textSpan').value,

@@ -134,7 +134,7 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateCreateName = 'ColorScheme';
+    mateBuilderName = 'ColorScheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate(
           brightness: p.get('brightness').build(),
@@ -453,7 +453,7 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateCreateName = 'ColorScheme.light';
+    mateBuilderName = 'ColorScheme.light';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.light(
           brightness: p.get('brightness').build(),
@@ -780,7 +780,7 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateCreateName = 'ColorScheme.dark';
+    mateBuilderName = 'ColorScheme.dark';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.dark(
           brightness: p.get('brightness').build(),
@@ -1105,7 +1105,7 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateCreateName = 'ColorScheme.highContrastLight';
+    mateBuilderName = 'ColorScheme.highContrastLight';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.highContrastLight(
           brightness: p.get('brightness').build(),
@@ -1432,7 +1432,7 @@ class ColorScheme$Mate extends ColorScheme with Mate {
           inversePrimary: inversePrimary,
           surfaceTint: surfaceTint,
         ) {
-    mateCreateName = 'ColorScheme.highContrastDark';
+    mateBuilderName = 'ColorScheme.highContrastDark';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.highContrastDark(
           brightness: p.get('brightness').build(),
