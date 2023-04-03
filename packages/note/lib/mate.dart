@@ -112,7 +112,7 @@ abstract class Param extends ChangeNotifier {
 
   @nonVirtual
   code.Expression toCodeExpression({required Editors editors}) {
-    return getEditor2().toCode();
+    return getEditor().toCode();
   }
 
   @nonVirtual
@@ -129,15 +129,15 @@ abstract class Param extends ChangeNotifier {
   }
 
   Widget nameWidget(BuildContext context, Editors editors) {
-    return getEditor2().nameWidget(context);
+    return getEditor().nameWidget(context);
   }
 
   valueWidget(BuildContext context, Editors editors) {
-    return getEditor2().valueWidget(context);
+    return getEditor().valueWidget(context);
   }
 
   @nonVirtual
-  Editor getEditor2() {
+  Editor getEditor() {
     return builderArg.getEditor(this, editors);
   }
 }

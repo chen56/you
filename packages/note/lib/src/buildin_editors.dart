@@ -156,6 +156,7 @@ class EnumEditor extends ValueParamEditor {
 
   @override
   code.Expression toCode() {
+    print("tocode ${param}");
     return code.refer("${param.value}");
   }
 }
