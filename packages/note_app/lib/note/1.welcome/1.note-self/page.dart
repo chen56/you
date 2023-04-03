@@ -47,6 +47,8 @@ build(Pen pen, BuildContext context) {
 
   pen.markdown('''
 ### Color参数
+
+TODO 暂时只能显示，还不能编辑
   ''');
   pen.sampleMate(Container$Mate(
     width: 200,
@@ -79,7 +81,6 @@ build(Pen pen, BuildContext context) {
 
   pen.sampleMate(Row$Mate(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
-    strings: ["a", "b"],
     children: [
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),

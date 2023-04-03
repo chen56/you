@@ -8,7 +8,10 @@ import 'package:note_app/note/1.welcome/1.note-self/page.dart' as note_welcome_n
 import 'package:note_app/note/1.welcome/page.dart' as note_welcome_;
 import 'package:note_app/note/2.dev/debug/page.dart' as note_dev_debug_;
 import 'package:note_app/note/2.dev/mirror/page.dart' as note_dev_mirror_;
-import 'package:note_app/note/components/button/ElevatedButton/page.dart' as note_components_button_ElevatedButton_;
+import 'package:note_app/note/components/bar/page.dart' as note_components_bar_;
+import 'package:note_app/note/components/button/ButtonStyleButton/page.dart'
+    as note_components_button_ButtonStyleButton_;
+import 'package:note_app/note/components/button/page.dart' as note_components_button_;
 import 'package:note_app/note/components/page.dart' as note_components_;
 import 'package:note_app/note/components/slider/page.dart' as note_components_slider_;
 import 'package:note_app/note/components/text/RichText/page.dart' as note_components_text_RichText_;
@@ -35,8 +38,12 @@ mixin PathsMixin {
 
   final Path note_dev_mirror = put("/note/2.dev/mirror", note_dev_mirror_.page);
 
-  final Path note_components_button_ElevatedButton =
-      put("/note/components/button/ElevatedButton", note_components_button_ElevatedButton_.page);
+  final Path note_components_bar = put("/note/components/bar", note_components_bar_.page);
+
+  final Path note_components_button_ButtonStyleButton =
+      put("/note/components/button/ButtonStyleButton", note_components_button_ButtonStyleButton_.page);
+
+  final Path note_components_button = put("/note/components/button", note_components_button_.page);
 
   final Path note_components = put("/note/components", note_components_.page);
 

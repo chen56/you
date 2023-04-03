@@ -349,6 +349,6 @@ class DefaultValueParamEditor extends ValueParamEditor {
 
   @override
   code.Expression toCode() {
-    return code.refer("${param.value}");
+    return code.literalString("${param.value}");
   }
 }

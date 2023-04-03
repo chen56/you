@@ -7,6 +7,10 @@ bool isType<Sub, Super>() {
   return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
 }
 
+bool isSubTypeOf<Sub, Super>(Sub object) {
+  return <Sub>[] is List<Super> || <Sub>[] is List<Super?> || object is Super;
+}
+
 /// 判断类型T是否是nullable的:
 ///     expect(isNullable<int>(), isFalse);
 ///     expect(isNullable<int?>(), isTrue);

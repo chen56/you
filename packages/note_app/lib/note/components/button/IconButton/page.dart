@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_mate_flutter/material.dart';
 
-import 'package:note_app/note/components/button/ElevatedButton/1.elevated_button.dart';
-
 PageMeta page = PageMeta(
-  shortTitle: "ElevatedButton",
+  shortTitle: "ButtonStyleButton",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-# button
-## 范例1 button 
+# IconButton
+
+继承关系：
+
+- [StatelessWidget]
+  - [IconButton] 
 
 ### Sample1
 
@@ -25,8 +27,6 @@ build(Pen pen, BuildContext context) {
   pen.sampleMate(Wrap$Mate(children: [
     ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
   ]));
-
-  pen.sampleFile(const Sample1());
 
   pen.markdown(r'''
 ## 范例2 Meta 

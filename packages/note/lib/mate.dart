@@ -404,6 +404,8 @@ class BuilderArg<T> {
   T build() => param.build();
 
   String toCodeExpressionString() => param.toCodeExpressionString();
+
+  isSubType<Super>() => utils.isSubTypeOf<T, Super>(init);
 }
 
 mixin Mate {
@@ -450,10 +452,19 @@ abstract class Editor {
 
   @nonVirtual
   Widget nameWidget(BuildContext context) {
+    Widget? icon = param.builderArg.isSubType<Widget>()
+        ? const Tooltip(message: "Widget", child: Icon(Icons.widgets, size: 15))
+        : null;
     if (param._parent is ListParam && param is ObjectParam) {
-      return Text("${(param as ObjectParam).builderRefer.symbol}");
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [if (icon != null) icon, Text("${(param as ObjectParam).builderRefer.symbol}")],
+      );
     }
-    return Text("${param.displayName}${param.isRoot ? '' : ': '} ");
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [if (icon != null) icon, Text("${param.displayName}${param.isRoot ? '' : ': '} ")],
+    );
   }
 
   Param get param;

@@ -19,7 +19,7 @@ class App extends StatelessWidget {
       title: 'Flutter Note',
       theme: ThemeData(
         primarySwatch: Colors.indigo,
-        useMaterial3: false,
+        useMaterial3: true,
       ),
       routerConfig: NavigatorV2.config(
         initial: paths.parse(paths.initial.path),
