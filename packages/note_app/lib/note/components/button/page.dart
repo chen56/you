@@ -115,6 +115,10 @@ the Material Design button types and how they should be used in designs.
 
 ### ToggleButtons
 
+一组可多选｜单选的按钮组。
+
+> **📣提示**：此组件实现于Material 2，类似于Material 3的[SegmentedButton]。可用[SegmentedButton]替换之。
+
   ''');
 
   pen.sampleMate(
@@ -128,6 +132,40 @@ the Material Design button types and how they should be used in designs.
             Icon(Icons.call),
             Icon(Icons.cake),
           ],
+        ),
+      ],
+    ),
+  );
+
+  pen.markdown(r'''
+
+### SegmentedButton
+
+一组可多选｜单选的按钮组。
+
+> **📣提示**：此组件实现于Material 3，类似于Material 2的[ToggleButtons]，可用替换掉[ToggleButtons]。
+
+<https://m3.material.io/components/segmented-buttons>
+
+  ''');
+
+  pen.sampleMate(
+    Row$Mate(
+      children: [
+        SegmentedButton$Mate<String>(
+          multiSelectionEnabled: true,
+          segments: <ButtonSegment<String>>[
+            ButtonSegment$Mate<String>(
+                value: "Day", label: Text$Mate('Day'), icon: Icon(Icons.calendar_view_day)),
+            ButtonSegment$Mate<String>(
+                value: "Week", label: Text$Mate('Week'), icon: Icon(Icons.calendar_view_week)),
+            ButtonSegment$Mate<String>(
+                value: "Month", label: Text$Mate('Month'), icon: Icon(Icons.calendar_view_month)),
+            ButtonSegment$Mate<String>(
+                value: "Year", label: Text$Mate('Year'), icon: Icon(Icons.calendar_today)),
+          ],
+          selected: <String>{"Month"},
+          onSelectionChanged: (Set<String> newSelection) {},
         ),
       ],
     ),

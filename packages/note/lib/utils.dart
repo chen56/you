@@ -41,6 +41,22 @@ R castList<R>({required Iterable from, required List to}) {
   return result as R;
 }
 
+R castSet<R>({required Iterable from, required Set to}) {
+  assert(to is R, "arg to:$to , type should be $R");
+//copy same type list
+  var result = to.toSet();
+// or
+// var result = to.toList()..clear();
+
+// fill
+  for (var e in from) {
+    result.add(e);
+  }
+
+//cast, no exception ,because : to is R == true
+  return result as R;
+}
+
 class ListenableMap extends MapBase<String, Object> with ChangeNotifier {
   final Map<String, Object> _attributes = {};
 
