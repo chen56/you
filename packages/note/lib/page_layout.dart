@@ -63,7 +63,11 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       controller: controller,
-      children: pen._contents,
+      children: [
+        ...pen._contents,
+        //page下留白，避免被os工具栏遮挡
+        const SizedBox(height: 200),
+      ],
     );
     final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
         ScrollableDetails(direction: AxisDirection.down, controller: controller));
@@ -73,7 +77,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       children: [
         SizedBox(width: 220, child: navigatorTree),
         Expanded(child: scrollBehavior),
-        SizedBox(width: 200, child: outlineView),
+        SizedBox(width: 250, child: outlineView),
       ],
     );
     var container = Container(
@@ -207,6 +211,7 @@ class _OutlineView extends StatelessWidget {
     // 一页一个链接
     Widget headLink(OutlineNode node) {
       var link2 = TextButton(
+        style: ButtonStyle(padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -235,13 +240,14 @@ class _OutlineView extends StatelessWidget {
     }
 
     var nodes = outline.root.toList(includeThis: false);
-    return Container(
-      // width: 300.0,
-      color: Colors.blue.shade50,
-      child: Column(
-        children: [
-          ...nodes.map((e) => headLink(e)).toList(),
-        ],
+    return Align(
+      child: Container(
+        color: Colors.blue.shade50,
+        child: Column(
+          children: [
+            ...nodes.map((e) => headLink(e)).toList(),
+          ],
+        ),
       ),
     );
   }
@@ -270,8 +276,7 @@ class _PagePen extends Pen {
 
   @override
   void widget(Widget Function(ObjectParam node) builder) {
-    // ObjectParam node = ObjectParam(init: null, builder: (p) => builder(p));
-    // sampleMate(builder(node));
+    _contents.add(builder(ObjectParam.root(editors: editors)));
   }
 
   @override

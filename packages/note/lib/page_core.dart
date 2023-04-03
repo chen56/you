@@ -219,8 +219,6 @@ class OutlineNode {
 
   OutlineNode({required this.title, required this.heading, required this.key});
 
-  get currentContext => null;
-
   OutlineNode add(OutlineNode newNode) {
     if (_parent == null || heading < newNode.heading) {
       newNode._parent = this;

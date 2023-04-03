@@ -7,6 +7,10 @@ bool isType<Sub, Super>() {
   return <Sub>[] is List<Super> || <Sub>[] is List<Super?>;
 }
 
+bool isSubTypeOf<Sub, Super>(Sub object) {
+  return <Sub>[] is List<Super> || <Sub>[] is List<Super?> || object is Super;
+}
+
 /// 判断类型T是否是nullable的:
 ///     expect(isNullable<int>(), isFalse);
 ///     expect(isNullable<int?>(), isTrue);
@@ -25,6 +29,22 @@ R castList<R>({required Iterable from, required List to}) {
   assert(to is R, "arg to:$to , type should be $R");
 //copy same type list
   var result = to.sublist(0, 0);
+// or
+// var result = to.toList()..clear();
+
+// fill
+  for (var e in from) {
+    result.add(e);
+  }
+
+//cast, no exception ,because : to is R == true
+  return result as R;
+}
+
+R castSet<R>({required Iterable from, required Set to}) {
+  assert(to is R, "arg to:$to , type should be $R");
+//copy same type list
+  var result = to.toSet();
 // or
 // var result = to.toList()..clear();
 

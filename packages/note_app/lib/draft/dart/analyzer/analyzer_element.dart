@@ -65,5 +65,5 @@ main() async {
 
 void log(Object? s) {
   // ignore: avoid_print
-  print("log: $s");
+  print("analyzer-log: $s");
 }

@@ -2,61 +2,76 @@
 // ignore_for_file: library_prefixes, non_constant_identifier_names
 
 import 'package:note/page_core.dart';
+import 'package:note_app/draft/2.dev/debug/page.dart' as draft_dev_debug_;
+import 'package:note_app/draft/2.dev/mirror/page.dart' as draft_dev_mirror_;
+import 'package:note_app/draft/components/bar/page.dart' as draft_components_bar_;
+import 'package:note_app/draft/components/button/ButtonStyleButton/page.dart'
+    as draft_components_button_ButtonStyleButton_;
+import 'package:note_app/draft/components/button/IconButton/page.dart' as draft_components_button_IconButton_;
+import 'package:note_app/draft/components/slider/page.dart' as draft_components_slider_;
+import 'package:note_app/draft/components/text/RichText/page.dart' as draft_components_text_RichText_;
+import 'package:note_app/draft/components/text/Text/page.dart' as draft_components_text_Text_;
 import 'package:note_app/draft/dart3/page.dart' as draft_dart3_;
+import 'package:note_app/draft/layout/page.dart' as draft_layout_;
+import 'package:note_app/draft/scrollable/Dismissible/page.dart' as draft_scrollable_Dismissible_;
+import 'package:note_app/draft/selectable/page.dart' as draft_selectable_;
+import 'package:note_app/draft/state/1.vanilla_state/page.dart' as draft_state_vanilla_state_;
+import 'package:note_app/draft/state/page.dart' as draft_state_;
+import 'package:note_app/draft/state/StatefulBuilder/page.dart' as draft_state_StatefulBuilder_;
 import 'package:note_app/not_found/page.dart' as not_found_;
-import 'package:note_app/note/1.welcome/1.note-self/page.dart' as note_welcome_note_self_;
 import 'package:note_app/note/1.welcome/page.dart' as note_welcome_;
-import 'package:note_app/note/2.dev/debug/page.dart' as note_dev_debug_;
-import 'package:note_app/note/2.dev/mirror/page.dart' as note_dev_mirror_;
-import 'package:note_app/note/components/button/ElevatedButton/page.dart' as note_components_button_ElevatedButton_;
+import 'package:note_app/note/2.note-self/page.dart' as note_note_self_;
+import 'package:note_app/note/components/button/page.dart' as note_components_button_;
 import 'package:note_app/note/components/page.dart' as note_components_;
-import 'package:note_app/note/components/slider/page.dart' as note_components_slider_;
-import 'package:note_app/note/components/text/RichText/page.dart' as note_components_text_RichText_;
-import 'package:note_app/note/components/text/Text/page.dart' as note_components_text_Text_;
-import 'package:note_app/note/layout/page.dart' as note_layout_;
 import 'package:note_app/note/page.dart' as note_;
-import 'package:note_app/note/scrollable/Dismissible/page.dart' as note_scrollable_Dismissible_;
-import 'package:note_app/note/selectable/page.dart' as note_selectable_;
-import 'package:note_app/note/state/1.vanilla_state/page.dart' as note_state_vanilla_state_;
-import 'package:note_app/note/state/StatefulBuilder/page.dart' as note_state_StatefulBuilder_;
 import 'package:note_app/note_app.dart';
 import 'package:note_app/page.dart' as root_;
 
 mixin PathsMixin {
+  final Path draft_dev_debug = put("/draft/2.dev/debug", draft_dev_debug_.page);
+
+  final Path draft_dev_mirror = put("/draft/2.dev/mirror", draft_dev_mirror_.page);
+
+  final Path draft_components_bar = put("/draft/components/bar", draft_components_bar_.page);
+
+  final Path draft_components_button_ButtonStyleButton =
+      put("/draft/components/button/ButtonStyleButton", draft_components_button_ButtonStyleButton_.page);
+
+  final Path draft_components_button_IconButton =
+      put("/draft/components/button/IconButton", draft_components_button_IconButton_.page);
+
+  final Path draft_components_slider = put("/draft/components/slider", draft_components_slider_.page);
+
+  final Path draft_components_text_RichText =
+      put("/draft/components/text/RichText", draft_components_text_RichText_.page);
+
+  final Path draft_components_text_Text = put("/draft/components/text/Text", draft_components_text_Text_.page);
+
   final Path draft_dart3 = put("/draft/dart3", draft_dart3_.page);
+
+  final Path draft_layout = put("/draft/layout", draft_layout_.page);
+
+  final Path draft_scrollable_Dismissible = put("/draft/scrollable/Dismissible", draft_scrollable_Dismissible_.page);
+
+  final Path draft_selectable = put("/draft/selectable", draft_selectable_.page);
+
+  final Path draft_state_vanilla_state = put("/draft/state/1.vanilla_state", draft_state_vanilla_state_.page);
+
+  final Path draft_state_StatefulBuilder = put("/draft/state/StatefulBuilder", draft_state_StatefulBuilder_.page);
+
+  final Path draft_state = put("/draft/state", draft_state_.page);
 
   final Path not_found = put("/not_found", not_found_.page);
 
-  final Path note_welcome_note_self = put("/note/1.welcome/1.note-self", note_welcome_note_self_.page);
-
   final Path note_welcome = put("/note/1.welcome", note_welcome_.page);
 
-  final Path note_dev_debug = put("/note/2.dev/debug", note_dev_debug_.page);
+  final Path note_note_self = put("/note/2.note-self", note_note_self_.page);
 
-  final Path note_dev_mirror = put("/note/2.dev/mirror", note_dev_mirror_.page);
-
-  final Path note_components_button_ElevatedButton =
-      put("/note/components/button/ElevatedButton", note_components_button_ElevatedButton_.page);
+  final Path note_components_button = put("/note/components/button", note_components_button_.page);
 
   final Path note_components = put("/note/components", note_components_.page);
 
-  final Path note_components_slider = put("/note/components/slider", note_components_slider_.page);
-
-  final Path note_components_text_RichText = put("/note/components/text/RichText", note_components_text_RichText_.page);
-
-  final Path note_components_text_Text = put("/note/components/text/Text", note_components_text_Text_.page);
-
-  final Path note_layout = put("/note/layout", note_layout_.page);
-
   final Path note = put("/note", note_.page);
-
-  final Path note_scrollable_Dismissible = put("/note/scrollable/Dismissible", note_scrollable_Dismissible_.page);
-
-  final Path note_selectable = put("/note/selectable", note_selectable_.page);
-
-  final Path note_state_vanilla_state = put("/note/state/1.vanilla_state", note_state_vanilla_state_.page);
-
-  final Path note_state_StatefulBuilder = put("/note/state/StatefulBuilder", note_state_StatefulBuilder_.page);
 
   final Path root = put("/", root_.page);
 }

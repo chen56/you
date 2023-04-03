@@ -37,7 +37,7 @@ import 'package:note_app/pages.g.dart';
 class Paths with Navigable, PathsMixin {
   late final Path<void> initial;
   Paths._() {
-    initial = note_welcome_note_self;
+    initial = note_components_button;
   }
 
   @override
