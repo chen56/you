@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
-
-import 'package:note_app/note/components/text/Text/1.text_normal.dart';
-import 'package:note_app/note/components/text/Text/2.text_rich.dart';
+import 'package:note_app/draft/components/text/Text/1.text_normal.dart';
+import 'package:note_app/draft/components/text/Text/2.text_rich.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "Text",

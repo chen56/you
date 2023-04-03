@@ -14,7 +14,7 @@ build(Pen pen, BuildContext context) {
 <https://m3.material.io/components/buttons/overview>, an overview of each of 
 the Material Design button types and how they should be used in designs.
 
-## 按钮概览 
+## 按钮概览
 
 ### 主要按钮
 
@@ -54,13 +54,6 @@ the Material Design button types and how they should be used in designs.
 ### FloatingActionButton
 
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
-继承关系：
-- [StatelessWidget]
-  - [FloatingActionButton] 
-    - 构造器[FloatingActionButton] 固定大小
-    - 构造器[FloatingActionButton.small] 小一点
-    - 构造器[FloatingActionButton.large] 大一点
-    - 构造器[FloatingActionButton.extended] icon + label
   ''');
 
   pen.sampleMate(
@@ -98,6 +91,7 @@ the Material Design button types and how they should be used in designs.
   pen.markdown(r'''
 ### 几个特殊的系统Button
 
+继承关系：
 - [StatelessWidget]
   - [_ActionButton] 
     - [BackButton] A Material Design back icon button
@@ -113,21 +107,6 @@ the Material Design button types and how they should be used in designs.
         CloseButton$Mate(),
         DrawerButton$Mate(),
         EndDrawerButton$Mate(),
-      ],
-    ),
-  );
-
-  pen.markdown(r'''
-
-### CheckboxMenuButton
-
-  ''');
-
-  pen.sampleMate(
-    Row$Mate(
-      children: [
-        CheckboxMenuButton$Mate(
-            value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
       ],
     ),
   );
@@ -176,6 +155,36 @@ GestureDetector(
   //   onTap: () {/**todo UI log，显示到控制台便于一般性的事件展示**/},
   // ));
 
+  // todo InkWell 模仿button
+  pen.markdown(r'''
+### Ink*组件
+
+可被用来模仿Button。
+
+InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
+
+继承关系：
+- StatelessWidget
+  - InkResponse
+    - InkWell
+    
+您在下面三种不同的文本上点点看区别：
+  ''');
+
+  pen.sampleMate(Column$Mate(
+    children: [
+      Text$Mate("1.普通Text"),
+      InkWell$Mate(
+        onTap: () {},
+        child: Text$Mate("2.裹了层InkWell的Text"),
+      ),
+      InkResponse$Mate(
+        onTap: () {},
+        child: Text$Mate("3.裹了层InkResponse的Text"),
+      )
+    ],
+  ));
+
   pen.markdown(r'''
 ### ButtonBar 
 
@@ -186,7 +195,7 @@ GestureDetector(
   pen.sampleMate(
     Container$Mate(
       width: 800,
-      color: Colors.blueAccent.shade100,
+      color: Colors.lime.shade50,
       child: ButtonBar$Mate(
         children: [
           ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
@@ -197,12 +206,6 @@ GestureDetector(
       ),
     ),
   );
-
-  // fixme markdown 的outline失灵？
-  pen.markdown("""
-  
-### ToggleButtons
-  
-  
-  """);
 }
+
+void testss(String s, Function()) {}

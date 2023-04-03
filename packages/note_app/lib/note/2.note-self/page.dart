@@ -3,7 +3,7 @@ import 'package:note/page_core.dart';
 import 'package:note_mate_flutter/material.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "Note机制试验田",
+  shortTitle: "Note机制介绍",
   builder: build,
 );
 

@@ -4,6 +4,7 @@ import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
 
+// fixme 删除此文件
 @Deprecated("已完全被mate库取代")
 class ParamNode {
   final Map<String, Editor> _editors = HashMap();

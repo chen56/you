@@ -1,8 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-import 'package:note_app/note/state/1.vanilla_state/1.1.hello.dart' as stateful_hello;
-
 PageMeta page = PageMeta(
   shortTitle: "最原始的状态管理",
   builder: build,
@@ -44,8 +42,6 @@ State
   最简单的StatefulWidget
 
   ''');
-
-  pen.sampleFile(const stateful_hello.App());
 
   pen.markdown(r'''
 ## InheritedWidget有点麻烦 

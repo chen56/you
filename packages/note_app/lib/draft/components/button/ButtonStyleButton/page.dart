@@ -22,11 +22,6 @@ ButtonStyleButton 相关子类
     * [OutlinedButton], a button with an outlined border and no fill color.
     * [TextButton], a button with no outline or fill color.
 
-### Sample1
-
-- a
-- b
-- c
 
   ''');
 

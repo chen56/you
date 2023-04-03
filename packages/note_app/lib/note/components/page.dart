@@ -8,7 +8,7 @@ PageMeta page = PageMeta(
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-# Components🟢🔔⚠️ℹ️**🟢🔔⚠️ℹ️**
+# Components️
 
 >  **📣Tip:**
 > Components are interactive building blocks for creating a user interface. They can be organized into five categories based on their purpose: Action, containment, navigation, selection, and text input.
