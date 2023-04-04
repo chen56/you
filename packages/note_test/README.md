@@ -1,6 +1,6 @@
 # note_test
 
-A new Flutter module project.
+Flutter-Note Integration Testing & e2e test.
 
 ## Getting Started
 

@@ -29,7 +29,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  late final _PagePen pen;
+  late final PenImpl pen;
   final ScrollController controller = ScrollController(initialScrollOffset: 0);
 
   _PageScreenState();
@@ -38,7 +38,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   void initState() {
     super.initState();
 
-    pen = _PagePen(editors: widget.editors);
+    pen = PenImpl(editors: widget.editors);
 
     //内容outline只build一次
     widget.current.build(pen, context);
@@ -59,32 +59,43 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
     // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太熟悉：
-    var contentListView = ListView(
-      scrollDirection: Axis.vertical,
-      shrinkWrap: true,
-      controller: controller,
-      children: [
-        ...pen._contents,
-        //page下留白，避免被os工具栏遮挡
-        const SizedBox(height: 200),
-      ],
-    );
-    final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
-        ScrollableDetails(direction: AxisDirection.down, controller: controller));
+    // var contentListView = ListView(
+    //   scrollDirection: Axis.vertical,
+    //   shrinkWrap: true,
+    //   controller: controller,
+    //   children: [
+    //     ...pen._contents,
+    //     //page下留白，避免被os工具栏遮挡
+    //     const SizedBox(height: 200),
+    //   ],
+    // );
+    // 20230404 chen56
+    // why use SingleChildScrollView+ListBody replace ListView ：
+    // ListView is lazy load, so page not complete, then outline load not complete.
+    var singleSccroll = SingleChildScrollView(
+        controller: controller,
+        child: ListBody(
+          children: [
+            ...pen._contents,
+            //page下留白，避免被os工具栏遮挡
+            const SizedBox(height: 300),
+          ],
+        ));
+
+    //no use
+    // final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
+    //     ScrollableDetails(direction: AxisDirection.down, controller: controller));
 
     var row = Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(width: 220, child: navigatorTree),
-        Expanded(child: scrollBehavior),
+        Expanded(child: singleSccroll),
         SizedBox(width: 250, child: outlineView),
       ],
     );
-    var container = Container(
-      child: row,
-    );
     var safeArea = SafeArea(
-      child: container,
+      child: row,
     );
     return Scaffold(
       appBar: AppBar(
@@ -253,12 +264,12 @@ class _OutlineView extends StatelessWidget {
   }
 }
 
-class _PagePen extends Pen {
+class PenImpl extends Pen {
   int i = 0;
 
   final Editors editors;
 
-  _PagePen({required this.editors});
+  PenImpl({required this.editors});
 
   Outline outline = Outline();
   final List<Widget> _contents = List.empty(growable: true);
