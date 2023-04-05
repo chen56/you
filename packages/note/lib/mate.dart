@@ -390,14 +390,27 @@ class ObjectParam extends Param {
     var formatter = editors_.formatter;
 
     var mateExpression = toCodeExpression(editors: editors_);
-    var runApp = code.refer("runApp", "package:flutter/material.dart");
-    var c = snippet
-        ? mateExpression.statement
-        : code.Library((e) => e
-          ..body.add(code.Method((b) => b
-            ..name = "main"
-            ..body = runApp.call([mateExpression]).code).closure.statement));
-    String result = c.accept(emitter).toString();
+
+    var toCode = mateExpression.statement;
+
+    if (!snippet) {
+      toCode = code.Block.of([
+        const code.Code("""
+import 'package:flutter/material.dart';
+
+void main() {
+  var sample="""),
+        mateExpression.statement,
+        const code.Code("""      
+  runApp(MaterialApp(
+    home: Scaffold(body: sample),
+  ));
+}
+    """),
+      ]);
+    }
+
+    String result = toCode.accept(emitter).toString();
     if (format) {
       result = snippet ? formatter.formatStatement(result) : formatter.format(result);
     }
