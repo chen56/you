@@ -490,14 +490,17 @@ typedef EditorBuilder<T> = Editor Function(Param param);
 
 class Editors {
   final EnumRegister enumRegister;
+  final IconRegisters iconRegisters;
   final code.DartEmitter emitter;
   final DartFormatter formatter;
 
   Editors({
     EnumRegister? enumRegister,
+    IconRegisters? iconRegisters,
     code.DartEmitter? emitter,
     DartFormatter? formatter,
   })  : enumRegister = enumRegister ?? EnumRegister(),
+        iconRegisters = iconRegisters ?? IconRegisters([]),
         emitter = emitter ?? defaultEmitter,
         formatter = formatter ?? defaultDartFormatter;
 
@@ -545,6 +548,9 @@ class Editors {
     if (utils.isType<T, Enum>() || param.init is Enum) {
       return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(T));
     }
+    if (utils.isType<T, IconData>() || param.init is IconData) {
+      return IconDataEditor(param, editors: this);
+    }
 
     if (utils.isType<T, void Function()>() || param.init is void Function()) {
       var ex = code.Method((b) => b
@@ -555,6 +561,14 @@ class Editors {
     }
 
     if (utils.isType<T, void Function(bool)>() || param.init is void Function(bool)) {
+      var ex = code.Method((b) => b
+        ..name = ''
+        ..lambda = false
+        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+        ..body = const code.Code("")).closure;
+      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    }
+    if (utils.isType<T, void Function(int)>() || param.init is void Function(int)) {
       var ex = code.Method((b) => b
         ..name = ''
         ..lambda = false
@@ -597,6 +611,40 @@ class EnumRegister {
 
   void register_<T>(List<T> values) {
     enums[T] = values;
+  }
+}
+
+class IconRegisters {
+  final Map<code.Reference, IconRegister> registers = {};
+
+  IconRegisters(List<IconRegister> registers) {
+    for (var r in registers) {
+      this.registers[r.ref] = r;
+    }
+  }
+
+  code.Expression getOrEmpty(IconData? icon) {
+    if (icon == null) return code.literalNull;
+    for (var register in registers.values) {
+      var result = register.get(icon);
+      if (result != null) return result;
+    }
+    return code.literalNull;
+  }
+}
+
+class IconRegister {
+  final Map<IconData, String> icons = {};
+  final code.Reference ref;
+  IconRegister(String refSymbol, String refUrl) : ref = code.Reference(refSymbol, refUrl);
+
+  void register(IconData icon, String name) {
+    icons[icon] = name;
+  }
+
+  code.Expression? get(IconData icon) {
+    var find = icons[icon];
+    return find == null ? null : ref.property(find);
   }
 }
 

@@ -183,6 +183,29 @@ class ColorEditor<T> extends ValueParamEditor {
   }
 }
 
+class IconDataEditor extends ValueParamEditor {
+  IconDataEditor(super.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return editors.iconRegisters.getOrEmpty(param.value);
+  }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return Row(
+      children: [
+        Text(param.toCodeExpressionString()),
+        SizedBox(
+          width: 20,
+          height: 20,
+          child: param.value == null ? null : Icon(param.value),
+        )
+      ],
+    );
+  }
+}
+
 /// 颜色
 class _ColorRegister {
   static final _ColorRegister instance = _ColorRegister._();

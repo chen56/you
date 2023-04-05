@@ -202,6 +202,7 @@ enable_experiment="--enable-experiment=records,patterns"
   /gen() {
     (cd packages/note_app ;          run dart run $enable_experiment tools/gen_pages.dart; )
     (cd packages/note_mate_flutter ; run dart run $enable_experiment tools/gen_mates.dart; )
+    (cd packages/note_mate_flutter ; run dart run $enable_experiment tools/gen_mate_icons.dart; )
   }
 }
 /regen?() {

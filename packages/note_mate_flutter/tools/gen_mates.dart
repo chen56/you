@@ -679,7 +679,7 @@ _genEnums({
           """)),
   );
 
-  var toFile = writeTo("mate_enums.dart");
+  var toFile = writeTo("mate_enums.g.dart");
 
   String writeContent = lib.accept(emitter).toString();
   writeContent = dartFormatter.format(writeContent);
