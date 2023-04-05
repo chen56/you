@@ -391,7 +391,7 @@ class _ParamAndCodeView extends StatelessWidget {
     );
     var codeView = HighlightView(
       // The original code to be highlighted
-      rootParam.toSampleCodeString(snippet: false, format: true),
+      rootParam.toSampleCodeString(snippet: false, format: false),
 
       // Specify language
       // It is recommended to give it a value for performance

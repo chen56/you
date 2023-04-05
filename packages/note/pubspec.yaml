@@ -22,8 +22,6 @@ dependencies:
 
   path: ^1.8.3
 
-  # https://pub.dev/packages/html
-  html: ^0.15.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -554,6 +554,15 @@ class Editors {
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
 
+    if (utils.isType<T, void Function(bool)>() || param.init is void Function(bool)) {
+      var ex = code.Method((b) => b
+        ..name = ''
+        ..lambda = false
+        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+        ..body = const code.Code("")).closure;
+      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    }
+
     return onNotFound != null ? onNotFound(param) : DefaultValueParamEditor(param, editors: this);
   }
 }
