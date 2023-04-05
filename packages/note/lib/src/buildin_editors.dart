@@ -355,6 +355,18 @@ class ListParamEditor extends Editor {
   }
 }
 
+class SetParamEditor extends Editor {
+  @override
+  final SetParam param;
+
+  SetParamEditor(this.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return code.literalSet(param.children.map((e) => e.toCodeExpression(editors: editors)));
+  }
+}
+
 class ManuallyValueEditor extends ValueParamEditor {
   code.Expression codeExpression;
 
