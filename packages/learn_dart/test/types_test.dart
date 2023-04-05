@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -51,6 +52,17 @@ void main() {
       // ignore: unnecessary_type_check
       expect(c is Enum, true);
       expect(isEnum(c), true);
+    });
+  });
+  group("Function", () {
+    test('f', () {
+      void numberToString(Set<String> selected) {}
+
+      SegmentedButton<String>(
+        segments: [],
+        selected: {},
+        onSelectionChanged: numberToString,
+      );
     });
   });
 }

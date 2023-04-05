@@ -184,7 +184,7 @@ abstract class Pen {
 
   void sampleMate(Mate widgetMate);
 
-  void widget(Widget Function(ObjectParam node) builder);
+  void widget(Widget Function(ObjectParam param) builder);
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
