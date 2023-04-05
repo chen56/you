@@ -24,7 +24,7 @@ build(Pen pen, BuildContext context) {
   - BottomSheet  
 - 通用容器，可包含在任意位置的其他容器中，用以包含主内容、数据、输入等其他组件
   - Card
-  - ListView：ListTile
+  - ListView：ListTile (和ListBody的区别)
   - Container
   - Flex相关: Column、Row、Flexible、Expanded、[Spacer]
   - Align：Center
@@ -36,22 +36,27 @@ build(Pen pen, BuildContext context) {
   - 可展开容器
     - ExpansionPanelList
     - ExpansionTile
-- 辅助容器，为主内容区做辅助服务的容器，比如导航，状态栏、菜单、工具栏、各种Bar
-  - AppBar
-  - BottomAppBar
-  - NavigationBar  (new, replacing BottomNavigationBar)
-  - BottomNavigationBar
-  - TabBar: TabBar+Tab+TabBarView
-  - SnackBar
-  - NavigationDrawer
-  - NavigationRail
-  - MenuBar
-  - DropdownMenu
-- 功能组件：较为独立的、主要不是用来做容器的功能组件，通常功能单一，比较小，也有例外，比如编辑器
+- 辅助容器，为主内容区做辅助服务的容器，比如菜单、各种Bar工具栏、状态栏
+  - 各类Bar
+    - AppBar
+    - BottomAppBar
+    - NavigationBar  (new, replacing BottomNavigationBar)
+    - NavigationRail
+    - TabBar: TabBar+Tab+TabBarView
+    - SnackBar
+  - Drawer 抽屉
+    - Drawer 不导航
+    - NavigationDrawer 可导航
+  - 各类Menu
+    - MenuBar
+    - DropdownMenu
+- 功能组件：较为独立的、主要不是用来做通用容器的，具有特殊功能性，一般比较小，也有例外，比如编辑器等
   - Buttons
+  - Text RichText
   - Badges [api-Badges](https://api.flutter.dev/flutter/material/Badge-class.html)
-  - Divider
+  - Divider:VerticalDivider
   - Progress indicators: CircularProgressIndicator, LinearProgressIndicator
+  - SafeArea
   - inputs
     - TextField
     - Checkbox、CheckboxListTile
