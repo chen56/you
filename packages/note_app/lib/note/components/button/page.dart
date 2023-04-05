@@ -127,10 +127,10 @@ the Material Design button types and how they should be used in designs.
         ToggleButtons$Mate(
           onPressed: (int index) {},
           isSelected: [true, false, true],
-          children: const <Widget>[
-            Icon(Icons.ac_unit),
-            Icon(Icons.call),
-            Icon(Icons.cake),
+          children: <Widget>[
+            Icon$Mate(Icons.ac_unit),
+            Icon$Mate(Icons.call),
+            Icon$Mate(Icons.cake),
           ],
         ),
       ],
