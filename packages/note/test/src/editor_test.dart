@@ -68,5 +68,15 @@ void main() {
       expect(singleCode<void Function()?>(() {}), "() {  } ");
       expect(singleCode<void Function()?>(null), "null");
     });
+    test("void Function(bool?)", () {
+      expect(singleCode<void Function(bool?)>((b) {}), "(b) {  } ");
+      expect(singleCode<void Function(bool?)?>((b) {}), "(b) {  } ");
+      expect(singleCode<void Function(bool?)?>(null), "null");
+    });
+    test("void Function(bool)", () {
+      expect(singleCode<void Function(bool)>((b) {}), "(b) {  } ");
+      expect(singleCode<void Function(bool)?>((b) {}), "(b) {  } ");
+      expect(singleCode<void Function(bool)?>(null), "null");
+    });
   });
 }

@@ -157,6 +157,15 @@ Param _toParam<T>({
 
     return result;
   }
+  if (utils.isType<T, Set>()) {
+    var result = SetParam(
+      builderArg: builderArg,
+      parent: parent,
+      editors: editors,
+    );
+
+    return result;
+  }
   // if (init is Param<T>) return init;
 
   if (builderArg.init is Mate) {
@@ -203,11 +212,12 @@ class ListParam extends Param {
         assert(notNull[i] != null, "list element [$i] should not be null init: $init");
         params.add(_toParam(
           builderArg: BuilderArg(
-              name: "$i",
-              init: notNull[i],
-              isNamed: false,
-              isFromUse: false,
-              defaultValue: defaultValue),
+            name: "$i",
+            init: notNull[i],
+            isNamed: false,
+            isFromUse: false,
+            defaultValue: null,
+          ),
           parent: this,
           editors: editors,
         ));
@@ -217,12 +227,54 @@ class ListParam extends Param {
 
   @override
   dynamic build() {
-    if (init == null) return null as dynamic;
+    if (init == null) return null;
 
     // 直接返回map后的list会转型错误：🔔⚠️❗️💡👉
     //     exception : return params.map((e)=>e.build()).toList() as T
     // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
     return utils.castList<dynamic>(from: params.map((e) => e.build()), to: init as List);
+  }
+
+  @override
+  Iterable<Param> get children => params;
+}
+
+class SetParam extends Param {
+  final List<Param> params = List.empty(growable: true);
+  int _index = 0;
+  SetParam({
+    required super.builderArg,
+    required Param parent,
+    required super.editors,
+  }) : super(parent: parent) {
+    if (init != null) {
+      Iterable notNull = init as Iterable;
+      for (var e in notNull) {
+        assert(e != null, "set element[$_index] should not be null init: $init");
+        params.add(_toParam(
+          builderArg: BuilderArg(
+            name: "$_index",
+            init: e,
+            isNamed: false,
+            isFromUse: false,
+            defaultValue: null,
+          ),
+          parent: this,
+          editors: editors,
+        ));
+        _index++;
+      }
+    }
+  }
+
+  @override
+  dynamic build() {
+    if (init == null) return null;
+
+    // 直接返回map后的toSet()会转型错误：🔔⚠️❗️💡👉
+    //     exception : return params.map((e)=>e.build()).toSet() as T
+    // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
+    return utils.castSet<dynamic>(from: params.map((e) => e.build()), to: init as Set);
   }
 
   @override
@@ -338,14 +390,27 @@ class ObjectParam extends Param {
     var formatter = editors_.formatter;
 
     var mateExpression = toCodeExpression(editors: editors_);
-    var runApp = code.refer("runApp", "package:flutter/material.dart");
-    var c = snippet
-        ? mateExpression.statement
-        : code.Library((e) => e
-          ..body.add(code.Method((b) => b
-            ..name = "main"
-            ..body = runApp.call([mateExpression]).code).closure.statement));
-    String result = c.accept(emitter).toString();
+
+    var toCode = mateExpression.statement;
+
+    if (!snippet) {
+      toCode = code.Block.of([
+        const code.Code("""
+import 'package:flutter/material.dart';
+
+void main() {
+  var sample="""),
+        mateExpression.statement,
+        const code.Code("""      
+  runApp(MaterialApp(
+    home: Scaffold(body: sample),
+  ));
+}
+    """),
+      ]);
+    }
+
+    String result = toCode.accept(emitter).toString();
     if (format) {
       result = snippet ? formatter.formatStatement(result) : formatter.format(result);
     }
@@ -490,14 +555,17 @@ typedef EditorBuilder<T> = Editor Function(Param param);
 
 class Editors {
   final EnumRegister enumRegister;
+  final IconRegisters iconRegisters;
   final code.DartEmitter emitter;
   final DartFormatter formatter;
 
   Editors({
     EnumRegister? enumRegister,
+    IconRegisters? iconRegisters,
     code.DartEmitter? emitter,
     DartFormatter? formatter,
   })  : enumRegister = enumRegister ?? EnumRegister(),
+        iconRegisters = iconRegisters ?? IconRegisters([]),
         emitter = emitter ?? defaultEmitter,
         formatter = formatter ?? defaultDartFormatter;
 
@@ -525,6 +593,9 @@ class Editors {
     if (param is ListParam) {
       return ListParamEditor(param, editors: this);
     }
+    if (param is SetParam) {
+      return SetParamEditor(param, editors: this);
+    }
 
     param as ValueParam;
     if (utils.isType<T, int>() || param.init is int) {
@@ -545,7 +616,11 @@ class Editors {
     if (utils.isType<T, Enum>() || param.init is Enum) {
       return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(T));
     }
+    if (utils.isType<T, IconData>() || param.init is IconData) {
+      return IconDataEditor(param, editors: this);
+    }
 
+    // todo Editors:这下面的函数类型越来越多啊，需要解决掉
     if (utils.isType<T, void Function()>() || param.init is void Function()) {
       var ex = code.Method((b) => b
         ..name = ''
@@ -554,6 +629,32 @@ class Editors {
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
 
+    if (utils.isType<T, void Function(bool)>() || param.init is void Function(bool)) {
+      var ex = code.Method((b) => b
+        ..name = ''
+        ..lambda = false
+        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+        ..body = const code.Code("")).closure;
+      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    }
+    if (utils.isType<T, void Function(int)>() || param.init is void Function(int)) {
+      var ex = code.Method((b) => b
+        ..name = ''
+        ..lambda = false
+        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+        ..body = const code.Code("")).closure;
+      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    }
+
+    // SegmentedButton.onSelectionChanged: void Function(Set<T>)?
+    if (utils.isType<T, void Function(Set<String>)>() || param.init is void Function(Set<String>)) {
+      var ex = code.Method((b) => b
+        ..name = ''
+        ..lambda = false
+        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+        ..body = const code.Code("")).closure;
+      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    }
     return onNotFound != null ? onNotFound(param) : DefaultValueParamEditor(param, editors: this);
   }
 }
@@ -588,6 +689,40 @@ class EnumRegister {
 
   void register_<T>(List<T> values) {
     enums[T] = values;
+  }
+}
+
+class IconRegisters {
+  final Map<code.Reference, IconRegister> registers = {};
+
+  IconRegisters(List<IconRegister> registers) {
+    for (var r in registers) {
+      this.registers[r.ref] = r;
+    }
+  }
+
+  code.Expression getOrEmpty(IconData? icon) {
+    if (icon == null) return code.literalNull;
+    for (var register in registers.values) {
+      var result = register.get(icon);
+      if (result != null) return result;
+    }
+    return code.literalNull;
+  }
+}
+
+class IconRegister {
+  final Map<IconData, String> icons = {};
+  final code.Reference ref;
+  IconRegister(String refSymbol, String refUrl) : ref = code.Reference(refSymbol, refUrl);
+
+  void register(IconData icon, String name) {
+    icons[icon] = name;
+  }
+
+  code.Expression? get(IconData icon) {
+    var find = icons[icon];
+    return find == null ? null : ref.property(find);
   }
 }
 

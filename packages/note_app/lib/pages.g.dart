@@ -7,7 +7,11 @@ import 'package:note_app/draft/2.dev/mirror/page.dart' as draft_dev_mirror_;
 import 'package:note_app/draft/components/bar/page.dart' as draft_components_bar_;
 import 'package:note_app/draft/components/button/ButtonStyleButton/page.dart'
     as draft_components_button_ButtonStyleButton_;
+import 'package:note_app/draft/components/button/FloatingActionButton/page.dart'
+    as draft_components_button_FloatingActionButton_;
 import 'package:note_app/draft/components/button/IconButton/page.dart' as draft_components_button_IconButton_;
+import 'package:note_app/draft/components/input/page.dart' as draft_components_input_;
+import 'package:note_app/draft/components/menu/page.dart' as draft_components_menu_;
 import 'package:note_app/draft/components/slider/page.dart' as draft_components_slider_;
 import 'package:note_app/draft/components/text/RichText/page.dart' as draft_components_text_RichText_;
 import 'package:note_app/draft/components/text/Text/page.dart' as draft_components_text_Text_;
@@ -37,8 +41,15 @@ mixin PathsMixin {
   final Path draft_components_button_ButtonStyleButton =
       put("/draft/components/button/ButtonStyleButton", draft_components_button_ButtonStyleButton_.page);
 
+  final Path draft_components_button_FloatingActionButton =
+      put("/draft/components/button/FloatingActionButton", draft_components_button_FloatingActionButton_.page);
+
   final Path draft_components_button_IconButton =
       put("/draft/components/button/IconButton", draft_components_button_IconButton_.page);
+
+  final Path draft_components_input = put("/draft/components/input", draft_components_input_.page);
+
+  final Path draft_components_menu = put("/draft/components/menu", draft_components_menu_.page);
 
   final Path draft_components_slider = put("/draft/components/slider", draft_components_slider_.page);
 

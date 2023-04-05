@@ -156,7 +156,6 @@ class EnumEditor extends ValueParamEditor {
 
   @override
   code.Expression toCode() {
-    print("tocode ${param}");
     return code.refer("${param.value}");
   }
 }
@@ -178,6 +177,29 @@ class ColorEditor<T> extends ValueParamEditor {
           width: 20,
           height: 20,
           color: param.value as Color,
+        )
+      ],
+    );
+  }
+}
+
+class IconDataEditor extends ValueParamEditor {
+  IconDataEditor(super.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return editors.iconRegisters.getOrEmpty(param.value);
+  }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return Row(
+      children: [
+        Text(param.toCodeExpressionString()),
+        SizedBox(
+          width: 20,
+          height: 20,
+          child: param.value == null ? null : Icon(param.value),
         )
       ],
     );
@@ -333,6 +355,18 @@ class ListParamEditor extends Editor {
   }
 }
 
+class SetParamEditor extends Editor {
+  @override
+  final SetParam param;
+
+  SetParamEditor(this.param, {required super.editors});
+
+  @override
+  code.Expression toCode() {
+    return code.literalSet(param.children.map((e) => e.toCodeExpression(editors: editors)));
+  }
+}
+
 class ManuallyValueEditor extends ValueParamEditor {
   code.Expression codeExpression;
 
@@ -350,6 +384,6 @@ class DefaultValueParamEditor extends ValueParamEditor {
 
   @override
   code.Expression toCode() {
-    return code.literalString("${param.value}");
+    return code.refer("${param.value}");
   }
 }

@@ -127,10 +127,10 @@ the Material Design button types and how they should be used in designs.
         ToggleButtons$Mate(
           onPressed: (int index) {},
           isSelected: [true, false, true],
-          children: const <Widget>[
-            Icon(Icons.ac_unit),
-            Icon(Icons.call),
-            Icon(Icons.cake),
+          children: <Widget>[
+            Icon$Mate(Icons.ac_unit),
+            Icon$Mate(Icons.call),
+            Icon$Mate(Icons.cake),
           ],
         ),
       ],
@@ -156,13 +156,15 @@ the Material Design button types and how they should be used in designs.
           multiSelectionEnabled: true,
           segments: <ButtonSegment<String>>[
             ButtonSegment$Mate<String>(
-                value: "Day", label: Text$Mate('Day'), icon: Icon(Icons.calendar_view_day)),
+                value: "Day", label: Text$Mate('Day'), icon: Icon$Mate(Icons.calendar_view_day)),
             ButtonSegment$Mate<String>(
-                value: "Week", label: Text$Mate('Week'), icon: Icon(Icons.calendar_view_week)),
+                value: "Week", label: Text$Mate('Week'), icon: Icon$Mate(Icons.calendar_view_week)),
             ButtonSegment$Mate<String>(
-                value: "Month", label: Text$Mate('Month'), icon: Icon(Icons.calendar_view_month)),
+                value: "Month",
+                label: Text$Mate('Month'),
+                icon: Icon$Mate(Icons.calendar_view_month)),
             ButtonSegment$Mate<String>(
-                value: "Year", label: Text$Mate('Year'), icon: Icon(Icons.calendar_today)),
+                value: "Year", label: Text$Mate('Year'), icon: Icon$Mate(Icons.calendar_today)),
           ],
           selected: <String>{"Month"},
           onSelectionChanged: (Set<String> newSelection) {},
