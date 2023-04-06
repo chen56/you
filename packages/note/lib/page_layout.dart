@@ -30,7 +30,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
   late final PenImpl pen;
-  final ScrollController controller = ScrollController(initialScrollOffset: 0);
+  final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
 
   _PageScreenState();
 
@@ -54,7 +54,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   Widget build(BuildContext context) {
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(contentPartController: controller, outline: pen.outline);
+    var outlineView = _OutlineView(mainContentViewController: controllerV, outline: pen.outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -72,16 +72,17 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     // 20230404 chen56
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
-    var singleSccroll = SingleChildScrollView(
-        controller: controller,
-        child: ListBody(
-          children: [
-            ...pen._contents,
-            //page下留白，避免被os工具栏遮挡
-            const SizedBox(height: 300),
-          ],
-        ));
-
+    var scrollV = SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      controller: controllerV,
+      child: ListBody(
+        children: [
+          ...pen._contents,
+          //page下留白，避免被os工具栏遮挡
+          const SizedBox(height: 300),
+        ],
+      ),
+    );
     //no use
     // final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
     //     ScrollableDetails(direction: AxisDirection.down, controller: controller));
@@ -90,7 +91,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(width: 220, child: navigatorTree),
-        Expanded(child: singleSccroll),
+        Expanded(child: scrollV),
         SizedBox(width: 250, child: outlineView),
       ],
     );
@@ -184,7 +185,11 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       includeThis: false,
       test: (e) => e.isRoot ? true : e.parent!.extend,
     );
-    return Column(children: notes.map((e) => newLink(e)).toList());
+    var column = Column(children: notes.map((e) => newLink(e)).toList());
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: column,
+    );
   }
 }
 
@@ -212,10 +217,10 @@ extension _TreeViewNote on Path {
 class _OutlineView extends StatelessWidget {
   final Outline outline;
 
-  // 主内容部分的滚动控制，防止异常用
-  final ScrollController contentPartController;
+  // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
+  final ScrollController mainContentViewController;
 
-  const _OutlineView({required this.outline, required this.contentPartController});
+  const _OutlineView({required this.outline, required this.mainContentViewController});
 
   @override
   Widget build(BuildContext context) {
@@ -237,7 +242,7 @@ class _OutlineView extends StatelessWidget {
         ),
         onPressed: () {
           // 防止异常
-          if (contentPartController.hasClients) {
+          if (mainContentViewController.hasClients) {
             Scrollable.ensureVisible(node.key.currentContext!);
           }
         },
@@ -251,15 +256,15 @@ class _OutlineView extends StatelessWidget {
     }
 
     var nodes = outline.root.toList(includeThis: false);
-    return Align(
-      child: Container(
-        color: Colors.blue.shade50,
-        child: Column(
-          children: [
-            ...nodes.map((e) => headLink(e)).toList(),
-          ],
-        ),
-      ),
+
+    var column = Column(
+      children: [
+        ...nodes.map((e) => headLink(e)).toList(),
+      ],
+    );
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: column,
     );
   }
 }

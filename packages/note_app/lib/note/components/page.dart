@@ -16,7 +16,14 @@ build(Pen pen, BuildContext context) {
 > <https://api.flutter.dev/flutter/material/ThemeData/useMaterial3.html>
 > [catalog of layout widgets : https://flutter.dev/widgets/layout/ ](https://flutter.dev/widgets/layout/)
 
+flutter 一切皆Widget的理念，确实很灵活，但也造成了Widget爆炸，
+比如[Title]这种设置操作系统标题的功能，都能独立出一个Widget.
+成百上千的Widget，如何分类、选用、认识都是难题。
+
 ## 索引
+
+尝试按以下分类认识flutter：
+
 - Top级容器：
   - App
   - Scaffold
