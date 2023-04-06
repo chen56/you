@@ -402,9 +402,7 @@ void main() {
   var sample="""),
         mateExpression.statement,
         const code.Code("""      
-  runApp(MaterialApp(
-    home: Scaffold(body: sample),
-  ));
+  runApp(MaterialApp(home: Scaffold(body: sample)));
 }
     """),
       ]);
