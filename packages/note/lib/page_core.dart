@@ -182,7 +182,10 @@ abstract class Pen {
 
   void markdown(String content);
 
-  void sampleMate(Mate widgetMate, {bool isShowCode = true, bool isShowEidtors = true});
+  void sampleMate(Mate widgetMate,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
+  void sampleBlock(Widget Function(ObjectParam param) builder,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
 
   void widget(Widget Function(ObjectParam param) builder);
 }

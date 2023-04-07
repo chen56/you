@@ -281,6 +281,10 @@ class SetParam extends Param {
   Iterable<Param> get children => params;
 }
 
+Object _defaultParamBuilder(ObjectParam param) {
+  return "";
+}
+
 class ObjectParam extends Param {
   final Map<String, Param> _params = {};
   final Object Function(ObjectParam param) builder;
@@ -300,9 +304,9 @@ class ObjectParam extends Param {
 
   Map<String, Param> get params => _params;
 
-  ObjectParam.rootFromMate(dynamic init, {required Editors editors})
+  ObjectParam.rootFromMate(Mate init, {required Editors editors})
       : this._fromMate(
-          init as Mate,
+          init,
           //根对象无name
           builderArg: BuilderArg(
             name: "",
@@ -314,8 +318,10 @@ class ObjectParam extends Param {
           editors: editors,
         );
 
-  ObjectParam.root({required Editors editors})
-      : this._(
+  ObjectParam.root({
+    required Editors editors,
+    Object Function(ObjectParam param) builder = _defaultParamBuilder,
+  }) : this._(
           builderArg: BuilderArg(
             //根对象无name
             name: "",
@@ -325,8 +331,7 @@ class ObjectParam extends Param {
             defaultValue: "",
           ),
           args: {},
-          //暂时没想好这个咋弄
-          builder: (s) => "root",
+          builder: builder,
           //根对象
           builderRefer: code.refer("ObjectParam", "package:note/mate.dart"),
           editors: editors,
@@ -352,6 +357,7 @@ class ObjectParam extends Param {
     bool isNamed = true,
     dynamic defaultValue,
   }) {
+    if (_params.containsKey(name)) return (_params[name] as Param).builderArg as BuilderArg<E>;
     var result = BuilderArg<E>(
       name: name,
       init: init,
@@ -369,6 +375,7 @@ class ObjectParam extends Param {
   }
 
   BuilderArg<E> get<E>(String name) {
+    assert(_params.containsKey(name), "$name should be exsits");
     return _params[name]!.builderArg as BuilderArg<E>;
   }
 
@@ -643,7 +650,10 @@ class Editors {
         ..body = const code.Code("")).closure;
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
-
+    if (utils.isType<T, Function>() || param.init is Function) {
+      var ex = code.refer("null /* not support function */");
+      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    }
     // SegmentedButton.onSelectionChanged: void Function(Set<T>)?
     if (utils.isType<T, void Function(Set<String>)>() || param.init is void Function(Set<String>)) {
       var ex = code.Method((b) => b

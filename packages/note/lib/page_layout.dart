@@ -310,12 +310,26 @@ class PenImpl extends Pen {
   }
 
   @override
-  void sampleMate(Mate widgetMate, {bool isShowCode = true, bool isShowEidtors = true}) {
+  void sampleMate(Mate widgetMate,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
     _contents.add(_MateSample(
       rootParam: widgetMate.toRootParam(editors: editors),
       editors: editors,
       isShowCode: isShowCode,
       isShowEidtors: isShowEidtors,
+      title: title,
+    ));
+  }
+
+  void sampleBlock(Widget Function(ObjectParam param) builder,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
+    ObjectParam rootParam = ObjectParam.root(editors: editors, builder: (param) => builder(param));
+    _contents.add(_MateSample(
+      rootParam: rootParam,
+      editors: editors,
+      isShowCode: isShowCode,
+      isShowEidtors: isShowEidtors,
+      title: title,
     ));
   }
 }
@@ -325,6 +339,7 @@ class _MateSample extends StatelessWidget {
   final Editors editors;
   final bool isShowCode;
   final bool isShowEidtors;
+  final String title;
   // ignore: unused_element
   const _MateSample({
     // ignore: unused_element
@@ -333,6 +348,7 @@ class _MateSample extends StatelessWidget {
     required this.editors,
     required this.isShowCode,
     required this.isShowEidtors,
+    required this.title,
   });
 
   @override
@@ -348,6 +364,7 @@ class _MateSample extends StatelessWidget {
             editors: editors,
             isShowCode: isShowCode,
             isShowEidtors: isShowEidtors,
+            title: title,
           );
           return Column(
             children: [
@@ -366,6 +383,7 @@ class _ParamAndCodeView extends StatelessWidget {
   final Editors editors;
   final bool isShowCode;
   final bool isShowEidtors;
+  final String title;
 
   const _ParamAndCodeView({
     // ignore: unused_element
@@ -374,6 +392,7 @@ class _ParamAndCodeView extends StatelessWidget {
     required this.editors,
     required this.isShowCode,
     required this.isShowEidtors,
+    required this.title,
   });
 
   @override
@@ -435,7 +454,7 @@ class _ParamAndCodeView extends StatelessWidget {
       initiallyExpanded: false,
       expandedAlignment: Alignment.topLeft,
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: const Row(children: [Text("显示代码")]),
+      title: Row(children: [Text(title)]),
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.start,

@@ -26,9 +26,9 @@ import 'package:note_app/draft/state/StatefulBuilder/page.dart' as draft_state_S
 import 'package:note_app/not_found/page.dart' as not_found_;
 import 'package:note_app/note/1.welcome/page.dart' as note_welcome_;
 import 'package:note_app/note/2.note-self/page.dart' as note_note_self_;
-import 'package:note_app/note/cheatsheet/1.content/button/page.dart' as note_cheatsheet_content_button_;
-import 'package:note_app/note/cheatsheet/2.container/bar/page.dart' as note_cheatsheet_container_bar_;
-import 'package:note_app/note/cheatsheet/page.dart' as note_cheatsheet_;
+import 'package:note_app/note/components/container/bar/page.dart' as note_components_container_bar_;
+import 'package:note_app/note/components/page.dart' as note_components_;
+import 'package:note_app/note/components/stand_alone/button/page.dart' as note_components_stand_alone_button_;
 import 'package:note_app/note/page.dart' as note_;
 import 'package:note_app/note_app.dart';
 import 'package:note_app/page.dart' as root_;
@@ -82,13 +82,12 @@ mixin PathsMixin {
 
   final Path note_note_self = put("/note/2.note-self", note_note_self_.page);
 
-  final Path note_cheatsheet_content_button =
-      put("/note/cheatsheet/1.content/button", note_cheatsheet_content_button_.page);
+  final Path note_components_container_bar = put("/note/components/container/bar", note_components_container_bar_.page);
 
-  final Path note_cheatsheet_container_bar =
-      put("/note/cheatsheet/2.container/bar", note_cheatsheet_container_bar_.page);
+  final Path note_components = put("/note/components", note_components_.page);
 
-  final Path note_cheatsheet = put("/note/cheatsheet", note_cheatsheet_.page);
+  final Path note_components_stand_alone_button =
+      put("/note/components/stand_alone/button", note_components_stand_alone_button_.page);
 
   final Path note = put("/note", note_.page);
 
