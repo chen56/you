@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "各种Bar",
+  shortTitle: "Bars",
   builder: build,
 );
 

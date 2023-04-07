@@ -182,7 +182,7 @@ abstract class Pen {
 
   void markdown(String content);
 
-  void sampleMate(Mate widgetMate);
+  void sampleMate(Mate widgetMate, {bool isShowCode = true, bool isShowEidtors = true});
 
   void widget(Widget Function(ObjectParam param) builder);
 }

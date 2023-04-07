@@ -125,10 +125,8 @@ class _NoteTreeView extends StatefulWidget {
     this.root, {
     Key? key,
   }) : super(key: key) {
-    // 初始化 所有parent为展开状态
-    for (var parent in root.parents) {
-      parent.extend = true;
-    }
+    // 当前文档较少，先都展开
+    root.extendAll(true);
   }
 
   @override
@@ -203,7 +201,7 @@ extension _TreeViewNote on Path {
       return false;
     }
     Object? result = attributes[_extendAttrName];
-    return result == null ? false : result as bool;
+    return result == null ? true : result as bool;
   }
 
   set extend(bool extend) {
@@ -211,6 +209,13 @@ extension _TreeViewNote on Path {
       return;
     }
     attributes[_extendAttrName] = extend;
+  }
+
+  void extendAll(bool extend) {
+    extend = extend;
+    children.forEach((e) {
+      e.extendAll(extend);
+    });
   }
 }
 
@@ -305,10 +310,12 @@ class PenImpl extends Pen {
   }
 
   @override
-  void sampleMate(Mate widgetMate) {
+  void sampleMate(Mate widgetMate, {bool isShowCode = true, bool isShowEidtors = true}) {
     _contents.add(_MateSample(
       rootParam: widgetMate.toRootParam(editors: editors),
       editors: editors,
+      isShowCode: isShowCode,
+      isShowEidtors: isShowEidtors,
     ));
   }
 }
@@ -316,13 +323,16 @@ class PenImpl extends Pen {
 class _MateSample extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
-
+  final bool isShowCode;
+  final bool isShowEidtors;
   // ignore: unused_element
   const _MateSample({
     // ignore: unused_element
     super.key,
     required this.rootParam,
     required this.editors,
+    required this.isShowCode,
+    required this.isShowEidtors,
   });
 
   @override
@@ -336,6 +346,8 @@ class _MateSample extends StatelessWidget {
           var paramAndCodeView = _ParamAndCodeView(
             rootParam: rootParam,
             editors: editors,
+            isShowCode: isShowCode,
+            isShowEidtors: isShowEidtors,
           );
           return Column(
             children: [
@@ -352,9 +364,17 @@ class _MateSample extends StatelessWidget {
 class _ParamAndCodeView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
+  final bool isShowCode;
+  final bool isShowEidtors;
 
-  // ignore: unused_element
-  const _ParamAndCodeView({super.key, required this.rootParam, required this.editors});
+  const _ParamAndCodeView({
+    // ignore: unused_element
+    super.key,
+    required this.rootParam,
+    required this.editors,
+    required this.isShowCode,
+    required this.isShowEidtors,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -421,8 +441,8 @@ class _ParamAndCodeView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: paramView),
-            Expanded(child: codeView),
+            if (isShowEidtors) Expanded(child: paramView),
+            if (isShowCode) Expanded(child: codeView),
           ],
         )
       ],

@@ -10,7 +10,10 @@ build(Pen pen, BuildContext context) {
   pen.markdown(r'''
 # Cheat sheet
 
-> A cheat sheet (also cheatsheet) or crib sheet is a concise set of notes used for quick reference..
+wikipedia 定义：
+
+>  **🚫Tip:**
+> Cheat sheet: A cheat sheet (also cheatsheet) or crib sheet is a concise set of notes used for quick reference..
 
   ''');
 }
