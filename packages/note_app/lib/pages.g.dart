@@ -17,6 +17,7 @@ import 'package:note_app/draft/components/text/RichText/page.dart' as draft_comp
 import 'package:note_app/draft/components/text/Text/page.dart' as draft_components_text_Text_;
 import 'package:note_app/draft/dart3/page.dart' as draft_dart3_;
 import 'package:note_app/draft/layout/page.dart' as draft_layout_;
+import 'package:note_app/draft/material3/page.dart' as draft_material3_;
 import 'package:note_app/draft/scrollable/Dismissible/page.dart' as draft_scrollable_Dismissible_;
 import 'package:note_app/draft/selectable/page.dart' as draft_selectable_;
 import 'package:note_app/draft/state/1.vanilla_state/page.dart' as draft_state_vanilla_state_;
@@ -25,8 +26,9 @@ import 'package:note_app/draft/state/StatefulBuilder/page.dart' as draft_state_S
 import 'package:note_app/not_found/page.dart' as not_found_;
 import 'package:note_app/note/1.welcome/page.dart' as note_welcome_;
 import 'package:note_app/note/2.note-self/page.dart' as note_note_self_;
-import 'package:note_app/note/components/button/page.dart' as note_components_button_;
+import 'package:note_app/note/components/container/bar/page.dart' as note_components_container_bar_;
 import 'package:note_app/note/components/page.dart' as note_components_;
+import 'package:note_app/note/components/stand_alone/button/page.dart' as note_components_stand_alone_button_;
 import 'package:note_app/note/page.dart' as note_;
 import 'package:note_app/note_app.dart';
 import 'package:note_app/page.dart' as root_;
@@ -62,6 +64,8 @@ mixin PathsMixin {
 
   final Path draft_layout = put("/draft/layout", draft_layout_.page);
 
+  final Path draft_material3 = put("/draft/material3", draft_material3_.page);
+
   final Path draft_scrollable_Dismissible = put("/draft/scrollable/Dismissible", draft_scrollable_Dismissible_.page);
 
   final Path draft_selectable = put("/draft/selectable", draft_selectable_.page);
@@ -78,9 +82,12 @@ mixin PathsMixin {
 
   final Path note_note_self = put("/note/2.note-self", note_note_self_.page);
 
-  final Path note_components_button = put("/note/components/button", note_components_button_.page);
+  final Path note_components_container_bar = put("/note/components/container/bar", note_components_container_bar_.page);
 
   final Path note_components = put("/note/components", note_components_.page);
+
+  final Path note_components_stand_alone_button =
+      put("/note/components/stand_alone/button", note_components_stand_alone_button_.page);
 
   final Path note = put("/note", note_.page);
 

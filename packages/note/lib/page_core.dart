@@ -182,9 +182,12 @@ abstract class Pen {
 
   void markdown(String content);
 
-  void sampleMate(Mate widgetMate);
+  void sampleMate(Mate widgetMate,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
+  void sampleBlock(Widget Function(ObjectParam param) builder,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
 
-  void widget(Widget Function(ObjectParam node) builder);
+  void widget(Widget Function(ObjectParam param) builder);
 }
 
 // markdown 的结构轮廓，主要用来显示TOC

@@ -3,7 +3,7 @@ import 'package:note/page_core.dart';
 import 'package:note_mate_flutter/material.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "按钮",
+  shortTitle: "Buttons",
   builder: build,
 );
 
@@ -61,20 +61,20 @@ the Material Design button types and how they should be used in designs.
       children: [
         FloatingActionButton$Mate(
           onPressed: () {},
-          heroTag: null,
+          heroTag: "FloatingActionButton",
           tooltip: "FloatingActionButton",
           child: Text$Mate("缺省构造器"),
         ),
         FloatingActionButton$Mate.small(
           // isExtended: false,
           onPressed: () {},
-          heroTag: null,
+          heroTag: "FloatingActionButton",
           child: Text$Mate("small"),
         ),
         FloatingActionButton$Mate.large(
           // isExtended: false,
           onPressed: () {},
-          heroTag: null,
+          heroTag: "FloatingActionButton",
           child: Text$Mate("large"),
         ),
         FloatingActionButton$Mate.extended(
@@ -82,7 +82,7 @@ the Material Design button types and how they should be used in designs.
           onPressed: () {},
           label: Text$Mate('extended'),
           icon: Icon$Mate(Icons.thumb_up),
-          heroTag: null,
+          heroTag: "FloatingActionButton",
         ),
       ],
     ),
@@ -234,11 +234,11 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 
   pen.sampleMate(
     Container$Mate(
-      width: 800,
+      width: 600,
       color: Colors.lime.shade50,
       child: ButtonBar$Mate(
         children: [
-          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton2")),
           OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
           CheckboxMenuButton$Mate(
               value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),

@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "Cheat sheet",
+  shortTitle: "Material3概览",
   builder: build,
 );
 
 build(Pen pen, BuildContext context) {
   pen.markdown(r'''
-# Cheat sheet
+# Material3
 
-wikipedia 定义：
+> Material3 组件索引参考:
+> <https://api.flutter.dev/flutter/material/ThemeData/useMaterial3.html>
 
->  **🚫Tip:**
-> Cheat sheet: A cheat sheet (also cheatsheet) or crib sheet is a concise set of notes used for quick reference..
+
 
   ''');
 }

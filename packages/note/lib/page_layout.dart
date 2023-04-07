@@ -30,7 +30,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
   late final PenImpl pen;
-  final ScrollController controller = ScrollController(initialScrollOffset: 0);
+  final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
 
   _PageScreenState();
 
@@ -54,7 +54,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   Widget build(BuildContext context) {
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(contentPartController: controller, outline: pen.outline);
+    var outlineView = _OutlineView(mainContentViewController: controllerV, outline: pen.outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -72,16 +72,17 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     // 20230404 chen56
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
-    var singleSccroll = SingleChildScrollView(
-        controller: controller,
-        child: ListBody(
-          children: [
-            ...pen._contents,
-            //page下留白，避免被os工具栏遮挡
-            const SizedBox(height: 300),
-          ],
-        ));
-
+    var scrollV = SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      controller: controllerV,
+      child: ListBody(
+        children: [
+          ...pen._contents,
+          //page下留白，避免被os工具栏遮挡
+          const SizedBox(height: 300),
+        ],
+      ),
+    );
     //no use
     // final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
     //     ScrollableDetails(direction: AxisDirection.down, controller: controller));
@@ -90,7 +91,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(width: 220, child: navigatorTree),
-        Expanded(child: singleSccroll),
+        Expanded(child: scrollV),
         SizedBox(width: 250, child: outlineView),
       ],
     );
@@ -124,10 +125,8 @@ class _NoteTreeView extends StatefulWidget {
     this.root, {
     Key? key,
   }) : super(key: key) {
-    // 初始化 所有parent为展开状态
-    for (var parent in root.parents) {
-      parent.extend = true;
-    }
+    // 当前文档较少，先都展开
+    root.extendAll(true);
   }
 
   @override
@@ -184,7 +183,11 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       includeThis: false,
       test: (e) => e.isRoot ? true : e.parent!.extend,
     );
-    return Column(children: notes.map((e) => newLink(e)).toList());
+    var column = Column(children: notes.map((e) => newLink(e)).toList());
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: column,
+    );
   }
 }
 
@@ -198,7 +201,7 @@ extension _TreeViewNote on Path {
       return false;
     }
     Object? result = attributes[_extendAttrName];
-    return result == null ? false : result as bool;
+    return result == null ? true : result as bool;
   }
 
   set extend(bool extend) {
@@ -207,15 +210,22 @@ extension _TreeViewNote on Path {
     }
     attributes[_extendAttrName] = extend;
   }
+
+  void extendAll(bool extend) {
+    extend = extend;
+    children.forEach((e) {
+      e.extendAll(extend);
+    });
+  }
 }
 
 class _OutlineView extends StatelessWidget {
   final Outline outline;
 
-  // 主内容部分的滚动控制，防止异常用
-  final ScrollController contentPartController;
+  // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
+  final ScrollController mainContentViewController;
 
-  const _OutlineView({required this.outline, required this.contentPartController});
+  const _OutlineView({required this.outline, required this.mainContentViewController});
 
   @override
   Widget build(BuildContext context) {
@@ -237,7 +247,7 @@ class _OutlineView extends StatelessWidget {
         ),
         onPressed: () {
           // 防止异常
-          if (contentPartController.hasClients) {
+          if (mainContentViewController.hasClients) {
             Scrollable.ensureVisible(node.key.currentContext!);
           }
         },
@@ -251,15 +261,15 @@ class _OutlineView extends StatelessWidget {
     }
 
     var nodes = outline.root.toList(includeThis: false);
-    return Align(
-      child: Container(
-        color: Colors.blue.shade50,
-        child: Column(
-          children: [
-            ...nodes.map((e) => headLink(e)).toList(),
-          ],
-        ),
-      ),
+
+    var column = Column(
+      children: [
+        ...nodes.map((e) => headLink(e)).toList(),
+      ],
+    );
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: column,
     );
   }
 }
@@ -300,10 +310,26 @@ class PenImpl extends Pen {
   }
 
   @override
-  void sampleMate(Mate widgetMate) {
+  void sampleMate(Mate widgetMate,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
     _contents.add(_MateSample(
       rootParam: widgetMate.toRootParam(editors: editors),
       editors: editors,
+      isShowCode: isShowCode,
+      isShowEidtors: isShowEidtors,
+      title: title,
+    ));
+  }
+
+  void sampleBlock(Widget Function(ObjectParam param) builder,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
+    ObjectParam rootParam = ObjectParam.root(editors: editors, builder: (param) => builder(param));
+    _contents.add(_MateSample(
+      rootParam: rootParam,
+      editors: editors,
+      isShowCode: isShowCode,
+      isShowEidtors: isShowEidtors,
+      title: title,
     ));
   }
 }
@@ -311,13 +337,18 @@ class PenImpl extends Pen {
 class _MateSample extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
-
+  final bool isShowCode;
+  final bool isShowEidtors;
+  final String title;
   // ignore: unused_element
   const _MateSample({
     // ignore: unused_element
     super.key,
     required this.rootParam,
     required this.editors,
+    required this.isShowCode,
+    required this.isShowEidtors,
+    required this.title,
   });
 
   @override
@@ -331,6 +362,9 @@ class _MateSample extends StatelessWidget {
           var paramAndCodeView = _ParamAndCodeView(
             rootParam: rootParam,
             editors: editors,
+            isShowCode: isShowCode,
+            isShowEidtors: isShowEidtors,
+            title: title,
           );
           return Column(
             children: [
@@ -347,9 +381,19 @@ class _MateSample extends StatelessWidget {
 class _ParamAndCodeView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
+  final bool isShowCode;
+  final bool isShowEidtors;
+  final String title;
 
-  // ignore: unused_element
-  const _ParamAndCodeView({super.key, required this.rootParam, required this.editors});
+  const _ParamAndCodeView({
+    // ignore: unused_element
+    super.key,
+    required this.rootParam,
+    required this.editors,
+    required this.isShowCode,
+    required this.isShowEidtors,
+    required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -410,14 +454,14 @@ class _ParamAndCodeView extends StatelessWidget {
       initiallyExpanded: false,
       expandedAlignment: Alignment.topLeft,
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: const Row(children: [Text("显示代码")]),
+      title: Row(children: [Text(title)]),
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: paramView),
-            Expanded(child: codeView),
+            if (isShowEidtors) Expanded(child: paramView),
+            if (isShowCode) Expanded(child: codeView),
           ],
         )
       ],
