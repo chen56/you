@@ -21,11 +21,12 @@ void main() {
   });
 
   String singleCode<T>(T? init) {
-    return obj.use("x", init).toCodeExpressionString();
+    //use同一个name 第二次，会返回上次的param，所以每次需要一个不同的name
+    return obj.use("x${UniqueKey().hashCode}", init).toCodeExpressionString();
   }
 
   String listCode<E>(List<E>? init) {
-    return obj.use("x", init).toCodeExpressionString();
+    return obj.use("x${UniqueKey().hashCode}", init).toCodeExpressionString();
   }
 
   group("editors", () {
