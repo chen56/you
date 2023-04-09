@@ -35,7 +35,6 @@ void main() {
   });
   group("length", () {
     test('长度', () {
-      expect("中文字符".substring(0, 1000), "7");
       expect("中文字符串长度".runes.length, 7);
       expect("# 中文abc".length, 7);
       expect("# 中文abc".runes.length, 7);
