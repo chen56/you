@@ -21,7 +21,7 @@ PageMeta page = PageMeta(
   ),
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown(r'''
 # home 
 

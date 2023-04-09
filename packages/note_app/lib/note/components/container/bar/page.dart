@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' as flutter;
+import 'package:flutter/material.dart';
 import 'package:note_mate_flutter/painting.dart' as painting;
 import 'package:note/page_core.dart';
 import 'package:note_mate_flutter/material.dart';
@@ -8,7 +9,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, flutter.BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown(r'''
 ## AppBar
 

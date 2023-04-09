@@ -25,6 +25,7 @@ import 'package:note_app/draft/state/page.dart' as draft_state_;
 import 'package:note_app/draft/state/StatefulBuilder/page.dart' as draft_state_StatefulBuilder_;
 import 'package:note_app/not_found/page.dart' as not_found_;
 import 'package:note_app/note/1.welcome/page.dart' as note_welcome_;
+import 'package:note_app/note/2.note-self/notebook/page.dart' as note_note_self_notebook_;
 import 'package:note_app/note/2.note-self/page.dart' as note_note_self_;
 import 'package:note_app/note/components/container/bar/page.dart' as note_components_container_bar_;
 import 'package:note_app/note/components/page.dart' as note_components_;
@@ -79,6 +80,8 @@ mixin PathsMixin {
   final Path not_found = put("/not_found", not_found_.page);
 
   final Path note_welcome = put("/note/1.welcome", note_welcome_.page);
+
+  final Path note_note_self_notebook = put("/note/2.note-self/notebook", note_note_self_notebook_.page);
 
   final Path note_note_self = put("/note/2.note-self", note_note_self_.page);
 

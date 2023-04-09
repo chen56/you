@@ -13,7 +13,7 @@ import 'package:note/navigator_v2.dart';
 class PageMeta<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
-  final void Function(Pen note, BuildContext context) builder;
+  final void Function(BuildContext context, Pen note) builder;
   late final Layout? layout;
 
   PageMeta({
@@ -77,7 +77,7 @@ class Path<T> {
 
   void build(Pen pen, BuildContext context) {
     if (_meta == null) return;
-    _meta!.builder(pen, context);
+    _meta!.builder(context, pen);
   }
 
   /// 页面骨架

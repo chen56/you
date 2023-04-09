@@ -22,6 +22,33 @@ void main() {
   test('null', () {
     expect(null.toString(), "null");
   });
+
+  test('substring', () {
+    try {
+      "abc".substring(1, 20);
+      fail("not here");
+    } catch (e) {
+      expect(e, isA<RangeError>());
+      expect(
+          e.toString(), equals("RangeError (end): Invalid value: Not in inclusive range 1..3: 20"));
+    }
+  });
+  group("length", () {
+    test('长度', () {
+      expect("中文字符".substring(0, 1000), "7");
+      expect("中文字符串长度".runes.length, 7);
+      expect("# 中文abc".length, 7);
+      expect("# 中文abc".runes.length, 7);
+    });
+  });
+  group("中文", () {
+    test('长度', () {
+      expect("中文字符串长度".length, 7);
+      expect("中文字符串长度".runes.length, 7);
+      expect("# 中文abc".length, 7);
+      expect("# 中文abc".runes.length, 7);
+    });
+  });
 }
 
 class Animal {}

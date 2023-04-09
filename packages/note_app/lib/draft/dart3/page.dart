@@ -6,7 +6,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown(r'''
 ## dart 3  暂时放弃，等稳定后再搞
 
