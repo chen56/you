@@ -168,24 +168,20 @@ class Path<T> {
   }
 }
 
-enum ContentType { markdown, sample, widget }
-
-class Content {
-  final ContentType type;
-  final Object value;
-
-  Content._({required this.type, required this.value});
-}
-
 abstract class Pen {
+  /// 这个方法作用是代码区块隔离，方便语法分析器
+  /// 这个函数会在代码显示器中擦除
+  // ignore: non_constant_identifier_names
+  void block_______________([void Function()? block]);
+
   void sampleFile(Widget sample);
 
   void markdown(String content);
 
   void sampleMate(Mate widgetMate,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
   void sampleBlock(Widget Function(ObjectParam param) builder,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
 
   void widget(Widget Function(ObjectParam param) builder);
 }

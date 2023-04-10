@@ -6,6 +6,8 @@ import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
+import 'notebook.dart';
+
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
@@ -192,8 +194,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension _TreeViewNote on Path {
-  static const _extendAttrName = "note.layout._TreeViewNote.extend";
+extension _PathExt on Path {
+  static const _extendAttrName = "note/page_layout/extend";
 
   //展开状态
   bool get extend {
@@ -275,21 +277,23 @@ class _OutlineView extends StatelessWidget {
 }
 
 class PenImpl extends Pen {
-  int i = 0;
+  int _blockIndex = 0;
+  int _key = 0;
 
   final Editors editors;
+  final Outline outline = Outline();
+
+  final List<Widget> _contents = List.empty(growable: true);
+
+  final List<ContentBlock> blocks = List.empty(growable: true);
+  ContentBlock _currentBlock = ContentBlock(index: 0);
 
   PenImpl({required this.editors});
 
-  Outline outline = Outline();
-  final List<Widget> _contents = List.empty(growable: true);
-
-  List<Content> get contents => List.unmodifiable(_contents);
-
   @override
   void markdown(String content) {
-    _contents.add(MarkdownContent(
-      key: ValueKey(i++),
+    _add(MarkdownContent(
+      key: ValueKey(_key++),
       outline: outline,
       content: content,
     ));
@@ -297,13 +301,13 @@ class PenImpl extends Pen {
 
   @override
   void widget(Widget Function(ObjectParam node) builder) {
-    _contents.add(builder(ObjectParam.root(editors: editors)));
+    _add(builder(ObjectParam.root(editors: editors)));
   }
 
   @override
   void sampleFile(Widget sample) {
-    _contents.add(ConstrainedBox(
-      key: ValueKey(i++),
+    _add(ConstrainedBox(
+      key: ValueKey(_key++),
       constraints: const BoxConstraints.tightFor(width: 200, height: 200),
       child: sample,
     ));
@@ -311,26 +315,57 @@ class PenImpl extends Pen {
 
   @override
   void sampleMate(Mate widgetMate,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
-    _contents.add(_MateSample(
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}) {
+    _add(_MateSample(
       rootParam: widgetMate.toRootParam(editors: editors),
       editors: editors,
       isShowCode: isShowCode,
-      isShowEidtors: isShowEidtors,
+      isShowParamEditor: isShowParamEditor,
       title: title,
     ));
   }
 
+  @override
   void sampleBlock(Widget Function(ObjectParam param) builder,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}) {
     ObjectParam rootParam = ObjectParam.root(editors: editors, builder: (param) => builder(param));
-    _contents.add(_MateSample(
+    _add(_MateSample(
       rootParam: rootParam,
       editors: editors,
       isShowCode: isShowCode,
-      isShowEidtors: isShowEidtors,
+      isShowParamEditor: isShowParamEditor,
       title: title,
     ));
+  }
+
+  void _add(Widget content) {
+    _contents.add(content);
+    _currentBlock.add(content);
+  }
+
+  /// 创建一个代码区块
+  /// create a new code block
+  /// 只能用最外层语句调用此函数
+  /// This function can only be called with the outermost statement
+  /// example:
+  /// build(Pen pen){
+  ///   pen.block_______________();  // is ok
+  ///   {
+  ///      pen.block_______________();  // is not ok
+  ///   }
+  /// }
+  /// 如果[block]参数为null, 则在代码视图中隐藏此行
+  /// if block arg is null, then hidden this statement in codeView:
+  ///     -> pen.block_______________();  //hidden this line
+  @override
+  // ignore: non_constant_identifier_names
+  void block_______________([void Function()? block]) {
+    _blockIndex++;
+    blocks.add(_currentBlock);
+    _currentBlock = ContentBlock(
+      index: _blockIndex,
+      block: block,
+    );
   }
 }
 
@@ -338,16 +373,15 @@ class _MateSample extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final bool isShowCode;
-  final bool isShowEidtors;
+  final bool isShowParamEditor;
   final String title;
-  // ignore: unused_element
   const _MateSample({
     // ignore: unused_element
     super.key,
     required this.rootParam,
     required this.editors,
     required this.isShowCode,
-    required this.isShowEidtors,
+    required this.isShowParamEditor,
     required this.title,
   });
 
@@ -363,7 +397,7 @@ class _MateSample extends StatelessWidget {
             rootParam: rootParam,
             editors: editors,
             isShowCode: isShowCode,
-            isShowEidtors: isShowEidtors,
+            isShowEidtors: isShowParamEditor,
             title: title,
           );
           return Column(

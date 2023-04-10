@@ -42,7 +42,7 @@ build(BuildContext context, Pen pen) {
           })
         ],
       ),
-      isShowEidtors: false);
+      isShowParamEditor: false);
 
   pen.markdown(r'''
 如果只是实验性的摆弄几下长宽高或者对齐方式的枚举参数，你还需要等待编译，那等试玩几个枚举，茶都凉了。

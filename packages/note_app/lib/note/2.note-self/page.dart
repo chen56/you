@@ -74,7 +74,7 @@ TODO 暂时只能显示，还不能编辑
   ));
 
   pen.markdown(r'''
-### 列表参数 
+### 枚举参数 
   ''');
 
   pen.sampleMate(Row$Mate(
@@ -84,4 +84,21 @@ TODO 暂时只能显示，还不能编辑
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
     ],
   ));
+
+  pen.markdown(r'''
+## 其他特性
+### 用循环一次性构造一组范例
+  ''');
+
+  for (var mainAxisAlignment in MainAxisAlignment.values) {
+    pen.sampleMate(
+        Row$Mate(
+          mainAxisAlignment: mainAxisAlignment,
+          children: [
+            ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
+            ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+          ],
+        ),
+        title: "$mainAxisAlignment");
+  }
 }
