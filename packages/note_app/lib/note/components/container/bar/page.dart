@@ -18,7 +18,7 @@ build(BuildContext context, Pen pen) {
 > ref: <https://api.flutter.dev/flutter/material/AppBar-class.html>
 ''');
 
-  pen.sampleMate(AppBar$Mate(
+  pen.mateSample(AppBar$Mate(
     title: Text$Mate('AppBar Title'),
     leading: DrawerButton$Mate(),
     actions: <flutter.Widget>[
@@ -43,7 +43,7 @@ build(BuildContext context, Pen pen) {
 
 ''');
   //
-  pen.sampleMate(BottomAppBar$Mate(
+  pen.mateSample(BottomAppBar$Mate(
     // shape: CircularNotchedRectangle(),
     child: Row$Mate(
       children: <flutter.Widget>[
@@ -85,7 +85,7 @@ build(BuildContext context, Pen pen) {
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  pen.sampleMate(Column$Mate(
+  pen.mateSample(Column$Mate(
     children: [
       Container$Mate(
         height: 100,
@@ -106,7 +106,7 @@ build(BuildContext context, Pen pen) {
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
 
-  pen.sampleBlock(
+  pen.widgetSample(
     title: "TODO Sample中包含复杂函数代码，暂不支持生成相关代码",
     (root) {
       var currentPageIndex = 0;
@@ -180,7 +180,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ],
   );
 
-  pen.sampleMate(
+  pen.mateSample(
     Row$Mate(
       children: [
         Container$Mate(
@@ -215,7 +215,7 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  pen.sampleMate(DefaultTabController$Mate(
+  pen.mateSample(DefaultTabController$Mate(
     length: 3,
     child: TabBar$Mate(
       tabs: <flutter.Widget>[
@@ -241,7 +241,7 @@ TabBar不加TabView长这样：
 
 ''');
 
-  pen.sampleMate(DefaultTabController$Mate(
+  pen.mateSample(DefaultTabController$Mate(
     initialIndex: 1,
     length: 3,
     child: Column$Mate(
@@ -297,7 +297,7 @@ DefaultTabController
   
        """);
 
-  pen.sampleBlock((param) {
+  pen.widgetSample((param) {
     onPressed() {
       flutter.ScaffoldMessenger.of(context).showSnackBar(
         flutter.SnackBar(
@@ -339,7 +339,7 @@ DefaultTabController
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Container$Mate(
       width: 600,
       color: flutter.Colors.lime.shade50,
@@ -361,7 +361,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Container$Mate(
       width: 300,
       child: Column$Mate(
@@ -408,7 +408,7 @@ MenuBar相关组件：
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Column$Mate(
       children: [
         Row$Mate(

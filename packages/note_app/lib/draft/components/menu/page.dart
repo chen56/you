@@ -19,7 +19,7 @@ build(BuildContext context, Pen pen) {
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Row$Mate(
       children: [
         CheckboxMenuButton$Mate(

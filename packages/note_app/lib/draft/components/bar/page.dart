@@ -17,7 +17,7 @@ build(BuildContext context, Pen pen) {
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Container$Mate(
       width: 800,
       color: Colors.blueAccent.shade100,

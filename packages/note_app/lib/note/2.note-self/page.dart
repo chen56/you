@@ -32,7 +32,7 @@ build(BuildContext context, Pen pen) {
   pen.markdown('''
 ### num参数
   ''');
-  pen.sampleMate(Container$Mate(
+  pen.mateSample(Container$Mate(
     height: 100,
     child: Text$Mate("请修改height,调节高度"),
   ));
@@ -41,14 +41,14 @@ build(BuildContext context, Pen pen) {
 ### String参数
   ''');
 
-  pen.sampleMate(Text$Mate("我是Text.data,修改我"));
+  pen.mateSample(Text$Mate("我是Text.data,修改我"));
 
   pen.markdown('''
 ### Color参数
 
 TODO 暂时只能显示，还不能编辑
   ''');
-  pen.sampleMate(Container$Mate(
+  pen.mateSample(Container$Mate(
     width: 200,
     height: 100,
     color: Colors.green.shade400,
@@ -66,7 +66,7 @@ TODO 暂时只能显示，还不能编辑
   pen.markdown('''
 ### bool参数
   ''');
-  pen.sampleMate(Container$Mate(
+  pen.mateSample(Container$Mate(
     width: 100,
     // height: 100,
     color: Colors.blue.shade100,
@@ -77,7 +77,7 @@ TODO 暂时只能显示，还不能编辑
 ### 枚举参数 
   ''');
 
-  pen.sampleMate(Row$Mate(
+  pen.mateSample(Row$Mate(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
@@ -91,7 +91,7 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   for (var mainAxisAlignment in MainAxisAlignment.values) {
-    pen.sampleMate(
+    pen.mateSample(
         Row$Mate(
           mainAxisAlignment: mainAxisAlignment,
           children: [

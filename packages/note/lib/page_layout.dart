@@ -32,7 +32,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  late final PenImpl pen;
+  late final PenImpl pen = PenImpl(editors: widget.editors);
   final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
 
   _PageScreenState();
@@ -40,12 +40,6 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   @override
   void initState() {
     super.initState();
-
-    pen = PenImpl(editors: widget.editors);
-
-    //内容outline只build一次
-    widget.current.build(pen, context);
-    pen.block_______________();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // 第一次[build]时, flutter-mardown包无法装配出outline，只有第一次[build]完，才能装配好，
@@ -56,6 +50,9 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
   @override
   Widget build(BuildContext context) {
+    pen.reset();
+    widget.current.build(pen, context);
+
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
     var outlineView = _OutlineView(mainContentViewController: controllerV, outline: pen.outline);
@@ -277,7 +274,7 @@ class _OutlineView extends StatelessWidget {
 }
 
 class PenImpl extends Pen {
-  int _blockIndex = 0;
+  int _cellIndex = 0;
   int _key = 0;
 
   final Editors editors;
@@ -287,6 +284,12 @@ class PenImpl extends Pen {
   ContentBlock _currentBlock = ContentBlock(index: 0);
 
   PenImpl({required this.editors});
+
+  reset() {
+    blocks.clear();
+    _currentBlock = ContentBlock(index: 0);
+    outline.reset();
+  }
 
   @override
   void markdown(String content) {
@@ -298,21 +301,12 @@ class PenImpl extends Pen {
   }
 
   @override
-  void widget(Widget Function(ObjectParam node) builder) {
-    _add(builder(ObjectParam.root(editors: editors)));
+  void widget(Widget widget) {
+    _add(widget);
   }
 
   @override
-  void sampleFile(Widget sample) {
-    _add(ConstrainedBox(
-      key: ValueKey(_key++),
-      constraints: const BoxConstraints.tightFor(width: 200, height: 200),
-      child: sample,
-    ));
-  }
-
-  @override
-  void sampleMate(
+  void mateSample(
     Mate widgetMate, {
     String title = "展开代码&编辑器",
     bool isShowCode = true,
@@ -328,7 +322,7 @@ class PenImpl extends Pen {
   }
 
   @override
-  void sampleBlock(
+  void widgetSample(
     Widget Function(ObjectParam param) builder, {
     String title = "展开代码&编辑器",
     bool isShowCode = true,
@@ -346,37 +340,35 @@ class PenImpl extends Pen {
 
   void _add(Widget content) {
     _currentBlock.add(content);
+    debugPrint("_add ${content.runtimeType} _currentBlock ${_currentBlock.hashCode}");
   }
 
   /// 创建一个代码区块
-  /// create a new code block
+  /// create a new code cell
   /// 只能用最外层语句调用此函数
   /// This function can only be called with the outermost statement
   /// example:
   /// build(Pen pen){
-  ///   pen.block_______________();  // is ok
+  ///   pen.cell();  // is ok
   ///   {
-  ///      pen.block_______________();  // is not ok
+  ///      pen.cell();  // is not ok
   ///   }
   /// }
-  /// 如果[block]参数为null, 则在代码视图中隐藏此行
+  /// 如果[builder]参数为null, 则在代码视图中隐藏此行
   /// if block arg is null, then hidden this statement in codeView:
-  ///     -> pen.block_______________();  //hidden this line
+  ///     -> pen.cell();  //hidden this line
   @override
   // ignore: non_constant_identifier_names
-  void block_______________([void Function()? block]) {
-    _blockIndex++;
+  void cell(CellBuilder builder) {
+    _cellIndex++;
     blocks.add(_currentBlock);
     _currentBlock = ContentBlock(
-      index: _blockIndex,
-      block: block,
+      index: _cellIndex,
+      builder: builder,
     );
-    if (block != null) block();
-  }
+    // builder();
 
-  @override
-  void print(Object? o) {
-    _add(Text("print:$o"));
+    debugPrint("block_______________ _currentBlock ${_currentBlock.hashCode}");
   }
 }
 

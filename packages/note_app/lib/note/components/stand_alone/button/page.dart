@@ -8,6 +8,8 @@ PageMeta page = PageMeta(
 );
 
 build(BuildContext context, Pen pen) {
+  int id = 0;
+
   pen.markdown(r'''
 # button
 
@@ -21,7 +23,7 @@ the Material Design button types and how they should be used in designs.
 以下几种主要Button都继承自[ButtonStyleButton]
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Wrap$Mate(
       children: [
         ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
@@ -40,7 +42,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Row$Mate(
       children: [
         IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.wifi)),
@@ -56,25 +58,25 @@ the Material Design button types and how they should be used in designs.
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Row$Mate(
       children: [
         FloatingActionButton$Mate(
           onPressed: () {},
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
           tooltip: "FloatingActionButton",
           child: Text$Mate("缺省构造器"),
         ),
         FloatingActionButton$Mate.small(
           // isExtended: false,
           onPressed: () {},
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
           child: Text$Mate("small"),
         ),
         FloatingActionButton$Mate.large(
           // isExtended: false,
           onPressed: () {},
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
           child: Text$Mate("large"),
         ),
         FloatingActionButton$Mate.extended(
@@ -82,7 +84,7 @@ the Material Design button types and how they should be used in designs.
           onPressed: () {},
           label: Text$Mate('extended'),
           icon: Icon$Mate(Icons.thumb_up),
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
         ),
       ],
     ),
@@ -100,7 +102,7 @@ the Material Design button types and how they should be used in designs.
     - [EndDrawerButton] A Material Design drawer icon button
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Row$Mate(
       children: [
         BackButton$Mate(),
@@ -121,7 +123,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Row$Mate(
       children: [
         ToggleButtons$Mate(
@@ -149,7 +151,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Row$Mate(
       children: [
         SegmentedButton$Mate<String>(
@@ -211,7 +213,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 您在下面三种不同的文本上点点看区别：
   ''');
 
-  pen.sampleMate(Column$Mate(
+  pen.mateSample(Column$Mate(
     children: [
       Text$Mate("1.普通Text"),
       InkWell$Mate(
@@ -232,7 +234,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 
   ''');
 
-  pen.sampleMate(
+  pen.mateSample(
     Container$Mate(
       width: 600,
       color: Colors.lime.shade50,

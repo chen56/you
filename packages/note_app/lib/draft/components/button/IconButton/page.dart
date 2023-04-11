@@ -19,7 +19,7 @@ build(BuildContext context, Pen pen) {
   - [IconButton] 
   ''');
 
-  pen.sampleMate(Wrap$Mate(children: [
+  pen.mateSample(Wrap$Mate(children: [
     // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
   ]));
 }

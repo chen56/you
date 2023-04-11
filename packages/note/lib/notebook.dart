@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note/page_core.dart';
 
 class Notebook {
   NoteHeader header;
@@ -41,13 +42,19 @@ class NoteBlock extends NotePart {
 
 class WriteContent {}
 
+class LogContent extends WriteContent {}
+
+class WidgetContent extends WriteContent {}
+
+class MateContent extends WriteContent {}
+
 class ContentBlock {
   final List<Widget> _contents = List.empty(growable: true);
   final int index;
-  final void Function()? block;
+  final void Function(BuildContext context, NoteCell cell)? builder;
   ContentBlock({
     required this.index,
-    this.block,
+    this.builder,
   });
 
   bool isEmpty() => _contents.isEmpty;
@@ -56,6 +63,11 @@ class ContentBlock {
 
   void add(Widget content) {
     _contents.add(content);
+  }
+
+  List<Object?> datas = List.empty(growable: true);
+  void print(Object? o) {
+    datas.add(o);
   }
 }
 

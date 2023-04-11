@@ -180,24 +180,37 @@ class Path<T> {
   }
 }
 
+class NoteCell {
+  List<Object?> datas = List.empty(growable: true);
+  void print(Object? o) {
+    datas.add(o);
+  }
+
+  void widget(Widget widget) {}
+}
+
+typedef CellBuilder = void Function(BuildContext context, NoteCell cell);
+typedef WidgetCellBuilder = Widget Function(BuildContext context, NoteCell cell);
+
 abstract class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
   // ignore: non_constant_identifier_names
-  void block_______________([void Function()? block]);
+  void cell(CellBuilder builder);
 
-  void sampleFile(Widget sample);
-
+  /// markdown cell
   void markdown(String content);
 
-  void sampleMate(Mate widgetMate,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
-  void sampleBlock(Widget Function(ObjectParam param) builder,
+  /// mate cell
+  void mateSample(Mate widgetMate,
       {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
 
-  void widget(Widget Function(ObjectParam param) builder);
+  /// mate cell
+  void widgetSample(Widget Function(ObjectParam param) builder,
+      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
 
-  void print(Object? o);
+  /// widget cell
+  void widget(Widget widget);
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
@@ -211,6 +224,11 @@ class Outline {
       return;
     }
     current = current!.add(newNode);
+  }
+
+  void reset() {
+    root.clear();
+    current = null;
   }
 }
 
@@ -257,6 +275,10 @@ class OutlineNode {
   @override
   String toString() {
     return "heading:$heading title:$title kids:${kids.length}";
+  }
+
+  void clear() {
+    kids.clear();
   }
 }
 
