@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
@@ -44,6 +45,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
     //内容outline只build一次
     widget.current.build(pen, context);
+    pen.block_______________();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       // 第一次[build]时, flutter-mardown包无法装配出outline，只有第一次[build]完，才能装配好，
@@ -74,20 +76,18 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     // 20230404 chen56
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
+
     var scrollV = SingleChildScrollView(
       scrollDirection: Axis.vertical,
       controller: controllerV,
       child: ListBody(
         children: [
-          ...pen._contents,
+          ...pen.blocks.map((e) => _NoteBlockView(e)),
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],
       ),
     );
-    //no use
-    // final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
-    //     ScrollableDetails(direction: AxisDirection.down, controller: controller));
 
     var row = Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -283,8 +283,6 @@ class PenImpl extends Pen {
   final Editors editors;
   final Outline outline = Outline();
 
-  final List<Widget> _contents = List.empty(growable: true);
-
   final List<ContentBlock> blocks = List.empty(growable: true);
   ContentBlock _currentBlock = ContentBlock(index: 0);
 
@@ -314,8 +312,12 @@ class PenImpl extends Pen {
   }
 
   @override
-  void sampleMate(Mate widgetMate,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}) {
+  void sampleMate(
+    Mate widgetMate, {
+    String title = "展开代码&编辑器",
+    bool isShowCode = true,
+    bool isShowParamEditor = true,
+  }) {
     _add(_MateSample(
       rootParam: widgetMate.toRootParam(editors: editors),
       editors: editors,
@@ -326,8 +328,12 @@ class PenImpl extends Pen {
   }
 
   @override
-  void sampleBlock(Widget Function(ObjectParam param) builder,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}) {
+  void sampleBlock(
+    Widget Function(ObjectParam param) builder, {
+    String title = "展开代码&编辑器",
+    bool isShowCode = true,
+    bool isShowParamEditor = true,
+  }) {
     ObjectParam rootParam = ObjectParam.root(editors: editors, builder: (param) => builder(param));
     _add(_MateSample(
       rootParam: rootParam,
@@ -339,7 +345,6 @@ class PenImpl extends Pen {
   }
 
   void _add(Widget content) {
-    _contents.add(content);
     _currentBlock.add(content);
   }
 
@@ -366,6 +371,12 @@ class PenImpl extends Pen {
       index: _blockIndex,
       block: block,
     );
+    if (block != null) block();
+  }
+
+  @override
+  void print(Object? o) {
+    _add(Text("print:$o"));
   }
 }
 
@@ -500,5 +511,59 @@ class _ParamAndCodeView extends StatelessWidget {
         )
       ],
     );
+  }
+}
+
+class _NoteBlockView extends StatelessWidget {
+  final ContentBlock block;
+  final ValueNotifier isShowCode = ValueNotifier(true);
+  _NoteBlockView(
+    this.block, {
+    // ignore: unused_element
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    var codeView = HighlightView(
+      // The original code to be highlighted
+      "code source... todo \n code.... \n code...",
+
+      // Specify language
+      // It is recommended to give it a value for performance
+      language: 'dart',
+
+      // Specify highlight theme
+      // All available themes are listed in `themes` folder
+      theme: atelierForestLightTheme,
+
+      // Specify padding
+      padding: const EdgeInsets.all(6),
+
+      // Specify text style
+    );
+
+    // We use Padding to avoid complex nested Columns/Rows:
+    // code | codeView
+    // bar  | -------------------
+    // view | contentView
+    const double leftOfBar = 20;
+
+    var leftBar = const Icon(size: leftOfBar, Icons.code);
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      if (isShowCode.value)
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            leftBar,
+            Expanded(child: codeView),
+          ],
+        ),
+      ...block.contents.map((e) => Container(
+            padding: const EdgeInsets.only(left: leftOfBar),
+            child: e,
+          )),
+      const SizedBox(height: 10),
+    ]);
   }
 }

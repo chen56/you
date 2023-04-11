@@ -11,6 +11,10 @@ build(BuildContext context, Pen pen) {
 
 # 布局
 
+## 约束
+
+LayoutBuilder
+
 ## 弹性布局
 
 - Flex <https://api.flutter-io.cn/flutter/widgets/Flex-class.html>

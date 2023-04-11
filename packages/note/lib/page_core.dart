@@ -8,6 +8,18 @@ import 'package:note/navigator_v2.dart';
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 ///
 ///
+///
+
+// /// override print
+// print(Object o) {
+//   if (printTarget != null) {
+//     printTarget!(o);
+//   } else {
+//     debugPrint("$o");
+//   }
+// }
+//
+// void Function(Object? o)? printTarget;
 
 /// <T>: [NavigatorV2.push] 的返回类型
 class PageMeta<T> {
@@ -184,6 +196,8 @@ abstract class Pen {
       {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
 
   void widget(Widget Function(ObjectParam param) builder);
+
+  void print(Object? o);
 }
 
 // markdown 的结构轮廓，主要用来显示TOC
