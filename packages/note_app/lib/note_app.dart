@@ -47,7 +47,7 @@ class Paths with Navigable, PathsMixin {
 
   @override
   Screen parse(String location) {
-    Path find = _root.kid(location)!; // ?? notFound;
+    Path find = _root.child(location)!; // ?? notFound;
     return find.createScreen(location);
   }
 }
@@ -60,14 +60,17 @@ put<C>(String path, PageMeta<C>? meta) {
 }
 
 class Layouts {
-  static PageScreen<T> defaultLayout<T>(Path<T> note) {
-    return PageScreen<T>(
-      current: note,
-      tree: paths.note,
-      editors: Editors(
-        enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
-        iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
-      ),
-    );
+  static Layout defaultLayout<T>({
+    bool isShowCellCode = false,
+  }) {
+    return (path) => PageScreen<T>(
+          current: path as Path<T>,
+          tree: paths.note,
+          editors: Editors(
+            enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
+            iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
+          ),
+          isShowCellCode: isShowCellCode,
+        );
   }
 }

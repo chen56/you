@@ -12,7 +12,7 @@ import 'notebook.dart';
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
-
+  final bool isShowCellCode;
   final Editors editors;
 
   PageScreen({
@@ -20,6 +20,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
     this.tree,
     required this.current,
     required this.editors,
+    this.isShowCellCode=false,
   });
 
   @override
@@ -32,7 +33,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  late final PenImpl pen = PenImpl(editors: widget.editors);
+  // late final PenImpl pen = PenImpl(editors: widget.editors);
   final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
 
   _PageScreenState();
@@ -48,14 +49,23 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     });
   }
 
+  ({Outline outline, List<Widget> cellWidgets}) buildPen(BuildContext context) {
+    Pen pen = Pen.build(context, widget.current);
+
+    Outline outline = Outline();
+    return (outline:outline, cellWidgets:pen.cells.map((cell) {
+      return _NoteCellView(cell, outline: outline, editors: widget.editors,isShowCellCode:widget.isShowCellCode,);
+    }).toList(), );
+  }
+
   @override
   Widget build(BuildContext context) {
-    pen.reset();
-    widget.current.build(pen, context);
+    var penResult = buildPen(context);
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(mainContentViewController: controllerV, outline: pen.outline);
+    var outlineView = _OutlineView(
+        mainContentViewController: controllerV, outline: penResult.outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -79,7 +89,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       controller: controllerV,
       child: ListBody(
         children: [
-          ...pen.blocks.map((e) => _NoteBlockView(e)),
+          ...penResult.cellWidgets,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],
@@ -120,8 +130,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 class _NoteTreeView extends StatefulWidget {
   final Path root;
 
-  _NoteTreeView(
-    this.root, {
+  _NoteTreeView(this.root, {
     Key? key,
   }) : super(key: key) {
     // 当前文档较少，先都展开
@@ -146,8 +155,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       String iconExtend = node.isLeaf
           ? "     "
           : node.extend
-              ? "▽  "
-              : "▷︎  ";
+          ? "▽  "
+          : "▷︎  ";
       String icon = "🗓";
       // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►
       // title 被Flexible包裹后，文本太长会自动换行
@@ -273,112 +282,14 @@ class _OutlineView extends StatelessWidget {
   }
 }
 
-class PenImpl extends Pen {
-  int _cellIndex = 0;
-  int _key = 0;
-
-  final Editors editors;
-  final Outline outline = Outline();
-
-  final List<ContentBlock> blocks = List.empty(growable: true);
-  ContentBlock _currentBlock = ContentBlock(index: 0);
-
-  PenImpl({required this.editors});
-
-  reset() {
-    blocks.clear();
-    _currentBlock = ContentBlock(index: 0);
-    outline.reset();
-  }
-
-  @override
-  void markdown(String content) {
-    _add(MarkdownContent(
-      key: ValueKey(_key++),
-      outline: outline,
-      content: content,
-    ));
-  }
-
-  @override
-  void widget(Widget widget) {
-    _add(widget);
-  }
-
-  @override
-  void mateSample(
-    Mate widgetMate, {
-    String title = "展开代码&编辑器",
-    bool isShowCode = true,
-    bool isShowParamEditor = true,
-  }) {
-    _add(_MateSample(
-      rootParam: widgetMate.toRootParam(editors: editors),
-      editors: editors,
-      isShowCode: isShowCode,
-      isShowParamEditor: isShowParamEditor,
-      title: title,
-    ));
-  }
-
-  @override
-  void widgetSample(
-    Widget Function(ObjectParam param) builder, {
-    String title = "展开代码&编辑器",
-    bool isShowCode = true,
-    bool isShowParamEditor = true,
-  }) {
-    ObjectParam rootParam = ObjectParam.root(editors: editors, builder: (param) => builder(param));
-    _add(_MateSample(
-      rootParam: rootParam,
-      editors: editors,
-      isShowCode: isShowCode,
-      isShowParamEditor: isShowParamEditor,
-      title: title,
-    ));
-  }
-
-  void _add(Widget content) {
-    _currentBlock.add(content);
-    debugPrint("_add ${content.runtimeType} _currentBlock ${_currentBlock.hashCode}");
-  }
-
-  /// 创建一个代码区块
-  /// create a new code cell
-  /// 只能用最外层语句调用此函数
-  /// This function can only be called with the outermost statement
-  /// example:
-  /// build(Pen pen){
-  ///   pen.cell();  // is ok
-  ///   {
-  ///      pen.cell();  // is not ok
-  ///   }
-  /// }
-  /// 如果[builder]参数为null, 则在代码视图中隐藏此行
-  /// if block arg is null, then hidden this statement in codeView:
-  ///     -> pen.cell();  //hidden this line
-  @override
-  // ignore: non_constant_identifier_names
-  void cell(CellBuilder builder) {
-    _cellIndex++;
-    blocks.add(_currentBlock);
-    _currentBlock = ContentBlock(
-      index: _cellIndex,
-      builder: builder,
-    );
-    // builder();
-
-    debugPrint("block_______________ _currentBlock ${_currentBlock.hashCode}");
-  }
-}
-
-class _MateSample extends StatelessWidget {
+class _MateSampleView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final bool isShowCode;
   final bool isShowParamEditor;
   final String title;
-  const _MateSample({
+
+  const _MateSampleView({
     // ignore: unused_element
     super.key,
     required this.rootParam,
@@ -465,7 +376,7 @@ class _ParamAndCodeView extends StatelessWidget {
     var paramView = Column(
       children: [
         ...rootParam
-            // hide null value
+        // hide null value
             .flat(test: (param) => param.isShow)
             .map(paramRow)
       ],
@@ -506,17 +417,49 @@ class _ParamAndCodeView extends StatelessWidget {
   }
 }
 
-class _NoteBlockView extends StatelessWidget {
-  final ContentBlock block;
-  final ValueNotifier isShowCode = ValueNotifier(true);
-  _NoteBlockView(
-    this.block, {
+class _NoteCellView extends StatelessWidget {
+  final bool isShowCellCode;
+
+  final NoteCell cell;
+  final Outline outline;
+  final Editors editors;
+
+    _NoteCellView(this.cell, {
     // ignore: unused_element
     super.key,
+    required this.outline,
+    required this.editors,
+    required this.isShowCellCode,
   });
+
+  Widget buildContent(BuildContext context, BaseNoteContent e) {
+    if (e is MarkdownNote) {
+      return MarkdownContent(outline: outline, content: e.content);
+    }
+    if (e is WidgetNote) {
+      return e.widget;
+    }
+    if (e is SampleNote) {
+      return _MateSampleView(
+        rootParam: e.mate.toRootParam(editors: editors),
+        editors: editors,
+        isShowCode: true,
+        isShowParamEditor: true,
+        title: "展开代码",
+      );
+    }
+
+    if (e is ObjectNote) {
+      return Text("${e.object}");
+    }
+
+    throw UnimplementedError("NoteContent not implemented : $e");
+  }
 
   @override
   Widget build(BuildContext context) {
+    Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
+
     var codeView = HighlightView(
       // The original code to be highlighted
       "code source... todo \n code.... \n code...",
@@ -543,7 +486,7 @@ class _NoteBlockView extends StatelessWidget {
 
     var leftBar = const Icon(size: leftOfBar, Icons.code);
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      if (isShowCode.value)
+      if (isShowCellCode)
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -551,7 +494,7 @@ class _NoteBlockView extends StatelessWidget {
             Expanded(child: codeView),
           ],
         ),
-      ...block.contents.map((e) => Container(
+      ...contentWidgets.map((e) => Container(
             padding: const EdgeInsets.only(left: leftOfBar),
             child: e,
           )),

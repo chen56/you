@@ -23,7 +23,7 @@ the Material Design button types and how they should be used in designs.
 以下几种主要Button都继承自[ButtonStyleButton]
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Wrap$Mate(
       children: [
         ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
@@ -42,7 +42,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Row$Mate(
       children: [
         IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.wifi)),
@@ -58,7 +58,7 @@ the Material Design button types and how they should be used in designs.
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Row$Mate(
       children: [
         FloatingActionButton$Mate(
@@ -102,7 +102,7 @@ the Material Design button types and how they should be used in designs.
     - [EndDrawerButton] A Material Design drawer icon button
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Row$Mate(
       children: [
         BackButton$Mate(),
@@ -123,7 +123,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Row$Mate(
       children: [
         ToggleButtons$Mate(
@@ -151,7 +151,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Row$Mate(
       children: [
         SegmentedButton$Mate<String>(
@@ -213,7 +213,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 您在下面三种不同的文本上点点看区别：
   ''');
 
-  pen.mateSample(Column$Mate(
+  pen.writeSample(Column$Mate(
     children: [
       Text$Mate("1.普通Text"),
       InkWell$Mate(
@@ -234,7 +234,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Container$Mate(
       width: 600,
       color: Colors.lime.shade50,

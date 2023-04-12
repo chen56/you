@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
+import 'package:note/notebook.dart';
+import 'package:note/utils.dart';
+
+typedef PageBuilder = void Function(BuildContext context, Pen pen);
 
 /// 本项目的就死活page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -25,7 +29,7 @@ import 'package:note/navigator_v2.dart';
 class PageMeta<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
-  final void Function(BuildContext context, Pen note) builder;
+  final PageBuilder builder;
   late final Layout? layout;
 
   PageMeta({
@@ -40,7 +44,6 @@ class PageMeta<T> {
   }
 }
 
-/// 用kids代替单词children,原因是children太长了
 class Path<T> {
   final String name;
   final List<Path> _children = List.empty(growable: true);
@@ -85,11 +88,6 @@ class Path<T> {
       return child;
     });
     return next._ensurePath(nameList.sublist(1));
-  }
-
-  void build(Pen pen, BuildContext context) {
-    if (_meta == null) return;
-    _meta!.builder(context, pen);
   }
 
   /// 页面骨架
@@ -145,7 +143,7 @@ class Path<T> {
     return [...parent!.topList(), this];
   }
 
-  Path? kid(String path) {
+  Path? child(String path) {
     Path? result = this;
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._childrenMap[split];
@@ -180,38 +178,88 @@ class Path<T> {
   }
 }
 
-class NoteCell {
-  List<Object?> datas = List.empty(growable: true);
-  void print(Object? o) {
-    datas.add(o);
-  }
-
-  void widget(Widget widget) {}
-}
-
-typedef CellBuilder = void Function(BuildContext context, NoteCell cell);
-typedef WidgetCellBuilder = Widget Function(BuildContext context, NoteCell cell);
-
-abstract class Pen {
+class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
   // ignore: non_constant_identifier_names
-  void cell(CellBuilder builder);
+  // void cell(CellBuilder builder);
+  // final List<NoteCell> cells = List.empty(growable: true);
+  // NoteCell _currentCell = NoteCell(index: 0);
+  late NoteCell _currentCell = _newCell();
+  final List<NoteCell> cells = List.empty(growable: true);
 
-  /// markdown cell
-  void markdown(String content);
+  int _cellIndex = 0;
 
-  /// mate cell
-  void mateSample(Mate widgetMate,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
+  Pen();
+  Pen.build(BuildContext context, Path path) {
+    if (path._meta == null) return;
+    path._meta!.builder(context, this);
+  }
 
-  /// mate cell
-  void widgetSample(Widget Function(ObjectParam param) builder,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true});
+  void markdown(String content) {
+    _addNewCellContent(MarkdownNote(content));
+  }
 
-  /// widget cell
-  void widget(Widget widget);
+  /// write系列函数不独立成 cell
+  void write(Object? object) {
+    _currentCell.add(object is BaseNoteContent ? object : ObjectNote(object));
+  }
+
+  /// write系列函数不独立成 cell
+  void writeSample(Mate mate) {
+    write(SampleNote(mate));
+  }
+
+  /// 增加一条占据整个cell的内容
+  void _addNewCellContent(BaseNoteContent content) {
+    _newCell();
+    write(content);
+    _newCell();
+  }
+
+  NoteCell _newCell() {
+    _currentCell = NoteCell(index: _cellIndex++);
+    cells.add(_currentCell);
+    return _currentCell;
+  }
 }
+
+abstract class BaseNoteContent {}
+
+class MarkdownNote extends BaseNoteContent {
+  final String content;
+  MarkdownNote(this.content);
+  @override
+  String toString() {
+    return "MarkdownNote('${content.safeSubstring(0, 15)}')";
+  }
+}
+
+class ObjectNote extends BaseNoteContent {
+  final Object? object;
+  ObjectNote(this.object);
+  @override
+  String toString() {
+    return "ObjectNote('${object?.toString().safeSubstring(0, 15)}')";
+  }
+}
+
+class WidgetNote extends BaseNoteContent {
+  final Widget widget;
+  WidgetNote(this.widget);
+}
+
+// {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
+class SampleNote extends BaseNoteContent {
+  final Mate mate;
+  SampleNote(this.mate);
+  @override
+  String toString() {
+    return "SampleNote('${mate.toString().safeSubstring(0, 15)}')";
+  }
+}
+
+typedef SampleBuilder = Widget Function(ObjectParam param);
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {

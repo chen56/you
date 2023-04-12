@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart' as flutter;
 import 'package:flutter/material.dart';
+import 'package:note_mate_flutter/material.dart';
 import 'package:note_mate_flutter/painting.dart' as painting;
 import 'package:note/page_core.dart';
-import 'package:note_mate_flutter/material.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "Bars",
@@ -18,7 +18,7 @@ build(BuildContext context, Pen pen) {
 > ref: <https://api.flutter.dev/flutter/material/AppBar-class.html>
 ''');
 
-  pen.mateSample(AppBar$Mate(
+  pen.writeSample(AppBar$Mate(
     title: Text$Mate('AppBar Title'),
     leading: DrawerButton$Mate(),
     actions: <flutter.Widget>[
@@ -43,7 +43,7 @@ build(BuildContext context, Pen pen) {
 
 ''');
   //
-  pen.mateSample(BottomAppBar$Mate(
+  pen.writeSample(BottomAppBar$Mate(
     // shape: CircularNotchedRectangle(),
     child: Row$Mate(
       children: <flutter.Widget>[
@@ -85,7 +85,7 @@ build(BuildContext context, Pen pen) {
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  pen.mateSample(Column$Mate(
+  pen.writeSample(Column$Mate(
     children: [
       Container$Mate(
         height: 100,
@@ -106,41 +106,39 @@ build(BuildContext context, Pen pen) {
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
 
-  pen.widgetSample(
-    title: "TODO Sample中包含复杂函数代码，暂不支持生成相关代码",
-    (root) {
-      var currentPageIndex = 0;
-      flutter.Widget buildNavigationBar(context, setState) {
-        var views = [
-          flutter.Container(height: 100, color: flutter.Colors.lime),
-          flutter.Container(height: 100, color: flutter.Colors.purple),
-        ];
-        return flutter.Column(
-          children: [
-            views[currentPageIndex],
-            flutter.NavigationBar(
-              onDestinationSelected: (int index) {
-                setState(() => currentPageIndex = index);
-              },
-              selectedIndex: currentPageIndex,
-              destinations: const <flutter.Widget>[
-                flutter.NavigationDestination(
-                    icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.lime),
-                    label: 'lime page'),
-                flutter.NavigationDestination(
-                    icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.purple),
-                    label: 'purple page'),
-              ],
-            )
-          ],
-        );
-      }
+  {
+    var currentPageIndex = 0;
 
-      return flutter.StatefulBuilder(
-        builder: buildNavigationBar,
+    flutter.Widget buildNavigationBar(context, setState) {
+      var views = [
+        flutter.Container(height: 100, color: flutter.Colors.lime),
+        flutter.Container(height: 100, color: flutter.Colors.purple),
+      ];
+      return flutter.Column(
+        children: [
+          views[currentPageIndex],
+          flutter.NavigationBar(
+            onDestinationSelected: (int index) {
+              setState(() => currentPageIndex = index);
+            },
+            selectedIndex: currentPageIndex,
+            destinations: const <flutter.Widget>[
+              flutter.NavigationDestination(
+                  icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.lime),
+                  label: 'lime page'),
+              flutter.NavigationDestination(
+                  icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.purple),
+                  label: 'purple page'),
+            ],
+          )
+        ],
       );
-    },
-  );
+    }
+
+    pen.write(SampleNote(StatefulBuilder$Mate(
+      builder: buildNavigationBar,
+    )));
+  }
 
   pen.markdown(r'''
 ## NavigationRail
@@ -180,7 +178,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ],
   );
 
-  pen.mateSample(
+  pen.writeSample(
     Row$Mate(
       children: [
         Container$Mate(
@@ -215,7 +213,7 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  pen.mateSample(DefaultTabController$Mate(
+  pen.writeSample(DefaultTabController$Mate(
     length: 3,
     child: TabBar$Mate(
       tabs: <flutter.Widget>[
@@ -241,7 +239,7 @@ TabBar不加TabView长这样：
 
 ''');
 
-  pen.mateSample(DefaultTabController$Mate(
+  pen.writeSample(DefaultTabController$Mate(
     initialIndex: 1,
     length: 3,
     child: Column$Mate(
@@ -297,7 +295,7 @@ DefaultTabController
   
        """);
 
-  pen.widgetSample((param) {
+  {
     onPressed() {
       flutter.ScaffoldMessenger.of(context).showSnackBar(
         flutter.SnackBar(
@@ -319,14 +317,14 @@ DefaultTabController
       );
     }
 
-    return flutter.SizedBox(
+    pen.writeSample(SizedBox$Mate(
       height: 100,
       child: flutter.FilledButton(
         onPressed: onPressed,
         child: const flutter.Text('Show Snackbar 6 seconds'),
       ),
-    );
-  });
+    ));
+  }
 
   pen.markdown(r'''
 ## ButtonBar 
@@ -339,7 +337,7 @@ DefaultTabController
 
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Container$Mate(
       width: 600,
       color: flutter.Colors.lime.shade50,
@@ -361,20 +359,27 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
 
   ''');
 
-  pen.mateSample(
+  pen.writeSample(
     Container$Mate(
       width: 300,
       child: Column$Mate(
         children: [
           Placeholder$Mate(fallbackHeight: 100, color: flutter.Colors.deepPurple),
           OverflowBar$Mate(
-            alignment: flutter.MainAxisAlignment.end, // 未溢出时的对齐方式
-            spacing: 10.0, // 未溢出时 水平方向 间距
-            textDirection: TextDirection.ltr, // 未溢出时 水平方向子组件的布局顺序(是从左往右还是从右往左)
-            overflowSpacing: 5.0, // 溢出时 垂直方向 间距
-            overflowAlignment: flutter.OverflowBarAlignment.end, // 溢出时 垂直方向 对齐方式
-            overflowDirection: VerticalDirection.down, // 溢出时 垂直方向子组件的布局顺序(是从上往下还是从右下往上)
-            clipBehavior: Clip.hardEdge, // 超出时 裁剪方式
+            alignment: flutter.MainAxisAlignment.end,
+            // 未溢出时的对齐方式
+            spacing: 10.0,
+            // 未溢出时 水平方向 间距
+            textDirection: TextDirection.ltr,
+            // 未溢出时 水平方向子组件的布局顺序(是从左往右还是从右往左)
+            overflowSpacing: 5.0,
+            // 溢出时 垂直方向 间距
+            overflowAlignment: flutter.OverflowBarAlignment.end,
+            // 溢出时 垂直方向 对齐方式
+            overflowDirection: VerticalDirection.down,
+            // 溢出时 垂直方向子组件的布局顺序(是从上往下还是从右下往上)
+            clipBehavior: Clip.hardEdge,
+            // 超出时 裁剪方式
             // 子组件
             children: [
               ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Cancel横排还是竖排取决于width")),
@@ -408,46 +413,36 @@ MenuBar相关组件：
 
   ''');
 
-  pen.mateSample(
-    Column$Mate(
+  {
+    var click = () {
+      flutter.showAboutDialog(
+        context: context,
+        applicationName: 'MenuBar Sample',
+        applicationVersion: '1.0.0',
+      );
+    };
+
+    pen.writeSample(MenuBar$Mate(
       children: [
-        Row$Mate(
-          mainAxisSize: flutter.MainAxisSize.min,
-          children: <flutter.Widget>[
-            Expanded$Mate(
-              child: MenuBar$Mate(
-                children: [
-                  MenuItemButton$Mate(
-                    onPressed: () {},
-                    child: MenuAcceleratorLabel$Mate(
-                      '&Exit',
-                      builder: flutter.MenuAcceleratorLabel.defaultLabelBuilder,
-                    ),
-                  ),
-                  SubmenuButton$Mate(
-                    menuChildren: [
-                      MenuItemButton$Mate(
-                        onPressed: () {
-                          flutter.showAboutDialog(
-                            context: context,
-                            applicationName: 'MenuBar Sample',
-                            applicationVersion: '1.0.0',
-                          );
-                        },
-                        child: MenuAcceleratorLabel$Mate('&flutter_note github',
-                            builder: flutter.MenuAcceleratorLabel.defaultLabelBuilder),
-                      )
-                    ],
-                    child: MenuAcceleratorLabel$Mate('&Help',
-                        builder: flutter.MenuAcceleratorLabel.defaultLabelBuilder),
-                  ),
-                ],
-              ),
-            ),
-          ],
+        MenuItemButton$Mate(
+          onPressed: () {},
+          child: MenuAcceleratorLabel$Mate(
+            '&Exit',
+            builder: flutter.MenuAcceleratorLabel.defaultLabelBuilder,
+          ),
         ),
-        Placeholder$Mate(fallbackHeight: 100, fallbackWidth: 100, color: flutter.Colors.deepPurple),
+        SubmenuButton$Mate(
+          menuChildren: [
+            MenuItemButton$Mate(
+              onPressed: click,
+              child: MenuAcceleratorLabel$Mate('&flutter_note github',
+                  builder: flutter.MenuAcceleratorLabel.defaultLabelBuilder),
+            )
+          ],
+          child: MenuAcceleratorLabel$Mate('&Help',
+              builder: flutter.MenuAcceleratorLabel.defaultLabelBuilder),
+        ),
       ],
-    ),
-  );
+    ));
+  }
 }

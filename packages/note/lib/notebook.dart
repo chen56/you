@@ -1,20 +1,19 @@
-import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 
 class Notebook {
   NoteHeader header;
-  List<NoteBlock> mainBlocks;
+  List<NoteCell> cells;
   NoteTail tail;
   Notebook({
     required this.header,
-    required this.mainBlocks,
+    required this.cells,
     required this.tail,
   });
 }
 
-class NotePart {
+class BaseNotePart {
   NotePartInfo info;
-  NotePart(
+  BaseNotePart(
     this.info,
   );
 }
@@ -28,50 +27,36 @@ class NotePartInfo {
   );
 }
 
-class NoteHeader extends NotePart {
+class NoteHeader extends BaseNotePart {
   NoteHeader(
     super.info,
   );
 }
 
-class NoteBlock extends NotePart {
+class NoteBlock extends BaseNotePart {
   NoteBlock(
     super.info,
   );
 }
 
-class WriteContent {}
-
-class LogContent extends WriteContent {}
-
-class WidgetContent extends WriteContent {}
-
-class MateContent extends WriteContent {}
-
-class ContentBlock {
-  final List<Widget> _contents = List.empty(growable: true);
+class NoteCell {
+  final List<BaseNoteContent> _contents = List.empty(growable: true);
+  // index use to find code
   final int index;
-  final void Function(BuildContext context, NoteCell cell)? builder;
-  ContentBlock({
+  NoteCell({
     required this.index,
-    this.builder,
   });
 
   bool isEmpty() => _contents.isEmpty;
 
-  List<Widget> get contents => List.unmodifiable(_contents);
+  List<BaseNoteContent> get contents => List.unmodifiable(_contents);
 
-  void add(Widget content) {
+  void add(BaseNoteContent content) {
     _contents.add(content);
-  }
-
-  List<Object?> datas = List.empty(growable: true);
-  void print(Object? o) {
-    datas.add(o);
   }
 }
 
-class NoteTail extends NotePart {
+class NoteTail extends BaseNotePart {
   NoteTail(
     super.info,
   );

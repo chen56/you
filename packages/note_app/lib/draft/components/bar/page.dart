@@ -17,8 +17,8 @@ build(BuildContext context, Pen pen) {
 
   ''');
 
-  pen.mateSample(
-    Container$Mate(
+  pen.write(
+    SampleNote(Container$Mate(
       width: 800,
       color: Colors.blueAccent.shade100,
       child: ButtonBar$Mate(
@@ -29,6 +29,6 @@ build(BuildContext context, Pen pen) {
               value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
         ],
       ),
-    ),
+    )),
   );
 }
