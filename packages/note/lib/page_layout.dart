@@ -33,8 +33,8 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  // late final PenImpl pen = PenImpl(editors: widget.editors);
   final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
+  Outline outline = Outline();
 
   _PageScreenState();
 
@@ -43,17 +43,18 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     super.initState();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // 第一次[build]时, flutter-mardown包无法装配出outline，只有第一次[build]完，才能装配好，
-      // 所以需要触发第二次build
+      // to do
+      // flutter-markdown只有在Widget.build时才parse markdown，导致第一次[build]时,
+      // 装配的outline无法展示出来， 所以需要触发第二次build,以使其展示出来
+      // 暂时没想好最终处理办法，暂时这样。
       setState(() {});
     });
   }
 
-  ({Outline outline, List<Widget> cellWidgets}) buildPen(BuildContext context) {
+  ({List<Widget> cellWidgets}) buildPen(BuildContext context) {
     Pen pen = Pen.build(context, widget.current);
 
-    Outline outline = Outline();
-    return (outline:outline, cellWidgets:pen.cells.map((cell) {
+    return (  cellWidgets:pen.cells.map((cell) {
       return _NoteCellView(cell, outline: outline, editors: widget.editors,isShowCellCode:widget.isShowCellCode,);
     }).toList(), );
   }
@@ -65,7 +66,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
     var outlineView = _OutlineView(
-        mainContentViewController: controllerV, outline: penResult.outline);
+        mainContentViewController: controllerV, outline: outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
