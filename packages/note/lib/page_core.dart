@@ -175,7 +175,7 @@ class Path<T> {
   }
 }
 
-typedef CellBuilder = void Function(BuildContext context, MainCell print);
+typedef CellBuilder = void Function(BuildContext context, NoteCell print);
 
 class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
@@ -184,8 +184,8 @@ class Pen {
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
-  late MainCell _currentCell = _natureCell();
-  final List<MainCell> cells = List.empty(growable: true);
+  late NoteCell _currentCell = _natureCell();
+  final List<NoteCell> cells = List.empty(growable: true);
 
   int _cellIndex = 0;
   final Editors editors;
@@ -218,8 +218,8 @@ class Pen {
   ///
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
-  MainCell cell(CellBuilder builder) {
-    _currentCell = MainCell(index: _cellIndex++, pen: this, builder: builder);
+  NoteCell cell(CellBuilder builder) {
+    _currentCell = NoteCell(index: _cellIndex++, pen: this, builder: builder);
     cells.add(_currentCell);
     return _currentCell;
   }
@@ -229,7 +229,7 @@ class Pen {
   ///
   /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
-  MainCell _natureCell() {
+  NoteCell _natureCell() {
     return cell((context, print) {});
   }
 }

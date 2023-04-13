@@ -422,7 +422,7 @@ class _ParamAndCodeView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final bool isShowCellCode;
 
-  final MainCell cell;
+  final NoteCell cell;
   final Outline outline;
   final Editors editors;
 

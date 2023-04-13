@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+/// log 是基础包，不依赖其他业务代码
+
 Logger logger = Logger();
 
 class Logger extends ChangeNotifier {

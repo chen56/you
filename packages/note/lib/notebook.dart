@@ -3,40 +3,35 @@ import 'package:note/mate.dart';
 import 'package:note/page_core.dart';
 
 class Notebook {
-  MainCell header;
-  List<MainCell> build;
-  MainCell tail;
+  NoteCell header;
+  List<NoteCell> body;
+  NoteCell tail;
   Notebook({
     required this.header,
-    required this.build,
+    required this.body,
     required this.tail,
   });
 }
 
-class CodePiece {
+class CodeBlock {
   int offset;
   int end;
-  CodePiece(
+  CodeBlock(
     this.offset,
     this.end,
   );
 }
 
-class HeaderTailCell {
-  final CodePiece codePiece;
-  HeaderTailCell(this.codePiece);
-}
-
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
-class MainCell extends ChangeNotifier {
+class NoteCell extends ChangeNotifier {
   final List<BaseNoteContent> _contents = List.empty(growable: true);
   // index use to find code
   final int index;
   final Pen pen;
   late final ObjectParam param = ObjectParam.root(editors: pen.editors);
   final CellBuilder _builder;
-  MainCell({
+  NoteCell({
     required this.index,
     required this.pen,
     required CellBuilder builder,
