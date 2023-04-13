@@ -55,8 +55,8 @@ class Paths with Navigable, PathsMixin {
 var paths = Paths._();
 
 Path<void> _root = Path.root();
-put<C>(String path, PageMeta<C>? meta) {
-  return _root.put(path, meta);
+put<C>(String path, NoteInfo noteInfo) {
+  return _root.put(path, noteInfo);
 }
 
 class Layouts {

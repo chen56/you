@@ -7,8 +7,6 @@ import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
-import 'notebook.dart';
-
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
@@ -53,7 +51,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
   ({List<Widget> cellWidgets}) buildPen(BuildContext context) {
     Pen pen = Pen.build(context, widget.current,editors:widget.editors);
-
+    // pen.cells.forEach((e) {print("sssss ${e.index} : ${e.contents}");});
     return ( cellWidgets:pen.cells.map((cell) {
       return _NoteCellView(
         cell, outline: outline, editors: widget.editors, isShowCellCode: widget.isShowCellCode,);
@@ -463,7 +461,7 @@ class _NoteCellView extends StatelessWidget {
 
     var codeView = HighlightView(
       // The original code to be highlighted
-      cell.code,
+      "${cell.index}-"+cell.code,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -507,7 +505,7 @@ class _NoteCellView extends StatelessWidget {
                 padding: const EdgeInsets.only(left: leftOfBar),
                 child: e,
               )),
-          const SizedBox(height: 10),
+          const SizedBox(height: 100),
         ]);
       },);
     });

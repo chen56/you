@@ -1,25 +1,15 @@
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
+import 'dart:convert';
+
 
 typedef PageBuilder = void Function(BuildContext context, Pen pen);
 
-/// 本项目的就死活page开发模型，包括几部分：
+/// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
 /// - [Layout]的具体实现，比如
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
-///
-///
-///
-// /// override print
-// print(Object o) {
-//   if (printTarget != null) {
-//     printTarget!(o);
-//   } else {
-//   }
-// }
-//
-// void Function(Object? o)? printTarget;
 
 /// <T>: [NavigatorV2.push] 的返回类型
 class PageMeta<T> {
@@ -49,6 +39,8 @@ class Path<T> {
   final Map<String, Object> attributes = {};
   PageMeta<T>? _meta;
 
+  NoteInfo? _noteInfo;
+
   Path._child(
     this.name, {
     required Path this.parent,
@@ -62,12 +54,14 @@ class Path<T> {
 
   List<Path> get children => List.unmodifiable(_children);
 
-  Path<C> put<C>(String fullPath, PageMeta<C>? meta) {
+  Path<C> put<C>(String fullPath, NoteInfo? noteInfo) {
     var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
     assert(path._meta == null,
         " $path add child '$fullPath': duplicate put , ${path._meta} already exists ");
-    path._meta = meta;
+
+    path._meta = noteInfo?.meta;
+    path._noteInfo = noteInfo;
     return path as Path<C>;
   }
 
@@ -114,6 +108,8 @@ class Path<T> {
   Path get root => isRoot ? this : parent!.root;
 
   String get title => _meta == null ? nameFlat : _meta!.shortTitle;
+
+  NoteInfo? get noteInfo => _noteInfo;
 
   String get path {
     if (isRoot) return "/";
@@ -183,14 +179,17 @@ class Pen {
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
-  late NoteCell _currentCell = _natureCell();
+  late NoteCell _currentCell;
   final List<NoteCell> cells = List.empty(growable: true);
 
   int _cellIndex = 0;
   final Editors editors;
-  Pen({required this.editors});
-  Pen.build(BuildContext context, Path path, {required this.editors}) {
+
+  final Path path;
+  // Pen({required this.editors});
+  Pen.build(BuildContext context, this.path, {required this.editors}) {
     if (path._meta == null) return;
+    _nextCell();
     path._meta!.builder(context, this);
   }
 
@@ -199,7 +198,7 @@ class Pen {
     cell((context, print) {
       print(MarkdownNote(content));
     });
-    _natureCell();
+    _nextCell();
   }
 
   @Deprecated("废弃：pen上只有markdown和cell函数")
@@ -218,9 +217,9 @@ class Pen {
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
   NoteCell cell(CellBuilder builder) {
-    _currentCell = NoteCell(index: _cellIndex++, pen: this, builder: builder);
-    cells.add(_currentCell);
-    return _currentCell;
+    NoteCell cell = _nextCell(builder);
+    _nextCell();
+    return cell;
   }
 
   /// 新增一个自然cell
@@ -228,8 +227,15 @@ class Pen {
   ///
   /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
-  NoteCell _natureCell() {
-    return cell((context, print) {});
+  NoteCell _nextCell([CellBuilder? builder]) {
+    _currentCell = NoteCell(
+      index: _cellIndex,
+      pen: this,
+      builder: builder ?? (_, __) {},
+    );
+    cells.add(_currentCell);
+    _cellIndex++;
+    return _currentCell;
   }
 }
 
@@ -372,24 +378,60 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
   String get location => current.path;
 }
 
-class Notebook {
-  NoteCell header;
-  List<NoteCell> body;
-  NoteCell tail;
-  Notebook({
-    required this.header,
-    required this.body,
-    required this.tail,
+class NoteInfo {
+  final NoteSource source;
+  final PageMeta meta;
+  NoteInfo({
+    required this.source,
+    required this.meta,
   });
 }
 
+class NoteSource {
+  final CodeBlock header;
+  final List<CodeBlock> body;
+  final CodeBlock tail;
+  final String code;
+  NoteSource({
+    required String code,
+    required this.header,
+    this.body = const [],
+    required this.tail,
+  }) : code = utf8.decode(base64.decode(code)) {
+    header.source = this;
+    tail.source = this;
+    for (var e in body) {
+      e.source = this;
+    }
+  }
+
+  String getMainCellCode(int index) {
+    if (index >= body.length) {
+      // not sync
+      return "cell code not sync, please gen page.g.dart";
+    }
+    var c = body[index];
+    return code.substring(c.offset, c.end);
+  }
+}
+
 class CodeBlock {
-  int offset;
-  int end;
-  CodeBlock(
-    this.offset,
-    this.end,
-  );
+  late final NoteSource source;
+  final int offset;
+  final int end;
+  final int statementCount;
+  CodeBlock({
+    required this.offset,
+    required this.end,
+    this.statementCount = 0,
+  });
+
+  /// 是否为不存在的代码块
+  bool get isExists => offset == end;
+
+  /// 是否为不包含任何有意义的语句的空块
+  // bool get isEmpty => isExists || ;
+  ///     final encodedCode = base64.encode(utf8.encode(source.code));
 }
 
 /// 一个cell代表note中的一个代码块及其产生的内容
@@ -441,7 +483,13 @@ class NoteCell extends ChangeNotifier {
   }
 
   String get code {
-    return "code source... todo \n code.... \n code...";
+    var source = pen.path.noteInfo?.source;
+    if (source == null) {
+      return _contents.isEmpty
+          ? ""
+          : "cell have content ,but code source is null, please gen page.g.dart";
+    }
+    return source.getMainCellCode(index);
   }
 
   /// 不包含pen相关调用的代码
