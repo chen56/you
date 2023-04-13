@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_pen.print
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
@@ -61,8 +63,8 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
     return "cell outer func";
   }
 
-  pen.write(cellOuter);
-  pen.write(outerFunc());
+  pen.print(cellOuter);
+  pen.print(outerFunc());
 
   pen.markdown("""
 ### ~~普通cell~~
@@ -101,7 +103,7 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
   """);
   int i = 0;
 
-  pen.write(StatefulBuilder(builder: (context, setSate) {
+  pen.print(StatefulBuilder(builder: (context, setSate) {
     return ElevatedButton(
       onPressed: () {
         setSate(() => i++);
@@ -138,4 +140,50 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
   // pen.cell((context, cell) {
   //   cell.print("hello");
   // });
+
+  pen.markdown("""
+## cell 内操作
+""");
+
+  pen.cell((context, print) {
+    int count = 0;
+    print(ElevatedButton(
+        onPressed: () {
+          count++;
+          print("click:$count");
+        },
+        child: Text("click:$i")));
+  });
+
+  pen.markdown("""
+### cell.param
+
+cell.param参数的变化会导致cell重建，但由于cell.param数据的保持，可以做一些动态效果
+""");
+
+  pen.cell((context, print) {
+    var count = print.param.use("count", 0);
+    print(ElevatedButton(
+        onPressed: () {
+          count.value = count.value + 1;
+        },
+        child: Text("click${count.value}")));
+  });
+
+  pen.markdown("""
+可以用[Timer.periodic]做一些动态效果, 但记得释放Timer实例 
+""");
+
+  pen.cell((context, print) {
+    int i = 3600;
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      print.clear();
+      print(Text("$i: ${DateTime.now()}"));
+      print(Container(
+        height: 20,
+        color: Colors.primaries[i-- % Colors.primaries.length],
+      ));
+      if (i < 0) timer.cancel();
+    });
+  });
 }

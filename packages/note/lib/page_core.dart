@@ -1,25 +1,22 @@
+import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
-import 'package:note/navigator_v2.dart';
 import 'package:note/notebook.dart';
-import 'package:note/utils.dart';
 
 typedef PageBuilder = void Function(BuildContext context, Pen pen);
 
 /// 本项目的就死活page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
-/// - [Layout]的具体实现，比如[Page]
+/// - [Layout]的具体实现，比如
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 ///
 ///
 ///
-
 // /// override print
 // print(Object o) {
 //   if (printTarget != null) {
 //     printTarget!(o);
 //   } else {
-//     debugPrint("$o");
 //   }
 // }
 //
@@ -70,7 +67,7 @@ class Path<T> {
     var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
     assert(path._meta == null,
-        " $path add kid '$fullPath': duplicate put , ${path._meta} already exists ");
+        " $path add child '$fullPath': duplicate put , ${path._meta} already exists ");
     path._meta = meta;
     return path as Path<C>;
   }
@@ -178,6 +175,8 @@ class Path<T> {
   }
 }
 
+typedef CellBuilder = void Function(BuildContext context, MainCell print);
+
 class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
@@ -185,42 +184,53 @@ class Pen {
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
-  late NoteCell _currentCell = _newCell();
-  final List<NoteCell> cells = List.empty(growable: true);
+  late MainCell _currentCell = _natureCell();
+  final List<MainCell> cells = List.empty(growable: true);
 
   int _cellIndex = 0;
-
-  Pen();
-  Pen.build(BuildContext context, Path path) {
+  final Editors editors;
+  Pen({required this.editors});
+  Pen.build(BuildContext context, Path path, {required this.editors}) {
     if (path._meta == null) return;
     path._meta!.builder(context, this);
   }
 
+  /// markdown 独占一个新cell
   void markdown(String content) {
-    _addNewCellContent(MarkdownNote(content));
+    cell((context, print) {
+      print(MarkdownNote(content));
+    });
+    _natureCell();
   }
 
-  /// write系列函数不独立成 cell
-  void write(Object? object) {
-    _currentCell.add(object is BaseNoteContent ? object : ObjectNote(object));
+  @Deprecated("废弃：pen上只有markdown和cell函数")
+  void print(Object? object) {
+    _currentCell.print(object);
   }
 
-  /// write系列函数不独立成 cell
-  void writeSample(Mate mate) {
-    write(SampleNote(mate));
+  @Deprecated("废弃：pen上只有markdown和cell函数")
+  void printSample(Mate mate) {
+    print(SampleNote(mate));
   }
 
-  /// 增加一条占据整个cell的内容
-  void _addNewCellContent(BaseNoteContent content) {
-    _newCell();
-    write(content);
-    _newCell();
-  }
-
-  NoteCell _newCell() {
-    _currentCell = NoteCell(index: _cellIndex++);
+  /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
+  /// Add a new cell, which is a code block and its generated content in the note
+  ///
+  /// 通过[builder]参数可以重建此cell
+  /// cell can be rebuilt using the [builder] arg
+  MainCell cell(CellBuilder builder) {
+    _currentCell = MainCell(index: _cellIndex++, pen: this, builder: builder);
     cells.add(_currentCell);
     return _currentCell;
+  }
+
+  /// 新增一个自然cell
+  /// add a nature cell
+  ///
+  /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
+  /// The meaning of natural cell is the code block between [Pen. cell] function blocks
+  MainCell _natureCell() {
+    return cell((context, print) {});
   }
 }
 
@@ -231,7 +241,7 @@ class MarkdownNote extends BaseNoteContent {
   MarkdownNote(this.content);
   @override
   String toString() {
-    return "MarkdownNote('${content.safeSubstring(0, 15)}')";
+    return "MarkdownNote('${content}')";
   }
 }
 
@@ -240,13 +250,18 @@ class ObjectNote extends BaseNoteContent {
   ObjectNote(this.object);
   @override
   String toString() {
-    return "ObjectNote('${object?.toString().safeSubstring(0, 15)}')";
+    return "ObjectNote('${object?.toString()}')";
   }
 }
 
 class WidgetNote extends BaseNoteContent {
   final Widget widget;
   WidgetNote(this.widget);
+
+  @override
+  String toString() {
+    return "WidgetNote('${widget.runtimeType}')";
+  }
 }
 
 // {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
@@ -255,7 +270,7 @@ class SampleNote extends BaseNoteContent {
   SampleNote(this.mate);
   @override
   String toString() {
-    return "SampleNote('${mate.toString().safeSubstring(0, 15)}')";
+    return "SampleNote('${mate.toString()}')";
   }
 }
 

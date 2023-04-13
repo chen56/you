@@ -17,7 +17,7 @@ build(BuildContext context, Pen pen) {
 
   ''');
 
-  pen.write(
+  pen.print(
     SampleNote(Container$Mate(
       width: 800,
       color: Colors.blueAccent.shade100,

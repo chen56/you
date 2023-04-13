@@ -1,12 +1,15 @@
 // ignore_for_file: unnecessary_type_check
 
+import 'package:analyzer/dart/analysis/features.dart';
 import 'package:test/test.dart';
+import 'package:analyzer/dart/analysis/utilities.dart' as util;
+import 'package:path/path.dart' as path;
 
 void main() {
   test('analyzer', () {
-    void xxx(int panelIndex, bool isExpanded) {}
-
-    print(xxx.toString());
-    expect(["1"].sublist(0, 1), ["1"]);
+    var x = util.parseFile(
+        path: path.absolute("test/analyzer/analyzer_test.dart"),
+        featureSet: FeatureSet.latestLanguageVersion());
+    print(x);
   });
 }

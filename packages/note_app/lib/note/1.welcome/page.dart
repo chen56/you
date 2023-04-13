@@ -30,7 +30,7 @@ build(BuildContext context, Pen pen) {
 
 如果用flutter写笔记，那笔记中的范例，不就可以立刻展示出来了吗，look：
 ''');
-  pen.writeSample(Row$Mate(
+  pen.printSample(Row$Mate(
     children: <Widget>[
       ...List.generate(3, (index) {
         return Expanded$Mate(
@@ -47,7 +47,7 @@ build(BuildContext context, Pen pen) {
 
 所以，我觉得应该像下面一样，你点下mainAxisAlignment换个枚举值看看效果：
 ''');
-  pen.writeSample(Row$Mate(
+  pen.printSample(Row$Mate(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: <Widget>[
       ...List.generate(3, (index) {
@@ -69,7 +69,7 @@ build(BuildContext context, Pen pen) {
 比如想让一个普通组件拥有Material3设计风格，套个马甲[InkResponse]就行了，look:
 ''');
 
-  pen.writeSample(Column$Mate(
+  pen.printSample(Column$Mate(
     children: [
       Text$Mate("1.普通Text,点我"),
       InkResponse$Mate(

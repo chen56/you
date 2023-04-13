@@ -18,12 +18,13 @@ build(BuildContext context, Pen pen) {
 > ref: <https://api.flutter.dev/flutter/material/AppBar-class.html>
 ''');
 
-  pen.writeSample(AppBar$Mate(
+  pen.printSample(AppBar$Mate(
     title: Text$Mate('AppBar Title'),
     leading: DrawerButton$Mate(),
     actions: <flutter.Widget>[
       IconButton$Mate(icon: Icon$Mate(flutter.Icons.add), onPressed: () {}),
-      IconButton$Mate(icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
+      IconButton$Mate(
+          icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
       CheckboxMenuButton$Mate(
         value: true,
         onChanged: (b) {},
@@ -43,7 +44,7 @@ build(BuildContext context, Pen pen) {
 
 ''');
   //
-  pen.writeSample(BottomAppBar$Mate(
+  pen.printSample(BottomAppBar$Mate(
     // shape: CircularNotchedRectangle(),
     child: Row$Mate(
       children: <flutter.Widget>[
@@ -85,7 +86,7 @@ build(BuildContext context, Pen pen) {
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  pen.writeSample(Column$Mate(
+  pen.printSample(Column$Mate(
     children: [
       Container$Mate(
         height: 100,
@@ -96,8 +97,10 @@ build(BuildContext context, Pen pen) {
         onDestinationSelected: (int index) {},
         selectedIndex: 1,
         destinations: <flutter.Widget>[
-          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
-          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
+          NavigationDestination$Mate(
+              icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
+          NavigationDestination$Mate(
+              icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
         ],
       )
     ],
@@ -124,10 +127,12 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
             selectedIndex: currentPageIndex,
             destinations: const <flutter.Widget>[
               flutter.NavigationDestination(
-                  icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.lime),
+                  icon: flutter.Icon(flutter.Icons.explore,
+                      color: flutter.Colors.lime),
                   label: 'lime page'),
               flutter.NavigationDestination(
-                  icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.purple),
+                  icon: flutter.Icon(flutter.Icons.explore,
+                      color: flutter.Colors.purple),
                   label: 'purple page'),
             ],
           )
@@ -135,7 +140,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
       );
     }
 
-    pen.write(SampleNote(StatefulBuilder$Mate(
+    pen.print(SampleNote(StatefulBuilder$Mate(
       builder: buildNavigationBar,
     )));
   }
@@ -174,11 +179,12 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
       NavigationRailDestination$Mate(
           icon: Icon$Mate(flutter.Icons.sanitizer), label: Text$Mate('First')),
       NavigationRailDestination$Mate(
-          icon: Icon$Mate(flutter.Icons.accessible), label: Text$Mate('Second')),
+          icon: Icon$Mate(flutter.Icons.accessible),
+          label: Text$Mate('Second')),
     ],
   );
 
-  pen.writeSample(
+  pen.printSample(
     Row$Mate(
       children: [
         Container$Mate(
@@ -213,7 +219,7 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  pen.writeSample(DefaultTabController$Mate(
+  pen.printSample(DefaultTabController$Mate(
     length: 3,
     child: TabBar$Mate(
       tabs: <flutter.Widget>[
@@ -239,7 +245,7 @@ TabBar不加TabView长这样：
 
 ''');
 
-  pen.writeSample(DefaultTabController$Mate(
+  pen.printSample(DefaultTabController$Mate(
     initialIndex: 1,
     length: 3,
     child: Column$Mate(
@@ -303,9 +309,12 @@ DefaultTabController
           content: flutter.Column(
             children: [
               const flutter.Text("Show Snackbar 6 seconds"),
-              flutter.IconButton(icon: const flutter.Icon(flutter.Icons.add), onPressed: () {}),
               flutter.IconButton(
-                  icon: const flutter.Icon(flutter.Icons.access_alarm), onPressed: () {}),
+                  icon: const flutter.Icon(flutter.Icons.add),
+                  onPressed: () {}),
+              flutter.IconButton(
+                  icon: const flutter.Icon(flutter.Icons.access_alarm),
+                  onPressed: () {}),
             ],
           ),
           action: flutter.SnackBarAction(
@@ -317,7 +326,7 @@ DefaultTabController
       );
     }
 
-    pen.writeSample(SizedBox$Mate(
+    pen.printSample(SizedBox$Mate(
       height: 100,
       child: flutter.FilledButton(
         onPressed: onPressed,
@@ -337,14 +346,16 @@ DefaultTabController
 
   ''');
 
-  pen.writeSample(
+  pen.printSample(
     Container$Mate(
       width: 600,
       color: flutter.Colors.lime.shade50,
       child: ButtonBar$Mate(
         children: [
-          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton2")),
-          OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
+          ElevatedButton$Mate(
+              onPressed: () {}, child: Text$Mate("ElevatedButton2")),
+          OutlinedButton$Mate(
+              onPressed: () {}, child: Text$Mate('OutlinedButton')),
         ],
       ),
     ),
@@ -359,12 +370,13 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
 
   ''');
 
-  pen.writeSample(
+  pen.printSample(
     Container$Mate(
       width: 300,
       child: Column$Mate(
         children: [
-          Placeholder$Mate(fallbackHeight: 100, color: flutter.Colors.deepPurple),
+          Placeholder$Mate(
+              fallbackHeight: 100, color: flutter.Colors.deepPurple),
           OverflowBar$Mate(
             alignment: flutter.MainAxisAlignment.end,
             // 未溢出时的对齐方式
@@ -382,8 +394,10 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
             // 超出时 裁剪方式
             // 子组件
             children: [
-              ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Cancel横排还是竖排取决于width")),
-              ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Ok对齐方式取决于排列")),
+              ElevatedButton$Mate(
+                  onPressed: () {}, child: Text$Mate("Cancel横排还是竖排取决于width")),
+              ElevatedButton$Mate(
+                  onPressed: () {}, child: Text$Mate("Ok对齐方式取决于排列")),
             ],
           )
         ],
@@ -422,7 +436,7 @@ MenuBar相关组件：
       );
     };
 
-    pen.writeSample(MenuBar$Mate(
+    pen.printSample(MenuBar$Mate(
       children: [
         MenuItemButton$Mate(
           onPressed: () {},

@@ -20,7 +20,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
     this.tree,
     required this.current,
     required this.editors,
-    this.isShowCellCode=false,
+    this.isShowCellCode = false,
   });
 
   @override
@@ -52,10 +52,11 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   }
 
   ({List<Widget> cellWidgets}) buildPen(BuildContext context) {
-    Pen pen = Pen.build(context, widget.current);
+    Pen pen = Pen.build(context, widget.current,editors:widget.editors);
 
-    return (  cellWidgets:pen.cells.map((cell) {
-      return _NoteCellView(cell, outline: outline, editors: widget.editors,isShowCellCode:widget.isShowCellCode,);
+    return ( cellWidgets:pen.cells.map((cell) {
+      return _NoteCellView(
+        cell, outline: outline, editors: widget.editors, isShowCellCode: widget.isShowCellCode,);
     }).toList(), );
   }
 
@@ -421,11 +422,11 @@ class _ParamAndCodeView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final bool isShowCellCode;
 
-  final NoteCell cell;
+  final MainCell cell;
   final Outline outline;
   final Editors editors;
 
-    _NoteCellView(this.cell, {
+  _NoteCellView(this.cell, {
     // ignore: unused_element
     super.key,
     required this.outline,
@@ -459,11 +460,10 @@ class _NoteCellView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
 
     var codeView = HighlightView(
       // The original code to be highlighted
-      "code source... todo \n code.... \n code...",
+      cell.code,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -486,20 +486,32 @@ class _NoteCellView extends StatelessWidget {
     const double leftOfBar = 20;
 
     var leftBar = const Icon(size: leftOfBar, Icons.code);
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      if (isShowCellCode)
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            leftBar,
-            Expanded(child: codeView),
-          ],
-        ),
-      ...contentWidgets.map((e) => Container(
-            padding: const EdgeInsets.only(left: leftOfBar),
-            child: e,
-          )),
-      const SizedBox(height: 10),
-    ]);
+
+    var lisenCellParamChange = ListenableBuilder(listenable: cell.param, builder: (context, child) {
+      cell.build(context);
+      return ListenableBuilder(listenable: cell, builder: (context, child) {
+
+        Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
+
+        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          if (isShowCellCode)
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                leftBar,
+                Expanded(child: codeView),
+              ],
+            ),
+          ...contentWidgets.map((e) =>
+              Container(
+                padding: const EdgeInsets.only(left: leftOfBar),
+                child: e,
+              )),
+          const SizedBox(height: 10),
+        ]);
+      },);
+    });
+
+    return lisenCellParamChange;
   }
 }

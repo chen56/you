@@ -15,6 +15,7 @@ import 'package:glob/list_local_fs.dart';
 import 'package:path/path.dart' as path;
 
 import 'package:note/env.dart';
+import 'package:note/utils.dart';
 
 final _dartfmt = DartFormatter(pageWidth: 120);
 
@@ -41,15 +42,15 @@ main() async {
     // 排序，顺序可以通过为目录名添加数字前缀来强行引导： 1.pagename
     resolvedLibs.sort((a, b) => a.lib.identifier.compareTo(b.lib.identifier));
 
-    log('gen pages.g.dart start');
-    genPages(resolvedLibs.map((e) => e.lib), fs);
-    log('gen pages.g.dart ok');
-
     log('genPages Info start');
     for (var page in resolvedLibs) {
       page.genPageInfo(fs);
     }
     log('genPages Info ok');
+
+    log('gen pages.g.dart start');
+    genPages(resolvedLibs.map((e) => e.lib), fs);
+    log('gen pages.g.dart ok');
   }
 }
 
@@ -119,18 +120,6 @@ class _Page {
     }
     for (var entity in block.childEntities) {
       log("entity runtimeType:${entity.runtimeType} offset:${entity.offset} : ${libContent.safeSubstring(entity.offset, entity.offset + 20)} ");
-    }
-  }
-}
-
-extension _StrExt on String {
-  String safeSubstring(int start, [int? end]) {
-    end ??= length;
-    end = end <= length ? end : length;
-    try {
-      return substring(start, end);
-    } catch (e) {
-      throw Exception("$e, string $this");
     }
   }
 }
