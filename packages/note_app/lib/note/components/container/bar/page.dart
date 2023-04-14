@@ -23,8 +23,7 @@ build(BuildContext context, Pen pen) {
     leading: DrawerButton$Mate(),
     actions: <flutter.Widget>[
       IconButton$Mate(icon: Icon$Mate(flutter.Icons.add), onPressed: () {}),
-      IconButton$Mate(
-          icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
+      IconButton$Mate(icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
       CheckboxMenuButton$Mate(
         value: true,
         onChanged: (b) {},
@@ -97,10 +96,8 @@ build(BuildContext context, Pen pen) {
         onDestinationSelected: (int index) {},
         selectedIndex: 1,
         destinations: <flutter.Widget>[
-          NavigationDestination$Mate(
-              icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
-          NavigationDestination$Mate(
-              icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
+          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
+          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
         ],
       )
     ],
@@ -109,7 +106,7 @@ build(BuildContext context, Pen pen) {
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
 
-  {
+  pen.cell((context, print) {
     var currentPageIndex = 0;
 
     flutter.Widget buildNavigationBar(context, setState) {
@@ -127,12 +124,10 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
             selectedIndex: currentPageIndex,
             destinations: const <flutter.Widget>[
               flutter.NavigationDestination(
-                  icon: flutter.Icon(flutter.Icons.explore,
-                      color: flutter.Colors.lime),
+                  icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.lime),
                   label: 'lime page'),
               flutter.NavigationDestination(
-                  icon: flutter.Icon(flutter.Icons.explore,
-                      color: flutter.Colors.purple),
+                  icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.purple),
                   label: 'purple page'),
             ],
           )
@@ -140,10 +135,10 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
       );
     }
 
-    pen.print(SampleNote(StatefulBuilder$Mate(
+    print(SampleNote(StatefulBuilder$Mate(
       builder: buildNavigationBar,
     )));
-  }
+  });
 
   pen.markdown(r'''
 ## NavigationRail
@@ -179,8 +174,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
       NavigationRailDestination$Mate(
           icon: Icon$Mate(flutter.Icons.sanitizer), label: Text$Mate('First')),
       NavigationRailDestination$Mate(
-          icon: Icon$Mate(flutter.Icons.accessible),
-          label: Text$Mate('Second')),
+          icon: Icon$Mate(flutter.Icons.accessible), label: Text$Mate('Second')),
     ],
   );
 
@@ -309,12 +303,9 @@ DefaultTabController
           content: flutter.Column(
             children: [
               const flutter.Text("Show Snackbar 6 seconds"),
+              flutter.IconButton(icon: const flutter.Icon(flutter.Icons.add), onPressed: () {}),
               flutter.IconButton(
-                  icon: const flutter.Icon(flutter.Icons.add),
-                  onPressed: () {}),
-              flutter.IconButton(
-                  icon: const flutter.Icon(flutter.Icons.access_alarm),
-                  onPressed: () {}),
+                  icon: const flutter.Icon(flutter.Icons.access_alarm), onPressed: () {}),
             ],
           ),
           action: flutter.SnackBarAction(
@@ -352,10 +343,8 @@ DefaultTabController
       color: flutter.Colors.lime.shade50,
       child: ButtonBar$Mate(
         children: [
-          ElevatedButton$Mate(
-              onPressed: () {}, child: Text$Mate("ElevatedButton2")),
-          OutlinedButton$Mate(
-              onPressed: () {}, child: Text$Mate('OutlinedButton')),
+          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton2")),
+          OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
         ],
       ),
     ),
@@ -375,8 +364,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
       width: 300,
       child: Column$Mate(
         children: [
-          Placeholder$Mate(
-              fallbackHeight: 100, color: flutter.Colors.deepPurple),
+          Placeholder$Mate(fallbackHeight: 100, color: flutter.Colors.deepPurple),
           OverflowBar$Mate(
             alignment: flutter.MainAxisAlignment.end,
             // 未溢出时的对齐方式
@@ -394,10 +382,8 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
             // 超出时 裁剪方式
             // 子组件
             children: [
-              ElevatedButton$Mate(
-                  onPressed: () {}, child: Text$Mate("Cancel横排还是竖排取决于width")),
-              ElevatedButton$Mate(
-                  onPressed: () {}, child: Text$Mate("Ok对齐方式取决于排列")),
+              ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Cancel横排还是竖排取决于width")),
+              ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Ok对齐方式取决于排列")),
             ],
           )
         ],

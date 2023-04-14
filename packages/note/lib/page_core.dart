@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'dart:convert';
 
-
 typedef PageBuilder = void Function(BuildContext context, Pen pen);
 
 /// 本项目page开发模型，包括几部分：
@@ -179,8 +178,9 @@ class Pen {
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
-  late NoteCell _currentCell;
   final List<NoteCell> cells = List.empty(growable: true);
+
+  late NoteCell _currentCell;
 
   int _cellIndex = 0;
   final Editors editors;
@@ -188,27 +188,29 @@ class Pen {
   final Path path;
   // Pen({required this.editors});
   Pen.build(BuildContext context, this.path, {required this.editors}) {
+    // 进入build() 函数后的第一个自然cell
+    _currentCell = NoteCell(
+      index: _cellIndex++,
+      pen: this,
+      builder: (_, __) {},
+    );
     if (path._meta == null) return;
-    _nextCell();
+
     path._meta!.builder(context, this);
+    // 最后一次cell()调用后的自然cell
+    _nextCell();
   }
 
   /// markdown 独占一个新cell
   void markdown(String content) {
-    cell((context, print) {
+    _nextCell((context, print) {
       print(MarkdownNote(content));
     });
-    _nextCell();
-  }
-
-  @Deprecated("废弃：pen上只有markdown和cell函数")
-  void print(Object? object) {
-    _currentCell.print(object);
   }
 
   @Deprecated("废弃：pen上只有markdown和cell函数")
   void printSample(Mate mate) {
-    print(SampleNote(mate));
+    _currentCell.print(SampleNote(mate));
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
@@ -217,9 +219,7 @@ class Pen {
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
   NoteCell cell(CellBuilder builder) {
-    NoteCell cell = _nextCell(builder);
-    _nextCell();
-    return cell;
+    return _nextCell(builder);
   }
 
   /// 新增一个自然cell
@@ -228,14 +228,14 @@ class Pen {
   /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
   NoteCell _nextCell([CellBuilder? builder]) {
-    _currentCell = NoteCell(
-      index: _cellIndex,
+    cells.add(_currentCell);
+    var next = NoteCell(
+      index: _cellIndex++,
       pen: this,
       builder: builder ?? (_, __) {},
     );
-    cells.add(_currentCell);
-    _cellIndex++;
-    return _currentCell;
+    _currentCell = next;
+    return next;
   }
 }
 

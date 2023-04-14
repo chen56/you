@@ -18,8 +18,9 @@ build(BuildContext context, Pen pen) {
 - [StatelessWidget]
   - [IconButton] 
   ''');
-
-  pen.print(SampleNote(Wrap$Mate(children: [
-    // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-  ])));
+  pen.cell((context, print) {
+    print(SampleNote(Wrap$Mate(children: [
+      // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+    ])));
+  });
 }

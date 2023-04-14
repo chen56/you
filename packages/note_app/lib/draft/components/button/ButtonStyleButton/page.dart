@@ -25,9 +25,11 @@ ButtonStyleButton 相关子类
 
   ''');
 
-  pen.print(SampleNote(Wrap$Mate(children: [
-    ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-  ])));
+  pen.cell((context, print) {
+    print(SampleNote(Wrap$Mate(children: [
+      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+    ])));
+  });
 
   pen.markdown(r'''
 ## 范例2 Meta 

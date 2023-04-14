@@ -13,6 +13,8 @@ PageMeta page = PageMeta(
 );
 
 build(BuildContext context, Pen pen) {
+  debugPrint("notebook: first line ");
+
   pen.markdown(r'''
 # Notebook 机制-实验状态
 
@@ -60,11 +62,8 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
   var cellOuter = "out cell";
   // ignore: unused_element
   String outerFunc() {
-    return "cell outer func";
+    return "cell outer func $cellOuter";
   }
-
-  pen.print(cellOuter);
-  pen.print(outerFunc());
 
   pen.markdown("""
 ### ~~普通cell~~
@@ -103,14 +102,16 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
   """);
   int i = 0;
 
-  pen.print(StatefulBuilder(builder: (context, setSate) {
-    return ElevatedButton(
-      onPressed: () {
-        setSate(() => i++);
-      },
-      child: Text("widget cell: $i"),
-    );
-  }));
+  pen.cell((context, print) {
+    print(StatefulBuilder(builder: (context, setSate) {
+      return ElevatedButton(
+        onPressed: () {
+          setSate(() => i++);
+        },
+        child: Text("widget cell: $i"),
+      );
+    }));
+  });
 
   // pen.templateSample2((context, cell) {
   //   return Column(
