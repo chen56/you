@@ -208,11 +208,6 @@ class Pen {
     });
   }
 
-  @Deprecated("废弃：pen上只有markdown和cell函数")
-  void printSample(Mate mate) {
-    _currentCell.print(SampleNote(mate));
-  }
-
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
   /// Add a new cell, which is a code block and its generated content in the note
   ///

@@ -18,21 +18,23 @@ build(BuildContext context, Pen pen) {
 > ref: <https://api.flutter.dev/flutter/material/AppBar-class.html>
 ''');
 
-  pen.printSample(AppBar$Mate(
-    title: Text$Mate('AppBar Title'),
-    leading: DrawerButton$Mate(),
-    actions: <flutter.Widget>[
-      IconButton$Mate(icon: Icon$Mate(flutter.Icons.add), onPressed: () {}),
-      IconButton$Mate(icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
-      CheckboxMenuButton$Mate(
-        value: true,
-        onChanged: (b) {},
-        child: Text$Mate('CheckboxMenuButton'),
-      ),
-      FilledButton$Mate(onPressed: () {}, child: Text$Mate('FilledButton')),
-    ],
-    notificationPredicate: flutter.defaultScrollNotificationPredicate,
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(AppBar$Mate(
+      title: Text$Mate('AppBar Title'),
+      leading: DrawerButton$Mate(),
+      actions: <flutter.Widget>[
+        IconButton$Mate(icon: Icon$Mate(flutter.Icons.add), onPressed: () {}),
+        IconButton$Mate(icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
+        CheckboxMenuButton$Mate(
+          value: true,
+          onChanged: (b) {},
+          child: Text$Mate('CheckboxMenuButton'),
+        ),
+        FilledButton$Mate(onPressed: () {}, child: Text$Mate('FilledButton')),
+      ],
+      notificationPredicate: flutter.defaultScrollNotificationPredicate,
+    )));
+  });
 
   pen.markdown(r'''
 ## BottomAppBar
@@ -43,29 +45,31 @@ build(BuildContext context, Pen pen) {
 
 ''');
   //
-  pen.printSample(BottomAppBar$Mate(
-    // shape: CircularNotchedRectangle(),
-    child: Row$Mate(
-      children: <flutter.Widget>[
-        IconButton$Mate(
-          tooltip: 'Open navigation menu',
-          icon: Icon$Mate(flutter.Icons.menu),
-          onPressed: () {},
-        ),
-        Spacer$Mate(),
-        IconButton$Mate(
-          tooltip: 'Search',
-          icon: Icon$Mate(flutter.Icons.search),
-          onPressed: () {},
-        ),
-        IconButton$Mate(
-          tooltip: 'Favorite',
-          icon: Icon$Mate(flutter.Icons.favorite),
-          onPressed: () {},
-        ),
-      ],
-    ),
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(BottomAppBar$Mate(
+      // shape: CircularNotchedRectangle(),
+      child: Row$Mate(
+        children: <flutter.Widget>[
+          IconButton$Mate(
+            tooltip: 'Open navigation menu',
+            icon: Icon$Mate(flutter.Icons.menu),
+            onPressed: () {},
+          ),
+          Spacer$Mate(),
+          IconButton$Mate(
+            tooltip: 'Search',
+            icon: Icon$Mate(flutter.Icons.search),
+            onPressed: () {},
+          ),
+          IconButton$Mate(
+            tooltip: 'Favorite',
+            icon: Icon$Mate(flutter.Icons.favorite),
+            onPressed: () {},
+          ),
+        ],
+      ),
+    )));
+  });
 
   pen.markdown(r'''
   
@@ -85,23 +89,25 @@ build(BuildContext context, Pen pen) {
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  pen.printSample(Column$Mate(
-    children: [
-      Container$Mate(
-        height: 100,
-        // color: Colors.lime,
-        child: Text$Mate("main content body"),
-      ),
-      NavigationBar$Mate(
-        onDestinationSelected: (int index) {},
-        selectedIndex: 1,
-        destinations: <flutter.Widget>[
-          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
-          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
-        ],
-      )
-    ],
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(Column$Mate(
+      children: [
+        Container$Mate(
+          height: 100,
+          // color: Colors.lime,
+          child: Text$Mate("main content body"),
+        ),
+        NavigationBar$Mate(
+          onDestinationSelected: (int index) {},
+          selectedIndex: 1,
+          destinations: <flutter.Widget>[
+            NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
+            NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
+          ],
+        )
+      ],
+    )));
+  });
   pen.markdown(r'''
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
@@ -178,8 +184,8 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ],
   );
 
-  pen.printSample(
-    Row$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
       children: [
         Container$Mate(
           height: 300,
@@ -192,8 +198,8 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
           child: Text$Mate("main content area"),
         )),
       ],
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 ## TabBar
@@ -213,25 +219,27 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  pen.printSample(DefaultTabController$Mate(
-    length: 3,
-    child: TabBar$Mate(
-      tabs: <flutter.Widget>[
-        Tab$Mate(
-          icon: Icon$Mate(flutter.Icons.cloud_outlined),
-          iconMargin: painting.EdgeInsets$Mate.all(10),
-        ),
-        Tab$Mate(
-          icon: Icon$Mate(flutter.Icons.beach_access_sharp),
-          iconMargin: painting.EdgeInsets$Mate.all(10),
-        ),
-        Tab$Mate(
-          icon: Icon$Mate(flutter.Icons.brightness_5_sharp),
-          iconMargin: painting.EdgeInsets$Mate.all(10),
-        ),
-      ],
-    ),
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(DefaultTabController$Mate(
+      length: 3,
+      child: TabBar$Mate(
+        tabs: <flutter.Widget>[
+          Tab$Mate(
+            icon: Icon$Mate(flutter.Icons.cloud_outlined),
+            iconMargin: painting.EdgeInsets$Mate.all(10),
+          ),
+          Tab$Mate(
+            icon: Icon$Mate(flutter.Icons.beach_access_sharp),
+            iconMargin: painting.EdgeInsets$Mate.all(10),
+          ),
+          Tab$Mate(
+            icon: Icon$Mate(flutter.Icons.brightness_5_sharp),
+            iconMargin: painting.EdgeInsets$Mate.all(10),
+          ),
+        ],
+      ),
+    )));
+  });
 
   pen.markdown(r'''
 
@@ -239,40 +247,42 @@ TabBar不加TabView长这样：
 
 ''');
 
-  pen.printSample(DefaultTabController$Mate(
-    initialIndex: 1,
-    length: 3,
-    child: Column$Mate(
-      children: [
-        TabBar$Mate(
-          tabs: <flutter.Widget>[
-            Tab$Mate(
-              icon: Icon$Mate(flutter.Icons.cloud_outlined),
-              iconMargin: painting.EdgeInsets$Mate.all(10),
-            ),
-            Tab$Mate(
-              icon: Icon$Mate(flutter.Icons.beach_access_sharp),
-              iconMargin: painting.EdgeInsets$Mate.all(10),
-            ),
-            Tab$Mate(
-              icon: Icon$Mate(flutter.Icons.brightness_5_sharp),
-              iconMargin: painting.EdgeInsets$Mate.all(10),
-            ),
-          ],
-        ),
-        Container$Mate(
-          height: 200,
-          child: TabBarView$Mate(
-            children: <flutter.Widget>[
-              Center$Mate(child: Text$Mate("It's cloudy here")),
-              Center$Mate(child: Text$Mate("It's rainy here")),
-              Center$Mate(child: Text$Mate("It's sunny here")),
+  pen.cell((context, print) {
+    print(SampleNote(DefaultTabController$Mate(
+      initialIndex: 1,
+      length: 3,
+      child: Column$Mate(
+        children: [
+          TabBar$Mate(
+            tabs: <flutter.Widget>[
+              Tab$Mate(
+                icon: Icon$Mate(flutter.Icons.cloud_outlined),
+                iconMargin: painting.EdgeInsets$Mate.all(10),
+              ),
+              Tab$Mate(
+                icon: Icon$Mate(flutter.Icons.beach_access_sharp),
+                iconMargin: painting.EdgeInsets$Mate.all(10),
+              ),
+              Tab$Mate(
+                icon: Icon$Mate(flutter.Icons.brightness_5_sharp),
+                iconMargin: painting.EdgeInsets$Mate.all(10),
+              ),
             ],
           ),
-        )
-      ],
-    ),
-  ));
+          Container$Mate(
+            height: 200,
+            child: TabBarView$Mate(
+              children: <flutter.Widget>[
+                Center$Mate(child: Text$Mate("It's cloudy here")),
+                Center$Mate(child: Text$Mate("It's rainy here")),
+                Center$Mate(child: Text$Mate("It's sunny here")),
+              ],
+            ),
+          )
+        ],
+      ),
+    )));
+  });
 
   pen.markdown("""
 上面用法和[NavigationBar]很像，主要就是在多个页面间切换，好处在，连事件逻辑都不需要，组件树如下结构即可：
@@ -295,7 +305,7 @@ DefaultTabController
   
        """);
 
-  {
+  pen.cell((context, print) {
     onPressed() {
       flutter.ScaffoldMessenger.of(context).showSnackBar(
         flutter.SnackBar(
@@ -317,15 +327,14 @@ DefaultTabController
       );
     }
 
-    pen.printSample(SizedBox$Mate(
+    print(SampleNote(SizedBox$Mate(
       height: 100,
       child: flutter.FilledButton(
         onPressed: onPressed,
         child: const flutter.Text('Show Snackbar 6 seconds'),
       ),
-    ));
-  }
-
+    )));
+  });
   pen.markdown(r'''
 ## ButtonBar 
 
@@ -337,8 +346,8 @@ DefaultTabController
 
   ''');
 
-  pen.printSample(
-    Container$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Container$Mate(
       width: 600,
       color: flutter.Colors.lime.shade50,
       child: ButtonBar$Mate(
@@ -347,8 +356,8 @@ DefaultTabController
           OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
         ],
       ),
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 ## OverflowBar
@@ -359,8 +368,8 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
 
   ''');
 
-  pen.printSample(
-    Container$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Container$Mate(
       width: 300,
       child: Column$Mate(
         children: [
@@ -388,8 +397,8 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
           )
         ],
       ),
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 ## PlatformMenuBar
@@ -413,7 +422,7 @@ MenuBar相关组件：
 
   ''');
 
-  {
+  pen.cell((context, print) {
     var click = () {
       flutter.showAboutDialog(
         context: context,
@@ -421,8 +430,7 @@ MenuBar相关组件：
         applicationVersion: '1.0.0',
       );
     };
-
-    pen.printSample(MenuBar$Mate(
+    print(SampleNote(MenuBar$Mate(
       children: [
         MenuItemButton$Mate(
           onPressed: () {},
@@ -443,6 +451,6 @@ MenuBar相关组件：
               builder: flutter.MenuAcceleratorLabel.defaultLabelBuilder),
         ),
       ],
-    ));
-  }
+    )));
+  });
 }
