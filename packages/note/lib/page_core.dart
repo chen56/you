@@ -151,6 +151,12 @@ class Path<T> {
         ;
   }
 
+  HeaderOrTailCell get header =>
+      HeaderOrTailCell(path: this, code: noteInfo == null ? "" : noteInfo!.source.headerCode);
+
+  HeaderOrTailCell get tail =>
+      HeaderOrTailCell(path: this, code: noteInfo == null ? "" : noteInfo!.source.tailCode);
+
   String toStringShort() {
     return path;
   }
@@ -169,8 +175,38 @@ class Path<T> {
   }
 }
 
-typedef CellBuilder = void Function(BuildContext context, NoteCell print);
+typedef CellBuilder = void Function(BuildContext context, MainCell print);
 
+///
+/// cell 是一段代码加上其运行后的一块界面区域，和jupyter/observablehq 中的cell概念类似，
+/// 但由于我们并没有一个notebook编辑器，一个cell，一个cell的编辑运行代码，而是通过代码分析器从
+/// dart代码中自动分割cell的，所以逻辑上有些许不同。
+///
+/// A cell is a block of code and an it's display area on page ui.
+/// The concept of a cell in jupyter/Observablehq is similar,
+/// but since we do not have a notebook editor, a cell is auto analyzed from Dart code,
+///
+/// - flutter_note 的cell在界面上是只读的
+/// - cell是我们对dart文件的一种视角
+/// - cell 分两种，
+///   - 一种是代码中用[cell]函数明确指定的cell，是可以单独运行的。（[Pen]级别的方法包括markdown()等都是cell函数）
+///   - 另一种是自然cell，即非明确指定的，夹在cell函数之间的代码段，要重新运行这种cell，相当于重新运行整个build函数
+/// 自然cell在build函数的最外层，可以用来放置公共变量、函数。
+///
+/// - implicit cell
+/// - explicit cell
+///
+///
+// build(){
+//   // this line belongs to implicit cell: cell-0
+//   pen.cell((context,pen){
+//     // this block is explicit： cell-1
+//   });
+//   // this block is implicit cell: cell-2
+//   pen.markdown("this line is explicit cell： cell-3");
+//   // this line is implicit cell: cell-4
+// }
+///
 class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
@@ -178,7 +214,7 @@ class Pen {
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
-  final List<NoteCell> cells = List.empty(growable: true);
+  final List<MainCell> cells = List.empty(growable: true);
 
   int _cellIndex = 0;
   final Editors editors;
@@ -191,8 +227,6 @@ class Pen {
     if (path._meta == null) return;
 
     path._meta!.builder(context, this);
-    // 最后一次cell()调用后的自然cell
-    _nextCell();
   }
 
   /// markdown 独占一个新cell
@@ -207,8 +241,9 @@ class Pen {
   ///
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
-  NoteCell cell(CellBuilder builder) {
+  MainCell cell(CellBuilder builder) {
     var cell = _nextCell(builder);
+    // 启动一个自然cell
     _nextCell();
     return cell;
   }
@@ -218,10 +253,11 @@ class Pen {
   ///
   /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
-  NoteCell _nextCell([CellBuilder? builder]) {
-    var next = NoteCell(
+  MainCell _nextCell([CellBuilder? builder]) {
+    var next = MainCell(
       index: _cellIndex++,
-      pen: this,
+      path: path,
+      param: ObjectParam.root(editors: editors),
       builder: builder ?? (_, __) {},
     );
     cells.add(next);
@@ -368,6 +404,17 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
   String get location => current.path;
 }
 
+class NotePage {
+  final Path path;
+  final NoteSource source;
+  final PageMeta meta;
+  NotePage({
+    required this.path,
+    required NoteInfo info,
+  })  : source = info.source,
+        meta = info.meta;
+}
+
 class NoteInfo {
   final NoteSource source;
   final PageMeta meta;
@@ -393,6 +440,13 @@ class NoteSource {
     for (var e in body) {
       e.source = this;
     }
+  }
+  String get headerCode {
+    return code.substring(header.offset, header.end);
+  }
+
+  String get tailCode {
+    return code.substring(tail.offset, tail.end);
   }
 
   String getMainCellCode(int index) {
@@ -424,22 +478,63 @@ class CodeBlock {
   ///     final encodedCode = base64.encode(utf8.encode(source.code));
 }
 
+abstract class BaseNoteCell extends ChangeNotifier {
+  final Path path;
+  BaseNoteCell({
+    required this.path,
+  });
+
+  List<BaseNoteContent> get contents;
+  bool isEmpty() => contents.isEmpty;
+
+  String get code;
+
+  /// 不包含pen相关调用的代码
+  String get noPenCode;
+
+  void build(BuildContext context);
+
+  bool get isEmptyCode {
+    return code.contains(RegExp(r'^\s*$'));
+  }
+
+  ObjectParam get param;
+}
+
+class HeaderOrTailCell extends BaseNoteCell {
+  @override
+  final ObjectParam param = ObjectParam.root(editors: Editors());
+  @override
+  final String code;
+  HeaderOrTailCell({
+    required super.path,
+    required this.code,
+  });
+
+  @override
+  List<BaseNoteContent> get contents => [];
+
+  @override
+  void build(BuildContext context) {}
+
+  @override
+  String get noPenCode => throw UnimplementedError();
+}
+
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
-class NoteCell extends ChangeNotifier {
+class MainCell extends BaseNoteCell {
   final List<BaseNoteContent> _contents = List.empty(growable: true);
   // index use to find code
   final int index;
-  final Pen pen;
-  late final ObjectParam param = ObjectParam.root(editors: pen.editors);
+  final ObjectParam param;
   final CellBuilder _builder;
-  NoteCell({
+  MainCell({
     required this.index,
-    required this.pen,
+    required super.path,
+    required this.param,
     required CellBuilder builder,
   }) : _builder = builder;
-
-  bool isEmpty() => _contents.isEmpty;
 
   List<BaseNoteContent> get contents => List.unmodifiable(_contents);
 
@@ -472,8 +567,9 @@ class NoteCell extends ChangeNotifier {
     notifyListeners();
   }
 
+  @override
   String get code {
-    var source = pen.path.noteInfo?.source;
+    var source = path.noteInfo?.source;
     if (source == null) {
       return _contents.isEmpty
           ? ""
@@ -483,11 +579,13 @@ class NoteCell extends ChangeNotifier {
   }
 
   /// 不包含pen相关调用的代码
+  @override
   String get noPenCode {
     return "code source... todo \n code.... \n code...";
   }
 
-  build(BuildContext context) {
+  @override
+  void build(BuildContext context) {
     _contents.clear();
     _builder(context, this);
   }

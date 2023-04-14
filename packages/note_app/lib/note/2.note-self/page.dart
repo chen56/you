@@ -99,6 +99,7 @@ TODO 暂时只能显示，还不能编辑
 ## 其他特性
 ### 用循环一次性构造一组范例
   ''');
+
   pen.cell((context, print) {
     for (var mainAxisAlignment in MainAxisAlignment.values) {
       print(SampleNote(Row$Mate(

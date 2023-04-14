@@ -7,6 +7,9 @@ import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
+/// 分割块，在cell间分割留白
+const Widget _cellSplitBlock = SizedBox(height: 10);
+
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
@@ -49,18 +52,42 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     });
   }
 
-  ({List<Widget> cellWidgets}) buildPen(BuildContext context) {
-    Pen pen = Pen.build(context, widget.current,editors:widget.editors);
-    // pen.cells.forEach((e) {print("sssss ${e.index} : ${e.contents}");});
-    return ( cellWidgets:pen.cells.map((cell) {
-      return _NoteCellView(
-        cell, outline: outline, editors: widget.editors, isShowCellCode: widget.isShowCellCode,);
-    }).toList(), );
+  ({List<
+      Widget> cells, Widget header, Widget tail, Widget buildStartBar, Widget buildEndBar}) buildNote(
+      BuildContext context) {
+    Pen pen = Pen.build(context, widget.current, editors: widget.editors);
+
+    bar(String code) {
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        const Text("<>"),
+        Expanded(child: Container(
+          height: 20,
+          color: Colors.blue.shade100,
+          child: Text(code),))
+      ],);
+    }
+
+    return (
+    cells:pen.cells.where((e) => !e.isEmptyCode)
+        .map((cell) => _newCellView(cell))
+        .toList(),
+    header: _newCellView(pen.path.header),
+    buildStartBar: bar("void build(context,pen){"),
+    tail: _newCellView(pen.path.tail),
+    buildEndBar: bar("} // end build(context,pen)"),
+
+    );
   }
+
+  _NoteCellView _newCellView(BaseNoteCell cell) =>
+      _NoteCellView(
+        cell, outline: outline, editors: widget.editors, isShowCellCode: widget.isShowCellCode,);
 
   @override
   Widget build(BuildContext context) {
-    var penResult = buildPen(context);
+    var noteResult = buildNote(context);
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
@@ -89,7 +116,13 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       controller: controllerV,
       child: ListBody(
         children: [
-          ...penResult.cellWidgets,
+          noteResult.header,
+          noteResult.buildStartBar,
+          _cellSplitBlock,
+          ...noteResult.cells,
+          noteResult.buildEndBar,
+          _cellSplitBlock,
+          noteResult.tail,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],
@@ -420,7 +453,7 @@ class _ParamAndCodeView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final bool isShowCellCode;
 
-  final NoteCell cell;
+  final BaseNoteCell cell;
   final Outline outline;
   final Editors editors;
 
@@ -458,7 +491,6 @@ class _NoteCellView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     var codeView = HighlightView(
       // The original code to be highlighted
       cell.code,
@@ -484,12 +516,11 @@ class _NoteCellView extends StatelessWidget {
     const double leftOfBar = 20;
 
     //const Icon(size: leftOfBar, Icons.code),
-    var leftBar = Column(children: [Text("<${cell.index}>")],);
+    var leftBar = const Column(children: [Text("<>")],);
 
     var lisenCellParamChange = ListenableBuilder(listenable: cell.param, builder: (context, child) {
       cell.build(context);
       return ListenableBuilder(listenable: cell, builder: (context, child) {
-
         Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
 
         return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -506,7 +537,7 @@ class _NoteCellView extends StatelessWidget {
                 padding: const EdgeInsets.only(left: leftOfBar),
                 child: e,
               )),
-          const SizedBox(height: 100),
+          _cellSplitBlock,
         ]);
       },);
     });
