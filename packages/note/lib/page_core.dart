@@ -180,8 +180,6 @@ class Pen {
   // NoteCell _currentCell = NoteCell(index: 0);
   final List<NoteCell> cells = List.empty(growable: true);
 
-  late NoteCell _currentCell;
-
   int _cellIndex = 0;
   final Editors editors;
 
@@ -189,11 +187,7 @@ class Pen {
   // Pen({required this.editors});
   Pen.build(BuildContext context, this.path, {required this.editors}) {
     // 进入build() 函数后的第一个自然cell
-    _currentCell = NoteCell(
-      index: _cellIndex++,
-      pen: this,
-      builder: (_, __) {},
-    );
+    _nextCell();
     if (path._meta == null) return;
 
     path._meta!.builder(context, this);
@@ -203,7 +197,7 @@ class Pen {
 
   /// markdown 独占一个新cell
   void markdown(String content) {
-    _nextCell((context, print) {
+    cell((context, print) {
       print(MarkdownNote(content));
     });
   }
@@ -214,7 +208,9 @@ class Pen {
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
   NoteCell cell(CellBuilder builder) {
-    return _nextCell(builder);
+    var cell = _nextCell(builder);
+    _nextCell();
+    return cell;
   }
 
   /// 新增一个自然cell
@@ -223,13 +219,12 @@ class Pen {
   /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
   NoteCell _nextCell([CellBuilder? builder]) {
-    cells.add(_currentCell);
     var next = NoteCell(
       index: _cellIndex++,
       pen: this,
       builder: builder ?? (_, __) {},
     );
-    _currentCell = next;
+    cells.add(next);
     return next;
   }
 }

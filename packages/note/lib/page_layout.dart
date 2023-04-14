@@ -461,7 +461,7 @@ class _NoteCellView extends StatelessWidget {
 
     var codeView = HighlightView(
       // The original code to be highlighted
-      "${cell.index}-"+cell.code,
+      cell.code,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -483,7 +483,8 @@ class _NoteCellView extends StatelessWidget {
     // view | contentView
     const double leftOfBar = 20;
 
-    var leftBar = const Icon(size: leftOfBar, Icons.code);
+    //const Icon(size: leftOfBar, Icons.code),
+    var leftBar = Column(children: [Text("<${cell.index}>")],);
 
     var lisenCellParamChange = ListenableBuilder(listenable: cell.param, builder: (context, child) {
       cell.build(context);

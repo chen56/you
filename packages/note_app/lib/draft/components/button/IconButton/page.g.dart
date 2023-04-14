@@ -15,10 +15,16 @@ final noteInfo = NoteInfo(
         /// (pen.markdown(r''' # IconButton)
         CodeBlock(offset: 246, end: 337, statementCount: 1),
 
-        /// (pen.print(SampleNote(Wrap$Mate)
-        CodeBlock(offset: 337, end: 470, statementCount: 1)
+        /// ()
+        CodeBlock(offset: 337, end: 340, statementCount: 0),
+
+        /// (pen.cell((context, print) {pri)
+        CodeBlock(offset: 340, end: 506, statementCount: 1),
+
+        /// ()
+        CodeBlock(offset: 506, end: 507, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 471, end: 472, statementCount: 0),
+      tail: CodeBlock(offset: 508, end: 509, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJJY29uQnV0dG9uIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuKSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyBJY29uQnV0dG9uCgrlm77moIfmjInpkq7jgIIKCue7p+aJv+WFs+ezu++8mgoKLSBbU3RhdGVsZXNzV2lkZ2V0XQogIC0gW0ljb25CdXR0b25dIAogICcnJyk7CgogIHBlbi5wcmludChTYW1wbGVOb3RlKFdyYXAkTWF0ZShjaGlsZHJlbjogWwogICAgLy8gSWNvbkJ1dHRvbiRNYXRlKG9uUHJlc3NlZDogKCkge30sIGNoaWxkOiBUZXh0JE1hdGUoIkVsZXZhdGVkQnV0dG9uIikpLAogIF0pKSk7Cn0K"""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJJY29uQnV0dG9uIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuKSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyBJY29uQnV0dG9uCgrlm77moIfmjInpkq7jgIIKCue7p+aJv+WFs+ezu++8mgoKLSBbU3RhdGVsZXNzV2lkZ2V0XQogIC0gW0ljb25CdXR0b25dIAogICcnJyk7CiAgcGVuLmNlbGwoKGNvbnRleHQsIHByaW50KSB7CiAgICBwcmludChTYW1wbGVOb3RlKFdyYXAkTWF0ZShjaGlsZHJlbjogWwogICAgICAvLyBJY29uQnV0dG9uJE1hdGUob25QcmVzc2VkOiAoKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgiRWxldmF0ZWRCdXR0b24iKSksCiAgICBdKSkpOwogIH0pOwp9Cg=="""),
 );
