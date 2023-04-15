@@ -52,38 +52,40 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     });
   }
 
-  ({List<
-      Widget> cells, Widget header, Widget tail, Widget buildStartBar, Widget buildEndBar}) buildNote(
-      BuildContext context) {
+  ({List<Widget> cells, Widget header, Widget tail, Widget buildStartBar, Widget buildEndBar})
+      buildNote(BuildContext context) {
     Pen pen = Pen.build(context, widget.current, editors: widget.editors);
 
-    bar(String code) {
+    codeBar(String code) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-        const Text("<>"),
-        Expanded(child: Container(
-          height: 20,
-          color: Colors.blue.shade100,
-          child: Text(code),))
-      ],);
+          const Text("<>"),
+          Expanded(
+              child: Container(
+            height: 20,
+            color: Colors.blue.shade100,
+            child: Text(code),
+          ))
+        ],
+      );
     }
 
     return (
-    cells:pen.cells.where((e) => !e.isEmptyCode)
-        .map((cell) => _newCellView(cell))
-        .toList(),
-    header: _newCellView(pen.path.header),
-    buildStartBar: bar("void build(context,pen){"),
-    tail: _newCellView(pen.path.tail),
-    buildEndBar: bar("} // end build(context,pen)"),
-
+      cells: pen.cells.map((cell) => _newCellView(cell)).toList(),
+      header: _newCellView(pen.path.header),
+      buildStartBar: codeBar("void build(context,pen){"),
+      tail: _newCellView(pen.path.tail),
+      buildEndBar: codeBar("} // end build(context,pen)"),
     );
   }
 
-  _NoteCellView _newCellView(BaseNoteCell cell) =>
-      _NoteCellView(
-        cell, outline: outline, editors: widget.editors, isShowCellCode: widget.isShowCellCode,);
+  _NoteCellView _newCellView(BaseNoteCell cell) => _NoteCellView(
+        cell,
+        outline: outline,
+        editors: widget.editors,
+        isShowCellCode: widget.isShowCellCode,
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -91,8 +93,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(
-        mainContentViewController: controllerV, outline: outline);
+    var outlineView = _OutlineView(mainContentViewController: controllerV, outline: outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -163,7 +164,8 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 class _NoteTreeView extends StatefulWidget {
   final Path root;
 
-  _NoteTreeView(this.root, {
+  _NoteTreeView(
+    this.root, {
     Key? key,
   }) : super(key: key) {
     // 当前文档较少，先都展开
@@ -188,8 +190,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       String iconExtend = node.isLeaf
           ? "     "
           : node.extend
-          ? "▽  "
-          : "▷︎  ";
+              ? "▽  "
+              : "▷︎  ";
       String icon = "🗓";
       // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►
       // title 被Flexible包裹后，文本太长会自动换行
@@ -409,7 +411,7 @@ class _ParamAndCodeView extends StatelessWidget {
     var paramView = Column(
       children: [
         ...rootParam
-        // hide null value
+            // hide null value
             .flat(test: (param) => param.isShow)
             .map(paramRow)
       ],
@@ -457,7 +459,8 @@ class _NoteCellView extends StatelessWidget {
   final Outline outline;
   final Editors editors;
 
-  _NoteCellView(this.cell, {
+  _NoteCellView(
+    this.cell, {
     // ignore: unused_element
     super.key,
     required this.outline,
@@ -491,6 +494,7 @@ class _NoteCellView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("buildss ${cell.contents}");
     var codeView = HighlightView(
       // The original code to be highlighted
       cell.code,
@@ -516,31 +520,37 @@ class _NoteCellView extends StatelessWidget {
     const double leftOfBar = 20;
 
     //const Icon(size: leftOfBar, Icons.code),
-    var leftBar = const Column(children: [Text("<>")],);
+    var leftBar = const Column(
+      children: [Text("<>")],
+    );
 
-    var lisenCellParamChange = ListenableBuilder(listenable: cell.param, builder: (context, child) {
-      cell.build(context);
-      return ListenableBuilder(listenable: cell, builder: (context, child) {
-        Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
+    var lisenCellParamChange = ListenableBuilder(
+        listenable: cell.param,
+        builder: (context, child) {
+          cell.build(context);
+          return ListenableBuilder(
+            listenable: cell,
+            builder: (context, child) {
+              Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
 
-        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          if (isShowCellCode)
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                leftBar,
-                Expanded(child: codeView),
-              ],
-            ),
-          ...contentWidgets.map((e) =>
-              Container(
-                padding: const EdgeInsets.only(left: leftOfBar),
-                child: e,
-              )),
-          _cellSplitBlock,
-        ]);
-      },);
-    });
+              return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                if (isShowCellCode)
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      leftBar,
+                      if (cell.code.isNotEmpty) Expanded(child: codeView),
+                    ],
+                  ),
+                ...contentWidgets.map((e) => Container(
+                      padding: const EdgeInsets.only(left: leftOfBar),
+                      child: e,
+                    )),
+                _cellSplitBlock,
+              ]);
+            },
+          );
+        });
 
     return lisenCellParamChange;
   }

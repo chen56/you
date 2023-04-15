@@ -263,6 +263,11 @@ class Pen {
     cells.add(next);
     return next;
   }
+
+  // fixme temp 临时在pen上的用用
+  void call(Object? object) {
+    cells.last.print(object);
+  }
 }
 
 abstract class BaseNoteContent {}
@@ -586,7 +591,8 @@ class MainCell extends BaseNoteCell {
 
   @override
   void build(BuildContext context) {
-    _contents.clear();
+    //fixme cell的重建会影响展示
+    // _contents.clear();
     _builder(context, this);
   }
 }
