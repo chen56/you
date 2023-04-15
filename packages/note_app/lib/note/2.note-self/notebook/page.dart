@@ -16,14 +16,8 @@ PageMeta page = PageMeta(
   layout: Layouts.defaultLayout(isShowCellCode: true),
 );
 
-build(BuildContext context, Pen print) {
-  print("hello note ");
-  print("hello note ");
-  debugPrint("hello note1 ${print.cells.last.contents}");
-  print("hello note ");
-  print("hello note ");
-
-  print.markdown(r'''
+build(BuildContext context, Pen pen, MainCell print) {
+  pen.markdown(r'''
 # Notebook视角
 
 Notebook的展示模式，是本项目的基础逻辑。
@@ -33,7 +27,10 @@ Notebook的展示模式，是本项目的基础逻辑。
 类似jupyter或observablehq，一个note由一系列cell构成，cell 是一段代码加上其运行后的一块界面区域，我们这样定义和使用cell：
 
 ''');
-  print.cell((context, print) {
+
+  // ---------------------------------------------------------------
+
+  pen.cell((context, print) {
     var x = analyzer_util.parseFile(
         path: path.absolute("analyzer_test.dart"), featureSet: FeatureSet.latestLanguageVersion());
     print("$x");
@@ -41,12 +38,14 @@ Notebook的展示模式，是本项目的基础逻辑。
     print("today is ${DateTime.now()}");
   });
 
-  print.markdown(r'''
+  // ---------------------------------------------------------------
+
+  pen.markdown(r'''
 notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码块->运行结果->代码块->运行结果这种看待问题的视角，非常适合
 文档撰写、实验等工作，因为笔记是线性的、一段一段没啥太大的紧密关联，代码又可以直接变现到界面上，妙不可言。
 比如，你学到一个很酷的Widget ToggleButtons，立刻把它记下来试试：
 ''');
-  print.cell((context, print) {
+  pen.cell((context, print) {
     print(ToggleButtons(
       isSelected: const [true, false, true],
       onPressed: (b) {},
@@ -54,10 +53,12 @@ notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码
     ));
   });
 
-  print.markdown(r'''
+  // ---------------------------------------------------------------
+
+  pen.markdown(r'''
 或者，发现[Timer.periodic]定时器可以玩一些动态效果(记得释放Timer)：
 ''');
-  print.cell((context, print) {
+  pen.cell((context, print) {
     int times = 0;
     Random random = Random(100);
 
@@ -79,11 +80,13 @@ notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码
     });
   });
 
-  print.markdown(r'''
-你应该已经发现，除了上面用[print.cell]函数明确指定一个cell外，[print.markdown]自己也会创建一个cell。
+  // ---------------------------------------------------------------
+
+  pen.markdown(r'''
+你应该已经发现，除了上面用[pen.cell]函数明确指定一个cell外，[pen.markdown]自己也会创建一个cell。
 ''');
 
-  print.markdown("""
+  pen.markdown("""
   
 notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter或observablehq等的区别是，
 这里并没有一个web版的notebook编辑器，一个cell，一个cell的编辑运行代码，本项目通过代码分析器
@@ -104,7 +107,7 @@ notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter
 /// - explicit cell
 
 
-- [print.markdown]: 对标print的函数，print输出字符串，write输出widget。
+- [pen.markdown]: 对标print的函数，print输出字符串，write输出widget。
   - write: 全局函数, write("hello") == print.write("hello")
 - [print.md]: 输出一个markdown cell, print.md("hello")==write(MarkdownNote("hello")) 
 - sample：输出一个特殊的内容，Flutter SampleNote，除cell代码外，每个sample还有独立的范例代码
@@ -129,26 +132,26 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
 
 如果两cell之间的自动cell内无代码逻辑，则会隐藏。  """);
 
-  print.markdown("""
+  pen.markdown("""
 ### ~~普通cell~~
 
 普通cell是个代码块，其源码如实反应其cell定义，更像jupyter、observablehq 的cell。
   """);
 
-  // print.cell((context, cell) {
+  // pen.cell((context, cell) {
   //   var cellInner = "in cell ";
   //   cell.print("cell outer var: $cellOuter");
   //   cell.print("cell inner  var $cellInner");
   // });
 
-//   print.markdown("""
+//   pen.markdown("""
 // cell 内不能嵌套其他cell，你想啊，一个notebook里的cell都是序列放置的，嵌套算哪门子逻辑呢？
 //   """);
-  // print.cell((context, cell) {
-  //   // print.cell((context, cell) {}); // error use
+  // pen.cell((context, cell) {
+  //   // pen.cell((context, cell) {}); // error use
   // });
 
-  // print.cell((context, cell) {
+  // pen.cell((context, cell) {
   //   int size = 1;
   //   onPressed() {
   //     cell.print("click: $size");
@@ -159,7 +162,7 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
   //   cell.widget(ElevatedButton(onPressed: onPressed, child: Text("text: $size")));
   // });
 
-  print.markdown("""
+  pen.markdown("""
 ### widget cell
 
 和markdown类似，不能单独重新运行，只能整个文件运行。
@@ -177,7 +180,7 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
 
   int i = 0;
 
-  print.cell((context, print) {
+  pen.cell((context, print) {
     print(StatefulBuilder(builder: (context, setSate) {
       return ElevatedButton(
         onPressed: () {
@@ -193,7 +196,7 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
   //     children: [],
   //   );
   // });
-  print.markdown("""
+  pen.markdown("""
 ### MateSample cell
 
 普通cell是个代码块，其源码如实反应其cell定义。
@@ -205,7 +208,7 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
   //   );
   // });
 
-//   print.markdown("""
+//   pen.markdown("""
 // ## cell 内操作
 //
 // ### print
@@ -213,15 +216,15 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
 // cell 内的
 //
 //   """);
-  // print.cell((context, cell) {
+  // pen.cell((context, cell) {
   //   cell.print("hello");
   // });
 
-  print.markdown("""
+  pen.markdown("""
 ## cell 内操作
 """);
 
-  print.cell((context, print) {
+  pen.cell((context, print) {
     int count = 0;
     print(ElevatedButton(
         onPressed: () {
@@ -231,13 +234,13 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
         child: Text("click:$i")));
   });
 
-  print.markdown("""
+  pen.markdown("""
 ### cell.param
 
 cell.param参数的变化会导致cell重建，但由于cell.param数据的保持，可以做一些动态效果
 """);
 
-  print.cell((context, print) {
+  pen.cell((context, print) {
     var count = print.param.use("count", 0);
     print(ElevatedButton(
         onPressed: () {

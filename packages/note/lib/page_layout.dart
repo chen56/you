@@ -8,7 +8,8 @@ import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
 /// 分割块，在cell间分割留白
-const Widget _cellSplitBlock = SizedBox(height: 10);
+const Widget _cellSplitBlock = SizedBox(height: 18);
+const double _leftPaddingOfBar = 20;
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
@@ -52,40 +53,22 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     });
   }
 
-  ({List<Widget> cells, Widget header, Widget tail, Widget buildStartBar, Widget buildEndBar})
-      buildNote(BuildContext context) {
+  ({List<Widget> cells, Widget header, Widget tail}) buildNote(BuildContext context) {
+    _NoteCellView _newCellView(BaseNoteCell cell) => _NoteCellView(
+          cell,
+          outline: outline,
+          editors: widget.editors,
+          isShowCellCode: widget.isShowCellCode,
+        );
+
     Pen pen = Pen.build(context, widget.current, editors: widget.editors);
 
-    codeBar(String code) {
-      return Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const Text("<>"),
-          Expanded(
-              child: Container(
-            height: 20,
-            color: Colors.blue.shade100,
-            child: Text(code),
-          ))
-        ],
-      );
-    }
-
     return (
-      cells: pen.cells.map((cell) => _newCellView(cell)).toList(),
       header: _newCellView(pen.path.header),
-      buildStartBar: codeBar("void build(context,pen){"),
+      cells: pen.cells.map((cell) => _newCellView(cell)).toList(),
       tail: _newCellView(pen.path.tail),
-      buildEndBar: codeBar("} // end build(context,pen)"),
     );
   }
-
-  _NoteCellView _newCellView(BaseNoteCell cell) => _NoteCellView(
-        cell,
-        outline: outline,
-        editors: widget.editors,
-        isShowCellCode: widget.isShowCellCode,
-      );
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +80,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
-    // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太熟悉：
+    // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太懂啊：
     // var contentListView = ListView(
     //   scrollDirection: Axis.vertical,
     //   shrinkWrap: true,
@@ -118,11 +101,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       child: ListBody(
         children: [
           noteResult.header,
-          noteResult.buildStartBar,
-          _cellSplitBlock,
           ...noteResult.cells,
-          noteResult.buildEndBar,
-          _cellSplitBlock,
           noteResult.tail,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
@@ -458,7 +437,6 @@ class _NoteCellView extends StatelessWidget {
   final BaseNoteCell cell;
   final Outline outline;
   final Editors editors;
-
   _NoteCellView(
     this.cell, {
     // ignore: unused_element
@@ -494,8 +472,7 @@ class _NoteCellView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("buildss ${cell.contents}");
-    var codeView = HighlightView(
+    var codeHighlightView = HighlightView(
       // The original code to be highlighted
       cell.code,
 
@@ -517,41 +494,123 @@ class _NoteCellView extends StatelessWidget {
     // code | codeView
     // bar  | -------------------
     // view | contentView
-    const double leftOfBar = 20;
 
-    //const Icon(size: leftOfBar, Icons.code),
-    var leftBar = const Column(
-      children: [Text("<>")],
+    var cellView = ListenableBuilder(
+      listenable: cell,
+      builder: (context, child) {
+        cell.build(context);
+        Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e))
+          ..map((e) => Container(
+                padding: const EdgeInsets.only(left: _leftPaddingOfBar),
+                child: e,
+              ));
+
+        // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
+        // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
+        return GetSizeBuilder(builder: (context, size, child) {
+          var leftBar = Material(
+              child: InkWell(
+            onTap: () {
+              cell.expand = !cell.expand;
+            },
+            child: Container(
+              height: size.height,
+              alignment: Alignment.topCenter,
+              child: cell.expand ? const Icon(Icons.code) : const Icon(Icons.code_off),
+            ),
+          ));
+
+          // codeVeiw默认很窄，需扩展到占满所有宽度
+          var codeViewFillWidth = LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
+            },
+          );
+          var cellFillSize = Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              leftBar,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (cell.expand) codeViewFillWidth,
+                    ...contentWidgets,
+                    _cellSplitBlock,
+                  ],
+                ),
+              ),
+            ],
+          );
+          return cellFillSize;
+        });
+      },
     );
-
-    var lisenCellParamChange = ListenableBuilder(
+    var cellBuildView = ListenableBuilder(
         listenable: cell.param,
         builder: (context, child) {
           cell.build(context);
-          return ListenableBuilder(
-            listenable: cell,
-            builder: (context, child) {
-              Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
-
-              return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                if (isShowCellCode)
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      leftBar,
-                      if (cell.code.isNotEmpty) Expanded(child: codeView),
-                    ],
-                  ),
-                ...contentWidgets.map((e) => Container(
-                      padding: const EdgeInsets.only(left: leftOfBar),
-                      child: e,
-                    )),
-                _cellSplitBlock,
-              ]);
-            },
-          );
+          return cellView;
         });
 
-    return lisenCellParamChange;
+    return cellBuildView;
+  }
+}
+
+class GetSizeBuilder extends StatelessWidget {
+  final ValueNotifier<Size> size = ValueNotifier(const Size(0, 0));
+  final ValueWidgetBuilder<Size> builder;
+  final Widget? child;
+  GetSizeBuilder({
+    super.key,
+    required this.builder,
+    this.child,
+  }) {}
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      var box = context.findRenderObject() as RenderBox;
+      if (box.hasSize) {
+        size.value = (context.findRenderObject() as RenderBox).size;
+      }
+    });
+    return ValueListenableBuilder<Size>(
+      valueListenable: size,
+      builder: builder,
+      child: child,
+    );
+  }
+}
+
+class SizeProvider extends StatefulWidget {
+  final Widget child;
+  final Function(Size) onChildSize;
+
+  const SizeProvider({Key? key, required this.onChildSize, required this.child}) : super(key: key);
+  @override
+  SizeProviderState createState() => SizeProviderState();
+}
+
+class SizeProviderState extends State<SizeProvider> {
+  @override
+  void initState() {
+    super.initState();
+    _onResize();
+  }
+
+  void _onResize() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      var box = context.findRenderObject() as RenderBox;
+      if (box.hasSize) {
+        widget.onChildSize(box.size);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // _onResize();
+    return widget.child;
   }
 }

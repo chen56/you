@@ -7,30 +7,30 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 201, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 255, statementCount: 0),
       body: [
         /// ()
-        CodeBlock(offset: 239, end: 242, statementCount: 0),
+        CodeBlock(offset: 255, end: 258, statementCount: 0),
 
         /// (pen.markdown(r''' # 菜单Menu    )
-        CodeBlock(offset: 242, end: 277, statementCount: 1),
+        CodeBlock(offset: 258, end: 293, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 277, end: 281, statementCount: 0),
+        CodeBlock(offset: 293, end: 297, statementCount: 0),
 
         /// (pen.markdown(r'''  ## Checkbox)
-        CodeBlock(offset: 281, end: 330, statementCount: 1),
+        CodeBlock(offset: 297, end: 346, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 330, end: 334, statementCount: 0),
+        CodeBlock(offset: 346, end: 350, statementCount: 0),
 
         /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 334, end: 562, statementCount: 1),
+        CodeBlock(offset: 350, end: 578, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 562, end: 563, statementCount: 0)
+        CodeBlock(offset: 578, end: 579, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 564, end: 565, statementCount: 0),
+      tail: CodeBlock(offset: 579, end: 581, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLoj5zljZVNZW51IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuKSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyDoj5zljZVNZW51CgogICcnJyk7CgogIHBlbi5tYXJrZG93bihyJycnCgojIyBDaGVja2JveE1lbnVCdXR0b24KCiAgJycnKTsKCiAgcGVuLmNlbGwoKGNvbnRleHQsIHByaW50KSB7CiAgICBwcmludChTYW1wbGVOb3RlKFJvdyRNYXRlKAogICAgICBjaGlsZHJlbjogWwogICAgICAgIENoZWNrYm94TWVudUJ1dHRvbiRNYXRlKAogICAgICAgICAgICB2YWx1ZTogdHJ1ZSwgb25DaGFuZ2VkOiAoYm9vbD8gdmFsdWUpIHt9LCBjaGlsZDogVGV4dCRNYXRlKCdDaGVja2JveE1lbnVCdXR0b24nKSksCiAgICAgIF0sCiAgICApKSk7CiAgfSk7Cn0K"""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLoj5zljZVNZW51IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuLCBNYWluQ2VsbCBwcmludCkgewogIHBlbi5tYXJrZG93bihyJycnCiMg6I+c5Y2VTWVudQoKICAnJycpOwoKICBwZW4ubWFya2Rvd24ocicnJwoKIyMgQ2hlY2tib3hNZW51QnV0dG9uCgogICcnJyk7CgogIHBlbi5jZWxsKChjb250ZXh0LCBwcmludCkgewogICAgcHJpbnQoU2FtcGxlTm90ZShSb3ckTWF0ZSgKICAgICAgY2hpbGRyZW46IFsKICAgICAgICBDaGVja2JveE1lbnVCdXR0b24kTWF0ZSgKICAgICAgICAgICAgdmFsdWU6IHRydWUsIG9uQ2hhbmdlZDogKGJvb2w/IHZhbHVlKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgnQ2hlY2tib3hNZW51QnV0dG9uJykpLAogICAgICBdLAogICAgKSkpOwogIH0pOwp9Cg=="""),
 );

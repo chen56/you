@@ -7,18 +7,18 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 156, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 210, statementCount: 0),
       body: [
         /// ()
-        CodeBlock(offset: 194, end: 197, statementCount: 0),
+        CodeBlock(offset: 210, end: 213, statementCount: 0),
 
         /// (pen.markdown(r''' # Material3 )
-        CodeBlock(offset: 197, end: 331, statementCount: 1),
+        CodeBlock(offset: 213, end: 347, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 331, end: 332, statementCount: 0)
+        CodeBlock(offset: 347, end: 348, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 333, end: 334, statementCount: 0),
+      tail: CodeBlock(offset: 348, end: 350, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAiTWF0ZXJpYWwz5qaC6KeIIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuKSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyBNYXRlcmlhbDMKCj4gTWF0ZXJpYWwzIOe7hOS7tue0ouW8leWPguiAgzoKPiA8aHR0cHM6Ly9hcGkuZmx1dHRlci5kZXYvZmx1dHRlci9tYXRlcmlhbC9UaGVtZURhdGEvdXNlTWF0ZXJpYWwzLmh0bWw+CgoKCiAgJycnKTsKfQo="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAiTWF0ZXJpYWwz5qaC6KeIIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuLCBNYWluQ2VsbCBwcmludCkgewogIHBlbi5tYXJrZG93bihyJycnCiMgTWF0ZXJpYWwzCgo+IE1hdGVyaWFsMyDnu4Tku7bntKLlvJXlj4LogIM6Cj4gPGh0dHBzOi8vYXBpLmZsdXR0ZXIuZGV2L2ZsdXR0ZXIvbWF0ZXJpYWwvVGhlbWVEYXRhL3VzZU1hdGVyaWFsMy5odG1sPgoKCgogICcnJyk7Cn0K"""),
 );

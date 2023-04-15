@@ -7,24 +7,24 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 153, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 207, statementCount: 0),
       body: [
         /// ()
-        CodeBlock(offset: 191, end: 194, statementCount: 0),
+        CodeBlock(offset: 207, end: 210, statementCount: 0),
 
         /// (pen.markdown(r''' # 进度条    ## )
-        CodeBlock(offset: 194, end: 254, statementCount: 1),
+        CodeBlock(offset: 210, end: 270, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 254, end: 258, statementCount: 0),
+        CodeBlock(offset: 270, end: 274, statementCount: 0),
 
         /// (pen.markdown(r''' ## 范例1 富文本  )
-        CodeBlock(offset: 258, end: 309, statementCount: 1),
+        CodeBlock(offset: 274, end: 325, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 309, end: 310, statementCount: 0)
+        CodeBlock(offset: 325, end: 326, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 311, end: 312, statementCount: 0),
+      tail: CodeBlock(offset: 326, end: 328, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJTbGlkZXLov5vluqbmnaEiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4pIHsKICBwZW4ubWFya2Rvd24ocicnJwojIOi/m+W6puadoSAgCgojIyDojIPkvosxIOaZrumAmuaWh+acrCAKClRleHQubmV3KCkKCiAgJycnKTsKCiAgcGVuLm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDlr4zmlofmnKwgCgpUZXh0LnJpY2goKQoKICAnJycpOwp9Cg=="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJTbGlkZXLov5vluqbmnaEiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4sIE1haW5DZWxsIHByaW50KSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyDov5vluqbmnaEgIAoKIyMg6IyD5L6LMSDmma7pgJrmlofmnKwgCgpUZXh0Lm5ldygpCgogICcnJyk7CgogIHBlbi5tYXJrZG93bihyJycnCiMjIOiMg+S+izEg5a+M5paH5pysIAoKVGV4dC5yaWNoKCkKCiAgJycnKTsKfQo="""),
 );

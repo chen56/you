@@ -6,7 +6,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen) {
+build(BuildContext context, Pen pen, MainCell print) {
   pen.markdown(r'''
 # Cheat sheet
 

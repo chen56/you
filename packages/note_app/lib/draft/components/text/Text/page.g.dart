@@ -7,24 +7,24 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 148, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 202, statementCount: 0),
       body: [
         /// ()
-        CodeBlock(offset: 186, end: 189, statementCount: 0),
+        CodeBlock(offset: 202, end: 205, statementCount: 0),
 
         /// (pen.markdown(r''' ## 范例1 普通文本 )
-        CodeBlock(offset: 189, end: 240, statementCount: 1),
+        CodeBlock(offset: 205, end: 256, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 240, end: 292, statementCount: 0),
+        CodeBlock(offset: 256, end: 308, statementCount: 0),
 
         /// (pen.markdown(r''' ## 范例1 富文本  )
-        CodeBlock(offset: 292, end: 343, statementCount: 1),
+        CodeBlock(offset: 308, end: 359, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 343, end: 390, statementCount: 0)
+        CodeBlock(offset: 359, end: 406, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 391, end: 392, statementCount: 0),
+      tail: CodeBlock(offset: 406, end: 408, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJUZXh0IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuKSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDmma7pgJrmlofmnKwgCgpUZXh0Lm5ldygpCgogICcnJyk7CgogIC8vIHBlbi5zYW1wbGVGaWxlKGNvbnN0IE5vcm1hbFRleHRTYW1wbGUoKSk7CgogIHBlbi5tYXJrZG93bihyJycnCiMjIOiMg+S+izEg5a+M5paH5pysIAoKVGV4dC5yaWNoKCkKCiAgJycnKTsKCiAgLy8gcGVuLnNhbXBsZUZpbGUoY29uc3QgUmljaFRleHRTYW1wbGUoKSk7Cn0K"""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJUZXh0IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuLCBNYWluQ2VsbCBwcmludCkgewogIHBlbi5tYXJrZG93bihyJycnCiMjIOiMg+S+izEg5pmu6YCa5paH5pysIAoKVGV4dC5uZXcoKQoKICAnJycpOwoKICAvLyBwZW4uc2FtcGxlRmlsZShjb25zdCBOb3JtYWxUZXh0U2FtcGxlKCkpOwoKICBwZW4ubWFya2Rvd24ocicnJwojIyDojIPkvosxIOWvjOaWh+acrCAKClRleHQucmljaCgpCgogICcnJyk7CgogIC8vIHBlbi5zYW1wbGVGaWxlKGNvbnN0IFJpY2hUZXh0U2FtcGxlKCkpOwp9Cg=="""),
 );

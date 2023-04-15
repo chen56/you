@@ -42,7 +42,7 @@ import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
 class Paths with Navigable, PathsMixin {
   late final Path<void> initial;
   Paths._() {
-    initial = note_note_self_notebook;
+    initial = note_note_self;
   }
 
   @override

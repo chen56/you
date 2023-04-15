@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'dart:convert';
 
-typedef PageBuilder = void Function(BuildContext context, Pen pen);
+typedef PageBuilder = void Function(BuildContext context, Pen pen, MainCell print);
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -223,10 +223,10 @@ class Pen {
   // Pen({required this.editors});
   Pen.build(BuildContext context, this.path, {required this.editors}) {
     // 进入build() 函数后的第一个自然cell
-    _nextCell();
+    MainCell firstCell = _nextCell();
     if (path._meta == null) return;
 
-    path._meta!.builder(context, this);
+    path._meta!.builder(context, this, firstCell);
   }
 
   /// markdown 独占一个新cell
@@ -264,9 +264,8 @@ class Pen {
     return next;
   }
 
-  // fixme temp 临时在pen上的用用
-  void call(Object? object) {
-    cells.last.print(object);
+  MainCell get nextCell___________________________ {
+    return _nextCell();
   }
 }
 
@@ -485,14 +484,33 @@ class CodeBlock {
 
 abstract class BaseNoteCell extends ChangeNotifier {
   final Path path;
+  bool? _expand;
+  // when first show note page, is default show code
+  final bool isShowCodeDefault;
   BaseNoteCell({
     required this.path,
+    required this.isShowCodeDefault,
   });
 
   List<BaseNoteContent> get contents;
   bool isEmpty() => contents.isEmpty;
 
   String get code;
+
+  // show == expand
+  bool get expand {
+    if (isEmptyCode) return false;
+    if (_expand == null) {
+      //markdown cell default hidden code
+      return isShowCodeDefault ? !isMarkdownCell : false;
+    }
+    return _expand!;
+  }
+
+  set expand(bool newValue) {
+    _expand = newValue;
+    notifyListeners();
+  }
 
   /// 不包含pen相关调用的代码
   String get noPenCode;
@@ -504,6 +522,8 @@ abstract class BaseNoteCell extends ChangeNotifier {
   }
 
   ObjectParam get param;
+
+  bool get isMarkdownCell;
 }
 
 class HeaderOrTailCell extends BaseNoteCell {
@@ -514,7 +534,7 @@ class HeaderOrTailCell extends BaseNoteCell {
   HeaderOrTailCell({
     required super.path,
     required this.code,
-  });
+  }) : super(isShowCodeDefault: false);
 
   @override
   List<BaseNoteContent> get contents => [];
@@ -524,6 +544,9 @@ class HeaderOrTailCell extends BaseNoteCell {
 
   @override
   String get noPenCode => throw UnimplementedError();
+
+  @override
+  bool get isMarkdownCell => false;
 }
 
 /// 一个cell代表note中的一个代码块及其产生的内容
@@ -539,7 +562,8 @@ class MainCell extends BaseNoteCell {
     required super.path,
     required this.param,
     required CellBuilder builder,
-  }) : _builder = builder;
+  })  : _builder = builder,
+        super(isShowCodeDefault: true);
 
   List<BaseNoteContent> get contents => List.unmodifiable(_contents);
 
@@ -549,6 +573,15 @@ class MainCell extends BaseNoteCell {
 
   void clear() {
     _contents.clear();
+  }
+
+  void markdown(String content) {
+    call(MarkdownNote(content));
+  }
+
+  @override
+  bool get isMarkdownCell {
+    return _contents.every((e) => e is MarkdownNote);
   }
 
   void call(Object? object) {

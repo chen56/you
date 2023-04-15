@@ -637,6 +637,7 @@ class Editors {
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
 
+    // todo 这些function类型的等到范例模版好了后要清理掉 github:#61
     if (utils.isType<T, void Function(bool)>() || param.init is void Function(bool)) {
       var ex = code.Method((b) => b
         ..name = ''

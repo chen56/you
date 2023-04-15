@@ -7,10 +7,10 @@ import 'package:note_app/note_app.dart';
 PageMeta page = PageMeta(
   shortTitle: "home",
   builder: build,
-  layout: Layouts.defaultLayout(isShowCellCode: false),
+  layout: Layouts.defaultLayout(isShowCellCode: true),
 );
 
-build(BuildContext context, Pen pen) {
+build(BuildContext context, Pen pen, MainCell print) {
   pen.markdown(r'''
 # home 
 

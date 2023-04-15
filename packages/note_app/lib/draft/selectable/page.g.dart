@@ -7,18 +7,18 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 148, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 202, statementCount: 0),
       body: [
         /// ()
-        CodeBlock(offset: 186, end: 189, statementCount: 0),
+        CodeBlock(offset: 202, end: 205, statementCount: 0),
 
         /// (pen.markdown(r''' ## flutter N)
-        CodeBlock(offset: 189, end: 266, statementCount: 1),
+        CodeBlock(offset: 205, end: 282, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 266, end: 267, statementCount: 0)
+        CodeBlock(offset: 282, end: 283, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 268, end: 269, statementCount: 0),
+      tail: CodeBlock(offset: 283, end: 285, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLlj6/pgInmi6nmgKciLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4pIHsKICBwZW4ubWFya2Rvd24ocicnJwojIyBmbHV0dGVyIE5vdGUKCmZsdXR0ZXIg6buY6K6k5piv5peg5rOV5LitVUnmlofmnKznmoTvvIznm7jlupTnmoTkuZ/ml6Dms5Xov5vooYzpobXpnaLmkJzntKLjgIIKCiAgJycnKTsKfQo="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLlj6/pgInmi6nmgKciLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4sIE1haW5DZWxsIHByaW50KSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyMgZmx1dHRlciBOb3RlCgpmbHV0dGVyIOm7mOiupOaYr+aXoOazleS4rVVJ5paH5pys55qE77yM55u45bqU55qE5Lmf5peg5rOV6L+b6KGM6aG16Z2i5pCc57Si44CCCgogICcnJyk7Cn0K"""),
 );

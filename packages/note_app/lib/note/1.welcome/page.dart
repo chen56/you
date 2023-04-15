@@ -8,7 +8,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen) {
+build(BuildContext context, Pen pen, MainCell print) {
   pen.markdown(r'''
 # flutter note项目
 
@@ -225,6 +225,8 @@ material.io对Compoent的定义如下：
 - [ ] Divider:VerticalDivider
 - [ ] SafeArea
 - [ ] Tooltip
+- [ ] OrientationBuilder 根据屏幕方向更新界面
+
 
 ### 主题Theme
 

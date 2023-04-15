@@ -7,18 +7,18 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 154, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 208, statementCount: 0),
       body: [
         /// ()
-        CodeBlock(offset: 192, end: 195, statementCount: 0),
+        CodeBlock(offset: 208, end: 211, statementCount: 0),
 
         /// (pen.markdown(r''' ## dart 3  暂)
-        CodeBlock(offset: 195, end: 337, statementCount: 1),
+        CodeBlock(offset: 211, end: 353, statementCount: 1),
 
         /// ()
-        CodeBlock(offset: 337, end: 338, statementCount: 0)
+        CodeBlock(offset: 353, end: 354, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 339, end: 340, statementCount: 0),
+      tail: CodeBlock(offset: 354, end: 356, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJkYXJ0IDMg5paw54m55oCnIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuKSB7CiAgcGVuLm1hcmtkb3duKHInJycKIyMgZGFydCAzICDmmoLml7bmlL7lvIPvvIznrYnnqLPlrprlkI7lho3mkJ4KCiMgdHlwZQoKaW50ZXJmYWNlIGNsYXNzCmJhc2UgY2xhc3MKZmluYWwgY2xhc3MKc2VhbGVkIGNsYXNzCm1peGluIGNsYXNzCgojIHJlY29yZHMKCiMgbWF0Y2gKCiAgJycnKTsKfQo="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJkYXJ0IDMg5paw54m55oCnIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuLCBNYWluQ2VsbCBwcmludCkgewogIHBlbi5tYXJrZG93bihyJycnCiMjIGRhcnQgMyAg5pqC5pe25pS+5byD77yM562J56iz5a6a5ZCO5YaN5pCeCgojIHR5cGUKCmludGVyZmFjZSBjbGFzcwpiYXNlIGNsYXNzCmZpbmFsIGNsYXNzCnNlYWxlZCBjbGFzcwptaXhpbiBjbGFzcwoKIyByZWNvcmRzCgojIG1hdGNoCgogICcnJyk7Cn0K"""),
 );
