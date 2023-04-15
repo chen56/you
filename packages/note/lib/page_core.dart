@@ -1,19 +1,20 @@
+import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
-import 'package:note/navigator_v2.dart';
+import 'dart:convert';
 
-/// 本项目的就死活page开发模型，包括几部分：
+typedef PageBuilder = void Function(BuildContext context, Pen pen);
+
+/// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
-/// - [Layout]的具体实现，比如[Page]
+/// - [Layout]的具体实现，比如
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
-///
-///
 
 /// <T>: [NavigatorV2.push] 的返回类型
 class PageMeta<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
-  final void Function(Pen note, BuildContext context) builder;
+  final PageBuilder builder;
   late final Layout? layout;
 
   PageMeta({
@@ -28,7 +29,6 @@ class PageMeta<T> {
   }
 }
 
-/// 用kids代替单词children,原因是children太长了
 class Path<T> {
   final String name;
   final List<Path> _children = List.empty(growable: true);
@@ -37,6 +37,8 @@ class Path<T> {
 
   final Map<String, Object> attributes = {};
   PageMeta<T>? _meta;
+
+  NoteInfo? _noteInfo;
 
   Path._child(
     this.name, {
@@ -51,12 +53,14 @@ class Path<T> {
 
   List<Path> get children => List.unmodifiable(_children);
 
-  Path<C> put<C>(String fullPath, PageMeta<C>? meta) {
+  Path<C> put<C>(String fullPath, NoteInfo? noteInfo) {
     var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
     var path = _ensurePath(p);
     assert(path._meta == null,
-        " $path add kid '$fullPath': duplicate put , ${path._meta} already exists ");
-    path._meta = meta;
+        " $path add child '$fullPath': duplicate put , ${path._meta} already exists ");
+
+    path._meta = noteInfo?.meta;
+    path._noteInfo = noteInfo;
     return path as Path<C>;
   }
 
@@ -73,11 +77,6 @@ class Path<T> {
       return child;
     });
     return next._ensurePath(nameList.sublist(1));
-  }
-
-  void build(Pen pen, BuildContext context) {
-    if (_meta == null) return;
-    _meta!.builder(pen, context);
   }
 
   /// 页面骨架
@@ -109,6 +108,8 @@ class Path<T> {
 
   String get title => _meta == null ? nameFlat : _meta!.shortTitle;
 
+  NoteInfo? get noteInfo => _noteInfo;
+
   String get path {
     if (isRoot) return "/";
     var parentPath = parent!.path;
@@ -133,7 +134,7 @@ class Path<T> {
     return [...parent!.topList(), this];
   }
 
-  Path? kid(String path) {
+  Path? child(String path) {
     Path? result = this;
     for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._childrenMap[split];
@@ -149,6 +150,12 @@ class Path<T> {
     return name.replaceAll(RegExp("\\d+[.]"), "") // 1.note-self -> note-self
         ;
   }
+
+  HeaderOrTailCell get header =>
+      HeaderOrTailCell(path: this, code: noteInfo == null ? "" : noteInfo!.source.headerCode);
+
+  HeaderOrTailCell get tail =>
+      HeaderOrTailCell(path: this, code: noteInfo == null ? "" : noteInfo!.source.tailCode);
 
   String toStringShort() {
     return path;
@@ -168,27 +175,137 @@ class Path<T> {
   }
 }
 
-enum ContentType { markdown, sample, widget }
+typedef CellBuilder = void Function(BuildContext context, MainCell print);
 
-class Content {
-  final ContentType type;
-  final Object value;
+///
+/// cell 是一段代码加上其运行后的一块界面区域，和jupyter/observablehq 中的cell概念类似，
+/// 但由于我们并没有一个notebook编辑器，一个cell，一个cell的编辑运行代码，而是通过代码分析器从
+/// dart代码中自动分割cell的，所以逻辑上有些许不同。
+///
+/// A cell is a block of code and an it's display area on page ui.
+/// The concept of a cell in jupyter/Observablehq is similar,
+/// but since we do not have a notebook editor, a cell is auto analyzed from Dart code,
+///
+/// - flutter_note 的cell在界面上是只读的
+/// - cell是我们对dart文件的一种视角
+/// - cell 分两种，
+///   - 一种是代码中用[cell]函数明确指定的cell，是可以单独运行的。（[Pen]级别的方法包括markdown()等都是cell函数）
+///   - 另一种是自然cell，即非明确指定的，夹在cell函数之间的代码段，要重新运行这种cell，相当于重新运行整个build函数
+/// 自然cell在build函数的最外层，可以用来放置公共变量、函数。
+///
+/// - implicit cell
+/// - explicit cell
+///
+///
+// build(){
+//   // this line belongs to implicit cell: cell-0
+//   pen.cell((context,pen){
+//     // this block is explicit： cell-1
+//   });
+//   // this block is implicit cell: cell-2
+//   pen.markdown("this line is explicit cell： cell-3");
+//   // this line is implicit cell: cell-4
+// }
+///
+class Pen {
+  /// 这个方法作用是代码区块隔离，方便语法分析器
+  /// 这个函数会在代码显示器中擦除
+  // ignore: non_constant_identifier_names
+  // void cell(CellBuilder builder);
+  // final List<NoteCell> cells = List.empty(growable: true);
+  // NoteCell _currentCell = NoteCell(index: 0);
+  final List<MainCell> cells = List.empty(growable: true);
 
-  Content._({required this.type, required this.value});
+  int _cellIndex = 0;
+  final Editors editors;
+
+  final Path path;
+  // Pen({required this.editors});
+  Pen.build(BuildContext context, this.path, {required this.editors}) {
+    // 进入build() 函数后的第一个自然cell
+    _nextCell();
+    if (path._meta == null) return;
+
+    path._meta!.builder(context, this);
+  }
+
+  /// markdown 独占一个新cell
+  void markdown(String content) {
+    cell((context, print) {
+      print(MarkdownNote(content));
+    });
+  }
+
+  /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
+  /// Add a new cell, which is a code block and its generated content in the note
+  ///
+  /// 通过[builder]参数可以重建此cell
+  /// cell can be rebuilt using the [builder] arg
+  MainCell cell(CellBuilder builder) {
+    var cell = _nextCell(builder);
+    // 启动一个自然cell
+    _nextCell();
+    return cell;
+  }
+
+  /// 新增一个自然cell
+  /// add a nature cell
+  ///
+  /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
+  /// The meaning of natural cell is the code block between [Pen. cell] function blocks
+  MainCell _nextCell([CellBuilder? builder]) {
+    var next = MainCell(
+      index: _cellIndex++,
+      path: path,
+      param: ObjectParam.root(editors: editors),
+      builder: builder ?? (_, __) {},
+    );
+    cells.add(next);
+    return next;
+  }
 }
 
-abstract class Pen {
-  void sampleFile(Widget sample);
+abstract class BaseNoteContent {}
 
-  void markdown(String content);
-
-  void sampleMate(Mate widgetMate,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
-  void sampleBlock(Widget Function(ObjectParam param) builder,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true});
-
-  void widget(Widget Function(ObjectParam param) builder);
+class MarkdownNote extends BaseNoteContent {
+  final String content;
+  MarkdownNote(this.content);
+  @override
+  String toString() {
+    return "MarkdownNote('${content}')";
+  }
 }
+
+class ObjectNote extends BaseNoteContent {
+  final Object? object;
+  ObjectNote(this.object);
+  @override
+  String toString() {
+    return "ObjectNote('${object?.toString()}')";
+  }
+}
+
+class WidgetNote extends BaseNoteContent {
+  final Widget widget;
+  WidgetNote(this.widget);
+
+  @override
+  String toString() {
+    return "WidgetNote('${widget.runtimeType}')";
+  }
+}
+
+// {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
+class SampleNote extends BaseNoteContent {
+  final Mate mate;
+  SampleNote(this.mate);
+  @override
+  String toString() {
+    return "SampleNote('${mate.toString()}')";
+  }
+}
+
+typedef SampleBuilder = Widget Function(ObjectParam param);
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -201,6 +318,11 @@ class Outline {
       return;
     }
     current = current!.add(newNode);
+  }
+
+  void reset() {
+    root.clear();
+    current = null;
   }
 }
 
@@ -248,6 +370,10 @@ class OutlineNode {
   String toString() {
     return "heading:$heading title:$title kids:${kids.length}";
   }
+
+  void clear() {
+    kids.clear();
+  }
 }
 
 typedef Layout = Screen Function(Path page);
@@ -276,4 +402,191 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
 
   @override
   String get location => current.path;
+}
+
+class NotePage {
+  final Path path;
+  final NoteSource source;
+  final PageMeta meta;
+  NotePage({
+    required this.path,
+    required NoteInfo info,
+  })  : source = info.source,
+        meta = info.meta;
+}
+
+class NoteInfo {
+  final NoteSource source;
+  final PageMeta meta;
+  NoteInfo({
+    required this.source,
+    required this.meta,
+  });
+}
+
+class NoteSource {
+  final CodeBlock header;
+  final List<CodeBlock> body;
+  final CodeBlock tail;
+  final String code;
+  NoteSource({
+    required String code,
+    required this.header,
+    this.body = const [],
+    required this.tail,
+  }) : code = utf8.decode(base64.decode(code)) {
+    header.source = this;
+    tail.source = this;
+    for (var e in body) {
+      e.source = this;
+    }
+  }
+  String get headerCode {
+    return code.substring(header.offset, header.end);
+  }
+
+  String get tailCode {
+    return code.substring(tail.offset, tail.end);
+  }
+
+  String getMainCellCode(int index) {
+    if (index >= body.length) {
+      // not sync
+      return "cell code not sync, please gen page.g.dart";
+    }
+    var c = body[index];
+    return code.substring(c.offset, c.end);
+  }
+}
+
+class CodeBlock {
+  late final NoteSource source;
+  final int offset;
+  final int end;
+  final int statementCount;
+  CodeBlock({
+    required this.offset,
+    required this.end,
+    this.statementCount = 0,
+  });
+
+  /// 是否为不存在的代码块
+  bool get isExists => offset == end;
+
+  /// 是否为不包含任何有意义的语句的空块
+  // bool get isEmpty => isExists || ;
+  ///     final encodedCode = base64.encode(utf8.encode(source.code));
+}
+
+abstract class BaseNoteCell extends ChangeNotifier {
+  final Path path;
+  BaseNoteCell({
+    required this.path,
+  });
+
+  List<BaseNoteContent> get contents;
+  bool isEmpty() => contents.isEmpty;
+
+  String get code;
+
+  /// 不包含pen相关调用的代码
+  String get noPenCode;
+
+  void build(BuildContext context);
+
+  bool get isEmptyCode {
+    return code.contains(RegExp(r'^\s*$'));
+  }
+
+  ObjectParam get param;
+}
+
+class HeaderOrTailCell extends BaseNoteCell {
+  @override
+  final ObjectParam param = ObjectParam.root(editors: Editors());
+  @override
+  final String code;
+  HeaderOrTailCell({
+    required super.path,
+    required this.code,
+  });
+
+  @override
+  List<BaseNoteContent> get contents => [];
+
+  @override
+  void build(BuildContext context) {}
+
+  @override
+  String get noPenCode => throw UnimplementedError();
+}
+
+/// 一个cell代表note中的一个代码块及其产生的内容
+/// A cell represents a code block in a note and its generated content
+class MainCell extends BaseNoteCell {
+  final List<BaseNoteContent> _contents = List.empty(growable: true);
+  // index use to find code
+  final int index;
+  final ObjectParam param;
+  final CellBuilder _builder;
+  MainCell({
+    required this.index,
+    required super.path,
+    required this.param,
+    required CellBuilder builder,
+  }) : _builder = builder;
+
+  List<BaseNoteContent> get contents => List.unmodifiable(_contents);
+
+  void print(Object? object) {
+    call(object);
+  }
+
+  void clear() {
+    _contents.clear();
+  }
+
+  void call(Object? object) {
+    if (object is BaseNoteContent) {
+      _add(object);
+      return;
+    }
+    if (object is Mate) {
+      _add(SampleNote(object));
+      return;
+    }
+    if (object is Widget) {
+      _add(WidgetNote(object));
+      return;
+    }
+    _add(ObjectNote(object));
+  }
+
+  void _add(BaseNoteContent content) {
+    _contents.add(content);
+    notifyListeners();
+  }
+
+  @override
+  String get code {
+    var source = path.noteInfo?.source;
+    if (source == null) {
+      return _contents.isEmpty
+          ? ""
+          : "cell have content ,but code source is null, please gen page.g.dart";
+    }
+    return source.getMainCellCode(index);
+  }
+
+  /// 不包含pen相关调用的代码
+  @override
+  String get noPenCode {
+    return "code source... todo \n code.... \n code...";
+  }
+
+  @override
+  void build(BuildContext context) {
+    _contents.clear();
+    _builder(context, this);
+  }
 }

@@ -7,7 +7,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown(r'''
 # bar
 
@@ -17,18 +17,20 @@ build(Pen pen, BuildContext context) {
 
   ''');
 
-  pen.sampleMate(
-    Container$Mate(
-      width: 800,
-      color: Colors.blueAccent.shade100,
-      child: ButtonBar$Mate(
-        children: [
-          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-          OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
-          CheckboxMenuButton$Mate(
-              value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
-        ],
-      ),
-    ),
-  );
+  pen.cell((context, print) {
+    print(
+      SampleNote(Container$Mate(
+        width: 800,
+        color: Colors.blueAccent.shade100,
+        child: ButtonBar$Mate(
+          children: [
+            ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+            OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
+            CheckboxMenuButton$Mate(
+                value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
+          ],
+        ),
+      )),
+    );
+  });
 }

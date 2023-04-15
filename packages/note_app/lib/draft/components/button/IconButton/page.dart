@@ -7,7 +7,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown(r'''
 # IconButton
 
@@ -18,8 +18,9 @@ build(Pen pen, BuildContext context) {
 - [StatelessWidget]
   - [IconButton] 
   ''');
-
-  pen.sampleMate(Wrap$Mate(children: [
-    // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-  ]));
+  pen.cell((context, print) {
+    print(SampleNote(Wrap$Mate(children: [
+      // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+    ])));
+  });
 }

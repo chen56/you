@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+/// log 是基础包，不依赖其他业务代码
+
 Logger logger = Logger();
 
 class Logger extends ChangeNotifier {
@@ -96,5 +98,23 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
 
   log(Object? msg) {
     logger.log("${delegate.runtimeType}(id:${identityHashCode(delegate)}).$msg");
+  }
+}
+
+class LayoutLog extends StatelessWidget {
+  final Widget child;
+  final String title;
+
+  const LayoutLog({super.key, this.title = "LayoutLog", this.child = const Text("LayoutLog")});
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        if (kDebugMode) {
+          print("LayoutLog-$title:$constraints");
+        }
+        return child;
+      },
+    );
   }
 }

@@ -7,7 +7,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown(r'''
 # 菜单Menu
 
@@ -19,12 +19,12 @@ build(Pen pen, BuildContext context) {
 
   ''');
 
-  pen.sampleMate(
-    Row$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
       children: [
         CheckboxMenuButton$Mate(
             value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
       ],
-    ),
-  );
+    )));
+  });
 }

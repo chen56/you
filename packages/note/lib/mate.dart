@@ -450,6 +450,9 @@ class BuilderArg<T> {
   }
 
   T get value => param.value;
+  set value(T newValue) {
+    param.value = newValue;
+  }
 
   bool get isNullable => nullable;
 

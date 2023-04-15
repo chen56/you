@@ -1,11 +1,16 @@
 // part of "pages.g.dart";
+import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/page_core.dart';
+import 'package:note/page_layout.dart';
 import 'package:note_app/pages.g.dart';
+import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
+import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
+
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
-// 需求被拒绝，自省会影响到dart的性能策略,只能另想办法, 比如自动生成
+// 需求被拒绝，自省会影响到dart的性能策略,只能另想办法, 目前使用代码生成 [tools/gen_pages.dart]
 
 // Path<void> root = Path<void>("/", meta: rootPage, kids: [
 //   Path<void>("not_found", meta: notFoundPage),
@@ -37,12 +42,12 @@ import 'package:note_app/pages.g.dart';
 class Paths with Navigable, PathsMixin {
   late final Path<void> initial;
   Paths._() {
-    initial = note_welcome;
+    initial = note_note_self_notebook;
   }
 
   @override
   Screen parse(String location) {
-    Path find = _root.kid(location)!; // ?? notFound;
+    Path find = _root.child(location)!; // ?? notFound;
     return find.createScreen(location);
   }
 }
@@ -50,6 +55,22 @@ class Paths with Navigable, PathsMixin {
 var paths = Paths._();
 
 Path<void> _root = Path.root();
-put<C>(String path, PageMeta<C>? meta) {
-  return _root.put(path, meta);
+put<C>(String path, NoteInfo noteInfo) {
+  return _root.put(path, noteInfo);
+}
+
+class Layouts {
+  static Layout defaultLayout<T>({
+    bool isShowCellCode = false,
+  }) {
+    return (path) => PageScreen<T>(
+          current: path as Path<T>,
+          tree: paths.note,
+          editors: Editors(
+            enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
+            iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
+          ),
+          isShowCellCode: isShowCellCode,
+        );
+  }
 }

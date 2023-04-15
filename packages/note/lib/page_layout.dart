@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
@@ -6,10 +7,13 @@ import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
+/// 分割块，在cell间分割留白
+const Widget _cellSplitBlock = SizedBox(height: 10);
+
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
-
+  final bool isShowCellCode;
   final Editors editors;
 
   PageScreen({
@@ -17,6 +21,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
     this.tree,
     required this.current,
     required this.editors,
+    this.isShowCellCode = false,
   });
 
   @override
@@ -29,8 +34,8 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 }
 
 class _PageScreenState<T> extends State<PageScreen<T>> {
-  late final PenImpl pen;
   final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
+  Outline outline = Outline();
 
   _PageScreenState();
 
@@ -38,23 +43,56 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   void initState() {
     super.initState();
 
-    pen = PenImpl(editors: widget.editors);
-
-    //内容outline只build一次
-    widget.current.build(pen, context);
-
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // 第一次[build]时, flutter-mardown包无法装配出outline，只有第一次[build]完，才能装配好，
-      // 所以需要触发第二次build
+      // to do
+      // flutter-markdown只有在Widget.build时才parse markdown，导致第一次[build]时,
+      // 装配的outline无法展示出来， 所以需要触发第二次build,以使其展示出来
+      // 暂时没想好最终处理办法，暂时这样。
       setState(() {});
     });
   }
 
+  ({List<
+      Widget> cells, Widget header, Widget tail, Widget buildStartBar, Widget buildEndBar}) buildNote(
+      BuildContext context) {
+    Pen pen = Pen.build(context, widget.current, editors: widget.editors);
+
+    bar(String code) {
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        const Text("<>"),
+        Expanded(child: Container(
+          height: 20,
+          color: Colors.blue.shade100,
+          child: Text(code),))
+      ],);
+    }
+
+    return (
+    cells:pen.cells.where((e) => !e.isEmptyCode)
+        .map((cell) => _newCellView(cell))
+        .toList(),
+    header: _newCellView(pen.path.header),
+    buildStartBar: bar("void build(context,pen){"),
+    tail: _newCellView(pen.path.tail),
+    buildEndBar: bar("} // end build(context,pen)"),
+
+    );
+  }
+
+  _NoteCellView _newCellView(BaseNoteCell cell) =>
+      _NoteCellView(
+        cell, outline: outline, editors: widget.editors, isShowCellCode: widget.isShowCellCode,);
+
   @override
   Widget build(BuildContext context) {
+    var noteResult = buildNote(context);
+
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(mainContentViewController: controllerV, outline: pen.outline);
+    var outlineView = _OutlineView(
+        mainContentViewController: controllerV, outline: outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -72,20 +110,24 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     // 20230404 chen56
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
+
     var scrollV = SingleChildScrollView(
       scrollDirection: Axis.vertical,
       controller: controllerV,
       child: ListBody(
         children: [
-          ...pen._contents,
+          noteResult.header,
+          noteResult.buildStartBar,
+          _cellSplitBlock,
+          ...noteResult.cells,
+          noteResult.buildEndBar,
+          _cellSplitBlock,
+          noteResult.tail,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],
       ),
     );
-    //no use
-    // final scrollBehavior = const ScrollBehavior().buildScrollbar(context, contentListView,
-    //     ScrollableDetails(direction: AxisDirection.down, controller: controller));
 
     var row = Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -121,8 +163,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 class _NoteTreeView extends StatefulWidget {
   final Path root;
 
-  _NoteTreeView(
-    this.root, {
+  _NoteTreeView(this.root, {
     Key? key,
   }) : super(key: key) {
     // 当前文档较少，先都展开
@@ -147,8 +188,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       String iconExtend = node.isLeaf
           ? "     "
           : node.extend
-              ? "▽  "
-              : "▷︎  ";
+          ? "▽  "
+          : "▷︎  ";
       String icon = "🗓";
       // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►
       // title 被Flexible包裹后，文本太长会自动换行
@@ -192,8 +233,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
 }
 
 // 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension _TreeViewNote on Path {
-  static const _extendAttrName = "note.layout._TreeViewNote.extend";
+extension _PathExt on Path {
+  static const _extendAttrName = "note/page_layout/extend";
 
   //展开状态
   bool get extend {
@@ -274,80 +315,20 @@ class _OutlineView extends StatelessWidget {
   }
 }
 
-class PenImpl extends Pen {
-  int i = 0;
-
-  final Editors editors;
-
-  PenImpl({required this.editors});
-
-  Outline outline = Outline();
-  final List<Widget> _contents = List.empty(growable: true);
-
-  List<Content> get contents => List.unmodifiable(_contents);
-
-  @override
-  void markdown(String content) {
-    _contents.add(MarkdownContent(
-      key: ValueKey(i++),
-      outline: outline,
-      content: content,
-    ));
-  }
-
-  @override
-  void widget(Widget Function(ObjectParam node) builder) {
-    _contents.add(builder(ObjectParam.root(editors: editors)));
-  }
-
-  @override
-  void sampleFile(Widget sample) {
-    _contents.add(ConstrainedBox(
-      key: ValueKey(i++),
-      constraints: const BoxConstraints.tightFor(width: 200, height: 200),
-      child: sample,
-    ));
-  }
-
-  @override
-  void sampleMate(Mate widgetMate,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
-    _contents.add(_MateSample(
-      rootParam: widgetMate.toRootParam(editors: editors),
-      editors: editors,
-      isShowCode: isShowCode,
-      isShowEidtors: isShowEidtors,
-      title: title,
-    ));
-  }
-
-  void sampleBlock(Widget Function(ObjectParam param) builder,
-      {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowEidtors = true}) {
-    ObjectParam rootParam = ObjectParam.root(editors: editors, builder: (param) => builder(param));
-    _contents.add(_MateSample(
-      rootParam: rootParam,
-      editors: editors,
-      isShowCode: isShowCode,
-      isShowEidtors: isShowEidtors,
-      title: title,
-    ));
-  }
-}
-
-class _MateSample extends StatelessWidget {
+class _MateSampleView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final bool isShowCode;
-  final bool isShowEidtors;
+  final bool isShowParamEditor;
   final String title;
-  // ignore: unused_element
-  const _MateSample({
+
+  const _MateSampleView({
     // ignore: unused_element
     super.key,
     required this.rootParam,
     required this.editors,
     required this.isShowCode,
-    required this.isShowEidtors,
+    required this.isShowParamEditor,
     required this.title,
   });
 
@@ -363,7 +344,7 @@ class _MateSample extends StatelessWidget {
             rootParam: rootParam,
             editors: editors,
             isShowCode: isShowCode,
-            isShowEidtors: isShowEidtors,
+            isShowEidtors: isShowParamEditor,
             title: title,
           );
           return Column(
@@ -428,7 +409,7 @@ class _ParamAndCodeView extends StatelessWidget {
     var paramView = Column(
       children: [
         ...rootParam
-            // hide null value
+        // hide null value
             .flat(test: (param) => param.isShow)
             .map(paramRow)
       ],
@@ -466,5 +447,101 @@ class _ParamAndCodeView extends StatelessWidget {
         )
       ],
     );
+  }
+}
+
+class _NoteCellView extends StatelessWidget {
+  final bool isShowCellCode;
+
+  final BaseNoteCell cell;
+  final Outline outline;
+  final Editors editors;
+
+  _NoteCellView(this.cell, {
+    // ignore: unused_element
+    super.key,
+    required this.outline,
+    required this.editors,
+    required this.isShowCellCode,
+  });
+
+  Widget buildContent(BuildContext context, BaseNoteContent e) {
+    if (e is MarkdownNote) {
+      return MarkdownContent(outline: outline, content: e.content);
+    }
+    if (e is WidgetNote) {
+      return e.widget;
+    }
+    if (e is SampleNote) {
+      return _MateSampleView(
+        rootParam: e.mate.toRootParam(editors: editors),
+        editors: editors,
+        isShowCode: true,
+        isShowParamEditor: true,
+        title: "展开代码",
+      );
+    }
+
+    if (e is ObjectNote) {
+      return Text("${e.object}");
+    }
+
+    throw UnimplementedError("NoteContent not implemented : $e");
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var codeView = HighlightView(
+      // The original code to be highlighted
+      cell.code,
+
+      // Specify language
+      // It is recommended to give it a value for performance
+      language: 'dart',
+
+      // Specify highlight theme
+      // All available themes are listed in `themes` folder
+      theme: atelierForestLightTheme,
+
+      // Specify padding
+      padding: const EdgeInsets.all(6),
+
+      // Specify text style
+    );
+
+    // We use Padding to avoid complex nested Columns/Rows:
+    // code | codeView
+    // bar  | -------------------
+    // view | contentView
+    const double leftOfBar = 20;
+
+    //const Icon(size: leftOfBar, Icons.code),
+    var leftBar = const Column(children: [Text("<>")],);
+
+    var lisenCellParamChange = ListenableBuilder(listenable: cell.param, builder: (context, child) {
+      cell.build(context);
+      return ListenableBuilder(listenable: cell, builder: (context, child) {
+        Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
+
+        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          if (isShowCellCode)
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                leftBar,
+                Expanded(child: codeView),
+              ],
+            ),
+          ...contentWidgets.map((e) =>
+              Container(
+                padding: const EdgeInsets.only(left: leftOfBar),
+                child: e,
+              )),
+          _cellSplitBlock,
+        ]);
+      },);
+    });
+
+    return lisenCellParamChange;
   }
 }

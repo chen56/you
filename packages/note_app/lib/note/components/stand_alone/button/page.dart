@@ -7,7 +7,9 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
+  int id = 0;
+
   pen.markdown(r'''
 # button
 
@@ -21,8 +23,8 @@ the Material Design button types and how they should be used in designs.
 以下几种主要Button都继承自[ButtonStyleButton]
   ''');
 
-  pen.sampleMate(
-    Wrap$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Wrap$Mate(
       children: [
         ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
         FilledButton$Mate(onPressed: () {}, child: Text$Mate('FilledButton')),
@@ -30,8 +32,8 @@ the Material Design button types and how they should be used in designs.
         OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
         TextButton$Mate(onPressed: () {}, child: Text$Mate('TextButton')),
       ],
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 ### IconButton
@@ -40,15 +42,15 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.sampleMate(
-    Row$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
       children: [
         IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.wifi)),
         IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.add)),
         IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.ac_unit)),
       ],
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 ### FloatingActionButton
@@ -56,25 +58,25 @@ the Material Design button types and how they should be used in designs.
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
   ''');
 
-  pen.sampleMate(
-    Row$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
       children: [
         FloatingActionButton$Mate(
           onPressed: () {},
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
           tooltip: "FloatingActionButton",
           child: Text$Mate("缺省构造器"),
         ),
         FloatingActionButton$Mate.small(
           // isExtended: false,
           onPressed: () {},
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
           child: Text$Mate("small"),
         ),
         FloatingActionButton$Mate.large(
           // isExtended: false,
           onPressed: () {},
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
           child: Text$Mate("large"),
         ),
         FloatingActionButton$Mate.extended(
@@ -82,11 +84,11 @@ the Material Design button types and how they should be used in designs.
           onPressed: () {},
           label: Text$Mate('extended'),
           icon: Icon$Mate(Icons.thumb_up),
-          heroTag: "FloatingActionButton",
+          heroTag: "button.FloatingActionButton${id++}",
         ),
       ],
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 ### 几个特殊的系统Button
@@ -100,16 +102,16 @@ the Material Design button types and how they should be used in designs.
     - [EndDrawerButton] A Material Design drawer icon button
   ''');
 
-  pen.sampleMate(
-    Row$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
       children: [
         BackButton$Mate(),
         CloseButton$Mate(),
         DrawerButton$Mate(),
         EndDrawerButton$Mate(),
       ],
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 
@@ -121,8 +123,8 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.sampleMate(
-    Row$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
       children: [
         ToggleButtons$Mate(
           onPressed: (int index) {},
@@ -134,8 +136,8 @@ the Material Design button types and how they should be used in designs.
           ],
         ),
       ],
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 
@@ -149,8 +151,8 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.sampleMate(
-    Row$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
       children: [
         SegmentedButton$Mate<String>(
           multiSelectionEnabled: true,
@@ -170,8 +172,8 @@ the Material Design button types and how they should be used in designs.
           onSelectionChanged: (Set<String> newSelection) {},
         ),
       ],
-    ),
-  );
+    )));
+  });
 
   pen.markdown(r'''
 ## 相关组件
@@ -211,19 +213,21 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 您在下面三种不同的文本上点点看区别：
   ''');
 
-  pen.sampleMate(Column$Mate(
-    children: [
-      Text$Mate("1.普通Text"),
-      InkWell$Mate(
-        onTap: () {},
-        child: Text$Mate("2.裹了层InkWell的Text"),
-      ),
-      InkResponse$Mate(
-        onTap: () {},
-        child: Text$Mate("3.裹了层InkResponse的Text"),
-      )
-    ],
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(Column$Mate(
+      children: [
+        Text$Mate("1.普通Text"),
+        InkWell$Mate(
+          onTap: () {},
+          child: Text$Mate("2.裹了层InkWell的Text"),
+        ),
+        InkResponse$Mate(
+          onTap: () {},
+          child: Text$Mate("3.裹了层InkResponse的Text"),
+        )
+      ],
+    )));
+  });
 
   pen.markdown(r'''
 ### ButtonBar 
@@ -232,8 +236,8 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 
   ''');
 
-  pen.sampleMate(
-    Container$Mate(
+  pen.cell((context, print) {
+    print(SampleNote(Container$Mate(
       width: 600,
       color: Colors.lime.shade50,
       child: ButtonBar$Mate(
@@ -244,8 +248,8 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
               value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
         ],
       ),
-    ),
-  );
+    )));
+  });
 }
 
 void testss(String s, Function()) {}

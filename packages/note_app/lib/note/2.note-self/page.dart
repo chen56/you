@@ -7,7 +7,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown('''
 # note 机制【实验阶段】
 
@@ -32,56 +32,83 @@ build(Pen pen, BuildContext context) {
   pen.markdown('''
 ### num参数
   ''');
-  pen.sampleMate(Container$Mate(
-    height: 100,
-    child: Text$Mate("请修改height,调节高度"),
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(Container$Mate(
+      height: 100,
+      child: Text$Mate("请修改height,调节高度"),
+    )));
+  });
 
   pen.markdown('''
 ### String参数
   ''');
 
-  pen.sampleMate(Text$Mate("我是Text.data,修改我"));
+  pen.cell((context, print) {
+    print(SampleNote(Text$Mate("我是Text.data,修改我")));
+  });
 
   pen.markdown('''
 ### Color参数
 
 TODO 暂时只能显示，还不能编辑
   ''');
-  pen.sampleMate(Container$Mate(
-    width: 200,
-    height: 100,
-    color: Colors.green.shade400,
-    clipBehavior: Clip.none,
-    child: Center$Mate(
-      child: Container$Mate(
-        width: 100,
-        height: 50,
-        color: Colors.red.shade400,
-        clipBehavior: Clip.none,
+  pen.cell((context, print) {
+    print(SampleNote(Container$Mate(
+      width: 200,
+      height: 100,
+      color: Colors.green.shade400,
+      clipBehavior: Clip.none,
+      child: Center$Mate(
+        child: Container$Mate(
+          width: 100,
+          height: 50,
+          color: Colors.red.shade400,
+          clipBehavior: Clip.none,
+        ),
       ),
-    ),
-  ));
+    )));
+  });
 
   pen.markdown('''
 ### bool参数
   ''');
-  pen.sampleMate(Container$Mate(
-    width: 100,
-    // height: 100,
-    color: Colors.blue.shade100,
-    child: Text$Mate("修改Text.softWrap: 自动换行", softWrap: true),
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(Container$Mate(
+      width: 100,
+      // height: 100,
+      color: Colors.blue.shade100,
+      child: Text$Mate("修改Text.softWrap: 自动换行", softWrap: true),
+    )));
+  });
 
   pen.markdown(r'''
-### 列表参数 
+### 枚举参数 
   ''');
 
-  pen.sampleMate(Row$Mate(
-    mainAxisAlignment: MainAxisAlignment.spaceAround,
-    children: [
-      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
-      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
-    ],
-  ));
+  pen.cell((context, print) {
+    print(SampleNote(Row$Mate(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
+        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+      ],
+    )));
+  });
+
+  pen.markdown(r'''
+## 其他特性
+### 用循环一次性构造一组范例
+  ''');
+
+  pen.cell((context, print) {
+    for (var mainAxisAlignment in MainAxisAlignment.values) {
+      print(SampleNote(Row$Mate(
+        mainAxisAlignment: mainAxisAlignment,
+        children: [
+          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
+          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+        ],
+      )));
+    }
+  });
 }

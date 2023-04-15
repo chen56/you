@@ -7,7 +7,7 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(Pen pen, BuildContext context) {
+build(BuildContext context, Pen pen) {
   pen.markdown(r'''
 # ButtonStyleButton
 
@@ -25,9 +25,11 @@ ButtonStyleButton 相关子类
 
   ''');
 
-  pen.sampleMate(Wrap$Mate(children: [
-    ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-  ]));
+  pen.cell((context, print) {
+    print(SampleNote(Wrap$Mate(children: [
+      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+    ])));
+  });
 
   pen.markdown(r'''
 ## 范例2 Meta 

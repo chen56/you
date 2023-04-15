@@ -154,7 +154,10 @@ option() {
 #  //   Param() => init as Param<C>,
 #  //   _ => Param.newValue(init: init),
 #  // };
-enable_experiment="--enable-experiment=records,patterns"
+
+# after Flutter 3.10.0-1.1.pre , records、patterns is now enabled by default;
+#enable_experiment="--enable-experiment=records,patterns"
+enable_experiment=""
 /build?() {
   /build?shortHelp() { cat <<<"生产build"; }
   /build() {
