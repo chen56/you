@@ -105,7 +105,7 @@ class LayoutLog extends StatelessWidget {
   final Widget child;
   final String title;
 
-  const LayoutLog({super.key, this.title = "LayoutLog", this.child = const Text("LayoutLog")});
+  const LayoutLog(this.title, {super.key, this.child = const Text("LayoutLog")});
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

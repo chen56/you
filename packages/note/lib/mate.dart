@@ -142,7 +142,6 @@ abstract class Param extends ChangeNotifier {
   }
 }
 
-// dart3 switch patterns : use idea, click class name can not navigation to source
 Param _toParam<T>({
   required BuilderArg<T> builderArg,
   required Param parent,
@@ -375,7 +374,7 @@ class ObjectParam extends Param {
   }
 
   BuilderArg<E> get<E>(String name) {
-    assert(_params.containsKey(name), "$name should be exsits");
+    assert(_params.containsKey(name), "$name should be exists");
     return _params[name]!.builderArg as BuilderArg<E>;
   }
 
@@ -462,7 +461,7 @@ class BuilderArg<T> {
 
   get isObject => param.isObject;
 
-  Param toParam({required Param parent, required Editors editors}) {
+  Param toParam({required ObjectParam parent, required Editors editors}) {
     return _toParam(
       builderArg: this,
       parent: parent,
@@ -482,18 +481,22 @@ class BuilderArg<T> {
 }
 
 mixin Mate {
+  // WARN: [Mate]'s fields use for code gen, so careful to change name.
   final Map<String, BuilderArg> _mateParams = {};
   late final Object Function(ObjectParam param) mateBuilder;
   late final String mateBuilderName;
   late final String matePackageUrl;
-
+  // The purpose of the cache variable is to ensure that to Root Param is only called once,
+  // because multiple calls will cause BuildArg.param to initialize multiple times
+  // and report an error
+  ObjectParam? _cache;
   BuilderArg<V> mateUse<V>(
     String name,
     V init, {
     required bool isNamed,
     dynamic defaultValue,
   }) {
-    var param = BuilderArg(
+    var variable = BuilderArg(
       name: name,
       init: init,
       isFromUse: true,
@@ -501,8 +504,8 @@ mixin Mate {
       defaultValue: defaultValue,
     );
 
-    _mateParams[name] = param;
-    return param;
+    _mateParams[name] = variable;
+    return variable;
   }
 
   BuilderArg<C> mateGet<C>(String name) {
@@ -510,7 +513,7 @@ mixin Mate {
   }
 
   ObjectParam toRootParam({required Editors editors}) {
-    return ObjectParam.rootFromMate(this, editors: editors);
+    return _cache ??= ObjectParam.rootFromMate(this, editors: editors);
   }
 }
 
@@ -637,6 +640,7 @@ class Editors {
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
 
+    // todo 这些function类型的等到范例模版好了后要清理掉 github:#61
     if (utils.isType<T, void Function(bool)>() || param.init is void Function(bool)) {
       var ex = code.Method((b) => b
         ..name = ''

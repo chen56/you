@@ -6,8 +6,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 ## 范例1 普通文本 
 
 print(WidgetInspectorService.instance.getRootWidgetSummaryTree("groupName"));
@@ -19,7 +19,7 @@ print(WidgetsBinding.instance.renderViewElement?.toDiagnosticsNode().toStringDee
 
   ''');
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## 范例1 普通文本 
 
   ''');

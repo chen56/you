@@ -7,18 +7,12 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 156, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 196, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 194, end: 197, statementCount: 0),
-
-        /// (pen.markdown(r''' # Cheat shee)
-        CodeBlock(offset: 197, end: 381, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 381, end: 382, statementCount: 0)
+        /// (print.markdown(r''' # Cheat sh)
+        CodeBlock(offset: 196, end: 386, statementCount: 1)
       ],
-      tail: CodeBlock(offset: 383, end: 384, statementCount: 0),
+      tail: CodeBlock(offset: 386, end: 388, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAiQ2hlYXQgc2hlZXQiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4pIHsKICBwZW4ubWFya2Rvd24ocicnJwojIENoZWF0IHNoZWV0Cgp3aWtpcGVkaWEg5a6a5LmJ77yaCgo+ICAqKvCfmqtUaXA6KioKPiBDaGVhdCBzaGVldDogQSBjaGVhdCBzaGVldCAoYWxzbyBjaGVhdHNoZWV0KSBvciBjcmliIHNoZWV0IGlzIGEgY29uY2lzZSBzZXQgb2Ygbm90ZXMgdXNlZCBmb3IgcXVpY2sgcmVmZXJlbmNlLi4KCiAgJycnKTsKfQo="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAiQ2hlYXQgc2hlZXQiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBDaGVhdCBzaGVldAoKd2lraXBlZGlhIOWumuS5ie+8mgoKPiAgKirwn5qrVGlwOioqCj4gQ2hlYXQgc2hlZXQ6IEEgY2hlYXQgc2hlZXQgKGFsc28gY2hlYXRzaGVldCkgb3IgY3JpYiBzaGVldCBpcyBhIGNvbmNpc2Ugc2V0IG9mIG5vdGVzIHVzZWQgZm9yIHF1aWNrIHJlZmVyZW5jZS4uCgogICcnJyk7Cn0K"""),
 );

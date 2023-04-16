@@ -6,8 +6,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 ## flutter Note
 
 flutter 默认是无法中UI文本的，相应的也无法进行页面搜索。

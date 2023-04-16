@@ -6,22 +6,22 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 ## 范例1 普通文本 
 
 Text.new()
 
   ''');
 
-  // pen.sampleFile(const NormalTextSample());
+  // print.sampleFile(const NormalTextSample());
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## 范例1 富文本 
 
 Text.rich()
 
   ''');
 
-  // pen.sampleFile(const RichTextSample());
+  // print.sampleFile(const RichTextSample());
 }

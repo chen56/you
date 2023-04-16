@@ -6,8 +6,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 ## 范例1 普通文本 
 
 什么是状态管理？在Flutter UI中，
@@ -43,7 +43,7 @@ State
 
   ''');
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## InheritedWidget有点麻烦 
 
 多个状态管理，需要aspect，或每个状态一个nheritedWidget

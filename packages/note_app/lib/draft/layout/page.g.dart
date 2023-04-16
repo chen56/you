@@ -7,18 +7,12 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 152, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 192, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 190, end: 193, statementCount: 0),
-
-        /// (pen.markdown(r'''  # 布局  ## 约束)
-        CodeBlock(offset: 193, end: 528, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 528, end: 529, statementCount: 0)
+        /// (print.markdown(r'''  # 布局  ## )
+        CodeBlock(offset: 192, end: 533, statementCount: 1)
       ],
-      tail: CodeBlock(offset: 530, end: 531, statementCount: 0),
+      tail: CodeBlock(offset: 533, end: 535, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJsYXlvdXTluIPlsYAiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4pIHsKICBwZW4ubWFya2Rvd24ocicnJwoKIyDluIPlsYAKCiMjIOe6puadnwoKTGF5b3V0QnVpbGRlcgoKIyMg5by55oCn5biD5bGACgotIEZsZXggPGh0dHBzOi8vYXBpLmZsdXR0ZXItaW8uY24vZmx1dHRlci93aWRnZXRzL0ZsZXgtY2xhc3MuaHRtbD4KICAtIFJvdwogIC0gQ29sdW1uCgojIyDluIPlsYDmlYXpmpzlpITnkIbvvJpJbnRyaW5zaWNIZWlnaHQKUm93KAogICAgICAgIG1haW5BeGlzU2l6ZTogTWFpbkF4aXNTaXplLm1pbiwKICAgICAgICBjaGlsZHJlbjogWwogICAgICAgICAgSW50cmluc2ljSGVpZ2h0KAogICAgICAgICAgICBjaGlsZDogbmF2aWdhdGlvblJhaWwsCiAgICAgICAgICApCiAgICAgICAgXSwKICAgICAgKQoKICAnJycpOwp9Cg=="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJsYXlvdXTluIPlsYAiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKCiMg5biD5bGACgojIyDnuqbmnZ8KCkxheW91dEJ1aWxkZXIKCiMjIOW8ueaAp+W4g+WxgAoKLSBGbGV4IDxodHRwczovL2FwaS5mbHV0dGVyLWlvLmNuL2ZsdXR0ZXIvd2lkZ2V0cy9GbGV4LWNsYXNzLmh0bWw+CiAgLSBSb3cKICAtIENvbHVtbgoKIyMg5biD5bGA5pWF6Zqc5aSE55CG77yaSW50cmluc2ljSGVpZ2h0ClJvdygKICAgICAgICBtYWluQXhpc1NpemU6IE1haW5BeGlzU2l6ZS5taW4sCiAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgIEludHJpbnNpY0hlaWdodCgKICAgICAgICAgICAgY2hpbGQ6IG5hdmlnYXRpb25SYWlsLAogICAgICAgICAgKQogICAgICAgIF0sCiAgICAgICkKCiAgJycnKTsKfQo="""),
 );

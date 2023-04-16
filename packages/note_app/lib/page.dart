@@ -7,11 +7,11 @@ import 'package:note_app/note_app.dart';
 PageMeta page = PageMeta(
   shortTitle: "home",
   builder: build,
-  layout: Layouts.defaultLayout(isShowCellCode: false),
+  layout: Layouts.defaultLayout(defaultCodeExpand: false),
 );
 
-build(BuildContext context, Pen pen) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 # home 
 
 本页面应该是不暴露的 ,但现在并未做任何限制，通过 / 可以看到

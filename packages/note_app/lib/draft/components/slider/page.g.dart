@@ -7,24 +7,12 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 153, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 193, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 191, end: 194, statementCount: 0),
-
-        /// (pen.markdown(r''' # 进度条    ## )
-        CodeBlock(offset: 194, end: 254, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 254, end: 258, statementCount: 0),
-
-        /// (pen.markdown(r''' ## 范例1 富文本  )
-        CodeBlock(offset: 258, end: 309, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 309, end: 310, statementCount: 0)
+        /// (print.markdown(r''' # 进度条    #, print.markdown(r''' ## 范例1 富文本)
+        CodeBlock(offset: 193, end: 316, statementCount: 2)
       ],
-      tail: CodeBlock(offset: 311, end: 312, statementCount: 0),
+      tail: CodeBlock(offset: 316, end: 318, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJTbGlkZXLov5vluqbmnaEiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4pIHsKICBwZW4ubWFya2Rvd24ocicnJwojIOi/m+W6puadoSAgCgojIyDojIPkvosxIOaZrumAmuaWh+acrCAKClRleHQubmV3KCkKCiAgJycnKTsKCiAgcGVuLm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDlr4zmlofmnKwgCgpUZXh0LnJpY2goKQoKICAnJycpOwp9Cg=="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJTbGlkZXLov5vluqbmnaEiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyDov5vluqbmnaEgIAoKIyMg6IyD5L6LMSDmma7pgJrmlofmnKwgCgpUZXh0Lm5ldygpCgogICcnJyk7CgogIHByaW50Lm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDlr4zmlofmnKwgCgpUZXh0LnJpY2goKQoKICAnJycpOwp9Cg=="""),
 );

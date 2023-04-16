@@ -8,12 +8,12 @@ import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
 /// 分割块，在cell间分割留白
-const Widget _cellSplitBlock = SizedBox(height: 10);
+const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
-  final bool isShowCellCode;
+  final bool defaultCodeExpand;
   final Editors editors;
 
   PageScreen({
@@ -21,7 +21,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
     this.tree,
     required this.current,
     required this.editors,
-    this.isShowCellCode = false,
+    this.defaultCodeExpand = false,
   });
 
   @override
@@ -52,38 +52,21 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     });
   }
 
-  ({List<
-      Widget> cells, Widget header, Widget tail, Widget buildStartBar, Widget buildEndBar}) buildNote(
-      BuildContext context) {
-    Pen pen = Pen.build(context, widget.current, editors: widget.editors);
+  ({List<Widget> cells, Widget header, Widget tail}) buildNote(BuildContext context) {
+    _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
+          cell,
+          outline: outline,
+          editors: widget.editors,
+        );
 
-    bar(String code) {
-      return Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-        const Text("<>"),
-        Expanded(child: Container(
-          height: 20,
-          color: Colors.blue.shade100,
-          child: Text(code),))
-      ],);
-    }
-
+    Pen pen = Pen.build(context, widget.current,
+        editors: widget.editors, defaultCodeExpand: widget.defaultCodeExpand);
     return (
-    cells:pen.cells.where((e) => !e.isEmptyCode)
-        .map((cell) => _newCellView(cell))
-        .toList(),
-    header: _newCellView(pen.path.header),
-    buildStartBar: bar("void build(context,pen){"),
-    tail: _newCellView(pen.path.tail),
-    buildEndBar: bar("} // end build(context,pen)"),
-
+      header: newCellView(pen.header),
+      cells: pen.cells.map((cell) => newCellView(cell)).toList(),
+      tail: newCellView(pen.tail),
     );
   }
-
-  _NoteCellView _newCellView(BaseNoteCell cell) =>
-      _NoteCellView(
-        cell, outline: outline, editors: widget.editors, isShowCellCode: widget.isShowCellCode,);
 
   @override
   Widget build(BuildContext context) {
@@ -91,12 +74,11 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(
-        mainContentViewController: controllerV, outline: outline);
+    var outlineView = _OutlineView(mainContentViewController: controllerV, outline: outline);
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
-    // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太熟悉：
+    // 暂时用Scrollbar试试，但不知其所以然，还是对其布局机制不太懂啊：
     // var contentListView = ListView(
     //   scrollDirection: Axis.vertical,
     //   shrinkWrap: true,
@@ -117,11 +99,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       child: ListBody(
         children: [
           noteResult.header,
-          noteResult.buildStartBar,
-          _cellSplitBlock,
           ...noteResult.cells,
-          noteResult.buildEndBar,
-          _cellSplitBlock,
           noteResult.tail,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
@@ -163,7 +141,8 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 class _NoteTreeView extends StatefulWidget {
   final Path root;
 
-  _NoteTreeView(this.root, {
+  _NoteTreeView(
+    this.root, {
     Key? key,
   }) : super(key: key) {
     // 当前文档较少，先都展开
@@ -188,8 +167,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       String iconExtend = node.isLeaf
           ? "     "
           : node.extend
-          ? "▽  "
-          : "▷︎  ";
+              ? "▽  "
+              : "▷︎  ";
       String icon = "🗓";
       // 📁📂📄🗓📜▸▾▹▿ ▶︎▷▼▽►
       // title 被Flexible包裹后，文本太长会自动换行
@@ -409,7 +388,7 @@ class _ParamAndCodeView extends StatelessWidget {
     var paramView = Column(
       children: [
         ...rootParam
-        // hide null value
+            // hide null value
             .flat(test: (param) => param.isShow)
             .map(paramRow)
       ],
@@ -450,22 +429,23 @@ class _ParamAndCodeView extends StatelessWidget {
   }
 }
 
+///
+/// code | codeView
+/// bar  | -------------------
+/// view | contentView
 class _NoteCellView extends StatelessWidget {
-  final bool isShowCellCode;
-
-  final BaseNoteCell cell;
+  final NoteCell cell;
   final Outline outline;
   final Editors editors;
-
-  _NoteCellView(this.cell, {
+  _NoteCellView(
+    this.cell, {
     // ignore: unused_element
     super.key,
     required this.outline,
     required this.editors,
-    required this.isShowCellCode,
   });
 
-  Widget buildContent(BuildContext context, BaseNoteContent e) {
+  Widget contentToWidget(BuildContext context, BaseNoteContent e) {
     if (e is MarkdownNote) {
       return MarkdownContent(outline: outline, content: e.content);
     }
@@ -491,7 +471,7 @@ class _NoteCellView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var codeView = HighlightView(
+    var codeHighlightView = HighlightView(
       // The original code to be highlighted
       cell.code,
 
@@ -504,44 +484,132 @@ class _NoteCellView extends StatelessWidget {
       theme: atelierForestLightTheme,
 
       // Specify padding
-      padding: const EdgeInsets.all(6),
+      padding: const EdgeInsets.all(0),
 
       // Specify text style
     );
 
-    // We use Padding to avoid complex nested Columns/Rows:
-    // code | codeView
-    // bar  | -------------------
-    // view | contentView
-    const double leftOfBar = 20;
+    var cellView = ListenableBuilder(
+      listenable: cell,
+      builder: (context, child) {
+        Iterable<Widget> contentWidgets =
+            cell.build(context).map((e) => contentToWidget(context, e));
+        // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
+        // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
+        resizeBuilder(BuildContext context, Size size, Widget? child) {
+          // if (size.width < 20 || size.height < 20) {
+          //   size = Size(20, 20);
+          // }
 
-    //const Icon(size: leftOfBar, Icons.code),
-    var leftBar = const Column(children: [Text("<>")],);
-
-    var lisenCellParamChange = ListenableBuilder(listenable: cell.param, builder: (context, child) {
-      cell.build(context);
-      return ListenableBuilder(listenable: cell, builder: (context, child) {
-        Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e));
-
-        return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          if (isShowCellCode)
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                leftBar,
-                Expanded(child: codeView),
-              ],
+          var barText = cell.isCodeEmpty
+              ? "  "
+              : cell.expand
+                  ? "${cell.singleCharName}▽"
+                  : "${cell.singleCharName}▷";
+          var leftBar = Material(
+            child: InkWell(
+              onTap: () {
+                cell.expand = !cell.expand;
+              },
+              child: Container(
+                height: size.height,
+                alignment: Alignment.topCenter,
+                child: Tooltip(
+                  message: '${cell.name}，序号可能不连续，因为会隐藏空cell',
+                  child: Text(barText),
+                ),
+              ),
             ),
-          ...contentWidgets.map((e) =>
-              Container(
-                padding: const EdgeInsets.only(left: leftOfBar),
-                child: e,
-              )),
-          _cellSplitBlock,
-        ]);
-      },);
-    });
+          );
 
-    return lisenCellParamChange;
+          // codeVeiw默认很窄，需扩展到占满所有宽度
+          var codeViewFillWidth = LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
+            },
+          );
+
+          var cellFillSize = Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              leftBar,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    if (cell.isCodeNotEmpty && cell.expand) codeViewFillWidth,
+                    ...contentWidgets,
+                    _cellSplitBlock,
+                  ],
+                ),
+              ),
+            ],
+          );
+          return cellFillSize;
+        }
+
+        // return resizeBuilder(context, Size(621, 300), null);
+        return GetSizeBuilder(builder: resizeBuilder);
+      },
+    );
+    return cell.contents.isEmpty && cell.isCodeEmpty ? Container() : cellView;
+  }
+}
+
+class GetSizeBuilder extends StatelessWidget {
+  final ValueNotifier<Size> size = ValueNotifier(const Size(0, 0));
+  final ValueWidgetBuilder<Size> builder;
+  final Widget? child;
+  GetSizeBuilder({
+    super.key,
+    required this.builder,
+    this.child,
+  }) {}
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      var box = context.findRenderObject() as RenderBox;
+      if (box.hasSize) {
+        size.value = (context.findRenderObject() as RenderBox).size;
+      }
+    });
+    return ValueListenableBuilder<Size>(
+      valueListenable: size,
+      builder: builder,
+      child: child,
+    );
+  }
+}
+
+class SizeProvider extends StatefulWidget {
+  final Widget child;
+  final Function(Size) onChildSize;
+
+  const SizeProvider({Key? key, required this.onChildSize, required this.child}) : super(key: key);
+  @override
+  SizeProviderState createState() => SizeProviderState();
+}
+
+class SizeProviderState extends State<SizeProvider> {
+  @override
+  void initState() {
+    super.initState();
+    _onResize();
+  }
+
+  void _onResize() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      var box = context.findRenderObject() as RenderBox;
+      if (box.hasSize) {
+        widget.onChildSize(box.size);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // _onResize();
+    return widget.child;
   }
 }
