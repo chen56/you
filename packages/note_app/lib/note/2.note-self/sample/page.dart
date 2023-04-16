@@ -108,8 +108,10 @@ TODO 暂时只能显示，还不能编辑
     print(SampleNote(Row$Mate(
       mainAxisAlignment: mainAxisAlignment,
       children: [
-        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
-        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+        ElevatedButton$Mate(
+            onPressed: () {}, child: Text$Mate("${mainAxisAlignment.name}:Button1")),
+        ElevatedButton$Mate(
+            onPressed: () {}, child: Text$Mate("${mainAxisAlignment.name}:Button2")),
       ],
     )));
   }
