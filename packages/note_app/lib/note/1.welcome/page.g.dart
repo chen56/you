@@ -9,7 +9,7 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 294, statementCount: 0),
       body: [
-        /// (print.markdown(r''' # flutter , print.cell((context, print) {p, print.markdown(r''' 如果只是实验性的摆弄, ..., print.cell((context, print) {p, print.markdown(r'''  组件组合是不是很棒)
+        /// (print.markdown(r''' # flutter , print.nextCell___________________________((context, print) {p, print.markdown(r''' 如果只是实验性的摆弄, ..., print.nextCell___________________________((context, print) {p, print.markdown(r'''  组件组合是不是很棒)
         CodeBlock(offset: 294, end: 5885, statementCount: 7)
       ],
       tail: CodeBlock(offset: 5885, end: 5887, statementCount: 0),

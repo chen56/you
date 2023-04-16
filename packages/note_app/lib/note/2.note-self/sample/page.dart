@@ -26,89 +26,91 @@ build(BuildContext context, Pen print) {
 
 本note中的UI范例，支持参数调节，可快速展示实验。
 
-请您点击开下面范例小箭头，修改Container.width，观察范例展示及代码的变化：
-  ''');
-
-  print.markdown('''
 ### num参数
-  ''');
-  print.cell((context, print) {
-    print(SampleNote(Container$Mate(
-      height: 100,
-      child: Text$Mate("请修改height,调节高度"),
-    )));
-  });
 
+请您点击开下面范例小箭头，修改Container.height，观察范例展示及代码的变化：
+  ''');
+
+  print.nextCell___________________________();
+  print(SampleNote(Container$Mate(
+    height: 100,
+    child: Text$Mate("请修改height,调节高度"),
+  )));
+  print(Container(
+    height: 100,
+    child: Text$Mate("请修改height,调节高度"),
+  ));
+
+  print.nextCell___________________________();
   print.markdown('''
 ### String参数
   ''');
 
-  print.cell((context, print) {
-    print(SampleNote(Text$Mate("我是Text.data,修改我")));
-  });
+  print.nextCell___________________________();
+  print(SampleNote(Text$Mate("我是Text.data,修改我")));
 
   print.markdown('''
 ### Color参数
 
 TODO 暂时只能显示，还不能编辑
   ''');
-  print.cell((context, print) {
-    print(SampleNote(Container$Mate(
-      width: 200,
-      height: 100,
-      color: Colors.green.shade400,
-      clipBehavior: Clip.none,
-      child: Center$Mate(
-        child: Container$Mate(
-          width: 100,
-          height: 50,
-          color: Colors.red.shade400,
-          clipBehavior: Clip.none,
-        ),
+  print.nextCell___________________________();
+  print(SampleNote(Container$Mate(
+    width: 200,
+    height: 100,
+    color: Colors.green.shade400,
+    clipBehavior: Clip.none,
+    child: Center$Mate(
+      child: Container$Mate(
+        width: 100,
+        height: 50,
+        color: Colors.red.shade400,
+        clipBehavior: Clip.none,
       ),
-    )));
-  });
+    ),
+  )));
 
+  print.nextCell___________________________();
   print.markdown('''
 ### bool参数
   ''');
-  print.cell((context, print) {
-    print(SampleNote(Container$Mate(
-      width: 100,
-      // height: 100,
-      color: Colors.blue.shade100,
-      child: Text$Mate("修改Text.softWrap: 自动换行", softWrap: true),
-    )));
-  });
 
+  print.nextCell___________________________();
+  print(SampleNote(Container$Mate(
+    width: 100,
+    // height: 100,
+    color: Colors.blue.shade100,
+    child: Text$Mate("修改Text.softWrap: 自动换行", softWrap: true),
+  )));
+
+  print.nextCell___________________________();
   print.markdown(r'''
 ### 枚举参数 
   ''');
 
-  print.cell((context, print) {
-    print(SampleNote(Row$Mate(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
-        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
-      ],
-    )));
-  });
+  print.nextCell___________________________();
+  print(SampleNote(Row$Mate(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
+      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+    ],
+  )));
 
+  print.nextCell___________________________();
   print.markdown(r'''
 ## 其他特性
 ### 用循环一次性构造一组范例
   ''');
 
-  print.cell((context, print) {
-    for (var mainAxisAlignment in MainAxisAlignment.values) {
-      print(SampleNote(Row$Mate(
-        mainAxisAlignment: mainAxisAlignment,
-        children: [
-          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
-          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
-        ],
-      )));
-    }
-  });
+  print.nextCell___________________________();
+  for (var mainAxisAlignment in MainAxisAlignment.values) {
+    print(SampleNote(Row$Mate(
+      mainAxisAlignment: mainAxisAlignment,
+      children: [
+        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
+        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+      ],
+    )));
+  }
 }

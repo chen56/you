@@ -30,7 +30,7 @@ build(BuildContext context, Pen print) {
 
 如果用flutter写笔记，那笔记中的范例，不就可以立刻展示出来了吗，look：
 ''');
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: <Widget>[
         ...List.generate(3, (index) {
@@ -43,13 +43,24 @@ build(BuildContext context, Pen print) {
       ],
     )));
   });
+  print(Row$Mate(
+    children: <Widget>[
+      ...List.generate(3, (index) {
+        return Expanded$Mate(
+            child: Container$Mate(
+          height: 100,
+          color: Colors.primaries[index % Colors.primaries.length],
+        ));
+      })
+    ],
+  ));
 
   print.markdown(r'''
 如果只是实验性的摆弄几下长宽高或者对齐方式的枚举参数，你还需要等待编译，那等试玩几个枚举，茶都凉了。
 
 所以，我觉得应该像下面一样，你点下mainAxisAlignment换个枚举值看看效果：
 ''');
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
@@ -73,7 +84,7 @@ build(BuildContext context, Pen print) {
 比如想让一个普通组件拥有Material3设计风格，套个马甲[InkResponse]就行了，look:
 ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Column$Mate(
       children: [
         Text$Mate("1.普通Text,点我"),

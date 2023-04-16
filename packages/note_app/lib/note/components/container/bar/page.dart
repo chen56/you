@@ -18,7 +18,7 @@ build(BuildContext context, Pen print) {
 > ref: <https://api.flutter.dev/flutter/material/AppBar-class.html>
 ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(AppBar$Mate(
       title: Text$Mate('AppBar Title'),
       leading: DrawerButton$Mate(),
@@ -45,7 +45,7 @@ build(BuildContext context, Pen print) {
 
 ''');
   //
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(BottomAppBar$Mate(
       // shape: CircularNotchedRectangle(),
       child: Row$Mate(
@@ -89,7 +89,7 @@ build(BuildContext context, Pen print) {
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Column$Mate(
       children: [
         Container$Mate(
@@ -112,7 +112,7 @@ build(BuildContext context, Pen print) {
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     var currentPageIndex = 0;
 
     flutter.Widget buildNavigationBar(context, setState) {
@@ -184,7 +184,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ],
   );
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         Container$Mate(
@@ -219,7 +219,7 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(DefaultTabController$Mate(
       length: 3,
       child: TabBar$Mate(
@@ -247,7 +247,7 @@ TabBar不加TabView长这样：
 
 ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(DefaultTabController$Mate(
       initialIndex: 1,
       length: 3,
@@ -305,7 +305,7 @@ DefaultTabController
   
        """);
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     onPressed() {
       flutter.ScaffoldMessenger.of(context).showSnackBar(
         flutter.SnackBar(
@@ -346,7 +346,7 @@ DefaultTabController
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Container$Mate(
       width: 600,
       color: flutter.Colors.lime.shade50,
@@ -368,7 +368,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Container$Mate(
       width: 300,
       child: Column$Mate(
@@ -422,7 +422,7 @@ MenuBar相关组件：
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     var click = () {
       flutter.showAboutDialog(
         context: context,

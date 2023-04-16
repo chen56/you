@@ -25,7 +25,7 @@ ButtonStyleButton 相关子类
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Wrap$Mate(children: [
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
     ])));

@@ -23,7 +23,7 @@ the Material Design button types and how they should be used in designs.
 以下几种主要Button都继承自[ButtonStyleButton]
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Wrap$Mate(
       children: [
         ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
@@ -42,7 +42,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.wifi)),
@@ -58,7 +58,7 @@ the Material Design button types and how they should be used in designs.
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         FloatingActionButton$Mate(
@@ -102,7 +102,7 @@ the Material Design button types and how they should be used in designs.
     - [EndDrawerButton] A Material Design drawer icon button
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         BackButton$Mate(),
@@ -123,7 +123,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         ToggleButtons$Mate(
@@ -151,7 +151,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         SegmentedButton$Mate<String>(
@@ -213,7 +213,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 您在下面三种不同的文本上点点看区别：
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Column$Mate(
       children: [
         Text$Mate("1.普通Text"),
@@ -236,7 +236,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Container$Mate(
       width: 600,
       color: Colors.lime.shade50,

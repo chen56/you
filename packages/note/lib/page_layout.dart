@@ -430,6 +430,10 @@ class _ParamAndCodeView extends StatelessWidget {
   }
 }
 
+///
+/// code | codeView
+/// bar  | -------------------
+/// view | contentView
 class _NoteCellView extends StatelessWidget {
   final bool isShowCellCode;
 
@@ -489,19 +493,15 @@ class _NoteCellView extends StatelessWidget {
       // Specify text style
     );
 
-    // We use Padding to avoid complex nested Columns/Rows:
-    // code | codeView
-    // bar  | -------------------
-    // view | contentView
-
     var cellView = ListenableBuilder(
       listenable: cell,
       builder: (context, child) {
         Iterable<Widget> contentWidgets =
             cell.build(context).map((e) => contentToWidget(context, e));
+
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
-        return GetSizeBuilder(builder: (context, size, child) {
+        resizeBuilder(context, size, child) {
           var leftBar = Material(
             child: InkWell(
               onTap: () {
@@ -542,7 +542,10 @@ class _NoteCellView extends StatelessWidget {
             ],
           );
           return cellFillSize;
-        });
+        }
+
+        // return resizeBuilder(context, Size(621, 300), null);
+        return GetSizeBuilder(builder: resizeBuilder);
       },
     );
     return cell.contents.isEmpty && cell.isCodeEmpty ? Container() : cellView;

@@ -17,7 +17,7 @@ build(BuildContext context, Pen print) {
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(
       SampleNote(Container$Mate(
         width: 800,

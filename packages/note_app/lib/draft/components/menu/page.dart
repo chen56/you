@@ -19,7 +19,7 @@ build(BuildContext context, Pen print) {
 
   ''');
 
-  print.cell((context, print) {
+  print.nextCell___________________________((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         CheckboxMenuButton$Mate(

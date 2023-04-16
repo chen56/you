@@ -9,7 +9,7 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 241, statementCount: 0),
       body: [
-        /// (print.markdown(r''' # 菜单Menu  , print.markdown(r'''  ## Checkb, print.cell((context, print) {p)
+        /// (print.markdown(r''' # 菜单Menu  , print.markdown(r'''  ## Checkb, print.nextCell___________________________((context, print) {p)
         CodeBlock(offset: 241, end: 571, statementCount: 3)
       ],
       tail: CodeBlock(offset: 571, end: 573, statementCount: 0),
