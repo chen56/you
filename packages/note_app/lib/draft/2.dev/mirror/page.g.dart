@@ -9,14 +9,8 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 205, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 205, end: 208, statementCount: 0),
-
         /// (pen.markdown(r'''    ## flutte)
-        CodeBlock(offset: 208, end: 3036, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 3036, end: 3037, statementCount: 0)
+        CodeBlock(offset: 205, end: 3037, statementCount: 1)
       ],
       tail: CodeBlock(offset: 3037, end: 3039, statementCount: 0),
       code:

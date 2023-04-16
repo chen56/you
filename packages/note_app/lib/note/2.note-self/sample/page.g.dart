@@ -9,86 +9,8 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 256, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 256, end: 259, statementCount: 0),
-
-        /// (pen.markdown(''' # 参数化范例  ## 可)
-        CodeBlock(offset: 259, end: 708, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 708, end: 712, statementCount: 0),
-
-        /// (pen.markdown(''' ### num参数   ')
-        CodeBlock(offset: 712, end: 746, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 746, end: 749, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 749, end: 889, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 889, end: 893, statementCount: 0),
-
-        /// (pen.markdown(''' ### String参数 )
-        CodeBlock(offset: 893, end: 930, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 930, end: 934, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 934, end: 1020, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1020, end: 1024, statementCount: 0),
-
-        /// (pen.markdown(''' ### Color参数  )
-        CodeBlock(offset: 1024, end: 1079, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1079, end: 1082, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 1082, end: 1459, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1459, end: 1463, statementCount: 0),
-
-        /// (pen.markdown(''' ### bool参数   )
-        CodeBlock(offset: 1463, end: 1498, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1498, end: 1501, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 1501, end: 1720, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1720, end: 1724, statementCount: 0),
-
-        /// (pen.markdown(r''' ### 枚举参数    )
-        CodeBlock(offset: 1724, end: 1759, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1759, end: 1763, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 1763, end: 2071, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 2071, end: 2075, statementCount: 0),
-
-        /// (pen.markdown(r''' ## 其他特性 ### )
-        CodeBlock(offset: 2075, end: 2125, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 2125, end: 2129, statementCount: 0),
-
-        /// (pen.cell((context, print) {for)
-        CodeBlock(offset: 2129, end: 2507, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 2507, end: 2508, statementCount: 0)
+        /// (pen.markdown(''' # 参数化范例  ## 可, pen.markdown(''' ### num参数   ', pen.cell((context, print) {pri, ..., pen.markdown(r''' ## 其他特性 ### , pen.cell((context, print) {for)
+        CodeBlock(offset: 256, end: 2508, statementCount: 13)
       ],
       tail: CodeBlock(offset: 2508, end: 2510, statementCount: 0),
       code:

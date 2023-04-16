@@ -138,8 +138,9 @@ class _Page {
         //上方代码块
         body.add((offset: offset, end: st.offset, cellStatements: cellStatements));
         cellStatements = [];
+
         //cell/markdown方法明确的代码块
-        body.add((offset: st.offset, end: st.end, cellStatements: [st]));
+        // body.add((offset: st.offset, end: st.end, cellStatements: [st]));
         offset = st.end;
       } else {
         cellStatements.add(st);
@@ -170,22 +171,39 @@ class _Page {
     );
   }
 
+  /// cell split statement :
+  /// ```dart
+  ///    print = print.nextCell___________________________;
+  /// ```
   bool isCellStatement(Statement statement) {
     if (statement is! ExpressionStatement) {
       return false;
     }
     var expression = statement.expression;
-    if (expression is! MethodInvocation) {
+
+    if (expression is! AssignmentExpression) {
       return false;
     }
-    String? typeName = expression.target?.staticType!.getDisplayString(withNullability: true);
-    if (typeName != "Pen") {
+    if (expression.writeElement?.name != "print") {
       return false;
     }
-    var cellMethods = ["markdown", "md", "cell"];
-    if (!cellMethods.contains(expression.methodName.name)) {
+
+    if (expression.rightHandSide.beginToken.lexeme != "print") {
       return false;
     }
+
+    if (expression.rightHandSide.endToken.lexeme != "nextCell___________________________") {
+      return false;
+    }
+    //
+    // String? typeName = expression.target?.staticType!.getDisplayString(withNullability: true);
+    // if (typeName != "Pen" || typeName != "MainCell") {
+    //   return false;
+    // }
+    // var cellMethods = ["markdown", "md", "cell", "nextCell___________________________"];
+    // if (!cellMethods.contains(expression.methodName.name)) {
+    //   return false;
+    // }
     return true;
   }
 

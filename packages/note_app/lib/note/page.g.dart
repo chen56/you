@@ -9,14 +9,8 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 234, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 234, end: 237, statementCount: 0),
-
         /// (pen.markdown(r''' # note   本页面)
-        CodeBlock(offset: 237, end: 309, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 309, end: 310, statementCount: 0)
+        CodeBlock(offset: 234, end: 310, statementCount: 1)
       ],
       tail: CodeBlock(offset: 310, end: 312, statementCount: 0),
       code:

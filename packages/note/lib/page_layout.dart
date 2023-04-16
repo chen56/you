@@ -72,6 +72,8 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint("ddbug build");
+
     var noteResult = buildNote(context);
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
@@ -516,7 +518,9 @@ class _NoteCellView extends StatelessWidget {
             child: Container(
               height: size.height,
               alignment: Alignment.topCenter,
-              child: cell.expand ? const Icon(Icons.code) : const Icon(Icons.code_off),
+              child: cell.expand
+                  ? const Icon(Icons.keyboard_arrow_down)
+                  : const Icon(Icons.keyboard_arrow_right),
             ),
           ));
 

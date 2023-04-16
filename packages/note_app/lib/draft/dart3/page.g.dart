@@ -9,14 +9,8 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 208, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 208, end: 211, statementCount: 0),
-
         /// (pen.markdown(r''' ## dart 3  暂)
-        CodeBlock(offset: 211, end: 353, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 353, end: 354, statementCount: 0)
+        CodeBlock(offset: 208, end: 354, statementCount: 1)
       ],
       tail: CodeBlock(offset: 354, end: 356, statementCount: 0),
       code:

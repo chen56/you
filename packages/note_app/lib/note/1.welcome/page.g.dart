@@ -9,50 +9,8 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 308, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 308, end: 311, statementCount: 0),
-
-        /// (pen.markdown(r''' # flutter no)
-        CodeBlock(offset: 311, end: 841, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 841, end: 844, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 844, end: 1179, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1179, end: 1183, statementCount: 0),
-
-        /// (pen.markdown(r''' 如果只是实验性的摆弄几下)
-        CodeBlock(offset: 1183, end: 1303, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1303, end: 1306, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 1306, end: 1688, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1688, end: 1692, statementCount: 0),
-
-        /// (pen.markdown(r''' 暂时不支持代码编辑，因为)
-        CodeBlock(offset: 1692, end: 1925, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 1925, end: 1929, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 1929, end: 2173, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 2173, end: 2177, statementCount: 0),
-
-        /// (pen.markdown(r'''  组件组合是不是很棒！ )
-        CodeBlock(offset: 2177, end: 5884, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 5884, end: 5885, statementCount: 0)
+        /// (pen.markdown(r''' # flutter no, pen.cell((context, print) {pri, pen.markdown(r''' 如果只是实验性的摆弄几下, ..., pen.cell((context, print) {pri, pen.markdown(r'''  组件组合是不是很棒！ )
+        CodeBlock(offset: 308, end: 5885, statementCount: 7)
       ],
       tail: CodeBlock(offset: 5885, end: 5887, statementCount: 0),
       code:

@@ -255,6 +255,7 @@ class Pen {
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
   MainCell _nextCell([CellBuilder? builder]) {
     var next = MainCell(
+      pen: this,
       index: _cellIndex++,
       path: path,
       param: ObjectParam.root(editors: editors),
@@ -557,7 +558,9 @@ class MainCell extends BaseNoteCell {
   final int index;
   final ObjectParam param;
   final CellBuilder _builder;
+  final Pen pen;
   MainCell({
+    required this.pen,
     required this.index,
     required super.path,
     required this.param,
@@ -566,6 +569,11 @@ class MainCell extends BaseNoteCell {
         super(isShowCodeDefault: true);
 
   List<BaseNoteContent> get contents => List.unmodifiable(_contents);
+
+  // ignore: non_constant_identifier_names
+  MainCell get nextCell___________________________ {
+    return pen._nextCell();
+  }
 
   void print(Object? object) {
     call(object);

@@ -9,20 +9,8 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 252, statementCount: 0),
       body: [
-        /// ()
-        CodeBlock(offset: 252, end: 255, statementCount: 0),
-
-        /// (pen.markdown(r''' # bar  ## Bu)
-        CodeBlock(offset: 255, end: 362, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 362, end: 366, statementCount: 0),
-
-        /// (pen.cell((context, print) {pri)
-        CodeBlock(offset: 366, end: 910, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 910, end: 911, statementCount: 0)
+        /// (pen.markdown(r''' # bar  ## Bu, pen.cell((context, print) {pri)
+        CodeBlock(offset: 252, end: 911, statementCount: 2)
       ],
       tail: CodeBlock(offset: 911, end: 913, statementCount: 0),
       code:
