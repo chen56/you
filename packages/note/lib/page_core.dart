@@ -228,7 +228,6 @@ class Pen {
         index: 0,
         codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.header,
         pen: this,
-        defaultExpand: false,
       );
 
   NoteCell get tail => NoteCell(
@@ -236,7 +235,6 @@ class Pen {
         index: 0,
         codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.tail,
         pen: this,
-        defaultExpand: false,
       );
 
   /// markdown 独占一个新cell
@@ -266,7 +264,6 @@ class Pen {
       index: cellIndex,
       codeBlock: NoteSource.getBodyCellBlock(path, cellIndex),
       builder: builder,
-      defaultExpand: true,
     );
     cells.add(next);
     return next;
@@ -544,14 +541,12 @@ class NoteCell extends ChangeNotifier {
   final CellBuilder? _builder;
   final Pen pen;
   bool? _expand;
-  bool defaultExpand;
   final CellType cellType;
 
   NoteCell({
     required this.codeBlock,
     required this.pen,
     required this.index,
-    this.defaultExpand = false,
     required this.cellType,
     CellBuilder? builder,
   }) : _builder = builder;
@@ -638,7 +633,12 @@ class NoteCell extends ChangeNotifier {
     if (isCodeEmpty) return false;
     if (_expand == null) {
       //markdown cell default hidden code
-      return defaultExpand ? !isMarkdownCell : false;
+      return switch (cellType) {
+        CellType.header => false,
+        CellType.tail => false,
+        CellType.body => !isMarkdownCell,
+        _ => false,
+      };
     }
     return _expand!;
   }
