@@ -10,7 +10,7 @@ import 'package:note_app/note_app.dart';
 PageMeta page = PageMeta(
   shortTitle: " Notebook机制",
   builder: build,
-  layout: Layouts.defaultLayout(isShowCellCode: true),
+  layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );
 
 build(BuildContext context, Pen print) {
@@ -78,11 +78,6 @@ notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码
   });
 
   print.nextCell___________________________();
-  print.markdown(r'''
-你应该已经发现，除了上面用[cell]函数明确指定一个cell外，[print.markdown]自己也会创建一个cell。
-''');
-
-  print.nextCell___________________________();
   print.markdown("""
   
 notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter或observablehq等的区别是，
@@ -93,7 +88,7 @@ notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter
 
 
 
-///TODO 以下还在草稿阶段，别浪费时间了
+///TODO 以下还在草稿阶段，暂时不需要阅读
 
 
 ///   - 一种是代码中用[cell]函数明确指定的cell，是可以单独运行的。（[Pen]级别的方法包括markdown()等都是cell函数）

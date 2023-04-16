@@ -30,51 +30,42 @@ build(BuildContext context, Pen print) {
 
 如果用flutter写笔记，那笔记中的范例，不就可以立刻展示出来了吗，look：
 ''');
-  print.nextCell___________________________((context, print) {
-    print(SampleNote(Row$Mate(
-      children: <Widget>[
-        ...List.generate(3, (index) {
-          return Expanded$Mate(
-              child: Container$Mate(
-            height: 100,
-            color: Colors.primaries[index % Colors.primaries.length],
-          ));
-        })
-      ],
-    )));
-  });
+
+  print.nextCell___________________________();
   print(Row$Mate(
     children: <Widget>[
       ...List.generate(3, (index) {
         return Expanded$Mate(
             child: Container$Mate(
-          height: 100,
+          height: 200,
           color: Colors.primaries[index % Colors.primaries.length],
         ));
       })
     ],
   ));
 
+  print.nextCell___________________________();
   print.markdown(r'''
 如果只是实验性的摆弄几下长宽高或者对齐方式的枚举参数，你还需要等待编译，那等试玩几个枚举，茶都凉了。
 
 所以，我觉得应该像下面一样，你点下mainAxisAlignment换个枚举值看看效果：
 ''');
-  print.nextCell___________________________((context, print) {
-    print(SampleNote(Row$Mate(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        ...List.generate(3, (index) {
-          return Container$Mate(
-            width: 100,
-            height: 100,
-            color: Colors.primaries[index + 5 % Colors.primaries.length],
-          );
-        })
-      ],
-    )));
-  });
 
+  print.nextCell___________________________();
+  print(SampleNote(Row$Mate(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: <Widget>[
+      ...List.generate(3, (index) {
+        return Container$Mate(
+          width: 100,
+          height: 100,
+          color: Colors.primaries[index + 5 % Colors.primaries.length],
+        );
+      })
+    ],
+  )));
+
+  print.nextCell___________________________();
   print.markdown(r'''
 暂时不支持代码编辑，因为要编译的，对吧，那是Dartpad的活儿，以后flutter_note的范例可能会加一个Dartpad的链接。
   
@@ -84,18 +75,18 @@ build(BuildContext context, Pen print) {
 比如想让一个普通组件拥有Material3设计风格，套个马甲[InkResponse]就行了，look:
 ''');
 
-  print.nextCell___________________________((context, print) {
-    print(SampleNote(Column$Mate(
-      children: [
-        Text$Mate("1.普通Text,点我"),
-        InkResponse$Mate(
-          onTap: () {},
-          child: Text$Mate("2.包Ink的Text,点我"),
-        ),
-      ],
-    )));
-  });
+  print.nextCell___________________________();
+  print(SampleNote(Column$Mate(
+    children: [
+      Text$Mate("1.普通Text,点我"),
+      InkResponse$Mate(
+        onTap: () {},
+        child: Text$Mate("2.包Ink的Text,点我"),
+      ),
+    ],
+  )));
 
+  print.nextCell___________________________();
   print.markdown(r'''
 
 组件组合是不是很棒！

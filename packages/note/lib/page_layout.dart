@@ -13,7 +13,7 @@ const Widget _cellSplitBlock = SizedBox(height: 18);
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
-  final bool isShowCellCode;
+  final bool defaultCodeExpand;
   final Editors editors;
 
   PageScreen({
@@ -21,7 +21,7 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
     this.tree,
     required this.current,
     required this.editors,
-    this.isShowCellCode = false,
+    this.defaultCodeExpand = false,
   });
 
   @override
@@ -53,19 +53,18 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   }
 
   ({List<Widget> cells, Widget header, Widget tail}) buildNote(BuildContext context) {
-    _NoteCellView _newCellView(NoteCell cell) => _NoteCellView(
+    _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
           editors: widget.editors,
-          isShowCellCode: widget.isShowCellCode,
         );
 
-    Pen pen = Pen.build(context, widget.current, editors: widget.editors);
-
+    Pen pen = Pen.build(context, widget.current,
+        editors: widget.editors, defaultCodeExpand: widget.defaultCodeExpand);
     return (
-      header: _newCellView(pen.header),
-      cells: pen.cells.map((cell) => _newCellView(cell)).toList(),
-      tail: _newCellView(pen.tail),
+      header: newCellView(pen.header),
+      cells: pen.cells.map((cell) => newCellView(cell)).toList(),
+      tail: newCellView(pen.tail),
     );
   }
 
@@ -435,8 +434,6 @@ class _ParamAndCodeView extends StatelessWidget {
 /// bar  | -------------------
 /// view | contentView
 class _NoteCellView extends StatelessWidget {
-  final bool isShowCellCode;
-
   final NoteCell cell;
   final Outline outline;
   final Editors editors;
@@ -446,7 +443,6 @@ class _NoteCellView extends StatelessWidget {
     super.key,
     required this.outline,
     required this.editors,
-    required this.isShowCellCode,
   });
 
   Widget contentToWidget(BuildContext context, BaseNoteContent e) {
@@ -498,10 +494,18 @@ class _NoteCellView extends StatelessWidget {
       builder: (context, child) {
         Iterable<Widget> contentWidgets =
             cell.build(context).map((e) => contentToWidget(context, e));
-
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
-        resizeBuilder(context, size, child) {
+        resizeBuilder(BuildContext context, Size size, Widget? child) {
+          // if (size.width < 20 || size.height < 20) {
+          //   size = Size(20, 20);
+          // }
+
+          var barText = cell.isCodeEmpty
+              ? "  "
+              : cell.expand
+                  ? "${cell.singleCharName}▽"
+                  : "${cell.singleCharName}▷";
           var leftBar = Material(
             child: InkWell(
               onTap: () {
@@ -512,7 +516,7 @@ class _NoteCellView extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 child: Tooltip(
                   message: '${cell.name}，序号可能不连续，因为会隐藏空cell',
-                  child: Text(cell.expand ? "▽" : "▷"),
+                  child: Text(barText),
                 ),
               ),
             ),
@@ -533,7 +537,7 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (isShowCellCode && cell.isCodeNotEmpty && cell.expand) codeViewFillWidth,
+                    if (cell.isCodeNotEmpty && cell.expand) codeViewFillWidth,
                     ...contentWidgets,
                     _cellSplitBlock,
                   ],

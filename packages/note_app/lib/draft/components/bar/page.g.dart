@@ -9,10 +9,16 @@ final noteInfo = NoteInfo(
   source: NoteSource(
       header: CodeBlock(offset: 0, end: 238, statementCount: 0),
       body: [
-        /// (print.markdown(r''' # bar  ## , print.nextCell___________________________((context, print) {p)
-        CodeBlock(offset: 238, end: 901, statementCount: 2)
+        /// (print.markdown(r''' # bar  ## )
+        CodeBlock(offset: 238, end: 354, statementCount: 1),
+
+        /// (print.nextCell________________)
+        CodeBlock(offset: 354, end: 931, statementCount: 1),
+
+        /// ()
+        CodeBlock(offset: 931, end: 932, statementCount: 0)
       ],
-      tail: CodeBlock(offset: 901, end: 903, statementCount: 0),
+      tail: CodeBlock(offset: 932, end: 934, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLlt6XlhbfmoI8iLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBiYXIKCiMjIEJ1dHRvbkJhciAKCuaMiemSrueahOW4g+WxgOWuueWZqO+8jOWPr+S7peaMieWGheWuueeahOWunumZheWuveW6puWcqOihjOaIluWIl+S5i+mXtOiwg+aVtO+8jOaCqOaKiuS4i+mdouiMg+S+i+S4reeItuWuueWZqENvbnRhaW5lci53aWR0aOiwg+Wwj+S6m+eci+eci++8mgoKICAnJycpOwoKICBwcmludC5jZWxsKChjb250ZXh0LCBwcmludCkgewogICAgcHJpbnQoCiAgICAgIFNhbXBsZU5vdGUoQ29udGFpbmVyJE1hdGUoCiAgICAgICAgd2lkdGg6IDgwMCwKICAgICAgICBjb2xvcjogQ29sb3JzLmJsdWVBY2NlbnQuc2hhZGUxMDAsCiAgICAgICAgY2hpbGQ6IEJ1dHRvbkJhciRNYXRlKAogICAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgICAgRWxldmF0ZWRCdXR0b24kTWF0ZShvblByZXNzZWQ6ICgpIHt9LCBjaGlsZDogVGV4dCRNYXRlKCJFbGV2YXRlZEJ1dHRvbiIpKSwKICAgICAgICAgICAgT3V0bGluZWRCdXR0b24kTWF0ZShvblByZXNzZWQ6ICgpIHt9LCBjaGlsZDogVGV4dCRNYXRlKCdPdXRsaW5lZEJ1dHRvbicpKSwKICAgICAgICAgICAgQ2hlY2tib3hNZW51QnV0dG9uJE1hdGUoCiAgICAgICAgICAgICAgICB2YWx1ZTogdHJ1ZSwgb25DaGFuZ2VkOiAoYm9vbD8gdmFsdWUpIHt9LCBjaGlsZDogVGV4dCRNYXRlKCdDaGVja2JveE1lbnVCdXR0b24nKSksCiAgICAgICAgICBdLAogICAgICAgICksCiAgICAgICkpLAogICAgKTsKICB9KTsKfQo="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLlt6XlhbfmoI8iLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBiYXIKCiMjIEJ1dHRvbkJhciAKCuaMiemSrueahOW4g+WxgOWuueWZqO+8jOWPr+S7peaMieWGheWuueeahOWunumZheWuveW6puWcqOihjOaIluWIl+S5i+mXtOiwg+aVtO+8jOaCqOaKiuS4i+mdouiMg+S+i+S4reeItuWuueWZqENvbnRhaW5lci53aWR0aOiwg+Wwj+S6m+eci+eci++8mgoKICAnJycpOwoKICBwcmludC5uZXh0Q2VsbF9fX19fX19fX19fX19fX19fX19fX19fX19fXygoY29udGV4dCwgcHJpbnQpIHsKICAgIHByaW50KAogICAgICBTYW1wbGVOb3RlKENvbnRhaW5lciRNYXRlKAogICAgICAgIHdpZHRoOiA4MDAsCiAgICAgICAgY29sb3I6IENvbG9ycy5ibHVlQWNjZW50LnNoYWRlMTAwLAogICAgICAgIGNoaWxkOiBCdXR0b25CYXIkTWF0ZSgKICAgICAgICAgIGNoaWxkcmVuOiBbCiAgICAgICAgICAgIEVsZXZhdGVkQnV0dG9uJE1hdGUob25QcmVzc2VkOiAoKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgiRWxldmF0ZWRCdXR0b24iKSksCiAgICAgICAgICAgIE91dGxpbmVkQnV0dG9uJE1hdGUob25QcmVzc2VkOiAoKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgnT3V0bGluZWRCdXR0b24nKSksCiAgICAgICAgICAgIENoZWNrYm94TWVudUJ1dHRvbiRNYXRlKAogICAgICAgICAgICAgICAgdmFsdWU6IHRydWUsIG9uQ2hhbmdlZDogKGJvb2w/IHZhbHVlKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgnQ2hlY2tib3hNZW51QnV0dG9uJykpLAogICAgICAgICAgXSwKICAgICAgICApLAogICAgICApKSwKICAgICk7CiAgfSk7Cn0K"""),
 );

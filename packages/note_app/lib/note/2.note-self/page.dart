@@ -10,6 +10,5 @@ build(BuildContext context, Pen print) {
   print.markdown("""
 # note项目机制
 
-
 """);
 }

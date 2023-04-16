@@ -213,9 +213,14 @@ class Pen {
   final Editors editors;
 
   final Path path;
-
+  final bool defaultCodeExpand;
   // Pen({required this.editors});
-  Pen.build(BuildContext context, this.path, {required this.editors}) {
+  Pen.build(
+    BuildContext context,
+    this.path, {
+    required this.editors,
+    required this.defaultCodeExpand,
+  }) {
     // firstCell
     _nextCell();
     if (path._meta == null) return;
@@ -240,15 +245,6 @@ class Pen {
   /// markdown 独占一个新cell
   void markdown(String content) {
     currentCell.print(MarkdownNote(content));
-  }
-
-  /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
-  /// Add a new cell, which is a code block and its generated content in the note
-  ///
-  /// 通过[builder]参数可以重建此cell
-  /// cell can be rebuilt using the [builder] arg
-  void cell(CellBuilder builder) {
-    nextCell___________________________(builder);
   }
 
   /// 新增一个自然cell
@@ -526,6 +522,11 @@ class CodeBlock {
   /// 是否为不包含任何有意义的语句的空块
 // bool get isEmpty => isExists || ;
   ///     final encodedCode = base64.encode(utf8.encode(source.code));
+  ///
+  @override
+  String toString() {
+    return "CodeBlock($offset:$end)";
+  }
 }
 
 enum CellType { header, body, tail }
@@ -571,6 +572,13 @@ class NoteCell extends ChangeNotifier {
         CellType.header => "cell[header]",
         CellType.tail => "cell[tail]",
         CellType.body => "cell[$index]",
+        _ => "error:not here",
+      };
+
+  get singleCharName => switch (cellType) {
+        CellType.header => "H",
+        CellType.tail => "T",
+        CellType.body => "$index",
         _ => "error:not here",
       };
 
@@ -631,16 +639,16 @@ class NoteCell extends ChangeNotifier {
   // show == expand
   bool get expand {
     if (isCodeEmpty) return false;
+    //markdown cell default hidden code
     if (_expand == null) {
-      //markdown cell default hidden code
       return switch (cellType) {
         CellType.header => false,
         CellType.tail => false,
-        CellType.body => !isMarkdownCell,
+        CellType.body => pen.defaultCodeExpand && !isMarkdownCell,
         _ => false,
       };
     }
-    return _expand!;
+    return _expand ?? pen.defaultCodeExpand;
   }
 
   bool get isShowCode {
