@@ -7,12 +7,12 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 259, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 245, statementCount: 0),
       body: [
-        /// (pen.markdown(r''' # IconButton, pen.cell((context, print) {pri)
-        CodeBlock(offset: 259, end: 523, statementCount: 2)
+        /// (print.markdown(r''' # IconButt, print.cell((context, print) {p)
+        CodeBlock(offset: 245, end: 513, statementCount: 2)
       ],
-      tail: CodeBlock(offset: 523, end: 525, statementCount: 0),
+      tail: CodeBlock(offset: 513, end: 515, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJJY29uQnV0dG9uIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuLCBNYWluQ2VsbCBwcmludCkgewogIHBlbi5tYXJrZG93bihyJycnCiMgSWNvbkJ1dHRvbgoK5Zu+5qCH5oyJ6ZKu44CCCgrnu6fmib/lhbPns7vvvJoKCi0gW1N0YXRlbGVzc1dpZGdldF0KICAtIFtJY29uQnV0dG9uXSAKICAnJycpOwogIHBlbi5jZWxsKChjb250ZXh0LCBwcmludCkgewogICAgcHJpbnQoU2FtcGxlTm90ZShXcmFwJE1hdGUoY2hpbGRyZW46IFsKICAgICAgLy8gSWNvbkJ1dHRvbiRNYXRlKG9uUHJlc3NlZDogKCkge30sIGNoaWxkOiBUZXh0JE1hdGUoIkVsZXZhdGVkQnV0dG9uIikpLAogICAgXSkpKTsKICB9KTsKfQo="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJJY29uQnV0dG9uIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgSWNvbkJ1dHRvbgoK5Zu+5qCH5oyJ6ZKu44CCCgrnu6fmib/lhbPns7vvvJoKCi0gW1N0YXRlbGVzc1dpZGdldF0KICAtIFtJY29uQnV0dG9uXSAKICAnJycpOwogIHByaW50LmNlbGwoKGNvbnRleHQsIHByaW50KSB7CiAgICBwcmludChTYW1wbGVOb3RlKFdyYXAkTWF0ZShjaGlsZHJlbjogWwogICAgICAvLyBJY29uQnV0dG9uJE1hdGUob25QcmVzc2VkOiAoKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgiRWxldmF0ZWRCdXR0b24iKSksCiAgICBdKSkpOwogIH0pOwp9Cg=="""),
 );

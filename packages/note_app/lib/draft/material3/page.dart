@@ -6,8 +6,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 # Material3
 
 > Material3 组件索引参考:

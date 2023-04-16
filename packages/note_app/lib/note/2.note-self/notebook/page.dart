@@ -13,71 +13,76 @@ PageMeta page = PageMeta(
   layout: Layouts.defaultLayout(isShowCellCode: true),
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  debugPrint("-----------${print.hashCode}  ${pen.hashCode}  ${context.hashCode}");
+build(BuildContext context, Pen print) {
   print.markdown(r'''
-# Notebook视角
+# Notebook机制
 
-Notebook的展示模式，是本项目的基础逻辑。
 
 ## 本项目的基本概念
 
-类似jupyter或observablehq，一个note由一系列cell构成，cell 是一段代码加上其运行后的一块界面区域，我们这样定义和使用cell：
-
+Notebook的展示模式，是本项目的基础逻辑，类似jupyter或observablehq，
+一个note由一系列cell构成，cell 是一段代码加上其运行后的一块界面区域：
 ''');
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
   print("hello flutter-note , i am a cell");
   print("today is ${DateTime.now()}");
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
   print.markdown(r'''
 notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码块->运行结果->代码块->运行结果这种看待问题的视角，非常适合
-文档撰写、实验等工作，因为笔记是线性的、一段一段没啥太大的紧密关联，代码又可以直接变现到界面上，妙不可言。
+文档撰写、实验等工作，因为笔记是线性、顺序执行的思路，代码又可以直接变现到界面上，妙不可言。
 比如，你学到一个很酷的Widget ToggleButtons，立刻把它记下来试试：
 ''');
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
+
   print(ToggleButtons(
     isSelected: const [true, false, true],
     onPressed: (b) {},
     children: const [Icon(Icons.ac_unit), Icon(Icons.call), Icon(Icons.cake)],
   ));
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
   print.markdown(r'''
 或者，发现[Timer.periodic]定时器可以玩一些动态效果(记得释放Timer)：
-todo 应提供dispose回调函数
+*todo 应提供dispose回调函数,因为flutter可能会多次build，会造成启动多个timer。*
 ''');
 
-  print = pen.nextCell___________________________;
-  {
-    int times = 0;
-    Random random = Random(100);
-    Timer.periodic(const Duration(milliseconds: 3500), (timer) {
-      print.clear();
+  print.nextCell___________________________((context, print) {
+    ValueNotifier<int> times = ValueNotifier(0);
+    int maxTimes = 600;
+    var random = Random(1);
 
-      String s = "欢迎你啊，我还能继续运行${3600 - times}次";
-      print(Text(" ${s[times % s.length]}", style: const TextStyle(fontSize: 50)));
-      print(Wrap(
-        children: List.generate(
-            300,
-            (index) => Container(
-                  width: 30,
-                  height: 30,
-                  color: Colors.primaries[random.nextInt(Colors.primaries.length)],
-                )),
-      ));
-      if (times++ > 3600) timer.cancel();
+    Timer.periodic(const Duration(milliseconds: 1000), (timer) {
+      times.value = times.value + 1;
+      if (times.value > maxTimes) timer.cancel();
     });
-  }
+    print(ListenableBuilder(
+      listenable: times,
+      builder: (context, child) {
+        return Wrap(
+          children: [
+            Text("${times.value}/$maxTimes"),
+            ...List.generate(
+                300,
+                (index) => Container(
+                      width: 30,
+                      height: 30,
+                      color: Colors.primaries[random.nextInt(Colors.primaries.length)],
+                    ))
+          ],
+        );
+      },
+    ));
+  });
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
   print.markdown(r'''
 你应该已经发现，除了上面用[cell]函数明确指定一个cell外，[print.markdown]自己也会创建一个cell。
 ''');
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
   print.markdown("""
   
 notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter或observablehq等的区别是，
@@ -128,7 +133,7 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
 ## cell 内操作
 """);
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
   {
     int count = 0;
     print(ElevatedButton(
@@ -139,12 +144,9 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
         child: Text("click:$count")));
   }
 
-  print = print.nextCell___________________________;
-  {
+  print.nextCell___________________________((context, print) {
     int i = 0;
     print(StatefulBuilder(builder: (context, setSate) {
-      debugPrint("print.hashCode ElevatedButton----------- ${print.hashCode}");
-
       return ElevatedButton(
         onPressed: () {
           setSate(() => i++);
@@ -152,27 +154,12 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
         child: Text("widget cell: $i"),
       );
     }));
-  }
+  });
 
-  print = print.nextCell___________________________;
+  print.nextCell___________________________();
   print.markdown("""
 ### MateSample cell
 
 普通cell是个代码块，其源码如实反应其cell定义。
   """);
-
-  print = print.nextCell___________________________;
-  print.markdown("""
-### cell.param
-
-cell.param参数的变化会导致cell重建，但由于cell.param数据的保持，可以做一些动态效果
-""");
-
-  print = print.nextCell___________________________;
-  var count = print.param.use("count", 0);
-  print(ElevatedButton(
-      onPressed: () {
-        count.value = count.value + 1;
-      },
-      child: Text("click${count.value}")));
 }

@@ -7,12 +7,12 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 206, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 192, statementCount: 0),
       body: [
-        /// (pen.markdown(r'''  # 布局  ## 约束)
-        CodeBlock(offset: 206, end: 545, statementCount: 1)
+        /// (print.markdown(r'''  # 布局  ## )
+        CodeBlock(offset: 192, end: 533, statementCount: 1)
       ],
-      tail: CodeBlock(offset: 545, end: 547, statementCount: 0),
+      tail: CodeBlock(offset: 533, end: 535, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJsYXlvdXTluIPlsYAiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwZW4sIE1haW5DZWxsIHByaW50KSB7CiAgcGVuLm1hcmtkb3duKHInJycKCiMg5biD5bGACgojIyDnuqbmnZ8KCkxheW91dEJ1aWxkZXIKCiMjIOW8ueaAp+W4g+WxgAoKLSBGbGV4IDxodHRwczovL2FwaS5mbHV0dGVyLWlvLmNuL2ZsdXR0ZXIvd2lkZ2V0cy9GbGV4LWNsYXNzLmh0bWw+CiAgLSBSb3cKICAtIENvbHVtbgoKIyMg5biD5bGA5pWF6Zqc5aSE55CG77yaSW50cmluc2ljSGVpZ2h0ClJvdygKICAgICAgICBtYWluQXhpc1NpemU6IE1haW5BeGlzU2l6ZS5taW4sCiAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgIEludHJpbnNpY0hlaWdodCgKICAgICAgICAgICAgY2hpbGQ6IG5hdmlnYXRpb25SYWlsLAogICAgICAgICAgKQogICAgICAgIF0sCiAgICAgICkKCiAgJycnKTsKfQo="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJsYXlvdXTluIPlsYAiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKCiMg5biD5bGACgojIyDnuqbmnZ8KCkxheW91dEJ1aWxkZXIKCiMjIOW8ueaAp+W4g+WxgAoKLSBGbGV4IDxodHRwczovL2FwaS5mbHV0dGVyLWlvLmNuL2ZsdXR0ZXIvd2lkZ2V0cy9GbGV4LWNsYXNzLmh0bWw+CiAgLSBSb3cKICAtIENvbHVtbgoKIyMg5biD5bGA5pWF6Zqc5aSE55CG77yaSW50cmluc2ljSGVpZ2h0ClJvdygKICAgICAgICBtYWluQXhpc1NpemU6IE1haW5BeGlzU2l6ZS5taW4sCiAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgIEludHJpbnNpY0hlaWdodCgKICAgICAgICAgICAgY2hpbGQ6IG5hdmlnYXRpb25SYWlsLAogICAgICAgICAgKQogICAgICAgIF0sCiAgICAgICkKCiAgJycnKTsKfQo="""),
 );

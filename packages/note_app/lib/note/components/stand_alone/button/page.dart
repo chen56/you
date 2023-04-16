@@ -7,10 +7,10 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
+build(BuildContext context, Pen print) {
   int id = 0;
 
-  pen.markdown(r'''
+  print.markdown(r'''
 # button
 
 <https://m3.material.io/components/buttons/overview>, an overview of each of 
@@ -23,7 +23,7 @@ the Material Design button types and how they should be used in designs.
 以下几种主要Button都继承自[ButtonStyleButton]
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Wrap$Mate(
       children: [
         ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
@@ -35,14 +35,14 @@ the Material Design button types and how they should be used in designs.
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ### IconButton
 
 图标按钮。
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.wifi)),
@@ -52,13 +52,13 @@ the Material Design button types and how they should be used in designs.
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ### FloatingActionButton
 
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         FloatingActionButton$Mate(
@@ -90,7 +90,7 @@ the Material Design button types and how they should be used in designs.
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ### 几个特殊的系统Button
 
 继承关系：
@@ -102,7 +102,7 @@ the Material Design button types and how they should be used in designs.
     - [EndDrawerButton] A Material Design drawer icon button
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         BackButton$Mate(),
@@ -113,7 +113,7 @@ the Material Design button types and how they should be used in designs.
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 
 ### ToggleButtons
 
@@ -123,7 +123,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         ToggleButtons$Mate(
@@ -139,7 +139,7 @@ the Material Design button types and how they should be used in designs.
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 
 ### SegmentedButton
 
@@ -151,7 +151,7 @@ the Material Design button types and how they should be used in designs.
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         SegmentedButton$Mate<String>(
@@ -175,7 +175,7 @@ the Material Design button types and how they should be used in designs.
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## 相关组件
 
 ### GestureDetector
@@ -190,7 +190,7 @@ GestureDetector(
 ```
   ''');
   // todo 增加GestureDetector范例
-  // pen.sampleMate(GestureDetector$Mate(
+  // print.sampleMate(GestureDetector$Mate(
   //   // todo default value：这种变量型的是不是可以弄一下  kDefaultTrackpadScrollToScaleFactor
   //   trackpadScrollToScaleFactor: kDefaultTrackpadScrollToScaleFactor,
   //   child: const Text("文本变按钮"),
@@ -198,7 +198,7 @@ GestureDetector(
   // ));
 
   // todo InkWell 模仿button
-  pen.markdown(r'''
+  print.markdown(r'''
 ### Ink*组件
 
 可被用来模仿Button。
@@ -213,7 +213,7 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 您在下面三种不同的文本上点点看区别：
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Column$Mate(
       children: [
         Text$Mate("1.普通Text"),
@@ -229,14 +229,14 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ### ButtonBar 
 
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，您把下面范例中父容器Container.width调小些看看：
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Container$Mate(
       width: 600,
       color: Colors.lime.shade50,

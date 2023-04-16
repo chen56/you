@@ -9,7 +9,6 @@ import 'package:note/src/flutter_highlight.dart';
 
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
-const double _leftPaddingOfBar = 20;
 
 class PageScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
@@ -54,7 +53,7 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
   }
 
   ({List<Widget> cells, Widget header, Widget tail}) buildNote(BuildContext context) {
-    _NoteCellView _newCellView(BaseNoteCell cell) => _NoteCellView(
+    _NoteCellView _newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
           editors: widget.editors,
@@ -64,16 +63,14 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
     Pen pen = Pen.build(context, widget.current, editors: widget.editors);
 
     return (
-      header: _newCellView(pen.path.header),
+      header: _newCellView(pen.header),
       cells: pen.cells.map((cell) => _newCellView(cell)).toList(),
-      tail: _newCellView(pen.path.tail),
+      tail: _newCellView(pen.tail),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("ddbug build");
-
     var noteResult = buildNote(context);
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
@@ -436,7 +433,7 @@ class _ParamAndCodeView extends StatelessWidget {
 class _NoteCellView extends StatelessWidget {
   final bool isShowCellCode;
 
-  final BaseNoteCell cell;
+  final NoteCell cell;
   final Outline outline;
   final Editors editors;
   _NoteCellView(
@@ -448,7 +445,7 @@ class _NoteCellView extends StatelessWidget {
     required this.isShowCellCode,
   });
 
-  Widget buildContent(BuildContext context, BaseNoteContent e) {
+  Widget contentToWidget(BuildContext context, BaseNoteContent e) {
     if (e is MarkdownNote) {
       return MarkdownContent(outline: outline, content: e.content);
     }
@@ -487,7 +484,7 @@ class _NoteCellView extends StatelessWidget {
       theme: atelierForestLightTheme,
 
       // Specify padding
-      padding: const EdgeInsets.all(6),
+      padding: const EdgeInsets.all(0),
 
       // Specify text style
     );
@@ -500,29 +497,26 @@ class _NoteCellView extends StatelessWidget {
     var cellView = ListenableBuilder(
       listenable: cell,
       builder: (context, child) {
-        cell.build(context);
-        Iterable<Widget> contentWidgets = cell.contents.map((e) => buildContent(context, e))
-          ..map((e) => Container(
-                padding: const EdgeInsets.only(left: _leftPaddingOfBar),
-                child: e,
-              ));
-
+        Iterable<Widget> contentWidgets =
+            cell.build(context).map((e) => contentToWidget(context, e));
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
         return GetSizeBuilder(builder: (context, size, child) {
           var leftBar = Material(
-              child: InkWell(
-            onTap: () {
-              cell.expand = !cell.expand;
-            },
-            child: Container(
-              height: size.height,
-              alignment: Alignment.topCenter,
-              child: cell.expand
-                  ? const Icon(Icons.keyboard_arrow_down)
-                  : const Icon(Icons.keyboard_arrow_right),
+            child: InkWell(
+              onTap: () {
+                cell.expand = !cell.expand;
+              },
+              child: Container(
+                height: size.height,
+                alignment: Alignment.topCenter,
+                child: Tooltip(
+                  message: '${cell.name}，序号可能不连续，因为会隐藏空cell',
+                  child: Text(cell.expand ? "▽" : "▷"),
+                ),
+              ),
             ),
-          ));
+          );
 
           // codeVeiw默认很窄，需扩展到占满所有宽度
           var codeViewFillWidth = LayoutBuilder(
@@ -530,6 +524,7 @@ class _NoteCellView extends StatelessWidget {
               return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
             },
           );
+
           var cellFillSize = Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -538,7 +533,7 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.expand) codeViewFillWidth,
+                    if (isShowCellCode && cell.isCodeNotEmpty && cell.expand) codeViewFillWidth,
                     ...contentWidgets,
                     _cellSplitBlock,
                   ],
@@ -550,14 +545,7 @@ class _NoteCellView extends StatelessWidget {
         });
       },
     );
-    var cellBuildView = ListenableBuilder(
-        listenable: cell.param,
-        builder: (context, child) {
-          cell.build(context);
-          return cellView;
-        });
-
-    return cellBuildView;
+    return cell.contents.isEmpty && cell.isCodeEmpty ? Container() : cellView;
   }
 }
 

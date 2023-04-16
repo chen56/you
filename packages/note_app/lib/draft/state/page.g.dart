@@ -7,12 +7,12 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 202, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 188, statementCount: 0),
       body: [
-        /// (pen.markdown(r''' ## flutter N)
-        CodeBlock(offset: 202, end: 247, statementCount: 1)
+        /// (print.markdown(r''' ## flutter)
+        CodeBlock(offset: 188, end: 235, statementCount: 1)
       ],
-      tail: CodeBlock(offset: 247, end: 249, statementCount: 0),
+      tail: CodeBlock(offset: 235, end: 237, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJub3RlIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuLCBNYWluQ2VsbCBwcmludCkgewogIHBlbi5tYXJrZG93bihyJycnCiMjIGZsdXR0ZXIgTm90ZQogICcnJyk7Cn0K"""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJub3RlIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMjIGZsdXR0ZXIgTm90ZQogICcnJyk7Cn0K"""),
 );

@@ -9,8 +9,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 ## AppBar
 
 一般放在[Scaffold.appBar].
@@ -18,7 +18,7 @@ build(BuildContext context, Pen pen, MainCell print) {
 > ref: <https://api.flutter.dev/flutter/material/AppBar-class.html>
 ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(AppBar$Mate(
       title: Text$Mate('AppBar Title'),
       leading: DrawerButton$Mate(),
@@ -36,7 +36,7 @@ build(BuildContext context, Pen pen, MainCell print) {
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## BottomAppBar
 
 一般放在[Scaffold.bottomNavigationBar].
@@ -45,7 +45,7 @@ build(BuildContext context, Pen pen, MainCell print) {
 
 ''');
   //
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(BottomAppBar$Mate(
       // shape: CircularNotchedRectangle(),
       child: Row$Mate(
@@ -71,7 +71,7 @@ build(BuildContext context, Pen pen, MainCell print) {
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
   
 ## ~~BottomNavigationBar~~
 
@@ -89,7 +89,7 @@ build(BuildContext context, Pen pen, MainCell print) {
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Column$Mate(
       children: [
         Container$Mate(
@@ -108,11 +108,11 @@ build(BuildContext context, Pen pen, MainCell print) {
       ],
     )));
   });
-  pen.markdown(r'''
+  print.markdown(r'''
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     var currentPageIndex = 0;
 
     flutter.Widget buildNavigationBar(context, setState) {
@@ -146,7 +146,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## NavigationRail
 
 主要用在Pad或桌面应用上。
@@ -184,7 +184,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ],
   );
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       children: [
         Container$Mate(
@@ -201,7 +201,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## TabBar
 
 > <https://api.flutter-io.cn/flutter/material/TabBar-class.html>
@@ -219,7 +219,7 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(DefaultTabController$Mate(
       length: 3,
       child: TabBar$Mate(
@@ -241,13 +241,13 @@ TabBar不加TabView长这样：
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 
 再来看看加了TabView的完整体，即TabBar实际使用模式：
 
 ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(DefaultTabController$Mate(
       initialIndex: 1,
       length: 3,
@@ -284,7 +284,7 @@ TabBar不加TabView长这样：
     )));
   });
 
-  pen.markdown("""
+  print.markdown("""
 上面用法和[NavigationBar]很像，主要就是在多个页面间切换，好处在，连事件逻辑都不需要，组件树如下结构即可：
 
 DefaultTabController
@@ -299,13 +299,13 @@ DefaultTabController
       - Widget View 3
        """);
 
-  pen.markdown("""
+  print.markdown("""
   ## SnackBar
   
   
        """);
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     onPressed() {
       flutter.ScaffoldMessenger.of(context).showSnackBar(
         flutter.SnackBar(
@@ -335,7 +335,7 @@ DefaultTabController
       ),
     )));
   });
-  pen.markdown(r'''
+  print.markdown(r'''
 ## ButtonBar 
 
 > <https://api.flutter-io.cn/flutter/material/ButtonBar-class.html>
@@ -346,7 +346,7 @@ DefaultTabController
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Container$Mate(
       width: 600,
       color: flutter.Colors.lime.shade50,
@@ -359,7 +359,7 @@ DefaultTabController
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## OverflowBar
 
 > <https://api.flutter-io.cn/flutter/material/ButtonBar-class.html>
@@ -368,7 +368,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Container$Mate(
       width: 300,
       child: Column$Mate(
@@ -400,7 +400,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## PlatformMenuBar
 
 > <https://api.flutter-io.cn/flutter/widgets/PlatformMenuBar-class.html>
@@ -409,7 +409,7 @@ PlatformMenuBar 目前之支持macOS（2023-04），不玩了。
 
   ''');
 
-  pen.markdown(r'''
+  print.markdown(r'''
 ## MenuBar
 
 > <https://api.flutter-io.cn/flutter/widgets/MenuBar-class.html>
@@ -422,7 +422,7 @@ MenuBar相关组件：
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     var click = () {
       flutter.showAboutDialog(
         context: context,

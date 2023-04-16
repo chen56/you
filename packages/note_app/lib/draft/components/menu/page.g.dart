@@ -7,12 +7,12 @@ import 'page.dart';
 final noteInfo = NoteInfo(
   meta: page,
   source: NoteSource(
-      header: CodeBlock(offset: 0, end: 255, statementCount: 0),
+      header: CodeBlock(offset: 0, end: 241, statementCount: 0),
       body: [
-        /// (pen.markdown(r''' # 菜单Menu    , pen.markdown(r'''  ## Checkbox, pen.cell((context, print) {pri)
-        CodeBlock(offset: 255, end: 579, statementCount: 3)
+        /// (print.markdown(r''' # 菜单Menu  , print.markdown(r'''  ## Checkb, print.cell((context, print) {p)
+        CodeBlock(offset: 241, end: 571, statementCount: 3)
       ],
-      tail: CodeBlock(offset: 579, end: 581, statementCount: 0),
+      tail: CodeBlock(offset: 571, end: 573, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLoj5zljZVNZW51IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcGVuLCBNYWluQ2VsbCBwcmludCkgewogIHBlbi5tYXJrZG93bihyJycnCiMg6I+c5Y2VTWVudQoKICAnJycpOwoKICBwZW4ubWFya2Rvd24ocicnJwoKIyMgQ2hlY2tib3hNZW51QnV0dG9uCgogICcnJyk7CgogIHBlbi5jZWxsKChjb250ZXh0LCBwcmludCkgewogICAgcHJpbnQoU2FtcGxlTm90ZShSb3ckTWF0ZSgKICAgICAgY2hpbGRyZW46IFsKICAgICAgICBDaGVja2JveE1lbnVCdXR0b24kTWF0ZSgKICAgICAgICAgICAgdmFsdWU6IHRydWUsIG9uQ2hhbmdlZDogKGJvb2w/IHZhbHVlKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgnQ2hlY2tib3hNZW51QnV0dG9uJykpLAogICAgICBdLAogICAgKSkpOwogIH0pOwp9Cg=="""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLoj5zljZVNZW51IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMg6I+c5Y2VTWVudQoKICAnJycpOwoKICBwcmludC5tYXJrZG93bihyJycnCgojIyBDaGVja2JveE1lbnVCdXR0b24KCiAgJycnKTsKCiAgcHJpbnQuY2VsbCgoY29udGV4dCwgcHJpbnQpIHsKICAgIHByaW50KFNhbXBsZU5vdGUoUm93JE1hdGUoCiAgICAgIGNoaWxkcmVuOiBbCiAgICAgICAgQ2hlY2tib3hNZW51QnV0dG9uJE1hdGUoCiAgICAgICAgICAgIHZhbHVlOiB0cnVlLCBvbkNoYW5nZWQ6IChib29sPyB2YWx1ZSkge30sIGNoaWxkOiBUZXh0JE1hdGUoJ0NoZWNrYm94TWVudUJ1dHRvbicpKSwKICAgICAgXSwKICAgICkpKTsKICB9KTsKfQo="""),
 );

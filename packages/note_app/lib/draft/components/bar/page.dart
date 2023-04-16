@@ -7,8 +7,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 # bar
 
 ## ButtonBar 
@@ -17,7 +17,7 @@ build(BuildContext context, Pen pen, MainCell print) {
 
   ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(
       SampleNote(Container$Mate(
         width: 800,

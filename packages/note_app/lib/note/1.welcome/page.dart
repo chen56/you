@@ -8,8 +8,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 # flutter note项目
 
 >  **🚫Tip:**
@@ -30,7 +30,7 @@ build(BuildContext context, Pen pen, MainCell print) {
 
 如果用flutter写笔记，那笔记中的范例，不就可以立刻展示出来了吗，look：
 ''');
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       children: <Widget>[
         ...List.generate(3, (index) {
@@ -44,12 +44,12 @@ build(BuildContext context, Pen pen, MainCell print) {
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 如果只是实验性的摆弄几下长宽高或者对齐方式的枚举参数，你还需要等待编译，那等试玩几个枚举，茶都凉了。
 
 所以，我觉得应该像下面一样，你点下mainAxisAlignment换个枚举值看看效果：
 ''');
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Row$Mate(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
@@ -64,7 +64,7 @@ build(BuildContext context, Pen pen, MainCell print) {
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 暂时不支持代码编辑，因为要编译的，对吧，那是Dartpad的活儿，以后flutter_note的范例可能会加一个Dartpad的链接。
   
 ### flutter一切皆widget妙啊
@@ -73,7 +73,7 @@ build(BuildContext context, Pen pen, MainCell print) {
 比如想让一个普通组件拥有Material3设计风格，套个马甲[InkResponse]就行了，look:
 ''');
 
-  pen.cell((context, print) {
+  print.cell((context, print) {
     print(SampleNote(Column$Mate(
       children: [
         Text$Mate("1.普通Text,点我"),
@@ -85,7 +85,7 @@ build(BuildContext context, Pen pen, MainCell print) {
     )));
   });
 
-  pen.markdown(r'''
+  print.markdown(r'''
 
 组件组合是不是很棒！
 

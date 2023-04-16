@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'dart:convert';
 
-typedef PageBuilder = void Function(BuildContext context, Pen pen, MainCell print);
+typedef PageBuilder = void Function(BuildContext context, Pen pen);
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -151,12 +151,6 @@ class Path<T> {
         ;
   }
 
-  HeaderOrTailCell get header =>
-      HeaderOrTailCell(path: this, code: noteInfo == null ? "" : noteInfo!.source.headerCode);
-
-  HeaderOrTailCell get tail =>
-      HeaderOrTailCell(path: this, code: noteInfo == null ? "" : noteInfo!.source.tailCode);
-
   String toStringShort() {
     return path;
   }
@@ -175,7 +169,7 @@ class Path<T> {
   }
 }
 
-typedef CellBuilder = void Function(BuildContext context, MainCell print);
+typedef CellBuilder = void Function(BuildContext context, NoteCell print);
 
 ///
 /// cell 是一段代码加上其运行后的一块界面区域，和jupyter/observablehq 中的cell概念类似，
@@ -214,26 +208,40 @@ class Pen {
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
-  final List<MainCell> cells = List.empty(growable: true);
+  final List<NoteCell> cells = List.empty(growable: true);
 
-  int _cellIndex = 0;
   final Editors editors;
 
   final Path path;
+
   // Pen({required this.editors});
   Pen.build(BuildContext context, this.path, {required this.editors}) {
-    // 进入build() 函数后的第一个自然cell
-    MainCell firstCell = _nextCell();
+    // firstCell
+    _nextCell();
     if (path._meta == null) return;
 
-    path._meta!.builder(context, this, firstCell);
+    path._meta!.builder(context, this);
   }
+
+  NoteCell get header => NoteCell(
+        cellType: CellType.header,
+        index: 0,
+        codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.header,
+        pen: this,
+        defaultExpand: false,
+      );
+
+  NoteCell get tail => NoteCell(
+        cellType: CellType.tail,
+        index: 0,
+        codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.tail,
+        pen: this,
+        defaultExpand: false,
+      );
 
   /// markdown 独占一个新cell
   void markdown(String content) {
-    cell((context, print) {
-      print(MarkdownNote(content));
-    });
+    currentCell.print(MarkdownNote(content));
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
@@ -241,11 +249,8 @@ class Pen {
   ///
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
-  MainCell cell(CellBuilder builder) {
-    var cell = _nextCell(builder);
-    // 启动一个自然cell
-    _nextCell();
-    return cell;
+  void cell(CellBuilder builder) {
+    nextCell___________________________(builder);
   }
 
   /// 新增一个自然cell
@@ -253,28 +258,48 @@ class Pen {
   ///
   /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
-  MainCell _nextCell([CellBuilder? builder]) {
-    var next = MainCell(
+  NoteCell _nextCell([CellBuilder? builder]) {
+    int cellIndex = cells.length;
+    var next = NoteCell(
+      cellType: CellType.body,
       pen: this,
-      index: _cellIndex++,
-      path: path,
-      param: ObjectParam.root(editors: editors),
-      builder: builder ?? (_, __) {},
+      index: cellIndex,
+      codeBlock: NoteSource.getBodyCellBlock(path, cellIndex),
+      builder: builder,
+      defaultExpand: true,
     );
     cells.add(next);
     return next;
   }
 
-  MainCell get nextCell___________________________ {
-    return _nextCell();
+  /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
+  /// Add a new cell, which is a code block and its generated content in the note
+  ///
+  /// 通过[builder]参数可以重建此cell
+  /// cell can be rebuilt using the [builder] arg
+  void nextCell___________________________([CellBuilder? builder]) {
+    // have builder, add a new cell
+    if (builder != null) {
+      _nextCell(builder);
+    }
+    // add a normal cell
+    _nextCell();
   }
+
+  void call(Object? object) {
+    currentCell.print(object);
+  }
+
+  NoteCell get currentCell => cells.last;
 }
 
 abstract class BaseNoteContent {}
 
 class MarkdownNote extends BaseNoteContent {
   final String content;
+
   MarkdownNote(this.content);
+
   @override
   String toString() {
     return "MarkdownNote('${content}')";
@@ -283,7 +308,9 @@ class MarkdownNote extends BaseNoteContent {
 
 class ObjectNote extends BaseNoteContent {
   final Object? object;
+
   ObjectNote(this.object);
+
   @override
   String toString() {
     return "ObjectNote('${object?.toString()}')";
@@ -292,6 +319,7 @@ class ObjectNote extends BaseNoteContent {
 
 class WidgetNote extends BaseNoteContent {
   final Widget widget;
+
   WidgetNote(this.widget);
 
   @override
@@ -303,7 +331,9 @@ class WidgetNote extends BaseNoteContent {
 // {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
 class SampleNote extends BaseNoteContent {
   final Mate mate;
+
   SampleNote(this.mate);
+
   @override
   String toString() {
     return "SampleNote('${mate.toString()}')";
@@ -413,6 +443,7 @@ class NotePage {
   final Path path;
   final NoteSource source;
   final PageMeta meta;
+
   NotePage({
     required this.path,
     required NoteInfo info,
@@ -423,6 +454,7 @@ class NotePage {
 class NoteInfo {
   final NoteSource source;
   final PageMeta meta;
+
   NoteInfo({
     required this.source,
     required this.meta,
@@ -434,6 +466,7 @@ class NoteSource {
   final List<CodeBlock> body;
   final CodeBlock tail;
   final String code;
+
   NoteSource({
     required String code,
     required this.header,
@@ -446,12 +479,25 @@ class NoteSource {
       e.source = this;
     }
   }
+
   String get headerCode {
     return code.substring(header.offset, header.end);
   }
 
   String get tailCode {
     return code.substring(tail.offset, tail.end);
+  }
+
+  static CodeBlock getBodyCellBlock(Path path, int cellIndex) {
+    if (path.noteInfo == null) return CodeBlock.Empty;
+    if (cellIndex >= path.noteInfo!.source.body.length) {
+      return CodeBlock.Empty;
+    }
+    return path.noteInfo!.source.body[cellIndex];
+  }
+
+  String getCode(CodeBlock codeBlock) {
+    return code.substring(codeBlock.offset, codeBlock.end);
   }
 
   String getMainCellCode(int index) {
@@ -469,6 +515,7 @@ class CodeBlock {
   final int offset;
   final int end;
   final int statementCount;
+
   CodeBlock({
     required this.offset,
     required this.end,
@@ -477,103 +524,62 @@ class CodeBlock {
 
   /// 是否为不存在的代码块
   bool get isExists => offset == end;
+  static CodeBlock Empty = CodeBlock(offset: 0, end: 0);
 
   /// 是否为不包含任何有意义的语句的空块
-  // bool get isEmpty => isExists || ;
+// bool get isEmpty => isExists || ;
   ///     final encodedCode = base64.encode(utf8.encode(source.code));
 }
 
-abstract class BaseNoteCell extends ChangeNotifier {
-  final Path path;
-  bool? _expand;
-  // when first show note page, is default show code
-  final bool isShowCodeDefault;
-  BaseNoteCell({
-    required this.path,
-    required this.isShowCodeDefault,
-  });
-
-  List<BaseNoteContent> get contents;
-  bool isEmpty() => contents.isEmpty;
-
-  String get code;
-
-  // show == expand
-  bool get expand {
-    if (isEmptyCode) return false;
-    if (_expand == null) {
-      //markdown cell default hidden code
-      return isShowCodeDefault ? !isMarkdownCell : false;
-    }
-    return _expand!;
-  }
-
-  set expand(bool newValue) {
-    _expand = newValue;
-    notifyListeners();
-  }
-
-  /// 不包含pen相关调用的代码
-  String get noPenCode;
-
-  void build(BuildContext context);
-
-  bool get isEmptyCode {
-    return code.contains(RegExp(r'^\s*$'));
-  }
-
-  ObjectParam get param;
-
-  bool get isMarkdownCell;
-}
-
-class HeaderOrTailCell extends BaseNoteCell {
-  @override
-  final ObjectParam param = ObjectParam.root(editors: Editors());
-  @override
-  final String code;
-  HeaderOrTailCell({
-    required super.path,
-    required this.code,
-  }) : super(isShowCodeDefault: false);
-
-  @override
-  List<BaseNoteContent> get contents => [];
-
-  @override
-  void build(BuildContext context) {}
-
-  @override
-  String get noPenCode => throw UnimplementedError();
-
-  @override
-  bool get isMarkdownCell => false;
-}
+enum CellType { header, body, tail }
 
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
-class MainCell extends BaseNoteCell {
+class NoteCell extends ChangeNotifier {
   final List<BaseNoteContent> _contents = List.empty(growable: true);
+
   // index use to find code
+  final CodeBlock codeBlock;
   final int index;
-  final ObjectParam param;
-  final CellBuilder _builder;
+  final CellBuilder? _builder;
   final Pen pen;
-  MainCell({
+  bool? _expand;
+  bool defaultExpand;
+  final CellType cellType;
+
+  NoteCell({
+    required this.codeBlock,
     required this.pen,
     required this.index,
-    required super.path,
-    required this.param,
-    required CellBuilder builder,
-  })  : _builder = builder,
-        super(isShowCodeDefault: true);
+    this.defaultExpand = false,
+    required this.cellType,
+    CellBuilder? builder,
+  }) : _builder = builder;
 
   List<BaseNoteContent> get contents => List.unmodifiable(_contents);
 
   // ignore: non_constant_identifier_names
-  MainCell get nextCell___________________________ {
+  NoteCell get nextCell___________________________ {
     return pen._nextCell();
   }
+
+  // String get name {
+  //   if (cellType == CellType.header) {
+  //     return "cell[header]";
+  //   }
+  //   if (cellType == CellType.tail) {
+  //     return "cell[tail]";
+  //   }
+  //   return "cell[$index]";
+  // }
+  get name => switch (cellType) {
+        CellType.header => "cell[header]",
+        CellType.tail => "cell[tail]",
+        CellType.body => "cell[$index]",
+        _ => "error:not here",
+      };
+
+  bool isEmpty() => contents.isEmpty;
 
   void print(Object? object) {
     call(object);
@@ -587,8 +593,8 @@ class MainCell extends BaseNoteCell {
     call(MarkdownNote(content));
   }
 
-  @override
   bool get isMarkdownCell {
+    if (_contents.isEmpty) return false;
     return _contents.every((e) => e is MarkdownNote);
   }
 
@@ -613,27 +619,57 @@ class MainCell extends BaseNoteCell {
     notifyListeners();
   }
 
-  @override
-  String get code {
-    var source = path.noteInfo?.source;
-    if (source == null) {
-      return _contents.isEmpty
-          ? ""
-          : "cell have content ,but code source is null, please gen page.g.dart";
-    }
-    return source.getMainCellCode(index);
-  }
-
   /// 不包含pen相关调用的代码
-  @override
   String get noPenCode {
     return "code source... todo \n code.... \n code...";
   }
 
+  String get code {
+    if (_contents.isNotEmpty && CodeBlock.Empty == codeBlock) {
+      return "cell have content ,but code source is null, please gen page.g.dart";
+    }
+    return path.noteInfo == null ? "" : path.noteInfo!.source.getCode(codeBlock);
+  }
+
+  Path get path => pen.path;
+
+  // show == expand
+  bool get expand {
+    if (isCodeEmpty) return false;
+    if (_expand == null) {
+      //markdown cell default hidden code
+      return defaultExpand ? !isMarkdownCell : false;
+    }
+    return _expand!;
+  }
+
+  bool get isShowCode {
+    return !isCodeEmpty;
+  }
+
+  set expand(bool newValue) {
+    _expand = newValue;
+    notifyListeners();
+  }
+
+  bool get isCodeEmpty {
+    return code.contains(RegExp(r'^\s*$'));
+  }
+
+  bool get isCodeNotEmpty {
+    return !isCodeEmpty;
+  }
+
+  List<BaseNoteContent> build(BuildContext context) {
+    if (_builder == null) return List.unmodifiable(_contents);
+
+    _contents.clear();
+    _builder!(context, this);
+    return List.unmodifiable(_contents);
+  }
+
   @override
-  void build(BuildContext context) {
-    //fixme cell的重建会影响展示
-    // _contents.clear();
-    _builder(context, this);
+  String toString() {
+    return "$name(hash:$hashCode, expend:$expand,isMarkdownCell:$isMarkdownCell, isEmptyCode:$isCodeEmpty contents-${contents.length}:$contents)";
   }
 }

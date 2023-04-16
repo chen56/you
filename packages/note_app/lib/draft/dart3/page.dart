@@ -6,8 +6,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 ## dart 3  暂时放弃，等稳定后再搞
 
 # type

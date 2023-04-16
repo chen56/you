@@ -6,8 +6,8 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 # FloatingActionButton
 
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。

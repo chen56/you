@@ -129,25 +129,50 @@ class _Page {
     var buildBodyBlock = (buildBody as BlockFunctionBody).block;
 
     List<_CodeBlock> body = [];
-    List<Statement> cellStatements = [];
+    List<Statement> collectCellStatements = [];
     int offset = buildBodyBlock.offset + 1;
     for (var st in buildBodyBlock.statements) {
       log("statement runtimeType:${st.runtimeType} - offset:${st.offset} len:${st.length} end:${st.end}    file.len:${fileContent.length} ,unit.len:${unit.length}  ");
       log("---${fileContent.toString().safeSubstring(st.offset, st.offset + 20)}---");
-      if (isCellStatement(st)) {
-        //上方代码块
-        body.add((offset: offset, end: st.offset, cellStatements: cellStatements));
-        cellStatements = [];
-
-        //cell/markdown方法明确的代码块
-        // body.add((offset: st.offset, end: st.end, cellStatements: [st]));
-        offset = st.end;
-      } else {
-        cellStatements.add(st);
+      var statementType = cellStatementType(st);
+      if (statementType == _cellStatementType.none) {
+        collectCellStatements.add(st);
+        continue;
       }
+      if (statementType == _cellStatementType.line) {
+        // Submit previously collected statements first
+        // Cell boundary line without builder :  code above line statements
+        // The line [cellStatementType.line] was ignored
+        body.add((offset: offset, end: st.offset, cellStatements: collectCellStatements));
+        //reset collect
+        collectCellStatements = [];
+
+        // The starting point of the new cell is located below the line statement
+        offset = st.end;
+        continue;
+      }
+      if (statementType == _cellStatementType.lineWithBuilder) {
+        // Submit previously collected statements first
+        body.add((offset: offset, end: st.offset, cellStatements: collectCellStatements));
+        //reset collect
+        collectCellStatements = [];
+
+        // The builder itself is a new cell
+        body.add((offset: st.offset, end: st.end, cellStatements: [st]));
+
+        // The starting point of the new cell is located below the line statement
+        offset = st.end;
+        continue;
+      }
+      throw Exception("not here! statementType:$statementType  statement:$st");
     }
-    //最后补一个代码块
-    body.add((offset: offset, end: buildBodyBlock.end - 1, cellStatements: cellStatements));
+    // Finally, add a cell as the end
+    body.add(
+        (
+          offset: offset,
+          end: buildBodyBlock.rightBracket.offset,
+          cellStatements: collectCellStatements
+        ));
 
     //  build(BuildContext context, Pen pen, MainCell print){
     // ↑_____________________________________________________↑_______________
@@ -171,40 +196,40 @@ class _Page {
     );
   }
 
-  /// cell split statement :
+  /// _cellStatementType.line :
   /// ```dart
-  ///    print = print.nextCell___________________________;
+  ///    print.nextCell___________________________();
   /// ```
-  bool isCellStatement(Statement statement) {
+  /// _cellStatementType.lineWithBuilder :
+  /// ```dart
+  ///    print.nextCell___________________________((context,print){
+  ///        // code in cell
+  ///    });
+  /// ```
+  _cellStatementType cellStatementType(Statement statement) {
     if (statement is! ExpressionStatement) {
-      return false;
+      return _cellStatementType.none;
     }
     var expression = statement.expression;
 
-    if (expression is! AssignmentExpression) {
-      return false;
-    }
-    if (expression.writeElement?.name != "print") {
-      return false;
+    if (expression is! MethodInvocation) {
+      return _cellStatementType.none;
     }
 
-    if (expression.rightHandSide.beginToken.lexeme != "print") {
-      return false;
-    }
-
-    if (expression.rightHandSide.endToken.lexeme != "nextCell___________________________") {
-      return false;
+    // print.nextCell___________________________()
+    if (expression.target?.staticType?.getDisplayString(withNullability: true) != "Pen") {
+      return _cellStatementType.none;
     }
     //
-    // String? typeName = expression.target?.staticType!.getDisplayString(withNullability: true);
-    // if (typeName != "Pen" || typeName != "MainCell") {
-    //   return false;
-    // }
-    // var cellMethods = ["markdown", "md", "cell", "nextCell___________________________"];
-    // if (!cellMethods.contains(expression.methodName.name)) {
-    //   return false;
-    // }
-    return true;
+    if (expression.methodName.name != "nextCell___________________________") {
+      return _cellStatementType.none;
+    }
+
+    if (expression.argumentList.arguments.isEmpty) {
+      return _cellStatementType.line;
+    } else {
+      return _cellStatementType.lineWithBuilder;
+    }
   }
 
   /*
@@ -320,3 +345,5 @@ log(Object? o) {
   // ignore: avoid_print
   print("${DateTime.now()} - $o");
 }
+
+enum _cellStatementType { line, lineWithBuilder, none }

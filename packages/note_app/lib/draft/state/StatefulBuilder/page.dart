@@ -6,12 +6,12 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-build(BuildContext context, Pen pen, MainCell print) {
-  pen.markdown(r'''
+build(BuildContext context, Pen print) {
+  print.markdown(r'''
 ## 范例1   
 
 
   ''');
 
-  // pen.sample(const Sample1());
+  // print.sample(const Sample1());
 }
