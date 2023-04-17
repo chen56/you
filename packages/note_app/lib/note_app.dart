@@ -63,7 +63,7 @@ class Layouts {
   static Layout defaultLayout<T>({
     bool defaultCodeExpand = false,
   }) {
-    return (path) => PageScreen<T>(
+    return (path) => LayoutScreen<T>(
           current: path as Path<T>,
           tree: paths.note,
           editors: Editors(

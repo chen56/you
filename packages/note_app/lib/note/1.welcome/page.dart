@@ -32,17 +32,22 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.nextCell___________________________();
-  print(Row$Mate(
-    children: <Widget>[
-      ...List.generate(3, (index) {
-        return Expanded$Mate(
-            child: Container$Mate(
-          height: 200,
-          color: Colors.primaries[index % Colors.primaries.length],
-        ));
-      })
-    ],
-  ));
+  print(
+    SampleNote(
+      Row$Mate(
+        children: <Widget>[
+          ...List.generate(3, (index) {
+            return Expanded$Mate(
+                child: Container$Mate(
+              height: 200,
+              color: Colors.primaries[index % Colors.primaries.length],
+            ));
+          })
+        ],
+      ),
+      isShowParamEditor: false,
+    ),
+  );
 
   print.nextCell___________________________();
   print.markdown(r'''
@@ -52,18 +57,22 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.nextCell___________________________();
-  print(SampleNote(Row$Mate(
-    mainAxisAlignment: MainAxisAlignment.spaceAround,
-    children: <Widget>[
-      ...List.generate(3, (index) {
-        return Container$Mate(
-          width: 100,
-          height: 100,
-          color: Colors.primaries[index + 5 % Colors.primaries.length],
-        );
-      })
-    ],
-  )));
+  print(
+    SampleNote(
+      Row$Mate(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          ...List.generate(3, (index) {
+            return Container$Mate(
+              width: 100,
+              height: 100,
+              color: Colors.primaries[index + 5 % Colors.primaries.length],
+            );
+          })
+        ],
+      ),
+    ),
+  );
 
   print.nextCell___________________________();
   print.markdown(r'''

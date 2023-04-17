@@ -324,8 +324,14 @@ class WidgetNote extends BaseNoteContent {
 // {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
 class SampleNote extends BaseNoteContent {
   final Mate mate;
+  final bool isShowCode;
+  final bool isShowParamEditor;
 
-  SampleNote(this.mate);
+  SampleNote(
+    this.mate, {
+    this.isShowCode = true,
+    this.isShowParamEditor = true,
+  });
 
   @override
   String toString() {
@@ -337,10 +343,13 @@ typedef SampleBuilder = Widget Function(ObjectParam param);
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
+  bool _done = false;
+
   OutlineNode root = OutlineNode(key: GlobalKey(), heading: 0, title: "");
   OutlineNode? current;
 
   void add(OutlineNode newNode) {
+    if (_done) return;
     if (current == null) {
       current = root.add(newNode);
       return;
@@ -348,9 +357,11 @@ class Outline {
     current = current!.add(newNode);
   }
 
-  void reset() {
-    root.clear();
-    current = null;
+  /// bed design: 目前非常糟糕的设计，因为outline会在markdown 第一次Widget.build后才能装配好
+  /// 第一次build时 界面上是看不到outline的，后面如果因为resize多次build，会造成outline持续重复增加内容
+  /// 所以要结束掉它
+  void collectDone() {
+    _done = true;
   }
 }
 
@@ -679,5 +690,19 @@ class NoteCell extends ChangeNotifier {
   @override
   String toString() {
     return "$name(hash:$hashCode, expend:$expand,isMarkdownCell:$isMarkdownCell, isEmptyCode:$isCodeEmpty contents-${contents.length}:$contents)";
+  }
+}
+
+/// https://m3.material.io/foundations/layout/applying-layout/window-size-classes
+enum WindowClass {
+  compact,
+  medium,
+  expanded;
+
+  factory WindowClass.fromContext(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    if (width >= 1400) return WindowClass.expanded;
+    if (width >= 900) return WindowClass.medium;
+    return WindowClass.compact;
   }
 }
