@@ -10,13 +10,13 @@ import 'package:note/src/flutter_highlight.dart';
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
-class PageScreen<T> extends StatefulWidget with Screen<T> {
+class LayoutScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
   final Path? tree;
   final bool defaultCodeExpand;
   final Editors editors;
 
-  PageScreen({
+  LayoutScreen({
     super.key,
     this.tree,
     required this.current,
@@ -29,15 +29,14 @@ class PageScreen<T> extends StatefulWidget with Screen<T> {
 
   @override
   State<StatefulWidget> createState() {
-    return _PageScreenState<T>();
+    return _LayoutScreenState<T>();
   }
 }
 
-class _PageScreenState<T> extends State<PageScreen<T>> {
+class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
   final ScrollController controllerV = ScrollController(initialScrollOffset: 0);
-  Outline outline = Outline();
-
-  _PageScreenState();
+  final Outline outline = Outline();
+  _LayoutScreenState();
 
   @override
   void initState() {
@@ -48,23 +47,31 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
       // flutter-markdown只有在Widget.build时才parse markdown，导致第一次[build]时,
       // 装配的outline无法展示出来， 所以需要触发第二次build,以使其展示出来
       // 暂时没想好最终处理办法，暂时这样。
-      setState(() {});
+      setState(() {
+        outline.collectDone();
+      });
     });
   }
 
-  ({List<Widget> cells, Widget header, Widget tail}) buildNote(BuildContext context) {
+  ({List<Widget> cells, Widget header, Widget tail, Outline outline}) buildNote(
+      BuildContext context) {
     _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
           editors: widget.editors,
         );
 
-    Pen pen = Pen.build(context, widget.current,
-        editors: widget.editors, defaultCodeExpand: widget.defaultCodeExpand);
+    Pen pen = Pen.build(
+      context,
+      widget.current,
+      editors: widget.editors,
+      defaultCodeExpand: widget.defaultCodeExpand,
+    );
     return (
       header: newCellView(pen.header),
       cells: pen.cells.map((cell) => newCellView(cell)).toList(),
       tail: newCellView(pen.tail),
+      outline: outline,
     );
   }
 
@@ -74,7 +81,10 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
 
     var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
 
-    var outlineView = _OutlineView(mainContentViewController: controllerV, outline: outline);
+    var outlineView = _OutlineView(
+      mainContentViewController: controllerV,
+      outline: noteResult.outline,
+    );
 
     // 总是偶发的报错: The Scrollbar's ScrollController has no ScrollPosition attached.
     // 参考：https://stackoverflow.com/questions/69853729/flutter-the-scrollbars-scrollcontroller-has-no-scrollposition-attached/71490688#71490688
@@ -106,29 +116,58 @@ class _PageScreenState<T> extends State<PageScreen<T>> {
         ],
       ),
     );
+    var appBar = AppBar(
+      title: Text(widget.current.title),
+      toolbarHeight: 36,
+    );
 
-    var row = Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        SizedBox(width: 220, child: navigatorTree),
-        Expanded(child: scrollV),
-        SizedBox(width: 250, child: outlineView),
-      ],
-    );
-    var safeArea = SafeArea(
-      child: row,
-    );
+    ///  Responsive UI:
+    ///  Since StatefulWidget will automatically build() when the screen size changes,
+    ///  the processing of responsive UI does not require special processing,
+    ///  such as ListenableBuilder
+    var w = WindowClass.fromContext(context);
+    if (w == WindowClass.compact) {
+      return Scaffold(
+        drawer: Drawer(child: navigatorTree),
+        endDrawer: Drawer(child: outlineView),
+        appBar: appBar,
+        body: scrollV,
+      );
+    }
+
+    if (w == WindowClass.medium) {
+      return Scaffold(
+        drawer: Drawer(child: navigatorTree),
+        appBar: appBar,
+        body: SafeArea(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(child: scrollV),
+              SizedBox(width: 250, child: outlineView),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.current.title),
-        toolbarHeight: 36,
+      appBar: appBar,
+      body: SafeArea(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(width: 220, child: navigatorTree),
+            Expanded(child: scrollV),
+            SizedBox(width: 250, child: outlineView),
+          ],
+        ),
       ),
-      body: safeArea,
     );
   }
 
   @override
-  void didUpdateWidget(covariant PageScreen<T> oldWidget) {
+  void didUpdateWidget(covariant LayoutScreen<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
   }
 
@@ -297,18 +336,15 @@ class _OutlineView extends StatelessWidget {
 class _MateSampleView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
-  final bool isShowCode;
-  final bool isShowParamEditor;
   final String title;
-
+  final SampleNote content;
   const _MateSampleView({
     // ignore: unused_element
     super.key,
     required this.rootParam,
     required this.editors,
-    required this.isShowCode,
-    required this.isShowParamEditor,
     required this.title,
+    required this.content,
   });
 
   @override
@@ -322,8 +358,7 @@ class _MateSampleView extends StatelessWidget {
           var paramAndCodeView = _ParamAndCodeView(
             rootParam: rootParam,
             editors: editors,
-            isShowCode: isShowCode,
-            isShowEidtors: isShowParamEditor,
+            content: content,
             title: title,
           );
           return Column(
@@ -341,19 +376,45 @@ class _MateSampleView extends StatelessWidget {
 class _ParamAndCodeView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
-  final bool isShowCode;
-  final bool isShowEidtors;
   final String title;
+  final SampleNote content;
 
   const _ParamAndCodeView({
     // ignore: unused_element
     super.key,
     required this.rootParam,
     required this.editors,
-    required this.isShowCode,
-    required this.isShowEidtors,
     required this.title,
+    required this.content,
   });
+
+  Widget responsiveUI(BuildContext context, Widget paramView, Widget codeView) {
+    WindowClass win = WindowClass.fromContext(context);
+    if (win == WindowClass.expanded) {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (content.isShowParamEditor) Expanded(child: paramView),
+          if (content.isShowCode) Expanded(child: codeView),
+        ],
+      );
+    }
+    var codeViewFillWidth = LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        return SizedBox(width: constraints.maxWidth, child: codeView);
+      },
+    );
+
+    return Column(
+      // mainAxisAlignment: MainAxisAlignment.start,
+      // crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (content.isShowParamEditor) paramView,
+        if (content.isShowCode) codeViewFillWidth,
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -416,14 +477,7 @@ class _ParamAndCodeView extends StatelessWidget {
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
       title: Row(children: [Text(title)]),
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            if (isShowEidtors) Expanded(child: paramView),
-            if (isShowCode) Expanded(child: codeView),
-          ],
-        )
+        responsiveUI(context, paramView, codeView),
       ],
     );
   }
@@ -454,10 +508,9 @@ class _NoteCellView extends StatelessWidget {
     }
     if (e is SampleNote) {
       return _MateSampleView(
+        content: e,
         rootParam: e.mate.toRootParam(editors: editors),
         editors: editors,
-        isShowCode: true,
-        isShowParamEditor: true,
         title: "展开代码",
       );
     }
@@ -549,6 +602,8 @@ class _NoteCellView extends StatelessWidget {
         }
 
         // return resizeBuilder(context, Size(621, 300), null);
+        // todo 发现StatefulWidget在最外层会随着屏幕大小变化自动build，
+        // 这里如果用StatefulWidget 是否可以不用这个了：GetSizeBuilder？
         return GetSizeBuilder(builder: resizeBuilder);
       },
     );
