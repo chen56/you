@@ -338,6 +338,9 @@ String _flatLibPath(String packageName) {
       .replaceAll("/", "_")
       .replaceAll(".", "_")
       .replaceAll("-", "_")
+      .replaceAll("&", "_")
+      .replaceAll("*", "_")
+      .replaceAll("*", "_")
       .replaceAll("@", "_");
 }
 
