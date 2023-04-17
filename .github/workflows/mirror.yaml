@@ -4,6 +4,7 @@ name: mirror-gitee
 # Controls when the workflow will run
 on: [push, delete]
 
+# update
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
