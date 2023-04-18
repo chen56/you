@@ -5,12 +5,12 @@ import 'package:note/page_core.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:note/src/flutter_highlight.dart';
 
-class MarkdownContent extends StatelessWidget {
+class MarkdownContentWidget extends StatelessWidget {
   final Outline outline;
   final String content;
   final ScrollController controller = ScrollController();
 
-  MarkdownContent({super.key, required this.outline, required this.content});
+  MarkdownContentWidget({super.key, required this.outline, required this.content});
 
   @override
   Widget build(BuildContext context) {

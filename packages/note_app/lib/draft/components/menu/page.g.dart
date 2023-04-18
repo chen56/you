@@ -12,13 +12,10 @@ final noteInfo = NoteInfo(
         /// (print.markdown(r''' # 菜单Menu  , print.markdown(r'''  ## Checkb)
         CodeBlock(offset: 241, end: 340, statementCount: 2),
 
-        /// (print.nextCell________________)
-        CodeBlock(offset: 340, end: 601, statementCount: 1),
-
-        /// ()
-        CodeBlock(offset: 601, end: 602, statementCount: 0)
+        /// (print(SampleContent(Row$Mate(c)
+        CodeBlock(offset: 384, end: 571, statementCount: 1)
       ],
-      tail: CodeBlock(offset: 602, end: 604, statementCount: 0),
+      tail: CodeBlock(offset: 571, end: 573, statementCount: 0),
       code:
-          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLoj5zljZVNZW51IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMg6I+c5Y2VTWVudQoKICAnJycpOwoKICBwcmludC5tYXJrZG93bihyJycnCgojIyBDaGVja2JveE1lbnVCdXR0b24KCiAgJycnKTsKCiAgcHJpbnQubmV4dENlbGxfX19fX19fX19fX19fX19fX19fX19fX19fX18oKGNvbnRleHQsIHByaW50KSB7CiAgICBwcmludChTYW1wbGVOb3RlKFJvdyRNYXRlKAogICAgICBjaGlsZHJlbjogWwogICAgICAgIENoZWNrYm94TWVudUJ1dHRvbiRNYXRlKAogICAgICAgICAgICB2YWx1ZTogdHJ1ZSwgb25DaGFuZ2VkOiAoYm9vbD8gdmFsdWUpIHt9LCBjaGlsZDogVGV4dCRNYXRlKCdDaGVja2JveE1lbnVCdXR0b24nKSksCiAgICAgIF0sCiAgICApKSk7CiAgfSk7Cn0K"""),
+          """aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICLoj5zljZVNZW51IiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMg6I+c5Y2VTWVudQoKICAnJycpOwoKICBwcmludC5tYXJrZG93bihyJycnCgojIyBDaGVja2JveE1lbnVCdXR0b24KCiAgJycnKTsKCiAgcHJpbnQubmV4dENlbGxfX19fX19fX19fX19fX19fX19fX19fX19fX18oKTsKICBwcmludChTYW1wbGVDb250ZW50KFJvdyRNYXRlKAogICAgY2hpbGRyZW46IFsKICAgICAgQ2hlY2tib3hNZW51QnV0dG9uJE1hdGUoCiAgICAgICAgICB2YWx1ZTogdHJ1ZSwgb25DaGFuZ2VkOiAoYm9vbD8gdmFsdWUpIHt9LCBjaGlsZDogVGV4dCRNYXRlKCdDaGVja2JveE1lbnVCdXR0b24nKSksCiAgICBdLAogICkpKTsKfQo="""),
 );

@@ -17,20 +17,19 @@ build(BuildContext context, Pen print) {
 
   ''');
 
-  print.nextCell___________________________((context, print) {
-    print(
-      SampleNote(Container$Mate(
-        width: 800,
-        color: Colors.blueAccent.shade100,
-        child: ButtonBar$Mate(
-          children: [
-            ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-            OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
-            CheckboxMenuButton$Mate(
-                value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
-          ],
-        ),
-      )),
-    );
-  });
+  print.nextCell___________________________();
+  print(
+    SampleContent(Container$Mate(
+      width: 800,
+      color: Colors.blueAccent.shade100,
+      child: ButtonBar$Mate(
+        children: [
+          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
+          OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
+          CheckboxMenuButton$Mate(
+              value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
+        ],
+      ),
+    )),
+  );
 }

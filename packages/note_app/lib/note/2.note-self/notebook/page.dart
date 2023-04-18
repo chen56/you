@@ -6,6 +6,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
+import 'package:note_mate_flutter/material.dart';
 
 PageMeta page = PageMeta(
   shortTitle: " Notebook机制",
@@ -36,7 +37,6 @@ notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码
 ''');
 
   print.nextCell___________________________();
-
   print(ToggleButtons(
     isSelected: const [true, false, true],
     onPressed: (b) {},
@@ -46,86 +46,101 @@ notebook的方式来呈现代码和其运行结果的想法很酷啊，以代码
   print.nextCell___________________________();
   print.markdown(r'''
 或者，发现[Timer.periodic]定时器可以玩一些动态效果(记得释放Timer)：
-*todo 应提供dispose回调函数,因为flutter可能会多次build，会造成启动多个timer。*
+(*todo note框架应提供dispose回调函数,因为flutter可能会多次build，会造成启动多个timer。*)
 ''');
 
-  print.nextCell___________________________((context, print) {
-    ValueNotifier<int> times = ValueNotifier(0);
-    int maxTimes = 600;
-    var random = Random(1);
-
-    Timer.periodic(const Duration(milliseconds: 1000), (timer) {
-      times.value = times.value + 1;
-      if (times.value > maxTimes) timer.cancel();
-    });
-    print(ListenableBuilder(
-      listenable: times,
-      builder: (context, child) {
-        return Wrap(
-          children: [
-            Text("${times.value}/$maxTimes"),
-            ...List.generate(
-                300,
-                (index) => Container(
-                      width: 30,
-                      height: 30,
-                      color: Colors.primaries[random.nextInt(Colors.primaries.length)],
-                    ))
-          ],
-        );
-      },
-    ));
+  print.nextCell___________________________();
+  ValueNotifier<int> times = ValueNotifier(0);
+  int maxTimes = 600;
+  var random = Random(1);
+  Timer.periodic(const Duration(milliseconds: 1000), (timer) {
+    times.value = times.value + 1;
+    if (times.value > maxTimes) timer.cancel();
   });
+  print(ListenableBuilder(
+    listenable: times,
+    builder: (context, child) {
+      return Wrap(
+        children: [
+          Text("${times.value}/$maxTimes"),
+          ...List.generate(
+              300,
+              (index) => Container(
+                    width: 30,
+                    height: 30,
+                    color: Colors.primaries[random.nextInt(Colors.primaries.length)],
+                  ))
+        ],
+      );
+    },
+  ));
 
   print.nextCell___________________________();
   print.markdown("""
-  
 notebook模式的思考方式，很棒，本项目和传统notebook工具jupyter或observablehq等的区别是，
 这里并没有一个web版的notebook编辑器，一个cell，一个cell的编辑运行代码，本项目通过代码分析器
 从dart代码中自动分割cell，再以一块代码+一块代码产生的UI展示出来，所以cell在界面上是只读的。
 之所以这样，只因我感觉最好的编辑器，还是idea、code这些，功能强大，编辑舒适，如果能加以利用现有的编辑器，
-并结合notebook的思路，应该也还不错。
+并结合notebook的思维模式来撰写代码，应该也还不错。
 
+## 可print的内容类型
 
+### ObjectContent
 
-///TODO 以下还在草稿阶段，暂时不需要阅读
+对标原生print的函数，print输出对象的字符串到stdout，而本项目输出对象的字符串到cell内。
+""");
 
+  print.nextCell___________________________();
+  // 形式1：
+  print(ObjectContent("hello"));
+  // 形式2：简化形式，自动转ObjectNote(object.toString())
+  print("hello");
 
-///   - 一种是代码中用[cell]函数明确指定的cell，是可以单独运行的。（[Pen]级别的方法包括markdown()等都是cell函数）
-///   - 另一种是自然cell，即非明确指定的，夹在cell函数之间的代码段，要重新运行这种cell，相当于重新运行整个build函数
-/// 自然cell在build函数的最外层，可以用来放置公共变量、函数。
-///
-/// - implicit cell
-/// - explicit cell
-
-
-- [print.markdown]: 对标print的函数，print输出字符串，write输出widget。
-  - write: 全局函数, write("hello") == print.write("hello")
-- [print.md]: 输出一个markdown cell, print.md("hello")==write(MarkdownNote("hello")) 
-- sample：输出一个特殊的内容，Flutter SampleNote，除cell代码外，每个sample还有独立的范例代码
-  - mateSample : flutter的范例cell，由Mate参数化组件构成, 范例代码由Mate生成+mateSample函数体内部分代码组合而成
-  - templateSample：flutter的范例cell, 范例代码会包含 templateSample函数体内所有代码
-
-sample的代码主要要求是完整的，可copy到ide直接能运行的代码，这和cell自己的代码有本质的区别，cell的代码是笔记代码，
-sample的代码是独立运行代码，默认情况，sample块会隐藏掉cell的代码展示，以避免混乱。
-
-
-
-## 各类cell
-
-### markdown cell
-
-你可以看到，markdown cell的代码就是调用：print.md(...)
-markdown cell 无法独立运行，只能通过运行全部notebook来重新执行（markdown中有插入变量，可能需要重新运行以更新UI）。
-
-### 两cell间隔自动形成的cell
-
-这种cell 无法独立运行，只能通过运行全部notebook来重新执行，主要用来放置跨cell的公共变量或函数。
-
-如果两cell之间的自动cell内无代码逻辑，则会隐藏。  """);
-
+  print.nextCell___________________________();
   print.markdown("""
-## cell 内操作
+### MarkdownContent
+
+如果一个cell里全都是MarkdownContent，默认代码是折叠的，点下左边小箭头，可以展开代码
+""");
+  print.nextCell___________________________();
+  // 形式1：
+  print(MarkdownContent("""hello 形式1"""));
+  // 形式2：简化形式
+  print.markdown("""hello 形式2""");
+
+  print.nextCell___________________________();
+  print.markdown("""
+### WidgetContent
+
+如果一个cell里全都是MarkdownContent，默认代码是折叠的，点下左边小箭头，可以展开代码
+""");
+
+  print.nextCell___________________________();
+  // 形式1：
+  print(WidgetContent(Container(width: 100, height: 100, color: Colors.deepPurple)));
+  // 形式2：简化形式，Widget 如果没有被识别为其他内容，就原本的显示出来
+  print(Container(width: 100, height: 100, color: Colors.blue));
+
+  print.nextCell___________________________();
+  print.markdown("""
+### SampleContent
+
+范例内容：本项目为flutter特殊制作了可调参范例，并生成可执行代码片段，copy到一个dart文件中，一般就能执行。
+sample的代码主要要求是完整的，可copy到ide直接能运行的代码，这和cell自己的代码有本质的区别，cell的代码是笔记代码，
+sample的代码是独立运行的flutter使用范例代码，实际的其他范例页面中，sample块的笔记代码会被折叠，以避免混乱。
+""");
+
+  print.nextCell___________________________();
+  // 形式1：
+  print(SampleContent(Container$Mate(width: 100, height: 100, color: Colors.deepPurple)));
+  // 形式2：简化形式，Mate类型的Widget通通认为是范例
+  print(Container$Mate(width: 100, height: 100, color: Colors.deepPurple));
+
+  print.nextCell___________________________();
+  print.markdown("""
+## 事件回调的问题
+
+动态的笔记代码中，通常夹杂按钮回调 或Timer回调，但你看，回调的print并不能把内容输出到正确的地方：
 """);
 
   print.nextCell___________________________();
@@ -134,27 +149,77 @@ markdown cell 无法独立运行，只能通过运行全部notebook来重新执�
     print(ElevatedButton(
         onPressed: () {
           count++;
-          print("click:$count");
+          print("事件回调的问题: $count");
         },
-        child: Text("click:$count")));
+        child: const Text("点击回调后，print没有输出在本cell下 ，而是在本页最最最下面")));
   }
 
-  print.nextCell___________________________((context, print) {
+  print.nextCell___________________________();
+  print.markdown("""
+问题原因：onPressed回调是在build方法执行完才被调用的，而最外层的print函数(Pen.call)的实现如下：
+```dart
+  // Pen类
+  void call(Object? object) {
+    currentCell.print(object);
+  }
+```
+
+内部的currentCell等build执行完后的已经指到是最后一个cell。
+  
+### 处理方案1
+
+回调中避免使用print，用flutter原始的statefull方案来做动态效果：
+""");
+  print.nextCell___________________________();
+  int i = 0;
+  print(StatefulBuilder(builder: (context, setSate) {
+    return ElevatedButton(
+      onPressed: () {
+        setSate(() => i++);
+      },
+      child: Text("widget cell: $i"),
+    );
+  }));
+
+  print.nextCell___________________________();
+  print.markdown("""
+### 处理方案2
+
+用闭包函数的小技巧来记住currentCell，就可以用print做动态效果：
+""");
+  print.nextCell___________________________();
+  (NoteCell print) {
     int i = 0;
-    print(StatefulBuilder(builder: (context, setSate) {
-      return ElevatedButton(
-        onPressed: () {
-          setSate(() => i++);
-        },
-        child: Text("widget cell: $i"),
-      );
-    }));
+    print(ElevatedButton(
+      onPressed: () {
+        i++;
+        print("闭包记住currentCell $i");
+      },
+      child: const Text("闭包记住currentCell"),
+    ));
+  }(print.currentCell);
+
+  print.nextCell___________________________();
+  print.markdown("""
+或用runInCurrentCell函数(与上面同理)来记住currentCell，就可以用print做动态效果：
+""");
+
+  print.nextCell___________________________();
+  print.runInCurrentCell((NoteCell print) {
+    int i = 0;
+    print(ElevatedButton(
+      onPressed: () {
+        i++;
+        print("runInCurrentCell $i");
+      },
+      child: Text("runInCurrentCell"),
+    ));
   });
 
   print.nextCell___________________________();
   print.markdown("""
-### MateSample cell
+## 结束
 
-普通cell是个代码块，其源码如实反应其cell定义。
-  """);
+上面回调案例会错误的print内容到此处，而不是输出到它自己的cell。
+""");
 }
