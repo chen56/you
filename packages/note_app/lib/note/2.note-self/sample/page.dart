@@ -32,14 +32,10 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.nextCell___________________________();
-  print(SampleNote(Container$Mate(
+  print(SampleContent(Container$Mate(
     height: 100,
     child: Text$Mate("请修改height,调节高度"),
   )));
-  print(Container(
-    height: 100,
-    child: Text$Mate("请修改height,调节高度"),
-  ));
 
   print.nextCell___________________________();
   print.markdown('''
@@ -47,15 +43,17 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.nextCell___________________________();
-  print(SampleNote(Text$Mate("我是Text.data,修改我")));
+  print(SampleContent(Text$Mate("我是Text.data,修改我")));
 
+  print.nextCell___________________________();
   print.markdown('''
 ### Color参数
 
 TODO 暂时只能显示，还不能编辑
   ''');
+
   print.nextCell___________________________();
-  print(SampleNote(Container$Mate(
+  print(SampleContent(Container$Mate(
     width: 200,
     height: 100,
     color: Colors.green.shade400,
@@ -76,7 +74,7 @@ TODO 暂时只能显示，还不能编辑
   ''');
 
   print.nextCell___________________________();
-  print(SampleNote(Container$Mate(
+  print(SampleContent(Container$Mate(
     width: 100,
     // height: 100,
     color: Colors.blue.shade100,
@@ -86,10 +84,12 @@ TODO 暂时只能显示，还不能编辑
   print.nextCell___________________________();
   print.markdown(r'''
 ### 枚举参数 
+
+修改下mainAxisAlignment：
   ''');
 
   print.nextCell___________________________();
-  print(SampleNote(Row$Mate(
+  print(SampleContent(Row$Mate(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
@@ -105,7 +105,7 @@ TODO 暂时只能显示，还不能编辑
 
   print.nextCell___________________________();
   for (var mainAxisAlignment in MainAxisAlignment.values) {
-    print(SampleNote(Row$Mate(
+    print(SampleContent(Row$Mate(
       mainAxisAlignment: mainAxisAlignment,
       children: [
         ElevatedButton$Mate(

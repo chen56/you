@@ -333,12 +333,12 @@ class _OutlineView extends StatelessWidget {
   }
 }
 
-class _MateSampleView extends StatelessWidget {
+class _MateSampleWidget extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final SampleNote content;
-  const _MateSampleView({
+  final SampleContent content;
+  const _MateSampleWidget({
     // ignore: unused_element
     super.key,
     required this.rootParam,
@@ -377,7 +377,7 @@ class _ParamAndCodeView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final SampleNote content;
+  final SampleContent content;
 
   const _ParamAndCodeView({
     // ignore: unused_element
@@ -440,7 +440,7 @@ class _ParamAndCodeView extends StatelessWidget {
         padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
         child: Container(
           decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
-          height: 25,
+          height: 30,
           child: row,
         ),
       );
@@ -499,15 +499,15 @@ class _NoteCellView extends StatelessWidget {
     required this.editors,
   });
 
-  Widget contentToWidget(BuildContext context, BaseNoteContent e) {
-    if (e is MarkdownNote) {
-      return MarkdownContent(outline: outline, content: e.content);
+  Widget contentToWidget(BuildContext context, NoteContent e) {
+    if (e is MarkdownContent) {
+      return MarkdownContentWidget(outline: outline, content: e.content);
     }
-    if (e is WidgetNote) {
+    if (e is WidgetContent) {
       return e.widget;
     }
-    if (e is SampleNote) {
-      return _MateSampleView(
+    if (e is SampleContent) {
+      return _MateSampleWidget(
         content: e,
         rootParam: e.mate.toRootParam(editors: editors),
         editors: editors,
@@ -515,7 +515,7 @@ class _NoteCellView extends StatelessWidget {
       );
     }
 
-    if (e is ObjectNote) {
+    if (e is ObjectContent) {
       return Text("${e.object}");
     }
 

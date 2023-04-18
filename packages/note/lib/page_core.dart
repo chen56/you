@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
@@ -169,8 +170,6 @@ class Path<T> {
   }
 }
 
-typedef CellBuilder = void Function(BuildContext context, NoteCell print);
-
 ///
 /// cell 是一段代码加上其运行后的一块界面区域，和jupyter/observablehq 中的cell概念类似，
 /// 但由于我们并没有一个notebook编辑器，一个cell，一个cell的编辑运行代码，而是通过代码分析器从
@@ -244,7 +243,7 @@ class Pen {
 
   /// markdown 独占一个新cell
   void markdown(String content) {
-    currentCell.print(MarkdownNote(content));
+    currentCell.print(MarkdownContent(content));
   }
 
   /// 新增一个自然cell
@@ -252,14 +251,13 @@ class Pen {
   ///
   /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
   /// The meaning of natural cell is the code block between [Pen. cell] function blocks
-  NoteCell _nextCell([CellBuilder? builder]) {
+  NoteCell _nextCell() {
     int cellIndex = cells.length;
     var next = NoteCell(
       cellType: CellType.body,
       pen: this,
       index: cellIndex,
       codeBlock: NoteSource.getBodyCellBlock(path, cellIndex),
-      builder: builder,
     );
     cells.add(next);
     return next;
@@ -270,11 +268,7 @@ class Pen {
   ///
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
-  void nextCell___________________________([CellBuilder? builder]) {
-    // have builder, add a new cell
-    if (builder != null) {
-      _nextCell(builder);
-    }
+  void nextCell___________________________() {
     // add a normal cell
     _nextCell();
   }
@@ -283,26 +277,28 @@ class Pen {
     currentCell.print(object);
   }
 
+  /// 注意：只能在NotePage的[build]函数的最外层调用，不能放在button回调或Timer回调中
+  /// 通过闭包记住currentCell的引用，以便可以在之后的回调中也可以print内容到currentCell
+  void runInCurrentCell(void Function(NoteCell print) callback) {
+    callback(currentCell);
+  }
+
   NoteCell get currentCell => cells.last;
 }
 
-abstract class BaseNoteContent {}
+/// note content is not widget , it is data.
+class NoteContent {}
 
-class MarkdownNote extends BaseNoteContent {
+class MarkdownContent extends NoteContent {
   final String content;
 
-  MarkdownNote(this.content);
-
-  @override
-  String toString() {
-    return "MarkdownNote('${content}')";
-  }
+  MarkdownContent(this.content);
 }
 
-class ObjectNote extends BaseNoteContent {
+class ObjectContent extends NoteContent {
   final Object? object;
 
-  ObjectNote(this.object);
+  ObjectContent(this.object);
 
   @override
   String toString() {
@@ -310,10 +306,10 @@ class ObjectNote extends BaseNoteContent {
   }
 }
 
-class WidgetNote extends BaseNoteContent {
+class WidgetContent extends NoteContent {
   final Widget widget;
 
-  WidgetNote(this.widget);
+  WidgetContent(this.widget);
 
   @override
   String toString() {
@@ -322,12 +318,12 @@ class WidgetNote extends BaseNoteContent {
 }
 
 // {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
-class SampleNote extends BaseNoteContent {
+class SampleContent extends NoteContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
 
-  SampleNote(
+  SampleContent(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
@@ -338,8 +334,6 @@ class SampleNote extends BaseNoteContent {
     return "SampleNote('${mate.toString()}')";
   }
 }
-
-typedef SampleBuilder = Widget Function(ObjectParam param);
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -545,12 +539,11 @@ enum CellType { header, body, tail }
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
-  final List<BaseNoteContent> _contents = List.empty(growable: true);
+  final List<NoteContent> _contents = List.empty(growable: true);
 
   // index use to find code
   final CodeBlock codeBlock;
   final int index;
-  final CellBuilder? _builder;
   final Pen pen;
   bool? _expand;
   final CellType cellType;
@@ -560,15 +553,9 @@ class NoteCell extends ChangeNotifier {
     required this.pen,
     required this.index,
     required this.cellType,
-    CellBuilder? builder,
-  }) : _builder = builder;
+  });
 
-  List<BaseNoteContent> get contents => List.unmodifiable(_contents);
-
-  // ignore: non_constant_identifier_names
-  NoteCell get nextCell___________________________ {
-    return pen._nextCell();
-  }
+  List<NoteContent> get contents => List.unmodifiable(_contents);
 
   // String get name {
   //   if (cellType == CellType.header) {
@@ -604,31 +591,31 @@ class NoteCell extends ChangeNotifier {
   }
 
   void markdown(String content) {
-    call(MarkdownNote(content));
+    call(MarkdownContent(content));
   }
 
   bool get isMarkdownCell {
     if (_contents.isEmpty) return false;
-    return _contents.every((e) => e is MarkdownNote);
+    return _contents.every((e) => e is MarkdownContent);
   }
 
   void call(Object? object) {
-    if (object is BaseNoteContent) {
+    if (object is NoteContent) {
       _add(object);
       return;
     }
     if (object is Mate) {
-      _add(SampleNote(object));
+      _add(SampleContent(object));
       return;
     }
     if (object is Widget) {
-      _add(WidgetNote(object));
+      _add(WidgetContent(object));
       return;
     }
-    _add(ObjectNote(object));
+    _add(ObjectContent(object));
   }
 
-  void _add(BaseNoteContent content) {
+  void _add(NoteContent content) {
     _contents.add(content);
     notifyListeners();
   }
@@ -679,11 +666,7 @@ class NoteCell extends ChangeNotifier {
     return !isCodeEmpty;
   }
 
-  List<BaseNoteContent> build(BuildContext context) {
-    if (_builder == null) return List.unmodifiable(_contents);
-
-    _contents.clear();
-    _builder!(context, this);
+  List<NoteContent> build(BuildContext context) {
     return List.unmodifiable(_contents);
   }
 
