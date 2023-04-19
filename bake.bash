@@ -209,7 +209,19 @@ enable_experiment=""
   /docker?shortHelp() { cat <<<"docker build"; }
   /docker() {
     (
-      docker build --tag younpc/note:0.1 --tag younpc/note:latest . ;
+      podman build --tag younpc/note:0.1 --tag younpc/note:latest . ;
+      mkdir -p build
+      podman run younpc/note  tar cf - web | ( cd build;tar xf -)
+    )
+  }
+}
+/dockerRun?() {
+  /dockerRun?shortHelp() { cat <<<"docker run"; }
+  /dockerRun() {
+    (
+      podman run --rm --name note -v $PWD/docker/nginx.conf:/etc/nginx/nginx.conf -p 8080:8080 younpc/note  ;
+      podman run --rm --name note  -p 8080:8080 younpc/note  ;
+      # podman run --name note -p 8080:8080 younpc/note  ;
     )
   }
 }
