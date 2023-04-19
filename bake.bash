@@ -164,7 +164,10 @@ enable_experiment=""
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
 #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
-    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html --base-href "/note/" ; )
+    ( cd packages/note_app;
+      run flutter build web -v $enable_experiment \
+                           --release --tree-shake-icons \
+                           --web-renderer html --base-href "/note/" ; )
   }
 }
 
@@ -180,7 +183,9 @@ enable_experiment=""
   /preview() {
 #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
 #    /build "$@"
-    ( cd packages/note_app; run flutter build web -v $enable_experiment --release --web-renderer html --base-href "/" ; )
+    ( cd packages/note_app;
+      run flutter build web -v $enable_experiment \
+             --release  --tree-shake-icons --web-renderer html --base-href "/" ; )
     # 	npx http-server ./app_note/build/web --port 8000
     run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000
   }
@@ -196,6 +201,15 @@ enable_experiment=""
       /get
       /build
       /test
+    )
+  }
+}
+
+/docker?() {
+  /docker?shortHelp() { cat <<<"docker build"; }
+  /docker() {
+    (
+      docker build --tag younpc/note:0.1 --tag younpc/note:latest . ;
     )
   }
 }
