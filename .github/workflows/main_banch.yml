@@ -51,7 +51,7 @@ jobs:
       - run: flutter --version
       - run: ./bake get
       - run: ./bake test
-      - run: ./bake build
+      - run: ./bake build --base-href "/note/"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:

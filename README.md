@@ -77,3 +77,8 @@ PR---->main--->prod
          |-----> deploy main(inner review) : https://chen56.github.com/note/main
 ```
 
+## ci docker
+
+```bash
+docker run --rm -v ${PWD}:/build --workdir /build fischerscode/flutter:3.10.0-1.1.pre ./bake build
+```
