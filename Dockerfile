@@ -31,9 +31,9 @@ EXPOSE 80
 WORKDIR /app
 
 # Prefer not to run as root.
-USER note
 
 COPY --from=builder /home/flutter/note/packages/note_app/build/web /app
-RUN npm i http-server
+RUN npm i -g http-server
 
+# docker run --rm -p 80:80 younpc/note
 CMD ["http-server", "/app","--port" ,"80" , "-g","--brotli"]
