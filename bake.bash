@@ -164,10 +164,12 @@ enable_experiment=""
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
 #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
-    ( cd packages/note_app;
+    (
+      cd packages/note_app;
       run flutter build web -v $enable_experiment \
                            --release --tree-shake-icons \
-                           --web-renderer html --base-href "/note/" ; )
+                           --web-renderer html "$@" ;
+    )
   }
 }
 
@@ -183,11 +185,9 @@ enable_experiment=""
   /preview() {
 #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
 #    /build "$@"
-    ( cd packages/note_app;
-      run flutter build web -v $enable_experiment \
-             --release  --tree-shake-icons --web-renderer html --base-href "/" ; )
+    /build
     # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000
+    run deno run --allow-env --allow-read --allow-sys --allow-docknet npm:http-server  ./packages/note_app/build/web --port 8000  -g --brotli
   }
 }
 
@@ -209,9 +209,9 @@ enable_experiment=""
   /docker?shortHelp() { cat <<<"docker build"; }
   /docker() {
     (
-      podman build --tag younpc/note:0.1 --tag younpc/note:latest . ;
+      docker build --tag younpc/note:latest . ;
       mkdir -p build
-      podman run younpc/note  tar cf - web | ( cd build;tar xf -)
+      docker run younpc/note  tar cf - web | ( cd build;tar xf -)
     )
   }
 }
@@ -219,13 +219,18 @@ enable_experiment=""
   /dockerRun?shortHelp() { cat <<<"docker run"; }
   /dockerRun() {
     (
-      podman run --rm --name note -v $PWD/docker/nginx.conf:/etc/nginx/nginx.conf -p 8080:8080 younpc/note  ;
-      podman run --rm --name note  -p 8080:8080 younpc/note  ;
-      # podman run --name note -p 8080:8080 younpc/note  ;
+      docker run --rm --name note -v $PWD/docker/nginx.conf:/etc/nginx/nginx.conf -p 8080:8080 younpc/note  ;
+      docker run --rm --name note  -p 8080:8080 younpc/note  ;
+      # docker run --name note -p 8080:8080 younpc/note  ;
     )
   }
 }
-
+/dockerPush?() {
+  /dockerPush?shortHelp() { cat <<<"docker image push"; }
+  /dockerPush() {
+    docker image push younpc/note:latest
+  }
+}
 /gen?() {
   /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
