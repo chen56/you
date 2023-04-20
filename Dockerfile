@@ -32,7 +32,7 @@ WORKDIR /app
 
 # Prefer not to run as root.
 
-COPY --from=builder /home/flutter/note/packages/note_app/build/web /app
+COPY --from=builder /home/flutter/note/packages/note_app/build/web /app/note
 RUN npm i -g http-server
 
 # docker run --rm -p 80:80 younpc/note
