@@ -10,7 +10,7 @@ ENV PUB_HOSTED_URL="https://pub.flutter-io.cn"
 ENV FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 RUN cd note && ./bake get \
-            && ./bake build
+            && ./bake build --base-href "/note/"
 
 #FROM nginx as web
 # for test
