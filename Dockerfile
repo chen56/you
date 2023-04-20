@@ -1,4 +1,4 @@
-FROM fischerscode/flutter:3.10.0-1.1.pre as builder
+FROM docker.io/fischerscode/flutter:3.10.0-1.1.pre as builder
 
 USER flutter:flutter
 
@@ -23,7 +23,7 @@ RUN cd note && ./bake get \
 
 # for test
 #  docker run --rm -v $PWD/packages/note_app/build/web:/app -p 8000:80 denoland/deno:1.32.5 deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server  /app --port 80  -g --brotli
-FROM denoland/deno:1.32.5
+FROM docker.io/denoland/deno:1.32.5
 
 # The port that your application listens to.
 EXPOSE 80

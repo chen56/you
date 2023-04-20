@@ -211,7 +211,7 @@ enable_experiment=""
     (
       docker build --tag younpc/note:latest . ;
       mkdir -p build
-      docker run younpc/note  tar cf - web | ( cd build;tar xf -)
+      docker run --workdir / younpc/note  tar cf - app | ( cd build;tar xf -)
     )
   }
 }
@@ -219,9 +219,8 @@ enable_experiment=""
   /dockerRun?shortHelp() { cat <<<"docker run"; }
   /dockerRun() {
     (
-      docker run --rm --name note -v $PWD/docker/nginx.conf:/etc/nginx/nginx.conf -p 8080:8080 younpc/note  ;
-      docker run --rm --name note  -p 8080:8080 younpc/note  ;
-      # docker run --name note -p 8080:8080 younpc/note  ;
+      # docker run --rm --name note -v $PWD/docker/nginx.conf:/etc/nginx/nginx.conf -p 8080:8080 younpc/note  ;
+      docker run --rm --name note -p 80:80 -u root:root  younpc/note ;
     )
   }
 }
