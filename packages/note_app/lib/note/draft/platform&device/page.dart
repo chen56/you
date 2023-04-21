@@ -2,6 +2,7 @@
 
 import 'dart:ui';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 
@@ -21,13 +22,17 @@ build(BuildContext context, Pen print) {
   ThemeData theme = Theme.of(context);
   MediaQueryData mediaQuery = MediaQuery.of(context);
   print.markdown('''
-| name                    | value                      | comment                                           |
-|-------------------------|----------------------------|---------------------------------------------------|
-| theme.platform.name     | ${theme.platform.name}     |                                                   |
-| theme.visualDensity     | ${theme.visualDensity.toStringShort()}     |      视觉密度                      |
-| mediaQuery.orientation  | ${mediaQuery.orientation}  | Orientation.landscape | Orientation.portrait      |
-| mediaQuery.size         | ${mediaQuery.size}         | logical pixel                                     |
-| window.physicalSize     | ${window.physicalSize}     | physical pixel                                    |
-| window.devicePixelRatio | ${window.devicePixelRatio} | physical pixel= logical pixel *  devicePixelRatio |
+| name                    | value                                  | comment                                           |
+|-------------------------|----------------------------------------|---------------------------------------------------|
+| kIsWeb                  | ${kIsWeb}                              | bool.fromEnvironment('dart.library.js_util')      |
+| kReleaseMode            | ${kReleaseMode}                        | bool.fromEnvironment('dart.vm.product')           |
+| kProfileMode            | ${kProfileMode}                        | bool.fromEnvironment('dart.vm.profile')           |
+| kDebugMode              | ${kDebugMode}                          | !kReleaseMode && !kProfileMode                    |
+| theme.platform.name     | ${theme.platform.name}                 |                                                   |
+| theme.visualDensity     | ${theme.visualDensity.toStringShort()} | 视觉密度                                              |
+| mediaQuery.orientation  | ${mediaQuery.orientation}              | landscape/portrait                                |
+| mediaQuery.size         | ${mediaQuery.size}                     | logical pixel                                     |
+| window.physicalSize     | ${window.physicalSize}                 | physical pixel                                    |
+| window.devicePixelRatio | ${window.devicePixelRatio}             | physical pixel= logical pixel *  devicePixelRatio |
   ''');
 }

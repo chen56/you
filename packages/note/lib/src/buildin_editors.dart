@@ -1,20 +1,28 @@
 import 'package:code_builder/code_builder.dart' as code;
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:note/mate.dart';
 
-class DoubleEditor extends ValueParamEditor {
-  DoubleEditor(super.param, {required super.editors});
+abstract class BaseValueInputEditor extends BaseValueEditor {
+  BaseValueInputEditor(super.param, {required super.editors});
 
   @override
   Widget valueWidget(BuildContext context) {
+    var platform = Theme.of(context).platform;
+    bool isAndroid = platform == TargetPlatform.android;
+    bool isIOS = platform == TargetPlatform.iOS;
+    var isMobileBrowser = kIsWeb && (isAndroid || isIOS);
+
     return TextFormField(
       initialValue: "${param.init}",
       autofocus: true,
-      decoration: const InputDecoration(
-        hintText: "Text#data",
+      decoration: InputDecoration(
+        hintText: isMobileBrowser ? "当前还不支持手机版浏览器编辑" : param.name,
       ),
+      readOnly: isMobileBrowser,
       onChanged: (value) {
-        var newValue = double.tryParse(value);
+        var newValue = toParamValue(value);
         if (newValue != null) {
           param.value = newValue;
         }
@@ -22,39 +30,40 @@ class DoubleEditor extends ValueParamEditor {
     );
   }
 
+  Object? toParamValue(String value);
+
   @override
   code.Expression toCode() {
     return code.literal(param.value);
   }
 }
 
-class IntEditor extends ValueParamEditor {
+class IntEditor extends BaseValueInputEditor {
   IntEditor(super.param, {required super.editors});
 
   @override
-  Widget valueWidget(BuildContext context) {
-    return TextFormField(
-      initialValue: "${param.init}",
-      autofocus: true,
-      decoration: const InputDecoration(
-        hintText: "Text#data",
-      ),
-      onChanged: (value) {
-        var newValue = int.tryParse(value);
-        if (newValue != null) {
-          param.value = newValue;
-        }
-      },
-    );
-  }
-
-  @override
-  code.Expression toCode() {
-    return code.literal(param.value);
+  Object? toParamValue(String value) {
+    return int.tryParse(value);
   }
 }
 
-class BoolEditor extends ValueParamEditor {
+class StringEditor extends BaseValueInputEditor {
+  StringEditor(super.param, {required super.editors}) {}
+  @override
+  Object? toParamValue(String value) {
+    return value;
+  }
+}
+
+class DoubleEditor extends BaseValueInputEditor {
+  DoubleEditor(super.param, {required super.editors});
+  @override
+  Object? toParamValue(String value) {
+    return double.tryParse(value);
+  }
+}
+
+class BoolEditor extends BaseValueEditor {
   BoolEditor(super.param, {required super.editors});
 
   @override
@@ -78,58 +87,7 @@ class BoolEditor extends ValueParamEditor {
   }
 }
 
-class StringEditor extends ValueParamEditor {
-  StringEditor(super.param, {required super.editors});
-
-  @override
-  Widget valueWidget(BuildContext context) {
-    return TextFormField(
-      initialValue: "${param.init}",
-      autofocus: true,
-      decoration: const InputDecoration(
-        hintText: "Text#data",
-      ),
-      onChanged: (value) {
-        param.value = value;
-      },
-    );
-  }
-
-  @override
-  code.Expression toCode() {
-    return code.literal(param.value);
-  }
-}
-//
-// class EnumEditor extends Editor<Enum> {
-//   final EnumRegister enums;
-//   EnumEditor({required this.enums, required super.editors});
-//
-//   @override
-//   Widget valueWidget(Param param) {
-//     return DropdownButton<Enum>(
-//       alignment: Alignment.topLeft,
-//       value: param.value as Enum,
-//       icon: const Icon(Icons.arrow_downward),
-//       elevation: 16,
-//       style: const TextStyle(color: Colors.deepPurple),
-//       onChanged: (Enum? value) {
-//         param.value = value;
-//       },
-//       items: enums
-//           .getOrEmpty(param.value.runtimeType)
-//           .map((e) => e as Enum)
-//           .map<DropdownMenuItem<Enum>>((Enum value) {
-//         return DropdownMenuItem<Enum>(
-//           value: value,
-//           child: Text(value.name),
-//         );
-//       }).toList(),
-//     );
-//   }
-// }
-
-class EnumEditor extends ValueParamEditor {
+class EnumEditor extends BaseValueEditor {
   final List enums;
 
   EnumEditor(super.param, {required this.enums, required super.editors});
@@ -160,7 +118,7 @@ class EnumEditor extends ValueParamEditor {
   }
 }
 
-class ColorEditor<T> extends ValueParamEditor {
+class ColorEditor<T> extends BaseValueEditor {
   ColorEditor(super.param, {required super.editors});
 
   @override
@@ -183,7 +141,7 @@ class ColorEditor<T> extends ValueParamEditor {
   }
 }
 
-class IconDataEditor extends ValueParamEditor {
+class IconDataEditor extends BaseValueEditor {
   IconDataEditor(super.param, {required super.editors});
 
   @override
@@ -302,18 +260,14 @@ class _ColorRegister {
   }
 }
 
-abstract class ValueParamEditor extends Editor {
+abstract class BaseValueEditor extends Editor {
   @override
   final ValueParam param;
 
-  ValueParamEditor(this.param, {required super.editors});
+  BaseValueEditor(this.param, {required super.editors});
 
   @override
-  Widget valueWidget(BuildContext context) {
-    return Text(
-      toCodeString(),
-    );
-  }
+  Widget valueWidget(BuildContext context);
 }
 
 class ObjectParamEditor extends Editor {
@@ -353,6 +307,11 @@ class ListParamEditor extends Editor {
   code.Expression toCode() {
     return code.literalList(param.children.map((e) => e.toCodeExpression(editors: editors)));
   }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return const Text("");
+  }
 }
 
 class SetParamEditor extends Editor {
@@ -365,9 +324,14 @@ class SetParamEditor extends Editor {
   code.Expression toCode() {
     return code.literalSet(param.children.map((e) => e.toCodeExpression(editors: editors)));
   }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return const Text("");
+  }
 }
 
-class ManuallyValueEditor extends ValueParamEditor {
+class ManuallyValueEditor extends BaseValueEditor {
   code.Expression codeExpression;
 
   ManuallyValueEditor(super.param, {required super.editors, required this.codeExpression});
@@ -377,13 +341,23 @@ class ManuallyValueEditor extends ValueParamEditor {
     if (param.value == null) return code.literalNull;
     return codeExpression;
   }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return Text("${param.value}");
+  }
 }
 
-class DefaultValueParamEditor extends ValueParamEditor {
+class DefaultValueParamEditor extends BaseValueEditor {
   DefaultValueParamEditor(super.param, {required super.editors});
 
   @override
   code.Expression toCode() {
     return code.refer("${param.value}");
+  }
+
+  @override
+  Widget valueWidget(BuildContext context) {
+    return Text("${param.value}");
   }
 }

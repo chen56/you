@@ -349,18 +349,19 @@ class _MateSampleView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var paramAndCodeView = _ParamAndCodeView(
+      rootParam: rootParam,
+      editors: editors,
+      content: content,
+      title: title,
+    );
+
     return Card(
       elevation: 5,
       child: ListenableBuilder(
         listenable: rootParam,
         builder: (context, _) {
           var renderView = rootParam.build() as Widget;
-          var paramAndCodeView = _ParamAndCodeView(
-            rootParam: rootParam,
-            editors: editors,
-            content: content,
-            title: title,
-          );
           return Column(
             children: [
               paramAndCodeView,
@@ -434,9 +435,9 @@ class _ParamAndCodeView extends StatelessWidget {
       var row = Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Flexible(child: nameWidget),
+          Expanded(flex: 40, child: nameWidget),
           // Flexible(child: param.valueWidget(context, editors)),
-          Flexible(child: param.valueWidget(context, editors)),
+          Expanded(flex: 60, child: param.valueWidget(context, editors)),
         ],
       );
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
@@ -451,9 +452,10 @@ class _ParamAndCodeView extends StatelessWidget {
         ),
       );
 
-      return row;
+      return padding;
     }
 
+    // codeView do not listen param changed, because we want keep Input widget
     var paramView = Column(
       children: [
         ...rootParam
@@ -462,22 +464,27 @@ class _ParamAndCodeView extends StatelessWidget {
             .map(paramRow)
       ],
     );
-    var codeView = HighlightView(
-      // The original code to be highlighted
-      rootParam.toSampleCodeString(snippet: false, format: true),
 
-      // Specify language
-      // It is recommended to give it a value for performance
-      language: 'dart',
+    // codeView listen param changed
+    var codeView = ListenableBuilder(
+      listenable: rootParam,
+      builder: (context, _) {
+        return HighlightView(
+          // The original code to be highlighted
+          rootParam.toSampleCodeString(snippet: false, format: true),
 
-      // Specify highlight theme
-      // All available themes are listed in `themes` folder
-      theme: vs2015Theme,
+          // Specify language
+          // It is recommended to give it a value for performance
+          language: 'dart',
 
-      // Specify padding
-      padding: const EdgeInsets.all(6),
+          // Specify highlight theme
+          // All available themes are listed in `themes` folder
+          theme: vs2015Theme,
 
-      // Specify text style
+          // Specify padding
+          padding: const EdgeInsets.all(6),
+        );
+      },
     );
     return ExpansionTile(
       initiallyExpanded: false,
