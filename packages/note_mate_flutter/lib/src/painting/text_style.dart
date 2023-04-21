@@ -11,110 +11,216 @@ class TextStyle$Mate extends _i1.TextStyle with _i2.Mate {
   /// TextStyle TextStyle({bool inherit = true, Color? color, Color? backgroundColor, double? fontSize, FontWeight? fontWeight, FontStyle? fontStyle, double? letterSpacing, double? wordSpacing, TextBaseline? textBaseline, double? height, TextLeadingDistribution? leadingDistribution, Locale? locale, Paint? foreground, Paint? background, List<Shadow>? shadows, List<FontFeature>? fontFeatures, List<FontVariation>? fontVariations, TextDecoration? decoration, Color? decorationColor, TextDecorationStyle? decorationStyle, double? decorationThickness, String? debugLabel, String? fontFamily, List<String>? fontFamilyFallback, String? package, TextOverflow? overflow})
   TextStyle$Mate({
     /// optionalParameters: {bool inherit = true} , default:processed=BooleanLiteralImpl
-    bool inherit = true,
+    super.inherit,
 
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? fontSize} , default:none
-    double? fontSize,
+    super.fontSize,
 
     /// optionalParameters: {FontWeight? fontWeight} , default:none
-    _i3.FontWeight? fontWeight,
+    super.fontWeight,
 
     /// optionalParameters: {FontStyle? fontStyle} , default:none
-    _i3.FontStyle? fontStyle,
+    super.fontStyle,
 
     /// optionalParameters: {double? letterSpacing} , default:none
-    double? letterSpacing,
+    super.letterSpacing,
 
     /// optionalParameters: {double? wordSpacing} , default:none
-    double? wordSpacing,
+    super.wordSpacing,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
-    _i3.TextBaseline? textBaseline,
+    super.textBaseline,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , default:none
-    _i3.TextLeadingDistribution? leadingDistribution,
+    super.leadingDistribution,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i3.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {Paint? foreground} , default:none
-    _i3.Paint? foreground,
+    super.foreground,
 
     /// optionalParameters: {Paint? background} , default:none
-    _i3.Paint? background,
+    super.background,
 
     /// optionalParameters: {List<Shadow>? shadows} , default:none
-    List<_i3.Shadow>? shadows,
+    super.shadows,
 
     /// optionalParameters: {List<FontFeature>? fontFeatures} , default:none
-    List<_i3.FontFeature>? fontFeatures,
+    super.fontFeatures,
 
     /// optionalParameters: {List<FontVariation>? fontVariations} , default:none
-    List<_i3.FontVariation>? fontVariations,
+    super.fontVariations,
 
     /// optionalParameters: {TextDecoration? decoration} , default:none
-    _i3.TextDecoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {Color? decorationColor} , default:none
-    _i3.Color? decorationColor,
+    super.decorationColor,
 
     /// optionalParameters: {TextDecorationStyle? decorationStyle} , default:none
-    _i3.TextDecorationStyle? decorationStyle,
+    super.decorationStyle,
 
     /// optionalParameters: {double? decorationThickness} , default:none
-    double? decorationThickness,
+    super.decorationThickness,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {String? fontFamily} , default:none
-    String? fontFamily,
+    super.fontFamily,
 
     /// optionalParameters: {List<String>? fontFamilyFallback} , default:none
-    List<String>? fontFamilyFallback,
+    super.fontFamilyFallback,
 
     /// optionalParameters: {String? package} , default:none
-    String? package,
+    super.package,
 
     /// optionalParameters: {TextOverflow? overflow} , default:none
-    _i4.TextOverflow? overflow,
-  }) : super(
-          inherit: inherit,
-          color: color,
-          backgroundColor: backgroundColor,
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-          fontStyle: fontStyle,
-          letterSpacing: letterSpacing,
-          wordSpacing: wordSpacing,
-          textBaseline: textBaseline,
-          height: height,
-          leadingDistribution: leadingDistribution,
-          locale: locale,
-          foreground: foreground,
-          background: background,
-          shadows: shadows,
-          fontFeatures: fontFeatures,
-          fontVariations: fontVariations,
-          decoration: decoration,
-          decorationColor: decorationColor,
-          decorationStyle: decorationStyle,
-          decorationThickness: decorationThickness,
-          debugLabel: debugLabel,
-          fontFamily: fontFamily,
-          fontFamilyFallback: fontFamilyFallback,
-          package: package,
-          overflow: overflow,
-        ) {
+    super.overflow,
+  })  : mateParams = {
+          'inherit': _i2.BuilderArg<bool>(
+            name: 'inherit',
+            init: inherit,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'fontSize': _i2.BuilderArg<double?>(
+            name: 'fontSize',
+            init: fontSize,
+            isNamed: true,
+          ),
+          'fontWeight': _i2.BuilderArg<_i3.FontWeight?>(
+            name: 'fontWeight',
+            init: fontWeight,
+            isNamed: true,
+          ),
+          'fontStyle': _i2.BuilderArg<_i3.FontStyle?>(
+            name: 'fontStyle',
+            init: fontStyle,
+            isNamed: true,
+          ),
+          'letterSpacing': _i2.BuilderArg<double?>(
+            name: 'letterSpacing',
+            init: letterSpacing,
+            isNamed: true,
+          ),
+          'wordSpacing': _i2.BuilderArg<double?>(
+            name: 'wordSpacing',
+            init: wordSpacing,
+            isNamed: true,
+          ),
+          'textBaseline': _i2.BuilderArg<_i3.TextBaseline?>(
+            name: 'textBaseline',
+            init: textBaseline,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'leadingDistribution': _i2.BuilderArg<_i3.TextLeadingDistribution?>(
+            name: 'leadingDistribution',
+            init: leadingDistribution,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i3.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'foreground': _i2.BuilderArg<_i3.Paint?>(
+            name: 'foreground',
+            init: foreground,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i3.Paint?>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+          ),
+          'shadows': _i2.BuilderArg<List<_i3.Shadow>?>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+          'fontFeatures': _i2.BuilderArg<List<_i3.FontFeature>?>(
+            name: 'fontFeatures',
+            init: fontFeatures,
+            isNamed: true,
+          ),
+          'fontVariations': _i2.BuilderArg<List<_i3.FontVariation>?>(
+            name: 'fontVariations',
+            init: fontVariations,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i3.TextDecoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'decorationColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'decorationColor',
+            init: decorationColor,
+            isNamed: true,
+          ),
+          'decorationStyle': _i2.BuilderArg<_i3.TextDecorationStyle?>(
+            name: 'decorationStyle',
+            init: decorationStyle,
+            isNamed: true,
+          ),
+          'decorationThickness': _i2.BuilderArg<double?>(
+            name: 'decorationThickness',
+            init: decorationThickness,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'fontFamily': _i2.BuilderArg<String?>(
+            name: 'fontFamily',
+            init: fontFamily,
+            isNamed: true,
+          ),
+          'fontFamilyFallback': _i2.BuilderArg<List<String>?>(
+            name: 'fontFamilyFallback',
+            init: fontFamilyFallback,
+            isNamed: true,
+          ),
+          'package': _i2.BuilderArg<String?>(
+            name: 'package',
+            init: package,
+            isNamed: true,
+          ),
+          'overflow': _i2.BuilderArg<_i4.TextOverflow?>(
+            name: 'overflow',
+            init: overflow,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextStyle';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextStyle$Mate(
@@ -145,136 +251,8 @@ class TextStyle$Mate extends _i1.TextStyle with _i2.Mate {
           package: p.get('package').build(),
           overflow: p.get('overflow').build(),
         );
-    mateUse(
-      'inherit',
-      inherit,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'fontSize',
-      fontSize,
-      isNamed: true,
-    );
-    mateUse(
-      'fontWeight',
-      fontWeight,
-      isNamed: true,
-    );
-    mateUse(
-      'fontStyle',
-      fontStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'letterSpacing',
-      letterSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'wordSpacing',
-      wordSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'textBaseline',
-      textBaseline,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingDistribution',
-      leadingDistribution,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'foreground',
-      foreground,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
-    mateUse(
-      'fontFeatures',
-      fontFeatures,
-      isNamed: true,
-    );
-    mateUse(
-      'fontVariations',
-      fontVariations,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'decorationColor',
-      decorationColor,
-      isNamed: true,
-    );
-    mateUse(
-      'decorationStyle',
-      decorationStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'decorationThickness',
-      decorationThickness,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'fontFamily',
-      fontFamily,
-      isNamed: true,
-    );
-    mateUse(
-      'fontFamilyFallback',
-      fontFamilyFallback,
-      isNamed: true,
-    );
-    mateUse(
-      'package',
-      package,
-      isNamed: true,
-    );
-    mateUse(
-      'overflow',
-      overflow,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

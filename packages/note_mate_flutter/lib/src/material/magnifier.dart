@@ -17,31 +17,33 @@ class TextMagnifier$Mate extends _i1.TextMagnifier with _i2.Mate {
   /// TextMagnifier TextMagnifier({Key? key, required ValueNotifier<MagnifierInfo> magnifierInfo})
   TextMagnifier$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ValueNotifier<MagnifierInfo> magnifierInfo} , default:none
-    required _i4.ValueNotifier<_i5.MagnifierInfo> magnifierInfo,
-  }) : super(
-          key: key,
-          magnifierInfo: magnifierInfo,
-        ) {
+    required super.magnifierInfo,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'magnifierInfo': _i2.BuilderArg<_i4.ValueNotifier<_i5.MagnifierInfo>>(
+            name: 'magnifierInfo',
+            init: magnifierInfo,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextMagnifier';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextMagnifier$Mate(
           key: p.get('key').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'magnifierInfo',
-      magnifierInfo,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Magnifier extends StatelessWidget
@@ -49,30 +51,57 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
   /// Magnifier Magnifier({Key? key, Offset additionalFocalPointOffset = Offset.zero, BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius)), Color filmColor = const Color.fromARGB(8, 158, 158, 158), List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))], Size size = Magnifier.kDefaultMagnifierSize})
   Magnifier$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i6.Offset additionalFocalPointOffset = _i7.Offset.zero,
+    super.additionalFocalPointOffset,
 
     /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius))} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i8.BorderRadius borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {Color filmColor = const Color.fromARGB(8, 158, 158, 158)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i6.Color filmColor,
+    super.filmColor,
 
     /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))]} , default:unprocessed=ListLiteralImpl
-    required List<_i9.BoxShadow> shadows,
+    super.shadows,
 
     /// optionalParameters: {Size size = Magnifier.kDefaultMagnifierSize} , default:processed=PrefixedIdentifierImpl
-    _i6.Size size = _i10.Magnifier.kDefaultMagnifierSize,
-  }) : super(
-          key: key,
-          additionalFocalPointOffset: additionalFocalPointOffset,
-          borderRadius: borderRadius,
-          filmColor: filmColor,
-          shadows: shadows,
-          size: size,
-        ) {
+    super.size,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'additionalFocalPointOffset': _i2.BuilderArg<_i6.Offset>(
+            name: 'additionalFocalPointOffset',
+            init: additionalFocalPointOffset,
+            isNamed: true,
+            defaultValue: _i7.Offset.zero,
+          ),
+          'borderRadius': _i2.BuilderArg<_i8.BorderRadius>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'filmColor': _i2.BuilderArg<_i6.Color>(
+            name: 'filmColor',
+            init: filmColor,
+            isNamed: true,
+          ),
+          'shadows': _i2.BuilderArg<List<_i9.BoxShadow>>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<_i6.Size>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: _i10.Magnifier.kDefaultMagnifierSize,
+          ),
+        },
+        super() {
     mateBuilderName = 'Magnifier';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Magnifier$Mate(
@@ -83,37 +112,8 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
           shadows: p.get('shadows').build(),
           size: p.get('size').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'additionalFocalPointOffset',
-      additionalFocalPointOffset,
-      isNamed: true,
-      defaultValue: _i7.Offset.zero,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'filmColor',
-      filmColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: _i10.Magnifier.kDefaultMagnifierSize,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

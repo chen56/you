@@ -15,78 +15,153 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
   /// DatePickerDialog DatePickerDialog({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, bool Function(DateTime)? selectableDayPredicate, String? cancelText, String? confirmText, String? helpText, DatePickerMode initialCalendarMode = DatePickerMode.day, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, String? restorationId, void Function(DatePickerEntryMode)? onDatePickerModeChange})
   DatePickerDialog$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required DateTime initialDate} , default:none
-    required DateTime initialDate,
+    required super.initialDate,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
-    required DateTime firstDate,
+    required super.firstDate,
 
     /// optionalParameters: {required DateTime lastDate} , default:none
-    required DateTime lastDate,
+    required super.lastDate,
 
     /// optionalParameters: {DateTime? currentDate} , default:none
-    DateTime? currentDate,
+    super.currentDate,
 
     /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:processed=PrefixedIdentifierImpl
-    _i4.DatePickerEntryMode initialEntryMode = _i5.DatePickerEntryMode.calendar,
+    super.initialEntryMode,
 
     /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , default:none
-    _i4.SelectableDayPredicate? selectableDayPredicate,
+    super.selectableDayPredicate,
 
     /// optionalParameters: {String? cancelText} , default:none
-    String? cancelText,
+    super.cancelText,
 
     /// optionalParameters: {String? confirmText} , default:none
-    String? confirmText,
+    super.confirmText,
 
     /// optionalParameters: {String? helpText} , default:none
-    String? helpText,
+    super.helpText,
 
     /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:processed=PrefixedIdentifierImpl
-    _i4.DatePickerMode initialCalendarMode = _i5.DatePickerMode.day,
+    super.initialCalendarMode,
 
     /// optionalParameters: {String? errorFormatText} , default:none
-    String? errorFormatText,
+    super.errorFormatText,
 
     /// optionalParameters: {String? errorInvalidText} , default:none
-    String? errorInvalidText,
+    super.errorInvalidText,
 
     /// optionalParameters: {String? fieldHintText} , default:none
-    String? fieldHintText,
+    super.fieldHintText,
 
     /// optionalParameters: {String? fieldLabelText} , default:none
-    String? fieldLabelText,
+    super.fieldLabelText,
 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
-    _i6.TextInputType? keyboardType,
+    super.keyboardType,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {void Function(DatePickerEntryMode)? onDatePickerModeChange} , default:none
-    _i7.ValueChanged<_i4.DatePickerEntryMode>? onDatePickerModeChange,
-  }) : super(
-          key: key,
-          initialDate: initialDate,
-          firstDate: firstDate,
-          lastDate: lastDate,
-          currentDate: currentDate,
-          initialEntryMode: initialEntryMode,
-          selectableDayPredicate: selectableDayPredicate,
-          cancelText: cancelText,
-          confirmText: confirmText,
-          helpText: helpText,
-          initialCalendarMode: initialCalendarMode,
-          errorFormatText: errorFormatText,
-          errorInvalidText: errorInvalidText,
-          fieldHintText: fieldHintText,
-          fieldLabelText: fieldLabelText,
-          keyboardType: keyboardType,
-          restorationId: restorationId,
-          onDatePickerModeChange: onDatePickerModeChange,
-        ) {
+    super.onDatePickerModeChange,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialDate': _i2.BuilderArg<DateTime>(
+            name: 'initialDate',
+            init: initialDate,
+            isNamed: true,
+          ),
+          'firstDate': _i2.BuilderArg<DateTime>(
+            name: 'firstDate',
+            init: firstDate,
+            isNamed: true,
+          ),
+          'lastDate': _i2.BuilderArg<DateTime>(
+            name: 'lastDate',
+            init: lastDate,
+            isNamed: true,
+          ),
+          'currentDate': _i2.BuilderArg<DateTime?>(
+            name: 'currentDate',
+            init: currentDate,
+            isNamed: true,
+          ),
+          'initialEntryMode': _i2.BuilderArg<_i4.DatePickerEntryMode>(
+            name: 'initialEntryMode',
+            init: initialEntryMode,
+            isNamed: true,
+            defaultValue: _i5.DatePickerEntryMode.calendar,
+          ),
+          'selectableDayPredicate': _i2.BuilderArg<_i4.SelectableDayPredicate?>(
+            name: 'selectableDayPredicate',
+            init: selectableDayPredicate,
+            isNamed: true,
+          ),
+          'cancelText': _i2.BuilderArg<String?>(
+            name: 'cancelText',
+            init: cancelText,
+            isNamed: true,
+          ),
+          'confirmText': _i2.BuilderArg<String?>(
+            name: 'confirmText',
+            init: confirmText,
+            isNamed: true,
+          ),
+          'helpText': _i2.BuilderArg<String?>(
+            name: 'helpText',
+            init: helpText,
+            isNamed: true,
+          ),
+          'initialCalendarMode': _i2.BuilderArg<_i4.DatePickerMode>(
+            name: 'initialCalendarMode',
+            init: initialCalendarMode,
+            isNamed: true,
+            defaultValue: _i5.DatePickerMode.day,
+          ),
+          'errorFormatText': _i2.BuilderArg<String?>(
+            name: 'errorFormatText',
+            init: errorFormatText,
+            isNamed: true,
+          ),
+          'errorInvalidText': _i2.BuilderArg<String?>(
+            name: 'errorInvalidText',
+            init: errorInvalidText,
+            isNamed: true,
+          ),
+          'fieldHintText': _i2.BuilderArg<String?>(
+            name: 'fieldHintText',
+            init: fieldHintText,
+            isNamed: true,
+          ),
+          'fieldLabelText': _i2.BuilderArg<String?>(
+            name: 'fieldLabelText',
+            init: fieldLabelText,
+            isNamed: true,
+          ),
+          'keyboardType': _i2.BuilderArg<_i6.TextInputType?>(
+            name: 'keyboardType',
+            init: keyboardType,
+            isNamed: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'onDatePickerModeChange': _i2.BuilderArg<_i7.ValueChanged<_i4.DatePickerEntryMode>?>(
+            name: 'onDatePickerModeChange',
+            init: onDatePickerModeChange,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DatePickerDialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerDialog$Mate(
@@ -109,99 +184,10 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           onDatePickerModeChange: p.get('onDatePickerModeChange').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialDate',
-      initialDate,
-      isNamed: true,
-    );
-    mateUse(
-      'firstDate',
-      firstDate,
-      isNamed: true,
-    );
-    mateUse(
-      'lastDate',
-      lastDate,
-      isNamed: true,
-    );
-    mateUse(
-      'currentDate',
-      currentDate,
-      isNamed: true,
-    );
-    mateUse(
-      'initialEntryMode',
-      initialEntryMode,
-      isNamed: true,
-      defaultValue: _i5.DatePickerEntryMode.calendar,
-    );
-    mateUse(
-      'selectableDayPredicate',
-      selectableDayPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'cancelText',
-      cancelText,
-      isNamed: true,
-    );
-    mateUse(
-      'confirmText',
-      confirmText,
-      isNamed: true,
-    );
-    mateUse(
-      'helpText',
-      helpText,
-      isNamed: true,
-    );
-    mateUse(
-      'initialCalendarMode',
-      initialCalendarMode,
-      isNamed: true,
-      defaultValue: _i5.DatePickerMode.day,
-    );
-    mateUse(
-      'errorFormatText',
-      errorFormatText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorInvalidText',
-      errorInvalidText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldHintText',
-      fieldHintText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldLabelText',
-      fieldLabelText,
-      isNamed: true,
-    );
-    mateUse(
-      'keyboardType',
-      keyboardType,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'onDatePickerModeChange',
-      onDatePickerModeChange,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DateRangePickerDialog extends StatefulWidget
@@ -209,82 +195,161 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
   /// DateRangePickerDialog DateRangePickerDialog({Key? key, DateTimeRange? initialDateRange, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar, String? helpText, String? cancelText, String? confirmText, String? saveText, String? errorInvalidRangeText, String? errorFormatText, String? errorInvalidText, String? fieldStartHintText, String? fieldEndHintText, String? fieldStartLabelText, String? fieldEndLabelText, TextInputType keyboardType = TextInputType.datetime, String? restorationId})
   DateRangePickerDialog$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {DateTimeRange? initialDateRange} , default:none
-    _i4.DateTimeRange? initialDateRange,
+    super.initialDateRange,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
-    required DateTime firstDate,
+    required super.firstDate,
 
     /// optionalParameters: {required DateTime lastDate} , default:none
-    required DateTime lastDate,
+    required super.lastDate,
 
     /// optionalParameters: {DateTime? currentDate} , default:none
-    DateTime? currentDate,
+    super.currentDate,
 
     /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:processed=PrefixedIdentifierImpl
-    _i4.DatePickerEntryMode initialEntryMode = _i5.DatePickerEntryMode.calendar,
+    super.initialEntryMode,
 
     /// optionalParameters: {String? helpText} , default:none
-    String? helpText,
+    super.helpText,
 
     /// optionalParameters: {String? cancelText} , default:none
-    String? cancelText,
+    super.cancelText,
 
     /// optionalParameters: {String? confirmText} , default:none
-    String? confirmText,
+    super.confirmText,
 
     /// optionalParameters: {String? saveText} , default:none
-    String? saveText,
+    super.saveText,
 
     /// optionalParameters: {String? errorInvalidRangeText} , default:none
-    String? errorInvalidRangeText,
+    super.errorInvalidRangeText,
 
     /// optionalParameters: {String? errorFormatText} , default:none
-    String? errorFormatText,
+    super.errorFormatText,
 
     /// optionalParameters: {String? errorInvalidText} , default:none
-    String? errorInvalidText,
+    super.errorInvalidText,
 
     /// optionalParameters: {String? fieldStartHintText} , default:none
-    String? fieldStartHintText,
+    super.fieldStartHintText,
 
     /// optionalParameters: {String? fieldEndHintText} , default:none
-    String? fieldEndHintText,
+    super.fieldEndHintText,
 
     /// optionalParameters: {String? fieldStartLabelText} , default:none
-    String? fieldStartLabelText,
+    super.fieldStartLabelText,
 
     /// optionalParameters: {String? fieldEndLabelText} , default:none
-    String? fieldEndLabelText,
+    super.fieldEndLabelText,
 
     /// optionalParameters: {TextInputType keyboardType = TextInputType.datetime} , default:processed=PrefixedIdentifierImpl
-    _i6.TextInputType keyboardType = _i8.TextInputType.datetime,
+    super.keyboardType,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
-  }) : super(
-          key: key,
-          initialDateRange: initialDateRange,
-          firstDate: firstDate,
-          lastDate: lastDate,
-          currentDate: currentDate,
-          initialEntryMode: initialEntryMode,
-          helpText: helpText,
-          cancelText: cancelText,
-          confirmText: confirmText,
-          saveText: saveText,
-          errorInvalidRangeText: errorInvalidRangeText,
-          errorFormatText: errorFormatText,
-          errorInvalidText: errorInvalidText,
-          fieldStartHintText: fieldStartHintText,
-          fieldEndHintText: fieldEndHintText,
-          fieldStartLabelText: fieldStartLabelText,
-          fieldEndLabelText: fieldEndLabelText,
-          keyboardType: keyboardType,
-          restorationId: restorationId,
-        ) {
+    super.restorationId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialDateRange': _i2.BuilderArg<_i4.DateTimeRange?>(
+            name: 'initialDateRange',
+            init: initialDateRange,
+            isNamed: true,
+          ),
+          'firstDate': _i2.BuilderArg<DateTime>(
+            name: 'firstDate',
+            init: firstDate,
+            isNamed: true,
+          ),
+          'lastDate': _i2.BuilderArg<DateTime>(
+            name: 'lastDate',
+            init: lastDate,
+            isNamed: true,
+          ),
+          'currentDate': _i2.BuilderArg<DateTime?>(
+            name: 'currentDate',
+            init: currentDate,
+            isNamed: true,
+          ),
+          'initialEntryMode': _i2.BuilderArg<_i4.DatePickerEntryMode>(
+            name: 'initialEntryMode',
+            init: initialEntryMode,
+            isNamed: true,
+            defaultValue: _i5.DatePickerEntryMode.calendar,
+          ),
+          'helpText': _i2.BuilderArg<String?>(
+            name: 'helpText',
+            init: helpText,
+            isNamed: true,
+          ),
+          'cancelText': _i2.BuilderArg<String?>(
+            name: 'cancelText',
+            init: cancelText,
+            isNamed: true,
+          ),
+          'confirmText': _i2.BuilderArg<String?>(
+            name: 'confirmText',
+            init: confirmText,
+            isNamed: true,
+          ),
+          'saveText': _i2.BuilderArg<String?>(
+            name: 'saveText',
+            init: saveText,
+            isNamed: true,
+          ),
+          'errorInvalidRangeText': _i2.BuilderArg<String?>(
+            name: 'errorInvalidRangeText',
+            init: errorInvalidRangeText,
+            isNamed: true,
+          ),
+          'errorFormatText': _i2.BuilderArg<String?>(
+            name: 'errorFormatText',
+            init: errorFormatText,
+            isNamed: true,
+          ),
+          'errorInvalidText': _i2.BuilderArg<String?>(
+            name: 'errorInvalidText',
+            init: errorInvalidText,
+            isNamed: true,
+          ),
+          'fieldStartHintText': _i2.BuilderArg<String?>(
+            name: 'fieldStartHintText',
+            init: fieldStartHintText,
+            isNamed: true,
+          ),
+          'fieldEndHintText': _i2.BuilderArg<String?>(
+            name: 'fieldEndHintText',
+            init: fieldEndHintText,
+            isNamed: true,
+          ),
+          'fieldStartLabelText': _i2.BuilderArg<String?>(
+            name: 'fieldStartLabelText',
+            init: fieldStartLabelText,
+            isNamed: true,
+          ),
+          'fieldEndLabelText': _i2.BuilderArg<String?>(
+            name: 'fieldEndLabelText',
+            init: fieldEndLabelText,
+            isNamed: true,
+          ),
+          'keyboardType': _i2.BuilderArg<_i6.TextInputType>(
+            name: 'keyboardType',
+            init: keyboardType,
+            isNamed: true,
+            defaultValue: _i8.TextInputType.datetime,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DateRangePickerDialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DateRangePickerDialog$Mate(
@@ -308,102 +373,8 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
           keyboardType: p.get('keyboardType').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialDateRange',
-      initialDateRange,
-      isNamed: true,
-    );
-    mateUse(
-      'firstDate',
-      firstDate,
-      isNamed: true,
-    );
-    mateUse(
-      'lastDate',
-      lastDate,
-      isNamed: true,
-    );
-    mateUse(
-      'currentDate',
-      currentDate,
-      isNamed: true,
-    );
-    mateUse(
-      'initialEntryMode',
-      initialEntryMode,
-      isNamed: true,
-      defaultValue: _i5.DatePickerEntryMode.calendar,
-    );
-    mateUse(
-      'helpText',
-      helpText,
-      isNamed: true,
-    );
-    mateUse(
-      'cancelText',
-      cancelText,
-      isNamed: true,
-    );
-    mateUse(
-      'confirmText',
-      confirmText,
-      isNamed: true,
-    );
-    mateUse(
-      'saveText',
-      saveText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorInvalidRangeText',
-      errorInvalidRangeText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorFormatText',
-      errorFormatText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorInvalidText',
-      errorInvalidText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldStartHintText',
-      fieldStartHintText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldEndHintText',
-      fieldEndHintText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldStartLabelText',
-      fieldStartLabelText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldEndLabelText',
-      fieldEndLabelText,
-      isNamed: true,
-    );
-    mateUse(
-      'keyboardType',
-      keyboardType,
-      isNamed: true,
-      defaultValue: _i8.TextInputType.datetime,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

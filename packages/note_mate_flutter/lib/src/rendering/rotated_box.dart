@@ -10,29 +10,31 @@ class RenderRotatedBox$Mate extends _i1.RenderRotatedBox with _i2.Mate {
   /// RenderRotatedBox RenderRotatedBox({required int quarterTurns, RenderBox? child})
   RenderRotatedBox$Mate({
     /// optionalParameters: {required int quarterTurns} , default:none
-    required int quarterTurns,
+    required super.quarterTurns,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          quarterTurns: quarterTurns,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'quarterTurns': _i2.BuilderArg<int>(
+            name: 'quarterTurns',
+            init: quarterTurns,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderRotatedBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderRotatedBox$Mate(
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'quarterTurns',
-      quarterTurns,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

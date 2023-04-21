@@ -10,29 +10,31 @@ class RenderSliverFixedExtentList$Mate extends _i1.RenderSliverFixedExtentList w
   /// RenderSliverFixedExtentList RenderSliverFixedExtentList({required RenderSliverBoxChildManager childManager, required double itemExtent})
   RenderSliverFixedExtentList$Mate({
     /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none
-    required _i3.RenderSliverBoxChildManager childManager,
+    required super.childManager,
 
     /// optionalParameters: {required double itemExtent} , default:none
-    required double itemExtent,
-  }) : super(
-          childManager: childManager,
-          itemExtent: itemExtent,
-        ) {
+    required super.itemExtent,
+  })  : mateParams = {
+          'childManager': _i2.BuilderArg<_i3.RenderSliverBoxChildManager>(
+            name: 'childManager',
+            init: childManager,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverFixedExtentList';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFixedExtentList$Mate(
           childManager: p.get('childManager').build(),
           itemExtent: p.get('itemExtent').build(),
         );
-    mateUse(
-      'childManager',
-      childManager,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -15,46 +15,87 @@ class TextSpan$Mate extends _i1.TextSpan with _i2.Mate {
   /// TextSpan TextSpan({String? text, List<InlineSpan>? children, TextStyle? style, GestureRecognizer? recognizer, MouseCursor? mouseCursor, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, String? semanticsLabel, Locale? locale, bool? spellOut})
   TextSpan$Mate({
     /// optionalParameters: {String? text} , default:none
-    String? text,
+    super.text,
 
     /// optionalParameters: {List<InlineSpan>? children} , default:none
-    List<_i3.InlineSpan>? children,
+    super.children,
 
     /// optionalParameters: {TextStyle? style} , default:none
-    _i4.TextStyle? style,
+    super.style,
 
     /// optionalParameters: {GestureRecognizer? recognizer} , default:none
-    _i5.GestureRecognizer? recognizer,
+    super.recognizer,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i6.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
-    _i7.PointerEnterEventListener? onEnter,
+    super.onEnter,
 
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
-    _i7.PointerExitEventListener? onExit,
+    super.onExit,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i8.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {bool? spellOut} , default:none
-    bool? spellOut,
-  }) : super(
-          text: text,
-          children: children,
-          style: style,
-          recognizer: recognizer,
-          mouseCursor: mouseCursor,
-          onEnter: onEnter,
-          onExit: onExit,
-          semanticsLabel: semanticsLabel,
-          locale: locale,
-          spellOut: spellOut,
-        ) {
+    super.spellOut,
+  })  : mateParams = {
+          'text': _i2.BuilderArg<String?>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i3.InlineSpan>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'recognizer': _i2.BuilderArg<_i5.GestureRecognizer?>(
+            name: 'recognizer',
+            init: recognizer,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i6.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'onEnter': _i2.BuilderArg<_i7.PointerEnterEventListener?>(
+            name: 'onEnter',
+            init: onEnter,
+            isNamed: true,
+          ),
+          'onExit': _i2.BuilderArg<_i7.PointerExitEventListener?>(
+            name: 'onExit',
+            init: onExit,
+            isNamed: true,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i8.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'spellOut': _i2.BuilderArg<bool?>(
+            name: 'spellOut',
+            init: spellOut,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSpan';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSpan$Mate(
@@ -69,55 +110,8 @@ class TextSpan$Mate extends _i1.TextSpan with _i2.Mate {
           locale: p.get('locale').build(),
           spellOut: p.get('spellOut').build(),
         );
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'recognizer',
-      recognizer,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnter',
-      onEnter,
-      isNamed: true,
-    );
-    mateUse(
-      'onExit',
-      onExit,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'spellOut',
-      spellOut,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

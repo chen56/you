@@ -12,18 +12,31 @@ class SemanticsDebugger$Mate extends _i1.SemanticsDebugger with _i2.Mate {
   /// SemanticsDebugger SemanticsDebugger({Key? key, required Widget child, TextStyle labelStyle = const TextStyle(color: Color(0xFF000000), fontSize: 10.0, height: 0.8)})
   SemanticsDebugger$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {TextStyle labelStyle = const TextStyle(color: Color(0xFF000000), fontSize: 10.0, height: 0.8)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.TextStyle labelStyle,
-  }) : super(
-          key: key,
-          child: child,
-          labelStyle: labelStyle,
-        ) {
+    super.labelStyle,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i5.TextStyle>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SemanticsDebugger';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SemanticsDebugger$Mate(
@@ -31,20 +44,8 @@ class SemanticsDebugger$Mate extends _i1.SemanticsDebugger with _i2.Mate {
           child: p.get('child').build(),
           labelStyle: p.get('labelStyle').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

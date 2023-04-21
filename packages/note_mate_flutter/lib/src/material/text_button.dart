@@ -16,50 +16,97 @@ class TextButton$Mate extends _i1.TextButton with _i2.Mate {
   /// TextButton TextButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHover, void Function(bool)? onFocusChange, ButtonStyle? style, FocusNode? focusNode, bool autofocus = false, Clip clipBehavior = Clip.none, MaterialStatesController? statesController, required Widget child})
   TextButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
-    required _i4.VoidCallback? onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i4.VoidCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(bool)? onHover} , default:none
-    _i5.ValueChanged<bool>? onHover,
+    super.onHover,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i5.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i6.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i7.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
-    _i8.MaterialStatesController? statesController,
+    super.statesController,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i9.Widget child,
-  }) : super(
-          key: key,
-          onPressed: onPressed,
-          onLongPress: onLongPress,
-          onHover: onHover,
-          onFocusChange: onFocusChange,
-          style: style,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          clipBehavior: clipBehavior,
-          statesController: statesController,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onHover': _i2.BuilderArg<_i5.ValueChanged<bool>?>(
+            name: 'onHover',
+            init: onHover,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i5.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i6.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i7.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'statesController': _i2.BuilderArg<_i8.MaterialStatesController?>(
+            name: 'statesController',
+            init: statesController,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextButton$Mate(
@@ -75,62 +122,8 @@ class TextButton$Mate extends _i1.TextButton with _i2.Mate {
           statesController: p.get('statesController').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onHover',
-      onHover,
-      isNamed: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'statesController',
-      statesController,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

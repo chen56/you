@@ -10,30 +10,32 @@ class Spacer$Mate extends _i1.Spacer with _i2.Mate {
   /// Spacer Spacer({Key? key, int flex = 1})
   Spacer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
-    int flex = 1,
-  }) : super(
-          key: key,
-          flex: flex,
-        ) {
+    super.flex,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'flex': _i2.BuilderArg<int>(
+            name: 'flex',
+            init: flex,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+        },
+        super() {
     mateBuilderName = 'Spacer';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Spacer$Mate(
           key: p.get('key').build(),
           flex: p.get('flex').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'flex',
-      flex,
-      isNamed: true,
-      defaultValue: 1,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

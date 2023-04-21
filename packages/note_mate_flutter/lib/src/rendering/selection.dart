@@ -11,17 +11,22 @@ class SelectedContent$Mate extends _i1.SelectedContent with _i2.Mate {
   SelectedContent$Mate(
       {
       /// optionalParameters: {required String plainText} , default:none
-      required String plainText})
-      : super(plainText: plainText) {
+      required super.plainText})
+      : mateParams = {
+          'plainText': _i2.BuilderArg<String>(
+            name: 'plainText',
+            init: plainText,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'SelectedContent';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectedContent$Mate(plainText: p.get('plainText').build());
-    mateUse(
-      'plainText',
-      plainText,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectWordSelectionEvent extends SelectionEvent
@@ -30,17 +35,22 @@ class SelectWordSelectionEvent$Mate extends _i1.SelectWordSelectionEvent with _i
   SelectWordSelectionEvent$Mate(
       {
       /// optionalParameters: {required Offset globalPosition} , default:none
-      required _i3.Offset globalPosition})
-      : super(globalPosition: globalPosition) {
+      required super.globalPosition})
+      : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'SelectWordSelectionEvent';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectWordSelectionEvent$Mate(globalPosition: p.get('globalPosition').build());
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectionEdgeUpdateEvent extends SelectionEvent
@@ -49,33 +59,40 @@ class SelectionEdgeUpdateEvent$Mate extends _i1.SelectionEdgeUpdateEvent with _i
   SelectionEdgeUpdateEvent$Mate.forStart(
       {
       /// optionalParameters: {required Offset globalPosition} , default:none
-      required _i3.Offset globalPosition})
-      : super.forStart(globalPosition: globalPosition) {
+      required super.globalPosition})
+      : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+          )
+        },
+        super.forStart() {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forStart';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forStart(globalPosition: p.get('globalPosition').build());
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-    );
   }
 
   /// SelectionEdgeUpdateEvent SelectionEdgeUpdateEvent.forEnd({required Offset globalPosition})
   SelectionEdgeUpdateEvent$Mate.forEnd(
       {
       /// optionalParameters: {required Offset globalPosition} , default:none
-      required _i3.Offset globalPosition})
-      : super.forEnd(globalPosition: globalPosition) {
+      required super.globalPosition})
+      : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+          )
+        },
+        super.forEnd() {
     mateBuilderName = 'SelectionEdgeUpdateEvent.forEnd';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionEdgeUpdateEvent$Mate.forEnd(globalPosition: p.get('globalPosition').build());
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class GranularlyExtendSelectionEvent extends SelectionEvent
@@ -83,18 +100,31 @@ class GranularlyExtendSelectionEvent$Mate extends _i1.GranularlyExtendSelectionE
   /// GranularlyExtendSelectionEvent GranularlyExtendSelectionEvent({required bool forward, required bool isEnd, required TextGranularity granularity})
   GranularlyExtendSelectionEvent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool isEnd} , default:none
-    required bool isEnd,
+    required super.isEnd,
 
     /// optionalParameters: {required TextGranularity granularity} , default:none
-    required _i1.TextGranularity granularity,
-  }) : super(
-          forward: forward,
-          isEnd: isEnd,
-          granularity: granularity,
-        ) {
+    required super.granularity,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'isEnd': _i2.BuilderArg<bool>(
+            name: 'isEnd',
+            init: isEnd,
+            isNamed: true,
+          ),
+          'granularity': _i2.BuilderArg<_i1.TextGranularity>(
+            name: 'granularity',
+            init: granularity,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'GranularlyExtendSelectionEvent';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => GranularlyExtendSelectionEvent$Mate(
@@ -102,22 +132,10 @@ class GranularlyExtendSelectionEvent$Mate extends _i1.GranularlyExtendSelectionE
           isEnd: p.get('isEnd').build(),
           granularity: p.get('granularity').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'isEnd',
-      isEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'granularity',
-      granularity,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DirectionallyExtendSelectionEvent extends SelectionEvent
@@ -125,18 +143,31 @@ class DirectionallyExtendSelectionEvent$Mate extends _i1.DirectionallyExtendSele
   /// DirectionallyExtendSelectionEvent DirectionallyExtendSelectionEvent({required double dx, required bool isEnd, required SelectionExtendDirection direction})
   DirectionallyExtendSelectionEvent$Mate({
     /// optionalParameters: {required double dx} , default:none
-    required double dx,
+    required super.dx,
 
     /// optionalParameters: {required bool isEnd} , default:none
-    required bool isEnd,
+    required super.isEnd,
 
     /// optionalParameters: {required SelectionExtendDirection direction} , default:none
-    required _i1.SelectionExtendDirection direction,
-  }) : super(
-          dx: dx,
-          isEnd: isEnd,
-          direction: direction,
-        ) {
+    required super.direction,
+  })  : mateParams = {
+          'dx': _i2.BuilderArg<double>(
+            name: 'dx',
+            init: dx,
+            isNamed: true,
+          ),
+          'isEnd': _i2.BuilderArg<bool>(
+            name: 'isEnd',
+            init: isEnd,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i1.SelectionExtendDirection>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DirectionallyExtendSelectionEvent';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => DirectionallyExtendSelectionEvent$Mate(
@@ -144,22 +175,10 @@ class DirectionallyExtendSelectionEvent$Mate extends _i1.DirectionallyExtendSele
           isEnd: p.get('isEnd').build(),
           direction: p.get('direction').build(),
         );
-    mateUse(
-      'dx',
-      dx,
-      isNamed: true,
-    );
-    mateUse(
-      'isEnd',
-      isEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectionGeometry
@@ -167,22 +186,39 @@ class SelectionGeometry$Mate extends _i1.SelectionGeometry with _i2.Mate {
   /// SelectionGeometry SelectionGeometry({SelectionPoint? startSelectionPoint, SelectionPoint? endSelectionPoint, required SelectionStatus status, required bool hasContent})
   SelectionGeometry$Mate({
     /// optionalParameters: {SelectionPoint? startSelectionPoint} , default:none
-    _i1.SelectionPoint? startSelectionPoint,
+    super.startSelectionPoint,
 
     /// optionalParameters: {SelectionPoint? endSelectionPoint} , default:none
-    _i1.SelectionPoint? endSelectionPoint,
+    super.endSelectionPoint,
 
     /// optionalParameters: {required SelectionStatus status} , default:none
-    required _i1.SelectionStatus status,
+    required super.status,
 
     /// optionalParameters: {required bool hasContent} , default:none
-    required bool hasContent,
-  }) : super(
-          startSelectionPoint: startSelectionPoint,
-          endSelectionPoint: endSelectionPoint,
-          status: status,
-          hasContent: hasContent,
-        ) {
+    required super.hasContent,
+  })  : mateParams = {
+          'startSelectionPoint': _i2.BuilderArg<_i1.SelectionPoint?>(
+            name: 'startSelectionPoint',
+            init: startSelectionPoint,
+            isNamed: true,
+          ),
+          'endSelectionPoint': _i2.BuilderArg<_i1.SelectionPoint?>(
+            name: 'endSelectionPoint',
+            init: endSelectionPoint,
+            isNamed: true,
+          ),
+          'status': _i2.BuilderArg<_i1.SelectionStatus>(
+            name: 'status',
+            init: status,
+            isNamed: true,
+          ),
+          'hasContent': _i2.BuilderArg<bool>(
+            name: 'hasContent',
+            init: hasContent,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SelectionGeometry';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionGeometry$Mate(
@@ -191,27 +227,10 @@ class SelectionGeometry$Mate extends _i1.SelectionGeometry with _i2.Mate {
           status: p.get('status').build(),
           hasContent: p.get('hasContent').build(),
         );
-    mateUse(
-      'startSelectionPoint',
-      startSelectionPoint,
-      isNamed: true,
-    );
-    mateUse(
-      'endSelectionPoint',
-      endSelectionPoint,
-      isNamed: true,
-    );
-    mateUse(
-      'status',
-      status,
-      isNamed: true,
-    );
-    mateUse(
-      'hasContent',
-      hasContent,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectionPoint
@@ -219,18 +238,31 @@ class SelectionPoint$Mate extends _i1.SelectionPoint with _i2.Mate {
   /// SelectionPoint SelectionPoint({required Offset localPosition, required double lineHeight, required TextSelectionHandleType handleType})
   SelectionPoint$Mate({
     /// optionalParameters: {required Offset localPosition} , default:none
-    required _i3.Offset localPosition,
+    required super.localPosition,
 
     /// optionalParameters: {required double lineHeight} , default:none
-    required double lineHeight,
+    required super.lineHeight,
 
     /// optionalParameters: {required TextSelectionHandleType handleType} , default:none
-    required _i1.TextSelectionHandleType handleType,
-  }) : super(
-          localPosition: localPosition,
-          lineHeight: lineHeight,
-          handleType: handleType,
-        ) {
+    required super.handleType,
+  })  : mateParams = {
+          'localPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'lineHeight': _i2.BuilderArg<double>(
+            name: 'lineHeight',
+            init: lineHeight,
+            isNamed: true,
+          ),
+          'handleType': _i2.BuilderArg<_i1.TextSelectionHandleType>(
+            name: 'handleType',
+            init: handleType,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SelectionPoint';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SelectionPoint$Mate(
@@ -238,20 +270,8 @@ class SelectionPoint$Mate extends _i1.SelectionPoint with _i2.Mate {
           lineHeight: p.get('lineHeight').build(),
           handleType: p.get('handleType').build(),
         );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'lineHeight',
-      lineHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'handleType',
-      handleType,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

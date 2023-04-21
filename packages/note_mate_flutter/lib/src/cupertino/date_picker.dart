@@ -15,58 +15,116 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
   /// CupertinoDatePicker CupertinoDatePicker({Key? key, CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime, required void Function(DateTime) onDateTimeChanged, DateTime? initialDateTime, DateTime? minimumDate, DateTime? maximumDate, int minimumYear = 1, int? maximumYear, int minuteInterval = 1, bool use24hFormat = false, DatePickerDateOrder? dateOrder, Color? backgroundColor, bool showDayOfWeek = false})
   CupertinoDatePicker$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime} , default:processed=PrefixedIdentifierImpl
-    _i1.CupertinoDatePickerMode mode = _i4.CupertinoDatePickerMode.dateAndTime,
+    super.mode,
 
     /// optionalParameters: {required void Function(DateTime) onDateTimeChanged} , default:none
-    required _i5.ValueChanged<DateTime> onDateTimeChanged,
+    required super.onDateTimeChanged,
 
     /// optionalParameters: {DateTime? initialDateTime} , default:none
-    DateTime? initialDateTime,
+    super.initialDateTime,
 
     /// optionalParameters: {DateTime? minimumDate} , default:none
-    DateTime? minimumDate,
+    super.minimumDate,
 
     /// optionalParameters: {DateTime? maximumDate} , default:none
-    DateTime? maximumDate,
+    super.maximumDate,
 
     /// optionalParameters: {int minimumYear = 1} , default:processed=IntegerLiteralImpl
-    int minimumYear = 1,
+    super.minimumYear,
 
     /// optionalParameters: {int? maximumYear} , default:none
-    int? maximumYear,
+    super.maximumYear,
 
     /// optionalParameters: {int minuteInterval = 1} , default:processed=IntegerLiteralImpl
-    int minuteInterval = 1,
+    super.minuteInterval,
 
     /// optionalParameters: {bool use24hFormat = false} , default:processed=BooleanLiteralImpl
-    bool use24hFormat = false,
+    super.use24hFormat,
 
     /// optionalParameters: {DatePickerDateOrder? dateOrder} , default:none
-    _i6.DatePickerDateOrder? dateOrder,
+    super.dateOrder,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i7.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {bool showDayOfWeek = false} , default:processed=BooleanLiteralImpl
-    bool showDayOfWeek = false,
-  }) : super(
-          key: key,
-          mode: mode,
-          onDateTimeChanged: onDateTimeChanged,
-          initialDateTime: initialDateTime,
-          minimumDate: minimumDate,
-          maximumDate: maximumDate,
-          minimumYear: minimumYear,
-          maximumYear: maximumYear,
-          minuteInterval: minuteInterval,
-          use24hFormat: use24hFormat,
-          dateOrder: dateOrder,
-          backgroundColor: backgroundColor,
-          showDayOfWeek: showDayOfWeek,
-        ) {
+    super.showDayOfWeek,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'mode': _i2.BuilderArg<_i1.CupertinoDatePickerMode>(
+            name: 'mode',
+            init: mode,
+            isNamed: true,
+            defaultValue: _i4.CupertinoDatePickerMode.dateAndTime,
+          ),
+          'onDateTimeChanged': _i2.BuilderArg<_i5.ValueChanged<DateTime>>(
+            name: 'onDateTimeChanged',
+            init: onDateTimeChanged,
+            isNamed: true,
+          ),
+          'initialDateTime': _i2.BuilderArg<DateTime?>(
+            name: 'initialDateTime',
+            init: initialDateTime,
+            isNamed: true,
+          ),
+          'minimumDate': _i2.BuilderArg<DateTime?>(
+            name: 'minimumDate',
+            init: minimumDate,
+            isNamed: true,
+          ),
+          'maximumDate': _i2.BuilderArg<DateTime?>(
+            name: 'maximumDate',
+            init: maximumDate,
+            isNamed: true,
+          ),
+          'minimumYear': _i2.BuilderArg<int>(
+            name: 'minimumYear',
+            init: minimumYear,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'maximumYear': _i2.BuilderArg<int?>(
+            name: 'maximumYear',
+            init: maximumYear,
+            isNamed: true,
+          ),
+          'minuteInterval': _i2.BuilderArg<int>(
+            name: 'minuteInterval',
+            init: minuteInterval,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'use24hFormat': _i2.BuilderArg<bool>(
+            name: 'use24hFormat',
+            init: use24hFormat,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dateOrder': _i2.BuilderArg<_i6.DatePickerDateOrder?>(
+            name: 'dateOrder',
+            init: dateOrder,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'showDayOfWeek': _i2.BuilderArg<bool>(
+            name: 'showDayOfWeek',
+            init: showDayOfWeek,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoDatePicker';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDatePicker$Mate(
@@ -84,77 +142,10 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
           backgroundColor: p.get('backgroundColor').build(),
           showDayOfWeek: p.get('showDayOfWeek').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'mode',
-      mode,
-      isNamed: true,
-      defaultValue: _i4.CupertinoDatePickerMode.dateAndTime,
-    );
-    mateUse(
-      'onDateTimeChanged',
-      onDateTimeChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'initialDateTime',
-      initialDateTime,
-      isNamed: true,
-    );
-    mateUse(
-      'minimumDate',
-      minimumDate,
-      isNamed: true,
-    );
-    mateUse(
-      'maximumDate',
-      maximumDate,
-      isNamed: true,
-    );
-    mateUse(
-      'minimumYear',
-      minimumYear,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'maximumYear',
-      maximumYear,
-      isNamed: true,
-    );
-    mateUse(
-      'minuteInterval',
-      minuteInterval,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'use24hFormat',
-      use24hFormat,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dateOrder',
-      dateOrder,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'showDayOfWeek',
-      showDayOfWeek,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CupertinoTimerPicker extends StatefulWidget
@@ -162,38 +153,76 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
   /// CupertinoTimerPicker CupertinoTimerPicker({Key? key, CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms, Duration initialTimerDuration = Duration.zero, int minuteInterval = 1, int secondInterval = 1, AlignmentGeometry alignment = Alignment.center, Color? backgroundColor, required void Function(Duration) onTimerDurationChanged})
   CupertinoTimerPicker$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms} , default:processed=PrefixedIdentifierImpl
-    _i1.CupertinoTimerPickerMode mode = _i4.CupertinoTimerPickerMode.hms,
+    super.mode,
 
     /// optionalParameters: {Duration initialTimerDuration = Duration.zero} , default:processed=PrefixedIdentifierImpl
-    Duration initialTimerDuration = Duration.zero,
+    super.initialTimerDuration,
 
     /// optionalParameters: {int minuteInterval = 1} , default:processed=IntegerLiteralImpl
-    int minuteInterval = 1,
+    super.minuteInterval,
 
     /// optionalParameters: {int secondInterval = 1} , default:processed=IntegerLiteralImpl
-    int secondInterval = 1,
+    super.secondInterval,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i8.AlignmentGeometry alignment = _i4.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i7.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {required void Function(Duration) onTimerDurationChanged} , default:none
-    required _i5.ValueChanged<Duration> onTimerDurationChanged,
-  }) : super(
-          key: key,
-          mode: mode,
-          initialTimerDuration: initialTimerDuration,
-          minuteInterval: minuteInterval,
-          secondInterval: secondInterval,
-          alignment: alignment,
-          backgroundColor: backgroundColor,
-          onTimerDurationChanged: onTimerDurationChanged,
-        ) {
+    required super.onTimerDurationChanged,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'mode': _i2.BuilderArg<_i1.CupertinoTimerPickerMode>(
+            name: 'mode',
+            init: mode,
+            isNamed: true,
+            defaultValue: _i4.CupertinoTimerPickerMode.hms,
+          ),
+          'initialTimerDuration': _i2.BuilderArg<Duration>(
+            name: 'initialTimerDuration',
+            init: initialTimerDuration,
+            isNamed: true,
+            defaultValue: Duration.zero,
+          ),
+          'minuteInterval': _i2.BuilderArg<int>(
+            name: 'minuteInterval',
+            init: minuteInterval,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'secondInterval': _i2.BuilderArg<int>(
+            name: 'secondInterval',
+            init: secondInterval,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i4.Alignment.center,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'onTimerDurationChanged': _i2.BuilderArg<_i5.ValueChanged<Duration>>(
+            name: 'onTimerDurationChanged',
+            init: onTimerDurationChanged,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoTimerPicker';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTimerPicker$Mate(
@@ -206,50 +235,8 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
           backgroundColor: p.get('backgroundColor').build(),
           onTimerDurationChanged: p.get('onTimerDurationChanged').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'mode',
-      mode,
-      isNamed: true,
-      defaultValue: _i4.CupertinoTimerPickerMode.hms,
-    );
-    mateUse(
-      'initialTimerDuration',
-      initialTimerDuration,
-      isNamed: true,
-      defaultValue: Duration.zero,
-    );
-    mateUse(
-      'minuteInterval',
-      minuteInterval,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'secondInterval',
-      secondInterval,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i4.Alignment.center,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'onTimerDurationChanged',
-      onTimerDurationChanged,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

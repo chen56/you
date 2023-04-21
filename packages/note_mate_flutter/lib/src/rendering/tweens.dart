@@ -11,31 +11,33 @@ class FractionalOffsetTween$Mate extends _i1.FractionalOffsetTween with _i2.Mate
   /// FractionalOffsetTween FractionalOffsetTween({FractionalOffset? begin, FractionalOffset? end})
   FractionalOffsetTween$Mate({
     /// optionalParameters: {FractionalOffset? begin} , default:none
-    _i3.FractionalOffset? begin,
+    super.begin,
 
     /// optionalParameters: {FractionalOffset? end} , default:none
-    _i3.FractionalOffset? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.FractionalOffset?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.FractionalOffset?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FractionalOffsetTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FractionalOffsetTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AlignmentTween extends Tween<Alignment>
@@ -43,31 +45,33 @@ class AlignmentTween$Mate extends _i1.AlignmentTween with _i2.Mate {
   /// AlignmentTween AlignmentTween({Alignment? begin, Alignment? end})
   AlignmentTween$Mate({
     /// optionalParameters: {Alignment? begin} , default:none
-    _i4.Alignment? begin,
+    super.begin,
 
     /// optionalParameters: {Alignment? end} , default:none
-    _i4.Alignment? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i4.Alignment?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i4.Alignment?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AlignmentTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AlignmentTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AlignmentGeometryTween extends Tween<AlignmentGeometry?>
@@ -75,29 +79,31 @@ class AlignmentGeometryTween$Mate extends _i1.AlignmentGeometryTween with _i2.Ma
   /// AlignmentGeometryTween AlignmentGeometryTween({AlignmentGeometry? begin, AlignmentGeometry? end})
   AlignmentGeometryTween$Mate({
     /// optionalParameters: {AlignmentGeometry? begin} , default:none
-    _i4.AlignmentGeometry? begin,
+    super.begin,
 
     /// optionalParameters: {AlignmentGeometry? end} , default:none
-    _i4.AlignmentGeometry? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i4.AlignmentGeometry?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i4.AlignmentGeometry?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AlignmentGeometryTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AlignmentGeometryTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

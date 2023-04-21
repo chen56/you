@@ -14,18 +14,23 @@ class CupertinoTabController$Mate extends _i1.CupertinoTabController with _i2.Ma
   CupertinoTabController$Mate(
       {
       /// optionalParameters: {int initialIndex = 0} , default:processed=IntegerLiteralImpl
-      int initialIndex = 0})
-      : super(initialIndex: initialIndex) {
+      super.initialIndex})
+      : mateParams = {
+          'initialIndex': _i2.BuilderArg<int>(
+            name: 'initialIndex',
+            init: initialIndex,
+            isNamed: true,
+            defaultValue: 0,
+          )
+        },
+        super() {
     mateBuilderName = 'CupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    mateUse(
-      'initialIndex',
-      initialIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CupertinoTabScaffold extends StatefulWidget
@@ -33,34 +38,64 @@ class CupertinoTabScaffold$Mate extends _i1.CupertinoTabScaffold with _i2.Mate {
   /// CupertinoTabScaffold CupertinoTabScaffold({Key? key, required CupertinoTabBar tabBar, required Widget Function(BuildContext, int) tabBuilder, CupertinoTabController? controller, Color? backgroundColor, bool resizeToAvoidBottomInset = true, String? restorationId})
   CupertinoTabScaffold$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required CupertinoTabBar tabBar} , default:none
-    required _i4.CupertinoTabBar tabBar,
+    required super.tabBar,
 
     /// optionalParameters: {required Widget Function(BuildContext, int) tabBuilder} , default:none
-    required _i5.IndexedWidgetBuilder tabBuilder,
+    required super.tabBuilder,
 
     /// optionalParameters: {CupertinoTabController? controller} , default:none
-    _i1.CupertinoTabController? controller,
+    super.controller,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i6.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {bool resizeToAvoidBottomInset = true} , default:processed=BooleanLiteralImpl
-    bool resizeToAvoidBottomInset = true,
+    super.resizeToAvoidBottomInset,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
-  }) : super(
-          key: key,
-          tabBar: tabBar,
-          tabBuilder: tabBuilder,
-          controller: controller,
-          backgroundColor: backgroundColor,
-          resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-          restorationId: restorationId,
-        ) {
+    super.restorationId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'tabBar': _i2.BuilderArg<_i4.CupertinoTabBar>(
+            name: 'tabBar',
+            init: tabBar,
+            isNamed: true,
+          ),
+          'tabBuilder': _i2.BuilderArg<_i5.IndexedWidgetBuilder>(
+            name: 'tabBuilder',
+            init: tabBuilder,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i1.CupertinoTabController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'resizeToAvoidBottomInset': _i2.BuilderArg<bool>(
+            name: 'resizeToAvoidBottomInset',
+            init: resizeToAvoidBottomInset,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoTabScaffold';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabScaffold$Mate(
@@ -72,43 +107,10 @@ class CupertinoTabScaffold$Mate extends _i1.CupertinoTabScaffold with _i2.Mate {
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'tabBar',
-      tabBar,
-      isNamed: true,
-    );
-    mateUse(
-      'tabBuilder',
-      tabBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'resizeToAvoidBottomInset',
-      resizeToAvoidBottomInset,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RestorableCupertinoTabController extends RestorableChangeNotifier<CupertinoTabController>
@@ -117,16 +119,21 @@ class RestorableCupertinoTabController$Mate extends _i1.RestorableCupertinoTabCo
   RestorableCupertinoTabController$Mate(
       {
       /// optionalParameters: {int initialIndex = 0} , default:processed=IntegerLiteralImpl
-      int initialIndex = 0})
-      : super(initialIndex: initialIndex) {
+      super.initialIndex})
+      : mateParams = {
+          'initialIndex': _i2.BuilderArg<int>(
+            name: 'initialIndex',
+            init: initialIndex,
+            isNamed: true,
+            defaultValue: 0,
+          )
+        },
+        super() {
     mateBuilderName = 'RestorableCupertinoTabController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorableCupertinoTabController$Mate(initialIndex: p.get('initialIndex').build());
-    mateUse(
-      'initialIndex',
-      initialIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

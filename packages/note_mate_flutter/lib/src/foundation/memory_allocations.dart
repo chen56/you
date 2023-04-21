@@ -9,18 +9,31 @@ class ObjectCreated$Mate extends _i1.ObjectCreated with _i2.Mate {
   /// ObjectCreated ObjectCreated({required String library, required String className, required Object object})
   ObjectCreated$Mate({
     /// optionalParameters: {required String library} , default:none
-    required String library,
+    required super.library,
 
     /// optionalParameters: {required String className} , default:none
-    required String className,
+    required super.className,
 
     /// optionalParameters: {required Object object} , default:none
-    required Object object,
-  }) : super(
-          library: library,
-          className: className,
-          object: object,
-        ) {
+    required super.object,
+  })  : mateParams = {
+          'library': _i2.BuilderArg<String>(
+            name: 'library',
+            init: library,
+            isNamed: true,
+          ),
+          'className': _i2.BuilderArg<String>(
+            name: 'className',
+            init: className,
+            isNamed: true,
+          ),
+          'object': _i2.BuilderArg<Object>(
+            name: 'object',
+            init: object,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ObjectCreated';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectCreated$Mate(
@@ -28,22 +41,10 @@ class ObjectCreated$Mate extends _i1.ObjectCreated with _i2.Mate {
           className: p.get('className').build(),
           object: p.get('object').build(),
         );
-    mateUse(
-      'library',
-      library,
-      isNamed: true,
-    );
-    mateUse(
-      'className',
-      className,
-      isNamed: true,
-    );
-    mateUse(
-      'object',
-      object,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ObjectDisposed extends ObjectEvent
@@ -52,15 +53,20 @@ class ObjectDisposed$Mate extends _i1.ObjectDisposed with _i2.Mate {
   ObjectDisposed$Mate(
       {
       /// optionalParameters: {required Object object} , default:none
-      required Object object})
-      : super(object: object) {
+      required super.object})
+      : mateParams = {
+          'object': _i2.BuilderArg<Object>(
+            name: 'object',
+            init: object,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ObjectDisposed';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectDisposed$Mate(object: p.get('object').build());
-    mateUse(
-      'object',
-      object,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

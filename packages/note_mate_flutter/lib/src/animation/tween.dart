@@ -11,31 +11,33 @@ class Tween$Mate<T extends Object?> extends _i1.Tween<T> with _i2.Mate {
   /// Tween<T> Tween({T? begin, T? end})
   Tween$Mate({
     /// optionalParameters: {T? begin} , default:none
-    T? begin,
+    super.begin,
 
     /// optionalParameters: {T? end} , default:none
-    T? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<T?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<T?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Tween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => Tween$Mate<T>(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ReverseTween<T extends Object?> extends Tween<T>
@@ -44,17 +46,22 @@ class ReverseTween$Mate<T extends Object?> extends _i1.ReverseTween<T> with _i2.
   ReverseTween$Mate(
 
       /// requiredParameters: Tween<T> parent
-      _i1.Tween<T> parent)
-      : super(parent) {
+      super.parent)
+      : mateParams = {
+          'parent': _i2.BuilderArg<_i1.Tween<T>>(
+            name: 'parent',
+            init: parent,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ReverseTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ReverseTween$Mate<T>(p.get('parent').value);
-    mateUse(
-      'parent',
-      parent,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ColorTween extends Tween<Color?>
@@ -62,31 +69,33 @@ class ColorTween$Mate extends _i1.ColorTween with _i2.Mate {
   /// ColorTween ColorTween({Color? begin, Color? end})
   ColorTween$Mate({
     /// optionalParameters: {Color? begin} , default:none
-    _i3.Color? begin,
+    super.begin,
 
     /// optionalParameters: {Color? end} , default:none
-    _i3.Color? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.Color?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.Color?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ColorTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ColorTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SizeTween extends Tween<Size?>
@@ -94,31 +103,33 @@ class SizeTween$Mate extends _i1.SizeTween with _i2.Mate {
   /// SizeTween SizeTween({Size? begin, Size? end})
   SizeTween$Mate({
     /// optionalParameters: {Size? begin} , default:none
-    _i3.Size? begin,
+    super.begin,
 
     /// optionalParameters: {Size? end} , default:none
-    _i3.Size? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.Size?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.Size?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SizeTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SizeTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RectTween extends Tween<Rect?>
@@ -126,31 +137,33 @@ class RectTween$Mate extends _i1.RectTween with _i2.Mate {
   /// RectTween RectTween({Rect? begin, Rect? end})
   RectTween$Mate({
     /// optionalParameters: {Rect? begin} , default:none
-    _i3.Rect? begin,
+    super.begin,
 
     /// optionalParameters: {Rect? end} , default:none
-    _i3.Rect? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.Rect?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.Rect?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RectTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => RectTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IntTween extends Tween<int>
@@ -158,31 +171,33 @@ class IntTween$Mate extends _i1.IntTween with _i2.Mate {
   /// IntTween IntTween({int? begin, int? end})
   IntTween$Mate({
     /// optionalParameters: {int? begin} , default:none
-    int? begin,
+    super.begin,
 
     /// optionalParameters: {int? end} , default:none
-    int? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<int?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<int?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'IntTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => IntTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class StepTween extends Tween<int>
@@ -190,31 +205,33 @@ class StepTween$Mate extends _i1.StepTween with _i2.Mate {
   /// StepTween StepTween({int? begin, int? end})
   StepTween$Mate({
     /// optionalParameters: {int? begin} , default:none
-    int? begin,
+    super.begin,
 
     /// optionalParameters: {int? end} , default:none
-    int? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<int?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<int?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'StepTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => StepTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ConstantTween<T> extends Tween<T>
@@ -223,17 +240,22 @@ class ConstantTween$Mate<T> extends _i1.ConstantTween<T> with _i2.Mate {
   ConstantTween$Mate(
 
       /// requiredParameters: T value
-      T value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ConstantTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ConstantTween$Mate<T>(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CurveTween extends Animatable<double>
@@ -242,15 +264,20 @@ class CurveTween$Mate extends _i1.CurveTween with _i2.Mate {
   CurveTween$Mate(
       {
       /// optionalParameters: {required Curve curve} , default:none
-      required _i4.Curve curve})
-      : super(curve: curve) {
+      required super.curve})
+      : mateParams = {
+          'curve': _i2.BuilderArg<_i4.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'CurveTween';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CurveTween$Mate(curve: p.get('curve').build());
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

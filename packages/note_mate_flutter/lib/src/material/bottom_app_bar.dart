@@ -14,50 +14,97 @@ class BottomAppBar$Mate extends _i1.BottomAppBar with _i2.Mate {
   /// BottomAppBar BottomAppBar({Key? key, Color? color, double? elevation, NotchedShape? shape, Clip clipBehavior = Clip.none, double notchMargin = 4.0, Widget? child, EdgeInsetsGeometry? padding, Color? surfaceTintColor, Color? shadowColor, double? height})
   BottomAppBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {NotchedShape? shape} , default:none
-    _i5.NotchedShape? shape,
+    super.shape,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {double notchMargin = 4.0} , default:processed=DoubleLiteralImpl
-    double notchMargin = 4.0,
+    super.notchMargin,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i6.Widget? child,
+    super.child,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i7.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i4.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i4.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
-  }) : super(
-          key: key,
-          color: color,
-          elevation: elevation,
-          shape: shape,
-          clipBehavior: clipBehavior,
-          notchMargin: notchMargin,
-          child: child,
-          padding: padding,
-          surfaceTintColor: surfaceTintColor,
-          shadowColor: shadowColor,
-          height: height,
-        ) {
+    super.height,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.NotchedShape?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'notchMargin': _i2.BuilderArg<double>(
+            name: 'notchMargin',
+            init: notchMargin,
+            isNamed: true,
+            defaultValue: 4.0,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BottomAppBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomAppBar$Mate(
@@ -73,62 +120,8 @@ class BottomAppBar$Mate extends _i1.BottomAppBar with _i2.Mate {
           shadowColor: p.get('shadowColor').build(),
           height: p.get('height').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'notchMargin',
-      notchMargin,
-      isNamed: true,
-      defaultValue: 4.0,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

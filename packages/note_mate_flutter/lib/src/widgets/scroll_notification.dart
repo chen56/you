@@ -13,18 +13,31 @@ class ScrollStartNotification$Mate extends _i1.ScrollStartNotification with _i2.
   /// ScrollStartNotification ScrollStartNotification({required ScrollMetrics metrics, required BuildContext? context, DragStartDetails? dragDetails})
   ScrollStartNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
-    required _i3.ScrollMetrics metrics,
+    required super.metrics,
 
     /// optionalParameters: {required BuildContext? context} , default:none
-    required _i4.BuildContext? context,
+    required super.context,
 
     /// optionalParameters: {DragStartDetails? dragDetails} , default:none
-    _i5.DragStartDetails? dragDetails,
-  }) : super(
-          metrics: metrics,
-          context: context,
-          dragDetails: dragDetails,
-        ) {
+    super.dragDetails,
+  })  : mateParams = {
+          'metrics': _i2.BuilderArg<_i3.ScrollMetrics>(
+            name: 'metrics',
+            init: metrics,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext?>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'dragDetails': _i2.BuilderArg<_i5.DragStartDetails?>(
+            name: 'dragDetails',
+            init: dragDetails,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollStartNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollStartNotification$Mate(
@@ -32,22 +45,10 @@ class ScrollStartNotification$Mate extends _i1.ScrollStartNotification with _i2.
           context: p.get('context').build(),
           dragDetails: p.get('dragDetails').build(),
         );
-    mateUse(
-      'metrics',
-      metrics,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'dragDetails',
-      dragDetails,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollUpdateNotification extends ScrollNotification
@@ -55,26 +56,47 @@ class ScrollUpdateNotification$Mate extends _i1.ScrollUpdateNotification with _i
   /// ScrollUpdateNotification ScrollUpdateNotification({required ScrollMetrics metrics, required BuildContext context, DragUpdateDetails? dragDetails, double? scrollDelta, int? depth})
   ScrollUpdateNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
-    required _i3.ScrollMetrics metrics,
+    required super.metrics,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
+    required super.context,
 
     /// optionalParameters: {DragUpdateDetails? dragDetails} , default:none
-    _i5.DragUpdateDetails? dragDetails,
+    super.dragDetails,
 
     /// optionalParameters: {double? scrollDelta} , default:none
-    double? scrollDelta,
+    super.scrollDelta,
 
     /// optionalParameters: {int? depth} , default:none
-    int? depth,
-  }) : super(
-          metrics: metrics,
-          context: context,
-          dragDetails: dragDetails,
-          scrollDelta: scrollDelta,
-          depth: depth,
-        ) {
+    super.depth,
+  })  : mateParams = {
+          'metrics': _i2.BuilderArg<_i3.ScrollMetrics>(
+            name: 'metrics',
+            init: metrics,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'dragDetails': _i2.BuilderArg<_i5.DragUpdateDetails?>(
+            name: 'dragDetails',
+            init: dragDetails,
+            isNamed: true,
+          ),
+          'scrollDelta': _i2.BuilderArg<double?>(
+            name: 'scrollDelta',
+            init: scrollDelta,
+            isNamed: true,
+          ),
+          'depth': _i2.BuilderArg<int?>(
+            name: 'depth',
+            init: depth,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollUpdateNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollUpdateNotification$Mate(
@@ -84,32 +106,10 @@ class ScrollUpdateNotification$Mate extends _i1.ScrollUpdateNotification with _i
           scrollDelta: p.get('scrollDelta').build(),
           depth: p.get('depth').build(),
         );
-    mateUse(
-      'metrics',
-      metrics,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'dragDetails',
-      dragDetails,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDelta',
-      scrollDelta,
-      isNamed: true,
-    );
-    mateUse(
-      'depth',
-      depth,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OverscrollNotification extends ScrollNotification
@@ -117,26 +117,48 @@ class OverscrollNotification$Mate extends _i1.OverscrollNotification with _i2.Ma
   /// OverscrollNotification OverscrollNotification({required ScrollMetrics metrics, required BuildContext context, DragUpdateDetails? dragDetails, required double overscroll, double velocity = 0.0})
   OverscrollNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
-    required _i3.ScrollMetrics metrics,
+    required super.metrics,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
+    required super.context,
 
     /// optionalParameters: {DragUpdateDetails? dragDetails} , default:none
-    _i5.DragUpdateDetails? dragDetails,
+    super.dragDetails,
 
     /// optionalParameters: {required double overscroll} , default:none
-    required double overscroll,
+    required super.overscroll,
 
     /// optionalParameters: {double velocity = 0.0} , default:processed=DoubleLiteralImpl
-    double velocity = 0.0,
-  }) : super(
-          metrics: metrics,
-          context: context,
-          dragDetails: dragDetails,
-          overscroll: overscroll,
-          velocity: velocity,
-        ) {
+    super.velocity,
+  })  : mateParams = {
+          'metrics': _i2.BuilderArg<_i3.ScrollMetrics>(
+            name: 'metrics',
+            init: metrics,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'dragDetails': _i2.BuilderArg<_i5.DragUpdateDetails?>(
+            name: 'dragDetails',
+            init: dragDetails,
+            isNamed: true,
+          ),
+          'overscroll': _i2.BuilderArg<double>(
+            name: 'overscroll',
+            init: overscroll,
+            isNamed: true,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'OverscrollNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverscrollNotification$Mate(
@@ -146,33 +168,10 @@ class OverscrollNotification$Mate extends _i1.OverscrollNotification with _i2.Ma
           overscroll: p.get('overscroll').build(),
           velocity: p.get('velocity').build(),
         );
-    mateUse(
-      'metrics',
-      metrics,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'dragDetails',
-      dragDetails,
-      isNamed: true,
-    );
-    mateUse(
-      'overscroll',
-      overscroll,
-      isNamed: true,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollEndNotification extends ScrollNotification
@@ -180,18 +179,31 @@ class ScrollEndNotification$Mate extends _i1.ScrollEndNotification with _i2.Mate
   /// ScrollEndNotification ScrollEndNotification({required ScrollMetrics metrics, required BuildContext context, DragEndDetails? dragDetails})
   ScrollEndNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
-    required _i3.ScrollMetrics metrics,
+    required super.metrics,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
+    required super.context,
 
     /// optionalParameters: {DragEndDetails? dragDetails} , default:none
-    _i5.DragEndDetails? dragDetails,
-  }) : super(
-          metrics: metrics,
-          context: context,
-          dragDetails: dragDetails,
-        ) {
+    super.dragDetails,
+  })  : mateParams = {
+          'metrics': _i2.BuilderArg<_i3.ScrollMetrics>(
+            name: 'metrics',
+            init: metrics,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'dragDetails': _i2.BuilderArg<_i5.DragEndDetails?>(
+            name: 'dragDetails',
+            init: dragDetails,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollEndNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollEndNotification$Mate(
@@ -199,22 +211,10 @@ class ScrollEndNotification$Mate extends _i1.ScrollEndNotification with _i2.Mate
           context: p.get('context').build(),
           dragDetails: p.get('dragDetails').build(),
         );
-    mateUse(
-      'metrics',
-      metrics,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'dragDetails',
-      dragDetails,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class UserScrollNotification extends ScrollNotification
@@ -222,18 +222,31 @@ class UserScrollNotification$Mate extends _i1.UserScrollNotification with _i2.Ma
   /// UserScrollNotification UserScrollNotification({required ScrollMetrics metrics, required BuildContext context, required ScrollDirection direction})
   UserScrollNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
-    required _i3.ScrollMetrics metrics,
+    required super.metrics,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
+    required super.context,
 
     /// optionalParameters: {required ScrollDirection direction} , default:none
-    required _i6.ScrollDirection direction,
-  }) : super(
-          metrics: metrics,
-          context: context,
-          direction: direction,
-        ) {
+    required super.direction,
+  })  : mateParams = {
+          'metrics': _i2.BuilderArg<_i3.ScrollMetrics>(
+            name: 'metrics',
+            init: metrics,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i6.ScrollDirection>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'UserScrollNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UserScrollNotification$Mate(
@@ -241,20 +254,8 @@ class UserScrollNotification$Mate extends _i1.UserScrollNotification with _i2.Ma
           context: p.get('context').build(),
           direction: p.get('direction').build(),
         );
-    mateUse(
-      'metrics',
-      metrics,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

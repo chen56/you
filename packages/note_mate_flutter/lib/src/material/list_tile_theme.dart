@@ -19,82 +19,159 @@ class ListTileThemeData$Mate extends _i1.ListTileThemeData with _i2.Mate {
   /// ListTileThemeData ListTileThemeData({bool? dense, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, Color? tileColor, Color? selectedTileColor, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity, ListTileTitleAlignment? titleAlignment})
   ListTileThemeData$Mate({
     /// optionalParameters: {bool? dense} , default:none
-    bool? dense,
+    super.dense,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i3.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {ListTileStyle? style} , default:none
-    _i4.ListTileStyle? style,
+    super.style,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i5.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i5.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i5.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {TextStyle? titleTextStyle} , default:none
-    _i6.TextStyle? titleTextStyle,
+    super.titleTextStyle,
 
     /// optionalParameters: {TextStyle? subtitleTextStyle} , default:none
-    _i6.TextStyle? subtitleTextStyle,
+    super.subtitleTextStyle,
 
     /// optionalParameters: {TextStyle? leadingAndTrailingTextStyle} , default:none
-    _i6.TextStyle? leadingAndTrailingTextStyle,
+    super.leadingAndTrailingTextStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
-    _i7.EdgeInsetsGeometry? contentPadding,
+    super.contentPadding,
 
     /// optionalParameters: {Color? tileColor} , default:none
-    _i5.Color? tileColor,
+    super.tileColor,
 
     /// optionalParameters: {Color? selectedTileColor} , default:none
-    _i5.Color? selectedTileColor,
+    super.selectedTileColor,
 
     /// optionalParameters: {double? horizontalTitleGap} , default:none
-    double? horizontalTitleGap,
+    super.horizontalTitleGap,
 
     /// optionalParameters: {double? minVerticalPadding} , default:none
-    double? minVerticalPadding,
+    super.minVerticalPadding,
 
     /// optionalParameters: {double? minLeadingWidth} , default:none
-    double? minLeadingWidth,
+    super.minLeadingWidth,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i8.MaterialStateProperty<_i9.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i10.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , default:none
-    _i4.ListTileTitleAlignment? titleAlignment,
-  }) : super(
-          dense: dense,
-          shape: shape,
-          style: style,
-          selectedColor: selectedColor,
-          iconColor: iconColor,
-          textColor: textColor,
-          titleTextStyle: titleTextStyle,
-          subtitleTextStyle: subtitleTextStyle,
-          leadingAndTrailingTextStyle: leadingAndTrailingTextStyle,
-          contentPadding: contentPadding,
-          tileColor: tileColor,
-          selectedTileColor: selectedTileColor,
-          horizontalTitleGap: horizontalTitleGap,
-          minVerticalPadding: minVerticalPadding,
-          minLeadingWidth: minLeadingWidth,
-          enableFeedback: enableFeedback,
-          mouseCursor: mouseCursor,
-          visualDensity: visualDensity,
-          titleAlignment: titleAlignment,
-        ) {
+    super.titleAlignment,
+  })  : mateParams = {
+          'dense': _i2.BuilderArg<bool?>(
+            name: 'dense',
+            init: dense,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i3.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i4.ListTileStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'subtitleTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'subtitleTextStyle',
+            init: subtitleTextStyle,
+            isNamed: true,
+          ),
+          'leadingAndTrailingTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'leadingAndTrailingTextStyle',
+            init: leadingAndTrailingTextStyle,
+            isNamed: true,
+          ),
+          'contentPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'contentPadding',
+            init: contentPadding,
+            isNamed: true,
+          ),
+          'tileColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'tileColor',
+            init: tileColor,
+            isNamed: true,
+          ),
+          'selectedTileColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedTileColor',
+            init: selectedTileColor,
+            isNamed: true,
+          ),
+          'horizontalTitleGap': _i2.BuilderArg<double?>(
+            name: 'horizontalTitleGap',
+            init: horizontalTitleGap,
+            isNamed: true,
+          ),
+          'minVerticalPadding': _i2.BuilderArg<double?>(
+            name: 'minVerticalPadding',
+            init: minVerticalPadding,
+            isNamed: true,
+          ),
+          'minLeadingWidth': _i2.BuilderArg<double?>(
+            name: 'minLeadingWidth',
+            init: minLeadingWidth,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i10.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'titleAlignment': _i2.BuilderArg<_i4.ListTileTitleAlignment?>(
+            name: 'titleAlignment',
+            init: titleAlignment,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ListTileThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTileThemeData$Mate(
@@ -118,102 +195,10 @@ class ListTileThemeData$Mate extends _i1.ListTileThemeData with _i2.Mate {
           visualDensity: p.get('visualDensity').build(),
           titleAlignment: p.get('titleAlignment').build(),
         );
-    mateUse(
-      'dense',
-      dense,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'titleTextStyle',
-      titleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitleTextStyle',
-      subtitleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingAndTrailingTextStyle',
-      leadingAndTrailingTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'contentPadding',
-      contentPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'tileColor',
-      tileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedTileColor',
-      selectedTileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'horizontalTitleGap',
-      horizontalTitleGap,
-      isNamed: true,
-    );
-    mateUse(
-      'minVerticalPadding',
-      minVerticalPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'minLeadingWidth',
-      minLeadingWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'titleAlignment',
-      titleAlignment,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ListTileTheme extends InheritedTheme
@@ -221,74 +206,143 @@ class ListTileTheme$Mate extends _i1.ListTileTheme with _i2.Mate {
   /// ListTileTheme ListTileTheme({Key? key, ListTileThemeData? data, bool? dense, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, EdgeInsetsGeometry? contentPadding, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, required Widget child})
   ListTileTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i11.Key? key,
+    super.key,
 
     /// optionalParameters: {ListTileThemeData? data} , default:none
-    _i1.ListTileThemeData? data,
+    super.data,
 
     /// optionalParameters: {bool? dense} , default:none
-    bool? dense,
+    super.dense,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i3.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {ListTileStyle? style} , default:none
-    _i4.ListTileStyle? style,
+    super.style,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i5.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i5.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i5.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
-    _i7.EdgeInsetsGeometry? contentPadding,
+    super.contentPadding,
 
     /// optionalParameters: {Color? tileColor} , default:none
-    _i5.Color? tileColor,
+    super.tileColor,
 
     /// optionalParameters: {Color? selectedTileColor} , default:none
-    _i5.Color? selectedTileColor,
+    super.selectedTileColor,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i8.MaterialStateProperty<_i9.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {double? horizontalTitleGap} , default:none
-    double? horizontalTitleGap,
+    super.horizontalTitleGap,
 
     /// optionalParameters: {double? minVerticalPadding} , default:none
-    double? minVerticalPadding,
+    super.minVerticalPadding,
 
     /// optionalParameters: {double? minLeadingWidth} , default:none
-    double? minLeadingWidth,
+    super.minLeadingWidth,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i12.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          dense: dense,
-          shape: shape,
-          style: style,
-          selectedColor: selectedColor,
-          iconColor: iconColor,
-          textColor: textColor,
-          contentPadding: contentPadding,
-          tileColor: tileColor,
-          selectedTileColor: selectedTileColor,
-          enableFeedback: enableFeedback,
-          mouseCursor: mouseCursor,
-          horizontalTitleGap: horizontalTitleGap,
-          minVerticalPadding: minVerticalPadding,
-          minLeadingWidth: minLeadingWidth,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i11.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ListTileThemeData?>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'dense': _i2.BuilderArg<bool?>(
+            name: 'dense',
+            init: dense,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i3.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i4.ListTileStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'contentPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'contentPadding',
+            init: contentPadding,
+            isNamed: true,
+          ),
+          'tileColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'tileColor',
+            init: tileColor,
+            isNamed: true,
+          ),
+          'selectedTileColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedTileColor',
+            init: selectedTileColor,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'horizontalTitleGap': _i2.BuilderArg<double?>(
+            name: 'horizontalTitleGap',
+            init: horizontalTitleGap,
+            isNamed: true,
+          ),
+          'minVerticalPadding': _i2.BuilderArg<double?>(
+            name: 'minVerticalPadding',
+            init: minVerticalPadding,
+            isNamed: true,
+          ),
+          'minLeadingWidth': _i2.BuilderArg<double?>(
+            name: 'minLeadingWidth',
+            init: minLeadingWidth,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i12.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ListTileTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTileTheme$Mate(
@@ -310,90 +364,8 @@ class ListTileTheme$Mate extends _i1.ListTileTheme with _i2.Mate {
           minLeadingWidth: p.get('minLeadingWidth').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'dense',
-      dense,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'contentPadding',
-      contentPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'tileColor',
-      tileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedTileColor',
-      selectedTileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'horizontalTitleGap',
-      horizontalTitleGap,
-      isNamed: true,
-    );
-    mateUse(
-      'minVerticalPadding',
-      minVerticalPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'minLeadingWidth',
-      minLeadingWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -11,29 +11,31 @@ class PlatformSelectableRegionContextMenu$Mate extends _i1.PlatformSelectableReg
   /// PlatformSelectableRegionContextMenu PlatformSelectableRegionContextMenu({required Widget child, Key? key})
   PlatformSelectableRegionContextMenu$Mate({
     /// optionalParameters: {required Widget child} , default:none
-    required _i3.Widget child,
+    required super.child,
 
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
-  }) : super(
-          child: child,
-          key: key,
-        ) {
+    super.key,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlatformSelectableRegionContextMenu';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PlatformSelectableRegionContextMenu$Mate(
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

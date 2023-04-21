@@ -11,22 +11,41 @@ class Texture$Mate extends _i1.Texture with _i2.Mate {
   /// Texture Texture({Key? key, required int textureId, bool freeze = false, FilterQuality filterQuality = FilterQuality.low})
   Texture$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required int textureId} , default:none
-    required int textureId,
+    required super.textureId,
 
     /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
-    bool freeze = false,
+    super.freeze,
 
     /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
-    _i4.FilterQuality filterQuality = _i4.FilterQuality.low,
-  }) : super(
-          key: key,
-          textureId: textureId,
-          freeze: freeze,
-          filterQuality: filterQuality,
-        ) {
+    super.filterQuality,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'textureId': _i2.BuilderArg<int>(
+            name: 'textureId',
+            init: textureId,
+            isNamed: true,
+          ),
+          'freeze': _i2.BuilderArg<bool>(
+            name: 'freeze',
+            init: freeze,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'filterQuality': _i2.BuilderArg<_i4.FilterQuality>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+            defaultValue: _i4.FilterQuality.low,
+          ),
+        },
+        super() {
     mateBuilderName = 'Texture';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Texture$Mate(
@@ -35,27 +54,8 @@ class Texture$Mate extends _i1.Texture with _i2.Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'textureId',
-      textureId,
-      isNamed: true,
-    );
-    mateUse(
-      'freeze',
-      freeze,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-      defaultValue: _i4.FilterQuality.low,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

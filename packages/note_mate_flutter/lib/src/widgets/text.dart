@@ -17,42 +17,82 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
   /// DefaultTextStyle DefaultTextStyle({Key? key, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, required Widget child})
   DefaultTextStyle$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required TextStyle style} , default:none
-    required _i4.TextStyle style,
+    required super.style,
 
     /// optionalParameters: {TextAlign? textAlign} , default:none
-    _i5.TextAlign? textAlign,
+    super.textAlign,
 
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
-    bool softWrap = true,
+    super.softWrap,
 
     /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
-    _i6.TextOverflow overflow = _i7.TextOverflow.clip,
+    super.overflow,
 
     /// optionalParameters: {int? maxLines} , default:none
-    int? maxLines,
+    super.maxLines,
 
     /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
-    _i6.TextWidthBasis textWidthBasis = _i7.TextWidthBasis.parent,
+    super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i5.TextHeightBehavior? textHeightBehavior,
+    super.textHeightBehavior,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          style: style,
-          textAlign: textAlign,
-          softWrap: softWrap,
-          overflow: overflow,
-          maxLines: maxLines,
-          textWidthBasis: textWidthBasis,
-          textHeightBehavior: textHeightBehavior,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i4.TextStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i5.TextAlign?>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+          ),
+          'softWrap': _i2.BuilderArg<bool>(
+            name: 'softWrap',
+            init: softWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'overflow': _i2.BuilderArg<_i6.TextOverflow>(
+            name: 'overflow',
+            init: overflow,
+            isNamed: true,
+            defaultValue: _i7.TextOverflow.clip,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i6.TextWidthBasis>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+            defaultValue: _i7.TextWidthBasis.parent,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i5.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DefaultTextStyle';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate(
@@ -66,71 +106,28 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-    );
-    mateUse(
-      'softWrap',
-      softWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'overflow',
-      overflow,
-      isNamed: true,
-      defaultValue: _i7.TextOverflow.clip,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-      defaultValue: _i7.TextWidthBasis.parent,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// DefaultTextStyle DefaultTextStyle.fallback({Key? key})
   DefaultTextStyle$Mate.fallback(
       {
       /// optionalParameters: {Key? key} , default:none
-      _i3.Key? key})
-      : super.fallback(key: key) {
+      super.key})
+      : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          )
+        },
+        super.fallback() {
     mateBuilderName = 'DefaultTextStyle.fallback';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultTextStyle$Mate.fallback(key: p.get('key').build());
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DefaultTextHeightBehavior extends InheritedTheme
@@ -138,18 +135,31 @@ class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior with 
   /// DefaultTextHeightBehavior DefaultTextHeightBehavior({Key? key, required TextHeightBehavior textHeightBehavior, required Widget child})
   DefaultTextHeightBehavior$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required TextHeightBehavior textHeightBehavior} , default:none
-    required _i5.TextHeightBehavior textHeightBehavior,
+    required super.textHeightBehavior,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          textHeightBehavior: textHeightBehavior,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i5.TextHeightBehavior>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DefaultTextHeightBehavior';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultTextHeightBehavior$Mate(
@@ -157,22 +167,10 @@ class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior with 
           textHeightBehavior: p.get('textHeightBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Text extends StatelessWidget
@@ -180,65 +178,126 @@ class Text$Mate extends _i1.Text with _i2.Mate {
   /// Text Text(String data, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
   Text$Mate(
     /// requiredParameters: String data
-    String data, {
+    super.data, {
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {TextStyle? style} , default:none
-    _i4.TextStyle? style,
+    super.style,
 
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
-    _i9.StrutStyle? strutStyle,
+    super.strutStyle,
 
     /// optionalParameters: {TextAlign? textAlign} , default:none
-    _i5.TextAlign? textAlign,
+    super.textAlign,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i5.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {bool? softWrap} , default:none
-    bool? softWrap,
+    super.softWrap,
 
     /// optionalParameters: {TextOverflow? overflow} , default:none
-    _i6.TextOverflow? overflow,
+    super.overflow,
 
     /// optionalParameters: {double? textScaleFactor} , default:none
-    double? textScaleFactor,
+    super.textScaleFactor,
 
     /// optionalParameters: {int? maxLines} , default:none
-    int? maxLines,
+    super.maxLines,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
-    _i6.TextWidthBasis? textWidthBasis,
+    super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i5.TextHeightBehavior? textHeightBehavior,
+    super.textHeightBehavior,
 
     /// optionalParameters: {Color? selectionColor} , default:none
-    _i5.Color? selectionColor,
-  }) : super(
-          data,
-          key: key,
-          style: style,
-          strutStyle: strutStyle,
-          textAlign: textAlign,
-          textDirection: textDirection,
-          locale: locale,
-          softWrap: softWrap,
-          overflow: overflow,
-          textScaleFactor: textScaleFactor,
-          maxLines: maxLines,
-          semanticsLabel: semanticsLabel,
-          textWidthBasis: textWidthBasis,
-          textHeightBehavior: textHeightBehavior,
-          selectionColor: selectionColor,
-        ) {
+    super.selectionColor,
+  })  : mateParams = {
+          'data': _i2.BuilderArg<String>(
+            name: 'data',
+            init: data,
+            isNamed: false,
+          ),
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'strutStyle': _i2.BuilderArg<_i9.StrutStyle?>(
+            name: 'strutStyle',
+            init: strutStyle,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i5.TextAlign?>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i5.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'softWrap': _i2.BuilderArg<bool?>(
+            name: 'softWrap',
+            init: softWrap,
+            isNamed: true,
+          ),
+          'overflow': _i2.BuilderArg<_i6.TextOverflow?>(
+            name: 'overflow',
+            init: overflow,
+            isNamed: true,
+          ),
+          'textScaleFactor': _i2.BuilderArg<double?>(
+            name: 'textScaleFactor',
+            init: textScaleFactor,
+            isNamed: true,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i6.TextWidthBasis?>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i5.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'selectionColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectionColor',
+            init: selectionColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Text';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Text$Mate(
@@ -258,145 +317,131 @@ class Text$Mate extends _i1.Text with _i2.Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateUse(
-      'data',
-      data,
-      isNamed: false,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'strutStyle',
-      strutStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'softWrap',
-      softWrap,
-      isNamed: true,
-    );
-    mateUse(
-      'overflow',
-      overflow,
-      isNamed: true,
-    );
-    mateUse(
-      'textScaleFactor',
-      textScaleFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionColor',
-      selectionColor,
-      isNamed: true,
-    );
   }
 
   /// Text Text.rich(InlineSpan textSpan, {Key? key, TextStyle? style, StrutStyle? strutStyle, TextAlign? textAlign, TextDirection? textDirection, Locale? locale, bool? softWrap, TextOverflow? overflow, double? textScaleFactor, int? maxLines, String? semanticsLabel, TextWidthBasis? textWidthBasis, TextHeightBehavior? textHeightBehavior, Color? selectionColor})
   Text$Mate.rich(
     /// requiredParameters: InlineSpan textSpan
-    _i10.InlineSpan textSpan, {
+    super.textSpan, {
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {TextStyle? style} , default:none
-    _i4.TextStyle? style,
+    super.style,
 
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
-    _i9.StrutStyle? strutStyle,
+    super.strutStyle,
 
     /// optionalParameters: {TextAlign? textAlign} , default:none
-    _i5.TextAlign? textAlign,
+    super.textAlign,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i5.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {bool? softWrap} , default:none
-    bool? softWrap,
+    super.softWrap,
 
     /// optionalParameters: {TextOverflow? overflow} , default:none
-    _i6.TextOverflow? overflow,
+    super.overflow,
 
     /// optionalParameters: {double? textScaleFactor} , default:none
-    double? textScaleFactor,
+    super.textScaleFactor,
 
     /// optionalParameters: {int? maxLines} , default:none
-    int? maxLines,
+    super.maxLines,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {TextWidthBasis? textWidthBasis} , default:none
-    _i6.TextWidthBasis? textWidthBasis,
+    super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i5.TextHeightBehavior? textHeightBehavior,
+    super.textHeightBehavior,
 
     /// optionalParameters: {Color? selectionColor} , default:none
-    _i5.Color? selectionColor,
-  }) : super.rich(
-          textSpan,
-          key: key,
-          style: style,
-          strutStyle: strutStyle,
-          textAlign: textAlign,
-          textDirection: textDirection,
-          locale: locale,
-          softWrap: softWrap,
-          overflow: overflow,
-          textScaleFactor: textScaleFactor,
-          maxLines: maxLines,
-          semanticsLabel: semanticsLabel,
-          textWidthBasis: textWidthBasis,
-          textHeightBehavior: textHeightBehavior,
-          selectionColor: selectionColor,
-        ) {
+    super.selectionColor,
+  })  : mateParams = {
+          'textSpan': _i2.BuilderArg<_i10.InlineSpan>(
+            name: 'textSpan',
+            init: textSpan,
+            isNamed: false,
+          ),
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'strutStyle': _i2.BuilderArg<_i9.StrutStyle?>(
+            name: 'strutStyle',
+            init: strutStyle,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i5.TextAlign?>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i5.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'softWrap': _i2.BuilderArg<bool?>(
+            name: 'softWrap',
+            init: softWrap,
+            isNamed: true,
+          ),
+          'overflow': _i2.BuilderArg<_i6.TextOverflow?>(
+            name: 'overflow',
+            init: overflow,
+            isNamed: true,
+          ),
+          'textScaleFactor': _i2.BuilderArg<double?>(
+            name: 'textScaleFactor',
+            init: textScaleFactor,
+            isNamed: true,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i6.TextWidthBasis?>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i5.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'selectionColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectionColor',
+            init: selectionColor,
+            isNamed: true,
+          ),
+        },
+        super.rich() {
     mateBuilderName = 'Text.rich';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Text$Mate.rich(
@@ -416,80 +461,8 @@ class Text$Mate extends _i1.Text with _i2.Mate {
           textHeightBehavior: p.get('textHeightBehavior').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateUse(
-      'textSpan',
-      textSpan,
-      isNamed: false,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'strutStyle',
-      strutStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'softWrap',
-      softWrap,
-      isNamed: true,
-    );
-    mateUse(
-      'overflow',
-      overflow,
-      isNamed: true,
-    );
-    mateUse(
-      'textScaleFactor',
-      textScaleFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionColor',
-      selectionColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

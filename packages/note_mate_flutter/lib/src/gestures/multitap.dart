@@ -12,18 +12,31 @@ class DoubleTapGestureRecognizer$Mate extends _i1.DoubleTapGestureRecognizer wit
   /// DoubleTapGestureRecognizer DoubleTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   DoubleTapGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DoubleTapGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DoubleTapGestureRecognizer$Mate(
@@ -31,22 +44,10 @@ class DoubleTapGestureRecognizer$Mate extends _i1.DoubleTapGestureRecognizer wit
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MultiTapGestureRecognizer extends GestureRecognizer
@@ -54,22 +55,40 @@ class MultiTapGestureRecognizer$Mate extends _i1.MultiTapGestureRecognizer with 
   /// MultiTapGestureRecognizer MultiTapGestureRecognizer({Duration longTapDelay = Duration.zero, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   MultiTapGestureRecognizer$Mate({
     /// optionalParameters: {Duration longTapDelay = Duration.zero} , default:processed=PrefixedIdentifierImpl
-    Duration longTapDelay = Duration.zero,
+    super.longTapDelay,
 
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          longTapDelay: longTapDelay,
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'longTapDelay': _i2.BuilderArg<Duration>(
+            name: 'longTapDelay',
+            init: longTapDelay,
+            isNamed: true,
+            defaultValue: Duration.zero,
+          ),
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MultiTapGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => MultiTapGestureRecognizer$Mate(
@@ -78,28 +97,10 @@ class MultiTapGestureRecognizer$Mate extends _i1.MultiTapGestureRecognizer with 
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'longTapDelay',
-      longTapDelay,
-      isNamed: true,
-      defaultValue: Duration.zero,
-    );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SerialTapDownDetails
@@ -107,26 +108,50 @@ class SerialTapDownDetails$Mate extends _i1.SerialTapDownDetails with _i2.Mate {
   /// SerialTapDownDetails SerialTapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, required PointerDeviceKind kind, int buttons = 0, int count = 1})
   SerialTapDownDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i5.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
+    super.localPosition,
 
     /// optionalParameters: {required PointerDeviceKind kind} , default:none
-    required _i3.PointerDeviceKind kind,
+    required super.kind,
 
     /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
-    int buttons = 0,
+    super.buttons,
 
     /// optionalParameters: {int count = 1} , default:processed=IntegerLiteralImpl
-    int count = 1,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-          kind: kind,
-          buttons: buttons,
-          count: count,
-        ) {
+    super.count,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i5.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
+            name: 'kind',
+            init: kind,
+            isNamed: true,
+          ),
+          'buttons': _i2.BuilderArg<int>(
+            name: 'buttons',
+            init: buttons,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'count': _i2.BuilderArg<int>(
+            name: 'count',
+            init: count,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+        },
+        super() {
     mateBuilderName = 'SerialTapDownDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapDownDetails$Mate(
@@ -136,35 +161,10 @@ class SerialTapDownDetails$Mate extends _i1.SerialTapDownDetails with _i2.Mate {
           buttons: p.get('buttons').build(),
           count: p.get('count').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i5.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'kind',
-      kind,
-      isNamed: true,
-    );
-    mateUse(
-      'buttons',
-      buttons,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'count',
-      count,
-      isNamed: true,
-      defaultValue: 1,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SerialTapCancelDetails
@@ -173,18 +173,23 @@ class SerialTapCancelDetails$Mate extends _i1.SerialTapCancelDetails with _i2.Ma
   SerialTapCancelDetails$Mate(
       {
       /// optionalParameters: {int count = 1} , default:processed=IntegerLiteralImpl
-      int count = 1})
-      : super(count: count) {
+      super.count})
+      : mateParams = {
+          'count': _i2.BuilderArg<int>(
+            name: 'count',
+            init: count,
+            isNamed: true,
+            defaultValue: 1,
+          )
+        },
+        super() {
     mateBuilderName = 'SerialTapCancelDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapCancelDetails$Mate(count: p.get('count').build());
-    mateUse(
-      'count',
-      count,
-      isNamed: true,
-      defaultValue: 1,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SerialTapUpDetails
@@ -192,22 +197,41 @@ class SerialTapUpDetails$Mate extends _i1.SerialTapUpDetails with _i2.Mate {
   /// SerialTapUpDetails SerialTapUpDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind, int count = 1})
   SerialTapUpDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i5.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
+    super.localPosition,
 
     /// optionalParameters: {PointerDeviceKind? kind} , default:none
-    _i3.PointerDeviceKind? kind,
+    super.kind,
 
     /// optionalParameters: {int count = 1} , default:processed=IntegerLiteralImpl
-    int count = 1,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-          kind: kind,
-          count: count,
-        ) {
+    super.count,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i5.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind?>(
+            name: 'kind',
+            init: kind,
+            isNamed: true,
+          ),
+          'count': _i2.BuilderArg<int>(
+            name: 'count',
+            init: count,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+        },
+        super() {
     mateBuilderName = 'SerialTapUpDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapUpDetails$Mate(
@@ -216,29 +240,10 @@ class SerialTapUpDetails$Mate extends _i1.SerialTapUpDetails with _i2.Mate {
           kind: p.get('kind').build(),
           count: p.get('count').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i5.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'kind',
-      kind,
-      isNamed: true,
-    );
-    mateUse(
-      'count',
-      count,
-      isNamed: true,
-      defaultValue: 1,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SerialTapGestureRecognizer extends GestureRecognizer
@@ -246,18 +251,31 @@ class SerialTapGestureRecognizer$Mate extends _i1.SerialTapGestureRecognizer wit
   /// SerialTapGestureRecognizer SerialTapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   SerialTapGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SerialTapGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => SerialTapGestureRecognizer$Mate(
@@ -265,20 +283,8 @@ class SerialTapGestureRecognizer$Mate extends _i1.SerialTapGestureRecognizer wit
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

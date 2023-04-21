@@ -12,25 +12,48 @@ class TransformProperty$Mate extends _i1.TransformProperty with _i2.Mate {
   /// TransformProperty TransformProperty(String name, Matrix4? value, {bool showName = true, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   TransformProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: Matrix4? value
-    _i3.Matrix4? value, {
+    super.value, {
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i4.DiagnosticLevel level = _i5.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          showName: showName,
-          defaultValue: defaultValue,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<_i3.Matrix4?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'level': _i2.BuilderArg<_i4.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i5.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'TransformProperty';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TransformProperty$Mate(
@@ -40,32 +63,8 @@ class TransformProperty$Mate extends _i1.TransformProperty with _i2.Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i5.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

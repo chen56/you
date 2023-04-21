@@ -12,22 +12,40 @@ class Title$Mate extends _i1.Title with _i2.Mate {
   /// Title Title({Key? key, String title = '', required Color color, required Widget child})
   Title$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {String title = ''} , default:processed=SimpleStringLiteralImpl
-    String title = '',
+    super.title,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i4.Color color,
+    required super.color,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          title: title,
-          color: color,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<String>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'color': _i2.BuilderArg<_i4.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Title';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Title$Mate(
@@ -36,26 +54,8 @@ class Title$Mate extends _i1.Title with _i2.Mate {
           color: p.get('color').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

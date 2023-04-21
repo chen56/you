@@ -9,46 +9,89 @@ class StackFrame$Mate extends _i1.StackFrame with _i2.Mate {
   /// StackFrame StackFrame({required int number, required int column, required int line, required String packageScheme, required String package, required String packagePath, String className = '', required String method, bool isConstructor = false, required String source})
   StackFrame$Mate({
     /// optionalParameters: {required int number} , default:none
-    required int number,
+    required super.number,
 
     /// optionalParameters: {required int column} , default:none
-    required int column,
+    required super.column,
 
     /// optionalParameters: {required int line} , default:none
-    required int line,
+    required super.line,
 
     /// optionalParameters: {required String packageScheme} , default:none
-    required String packageScheme,
+    required super.packageScheme,
 
     /// optionalParameters: {required String package} , default:none
-    required String package,
+    required super.package,
 
     /// optionalParameters: {required String packagePath} , default:none
-    required String packagePath,
+    required super.packagePath,
 
     /// optionalParameters: {String className = ''} , default:processed=SimpleStringLiteralImpl
-    String className = '',
+    super.className,
 
     /// optionalParameters: {required String method} , default:none
-    required String method,
+    required super.method,
 
     /// optionalParameters: {bool isConstructor = false} , default:processed=BooleanLiteralImpl
-    bool isConstructor = false,
+    super.isConstructor,
 
     /// optionalParameters: {required String source} , default:none
-    required String source,
-  }) : super(
-          number: number,
-          column: column,
-          line: line,
-          packageScheme: packageScheme,
-          package: package,
-          packagePath: packagePath,
-          className: className,
-          method: method,
-          isConstructor: isConstructor,
-          source: source,
-        ) {
+    required super.source,
+  })  : mateParams = {
+          'number': _i2.BuilderArg<int>(
+            name: 'number',
+            init: number,
+            isNamed: true,
+          ),
+          'column': _i2.BuilderArg<int>(
+            name: 'column',
+            init: column,
+            isNamed: true,
+          ),
+          'line': _i2.BuilderArg<int>(
+            name: 'line',
+            init: line,
+            isNamed: true,
+          ),
+          'packageScheme': _i2.BuilderArg<String>(
+            name: 'packageScheme',
+            init: packageScheme,
+            isNamed: true,
+          ),
+          'package': _i2.BuilderArg<String>(
+            name: 'package',
+            init: package,
+            isNamed: true,
+          ),
+          'packagePath': _i2.BuilderArg<String>(
+            name: 'packagePath',
+            init: packagePath,
+            isNamed: true,
+          ),
+          'className': _i2.BuilderArg<String>(
+            name: 'className',
+            init: className,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'method': _i2.BuilderArg<String>(
+            name: 'method',
+            init: method,
+            isNamed: true,
+          ),
+          'isConstructor': _i2.BuilderArg<bool>(
+            name: 'isConstructor',
+            init: isConstructor,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'source': _i2.BuilderArg<String>(
+            name: 'source',
+            init: source,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'StackFrame';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => StackFrame$Mate(
@@ -63,57 +106,8 @@ class StackFrame$Mate extends _i1.StackFrame with _i2.Mate {
           isConstructor: p.get('isConstructor').build(),
           source: p.get('source').build(),
         );
-    mateUse(
-      'number',
-      number,
-      isNamed: true,
-    );
-    mateUse(
-      'column',
-      column,
-      isNamed: true,
-    );
-    mateUse(
-      'line',
-      line,
-      isNamed: true,
-    );
-    mateUse(
-      'packageScheme',
-      packageScheme,
-      isNamed: true,
-    );
-    mateUse(
-      'package',
-      package,
-      isNamed: true,
-    );
-    mateUse(
-      'packagePath',
-      packagePath,
-      isNamed: true,
-    );
-    mateUse(
-      'className',
-      className,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'method',
-      method,
-      isNamed: true,
-    );
-    mateUse(
-      'isConstructor',
-      isConstructor,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'source',
-      source,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

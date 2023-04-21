@@ -16,58 +16,119 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
   /// DecorationImage DecorationImage({required ImageProvider<Object> image, void Function(Object, StackTrace?)? onError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double scale = 1.0, double opacity = 1.0, FilterQuality filterQuality = FilterQuality.low, bool invertColors = false, bool isAntiAlias = false})
   DecorationImage$Mate({
     /// optionalParameters: {required ImageProvider<Object> image} , default:none
-    required _i3.ImageProvider<Object> image,
+    required super.image,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onError} , default:none
-    _i4.ImageErrorListener? onError,
+    super.onError,
 
     /// optionalParameters: {ColorFilter? colorFilter} , default:none
-    _i5.ColorFilter? colorFilter,
+    super.colorFilter,
 
     /// optionalParameters: {BoxFit? fit} , default:none
-    _i6.BoxFit? fit,
+    super.fit,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i7.AlignmentGeometry alignment = _i8.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
-    _i5.Rect? centerSlice,
+    super.centerSlice,
 
     /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
-    _i1.ImageRepeat repeat = _i8.ImageRepeat.noRepeat,
+    super.repeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
-    bool matchTextDirection = false,
+    super.matchTextDirection,
 
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
+    super.scale,
 
     /// optionalParameters: {double opacity = 1.0} , default:processed=DoubleLiteralImpl
-    double opacity = 1.0,
+    super.opacity,
 
     /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
-    _i5.FilterQuality filterQuality = _i5.FilterQuality.low,
+    super.filterQuality,
 
     /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
-    bool invertColors = false,
+    super.invertColors,
 
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
-    bool isAntiAlias = false,
-  }) : super(
-          image: image,
-          onError: onError,
-          colorFilter: colorFilter,
-          fit: fit,
-          alignment: alignment,
-          centerSlice: centerSlice,
-          repeat: repeat,
-          matchTextDirection: matchTextDirection,
-          scale: scale,
-          opacity: opacity,
-          filterQuality: filterQuality,
-          invertColors: invertColors,
-          isAntiAlias: isAntiAlias,
-        ) {
+    super.isAntiAlias,
+  })  : mateParams = {
+          'image': _i2.BuilderArg<_i3.ImageProvider<Object>>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'onError': _i2.BuilderArg<_i4.ImageErrorListener?>(
+            name: 'onError',
+            init: onError,
+            isNamed: true,
+          ),
+          'colorFilter': _i2.BuilderArg<_i5.ColorFilter?>(
+            name: 'colorFilter',
+            init: colorFilter,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i6.BoxFit?>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i8.Alignment.center,
+          ),
+          'centerSlice': _i2.BuilderArg<_i5.Rect?>(
+            name: 'centerSlice',
+            init: centerSlice,
+            isNamed: true,
+          ),
+          'repeat': _i2.BuilderArg<_i1.ImageRepeat>(
+            name: 'repeat',
+            init: repeat,
+            isNamed: true,
+            defaultValue: _i8.ImageRepeat.noRepeat,
+          ),
+          'matchTextDirection': _i2.BuilderArg<bool>(
+            name: 'matchTextDirection',
+            init: matchTextDirection,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'opacity': _i2.BuilderArg<double>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'filterQuality': _i2.BuilderArg<_i5.FilterQuality>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+            defaultValue: _i5.FilterQuality.low,
+          ),
+          'invertColors': _i2.BuilderArg<bool>(
+            name: 'invertColors',
+            init: invertColors,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isAntiAlias': _i2.BuilderArg<bool>(
+            name: 'isAntiAlias',
+            init: isAntiAlias,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'DecorationImage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DecorationImage$Mate(
@@ -85,80 +146,10 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
           invertColors: p.get('invertColors').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'onError',
-      onError,
-      isNamed: true,
-    );
-    mateUse(
-      'colorFilter',
-      colorFilter,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i8.Alignment.center,
-    );
-    mateUse(
-      'centerSlice',
-      centerSlice,
-      isNamed: true,
-    );
-    mateUse(
-      'repeat',
-      repeat,
-      isNamed: true,
-      defaultValue: _i8.ImageRepeat.noRepeat,
-    );
-    mateUse(
-      'matchTextDirection',
-      matchTextDirection,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-      defaultValue: _i5.FilterQuality.low,
-    );
-    mateUse(
-      'invertColors',
-      invertColors,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isAntiAlias',
-      isAntiAlias,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ImageTilingInfo
@@ -166,18 +157,31 @@ class ImageTilingInfo$Mate extends _i1.ImageTilingInfo with _i2.Mate {
   /// ImageTilingInfo ImageTilingInfo({required TileMode tmx, required TileMode tmy, required Matrix4 transform})
   ImageTilingInfo$Mate({
     /// optionalParameters: {required TileMode tmx} , default:none
-    required _i5.TileMode tmx,
+    required super.tmx,
 
     /// optionalParameters: {required TileMode tmy} , default:none
-    required _i5.TileMode tmy,
+    required super.tmy,
 
     /// optionalParameters: {required Matrix4 transform} , default:none
-    required _i9.Matrix4 transform,
-  }) : super(
-          tmx: tmx,
-          tmy: tmy,
-          transform: transform,
-        ) {
+    required super.transform,
+  })  : mateParams = {
+          'tmx': _i2.BuilderArg<_i5.TileMode>(
+            name: 'tmx',
+            init: tmx,
+            isNamed: true,
+          ),
+          'tmy': _i2.BuilderArg<_i5.TileMode>(
+            name: 'tmy',
+            init: tmy,
+            isNamed: true,
+          ),
+          'transform': _i2.BuilderArg<_i9.Matrix4>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageTilingInfo';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageTilingInfo$Mate(
@@ -185,20 +189,8 @@ class ImageTilingInfo$Mate extends _i1.ImageTilingInfo with _i2.Mate {
           tmy: p.get('tmy').build(),
           transform: p.get('transform').build(),
         );
-    mateUse(
-      'tmx',
-      tmx,
-      isNamed: true,
-    );
-    mateUse(
-      'tmy',
-      tmy,
-      isNamed: true,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

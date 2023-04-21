@@ -11,32 +11,34 @@ class RenderSliverFillViewport$Mate extends _i1.RenderSliverFillViewport with _i
   /// RenderSliverFillViewport RenderSliverFillViewport({required RenderSliverBoxChildManager childManager, double viewportFraction = 1.0})
   RenderSliverFillViewport$Mate({
     /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none
-    required _i3.RenderSliverBoxChildManager childManager,
+    required super.childManager,
 
     /// optionalParameters: {double viewportFraction = 1.0} , default:processed=DoubleLiteralImpl
-    double viewportFraction = 1.0,
-  }) : super(
-          childManager: childManager,
-          viewportFraction: viewportFraction,
-        ) {
+    super.viewportFraction,
+  })  : mateParams = {
+          'childManager': _i2.BuilderArg<_i3.RenderSliverBoxChildManager>(
+            name: 'childManager',
+            init: childManager,
+            isNamed: true,
+          ),
+          'viewportFraction': _i2.BuilderArg<double>(
+            name: 'viewportFraction',
+            init: viewportFraction,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverFillViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFillViewport$Mate(
           childManager: p.get('childManager').build(),
           viewportFraction: p.get('viewportFraction').build(),
         );
-    mateUse(
-      'childManager',
-      childManager,
-      isNamed: true,
-    );
-    mateUse(
-      'viewportFraction',
-      viewportFraction,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverFillRemainingWithScrollable extends RenderSliverSingleBoxAdapter
@@ -45,17 +47,22 @@ class RenderSliverFillRemainingWithScrollable$Mate extends _i1.RenderSliverFillR
   RenderSliverFillRemainingWithScrollable$Mate(
       {
       /// optionalParameters: {RenderBox? child} , default:none
-      _i4.RenderBox? child})
-      : super(child: child) {
+      super.child})
+      : mateParams = {
+          'child': _i2.BuilderArg<_i4.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderSliverFillRemainingWithScrollable';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFillRemainingWithScrollable$Mate(child: p.get('child').build());
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverFillRemaining extends RenderSliverSingleBoxAdapter
@@ -64,17 +71,22 @@ class RenderSliverFillRemaining$Mate extends _i1.RenderSliverFillRemaining with 
   RenderSliverFillRemaining$Mate(
       {
       /// optionalParameters: {RenderBox? child} , default:none
-      _i4.RenderBox? child})
-      : super(child: child) {
+      super.child})
+      : mateParams = {
+          'child': _i2.BuilderArg<_i4.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderSliverFillRemaining';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFillRemaining$Mate(child: p.get('child').build());
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverFillRemainingAndOverscroll extends RenderSliverSingleBoxAdapter
@@ -83,15 +95,20 @@ class RenderSliverFillRemainingAndOverscroll$Mate extends _i1.RenderSliverFillRe
   RenderSliverFillRemainingAndOverscroll$Mate(
       {
       /// optionalParameters: {RenderBox? child} , default:none
-      _i4.RenderBox? child})
-      : super(child: child) {
+      super.child})
+      : mateParams = {
+          'child': _i2.BuilderArg<_i4.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderSliverFillRemainingAndOverscroll';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverFillRemainingAndOverscroll$Mate(child: p.get('child').build());
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

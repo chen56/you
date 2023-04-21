@@ -12,32 +12,35 @@ class SliverLayoutBuilder$Mate extends _i1.SliverLayoutBuilder with _i2.Mate {
   /// SliverLayoutBuilder SliverLayoutBuilder({Key? key, required Widget Function(BuildContext, SliverConstraints) builder})
   SliverLayoutBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext, SliverConstraints) builder} , default:none
-    required _i4.Widget Function(
-      _i4.BuildContext,
-      _i5.SliverConstraints,
-    ) builder,
-  }) : super(
-          key: key,
-          builder: builder,
-        ) {
+    required super.builder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<
+              _i4.Widget Function(
+                _i4.BuildContext,
+                _i5.SliverConstraints,
+              )>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverLayoutBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverLayoutBuilder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

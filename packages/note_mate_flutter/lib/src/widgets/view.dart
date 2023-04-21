@@ -11,29 +11,31 @@ class View$Mate extends _i1.View with _i2.Mate {
   /// View View({required FlutterView view, required Widget child})
   View$Mate({
     /// optionalParameters: {required FlutterView view} , default:none
-    required _i3.FlutterView view,
+    required super.view,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          view: view,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'view': _i2.BuilderArg<_i3.FlutterView>(
+            name: 'view',
+            init: view,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'View';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => View$Mate(
           view: p.get('view').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'view',
-      view,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

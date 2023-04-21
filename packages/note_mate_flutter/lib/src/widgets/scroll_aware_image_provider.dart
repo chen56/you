@@ -12,29 +12,31 @@ class ScrollAwareImageProvider$Mate<T extends Object> extends _i1.ScrollAwareIma
   /// ScrollAwareImageProvider<T> ScrollAwareImageProvider({required DisposableBuildContext<State<StatefulWidget>> context, required ImageProvider<T> imageProvider})
   ScrollAwareImageProvider$Mate({
     /// optionalParameters: {required DisposableBuildContext<State<StatefulWidget>> context} , default:none
-    required _i3.DisposableBuildContext<_i4.State<_i4.StatefulWidget>> context,
+    required super.context,
 
     /// optionalParameters: {required ImageProvider<T> imageProvider} , default:none
-    required _i5.ImageProvider<T> imageProvider,
-  }) : super(
-          context: context,
-          imageProvider: imageProvider,
-        ) {
+    required super.imageProvider,
+  })  : mateParams = {
+          'context': _i2.BuilderArg<_i3.DisposableBuildContext<_i4.State<_i4.StatefulWidget>>>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'imageProvider': _i2.BuilderArg<_i5.ImageProvider<T>>(
+            name: 'imageProvider',
+            init: imageProvider,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollAwareImageProvider';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollAwareImageProvider$Mate<T>(
           context: p.get('context').build(),
           imageProvider: p.get('imageProvider').build(),
         );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'imageProvider',
-      imageProvider,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

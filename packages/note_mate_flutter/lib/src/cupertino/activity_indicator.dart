@@ -11,22 +11,40 @@ class CupertinoActivityIndicator$Mate extends _i1.CupertinoActivityIndicator wit
   /// CupertinoActivityIndicator CupertinoActivityIndicator({Key? key, Color? color, bool animating = true, double radius = _kDefaultIndicatorRadius})
   CupertinoActivityIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {bool animating = true} , default:processed=BooleanLiteralImpl
-    bool animating = true,
+    super.animating,
 
     /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , default:unprocessed=SimpleIdentifierImpl
-    required double radius,
-  }) : super(
-          key: key,
-          color: color,
-          animating: animating,
-          radius: radius,
-        ) {
+    super.radius,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'animating': _i2.BuilderArg<bool>(
+            name: 'animating',
+            init: animating,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'radius': _i2.BuilderArg<double>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoActivityIndicator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate(
@@ -35,48 +53,45 @@ class CupertinoActivityIndicator$Mate extends _i1.CupertinoActivityIndicator wit
           animating: p.get('animating').build(),
           radius: p.get('radius').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'animating',
-      animating,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
   }
 
   /// CupertinoActivityIndicator CupertinoActivityIndicator.partiallyRevealed({Key? key, Color? color, double radius = _kDefaultIndicatorRadius, double progress = 1.0})
   CupertinoActivityIndicator$Mate.partiallyRevealed({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {double radius = _kDefaultIndicatorRadius} , default:unprocessed=SimpleIdentifierImpl
-    required double radius,
+    super.radius,
 
     /// optionalParameters: {double progress = 1.0} , default:processed=DoubleLiteralImpl
-    double progress = 1.0,
-  }) : super.partiallyRevealed(
-          key: key,
-          color: color,
-          radius: radius,
-          progress: progress,
-        ) {
+    super.progress,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<double>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'progress': _i2.BuilderArg<double>(
+            name: 'progress',
+            init: progress,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super.partiallyRevealed() {
     mateBuilderName = 'CupertinoActivityIndicator.partiallyRevealed';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoActivityIndicator$Mate.partiallyRevealed(
@@ -85,26 +100,8 @@ class CupertinoActivityIndicator$Mate extends _i1.CupertinoActivityIndicator wit
           radius: p.get('radius').build(),
           progress: p.get('progress').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'progress',
-      progress,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

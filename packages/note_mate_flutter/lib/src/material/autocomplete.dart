@@ -13,38 +13,73 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
   /// Autocomplete<T> Autocomplete({Key? key, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder, void Function(T)? onSelected, double optionsMaxHeight = 200.0, Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder, TextEditingValue? initialValue})
   Autocomplete$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , default:none
-    required _i4.AutocompleteOptionsBuilder<T> optionsBuilder,
+    required super.optionsBuilder,
 
     /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , default:processed=PrefixedIdentifierImpl
-    _i4.AutocompleteOptionToString<T> displayStringForOption = _i5.RawAutocomplete.defaultStringForOption,
+    super.displayStringForOption,
 
     /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , default:unprocessed=SimpleIdentifierImpl
-    required _i4.AutocompleteFieldViewBuilder fieldViewBuilder,
+    super.fieldViewBuilder,
 
     /// optionalParameters: {void Function(T)? onSelected} , default:none
-    _i4.AutocompleteOnSelected<T>? onSelected,
+    super.onSelected,
 
     /// optionalParameters: {double optionsMaxHeight = 200.0} , default:processed=DoubleLiteralImpl
-    double optionsMaxHeight = 200.0,
+    super.optionsMaxHeight,
 
     /// optionalParameters: {Widget Function(BuildContext, void Function(T), Iterable<T>)? optionsViewBuilder} , default:none
-    _i4.AutocompleteOptionsViewBuilder<T>? optionsViewBuilder,
+    super.optionsViewBuilder,
 
     /// optionalParameters: {TextEditingValue? initialValue} , default:none
-    _i6.TextEditingValue? initialValue,
-  }) : super(
-          key: key,
-          optionsBuilder: optionsBuilder,
-          displayStringForOption: displayStringForOption,
-          fieldViewBuilder: fieldViewBuilder,
-          onSelected: onSelected,
-          optionsMaxHeight: optionsMaxHeight,
-          optionsViewBuilder: optionsViewBuilder,
-          initialValue: initialValue,
-        ) {
+    super.initialValue,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'optionsBuilder': _i2.BuilderArg<_i4.AutocompleteOptionsBuilder<T>>(
+            name: 'optionsBuilder',
+            init: optionsBuilder,
+            isNamed: true,
+          ),
+          'displayStringForOption': _i2.BuilderArg<_i4.AutocompleteOptionToString<T>>(
+            name: 'displayStringForOption',
+            init: displayStringForOption,
+            isNamed: true,
+            defaultValue: _i5.RawAutocomplete.defaultStringForOption,
+          ),
+          'fieldViewBuilder': _i2.BuilderArg<_i4.AutocompleteFieldViewBuilder>(
+            name: 'fieldViewBuilder',
+            init: fieldViewBuilder,
+            isNamed: true,
+          ),
+          'onSelected': _i2.BuilderArg<_i4.AutocompleteOnSelected<T>?>(
+            name: 'onSelected',
+            init: onSelected,
+            isNamed: true,
+          ),
+          'optionsMaxHeight': _i2.BuilderArg<double>(
+            name: 'optionsMaxHeight',
+            init: optionsMaxHeight,
+            isNamed: true,
+            defaultValue: 200.0,
+          ),
+          'optionsViewBuilder': _i2.BuilderArg<_i4.AutocompleteOptionsViewBuilder<T>?>(
+            name: 'optionsViewBuilder',
+            init: optionsViewBuilder,
+            isNamed: true,
+          ),
+          'initialValue': _i2.BuilderArg<_i6.TextEditingValue?>(
+            name: 'initialValue',
+            init: initialValue,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Autocomplete';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Autocomplete$Mate<T>(
@@ -57,47 +92,8 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
           optionsViewBuilder: p.get('optionsViewBuilder').build(),
           initialValue: p.get('initialValue').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'optionsBuilder',
-      optionsBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'displayStringForOption',
-      displayStringForOption,
-      isNamed: true,
-      defaultValue: _i5.RawAutocomplete.defaultStringForOption,
-    );
-    mateUse(
-      'fieldViewBuilder',
-      fieldViewBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelected',
-      onSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'optionsMaxHeight',
-      optionsMaxHeight,
-      isNamed: true,
-      defaultValue: 200.0,
-    );
-    mateUse(
-      'optionsViewBuilder',
-      optionsViewBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'initialValue',
-      initialValue,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

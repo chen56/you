@@ -12,32 +12,34 @@ class OverScrollHeaderStretchConfiguration$Mate extends _i1.OverScrollHeaderStre
   /// OverScrollHeaderStretchConfiguration OverScrollHeaderStretchConfiguration({double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger})
   OverScrollHeaderStretchConfiguration$Mate({
     /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
-    double stretchTriggerOffset = 100.0,
+    super.stretchTriggerOffset,
 
     /// optionalParameters: {Future<void> Function()? onStretchTrigger} , default:none
-    _i3.AsyncCallback? onStretchTrigger,
-  }) : super(
-          stretchTriggerOffset: stretchTriggerOffset,
-          onStretchTrigger: onStretchTrigger,
-        ) {
+    super.onStretchTrigger,
+  })  : mateParams = {
+          'stretchTriggerOffset': _i2.BuilderArg<double>(
+            name: 'stretchTriggerOffset',
+            init: stretchTriggerOffset,
+            isNamed: true,
+            defaultValue: 100.0,
+          ),
+          'onStretchTrigger': _i2.BuilderArg<_i3.AsyncCallback?>(
+            name: 'onStretchTrigger',
+            init: onStretchTrigger,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'OverScrollHeaderStretchConfiguration';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => OverScrollHeaderStretchConfiguration$Mate(
           stretchTriggerOffset: p.get('stretchTriggerOffset').build(),
           onStretchTrigger: p.get('onStretchTrigger').build(),
         );
-    mateUse(
-      'stretchTriggerOffset',
-      stretchTriggerOffset,
-      isNamed: true,
-      defaultValue: 100.0,
-    );
-    mateUse(
-      'onStretchTrigger',
-      onStretchTrigger,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PersistentHeaderShowOnScreenConfiguration
@@ -46,33 +48,35 @@ class PersistentHeaderShowOnScreenConfiguration$Mate extends _i1.PersistentHeade
   /// PersistentHeaderShowOnScreenConfiguration PersistentHeaderShowOnScreenConfiguration({double minShowOnScreenExtent = double.negativeInfinity, double maxShowOnScreenExtent = double.infinity})
   PersistentHeaderShowOnScreenConfiguration$Mate({
     /// optionalParameters: {double minShowOnScreenExtent = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
-    double minShowOnScreenExtent = double.negativeInfinity,
+    super.minShowOnScreenExtent,
 
     /// optionalParameters: {double maxShowOnScreenExtent = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double maxShowOnScreenExtent = double.infinity,
-  }) : super(
-          minShowOnScreenExtent: minShowOnScreenExtent,
-          maxShowOnScreenExtent: maxShowOnScreenExtent,
-        ) {
+    super.maxShowOnScreenExtent,
+  })  : mateParams = {
+          'minShowOnScreenExtent': _i2.BuilderArg<double>(
+            name: 'minShowOnScreenExtent',
+            init: minShowOnScreenExtent,
+            isNamed: true,
+            defaultValue: double.negativeInfinity,
+          ),
+          'maxShowOnScreenExtent': _i2.BuilderArg<double>(
+            name: 'maxShowOnScreenExtent',
+            init: maxShowOnScreenExtent,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+        },
+        super() {
     mateBuilderName = 'PersistentHeaderShowOnScreenConfiguration';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PersistentHeaderShowOnScreenConfiguration$Mate(
           minShowOnScreenExtent: p.get('minShowOnScreenExtent').build(),
           maxShowOnScreenExtent: p.get('maxShowOnScreenExtent').build(),
         );
-    mateUse(
-      'minShowOnScreenExtent',
-      minShowOnScreenExtent,
-      isNamed: true,
-      defaultValue: double.negativeInfinity,
-    );
-    mateUse(
-      'maxShowOnScreenExtent',
-      maxShowOnScreenExtent,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FloatingHeaderSnapConfiguration
@@ -80,30 +84,32 @@ class FloatingHeaderSnapConfiguration$Mate extends _i1.FloatingHeaderSnapConfigu
   /// FloatingHeaderSnapConfiguration FloatingHeaderSnapConfiguration({Curve curve = Curves.ease, Duration duration = const Duration(milliseconds: 300)})
   FloatingHeaderSnapConfiguration$Mate({
     /// optionalParameters: {Curve curve = Curves.ease} , default:processed=PrefixedIdentifierImpl
-    _i4.Curve curve = _i5.Curves.ease,
+    super.curve,
 
     /// optionalParameters: {Duration duration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
-    required Duration duration,
-  }) : super(
-          curve: curve,
-          duration: duration,
-        ) {
+    super.duration,
+  })  : mateParams = {
+          'curve': _i2.BuilderArg<_i4.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i5.Curves.ease,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FloatingHeaderSnapConfiguration';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => FloatingHeaderSnapConfiguration$Mate(
           curve: p.get('curve').build(),
           duration: p.get('duration').build(),
         );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i5.Curves.ease,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

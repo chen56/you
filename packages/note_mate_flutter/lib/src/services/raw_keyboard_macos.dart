@@ -9,26 +9,51 @@ class RawKeyEventDataMacOs$Mate extends _i1.RawKeyEventDataMacOs with _i2.Mate {
   /// RawKeyEventDataMacOs RawKeyEventDataMacOs({String characters = '', String charactersIgnoringModifiers = '', int keyCode = 0, int modifiers = 0, int? specifiedLogicalKey})
   RawKeyEventDataMacOs$Mate({
     /// optionalParameters: {String characters = ''} , default:processed=SimpleStringLiteralImpl
-    String characters = '',
+    super.characters,
 
     /// optionalParameters: {String charactersIgnoringModifiers = ''} , default:processed=SimpleStringLiteralImpl
-    String charactersIgnoringModifiers = '',
+    super.charactersIgnoringModifiers,
 
     /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
-    int keyCode = 0,
+    super.keyCode,
 
     /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
-    int modifiers = 0,
+    super.modifiers,
 
     /// optionalParameters: {int? specifiedLogicalKey} , default:none
-    int? specifiedLogicalKey,
-  }) : super(
-          characters: characters,
-          charactersIgnoringModifiers: charactersIgnoringModifiers,
-          keyCode: keyCode,
-          modifiers: modifiers,
-          specifiedLogicalKey: specifiedLogicalKey,
-        ) {
+    super.specifiedLogicalKey,
+  })  : mateParams = {
+          'characters': _i2.BuilderArg<String>(
+            name: 'characters',
+            init: characters,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'charactersIgnoringModifiers': _i2.BuilderArg<String>(
+            name: 'charactersIgnoringModifiers',
+            init: charactersIgnoringModifiers,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'keyCode': _i2.BuilderArg<int>(
+            name: 'keyCode',
+            init: keyCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'modifiers': _i2.BuilderArg<int>(
+            name: 'modifiers',
+            init: modifiers,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'specifiedLogicalKey': _i2.BuilderArg<int?>(
+            name: 'specifiedLogicalKey',
+            init: specifiedLogicalKey,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyEventDataMacOs';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataMacOs$Mate(
@@ -38,34 +63,8 @@ class RawKeyEventDataMacOs$Mate extends _i1.RawKeyEventDataMacOs with _i2.Mate {
           modifiers: p.get('modifiers').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    mateUse(
-      'characters',
-      characters,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'charactersIgnoringModifiers',
-      charactersIgnoringModifiers,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'keyCode',
-      keyCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'modifiers',
-      modifiers,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'specifiedLogicalKey',
-      specifiedLogicalKey,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

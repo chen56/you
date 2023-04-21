@@ -9,18 +9,31 @@ class AssetMetadata$Mate extends _i1.AssetMetadata with _i2.Mate {
   /// AssetMetadata AssetMetadata({required String key, required double? targetDevicePixelRatio, required bool main})
   AssetMetadata$Mate({
     /// optionalParameters: {required String key} , default:none
-    required String key,
+    required super.key,
 
     /// optionalParameters: {required double? targetDevicePixelRatio} , default:none
-    required double? targetDevicePixelRatio,
+    required super.targetDevicePixelRatio,
 
     /// optionalParameters: {required bool main} , default:none
-    required bool main,
-  }) : super(
-          key: key,
-          targetDevicePixelRatio: targetDevicePixelRatio,
-          main: main,
-        ) {
+    required super.main,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<String>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'targetDevicePixelRatio': _i2.BuilderArg<double?>(
+            name: 'targetDevicePixelRatio',
+            init: targetDevicePixelRatio,
+            isNamed: true,
+          ),
+          'main': _i2.BuilderArg<bool>(
+            name: 'main',
+            init: main,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AssetMetadata';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => AssetMetadata$Mate(
@@ -28,20 +41,8 @@ class AssetMetadata$Mate extends _i1.AssetMetadata with _i2.Mate {
           targetDevicePixelRatio: p.get('targetDevicePixelRatio').build(),
           main: p.get('main').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'targetDevicePixelRatio',
-      targetDevicePixelRatio,
-      isNamed: true,
-    );
-    mateUse(
-      'main',
-      main,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

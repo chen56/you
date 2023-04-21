@@ -10,15 +10,20 @@ class NetworkAssetBundle$Mate extends _i1.NetworkAssetBundle with _i2.Mate {
   NetworkAssetBundle$Mate(
 
       /// requiredParameters: Uri baseUrl
-      Uri baseUrl)
-      : super(baseUrl) {
+      super.baseUrl)
+      : mateParams = {
+          'baseUrl': _i2.BuilderArg<Uri>(
+            name: 'baseUrl',
+            init: baseUrl,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'NetworkAssetBundle';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => NetworkAssetBundle$Mate(p.get('baseUrl').value);
-    mateUse(
-      'baseUrl',
-      baseUrl,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

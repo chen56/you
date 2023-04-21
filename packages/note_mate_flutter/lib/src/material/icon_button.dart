@@ -19,98 +19,192 @@ class IconButton$Mate extends _i1.IconButton with _i2.Mate {
   /// IconButton IconButton({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
   IconButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? iconSize} , default:none
-    double? iconSize,
+    super.iconSize,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i4.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i6.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {Color? color} , default:none
-    _i7.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i7.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i7.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i7.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i7.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i7.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
-    required _i7.VoidCallback? onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i10.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i11.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {bool? isSelected} , default:none
-    bool? isSelected,
+    super.isSelected,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i12.Widget? selectedIcon,
+    super.selectedIcon,
 
     /// optionalParameters: {required Widget icon} , default:none
-    required _i12.Widget icon,
-  }) : super(
-          key: key,
-          iconSize: iconSize,
-          visualDensity: visualDensity,
-          padding: padding,
-          alignment: alignment,
-          splashRadius: splashRadius,
-          color: color,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          disabledColor: disabledColor,
-          onPressed: onPressed,
-          mouseCursor: mouseCursor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          tooltip: tooltip,
-          enableFeedback: enableFeedback,
-          constraints: constraints,
-          style: style,
-          isSelected: isSelected,
-          selectedIcon: selectedIcon,
-          icon: icon,
-        ) {
+    required super.icon,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i4.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i7.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i10.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'isSelected': _i2.BuilderArg<bool?>(
+            name: 'isSelected',
+            init: isSelected,
+            isNamed: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i12.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i12.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'IconButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IconButton$Mate(
@@ -138,219 +232,197 @@ class IconButton$Mate extends _i1.IconButton with _i2.Mate {
           selectedIcon: p.get('selectedIcon').build(),
           icon: p.get('icon').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'isSelected',
-      isSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
   }
 
   /// IconButton IconButton.filled({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
   IconButton$Mate.filled({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? iconSize} , default:none
-    double? iconSize,
+    super.iconSize,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i4.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i6.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {Color? color} , default:none
-    _i7.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i7.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i7.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i7.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i7.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i7.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
-    required _i7.VoidCallback? onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i10.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i11.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {bool? isSelected} , default:none
-    bool? isSelected,
+    super.isSelected,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i12.Widget? selectedIcon,
+    super.selectedIcon,
 
     /// optionalParameters: {required Widget icon} , default:none
-    required _i12.Widget icon,
-  }) : super.filled(
-          key: key,
-          iconSize: iconSize,
-          visualDensity: visualDensity,
-          padding: padding,
-          alignment: alignment,
-          splashRadius: splashRadius,
-          color: color,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          disabledColor: disabledColor,
-          onPressed: onPressed,
-          mouseCursor: mouseCursor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          tooltip: tooltip,
-          enableFeedback: enableFeedback,
-          constraints: constraints,
-          style: style,
-          isSelected: isSelected,
-          selectedIcon: selectedIcon,
-          icon: icon,
-        ) {
+    required super.icon,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i4.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i7.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i10.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'isSelected': _i2.BuilderArg<bool?>(
+            name: 'isSelected',
+            init: isSelected,
+            isNamed: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i12.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i12.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+        },
+        super.filled() {
     mateBuilderName = 'IconButton.filled';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IconButton$Mate.filled(
@@ -378,219 +450,197 @@ class IconButton$Mate extends _i1.IconButton with _i2.Mate {
           selectedIcon: p.get('selectedIcon').build(),
           icon: p.get('icon').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'isSelected',
-      isSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
   }
 
   /// IconButton IconButton.filledTonal({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
   IconButton$Mate.filledTonal({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? iconSize} , default:none
-    double? iconSize,
+    super.iconSize,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i4.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i6.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {Color? color} , default:none
-    _i7.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i7.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i7.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i7.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i7.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i7.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
-    required _i7.VoidCallback? onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i10.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i11.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {bool? isSelected} , default:none
-    bool? isSelected,
+    super.isSelected,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i12.Widget? selectedIcon,
+    super.selectedIcon,
 
     /// optionalParameters: {required Widget icon} , default:none
-    required _i12.Widget icon,
-  }) : super.filledTonal(
-          key: key,
-          iconSize: iconSize,
-          visualDensity: visualDensity,
-          padding: padding,
-          alignment: alignment,
-          splashRadius: splashRadius,
-          color: color,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          disabledColor: disabledColor,
-          onPressed: onPressed,
-          mouseCursor: mouseCursor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          tooltip: tooltip,
-          enableFeedback: enableFeedback,
-          constraints: constraints,
-          style: style,
-          isSelected: isSelected,
-          selectedIcon: selectedIcon,
-          icon: icon,
-        ) {
+    required super.icon,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i4.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i7.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i10.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'isSelected': _i2.BuilderArg<bool?>(
+            name: 'isSelected',
+            init: isSelected,
+            isNamed: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i12.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i12.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+        },
+        super.filledTonal() {
     mateBuilderName = 'IconButton.filledTonal';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IconButton$Mate.filledTonal(
@@ -618,219 +668,197 @@ class IconButton$Mate extends _i1.IconButton with _i2.Mate {
           selectedIcon: p.get('selectedIcon').build(),
           icon: p.get('icon').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'isSelected',
-      isSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
   }
 
   /// IconButton IconButton.outlined({Key? key, double? iconSize, VisualDensity? visualDensity, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, double? splashRadius, Color? color, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Color? disabledColor, required void Function()? onPressed, MouseCursor? mouseCursor, FocusNode? focusNode, bool autofocus = false, String? tooltip, bool? enableFeedback, BoxConstraints? constraints, ButtonStyle? style, bool? isSelected, Widget? selectedIcon, required Widget icon})
   IconButton$Mate.outlined({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? iconSize} , default:none
-    double? iconSize,
+    super.iconSize,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i4.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i6.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {Color? color} , default:none
-    _i7.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i7.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i7.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i7.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i7.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i7.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
-    required _i7.VoidCallback? onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i10.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i11.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {bool? isSelected} , default:none
-    bool? isSelected,
+    super.isSelected,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i12.Widget? selectedIcon,
+    super.selectedIcon,
 
     /// optionalParameters: {required Widget icon} , default:none
-    required _i12.Widget icon,
-  }) : super.outlined(
-          key: key,
-          iconSize: iconSize,
-          visualDensity: visualDensity,
-          padding: padding,
-          alignment: alignment,
-          splashRadius: splashRadius,
-          color: color,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          disabledColor: disabledColor,
-          onPressed: onPressed,
-          mouseCursor: mouseCursor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          tooltip: tooltip,
-          enableFeedback: enableFeedback,
-          constraints: constraints,
-          style: style,
-          isSelected: isSelected,
-          selectedIcon: selectedIcon,
-          icon: icon,
-        ) {
+    required super.icon,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i4.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i7.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i10.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'isSelected': _i2.BuilderArg<bool?>(
+            name: 'isSelected',
+            init: isSelected,
+            isNamed: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i12.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i12.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+        },
+        super.outlined() {
     mateBuilderName = 'IconButton.outlined';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => IconButton$Mate.outlined(
@@ -858,121 +886,8 @@ class IconButton$Mate extends _i1.IconButton with _i2.Mate {
           selectedIcon: p.get('selectedIcon').build(),
           icon: p.get('icon').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'isSelected',
-      isSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

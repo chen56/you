@@ -10,17 +10,22 @@ class MaterialStatePropertyAll$Mate<T> extends _i1.MaterialStatePropertyAll<T> w
   MaterialStatePropertyAll$Mate(
 
       /// requiredParameters: T value
-      T value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'MaterialStatePropertyAll';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialStatePropertyAll$Mate<T>(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MaterialStatesController extends ValueNotifier<Set<MaterialState>>
@@ -29,15 +34,20 @@ class MaterialStatesController$Mate extends _i1.MaterialStatesController with _i
   MaterialStatesController$Mate(
 
       /// requiredParameters: [Set<MaterialState>? value]
-      Set<_i1.MaterialState>? value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<Set<_i1.MaterialState>?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'MaterialStatesController';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialStatesController$Mate(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

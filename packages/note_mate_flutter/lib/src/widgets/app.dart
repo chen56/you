@@ -19,126 +19,254 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
   /// WidgetsApp WidgetsApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? initialRoute, PageRoute<T> Function<T>(RouteSettings, Widget Function(BuildContext))? pageRouteBuilder, Widget? home, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, TextStyle? textStyle, required Color color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowWidgetInspector = false, bool debugShowCheckedModeBanner = true, Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, bool useInheritedMediaQuery = false})
   WidgetsApp$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , default:none
-    _i4.GlobalKey<_i5.NavigatorState>? navigatorKey,
+    super.navigatorKey,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
-    _i5.RouteFactory? onGenerateRoute,
+    super.onGenerateRoute,
 
     /// optionalParameters: {List<Route<dynamic>> Function(String)? onGenerateInitialRoutes} , default:none
-    _i1.InitialRouteListFactory? onGenerateInitialRoutes,
+    super.onGenerateInitialRoutes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
-    _i5.RouteFactory? onUnknownRoute,
+    super.onUnknownRoute,
 
     /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.NavigatorObserver> navigatorObservers,
+    super.navigatorObservers,
 
     /// optionalParameters: {String? initialRoute} , default:none
-    String? initialRoute,
+    super.initialRoute,
 
     /// optionalParameters: {PageRoute<T> Function<T>(RouteSettings, Widget Function(BuildContext))? pageRouteBuilder} , default:none
-    _i1.PageRouteFactory? pageRouteBuilder,
+    super.pageRouteBuilder,
 
     /// optionalParameters: {Widget? home} , default:none
-    _i4.Widget? home,
+    super.home,
 
     /// optionalParameters: {Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}} , default:unprocessed=SetOrMapLiteralImpl
-    required Map<String, _i4.WidgetBuilder> routes,
+    super.routes,
 
     /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , default:none
-    _i4.TransitionBuilder? builder,
+    super.builder,
 
     /// optionalParameters: {String title = ''} , default:processed=SimpleStringLiteralImpl
-    String title = '',
+    super.title,
 
     /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , default:none
-    _i1.GenerateAppTitle? onGenerateTitle,
+    super.onGenerateTitle,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i6.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i7.Color color,
+    required super.color,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i7.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , default:none
-    Iterable<_i8.LocalizationsDelegate<dynamic>>? localizationsDelegates,
+    super.localizationsDelegates,
 
     /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , default:none
-    _i1.LocaleListResolutionCallback? localeListResolutionCallback,
+    super.localeListResolutionCallback,
 
     /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , default:none
-    _i1.LocaleResolutionCallback? localeResolutionCallback,
+    super.localeResolutionCallback,
 
     /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , default:unprocessed=ListLiteralImpl
-    required Iterable<_i7.Locale> supportedLocales,
+    super.supportedLocales,
 
     /// optionalParameters: {bool showPerformanceOverlay = false} , default:processed=BooleanLiteralImpl
-    bool showPerformanceOverlay = false,
+    super.showPerformanceOverlay,
 
     /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardRasterCacheImages = false,
+    super.checkerboardRasterCacheImages,
 
     /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardOffscreenLayers = false,
+    super.checkerboardOffscreenLayers,
 
     /// optionalParameters: {bool showSemanticsDebugger = false} , default:processed=BooleanLiteralImpl
-    bool showSemanticsDebugger = false,
+    super.showSemanticsDebugger,
 
     /// optionalParameters: {bool debugShowWidgetInspector = false} , default:processed=BooleanLiteralImpl
-    bool debugShowWidgetInspector = false,
+    super.debugShowWidgetInspector,
 
     /// optionalParameters: {bool debugShowCheckedModeBanner = true} , default:processed=BooleanLiteralImpl
-    bool debugShowCheckedModeBanner = true,
+    super.debugShowCheckedModeBanner,
 
     /// optionalParameters: {Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder} , default:none
-    _i9.InspectorSelectButtonBuilder? inspectorSelectButtonBuilder,
+    super.inspectorSelectButtonBuilder,
 
     /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , default:none
-    Map<_i10.ShortcutActivator, _i11.Intent>? shortcuts,
+    super.shortcuts,
 
     /// optionalParameters: {Map<Type, Action<Intent>>? actions} , default:none
-    Map<Type, _i11.Action<_i11.Intent>>? actions,
+    super.actions,
 
     /// optionalParameters: {String? restorationScopeId} , default:none
-    String? restorationScopeId,
-  }) : super(
-          key: key,
-          navigatorKey: navigatorKey,
-          onGenerateRoute: onGenerateRoute,
-          onGenerateInitialRoutes: onGenerateInitialRoutes,
-          onUnknownRoute: onUnknownRoute,
-          navigatorObservers: navigatorObservers,
-          initialRoute: initialRoute,
-          pageRouteBuilder: pageRouteBuilder,
-          home: home,
-          routes: routes,
-          builder: builder,
-          title: title,
-          onGenerateTitle: onGenerateTitle,
-          textStyle: textStyle,
-          color: color,
-          locale: locale,
-          localizationsDelegates: localizationsDelegates,
-          localeListResolutionCallback: localeListResolutionCallback,
-          localeResolutionCallback: localeResolutionCallback,
-          supportedLocales: supportedLocales,
-          showPerformanceOverlay: showPerformanceOverlay,
-          checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-          checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-          showSemanticsDebugger: showSemanticsDebugger,
-          debugShowWidgetInspector: debugShowWidgetInspector,
-          debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-          inspectorSelectButtonBuilder: inspectorSelectButtonBuilder,
-          shortcuts: shortcuts,
-          actions: actions,
-          restorationScopeId: restorationScopeId,
-        ) {
+    super.restorationScopeId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'navigatorKey': _i2.BuilderArg<_i4.GlobalKey<_i5.NavigatorState>?>(
+            name: 'navigatorKey',
+            init: navigatorKey,
+            isNamed: true,
+          ),
+          'onGenerateRoute': _i2.BuilderArg<_i5.RouteFactory?>(
+            name: 'onGenerateRoute',
+            init: onGenerateRoute,
+            isNamed: true,
+          ),
+          'onGenerateInitialRoutes': _i2.BuilderArg<_i1.InitialRouteListFactory?>(
+            name: 'onGenerateInitialRoutes',
+            init: onGenerateInitialRoutes,
+            isNamed: true,
+          ),
+          'onUnknownRoute': _i2.BuilderArg<_i5.RouteFactory?>(
+            name: 'onUnknownRoute',
+            init: onUnknownRoute,
+            isNamed: true,
+          ),
+          'navigatorObservers': _i2.BuilderArg<List<_i5.NavigatorObserver>>(
+            name: 'navigatorObservers',
+            init: navigatorObservers,
+            isNamed: true,
+          ),
+          'initialRoute': _i2.BuilderArg<String?>(
+            name: 'initialRoute',
+            init: initialRoute,
+            isNamed: true,
+          ),
+          'pageRouteBuilder': _i2.BuilderArg<_i1.PageRouteFactory?>(
+            name: 'pageRouteBuilder',
+            init: pageRouteBuilder,
+            isNamed: true,
+          ),
+          'home': _i2.BuilderArg<_i4.Widget?>(
+            name: 'home',
+            init: home,
+            isNamed: true,
+          ),
+          'routes': _i2.BuilderArg<Map<String, _i4.WidgetBuilder>>(
+            name: 'routes',
+            init: routes,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i4.TransitionBuilder?>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<String>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'onGenerateTitle': _i2.BuilderArg<_i1.GenerateAppTitle?>(
+            name: 'onGenerateTitle',
+            init: onGenerateTitle,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i7.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i7.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
+            name: 'localizationsDelegates',
+            init: localizationsDelegates,
+            isNamed: true,
+          ),
+          'localeListResolutionCallback': _i2.BuilderArg<_i1.LocaleListResolutionCallback?>(
+            name: 'localeListResolutionCallback',
+            init: localeListResolutionCallback,
+            isNamed: true,
+          ),
+          'localeResolutionCallback': _i2.BuilderArg<_i1.LocaleResolutionCallback?>(
+            name: 'localeResolutionCallback',
+            init: localeResolutionCallback,
+            isNamed: true,
+          ),
+          'supportedLocales': _i2.BuilderArg<Iterable<_i7.Locale>>(
+            name: 'supportedLocales',
+            init: supportedLocales,
+            isNamed: true,
+          ),
+          'showPerformanceOverlay': _i2.BuilderArg<bool>(
+            name: 'showPerformanceOverlay',
+            init: showPerformanceOverlay,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardRasterCacheImages': _i2.BuilderArg<bool>(
+            name: 'checkerboardRasterCacheImages',
+            init: checkerboardRasterCacheImages,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardOffscreenLayers': _i2.BuilderArg<bool>(
+            name: 'checkerboardOffscreenLayers',
+            init: checkerboardOffscreenLayers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'showSemanticsDebugger': _i2.BuilderArg<bool>(
+            name: 'showSemanticsDebugger',
+            init: showSemanticsDebugger,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'debugShowWidgetInspector': _i2.BuilderArg<bool>(
+            name: 'debugShowWidgetInspector',
+            init: debugShowWidgetInspector,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'debugShowCheckedModeBanner': _i2.BuilderArg<bool>(
+            name: 'debugShowCheckedModeBanner',
+            init: debugShowCheckedModeBanner,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
+            name: 'inspectorSelectButtonBuilder',
+            init: inspectorSelectButtonBuilder,
+            isNamed: true,
+          ),
+          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+            name: 'shortcuts',
+            init: shortcuts,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'restorationScopeId': _i2.BuilderArg<String?>(
+            name: 'restorationScopeId',
+            init: restorationScopeId,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'WidgetsApp';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => WidgetsApp$Mate(
@@ -173,272 +301,227 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'navigatorKey',
-      navigatorKey,
-      isNamed: true,
-    );
-    mateUse(
-      'onGenerateRoute',
-      onGenerateRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'onGenerateInitialRoutes',
-      onGenerateInitialRoutes,
-      isNamed: true,
-    );
-    mateUse(
-      'onUnknownRoute',
-      onUnknownRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'navigatorObservers',
-      navigatorObservers,
-      isNamed: true,
-    );
-    mateUse(
-      'initialRoute',
-      initialRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'pageRouteBuilder',
-      pageRouteBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'home',
-      home,
-      isNamed: true,
-    );
-    mateUse(
-      'routes',
-      routes,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'onGenerateTitle',
-      onGenerateTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'localizationsDelegates',
-      localizationsDelegates,
-      isNamed: true,
-    );
-    mateUse(
-      'localeListResolutionCallback',
-      localeListResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'localeResolutionCallback',
-      localeResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedLocales',
-      supportedLocales,
-      isNamed: true,
-    );
-    mateUse(
-      'showPerformanceOverlay',
-      showPerformanceOverlay,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardRasterCacheImages',
-      checkerboardRasterCacheImages,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardOffscreenLayers',
-      checkerboardOffscreenLayers,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'showSemanticsDebugger',
-      showSemanticsDebugger,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'debugShowWidgetInspector',
-      debugShowWidgetInspector,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'debugShowCheckedModeBanner',
-      debugShowCheckedModeBanner,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'inspectorSelectButtonBuilder',
-      inspectorSelectButtonBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'shortcuts',
-      shortcuts,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationScopeId',
-      restorationScopeId,
-      isNamed: true,
-    );
   }
 
   /// WidgetsApp WidgetsApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, RouterConfig<Object>? routerConfig, BackButtonDispatcher? backButtonDispatcher, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, TextStyle? textStyle, required Color color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowWidgetInspector = false, bool debugShowCheckedModeBanner = true, Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, bool useInheritedMediaQuery = false})
   WidgetsApp$Mate.router({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , default:none
-    _i12.RouteInformationProvider? routeInformationProvider,
+    super.routeInformationProvider,
 
     /// optionalParameters: {RouteInformationParser<Object>? routeInformationParser} , default:none
-    _i12.RouteInformationParser<Object>? routeInformationParser,
+    super.routeInformationParser,
 
     /// optionalParameters: {RouterDelegate<Object>? routerDelegate} , default:none
-    _i12.RouterDelegate<Object>? routerDelegate,
+    super.routerDelegate,
 
     /// optionalParameters: {RouterConfig<Object>? routerConfig} , default:none
-    _i12.RouterConfig<Object>? routerConfig,
+    super.routerConfig,
 
     /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , default:none
-    _i12.BackButtonDispatcher? backButtonDispatcher,
+    super.backButtonDispatcher,
 
     /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , default:none
-    _i4.TransitionBuilder? builder,
+    super.builder,
 
     /// optionalParameters: {String title = ''} , default:processed=SimpleStringLiteralImpl
-    String title = '',
+    super.title,
 
     /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , default:none
-    _i1.GenerateAppTitle? onGenerateTitle,
+    super.onGenerateTitle,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i6.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i7.Color color,
+    required super.color,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i7.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , default:none
-    Iterable<_i8.LocalizationsDelegate<dynamic>>? localizationsDelegates,
+    super.localizationsDelegates,
 
     /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , default:none
-    _i1.LocaleListResolutionCallback? localeListResolutionCallback,
+    super.localeListResolutionCallback,
 
     /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , default:none
-    _i1.LocaleResolutionCallback? localeResolutionCallback,
+    super.localeResolutionCallback,
 
     /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , default:unprocessed=ListLiteralImpl
-    required Iterable<_i7.Locale> supportedLocales,
+    super.supportedLocales,
 
     /// optionalParameters: {bool showPerformanceOverlay = false} , default:processed=BooleanLiteralImpl
-    bool showPerformanceOverlay = false,
+    super.showPerformanceOverlay,
 
     /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardRasterCacheImages = false,
+    super.checkerboardRasterCacheImages,
 
     /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardOffscreenLayers = false,
+    super.checkerboardOffscreenLayers,
 
     /// optionalParameters: {bool showSemanticsDebugger = false} , default:processed=BooleanLiteralImpl
-    bool showSemanticsDebugger = false,
+    super.showSemanticsDebugger,
 
     /// optionalParameters: {bool debugShowWidgetInspector = false} , default:processed=BooleanLiteralImpl
-    bool debugShowWidgetInspector = false,
+    super.debugShowWidgetInspector,
 
     /// optionalParameters: {bool debugShowCheckedModeBanner = true} , default:processed=BooleanLiteralImpl
-    bool debugShowCheckedModeBanner = true,
+    super.debugShowCheckedModeBanner,
 
     /// optionalParameters: {Widget Function(BuildContext, void Function())? inspectorSelectButtonBuilder} , default:none
-    _i9.InspectorSelectButtonBuilder? inspectorSelectButtonBuilder,
+    super.inspectorSelectButtonBuilder,
 
     /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , default:none
-    Map<_i10.ShortcutActivator, _i11.Intent>? shortcuts,
+    super.shortcuts,
 
     /// optionalParameters: {Map<Type, Action<Intent>>? actions} , default:none
-    Map<Type, _i11.Action<_i11.Intent>>? actions,
+    super.actions,
 
     /// optionalParameters: {String? restorationScopeId} , default:none
-    String? restorationScopeId,
-  }) : super.router(
-          key: key,
-          routeInformationProvider: routeInformationProvider,
-          routeInformationParser: routeInformationParser,
-          routerDelegate: routerDelegate,
-          routerConfig: routerConfig,
-          backButtonDispatcher: backButtonDispatcher,
-          builder: builder,
-          title: title,
-          onGenerateTitle: onGenerateTitle,
-          textStyle: textStyle,
-          color: color,
-          locale: locale,
-          localizationsDelegates: localizationsDelegates,
-          localeListResolutionCallback: localeListResolutionCallback,
-          localeResolutionCallback: localeResolutionCallback,
-          supportedLocales: supportedLocales,
-          showPerformanceOverlay: showPerformanceOverlay,
-          checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-          checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-          showSemanticsDebugger: showSemanticsDebugger,
-          debugShowWidgetInspector: debugShowWidgetInspector,
-          debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-          inspectorSelectButtonBuilder: inspectorSelectButtonBuilder,
-          shortcuts: shortcuts,
-          actions: actions,
-          restorationScopeId: restorationScopeId,
-        ) {
+    super.restorationScopeId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'routeInformationProvider': _i2.BuilderArg<_i12.RouteInformationProvider?>(
+            name: 'routeInformationProvider',
+            init: routeInformationProvider,
+            isNamed: true,
+          ),
+          'routeInformationParser': _i2.BuilderArg<_i12.RouteInformationParser<Object>?>(
+            name: 'routeInformationParser',
+            init: routeInformationParser,
+            isNamed: true,
+          ),
+          'routerDelegate': _i2.BuilderArg<_i12.RouterDelegate<Object>?>(
+            name: 'routerDelegate',
+            init: routerDelegate,
+            isNamed: true,
+          ),
+          'routerConfig': _i2.BuilderArg<_i12.RouterConfig<Object>?>(
+            name: 'routerConfig',
+            init: routerConfig,
+            isNamed: true,
+          ),
+          'backButtonDispatcher': _i2.BuilderArg<_i12.BackButtonDispatcher?>(
+            name: 'backButtonDispatcher',
+            init: backButtonDispatcher,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i4.TransitionBuilder?>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<String>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'onGenerateTitle': _i2.BuilderArg<_i1.GenerateAppTitle?>(
+            name: 'onGenerateTitle',
+            init: onGenerateTitle,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i7.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i7.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i8.LocalizationsDelegate<dynamic>>?>(
+            name: 'localizationsDelegates',
+            init: localizationsDelegates,
+            isNamed: true,
+          ),
+          'localeListResolutionCallback': _i2.BuilderArg<_i1.LocaleListResolutionCallback?>(
+            name: 'localeListResolutionCallback',
+            init: localeListResolutionCallback,
+            isNamed: true,
+          ),
+          'localeResolutionCallback': _i2.BuilderArg<_i1.LocaleResolutionCallback?>(
+            name: 'localeResolutionCallback',
+            init: localeResolutionCallback,
+            isNamed: true,
+          ),
+          'supportedLocales': _i2.BuilderArg<Iterable<_i7.Locale>>(
+            name: 'supportedLocales',
+            init: supportedLocales,
+            isNamed: true,
+          ),
+          'showPerformanceOverlay': _i2.BuilderArg<bool>(
+            name: 'showPerformanceOverlay',
+            init: showPerformanceOverlay,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardRasterCacheImages': _i2.BuilderArg<bool>(
+            name: 'checkerboardRasterCacheImages',
+            init: checkerboardRasterCacheImages,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardOffscreenLayers': _i2.BuilderArg<bool>(
+            name: 'checkerboardOffscreenLayers',
+            init: checkerboardOffscreenLayers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'showSemanticsDebugger': _i2.BuilderArg<bool>(
+            name: 'showSemanticsDebugger',
+            init: showSemanticsDebugger,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'debugShowWidgetInspector': _i2.BuilderArg<bool>(
+            name: 'debugShowWidgetInspector',
+            init: debugShowWidgetInspector,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'debugShowCheckedModeBanner': _i2.BuilderArg<bool>(
+            name: 'debugShowCheckedModeBanner',
+            init: debugShowCheckedModeBanner,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'inspectorSelectButtonBuilder': _i2.BuilderArg<_i9.InspectorSelectButtonBuilder?>(
+            name: 'inspectorSelectButtonBuilder',
+            init: inspectorSelectButtonBuilder,
+            isNamed: true,
+          ),
+          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+            name: 'shortcuts',
+            init: shortcuts,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'restorationScopeId': _i2.BuilderArg<String?>(
+            name: 'restorationScopeId',
+            init: restorationScopeId,
+            isNamed: true,
+          ),
+        },
+        super.router() {
     mateBuilderName = 'WidgetsApp.router';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => WidgetsApp$Mate.router(
@@ -469,142 +552,8 @@ class WidgetsApp$Mate extends _i1.WidgetsApp with _i2.Mate {
           actions: p.get('actions').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'routeInformationProvider',
-      routeInformationProvider,
-      isNamed: true,
-    );
-    mateUse(
-      'routeInformationParser',
-      routeInformationParser,
-      isNamed: true,
-    );
-    mateUse(
-      'routerDelegate',
-      routerDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'routerConfig',
-      routerConfig,
-      isNamed: true,
-    );
-    mateUse(
-      'backButtonDispatcher',
-      backButtonDispatcher,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'onGenerateTitle',
-      onGenerateTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'localizationsDelegates',
-      localizationsDelegates,
-      isNamed: true,
-    );
-    mateUse(
-      'localeListResolutionCallback',
-      localeListResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'localeResolutionCallback',
-      localeResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedLocales',
-      supportedLocales,
-      isNamed: true,
-    );
-    mateUse(
-      'showPerformanceOverlay',
-      showPerformanceOverlay,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardRasterCacheImages',
-      checkerboardRasterCacheImages,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardOffscreenLayers',
-      checkerboardOffscreenLayers,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'showSemanticsDebugger',
-      showSemanticsDebugger,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'debugShowWidgetInspector',
-      debugShowWidgetInspector,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'debugShowCheckedModeBanner',
-      debugShowCheckedModeBanner,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'inspectorSelectButtonBuilder',
-      inspectorSelectButtonBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'shortcuts',
-      shortcuts,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationScopeId',
-      restorationScopeId,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

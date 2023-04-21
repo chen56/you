@@ -12,32 +12,34 @@ class LocalHistoryEntry$Mate extends _i1.LocalHistoryEntry with _i2.Mate {
   /// LocalHistoryEntry LocalHistoryEntry({void Function()? onRemove, bool impliesAppBarDismissal = true})
   LocalHistoryEntry$Mate({
     /// optionalParameters: {void Function()? onRemove} , default:none
-    _i3.VoidCallback? onRemove,
+    super.onRemove,
 
     /// optionalParameters: {bool impliesAppBarDismissal = true} , default:processed=BooleanLiteralImpl
-    bool impliesAppBarDismissal = true,
-  }) : super(
-          onRemove: onRemove,
-          impliesAppBarDismissal: impliesAppBarDismissal,
-        ) {
+    super.impliesAppBarDismissal,
+  })  : mateParams = {
+          'onRemove': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onRemove',
+            init: onRemove,
+            isNamed: true,
+          ),
+          'impliesAppBarDismissal': _i2.BuilderArg<bool>(
+            name: 'impliesAppBarDismissal',
+            init: impliesAppBarDismissal,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LocalHistoryEntry';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LocalHistoryEntry$Mate(
           onRemove: p.get('onRemove').build(),
           impliesAppBarDismissal: p.get('impliesAppBarDismissal').build(),
         );
-    mateUse(
-      'onRemove',
-      onRemove,
-      isNamed: true,
-    );
-    mateUse(
-      'impliesAppBarDismissal',
-      impliesAppBarDismissal,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RawDialogRoute<T> extends PopupRoute<T>
@@ -45,42 +47,80 @@ class RawDialogRoute$Mate<T> extends _i1.RawDialogRoute<T> with _i2.Mate {
   /// RawDialogRoute<T> RawDialogRoute({required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder, bool barrierDismissible = true, Color? barrierColor = const Color(0x80000000), String? barrierLabel, Duration transitionDuration = const Duration(milliseconds: 200), Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder, RouteSettings? settings, Offset? anchorPoint, TraversalEdgeBehavior? traversalEdgeBehavior})
   RawDialogRoute$Mate({
     /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder} , default:none
-    required _i1.RoutePageBuilder pageBuilder,
+    required super.pageBuilder,
 
     /// optionalParameters: {bool barrierDismissible = true} , default:processed=BooleanLiteralImpl
-    bool barrierDismissible = true,
+    super.barrierDismissible,
 
     /// optionalParameters: {Color? barrierColor = const Color(0x80000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color? barrierColor,
+    super.barrierColor,
 
     /// optionalParameters: {String? barrierLabel} , default:none
-    String? barrierLabel,
+    super.barrierLabel,
 
     /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 200)} , default:unprocessed=InstanceCreationExpressionImpl
-    required Duration transitionDuration,
+    super.transitionDuration,
 
     /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder} , default:none
-    _i1.RouteTransitionsBuilder? transitionBuilder,
+    super.transitionBuilder,
 
     /// optionalParameters: {RouteSettings? settings} , default:none
-    _i4.RouteSettings? settings,
+    super.settings,
 
     /// optionalParameters: {Offset? anchorPoint} , default:none
-    _i3.Offset? anchorPoint,
+    super.anchorPoint,
 
     /// optionalParameters: {TraversalEdgeBehavior? traversalEdgeBehavior} , default:none
-    _i5.TraversalEdgeBehavior? traversalEdgeBehavior,
-  }) : super(
-          pageBuilder: pageBuilder,
-          barrierDismissible: barrierDismissible,
-          barrierColor: barrierColor,
-          barrierLabel: barrierLabel,
-          transitionDuration: transitionDuration,
-          transitionBuilder: transitionBuilder,
-          settings: settings,
-          anchorPoint: anchorPoint,
-          traversalEdgeBehavior: traversalEdgeBehavior,
-        ) {
+    super.traversalEdgeBehavior,
+  })  : mateParams = {
+          'pageBuilder': _i2.BuilderArg<_i1.RoutePageBuilder>(
+            name: 'pageBuilder',
+            init: pageBuilder,
+            isNamed: true,
+          ),
+          'barrierDismissible': _i2.BuilderArg<bool>(
+            name: 'barrierDismissible',
+            init: barrierDismissible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'barrierColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'barrierColor',
+            init: barrierColor,
+            isNamed: true,
+          ),
+          'barrierLabel': _i2.BuilderArg<String?>(
+            name: 'barrierLabel',
+            init: barrierLabel,
+            isNamed: true,
+          ),
+          'transitionDuration': _i2.BuilderArg<Duration>(
+            name: 'transitionDuration',
+            init: transitionDuration,
+            isNamed: true,
+          ),
+          'transitionBuilder': _i2.BuilderArg<_i1.RouteTransitionsBuilder?>(
+            name: 'transitionBuilder',
+            init: transitionBuilder,
+            isNamed: true,
+          ),
+          'settings': _i2.BuilderArg<_i4.RouteSettings?>(
+            name: 'settings',
+            init: settings,
+            isNamed: true,
+          ),
+          'anchorPoint': _i2.BuilderArg<_i3.Offset?>(
+            name: 'anchorPoint',
+            init: anchorPoint,
+            isNamed: true,
+          ),
+          'traversalEdgeBehavior': _i2.BuilderArg<_i5.TraversalEdgeBehavior?>(
+            name: 'traversalEdgeBehavior',
+            init: traversalEdgeBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawDialogRoute';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RawDialogRoute$Mate<T>(
@@ -94,51 +134,8 @@ class RawDialogRoute$Mate<T> extends _i1.RawDialogRoute<T> with _i2.Mate {
           anchorPoint: p.get('anchorPoint').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
         );
-    mateUse(
-      'pageBuilder',
-      pageBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'barrierDismissible',
-      barrierDismissible,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'barrierColor',
-      barrierColor,
-      isNamed: true,
-    );
-    mateUse(
-      'barrierLabel',
-      barrierLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'transitionDuration',
-      transitionDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'transitionBuilder',
-      transitionBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'settings',
-      settings,
-      isNamed: true,
-    );
-    mateUse(
-      'anchorPoint',
-      anchorPoint,
-      isNamed: true,
-    );
-    mateUse(
-      'traversalEdgeBehavior',
-      traversalEdgeBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

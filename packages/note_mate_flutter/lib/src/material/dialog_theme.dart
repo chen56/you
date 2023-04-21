@@ -14,46 +14,87 @@ class DialogTheme$Mate extends _i1.DialogTheme with _i2.Mate {
   /// DialogTheme DialogTheme({Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, AlignmentGeometry? alignment, Color? iconColor, TextStyle? titleTextStyle, TextStyle? contentTextStyle, EdgeInsetsGeometry? actionsPadding})
   DialogTheme$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i4.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i5.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i3.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {TextStyle? titleTextStyle} , default:none
-    _i6.TextStyle? titleTextStyle,
+    super.titleTextStyle,
 
     /// optionalParameters: {TextStyle? contentTextStyle} , default:none
-    _i6.TextStyle? contentTextStyle,
+    super.contentTextStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? actionsPadding} , default:none
-    _i7.EdgeInsetsGeometry? actionsPadding,
-  }) : super(
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          shape: shape,
-          alignment: alignment,
-          iconColor: iconColor,
-          titleTextStyle: titleTextStyle,
-          contentTextStyle: contentTextStyle,
-          actionsPadding: actionsPadding,
-        ) {
+    super.actionsPadding,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i5.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'contentTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'contentTextStyle',
+            init: contentTextStyle,
+            isNamed: true,
+          ),
+          'actionsPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'actionsPadding',
+            init: actionsPadding,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DialogTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DialogTheme$Mate(
@@ -68,55 +109,8 @@ class DialogTheme$Mate extends _i1.DialogTheme with _i2.Mate {
           contentTextStyle: p.get('contentTextStyle').build(),
           actionsPadding: p.get('actionsPadding').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'titleTextStyle',
-      titleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'contentTextStyle',
-      contentTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'actionsPadding',
-      actionsPadding,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

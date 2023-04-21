@@ -9,29 +9,31 @@ class FractionalOffset$Mate extends _i1.FractionalOffset with _i2.Mate {
   /// FractionalOffset FractionalOffset(double dx, double dy)
   FractionalOffset$Mate(
     /// requiredParameters: double dx
-    double dx,
+    super.dx,
 
     /// requiredParameters: double dy
-    double dy,
-  ) : super(
-          dx,
-          dy,
-        ) {
+    super.dy,
+  )   : mateParams = {
+          'dx': _i2.BuilderArg<double>(
+            name: 'dx',
+            init: dx,
+            isNamed: false,
+          ),
+          'dy': _i2.BuilderArg<double>(
+            name: 'dy',
+            init: dy,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'FractionalOffset';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FractionalOffset$Mate(
           p.get('dx').value,
           p.get('dy').value,
         );
-    mateUse(
-      'dx',
-      dx,
-      isNamed: false,
-    );
-    mateUse(
-      'dy',
-      dy,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

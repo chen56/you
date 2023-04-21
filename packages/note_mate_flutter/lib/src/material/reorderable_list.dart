@@ -21,102 +21,207 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
   /// ReorderableListView ReorderableListView({Key? key, required List<Widget> children, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ReorderableListView$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {required void Function(int, int) onReorder} , default:none
-    required _i5.ReorderCallback onReorder,
+    required super.onReorder,
 
     /// optionalParameters: {void Function(int)? onReorderStart} , default:none
-    void Function(int)? onReorderStart,
+    super.onReorderStart,
 
     /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
-    void Function(int)? onReorderEnd,
+    super.onReorderEnd,
 
     /// optionalParameters: {double? itemExtent} , default:none
-    double? itemExtent,
+    super.itemExtent,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
-    _i4.Widget? prototypeItem,
+    super.prototypeItem,
 
     /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
-    _i5.ReorderItemProxyDecorator? proxyDecorator,
+    super.proxyDecorator,
 
     /// optionalParameters: {bool buildDefaultDragHandles = true} , default:processed=BooleanLiteralImpl
-    bool buildDefaultDragHandles = true,
+    super.buildDefaultDragHandles,
 
     /// optionalParameters: {EdgeInsets? padding} , default:none
-    _i6.EdgeInsets? padding,
+    super.padding,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {Widget? footer} , default:none
-    _i4.Widget? footer,
+    super.footer,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i7.Axis scrollDirection = _i8.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? scrollController} , default:none
-    _i9.ScrollController? scrollController,
+    super.scrollController,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i10.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
-    double anchor = 0.0,
+    super.anchor,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i11.DragStartBehavior dragStartBehavior = _i12.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i13.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i8.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i14.Clip clipBehavior = _i14.Clip.hardEdge,
-  }) : super(
-          key: key,
-          children: children,
-          onReorder: onReorder,
-          onReorderStart: onReorderStart,
-          onReorderEnd: onReorderEnd,
-          itemExtent: itemExtent,
-          prototypeItem: prototypeItem,
-          proxyDecorator: proxyDecorator,
-          buildDefaultDragHandles: buildDefaultDragHandles,
-          padding: padding,
-          header: header,
-          footer: footer,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          scrollController: scrollController,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          anchor: anchor,
-          cacheExtent: cacheExtent,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'onReorder': _i2.BuilderArg<_i5.ReorderCallback>(
+            name: 'onReorder',
+            init: onReorder,
+            isNamed: true,
+          ),
+          'onReorderStart': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderStart',
+            init: onReorderStart,
+            isNamed: true,
+          ),
+          'onReorderEnd': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderEnd',
+            init: onReorderEnd,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double?>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i4.Widget?>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'proxyDecorator': _i2.BuilderArg<_i5.ReorderItemProxyDecorator?>(
+            name: 'proxyDecorator',
+            init: proxyDecorator,
+            isNamed: true,
+          ),
+          'buildDefaultDragHandles': _i2.BuilderArg<bool>(
+            name: 'buildDefaultDragHandles',
+            init: buildDefaultDragHandles,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsets?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'footer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i7.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i8.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'scrollController': _i2.BuilderArg<_i9.ScrollController?>(
+            name: 'scrollController',
+            init: scrollController,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i10.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'anchor': _i2.BuilderArg<double>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i8.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i14.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i14.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'ReorderableListView';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableListView$Mate(
@@ -145,239 +250,220 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorder',
-      onReorder,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderStart',
-      onReorderStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderEnd',
-      onReorderEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'proxyDecorator',
-      proxyDecorator,
-      isNamed: true,
-    );
-    mateUse(
-      'buildDefaultDragHandles',
-      buildDefaultDragHandles,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i8.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'scrollController',
-      scrollController,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i12.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i8.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i14.Clip.hardEdge,
-    );
   }
 
   /// ReorderableListView ReorderableListView.builder({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, bool buildDefaultDragHandles = true, EdgeInsets? padding, Widget? header, Widget? footer, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? scrollController, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ReorderableListView$Mate.builder({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , default:none
-    required _i4.IndexedWidgetBuilder itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {required int itemCount} , default:none
-    required int itemCount,
+    required super.itemCount,
 
     /// optionalParameters: {required void Function(int, int) onReorder} , default:none
-    required _i5.ReorderCallback onReorder,
+    required super.onReorder,
 
     /// optionalParameters: {void Function(int)? onReorderStart} , default:none
-    void Function(int)? onReorderStart,
+    super.onReorderStart,
 
     /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
-    void Function(int)? onReorderEnd,
+    super.onReorderEnd,
 
     /// optionalParameters: {double? itemExtent} , default:none
-    double? itemExtent,
+    super.itemExtent,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
-    _i4.Widget? prototypeItem,
+    super.prototypeItem,
 
     /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
-    _i5.ReorderItemProxyDecorator? proxyDecorator,
+    super.proxyDecorator,
 
     /// optionalParameters: {bool buildDefaultDragHandles = true} , default:processed=BooleanLiteralImpl
-    bool buildDefaultDragHandles = true,
+    super.buildDefaultDragHandles,
 
     /// optionalParameters: {EdgeInsets? padding} , default:none
-    _i6.EdgeInsets? padding,
+    super.padding,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {Widget? footer} , default:none
-    _i4.Widget? footer,
+    super.footer,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i7.Axis scrollDirection = _i8.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? scrollController} , default:none
-    _i9.ScrollController? scrollController,
+    super.scrollController,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i10.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
-    double anchor = 0.0,
+    super.anchor,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i11.DragStartBehavior dragStartBehavior = _i12.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i13.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i8.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i14.Clip clipBehavior = _i14.Clip.hardEdge,
-  }) : super.builder(
-          key: key,
-          itemBuilder: itemBuilder,
-          itemCount: itemCount,
-          onReorder: onReorder,
-          onReorderStart: onReorderStart,
-          onReorderEnd: onReorderEnd,
-          itemExtent: itemExtent,
-          prototypeItem: prototypeItem,
-          proxyDecorator: proxyDecorator,
-          buildDefaultDragHandles: buildDefaultDragHandles,
-          padding: padding,
-          header: header,
-          footer: footer,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          scrollController: scrollController,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          anchor: anchor,
-          cacheExtent: cacheExtent,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i4.IndexedWidgetBuilder>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'itemCount': _i2.BuilderArg<int>(
+            name: 'itemCount',
+            init: itemCount,
+            isNamed: true,
+          ),
+          'onReorder': _i2.BuilderArg<_i5.ReorderCallback>(
+            name: 'onReorder',
+            init: onReorder,
+            isNamed: true,
+          ),
+          'onReorderStart': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderStart',
+            init: onReorderStart,
+            isNamed: true,
+          ),
+          'onReorderEnd': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderEnd',
+            init: onReorderEnd,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double?>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i4.Widget?>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'proxyDecorator': _i2.BuilderArg<_i5.ReorderItemProxyDecorator?>(
+            name: 'proxyDecorator',
+            init: proxyDecorator,
+            isNamed: true,
+          ),
+          'buildDefaultDragHandles': _i2.BuilderArg<bool>(
+            name: 'buildDefaultDragHandles',
+            init: buildDefaultDragHandles,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsets?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'footer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i7.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i8.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'scrollController': _i2.BuilderArg<_i9.ScrollController?>(
+            name: 'scrollController',
+            init: scrollController,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i10.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'anchor': _i2.BuilderArg<double>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i8.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i14.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i14.Clip.hardEdge,
+          ),
+        },
+        super.builder() {
     mateBuilderName = 'ReorderableListView.builder';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ReorderableListView$Mate.builder(
@@ -407,138 +493,8 @@ class ReorderableListView$Mate extends _i1.ReorderableListView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'itemCount',
-      itemCount,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorder',
-      onReorder,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderStart',
-      onReorderStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderEnd',
-      onReorderEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'proxyDecorator',
-      proxyDecorator,
-      isNamed: true,
-    );
-    mateUse(
-      'buildDefaultDragHandles',
-      buildDefaultDragHandles,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i8.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'scrollController',
-      scrollController,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i12.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i8.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i14.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

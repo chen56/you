@@ -12,18 +12,31 @@ class TextSelectionThemeData$Mate extends _i1.TextSelectionThemeData with _i2.Ma
   /// TextSelectionThemeData TextSelectionThemeData({Color? cursorColor, Color? selectionColor, Color? selectionHandleColor})
   TextSelectionThemeData$Mate({
     /// optionalParameters: {Color? cursorColor} , default:none
-    _i3.Color? cursorColor,
+    super.cursorColor,
 
     /// optionalParameters: {Color? selectionColor} , default:none
-    _i3.Color? selectionColor,
+    super.selectionColor,
 
     /// optionalParameters: {Color? selectionHandleColor} , default:none
-    _i3.Color? selectionHandleColor,
-  }) : super(
-          cursorColor: cursorColor,
-          selectionColor: selectionColor,
-          selectionHandleColor: selectionHandleColor,
-        ) {
+    super.selectionHandleColor,
+  })  : mateParams = {
+          'cursorColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'cursorColor',
+            init: cursorColor,
+            isNamed: true,
+          ),
+          'selectionColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'selectionColor',
+            init: selectionColor,
+            isNamed: true,
+          ),
+          'selectionHandleColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'selectionHandleColor',
+            init: selectionHandleColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionThemeData$Mate(
@@ -31,22 +44,10 @@ class TextSelectionThemeData$Mate extends _i1.TextSelectionThemeData with _i2.Ma
           selectionColor: p.get('selectionColor').build(),
           selectionHandleColor: p.get('selectionHandleColor').build(),
         );
-    mateUse(
-      'cursorColor',
-      cursorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionColor',
-      selectionColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionHandleColor',
-      selectionHandleColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextSelectionTheme extends InheritedTheme
@@ -54,18 +55,31 @@ class TextSelectionTheme$Mate extends _i1.TextSelectionTheme with _i2.Mate {
   /// TextSelectionTheme TextSelectionTheme({Key? key, required TextSelectionThemeData data, required Widget child})
   TextSelectionTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required TextSelectionThemeData data} , default:none
-    required _i1.TextSelectionThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.TextSelectionThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionTheme$Mate(
@@ -73,20 +87,8 @@ class TextSelectionTheme$Mate extends _i1.TextSelectionTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -11,17 +11,22 @@ class TweenSequence$Mate<T> extends _i1.TweenSequence<T> with _i2.Mate {
   TweenSequence$Mate(
 
       /// requiredParameters: List<TweenSequenceItem<T>> items
-      List<_i1.TweenSequenceItem<T>> items)
-      : super(items) {
+      super.items)
+      : mateParams = {
+          'items': _i2.BuilderArg<List<_i1.TweenSequenceItem<T>>>(
+            name: 'items',
+            init: items,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'TweenSequence';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TweenSequence$Mate<T>(p.get('items').value);
-    mateUse(
-      'items',
-      items,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FlippedTweenSequence extends TweenSequence<double>
@@ -30,17 +35,22 @@ class FlippedTweenSequence$Mate extends _i1.FlippedTweenSequence with _i2.Mate {
   FlippedTweenSequence$Mate(
 
       /// requiredParameters: List<TweenSequenceItem<double>> items
-      List<_i1.TweenSequenceItem<double>> items)
-      : super(items) {
+      super.items)
+      : mateParams = {
+          'items': _i2.BuilderArg<List<_i1.TweenSequenceItem<double>>>(
+            name: 'items',
+            init: items,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'FlippedTweenSequence';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => FlippedTweenSequence$Mate(p.get('items').value);
-    mateUse(
-      'items',
-      items,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TweenSequenceItem<T>
@@ -48,29 +58,31 @@ class TweenSequenceItem$Mate<T> extends _i1.TweenSequenceItem<T> with _i2.Mate {
   /// TweenSequenceItem<T> TweenSequenceItem({required Animatable<T> tween, required double weight})
   TweenSequenceItem$Mate({
     /// optionalParameters: {required Animatable<T> tween} , default:none
-    required _i3.Animatable<T> tween,
+    required super.tween,
 
     /// optionalParameters: {required double weight} , default:none
-    required double weight,
-  }) : super(
-          tween: tween,
-          weight: weight,
-        ) {
+    required super.weight,
+  })  : mateParams = {
+          'tween': _i2.BuilderArg<_i3.Animatable<T>>(
+            name: 'tween',
+            init: tween,
+            isNamed: true,
+          ),
+          'weight': _i2.BuilderArg<double>(
+            name: 'weight',
+            init: weight,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TweenSequenceItem';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TweenSequenceItem$Mate<T>(
           tween: p.get('tween').build(),
           weight: p.get('weight').build(),
         );
-    mateUse(
-      'tween',
-      tween,
-      isNamed: true,
-    );
-    mateUse(
-      'weight',
-      weight,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

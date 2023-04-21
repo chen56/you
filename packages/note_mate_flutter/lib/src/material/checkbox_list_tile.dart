@@ -21,134 +21,269 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
   /// CheckboxListTile CheckboxListTile({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback})
   CheckboxListTile$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required bool? value} , default:none
-    required bool? value,
+    required super.value,
 
     /// optionalParameters: {required void Function(bool?)? onChanged} , default:none
-    required _i4.ValueChanged<bool?>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i5.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i6.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , default:none
-    _i7.MaterialStateProperty<_i6.Color?>? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {Color? checkColor} , default:none
-    _i6.Color? checkColor,
+    super.checkColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i6.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i7.MaterialStateProperty<_i6.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i8.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i8.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i10.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {BorderSide? side} , default:none
-    _i10.BorderSide? side,
+    super.side,
 
     /// optionalParameters: {bool isError = false} , default:processed=BooleanLiteralImpl
-    bool isError = false,
+    super.isError,
 
     /// optionalParameters: {bool? enabled} , default:none
-    bool? enabled,
+    super.enabled,
 
     /// optionalParameters: {Color? tileColor} , default:none
-    _i6.Color? tileColor,
+    super.tileColor,
 
     /// optionalParameters: {Widget? title} , default:none
-    _i11.Widget? title,
+    super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i11.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {bool isThreeLine = false} , default:processed=BooleanLiteralImpl
-    bool isThreeLine = false,
+    super.isThreeLine,
 
     /// optionalParameters: {bool? dense} , default:none
-    bool? dense,
+    super.dense,
 
     /// optionalParameters: {Widget? secondary} , default:none
-    _i11.Widget? secondary,
+    super.secondary,
 
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
-    bool selected = false,
+    super.selected,
 
     /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
-    _i12.ListTileControlAffinity controlAffinity = _i13.ListTileControlAffinity.platform,
+    super.controlAffinity,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
-    _i14.EdgeInsetsGeometry? contentPadding,
+    super.contentPadding,
 
     /// optionalParameters: {bool tristate = false} , default:processed=BooleanLiteralImpl
-    bool tristate = false,
+    super.tristate,
 
     /// optionalParameters: {OutlinedBorder? checkboxShape} , default:none
-    _i10.OutlinedBorder? checkboxShape,
+    super.checkboxShape,
 
     /// optionalParameters: {Color? selectedTileColor} , default:none
-    _i6.Color? selectedTileColor,
+    super.selectedTileColor,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i4.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
-  }) : super(
-          key: key,
-          value: value,
-          onChanged: onChanged,
-          mouseCursor: mouseCursor,
-          activeColor: activeColor,
-          fillColor: fillColor,
-          checkColor: checkColor,
-          hoverColor: hoverColor,
-          overlayColor: overlayColor,
-          splashRadius: splashRadius,
-          materialTapTargetSize: materialTapTargetSize,
-          visualDensity: visualDensity,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          shape: shape,
-          side: side,
-          isError: isError,
-          enabled: enabled,
-          tileColor: tileColor,
-          title: title,
-          subtitle: subtitle,
-          isThreeLine: isThreeLine,
-          dense: dense,
-          secondary: secondary,
-          selected: selected,
-          controlAffinity: controlAffinity,
-          contentPadding: contentPadding,
-          tristate: tristate,
-          checkboxShape: checkboxShape,
-          selectedTileColor: selectedTileColor,
-          onFocusChange: onFocusChange,
-          enableFeedback: enableFeedback,
-        ) {
+    super.enableFeedback,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<bool?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<bool?>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i5.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'fillColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'checkColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'checkColor',
+            init: checkColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i8.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i8.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'shape': _i2.BuilderArg<_i10.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i10.BorderSide?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'isError': _i2.BuilderArg<bool>(
+            name: 'isError',
+            init: isError,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'enabled': _i2.BuilderArg<bool?>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+          ),
+          'tileColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'tileColor',
+            init: tileColor,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i11.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i11.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'isThreeLine': _i2.BuilderArg<bool>(
+            name: 'isThreeLine',
+            init: isThreeLine,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dense': _i2.BuilderArg<bool?>(
+            name: 'dense',
+            init: dense,
+            isNamed: true,
+          ),
+          'secondary': _i2.BuilderArg<_i11.Widget?>(
+            name: 'secondary',
+            init: secondary,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controlAffinity': _i2.BuilderArg<_i12.ListTileControlAffinity>(
+            name: 'controlAffinity',
+            init: controlAffinity,
+            isNamed: true,
+            defaultValue: _i13.ListTileControlAffinity.platform,
+          ),
+          'contentPadding': _i2.BuilderArg<_i14.EdgeInsetsGeometry?>(
+            name: 'contentPadding',
+            init: contentPadding,
+            isNamed: true,
+          ),
+          'tristate': _i2.BuilderArg<bool>(
+            name: 'tristate',
+            init: tristate,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkboxShape': _i2.BuilderArg<_i10.OutlinedBorder?>(
+            name: 'checkboxShape',
+            init: checkboxShape,
+            isNamed: true,
+          ),
+          'selectedTileColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'selectedTileColor',
+            init: selectedTileColor,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CheckboxListTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckboxListTile$Mate(
@@ -185,305 +320,274 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
           onFocusChange: p.get('onFocusChange').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'checkColor',
-      checkColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'isError',
-      isError,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-    );
-    mateUse(
-      'tileColor',
-      tileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'isThreeLine',
-      isThreeLine,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dense',
-      dense,
-      isNamed: true,
-    );
-    mateUse(
-      'secondary',
-      secondary,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controlAffinity',
-      controlAffinity,
-      isNamed: true,
-      defaultValue: _i13.ListTileControlAffinity.platform,
-    );
-    mateUse(
-      'contentPadding',
-      contentPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'tristate',
-      tristate,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkboxShape',
-      checkboxShape,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedTileColor',
-      selectedTileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
   }
 
   /// CheckboxListTile CheckboxListTile.adaptive({Key? key, required bool? value, required void Function(bool?)? onChanged, MouseCursor? mouseCursor, Color? activeColor, MaterialStateProperty<Color?>? fillColor, Color? checkColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity, FocusNode? focusNode, bool autofocus = false, ShapeBorder? shape, BorderSide? side, bool isError = false, bool? enabled, Color? tileColor, Widget? title, Widget? subtitle, bool isThreeLine = false, bool? dense, Widget? secondary, bool selected = false, ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform, EdgeInsetsGeometry? contentPadding, bool tristate = false, OutlinedBorder? checkboxShape, Color? selectedTileColor, void Function(bool)? onFocusChange, bool? enableFeedback})
   CheckboxListTile$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required bool? value} , default:none
-    required bool? value,
+    required super.value,
 
     /// optionalParameters: {required void Function(bool?)? onChanged} , default:none
-    required _i4.ValueChanged<bool?>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i5.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i6.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , default:none
-    _i7.MaterialStateProperty<_i6.Color?>? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {Color? checkColor} , default:none
-    _i6.Color? checkColor,
+    super.checkColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i6.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i7.MaterialStateProperty<_i6.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i8.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i8.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i10.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {BorderSide? side} , default:none
-    _i10.BorderSide? side,
+    super.side,
 
     /// optionalParameters: {bool isError = false} , default:processed=BooleanLiteralImpl
-    bool isError = false,
+    super.isError,
 
     /// optionalParameters: {bool? enabled} , default:none
-    bool? enabled,
+    super.enabled,
 
     /// optionalParameters: {Color? tileColor} , default:none
-    _i6.Color? tileColor,
+    super.tileColor,
 
     /// optionalParameters: {Widget? title} , default:none
-    _i11.Widget? title,
+    super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i11.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {bool isThreeLine = false} , default:processed=BooleanLiteralImpl
-    bool isThreeLine = false,
+    super.isThreeLine,
 
     /// optionalParameters: {bool? dense} , default:none
-    bool? dense,
+    super.dense,
 
     /// optionalParameters: {Widget? secondary} , default:none
-    _i11.Widget? secondary,
+    super.secondary,
 
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
-    bool selected = false,
+    super.selected,
 
     /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
-    _i12.ListTileControlAffinity controlAffinity = _i13.ListTileControlAffinity.platform,
+    super.controlAffinity,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
-    _i14.EdgeInsetsGeometry? contentPadding,
+    super.contentPadding,
 
     /// optionalParameters: {bool tristate = false} , default:processed=BooleanLiteralImpl
-    bool tristate = false,
+    super.tristate,
 
     /// optionalParameters: {OutlinedBorder? checkboxShape} , default:none
-    _i10.OutlinedBorder? checkboxShape,
+    super.checkboxShape,
 
     /// optionalParameters: {Color? selectedTileColor} , default:none
-    _i6.Color? selectedTileColor,
+    super.selectedTileColor,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i4.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
-  }) : super.adaptive(
-          key: key,
-          value: value,
-          onChanged: onChanged,
-          mouseCursor: mouseCursor,
-          activeColor: activeColor,
-          fillColor: fillColor,
-          checkColor: checkColor,
-          hoverColor: hoverColor,
-          overlayColor: overlayColor,
-          splashRadius: splashRadius,
-          materialTapTargetSize: materialTapTargetSize,
-          visualDensity: visualDensity,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          shape: shape,
-          side: side,
-          isError: isError,
-          enabled: enabled,
-          tileColor: tileColor,
-          title: title,
-          subtitle: subtitle,
-          isThreeLine: isThreeLine,
-          dense: dense,
-          secondary: secondary,
-          selected: selected,
-          controlAffinity: controlAffinity,
-          contentPadding: contentPadding,
-          tristate: tristate,
-          checkboxShape: checkboxShape,
-          selectedTileColor: selectedTileColor,
-          onFocusChange: onFocusChange,
-          enableFeedback: enableFeedback,
-        ) {
+    super.enableFeedback,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<bool?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<bool?>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i5.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'fillColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'checkColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'checkColor',
+            init: checkColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i8.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i8.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'shape': _i2.BuilderArg<_i10.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i10.BorderSide?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'isError': _i2.BuilderArg<bool>(
+            name: 'isError',
+            init: isError,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'enabled': _i2.BuilderArg<bool?>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+          ),
+          'tileColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'tileColor',
+            init: tileColor,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i11.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i11.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'isThreeLine': _i2.BuilderArg<bool>(
+            name: 'isThreeLine',
+            init: isThreeLine,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dense': _i2.BuilderArg<bool?>(
+            name: 'dense',
+            init: dense,
+            isNamed: true,
+          ),
+          'secondary': _i2.BuilderArg<_i11.Widget?>(
+            name: 'secondary',
+            init: secondary,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controlAffinity': _i2.BuilderArg<_i12.ListTileControlAffinity>(
+            name: 'controlAffinity',
+            init: controlAffinity,
+            isNamed: true,
+            defaultValue: _i13.ListTileControlAffinity.platform,
+          ),
+          'contentPadding': _i2.BuilderArg<_i14.EdgeInsetsGeometry?>(
+            name: 'contentPadding',
+            init: contentPadding,
+            isNamed: true,
+          ),
+          'tristate': _i2.BuilderArg<bool>(
+            name: 'tristate',
+            init: tristate,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkboxShape': _i2.BuilderArg<_i10.OutlinedBorder?>(
+            name: 'checkboxShape',
+            init: checkboxShape,
+            isNamed: true,
+          ),
+          'selectedTileColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'selectedTileColor',
+            init: selectedTileColor,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+        },
+        super.adaptive() {
     mateBuilderName = 'CheckboxListTile.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckboxListTile$Mate.adaptive(
@@ -520,171 +624,8 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
           onFocusChange: p.get('onFocusChange').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'checkColor',
-      checkColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'isError',
-      isError,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-    );
-    mateUse(
-      'tileColor',
-      tileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'isThreeLine',
-      isThreeLine,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dense',
-      dense,
-      isNamed: true,
-    );
-    mateUse(
-      'secondary',
-      secondary,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controlAffinity',
-      controlAffinity,
-      isNamed: true,
-      defaultValue: _i13.ListTileControlAffinity.platform,
-    );
-    mateUse(
-      'contentPadding',
-      contentPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'tristate',
-      tristate,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkboxShape',
-      checkboxShape,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedTileColor',
-      selectedTileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

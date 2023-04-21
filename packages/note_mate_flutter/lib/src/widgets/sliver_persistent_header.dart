@@ -10,22 +10,41 @@ class SliverPersistentHeader$Mate extends _i1.SliverPersistentHeader with _i2.Ma
   /// SliverPersistentHeader SliverPersistentHeader({Key? key, required SliverPersistentHeaderDelegate delegate, bool pinned = false, bool floating = false})
   SliverPersistentHeader$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required SliverPersistentHeaderDelegate delegate} , default:none
-    required _i1.SliverPersistentHeaderDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {bool pinned = false} , default:processed=BooleanLiteralImpl
-    bool pinned = false,
+    super.pinned,
 
     /// optionalParameters: {bool floating = false} , default:processed=BooleanLiteralImpl
-    bool floating = false,
-  }) : super(
-          key: key,
-          delegate: delegate,
-          pinned: pinned,
-          floating: floating,
-        ) {
+    super.floating,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i1.SliverPersistentHeaderDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'pinned': _i2.BuilderArg<bool>(
+            name: 'pinned',
+            init: pinned,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'floating': _i2.BuilderArg<bool>(
+            name: 'floating',
+            init: floating,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverPersistentHeader';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverPersistentHeader$Mate(
@@ -34,27 +53,8 @@ class SliverPersistentHeader$Mate extends _i1.SliverPersistentHeader with _i2.Ma
           pinned: p.get('pinned').build(),
           floating: p.get('floating').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'pinned',
-      pinned,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'floating',
-      floating,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

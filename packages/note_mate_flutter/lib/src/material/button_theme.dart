@@ -17,74 +17,148 @@ class ButtonTheme$Mate extends _i1.ButtonTheme with _i2.Mate {
   /// ButtonTheme ButtonTheme({Key? key, ButtonTextTheme textTheme = ButtonTextTheme.normal, ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded, double minWidth = 88.0, double height = 36.0, EdgeInsetsGeometry? padding, ShapeBorder? shape, bool alignedDropdown = false, Color? buttonColor, Color? disabledColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, ColorScheme? colorScheme, MaterialTapTargetSize? materialTapTargetSize, required Widget child})
   ButtonTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , default:processed=PrefixedIdentifierImpl
-    _i1.ButtonTextTheme textTheme = _i4.ButtonTextTheme.normal,
+    super.textTheme,
 
     /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , default:processed=PrefixedIdentifierImpl
-    _i1.ButtonBarLayoutBehavior layoutBehavior = _i4.ButtonBarLayoutBehavior.padded,
+    super.layoutBehavior,
 
     /// optionalParameters: {double minWidth = 88.0} , default:processed=DoubleLiteralImpl
-    double minWidth = 88.0,
+    super.minWidth,
 
     /// optionalParameters: {double height = 36.0} , default:processed=DoubleLiteralImpl
-    double height = 36.0,
+    super.height,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i6.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {bool alignedDropdown = false} , default:processed=BooleanLiteralImpl
-    bool alignedDropdown = false,
+    super.alignedDropdown,
 
     /// optionalParameters: {Color? buttonColor} , default:none
-    _i7.Color? buttonColor,
+    super.buttonColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i7.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i7.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i7.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i7.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i7.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {ColorScheme? colorScheme} , default:none
-    _i8.ColorScheme? colorScheme,
+    super.colorScheme,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i9.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i10.Widget child,
-  }) : super(
-          key: key,
-          textTheme: textTheme,
-          layoutBehavior: layoutBehavior,
-          minWidth: minWidth,
-          height: height,
-          padding: padding,
-          shape: shape,
-          alignedDropdown: alignedDropdown,
-          buttonColor: buttonColor,
-          disabledColor: disabledColor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          colorScheme: colorScheme,
-          materialTapTargetSize: materialTapTargetSize,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'textTheme': _i2.BuilderArg<_i1.ButtonTextTheme>(
+            name: 'textTheme',
+            init: textTheme,
+            isNamed: true,
+            defaultValue: _i4.ButtonTextTheme.normal,
+          ),
+          'layoutBehavior': _i2.BuilderArg<_i1.ButtonBarLayoutBehavior>(
+            name: 'layoutBehavior',
+            init: layoutBehavior,
+            isNamed: true,
+            defaultValue: _i4.ButtonBarLayoutBehavior.padded,
+          ),
+          'minWidth': _i2.BuilderArg<double>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+            defaultValue: 88.0,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+            defaultValue: 36.0,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i6.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'alignedDropdown': _i2.BuilderArg<bool>(
+            name: 'alignedDropdown',
+            init: alignedDropdown,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'buttonColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'buttonColor',
+            init: buttonColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'colorScheme': _i2.BuilderArg<_i8.ColorScheme?>(
+            name: 'colorScheme',
+            init: colorScheme,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i9.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i10.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ButtonTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonTheme$Mate(
@@ -106,113 +180,36 @@ class ButtonTheme$Mate extends _i1.ButtonTheme with _i2.Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'textTheme',
-      textTheme,
-      isNamed: true,
-      defaultValue: _i4.ButtonTextTheme.normal,
-    );
-    mateUse(
-      'layoutBehavior',
-      layoutBehavior,
-      isNamed: true,
-      defaultValue: _i4.ButtonBarLayoutBehavior.padded,
-    );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-      defaultValue: 88.0,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-      defaultValue: 36.0,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'alignedDropdown',
-      alignedDropdown,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'buttonColor',
-      buttonColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'colorScheme',
-      colorScheme,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// ButtonTheme ButtonTheme.fromButtonThemeData({Key? key, required ButtonThemeData data, required Widget child})
   ButtonTheme$Mate.fromButtonThemeData({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ButtonThemeData data} , default:none
-    required _i1.ButtonThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i10.Widget child,
-  }) : super.fromButtonThemeData(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ButtonThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i10.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.fromButtonThemeData() {
     mateBuilderName = 'ButtonTheme.fromButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonTheme$Mate.fromButtonThemeData(
@@ -220,22 +217,10 @@ class ButtonTheme$Mate extends _i1.ButtonTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ButtonThemeData with Diagnosticable
@@ -243,66 +228,132 @@ class ButtonThemeData$Mate extends _i1.ButtonThemeData with _i2.Mate {
   /// ButtonThemeData ButtonThemeData({ButtonTextTheme textTheme = ButtonTextTheme.normal, double minWidth = 88.0, double height = 36.0, EdgeInsetsGeometry? padding, ShapeBorder? shape, ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded, bool alignedDropdown = false, Color? buttonColor, Color? disabledColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, ColorScheme? colorScheme, MaterialTapTargetSize? materialTapTargetSize})
   ButtonThemeData$Mate({
     /// optionalParameters: {ButtonTextTheme textTheme = ButtonTextTheme.normal} , default:processed=PrefixedIdentifierImpl
-    _i1.ButtonTextTheme textTheme = _i4.ButtonTextTheme.normal,
+    super.textTheme,
 
     /// optionalParameters: {double minWidth = 88.0} , default:processed=DoubleLiteralImpl
-    double minWidth = 88.0,
+    super.minWidth,
 
     /// optionalParameters: {double height = 36.0} , default:processed=DoubleLiteralImpl
-    double height = 36.0,
+    super.height,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i6.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {ButtonBarLayoutBehavior layoutBehavior = ButtonBarLayoutBehavior.padded} , default:processed=PrefixedIdentifierImpl
-    _i1.ButtonBarLayoutBehavior layoutBehavior = _i4.ButtonBarLayoutBehavior.padded,
+    super.layoutBehavior,
 
     /// optionalParameters: {bool alignedDropdown = false} , default:processed=BooleanLiteralImpl
-    bool alignedDropdown = false,
+    super.alignedDropdown,
 
     /// optionalParameters: {Color? buttonColor} , default:none
-    _i7.Color? buttonColor,
+    super.buttonColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i7.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i7.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i7.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i7.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i7.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {ColorScheme? colorScheme} , default:none
-    _i8.ColorScheme? colorScheme,
+    super.colorScheme,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i9.MaterialTapTargetSize? materialTapTargetSize,
-  }) : super(
-          textTheme: textTheme,
-          minWidth: minWidth,
-          height: height,
-          padding: padding,
-          shape: shape,
-          layoutBehavior: layoutBehavior,
-          alignedDropdown: alignedDropdown,
-          buttonColor: buttonColor,
-          disabledColor: disabledColor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          colorScheme: colorScheme,
-          materialTapTargetSize: materialTapTargetSize,
-        ) {
+    super.materialTapTargetSize,
+  })  : mateParams = {
+          'textTheme': _i2.BuilderArg<_i1.ButtonTextTheme>(
+            name: 'textTheme',
+            init: textTheme,
+            isNamed: true,
+            defaultValue: _i4.ButtonTextTheme.normal,
+          ),
+          'minWidth': _i2.BuilderArg<double>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+            defaultValue: 88.0,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+            defaultValue: 36.0,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i6.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'layoutBehavior': _i2.BuilderArg<_i1.ButtonBarLayoutBehavior>(
+            name: 'layoutBehavior',
+            init: layoutBehavior,
+            isNamed: true,
+            defaultValue: _i4.ButtonBarLayoutBehavior.padded,
+          ),
+          'alignedDropdown': _i2.BuilderArg<bool>(
+            name: 'alignedDropdown',
+            init: alignedDropdown,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'buttonColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'buttonColor',
+            init: buttonColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'colorScheme': _i2.BuilderArg<_i8.ColorScheme?>(
+            name: 'colorScheme',
+            init: colorScheme,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i9.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonThemeData$Mate(
@@ -322,85 +373,8 @@ class ButtonThemeData$Mate extends _i1.ButtonThemeData with _i2.Mate {
           colorScheme: p.get('colorScheme').build(),
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
         );
-    mateUse(
-      'textTheme',
-      textTheme,
-      isNamed: true,
-      defaultValue: _i4.ButtonTextTheme.normal,
-    );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-      defaultValue: 88.0,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-      defaultValue: 36.0,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'layoutBehavior',
-      layoutBehavior,
-      isNamed: true,
-      defaultValue: _i4.ButtonBarLayoutBehavior.padded,
-    );
-    mateUse(
-      'alignedDropdown',
-      alignedDropdown,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'buttonColor',
-      buttonColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'colorScheme',
-      colorScheme,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

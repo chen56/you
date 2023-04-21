@@ -11,15 +11,20 @@ class RenderSliverList$Mate extends _i1.RenderSliverList with _i2.Mate {
   RenderSliverList$Mate(
       {
       /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none
-      required _i3.RenderSliverBoxChildManager childManager})
-      : super(childManager: childManager) {
+      required super.childManager})
+      : mateParams = {
+          'childManager': _i2.BuilderArg<_i3.RenderSliverBoxChildManager>(
+            name: 'childManager',
+            init: childManager,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderSliverList';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverList$Mate(childManager: p.get('childManager').build());
-    mateUse(
-      'childManager',
-      childManager,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

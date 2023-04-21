@@ -10,18 +10,33 @@ class TextureBox$Mate extends _i1.TextureBox with _i2.Mate {
   /// TextureBox TextureBox({required int textureId, bool freeze = false, FilterQuality filterQuality = FilterQuality.low})
   TextureBox$Mate({
     /// optionalParameters: {required int textureId} , default:none
-    required int textureId,
+    required super.textureId,
 
     /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
-    bool freeze = false,
+    super.freeze,
 
     /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
-    _i3.FilterQuality filterQuality = _i3.FilterQuality.low,
-  }) : super(
-          textureId: textureId,
-          freeze: freeze,
-          filterQuality: filterQuality,
-        ) {
+    super.filterQuality,
+  })  : mateParams = {
+          'textureId': _i2.BuilderArg<int>(
+            name: 'textureId',
+            init: textureId,
+            isNamed: true,
+          ),
+          'freeze': _i2.BuilderArg<bool>(
+            name: 'freeze',
+            init: freeze,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'filterQuality': _i2.BuilderArg<_i3.FilterQuality>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+            defaultValue: _i3.FilterQuality.low,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextureBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => TextureBox$Mate(
@@ -29,22 +44,8 @@ class TextureBox$Mate extends _i1.TextureBox with _i2.Mate {
           freeze: p.get('freeze').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateUse(
-      'textureId',
-      textureId,
-      isNamed: true,
-    );
-    mateUse(
-      'freeze',
-      freeze,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-      defaultValue: _i3.FilterQuality.low,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

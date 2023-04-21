@@ -12,22 +12,39 @@ class HSVColor$Mate extends _i1.HSVColor with _i2.Mate {
   /// HSVColor HSVColor.fromAHSV(double alpha, double hue, double saturation, double value)
   HSVColor$Mate.fromAHSV(
     /// requiredParameters: double alpha
-    double alpha,
+    super.alpha,
 
     /// requiredParameters: double hue
-    double hue,
+    super.hue,
 
     /// requiredParameters: double saturation
-    double saturation,
+    super.saturation,
 
     /// requiredParameters: double value
-    double value,
-  ) : super.fromAHSV(
-          alpha,
-          hue,
-          saturation,
-          value,
-        ) {
+    super.value,
+  )   : mateParams = {
+          'alpha': _i2.BuilderArg<double>(
+            name: 'alpha',
+            init: alpha,
+            isNamed: false,
+          ),
+          'hue': _i2.BuilderArg<double>(
+            name: 'hue',
+            init: hue,
+            isNamed: false,
+          ),
+          'saturation': _i2.BuilderArg<double>(
+            name: 'saturation',
+            init: saturation,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+        },
+        super.fromAHSV() {
     mateBuilderName = 'HSVColor.fromAHSV';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => HSVColor$Mate.fromAHSV(
@@ -36,27 +53,10 @@ class HSVColor$Mate extends _i1.HSVColor with _i2.Mate {
           p.get('saturation').value,
           p.get('value').value,
         );
-    mateUse(
-      'alpha',
-      alpha,
-      isNamed: false,
-    );
-    mateUse(
-      'hue',
-      hue,
-      isNamed: false,
-    );
-    mateUse(
-      'saturation',
-      saturation,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class HSLColor
@@ -64,22 +64,39 @@ class HSLColor$Mate extends _i1.HSLColor with _i2.Mate {
   /// HSLColor HSLColor.fromAHSL(double alpha, double hue, double saturation, double lightness)
   HSLColor$Mate.fromAHSL(
     /// requiredParameters: double alpha
-    double alpha,
+    super.alpha,
 
     /// requiredParameters: double hue
-    double hue,
+    super.hue,
 
     /// requiredParameters: double saturation
-    double saturation,
+    super.saturation,
 
     /// requiredParameters: double lightness
-    double lightness,
-  ) : super.fromAHSL(
-          alpha,
-          hue,
-          saturation,
-          lightness,
-        ) {
+    super.lightness,
+  )   : mateParams = {
+          'alpha': _i2.BuilderArg<double>(
+            name: 'alpha',
+            init: alpha,
+            isNamed: false,
+          ),
+          'hue': _i2.BuilderArg<double>(
+            name: 'hue',
+            init: hue,
+            isNamed: false,
+          ),
+          'saturation': _i2.BuilderArg<double>(
+            name: 'saturation',
+            init: saturation,
+            isNamed: false,
+          ),
+          'lightness': _i2.BuilderArg<double>(
+            name: 'lightness',
+            init: lightness,
+            isNamed: false,
+          ),
+        },
+        super.fromAHSL() {
     mateBuilderName = 'HSLColor.fromAHSL';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => HSLColor$Mate.fromAHSL(
@@ -88,27 +105,10 @@ class HSLColor$Mate extends _i1.HSLColor with _i2.Mate {
           p.get('saturation').value,
           p.get('lightness').value,
         );
-    mateUse(
-      'alpha',
-      alpha,
-      isNamed: false,
-    );
-    mateUse(
-      'hue',
-      hue,
-      isNamed: false,
-    );
-    mateUse(
-      'saturation',
-      saturation,
-      isNamed: false,
-    );
-    mateUse(
-      'lightness',
-      lightness,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ColorSwatch<T> extends Color
@@ -116,31 +116,33 @@ class ColorSwatch$Mate<T> extends _i1.ColorSwatch<T> with _i2.Mate {
   /// ColorSwatch<T> ColorSwatch(int primary, Map<T, Color> _swatch)
   ColorSwatch$Mate(
     /// requiredParameters: int primary
-    int primary,
+    super.primary,
 
     /// requiredParameters: Map<T, Color> _swatch
-    Map<T, _i3.Color> _swatch,
-  ) : super(
-          primary,
-          _swatch,
-        ) {
+    super._swatch,
+  )   : mateParams = {
+          'primary': _i2.BuilderArg<int>(
+            name: 'primary',
+            init: primary,
+            isNamed: false,
+          ),
+          '_swatch': _i2.BuilderArg<Map<T, _i3.Color>>(
+            name: '_swatch',
+            init: _swatch,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'ColorSwatch';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ColorSwatch$Mate<T>(
           p.get('primary').value,
           p.get('_swatch').value,
         );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: false,
-    );
-    mateUse(
-      '_swatch',
-      _swatch,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ColorProperty extends DiagnosticsProperty<Color>
@@ -148,29 +150,57 @@ class ColorProperty$Mate extends _i1.ColorProperty with _i2.Mate {
   /// ColorProperty ColorProperty(String name, Color? value, {bool showName = true, Object? defaultValue = kNoDefaultValue, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   ColorProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: Color? value
-    _i3.Color? value, {
+    super.value, {
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i4.DiagnosticsTreeStyle style = _i5.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i4.DiagnosticLevel level = _i5.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          showName: showName,
-          defaultValue: defaultValue,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<_i3.Color?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i4.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i5.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i4.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i5.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'ColorProperty';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ColorProperty$Mate(
@@ -181,38 +211,8 @@ class ColorProperty$Mate extends _i1.ColorProperty with _i2.Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i5.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i5.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

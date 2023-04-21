@@ -16,46 +16,87 @@ class NavigationDrawerThemeData$Mate extends _i1.NavigationDrawerThemeData with 
   /// NavigationDrawerThemeData NavigationDrawerThemeData({double? tileHeight, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, Size? indicatorSize, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme})
   NavigationDrawerThemeData$Mate({
     /// optionalParameters: {double? tileHeight} , default:none
-    double? tileHeight,
+    super.tileHeight,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i3.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
-    _i4.ShapeBorder? indicatorShape,
+    super.indicatorShape,
 
     /// optionalParameters: {Size? indicatorSize} , default:none
-    _i3.Size? indicatorSize,
+    super.indicatorSize,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , default:none
-    _i5.MaterialStateProperty<_i6.TextStyle?>? labelTextStyle,
+    super.labelTextStyle,
 
     /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , default:none
-    _i5.MaterialStateProperty<_i7.IconThemeData?>? iconTheme,
-  }) : super(
-          tileHeight: tileHeight,
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          indicatorColor: indicatorColor,
-          indicatorShape: indicatorShape,
-          indicatorSize: indicatorSize,
-          labelTextStyle: labelTextStyle,
-          iconTheme: iconTheme,
-        ) {
+    super.iconTheme,
+  })  : mateParams = {
+          'tileHeight': _i2.BuilderArg<double?>(
+            name: 'tileHeight',
+            init: tileHeight,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorShape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'indicatorShape',
+            init: indicatorShape,
+            isNamed: true,
+          ),
+          'indicatorSize': _i2.BuilderArg<_i3.Size?>(
+            name: 'indicatorSize',
+            init: indicatorSize,
+            isNamed: true,
+          ),
+          'labelTextStyle': _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
+            name: 'labelTextStyle',
+            init: labelTextStyle,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationDrawerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerThemeData$Mate(
@@ -70,57 +111,10 @@ class NavigationDrawerThemeData$Mate extends _i1.NavigationDrawerThemeData with 
           labelTextStyle: p.get('labelTextStyle').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateUse(
-      'tileHeight',
-      tileHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorShape',
-      indicatorShape,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorSize',
-      indicatorSize,
-      isNamed: true,
-    );
-    mateUse(
-      'labelTextStyle',
-      labelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NavigationDrawerTheme extends InheritedTheme
@@ -128,18 +122,31 @@ class NavigationDrawerTheme$Mate extends _i1.NavigationDrawerTheme with _i2.Mate
   /// NavigationDrawerTheme NavigationDrawerTheme({Key? key, required NavigationDrawerThemeData data, required Widget child})
   NavigationDrawerTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i8.Key? key,
+    super.key,
 
     /// optionalParameters: {required NavigationDrawerThemeData data} , default:none
-    required _i1.NavigationDrawerThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i9.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i8.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.NavigationDrawerThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationDrawerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerTheme$Mate(
@@ -147,20 +154,8 @@ class NavigationDrawerTheme$Mate extends _i1.NavigationDrawerTheme with _i2.Mate
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

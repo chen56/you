@@ -12,15 +12,20 @@ class DesktopTextSelectionToolbarLayoutDelegate$Mate extends _i1.DesktopTextSele
   DesktopTextSelectionToolbarLayoutDelegate$Mate(
       {
       /// optionalParameters: {required Offset anchor} , default:none
-      required _i3.Offset anchor})
-      : super(anchor: anchor) {
+      required super.anchor})
+      : mateParams = {
+          'anchor': _i2.BuilderArg<_i3.Offset>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DesktopTextSelectionToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DesktopTextSelectionToolbarLayoutDelegate$Mate(anchor: p.get('anchor').build());
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

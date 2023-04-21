@@ -13,31 +13,33 @@ class TapRegionSurface$Mate extends _i1.TapRegionSurface with _i2.Mate {
   /// TapRegionSurface TapRegionSurface({Key? key, required Widget child})
   TapRegionSurface$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TapRegionSurface';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TapRegionSurface$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TapRegion extends SingleChildRenderObjectWidget
@@ -45,38 +47,73 @@ class TapRegion$Mate extends _i1.TapRegion with _i2.Mate {
   /// TapRegion TapRegion({Key? key, required Widget? child, bool enabled = true, HitTestBehavior behavior = HitTestBehavior.deferToChild, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, Object? groupId, String? debugLabel})
   TapRegion$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget? child} , default:none
-    required _i4.Widget? child,
+    required super.child,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i5.HitTestBehavior behavior = _i6.HitTestBehavior.deferToChild,
+    super.behavior,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
-    _i1.TapRegionCallback? onTapOutside,
+    super.onTapOutside,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , default:none
-    _i1.TapRegionCallback? onTapInside,
+    super.onTapInside,
 
     /// optionalParameters: {Object? groupId} , default:none
-    Object? groupId,
+    super.groupId,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          key: key,
-          child: child,
-          enabled: enabled,
-          behavior: behavior,
-          onTapOutside: onTapOutside,
-          onTapInside: onTapInside,
-          groupId: groupId,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'behavior': _i2.BuilderArg<_i5.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i6.HitTestBehavior.deferToChild,
+          ),
+          'onTapOutside': _i2.BuilderArg<_i1.TapRegionCallback?>(
+            name: 'onTapOutside',
+            init: onTapOutside,
+            isNamed: true,
+          ),
+          'onTapInside': _i2.BuilderArg<_i1.TapRegionCallback?>(
+            name: 'onTapInside',
+            init: onTapInside,
+            isNamed: true,
+          ),
+          'groupId': _i2.BuilderArg<Object?>(
+            name: 'groupId',
+            init: groupId,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TapRegion';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TapRegion$Mate(
@@ -89,49 +126,10 @@ class TapRegion$Mate extends _i1.TapRegion with _i2.Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i6.HitTestBehavior.deferToChild,
-    );
-    mateUse(
-      'onTapOutside',
-      onTapOutside,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapInside',
-      onTapInside,
-      isNamed: true,
-    );
-    mateUse(
-      'groupId',
-      groupId,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderTapRegion extends RenderProxyBoxWithHitTestBehavior
@@ -139,34 +137,65 @@ class RenderTapRegion$Mate extends _i1.RenderTapRegion with _i2.Mate {
   /// RenderTapRegion RenderTapRegion({TapRegionRegistry? registry, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, HitTestBehavior behavior = HitTestBehavior.deferToChild, Object? groupId, String? debugLabel})
   RenderTapRegion$Mate({
     /// optionalParameters: {TapRegionRegistry? registry} , default:none
-    _i1.TapRegionRegistry? registry,
+    super.registry,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
-    _i1.TapRegionCallback? onTapOutside,
+    super.onTapOutside,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , default:none
-    _i1.TapRegionCallback? onTapInside,
+    super.onTapInside,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i5.HitTestBehavior behavior = _i6.HitTestBehavior.deferToChild,
+    super.behavior,
 
     /// optionalParameters: {Object? groupId} , default:none
-    Object? groupId,
+    super.groupId,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          registry: registry,
-          enabled: enabled,
-          onTapOutside: onTapOutside,
-          onTapInside: onTapInside,
-          behavior: behavior,
-          groupId: groupId,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'registry': _i2.BuilderArg<_i1.TapRegionRegistry?>(
+            name: 'registry',
+            init: registry,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onTapOutside': _i2.BuilderArg<_i1.TapRegionCallback?>(
+            name: 'onTapOutside',
+            init: onTapOutside,
+            isNamed: true,
+          ),
+          'onTapInside': _i2.BuilderArg<_i1.TapRegionCallback?>(
+            name: 'onTapInside',
+            init: onTapInside,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i5.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i6.HitTestBehavior.deferToChild,
+          ),
+          'groupId': _i2.BuilderArg<Object?>(
+            name: 'groupId',
+            init: groupId,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderTapRegion';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RenderTapRegion$Mate(
@@ -178,44 +207,10 @@ class RenderTapRegion$Mate extends _i1.RenderTapRegion with _i2.Mate {
           groupId: p.get('groupId').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'registry',
-      registry,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onTapOutside',
-      onTapOutside,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapInside',
-      onTapInside,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i6.HitTestBehavior.deferToChild,
-    );
-    mateUse(
-      'groupId',
-      groupId,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextFieldTapRegion extends TapRegion
@@ -223,30 +218,56 @@ class TextFieldTapRegion$Mate extends _i1.TextFieldTapRegion with _i2.Mate {
   /// TextFieldTapRegion TextFieldTapRegion({Key? key, required Widget? child, bool enabled = true, void Function(PointerDownEvent)? onTapOutside, void Function(PointerDownEvent)? onTapInside, String? debugLabel})
   TextFieldTapRegion$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget? child} , default:none
-    required _i4.Widget? child,
+    required super.child,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapOutside} , default:none
-    _i1.TapRegionCallback? onTapOutside,
+    super.onTapOutside,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onTapInside} , default:none
-    _i1.TapRegionCallback? onTapInside,
+    super.onTapInside,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          key: key,
-          child: child,
-          enabled: enabled,
-          onTapOutside: onTapOutside,
-          onTapInside: onTapInside,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onTapOutside': _i2.BuilderArg<_i1.TapRegionCallback?>(
+            name: 'onTapOutside',
+            init: onTapOutside,
+            isNamed: true,
+          ),
+          'onTapInside': _i2.BuilderArg<_i1.TapRegionCallback?>(
+            name: 'onTapInside',
+            init: onTapInside,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextFieldTapRegion';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextFieldTapRegion$Mate(
@@ -257,36 +278,8 @@ class TextFieldTapRegion$Mate extends _i1.TextFieldTapRegion with _i2.Mate {
           onTapInside: p.get('onTapInside').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onTapOutside',
-      onTapOutside,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapInside',
-      onTapInside,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

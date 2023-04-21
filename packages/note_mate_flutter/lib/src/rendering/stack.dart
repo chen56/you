@@ -13,22 +13,39 @@ class RelativeRect$Mate extends _i1.RelativeRect with _i2.Mate {
   /// RelativeRect RelativeRect.fromLTRB(double left, double top, double right, double bottom)
   RelativeRect$Mate.fromLTRB(
     /// requiredParameters: double left
-    double left,
+    super.left,
 
     /// requiredParameters: double top
-    double top,
+    super.top,
 
     /// requiredParameters: double right
-    double right,
+    super.right,
 
     /// requiredParameters: double bottom
-    double bottom,
-  ) : super.fromLTRB(
-          left,
-          top,
-          right,
-          bottom,
-        ) {
+    super.bottom,
+  )   : mateParams = {
+          'left': _i2.BuilderArg<double>(
+            name: 'left',
+            init: left,
+            isNamed: false,
+          ),
+          'top': _i2.BuilderArg<double>(
+            name: 'top',
+            init: top,
+            isNamed: false,
+          ),
+          'right': _i2.BuilderArg<double>(
+            name: 'right',
+            init: right,
+            isNamed: false,
+          ),
+          'bottom': _i2.BuilderArg<double>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: false,
+          ),
+        },
+        super.fromLTRB() {
     mateBuilderName = 'RelativeRect.fromLTRB';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RelativeRect$Mate.fromLTRB(
@@ -37,27 +54,10 @@ class RelativeRect$Mate extends _i1.RelativeRect with _i2.Mate {
           p.get('right').value,
           p.get('bottom').value,
         );
-    mateUse(
-      'left',
-      left,
-      isNamed: false,
-    );
-    mateUse(
-      'top',
-      top,
-      isNamed: false,
-    );
-    mateUse(
-      'right',
-      right,
-      isNamed: false,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderStack extends RenderBox with ContainerRenderObjectMixin<RenderBox, StackParentData>, RenderBoxContainerDefaultsMixin<RenderBox, StackParentData>
@@ -65,26 +65,50 @@ class RenderStack$Mate extends _i1.RenderStack with _i2.Mate {
   /// RenderStack RenderStack({List<RenderBox>? children, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge})
   RenderStack$Mate({
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i3.RenderBox>? children,
+    super.children,
 
     /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
-    _i4.AlignmentGeometry alignment = _i5.AlignmentDirectional.topStart,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i6.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
-    _i1.StackFit fit = _i5.StackFit.loose,
+    super.fit,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i6.Clip clipBehavior = _i6.Clip.hardEdge,
-  }) : super(
-          children: children,
-          alignment: alignment,
-          textDirection: textDirection,
-          fit: fit,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i4.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i5.AlignmentDirectional.topStart,
+          ),
+          'textDirection': _i2.BuilderArg<_i6.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i1.StackFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i5.StackFit.loose,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i6.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderStack';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderStack$Mate(
@@ -94,35 +118,10 @@ class RenderStack$Mate extends _i1.RenderStack with _i2.Mate {
           fit: p.get('fit').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i5.AlignmentDirectional.topStart,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-      defaultValue: _i5.StackFit.loose,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i6.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderIndexedStack extends RenderStack
@@ -130,30 +129,59 @@ class RenderIndexedStack$Mate extends _i1.RenderIndexedStack with _i2.Mate {
   /// RenderIndexedStack RenderIndexedStack({List<RenderBox>? children, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, int? index = 0})
   RenderIndexedStack$Mate({
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i3.RenderBox>? children,
+    super.children,
 
     /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
-    _i4.AlignmentGeometry alignment = _i5.AlignmentDirectional.topStart,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i6.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
-    _i1.StackFit fit = _i5.StackFit.loose,
+    super.fit,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i6.Clip clipBehavior = _i6.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {int? index = 0} , default:processed=IntegerLiteralImpl
-    int? index = 0,
-  }) : super(
-          children: children,
-          alignment: alignment,
-          textDirection: textDirection,
-          fit: fit,
-          clipBehavior: clipBehavior,
-          index: index,
-        ) {
+    super.index,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i4.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i5.AlignmentDirectional.topStart,
+          ),
+          'textDirection': _i2.BuilderArg<_i6.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i1.StackFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i5.StackFit.loose,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i6.Clip.hardEdge,
+          ),
+          'index': _i2.BuilderArg<int?>(
+            name: 'index',
+            init: index,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderIndexedStack';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIndexedStack$Mate(
@@ -164,39 +192,8 @@ class RenderIndexedStack$Mate extends _i1.RenderIndexedStack with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           index: p.get('index').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i5.AlignmentDirectional.topStart,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-      defaultValue: _i5.StackFit.loose,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i6.Clip.hardEdge,
-    );
-    mateUse(
-      'index',
-      index,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

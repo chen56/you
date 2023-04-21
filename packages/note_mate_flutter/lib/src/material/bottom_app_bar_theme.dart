@@ -12,34 +12,63 @@ class BottomAppBarTheme$Mate extends _i1.BottomAppBarTheme with _i2.Mate {
   /// BottomAppBarTheme BottomAppBarTheme({Color? color, double? elevation, NotchedShape? shape, double? height, Color? surfaceTintColor, Color? shadowColor, EdgeInsetsGeometry? padding})
   BottomAppBarTheme$Mate({
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {NotchedShape? shape} , default:none
-    _i4.NotchedShape? shape,
+    super.shape,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
-  }) : super(
-          color: color,
-          elevation: elevation,
-          shape: shape,
-          height: height,
-          surfaceTintColor: surfaceTintColor,
-          shadowColor: shadowColor,
-          padding: padding,
-        ) {
+    super.padding,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.NotchedShape?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BottomAppBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomAppBarTheme$Mate(
@@ -51,40 +80,8 @@ class BottomAppBarTheme$Mate extends _i1.BottomAppBarTheme with _i2.Mate {
           shadowColor: p.get('shadowColor').build(),
           padding: p.get('padding').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

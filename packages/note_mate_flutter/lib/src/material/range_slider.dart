@@ -15,62 +15,121 @@ class RangeSlider$Mate extends _i1.RangeSlider with _i2.Mate {
   /// RangeSlider RangeSlider({Key? key, required RangeValues values, required void Function(RangeValues)? onChanged, void Function(RangeValues)? onChangeStart, void Function(RangeValues)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, RangeLabels? labels, Color? activeColor, Color? inactiveColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<MouseCursor?>? mouseCursor, String Function(double)? semanticFormatterCallback})
   RangeSlider$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required RangeValues values} , default:none
-    required _i4.RangeValues values,
+    required super.values,
 
     /// optionalParameters: {required void Function(RangeValues)? onChanged} , default:none
-    required _i5.ValueChanged<_i4.RangeValues>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {void Function(RangeValues)? onChangeStart} , default:none
-    _i5.ValueChanged<_i4.RangeValues>? onChangeStart,
+    super.onChangeStart,
 
     /// optionalParameters: {void Function(RangeValues)? onChangeEnd} , default:none
-    _i5.ValueChanged<_i4.RangeValues>? onChangeEnd,
+    super.onChangeEnd,
 
     /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
-    double min = 0.0,
+    super.min,
 
     /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
-    double max = 1.0,
+    super.max,
 
     /// optionalParameters: {int? divisions} , default:none
-    int? divisions,
+    super.divisions,
 
     /// optionalParameters: {RangeLabels? labels} , default:none
-    _i4.RangeLabels? labels,
+    super.labels,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i6.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? inactiveColor} , default:none
-    _i6.Color? inactiveColor,
+    super.inactiveColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i7.MaterialStateProperty<_i6.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i7.MaterialStateProperty<_i8.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {String Function(double)? semanticFormatterCallback} , default:none
-    _i4.SemanticFormatterCallback? semanticFormatterCallback,
-  }) : super(
-          key: key,
-          values: values,
-          onChanged: onChanged,
-          onChangeStart: onChangeStart,
-          onChangeEnd: onChangeEnd,
-          min: min,
-          max: max,
-          divisions: divisions,
-          labels: labels,
-          activeColor: activeColor,
-          inactiveColor: inactiveColor,
-          overlayColor: overlayColor,
-          mouseCursor: mouseCursor,
-          semanticFormatterCallback: semanticFormatterCallback,
-        ) {
+    super.semanticFormatterCallback,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'values': _i2.BuilderArg<_i4.RangeValues>(
+            name: 'values',
+            init: values,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i5.ValueChanged<_i4.RangeValues>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'onChangeStart': _i2.BuilderArg<_i5.ValueChanged<_i4.RangeValues>?>(
+            name: 'onChangeStart',
+            init: onChangeStart,
+            isNamed: true,
+          ),
+          'onChangeEnd': _i2.BuilderArg<_i5.ValueChanged<_i4.RangeValues>?>(
+            name: 'onChangeEnd',
+            init: onChangeEnd,
+            isNamed: true,
+          ),
+          'min': _i2.BuilderArg<double>(
+            name: 'min',
+            init: min,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'max': _i2.BuilderArg<double>(
+            name: 'max',
+            init: max,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'divisions': _i2.BuilderArg<int?>(
+            name: 'divisions',
+            init: divisions,
+            isNamed: true,
+          ),
+          'labels': _i2.BuilderArg<_i4.RangeLabels?>(
+            name: 'labels',
+            init: labels,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'inactiveColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'inactiveColor',
+            init: inactiveColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'semanticFormatterCallback': _i2.BuilderArg<_i4.SemanticFormatterCallback?>(
+            name: 'semanticFormatterCallback',
+            init: semanticFormatterCallback,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RangeSlider';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RangeSlider$Mate(
@@ -89,77 +148,8 @@ class RangeSlider$Mate extends _i1.RangeSlider with _i2.Mate {
           mouseCursor: p.get('mouseCursor').build(),
           semanticFormatterCallback: p.get('semanticFormatterCallback').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'values',
-      values,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeStart',
-      onChangeStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeEnd',
-      onChangeEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'min',
-      min,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'max',
-      max,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'divisions',
-      divisions,
-      isNamed: true,
-    );
-    mateUse(
-      'labels',
-      labels,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveColor',
-      inactiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticFormatterCallback',
-      semanticFormatterCallback,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

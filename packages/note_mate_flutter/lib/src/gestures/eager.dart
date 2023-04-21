@@ -11,29 +11,31 @@ class EagerGestureRecognizer$Mate extends _i1.EagerGestureRecognizer with _i2.Ma
   /// EagerGestureRecognizer EagerGestureRecognizer({Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   EagerGestureRecognizer$Mate({
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'EagerGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => EagerGestureRecognizer$Mate(
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

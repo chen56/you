@@ -16,58 +16,112 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
   /// NavigationBar NavigationBar({Key? key, Duration? animationDuration, int selectedIndex = 0, required List<Widget> destinations, void Function(int)? onDestinationSelected, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, double? height, NavigationDestinationLabelBehavior? labelBehavior})
   NavigationBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Duration? animationDuration} , default:none
-    Duration? animationDuration,
+    super.animationDuration,
 
     /// optionalParameters: {int selectedIndex = 0} , default:processed=IntegerLiteralImpl
-    int selectedIndex = 0,
+    super.selectedIndex,
 
     /// optionalParameters: {required List<Widget> destinations} , default:none
-    required List<_i4.Widget> destinations,
+    required super.destinations,
 
     /// optionalParameters: {void Function(int)? onDestinationSelected} , default:none
-    _i5.ValueChanged<int>? onDestinationSelected,
+    super.onDestinationSelected,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i6.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i6.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i6.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i6.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
-    _i7.ShapeBorder? indicatorShape,
+    super.indicatorShape,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , default:none
-    _i1.NavigationDestinationLabelBehavior? labelBehavior,
-  }) : super(
-          key: key,
-          animationDuration: animationDuration,
-          selectedIndex: selectedIndex,
-          destinations: destinations,
-          onDestinationSelected: onDestinationSelected,
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          indicatorColor: indicatorColor,
-          indicatorShape: indicatorShape,
-          height: height,
-          labelBehavior: labelBehavior,
-        ) {
+    super.labelBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'animationDuration': _i2.BuilderArg<Duration?>(
+            name: 'animationDuration',
+            init: animationDuration,
+            isNamed: true,
+          ),
+          'selectedIndex': _i2.BuilderArg<int>(
+            name: 'selectedIndex',
+            init: selectedIndex,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'destinations': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'destinations',
+            init: destinations,
+            isNamed: true,
+          ),
+          'onDestinationSelected': _i2.BuilderArg<_i5.ValueChanged<int>?>(
+            name: 'onDestinationSelected',
+            init: onDestinationSelected,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorShape': _i2.BuilderArg<_i7.ShapeBorder?>(
+            name: 'indicatorShape',
+            init: indicatorShape,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'labelBehavior': _i2.BuilderArg<_i1.NavigationDestinationLabelBehavior?>(
+            name: 'labelBehavior',
+            init: labelBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationBar$Mate(
@@ -85,73 +139,10 @@ class NavigationBar$Mate extends _i1.NavigationBar with _i2.Mate {
           height: p.get('height').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'animationDuration',
-      animationDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIndex',
-      selectedIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'destinations',
-      destinations,
-      isNamed: true,
-    );
-    mateUse(
-      'onDestinationSelected',
-      onDestinationSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorShape',
-      indicatorShape,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'labelBehavior',
-      labelBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NavigationDestination extends StatelessWidget
@@ -159,26 +150,47 @@ class NavigationDestination$Mate extends _i1.NavigationDestination with _i2.Mate
   /// NavigationDestination NavigationDestination({Key? key, required Widget icon, Widget? selectedIcon, required String label, String? tooltip})
   NavigationDestination$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget icon} , default:none
-    required _i4.Widget icon,
+    required super.icon,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i4.Widget? selectedIcon,
+    super.selectedIcon,
 
     /// optionalParameters: {required String label} , default:none
-    required String label,
+    required super.label,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
-  }) : super(
-          key: key,
-          icon: icon,
-          selectedIcon: selectedIcon,
-          label: label,
-          tooltip: tooltip,
-        ) {
+    super.tooltip,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i4.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationDestination';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDestination$Mate(
@@ -188,32 +200,10 @@ class NavigationDestination$Mate extends _i1.NavigationDestination with _i2.Mate
           label: p.get('label').build(),
           tooltip: p.get('tooltip').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NavigationIndicator extends StatelessWidget
@@ -221,34 +211,63 @@ class NavigationIndicator$Mate extends _i1.NavigationIndicator with _i2.Mate {
   /// NavigationIndicator NavigationIndicator({Key? key, required Animation<double> animation, Color? color, double width = _kIndicatorWidth, double height = _kIndicatorHeight, BorderRadius borderRadius = const BorderRadius.all(Radius.circular(16)), ShapeBorder? shape})
   NavigationIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Animation<double> animation} , default:none
-    required _i8.Animation<double> animation,
+    required super.animation,
 
     /// optionalParameters: {Color? color} , default:none
-    _i6.Color? color,
+    super.color,
 
     /// optionalParameters: {double width = _kIndicatorWidth} , default:unprocessed=SimpleIdentifierImpl
-    required double width,
+    super.width,
 
     /// optionalParameters: {double height = _kIndicatorHeight} , default:unprocessed=SimpleIdentifierImpl
-    required double height,
+    super.height,
 
     /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(16))} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i9.BorderRadius borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i7.ShapeBorder? shape,
-  }) : super(
-          key: key,
-          animation: animation,
-          color: color,
-          width: width,
-          height: height,
-          borderRadius: borderRadius,
-          shape: shape,
-        ) {
+    super.shape,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'animation': _i2.BuilderArg<_i8.Animation<double>>(
+            name: 'animation',
+            init: animation,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i6.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadius>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationIndicator$Mate(
@@ -260,40 +279,8 @@ class NavigationIndicator$Mate extends _i1.NavigationIndicator with _i2.Mate {
           borderRadius: p.get('borderRadius').build(),
           shape: p.get('shape').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'animation',
-      animation,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

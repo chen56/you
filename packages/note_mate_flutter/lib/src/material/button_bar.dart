@@ -15,54 +15,103 @@ class ButtonBar$Mate extends _i1.ButtonBar with _i2.Mate {
   /// ButtonBar ButtonBar({Key? key, MainAxisAlignment? alignment, MainAxisSize? mainAxisSize, ButtonTextTheme? buttonTextTheme, double? buttonMinWidth, double? buttonHeight, EdgeInsetsGeometry? buttonPadding, bool? buttonAlignedDropdown, ButtonBarLayoutBehavior? layoutBehavior, VerticalDirection? overflowDirection, double? overflowButtonSpacing, List<Widget> children = const <Widget>[]})
   ButtonBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {MainAxisAlignment? alignment} , default:none
-    _i4.MainAxisAlignment? alignment,
+    super.alignment,
 
     /// optionalParameters: {MainAxisSize? mainAxisSize} , default:none
-    _i4.MainAxisSize? mainAxisSize,
+    super.mainAxisSize,
 
     /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , default:none
-    _i5.ButtonTextTheme? buttonTextTheme,
+    super.buttonTextTheme,
 
     /// optionalParameters: {double? buttonMinWidth} , default:none
-    double? buttonMinWidth,
+    super.buttonMinWidth,
 
     /// optionalParameters: {double? buttonHeight} , default:none
-    double? buttonHeight,
+    super.buttonHeight,
 
     /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , default:none
-    _i6.EdgeInsetsGeometry? buttonPadding,
+    super.buttonPadding,
 
     /// optionalParameters: {bool? buttonAlignedDropdown} , default:none
-    bool? buttonAlignedDropdown,
+    super.buttonAlignedDropdown,
 
     /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , default:none
-    _i5.ButtonBarLayoutBehavior? layoutBehavior,
+    super.layoutBehavior,
 
     /// optionalParameters: {VerticalDirection? overflowDirection} , default:none
-    _i7.VerticalDirection? overflowDirection,
+    super.overflowDirection,
 
     /// optionalParameters: {double? overflowButtonSpacing} , default:none
-    double? overflowButtonSpacing,
+    super.overflowButtonSpacing,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i8.Widget> children,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          mainAxisSize: mainAxisSize,
-          buttonTextTheme: buttonTextTheme,
-          buttonMinWidth: buttonMinWidth,
-          buttonHeight: buttonHeight,
-          buttonPadding: buttonPadding,
-          buttonAlignedDropdown: buttonAlignedDropdown,
-          layoutBehavior: layoutBehavior,
-          overflowDirection: overflowDirection,
-          overflowButtonSpacing: overflowButtonSpacing,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i4.MainAxisAlignment?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'mainAxisSize': _i2.BuilderArg<_i4.MainAxisSize?>(
+            name: 'mainAxisSize',
+            init: mainAxisSize,
+            isNamed: true,
+          ),
+          'buttonTextTheme': _i2.BuilderArg<_i5.ButtonTextTheme?>(
+            name: 'buttonTextTheme',
+            init: buttonTextTheme,
+            isNamed: true,
+          ),
+          'buttonMinWidth': _i2.BuilderArg<double?>(
+            name: 'buttonMinWidth',
+            init: buttonMinWidth,
+            isNamed: true,
+          ),
+          'buttonHeight': _i2.BuilderArg<double?>(
+            name: 'buttonHeight',
+            init: buttonHeight,
+            isNamed: true,
+          ),
+          'buttonPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'buttonPadding',
+            init: buttonPadding,
+            isNamed: true,
+          ),
+          'buttonAlignedDropdown': _i2.BuilderArg<bool?>(
+            name: 'buttonAlignedDropdown',
+            init: buttonAlignedDropdown,
+            isNamed: true,
+          ),
+          'layoutBehavior': _i2.BuilderArg<_i5.ButtonBarLayoutBehavior?>(
+            name: 'layoutBehavior',
+            init: layoutBehavior,
+            isNamed: true,
+          ),
+          'overflowDirection': _i2.BuilderArg<_i7.VerticalDirection?>(
+            name: 'overflowDirection',
+            init: overflowDirection,
+            isNamed: true,
+          ),
+          'overflowButtonSpacing': _i2.BuilderArg<double?>(
+            name: 'overflowButtonSpacing',
+            init: overflowButtonSpacing,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i8.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ButtonBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBar$Mate(
@@ -79,65 +128,8 @@ class ButtonBar$Mate extends _i1.ButtonBar with _i2.Mate {
           overflowButtonSpacing: p.get('overflowButtonSpacing').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisSize',
-      mainAxisSize,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonTextTheme',
-      buttonTextTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonMinWidth',
-      buttonMinWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonHeight',
-      buttonHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonPadding',
-      buttonPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonAlignedDropdown',
-      buttonAlignedDropdown,
-      isNamed: true,
-    );
-    mateUse(
-      'layoutBehavior',
-      layoutBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'overflowDirection',
-      overflowDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'overflowButtonSpacing',
-      overflowButtonSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -9,18 +9,32 @@ class RawKeyDownEvent$Mate extends _i1.RawKeyDownEvent with _i2.Mate {
   /// RawKeyDownEvent RawKeyDownEvent({required RawKeyEventData data, String? character, bool repeat = false})
   RawKeyDownEvent$Mate({
     /// optionalParameters: {required RawKeyEventData data} , default:none
-    required _i1.RawKeyEventData data,
+    required super.data,
 
     /// optionalParameters: {String? character} , default:none
-    String? character,
+    super.character,
 
     /// optionalParameters: {bool repeat = false} , default:processed=BooleanLiteralImpl
-    bool repeat = false,
-  }) : super(
-          data: data,
-          character: character,
-          repeat: repeat,
-        ) {
+    super.repeat,
+  })  : mateParams = {
+          'data': _i2.BuilderArg<_i1.RawKeyEventData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'character': _i2.BuilderArg<String?>(
+            name: 'character',
+            init: character,
+            isNamed: true,
+          ),
+          'repeat': _i2.BuilderArg<bool>(
+            name: 'repeat',
+            init: repeat,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyDownEvent';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyDownEvent$Mate(
@@ -28,23 +42,10 @@ class RawKeyDownEvent$Mate extends _i1.RawKeyDownEvent with _i2.Mate {
           character: p.get('character').build(),
           repeat: p.get('repeat').build(),
         );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'character',
-      character,
-      isNamed: true,
-    );
-    mateUse(
-      'repeat',
-      repeat,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RawKeyUpEvent extends RawKeyEvent
@@ -52,29 +53,31 @@ class RawKeyUpEvent$Mate extends _i1.RawKeyUpEvent with _i2.Mate {
   /// RawKeyUpEvent RawKeyUpEvent({required RawKeyEventData data, String? character})
   RawKeyUpEvent$Mate({
     /// optionalParameters: {required RawKeyEventData data} , default:none
-    required _i1.RawKeyEventData data,
+    required super.data,
 
     /// optionalParameters: {String? character} , default:none
-    String? character,
-  }) : super(
-          data: data,
-          character: character,
-        ) {
+    super.character,
+  })  : mateParams = {
+          'data': _i2.BuilderArg<_i1.RawKeyEventData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'character': _i2.BuilderArg<String?>(
+            name: 'character',
+            init: character,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyUpEvent';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyUpEvent$Mate(
           data: p.get('data').build(),
           character: p.get('character').build(),
         );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'character',
-      character,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

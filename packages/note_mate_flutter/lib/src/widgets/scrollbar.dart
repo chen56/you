@@ -18,70 +18,139 @@ class ScrollbarPainter$Mate extends _i1.ScrollbarPainter with _i2.Mate {
   /// ScrollbarPainter ScrollbarPainter({required Color color, required Animation<double> fadeoutOpacityAnimation, Color trackColor = const Color(0x00000000), Color trackBorderColor = const Color(0x00000000), TextDirection? textDirection, double thickness = _kScrollbarThickness, EdgeInsets padding = EdgeInsets.zero, double mainAxisMargin = 0.0, double crossAxisMargin = 0.0, Radius? radius, Radius? trackRadius, OutlinedBorder? shape, double minLength = _kMinThumbExtent, double? minOverscrollLength, ScrollbarOrientation? scrollbarOrientation, bool ignorePointer = false})
   ScrollbarPainter$Mate({
     /// optionalParameters: {required Color color} , default:none
-    required _i3.Color color,
+    required super.color,
 
     /// optionalParameters: {required Animation<double> fadeoutOpacityAnimation} , default:none
-    required _i4.Animation<double> fadeoutOpacityAnimation,
+    required super.fadeoutOpacityAnimation,
 
     /// optionalParameters: {Color trackColor = const Color(0x00000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color trackColor,
+    super.trackColor,
 
     /// optionalParameters: {Color trackBorderColor = const Color(0x00000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color trackBorderColor,
+    super.trackBorderColor,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i3.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {double thickness = _kScrollbarThickness} , default:unprocessed=SimpleIdentifierImpl
-    required double thickness,
+    super.thickness,
 
     /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.EdgeInsets padding = _i6.EdgeInsets.zero,
+    super.padding,
 
     /// optionalParameters: {double mainAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
-    double mainAxisMargin = 0.0,
+    super.mainAxisMargin,
 
     /// optionalParameters: {double crossAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
-    double crossAxisMargin = 0.0,
+    super.crossAxisMargin,
 
     /// optionalParameters: {Radius? radius} , default:none
-    _i3.Radius? radius,
+    super.radius,
 
     /// optionalParameters: {Radius? trackRadius} , default:none
-    _i3.Radius? trackRadius,
+    super.trackRadius,
 
     /// optionalParameters: {OutlinedBorder? shape} , default:none
-    _i7.OutlinedBorder? shape,
+    super.shape,
 
     /// optionalParameters: {double minLength = _kMinThumbExtent} , default:unprocessed=SimpleIdentifierImpl
-    required double minLength,
+    super.minLength,
 
     /// optionalParameters: {double? minOverscrollLength} , default:none
-    double? minOverscrollLength,
+    super.minOverscrollLength,
 
     /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , default:none
-    _i1.ScrollbarOrientation? scrollbarOrientation,
+    super.scrollbarOrientation,
 
     /// optionalParameters: {bool ignorePointer = false} , default:processed=BooleanLiteralImpl
-    bool ignorePointer = false,
-  }) : super(
-          color: color,
-          fadeoutOpacityAnimation: fadeoutOpacityAnimation,
-          trackColor: trackColor,
-          trackBorderColor: trackBorderColor,
-          textDirection: textDirection,
-          thickness: thickness,
-          padding: padding,
-          mainAxisMargin: mainAxisMargin,
-          crossAxisMargin: crossAxisMargin,
-          radius: radius,
-          trackRadius: trackRadius,
-          shape: shape,
-          minLength: minLength,
-          minOverscrollLength: minOverscrollLength,
-          scrollbarOrientation: scrollbarOrientation,
-          ignorePointer: ignorePointer,
-        ) {
+    super.ignorePointer,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'fadeoutOpacityAnimation': _i2.BuilderArg<_i4.Animation<double>>(
+            name: 'fadeoutOpacityAnimation',
+            init: fadeoutOpacityAnimation,
+            isNamed: true,
+          ),
+          'trackColor': _i2.BuilderArg<_i3.Color>(
+            name: 'trackColor',
+            init: trackColor,
+            isNamed: true,
+          ),
+          'trackBorderColor': _i2.BuilderArg<_i3.Color>(
+            name: 'trackBorderColor',
+            init: trackBorderColor,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'thickness': _i2.BuilderArg<double>(
+            name: 'thickness',
+            init: thickness,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsets>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+            defaultValue: _i6.EdgeInsets.zero,
+          ),
+          'mainAxisMargin': _i2.BuilderArg<double>(
+            name: 'mainAxisMargin',
+            init: mainAxisMargin,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisMargin': _i2.BuilderArg<double>(
+            name: 'crossAxisMargin',
+            init: crossAxisMargin,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'radius': _i2.BuilderArg<_i3.Radius?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'trackRadius': _i2.BuilderArg<_i3.Radius?>(
+            name: 'trackRadius',
+            init: trackRadius,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.OutlinedBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'minLength': _i2.BuilderArg<double>(
+            name: 'minLength',
+            init: minLength,
+            isNamed: true,
+          ),
+          'minOverscrollLength': _i2.BuilderArg<double?>(
+            name: 'minOverscrollLength',
+            init: minOverscrollLength,
+            isNamed: true,
+          ),
+          'scrollbarOrientation': _i2.BuilderArg<_i1.ScrollbarOrientation?>(
+            name: 'scrollbarOrientation',
+            init: scrollbarOrientation,
+            isNamed: true,
+          ),
+          'ignorePointer': _i2.BuilderArg<bool>(
+            name: 'ignorePointer',
+            init: ignorePointer,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollbarPainter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollbarPainter$Mate(
@@ -102,91 +171,10 @@ class ScrollbarPainter$Mate extends _i1.ScrollbarPainter with _i2.Mate {
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
           ignorePointer: p.get('ignorePointer').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'fadeoutOpacityAnimation',
-      fadeoutOpacityAnimation,
-      isNamed: true,
-    );
-    mateUse(
-      'trackColor',
-      trackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackBorderColor',
-      trackBorderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'thickness',
-      thickness,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-      defaultValue: _i6.EdgeInsets.zero,
-    );
-    mateUse(
-      'mainAxisMargin',
-      mainAxisMargin,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisMargin',
-      crossAxisMargin,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'trackRadius',
-      trackRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'minLength',
-      minLength,
-      isNamed: true,
-    );
-    mateUse(
-      'minOverscrollLength',
-      minOverscrollLength,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollbarOrientation',
-      scrollbarOrientation,
-      isNamed: true,
-    );
-    mateUse(
-      'ignorePointer',
-      ignorePointer,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RawScrollbar extends StatefulWidget
@@ -194,98 +182,194 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
   /// RawScrollbar RawScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, OutlinedBorder? shape, Radius? radius, double? thickness, Color? thumbColor, double minThumbLength = _kMinThumbExtent, double? minOverscrollLength, bool? trackVisibility, Radius? trackRadius, Color? trackColor, Color? trackBorderColor, Duration fadeDuration = _kScrollbarFadeDuration, Duration timeToFade = _kScrollbarTimeToFade, Duration pressDuration = Duration.zero, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, double mainAxisMargin = 0.0, double crossAxisMargin = 0.0, EdgeInsets? padding, bool? isAlwaysShown})
   RawScrollbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i8.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i9.Widget child,
+    required super.child,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i10.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? thumbVisibility} , default:none
-    bool? thumbVisibility,
+    super.thumbVisibility,
 
     /// optionalParameters: {OutlinedBorder? shape} , default:none
-    _i7.OutlinedBorder? shape,
+    super.shape,
 
     /// optionalParameters: {Radius? radius} , default:none
-    _i3.Radius? radius,
+    super.radius,
 
     /// optionalParameters: {double? thickness} , default:none
-    double? thickness,
+    super.thickness,
 
     /// optionalParameters: {Color? thumbColor} , default:none
-    _i3.Color? thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {double minThumbLength = _kMinThumbExtent} , default:unprocessed=SimpleIdentifierImpl
-    required double minThumbLength,
+    super.minThumbLength,
 
     /// optionalParameters: {double? minOverscrollLength} , default:none
-    double? minOverscrollLength,
+    super.minOverscrollLength,
 
     /// optionalParameters: {bool? trackVisibility} , default:none
-    bool? trackVisibility,
+    super.trackVisibility,
 
     /// optionalParameters: {Radius? trackRadius} , default:none
-    _i3.Radius? trackRadius,
+    super.trackRadius,
 
     /// optionalParameters: {Color? trackColor} , default:none
-    _i3.Color? trackColor,
+    super.trackColor,
 
     /// optionalParameters: {Color? trackBorderColor} , default:none
-    _i3.Color? trackBorderColor,
+    super.trackBorderColor,
 
     /// optionalParameters: {Duration fadeDuration = _kScrollbarFadeDuration} , default:unprocessed=SimpleIdentifierImpl
-    required Duration fadeDuration,
+    super.fadeDuration,
 
     /// optionalParameters: {Duration timeToFade = _kScrollbarTimeToFade} , default:unprocessed=SimpleIdentifierImpl
-    required Duration timeToFade,
+    super.timeToFade,
 
     /// optionalParameters: {Duration pressDuration = Duration.zero} , default:processed=PrefixedIdentifierImpl
-    Duration pressDuration = Duration.zero,
+    super.pressDuration,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
-    required _i11.ScrollNotificationPredicate notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {bool? interactive} , default:none
-    bool? interactive,
+    super.interactive,
 
     /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , default:none
-    _i1.ScrollbarOrientation? scrollbarOrientation,
+    super.scrollbarOrientation,
 
     /// optionalParameters: {double mainAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
-    double mainAxisMargin = 0.0,
+    super.mainAxisMargin,
 
     /// optionalParameters: {double crossAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
-    double crossAxisMargin = 0.0,
+    super.crossAxisMargin,
 
     /// optionalParameters: {EdgeInsets? padding} , default:none
-    _i5.EdgeInsets? padding,
-  }) : super(
-          key: key,
-          child: child,
-          controller: controller,
-          thumbVisibility: thumbVisibility,
-          shape: shape,
-          radius: radius,
-          thickness: thickness,
-          thumbColor: thumbColor,
-          minThumbLength: minThumbLength,
-          minOverscrollLength: minOverscrollLength,
-          trackVisibility: trackVisibility,
-          trackRadius: trackRadius,
-          trackColor: trackColor,
-          trackBorderColor: trackBorderColor,
-          fadeDuration: fadeDuration,
-          timeToFade: timeToFade,
-          pressDuration: pressDuration,
-          notificationPredicate: notificationPredicate,
-          interactive: interactive,
-          scrollbarOrientation: scrollbarOrientation,
-          mainAxisMargin: mainAxisMargin,
-          crossAxisMargin: crossAxisMargin,
-          padding: padding,
-        ) {
+    super.padding,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i8.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i10.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'thumbVisibility': _i2.BuilderArg<bool?>(
+            name: 'thumbVisibility',
+            init: thumbVisibility,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.OutlinedBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<_i3.Radius?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'thickness': _i2.BuilderArg<double?>(
+            name: 'thickness',
+            init: thickness,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'minThumbLength': _i2.BuilderArg<double>(
+            name: 'minThumbLength',
+            init: minThumbLength,
+            isNamed: true,
+          ),
+          'minOverscrollLength': _i2.BuilderArg<double?>(
+            name: 'minOverscrollLength',
+            init: minOverscrollLength,
+            isNamed: true,
+          ),
+          'trackVisibility': _i2.BuilderArg<bool?>(
+            name: 'trackVisibility',
+            init: trackVisibility,
+            isNamed: true,
+          ),
+          'trackRadius': _i2.BuilderArg<_i3.Radius?>(
+            name: 'trackRadius',
+            init: trackRadius,
+            isNamed: true,
+          ),
+          'trackColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'trackColor',
+            init: trackColor,
+            isNamed: true,
+          ),
+          'trackBorderColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'trackBorderColor',
+            init: trackBorderColor,
+            isNamed: true,
+          ),
+          'fadeDuration': _i2.BuilderArg<Duration>(
+            name: 'fadeDuration',
+            init: fadeDuration,
+            isNamed: true,
+          ),
+          'timeToFade': _i2.BuilderArg<Duration>(
+            name: 'timeToFade',
+            init: timeToFade,
+            isNamed: true,
+          ),
+          'pressDuration': _i2.BuilderArg<Duration>(
+            name: 'pressDuration',
+            init: pressDuration,
+            isNamed: true,
+            defaultValue: Duration.zero,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i11.ScrollNotificationPredicate>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'interactive': _i2.BuilderArg<bool?>(
+            name: 'interactive',
+            init: interactive,
+            isNamed: true,
+          ),
+          'scrollbarOrientation': _i2.BuilderArg<_i1.ScrollbarOrientation?>(
+            name: 'scrollbarOrientation',
+            init: scrollbarOrientation,
+            isNamed: true,
+          ),
+          'mainAxisMargin': _i2.BuilderArg<double>(
+            name: 'mainAxisMargin',
+            init: mainAxisMargin,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisMargin': _i2.BuilderArg<double>(
+            name: 'crossAxisMargin',
+            init: crossAxisMargin,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsets?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawScrollbar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RawScrollbar$Mate(
@@ -313,123 +397,8 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
           crossAxisMargin: p.get('crossAxisMargin').build(),
           padding: p.get('padding').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbVisibility',
-      thumbVisibility,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'thickness',
-      thickness,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'minThumbLength',
-      minThumbLength,
-      isNamed: true,
-    );
-    mateUse(
-      'minOverscrollLength',
-      minOverscrollLength,
-      isNamed: true,
-    );
-    mateUse(
-      'trackVisibility',
-      trackVisibility,
-      isNamed: true,
-    );
-    mateUse(
-      'trackRadius',
-      trackRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'trackColor',
-      trackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackBorderColor',
-      trackBorderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'fadeDuration',
-      fadeDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'timeToFade',
-      timeToFade,
-      isNamed: true,
-    );
-    mateUse(
-      'pressDuration',
-      pressDuration,
-      isNamed: true,
-      defaultValue: Duration.zero,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'interactive',
-      interactive,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollbarOrientation',
-      scrollbarOrientation,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisMargin',
-      mainAxisMargin,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisMargin',
-      crossAxisMargin,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -18,106 +18,215 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
   /// PaginatedDataTable PaginatedDataTable({Key? key, Widget? header, List<Widget>? actions, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, double headingRowHeight = 56.0, double horizontalMargin = 24.0, double columnSpacing = 56.0, bool showCheckboxColumn = true, bool showFirstLastButtons = false, int? initialFirstRowIndex = 0, void Function(int)? onPageChanged, int rowsPerPage = defaultRowsPerPage, List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10], void Function(int?)? onRowsPerPageChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? arrowHeadColor, required DataTableSource source, double? checkboxHorizontalMargin, ScrollController? controller, bool? primary})
   PaginatedDataTable$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {List<Widget>? actions} , default:none
-    List<_i4.Widget>? actions,
+    super.actions,
 
     /// optionalParameters: {required List<DataColumn> columns} , default:none
-    required List<_i5.DataColumn> columns,
+    required super.columns,
 
     /// optionalParameters: {int? sortColumnIndex} , default:none
-    int? sortColumnIndex,
+    super.sortColumnIndex,
 
     /// optionalParameters: {bool sortAscending = true} , default:processed=BooleanLiteralImpl
-    bool sortAscending = true,
+    super.sortAscending,
 
     /// optionalParameters: {void Function(bool?)? onSelectAll} , default:none
-    _i6.ValueSetter<bool?>? onSelectAll,
+    super.onSelectAll,
 
     /// optionalParameters: {double? dataRowMinHeight} , default:none
-    double? dataRowMinHeight,
+    super.dataRowMinHeight,
 
     /// optionalParameters: {double? dataRowMaxHeight} , default:none
-    double? dataRowMaxHeight,
+    super.dataRowMaxHeight,
 
     /// optionalParameters: {double headingRowHeight = 56.0} , default:processed=DoubleLiteralImpl
-    double headingRowHeight = 56.0,
+    super.headingRowHeight,
 
     /// optionalParameters: {double horizontalMargin = 24.0} , default:processed=DoubleLiteralImpl
-    double horizontalMargin = 24.0,
+    super.horizontalMargin,
 
     /// optionalParameters: {double columnSpacing = 56.0} , default:processed=DoubleLiteralImpl
-    double columnSpacing = 56.0,
+    super.columnSpacing,
 
     /// optionalParameters: {bool showCheckboxColumn = true} , default:processed=BooleanLiteralImpl
-    bool showCheckboxColumn = true,
+    super.showCheckboxColumn,
 
     /// optionalParameters: {bool showFirstLastButtons = false} , default:processed=BooleanLiteralImpl
-    bool showFirstLastButtons = false,
+    super.showFirstLastButtons,
 
     /// optionalParameters: {int? initialFirstRowIndex = 0} , default:processed=IntegerLiteralImpl
-    int? initialFirstRowIndex = 0,
+    super.initialFirstRowIndex,
 
     /// optionalParameters: {void Function(int)? onPageChanged} , default:none
-    _i6.ValueChanged<int>? onPageChanged,
+    super.onPageChanged,
 
     /// optionalParameters: {int rowsPerPage = defaultRowsPerPage} , default:unprocessed=SimpleIdentifierImpl
-    required int rowsPerPage,
+    super.rowsPerPage,
 
     /// optionalParameters: {List<int> availableRowsPerPage = const <int>[defaultRowsPerPage, defaultRowsPerPage * 2, defaultRowsPerPage * 5, defaultRowsPerPage * 10]} , default:unprocessed=ListLiteralImpl
-    required List<int> availableRowsPerPage,
+    super.availableRowsPerPage,
 
     /// optionalParameters: {void Function(int?)? onRowsPerPageChanged} , default:none
-    _i6.ValueChanged<int?>? onRowsPerPageChanged,
+    super.onRowsPerPageChanged,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i7.DragStartBehavior dragStartBehavior = _i8.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {Color? arrowHeadColor} , default:none
-    _i9.Color? arrowHeadColor,
+    super.arrowHeadColor,
 
     /// optionalParameters: {required DataTableSource source} , default:none
-    required _i10.DataTableSource source,
+    required super.source,
 
     /// optionalParameters: {double? checkboxHorizontalMargin} , default:none
-    double? checkboxHorizontalMargin,
+    super.checkboxHorizontalMargin,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i11.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
-  }) : super(
-          key: key,
-          header: header,
-          actions: actions,
-          columns: columns,
-          sortColumnIndex: sortColumnIndex,
-          sortAscending: sortAscending,
-          onSelectAll: onSelectAll,
-          dataRowMinHeight: dataRowMinHeight,
-          dataRowMaxHeight: dataRowMaxHeight,
-          headingRowHeight: headingRowHeight,
-          horizontalMargin: horizontalMargin,
-          columnSpacing: columnSpacing,
-          showCheckboxColumn: showCheckboxColumn,
-          showFirstLastButtons: showFirstLastButtons,
-          initialFirstRowIndex: initialFirstRowIndex,
-          onPageChanged: onPageChanged,
-          rowsPerPage: rowsPerPage,
-          availableRowsPerPage: availableRowsPerPage,
-          onRowsPerPageChanged: onRowsPerPageChanged,
-          dragStartBehavior: dragStartBehavior,
-          arrowHeadColor: arrowHeadColor,
-          source: source,
-          checkboxHorizontalMargin: checkboxHorizontalMargin,
-          controller: controller,
-          primary: primary,
-        ) {
+    super.primary,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'columns': _i2.BuilderArg<List<_i5.DataColumn>>(
+            name: 'columns',
+            init: columns,
+            isNamed: true,
+          ),
+          'sortColumnIndex': _i2.BuilderArg<int?>(
+            name: 'sortColumnIndex',
+            init: sortColumnIndex,
+            isNamed: true,
+          ),
+          'sortAscending': _i2.BuilderArg<bool>(
+            name: 'sortAscending',
+            init: sortAscending,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onSelectAll': _i2.BuilderArg<_i6.ValueSetter<bool?>?>(
+            name: 'onSelectAll',
+            init: onSelectAll,
+            isNamed: true,
+          ),
+          'dataRowMinHeight': _i2.BuilderArg<double?>(
+            name: 'dataRowMinHeight',
+            init: dataRowMinHeight,
+            isNamed: true,
+          ),
+          'dataRowMaxHeight': _i2.BuilderArg<double?>(
+            name: 'dataRowMaxHeight',
+            init: dataRowMaxHeight,
+            isNamed: true,
+          ),
+          'headingRowHeight': _i2.BuilderArg<double>(
+            name: 'headingRowHeight',
+            init: headingRowHeight,
+            isNamed: true,
+            defaultValue: 56.0,
+          ),
+          'horizontalMargin': _i2.BuilderArg<double>(
+            name: 'horizontalMargin',
+            init: horizontalMargin,
+            isNamed: true,
+            defaultValue: 24.0,
+          ),
+          'columnSpacing': _i2.BuilderArg<double>(
+            name: 'columnSpacing',
+            init: columnSpacing,
+            isNamed: true,
+            defaultValue: 56.0,
+          ),
+          'showCheckboxColumn': _i2.BuilderArg<bool>(
+            name: 'showCheckboxColumn',
+            init: showCheckboxColumn,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showFirstLastButtons': _i2.BuilderArg<bool>(
+            name: 'showFirstLastButtons',
+            init: showFirstLastButtons,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'initialFirstRowIndex': _i2.BuilderArg<int?>(
+            name: 'initialFirstRowIndex',
+            init: initialFirstRowIndex,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'onPageChanged': _i2.BuilderArg<_i6.ValueChanged<int>?>(
+            name: 'onPageChanged',
+            init: onPageChanged,
+            isNamed: true,
+          ),
+          'rowsPerPage': _i2.BuilderArg<int>(
+            name: 'rowsPerPage',
+            init: rowsPerPage,
+            isNamed: true,
+          ),
+          'availableRowsPerPage': _i2.BuilderArg<List<int>>(
+            name: 'availableRowsPerPage',
+            init: availableRowsPerPage,
+            isNamed: true,
+          ),
+          'onRowsPerPageChanged': _i2.BuilderArg<_i6.ValueChanged<int?>?>(
+            name: 'onRowsPerPageChanged',
+            init: onRowsPerPageChanged,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
+          ),
+          'arrowHeadColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'arrowHeadColor',
+            init: arrowHeadColor,
+            isNamed: true,
+          ),
+          'source': _i2.BuilderArg<_i10.DataTableSource>(
+            name: 'source',
+            init: source,
+            isNamed: true,
+          ),
+          'checkboxHorizontalMargin': _i2.BuilderArg<double?>(
+            name: 'checkboxHorizontalMargin',
+            init: checkboxHorizontalMargin,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i11.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PaginatedDataTable';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PaginatedDataTable$Mate(
@@ -147,138 +256,8 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
           controller: p.get('controller').build(),
           primary: p.get('primary').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'columns',
-      columns,
-      isNamed: true,
-    );
-    mateUse(
-      'sortColumnIndex',
-      sortColumnIndex,
-      isNamed: true,
-    );
-    mateUse(
-      'sortAscending',
-      sortAscending,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onSelectAll',
-      onSelectAll,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowMinHeight',
-      dataRowMinHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowMaxHeight',
-      dataRowMaxHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'headingRowHeight',
-      headingRowHeight,
-      isNamed: true,
-      defaultValue: 56.0,
-    );
-    mateUse(
-      'horizontalMargin',
-      horizontalMargin,
-      isNamed: true,
-      defaultValue: 24.0,
-    );
-    mateUse(
-      'columnSpacing',
-      columnSpacing,
-      isNamed: true,
-      defaultValue: 56.0,
-    );
-    mateUse(
-      'showCheckboxColumn',
-      showCheckboxColumn,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showFirstLastButtons',
-      showFirstLastButtons,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'initialFirstRowIndex',
-      initialFirstRowIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'onPageChanged',
-      onPageChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'rowsPerPage',
-      rowsPerPage,
-      isNamed: true,
-    );
-    mateUse(
-      'availableRowsPerPage',
-      availableRowsPerPage,
-      isNamed: true,
-    );
-    mateUse(
-      'onRowsPerPageChanged',
-      onRowsPerPageChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i8.DragStartBehavior.start,
-    );
-    mateUse(
-      'arrowHeadColor',
-      arrowHeadColor,
-      isNamed: true,
-    );
-    mateUse(
-      'source',
-      source,
-      isNamed: true,
-    );
-    mateUse(
-      'checkboxHorizontalMargin',
-      checkboxHorizontalMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

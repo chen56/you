@@ -22,74 +22,150 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
   /// CustomScrollView CustomScrollView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, ScrollBehavior? scrollBehavior, bool shrinkWrap = false, Key? center, double anchor = 0.0, double? cacheExtent, List<Widget> slivers = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   CustomScrollView$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
-    _i8.ScrollBehavior? scrollBehavior,
+    super.scrollBehavior,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {Key? center} , default:none
-    _i3.Key? center,
+    super.center,
 
     /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
-    double anchor = 0.0,
+    super.anchor,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i9.Widget> slivers,
+    super.slivers,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          scrollBehavior: scrollBehavior,
-          shrinkWrap: shrinkWrap,
-          center: center,
-          anchor: anchor,
-          cacheExtent: cacheExtent,
-          slivers: slivers,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'scrollBehavior': _i2.BuilderArg<_i8.ScrollBehavior?>(
+            name: 'scrollBehavior',
+            init: scrollBehavior,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'center': _i2.BuilderArg<_i3.Key?>(
+            name: 'center',
+            init: center,
+            isNamed: true,
+          ),
+          'anchor': _i2.BuilderArg<double>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'slivers': _i2.BuilderArg<List<_i9.Widget>>(
+            name: 'slivers',
+            init: slivers,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'CustomScrollView';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CustomScrollView$Mate(
@@ -111,99 +187,10 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollBehavior',
-      scrollBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'center',
-      center,
-      isNamed: true,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'slivers',
-      slivers,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ListView extends BoxScrollView
@@ -211,86 +198,176 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
   /// ListView ListView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {double? itemExtent} , default:none
-    double? itemExtent,
+    super.itemExtent,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
-    _i9.Widget? prototypeItem,
+    super.prototypeItem,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i9.Widget> children,
+    super.children,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          itemExtent: itemExtent,
-          prototypeItem: prototypeItem,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          cacheExtent: cacheExtent,
-          children: children,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double?>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'ListView';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ListView$Mate(
@@ -315,208 +392,197 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
 
   /// ListView ListView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.builder({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {double? itemExtent} , default:none
-    double? itemExtent,
+    super.itemExtent,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
-    _i9.Widget? prototypeItem,
+    super.prototypeItem,
 
     /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , default:none
-    required _i9.NullableIndexedWidgetBuilder itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
-    _i14.ChildIndexGetter? findChildIndexCallback,
+    super.findChildIndexCallback,
 
     /// optionalParameters: {int? itemCount} , default:none
-    int? itemCount,
+    super.itemCount,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super.builder(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          itemExtent: itemExtent,
-          prototypeItem: prototypeItem,
-          itemBuilder: itemBuilder,
-          findChildIndexCallback: findChildIndexCallback,
-          itemCount: itemCount,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          cacheExtent: cacheExtent,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double?>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i9.NullableIndexedWidgetBuilder>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+            name: 'findChildIndexCallback',
+            init: findChildIndexCallback,
+            isNamed: true,
+          ),
+          'itemCount': _i2.BuilderArg<int?>(
+            name: 'itemCount',
+            init: itemCount,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super.builder() {
     mateBuilderName = 'ListView.builder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ListView$Mate.builder(
@@ -543,210 +609,181 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'findChildIndexCallback',
-      findChildIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'itemCount',
-      itemCount,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
 
   /// ListView ListView.separated({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required Widget Function(BuildContext, int) separatorBuilder, required int itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.separated({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , default:none
-    required _i9.NullableIndexedWidgetBuilder itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
-    _i14.ChildIndexGetter? findChildIndexCallback,
+    super.findChildIndexCallback,
 
     /// optionalParameters: {required Widget Function(BuildContext, int) separatorBuilder} , default:none
-    required _i9.IndexedWidgetBuilder separatorBuilder,
+    required super.separatorBuilder,
 
     /// optionalParameters: {required int itemCount} , default:none
-    required int itemCount,
+    required super.itemCount,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super.separated(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          itemBuilder: itemBuilder,
-          findChildIndexCallback: findChildIndexCallback,
-          separatorBuilder: separatorBuilder,
-          itemCount: itemCount,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          cacheExtent: cacheExtent,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i9.NullableIndexedWidgetBuilder>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+            name: 'findChildIndexCallback',
+            init: findChildIndexCallback,
+            isNamed: true,
+          ),
+          'separatorBuilder': _i2.BuilderArg<_i9.IndexedWidgetBuilder>(
+            name: 'separatorBuilder',
+            init: separatorBuilder,
+            isNamed: true,
+          ),
+          'itemCount': _i2.BuilderArg<int>(
+            name: 'itemCount',
+            init: itemCount,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super.separated() {
     mateBuilderName = 'ListView.separated';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ListView$Mate.separated(
@@ -771,188 +808,154 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'findChildIndexCallback',
-      findChildIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'separatorBuilder',
-      separatorBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'itemCount',
-      itemCount,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
 
   /// ListView ListView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, double? itemExtent, Widget? prototypeItem, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ListView$Mate.custom({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {double? itemExtent} , default:none
-    double? itemExtent,
+    super.itemExtent,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
-    _i9.Widget? prototypeItem,
+    super.prototypeItem,
 
     /// optionalParameters: {required SliverChildDelegate childrenDelegate} , default:none
-    required _i14.SliverChildDelegate childrenDelegate,
+    required super.childrenDelegate,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super.custom(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          itemExtent: itemExtent,
-          prototypeItem: prototypeItem,
-          childrenDelegate: childrenDelegate,
-          cacheExtent: cacheExtent,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double?>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'childrenDelegate': _i2.BuilderArg<_i14.SliverChildDelegate>(
+            name: 'childrenDelegate',
+            init: childrenDelegate,
+            isNamed: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super.custom() {
     mateBuilderName = 'ListView.custom';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ListView$Mate.custom(
@@ -974,98 +977,10 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'childrenDelegate',
-      childrenDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class GridView extends BoxScrollView
@@ -1073,82 +988,168 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
   /// GridView GridView({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Clip clipBehavior = Clip.hardEdge, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId})
   GridView$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {required SliverGridDelegate gridDelegate} , default:none
-    required _i15.SliverGridDelegate gridDelegate,
+    required super.gridDelegate,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i9.Widget> children,
+    super.children,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
-  }) : super(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          gridDelegate: gridDelegate,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          cacheExtent: cacheExtent,
-          children: children,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          clipBehavior: clipBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-        ) {
+    super.restorationId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
+            name: 'gridDelegate',
+            init: gridDelegate,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'GridView';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GridView$Mate(
@@ -1172,199 +1173,189 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
           keyboardDismissBehavior: p.get('keyboardDismissBehavior').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'gridDelegate',
-      gridDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
   }
 
   /// GridView GridView.builder({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required Widget? Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.builder({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {required SliverGridDelegate gridDelegate} , default:none
-    required _i15.SliverGridDelegate gridDelegate,
+    required super.gridDelegate,
 
     /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , default:none
-    required _i9.NullableIndexedWidgetBuilder itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
-    _i14.ChildIndexGetter? findChildIndexCallback,
+    super.findChildIndexCallback,
 
     /// optionalParameters: {int? itemCount} , default:none
-    int? itemCount,
+    super.itemCount,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super.builder(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          gridDelegate: gridDelegate,
-          itemBuilder: itemBuilder,
-          findChildIndexCallback: findChildIndexCallback,
-          itemCount: itemCount,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          cacheExtent: cacheExtent,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
+            name: 'gridDelegate',
+            init: gridDelegate,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i9.NullableIndexedWidgetBuilder>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+            name: 'findChildIndexCallback',
+            init: findChildIndexCallback,
+            isNamed: true,
+          ),
+          'itemCount': _i2.BuilderArg<int?>(
+            name: 'itemCount',
+            init: itemCount,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super.builder() {
     mateBuilderName = 'GridView.builder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GridView$Mate.builder(
@@ -1390,189 +1381,146 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'gridDelegate',
-      gridDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'findChildIndexCallback',
-      findChildIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'itemCount',
-      itemCount,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
 
   /// GridView GridView.custom({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required SliverGridDelegate gridDelegate, required SliverChildDelegate childrenDelegate, double? cacheExtent, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.custom({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {required SliverGridDelegate gridDelegate} , default:none
-    required _i15.SliverGridDelegate gridDelegate,
+    required super.gridDelegate,
 
     /// optionalParameters: {required SliverChildDelegate childrenDelegate} , default:none
-    required _i14.SliverChildDelegate childrenDelegate,
+    required super.childrenDelegate,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super.custom(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          gridDelegate: gridDelegate,
-          childrenDelegate: childrenDelegate,
-          cacheExtent: cacheExtent,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
+            name: 'gridDelegate',
+            init: gridDelegate,
+            isNamed: true,
+          ),
+          'childrenDelegate': _i2.BuilderArg<_i14.SliverChildDelegate>(
+            name: 'childrenDelegate',
+            init: childrenDelegate,
+            isNamed: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super.custom() {
     mateBuilderName = 'GridView.custom';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GridView$Mate.custom(
@@ -1593,185 +1541,200 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'gridDelegate',
-      gridDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'childrenDelegate',
-      childrenDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
 
   /// GridView GridView.count({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.count({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {required int crossAxisCount} , default:none
-    required int crossAxisCount,
+    required super.crossAxisCount,
 
     /// optionalParameters: {double mainAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double mainAxisSpacing = 0.0,
+    super.mainAxisSpacing,
 
     /// optionalParameters: {double crossAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double crossAxisSpacing = 0.0,
+    super.crossAxisSpacing,
 
     /// optionalParameters: {double childAspectRatio = 1.0} , default:processed=DoubleLiteralImpl
-    double childAspectRatio = 1.0,
+    super.childAspectRatio,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i9.Widget> children,
+    super.children,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super.count(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          crossAxisCount: crossAxisCount,
-          mainAxisSpacing: mainAxisSpacing,
-          crossAxisSpacing: crossAxisSpacing,
-          childAspectRatio: childAspectRatio,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          cacheExtent: cacheExtent,
-          children: children,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'crossAxisCount': _i2.BuilderArg<int>(
+            name: 'crossAxisCount',
+            init: crossAxisCount,
+            isNamed: true,
+          ),
+          'mainAxisSpacing': _i2.BuilderArg<double>(
+            name: 'mainAxisSpacing',
+            init: mainAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisSpacing': _i2.BuilderArg<double>(
+            name: 'crossAxisSpacing',
+            init: crossAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'childAspectRatio': _i2.BuilderArg<double>(
+            name: 'childAspectRatio',
+            init: childAspectRatio,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super.count() {
     mateBuilderName = 'GridView.count';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GridView$Mate.count(
@@ -1798,221 +1761,200 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'crossAxisCount',
-      crossAxisCount,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisSpacing',
-      mainAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisSpacing',
-      crossAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'childAspectRatio',
-      childAspectRatio,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
 
   /// GridView GridView.extent({Key? key, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, EdgeInsetsGeometry? padding, required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, double? cacheExtent, List<Widget> children = const <Widget>[], int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   GridView$Mate.extent({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis scrollDirection = _i5.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i13.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {required double maxCrossAxisExtent} , default:none
-    required double maxCrossAxisExtent,
+    required super.maxCrossAxisExtent,
 
     /// optionalParameters: {double mainAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double mainAxisSpacing = 0.0,
+    super.mainAxisSpacing,
 
     /// optionalParameters: {double crossAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double crossAxisSpacing = 0.0,
+    super.crossAxisSpacing,
 
     /// optionalParameters: {double childAspectRatio = 1.0} , default:processed=DoubleLiteralImpl
-    double childAspectRatio = 1.0,
+    super.childAspectRatio,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i9.Widget> children,
+    super.children,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i5.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super.extent(
-          key: key,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          padding: padding,
-          maxCrossAxisExtent: maxCrossAxisExtent,
-          mainAxisSpacing: mainAxisSpacing,
-          crossAxisSpacing: crossAxisSpacing,
-          childAspectRatio: childAspectRatio,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          cacheExtent: cacheExtent,
-          children: children,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i4.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i5.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'maxCrossAxisExtent': _i2.BuilderArg<double>(
+            name: 'maxCrossAxisExtent',
+            init: maxCrossAxisExtent,
+            isNamed: true,
+          ),
+          'mainAxisSpacing': _i2.BuilderArg<double>(
+            name: 'mainAxisSpacing',
+            init: mainAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisSpacing': _i2.BuilderArg<double>(
+            name: 'crossAxisSpacing',
+            init: crossAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'childAspectRatio': _i2.BuilderArg<double>(
+            name: 'childAspectRatio',
+            init: childAspectRatio,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super.extent() {
     mateBuilderName = 'GridView.extent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GridView$Mate.extent(
@@ -2039,127 +1981,8 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i5.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'maxCrossAxisExtent',
-      maxCrossAxisExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisSpacing',
-      mainAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisSpacing',
-      crossAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'childAspectRatio',
-      childAspectRatio,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

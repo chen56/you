@@ -17,50 +17,95 @@ class SearchBarThemeData$Mate extends _i1.SearchBarThemeData with _i2.Mate {
   /// SearchBarThemeData SearchBarThemeData({MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle, BoxConstraints? constraints})
   SearchBarThemeData$Mate({
     /// optionalParameters: {MaterialStateProperty<double?>? elevation} , default:none
-    _i3.MaterialStateProperty<double?>? elevation,
+    super.elevation,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , default:none
-    _i3.MaterialStateProperty<_i5.BorderSide?>? side,
+    super.side,
 
     /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , default:none
-    _i3.MaterialStateProperty<_i5.OutlinedBorder?>? shape,
+    super.shape,
 
     /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , default:none
-    _i3.MaterialStateProperty<_i6.EdgeInsetsGeometry?>? padding,
+    super.padding,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? textStyle} , default:none
-    _i3.MaterialStateProperty<_i7.TextStyle?>? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? hintStyle} , default:none
-    _i3.MaterialStateProperty<_i7.TextStyle?>? hintStyle,
+    super.hintStyle,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i8.BoxConstraints? constraints,
-  }) : super(
-          elevation: elevation,
-          backgroundColor: backgroundColor,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          overlayColor: overlayColor,
-          side: side,
-          shape: shape,
-          padding: padding,
-          textStyle: textStyle,
-          hintStyle: hintStyle,
-          constraints: constraints,
-        ) {
+    super.constraints,
+  })  : mateParams = {
+          'elevation': _i2.BuilderArg<_i3.MaterialStateProperty<double?>?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.BorderSide?>?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.OutlinedBorder?>?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i3.MaterialStateProperty<_i6.EdgeInsetsGeometry?>?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i3.MaterialStateProperty<_i7.TextStyle?>?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'hintStyle': _i2.BuilderArg<_i3.MaterialStateProperty<_i7.TextStyle?>?>(
+            name: 'hintStyle',
+            init: hintStyle,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i8.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SearchBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SearchBarThemeData$Mate(
@@ -76,62 +121,10 @@ class SearchBarThemeData$Mate extends _i1.SearchBarThemeData with _i2.Mate {
           hintStyle: p.get('hintStyle').build(),
           constraints: p.get('constraints').build(),
         );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'hintStyle',
-      hintStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SearchBarTheme extends InheritedWidget
@@ -139,18 +132,31 @@ class SearchBarTheme$Mate extends _i1.SearchBarTheme with _i2.Mate {
   /// SearchBarTheme SearchBarTheme({Key? key, required SearchBarThemeData data, required Widget child})
   SearchBarTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i9.Key? key,
+    super.key,
 
     /// optionalParameters: {required SearchBarThemeData data} , default:none
-    required _i1.SearchBarThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i10.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i9.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.SearchBarThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i10.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SearchBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SearchBarTheme$Mate(
@@ -158,20 +164,8 @@ class SearchBarTheme$Mate extends _i1.SearchBarTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

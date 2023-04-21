@@ -10,42 +10,79 @@ class CupertinoDynamicColor$Mate extends _i1.CupertinoDynamicColor with _i2.Mate
   /// CupertinoDynamicColor CupertinoDynamicColor({String? debugLabel, required Color color, required Color darkColor, required Color highContrastColor, required Color darkHighContrastColor, required Color elevatedColor, required Color darkElevatedColor, required Color highContrastElevatedColor, required Color darkHighContrastElevatedColor})
   CupertinoDynamicColor$Mate({
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i3.Color color,
+    required super.color,
 
     /// optionalParameters: {required Color darkColor} , default:none
-    required _i3.Color darkColor,
+    required super.darkColor,
 
     /// optionalParameters: {required Color highContrastColor} , default:none
-    required _i3.Color highContrastColor,
+    required super.highContrastColor,
 
     /// optionalParameters: {required Color darkHighContrastColor} , default:none
-    required _i3.Color darkHighContrastColor,
+    required super.darkHighContrastColor,
 
     /// optionalParameters: {required Color elevatedColor} , default:none
-    required _i3.Color elevatedColor,
+    required super.elevatedColor,
 
     /// optionalParameters: {required Color darkElevatedColor} , default:none
-    required _i3.Color darkElevatedColor,
+    required super.darkElevatedColor,
 
     /// optionalParameters: {required Color highContrastElevatedColor} , default:none
-    required _i3.Color highContrastElevatedColor,
+    required super.highContrastElevatedColor,
 
     /// optionalParameters: {required Color darkHighContrastElevatedColor} , default:none
-    required _i3.Color darkHighContrastElevatedColor,
-  }) : super(
-          debugLabel: debugLabel,
-          color: color,
-          darkColor: darkColor,
-          highContrastColor: highContrastColor,
-          darkHighContrastColor: darkHighContrastColor,
-          elevatedColor: elevatedColor,
-          darkElevatedColor: darkElevatedColor,
-          highContrastElevatedColor: highContrastElevatedColor,
-          darkHighContrastElevatedColor: darkHighContrastElevatedColor,
-        ) {
+    required super.darkHighContrastElevatedColor,
+  })  : mateParams = {
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'darkColor': _i2.BuilderArg<_i3.Color>(
+            name: 'darkColor',
+            init: darkColor,
+            isNamed: true,
+          ),
+          'highContrastColor': _i2.BuilderArg<_i3.Color>(
+            name: 'highContrastColor',
+            init: highContrastColor,
+            isNamed: true,
+          ),
+          'darkHighContrastColor': _i2.BuilderArg<_i3.Color>(
+            name: 'darkHighContrastColor',
+            init: darkHighContrastColor,
+            isNamed: true,
+          ),
+          'elevatedColor': _i2.BuilderArg<_i3.Color>(
+            name: 'elevatedColor',
+            init: elevatedColor,
+            isNamed: true,
+          ),
+          'darkElevatedColor': _i2.BuilderArg<_i3.Color>(
+            name: 'darkElevatedColor',
+            init: darkElevatedColor,
+            isNamed: true,
+          ),
+          'highContrastElevatedColor': _i2.BuilderArg<_i3.Color>(
+            name: 'highContrastElevatedColor',
+            init: highContrastElevatedColor,
+            isNamed: true,
+          ),
+          'darkHighContrastElevatedColor': _i2.BuilderArg<_i3.Color>(
+            name: 'darkHighContrastElevatedColor',
+            init: darkHighContrastElevatedColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoDynamicColor';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate(
@@ -59,76 +96,52 @@ class CupertinoDynamicColor$Mate extends _i1.CupertinoDynamicColor with _i2.Mate
           highContrastElevatedColor: p.get('highContrastElevatedColor').build(),
           darkHighContrastElevatedColor: p.get('darkHighContrastElevatedColor').build(),
         );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'darkColor',
-      darkColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highContrastColor',
-      highContrastColor,
-      isNamed: true,
-    );
-    mateUse(
-      'darkHighContrastColor',
-      darkHighContrastColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevatedColor',
-      elevatedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'darkElevatedColor',
-      darkElevatedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highContrastElevatedColor',
-      highContrastElevatedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'darkHighContrastElevatedColor',
-      darkHighContrastElevatedColor,
-      isNamed: true,
-    );
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightnessAndContrast({String? debugLabel, required Color color, required Color darkColor, required Color highContrastColor, required Color darkHighContrastColor})
   CupertinoDynamicColor$Mate.withBrightnessAndContrast({
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i3.Color color,
+    required super.color,
 
     /// optionalParameters: {required Color darkColor} , default:none
-    required _i3.Color darkColor,
+    required super.darkColor,
 
     /// optionalParameters: {required Color highContrastColor} , default:none
-    required _i3.Color highContrastColor,
+    required super.highContrastColor,
 
     /// optionalParameters: {required Color darkHighContrastColor} , default:none
-    required _i3.Color darkHighContrastColor,
-  }) : super.withBrightnessAndContrast(
-          debugLabel: debugLabel,
-          color: color,
-          darkColor: darkColor,
-          highContrastColor: highContrastColor,
-          darkHighContrastColor: darkHighContrastColor,
-        ) {
+    required super.darkHighContrastColor,
+  })  : mateParams = {
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'darkColor': _i2.BuilderArg<_i3.Color>(
+            name: 'darkColor',
+            init: darkColor,
+            isNamed: true,
+          ),
+          'highContrastColor': _i2.BuilderArg<_i3.Color>(
+            name: 'highContrastColor',
+            init: highContrastColor,
+            isNamed: true,
+          ),
+          'darkHighContrastColor': _i2.BuilderArg<_i3.Color>(
+            name: 'darkHighContrastColor',
+            init: darkHighContrastColor,
+            isNamed: true,
+          ),
+        },
+        super.withBrightnessAndContrast() {
     mateBuilderName = 'CupertinoDynamicColor.withBrightnessAndContrast';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate.withBrightnessAndContrast(
@@ -138,48 +151,36 @@ class CupertinoDynamicColor$Mate extends _i1.CupertinoDynamicColor with _i2.Mate
           highContrastColor: p.get('highContrastColor').build(),
           darkHighContrastColor: p.get('darkHighContrastColor').build(),
         );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'darkColor',
-      darkColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highContrastColor',
-      highContrastColor,
-      isNamed: true,
-    );
-    mateUse(
-      'darkHighContrastColor',
-      darkHighContrastColor,
-      isNamed: true,
-    );
   }
 
   /// CupertinoDynamicColor CupertinoDynamicColor.withBrightness({String? debugLabel, required Color color, required Color darkColor})
   CupertinoDynamicColor$Mate.withBrightness({
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i3.Color color,
+    required super.color,
 
     /// optionalParameters: {required Color darkColor} , default:none
-    required _i3.Color darkColor,
-  }) : super.withBrightness(
-          debugLabel: debugLabel,
-          color: color,
-          darkColor: darkColor,
-        ) {
+    required super.darkColor,
+  })  : mateParams = {
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'darkColor': _i2.BuilderArg<_i3.Color>(
+            name: 'darkColor',
+            init: darkColor,
+            isNamed: true,
+          ),
+        },
+        super.withBrightness() {
     mateBuilderName = 'CupertinoDynamicColor.withBrightness';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDynamicColor$Mate.withBrightness(
@@ -187,20 +188,8 @@ class CupertinoDynamicColor$Mate extends _i1.CupertinoDynamicColor with _i2.Mate
           color: p.get('color').build(),
           darkColor: p.get('darkColor').build(),
         );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'darkColor',
-      darkColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

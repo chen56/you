@@ -13,26 +13,47 @@ class TextSelectionToolbar$Mate extends _i1.TextSelectionToolbar with _i2.Mate {
   /// TextSelectionToolbar TextSelectionToolbar({Key? key, required Offset anchorAbove, required Offset anchorBelow, Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder, required List<Widget> children})
   TextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Offset anchorAbove} , default:none
-    required _i4.Offset anchorAbove,
+    required super.anchorAbove,
 
     /// optionalParameters: {required Offset anchorBelow} , default:none
-    required _i4.Offset anchorBelow,
+    required super.anchorBelow,
 
     /// optionalParameters: {Widget Function(BuildContext, Widget) toolbarBuilder = _defaultToolbarBuilder} , default:unprocessed=SimpleIdentifierImpl
-    required _i5.ToolbarBuilder toolbarBuilder,
+    super.toolbarBuilder,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i6.Widget> children,
-  }) : super(
-          key: key,
-          anchorAbove: anchorAbove,
-          anchorBelow: anchorBelow,
-          toolbarBuilder: toolbarBuilder,
-          children: children,
-        ) {
+    required super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'anchorAbove': _i2.BuilderArg<_i4.Offset>(
+            name: 'anchorAbove',
+            init: anchorAbove,
+            isNamed: true,
+          ),
+          'anchorBelow': _i2.BuilderArg<_i4.Offset>(
+            name: 'anchorBelow',
+            init: anchorBelow,
+            isNamed: true,
+          ),
+          'toolbarBuilder': _i2.BuilderArg<_i5.ToolbarBuilder>(
+            name: 'toolbarBuilder',
+            init: toolbarBuilder,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i6.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionToolbar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionToolbar$Mate(
@@ -42,30 +63,8 @@ class TextSelectionToolbar$Mate extends _i1.TextSelectionToolbar with _i2.Mate {
           toolbarBuilder: p.get('toolbarBuilder').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'anchorAbove',
-      anchorAbove,
-      isNamed: true,
-    );
-    mateUse(
-      'anchorBelow',
-      anchorBelow,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarBuilder',
-      toolbarBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,17 +12,30 @@ class BasicMessageChannel$Mate<T> extends _i1.BasicMessageChannel<T> with _i2.Ma
   /// BasicMessageChannel<T> BasicMessageChannel(String name, MessageCodec<T> codec, {BinaryMessenger? binaryMessenger})
   BasicMessageChannel$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: MessageCodec<T> codec
-    _i3.MessageCodec<T> codec, {
+    super.codec, {
     /// optionalParameters: {BinaryMessenger? binaryMessenger} , default:none
-    _i4.BinaryMessenger? binaryMessenger,
-  }) : super(
-          name,
-          codec,
-          binaryMessenger: binaryMessenger,
-        ) {
+    super.binaryMessenger,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'codec': _i2.BuilderArg<_i3.MessageCodec<T>>(
+            name: 'codec',
+            init: codec,
+            isNamed: false,
+          ),
+          'binaryMessenger': _i2.BuilderArg<_i4.BinaryMessenger?>(
+            name: 'binaryMessenger',
+            init: binaryMessenger,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BasicMessageChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => BasicMessageChannel$Mate<T>(
@@ -30,22 +43,10 @@ class BasicMessageChannel$Mate<T> extends _i1.BasicMessageChannel<T> with _i2.Ma
           p.get('codec').value,
           binaryMessenger: p.get('binaryMessenger').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'codec',
-      codec,
-      isNamed: false,
-    );
-    mateUse(
-      'binaryMessenger',
-      binaryMessenger,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MethodChannel
@@ -53,18 +54,31 @@ class MethodChannel$Mate extends _i1.MethodChannel with _i2.Mate {
   /// MethodChannel MethodChannel(String name, [MethodCodec codec = const StandardMethodCodec(), BinaryMessenger? binaryMessenger])
   MethodChannel$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: [MethodCodec codec = const StandardMethodCodec()]
-    _i3.MethodCodec codec,
+    super.codec,
 
     /// requiredParameters: [BinaryMessenger? binaryMessenger]
-    _i4.BinaryMessenger? binaryMessenger,
-  ) : super(
-          name,
-          codec,
-          binaryMessenger,
-        ) {
+    super.binaryMessenger,
+  )   : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'codec': _i2.BuilderArg<_i3.MethodCodec>(
+            name: 'codec',
+            init: codec,
+            isNamed: false,
+          ),
+          'binaryMessenger': _i2.BuilderArg<_i4.BinaryMessenger?>(
+            name: 'binaryMessenger',
+            init: binaryMessenger,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'MethodChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MethodChannel$Mate(
@@ -72,22 +86,10 @@ class MethodChannel$Mate extends _i1.MethodChannel with _i2.Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'codec',
-      codec,
-      isNamed: false,
-    );
-    mateUse(
-      'binaryMessenger',
-      binaryMessenger,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OptionalMethodChannel extends MethodChannel
@@ -95,18 +97,31 @@ class OptionalMethodChannel$Mate extends _i1.OptionalMethodChannel with _i2.Mate
   /// OptionalMethodChannel OptionalMethodChannel(String name, [MethodCodec codec = const StandardMethodCodec(), BinaryMessenger? binaryMessenger])
   OptionalMethodChannel$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: [MethodCodec codec = const StandardMethodCodec()]
-    _i3.MethodCodec codec,
+    super.codec,
 
     /// requiredParameters: [BinaryMessenger? binaryMessenger]
-    _i4.BinaryMessenger? binaryMessenger,
-  ) : super(
-          name,
-          codec,
-          binaryMessenger,
-        ) {
+    super.binaryMessenger,
+  )   : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'codec': _i2.BuilderArg<_i3.MethodCodec>(
+            name: 'codec',
+            init: codec,
+            isNamed: false,
+          ),
+          'binaryMessenger': _i2.BuilderArg<_i4.BinaryMessenger?>(
+            name: 'binaryMessenger',
+            init: binaryMessenger,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'OptionalMethodChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => OptionalMethodChannel$Mate(
@@ -114,22 +129,10 @@ class OptionalMethodChannel$Mate extends _i1.OptionalMethodChannel with _i2.Mate
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'codec',
-      codec,
-      isNamed: false,
-    );
-    mateUse(
-      'binaryMessenger',
-      binaryMessenger,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class EventChannel
@@ -137,18 +140,31 @@ class EventChannel$Mate extends _i1.EventChannel with _i2.Mate {
   /// EventChannel EventChannel(String name, [MethodCodec codec = const StandardMethodCodec(), BinaryMessenger? binaryMessenger])
   EventChannel$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: [MethodCodec codec = const StandardMethodCodec()]
-    _i3.MethodCodec codec,
+    super.codec,
 
     /// requiredParameters: [BinaryMessenger? binaryMessenger]
-    _i4.BinaryMessenger? binaryMessenger,
-  ) : super(
-          name,
-          codec,
-          binaryMessenger,
-        ) {
+    super.binaryMessenger,
+  )   : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'codec': _i2.BuilderArg<_i3.MethodCodec>(
+            name: 'codec',
+            init: codec,
+            isNamed: false,
+          ),
+          'binaryMessenger': _i2.BuilderArg<_i4.BinaryMessenger?>(
+            name: 'binaryMessenger',
+            init: binaryMessenger,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'EventChannel';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => EventChannel$Mate(
@@ -156,20 +172,8 @@ class EventChannel$Mate extends _i1.EventChannel with _i2.Mate {
           p.get('codec').value,
           p.get('binaryMessenger').value,
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'codec',
-      codec,
-      isNamed: false,
-    );
-    mateUse(
-      'binaryMessenger',
-      binaryMessenger,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -21,30 +21,57 @@ class DropdownMenuItem$Mate<T> extends _i1.DropdownMenuItem<T> with _i2.Mate {
   /// DropdownMenuItem<T> DropdownMenuItem({Key? key, void Function()? onTap, T? value, bool enabled = true, AlignmentGeometry alignment = AlignmentDirectional.centerStart, required Widget child})
   DropdownMenuItem$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i4.VoidCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {T? value} , default:none
-    T? value,
+    super.value,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
-    _i5.AlignmentGeometry alignment = _i6.AlignmentDirectional.centerStart,
+    super.alignment,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i7.Widget child,
-  }) : super(
-          key: key,
-          onTap: onTap,
-          value: value,
-          enabled: enabled,
-          alignment: alignment,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'alignment': _i2.BuilderArg<_i5.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i6.AlignmentDirectional.centerStart,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownMenuItem';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuItem$Mate<T>(
@@ -55,39 +82,10 @@ class DropdownMenuItem$Mate<T> extends _i1.DropdownMenuItem<T> with _i2.Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i6.AlignmentDirectional.centerStart,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DropdownButtonHideUnderline extends InheritedWidget
@@ -95,31 +93,33 @@ class DropdownButtonHideUnderline$Mate extends _i1.DropdownButtonHideUnderline w
   /// DropdownButtonHideUnderline DropdownButtonHideUnderline({Key? key, required Widget child})
   DropdownButtonHideUnderline$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i7.Widget child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownButtonHideUnderline';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButtonHideUnderline$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DropdownButton<T> extends StatefulWidget
@@ -127,114 +127,229 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
   /// DropdownButton<T> DropdownButton({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? underline, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = false, bool isExpanded = false, double? itemHeight = kMinInteractiveDimension, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<DropdownMenuItem<T>>? items} , default:none
-    required List<_i1.DropdownMenuItem<T>>? items,
+    required super.items,
 
     /// optionalParameters: {List<Widget> Function(BuildContext)? selectedItemBuilder} , default:none
-    _i1.DropdownButtonBuilder? selectedItemBuilder,
+    super.selectedItemBuilder,
 
     /// optionalParameters: {T? value} , default:none
-    T? value,
+    super.value,
 
     /// optionalParameters: {Widget? hint} , default:none
-    _i7.Widget? hint,
+    super.hint,
 
     /// optionalParameters: {Widget? disabledHint} , default:none
-    _i7.Widget? disabledHint,
+    super.disabledHint,
 
     /// optionalParameters: {required void Function(T?)? onChanged} , default:none
-    required _i8.ValueChanged<T?>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i4.VoidCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {int elevation = 8} , default:processed=IntegerLiteralImpl
-    int elevation = 8,
+    super.elevation,
 
     /// optionalParameters: {TextStyle? style} , default:none
-    _i9.TextStyle? style,
+    super.style,
 
     /// optionalParameters: {Widget? underline} , default:none
-    _i7.Widget? underline,
+    super.underline,
 
     /// optionalParameters: {Widget? icon} , default:none
-    _i7.Widget? icon,
+    super.icon,
 
     /// optionalParameters: {Color? iconDisabledColor} , default:none
-    _i4.Color? iconDisabledColor,
+    super.iconDisabledColor,
 
     /// optionalParameters: {Color? iconEnabledColor} , default:none
-    _i4.Color? iconEnabledColor,
+    super.iconEnabledColor,
 
     /// optionalParameters: {double iconSize = 24.0} , default:processed=DoubleLiteralImpl
-    double iconSize = 24.0,
+    super.iconSize,
 
     /// optionalParameters: {bool isDense = false} , default:processed=BooleanLiteralImpl
-    bool isDense = false,
+    super.isDense,
 
     /// optionalParameters: {bool isExpanded = false} , default:processed=BooleanLiteralImpl
-    bool isExpanded = false,
+    super.isExpanded,
 
     /// optionalParameters: {double? itemHeight = kMinInteractiveDimension} , default:unprocessed=SimpleIdentifierImpl
-    required double? itemHeight,
+    super.itemHeight,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i4.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i10.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {Color? dropdownColor} , default:none
-    _i4.Color? dropdownColor,
+    super.dropdownColor,
 
     /// optionalParameters: {double? menuMaxHeight} , default:none
-    double? menuMaxHeight,
+    super.menuMaxHeight,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
-    _i5.AlignmentGeometry alignment = _i6.AlignmentDirectional.centerStart,
+    super.alignment,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i11.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i12.EdgeInsetsGeometry? padding,
-  }) : super(
-          key: key,
-          items: items,
-          selectedItemBuilder: selectedItemBuilder,
-          value: value,
-          hint: hint,
-          disabledHint: disabledHint,
-          onChanged: onChanged,
-          onTap: onTap,
-          elevation: elevation,
-          style: style,
-          underline: underline,
-          icon: icon,
-          iconDisabledColor: iconDisabledColor,
-          iconEnabledColor: iconEnabledColor,
-          iconSize: iconSize,
-          isDense: isDense,
-          isExpanded: isExpanded,
-          itemHeight: itemHeight,
-          focusColor: focusColor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          dropdownColor: dropdownColor,
-          menuMaxHeight: menuMaxHeight,
-          enableFeedback: enableFeedback,
-          alignment: alignment,
-          borderRadius: borderRadius,
-          padding: padding,
-        ) {
+    super.padding,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'items': _i2.BuilderArg<List<_i1.DropdownMenuItem<T>>?>(
+            name: 'items',
+            init: items,
+            isNamed: true,
+          ),
+          'selectedItemBuilder': _i2.BuilderArg<_i1.DropdownButtonBuilder?>(
+            name: 'selectedItemBuilder',
+            init: selectedItemBuilder,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'hint': _i2.BuilderArg<_i7.Widget?>(
+            name: 'hint',
+            init: hint,
+            isNamed: true,
+          ),
+          'disabledHint': _i2.BuilderArg<_i7.Widget?>(
+            name: 'disabledHint',
+            init: disabledHint,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i8.ValueChanged<T?>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<int>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 8,
+          ),
+          'style': _i2.BuilderArg<_i9.TextStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'underline': _i2.BuilderArg<_i7.Widget?>(
+            name: 'underline',
+            init: underline,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i7.Widget?>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'iconDisabledColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'iconDisabledColor',
+            init: iconDisabledColor,
+            isNamed: true,
+          ),
+          'iconEnabledColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'iconEnabledColor',
+            init: iconEnabledColor,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+            defaultValue: 24.0,
+          ),
+          'isDense': _i2.BuilderArg<bool>(
+            name: 'isDense',
+            init: isDense,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isExpanded': _i2.BuilderArg<bool>(
+            name: 'isExpanded',
+            init: isExpanded,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'itemHeight': _i2.BuilderArg<double?>(
+            name: 'itemHeight',
+            init: itemHeight,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i10.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dropdownColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'dropdownColor',
+            init: dropdownColor,
+            isNamed: true,
+          ),
+          'menuMaxHeight': _i2.BuilderArg<double?>(
+            name: 'menuMaxHeight',
+            init: menuMaxHeight,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i5.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i6.AlignmentDirectional.centerStart,
+          ),
+          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i12.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButton$Mate<T>(
@@ -266,148 +381,10 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'items',
-      items,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedItemBuilder',
-      selectedItemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'hint',
-      hint,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledHint',
-      disabledHint,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-      defaultValue: 8,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'underline',
-      underline,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'iconDisabledColor',
-      iconDisabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconEnabledColor',
-      iconEnabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-      defaultValue: 24.0,
-    );
-    mateUse(
-      'isDense',
-      isDense,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isExpanded',
-      isExpanded,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'itemHeight',
-      itemHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dropdownColor',
-      dropdownColor,
-      isNamed: true,
-    );
-    mateUse(
-      'menuMaxHeight',
-      menuMaxHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i6.AlignmentDirectional.centerStart,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DropdownButtonFormField<T> extends FormField<T>
@@ -415,126 +392,253 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
   /// DropdownButtonFormField<T> DropdownButtonFormField({Key? key, required List<DropdownMenuItem<T>>? items, List<Widget> Function(BuildContext)? selectedItemBuilder, T? value, Widget? hint, Widget? disabledHint, required void Function(T?)? onChanged, void Function()? onTap, int elevation = 8, TextStyle? style, Widget? icon, Color? iconDisabledColor, Color? iconEnabledColor, double iconSize = 24.0, bool isDense = true, bool isExpanded = false, double? itemHeight, Color? focusColor, FocusNode? focusNode, bool autofocus = false, Color? dropdownColor, InputDecoration? decoration, void Function(T?)? onSaved, String? Function(T?)? validator, AutovalidateMode? autovalidateMode, double? menuMaxHeight, bool? enableFeedback, AlignmentGeometry alignment = AlignmentDirectional.centerStart, BorderRadius? borderRadius, EdgeInsetsGeometry? padding})
   DropdownButtonFormField$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<DropdownMenuItem<T>>? items} , default:none
-    required List<_i1.DropdownMenuItem<T>>? items,
+    required super.items,
 
     /// optionalParameters: {List<Widget> Function(BuildContext)? selectedItemBuilder} , default:none
-    _i1.DropdownButtonBuilder? selectedItemBuilder,
+    super.selectedItemBuilder,
 
     /// optionalParameters: {T? value} , default:none
-    T? value,
+    super.value,
 
     /// optionalParameters: {Widget? hint} , default:none
-    _i7.Widget? hint,
+    super.hint,
 
     /// optionalParameters: {Widget? disabledHint} , default:none
-    _i7.Widget? disabledHint,
+    super.disabledHint,
 
     /// optionalParameters: {required void Function(T?)? onChanged} , default:none
-    required _i8.ValueChanged<T?>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i4.VoidCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {int elevation = 8} , default:processed=IntegerLiteralImpl
-    int elevation = 8,
+    super.elevation,
 
     /// optionalParameters: {TextStyle? style} , default:none
-    _i9.TextStyle? style,
+    super.style,
 
     /// optionalParameters: {Widget? icon} , default:none
-    _i7.Widget? icon,
+    super.icon,
 
     /// optionalParameters: {Color? iconDisabledColor} , default:none
-    _i4.Color? iconDisabledColor,
+    super.iconDisabledColor,
 
     /// optionalParameters: {Color? iconEnabledColor} , default:none
-    _i4.Color? iconEnabledColor,
+    super.iconEnabledColor,
 
     /// optionalParameters: {double iconSize = 24.0} , default:processed=DoubleLiteralImpl
-    double iconSize = 24.0,
+    super.iconSize,
 
     /// optionalParameters: {bool isDense = true} , default:processed=BooleanLiteralImpl
-    bool isDense = true,
+    super.isDense,
 
     /// optionalParameters: {bool isExpanded = false} , default:processed=BooleanLiteralImpl
-    bool isExpanded = false,
+    super.isExpanded,
 
     /// optionalParameters: {double? itemHeight} , default:none
-    double? itemHeight,
+    super.itemHeight,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i4.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i10.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {Color? dropdownColor} , default:none
-    _i4.Color? dropdownColor,
+    super.dropdownColor,
 
     /// optionalParameters: {InputDecoration? decoration} , default:none
-    _i13.InputDecoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {void Function(T?)? onSaved} , default:none
-    _i14.FormFieldSetter<T>? onSaved,
+    super.onSaved,
 
     /// optionalParameters: {String? Function(T?)? validator} , default:none
-    _i14.FormFieldValidator<T>? validator,
+    super.validator,
 
     /// optionalParameters: {AutovalidateMode? autovalidateMode} , default:none
-    _i14.AutovalidateMode? autovalidateMode,
+    super.autovalidateMode,
 
     /// optionalParameters: {double? menuMaxHeight} , default:none
-    double? menuMaxHeight,
+    super.menuMaxHeight,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
-    _i5.AlignmentGeometry alignment = _i6.AlignmentDirectional.centerStart,
+    super.alignment,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i11.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i12.EdgeInsetsGeometry? padding,
-  }) : super(
-          key: key,
-          items: items,
-          selectedItemBuilder: selectedItemBuilder,
-          value: value,
-          hint: hint,
-          disabledHint: disabledHint,
-          onChanged: onChanged,
-          onTap: onTap,
-          elevation: elevation,
-          style: style,
-          icon: icon,
-          iconDisabledColor: iconDisabledColor,
-          iconEnabledColor: iconEnabledColor,
-          iconSize: iconSize,
-          isDense: isDense,
-          isExpanded: isExpanded,
-          itemHeight: itemHeight,
-          focusColor: focusColor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          dropdownColor: dropdownColor,
-          decoration: decoration,
-          onSaved: onSaved,
-          validator: validator,
-          autovalidateMode: autovalidateMode,
-          menuMaxHeight: menuMaxHeight,
-          enableFeedback: enableFeedback,
-          alignment: alignment,
-          borderRadius: borderRadius,
-          padding: padding,
-        ) {
+    super.padding,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'items': _i2.BuilderArg<List<_i1.DropdownMenuItem<T>>?>(
+            name: 'items',
+            init: items,
+            isNamed: true,
+          ),
+          'selectedItemBuilder': _i2.BuilderArg<_i1.DropdownButtonBuilder?>(
+            name: 'selectedItemBuilder',
+            init: selectedItemBuilder,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'hint': _i2.BuilderArg<_i7.Widget?>(
+            name: 'hint',
+            init: hint,
+            isNamed: true,
+          ),
+          'disabledHint': _i2.BuilderArg<_i7.Widget?>(
+            name: 'disabledHint',
+            init: disabledHint,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i8.ValueChanged<T?>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<int>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 8,
+          ),
+          'style': _i2.BuilderArg<_i9.TextStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i7.Widget?>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'iconDisabledColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'iconDisabledColor',
+            init: iconDisabledColor,
+            isNamed: true,
+          ),
+          'iconEnabledColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'iconEnabledColor',
+            init: iconEnabledColor,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+            defaultValue: 24.0,
+          ),
+          'isDense': _i2.BuilderArg<bool>(
+            name: 'isDense',
+            init: isDense,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'isExpanded': _i2.BuilderArg<bool>(
+            name: 'isExpanded',
+            init: isExpanded,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'itemHeight': _i2.BuilderArg<double?>(
+            name: 'itemHeight',
+            init: itemHeight,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i10.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dropdownColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'dropdownColor',
+            init: dropdownColor,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i13.InputDecoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'onSaved': _i2.BuilderArg<_i14.FormFieldSetter<T>?>(
+            name: 'onSaved',
+            init: onSaved,
+            isNamed: true,
+          ),
+          'validator': _i2.BuilderArg<_i14.FormFieldValidator<T>?>(
+            name: 'validator',
+            init: validator,
+            isNamed: true,
+          ),
+          'autovalidateMode': _i2.BuilderArg<_i14.AutovalidateMode?>(
+            name: 'autovalidateMode',
+            init: autovalidateMode,
+            isNamed: true,
+          ),
+          'menuMaxHeight': _i2.BuilderArg<double?>(
+            name: 'menuMaxHeight',
+            init: menuMaxHeight,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i5.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i6.AlignmentDirectional.centerStart,
+          ),
+          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i12.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownButtonFormField';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownButtonFormField$Mate<T>(
@@ -569,161 +673,8 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
           borderRadius: p.get('borderRadius').build(),
           padding: p.get('padding').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'items',
-      items,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedItemBuilder',
-      selectedItemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'hint',
-      hint,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledHint',
-      disabledHint,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-      defaultValue: 8,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'iconDisabledColor',
-      iconDisabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconEnabledColor',
-      iconEnabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-      defaultValue: 24.0,
-    );
-    mateUse(
-      'isDense',
-      isDense,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'isExpanded',
-      isExpanded,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'itemHeight',
-      itemHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dropdownColor',
-      dropdownColor,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'onSaved',
-      onSaved,
-      isNamed: true,
-    );
-    mateUse(
-      'validator',
-      validator,
-      isNamed: true,
-    );
-    mateUse(
-      'autovalidateMode',
-      autovalidateMode,
-      isNamed: true,
-    );
-    mateUse(
-      'menuMaxHeight',
-      menuMaxHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i6.AlignmentDirectional.centerStart,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

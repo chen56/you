@@ -17,30 +17,56 @@ class DropdownMenuEntry$Mate<T> extends _i1.DropdownMenuEntry<T> with _i2.Mate {
   /// DropdownMenuEntry<T> DropdownMenuEntry({required T value, required String label, Widget? leadingIcon, Widget? trailingIcon, bool enabled = true, ButtonStyle? style})
   DropdownMenuEntry$Mate({
     /// optionalParameters: {required T value} , default:none
-    required T value,
+    required super.value,
 
     /// optionalParameters: {required String label} , default:none
-    required String label,
+    required super.label,
 
     /// optionalParameters: {Widget? leadingIcon} , default:none
-    _i3.Widget? leadingIcon,
+    super.leadingIcon,
 
     /// optionalParameters: {Widget? trailingIcon} , default:none
-    _i3.Widget? trailingIcon,
+    super.trailingIcon,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i4.ButtonStyle? style,
-  }) : super(
-          value: value,
-          label: label,
-          leadingIcon: leadingIcon,
-          trailingIcon: trailingIcon,
-          enabled: enabled,
-          style: style,
-        ) {
+    super.style,
+  })  : mateParams = {
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'leadingIcon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'leadingIcon',
+            init: leadingIcon,
+            isNamed: true,
+          ),
+          'trailingIcon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'trailingIcon',
+            init: trailingIcon,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'style': _i2.BuilderArg<_i4.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownMenuEntry';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuEntry$Mate<T>(
@@ -51,38 +77,10 @@ class DropdownMenuEntry$Mate<T> extends _i1.DropdownMenuEntry<T> with _i2.Mate {
           enabled: p.get('enabled').build(),
           style: p.get('style').build(),
         );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingIcon',
-      leadingIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'trailingIcon',
-      trailingIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DropdownMenu<T> extends StatefulWidget
@@ -90,90 +88,178 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
   /// DropdownMenu<T> DropdownMenu({Key? key, bool enabled = true, double? width, double? menuHeight, Widget? leadingIcon, Widget? trailingIcon, Widget? label, String? hintText, String? helperText, String? errorText, Widget? selectedTrailingIcon, bool enableFilter = false, bool enableSearch = true, TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle, TextEditingController? controller, T? initialSelection, void Function(T?)? onSelected, bool? requestFocusOnTap, required List<DropdownMenuEntry<T>> dropdownMenuEntries})
   DropdownMenu$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i5.Key? key,
+    super.key,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? menuHeight} , default:none
-    double? menuHeight,
+    super.menuHeight,
 
     /// optionalParameters: {Widget? leadingIcon} , default:none
-    _i3.Widget? leadingIcon,
+    super.leadingIcon,
 
     /// optionalParameters: {Widget? trailingIcon} , default:none
-    _i3.Widget? trailingIcon,
+    super.trailingIcon,
 
     /// optionalParameters: {Widget? label} , default:none
-    _i3.Widget? label,
+    super.label,
 
     /// optionalParameters: {String? hintText} , default:none
-    String? hintText,
+    super.hintText,
 
     /// optionalParameters: {String? helperText} , default:none
-    String? helperText,
+    super.helperText,
 
     /// optionalParameters: {String? errorText} , default:none
-    String? errorText,
+    super.errorText,
 
     /// optionalParameters: {Widget? selectedTrailingIcon} , default:none
-    _i3.Widget? selectedTrailingIcon,
+    super.selectedTrailingIcon,
 
     /// optionalParameters: {bool enableFilter = false} , default:processed=BooleanLiteralImpl
-    bool enableFilter = false,
+    super.enableFilter,
 
     /// optionalParameters: {bool enableSearch = true} , default:processed=BooleanLiteralImpl
-    bool enableSearch = true,
+    super.enableSearch,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i6.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , default:none
-    _i7.InputDecorationTheme? inputDecorationTheme,
+    super.inputDecorationTheme,
 
     /// optionalParameters: {MenuStyle? menuStyle} , default:none
-    _i8.MenuStyle? menuStyle,
+    super.menuStyle,
 
     /// optionalParameters: {TextEditingController? controller} , default:none
-    _i9.TextEditingController? controller,
+    super.controller,
 
     /// optionalParameters: {T? initialSelection} , default:none
-    T? initialSelection,
+    super.initialSelection,
 
     /// optionalParameters: {void Function(T?)? onSelected} , default:none
-    _i10.ValueChanged<T?>? onSelected,
+    super.onSelected,
 
     /// optionalParameters: {bool? requestFocusOnTap} , default:none
-    bool? requestFocusOnTap,
+    super.requestFocusOnTap,
 
     /// optionalParameters: {required List<DropdownMenuEntry<T>> dropdownMenuEntries} , default:none
-    required List<_i1.DropdownMenuEntry<T>> dropdownMenuEntries,
-  }) : super(
-          key: key,
-          enabled: enabled,
-          width: width,
-          menuHeight: menuHeight,
-          leadingIcon: leadingIcon,
-          trailingIcon: trailingIcon,
-          label: label,
-          hintText: hintText,
-          helperText: helperText,
-          errorText: errorText,
-          selectedTrailingIcon: selectedTrailingIcon,
-          enableFilter: enableFilter,
-          enableSearch: enableSearch,
-          textStyle: textStyle,
-          inputDecorationTheme: inputDecorationTheme,
-          menuStyle: menuStyle,
-          controller: controller,
-          initialSelection: initialSelection,
-          onSelected: onSelected,
-          requestFocusOnTap: requestFocusOnTap,
-          dropdownMenuEntries: dropdownMenuEntries,
-        ) {
+    required super.dropdownMenuEntries,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i5.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'menuHeight': _i2.BuilderArg<double?>(
+            name: 'menuHeight',
+            init: menuHeight,
+            isNamed: true,
+          ),
+          'leadingIcon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'leadingIcon',
+            init: leadingIcon,
+            isNamed: true,
+          ),
+          'trailingIcon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'trailingIcon',
+            init: trailingIcon,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i3.Widget?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'hintText': _i2.BuilderArg<String?>(
+            name: 'hintText',
+            init: hintText,
+            isNamed: true,
+          ),
+          'helperText': _i2.BuilderArg<String?>(
+            name: 'helperText',
+            init: helperText,
+            isNamed: true,
+          ),
+          'errorText': _i2.BuilderArg<String?>(
+            name: 'errorText',
+            init: errorText,
+            isNamed: true,
+          ),
+          'selectedTrailingIcon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'selectedTrailingIcon',
+            init: selectedTrailingIcon,
+            isNamed: true,
+          ),
+          'enableFilter': _i2.BuilderArg<bool>(
+            name: 'enableFilter',
+            init: enableFilter,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'enableSearch': _i2.BuilderArg<bool>(
+            name: 'enableSearch',
+            init: enableSearch,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'inputDecorationTheme': _i2.BuilderArg<_i7.InputDecorationTheme?>(
+            name: 'inputDecorationTheme',
+            init: inputDecorationTheme,
+            isNamed: true,
+          ),
+          'menuStyle': _i2.BuilderArg<_i8.MenuStyle?>(
+            name: 'menuStyle',
+            init: menuStyle,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i9.TextEditingController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'initialSelection': _i2.BuilderArg<T?>(
+            name: 'initialSelection',
+            init: initialSelection,
+            isNamed: true,
+          ),
+          'onSelected': _i2.BuilderArg<_i10.ValueChanged<T?>?>(
+            name: 'onSelected',
+            init: onSelected,
+            isNamed: true,
+          ),
+          'requestFocusOnTap': _i2.BuilderArg<bool?>(
+            name: 'requestFocusOnTap',
+            init: requestFocusOnTap,
+            isNamed: true,
+          ),
+          'dropdownMenuEntries': _i2.BuilderArg<List<_i1.DropdownMenuEntry<T>>>(
+            name: 'dropdownMenuEntries',
+            init: dropdownMenuEntries,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownMenu';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenu$Mate<T>(
@@ -199,113 +285,8 @@ class DropdownMenu$Mate<T> extends _i1.DropdownMenu<T> with _i2.Mate {
           requestFocusOnTap: p.get('requestFocusOnTap').build(),
           dropdownMenuEntries: p.get('dropdownMenuEntries').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'menuHeight',
-      menuHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingIcon',
-      leadingIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'trailingIcon',
-      trailingIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'hintText',
-      hintText,
-      isNamed: true,
-    );
-    mateUse(
-      'helperText',
-      helperText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorText',
-      errorText,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedTrailingIcon',
-      selectedTrailingIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFilter',
-      enableFilter,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'enableSearch',
-      enableSearch,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'inputDecorationTheme',
-      inputDecorationTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'menuStyle',
-      menuStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'initialSelection',
-      initialSelection,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelected',
-      onSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'requestFocusOnTap',
-      requestFocusOnTap,
-      isNamed: true,
-    );
-    mateUse(
-      'dropdownMenuEntries',
-      dropdownMenuEntries,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -9,22 +9,43 @@ class RenderPerformanceOverlay$Mate extends _i1.RenderPerformanceOverlay with _i
   /// RenderPerformanceOverlay RenderPerformanceOverlay({int optionsMask = 0, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   RenderPerformanceOverlay$Mate({
     /// optionalParameters: {int optionsMask = 0} , default:processed=IntegerLiteralImpl
-    int optionsMask = 0,
+    super.optionsMask,
 
     /// optionalParameters: {int rasterizerThreshold = 0} , default:processed=IntegerLiteralImpl
-    int rasterizerThreshold = 0,
+    super.rasterizerThreshold,
 
     /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardRasterCacheImages = false,
+    super.checkerboardRasterCacheImages,
 
     /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardOffscreenLayers = false,
-  }) : super(
-          optionsMask: optionsMask,
-          rasterizerThreshold: rasterizerThreshold,
-          checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-          checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-        ) {
+    super.checkerboardOffscreenLayers,
+  })  : mateParams = {
+          'optionsMask': _i2.BuilderArg<int>(
+            name: 'optionsMask',
+            init: optionsMask,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'rasterizerThreshold': _i2.BuilderArg<int>(
+            name: 'rasterizerThreshold',
+            init: rasterizerThreshold,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'checkerboardRasterCacheImages': _i2.BuilderArg<bool>(
+            name: 'checkerboardRasterCacheImages',
+            init: checkerboardRasterCacheImages,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardOffscreenLayers': _i2.BuilderArg<bool>(
+            name: 'checkerboardOffscreenLayers',
+            init: checkerboardOffscreenLayers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderPerformanceOverlay';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPerformanceOverlay$Mate(
@@ -33,29 +54,8 @@ class RenderPerformanceOverlay$Mate extends _i1.RenderPerformanceOverlay with _i
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    mateUse(
-      'optionsMask',
-      optionsMask,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'rasterizerThreshold',
-      rasterizerThreshold,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'checkerboardRasterCacheImages',
-      checkerboardRasterCacheImages,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardOffscreenLayers',
-      checkerboardOffscreenLayers,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

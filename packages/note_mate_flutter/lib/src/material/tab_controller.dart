@@ -12,22 +12,40 @@ class TabController$Mate extends _i1.TabController with _i2.Mate {
   /// TabController TabController({int initialIndex = 0, Duration? animationDuration, required int length, required TickerProvider vsync})
   TabController$Mate({
     /// optionalParameters: {int initialIndex = 0} , default:processed=IntegerLiteralImpl
-    int initialIndex = 0,
+    super.initialIndex,
 
     /// optionalParameters: {Duration? animationDuration} , default:none
-    Duration? animationDuration,
+    super.animationDuration,
 
     /// optionalParameters: {required int length} , default:none
-    required int length,
+    required super.length,
 
     /// optionalParameters: {required TickerProvider vsync} , default:none
-    required _i3.TickerProvider vsync,
-  }) : super(
-          initialIndex: initialIndex,
-          animationDuration: animationDuration,
-          length: length,
-          vsync: vsync,
-        ) {
+    required super.vsync,
+  })  : mateParams = {
+          'initialIndex': _i2.BuilderArg<int>(
+            name: 'initialIndex',
+            init: initialIndex,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'animationDuration': _i2.BuilderArg<Duration?>(
+            name: 'animationDuration',
+            init: animationDuration,
+            isNamed: true,
+          ),
+          'length': _i2.BuilderArg<int>(
+            name: 'length',
+            init: length,
+            isNamed: true,
+          ),
+          'vsync': _i2.BuilderArg<_i3.TickerProvider>(
+            name: 'vsync',
+            init: vsync,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TabController';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabController$Mate(
@@ -36,28 +54,10 @@ class TabController$Mate extends _i1.TabController with _i2.Mate {
           length: p.get('length').build(),
           vsync: p.get('vsync').build(),
         );
-    mateUse(
-      'initialIndex',
-      initialIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'animationDuration',
-      animationDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'length',
-      length,
-      isNamed: true,
-    );
-    mateUse(
-      'vsync',
-      vsync,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DefaultTabController extends StatefulWidget
@@ -65,26 +65,48 @@ class DefaultTabController$Mate extends _i1.DefaultTabController with _i2.Mate {
   /// DefaultTabController DefaultTabController({Key? key, required int length, int initialIndex = 0, required Widget child, Duration? animationDuration})
   DefaultTabController$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required int length} , default:none
-    required int length,
+    required super.length,
 
     /// optionalParameters: {int initialIndex = 0} , default:processed=IntegerLiteralImpl
-    int initialIndex = 0,
+    super.initialIndex,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
+    required super.child,
 
     /// optionalParameters: {Duration? animationDuration} , default:none
-    Duration? animationDuration,
-  }) : super(
-          key: key,
-          length: length,
-          initialIndex: initialIndex,
-          child: child,
-          animationDuration: animationDuration,
-        ) {
+    super.animationDuration,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'length': _i2.BuilderArg<int>(
+            name: 'length',
+            init: length,
+            isNamed: true,
+          ),
+          'initialIndex': _i2.BuilderArg<int>(
+            name: 'initialIndex',
+            init: initialIndex,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'animationDuration': _i2.BuilderArg<Duration?>(
+            name: 'animationDuration',
+            init: animationDuration,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DefaultTabController';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DefaultTabController$Mate(
@@ -94,31 +116,8 @@ class DefaultTabController$Mate extends _i1.DefaultTabController with _i2.Mate {
           child: p.get('child').build(),
           animationDuration: p.get('animationDuration').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'length',
-      length,
-      isNamed: true,
-    );
-    mateUse(
-      'initialIndex',
-      initialIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'animationDuration',
-      animationDuration,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -13,50 +13,95 @@ class ScrollbarThemeData$Mate extends _i1.ScrollbarThemeData with _i2.Mate {
   /// ScrollbarThemeData ScrollbarThemeData({MaterialStateProperty<bool?>? thumbVisibility, MaterialStateProperty<double?>? thickness, MaterialStateProperty<bool?>? trackVisibility, Radius? radius, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackBorderColor, double? crossAxisMargin, double? mainAxisMargin, double? minThumbLength, bool? interactive, bool? isAlwaysShown, bool? showTrackOnHover})
   ScrollbarThemeData$Mate({
     /// optionalParameters: {MaterialStateProperty<bool?>? thumbVisibility} , default:none
-    _i3.MaterialStateProperty<bool?>? thumbVisibility,
+    super.thumbVisibility,
 
     /// optionalParameters: {MaterialStateProperty<double?>? thickness} , default:none
-    _i3.MaterialStateProperty<double?>? thickness,
+    super.thickness,
 
     /// optionalParameters: {MaterialStateProperty<bool?>? trackVisibility} , default:none
-    _i3.MaterialStateProperty<bool?>? trackVisibility,
+    super.trackVisibility,
 
     /// optionalParameters: {Radius? radius} , default:none
-    _i4.Radius? radius,
+    super.radius,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? trackColor,
+    super.trackColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackBorderColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? trackBorderColor,
+    super.trackBorderColor,
 
     /// optionalParameters: {double? crossAxisMargin} , default:none
-    double? crossAxisMargin,
+    super.crossAxisMargin,
 
     /// optionalParameters: {double? mainAxisMargin} , default:none
-    double? mainAxisMargin,
+    super.mainAxisMargin,
 
     /// optionalParameters: {double? minThumbLength} , default:none
-    double? minThumbLength,
+    super.minThumbLength,
 
     /// optionalParameters: {bool? interactive} , default:none
-    bool? interactive,
-  }) : super(
-          thumbVisibility: thumbVisibility,
-          thickness: thickness,
-          trackVisibility: trackVisibility,
-          radius: radius,
-          thumbColor: thumbColor,
-          trackColor: trackColor,
-          trackBorderColor: trackBorderColor,
-          crossAxisMargin: crossAxisMargin,
-          mainAxisMargin: mainAxisMargin,
-          minThumbLength: minThumbLength,
-          interactive: interactive,
-        ) {
+    super.interactive,
+  })  : mateParams = {
+          'thumbVisibility': _i2.BuilderArg<_i3.MaterialStateProperty<bool?>?>(
+            name: 'thumbVisibility',
+            init: thumbVisibility,
+            isNamed: true,
+          ),
+          'thickness': _i2.BuilderArg<_i3.MaterialStateProperty<double?>?>(
+            name: 'thickness',
+            init: thickness,
+            isNamed: true,
+          ),
+          'trackVisibility': _i2.BuilderArg<_i3.MaterialStateProperty<bool?>?>(
+            name: 'trackVisibility',
+            init: trackVisibility,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<_i4.Radius?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'trackColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'trackColor',
+            init: trackColor,
+            isNamed: true,
+          ),
+          'trackBorderColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'trackBorderColor',
+            init: trackBorderColor,
+            isNamed: true,
+          ),
+          'crossAxisMargin': _i2.BuilderArg<double?>(
+            name: 'crossAxisMargin',
+            init: crossAxisMargin,
+            isNamed: true,
+          ),
+          'mainAxisMargin': _i2.BuilderArg<double?>(
+            name: 'mainAxisMargin',
+            init: mainAxisMargin,
+            isNamed: true,
+          ),
+          'minThumbLength': _i2.BuilderArg<double?>(
+            name: 'minThumbLength',
+            init: minThumbLength,
+            isNamed: true,
+          ),
+          'interactive': _i2.BuilderArg<bool?>(
+            name: 'interactive',
+            init: interactive,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollbarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollbarThemeData$Mate(
@@ -72,62 +117,10 @@ class ScrollbarThemeData$Mate extends _i1.ScrollbarThemeData with _i2.Mate {
           minThumbLength: p.get('minThumbLength').build(),
           interactive: p.get('interactive').build(),
         );
-    mateUse(
-      'thumbVisibility',
-      thumbVisibility,
-      isNamed: true,
-    );
-    mateUse(
-      'thickness',
-      thickness,
-      isNamed: true,
-    );
-    mateUse(
-      'trackVisibility',
-      trackVisibility,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackColor',
-      trackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackBorderColor',
-      trackBorderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'crossAxisMargin',
-      crossAxisMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisMargin',
-      mainAxisMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'minThumbLength',
-      minThumbLength,
-      isNamed: true,
-    );
-    mateUse(
-      'interactive',
-      interactive,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollbarTheme extends InheritedTheme
@@ -135,18 +128,31 @@ class ScrollbarTheme$Mate extends _i1.ScrollbarTheme with _i2.Mate {
   /// ScrollbarTheme ScrollbarTheme({Key? key, required ScrollbarThemeData data, required Widget child})
   ScrollbarTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i5.Key? key,
+    super.key,
 
     /// optionalParameters: {required ScrollbarThemeData data} , default:none
-    required _i1.ScrollbarThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i6.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i5.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ScrollbarThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollbarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScrollbarTheme$Mate(
@@ -154,20 +160,8 @@ class ScrollbarTheme$Mate extends _i1.ScrollbarTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

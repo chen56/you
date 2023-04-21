@@ -12,18 +12,32 @@ class TapDownDetails$Mate extends _i1.TapDownDetails with _i2.Mate {
   /// TapDownDetails TapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   TapDownDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i4.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
+    super.localPosition,
 
     /// optionalParameters: {PointerDeviceKind? kind} , default:none
-    _i3.PointerDeviceKind? kind,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-          kind: kind,
-        ) {
+    super.kind,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind?>(
+            name: 'kind',
+            init: kind,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TapDownDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TapDownDetails$Mate(
@@ -31,23 +45,10 @@ class TapDownDetails$Mate extends _i1.TapDownDetails with _i2.Mate {
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'kind',
-      kind,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TapUpDetails
@@ -55,18 +56,32 @@ class TapUpDetails$Mate extends _i1.TapUpDetails with _i2.Mate {
   /// TapUpDetails TapUpDetails({required PointerDeviceKind kind, Offset globalPosition = Offset.zero, Offset? localPosition})
   TapUpDetails$Mate({
     /// optionalParameters: {required PointerDeviceKind kind} , default:none
-    required _i3.PointerDeviceKind kind,
+    required super.kind,
 
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i4.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
-  }) : super(
-          kind: kind,
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-        ) {
+    super.localPosition,
+  })  : mateParams = {
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
+            name: 'kind',
+            init: kind,
+            isNamed: true,
+          ),
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TapUpDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TapUpDetails$Mate(
@@ -74,23 +89,10 @@ class TapUpDetails$Mate extends _i1.TapUpDetails with _i2.Mate {
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse(
-      'kind',
-      kind,
-      isNamed: true,
-    );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TapGestureRecognizer extends BaseTapGestureRecognizer
@@ -98,18 +100,31 @@ class TapGestureRecognizer$Mate extends _i1.TapGestureRecognizer with _i2.Mate {
   /// TapGestureRecognizer TapGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   TapGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i5.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i5.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TapGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => TapGestureRecognizer$Mate(
@@ -117,20 +132,8 @@ class TapGestureRecognizer$Mate extends _i1.TapGestureRecognizer with _i2.Mate {
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

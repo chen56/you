@@ -14,18 +14,31 @@ class DropdownMenuThemeData$Mate extends _i1.DropdownMenuThemeData with _i2.Mate
   /// DropdownMenuThemeData DropdownMenuThemeData({TextStyle? textStyle, InputDecorationTheme? inputDecorationTheme, MenuStyle? menuStyle})
   DropdownMenuThemeData$Mate({
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i3.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , default:none
-    _i4.InputDecorationTheme? inputDecorationTheme,
+    super.inputDecorationTheme,
 
     /// optionalParameters: {MenuStyle? menuStyle} , default:none
-    _i5.MenuStyle? menuStyle,
-  }) : super(
-          textStyle: textStyle,
-          inputDecorationTheme: inputDecorationTheme,
-          menuStyle: menuStyle,
-        ) {
+    super.menuStyle,
+  })  : mateParams = {
+          'textStyle': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'inputDecorationTheme': _i2.BuilderArg<_i4.InputDecorationTheme?>(
+            name: 'inputDecorationTheme',
+            init: inputDecorationTheme,
+            isNamed: true,
+          ),
+          'menuStyle': _i2.BuilderArg<_i5.MenuStyle?>(
+            name: 'menuStyle',
+            init: menuStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownMenuThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuThemeData$Mate(
@@ -33,22 +46,10 @@ class DropdownMenuThemeData$Mate extends _i1.DropdownMenuThemeData with _i2.Mate
           inputDecorationTheme: p.get('inputDecorationTheme').build(),
           menuStyle: p.get('menuStyle').build(),
         );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'inputDecorationTheme',
-      inputDecorationTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'menuStyle',
-      menuStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DropdownMenuTheme extends InheritedTheme
@@ -56,18 +57,31 @@ class DropdownMenuTheme$Mate extends _i1.DropdownMenuTheme with _i2.Mate {
   /// DropdownMenuTheme DropdownMenuTheme({Key? key, required DropdownMenuThemeData data, required Widget child})
   DropdownMenuTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i6.Key? key,
+    super.key,
 
     /// optionalParameters: {required DropdownMenuThemeData data} , default:none
-    required _i1.DropdownMenuThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i7.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i6.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.DropdownMenuThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DropdownMenuTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DropdownMenuTheme$Mate(
@@ -75,20 +89,8 @@ class DropdownMenuTheme$Mate extends _i1.DropdownMenuTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

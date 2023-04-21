@@ -10,106 +10,225 @@ class TextTreeConfiguration$Mate extends _i1.TextTreeConfiguration with _i2.Mate
   /// TextTreeConfiguration TextTreeConfiguration({required String prefixLineOne, required String prefixOtherLines, required String prefixLastChildLineOne, required String prefixOtherLinesRootNode, required String linkCharacter, required String propertyPrefixIfChildren, required String propertyPrefixNoChildren, String lineBreak = '\n', bool lineBreakProperties = true, String afterName = ':', String afterDescriptionIfBody = '', String afterDescription = '', String beforeProperties = '', String afterProperties = '', String mandatoryAfterProperties = '', String propertySeparator = '', String bodyIndent = '', String footer = '', bool showChildren = true, bool addBlankLineIfNoChildren = true, bool isNameOnOwnLine = false, bool isBlankLineBetweenPropertiesAndChildren = true, String beforeName = '', String suffixLineOne = '', String mandatoryFooter = ''})
   TextTreeConfiguration$Mate({
     /// optionalParameters: {required String prefixLineOne} , default:none
-    required String prefixLineOne,
+    required super.prefixLineOne,
 
     /// optionalParameters: {required String prefixOtherLines} , default:none
-    required String prefixOtherLines,
+    required super.prefixOtherLines,
 
     /// optionalParameters: {required String prefixLastChildLineOne} , default:none
-    required String prefixLastChildLineOne,
+    required super.prefixLastChildLineOne,
 
     /// optionalParameters: {required String prefixOtherLinesRootNode} , default:none
-    required String prefixOtherLinesRootNode,
+    required super.prefixOtherLinesRootNode,
 
     /// optionalParameters: {required String linkCharacter} , default:none
-    required String linkCharacter,
+    required super.linkCharacter,
 
     /// optionalParameters: {required String propertyPrefixIfChildren} , default:none
-    required String propertyPrefixIfChildren,
+    required super.propertyPrefixIfChildren,
 
     /// optionalParameters: {required String propertyPrefixNoChildren} , default:none
-    required String propertyPrefixNoChildren,
+    required super.propertyPrefixNoChildren,
 
     /// optionalParameters: {String lineBreak = '\n'} , default:processed=SimpleStringLiteralImpl
-    String lineBreak = '\n',
+    super.lineBreak,
 
     /// optionalParameters: {bool lineBreakProperties = true} , default:processed=BooleanLiteralImpl
-    bool lineBreakProperties = true,
+    super.lineBreakProperties,
 
     /// optionalParameters: {String afterName = ':'} , default:processed=SimpleStringLiteralImpl
-    String afterName = ':',
+    super.afterName,
 
     /// optionalParameters: {String afterDescriptionIfBody = ''} , default:processed=SimpleStringLiteralImpl
-    String afterDescriptionIfBody = '',
+    super.afterDescriptionIfBody,
 
     /// optionalParameters: {String afterDescription = ''} , default:processed=SimpleStringLiteralImpl
-    String afterDescription = '',
+    super.afterDescription,
 
     /// optionalParameters: {String beforeProperties = ''} , default:processed=SimpleStringLiteralImpl
-    String beforeProperties = '',
+    super.beforeProperties,
 
     /// optionalParameters: {String afterProperties = ''} , default:processed=SimpleStringLiteralImpl
-    String afterProperties = '',
+    super.afterProperties,
 
     /// optionalParameters: {String mandatoryAfterProperties = ''} , default:processed=SimpleStringLiteralImpl
-    String mandatoryAfterProperties = '',
+    super.mandatoryAfterProperties,
 
     /// optionalParameters: {String propertySeparator = ''} , default:processed=SimpleStringLiteralImpl
-    String propertySeparator = '',
+    super.propertySeparator,
 
     /// optionalParameters: {String bodyIndent = ''} , default:processed=SimpleStringLiteralImpl
-    String bodyIndent = '',
+    super.bodyIndent,
 
     /// optionalParameters: {String footer = ''} , default:processed=SimpleStringLiteralImpl
-    String footer = '',
+    super.footer,
 
     /// optionalParameters: {bool showChildren = true} , default:processed=BooleanLiteralImpl
-    bool showChildren = true,
+    super.showChildren,
 
     /// optionalParameters: {bool addBlankLineIfNoChildren = true} , default:processed=BooleanLiteralImpl
-    bool addBlankLineIfNoChildren = true,
+    super.addBlankLineIfNoChildren,
 
     /// optionalParameters: {bool isNameOnOwnLine = false} , default:processed=BooleanLiteralImpl
-    bool isNameOnOwnLine = false,
+    super.isNameOnOwnLine,
 
     /// optionalParameters: {bool isBlankLineBetweenPropertiesAndChildren = true} , default:processed=BooleanLiteralImpl
-    bool isBlankLineBetweenPropertiesAndChildren = true,
+    super.isBlankLineBetweenPropertiesAndChildren,
 
     /// optionalParameters: {String beforeName = ''} , default:processed=SimpleStringLiteralImpl
-    String beforeName = '',
+    super.beforeName,
 
     /// optionalParameters: {String suffixLineOne = ''} , default:processed=SimpleStringLiteralImpl
-    String suffixLineOne = '',
+    super.suffixLineOne,
 
     /// optionalParameters: {String mandatoryFooter = ''} , default:processed=SimpleStringLiteralImpl
-    String mandatoryFooter = '',
-  }) : super(
-          prefixLineOne: prefixLineOne,
-          prefixOtherLines: prefixOtherLines,
-          prefixLastChildLineOne: prefixLastChildLineOne,
-          prefixOtherLinesRootNode: prefixOtherLinesRootNode,
-          linkCharacter: linkCharacter,
-          propertyPrefixIfChildren: propertyPrefixIfChildren,
-          propertyPrefixNoChildren: propertyPrefixNoChildren,
-          lineBreak: lineBreak,
-          lineBreakProperties: lineBreakProperties,
-          afterName: afterName,
-          afterDescriptionIfBody: afterDescriptionIfBody,
-          afterDescription: afterDescription,
-          beforeProperties: beforeProperties,
-          afterProperties: afterProperties,
-          mandatoryAfterProperties: mandatoryAfterProperties,
-          propertySeparator: propertySeparator,
-          bodyIndent: bodyIndent,
-          footer: footer,
-          showChildren: showChildren,
-          addBlankLineIfNoChildren: addBlankLineIfNoChildren,
-          isNameOnOwnLine: isNameOnOwnLine,
-          isBlankLineBetweenPropertiesAndChildren: isBlankLineBetweenPropertiesAndChildren,
-          beforeName: beforeName,
-          suffixLineOne: suffixLineOne,
-          mandatoryFooter: mandatoryFooter,
-        ) {
+    super.mandatoryFooter,
+  })  : mateParams = {
+          'prefixLineOne': _i2.BuilderArg<String>(
+            name: 'prefixLineOne',
+            init: prefixLineOne,
+            isNamed: true,
+          ),
+          'prefixOtherLines': _i2.BuilderArg<String>(
+            name: 'prefixOtherLines',
+            init: prefixOtherLines,
+            isNamed: true,
+          ),
+          'prefixLastChildLineOne': _i2.BuilderArg<String>(
+            name: 'prefixLastChildLineOne',
+            init: prefixLastChildLineOne,
+            isNamed: true,
+          ),
+          'prefixOtherLinesRootNode': _i2.BuilderArg<String>(
+            name: 'prefixOtherLinesRootNode',
+            init: prefixOtherLinesRootNode,
+            isNamed: true,
+          ),
+          'linkCharacter': _i2.BuilderArg<String>(
+            name: 'linkCharacter',
+            init: linkCharacter,
+            isNamed: true,
+          ),
+          'propertyPrefixIfChildren': _i2.BuilderArg<String>(
+            name: 'propertyPrefixIfChildren',
+            init: propertyPrefixIfChildren,
+            isNamed: true,
+          ),
+          'propertyPrefixNoChildren': _i2.BuilderArg<String>(
+            name: 'propertyPrefixNoChildren',
+            init: propertyPrefixNoChildren,
+            isNamed: true,
+          ),
+          'lineBreak': _i2.BuilderArg<String>(
+            name: 'lineBreak',
+            init: lineBreak,
+            isNamed: true,
+            defaultValue: '\n',
+          ),
+          'lineBreakProperties': _i2.BuilderArg<bool>(
+            name: 'lineBreakProperties',
+            init: lineBreakProperties,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'afterName': _i2.BuilderArg<String>(
+            name: 'afterName',
+            init: afterName,
+            isNamed: true,
+            defaultValue: ':',
+          ),
+          'afterDescriptionIfBody': _i2.BuilderArg<String>(
+            name: 'afterDescriptionIfBody',
+            init: afterDescriptionIfBody,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'afterDescription': _i2.BuilderArg<String>(
+            name: 'afterDescription',
+            init: afterDescription,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'beforeProperties': _i2.BuilderArg<String>(
+            name: 'beforeProperties',
+            init: beforeProperties,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'afterProperties': _i2.BuilderArg<String>(
+            name: 'afterProperties',
+            init: afterProperties,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'mandatoryAfterProperties': _i2.BuilderArg<String>(
+            name: 'mandatoryAfterProperties',
+            init: mandatoryAfterProperties,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'propertySeparator': _i2.BuilderArg<String>(
+            name: 'propertySeparator',
+            init: propertySeparator,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'bodyIndent': _i2.BuilderArg<String>(
+            name: 'bodyIndent',
+            init: bodyIndent,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'footer': _i2.BuilderArg<String>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'showChildren': _i2.BuilderArg<bool>(
+            name: 'showChildren',
+            init: showChildren,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addBlankLineIfNoChildren': _i2.BuilderArg<bool>(
+            name: 'addBlankLineIfNoChildren',
+            init: addBlankLineIfNoChildren,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'isNameOnOwnLine': _i2.BuilderArg<bool>(
+            name: 'isNameOnOwnLine',
+            init: isNameOnOwnLine,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isBlankLineBetweenPropertiesAndChildren': _i2.BuilderArg<bool>(
+            name: 'isBlankLineBetweenPropertiesAndChildren',
+            init: isBlankLineBetweenPropertiesAndChildren,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'beforeName': _i2.BuilderArg<String>(
+            name: 'beforeName',
+            init: beforeName,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'suffixLineOne': _i2.BuilderArg<String>(
+            name: 'suffixLineOne',
+            init: suffixLineOne,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'mandatoryFooter': _i2.BuilderArg<String>(
+            name: 'mandatoryFooter',
+            init: mandatoryFooter,
+            isNamed: true,
+            defaultValue: '',
+          ),
+        },
+        super() {
     mateBuilderName = 'TextTreeConfiguration';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => TextTreeConfiguration$Mate(
@@ -139,150 +258,10 @@ class TextTreeConfiguration$Mate extends _i1.TextTreeConfiguration with _i2.Mate
           suffixLineOne: p.get('suffixLineOne').build(),
           mandatoryFooter: p.get('mandatoryFooter').build(),
         );
-    mateUse(
-      'prefixLineOne',
-      prefixLineOne,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixOtherLines',
-      prefixOtherLines,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixLastChildLineOne',
-      prefixLastChildLineOne,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixOtherLinesRootNode',
-      prefixOtherLinesRootNode,
-      isNamed: true,
-    );
-    mateUse(
-      'linkCharacter',
-      linkCharacter,
-      isNamed: true,
-    );
-    mateUse(
-      'propertyPrefixIfChildren',
-      propertyPrefixIfChildren,
-      isNamed: true,
-    );
-    mateUse(
-      'propertyPrefixNoChildren',
-      propertyPrefixNoChildren,
-      isNamed: true,
-    );
-    mateUse(
-      'lineBreak',
-      lineBreak,
-      isNamed: true,
-      defaultValue: '\n',
-    );
-    mateUse(
-      'lineBreakProperties',
-      lineBreakProperties,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'afterName',
-      afterName,
-      isNamed: true,
-      defaultValue: ':',
-    );
-    mateUse(
-      'afterDescriptionIfBody',
-      afterDescriptionIfBody,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'afterDescription',
-      afterDescription,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'beforeProperties',
-      beforeProperties,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'afterProperties',
-      afterProperties,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'mandatoryAfterProperties',
-      mandatoryAfterProperties,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'propertySeparator',
-      propertySeparator,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'bodyIndent',
-      bodyIndent,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'showChildren',
-      showChildren,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addBlankLineIfNoChildren',
-      addBlankLineIfNoChildren,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'isNameOnOwnLine',
-      isNameOnOwnLine,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isBlankLineBetweenPropertiesAndChildren',
-      isBlankLineBetweenPropertiesAndChildren,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'beforeName',
-      beforeName,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'suffixLineOne',
-      suffixLineOne,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'mandatoryFooter',
-      mandatoryFooter,
-      isNamed: true,
-      defaultValue: '',
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextTreeRenderer
@@ -290,22 +269,43 @@ class TextTreeRenderer$Mate extends _i1.TextTreeRenderer with _i2.Mate {
   /// TextTreeRenderer TextTreeRenderer({DiagnosticLevel minLevel = DiagnosticLevel.debug, int wrapWidth = 100, int wrapWidthProperties = 65, int maxDescendentsTruncatableNode = -1})
   TextTreeRenderer$Mate({
     /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel minLevel = _i3.DiagnosticLevel.debug,
+    super.minLevel,
 
     /// optionalParameters: {int wrapWidth = 100} , default:processed=IntegerLiteralImpl
-    int wrapWidth = 100,
+    super.wrapWidth,
 
     /// optionalParameters: {int wrapWidthProperties = 65} , default:processed=IntegerLiteralImpl
-    int wrapWidthProperties = 65,
+    super.wrapWidthProperties,
 
     /// optionalParameters: {int maxDescendentsTruncatableNode = -1} , default:processed=PrefixExpressionImpl
-    int maxDescendentsTruncatableNode = -1,
-  }) : super(
-          minLevel: minLevel,
-          wrapWidth: wrapWidth,
-          wrapWidthProperties: wrapWidthProperties,
-          maxDescendentsTruncatableNode: maxDescendentsTruncatableNode,
-        ) {
+    super.maxDescendentsTruncatableNode,
+  })  : mateParams = {
+          'minLevel': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'minLevel',
+            init: minLevel,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.debug,
+          ),
+          'wrapWidth': _i2.BuilderArg<int>(
+            name: 'wrapWidth',
+            init: wrapWidth,
+            isNamed: true,
+            defaultValue: 100,
+          ),
+          'wrapWidthProperties': _i2.BuilderArg<int>(
+            name: 'wrapWidthProperties',
+            init: wrapWidthProperties,
+            isNamed: true,
+            defaultValue: 65,
+          ),
+          'maxDescendentsTruncatableNode': _i2.BuilderArg<int>(
+            name: 'maxDescendentsTruncatableNode',
+            init: maxDescendentsTruncatableNode,
+            isNamed: true,
+            defaultValue: -1,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextTreeRenderer';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => TextTreeRenderer$Mate(
@@ -314,31 +314,10 @@ class TextTreeRenderer$Mate extends _i1.TextTreeRenderer with _i2.Mate {
           wrapWidthProperties: p.get('wrapWidthProperties').build(),
           maxDescendentsTruncatableNode: p.get('maxDescendentsTruncatableNode').build(),
         );
-    mateUse(
-      'minLevel',
-      minLevel,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.debug,
-    );
-    mateUse(
-      'wrapWidth',
-      wrapWidth,
-      isNamed: true,
-      defaultValue: 100,
-    );
-    mateUse(
-      'wrapWidthProperties',
-      wrapWidthProperties,
-      isNamed: true,
-      defaultValue: 65,
-    );
-    mateUse(
-      'maxDescendentsTruncatableNode',
-      maxDescendentsTruncatableNode,
-      isNamed: true,
-      defaultValue: -1,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MessageProperty extends DiagnosticsProperty<void>
@@ -346,21 +325,40 @@ class MessageProperty$Mate extends _i1.MessageProperty with _i2.Mate {
   /// MessageProperty MessageProperty(String name, String message, {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   MessageProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: String message
-    String message, {
+    super.message, {
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          message,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'message': _i2.BuilderArg<String>(
+            name: 'message',
+            init: message,
+            isNamed: false,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'MessageProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => MessageProperty$Mate(
@@ -369,29 +367,10 @@ class MessageProperty$Mate extends _i1.MessageProperty with _i2.Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'message',
-      message,
-      isNamed: false,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class StringProperty extends DiagnosticsProperty<String>
@@ -399,45 +378,90 @@ class StringProperty$Mate extends _i1.StringProperty with _i2.Mate {
   /// StringProperty StringProperty(String name, String? value, {String? description, String? tooltip, bool showName = true, Object? defaultValue = kNoDefaultValue, bool quoted = true, String? ifEmpty, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   StringProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: String? value
-    String? value, {
+    super.value, {
     /// optionalParameters: {String? description} , default:none
-    String? description,
+    super.description,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {bool quoted = true} , default:processed=BooleanLiteralImpl
-    bool quoted = true,
+    super.quoted,
 
     /// optionalParameters: {String? ifEmpty} , default:none
-    String? ifEmpty,
+    super.ifEmpty,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          description: description,
-          tooltip: tooltip,
-          showName: showName,
-          defaultValue: defaultValue,
-          quoted: quoted,
-          ifEmpty: ifEmpty,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<String?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'description': _i2.BuilderArg<String?>(
+            name: 'description',
+            init: description,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'quoted': _i2.BuilderArg<bool>(
+            name: 'quoted',
+            init: quoted,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ifEmpty': _i2.BuilderArg<String?>(
+            name: 'ifEmpty',
+            init: ifEmpty,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'StringProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => StringProperty$Mate(
@@ -452,61 +476,10 @@ class StringProperty$Mate extends _i1.StringProperty with _i2.Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'description',
-      description,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'quoted',
-      quoted,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ifEmpty',
-      ifEmpty,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DoubleProperty extends _NumProperty<double>
@@ -514,41 +487,81 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
   /// DoubleProperty DoubleProperty(String name, double? value, {String? ifNull, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, bool showName = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   DoubleProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: double? value
-    double? value, {
+    super.value, {
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {String? unit} , default:none
-    String? unit,
+    super.unit,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          ifNull: ifNull,
-          unit: unit,
-          tooltip: tooltip,
-          defaultValue: defaultValue,
-          showName: showName,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<double?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'unit': _i2.BuilderArg<String?>(
+            name: 'unit',
+            init: unit,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'DoubleProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DoubleProperty$Mate(
@@ -562,90 +575,77 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'unit',
-      unit,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
 
   /// DoubleProperty DoubleProperty.lazy(String name, double? Function() computeValue, {String? ifNull, bool showName = true, String? unit, String? tooltip, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   DoubleProperty$Mate.lazy(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: double? Function() computeValue
-    _i1.ComputePropertyValueCallback<double> computeValue, {
+    super.computeValue, {
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {String? unit} , default:none
-    String? unit,
+    super.unit,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super.lazy(
-          name,
-          computeValue,
-          ifNull: ifNull,
-          showName: showName,
-          unit: unit,
-          tooltip: tooltip,
-          defaultValue: defaultValue,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'computeValue': _i2.BuilderArg<_i1.ComputePropertyValueCallback<double>>(
+            name: 'computeValue',
+            init: computeValue,
+            isNamed: false,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'unit': _i2.BuilderArg<String?>(
+            name: 'unit',
+            init: unit,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super.lazy() {
     mateBuilderName = 'DoubleProperty.lazy';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DoubleProperty$Mate.lazy(
@@ -658,49 +658,10 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'computeValue',
-      computeValue,
-      isNamed: false,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'unit',
-      unit,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IntProperty extends _NumProperty<int>
@@ -708,37 +669,73 @@ class IntProperty$Mate extends _i1.IntProperty with _i2.Mate {
   /// IntProperty IntProperty(String name, int? value, {String? ifNull, bool showName = true, String? unit, Object? defaultValue = kNoDefaultValue, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   IntProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: int? value
-    int? value, {
+    super.value, {
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {String? unit} , default:none
-    String? unit,
+    super.unit,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          ifNull: ifNull,
-          showName: showName,
-          unit: unit,
-          defaultValue: defaultValue,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<int?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'unit': _i2.BuilderArg<String?>(
+            name: 'unit',
+            init: unit,
+            isNamed: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'IntProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => IntProperty$Mate(
@@ -751,50 +748,10 @@ class IntProperty$Mate extends _i1.IntProperty with _i2.Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'unit',
-      unit,
-      isNamed: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PercentProperty extends DoubleProperty
@@ -802,33 +759,64 @@ class PercentProperty$Mate extends _i1.PercentProperty with _i2.Mate {
   /// PercentProperty PercentProperty(String name, double? fraction, {String? ifNull, bool showName = true, String? tooltip, String? unit, DiagnosticLevel level = DiagnosticLevel.info})
   PercentProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: double? fraction
-    double? fraction, {
+    super.fraction, {
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {String? unit} , default:none
-    String? unit,
+    super.unit,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          fraction,
-          ifNull: ifNull,
-          showName: showName,
-          tooltip: tooltip,
-          unit: unit,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'fraction': _i2.BuilderArg<double?>(
+            name: 'fraction',
+            init: fraction,
+            isNamed: false,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'unit': _i2.BuilderArg<String?>(
+            name: 'unit',
+            init: unit,
+            isNamed: true,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'PercentProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => PercentProperty$Mate(
@@ -840,44 +828,10 @@ class PercentProperty$Mate extends _i1.PercentProperty with _i2.Mate {
           unit: p.get('unit').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'fraction',
-      fraction,
-      isNamed: false,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'unit',
-      unit,
-      isNamed: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FlagProperty extends DiagnosticsProperty<bool>
@@ -885,33 +839,64 @@ class FlagProperty$Mate extends _i1.FlagProperty with _i2.Mate {
   /// FlagProperty FlagProperty(String name, {required bool? value, String? ifTrue, String? ifFalse, bool showName = false, Object? defaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   FlagProperty$Mate(
     /// requiredParameters: String name
-    String name, {
+    super.name, {
     /// optionalParameters: {required bool? value} , default:none
-    required bool? value,
+    required super.value,
 
     /// optionalParameters: {String? ifTrue} , default:none
-    String? ifTrue,
+    super.ifTrue,
 
     /// optionalParameters: {String? ifFalse} , default:none
-    String? ifFalse,
+    super.ifFalse,
 
     /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
-    bool showName = false,
+    super.showName,
 
     /// optionalParameters: {Object? defaultValue} , default:none
-    Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value: value,
-          ifTrue: ifTrue,
-          ifFalse: ifFalse,
-          showName: showName,
-          defaultValue: defaultValue,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<bool?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'ifTrue': _i2.BuilderArg<String?>(
+            name: 'ifTrue',
+            init: ifTrue,
+            isNamed: true,
+          ),
+          'ifFalse': _i2.BuilderArg<String?>(
+            name: 'ifFalse',
+            init: ifFalse,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'FlagProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlagProperty$Mate(
@@ -923,44 +908,10 @@ class FlagProperty$Mate extends _i1.FlagProperty with _i2.Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'ifTrue',
-      ifTrue,
-      isNamed: true,
-    );
-    mateUse(
-      'ifFalse',
-      ifFalse,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IterableProperty<T> extends DiagnosticsProperty<Iterable<T>>
@@ -968,41 +919,83 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
   /// IterableProperty<T> IterableProperty(String name, Iterable<T>? value, {Object? defaultValue = kNoDefaultValue, String? ifNull, String? ifEmpty = '[]', DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, bool showName = true, bool showSeparator = true, DiagnosticLevel level = DiagnosticLevel.info})
   IterableProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: Iterable<T>? value
-    Iterable<T>? value, {
+    super.value, {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {String? ifEmpty = '[]'} , default:processed=SimpleStringLiteralImpl
-    String? ifEmpty = '[]',
+    super.ifEmpty,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
-    bool showSeparator = true,
+    super.showSeparator,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          defaultValue: defaultValue,
-          ifNull: ifNull,
-          ifEmpty: ifEmpty,
-          style: style,
-          showName: showName,
-          showSeparator: showSeparator,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<Iterable<T>?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'ifEmpty': _i2.BuilderArg<String?>(
+            name: 'ifEmpty',
+            init: ifEmpty,
+            isNamed: true,
+            defaultValue: '[]',
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showSeparator': _i2.BuilderArg<bool>(
+            name: 'showSeparator',
+            init: showSeparator,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'IterableProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => IterableProperty$Mate<T>(
@@ -1016,57 +1009,10 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'ifEmpty',
-      ifEmpty,
-      isNamed: true,
-      defaultValue: '[]',
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showSeparator',
-      showSeparator,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class EnumProperty<T> extends DiagnosticsProperty<T>
@@ -1074,21 +1020,39 @@ class EnumProperty$Mate<T> extends _i1.EnumProperty<T> with _i2.Mate {
   /// EnumProperty<T> EnumProperty(String name, T? value, {Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info})
   EnumProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: T? value
-    T? value, {
+    super.value, {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          defaultValue: defaultValue,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'EnumProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => EnumProperty$Mate<T>(
@@ -1097,28 +1061,10 @@ class EnumProperty$Mate<T> extends _i1.EnumProperty<T> with _i2.Mate {
           defaultValue: p.get('defaultValue').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ObjectFlagProperty<T> extends DiagnosticsProperty<T>
@@ -1126,29 +1072,56 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
   /// ObjectFlagProperty<T> ObjectFlagProperty(String name, T? value, {String? ifPresent, String? ifNull, bool showName = false, DiagnosticLevel level = DiagnosticLevel.info})
   ObjectFlagProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: T? value
-    T? value, {
+    super.value, {
     /// optionalParameters: {String? ifPresent} , default:none
-    String? ifPresent,
+    super.ifPresent,
 
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
-    bool showName = false,
+    super.showName,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          ifPresent: ifPresent,
-          ifNull: ifNull,
-          showName: showName,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'ifPresent': _i2.BuilderArg<String?>(
+            name: 'ifPresent',
+            init: ifPresent,
+            isNamed: true,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'ObjectFlagProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectFlagProperty$Mate<T>(
@@ -1159,54 +1132,36 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
           showName: p.get('showName').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'ifPresent',
-      ifPresent,
-      isNamed: true,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
 
   /// ObjectFlagProperty<T> ObjectFlagProperty.has(String name, T? value, {DiagnosticLevel level = DiagnosticLevel.info})
   ObjectFlagProperty$Mate.has(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: T? value
-    T? value, {
+    super.value, {
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super.has(
-          name,
-          value,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super.has() {
     mateBuilderName = 'ObjectFlagProperty.has';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ObjectFlagProperty$Mate<T>.has(
@@ -1214,23 +1169,10 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
           p.get('value').value,
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FlagsSummary<T> extends DiagnosticsProperty<Map<String, T?>>
@@ -1238,29 +1180,57 @@ class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
   /// FlagsSummary<T> FlagsSummary(String name, Map<String, T?> value, {String? ifEmpty, bool showName = true, bool showSeparator = true, DiagnosticLevel level = DiagnosticLevel.info})
   FlagsSummary$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: Map<String, T?> value
-    Map<String, T?> value, {
+    super.value, {
     /// optionalParameters: {String? ifEmpty} , default:none
-    String? ifEmpty,
+    super.ifEmpty,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
-    bool showSeparator = true,
+    super.showSeparator,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          ifEmpty: ifEmpty,
-          showName: showName,
-          showSeparator: showSeparator,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<Map<String, T?>>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'ifEmpty': _i2.BuilderArg<String?>(
+            name: 'ifEmpty',
+            init: ifEmpty,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showSeparator': _i2.BuilderArg<bool>(
+            name: 'showSeparator',
+            init: showSeparator,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'FlagsSummary';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => FlagsSummary$Mate<T>(
@@ -1271,40 +1241,10 @@ class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
           showSeparator: p.get('showSeparator').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'ifEmpty',
-      ifEmpty,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showSeparator',
-      showSeparator,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DiagnosticsProperty<T> extends DiagnosticsNode
@@ -1312,69 +1252,142 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
   /// DiagnosticsProperty<T> DiagnosticsProperty(String? name, T? value, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, String? linePrefix, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   DiagnosticsProperty$Mate(
     /// requiredParameters: String? name
-    String? name,
+    super.name,
 
     /// requiredParameters: T? value
-    T? value, {
+    super.value, {
     /// optionalParameters: {String? description} , default:none
-    String? description,
+    super.description,
 
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {String? ifEmpty} , default:none
-    String? ifEmpty,
+    super.ifEmpty,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
-    bool showSeparator = true,
+    super.showSeparator,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool missingIfNull = false} , default:processed=BooleanLiteralImpl
-    bool missingIfNull = false,
+    super.missingIfNull,
 
     /// optionalParameters: {String? linePrefix} , default:none
-    String? linePrefix,
+    super.linePrefix,
 
     /// optionalParameters: {bool expandableValue = false} , default:processed=BooleanLiteralImpl
-    bool expandableValue = false,
+    super.expandableValue,
 
     /// optionalParameters: {bool allowWrap = true} , default:processed=BooleanLiteralImpl
-    bool allowWrap = true,
+    super.allowWrap,
 
     /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
-    bool allowNameWrap = true,
+    super.allowNameWrap,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          description: description,
-          ifNull: ifNull,
-          ifEmpty: ifEmpty,
-          showName: showName,
-          showSeparator: showSeparator,
-          defaultValue: defaultValue,
-          tooltip: tooltip,
-          missingIfNull: missingIfNull,
-          linePrefix: linePrefix,
-          expandableValue: expandableValue,
-          allowWrap: allowWrap,
-          allowNameWrap: allowNameWrap,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String?>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'description': _i2.BuilderArg<String?>(
+            name: 'description',
+            init: description,
+            isNamed: true,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'ifEmpty': _i2.BuilderArg<String?>(
+            name: 'ifEmpty',
+            init: ifEmpty,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showSeparator': _i2.BuilderArg<bool>(
+            name: 'showSeparator',
+            init: showSeparator,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'missingIfNull': _i2.BuilderArg<bool>(
+            name: 'missingIfNull',
+            init: missingIfNull,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'linePrefix': _i2.BuilderArg<String?>(
+            name: 'linePrefix',
+            init: linePrefix,
+            isNamed: true,
+          ),
+          'expandableValue': _i2.BuilderArg<bool>(
+            name: 'expandableValue',
+            init: expandableValue,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'allowWrap': _i2.BuilderArg<bool>(
+            name: 'allowWrap',
+            init: allowWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'allowNameWrap': _i2.BuilderArg<bool>(
+            name: 'allowNameWrap',
+            init: allowNameWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'DiagnosticsProperty';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsProperty$Mate<T>(
@@ -1395,158 +1408,139 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'description',
-      description,
-      isNamed: true,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'ifEmpty',
-      ifEmpty,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showSeparator',
-      showSeparator,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'missingIfNull',
-      missingIfNull,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'linePrefix',
-      linePrefix,
-      isNamed: true,
-    );
-    mateUse(
-      'expandableValue',
-      expandableValue,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'allowWrap',
-      allowWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'allowNameWrap',
-      allowNameWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
 
   /// DiagnosticsProperty<T> DiagnosticsProperty.lazy(String? name, T? Function() computeValue, {String? description, String? ifNull, String? ifEmpty, bool showName = true, bool showSeparator = true, Object? defaultValue = kNoDefaultValue, String? tooltip, bool missingIfNull = false, bool expandableValue = false, bool allowWrap = true, bool allowNameWrap = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   DiagnosticsProperty$Mate.lazy(
     /// requiredParameters: String? name
-    String? name,
+    super.name,
 
     /// requiredParameters: T? Function() computeValue
-    _i1.ComputePropertyValueCallback<T> computeValue, {
+    super.computeValue, {
     /// optionalParameters: {String? description} , default:none
-    String? description,
+    super.description,
 
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {String? ifEmpty} , default:none
-    String? ifEmpty,
+    super.ifEmpty,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
-    bool showSeparator = true,
+    super.showSeparator,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool missingIfNull = false} , default:processed=BooleanLiteralImpl
-    bool missingIfNull = false,
+    super.missingIfNull,
 
     /// optionalParameters: {bool expandableValue = false} , default:processed=BooleanLiteralImpl
-    bool expandableValue = false,
+    super.expandableValue,
 
     /// optionalParameters: {bool allowWrap = true} , default:processed=BooleanLiteralImpl
-    bool allowWrap = true,
+    super.allowWrap,
 
     /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
-    bool allowNameWrap = true,
+    super.allowNameWrap,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
-  }) : super.lazy(
-          name,
-          computeValue,
-          description: description,
-          ifNull: ifNull,
-          ifEmpty: ifEmpty,
-          showName: showName,
-          showSeparator: showSeparator,
-          defaultValue: defaultValue,
-          tooltip: tooltip,
-          missingIfNull: missingIfNull,
-          expandableValue: expandableValue,
-          allowWrap: allowWrap,
-          allowNameWrap: allowNameWrap,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String?>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'computeValue': _i2.BuilderArg<_i1.ComputePropertyValueCallback<T>>(
+            name: 'computeValue',
+            init: computeValue,
+            isNamed: false,
+          ),
+          'description': _i2.BuilderArg<String?>(
+            name: 'description',
+            init: description,
+            isNamed: true,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'ifEmpty': _i2.BuilderArg<String?>(
+            name: 'ifEmpty',
+            init: ifEmpty,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showSeparator': _i2.BuilderArg<bool>(
+            name: 'showSeparator',
+            init: showSeparator,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'missingIfNull': _i2.BuilderArg<bool>(
+            name: 'missingIfNull',
+            init: missingIfNull,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'expandableValue': _i2.BuilderArg<bool>(
+            name: 'expandableValue',
+            init: expandableValue,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'allowWrap': _i2.BuilderArg<bool>(
+            name: 'allowWrap',
+            init: allowWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'allowNameWrap': _i2.BuilderArg<bool>(
+            name: 'allowNameWrap',
+            init: allowNameWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+        },
+        super.lazy() {
     mateBuilderName = 'DiagnosticsProperty.lazy';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsProperty$Mate<T>.lazy(
@@ -1566,90 +1560,10 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'computeValue',
-      computeValue,
-      isNamed: false,
-    );
-    mateUse(
-      'description',
-      description,
-      isNamed: true,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'ifEmpty',
-      ifEmpty,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showSeparator',
-      showSeparator,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'missingIfNull',
-      missingIfNull,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'expandableValue',
-      expandableValue,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'allowWrap',
-      allowWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'allowNameWrap',
-      allowNameWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DiagnosticableNode<T extends Diagnosticable> extends DiagnosticsNode
@@ -1657,18 +1571,31 @@ class DiagnosticableNode$Mate<T extends _i1.Diagnosticable> extends _i1.Diagnost
   /// DiagnosticableNode<T> DiagnosticableNode({String? name, required T value, required DiagnosticsTreeStyle? style})
   DiagnosticableNode$Mate({
     /// optionalParameters: {String? name} , default:none
-    String? name,
+    super.name,
 
     /// optionalParameters: {required T value} , default:none
-    required T value,
+    required super.value,
 
     /// optionalParameters: {required DiagnosticsTreeStyle? style} , default:none
-    required _i1.DiagnosticsTreeStyle? style,
-  }) : super(
-          name: name,
-          value: value,
-          style: style,
-        ) {
+    required super.style,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String?>(
+            name: 'name',
+            init: name,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DiagnosticableNode';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticableNode$Mate<T>(
@@ -1676,22 +1603,10 @@ class DiagnosticableNode$Mate<T extends _i1.Diagnosticable> extends _i1.Diagnost
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DiagnosticableTreeNode extends DiagnosticableNode<DiagnosticableTree>
@@ -1699,18 +1614,31 @@ class DiagnosticableTreeNode$Mate extends _i1.DiagnosticableTreeNode with _i2.Ma
   /// DiagnosticableTreeNode DiagnosticableTreeNode({String? name, required DiagnosticableTree value, required DiagnosticsTreeStyle? style})
   DiagnosticableTreeNode$Mate({
     /// optionalParameters: {String? name} , default:none
-    String? name,
+    super.name,
 
     /// optionalParameters: {required DiagnosticableTree value} , default:none
-    required _i1.DiagnosticableTree value,
+    required super.value,
 
     /// optionalParameters: {required DiagnosticsTreeStyle? style} , default:none
-    required _i1.DiagnosticsTreeStyle? style,
-  }) : super(
-          name: name,
-          value: value,
-          style: style,
-        ) {
+    required super.style,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String?>(
+            name: 'name',
+            init: name,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<_i1.DiagnosticableTree>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DiagnosticableTreeNode';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticableTreeNode$Mate(
@@ -1718,22 +1646,10 @@ class DiagnosticableTreeNode$Mate extends _i1.DiagnosticableTreeNode with _i2.Ma
           value: p.get('value').build(),
           style: p.get('style').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DiagnosticPropertiesBuilder
@@ -1742,17 +1658,22 @@ class DiagnosticPropertiesBuilder$Mate extends _i1.DiagnosticPropertiesBuilder w
   DiagnosticPropertiesBuilder$Mate.fromProperties(
 
       /// requiredParameters: List<DiagnosticsNode> properties
-      List<_i1.DiagnosticsNode> properties)
-      : super.fromProperties(properties) {
+      super.properties)
+      : mateParams = {
+          'properties': _i2.BuilderArg<List<_i1.DiagnosticsNode>>(
+            name: 'properties',
+            init: properties,
+            isNamed: false,
+          )
+        },
+        super.fromProperties() {
     mateBuilderName = 'DiagnosticPropertiesBuilder.fromProperties';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticPropertiesBuilder$Mate.fromProperties(p.get('properties').value);
-    mateUse(
-      'properties',
-      properties,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DiagnosticsBlock extends DiagnosticsNode
@@ -1760,50 +1681,100 @@ class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
   /// DiagnosticsBlock DiagnosticsBlock({String? name, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace, bool showName = true, bool showSeparator = true, String? linePrefix, Object? value, String? description, DiagnosticLevel level = DiagnosticLevel.info, bool allowTruncate = false, List<DiagnosticsNode> children = const <DiagnosticsNode>[], List<DiagnosticsNode> properties = const <DiagnosticsNode>[]})
   DiagnosticsBlock$Mate({
     /// optionalParameters: {String? name} , default:none
-    String? name,
+    super.name,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticsTreeStyle style = _i3.DiagnosticsTreeStyle.whitespace,
+    super.style,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
-    bool showSeparator = true,
+    super.showSeparator,
 
     /// optionalParameters: {String? linePrefix} , default:none
-    String? linePrefix,
+    super.linePrefix,
 
     /// optionalParameters: {Object? value} , default:none
-    Object? value,
+    super.value,
 
     /// optionalParameters: {String? description} , default:none
-    String? description,
+    super.description,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i1.DiagnosticLevel level = _i3.DiagnosticLevel.info,
+    super.level,
 
     /// optionalParameters: {bool allowTruncate = false} , default:processed=BooleanLiteralImpl
-    bool allowTruncate = false,
+    super.allowTruncate,
 
     /// optionalParameters: {List<DiagnosticsNode> children = const <DiagnosticsNode>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i1.DiagnosticsNode> children,
+    super.children,
 
     /// optionalParameters: {List<DiagnosticsNode> properties = const <DiagnosticsNode>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i1.DiagnosticsNode> properties,
-  }) : super(
-          name: name,
-          style: style,
-          showName: showName,
-          showSeparator: showSeparator,
-          linePrefix: linePrefix,
-          value: value,
-          description: description,
-          level: level,
-          allowTruncate: allowTruncate,
-          children: children,
-          properties: properties,
-        ) {
+    super.properties,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String?>(
+            name: 'name',
+            init: name,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i1.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticsTreeStyle.whitespace,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showSeparator': _i2.BuilderArg<bool>(
+            name: 'showSeparator',
+            init: showSeparator,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'linePrefix': _i2.BuilderArg<String?>(
+            name: 'linePrefix',
+            init: linePrefix,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<Object?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'description': _i2.BuilderArg<String?>(
+            name: 'description',
+            init: description,
+            isNamed: true,
+          ),
+          'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i3.DiagnosticLevel.info,
+          ),
+          'allowTruncate': _i2.BuilderArg<bool>(
+            name: 'allowTruncate',
+            init: allowTruncate,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'children': _i2.BuilderArg<List<_i1.DiagnosticsNode>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'properties': _i2.BuilderArg<List<_i1.DiagnosticsNode>>(
+            name: 'properties',
+            init: properties,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DiagnosticsBlock';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DiagnosticsBlock$Mate(
@@ -1819,65 +1790,8 @@ class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
           children: p.get('children').build(),
           properties: p.get('properties').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticsTreeStyle.whitespace,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showSeparator',
-      showSeparator,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'linePrefix',
-      linePrefix,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'description',
-      description,
-      isNamed: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i3.DiagnosticLevel.info,
-    );
-    mateUse(
-      'allowTruncate',
-      allowTruncate,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'properties',
-      properties,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

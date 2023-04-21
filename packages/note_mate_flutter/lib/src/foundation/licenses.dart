@@ -9,31 +9,33 @@ class LicenseParagraph$Mate extends _i1.LicenseParagraph with _i2.Mate {
   /// LicenseParagraph LicenseParagraph(String text, int indent)
   LicenseParagraph$Mate(
     /// requiredParameters: String text
-    String text,
+    super.text,
 
     /// requiredParameters: int indent
-    int indent,
-  ) : super(
-          text,
-          indent,
-        ) {
+    super.indent,
+  )   : mateParams = {
+          'text': _i2.BuilderArg<String>(
+            name: 'text',
+            init: text,
+            isNamed: false,
+          ),
+          'indent': _i2.BuilderArg<int>(
+            name: 'indent',
+            init: indent,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'LicenseParagraph';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => LicenseParagraph$Mate(
           p.get('text').value,
           p.get('indent').value,
         );
-    mateUse(
-      'text',
-      text,
-      isNamed: false,
-    );
-    mateUse(
-      'indent',
-      indent,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LicenseEntryWithLineBreaks extends LicenseEntry
@@ -41,29 +43,31 @@ class LicenseEntryWithLineBreaks$Mate extends _i1.LicenseEntryWithLineBreaks wit
   /// LicenseEntryWithLineBreaks LicenseEntryWithLineBreaks(List<String> packages, String text)
   LicenseEntryWithLineBreaks$Mate(
     /// requiredParameters: List<String> packages
-    List<String> packages,
+    super.packages,
 
     /// requiredParameters: String text
-    String text,
-  ) : super(
-          packages,
-          text,
-        ) {
+    super.text,
+  )   : mateParams = {
+          'packages': _i2.BuilderArg<List<String>>(
+            name: 'packages',
+            init: packages,
+            isNamed: false,
+          ),
+          'text': _i2.BuilderArg<String>(
+            name: 'text',
+            init: text,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'LicenseEntryWithLineBreaks';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => LicenseEntryWithLineBreaks$Mate(
           p.get('packages').value,
           p.get('text').value,
         );
-    mateUse(
-      'packages',
-      packages,
-      isNamed: false,
-    );
-    mateUse(
-      'text',
-      text,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

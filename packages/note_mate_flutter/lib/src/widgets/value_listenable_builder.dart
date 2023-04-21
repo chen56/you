@@ -12,22 +12,39 @@ class ValueListenableBuilder$Mate<T> extends _i1.ValueListenableBuilder<T> with 
   /// ValueListenableBuilder<T> ValueListenableBuilder({Key? key, required ValueListenable<T> valueListenable, required Widget Function(BuildContext, T, Widget?) builder, Widget? child})
   ValueListenableBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ValueListenable<T> valueListenable} , default:none
-    required _i4.ValueListenable<T> valueListenable,
+    required super.valueListenable,
 
     /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , default:none
-    required _i1.ValueWidgetBuilder<T> builder,
+    required super.builder,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          valueListenable: valueListenable,
-          builder: builder,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'valueListenable': _i2.BuilderArg<_i4.ValueListenable<T>>(
+            name: 'valueListenable',
+            init: valueListenable,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.ValueWidgetBuilder<T>>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ValueListenableBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ValueListenableBuilder$Mate<T>(
@@ -36,25 +53,8 @@ class ValueListenableBuilder$Mate<T> extends _i1.ValueListenableBuilder<T> with 
           builder: p.get('builder').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'valueListenable',
-      valueListenable,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

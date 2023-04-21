@@ -15,30 +15,55 @@ class ImageConfiguration$Mate extends _i1.ImageConfiguration with _i2.Mate {
   /// ImageConfiguration ImageConfiguration({AssetBundle? bundle, double? devicePixelRatio, Locale? locale, TextDirection? textDirection, Size? size, TargetPlatform? platform})
   ImageConfiguration$Mate({
     /// optionalParameters: {AssetBundle? bundle} , default:none
-    _i3.AssetBundle? bundle,
+    super.bundle,
 
     /// optionalParameters: {double? devicePixelRatio} , default:none
-    double? devicePixelRatio,
+    super.devicePixelRatio,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i4.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {Size? size} , default:none
-    _i4.Size? size,
+    super.size,
 
     /// optionalParameters: {TargetPlatform? platform} , default:none
-    _i5.TargetPlatform? platform,
-  }) : super(
-          bundle: bundle,
-          devicePixelRatio: devicePixelRatio,
-          locale: locale,
-          textDirection: textDirection,
-          size: size,
-          platform: platform,
-        ) {
+    super.platform,
+  })  : mateParams = {
+          'bundle': _i2.BuilderArg<_i3.AssetBundle?>(
+            name: 'bundle',
+            init: bundle,
+            isNamed: true,
+          ),
+          'devicePixelRatio': _i2.BuilderArg<double?>(
+            name: 'devicePixelRatio',
+            init: devicePixelRatio,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i4.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<_i4.Size?>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'platform': _i2.BuilderArg<_i5.TargetPlatform?>(
+            name: 'platform',
+            init: platform,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageConfiguration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageConfiguration$Mate(
@@ -49,37 +74,10 @@ class ImageConfiguration$Mate extends _i1.ImageConfiguration with _i2.Mate {
           size: p.get('size').build(),
           platform: p.get('platform').build(),
         );
-    mateUse(
-      'bundle',
-      bundle,
-      isNamed: true,
-    );
-    mateUse(
-      'devicePixelRatio',
-      devicePixelRatio,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'platform',
-      platform,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AssetBundleImageKey
@@ -87,18 +85,31 @@ class AssetBundleImageKey$Mate extends _i1.AssetBundleImageKey with _i2.Mate {
   /// AssetBundleImageKey AssetBundleImageKey({required AssetBundle bundle, required String name, required double scale})
   AssetBundleImageKey$Mate({
     /// optionalParameters: {required AssetBundle bundle} , default:none
-    required _i3.AssetBundle bundle,
+    required super.bundle,
 
     /// optionalParameters: {required String name} , default:none
-    required String name,
+    required super.name,
 
     /// optionalParameters: {required double scale} , default:none
-    required double scale,
-  }) : super(
-          bundle: bundle,
-          name: name,
-          scale: scale,
-        ) {
+    required super.scale,
+  })  : mateParams = {
+          'bundle': _i2.BuilderArg<_i3.AssetBundle>(
+            name: 'bundle',
+            init: bundle,
+            isNamed: true,
+          ),
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AssetBundleImageKey';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AssetBundleImageKey$Mate(
@@ -106,22 +117,10 @@ class AssetBundleImageKey$Mate extends _i1.AssetBundleImageKey with _i2.Mate {
           name: p.get('name').build(),
           scale: p.get('scale').build(),
         );
-    mateUse(
-      'bundle',
-      bundle,
-      isNamed: true,
-    );
-    mateUse(
-      'name',
-      name,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ResizeImage extends ImageProvider<ResizeImageKey>
@@ -129,25 +128,48 @@ class ResizeImage$Mate extends _i1.ResizeImage with _i2.Mate {
   /// ResizeImage ResizeImage(ImageProvider<Object> imageProvider, {int? width, int? height, ResizeImagePolicy policy = ResizeImagePolicy.exact, bool allowUpscaling = false})
   ResizeImage$Mate(
     /// requiredParameters: ImageProvider<Object> imageProvider
-    _i1.ImageProvider<Object> imageProvider, {
+    super.imageProvider, {
     /// optionalParameters: {int? width} , default:none
-    int? width,
+    super.width,
 
     /// optionalParameters: {int? height} , default:none
-    int? height,
+    super.height,
 
     /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , default:processed=PrefixedIdentifierImpl
-    _i1.ResizeImagePolicy policy = _i6.ResizeImagePolicy.exact,
+    super.policy,
 
     /// optionalParameters: {bool allowUpscaling = false} , default:processed=BooleanLiteralImpl
-    bool allowUpscaling = false,
-  }) : super(
-          imageProvider,
-          width: width,
-          height: height,
-          policy: policy,
-          allowUpscaling: allowUpscaling,
-        ) {
+    super.allowUpscaling,
+  })  : mateParams = {
+          'imageProvider': _i2.BuilderArg<_i1.ImageProvider<Object>>(
+            name: 'imageProvider',
+            init: imageProvider,
+            isNamed: false,
+          ),
+          'width': _i2.BuilderArg<int?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<int?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'policy': _i2.BuilderArg<_i1.ResizeImagePolicy>(
+            name: 'policy',
+            init: policy,
+            isNamed: true,
+            defaultValue: _i6.ResizeImagePolicy.exact,
+          ),
+          'allowUpscaling': _i2.BuilderArg<bool>(
+            name: 'allowUpscaling',
+            init: allowUpscaling,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'ResizeImage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ResizeImage$Mate(
@@ -157,34 +179,10 @@ class ResizeImage$Mate extends _i1.ResizeImage with _i2.Mate {
           policy: p.get('policy').build(),
           allowUpscaling: p.get('allowUpscaling').build(),
         );
-    mateUse(
-      'imageProvider',
-      imageProvider,
-      isNamed: false,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'policy',
-      policy,
-      isNamed: true,
-      defaultValue: _i6.ResizeImagePolicy.exact,
-    );
-    mateUse(
-      'allowUpscaling',
-      allowUpscaling,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FileImage extends ImageProvider<FileImage>
@@ -192,31 +190,33 @@ class FileImage$Mate extends _i1.FileImage with _i2.Mate {
   /// FileImage FileImage(File file, {double scale = 1.0})
   FileImage$Mate(
     /// requiredParameters: File file
-    _i7.File file, {
+    super.file, {
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
-  }) : super(
-          file,
-          scale: scale,
-        ) {
+    super.scale,
+  })  : mateParams = {
+          'file': _i2.BuilderArg<_i7.File>(
+            name: 'file',
+            init: file,
+            isNamed: false,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'FileImage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FileImage$Mate(
           p.get('file').value,
           scale: p.get('scale').build(),
         );
-    mateUse(
-      'file',
-      file,
-      isNamed: false,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MemoryImage extends ImageProvider<MemoryImage>
@@ -224,31 +224,33 @@ class MemoryImage$Mate extends _i1.MemoryImage with _i2.Mate {
   /// MemoryImage MemoryImage(Uint8List bytes, {double scale = 1.0})
   MemoryImage$Mate(
     /// requiredParameters: Uint8List bytes
-    _i8.Uint8List bytes, {
+    super.bytes, {
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
-  }) : super(
-          bytes,
-          scale: scale,
-        ) {
+    super.scale,
+  })  : mateParams = {
+          'bytes': _i2.BuilderArg<_i8.Uint8List>(
+            name: 'bytes',
+            init: bytes,
+            isNamed: false,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'MemoryImage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MemoryImage$Mate(
           p.get('bytes').value,
           scale: p.get('scale').build(),
         );
-    mateUse(
-      'bytes',
-      bytes,
-      isNamed: false,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExactAssetImage extends AssetBundleImageProvider
@@ -256,21 +258,39 @@ class ExactAssetImage$Mate extends _i1.ExactAssetImage with _i2.Mate {
   /// ExactAssetImage ExactAssetImage(String assetName, {double scale = 1.0, AssetBundle? bundle, String? package})
   ExactAssetImage$Mate(
     /// requiredParameters: String assetName
-    String assetName, {
+    super.assetName, {
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
+    super.scale,
 
     /// optionalParameters: {AssetBundle? bundle} , default:none
-    _i3.AssetBundle? bundle,
+    super.bundle,
 
     /// optionalParameters: {String? package} , default:none
-    String? package,
-  }) : super(
-          assetName,
-          scale: scale,
-          bundle: bundle,
-          package: package,
-        ) {
+    super.package,
+  })  : mateParams = {
+          'assetName': _i2.BuilderArg<String>(
+            name: 'assetName',
+            init: assetName,
+            isNamed: false,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'bundle': _i2.BuilderArg<_i3.AssetBundle?>(
+            name: 'bundle',
+            init: bundle,
+            isNamed: true,
+          ),
+          'package': _i2.BuilderArg<String?>(
+            name: 'package',
+            init: package,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExactAssetImage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExactAssetImage$Mate(
@@ -279,28 +299,10 @@ class ExactAssetImage$Mate extends _i1.ExactAssetImage with _i2.Mate {
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    mateUse(
-      'assetName',
-      assetName,
-      isNamed: false,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'bundle',
-      bundle,
-      isNamed: true,
-    );
-    mateUse(
-      'package',
-      package,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NetworkImageLoadException implements Exception
@@ -308,29 +310,31 @@ class NetworkImageLoadException$Mate extends _i1.NetworkImageLoadException with 
   /// NetworkImageLoadException NetworkImageLoadException({required int statusCode, required Uri uri})
   NetworkImageLoadException$Mate({
     /// optionalParameters: {required int statusCode} , default:none
-    required int statusCode,
+    required super.statusCode,
 
     /// optionalParameters: {required Uri uri} , default:none
-    required Uri uri,
-  }) : super(
-          statusCode: statusCode,
-          uri: uri,
-        ) {
+    required super.uri,
+  })  : mateParams = {
+          'statusCode': _i2.BuilderArg<int>(
+            name: 'statusCode',
+            init: statusCode,
+            isNamed: true,
+          ),
+          'uri': _i2.BuilderArg<Uri>(
+            name: 'uri',
+            init: uri,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NetworkImageLoadException';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => NetworkImageLoadException$Mate(
           statusCode: p.get('statusCode').build(),
           uri: p.get('uri').build(),
         );
-    mateUse(
-      'statusCode',
-      statusCode,
-      isNamed: true,
-    );
-    mateUse(
-      'uri',
-      uri,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

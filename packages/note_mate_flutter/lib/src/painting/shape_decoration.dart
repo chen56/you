@@ -14,26 +14,47 @@ class ShapeDecoration$Mate extends _i1.ShapeDecoration with _i2.Mate {
   /// ShapeDecoration ShapeDecoration({Color? color, DecorationImage? image, Gradient? gradient, List<BoxShadow>? shadows, required ShapeBorder shape})
   ShapeDecoration$Mate({
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {DecorationImage? image} , default:none
-    _i4.DecorationImage? image,
+    super.image,
 
     /// optionalParameters: {Gradient? gradient} , default:none
-    _i5.Gradient? gradient,
+    super.gradient,
 
     /// optionalParameters: {List<BoxShadow>? shadows} , default:none
-    List<_i6.BoxShadow>? shadows,
+    super.shadows,
 
     /// optionalParameters: {required ShapeBorder shape} , default:none
-    required _i7.ShapeBorder shape,
-  }) : super(
-          color: color,
-          image: image,
-          gradient: gradient,
-          shadows: shadows,
-          shape: shape,
-        ) {
+    required super.shape,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'image': _i2.BuilderArg<_i4.DecorationImage?>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'gradient': _i2.BuilderArg<_i5.Gradient?>(
+            name: 'gradient',
+            init: gradient,
+            isNamed: true,
+          ),
+          'shadows': _i2.BuilderArg<List<_i6.BoxShadow>?>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.ShapeBorder>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ShapeDecoration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ShapeDecoration$Mate(
@@ -43,30 +64,8 @@ class ShapeDecoration$Mate extends _i1.ShapeDecoration with _i2.Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'gradient',
-      gradient,
-      isNamed: true,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

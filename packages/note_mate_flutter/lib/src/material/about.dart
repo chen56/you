@@ -11,42 +11,79 @@ class AboutListTile$Mate extends _i1.AboutListTile with _i2.Mate {
   /// AboutListTile AboutListTile({Key? key, Widget? icon, Widget? child, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese, List<Widget>? aboutBoxChildren, bool? dense})
   AboutListTile$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? icon} , default:none
-    _i4.Widget? icon,
+    super.icon,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {String? applicationName} , default:none
-    String? applicationName,
+    super.applicationName,
 
     /// optionalParameters: {String? applicationVersion} , default:none
-    String? applicationVersion,
+    super.applicationVersion,
 
     /// optionalParameters: {Widget? applicationIcon} , default:none
-    _i4.Widget? applicationIcon,
+    super.applicationIcon,
 
     /// optionalParameters: {String? applicationLegalese} , default:none
-    String? applicationLegalese,
+    super.applicationLegalese,
 
     /// optionalParameters: {List<Widget>? aboutBoxChildren} , default:none
-    List<_i4.Widget>? aboutBoxChildren,
+    super.aboutBoxChildren,
 
     /// optionalParameters: {bool? dense} , default:none
-    bool? dense,
-  }) : super(
-          key: key,
-          icon: icon,
-          child: child,
-          applicationName: applicationName,
-          applicationVersion: applicationVersion,
-          applicationIcon: applicationIcon,
-          applicationLegalese: applicationLegalese,
-          aboutBoxChildren: aboutBoxChildren,
-          dense: dense,
-        ) {
+    super.dense,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'applicationName': _i2.BuilderArg<String?>(
+            name: 'applicationName',
+            init: applicationName,
+            isNamed: true,
+          ),
+          'applicationVersion': _i2.BuilderArg<String?>(
+            name: 'applicationVersion',
+            init: applicationVersion,
+            isNamed: true,
+          ),
+          'applicationIcon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'applicationIcon',
+            init: applicationIcon,
+            isNamed: true,
+          ),
+          'applicationLegalese': _i2.BuilderArg<String?>(
+            name: 'applicationLegalese',
+            init: applicationLegalese,
+            isNamed: true,
+          ),
+          'aboutBoxChildren': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'aboutBoxChildren',
+            init: aboutBoxChildren,
+            isNamed: true,
+          ),
+          'dense': _i2.BuilderArg<bool?>(
+            name: 'dense',
+            init: dense,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AboutListTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AboutListTile$Mate(
@@ -60,52 +97,10 @@ class AboutListTile$Mate extends _i1.AboutListTile with _i2.Mate {
           aboutBoxChildren: p.get('aboutBoxChildren').build(),
           dense: p.get('dense').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationName',
-      applicationName,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationVersion',
-      applicationVersion,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationIcon',
-      applicationIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationLegalese',
-      applicationLegalese,
-      isNamed: true,
-    );
-    mateUse(
-      'aboutBoxChildren',
-      aboutBoxChildren,
-      isNamed: true,
-    );
-    mateUse(
-      'dense',
-      dense,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AboutDialog extends StatelessWidget
@@ -113,30 +108,55 @@ class AboutDialog$Mate extends _i1.AboutDialog with _i2.Mate {
   /// AboutDialog AboutDialog({Key? key, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese, List<Widget>? children})
   AboutDialog$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {String? applicationName} , default:none
-    String? applicationName,
+    super.applicationName,
 
     /// optionalParameters: {String? applicationVersion} , default:none
-    String? applicationVersion,
+    super.applicationVersion,
 
     /// optionalParameters: {Widget? applicationIcon} , default:none
-    _i4.Widget? applicationIcon,
+    super.applicationIcon,
 
     /// optionalParameters: {String? applicationLegalese} , default:none
-    String? applicationLegalese,
+    super.applicationLegalese,
 
     /// optionalParameters: {List<Widget>? children} , default:none
-    List<_i4.Widget>? children,
-  }) : super(
-          key: key,
-          applicationName: applicationName,
-          applicationVersion: applicationVersion,
-          applicationIcon: applicationIcon,
-          applicationLegalese: applicationLegalese,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'applicationName': _i2.BuilderArg<String?>(
+            name: 'applicationName',
+            init: applicationName,
+            isNamed: true,
+          ),
+          'applicationVersion': _i2.BuilderArg<String?>(
+            name: 'applicationVersion',
+            init: applicationVersion,
+            isNamed: true,
+          ),
+          'applicationIcon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'applicationIcon',
+            init: applicationIcon,
+            isNamed: true,
+          ),
+          'applicationLegalese': _i2.BuilderArg<String?>(
+            name: 'applicationLegalese',
+            init: applicationLegalese,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AboutDialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AboutDialog$Mate(
@@ -147,37 +167,10 @@ class AboutDialog$Mate extends _i1.AboutDialog with _i2.Mate {
           applicationLegalese: p.get('applicationLegalese').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationName',
-      applicationName,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationVersion',
-      applicationVersion,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationIcon',
-      applicationIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationLegalese',
-      applicationLegalese,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LicensePage extends StatefulWidget
@@ -185,26 +178,47 @@ class LicensePage$Mate extends _i1.LicensePage with _i2.Mate {
   /// LicensePage LicensePage({Key? key, String? applicationName, String? applicationVersion, Widget? applicationIcon, String? applicationLegalese})
   LicensePage$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {String? applicationName} , default:none
-    String? applicationName,
+    super.applicationName,
 
     /// optionalParameters: {String? applicationVersion} , default:none
-    String? applicationVersion,
+    super.applicationVersion,
 
     /// optionalParameters: {Widget? applicationIcon} , default:none
-    _i4.Widget? applicationIcon,
+    super.applicationIcon,
 
     /// optionalParameters: {String? applicationLegalese} , default:none
-    String? applicationLegalese,
-  }) : super(
-          key: key,
-          applicationName: applicationName,
-          applicationVersion: applicationVersion,
-          applicationIcon: applicationIcon,
-          applicationLegalese: applicationLegalese,
-        ) {
+    super.applicationLegalese,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'applicationName': _i2.BuilderArg<String?>(
+            name: 'applicationName',
+            init: applicationName,
+            isNamed: true,
+          ),
+          'applicationVersion': _i2.BuilderArg<String?>(
+            name: 'applicationVersion',
+            init: applicationVersion,
+            isNamed: true,
+          ),
+          'applicationIcon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'applicationIcon',
+            init: applicationIcon,
+            isNamed: true,
+          ),
+          'applicationLegalese': _i2.BuilderArg<String?>(
+            name: 'applicationLegalese',
+            init: applicationLegalese,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LicensePage';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LicensePage$Mate(
@@ -214,30 +228,8 @@ class LicensePage$Mate extends _i1.LicensePage with _i2.Mate {
           applicationIcon: p.get('applicationIcon').build(),
           applicationLegalese: p.get('applicationLegalese').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationName',
-      applicationName,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationVersion',
-      applicationVersion,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationIcon',
-      applicationIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'applicationLegalese',
-      applicationLegalese,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -11,34 +11,70 @@ class StarBorder$Mate extends _i1.StarBorder with _i2.Mate {
   /// StarBorder StarBorder({BorderSide side = BorderSide.none, double points = 5, double innerRadiusRatio = 0.4, double pointRounding = 0, double valleyRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {double points = 5} , default:processed=IntegerLiteralImpl
-    double points = 5,
+    super.points,
 
     /// optionalParameters: {double innerRadiusRatio = 0.4} , default:processed=DoubleLiteralImpl
-    double innerRadiusRatio = 0.4,
+    super.innerRadiusRatio,
 
     /// optionalParameters: {double pointRounding = 0} , default:processed=IntegerLiteralImpl
-    double pointRounding = 0,
+    super.pointRounding,
 
     /// optionalParameters: {double valleyRounding = 0} , default:processed=IntegerLiteralImpl
-    double valleyRounding = 0,
+    super.valleyRounding,
 
     /// optionalParameters: {double rotation = 0} , default:processed=IntegerLiteralImpl
-    double rotation = 0,
+    super.rotation,
 
     /// optionalParameters: {double squash = 0} , default:processed=IntegerLiteralImpl
-    double squash = 0,
-  }) : super(
-          side: side,
-          points: points,
-          innerRadiusRatio: innerRadiusRatio,
-          pointRounding: pointRounding,
-          valleyRounding: valleyRounding,
-          rotation: rotation,
-          squash: squash,
-        ) {
+    super.squash,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'points': _i2.BuilderArg<double>(
+            name: 'points',
+            init: points,
+            isNamed: true,
+            defaultValue: 5,
+          ),
+          'innerRadiusRatio': _i2.BuilderArg<double>(
+            name: 'innerRadiusRatio',
+            init: innerRadiusRatio,
+            isNamed: true,
+            defaultValue: 0.4,
+          ),
+          'pointRounding': _i2.BuilderArg<double>(
+            name: 'pointRounding',
+            init: pointRounding,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'valleyRounding': _i2.BuilderArg<double>(
+            name: 'valleyRounding',
+            init: valleyRounding,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'rotation': _i2.BuilderArg<double>(
+            name: 'rotation',
+            init: rotation,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'squash': _i2.BuilderArg<double>(
+            name: 'squash',
+            init: squash,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'StarBorder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StarBorder$Mate(
@@ -50,73 +86,57 @@ class StarBorder$Mate extends _i1.StarBorder with _i2.Mate {
           rotation: p.get('rotation').build(),
           squash: p.get('squash').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'points',
-      points,
-      isNamed: true,
-      defaultValue: 5,
-    );
-    mateUse(
-      'innerRadiusRatio',
-      innerRadiusRatio,
-      isNamed: true,
-      defaultValue: 0.4,
-    );
-    mateUse(
-      'pointRounding',
-      pointRounding,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'valleyRounding',
-      valleyRounding,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'rotation',
-      rotation,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'squash',
-      squash,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
 
   /// StarBorder StarBorder.polygon({BorderSide side = BorderSide.none, double sides = 5, double pointRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate.polygon({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {double sides = 5} , default:processed=IntegerLiteralImpl
-    double sides = 5,
+    super.sides,
 
     /// optionalParameters: {double pointRounding = 0} , default:processed=IntegerLiteralImpl
-    double pointRounding = 0,
+    super.pointRounding,
 
     /// optionalParameters: {double rotation = 0} , default:processed=IntegerLiteralImpl
-    double rotation = 0,
+    super.rotation,
 
     /// optionalParameters: {double squash = 0} , default:processed=IntegerLiteralImpl
-    double squash = 0,
-  }) : super.polygon(
-          side: side,
-          sides: sides,
-          pointRounding: pointRounding,
-          rotation: rotation,
-          squash: squash,
-        ) {
+    super.squash,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'sides': _i2.BuilderArg<double>(
+            name: 'sides',
+            init: sides,
+            isNamed: true,
+            defaultValue: 5,
+          ),
+          'pointRounding': _i2.BuilderArg<double>(
+            name: 'pointRounding',
+            init: pointRounding,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'rotation': _i2.BuilderArg<double>(
+            name: 'rotation',
+            init: rotation,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'squash': _i2.BuilderArg<double>(
+            name: 'squash',
+            init: squash,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super.polygon() {
     mateBuilderName = 'StarBorder.polygon';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StarBorder$Mate.polygon(
@@ -126,35 +146,8 @@ class StarBorder$Mate extends _i1.StarBorder with _i2.Mate {
           rotation: p.get('rotation').build(),
           squash: p.get('squash').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'sides',
-      sides,
-      isNamed: true,
-      defaultValue: 5,
-    );
-    mateUse(
-      'pointRounding',
-      pointRounding,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'rotation',
-      rotation,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'squash',
-      squash,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

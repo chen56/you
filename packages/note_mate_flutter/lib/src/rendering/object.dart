@@ -13,31 +13,33 @@ class PaintingContext$Mate extends _i1.PaintingContext with _i2.Mate {
   /// PaintingContext PaintingContext(ContainerLayer _containerLayer, Rect estimatedBounds)
   PaintingContext$Mate(
     /// requiredParameters: ContainerLayer _containerLayer
-    _i3.ContainerLayer _containerLayer,
+    super._containerLayer,
 
     /// requiredParameters: Rect estimatedBounds
-    _i4.Rect estimatedBounds,
-  ) : super(
-          _containerLayer,
-          estimatedBounds,
-        ) {
+    super.estimatedBounds,
+  )   : mateParams = {
+          '_containerLayer': _i2.BuilderArg<_i3.ContainerLayer>(
+            name: '_containerLayer',
+            init: _containerLayer,
+            isNamed: false,
+          ),
+          'estimatedBounds': _i2.BuilderArg<_i4.Rect>(
+            name: 'estimatedBounds',
+            init: estimatedBounds,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'PaintingContext';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PaintingContext$Mate(
           p.get('_containerLayer').value,
           p.get('estimatedBounds').value,
         );
-    mateUse(
-      '_containerLayer',
-      _containerLayer,
-      isNamed: false,
-    );
-    mateUse(
-      'estimatedBounds',
-      estimatedBounds,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PipelineOwner
@@ -45,22 +47,39 @@ class PipelineOwner$Mate extends _i1.PipelineOwner with _i2.Mate {
   /// PipelineOwner PipelineOwner({void Function()? onNeedVisualUpdate, void Function()? onSemanticsOwnerCreated, void Function(SemanticsUpdate)? onSemanticsUpdate, void Function()? onSemanticsOwnerDisposed})
   PipelineOwner$Mate({
     /// optionalParameters: {void Function()? onNeedVisualUpdate} , default:none
-    _i4.VoidCallback? onNeedVisualUpdate,
+    super.onNeedVisualUpdate,
 
     /// optionalParameters: {void Function()? onSemanticsOwnerCreated} , default:none
-    _i4.VoidCallback? onSemanticsOwnerCreated,
+    super.onSemanticsOwnerCreated,
 
     /// optionalParameters: {void Function(SemanticsUpdate)? onSemanticsUpdate} , default:none
-    _i5.SemanticsUpdateCallback? onSemanticsUpdate,
+    super.onSemanticsUpdate,
 
     /// optionalParameters: {void Function()? onSemanticsOwnerDisposed} , default:none
-    _i4.VoidCallback? onSemanticsOwnerDisposed,
-  }) : super(
-          onNeedVisualUpdate: onNeedVisualUpdate,
-          onSemanticsOwnerCreated: onSemanticsOwnerCreated,
-          onSemanticsUpdate: onSemanticsUpdate,
-          onSemanticsOwnerDisposed: onSemanticsOwnerDisposed,
-        ) {
+    super.onSemanticsOwnerDisposed,
+  })  : mateParams = {
+          'onNeedVisualUpdate': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onNeedVisualUpdate',
+            init: onNeedVisualUpdate,
+            isNamed: true,
+          ),
+          'onSemanticsOwnerCreated': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onSemanticsOwnerCreated',
+            init: onSemanticsOwnerCreated,
+            isNamed: true,
+          ),
+          'onSemanticsUpdate': _i2.BuilderArg<_i5.SemanticsUpdateCallback?>(
+            name: 'onSemanticsUpdate',
+            init: onSemanticsUpdate,
+            isNamed: true,
+          ),
+          'onSemanticsOwnerDisposed': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onSemanticsOwnerDisposed',
+            init: onSemanticsOwnerDisposed,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PipelineOwner';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PipelineOwner$Mate(
@@ -69,27 +88,10 @@ class PipelineOwner$Mate extends _i1.PipelineOwner with _i2.Mate {
           onSemanticsUpdate: p.get('onSemanticsUpdate').build(),
           onSemanticsOwnerDisposed: p.get('onSemanticsOwnerDisposed').build(),
         );
-    mateUse(
-      'onNeedVisualUpdate',
-      onNeedVisualUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onSemanticsOwnerCreated',
-      onSemanticsOwnerCreated,
-      isNamed: true,
-    );
-    mateUse(
-      'onSemanticsUpdate',
-      onSemanticsUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onSemanticsOwnerDisposed',
-      onSemanticsOwnerDisposed,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DiagnosticsDebugCreator extends DiagnosticsProperty<Object>
@@ -98,15 +100,20 @@ class DiagnosticsDebugCreator$Mate extends _i1.DiagnosticsDebugCreator with _i2.
   DiagnosticsDebugCreator$Mate(
 
       /// requiredParameters: Object value
-      Object value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<Object>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'DiagnosticsDebugCreator';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => DiagnosticsDebugCreator$Mate(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

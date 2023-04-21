@@ -21,94 +21,190 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
   /// ReorderableList ReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator, EdgeInsetsGeometry? padding, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollController? controller, bool? primary, ScrollPhysics? physics, bool shrinkWrap = false, double anchor = 0.0, double? cacheExtent, DragStartBehavior dragStartBehavior = DragStartBehavior.start, ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual, String? restorationId, Clip clipBehavior = Clip.hardEdge})
   ReorderableList$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , default:none
-    required _i4.IndexedWidgetBuilder itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {required int itemCount} , default:none
-    required int itemCount,
+    required super.itemCount,
 
     /// optionalParameters: {required void Function(int, int) onReorder} , default:none
-    required _i1.ReorderCallback onReorder,
+    required super.onReorder,
 
     /// optionalParameters: {void Function(int)? onReorderStart} , default:none
-    void Function(int)? onReorderStart,
+    super.onReorderStart,
 
     /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
-    void Function(int)? onReorderEnd,
+    super.onReorderEnd,
 
     /// optionalParameters: {double? itemExtent} , default:none
-    double? itemExtent,
+    super.itemExtent,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
-    _i4.Widget? prototypeItem,
+    super.prototypeItem,
 
     /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
-    _i1.ReorderItemProxyDecorator? proxyDecorator,
+    super.proxyDecorator,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i6.Axis scrollDirection = _i7.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i8.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? primary} , default:none
-    bool? primary,
+    super.primary,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i9.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {bool shrinkWrap = false} , default:processed=BooleanLiteralImpl
-    bool shrinkWrap = false,
+    super.shrinkWrap,
 
     /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
-    double anchor = 0.0,
+    super.anchor,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i10.DragStartBehavior dragStartBehavior = _i11.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
-    _i12.ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = _i7.ScrollViewKeyboardDismissBehavior.manual,
+    super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i13.Clip clipBehavior = _i13.Clip.hardEdge,
-  }) : super(
-          key: key,
-          itemBuilder: itemBuilder,
-          itemCount: itemCount,
-          onReorder: onReorder,
-          onReorderStart: onReorderStart,
-          onReorderEnd: onReorderEnd,
-          itemExtent: itemExtent,
-          prototypeItem: prototypeItem,
-          proxyDecorator: proxyDecorator,
-          padding: padding,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          controller: controller,
-          primary: primary,
-          physics: physics,
-          shrinkWrap: shrinkWrap,
-          anchor: anchor,
-          cacheExtent: cacheExtent,
-          dragStartBehavior: dragStartBehavior,
-          keyboardDismissBehavior: keyboardDismissBehavior,
-          restorationId: restorationId,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i4.IndexedWidgetBuilder>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'itemCount': _i2.BuilderArg<int>(
+            name: 'itemCount',
+            init: itemCount,
+            isNamed: true,
+          ),
+          'onReorder': _i2.BuilderArg<_i1.ReorderCallback>(
+            name: 'onReorder',
+            init: onReorder,
+            isNamed: true,
+          ),
+          'onReorderStart': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderStart',
+            init: onReorderStart,
+            isNamed: true,
+          ),
+          'onReorderEnd': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderEnd',
+            init: onReorderEnd,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double?>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i4.Widget?>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'proxyDecorator': _i2.BuilderArg<_i1.ReorderItemProxyDecorator?>(
+            name: 'proxyDecorator',
+            init: proxyDecorator,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i6.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i7.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i8.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool?>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i9.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'shrinkWrap': _i2.BuilderArg<bool>(
+            name: 'shrinkWrap',
+            init: shrinkWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'anchor': _i2.BuilderArg<double>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
+          ),
+          'keyboardDismissBehavior': _i2.BuilderArg<_i12.ScrollViewKeyboardDismissBehavior>(
+            name: 'keyboardDismissBehavior',
+            init: keyboardDismissBehavior,
+            isNamed: true,
+            defaultValue: _i7.ScrollViewKeyboardDismissBehavior.manual,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i13.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i13.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'ReorderableList';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ReorderableList$Mate(
@@ -135,124 +231,10 @@ class ReorderableList$Mate extends _i1.ReorderableList with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'itemCount',
-      itemCount,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorder',
-      onReorder,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderStart',
-      onReorderStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderEnd',
-      onReorderEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'proxyDecorator',
-      proxyDecorator,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i7.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'shrinkWrap',
-      shrinkWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i11.DragStartBehavior.start,
-    );
-    mateUse(
-      'keyboardDismissBehavior',
-      keyboardDismissBehavior,
-      isNamed: true,
-      defaultValue: _i7.ScrollViewKeyboardDismissBehavior.manual,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i13.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverReorderableList extends StatefulWidget
@@ -260,46 +242,87 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
   /// SliverReorderableList SliverReorderableList({Key? key, required Widget Function(BuildContext, int) itemBuilder, int? Function(Key)? findChildIndexCallback, required int itemCount, required void Function(int, int) onReorder, void Function(int)? onReorderStart, void Function(int)? onReorderEnd, double? itemExtent, Widget? prototypeItem, Widget Function(Widget, int, Animation<double>)? proxyDecorator})
   SliverReorderableList$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext, int) itemBuilder} , default:none
-    required _i4.IndexedWidgetBuilder itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
-    _i14.ChildIndexGetter? findChildIndexCallback,
+    super.findChildIndexCallback,
 
     /// optionalParameters: {required int itemCount} , default:none
-    required int itemCount,
+    required super.itemCount,
 
     /// optionalParameters: {required void Function(int, int) onReorder} , default:none
-    required _i1.ReorderCallback onReorder,
+    required super.onReorder,
 
     /// optionalParameters: {void Function(int)? onReorderStart} , default:none
-    void Function(int)? onReorderStart,
+    super.onReorderStart,
 
     /// optionalParameters: {void Function(int)? onReorderEnd} , default:none
-    void Function(int)? onReorderEnd,
+    super.onReorderEnd,
 
     /// optionalParameters: {double? itemExtent} , default:none
-    double? itemExtent,
+    super.itemExtent,
 
     /// optionalParameters: {Widget? prototypeItem} , default:none
-    _i4.Widget? prototypeItem,
+    super.prototypeItem,
 
     /// optionalParameters: {Widget Function(Widget, int, Animation<double>)? proxyDecorator} , default:none
-    _i1.ReorderItemProxyDecorator? proxyDecorator,
-  }) : super(
-          key: key,
-          itemBuilder: itemBuilder,
-          findChildIndexCallback: findChildIndexCallback,
-          itemCount: itemCount,
-          onReorder: onReorder,
-          onReorderStart: onReorderStart,
-          onReorderEnd: onReorderEnd,
-          itemExtent: itemExtent,
-          prototypeItem: prototypeItem,
-          proxyDecorator: proxyDecorator,
-        ) {
+    super.proxyDecorator,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i4.IndexedWidgetBuilder>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
+            name: 'findChildIndexCallback',
+            init: findChildIndexCallback,
+            isNamed: true,
+          ),
+          'itemCount': _i2.BuilderArg<int>(
+            name: 'itemCount',
+            init: itemCount,
+            isNamed: true,
+          ),
+          'onReorder': _i2.BuilderArg<_i1.ReorderCallback>(
+            name: 'onReorder',
+            init: onReorder,
+            isNamed: true,
+          ),
+          'onReorderStart': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderStart',
+            init: onReorderStart,
+            isNamed: true,
+          ),
+          'onReorderEnd': _i2.BuilderArg<void Function(int)?>(
+            name: 'onReorderEnd',
+            init: onReorderEnd,
+            isNamed: true,
+          ),
+          'itemExtent': _i2.BuilderArg<double?>(
+            name: 'itemExtent',
+            init: itemExtent,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i4.Widget?>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'proxyDecorator': _i2.BuilderArg<_i1.ReorderItemProxyDecorator?>(
+            name: 'proxyDecorator',
+            init: proxyDecorator,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverReorderableList';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverReorderableList$Mate(
@@ -314,57 +337,10 @@ class SliverReorderableList$Mate extends _i1.SliverReorderableList with _i2.Mate
           prototypeItem: p.get('prototypeItem').build(),
           proxyDecorator: p.get('proxyDecorator').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'findChildIndexCallback',
-      findChildIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'itemCount',
-      itemCount,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorder',
-      onReorder,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderStart',
-      onReorderStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onReorderEnd',
-      onReorderEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'itemExtent',
-      itemExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'proxyDecorator',
-      proxyDecorator,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ReorderableDragStartListener extends StatelessWidget
@@ -372,22 +348,40 @@ class ReorderableDragStartListener$Mate extends _i1.ReorderableDragStartListener
   /// ReorderableDragStartListener ReorderableDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDragStartListener$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {required int index} , default:none
-    required int index,
+    required super.index,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
-  }) : super(
-          key: key,
-          child: child,
-          index: index,
-          enabled: enabled,
-        ) {
+    super.enabled,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'index': _i2.BuilderArg<int>(
+            name: 'index',
+            init: index,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ReorderableDragStartListener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ReorderableDragStartListener$Mate(
@@ -396,28 +390,10 @@ class ReorderableDragStartListener$Mate extends _i1.ReorderableDragStartListener
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'index',
-      index,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ReorderableDelayedDragStartListener extends ReorderableDragStartListener
@@ -425,22 +401,40 @@ class ReorderableDelayedDragStartListener$Mate extends _i1.ReorderableDelayedDra
   /// ReorderableDelayedDragStartListener ReorderableDelayedDragStartListener({Key? key, required Widget child, required int index, bool enabled = true})
   ReorderableDelayedDragStartListener$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {required int index} , default:none
-    required int index,
+    required super.index,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
-  }) : super(
-          key: key,
-          child: child,
-          index: index,
-          enabled: enabled,
-        ) {
+    super.enabled,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'index': _i2.BuilderArg<int>(
+            name: 'index',
+            init: index,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ReorderableDelayedDragStartListener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ReorderableDelayedDragStartListener$Mate(
@@ -449,26 +443,8 @@ class ReorderableDelayedDragStartListener$Mate extends _i1.ReorderableDelayedDra
           index: p.get('index').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'index',
-      index,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

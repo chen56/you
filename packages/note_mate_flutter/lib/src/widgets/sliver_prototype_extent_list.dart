@@ -12,18 +12,31 @@ class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList with 
   /// SliverPrototypeExtentList SliverPrototypeExtentList({Key? key, required SliverChildDelegate delegate, required Widget prototypeItem})
   SliverPrototypeExtentList$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required SliverChildDelegate delegate} , default:none
-    required _i4.SliverChildDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {required Widget prototypeItem} , default:none
-    required _i5.Widget prototypeItem,
-  }) : super(
-          key: key,
-          delegate: delegate,
-          prototypeItem: prototypeItem,
-        ) {
+    required super.prototypeItem,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i4.SliverChildDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i5.Widget>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverPrototypeExtentList';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate(
@@ -31,58 +44,79 @@ class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList with 
           delegate: p.get('delegate').build(),
           prototypeItem: p.get('prototypeItem').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.builder({Key? key, required Widget? Function(BuildContext, int) itemBuilder, required Widget prototypeItem, int? Function(Key)? findChildIndexCallback, int? itemCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
   SliverPrototypeExtentList$Mate.builder({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget? Function(BuildContext, int) itemBuilder} , default:none
-    required _i5.NullableIndexedWidgetBuilder itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {required Widget prototypeItem} , default:none
-    required _i5.Widget prototypeItem,
+    required super.prototypeItem,
 
     /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
-    _i4.ChildIndexGetter? findChildIndexCallback,
+    super.findChildIndexCallback,
 
     /// optionalParameters: {int? itemCount} , default:none
-    int? itemCount,
+    super.itemCount,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
-  }) : super.builder(
-          key: key,
-          itemBuilder: itemBuilder,
-          prototypeItem: prototypeItem,
-          findChildIndexCallback: findChildIndexCallback,
-          itemCount: itemCount,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-        ) {
+    super.addSemanticIndexes,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i5.NullableIndexedWidgetBuilder>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i5.Widget>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'findChildIndexCallback': _i2.BuilderArg<_i4.ChildIndexGetter?>(
+            name: 'findChildIndexCallback',
+            init: findChildIndexCallback,
+            isNamed: true,
+          ),
+          'itemCount': _i2.BuilderArg<int?>(
+            name: 'itemCount',
+            init: itemCount,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.builder() {
     mateBuilderName = 'SliverPrototypeExtentList.builder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.builder(
@@ -95,78 +129,63 @@ class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList with 
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'findChildIndexCallback',
-      findChildIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'itemCount',
-      itemCount,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
 
   /// SliverPrototypeExtentList SliverPrototypeExtentList.list({Key? key, required List<Widget> children, required Widget prototypeItem, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true})
   SliverPrototypeExtentList$Mate.list({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i5.Widget> children,
+    required super.children,
 
     /// optionalParameters: {required Widget prototypeItem} , default:none
-    required _i5.Widget prototypeItem,
+    required super.prototypeItem,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
-  }) : super.list(
-          key: key,
-          children: children,
-          prototypeItem: prototypeItem,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-        ) {
+    super.addSemanticIndexes,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'prototypeItem': _i2.BuilderArg<_i5.Widget>(
+            name: 'prototypeItem',
+            init: prototypeItem,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.list() {
     mateBuilderName = 'SliverPrototypeExtentList.list';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverPrototypeExtentList$Mate.list(
@@ -177,38 +196,8 @@ class SliverPrototypeExtentList$Mate extends _i1.SliverPrototypeExtentList with 
           addRepaintBoundaries: p.get('addRepaintBoundaries').build(),
           addSemanticIndexes: p.get('addSemanticIndexes').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'prototypeItem',
-      prototypeItem,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

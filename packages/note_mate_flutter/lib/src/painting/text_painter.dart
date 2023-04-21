@@ -13,22 +13,39 @@ class PlaceholderDimensions$Mate extends _i1.PlaceholderDimensions with _i2.Mate
   /// PlaceholderDimensions PlaceholderDimensions({required Size size, required PlaceholderAlignment alignment, TextBaseline? baseline, double? baselineOffset})
   PlaceholderDimensions$Mate({
     /// optionalParameters: {required Size size} , default:none
-    required _i3.Size size,
+    required super.size,
 
     /// optionalParameters: {required PlaceholderAlignment alignment} , default:none
-    required _i3.PlaceholderAlignment alignment,
+    required super.alignment,
 
     /// optionalParameters: {TextBaseline? baseline} , default:none
-    _i3.TextBaseline? baseline,
+    super.baseline,
 
     /// optionalParameters: {double? baselineOffset} , default:none
-    double? baselineOffset,
-  }) : super(
-          size: size,
-          alignment: alignment,
-          baseline: baseline,
-          baselineOffset: baselineOffset,
-        ) {
+    super.baselineOffset,
+  })  : mateParams = {
+          'size': _i2.BuilderArg<_i3.Size>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i3.PlaceholderAlignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'baseline': _i2.BuilderArg<_i3.TextBaseline?>(
+            name: 'baseline',
+            init: baseline,
+            isNamed: true,
+          ),
+          'baselineOffset': _i2.BuilderArg<double?>(
+            name: 'baselineOffset',
+            init: baselineOffset,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlaceholderDimensions';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PlaceholderDimensions$Mate(
@@ -37,27 +54,10 @@ class PlaceholderDimensions$Mate extends _i1.PlaceholderDimensions with _i2.Mate
           baseline: p.get('baseline').build(),
           baselineOffset: p.get('baselineOffset').build(),
         );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'baseline',
-      baseline,
-      isNamed: true,
-    );
-    mateUse(
-      'baselineOffset',
-      baselineOffset,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextPainter
@@ -65,46 +65,90 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
   /// TextPainter TextPainter({InlineSpan? text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, double textScaleFactor = 1.0, int? maxLines, String? ellipsis, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior})
   TextPainter$Mate({
     /// optionalParameters: {InlineSpan? text} , default:none
-    _i4.InlineSpan? text,
+    super.text,
 
     /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
-    _i3.TextAlign textAlign = _i3.TextAlign.start,
+    super.textAlign,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i3.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    double textScaleFactor = 1.0,
+    super.textScaleFactor,
 
     /// optionalParameters: {int? maxLines} , default:none
-    int? maxLines,
+    super.maxLines,
 
     /// optionalParameters: {String? ellipsis} , default:none
-    String? ellipsis,
+    super.ellipsis,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i3.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
-    _i5.StrutStyle? strutStyle,
+    super.strutStyle,
 
     /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
-    _i1.TextWidthBasis textWidthBasis = _i6.TextWidthBasis.parent,
+    super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i3.TextHeightBehavior? textHeightBehavior,
-  }) : super(
-          text: text,
-          textAlign: textAlign,
-          textDirection: textDirection,
-          textScaleFactor: textScaleFactor,
-          maxLines: maxLines,
-          ellipsis: ellipsis,
-          locale: locale,
-          strutStyle: strutStyle,
-          textWidthBasis: textWidthBasis,
-          textHeightBehavior: textHeightBehavior,
-        ) {
+    super.textHeightBehavior,
+  })  : mateParams = {
+          'text': _i2.BuilderArg<_i4.InlineSpan?>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i3.TextAlign>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+            defaultValue: _i3.TextAlign.start,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'textScaleFactor': _i2.BuilderArg<double>(
+            name: 'textScaleFactor',
+            init: textScaleFactor,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+          ),
+          'ellipsis': _i2.BuilderArg<String?>(
+            name: 'ellipsis',
+            init: ellipsis,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i3.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'strutStyle': _i2.BuilderArg<_i5.StrutStyle?>(
+            name: 'strutStyle',
+            init: strutStyle,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i1.TextWidthBasis>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+            defaultValue: _i6.TextWidthBasis.parent,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i3.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextPainter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextPainter$Mate(
@@ -119,58 +163,8 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
           textWidthBasis: p.get('textWidthBasis').build(),
           textHeightBehavior: p.get('textHeightBehavior').build(),
         );
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-      defaultValue: _i3.TextAlign.start,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'textScaleFactor',
-      textScaleFactor,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'ellipsis',
-      ellipsis,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'strutStyle',
-      strutStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-      defaultValue: _i6.TextWidthBasis.parent,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

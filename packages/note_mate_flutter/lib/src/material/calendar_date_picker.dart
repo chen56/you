@@ -15,42 +15,80 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
   /// CalendarDatePicker CalendarDatePicker({Key? key, required DateTime initialDate, required DateTime firstDate, required DateTime lastDate, DateTime? currentDate, required void Function(DateTime) onDateChanged, void Function(DateTime)? onDisplayedMonthChanged, DatePickerMode initialCalendarMode = DatePickerMode.day, bool Function(DateTime)? selectableDayPredicate})
   CalendarDatePicker$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required DateTime initialDate} , default:none
-    required DateTime initialDate,
+    required super.initialDate,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
-    required DateTime firstDate,
+    required super.firstDate,
 
     /// optionalParameters: {required DateTime lastDate} , default:none
-    required DateTime lastDate,
+    required super.lastDate,
 
     /// optionalParameters: {DateTime? currentDate} , default:none
-    DateTime? currentDate,
+    super.currentDate,
 
     /// optionalParameters: {required void Function(DateTime) onDateChanged} , default:none
-    required _i4.ValueChanged<DateTime> onDateChanged,
+    required super.onDateChanged,
 
     /// optionalParameters: {void Function(DateTime)? onDisplayedMonthChanged} , default:none
-    _i4.ValueChanged<DateTime>? onDisplayedMonthChanged,
+    super.onDisplayedMonthChanged,
 
     /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:processed=PrefixedIdentifierImpl
-    _i5.DatePickerMode initialCalendarMode = _i6.DatePickerMode.day,
+    super.initialCalendarMode,
 
     /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , default:none
-    _i5.SelectableDayPredicate? selectableDayPredicate,
-  }) : super(
-          key: key,
-          initialDate: initialDate,
-          firstDate: firstDate,
-          lastDate: lastDate,
-          currentDate: currentDate,
-          onDateChanged: onDateChanged,
-          onDisplayedMonthChanged: onDisplayedMonthChanged,
-          initialCalendarMode: initialCalendarMode,
-          selectableDayPredicate: selectableDayPredicate,
-        ) {
+    super.selectableDayPredicate,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialDate': _i2.BuilderArg<DateTime>(
+            name: 'initialDate',
+            init: initialDate,
+            isNamed: true,
+          ),
+          'firstDate': _i2.BuilderArg<DateTime>(
+            name: 'firstDate',
+            init: firstDate,
+            isNamed: true,
+          ),
+          'lastDate': _i2.BuilderArg<DateTime>(
+            name: 'lastDate',
+            init: lastDate,
+            isNamed: true,
+          ),
+          'currentDate': _i2.BuilderArg<DateTime?>(
+            name: 'currentDate',
+            init: currentDate,
+            isNamed: true,
+          ),
+          'onDateChanged': _i2.BuilderArg<_i4.ValueChanged<DateTime>>(
+            name: 'onDateChanged',
+            init: onDateChanged,
+            isNamed: true,
+          ),
+          'onDisplayedMonthChanged': _i2.BuilderArg<_i4.ValueChanged<DateTime>?>(
+            name: 'onDisplayedMonthChanged',
+            init: onDisplayedMonthChanged,
+            isNamed: true,
+          ),
+          'initialCalendarMode': _i2.BuilderArg<_i5.DatePickerMode>(
+            name: 'initialCalendarMode',
+            init: initialCalendarMode,
+            isNamed: true,
+            defaultValue: _i6.DatePickerMode.day,
+          ),
+          'selectableDayPredicate': _i2.BuilderArg<_i5.SelectableDayPredicate?>(
+            name: 'selectableDayPredicate',
+            init: selectableDayPredicate,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CalendarDatePicker';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CalendarDatePicker$Mate(
@@ -64,53 +102,10 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
           initialCalendarMode: p.get('initialCalendarMode').build(),
           selectableDayPredicate: p.get('selectableDayPredicate').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialDate',
-      initialDate,
-      isNamed: true,
-    );
-    mateUse(
-      'firstDate',
-      firstDate,
-      isNamed: true,
-    );
-    mateUse(
-      'lastDate',
-      lastDate,
-      isNamed: true,
-    );
-    mateUse(
-      'currentDate',
-      currentDate,
-      isNamed: true,
-    );
-    mateUse(
-      'onDateChanged',
-      onDateChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onDisplayedMonthChanged',
-      onDisplayedMonthChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'initialCalendarMode',
-      initialCalendarMode,
-      isNamed: true,
-      defaultValue: _i6.DatePickerMode.day,
-    );
-    mateUse(
-      'selectableDayPredicate',
-      selectableDayPredicate,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class YearPicker extends StatefulWidget
@@ -118,38 +113,72 @@ class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
   /// YearPicker YearPicker({Key? key, DateTime? currentDate, required DateTime firstDate, required DateTime lastDate, DateTime? initialDate, required DateTime selectedDate, required void Function(DateTime) onChanged, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   YearPicker$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {DateTime? currentDate} , default:none
-    DateTime? currentDate,
+    super.currentDate,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
-    required DateTime firstDate,
+    required super.firstDate,
 
     /// optionalParameters: {required DateTime lastDate} , default:none
-    required DateTime lastDate,
+    required super.lastDate,
 
     /// optionalParameters: {DateTime? initialDate} , default:none
-    DateTime? initialDate,
+    super.initialDate,
 
     /// optionalParameters: {required DateTime selectedDate} , default:none
-    required DateTime selectedDate,
+    required super.selectedDate,
 
     /// optionalParameters: {required void Function(DateTime) onChanged} , default:none
-    required _i4.ValueChanged<DateTime> onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i7.DragStartBehavior dragStartBehavior = _i8.DragStartBehavior.start,
-  }) : super(
-          key: key,
-          currentDate: currentDate,
-          firstDate: firstDate,
-          lastDate: lastDate,
-          initialDate: initialDate,
-          selectedDate: selectedDate,
-          onChanged: onChanged,
-          dragStartBehavior: dragStartBehavior,
-        ) {
+    super.dragStartBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'currentDate': _i2.BuilderArg<DateTime?>(
+            name: 'currentDate',
+            init: currentDate,
+            isNamed: true,
+          ),
+          'firstDate': _i2.BuilderArg<DateTime>(
+            name: 'firstDate',
+            init: firstDate,
+            isNamed: true,
+          ),
+          'lastDate': _i2.BuilderArg<DateTime>(
+            name: 'lastDate',
+            init: lastDate,
+            isNamed: true,
+          ),
+          'initialDate': _i2.BuilderArg<DateTime?>(
+            name: 'initialDate',
+            init: initialDate,
+            isNamed: true,
+          ),
+          'selectedDate': _i2.BuilderArg<DateTime>(
+            name: 'selectedDate',
+            init: selectedDate,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<DateTime>>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
+          ),
+        },
+        super() {
     mateBuilderName = 'YearPicker';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => YearPicker$Mate(
@@ -162,46 +191,8 @@ class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
           onChanged: p.get('onChanged').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'currentDate',
-      currentDate,
-      isNamed: true,
-    );
-    mateUse(
-      'firstDate',
-      firstDate,
-      isNamed: true,
-    );
-    mateUse(
-      'lastDate',
-      lastDate,
-      isNamed: true,
-    );
-    mateUse(
-      'initialDate',
-      initialDate,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedDate',
-      selectedDate,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i8.DragStartBehavior.start,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

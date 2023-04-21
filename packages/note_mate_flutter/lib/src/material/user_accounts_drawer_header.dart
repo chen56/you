@@ -15,50 +15,96 @@ class UserAccountsDrawerHeader$Mate extends _i1.UserAccountsDrawerHeader with _i
   /// UserAccountsDrawerHeader UserAccountsDrawerHeader({Key? key, Decoration? decoration, EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0), Widget? currentAccountPicture, List<Widget>? otherAccountsPictures, Size currentAccountPictureSize = const Size.square(72.0), Size otherAccountsPicturesSize = const Size.square(40.0), required Widget? accountName, required Widget? accountEmail, void Function()? onDetailsPressed, Color arrowColor = Colors.white})
   UserAccountsDrawerHeader$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i4.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin = const EdgeInsets.only(bottom: 8.0)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {Widget? currentAccountPicture} , default:none
-    _i6.Widget? currentAccountPicture,
+    super.currentAccountPicture,
 
     /// optionalParameters: {List<Widget>? otherAccountsPictures} , default:none
-    List<_i6.Widget>? otherAccountsPictures,
+    super.otherAccountsPictures,
 
     /// optionalParameters: {Size currentAccountPictureSize = const Size.square(72.0)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i7.Size currentAccountPictureSize,
+    super.currentAccountPictureSize,
 
     /// optionalParameters: {Size otherAccountsPicturesSize = const Size.square(40.0)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i7.Size otherAccountsPicturesSize,
+    super.otherAccountsPicturesSize,
 
     /// optionalParameters: {required Widget? accountName} , default:none
-    required _i6.Widget? accountName,
+    required super.accountName,
 
     /// optionalParameters: {required Widget? accountEmail} , default:none
-    required _i6.Widget? accountEmail,
+    required super.accountEmail,
 
     /// optionalParameters: {void Function()? onDetailsPressed} , default:none
-    _i7.VoidCallback? onDetailsPressed,
+    super.onDetailsPressed,
 
     /// optionalParameters: {Color arrowColor = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i7.Color arrowColor = _i8.Colors.white,
-  }) : super(
-          key: key,
-          decoration: decoration,
-          margin: margin,
-          currentAccountPicture: currentAccountPicture,
-          otherAccountsPictures: otherAccountsPictures,
-          currentAccountPictureSize: currentAccountPictureSize,
-          otherAccountsPicturesSize: otherAccountsPicturesSize,
-          accountName: accountName,
-          accountEmail: accountEmail,
-          onDetailsPressed: onDetailsPressed,
-          arrowColor: arrowColor,
-        ) {
+    super.arrowColor,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'currentAccountPicture': _i2.BuilderArg<_i6.Widget?>(
+            name: 'currentAccountPicture',
+            init: currentAccountPicture,
+            isNamed: true,
+          ),
+          'otherAccountsPictures': _i2.BuilderArg<List<_i6.Widget>?>(
+            name: 'otherAccountsPictures',
+            init: otherAccountsPictures,
+            isNamed: true,
+          ),
+          'currentAccountPictureSize': _i2.BuilderArg<_i7.Size>(
+            name: 'currentAccountPictureSize',
+            init: currentAccountPictureSize,
+            isNamed: true,
+          ),
+          'otherAccountsPicturesSize': _i2.BuilderArg<_i7.Size>(
+            name: 'otherAccountsPicturesSize',
+            init: otherAccountsPicturesSize,
+            isNamed: true,
+          ),
+          'accountName': _i2.BuilderArg<_i6.Widget?>(
+            name: 'accountName',
+            init: accountName,
+            isNamed: true,
+          ),
+          'accountEmail': _i2.BuilderArg<_i6.Widget?>(
+            name: 'accountEmail',
+            init: accountEmail,
+            isNamed: true,
+          ),
+          'onDetailsPressed': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onDetailsPressed',
+            init: onDetailsPressed,
+            isNamed: true,
+          ),
+          'arrowColor': _i2.BuilderArg<_i7.Color>(
+            name: 'arrowColor',
+            init: arrowColor,
+            isNamed: true,
+            defaultValue: _i8.Colors.white,
+          ),
+        },
+        super() {
     mateBuilderName = 'UserAccountsDrawerHeader';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UserAccountsDrawerHeader$Mate(
@@ -74,61 +120,8 @@ class UserAccountsDrawerHeader$Mate extends _i1.UserAccountsDrawerHeader with _i
           onDetailsPressed: p.get('onDetailsPressed').build(),
           arrowColor: p.get('arrowColor').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'currentAccountPicture',
-      currentAccountPicture,
-      isNamed: true,
-    );
-    mateUse(
-      'otherAccountsPictures',
-      otherAccountsPictures,
-      isNamed: true,
-    );
-    mateUse(
-      'currentAccountPictureSize',
-      currentAccountPictureSize,
-      isNamed: true,
-    );
-    mateUse(
-      'otherAccountsPicturesSize',
-      otherAccountsPicturesSize,
-      isNamed: true,
-    );
-    mateUse(
-      'accountName',
-      accountName,
-      isNamed: true,
-    );
-    mateUse(
-      'accountEmail',
-      accountEmail,
-      isNamed: true,
-    );
-    mateUse(
-      'onDetailsPressed',
-      onDetailsPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'arrowColor',
-      arrowColor,
-      isNamed: true,
-      defaultValue: _i8.Colors.white,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

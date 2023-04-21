@@ -13,17 +13,22 @@ class DeleteCharacterIntent$Mate extends _i1.DeleteCharacterIntent with _i2.Mate
   DeleteCharacterIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DeleteCharacterIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DeleteCharacterIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DeleteToNextWordBoundaryIntent extends DirectionalTextEditingIntent
@@ -32,17 +37,22 @@ class DeleteToNextWordBoundaryIntent$Mate extends _i1.DeleteToNextWordBoundaryIn
   DeleteToNextWordBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DeleteToNextWordBoundaryIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DeleteToNextWordBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DeleteToLineBreakIntent extends DirectionalTextEditingIntent
@@ -51,17 +61,22 @@ class DeleteToLineBreakIntent$Mate extends _i1.DeleteToLineBreakIntent with _i2.
   DeleteToLineBreakIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DeleteToLineBreakIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DeleteToLineBreakIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionByCharacterIntent extends DirectionalCaretMovementIntent
@@ -69,31 +84,33 @@ class ExtendSelectionByCharacterIntent$Mate extends _i1.ExtendSelectionByCharact
   /// ExtendSelectionByCharacterIntent ExtendSelectionByCharacterIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionByCharacterIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool collapseSelection} , default:none
-    required bool collapseSelection,
-  }) : super(
-          forward: forward,
-          collapseSelection: collapseSelection,
-        ) {
+    required super.collapseSelection,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'collapseSelection': _i2.BuilderArg<bool>(
+            name: 'collapseSelection',
+            init: collapseSelection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionByCharacterIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionByCharacterIntent$Mate(
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseSelection',
-      collapseSelection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionToNextWordBoundaryIntent extends DirectionalCaretMovementIntent
@@ -101,31 +118,33 @@ class ExtendSelectionToNextWordBoundaryIntent$Mate extends _i1.ExtendSelectionTo
   /// ExtendSelectionToNextWordBoundaryIntent ExtendSelectionToNextWordBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToNextWordBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool collapseSelection} , default:none
-    required bool collapseSelection,
-  }) : super(
-          forward: forward,
-          collapseSelection: collapseSelection,
-        ) {
+    required super.collapseSelection,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'collapseSelection': _i2.BuilderArg<bool>(
+            name: 'collapseSelection',
+            init: collapseSelection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionToNextWordBoundaryIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionToNextWordBoundaryIntent$Mate(
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseSelection',
-      collapseSelection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent extends DirectionalCaretMovementIntent
@@ -135,17 +154,22 @@ class ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate
   ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionToNextWordBoundaryOrCaretLocationIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionToNextWordBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExpandSelectionToDocumentBoundaryIntent extends DirectionalCaretMovementIntent
@@ -154,17 +178,22 @@ class ExpandSelectionToDocumentBoundaryIntent$Mate extends _i1.ExpandSelectionTo
   ExpandSelectionToDocumentBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ExpandSelectionToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExpandSelectionToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExpandSelectionToLineBreakIntent extends DirectionalCaretMovementIntent
@@ -173,17 +202,22 @@ class ExpandSelectionToLineBreakIntent$Mate extends _i1.ExpandSelectionToLineBre
   ExpandSelectionToLineBreakIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ExpandSelectionToLineBreakIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExpandSelectionToLineBreakIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionToLineBreakIntent extends DirectionalCaretMovementIntent
@@ -191,22 +225,41 @@ class ExtendSelectionToLineBreakIntent$Mate extends _i1.ExtendSelectionToLineBre
   /// ExtendSelectionToLineBreakIntent ExtendSelectionToLineBreakIntent({required bool forward, required bool collapseSelection, bool collapseAtReversal = false, bool continuesAtWrap = false})
   ExtendSelectionToLineBreakIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool collapseSelection} , default:none
-    required bool collapseSelection,
+    required super.collapseSelection,
 
     /// optionalParameters: {bool collapseAtReversal = false} , default:processed=BooleanLiteralImpl
-    bool collapseAtReversal = false,
+    super.collapseAtReversal,
 
     /// optionalParameters: {bool continuesAtWrap = false} , default:processed=BooleanLiteralImpl
-    bool continuesAtWrap = false,
-  }) : super(
-          forward: forward,
-          collapseSelection: collapseSelection,
-          collapseAtReversal: collapseAtReversal,
-          continuesAtWrap: continuesAtWrap,
-        ) {
+    super.continuesAtWrap,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'collapseSelection': _i2.BuilderArg<bool>(
+            name: 'collapseSelection',
+            init: collapseSelection,
+            isNamed: true,
+          ),
+          'collapseAtReversal': _i2.BuilderArg<bool>(
+            name: 'collapseAtReversal',
+            init: collapseAtReversal,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'continuesAtWrap': _i2.BuilderArg<bool>(
+            name: 'continuesAtWrap',
+            init: continuesAtWrap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionToLineBreakIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionToLineBreakIntent$Mate(
@@ -215,29 +268,10 @@ class ExtendSelectionToLineBreakIntent$Mate extends _i1.ExtendSelectionToLineBre
           collapseAtReversal: p.get('collapseAtReversal').build(),
           continuesAtWrap: p.get('continuesAtWrap').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseSelection',
-      collapseSelection,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseAtReversal',
-      collapseAtReversal,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'continuesAtWrap',
-      continuesAtWrap,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionVerticallyToAdjacentLineIntent extends DirectionalCaretMovementIntent
@@ -246,31 +280,33 @@ class ExtendSelectionVerticallyToAdjacentLineIntent$Mate extends _i1.ExtendSelec
   /// ExtendSelectionVerticallyToAdjacentLineIntent ExtendSelectionVerticallyToAdjacentLineIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionVerticallyToAdjacentLineIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool collapseSelection} , default:none
-    required bool collapseSelection,
-  }) : super(
-          forward: forward,
-          collapseSelection: collapseSelection,
-        ) {
+    required super.collapseSelection,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'collapseSelection': _i2.BuilderArg<bool>(
+            name: 'collapseSelection',
+            init: collapseSelection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionVerticallyToAdjacentLineIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionVerticallyToAdjacentLineIntent$Mate(
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseSelection',
-      collapseSelection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionVerticallyToAdjacentPageIntent extends DirectionalCaretMovementIntent
@@ -279,31 +315,33 @@ class ExtendSelectionVerticallyToAdjacentPageIntent$Mate extends _i1.ExtendSelec
   /// ExtendSelectionVerticallyToAdjacentPageIntent ExtendSelectionVerticallyToAdjacentPageIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionVerticallyToAdjacentPageIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool collapseSelection} , default:none
-    required bool collapseSelection,
-  }) : super(
-          forward: forward,
-          collapseSelection: collapseSelection,
-        ) {
+    required super.collapseSelection,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'collapseSelection': _i2.BuilderArg<bool>(
+            name: 'collapseSelection',
+            init: collapseSelection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionVerticallyToAdjacentPageIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionVerticallyToAdjacentPageIntent$Mate(
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseSelection',
-      collapseSelection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionToNextParagraphBoundaryIntent extends DirectionalCaretMovementIntent
@@ -312,31 +350,33 @@ class ExtendSelectionToNextParagraphBoundaryIntent$Mate extends _i1.ExtendSelect
   /// ExtendSelectionToNextParagraphBoundaryIntent ExtendSelectionToNextParagraphBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToNextParagraphBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool collapseSelection} , default:none
-    required bool collapseSelection,
-  }) : super(
-          forward: forward,
-          collapseSelection: collapseSelection,
-        ) {
+    required super.collapseSelection,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'collapseSelection': _i2.BuilderArg<bool>(
+            name: 'collapseSelection',
+            init: collapseSelection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionToNextParagraphBoundaryIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionToNextParagraphBoundaryIntent$Mate(
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseSelection',
-      collapseSelection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent extends DirectionalCaretMovementIntent
@@ -346,18 +386,23 @@ class ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate
   ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder =
         (p) => ExtendSelectionToNextParagraphBoundaryOrCaretLocationIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionToDocumentBoundaryIntent extends DirectionalCaretMovementIntent
@@ -365,31 +410,33 @@ class ExtendSelectionToDocumentBoundaryIntent$Mate extends _i1.ExtendSelectionTo
   /// ExtendSelectionToDocumentBoundaryIntent ExtendSelectionToDocumentBoundaryIntent({required bool forward, required bool collapseSelection})
   ExtendSelectionToDocumentBoundaryIntent$Mate({
     /// optionalParameters: {required bool forward} , default:none
-    required bool forward,
+    required super.forward,
 
     /// optionalParameters: {required bool collapseSelection} , default:none
-    required bool collapseSelection,
-  }) : super(
-          forward: forward,
-          collapseSelection: collapseSelection,
-        ) {
+    required super.collapseSelection,
+  })  : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          ),
+          'collapseSelection': _i2.BuilderArg<bool>(
+            name: 'collapseSelection',
+            init: collapseSelection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionToDocumentBoundaryIntent$Mate(
           forward: p.get('forward').build(),
           collapseSelection: p.get('collapseSelection').build(),
         );
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseSelection',
-      collapseSelection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollToDocumentBoundaryIntent extends DirectionalTextEditingIntent
@@ -398,17 +445,22 @@ class ScrollToDocumentBoundaryIntent$Mate extends _i1.ScrollToDocumentBoundaryIn
   ScrollToDocumentBoundaryIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ScrollToDocumentBoundaryIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollToDocumentBoundaryIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExtendSelectionByPageIntent extends DirectionalTextEditingIntent
@@ -417,17 +469,22 @@ class ExtendSelectionByPageIntent$Mate extends _i1.ExtendSelectionByPageIntent w
   ExtendSelectionByPageIntent$Mate(
       {
       /// optionalParameters: {required bool forward} , default:none
-      required bool forward})
-      : super(forward: forward) {
+      required super.forward})
+      : mateParams = {
+          'forward': _i2.BuilderArg<bool>(
+            name: 'forward',
+            init: forward,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ExtendSelectionByPageIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExtendSelectionByPageIntent$Mate(forward: p.get('forward').build());
-    mateUse(
-      'forward',
-      forward,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectAllTextIntent extends Intent
@@ -436,17 +493,22 @@ class SelectAllTextIntent$Mate extends _i1.SelectAllTextIntent with _i2.Mate {
   SelectAllTextIntent$Mate(
 
       /// requiredParameters: SelectionChangedCause cause
-      _i3.SelectionChangedCause cause)
-      : super(cause) {
+      super.cause)
+      : mateParams = {
+          'cause': _i2.BuilderArg<_i3.SelectionChangedCause>(
+            name: 'cause',
+            init: cause,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'SelectAllTextIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SelectAllTextIntent$Mate(p.get('cause').value);
-    mateUse(
-      'cause',
-      cause,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CopySelectionTextIntent extends Intent
@@ -455,17 +517,22 @@ class CopySelectionTextIntent$Mate extends _i1.CopySelectionTextIntent with _i2.
   CopySelectionTextIntent$Mate.cut(
 
       /// requiredParameters: SelectionChangedCause cause
-      _i3.SelectionChangedCause cause)
-      : super.cut(cause) {
+      super.cause)
+      : mateParams = {
+          'cause': _i2.BuilderArg<_i3.SelectionChangedCause>(
+            name: 'cause',
+            init: cause,
+            isNamed: false,
+          )
+        },
+        super.cut() {
     mateBuilderName = 'CopySelectionTextIntent.cut';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CopySelectionTextIntent$Mate.cut(p.get('cause').value);
-    mateUse(
-      'cause',
-      cause,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PasteTextIntent extends Intent
@@ -474,17 +541,22 @@ class PasteTextIntent$Mate extends _i1.PasteTextIntent with _i2.Mate {
   PasteTextIntent$Mate(
 
       /// requiredParameters: SelectionChangedCause cause
-      _i3.SelectionChangedCause cause)
-      : super(cause) {
+      super.cause)
+      : mateParams = {
+          'cause': _i2.BuilderArg<_i3.SelectionChangedCause>(
+            name: 'cause',
+            init: cause,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'PasteTextIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PasteTextIntent$Mate(p.get('cause').value);
-    mateUse(
-      'cause',
-      cause,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RedoTextIntent extends Intent
@@ -493,17 +565,22 @@ class RedoTextIntent$Mate extends _i1.RedoTextIntent with _i2.Mate {
   RedoTextIntent$Mate(
 
       /// requiredParameters: SelectionChangedCause cause
-      _i3.SelectionChangedCause cause)
-      : super(cause) {
+      super.cause)
+      : mateParams = {
+          'cause': _i2.BuilderArg<_i3.SelectionChangedCause>(
+            name: 'cause',
+            init: cause,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'RedoTextIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RedoTextIntent$Mate(p.get('cause').value);
-    mateUse(
-      'cause',
-      cause,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ReplaceTextIntent extends Intent
@@ -511,22 +588,39 @@ class ReplaceTextIntent$Mate extends _i1.ReplaceTextIntent with _i2.Mate {
   /// ReplaceTextIntent ReplaceTextIntent(TextEditingValue currentTextEditingValue, String replacementText, TextRange replacementRange, SelectionChangedCause cause)
   ReplaceTextIntent$Mate(
     /// requiredParameters: TextEditingValue currentTextEditingValue
-    _i3.TextEditingValue currentTextEditingValue,
+    super.currentTextEditingValue,
 
     /// requiredParameters: String replacementText
-    String replacementText,
+    super.replacementText,
 
     /// requiredParameters: TextRange replacementRange
-    _i4.TextRange replacementRange,
+    super.replacementRange,
 
     /// requiredParameters: SelectionChangedCause cause
-    _i3.SelectionChangedCause cause,
-  ) : super(
-          currentTextEditingValue,
-          replacementText,
-          replacementRange,
-          cause,
-        ) {
+    super.cause,
+  )   : mateParams = {
+          'currentTextEditingValue': _i2.BuilderArg<_i3.TextEditingValue>(
+            name: 'currentTextEditingValue',
+            init: currentTextEditingValue,
+            isNamed: false,
+          ),
+          'replacementText': _i2.BuilderArg<String>(
+            name: 'replacementText',
+            init: replacementText,
+            isNamed: false,
+          ),
+          'replacementRange': _i2.BuilderArg<_i4.TextRange>(
+            name: 'replacementRange',
+            init: replacementRange,
+            isNamed: false,
+          ),
+          'cause': _i2.BuilderArg<_i3.SelectionChangedCause>(
+            name: 'cause',
+            init: cause,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'ReplaceTextIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ReplaceTextIntent$Mate(
@@ -535,27 +629,10 @@ class ReplaceTextIntent$Mate extends _i1.ReplaceTextIntent with _i2.Mate {
           p.get('replacementRange').value,
           p.get('cause').value,
         );
-    mateUse(
-      'currentTextEditingValue',
-      currentTextEditingValue,
-      isNamed: false,
-    );
-    mateUse(
-      'replacementText',
-      replacementText,
-      isNamed: false,
-    );
-    mateUse(
-      'replacementRange',
-      replacementRange,
-      isNamed: false,
-    );
-    mateUse(
-      'cause',
-      cause,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class UndoTextIntent extends Intent
@@ -564,17 +641,22 @@ class UndoTextIntent$Mate extends _i1.UndoTextIntent with _i2.Mate {
   UndoTextIntent$Mate(
 
       /// requiredParameters: SelectionChangedCause cause
-      _i3.SelectionChangedCause cause)
-      : super(cause) {
+      super.cause)
+      : mateParams = {
+          'cause': _i2.BuilderArg<_i3.SelectionChangedCause>(
+            name: 'cause',
+            init: cause,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'UndoTextIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UndoTextIntent$Mate(p.get('cause').value);
-    mateUse(
-      'cause',
-      cause,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class UpdateSelectionIntent extends Intent
@@ -582,18 +664,31 @@ class UpdateSelectionIntent$Mate extends _i1.UpdateSelectionIntent with _i2.Mate
   /// UpdateSelectionIntent UpdateSelectionIntent(TextEditingValue currentTextEditingValue, TextSelection newSelection, SelectionChangedCause cause)
   UpdateSelectionIntent$Mate(
     /// requiredParameters: TextEditingValue currentTextEditingValue
-    _i3.TextEditingValue currentTextEditingValue,
+    super.currentTextEditingValue,
 
     /// requiredParameters: TextSelection newSelection
-    _i5.TextSelection newSelection,
+    super.newSelection,
 
     /// requiredParameters: SelectionChangedCause cause
-    _i3.SelectionChangedCause cause,
-  ) : super(
-          currentTextEditingValue,
-          newSelection,
-          cause,
-        ) {
+    super.cause,
+  )   : mateParams = {
+          'currentTextEditingValue': _i2.BuilderArg<_i3.TextEditingValue>(
+            name: 'currentTextEditingValue',
+            init: currentTextEditingValue,
+            isNamed: false,
+          ),
+          'newSelection': _i2.BuilderArg<_i5.TextSelection>(
+            name: 'newSelection',
+            init: newSelection,
+            isNamed: false,
+          ),
+          'cause': _i2.BuilderArg<_i3.SelectionChangedCause>(
+            name: 'cause',
+            init: cause,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'UpdateSelectionIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UpdateSelectionIntent$Mate(
@@ -601,20 +696,8 @@ class UpdateSelectionIntent$Mate extends _i1.UpdateSelectionIntent with _i2.Mate
           p.get('newSelection').value,
           p.get('cause').value,
         );
-    mateUse(
-      'currentTextEditingValue',
-      currentTextEditingValue,
-      isNamed: false,
-    );
-    mateUse(
-      'newSelection',
-      newSelection,
-      isNamed: false,
-    );
-    mateUse(
-      'cause',
-      cause,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

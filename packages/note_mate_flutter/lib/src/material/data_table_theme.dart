@@ -16,62 +16,119 @@ class DataTableThemeData$Mate extends _i1.DataTableThemeData with _i2.Mate {
   /// DataTableThemeData DataTableThemeData({Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, double? dividerThickness, double? checkboxHorizontalMargin, MaterialStateProperty<MouseCursor?>? headingCellCursor, MaterialStateProperty<MouseCursor?>? dataRowCursor})
   DataTableThemeData$Mate({
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i3.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , default:none
-    _i4.MaterialStateProperty<_i5.Color?>? dataRowColor,
+    super.dataRowColor,
 
     /// optionalParameters: {double? dataRowMinHeight} , default:none
-    double? dataRowMinHeight,
+    super.dataRowMinHeight,
 
     /// optionalParameters: {double? dataRowMaxHeight} , default:none
-    double? dataRowMaxHeight,
+    super.dataRowMaxHeight,
 
     /// optionalParameters: {TextStyle? dataTextStyle} , default:none
-    _i6.TextStyle? dataTextStyle,
+    super.dataTextStyle,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , default:none
-    _i4.MaterialStateProperty<_i5.Color?>? headingRowColor,
+    super.headingRowColor,
 
     /// optionalParameters: {double? headingRowHeight} , default:none
-    double? headingRowHeight,
+    super.headingRowHeight,
 
     /// optionalParameters: {TextStyle? headingTextStyle} , default:none
-    _i6.TextStyle? headingTextStyle,
+    super.headingTextStyle,
 
     /// optionalParameters: {double? horizontalMargin} , default:none
-    double? horizontalMargin,
+    super.horizontalMargin,
 
     /// optionalParameters: {double? columnSpacing} , default:none
-    double? columnSpacing,
+    super.columnSpacing,
 
     /// optionalParameters: {double? dividerThickness} , default:none
-    double? dividerThickness,
+    super.dividerThickness,
 
     /// optionalParameters: {double? checkboxHorizontalMargin} , default:none
-    double? checkboxHorizontalMargin,
+    super.checkboxHorizontalMargin,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? headingCellCursor} , default:none
-    _i4.MaterialStateProperty<_i7.MouseCursor?>? headingCellCursor,
+    super.headingCellCursor,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? dataRowCursor} , default:none
-    _i4.MaterialStateProperty<_i7.MouseCursor?>? dataRowCursor,
-  }) : super(
-          decoration: decoration,
-          dataRowColor: dataRowColor,
-          dataRowMinHeight: dataRowMinHeight,
-          dataRowMaxHeight: dataRowMaxHeight,
-          dataTextStyle: dataTextStyle,
-          headingRowColor: headingRowColor,
-          headingRowHeight: headingRowHeight,
-          headingTextStyle: headingTextStyle,
-          horizontalMargin: horizontalMargin,
-          columnSpacing: columnSpacing,
-          dividerThickness: dividerThickness,
-          checkboxHorizontalMargin: checkboxHorizontalMargin,
-          headingCellCursor: headingCellCursor,
-          dataRowCursor: dataRowCursor,
-        ) {
+    super.dataRowCursor,
+  })  : mateParams = {
+          'decoration': _i2.BuilderArg<_i3.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'dataRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.Color?>?>(
+            name: 'dataRowColor',
+            init: dataRowColor,
+            isNamed: true,
+          ),
+          'dataRowMinHeight': _i2.BuilderArg<double?>(
+            name: 'dataRowMinHeight',
+            init: dataRowMinHeight,
+            isNamed: true,
+          ),
+          'dataRowMaxHeight': _i2.BuilderArg<double?>(
+            name: 'dataRowMaxHeight',
+            init: dataRowMaxHeight,
+            isNamed: true,
+          ),
+          'dataTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'dataTextStyle',
+            init: dataTextStyle,
+            isNamed: true,
+          ),
+          'headingRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.Color?>?>(
+            name: 'headingRowColor',
+            init: headingRowColor,
+            isNamed: true,
+          ),
+          'headingRowHeight': _i2.BuilderArg<double?>(
+            name: 'headingRowHeight',
+            init: headingRowHeight,
+            isNamed: true,
+          ),
+          'headingTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'headingTextStyle',
+            init: headingTextStyle,
+            isNamed: true,
+          ),
+          'horizontalMargin': _i2.BuilderArg<double?>(
+            name: 'horizontalMargin',
+            init: horizontalMargin,
+            isNamed: true,
+          ),
+          'columnSpacing': _i2.BuilderArg<double?>(
+            name: 'columnSpacing',
+            init: columnSpacing,
+            isNamed: true,
+          ),
+          'dividerThickness': _i2.BuilderArg<double?>(
+            name: 'dividerThickness',
+            init: dividerThickness,
+            isNamed: true,
+          ),
+          'checkboxHorizontalMargin': _i2.BuilderArg<double?>(
+            name: 'checkboxHorizontalMargin',
+            init: checkboxHorizontalMargin,
+            isNamed: true,
+          ),
+          'headingCellCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i7.MouseCursor?>?>(
+            name: 'headingCellCursor',
+            init: headingCellCursor,
+            isNamed: true,
+          ),
+          'dataRowCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i7.MouseCursor?>?>(
+            name: 'dataRowCursor',
+            init: dataRowCursor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DataTableThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataTableThemeData$Mate(
@@ -90,77 +147,10 @@ class DataTableThemeData$Mate extends _i1.DataTableThemeData with _i2.Mate {
           headingCellCursor: p.get('headingCellCursor').build(),
           dataRowCursor: p.get('dataRowCursor').build(),
         );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowColor',
-      dataRowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowMinHeight',
-      dataRowMinHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowMaxHeight',
-      dataRowMaxHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'dataTextStyle',
-      dataTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'headingRowColor',
-      headingRowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'headingRowHeight',
-      headingRowHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'headingTextStyle',
-      headingTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'horizontalMargin',
-      horizontalMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'columnSpacing',
-      columnSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerThickness',
-      dividerThickness,
-      isNamed: true,
-    );
-    mateUse(
-      'checkboxHorizontalMargin',
-      checkboxHorizontalMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'headingCellCursor',
-      headingCellCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowCursor',
-      dataRowCursor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DataTableTheme extends InheritedWidget
@@ -168,18 +158,31 @@ class DataTableTheme$Mate extends _i1.DataTableTheme with _i2.Mate {
   /// DataTableTheme DataTableTheme({Key? key, required DataTableThemeData data, required Widget child})
   DataTableTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i8.Key? key,
+    super.key,
 
     /// optionalParameters: {required DataTableThemeData data} , default:none
-    required _i1.DataTableThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i9.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i8.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.DataTableThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DataTableTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataTableTheme$Mate(
@@ -187,20 +190,8 @@ class DataTableTheme$Mate extends _i1.DataTableTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

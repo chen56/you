@@ -17,94 +17,183 @@ class TimePickerThemeData$Mate extends _i1.TimePickerThemeData with _i2.Mate {
   /// TimePickerThemeData TimePickerThemeData({Color? backgroundColor, ButtonStyle? cancelButtonStyle, ButtonStyle? confirmButtonStyle, BorderSide? dayPeriodBorderSide, Color? dayPeriodColor, OutlinedBorder? dayPeriodShape, Color? dayPeriodTextColor, TextStyle? dayPeriodTextStyle, Color? dialBackgroundColor, Color? dialHandColor, Color? dialTextColor, TextStyle? dialTextStyle, double? elevation, Color? entryModeIconColor, TextStyle? helpTextStyle, Color? hourMinuteColor, ShapeBorder? hourMinuteShape, Color? hourMinuteTextColor, TextStyle? hourMinuteTextStyle, InputDecorationTheme? inputDecorationTheme, EdgeInsetsGeometry? padding, ShapeBorder? shape})
   TimePickerThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {ButtonStyle? cancelButtonStyle} , default:none
-    _i4.ButtonStyle? cancelButtonStyle,
+    super.cancelButtonStyle,
 
     /// optionalParameters: {ButtonStyle? confirmButtonStyle} , default:none
-    _i4.ButtonStyle? confirmButtonStyle,
+    super.confirmButtonStyle,
 
     /// optionalParameters: {BorderSide? dayPeriodBorderSide} , default:none
-    _i5.BorderSide? dayPeriodBorderSide,
+    super.dayPeriodBorderSide,
 
     /// optionalParameters: {Color? dayPeriodColor} , default:none
-    _i3.Color? dayPeriodColor,
+    super.dayPeriodColor,
 
     /// optionalParameters: {OutlinedBorder? dayPeriodShape} , default:none
-    _i5.OutlinedBorder? dayPeriodShape,
+    super.dayPeriodShape,
 
     /// optionalParameters: {Color? dayPeriodTextColor} , default:none
-    _i3.Color? dayPeriodTextColor,
+    super.dayPeriodTextColor,
 
     /// optionalParameters: {TextStyle? dayPeriodTextStyle} , default:none
-    _i6.TextStyle? dayPeriodTextStyle,
+    super.dayPeriodTextStyle,
 
     /// optionalParameters: {Color? dialBackgroundColor} , default:none
-    _i3.Color? dialBackgroundColor,
+    super.dialBackgroundColor,
 
     /// optionalParameters: {Color? dialHandColor} , default:none
-    _i3.Color? dialHandColor,
+    super.dialHandColor,
 
     /// optionalParameters: {Color? dialTextColor} , default:none
-    _i3.Color? dialTextColor,
+    super.dialTextColor,
 
     /// optionalParameters: {TextStyle? dialTextStyle} , default:none
-    _i6.TextStyle? dialTextStyle,
+    super.dialTextStyle,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? entryModeIconColor} , default:none
-    _i3.Color? entryModeIconColor,
+    super.entryModeIconColor,
 
     /// optionalParameters: {TextStyle? helpTextStyle} , default:none
-    _i6.TextStyle? helpTextStyle,
+    super.helpTextStyle,
 
     /// optionalParameters: {Color? hourMinuteColor} , default:none
-    _i3.Color? hourMinuteColor,
+    super.hourMinuteColor,
 
     /// optionalParameters: {ShapeBorder? hourMinuteShape} , default:none
-    _i5.ShapeBorder? hourMinuteShape,
+    super.hourMinuteShape,
 
     /// optionalParameters: {Color? hourMinuteTextColor} , default:none
-    _i3.Color? hourMinuteTextColor,
+    super.hourMinuteTextColor,
 
     /// optionalParameters: {TextStyle? hourMinuteTextStyle} , default:none
-    _i6.TextStyle? hourMinuteTextStyle,
+    super.hourMinuteTextStyle,
 
     /// optionalParameters: {InputDecorationTheme? inputDecorationTheme} , default:none
-    _i7.InputDecorationTheme? inputDecorationTheme,
+    super.inputDecorationTheme,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i8.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i5.ShapeBorder? shape,
-  }) : super(
-          backgroundColor: backgroundColor,
-          cancelButtonStyle: cancelButtonStyle,
-          confirmButtonStyle: confirmButtonStyle,
-          dayPeriodBorderSide: dayPeriodBorderSide,
-          dayPeriodColor: dayPeriodColor,
-          dayPeriodShape: dayPeriodShape,
-          dayPeriodTextColor: dayPeriodTextColor,
-          dayPeriodTextStyle: dayPeriodTextStyle,
-          dialBackgroundColor: dialBackgroundColor,
-          dialHandColor: dialHandColor,
-          dialTextColor: dialTextColor,
-          dialTextStyle: dialTextStyle,
-          elevation: elevation,
-          entryModeIconColor: entryModeIconColor,
-          helpTextStyle: helpTextStyle,
-          hourMinuteColor: hourMinuteColor,
-          hourMinuteShape: hourMinuteShape,
-          hourMinuteTextColor: hourMinuteTextColor,
-          hourMinuteTextStyle: hourMinuteTextStyle,
-          inputDecorationTheme: inputDecorationTheme,
-          padding: padding,
-          shape: shape,
-        ) {
+    super.shape,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'cancelButtonStyle': _i2.BuilderArg<_i4.ButtonStyle?>(
+            name: 'cancelButtonStyle',
+            init: cancelButtonStyle,
+            isNamed: true,
+          ),
+          'confirmButtonStyle': _i2.BuilderArg<_i4.ButtonStyle?>(
+            name: 'confirmButtonStyle',
+            init: confirmButtonStyle,
+            isNamed: true,
+          ),
+          'dayPeriodBorderSide': _i2.BuilderArg<_i5.BorderSide?>(
+            name: 'dayPeriodBorderSide',
+            init: dayPeriodBorderSide,
+            isNamed: true,
+          ),
+          'dayPeriodColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'dayPeriodColor',
+            init: dayPeriodColor,
+            isNamed: true,
+          ),
+          'dayPeriodShape': _i2.BuilderArg<_i5.OutlinedBorder?>(
+            name: 'dayPeriodShape',
+            init: dayPeriodShape,
+            isNamed: true,
+          ),
+          'dayPeriodTextColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'dayPeriodTextColor',
+            init: dayPeriodTextColor,
+            isNamed: true,
+          ),
+          'dayPeriodTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'dayPeriodTextStyle',
+            init: dayPeriodTextStyle,
+            isNamed: true,
+          ),
+          'dialBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'dialBackgroundColor',
+            init: dialBackgroundColor,
+            isNamed: true,
+          ),
+          'dialHandColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'dialHandColor',
+            init: dialHandColor,
+            isNamed: true,
+          ),
+          'dialTextColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'dialTextColor',
+            init: dialTextColor,
+            isNamed: true,
+          ),
+          'dialTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'dialTextStyle',
+            init: dialTextStyle,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'entryModeIconColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'entryModeIconColor',
+            init: entryModeIconColor,
+            isNamed: true,
+          ),
+          'helpTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'helpTextStyle',
+            init: helpTextStyle,
+            isNamed: true,
+          ),
+          'hourMinuteColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'hourMinuteColor',
+            init: hourMinuteColor,
+            isNamed: true,
+          ),
+          'hourMinuteShape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'hourMinuteShape',
+            init: hourMinuteShape,
+            isNamed: true,
+          ),
+          'hourMinuteTextColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'hourMinuteTextColor',
+            init: hourMinuteTextColor,
+            isNamed: true,
+          ),
+          'hourMinuteTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'hourMinuteTextStyle',
+            init: hourMinuteTextStyle,
+            isNamed: true,
+          ),
+          'inputDecorationTheme': _i2.BuilderArg<_i7.InputDecorationTheme?>(
+            name: 'inputDecorationTheme',
+            init: inputDecorationTheme,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TimePickerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerThemeData$Mate(
@@ -131,117 +220,10 @@ class TimePickerThemeData$Mate extends _i1.TimePickerThemeData with _i2.Mate {
           padding: p.get('padding').build(),
           shape: p.get('shape').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'cancelButtonStyle',
-      cancelButtonStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'confirmButtonStyle',
-      confirmButtonStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dayPeriodBorderSide',
-      dayPeriodBorderSide,
-      isNamed: true,
-    );
-    mateUse(
-      'dayPeriodColor',
-      dayPeriodColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dayPeriodShape',
-      dayPeriodShape,
-      isNamed: true,
-    );
-    mateUse(
-      'dayPeriodTextColor',
-      dayPeriodTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dayPeriodTextStyle',
-      dayPeriodTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dialBackgroundColor',
-      dialBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dialHandColor',
-      dialHandColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dialTextColor',
-      dialTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dialTextStyle',
-      dialTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'entryModeIconColor',
-      entryModeIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'helpTextStyle',
-      helpTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'hourMinuteColor',
-      hourMinuteColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hourMinuteShape',
-      hourMinuteShape,
-      isNamed: true,
-    );
-    mateUse(
-      'hourMinuteTextColor',
-      hourMinuteTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hourMinuteTextStyle',
-      hourMinuteTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'inputDecorationTheme',
-      inputDecorationTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TimePickerTheme extends InheritedTheme
@@ -249,18 +231,31 @@ class TimePickerTheme$Mate extends _i1.TimePickerTheme with _i2.Mate {
   /// TimePickerTheme TimePickerTheme({Key? key, required TimePickerThemeData data, required Widget child})
   TimePickerTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i9.Key? key,
+    super.key,
 
     /// optionalParameters: {required TimePickerThemeData data} , default:none
-    required _i1.TimePickerThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i10.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i9.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.TimePickerThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i10.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TimePickerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerTheme$Mate(
@@ -268,20 +263,8 @@ class TimePickerTheme$Mate extends _i1.TimePickerTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

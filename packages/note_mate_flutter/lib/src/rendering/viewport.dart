@@ -15,31 +15,33 @@ class RevealedOffset$Mate extends _i1.RevealedOffset with _i2.Mate {
   /// RevealedOffset RevealedOffset({required double offset, required Rect rect})
   RevealedOffset$Mate({
     /// optionalParameters: {required double offset} , default:none
-    required double offset,
+    required super.offset,
 
     /// optionalParameters: {required Rect rect} , default:none
-    required _i3.Rect rect,
-  }) : super(
-          offset: offset,
-          rect: rect,
-        ) {
+    required super.rect,
+  })  : mateParams = {
+          'offset': _i2.BuilderArg<double>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'rect': _i2.BuilderArg<_i3.Rect>(
+            name: 'rect',
+            init: rect,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RevealedOffset';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RevealedOffset$Mate(
           offset: p.get('offset').build(),
           rect: p.get('rect').build(),
         );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'rect',
-      rect,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderViewport extends RenderViewportBase<SliverPhysicalContainerParentData>
@@ -47,42 +49,83 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
   /// RenderViewport RenderViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, double? cacheExtent, CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel, Clip clipBehavior = Clip.hardEdge})
   RenderViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i4.AxisDirection axisDirection = _i5.AxisDirection.down,
+    super.axisDirection,
 
     /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
-    required _i4.AxisDirection crossAxisDirection,
+    required super.crossAxisDirection,
 
     /// optionalParameters: {required ViewportOffset offset} , default:none
-    required _i6.ViewportOffset offset,
+    required super.offset,
 
     /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
-    double anchor = 0.0,
+    super.anchor,
 
     /// optionalParameters: {List<RenderSliver>? children} , default:none
-    List<_i7.RenderSliver>? children,
+    super.children,
 
     /// optionalParameters: {RenderSliver? center} , default:none
-    _i7.RenderSliver? center,
+    super.center,
 
     /// optionalParameters: {double? cacheExtent} , default:none
-    double? cacheExtent,
+    super.cacheExtent,
 
     /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , default:processed=PrefixedIdentifierImpl
-    _i1.CacheExtentStyle cacheExtentStyle = _i8.CacheExtentStyle.pixel,
+    super.cacheExtentStyle,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i3.Clip clipBehavior = _i3.Clip.hardEdge,
-  }) : super(
-          axisDirection: axisDirection,
-          crossAxisDirection: crossAxisDirection,
-          offset: offset,
-          anchor: anchor,
-          children: children,
-          center: center,
-          cacheExtent: cacheExtent,
-          cacheExtentStyle: cacheExtentStyle,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
+          ),
+          'crossAxisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'crossAxisDirection',
+            init: crossAxisDirection,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i6.ViewportOffset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'anchor': _i2.BuilderArg<double>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'children': _i2.BuilderArg<List<_i7.RenderSliver>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'center': _i2.BuilderArg<_i7.RenderSliver?>(
+            name: 'center',
+            init: center,
+            isNamed: true,
+          ),
+          'cacheExtent': _i2.BuilderArg<double?>(
+            name: 'cacheExtent',
+            init: cacheExtent,
+            isNamed: true,
+          ),
+          'cacheExtentStyle': _i2.BuilderArg<_i1.CacheExtentStyle>(
+            name: 'cacheExtentStyle',
+            init: cacheExtentStyle,
+            isNamed: true,
+            defaultValue: _i8.CacheExtentStyle.pixel,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i3.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i3.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderViewport$Mate(
@@ -96,56 +139,10 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
           cacheExtentStyle: p.get('cacheExtentStyle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-      defaultValue: _i5.AxisDirection.down,
-    );
-    mateUse(
-      'crossAxisDirection',
-      crossAxisDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'center',
-      center,
-      isNamed: true,
-    );
-    mateUse(
-      'cacheExtent',
-      cacheExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'cacheExtentStyle',
-      cacheExtentStyle,
-      isNamed: true,
-      defaultValue: _i8.CacheExtentStyle.pixel,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i3.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderShrinkWrappingViewport extends RenderViewportBase<SliverLogicalContainerParentData>
@@ -153,26 +150,49 @@ class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport
   /// RenderShrinkWrappingViewport RenderShrinkWrappingViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<RenderSliver>? children})
   RenderShrinkWrappingViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i4.AxisDirection axisDirection = _i5.AxisDirection.down,
+    super.axisDirection,
 
     /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
-    required _i4.AxisDirection crossAxisDirection,
+    required super.crossAxisDirection,
 
     /// optionalParameters: {required ViewportOffset offset} , default:none
-    required _i6.ViewportOffset offset,
+    required super.offset,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i3.Clip clipBehavior = _i3.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {List<RenderSliver>? children} , default:none
-    List<_i7.RenderSliver>? children,
-  }) : super(
-          axisDirection: axisDirection,
-          crossAxisDirection: crossAxisDirection,
-          offset: offset,
-          clipBehavior: clipBehavior,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
+          ),
+          'crossAxisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'crossAxisDirection',
+            init: crossAxisDirection,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i6.ViewportOffset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i3.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i3.Clip.hardEdge,
+          ),
+          'children': _i2.BuilderArg<List<_i7.RenderSliver>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderShrinkWrappingViewport';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderShrinkWrappingViewport$Mate(
@@ -182,32 +202,8 @@ class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-      defaultValue: _i5.AxisDirection.down,
-    );
-    mateUse(
-      'crossAxisDirection',
-      crossAxisDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i3.Clip.hardEdge,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

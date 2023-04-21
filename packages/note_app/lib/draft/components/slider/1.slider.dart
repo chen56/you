@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:note/param_deprecated.dart';
 
 void main() {
   runApp(const SliderApp());
 }
 
-final ParamNode params = ParamNode();
-final insert = params.insert;
-final insert_ = params.insert_;
+// final ParamNode params = ParamNode();
+// final insert = params.insert;
+// final insert_ = params.insert_;
 
 class SliderApp extends StatefulWidget {
   const SliderApp({super.key});

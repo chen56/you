@@ -10,31 +10,33 @@ class MaterialPointArcTween$Mate extends _i1.MaterialPointArcTween with _i2.Mate
   /// MaterialPointArcTween MaterialPointArcTween({Offset? begin, Offset? end})
   MaterialPointArcTween$Mate({
     /// optionalParameters: {Offset? begin} , default:none
-    _i3.Offset? begin,
+    super.begin,
 
     /// optionalParameters: {Offset? end} , default:none
-    _i3.Offset? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.Offset?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.Offset?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MaterialPointArcTween';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialPointArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MaterialRectArcTween extends RectTween
@@ -42,31 +44,33 @@ class MaterialRectArcTween$Mate extends _i1.MaterialRectArcTween with _i2.Mate {
   /// MaterialRectArcTween MaterialRectArcTween({Rect? begin, Rect? end})
   MaterialRectArcTween$Mate({
     /// optionalParameters: {Rect? begin} , default:none
-    _i3.Rect? begin,
+    super.begin,
 
     /// optionalParameters: {Rect? end} , default:none
-    _i3.Rect? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.Rect?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.Rect?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MaterialRectArcTween';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialRectArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MaterialRectCenterArcTween extends RectTween
@@ -74,29 +78,31 @@ class MaterialRectCenterArcTween$Mate extends _i1.MaterialRectCenterArcTween wit
   /// MaterialRectCenterArcTween MaterialRectCenterArcTween({Rect? begin, Rect? end})
   MaterialRectCenterArcTween$Mate({
     /// optionalParameters: {Rect? begin} , default:none
-    _i3.Rect? begin,
+    super.begin,
 
     /// optionalParameters: {Rect? end} , default:none
-    _i3.Rect? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.Rect?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.Rect?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MaterialRectCenterArcTween';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialRectCenterArcTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

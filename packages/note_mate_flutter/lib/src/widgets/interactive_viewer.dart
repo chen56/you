@@ -17,78 +17,160 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
   /// InteractiveViewer InteractiveViewer({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, bool constrained = true, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = kDefaultMouseScrollToScaleFactor, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget child})
   InteractiveViewer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:processed=PrefixedIdentifierImpl
-    _i1.PanAxis panAxis = _i5.PanAxis.free,
+    super.panAxis,
 
     /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i6.EdgeInsets boundaryMargin = _i5.EdgeInsets.zero,
+    super.boundaryMargin,
 
     /// optionalParameters: {bool constrained = true} , default:processed=BooleanLiteralImpl
-    bool constrained = true,
+    super.constrained,
 
     /// optionalParameters: {double maxScale = 2.5} , default:processed=DoubleLiteralImpl
-    double maxScale = 2.5,
+    super.maxScale,
 
     /// optionalParameters: {double minScale = 0.8} , default:processed=DoubleLiteralImpl
-    double minScale = 0.8,
+    super.minScale,
 
     /// optionalParameters: {double interactionEndFrictionCoefficient = _kDrag} , default:unprocessed=SimpleIdentifierImpl
-    required double interactionEndFrictionCoefficient,
+    super.interactionEndFrictionCoefficient,
 
     /// optionalParameters: {void Function(ScaleEndDetails)? onInteractionEnd} , default:none
-    _i7.GestureScaleEndCallback? onInteractionEnd,
+    super.onInteractionEnd,
 
     /// optionalParameters: {void Function(ScaleStartDetails)? onInteractionStart} , default:none
-    _i7.GestureScaleStartCallback? onInteractionStart,
+    super.onInteractionStart,
 
     /// optionalParameters: {void Function(ScaleUpdateDetails)? onInteractionUpdate} , default:none
-    _i7.GestureScaleUpdateCallback? onInteractionUpdate,
+    super.onInteractionUpdate,
 
     /// optionalParameters: {bool panEnabled = true} , default:processed=BooleanLiteralImpl
-    bool panEnabled = true,
+    super.panEnabled,
 
     /// optionalParameters: {bool scaleEnabled = true} , default:processed=BooleanLiteralImpl
-    bool scaleEnabled = true,
+    super.scaleEnabled,
 
     /// optionalParameters: {double scaleFactor = kDefaultMouseScrollToScaleFactor} , default:unprocessed=SimpleIdentifierImpl
-    required double scaleFactor,
+    super.scaleFactor,
 
     /// optionalParameters: {TransformationController? transformationController} , default:none
-    _i1.TransformationController? transformationController,
+    super.transformationController,
 
     /// optionalParameters: {Alignment? alignment} , default:none
-    _i8.Alignment? alignment,
+    super.alignment,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
-    bool trackpadScrollCausesScale = false,
+    super.trackpadScrollCausesScale,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i9.Widget child,
-  }) : super(
-          key: key,
-          clipBehavior: clipBehavior,
-          panAxis: panAxis,
-          boundaryMargin: boundaryMargin,
-          constrained: constrained,
-          maxScale: maxScale,
-          minScale: minScale,
-          interactionEndFrictionCoefficient: interactionEndFrictionCoefficient,
-          onInteractionEnd: onInteractionEnd,
-          onInteractionStart: onInteractionStart,
-          onInteractionUpdate: onInteractionUpdate,
-          panEnabled: panEnabled,
-          scaleEnabled: scaleEnabled,
-          scaleFactor: scaleFactor,
-          transformationController: transformationController,
-          alignment: alignment,
-          trackpadScrollCausesScale: trackpadScrollCausesScale,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+          'panAxis': _i2.BuilderArg<_i1.PanAxis>(
+            name: 'panAxis',
+            init: panAxis,
+            isNamed: true,
+            defaultValue: _i5.PanAxis.free,
+          ),
+          'boundaryMargin': _i2.BuilderArg<_i6.EdgeInsets>(
+            name: 'boundaryMargin',
+            init: boundaryMargin,
+            isNamed: true,
+            defaultValue: _i5.EdgeInsets.zero,
+          ),
+          'constrained': _i2.BuilderArg<bool>(
+            name: 'constrained',
+            init: constrained,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'maxScale': _i2.BuilderArg<double>(
+            name: 'maxScale',
+            init: maxScale,
+            isNamed: true,
+            defaultValue: 2.5,
+          ),
+          'minScale': _i2.BuilderArg<double>(
+            name: 'minScale',
+            init: minScale,
+            isNamed: true,
+            defaultValue: 0.8,
+          ),
+          'interactionEndFrictionCoefficient': _i2.BuilderArg<double>(
+            name: 'interactionEndFrictionCoefficient',
+            init: interactionEndFrictionCoefficient,
+            isNamed: true,
+          ),
+          'onInteractionEnd': _i2.BuilderArg<_i7.GestureScaleEndCallback?>(
+            name: 'onInteractionEnd',
+            init: onInteractionEnd,
+            isNamed: true,
+          ),
+          'onInteractionStart': _i2.BuilderArg<_i7.GestureScaleStartCallback?>(
+            name: 'onInteractionStart',
+            init: onInteractionStart,
+            isNamed: true,
+          ),
+          'onInteractionUpdate': _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
+            name: 'onInteractionUpdate',
+            init: onInteractionUpdate,
+            isNamed: true,
+          ),
+          'panEnabled': _i2.BuilderArg<bool>(
+            name: 'panEnabled',
+            init: panEnabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'scaleEnabled': _i2.BuilderArg<bool>(
+            name: 'scaleEnabled',
+            init: scaleEnabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'scaleFactor': _i2.BuilderArg<double>(
+            name: 'scaleFactor',
+            init: scaleFactor,
+            isNamed: true,
+          ),
+          'transformationController': _i2.BuilderArg<_i1.TransformationController?>(
+            name: 'transformationController',
+            init: transformationController,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i8.Alignment?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'trackpadScrollCausesScale': _i2.BuilderArg<bool>(
+            name: 'trackpadScrollCausesScale',
+            init: trackpadScrollCausesScale,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InteractiveViewer';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => InteractiveViewer$Mate(
@@ -111,178 +193,157 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
-    mateUse(
-      'panAxis',
-      panAxis,
-      isNamed: true,
-      defaultValue: _i5.PanAxis.free,
-    );
-    mateUse(
-      'boundaryMargin',
-      boundaryMargin,
-      isNamed: true,
-      defaultValue: _i5.EdgeInsets.zero,
-    );
-    mateUse(
-      'constrained',
-      constrained,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'maxScale',
-      maxScale,
-      isNamed: true,
-      defaultValue: 2.5,
-    );
-    mateUse(
-      'minScale',
-      minScale,
-      isNamed: true,
-      defaultValue: 0.8,
-    );
-    mateUse(
-      'interactionEndFrictionCoefficient',
-      interactionEndFrictionCoefficient,
-      isNamed: true,
-    );
-    mateUse(
-      'onInteractionEnd',
-      onInteractionEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onInteractionStart',
-      onInteractionStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onInteractionUpdate',
-      onInteractionUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'panEnabled',
-      panEnabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'scaleEnabled',
-      scaleEnabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'scaleFactor',
-      scaleFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'transformationController',
-      transformationController,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'trackpadScrollCausesScale',
-      trackpadScrollCausesScale,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// InteractiveViewer InteractiveViewer.builder({Key? key, Clip clipBehavior = Clip.hardEdge, bool alignPanAxis = false, PanAxis panAxis = PanAxis.free, EdgeInsets boundaryMargin = EdgeInsets.zero, double maxScale = 2.5, double minScale = 0.8, double interactionEndFrictionCoefficient = _kDrag, void Function(ScaleEndDetails)? onInteractionEnd, void Function(ScaleStartDetails)? onInteractionStart, void Function(ScaleUpdateDetails)? onInteractionUpdate, bool panEnabled = true, bool scaleEnabled = true, double scaleFactor = 200.0, TransformationController? transformationController, Alignment? alignment, bool trackpadScrollCausesScale = false, required Widget Function(BuildContext, Quad) builder})
   InteractiveViewer$Mate.builder({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:processed=PrefixedIdentifierImpl
-    _i1.PanAxis panAxis = _i5.PanAxis.free,
+    super.panAxis,
 
     /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i6.EdgeInsets boundaryMargin = _i5.EdgeInsets.zero,
+    super.boundaryMargin,
 
     /// optionalParameters: {double maxScale = 2.5} , default:processed=DoubleLiteralImpl
-    double maxScale = 2.5,
+    super.maxScale,
 
     /// optionalParameters: {double minScale = 0.8} , default:processed=DoubleLiteralImpl
-    double minScale = 0.8,
+    super.minScale,
 
     /// optionalParameters: {double interactionEndFrictionCoefficient = _kDrag} , default:unprocessed=SimpleIdentifierImpl
-    required double interactionEndFrictionCoefficient,
+    super.interactionEndFrictionCoefficient,
 
     /// optionalParameters: {void Function(ScaleEndDetails)? onInteractionEnd} , default:none
-    _i7.GestureScaleEndCallback? onInteractionEnd,
+    super.onInteractionEnd,
 
     /// optionalParameters: {void Function(ScaleStartDetails)? onInteractionStart} , default:none
-    _i7.GestureScaleStartCallback? onInteractionStart,
+    super.onInteractionStart,
 
     /// optionalParameters: {void Function(ScaleUpdateDetails)? onInteractionUpdate} , default:none
-    _i7.GestureScaleUpdateCallback? onInteractionUpdate,
+    super.onInteractionUpdate,
 
     /// optionalParameters: {bool panEnabled = true} , default:processed=BooleanLiteralImpl
-    bool panEnabled = true,
+    super.panEnabled,
 
     /// optionalParameters: {bool scaleEnabled = true} , default:processed=BooleanLiteralImpl
-    bool scaleEnabled = true,
+    super.scaleEnabled,
 
     /// optionalParameters: {double scaleFactor = 200.0} , default:processed=DoubleLiteralImpl
-    double scaleFactor = 200.0,
+    super.scaleFactor,
 
     /// optionalParameters: {TransformationController? transformationController} , default:none
-    _i1.TransformationController? transformationController,
+    super.transformationController,
 
     /// optionalParameters: {Alignment? alignment} , default:none
-    _i8.Alignment? alignment,
+    super.alignment,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
-    bool trackpadScrollCausesScale = false,
+    super.trackpadScrollCausesScale,
 
     /// optionalParameters: {required Widget Function(BuildContext, Quad) builder} , default:none
-    required _i1.InteractiveViewerWidgetBuilder builder,
-  }) : super.builder(
-          key: key,
-          clipBehavior: clipBehavior,
-          panAxis: panAxis,
-          boundaryMargin: boundaryMargin,
-          maxScale: maxScale,
-          minScale: minScale,
-          interactionEndFrictionCoefficient: interactionEndFrictionCoefficient,
-          onInteractionEnd: onInteractionEnd,
-          onInteractionStart: onInteractionStart,
-          onInteractionUpdate: onInteractionUpdate,
-          panEnabled: panEnabled,
-          scaleEnabled: scaleEnabled,
-          scaleFactor: scaleFactor,
-          transformationController: transformationController,
-          alignment: alignment,
-          trackpadScrollCausesScale: trackpadScrollCausesScale,
-          builder: builder,
-        ) {
+    required super.builder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+          'panAxis': _i2.BuilderArg<_i1.PanAxis>(
+            name: 'panAxis',
+            init: panAxis,
+            isNamed: true,
+            defaultValue: _i5.PanAxis.free,
+          ),
+          'boundaryMargin': _i2.BuilderArg<_i6.EdgeInsets>(
+            name: 'boundaryMargin',
+            init: boundaryMargin,
+            isNamed: true,
+            defaultValue: _i5.EdgeInsets.zero,
+          ),
+          'maxScale': _i2.BuilderArg<double>(
+            name: 'maxScale',
+            init: maxScale,
+            isNamed: true,
+            defaultValue: 2.5,
+          ),
+          'minScale': _i2.BuilderArg<double>(
+            name: 'minScale',
+            init: minScale,
+            isNamed: true,
+            defaultValue: 0.8,
+          ),
+          'interactionEndFrictionCoefficient': _i2.BuilderArg<double>(
+            name: 'interactionEndFrictionCoefficient',
+            init: interactionEndFrictionCoefficient,
+            isNamed: true,
+          ),
+          'onInteractionEnd': _i2.BuilderArg<_i7.GestureScaleEndCallback?>(
+            name: 'onInteractionEnd',
+            init: onInteractionEnd,
+            isNamed: true,
+          ),
+          'onInteractionStart': _i2.BuilderArg<_i7.GestureScaleStartCallback?>(
+            name: 'onInteractionStart',
+            init: onInteractionStart,
+            isNamed: true,
+          ),
+          'onInteractionUpdate': _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
+            name: 'onInteractionUpdate',
+            init: onInteractionUpdate,
+            isNamed: true,
+          ),
+          'panEnabled': _i2.BuilderArg<bool>(
+            name: 'panEnabled',
+            init: panEnabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'scaleEnabled': _i2.BuilderArg<bool>(
+            name: 'scaleEnabled',
+            init: scaleEnabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'scaleFactor': _i2.BuilderArg<double>(
+            name: 'scaleFactor',
+            init: scaleFactor,
+            isNamed: true,
+            defaultValue: 200.0,
+          ),
+          'transformationController': _i2.BuilderArg<_i1.TransformationController?>(
+            name: 'transformationController',
+            init: transformationController,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i8.Alignment?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'trackpadScrollCausesScale': _i2.BuilderArg<bool>(
+            name: 'trackpadScrollCausesScale',
+            init: trackpadScrollCausesScale,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'builder': _i2.BuilderArg<_i1.InteractiveViewerWidgetBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+        },
+        super.builder() {
     mateBuilderName = 'InteractiveViewer.builder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => InteractiveViewer$Mate.builder(
@@ -304,101 +365,10 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           builder: p.get('builder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
-    mateUse(
-      'panAxis',
-      panAxis,
-      isNamed: true,
-      defaultValue: _i5.PanAxis.free,
-    );
-    mateUse(
-      'boundaryMargin',
-      boundaryMargin,
-      isNamed: true,
-      defaultValue: _i5.EdgeInsets.zero,
-    );
-    mateUse(
-      'maxScale',
-      maxScale,
-      isNamed: true,
-      defaultValue: 2.5,
-    );
-    mateUse(
-      'minScale',
-      minScale,
-      isNamed: true,
-      defaultValue: 0.8,
-    );
-    mateUse(
-      'interactionEndFrictionCoefficient',
-      interactionEndFrictionCoefficient,
-      isNamed: true,
-    );
-    mateUse(
-      'onInteractionEnd',
-      onInteractionEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onInteractionStart',
-      onInteractionStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onInteractionUpdate',
-      onInteractionUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'panEnabled',
-      panEnabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'scaleEnabled',
-      scaleEnabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'scaleFactor',
-      scaleFactor,
-      isNamed: true,
-      defaultValue: 200.0,
-    );
-    mateUse(
-      'transformationController',
-      transformationController,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'trackpadScrollCausesScale',
-      trackpadScrollCausesScale,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TransformationController extends ValueNotifier<Matrix4>
@@ -407,15 +377,20 @@ class TransformationController$Mate extends _i1.TransformationController with _i
   TransformationController$Mate(
 
       /// requiredParameters: [Matrix4? value]
-      _i10.Matrix4? value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<_i10.Matrix4?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'TransformationController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TransformationController$Mate(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

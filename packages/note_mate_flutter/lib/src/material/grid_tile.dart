@@ -11,22 +11,39 @@ class GridTile$Mate extends _i1.GridTile with _i2.Mate {
   /// GridTile GridTile({Key? key, Widget? header, Widget? footer, required Widget child})
   GridTile$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {Widget? footer} , default:none
-    _i4.Widget? footer,
+    super.footer,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          header: header,
-          footer: footer,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'footer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'GridTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridTile$Mate(
@@ -35,25 +52,8 @@ class GridTile$Mate extends _i1.GridTile with _i2.Mate {
           footer: p.get('footer').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

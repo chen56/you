@@ -10,15 +10,20 @@ class ValueKey$Mate<T> extends _i1.ValueKey<T> with _i2.Mate {
   ValueKey$Mate(
 
       /// requiredParameters: T value
-      T value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ValueKey';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ValueKey$Mate<T>(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

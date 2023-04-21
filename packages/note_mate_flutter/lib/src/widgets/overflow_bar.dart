@@ -15,42 +15,84 @@ class OverflowBar$Mate extends _i1.OverflowBar with _i2.Mate {
   /// OverflowBar OverflowBar({Key? key, double spacing = 0.0, MainAxisAlignment? alignment, double overflowSpacing = 0.0, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start, VerticalDirection overflowDirection = VerticalDirection.down, TextDirection? textDirection, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   OverflowBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
-    double spacing = 0.0,
+    super.spacing,
 
     /// optionalParameters: {MainAxisAlignment? alignment} , default:none
-    _i4.MainAxisAlignment? alignment,
+    super.alignment,
 
     /// optionalParameters: {double overflowSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double overflowSpacing = 0.0,
+    super.overflowSpacing,
 
     /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i1.OverflowBarAlignment overflowAlignment = _i5.OverflowBarAlignment.start,
+    super.overflowAlignment,
 
     /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i6.VerticalDirection overflowDirection = _i5.VerticalDirection.down,
+    super.overflowDirection,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i7.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i7.Clip clipBehavior = _i7.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i8.Widget> children,
-  }) : super(
-          key: key,
-          spacing: spacing,
-          alignment: alignment,
-          overflowSpacing: overflowSpacing,
-          overflowAlignment: overflowAlignment,
-          overflowDirection: overflowDirection,
-          textDirection: textDirection,
-          clipBehavior: clipBehavior,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'spacing': _i2.BuilderArg<double>(
+            name: 'spacing',
+            init: spacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'alignment': _i2.BuilderArg<_i4.MainAxisAlignment?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'overflowSpacing': _i2.BuilderArg<double>(
+            name: 'overflowSpacing',
+            init: overflowSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'overflowAlignment': _i2.BuilderArg<_i1.OverflowBarAlignment>(
+            name: 'overflowAlignment',
+            init: overflowAlignment,
+            isNamed: true,
+            defaultValue: _i5.OverflowBarAlignment.start,
+          ),
+          'overflowDirection': _i2.BuilderArg<_i6.VerticalDirection>(
+            name: 'overflowDirection',
+            init: overflowDirection,
+            isNamed: true,
+            defaultValue: _i5.VerticalDirection.down,
+          ),
+          'textDirection': _i2.BuilderArg<_i7.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i7.Clip.none,
+          ),
+          'children': _i2.BuilderArg<List<_i8.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'OverflowBar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverflowBar$Mate(
@@ -64,55 +106,8 @@ class OverflowBar$Mate extends _i1.OverflowBar with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'spacing',
-      spacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'overflowSpacing',
-      overflowSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'overflowAlignment',
-      overflowAlignment,
-      isNamed: true,
-      defaultValue: _i5.OverflowBarAlignment.start,
-    );
-    mateUse(
-      'overflowDirection',
-      overflowDirection,
-      isNamed: true,
-      defaultValue: _i5.VerticalDirection.down,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i7.Clip.none,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,18 +12,31 @@ class WidgetInspector$Mate extends _i1.WidgetInspector with _i2.Mate {
   /// WidgetInspector WidgetInspector({Key? key, required Widget child, required Widget Function(BuildContext, void Function())? selectButtonBuilder})
   WidgetInspector$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {required Widget Function(BuildContext, void Function())? selectButtonBuilder} , default:none
-    required _i1.InspectorSelectButtonBuilder? selectButtonBuilder,
-  }) : super(
-          key: key,
-          child: child,
-          selectButtonBuilder: selectButtonBuilder,
-        ) {
+    required super.selectButtonBuilder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'selectButtonBuilder': _i2.BuilderArg<_i1.InspectorSelectButtonBuilder?>(
+            name: 'selectButtonBuilder',
+            init: selectButtonBuilder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'WidgetInspector';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => WidgetInspector$Mate(
@@ -31,22 +44,10 @@ class WidgetInspector$Mate extends _i1.WidgetInspector with _i2.Mate {
           child: p.get('child').build(),
           selectButtonBuilder: p.get('selectButtonBuilder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'selectButtonBuilder',
-      selectButtonBuilder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DevToolsDeepLinkProperty extends DiagnosticsProperty<String>
@@ -54,31 +55,33 @@ class DevToolsDeepLinkProperty$Mate extends _i1.DevToolsDeepLinkProperty with _i
   /// DevToolsDeepLinkProperty DevToolsDeepLinkProperty(String description, String url)
   DevToolsDeepLinkProperty$Mate(
     /// requiredParameters: String description
-    String description,
+    super.description,
 
     /// requiredParameters: String url
-    String url,
-  ) : super(
-          description,
-          url,
-        ) {
+    super.url,
+  )   : mateParams = {
+          'description': _i2.BuilderArg<String>(
+            name: 'description',
+            init: description,
+            isNamed: false,
+          ),
+          'url': _i2.BuilderArg<String>(
+            name: 'url',
+            init: url,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'DevToolsDeepLinkProperty';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DevToolsDeepLinkProperty$Mate(
           p.get('description').value,
           p.get('url').value,
         );
-    mateUse(
-      'description',
-      description,
-      isNamed: false,
-    );
-    mateUse(
-      'url',
-      url,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class InspectorSerializationDelegate implements DiagnosticsSerializationDelegate
@@ -86,41 +89,80 @@ class InspectorSerializationDelegate$Mate extends _i1.InspectorSerializationDele
   /// InspectorSerializationDelegate InspectorSerializationDelegate({String? groupName, bool summaryTree = false, int maxDescendantsTruncatableNode = -1, bool expandPropertyValues = true, int subtreeDepth = 1, bool includeProperties = false, required WidgetInspectorService service, Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback})
   InspectorSerializationDelegate$Mate({
     /// optionalParameters: {String? groupName} , default:none
-    String? groupName,
+    super.groupName,
 
     /// optionalParameters: {bool summaryTree = false} , default:processed=BooleanLiteralImpl
-    bool summaryTree = false,
+    super.summaryTree,
 
     /// optionalParameters: {int maxDescendantsTruncatableNode = -1} , default:processed=PrefixExpressionImpl
-    int maxDescendantsTruncatableNode = -1,
+    super.maxDescendantsTruncatableNode,
 
     /// optionalParameters: {bool expandPropertyValues = true} , default:processed=BooleanLiteralImpl
-    bool expandPropertyValues = true,
+    super.expandPropertyValues,
 
     /// optionalParameters: {int subtreeDepth = 1} , default:processed=IntegerLiteralImpl
-    int subtreeDepth = 1,
+    super.subtreeDepth,
 
     /// optionalParameters: {bool includeProperties = false} , default:processed=BooleanLiteralImpl
-    bool includeProperties = false,
+    super.includeProperties,
 
     /// optionalParameters: {required WidgetInspectorService service} , default:none
-    required _i1.WidgetInspectorService service,
+    required super.service,
 
     /// optionalParameters: {Map<String, Object>? Function(DiagnosticsNode, InspectorSerializationDelegate)? addAdditionalPropertiesCallback} , default:none
-    Map<String, Object>? Function(
-      _i5.DiagnosticsNode,
-      _i1.InspectorSerializationDelegate,
-    )? addAdditionalPropertiesCallback,
-  }) : super(
-          groupName: groupName,
-          summaryTree: summaryTree,
-          maxDescendantsTruncatableNode: maxDescendantsTruncatableNode,
-          expandPropertyValues: expandPropertyValues,
-          subtreeDepth: subtreeDepth,
-          includeProperties: includeProperties,
-          service: service,
-          addAdditionalPropertiesCallback: addAdditionalPropertiesCallback,
-        ) {
+    super.addAdditionalPropertiesCallback,
+  })  : mateParams = {
+          'groupName': _i2.BuilderArg<String?>(
+            name: 'groupName',
+            init: groupName,
+            isNamed: true,
+          ),
+          'summaryTree': _i2.BuilderArg<bool>(
+            name: 'summaryTree',
+            init: summaryTree,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maxDescendantsTruncatableNode': _i2.BuilderArg<int>(
+            name: 'maxDescendantsTruncatableNode',
+            init: maxDescendantsTruncatableNode,
+            isNamed: true,
+            defaultValue: -1,
+          ),
+          'expandPropertyValues': _i2.BuilderArg<bool>(
+            name: 'expandPropertyValues',
+            init: expandPropertyValues,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'subtreeDepth': _i2.BuilderArg<int>(
+            name: 'subtreeDepth',
+            init: subtreeDepth,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'includeProperties': _i2.BuilderArg<bool>(
+            name: 'includeProperties',
+            init: includeProperties,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'service': _i2.BuilderArg<_i1.WidgetInspectorService>(
+            name: 'service',
+            init: service,
+            isNamed: true,
+          ),
+          'addAdditionalPropertiesCallback': _i2.BuilderArg<
+              Map<String, Object>? Function(
+                _i5.DiagnosticsNode,
+                _i1.InspectorSerializationDelegate,
+              )?>(
+            name: 'addAdditionalPropertiesCallback',
+            init: addAdditionalPropertiesCallback,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InspectorSerializationDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => InspectorSerializationDelegate$Mate(
@@ -133,50 +175,8 @@ class InspectorSerializationDelegate$Mate extends _i1.InspectorSerializationDele
           service: p.get('service').build(),
           addAdditionalPropertiesCallback: p.get('addAdditionalPropertiesCallback').build(),
         );
-    mateUse(
-      'groupName',
-      groupName,
-      isNamed: true,
-    );
-    mateUse(
-      'summaryTree',
-      summaryTree,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maxDescendantsTruncatableNode',
-      maxDescendantsTruncatableNode,
-      isNamed: true,
-      defaultValue: -1,
-    );
-    mateUse(
-      'expandPropertyValues',
-      expandPropertyValues,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'subtreeDepth',
-      subtreeDepth,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'includeProperties',
-      includeProperties,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'service',
-      service,
-      isNamed: true,
-    );
-    mateUse(
-      'addAdditionalPropertiesCallback',
-      addAdditionalPropertiesCallback,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

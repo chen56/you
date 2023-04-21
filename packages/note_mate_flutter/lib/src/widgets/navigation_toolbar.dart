@@ -11,30 +11,56 @@ class NavigationToolbar$Mate extends _i1.NavigationToolbar with _i2.Mate {
   /// NavigationToolbar NavigationToolbar({Key? key, Widget? leading, Widget? middle, Widget? trailing, bool centerMiddle = true, double middleSpacing = kMiddleSpacing})
   NavigationToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Widget? middle} , default:none
-    _i4.Widget? middle,
+    super.middle,
 
     /// optionalParameters: {Widget? trailing} , default:none
-    _i4.Widget? trailing,
+    super.trailing,
 
     /// optionalParameters: {bool centerMiddle = true} , default:processed=BooleanLiteralImpl
-    bool centerMiddle = true,
+    super.centerMiddle,
 
     /// optionalParameters: {double middleSpacing = kMiddleSpacing} , default:unprocessed=SimpleIdentifierImpl
-    required double middleSpacing,
-  }) : super(
-          key: key,
-          leading: leading,
-          middle: middle,
-          trailing: trailing,
-          centerMiddle: centerMiddle,
-          middleSpacing: middleSpacing,
-        ) {
+    super.middleSpacing,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'middle': _i2.BuilderArg<_i4.Widget?>(
+            name: 'middle',
+            init: middle,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<_i4.Widget?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+          'centerMiddle': _i2.BuilderArg<bool>(
+            name: 'centerMiddle',
+            init: centerMiddle,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'middleSpacing': _i2.BuilderArg<double>(
+            name: 'middleSpacing',
+            init: middleSpacing,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationToolbar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => NavigationToolbar$Mate(
@@ -45,36 +71,8 @@ class NavigationToolbar$Mate extends _i1.NavigationToolbar with _i2.Mate {
           centerMiddle: p.get('centerMiddle').build(),
           middleSpacing: p.get('middleSpacing').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'middle',
-      middle,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
-    mateUse(
-      'centerMiddle',
-      centerMiddle,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'middleSpacing',
-      middleSpacing,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

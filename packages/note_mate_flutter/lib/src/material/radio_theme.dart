@@ -15,30 +15,55 @@ class RadioThemeData$Mate extends _i1.RadioThemeData with _i2.Mate {
   /// RadioThemeData RadioThemeData({MaterialStateProperty<MouseCursor?>? mouseCursor, MaterialStateProperty<Color?>? fillColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, MaterialTapTargetSize? materialTapTargetSize, VisualDensity? visualDensity})
   RadioThemeData$Mate({
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i3.MaterialStateProperty<_i4.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? fillColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i6.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i6.VisualDensity? visualDensity,
-  }) : super(
-          mouseCursor: mouseCursor,
-          fillColor: fillColor,
-          overlayColor: overlayColor,
-          splashRadius: splashRadius,
-          materialTapTargetSize: materialTapTargetSize,
-          visualDensity: visualDensity,
-        ) {
+    super.visualDensity,
+  })  : mateParams = {
+          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'fillColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i6.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i6.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RadioThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RadioThemeData$Mate(
@@ -49,37 +74,10 @@ class RadioThemeData$Mate extends _i1.RadioThemeData with _i2.Mate {
           materialTapTargetSize: p.get('materialTapTargetSize').build(),
           visualDensity: p.get('visualDensity').build(),
         );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RadioTheme extends InheritedWidget
@@ -87,18 +85,31 @@ class RadioTheme$Mate extends _i1.RadioTheme with _i2.Mate {
   /// RadioTheme RadioTheme({Key? key, required RadioThemeData data, required Widget child})
   RadioTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required RadioThemeData data} , default:none
-    required _i1.RadioThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.RadioThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RadioTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RadioTheme$Mate(
@@ -106,20 +117,8 @@ class RadioTheme$Mate extends _i1.RadioTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

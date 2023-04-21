@@ -20,31 +20,33 @@ class PopupMenuDivider$Mate extends _i1.PopupMenuDivider with _i2.Mate {
   /// PopupMenuDivider PopupMenuDivider({Key? key, double height = _kMenuDividerHeight})
   PopupMenuDivider$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double height = _kMenuDividerHeight} , default:unprocessed=SimpleIdentifierImpl
-    required double height,
-  }) : super(
-          key: key,
-          height: height,
-        ) {
+    super.height,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PopupMenuDivider';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuDivider$Mate(
           key: p.get('key').build(),
           height: p.get('height').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PopupMenuItem<T> extends PopupMenuEntry<T>
@@ -52,46 +54,88 @@ class PopupMenuItem$Mate<T> extends _i1.PopupMenuItem<T> with _i2.Mate {
   /// PopupMenuItem<T> PopupMenuItem({Key? key, T? value, void Function()? onTap, bool enabled = true, double height = kMinInteractiveDimension, EdgeInsets? padding, TextStyle? textStyle, MaterialStateProperty<TextStyle?>? labelTextStyle, MouseCursor? mouseCursor, required Widget? child})
   PopupMenuItem$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {T? value} , default:none
-    T? value,
+    super.value,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i4.VoidCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {double height = kMinInteractiveDimension} , default:unprocessed=SimpleIdentifierImpl
-    required double height,
+    super.height,
 
     /// optionalParameters: {EdgeInsets? padding} , default:none
-    _i5.EdgeInsets? padding,
+    super.padding,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i6.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , default:none
-    _i7.MaterialStateProperty<_i6.TextStyle?>? labelTextStyle,
+    super.labelTextStyle,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {required Widget? child} , default:none
-    required _i9.Widget? child,
-  }) : super(
-          key: key,
-          value: value,
-          onTap: onTap,
-          enabled: enabled,
-          height: height,
-          padding: padding,
-          textStyle: textStyle,
-          labelTextStyle: labelTextStyle,
-          mouseCursor: mouseCursor,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsets?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'labelTextStyle': _i2.BuilderArg<_i7.MaterialStateProperty<_i6.TextStyle?>?>(
+            name: 'labelTextStyle',
+            init: labelTextStyle,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PopupMenuItem';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuItem$Mate<T>(
@@ -106,58 +150,10 @@ class PopupMenuItem$Mate<T> extends _i1.PopupMenuItem<T> with _i2.Mate {
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'labelTextStyle',
-      labelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CheckedPopupMenuItem<T> extends PopupMenuItem<T>
@@ -165,38 +161,73 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
   /// CheckedPopupMenuItem<T> CheckedPopupMenuItem({Key? key, T? value, bool checked = false, bool enabled = true, EdgeInsets? padding, double height = kMinInteractiveDimension, MouseCursor? mouseCursor, Widget? child})
   CheckedPopupMenuItem$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {T? value} , default:none
-    T? value,
+    super.value,
 
     /// optionalParameters: {bool checked = false} , default:processed=BooleanLiteralImpl
-    bool checked = false,
+    super.checked,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {EdgeInsets? padding} , default:none
-    _i5.EdgeInsets? padding,
+    super.padding,
 
     /// optionalParameters: {double height = kMinInteractiveDimension} , default:unprocessed=SimpleIdentifierImpl
-    required double height,
+    super.height,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i9.Widget? child,
-  }) : super(
-          key: key,
-          value: value,
-          checked: checked,
-          enabled: enabled,
-          padding: padding,
-          height: height,
-          mouseCursor: mouseCursor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'checked': _i2.BuilderArg<bool>(
+            name: 'checked',
+            init: checked,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsets?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CheckedPopupMenuItem';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CheckedPopupMenuItem$Mate<T>(
@@ -209,49 +240,10 @@ class CheckedPopupMenuItem$Mate<T> extends _i1.CheckedPopupMenuItem<T> with _i2.
           mouseCursor: p.get('mouseCursor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'checked',
-      checked,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PopupMenuButton<T> extends StatefulWidget
@@ -259,98 +251,194 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
   /// PopupMenuButton<T> PopupMenuButton({Key? key, required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder, T? initialValue, void Function()? onOpened, void Function(T)? onSelected, void Function()? onCanceled, String? tooltip, double? elevation, Color? shadowColor, Color? surfaceTintColor, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Widget? child, double? splashRadius, Widget? icon, double? iconSize, Offset offset = Offset.zero, bool enabled = true, ShapeBorder? shape, Color? color, bool? enableFeedback, BoxConstraints? constraints, PopupMenuPosition? position, Clip clipBehavior = Clip.none})
   PopupMenuButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<PopupMenuEntry<T>> Function(BuildContext) itemBuilder} , default:none
-    required _i1.PopupMenuItemBuilder<T> itemBuilder,
+    required super.itemBuilder,
 
     /// optionalParameters: {T? initialValue} , default:none
-    T? initialValue,
+    super.initialValue,
 
     /// optionalParameters: {void Function()? onOpened} , default:none
-    _i4.VoidCallback? onOpened,
+    super.onOpened,
 
     /// optionalParameters: {void Function(T)? onSelected} , default:none
-    _i1.PopupMenuItemSelected<T>? onSelected,
+    super.onSelected,
 
     /// optionalParameters: {void Function()? onCanceled} , default:none
-    _i1.PopupMenuCanceled? onCanceled,
+    super.onCanceled,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i4.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i4.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(8.0)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.EdgeInsetsGeometry padding,
+    super.padding,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i9.Widget? child,
+    super.child,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {Widget? icon} , default:none
-    _i9.Widget? icon,
+    super.icon,
 
     /// optionalParameters: {double? iconSize} , default:none
-    double? iconSize,
+    super.iconSize,
 
     /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i4.Offset offset = _i10.Offset.zero,
+    super.offset,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i11.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i12.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {PopupMenuPosition? position} , default:none
-    _i13.PopupMenuPosition? position,
+    super.position,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
-  }) : super(
-          key: key,
-          itemBuilder: itemBuilder,
-          initialValue: initialValue,
-          onOpened: onOpened,
-          onSelected: onSelected,
-          onCanceled: onCanceled,
-          tooltip: tooltip,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          padding: padding,
-          child: child,
-          splashRadius: splashRadius,
-          icon: icon,
-          iconSize: iconSize,
-          offset: offset,
-          enabled: enabled,
-          shape: shape,
-          color: color,
-          enableFeedback: enableFeedback,
-          constraints: constraints,
-          position: position,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'itemBuilder': _i2.BuilderArg<_i1.PopupMenuItemBuilder<T>>(
+            name: 'itemBuilder',
+            init: itemBuilder,
+            isNamed: true,
+          ),
+          'initialValue': _i2.BuilderArg<T?>(
+            name: 'initialValue',
+            init: initialValue,
+            isNamed: true,
+          ),
+          'onOpened': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onOpened',
+            init: onOpened,
+            isNamed: true,
+          ),
+          'onSelected': _i2.BuilderArg<_i1.PopupMenuItemSelected<T>?>(
+            name: 'onSelected',
+            init: onSelected,
+            isNamed: true,
+          ),
+          'onCanceled': _i2.BuilderArg<_i1.PopupMenuCanceled?>(
+            name: 'onCanceled',
+            init: onCanceled,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i9.Widget?>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i4.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+            defaultValue: _i10.Offset.zero,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'shape': _i2.BuilderArg<_i11.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i12.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'position': _i2.BuilderArg<_i13.PopupMenuPosition?>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'PopupMenuButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuButton$Mate<T>(
@@ -378,123 +466,8 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
           position: p.get('position').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'itemBuilder',
-      itemBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'initialValue',
-      initialValue,
-      isNamed: true,
-    );
-    mateUse(
-      'onOpened',
-      onOpened,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelected',
-      onSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'onCanceled',
-      onCanceled,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-      defaultValue: _i10.Offset.zero,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -14,42 +14,80 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
   /// CupertinoSwitch CupertinoSwitch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? trackColor, Color? thumbColor, bool? applyTheme, Color? focusColor, DragStartBehavior dragStartBehavior = DragStartBehavior.start})
   CupertinoSwitch$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required bool value} , default:none
-    required bool value,
+    required super.value,
 
     /// optionalParameters: {required void Function(bool)? onChanged} , default:none
-    required _i4.ValueChanged<bool>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? trackColor} , default:none
-    _i5.Color? trackColor,
+    super.trackColor,
 
     /// optionalParameters: {Color? thumbColor} , default:none
-    _i5.Color? thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {bool? applyTheme} , default:none
-    bool? applyTheme,
+    super.applyTheme,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i6.DragStartBehavior dragStartBehavior = _i7.DragStartBehavior.start,
-  }) : super(
-          key: key,
-          value: value,
-          onChanged: onChanged,
-          activeColor: activeColor,
-          trackColor: trackColor,
-          thumbColor: thumbColor,
-          applyTheme: applyTheme,
-          focusColor: focusColor,
-          dragStartBehavior: dragStartBehavior,
-        ) {
+    super.dragStartBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<bool>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'trackColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'trackColor',
+            init: trackColor,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'applyTheme': _i2.BuilderArg<bool?>(
+            name: 'applyTheme',
+            init: applyTheme,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i6.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i7.DragStartBehavior.start,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoSwitch';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSwitch$Mate(
@@ -63,51 +101,8 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
           focusColor: p.get('focusColor').build(),
           dragStartBehavior: p.get('dragStartBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackColor',
-      trackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'applyTheme',
-      applyTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i7.DragStartBehavior.start,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

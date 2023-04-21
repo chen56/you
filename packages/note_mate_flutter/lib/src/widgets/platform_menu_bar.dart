@@ -15,21 +15,41 @@ class ShortcutSerialization$Mate extends _i1.ShortcutSerialization with _i2.Mate
   /// ShortcutSerialization ShortcutSerialization.character(String character, {bool alt = false, bool control = false, bool meta = false})
   ShortcutSerialization$Mate.character(
     /// requiredParameters: String character
-    String character, {
+    super.character, {
     /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
-    bool alt = false,
+    super.alt,
 
     /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
-    bool control = false,
+    super.control,
 
     /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
-    bool meta = false,
-  }) : super.character(
-          character,
-          alt: alt,
-          control: control,
-          meta: meta,
-        ) {
+    super.meta,
+  })  : mateParams = {
+          'character': _i2.BuilderArg<String>(
+            name: 'character',
+            init: character,
+            isNamed: false,
+          ),
+          'alt': _i2.BuilderArg<bool>(
+            name: 'alt',
+            init: alt,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'control': _i2.BuilderArg<bool>(
+            name: 'control',
+            init: control,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'meta': _i2.BuilderArg<bool>(
+            name: 'meta',
+            init: meta,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super.character() {
     mateBuilderName = 'ShortcutSerialization.character';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ShortcutSerialization$Mate.character(
@@ -38,53 +58,55 @@ class ShortcutSerialization$Mate extends _i1.ShortcutSerialization with _i2.Mate
           control: p.get('control').build(),
           meta: p.get('meta').build(),
         );
-    mateUse(
-      'character',
-      character,
-      isNamed: false,
-    );
-    mateUse(
-      'alt',
-      alt,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'control',
-      control,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'meta',
-      meta,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
 
   /// ShortcutSerialization ShortcutSerialization.modifier(LogicalKeyboardKey trigger, {bool alt = false, bool control = false, bool meta = false, bool shift = false})
   ShortcutSerialization$Mate.modifier(
     /// requiredParameters: LogicalKeyboardKey trigger
-    _i3.LogicalKeyboardKey trigger, {
+    super.trigger, {
     /// optionalParameters: {bool alt = false} , default:processed=BooleanLiteralImpl
-    bool alt = false,
+    super.alt,
 
     /// optionalParameters: {bool control = false} , default:processed=BooleanLiteralImpl
-    bool control = false,
+    super.control,
 
     /// optionalParameters: {bool meta = false} , default:processed=BooleanLiteralImpl
-    bool meta = false,
+    super.meta,
 
     /// optionalParameters: {bool shift = false} , default:processed=BooleanLiteralImpl
-    bool shift = false,
-  }) : super.modifier(
-          trigger,
-          alt: alt,
-          control: control,
-          meta: meta,
-          shift: shift,
-        ) {
+    super.shift,
+  })  : mateParams = {
+          'trigger': _i2.BuilderArg<_i3.LogicalKeyboardKey>(
+            name: 'trigger',
+            init: trigger,
+            isNamed: false,
+          ),
+          'alt': _i2.BuilderArg<bool>(
+            name: 'alt',
+            init: alt,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'control': _i2.BuilderArg<bool>(
+            name: 'control',
+            init: control,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'meta': _i2.BuilderArg<bool>(
+            name: 'meta',
+            init: meta,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'shift': _i2.BuilderArg<bool>(
+            name: 'shift',
+            init: shift,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super.modifier() {
     mateBuilderName = 'ShortcutSerialization.modifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ShortcutSerialization$Mate.modifier(
@@ -94,36 +116,10 @@ class ShortcutSerialization$Mate extends _i1.ShortcutSerialization with _i2.Mate
           meta: p.get('meta').build(),
           shift: p.get('shift').build(),
         );
-    mateUse(
-      'trigger',
-      trigger,
-      isNamed: false,
-    );
-    mateUse(
-      'alt',
-      alt,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'control',
-      control,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'meta',
-      meta,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'shift',
-      shift,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DefaultPlatformMenuDelegate extends PlatformMenuDelegate
@@ -132,17 +128,22 @@ class DefaultPlatformMenuDelegate$Mate extends _i1.DefaultPlatformMenuDelegate w
   DefaultPlatformMenuDelegate$Mate(
       {
       /// optionalParameters: {MethodChannel? channel} , default:none
-      _i4.MethodChannel? channel})
-      : super(channel: channel) {
+      super.channel})
+      : mateParams = {
+          'channel': _i2.BuilderArg<_i4.MethodChannel?>(
+            name: 'channel',
+            init: channel,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DefaultPlatformMenuDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultPlatformMenuDelegate$Mate(channel: p.get('channel').build());
-    mateUse(
-      'channel',
-      channel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PlatformMenuBar extends StatefulWidget with DiagnosticableTreeMixin
@@ -150,18 +151,31 @@ class PlatformMenuBar$Mate extends _i1.PlatformMenuBar with _i2.Mate {
   /// PlatformMenuBar PlatformMenuBar({Key? key, required List<PlatformMenuItem> menus, Widget? child, Widget? body})
   PlatformMenuBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i5.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<PlatformMenuItem> menus} , default:none
-    required List<_i1.PlatformMenuItem> menus,
+    required super.menus,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i6.Widget? child,
-  }) : super(
-          key: key,
-          menus: menus,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i5.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'menus': _i2.BuilderArg<List<_i1.PlatformMenuItem>>(
+            name: 'menus',
+            init: menus,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlatformMenuBar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PlatformMenuBar$Mate(
@@ -169,22 +183,10 @@ class PlatformMenuBar$Mate extends _i1.PlatformMenuBar with _i2.Mate {
           menus: p.get('menus').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'menus',
-      menus,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PlatformMenu extends PlatformMenuItem with DiagnosticableTreeMixin
@@ -192,22 +194,39 @@ class PlatformMenu$Mate extends _i1.PlatformMenu with _i2.Mate {
   /// PlatformMenu PlatformMenu({required String label, void Function()? onOpen, void Function()? onClose, required List<PlatformMenuItem> menus})
   PlatformMenu$Mate({
     /// optionalParameters: {required String label} , default:none
-    required String label,
+    required super.label,
 
     /// optionalParameters: {void Function()? onOpen} , default:none
-    _i7.VoidCallback? onOpen,
+    super.onOpen,
 
     /// optionalParameters: {void Function()? onClose} , default:none
-    _i7.VoidCallback? onClose,
+    super.onClose,
 
     /// optionalParameters: {required List<PlatformMenuItem> menus} , default:none
-    required List<_i1.PlatformMenuItem> menus,
-  }) : super(
-          label: label,
-          onOpen: onOpen,
-          onClose: onClose,
-          menus: menus,
-        ) {
+    required super.menus,
+  })  : mateParams = {
+          'label': _i2.BuilderArg<String>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'onOpen': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onOpen',
+            init: onOpen,
+            isNamed: true,
+          ),
+          'onClose': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onClose',
+            init: onClose,
+            isNamed: true,
+          ),
+          'menus': _i2.BuilderArg<List<_i1.PlatformMenuItem>>(
+            name: 'menus',
+            init: menus,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlatformMenu';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PlatformMenu$Mate(
@@ -216,27 +235,10 @@ class PlatformMenu$Mate extends _i1.PlatformMenu with _i2.Mate {
           onClose: p.get('onClose').build(),
           menus: p.get('menus').build(),
         );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'onOpen',
-      onOpen,
-      isNamed: true,
-    );
-    mateUse(
-      'onClose',
-      onClose,
-      isNamed: true,
-    );
-    mateUse(
-      'menus',
-      menus,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PlatformMenuItemGroup extends PlatformMenuItem
@@ -245,17 +247,22 @@ class PlatformMenuItemGroup$Mate extends _i1.PlatformMenuItemGroup with _i2.Mate
   PlatformMenuItemGroup$Mate(
       {
       /// optionalParameters: {required List<PlatformMenuItem> members} , default:none
-      required List<_i1.PlatformMenuItem> members})
-      : super(members: members) {
+      required super.members})
+      : mateParams = {
+          'members': _i2.BuilderArg<List<_i1.PlatformMenuItem>>(
+            name: 'members',
+            init: members,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'PlatformMenuItemGroup';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PlatformMenuItemGroup$Mate(members: p.get('members').build());
-    mateUse(
-      'members',
-      members,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PlatformMenuItem with Diagnosticable
@@ -263,22 +270,39 @@ class PlatformMenuItem$Mate extends _i1.PlatformMenuItem with _i2.Mate {
   /// PlatformMenuItem PlatformMenuItem({required String label, MenuSerializableShortcut? shortcut, void Function()? onSelected, Intent? onSelectedIntent})
   PlatformMenuItem$Mate({
     /// optionalParameters: {required String label} , default:none
-    required String label,
+    required super.label,
 
     /// optionalParameters: {MenuSerializableShortcut? shortcut} , default:none
-    _i1.MenuSerializableShortcut? shortcut,
+    super.shortcut,
 
     /// optionalParameters: {void Function()? onSelected} , default:none
-    _i7.VoidCallback? onSelected,
+    super.onSelected,
 
     /// optionalParameters: {Intent? onSelectedIntent} , default:none
-    _i8.Intent? onSelectedIntent,
-  }) : super(
-          label: label,
-          shortcut: shortcut,
-          onSelected: onSelected,
-          onSelectedIntent: onSelectedIntent,
-        ) {
+    super.onSelectedIntent,
+  })  : mateParams = {
+          'label': _i2.BuilderArg<String>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'shortcut': _i2.BuilderArg<_i1.MenuSerializableShortcut?>(
+            name: 'shortcut',
+            init: shortcut,
+            isNamed: true,
+          ),
+          'onSelected': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onSelected',
+            init: onSelected,
+            isNamed: true,
+          ),
+          'onSelectedIntent': _i2.BuilderArg<_i8.Intent?>(
+            name: 'onSelectedIntent',
+            init: onSelectedIntent,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlatformMenuItem';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PlatformMenuItem$Mate(
@@ -287,27 +311,10 @@ class PlatformMenuItem$Mate extends _i1.PlatformMenuItem with _i2.Mate {
           onSelected: p.get('onSelected').build(),
           onSelectedIntent: p.get('onSelectedIntent').build(),
         );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'shortcut',
-      shortcut,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelected',
-      onSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelectedIntent',
-      onSelectedIntent,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PlatformProvidedMenuItem extends PlatformMenuItem
@@ -315,30 +322,32 @@ class PlatformProvidedMenuItem$Mate extends _i1.PlatformProvidedMenuItem with _i
   /// PlatformProvidedMenuItem PlatformProvidedMenuItem({required PlatformProvidedMenuItemType type, bool enabled = true})
   PlatformProvidedMenuItem$Mate({
     /// optionalParameters: {required PlatformProvidedMenuItemType type} , default:none
-    required _i1.PlatformProvidedMenuItemType type,
+    required super.type,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
-  }) : super(
-          type: type,
-          enabled: enabled,
-        ) {
+    super.enabled,
+  })  : mateParams = {
+          'type': _i2.BuilderArg<_i1.PlatformProvidedMenuItemType>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlatformProvidedMenuItem';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PlatformProvidedMenuItem$Mate(
           type: p.get('type').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

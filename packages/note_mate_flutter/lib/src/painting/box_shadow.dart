@@ -11,26 +11,51 @@ class BoxShadow$Mate extends _i1.BoxShadow with _i2.Mate {
   /// BoxShadow BoxShadow({Color color = const Color(_kColorDefault), Offset offset = Offset.zero, double blurRadius = 0.0, double spreadRadius = 0.0, BlurStyle blurStyle = BlurStyle.normal})
   BoxShadow$Mate({
     /// optionalParameters: {Color color = const Color(_kColorDefault)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color color,
+    super.color,
 
     /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset offset = _i4.Offset.zero,
+    super.offset,
 
     /// optionalParameters: {double blurRadius = 0.0} , default:processed=DoubleLiteralImpl
-    double blurRadius = 0.0,
+    super.blurRadius,
 
     /// optionalParameters: {double spreadRadius = 0.0} , default:processed=DoubleLiteralImpl
-    double spreadRadius = 0.0,
+    super.spreadRadius,
 
     /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , default:processed=PrefixedIdentifierImpl
-    _i3.BlurStyle blurStyle = _i3.BlurStyle.normal,
-  }) : super(
-          color: color,
-          offset: offset,
-          blurRadius: blurRadius,
-          spreadRadius: spreadRadius,
-          blurStyle: blurStyle,
-        ) {
+    super.blurStyle,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i3.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'blurRadius': _i2.BuilderArg<double>(
+            name: 'blurRadius',
+            init: blurRadius,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'spreadRadius': _i2.BuilderArg<double>(
+            name: 'spreadRadius',
+            init: spreadRadius,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'blurStyle': _i2.BuilderArg<_i3.BlurStyle>(
+            name: 'blurStyle',
+            init: blurStyle,
+            isNamed: true,
+            defaultValue: _i3.BlurStyle.normal,
+          ),
+        },
+        super() {
     mateBuilderName = 'BoxShadow';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxShadow$Mate(
@@ -40,34 +65,8 @@ class BoxShadow$Mate extends _i1.BoxShadow with _i2.Mate {
           spreadRadius: p.get('spreadRadius').build(),
           blurStyle: p.get('blurStyle').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'blurRadius',
-      blurRadius,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'spreadRadius',
-      spreadRadius,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'blurStyle',
-      blurStyle,
-      isNamed: true,
-      defaultValue: _i3.BlurStyle.normal,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -13,54 +13,104 @@ class TimePickerDialog$Mate extends _i1.TimePickerDialog with _i2.Mate {
   /// TimePickerDialog TimePickerDialog({Key? key, required TimeOfDay initialTime, String? cancelText, String? confirmText, String? helpText, String? errorInvalidText, String? hourLabelText, String? minuteLabelText, String? restorationId, TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial, Orientation? orientation, void Function(TimePickerEntryMode)? onEntryModeChanged})
   TimePickerDialog$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required TimeOfDay initialTime} , default:none
-    required _i4.TimeOfDay initialTime,
+    required super.initialTime,
 
     /// optionalParameters: {String? cancelText} , default:none
-    String? cancelText,
+    super.cancelText,
 
     /// optionalParameters: {String? confirmText} , default:none
-    String? confirmText,
+    super.confirmText,
 
     /// optionalParameters: {String? helpText} , default:none
-    String? helpText,
+    super.helpText,
 
     /// optionalParameters: {String? errorInvalidText} , default:none
-    String? errorInvalidText,
+    super.errorInvalidText,
 
     /// optionalParameters: {String? hourLabelText} , default:none
-    String? hourLabelText,
+    super.hourLabelText,
 
     /// optionalParameters: {String? minuteLabelText} , default:none
-    String? minuteLabelText,
+    super.minuteLabelText,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , default:processed=PrefixedIdentifierImpl
-    _i1.TimePickerEntryMode initialEntryMode = _i5.TimePickerEntryMode.dial,
+    super.initialEntryMode,
 
     /// optionalParameters: {Orientation? orientation} , default:none
-    _i6.Orientation? orientation,
+    super.orientation,
 
     /// optionalParameters: {void Function(TimePickerEntryMode)? onEntryModeChanged} , default:none
-    _i1.EntryModeChangeCallback? onEntryModeChanged,
-  }) : super(
-          key: key,
-          initialTime: initialTime,
-          cancelText: cancelText,
-          confirmText: confirmText,
-          helpText: helpText,
-          errorInvalidText: errorInvalidText,
-          hourLabelText: hourLabelText,
-          minuteLabelText: minuteLabelText,
-          restorationId: restorationId,
-          initialEntryMode: initialEntryMode,
-          orientation: orientation,
-          onEntryModeChanged: onEntryModeChanged,
-        ) {
+    super.onEntryModeChanged,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialTime': _i2.BuilderArg<_i4.TimeOfDay>(
+            name: 'initialTime',
+            init: initialTime,
+            isNamed: true,
+          ),
+          'cancelText': _i2.BuilderArg<String?>(
+            name: 'cancelText',
+            init: cancelText,
+            isNamed: true,
+          ),
+          'confirmText': _i2.BuilderArg<String?>(
+            name: 'confirmText',
+            init: confirmText,
+            isNamed: true,
+          ),
+          'helpText': _i2.BuilderArg<String?>(
+            name: 'helpText',
+            init: helpText,
+            isNamed: true,
+          ),
+          'errorInvalidText': _i2.BuilderArg<String?>(
+            name: 'errorInvalidText',
+            init: errorInvalidText,
+            isNamed: true,
+          ),
+          'hourLabelText': _i2.BuilderArg<String?>(
+            name: 'hourLabelText',
+            init: hourLabelText,
+            isNamed: true,
+          ),
+          'minuteLabelText': _i2.BuilderArg<String?>(
+            name: 'minuteLabelText',
+            init: minuteLabelText,
+            isNamed: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'initialEntryMode': _i2.BuilderArg<_i1.TimePickerEntryMode>(
+            name: 'initialEntryMode',
+            init: initialEntryMode,
+            isNamed: true,
+            defaultValue: _i5.TimePickerEntryMode.dial,
+          ),
+          'orientation': _i2.BuilderArg<_i6.Orientation?>(
+            name: 'orientation',
+            init: orientation,
+            isNamed: true,
+          ),
+          'onEntryModeChanged': _i2.BuilderArg<_i1.EntryModeChangeCallback?>(
+            name: 'onEntryModeChanged',
+            init: onEntryModeChanged,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TimePickerDialog';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimePickerDialog$Mate(
@@ -77,66 +127,8 @@ class TimePickerDialog$Mate extends _i1.TimePickerDialog with _i2.Mate {
           orientation: p.get('orientation').build(),
           onEntryModeChanged: p.get('onEntryModeChanged').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialTime',
-      initialTime,
-      isNamed: true,
-    );
-    mateUse(
-      'cancelText',
-      cancelText,
-      isNamed: true,
-    );
-    mateUse(
-      'confirmText',
-      confirmText,
-      isNamed: true,
-    );
-    mateUse(
-      'helpText',
-      helpText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorInvalidText',
-      errorInvalidText,
-      isNamed: true,
-    );
-    mateUse(
-      'hourLabelText',
-      hourLabelText,
-      isNamed: true,
-    );
-    mateUse(
-      'minuteLabelText',
-      minuteLabelText,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'initialEntryMode',
-      initialEntryMode,
-      isNamed: true,
-      defaultValue: _i5.TimePickerEntryMode.dial,
-    );
-    mateUse(
-      'orientation',
-      orientation,
-      isNamed: true,
-    );
-    mateUse(
-      'onEntryModeChanged',
-      onEntryModeChanged,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -9,18 +9,33 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
   /// ScrollController ScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   ScrollController$Mate({
     /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
-    double initialScrollOffset = 0.0,
+    super.initialScrollOffset,
 
     /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
-    bool keepScrollOffset = true,
+    super.keepScrollOffset,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          initialScrollOffset: initialScrollOffset,
-          keepScrollOffset: keepScrollOffset,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'initialScrollOffset': _i2.BuilderArg<double>(
+            name: 'initialScrollOffset',
+            init: initialScrollOffset,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'keepScrollOffset': _i2.BuilderArg<bool>(
+            name: 'keepScrollOffset',
+            init: keepScrollOffset,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollController$Mate(
@@ -28,24 +43,10 @@ class ScrollController$Mate extends _i1.ScrollController with _i2.Mate {
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'initialScrollOffset',
-      initialScrollOffset,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'keepScrollOffset',
-      keepScrollOffset,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TrackingScrollController extends ScrollController
@@ -53,18 +54,33 @@ class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i
   /// TrackingScrollController TrackingScrollController({double initialScrollOffset = 0.0, bool keepScrollOffset = true, String? debugLabel})
   TrackingScrollController$Mate({
     /// optionalParameters: {double initialScrollOffset = 0.0} , default:processed=DoubleLiteralImpl
-    double initialScrollOffset = 0.0,
+    super.initialScrollOffset,
 
     /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
-    bool keepScrollOffset = true,
+    super.keepScrollOffset,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          initialScrollOffset: initialScrollOffset,
-          keepScrollOffset: keepScrollOffset,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'initialScrollOffset': _i2.BuilderArg<double>(
+            name: 'initialScrollOffset',
+            init: initialScrollOffset,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'keepScrollOffset': _i2.BuilderArg<bool>(
+            name: 'keepScrollOffset',
+            init: keepScrollOffset,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TrackingScrollController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TrackingScrollController$Mate(
@@ -72,22 +88,8 @@ class TrackingScrollController$Mate extends _i1.TrackingScrollController with _i
           keepScrollOffset: p.get('keepScrollOffset').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'initialScrollOffset',
-      initialScrollOffset,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'keepScrollOffset',
-      keepScrollOffset,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -15,42 +15,79 @@ class ButtonBarThemeData$Mate extends _i1.ButtonBarThemeData with _i2.Mate {
   /// ButtonBarThemeData ButtonBarThemeData({MainAxisAlignment? alignment, MainAxisSize? mainAxisSize, ButtonTextTheme? buttonTextTheme, double? buttonMinWidth, double? buttonHeight, EdgeInsetsGeometry? buttonPadding, bool? buttonAlignedDropdown, ButtonBarLayoutBehavior? layoutBehavior, VerticalDirection? overflowDirection})
   ButtonBarThemeData$Mate({
     /// optionalParameters: {MainAxisAlignment? alignment} , default:none
-    _i3.MainAxisAlignment? alignment,
+    super.alignment,
 
     /// optionalParameters: {MainAxisSize? mainAxisSize} , default:none
-    _i3.MainAxisSize? mainAxisSize,
+    super.mainAxisSize,
 
     /// optionalParameters: {ButtonTextTheme? buttonTextTheme} , default:none
-    _i4.ButtonTextTheme? buttonTextTheme,
+    super.buttonTextTheme,
 
     /// optionalParameters: {double? buttonMinWidth} , default:none
-    double? buttonMinWidth,
+    super.buttonMinWidth,
 
     /// optionalParameters: {double? buttonHeight} , default:none
-    double? buttonHeight,
+    super.buttonHeight,
 
     /// optionalParameters: {EdgeInsetsGeometry? buttonPadding} , default:none
-    _i5.EdgeInsetsGeometry? buttonPadding,
+    super.buttonPadding,
 
     /// optionalParameters: {bool? buttonAlignedDropdown} , default:none
-    bool? buttonAlignedDropdown,
+    super.buttonAlignedDropdown,
 
     /// optionalParameters: {ButtonBarLayoutBehavior? layoutBehavior} , default:none
-    _i4.ButtonBarLayoutBehavior? layoutBehavior,
+    super.layoutBehavior,
 
     /// optionalParameters: {VerticalDirection? overflowDirection} , default:none
-    _i6.VerticalDirection? overflowDirection,
-  }) : super(
-          alignment: alignment,
-          mainAxisSize: mainAxisSize,
-          buttonTextTheme: buttonTextTheme,
-          buttonMinWidth: buttonMinWidth,
-          buttonHeight: buttonHeight,
-          buttonPadding: buttonPadding,
-          buttonAlignedDropdown: buttonAlignedDropdown,
-          layoutBehavior: layoutBehavior,
-          overflowDirection: overflowDirection,
-        ) {
+    super.overflowDirection,
+  })  : mateParams = {
+          'alignment': _i2.BuilderArg<_i3.MainAxisAlignment?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'mainAxisSize': _i2.BuilderArg<_i3.MainAxisSize?>(
+            name: 'mainAxisSize',
+            init: mainAxisSize,
+            isNamed: true,
+          ),
+          'buttonTextTheme': _i2.BuilderArg<_i4.ButtonTextTheme?>(
+            name: 'buttonTextTheme',
+            init: buttonTextTheme,
+            isNamed: true,
+          ),
+          'buttonMinWidth': _i2.BuilderArg<double?>(
+            name: 'buttonMinWidth',
+            init: buttonMinWidth,
+            isNamed: true,
+          ),
+          'buttonHeight': _i2.BuilderArg<double?>(
+            name: 'buttonHeight',
+            init: buttonHeight,
+            isNamed: true,
+          ),
+          'buttonPadding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'buttonPadding',
+            init: buttonPadding,
+            isNamed: true,
+          ),
+          'buttonAlignedDropdown': _i2.BuilderArg<bool?>(
+            name: 'buttonAlignedDropdown',
+            init: buttonAlignedDropdown,
+            isNamed: true,
+          ),
+          'layoutBehavior': _i2.BuilderArg<_i4.ButtonBarLayoutBehavior?>(
+            name: 'layoutBehavior',
+            init: layoutBehavior,
+            isNamed: true,
+          ),
+          'overflowDirection': _i2.BuilderArg<_i6.VerticalDirection?>(
+            name: 'overflowDirection',
+            init: overflowDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ButtonBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBarThemeData$Mate(
@@ -64,52 +101,10 @@ class ButtonBarThemeData$Mate extends _i1.ButtonBarThemeData with _i2.Mate {
           layoutBehavior: p.get('layoutBehavior').build(),
           overflowDirection: p.get('overflowDirection').build(),
         );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisSize',
-      mainAxisSize,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonTextTheme',
-      buttonTextTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonMinWidth',
-      buttonMinWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonHeight',
-      buttonHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonPadding',
-      buttonPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonAlignedDropdown',
-      buttonAlignedDropdown,
-      isNamed: true,
-    );
-    mateUse(
-      'layoutBehavior',
-      layoutBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'overflowDirection',
-      overflowDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ButtonBarTheme extends InheritedWidget
@@ -117,18 +112,31 @@ class ButtonBarTheme$Mate extends _i1.ButtonBarTheme with _i2.Mate {
   /// ButtonBarTheme ButtonBarTheme({Key? key, required ButtonBarThemeData data, required Widget child})
   ButtonBarTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required ButtonBarThemeData data} , default:none
-    required _i1.ButtonBarThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ButtonBarThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ButtonBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonBarTheme$Mate(
@@ -136,20 +144,8 @@ class ButtonBarTheme$Mate extends _i1.ButtonBarTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

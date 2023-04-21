@@ -10,66 +10,127 @@ class TextTheme$Mate extends _i1.TextTheme with _i2.Mate {
   /// TextTheme TextTheme({TextStyle? displayLarge, TextStyle? displayMedium, TextStyle? displaySmall, TextStyle? headlineLarge, TextStyle? headlineMedium, TextStyle? headlineSmall, TextStyle? titleLarge, TextStyle? titleMedium, TextStyle? titleSmall, TextStyle? bodyLarge, TextStyle? bodyMedium, TextStyle? bodySmall, TextStyle? labelLarge, TextStyle? labelMedium, TextStyle? labelSmall, TextStyle? headline1, TextStyle? headline2, TextStyle? headline3, TextStyle? headline4, TextStyle? headline5, TextStyle? headline6, TextStyle? subtitle1, TextStyle? subtitle2, TextStyle? bodyText1, TextStyle? bodyText2, TextStyle? caption, TextStyle? button, TextStyle? overline})
   TextTheme$Mate({
     /// optionalParameters: {TextStyle? displayLarge} , default:none
-    _i3.TextStyle? displayLarge,
+    super.displayLarge,
 
     /// optionalParameters: {TextStyle? displayMedium} , default:none
-    _i3.TextStyle? displayMedium,
+    super.displayMedium,
 
     /// optionalParameters: {TextStyle? displaySmall} , default:none
-    _i3.TextStyle? displaySmall,
+    super.displaySmall,
 
     /// optionalParameters: {TextStyle? headlineLarge} , default:none
-    _i3.TextStyle? headlineLarge,
+    super.headlineLarge,
 
     /// optionalParameters: {TextStyle? headlineMedium} , default:none
-    _i3.TextStyle? headlineMedium,
+    super.headlineMedium,
 
     /// optionalParameters: {TextStyle? headlineSmall} , default:none
-    _i3.TextStyle? headlineSmall,
+    super.headlineSmall,
 
     /// optionalParameters: {TextStyle? titleLarge} , default:none
-    _i3.TextStyle? titleLarge,
+    super.titleLarge,
 
     /// optionalParameters: {TextStyle? titleMedium} , default:none
-    _i3.TextStyle? titleMedium,
+    super.titleMedium,
 
     /// optionalParameters: {TextStyle? titleSmall} , default:none
-    _i3.TextStyle? titleSmall,
+    super.titleSmall,
 
     /// optionalParameters: {TextStyle? bodyLarge} , default:none
-    _i3.TextStyle? bodyLarge,
+    super.bodyLarge,
 
     /// optionalParameters: {TextStyle? bodyMedium} , default:none
-    _i3.TextStyle? bodyMedium,
+    super.bodyMedium,
 
     /// optionalParameters: {TextStyle? bodySmall} , default:none
-    _i3.TextStyle? bodySmall,
+    super.bodySmall,
 
     /// optionalParameters: {TextStyle? labelLarge} , default:none
-    _i3.TextStyle? labelLarge,
+    super.labelLarge,
 
     /// optionalParameters: {TextStyle? labelMedium} , default:none
-    _i3.TextStyle? labelMedium,
+    super.labelMedium,
 
     /// optionalParameters: {TextStyle? labelSmall} , default:none
-    _i3.TextStyle? labelSmall,
-  }) : super(
-          displayLarge: displayLarge,
-          displayMedium: displayMedium,
-          displaySmall: displaySmall,
-          headlineLarge: headlineLarge,
-          headlineMedium: headlineMedium,
-          headlineSmall: headlineSmall,
-          titleLarge: titleLarge,
-          titleMedium: titleMedium,
-          titleSmall: titleSmall,
-          bodyLarge: bodyLarge,
-          bodyMedium: bodyMedium,
-          bodySmall: bodySmall,
-          labelLarge: labelLarge,
-          labelMedium: labelMedium,
-          labelSmall: labelSmall,
-        ) {
+    super.labelSmall,
+  })  : mateParams = {
+          'displayLarge': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'displayLarge',
+            init: displayLarge,
+            isNamed: true,
+          ),
+          'displayMedium': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'displayMedium',
+            init: displayMedium,
+            isNamed: true,
+          ),
+          'displaySmall': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'displaySmall',
+            init: displaySmall,
+            isNamed: true,
+          ),
+          'headlineLarge': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'headlineLarge',
+            init: headlineLarge,
+            isNamed: true,
+          ),
+          'headlineMedium': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'headlineMedium',
+            init: headlineMedium,
+            isNamed: true,
+          ),
+          'headlineSmall': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'headlineSmall',
+            init: headlineSmall,
+            isNamed: true,
+          ),
+          'titleLarge': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'titleLarge',
+            init: titleLarge,
+            isNamed: true,
+          ),
+          'titleMedium': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'titleMedium',
+            init: titleMedium,
+            isNamed: true,
+          ),
+          'titleSmall': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'titleSmall',
+            init: titleSmall,
+            isNamed: true,
+          ),
+          'bodyLarge': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'bodyLarge',
+            init: bodyLarge,
+            isNamed: true,
+          ),
+          'bodyMedium': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'bodyMedium',
+            init: bodyMedium,
+            isNamed: true,
+          ),
+          'bodySmall': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'bodySmall',
+            init: bodySmall,
+            isNamed: true,
+          ),
+          'labelLarge': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'labelLarge',
+            init: labelLarge,
+            isNamed: true,
+          ),
+          'labelMedium': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'labelMedium',
+            init: labelMedium,
+            isNamed: true,
+          ),
+          'labelSmall': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'labelSmall',
+            init: labelSmall,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextTheme$Mate(
@@ -89,80 +150,8 @@ class TextTheme$Mate extends _i1.TextTheme with _i2.Mate {
           labelMedium: p.get('labelMedium').build(),
           labelSmall: p.get('labelSmall').build(),
         );
-    mateUse(
-      'displayLarge',
-      displayLarge,
-      isNamed: true,
-    );
-    mateUse(
-      'displayMedium',
-      displayMedium,
-      isNamed: true,
-    );
-    mateUse(
-      'displaySmall',
-      displaySmall,
-      isNamed: true,
-    );
-    mateUse(
-      'headlineLarge',
-      headlineLarge,
-      isNamed: true,
-    );
-    mateUse(
-      'headlineMedium',
-      headlineMedium,
-      isNamed: true,
-    );
-    mateUse(
-      'headlineSmall',
-      headlineSmall,
-      isNamed: true,
-    );
-    mateUse(
-      'titleLarge',
-      titleLarge,
-      isNamed: true,
-    );
-    mateUse(
-      'titleMedium',
-      titleMedium,
-      isNamed: true,
-    );
-    mateUse(
-      'titleSmall',
-      titleSmall,
-      isNamed: true,
-    );
-    mateUse(
-      'bodyLarge',
-      bodyLarge,
-      isNamed: true,
-    );
-    mateUse(
-      'bodyMedium',
-      bodyMedium,
-      isNamed: true,
-    );
-    mateUse(
-      'bodySmall',
-      bodySmall,
-      isNamed: true,
-    );
-    mateUse(
-      'labelLarge',
-      labelLarge,
-      isNamed: true,
-    );
-    mateUse(
-      'labelMedium',
-      labelMedium,
-      isNamed: true,
-    );
-    mateUse(
-      'labelSmall',
-      labelSmall,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -11,31 +11,33 @@ class OvalBorder$Mate extends _i1.OvalBorder with _i2.Mate {
   /// OvalBorder OvalBorder({BorderSide side = BorderSide.none, double eccentricity = 1.0})
   OvalBorder$Mate({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {double eccentricity = 1.0} , default:processed=DoubleLiteralImpl
-    double eccentricity = 1.0,
-  }) : super(
-          side: side,
-          eccentricity: eccentricity,
-        ) {
+    super.eccentricity,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'eccentricity': _i2.BuilderArg<double>(
+            name: 'eccentricity',
+            init: eccentricity,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'OvalBorder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OvalBorder$Mate(
           side: p.get('side').build(),
           eccentricity: p.get('eccentricity').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'eccentricity',
-      eccentricity,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

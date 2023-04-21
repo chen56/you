@@ -21,146 +21,291 @@ class ListTile$Mate extends _i1.ListTile with _i2.Mate {
   /// ListTile ListTile({Key? key, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing, bool isThreeLine = false, bool? dense, VisualDensity? visualDensity, ShapeBorder? shape, ListTileStyle? style, Color? selectedColor, Color? iconColor, Color? textColor, TextStyle? titleTextStyle, TextStyle? subtitleTextStyle, TextStyle? leadingAndTrailingTextStyle, EdgeInsetsGeometry? contentPadding, bool enabled = true, void Function()? onTap, void Function()? onLongPress, void Function(bool)? onFocusChange, MouseCursor? mouseCursor, bool selected = false, Color? focusColor, Color? hoverColor, Color? splashColor, FocusNode? focusNode, bool autofocus = false, Color? tileColor, Color? selectedTileColor, bool? enableFeedback, double? horizontalTitleGap, double? minVerticalPadding, double? minLeadingWidth, ListTileTitleAlignment? titleAlignment})
   ListTile$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Widget? title} , default:none
-    _i4.Widget? title,
+    super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i4.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {Widget? trailing} , default:none
-    _i4.Widget? trailing,
+    super.trailing,
 
     /// optionalParameters: {bool isThreeLine = false} , default:processed=BooleanLiteralImpl
-    bool isThreeLine = false,
+    super.isThreeLine,
 
     /// optionalParameters: {bool? dense} , default:none
-    bool? dense,
+    super.dense,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i5.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i6.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {ListTileStyle? style} , default:none
-    _i1.ListTileStyle? style,
+    super.style,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i7.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i7.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i7.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {TextStyle? titleTextStyle} , default:none
-    _i8.TextStyle? titleTextStyle,
+    super.titleTextStyle,
 
     /// optionalParameters: {TextStyle? subtitleTextStyle} , default:none
-    _i8.TextStyle? subtitleTextStyle,
+    super.subtitleTextStyle,
 
     /// optionalParameters: {TextStyle? leadingAndTrailingTextStyle} , default:none
-    _i8.TextStyle? leadingAndTrailingTextStyle,
+    super.leadingAndTrailingTextStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
-    _i9.EdgeInsetsGeometry? contentPadding,
+    super.contentPadding,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i10.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i11.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i12.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i13.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
-    bool selected = false,
+    super.selected,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i7.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i7.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i7.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i14.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {Color? tileColor} , default:none
-    _i7.Color? tileColor,
+    super.tileColor,
 
     /// optionalParameters: {Color? selectedTileColor} , default:none
-    _i7.Color? selectedTileColor,
+    super.selectedTileColor,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {double? horizontalTitleGap} , default:none
-    double? horizontalTitleGap,
+    super.horizontalTitleGap,
 
     /// optionalParameters: {double? minVerticalPadding} , default:none
-    double? minVerticalPadding,
+    super.minVerticalPadding,
 
     /// optionalParameters: {double? minLeadingWidth} , default:none
-    double? minLeadingWidth,
+    super.minLeadingWidth,
 
     /// optionalParameters: {ListTileTitleAlignment? titleAlignment} , default:none
-    _i1.ListTileTitleAlignment? titleAlignment,
-  }) : super(
-          key: key,
-          leading: leading,
-          title: title,
-          subtitle: subtitle,
-          trailing: trailing,
-          isThreeLine: isThreeLine,
-          dense: dense,
-          visualDensity: visualDensity,
-          shape: shape,
-          style: style,
-          selectedColor: selectedColor,
-          iconColor: iconColor,
-          textColor: textColor,
-          titleTextStyle: titleTextStyle,
-          subtitleTextStyle: subtitleTextStyle,
-          leadingAndTrailingTextStyle: leadingAndTrailingTextStyle,
-          contentPadding: contentPadding,
-          enabled: enabled,
-          onTap: onTap,
-          onLongPress: onLongPress,
-          onFocusChange: onFocusChange,
-          mouseCursor: mouseCursor,
-          selected: selected,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          splashColor: splashColor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          tileColor: tileColor,
-          selectedTileColor: selectedTileColor,
-          enableFeedback: enableFeedback,
-          horizontalTitleGap: horizontalTitleGap,
-          minVerticalPadding: minVerticalPadding,
-          minLeadingWidth: minLeadingWidth,
-          titleAlignment: titleAlignment,
-        ) {
+    super.titleAlignment,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i4.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<_i4.Widget?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+          'isThreeLine': _i2.BuilderArg<bool>(
+            name: 'isThreeLine',
+            init: isThreeLine,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dense': _i2.BuilderArg<bool?>(
+            name: 'dense',
+            init: dense,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i5.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i6.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i1.ListTileStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i8.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'subtitleTextStyle': _i2.BuilderArg<_i8.TextStyle?>(
+            name: 'subtitleTextStyle',
+            init: subtitleTextStyle,
+            isNamed: true,
+          ),
+          'leadingAndTrailingTextStyle': _i2.BuilderArg<_i8.TextStyle?>(
+            name: 'leadingAndTrailingTextStyle',
+            init: leadingAndTrailingTextStyle,
+            isNamed: true,
+          ),
+          'contentPadding': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
+            name: 'contentPadding',
+            init: contentPadding,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onTap': _i2.BuilderArg<_i10.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i11.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i12.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i13.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'focusColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'tileColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'tileColor',
+            init: tileColor,
+            isNamed: true,
+          ),
+          'selectedTileColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'selectedTileColor',
+            init: selectedTileColor,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'horizontalTitleGap': _i2.BuilderArg<double?>(
+            name: 'horizontalTitleGap',
+            init: horizontalTitleGap,
+            isNamed: true,
+          ),
+          'minVerticalPadding': _i2.BuilderArg<double?>(
+            name: 'minVerticalPadding',
+            init: minVerticalPadding,
+            isNamed: true,
+          ),
+          'minLeadingWidth': _i2.BuilderArg<double?>(
+            name: 'minLeadingWidth',
+            init: minLeadingWidth,
+            isNamed: true,
+          ),
+          'titleAlignment': _i2.BuilderArg<_i1.ListTileTitleAlignment?>(
+            name: 'titleAlignment',
+            init: titleAlignment,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ListTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ListTile$Mate(
@@ -200,184 +345,8 @@ class ListTile$Mate extends _i1.ListTile with _i2.Mate {
           minLeadingWidth: p.get('minLeadingWidth').build(),
           titleAlignment: p.get('titleAlignment').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
-    mateUse(
-      'isThreeLine',
-      isThreeLine,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dense',
-      dense,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'titleTextStyle',
-      titleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitleTextStyle',
-      subtitleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingAndTrailingTextStyle',
-      leadingAndTrailingTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'contentPadding',
-      contentPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'tileColor',
-      tileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedTileColor',
-      selectedTileColor,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'horizontalTitleGap',
-      horizontalTitleGap,
-      isNamed: true,
-    );
-    mateUse(
-      'minVerticalPadding',
-      minVerticalPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'minLeadingWidth',
-      minLeadingWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'titleAlignment',
-      titleAlignment,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

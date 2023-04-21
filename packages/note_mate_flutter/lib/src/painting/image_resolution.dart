@@ -10,17 +10,30 @@ class AssetImage$Mate extends _i1.AssetImage with _i2.Mate {
   /// AssetImage AssetImage(String assetName, {AssetBundle? bundle, String? package})
   AssetImage$Mate(
     /// requiredParameters: String assetName
-    String assetName, {
+    super.assetName, {
     /// optionalParameters: {AssetBundle? bundle} , default:none
-    _i3.AssetBundle? bundle,
+    super.bundle,
 
     /// optionalParameters: {String? package} , default:none
-    String? package,
-  }) : super(
-          assetName,
-          bundle: bundle,
-          package: package,
-        ) {
+    super.package,
+  })  : mateParams = {
+          'assetName': _i2.BuilderArg<String>(
+            name: 'assetName',
+            init: assetName,
+            isNamed: false,
+          ),
+          'bundle': _i2.BuilderArg<_i3.AssetBundle?>(
+            name: 'bundle',
+            init: bundle,
+            isNamed: true,
+          ),
+          'package': _i2.BuilderArg<String?>(
+            name: 'package',
+            init: package,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AssetImage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AssetImage$Mate(
@@ -28,20 +41,8 @@ class AssetImage$Mate extends _i1.AssetImage with _i2.Mate {
           bundle: p.get('bundle').build(),
           package: p.get('package').build(),
         );
-    mateUse(
-      'assetName',
-      assetName,
-      isNamed: false,
-    );
-    mateUse(
-      'bundle',
-      bundle,
-      isNamed: true,
-    );
-    mateUse(
-      'package',
-      package,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

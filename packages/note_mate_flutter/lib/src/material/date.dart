@@ -9,29 +9,31 @@ class DateTimeRange$Mate extends _i1.DateTimeRange with _i2.Mate {
   /// DateTimeRange DateTimeRange({required DateTime start, required DateTime end})
   DateTimeRange$Mate({
     /// optionalParameters: {required DateTime start} , default:none
-    required DateTime start,
+    required super.start,
 
     /// optionalParameters: {required DateTime end} , default:none
-    required DateTime end,
-  }) : super(
-          start: start,
-          end: end,
-        ) {
+    required super.end,
+  })  : mateParams = {
+          'start': _i2.BuilderArg<DateTime>(
+            name: 'start',
+            init: start,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<DateTime>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DateTimeRange';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DateTimeRange$Mate(
           start: p.get('start').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'start',
-      start,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

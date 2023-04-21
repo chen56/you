@@ -14,30 +14,57 @@ class RawKeyboardListener$Mate extends _i1.RawKeyboardListener with _i2.Mate {
   /// RawKeyboardListener RawKeyboardListener({Key? key, required FocusNode focusNode, bool autofocus = false, bool includeSemantics = true, void Function(RawKeyEvent)? onKey, required Widget child})
   RawKeyboardListener$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required FocusNode focusNode} , default:none
-    required _i4.FocusNode focusNode,
+    required super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {bool includeSemantics = true} , default:processed=BooleanLiteralImpl
-    bool includeSemantics = true,
+    super.includeSemantics,
 
     /// optionalParameters: {void Function(RawKeyEvent)? onKey} , default:none
-    _i5.ValueChanged<_i6.RawKeyEvent>? onKey,
+    super.onKey,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i7.Widget child,
-  }) : super(
-          key: key,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          includeSemantics: includeSemantics,
-          onKey: onKey,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i4.FocusNode>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'includeSemantics': _i2.BuilderArg<bool>(
+            name: 'includeSemantics',
+            init: includeSemantics,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onKey': _i2.BuilderArg<_i5.ValueChanged<_i6.RawKeyEvent>?>(
+            name: 'onKey',
+            init: onKey,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyboardListener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RawKeyboardListener$Mate(
@@ -48,37 +75,8 @@ class RawKeyboardListener$Mate extends _i1.RawKeyboardListener with _i2.Mate {
           onKey: p.get('onKey').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'includeSemantics',
-      includeSemantics,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onKey',
-      onKey,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

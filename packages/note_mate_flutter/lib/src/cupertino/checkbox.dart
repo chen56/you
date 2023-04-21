@@ -14,54 +14,105 @@ class CupertinoCheckbox$Mate extends _i1.CupertinoCheckbox with _i2.Mate {
   /// CupertinoCheckbox CupertinoCheckbox({Key? key, required bool? value, bool tristate = false, required void Function(bool?)? onChanged, Color? activeColor, Color? inactiveColor, Color? checkColor, Color? focusColor, FocusNode? focusNode, bool autofocus = false, BorderSide? side, OutlinedBorder? shape})
   CupertinoCheckbox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required bool? value} , default:none
-    required bool? value,
+    required super.value,
 
     /// optionalParameters: {bool tristate = false} , default:processed=BooleanLiteralImpl
-    bool tristate = false,
+    super.tristate,
 
     /// optionalParameters: {required void Function(bool?)? onChanged} , default:none
-    required _i4.ValueChanged<bool?>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? inactiveColor} , default:none
-    _i5.Color? inactiveColor,
+    super.inactiveColor,
 
     /// optionalParameters: {Color? checkColor} , default:none
-    _i5.Color? checkColor,
+    super.checkColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i6.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {BorderSide? side} , default:none
-    _i7.BorderSide? side,
+    super.side,
 
     /// optionalParameters: {OutlinedBorder? shape} , default:none
-    _i7.OutlinedBorder? shape,
-  }) : super(
-          key: key,
-          value: value,
-          tristate: tristate,
-          onChanged: onChanged,
-          activeColor: activeColor,
-          inactiveColor: inactiveColor,
-          checkColor: checkColor,
-          focusColor: focusColor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          side: side,
-          shape: shape,
-        ) {
+    super.shape,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<bool?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'tristate': _i2.BuilderArg<bool>(
+            name: 'tristate',
+            init: tristate,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<bool?>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'inactiveColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveColor',
+            init: inactiveColor,
+            isNamed: true,
+          ),
+          'checkColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'checkColor',
+            init: checkColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i6.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'side': _i2.BuilderArg<_i7.BorderSide?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.OutlinedBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoCheckbox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoCheckbox$Mate(
@@ -78,67 +129,8 @@ class CupertinoCheckbox$Mate extends _i1.CupertinoCheckbox with _i2.Mate {
           side: p.get('side').build(),
           shape: p.get('shape').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'tristate',
-      tristate,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveColor',
-      inactiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'checkColor',
-      checkColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

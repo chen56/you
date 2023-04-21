@@ -15,46 +15,87 @@ class Drawer$Mate extends _i1.Drawer with _i2.Mate {
   /// Drawer Drawer({Key? key, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, double? width, Widget? child, String? semanticLabel, Clip? clipBehavior})
   Drawer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i4.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i4.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i5.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i6.Widget? child,
+    super.child,
 
     /// optionalParameters: {String? semanticLabel} , default:none
-    String? semanticLabel,
+    super.semanticLabel,
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i4.Clip? clipBehavior,
-  }) : super(
-          key: key,
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          shape: shape,
-          width: width,
-          child: child,
-          semanticLabel: semanticLabel,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'semanticLabel': _i2.BuilderArg<String?>(
+            name: 'semanticLabel',
+            init: semanticLabel,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Drawer';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Drawer$Mate(
@@ -69,57 +110,10 @@ class Drawer$Mate extends _i1.Drawer with _i2.Mate {
           semanticLabel: p.get('semanticLabel').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticLabel',
-      semanticLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DrawerController extends StatefulWidget
@@ -127,42 +121,82 @@ class DrawerController$Mate extends _i1.DrawerController with _i2.Mate {
   /// DrawerController DrawerController({GlobalKey<State<StatefulWidget>>? key, required Widget child, required DrawerAlignment alignment, bool isDrawerOpen = false, void Function(bool)? drawerCallback, DragStartBehavior dragStartBehavior = DragStartBehavior.start, Color? scrimColor, double? edgeDragWidth, bool enableOpenDragGesture = true})
   DrawerController$Mate({
     /// optionalParameters: {GlobalKey<State<StatefulWidget>>? key} , default:none
-    _i6.GlobalKey<_i6.State<_i6.StatefulWidget>>? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i6.Widget child,
+    required super.child,
 
     /// optionalParameters: {required DrawerAlignment alignment} , default:none
-    required _i1.DrawerAlignment alignment,
+    required super.alignment,
 
     /// optionalParameters: {bool isDrawerOpen = false} , default:processed=BooleanLiteralImpl
-    bool isDrawerOpen = false,
+    super.isDrawerOpen,
 
     /// optionalParameters: {void Function(bool)? drawerCallback} , default:none
-    _i1.DrawerCallback? drawerCallback,
+    super.drawerCallback,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i7.DragStartBehavior dragStartBehavior = _i8.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {Color? scrimColor} , default:none
-    _i4.Color? scrimColor,
+    super.scrimColor,
 
     /// optionalParameters: {double? edgeDragWidth} , default:none
-    double? edgeDragWidth,
+    super.edgeDragWidth,
 
     /// optionalParameters: {bool enableOpenDragGesture = true} , default:processed=BooleanLiteralImpl
-    bool enableOpenDragGesture = true,
-  }) : super(
-          key: key,
-          child: child,
-          alignment: alignment,
-          isDrawerOpen: isDrawerOpen,
-          drawerCallback: drawerCallback,
-          dragStartBehavior: dragStartBehavior,
-          scrimColor: scrimColor,
-          edgeDragWidth: edgeDragWidth,
-          enableOpenDragGesture: enableOpenDragGesture,
-        ) {
+    super.enableOpenDragGesture,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i6.GlobalKey<_i6.State<_i6.StatefulWidget>>?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i1.DrawerAlignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'isDrawerOpen': _i2.BuilderArg<bool>(
+            name: 'isDrawerOpen',
+            init: isDrawerOpen,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'drawerCallback': _i2.BuilderArg<_i1.DrawerCallback?>(
+            name: 'drawerCallback',
+            init: drawerCallback,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
+          ),
+          'scrimColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'scrimColor',
+            init: scrimColor,
+            isNamed: true,
+          ),
+          'edgeDragWidth': _i2.BuilderArg<double?>(
+            name: 'edgeDragWidth',
+            init: edgeDragWidth,
+            isNamed: true,
+          ),
+          'enableOpenDragGesture': _i2.BuilderArg<bool>(
+            name: 'enableOpenDragGesture',
+            init: enableOpenDragGesture,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DrawerController';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerController$Mate(
@@ -176,53 +210,8 @@ class DrawerController$Mate extends _i1.DrawerController with _i2.Mate {
           edgeDragWidth: p.get('edgeDragWidth').build(),
           enableOpenDragGesture: p.get('enableOpenDragGesture').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'isDrawerOpen',
-      isDrawerOpen,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'drawerCallback',
-      drawerCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i8.DragStartBehavior.start,
-    );
-    mateUse(
-      'scrimColor',
-      scrimColor,
-      isNamed: true,
-    );
-    mateUse(
-      'edgeDragWidth',
-      edgeDragWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'enableOpenDragGesture',
-      enableOpenDragGesture,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

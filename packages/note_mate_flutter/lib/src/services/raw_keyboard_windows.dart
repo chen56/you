@@ -9,22 +9,43 @@ class RawKeyEventDataWindows$Mate extends _i1.RawKeyEventDataWindows with _i2.Ma
   /// RawKeyEventDataWindows RawKeyEventDataWindows({int keyCode = 0, int scanCode = 0, int characterCodePoint = 0, int modifiers = 0})
   RawKeyEventDataWindows$Mate({
     /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
-    int keyCode = 0,
+    super.keyCode,
 
     /// optionalParameters: {int scanCode = 0} , default:processed=IntegerLiteralImpl
-    int scanCode = 0,
+    super.scanCode,
 
     /// optionalParameters: {int characterCodePoint = 0} , default:processed=IntegerLiteralImpl
-    int characterCodePoint = 0,
+    super.characterCodePoint,
 
     /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
-    int modifiers = 0,
-  }) : super(
-          keyCode: keyCode,
-          scanCode: scanCode,
-          characterCodePoint: characterCodePoint,
-          modifiers: modifiers,
-        ) {
+    super.modifiers,
+  })  : mateParams = {
+          'keyCode': _i2.BuilderArg<int>(
+            name: 'keyCode',
+            init: keyCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'scanCode': _i2.BuilderArg<int>(
+            name: 'scanCode',
+            init: scanCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'characterCodePoint': _i2.BuilderArg<int>(
+            name: 'characterCodePoint',
+            init: characterCodePoint,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'modifiers': _i2.BuilderArg<int>(
+            name: 'modifiers',
+            init: modifiers,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyEventDataWindows';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataWindows$Mate(
@@ -33,29 +54,8 @@ class RawKeyEventDataWindows$Mate extends _i1.RawKeyEventDataWindows with _i2.Ma
           characterCodePoint: p.get('characterCodePoint').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateUse(
-      'keyCode',
-      keyCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'scanCode',
-      scanCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'characterCodePoint',
-      characterCodePoint,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'modifiers',
-      modifiers,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

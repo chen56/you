@@ -11,18 +11,31 @@ class ForcePressDetails$Mate extends _i1.ForcePressDetails with _i2.Mate {
   /// ForcePressDetails ForcePressDetails({required Offset globalPosition, Offset? localPosition, required double pressure})
   ForcePressDetails$Mate({
     /// optionalParameters: {required Offset globalPosition} , default:none
-    required _i3.Offset globalPosition,
+    required super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
+    super.localPosition,
 
     /// optionalParameters: {required double pressure} , default:none
-    required double pressure,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-          pressure: pressure,
-        ) {
+    required super.pressure,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'pressure': _i2.BuilderArg<double>(
+            name: 'pressure',
+            init: pressure,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ForcePressDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ForcePressDetails$Mate(
@@ -30,22 +43,10 @@ class ForcePressDetails$Mate extends _i1.ForcePressDetails with _i2.Mate {
           localPosition: p.get('localPosition').build(),
           pressure: p.get('pressure').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'pressure',
-      pressure,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ForcePressGestureRecognizer extends OneSequenceGestureRecognizer
@@ -53,30 +54,57 @@ class ForcePressGestureRecognizer$Mate extends _i1.ForcePressGestureRecognizer w
   /// ForcePressGestureRecognizer ForcePressGestureRecognizer({double startPressure = 0.4, double peakPressure = 0.85, double Function(double, double, double) interpolation = _inverseLerp, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   ForcePressGestureRecognizer$Mate({
     /// optionalParameters: {double startPressure = 0.4} , default:processed=DoubleLiteralImpl
-    double startPressure = 0.4,
+    super.startPressure,
 
     /// optionalParameters: {double peakPressure = 0.85} , default:processed=DoubleLiteralImpl
-    double peakPressure = 0.85,
+    super.peakPressure,
 
     /// optionalParameters: {double Function(double, double, double) interpolation = _inverseLerp} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.GestureForceInterpolation interpolation,
+    super.interpolation,
 
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          startPressure: startPressure,
-          peakPressure: peakPressure,
-          interpolation: interpolation,
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'startPressure': _i2.BuilderArg<double>(
+            name: 'startPressure',
+            init: startPressure,
+            isNamed: true,
+            defaultValue: 0.4,
+          ),
+          'peakPressure': _i2.BuilderArg<double>(
+            name: 'peakPressure',
+            init: peakPressure,
+            isNamed: true,
+            defaultValue: 0.85,
+          ),
+          'interpolation': _i2.BuilderArg<_i1.GestureForceInterpolation>(
+            name: 'interpolation',
+            init: interpolation,
+            isNamed: true,
+          ),
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ForcePressGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ForcePressGestureRecognizer$Mate(
@@ -87,37 +115,8 @@ class ForcePressGestureRecognizer$Mate extends _i1.ForcePressGestureRecognizer w
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'startPressure',
-      startPressure,
-      isNamed: true,
-      defaultValue: 0.4,
-    );
-    mateUse(
-      'peakPressure',
-      peakPressure,
-      isNamed: true,
-      defaultValue: 0.85,
-    );
-    mateUse(
-      'interpolation',
-      interpolation,
-      isNamed: true,
-    );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

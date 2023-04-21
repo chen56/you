@@ -118,6 +118,11 @@ class EnumEditor extends BaseValueEditor {
   code.Expression toCode() {
     return code.refer("${param.value}");
   }
+
+  @override
+  String toString() {
+    return "EnumEditor(enums:$enums,value:${param.value},param:$param)";
+  }
 }
 
 class ColorEditor<T> extends BaseValueEditor {

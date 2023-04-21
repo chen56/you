@@ -11,42 +11,85 @@ class Visibility$Mate extends _i1.Visibility with _i2.Mate {
   /// Visibility Visibility({Key? key, required Widget child, Widget replacement = const SizedBox.shrink(), bool visible = true, bool maintainState = false, bool maintainAnimation = false, bool maintainSize = false, bool maintainSemantics = false, bool maintainInteractivity = false})
   Visibility$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {Widget replacement = const SizedBox.shrink()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.Widget replacement,
+    super.replacement,
 
     /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
-    bool visible = true,
+    super.visible,
 
     /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
-    bool maintainState = false,
+    super.maintainState,
 
     /// optionalParameters: {bool maintainAnimation = false} , default:processed=BooleanLiteralImpl
-    bool maintainAnimation = false,
+    super.maintainAnimation,
 
     /// optionalParameters: {bool maintainSize = false} , default:processed=BooleanLiteralImpl
-    bool maintainSize = false,
+    super.maintainSize,
 
     /// optionalParameters: {bool maintainSemantics = false} , default:processed=BooleanLiteralImpl
-    bool maintainSemantics = false,
+    super.maintainSemantics,
 
     /// optionalParameters: {bool maintainInteractivity = false} , default:processed=BooleanLiteralImpl
-    bool maintainInteractivity = false,
-  }) : super(
-          key: key,
-          child: child,
-          replacement: replacement,
-          visible: visible,
-          maintainState: maintainState,
-          maintainAnimation: maintainAnimation,
-          maintainSize: maintainSize,
-          maintainSemantics: maintainSemantics,
-          maintainInteractivity: maintainInteractivity,
-        ) {
+    super.maintainInteractivity,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'replacement': _i2.BuilderArg<_i4.Widget>(
+            name: 'replacement',
+            init: replacement,
+            isNamed: true,
+          ),
+          'visible': _i2.BuilderArg<bool>(
+            name: 'visible',
+            init: visible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'maintainState': _i2.BuilderArg<bool>(
+            name: 'maintainState',
+            init: maintainState,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainAnimation': _i2.BuilderArg<bool>(
+            name: 'maintainAnimation',
+            init: maintainAnimation,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainSize': _i2.BuilderArg<bool>(
+            name: 'maintainSize',
+            init: maintainSize,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainSemantics': _i2.BuilderArg<bool>(
+            name: 'maintainSemantics',
+            init: maintainSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainInteractivity': _i2.BuilderArg<bool>(
+            name: 'maintainInteractivity',
+            init: maintainInteractivity,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'Visibility';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Visibility$Mate(
@@ -60,74 +103,37 @@ class Visibility$Mate extends _i1.Visibility with _i2.Mate {
           maintainSemantics: p.get('maintainSemantics').build(),
           maintainInteractivity: p.get('maintainInteractivity').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'replacement',
-      replacement,
-      isNamed: true,
-    );
-    mateUse(
-      'visible',
-      visible,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'maintainState',
-      maintainState,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainAnimation',
-      maintainAnimation,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainSize',
-      maintainSize,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainSemantics',
-      maintainSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainInteractivity',
-      maintainInteractivity,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
 
   /// Visibility Visibility.maintain({Key? key, required Widget child, bool visible = true})
   Visibility$Mate.maintain({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
-    bool visible = true,
-  }) : super.maintain(
-          key: key,
-          child: child,
-          visible: visible,
-        ) {
+    super.visible,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'visible': _i2.BuilderArg<bool>(
+            name: 'visible',
+            init: visible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.maintain() {
     mateBuilderName = 'Visibility.maintain';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Visibility$Mate.maintain(
@@ -135,23 +141,10 @@ class Visibility$Mate extends _i1.Visibility with _i2.Mate {
           child: p.get('child').build(),
           visible: p.get('visible').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'visible',
-      visible,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverVisibility extends StatelessWidget
@@ -159,42 +152,85 @@ class SliverVisibility$Mate extends _i1.SliverVisibility with _i2.Mate {
   /// SliverVisibility SliverVisibility({Key? key, required Widget sliver, Widget replacementSliver = const SliverToBoxAdapter(), bool visible = true, bool maintainState = false, bool maintainAnimation = false, bool maintainSize = false, bool maintainSemantics = false, bool maintainInteractivity = false})
   SliverVisibility$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget sliver} , default:none
-    required _i4.Widget sliver,
+    required super.sliver,
 
     /// optionalParameters: {Widget replacementSliver = const SliverToBoxAdapter()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.Widget replacementSliver,
+    super.replacementSliver,
 
     /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
-    bool visible = true,
+    super.visible,
 
     /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
-    bool maintainState = false,
+    super.maintainState,
 
     /// optionalParameters: {bool maintainAnimation = false} , default:processed=BooleanLiteralImpl
-    bool maintainAnimation = false,
+    super.maintainAnimation,
 
     /// optionalParameters: {bool maintainSize = false} , default:processed=BooleanLiteralImpl
-    bool maintainSize = false,
+    super.maintainSize,
 
     /// optionalParameters: {bool maintainSemantics = false} , default:processed=BooleanLiteralImpl
-    bool maintainSemantics = false,
+    super.maintainSemantics,
 
     /// optionalParameters: {bool maintainInteractivity = false} , default:processed=BooleanLiteralImpl
-    bool maintainInteractivity = false,
-  }) : super(
-          key: key,
-          sliver: sliver,
-          replacementSliver: replacementSliver,
-          visible: visible,
-          maintainState: maintainState,
-          maintainAnimation: maintainAnimation,
-          maintainSize: maintainSize,
-          maintainSemantics: maintainSemantics,
-          maintainInteractivity: maintainInteractivity,
-        ) {
+    super.maintainInteractivity,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i4.Widget>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+          'replacementSliver': _i2.BuilderArg<_i4.Widget>(
+            name: 'replacementSliver',
+            init: replacementSliver,
+            isNamed: true,
+          ),
+          'visible': _i2.BuilderArg<bool>(
+            name: 'visible',
+            init: visible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'maintainState': _i2.BuilderArg<bool>(
+            name: 'maintainState',
+            init: maintainState,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainAnimation': _i2.BuilderArg<bool>(
+            name: 'maintainAnimation',
+            init: maintainAnimation,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainSize': _i2.BuilderArg<bool>(
+            name: 'maintainSize',
+            init: maintainSize,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainSemantics': _i2.BuilderArg<bool>(
+            name: 'maintainSemantics',
+            init: maintainSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainInteractivity': _i2.BuilderArg<bool>(
+            name: 'maintainInteractivity',
+            init: maintainInteractivity,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverVisibility';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverVisibility$Mate(
@@ -208,78 +244,45 @@ class SliverVisibility$Mate extends _i1.SliverVisibility with _i2.Mate {
           maintainSemantics: p.get('maintainSemantics').build(),
           maintainInteractivity: p.get('maintainInteractivity').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
-    mateUse(
-      'replacementSliver',
-      replacementSliver,
-      isNamed: true,
-    );
-    mateUse(
-      'visible',
-      visible,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'maintainState',
-      maintainState,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainAnimation',
-      maintainAnimation,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainSize',
-      maintainSize,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainSemantics',
-      maintainSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainInteractivity',
-      maintainInteractivity,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
 
   /// SliverVisibility SliverVisibility.maintain({Key? key, required Widget sliver, Widget replacementSliver = const SliverToBoxAdapter(), bool visible = true})
   SliverVisibility$Mate.maintain({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget sliver} , default:none
-    required _i4.Widget sliver,
+    required super.sliver,
 
     /// optionalParameters: {Widget replacementSliver = const SliverToBoxAdapter()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.Widget replacementSliver,
+    super.replacementSliver,
 
     /// optionalParameters: {bool visible = true} , default:processed=BooleanLiteralImpl
-    bool visible = true,
-  }) : super.maintain(
-          key: key,
-          sliver: sliver,
-          replacementSliver: replacementSliver,
-          visible: visible,
-        ) {
+    super.visible,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i4.Widget>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+          'replacementSliver': _i2.BuilderArg<_i4.Widget>(
+            name: 'replacementSliver',
+            init: replacementSliver,
+            isNamed: true,
+          ),
+          'visible': _i2.BuilderArg<bool>(
+            name: 'visible',
+            init: visible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.maintain() {
     mateBuilderName = 'SliverVisibility.maintain';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverVisibility$Mate.maintain(
@@ -288,26 +291,8 @@ class SliverVisibility$Mate extends _i1.SliverVisibility with _i2.Mate {
           replacementSliver: p.get('replacementSliver').build(),
           visible: p.get('visible').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
-    mateUse(
-      'replacementSliver',
-      replacementSliver,
-      isNamed: true,
-    );
-    mateUse(
-      'visible',
-      visible,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

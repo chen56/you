@@ -13,30 +13,55 @@ class BannerPainter$Mate extends _i1.BannerPainter with _i2.Mate {
   /// BannerPainter BannerPainter({required String message, required TextDirection textDirection, required BannerLocation location, required TextDirection layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   BannerPainter$Mate({
     /// optionalParameters: {required String message} , default:none
-    required String message,
+    required super.message,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i3.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {required BannerLocation location} , default:none
-    required _i1.BannerLocation location,
+    required super.location,
 
     /// optionalParameters: {required TextDirection layoutDirection} , default:none
-    required _i3.TextDirection layoutDirection,
+    required super.layoutDirection,
 
     /// optionalParameters: {Color color = _kColor} , default:unprocessed=SimpleIdentifierImpl
-    required _i3.Color color,
+    super.color,
 
     /// optionalParameters: {TextStyle textStyle = _kTextStyle} , default:unprocessed=SimpleIdentifierImpl
-    required _i4.TextStyle textStyle,
-  }) : super(
-          message: message,
-          textDirection: textDirection,
-          location: location,
-          layoutDirection: layoutDirection,
-          color: color,
-          textStyle: textStyle,
-        ) {
+    super.textStyle,
+  })  : mateParams = {
+          'message': _i2.BuilderArg<String>(
+            name: 'message',
+            init: message,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'location': _i2.BuilderArg<_i1.BannerLocation>(
+            name: 'location',
+            init: location,
+            isNamed: true,
+          ),
+          'layoutDirection': _i2.BuilderArg<_i3.TextDirection>(
+            name: 'layoutDirection',
+            init: layoutDirection,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i4.TextStyle>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BannerPainter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BannerPainter$Mate(
@@ -47,37 +72,10 @@ class BannerPainter$Mate extends _i1.BannerPainter with _i2.Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    mateUse(
-      'message',
-      message,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'location',
-      location,
-      isNamed: true,
-    );
-    mateUse(
-      'layoutDirection',
-      layoutDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Banner extends StatelessWidget
@@ -85,38 +83,71 @@ class Banner$Mate extends _i1.Banner with _i2.Mate {
   /// Banner Banner({Key? key, Widget? child, required String message, TextDirection? textDirection, required BannerLocation location, TextDirection? layoutDirection, Color color = _kColor, TextStyle textStyle = _kTextStyle})
   Banner$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i5.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i6.Widget? child,
+    super.child,
 
     /// optionalParameters: {required String message} , default:none
-    required String message,
+    required super.message,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i3.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {required BannerLocation location} , default:none
-    required _i1.BannerLocation location,
+    required super.location,
 
     /// optionalParameters: {TextDirection? layoutDirection} , default:none
-    _i3.TextDirection? layoutDirection,
+    super.layoutDirection,
 
     /// optionalParameters: {Color color = _kColor} , default:unprocessed=SimpleIdentifierImpl
-    required _i3.Color color,
+    super.color,
 
     /// optionalParameters: {TextStyle textStyle = _kTextStyle} , default:unprocessed=SimpleIdentifierImpl
-    required _i4.TextStyle textStyle,
-  }) : super(
-          key: key,
-          child: child,
-          message: message,
-          textDirection: textDirection,
-          location: location,
-          layoutDirection: layoutDirection,
-          color: color,
-          textStyle: textStyle,
-        ) {
+    super.textStyle,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i5.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'message': _i2.BuilderArg<String>(
+            name: 'message',
+            init: message,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'location': _i2.BuilderArg<_i1.BannerLocation>(
+            name: 'location',
+            init: location,
+            isNamed: true,
+          ),
+          'layoutDirection': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'layoutDirection',
+            init: layoutDirection,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i4.TextStyle>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Banner';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Banner$Mate(
@@ -129,47 +160,10 @@ class Banner$Mate extends _i1.Banner with _i2.Mate {
           color: p.get('color').build(),
           textStyle: p.get('textStyle').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'message',
-      message,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'location',
-      location,
-      isNamed: true,
-    );
-    mateUse(
-      'layoutDirection',
-      layoutDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CheckedModeBanner extends StatelessWidget
@@ -177,29 +171,31 @@ class CheckedModeBanner$Mate extends _i1.CheckedModeBanner with _i2.Mate {
   /// CheckedModeBanner CheckedModeBanner({Key? key, required Widget child})
   CheckedModeBanner$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i5.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i6.Widget child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i5.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CheckedModeBanner';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CheckedModeBanner$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

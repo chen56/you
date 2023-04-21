@@ -12,30 +12,55 @@ class CupertinoFormRow$Mate extends _i1.CupertinoFormRow with _i2.Mate {
   /// CupertinoFormRow CupertinoFormRow({Key? key, required Widget child, Widget? prefix, EdgeInsetsGeometry? padding, Widget? helper, Widget? error})
   CupertinoFormRow$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {Widget? prefix} , default:none
-    _i4.Widget? prefix,
+    super.prefix,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Widget? helper} , default:none
-    _i4.Widget? helper,
+    super.helper,
 
     /// optionalParameters: {Widget? error} , default:none
-    _i4.Widget? error,
-  }) : super(
-          key: key,
-          child: child,
-          prefix: prefix,
-          padding: padding,
-          helper: helper,
-          error: error,
-        ) {
+    super.error,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'prefix': _i2.BuilderArg<_i4.Widget?>(
+            name: 'prefix',
+            init: prefix,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'helper': _i2.BuilderArg<_i4.Widget?>(
+            name: 'helper',
+            init: helper,
+            isNamed: true,
+          ),
+          'error': _i2.BuilderArg<_i4.Widget?>(
+            name: 'error',
+            init: error,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoFormRow';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFormRow$Mate(
@@ -46,35 +71,8 @@ class CupertinoFormRow$Mate extends _i1.CupertinoFormRow with _i2.Mate {
           helper: p.get('helper').build(),
           error: p.get('error').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'prefix',
-      prefix,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'helper',
-      helper,
-      isNamed: true,
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

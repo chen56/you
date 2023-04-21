@@ -11,18 +11,31 @@ class VerticalDragGestureRecognizer$Mate extends _i1.VerticalDragGestureRecogniz
   /// VerticalDragGestureRecognizer VerticalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   VerticalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'VerticalDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VerticalDragGestureRecognizer$Mate(
@@ -30,22 +43,10 @@ class VerticalDragGestureRecognizer$Mate extends _i1.VerticalDragGestureRecogniz
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class HorizontalDragGestureRecognizer extends DragGestureRecognizer
@@ -53,18 +54,31 @@ class HorizontalDragGestureRecognizer$Mate extends _i1.HorizontalDragGestureReco
   /// HorizontalDragGestureRecognizer HorizontalDragGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   HorizontalDragGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'HorizontalDragGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HorizontalDragGestureRecognizer$Mate(
@@ -72,22 +86,10 @@ class HorizontalDragGestureRecognizer$Mate extends _i1.HorizontalDragGestureReco
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PanGestureRecognizer extends DragGestureRecognizer
@@ -95,18 +97,31 @@ class PanGestureRecognizer$Mate extends _i1.PanGestureRecognizer with _i2.Mate {
   /// PanGestureRecognizer PanGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   PanGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i4.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PanGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PanGestureRecognizer$Mate(
@@ -114,20 +129,8 @@ class PanGestureRecognizer$Mate extends _i1.PanGestureRecognizer with _i2.Mate {
           supportedDevices: p.get('supportedDevices').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

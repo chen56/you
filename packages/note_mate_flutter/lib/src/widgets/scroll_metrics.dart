@@ -10,30 +10,55 @@ class FixedScrollMetrics$Mate extends _i1.FixedScrollMetrics with _i2.Mate {
   /// FixedScrollMetrics FixedScrollMetrics({required double? minScrollExtent, required double? maxScrollExtent, required double? pixels, required double? viewportDimension, required AxisDirection axisDirection, required double devicePixelRatio})
   FixedScrollMetrics$Mate({
     /// optionalParameters: {required double? minScrollExtent} , default:none
-    required double? minScrollExtent,
+    required super.minScrollExtent,
 
     /// optionalParameters: {required double? maxScrollExtent} , default:none
-    required double? maxScrollExtent,
+    required super.maxScrollExtent,
 
     /// optionalParameters: {required double? pixels} , default:none
-    required double? pixels,
+    required super.pixels,
 
     /// optionalParameters: {required double? viewportDimension} , default:none
-    required double? viewportDimension,
+    required super.viewportDimension,
 
     /// optionalParameters: {required AxisDirection axisDirection} , default:none
-    required _i3.AxisDirection axisDirection,
+    required super.axisDirection,
 
     /// optionalParameters: {required double devicePixelRatio} , default:none
-    required double devicePixelRatio,
-  }) : super(
-          minScrollExtent: minScrollExtent,
-          maxScrollExtent: maxScrollExtent,
-          pixels: pixels,
-          viewportDimension: viewportDimension,
-          axisDirection: axisDirection,
-          devicePixelRatio: devicePixelRatio,
-        ) {
+    required super.devicePixelRatio,
+  })  : mateParams = {
+          'minScrollExtent': _i2.BuilderArg<double?>(
+            name: 'minScrollExtent',
+            init: minScrollExtent,
+            isNamed: true,
+          ),
+          'maxScrollExtent': _i2.BuilderArg<double?>(
+            name: 'maxScrollExtent',
+            init: maxScrollExtent,
+            isNamed: true,
+          ),
+          'pixels': _i2.BuilderArg<double?>(
+            name: 'pixels',
+            init: pixels,
+            isNamed: true,
+          ),
+          'viewportDimension': _i2.BuilderArg<double?>(
+            name: 'viewportDimension',
+            init: viewportDimension,
+            isNamed: true,
+          ),
+          'axisDirection': _i2.BuilderArg<_i3.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+          ),
+          'devicePixelRatio': _i2.BuilderArg<double>(
+            name: 'devicePixelRatio',
+            init: devicePixelRatio,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FixedScrollMetrics';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FixedScrollMetrics$Mate(
@@ -44,35 +69,8 @@ class FixedScrollMetrics$Mate extends _i1.FixedScrollMetrics with _i2.Mate {
           axisDirection: p.get('axisDirection').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateUse(
-      'minScrollExtent',
-      minScrollExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'maxScrollExtent',
-      maxScrollExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'pixels',
-      pixels,
-      isNamed: true,
-    );
-    mateUse(
-      'viewportDimension',
-      viewportDimension,
-      isNamed: true,
-    );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'devicePixelRatio',
-      devicePixelRatio,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

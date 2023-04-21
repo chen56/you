@@ -11,26 +11,47 @@ class BottomNavigationBarItem$Mate extends _i1.BottomNavigationBarItem with _i2.
   /// BottomNavigationBarItem BottomNavigationBarItem({required Widget icon, String? label, Widget? activeIcon, Color? backgroundColor, String? tooltip})
   BottomNavigationBarItem$Mate({
     /// optionalParameters: {required Widget icon} , default:none
-    required _i3.Widget icon,
+    required super.icon,
 
     /// optionalParameters: {String? label} , default:none
-    String? label,
+    super.label,
 
     /// optionalParameters: {Widget? activeIcon} , default:none
-    _i3.Widget? activeIcon,
+    super.activeIcon,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
-  }) : super(
-          icon: icon,
-          label: label,
-          activeIcon: activeIcon,
-          backgroundColor: backgroundColor,
-          tooltip: tooltip,
-        ) {
+    super.tooltip,
+  })  : mateParams = {
+          'icon': _i2.BuilderArg<_i3.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'activeIcon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'activeIcon',
+            init: activeIcon,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BottomNavigationBarItem';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BottomNavigationBarItem$Mate(
@@ -40,30 +61,8 @@ class BottomNavigationBarItem$Mate extends _i1.BottomNavigationBarItem with _i2.
           backgroundColor: p.get('backgroundColor').build(),
           tooltip: p.get('tooltip').build(),
         );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'activeIcon',
-      activeIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,22 +12,40 @@ class ButtonSegment$Mate<T> extends _i1.ButtonSegment<T> with _i2.Mate {
   /// ButtonSegment<T> ButtonSegment({required T value, Widget? icon, Widget? label, bool enabled = true})
   ButtonSegment$Mate({
     /// optionalParameters: {required T value} , default:none
-    required T value,
+    required super.value,
 
     /// optionalParameters: {Widget? icon} , default:none
-    _i3.Widget? icon,
+    super.icon,
 
     /// optionalParameters: {Widget? label} , default:none
-    _i3.Widget? label,
+    super.label,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
-  }) : super(
-          value: value,
-          icon: icon,
-          label: label,
-          enabled: enabled,
-        ) {
+    super.enabled,
+  })  : mateParams = {
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i3.Widget?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ButtonSegment';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonSegment$Mate<T>(
@@ -36,28 +54,10 @@ class ButtonSegment$Mate<T> extends _i1.ButtonSegment<T> with _i2.Mate {
           label: p.get('label').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SegmentedButton<T> extends StatelessWidget
@@ -65,42 +65,82 @@ class SegmentedButton$Mate<T> extends _i1.SegmentedButton<T> with _i2.Mate {
   /// SegmentedButton<T> SegmentedButton({Key? key, required List<ButtonSegment<T>> segments, required Set<T> selected, void Function(Set<T>)? onSelectionChanged, bool multiSelectionEnabled = false, bool emptySelectionAllowed = false, ButtonStyle? style, bool showSelectedIcon = true, Widget? selectedIcon})
   SegmentedButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<ButtonSegment<T>> segments} , default:none
-    required List<_i1.ButtonSegment<T>> segments,
+    required super.segments,
 
     /// optionalParameters: {required Set<T> selected} , default:none
-    required Set<T> selected,
+    required super.selected,
 
     /// optionalParameters: {void Function(Set<T>)? onSelectionChanged} , default:none
-    void Function(Set<T>)? onSelectionChanged,
+    super.onSelectionChanged,
 
     /// optionalParameters: {bool multiSelectionEnabled = false} , default:processed=BooleanLiteralImpl
-    bool multiSelectionEnabled = false,
+    super.multiSelectionEnabled,
 
     /// optionalParameters: {bool emptySelectionAllowed = false} , default:processed=BooleanLiteralImpl
-    bool emptySelectionAllowed = false,
+    super.emptySelectionAllowed,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i5.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {bool showSelectedIcon = true} , default:processed=BooleanLiteralImpl
-    bool showSelectedIcon = true,
+    super.showSelectedIcon,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i3.Widget? selectedIcon,
-  }) : super(
-          key: key,
-          segments: segments,
-          selected: selected,
-          onSelectionChanged: onSelectionChanged,
-          multiSelectionEnabled: multiSelectionEnabled,
-          emptySelectionAllowed: emptySelectionAllowed,
-          style: style,
-          showSelectedIcon: showSelectedIcon,
-          selectedIcon: selectedIcon,
-        ) {
+    super.selectedIcon,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'segments': _i2.BuilderArg<List<_i1.ButtonSegment<T>>>(
+            name: 'segments',
+            init: segments,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<Set<T>>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+          ),
+          'onSelectionChanged': _i2.BuilderArg<void Function(Set<T>)?>(
+            name: 'onSelectionChanged',
+            init: onSelectionChanged,
+            isNamed: true,
+          ),
+          'multiSelectionEnabled': _i2.BuilderArg<bool>(
+            name: 'multiSelectionEnabled',
+            init: multiSelectionEnabled,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'emptySelectionAllowed': _i2.BuilderArg<bool>(
+            name: 'emptySelectionAllowed',
+            init: emptySelectionAllowed,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'style': _i2.BuilderArg<_i5.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'showSelectedIcon': _i2.BuilderArg<bool>(
+            name: 'showSelectedIcon',
+            init: showSelectedIcon,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i3.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SegmentedButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SegmentedButton$Mate<T>(
@@ -114,53 +154,8 @@ class SegmentedButton$Mate<T> extends _i1.SegmentedButton<T> with _i2.Mate {
           showSelectedIcon: p.get('showSelectedIcon').build(),
           selectedIcon: p.get('selectedIcon').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'segments',
-      segments,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelectionChanged',
-      onSelectionChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'multiSelectionEnabled',
-      multiSelectionEnabled,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'emptySelectionAllowed',
-      emptySelectionAllowed,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'showSelectedIcon',
-      showSelectedIcon,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

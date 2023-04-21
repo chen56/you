@@ -149,6 +149,12 @@ void main() {
       ..body = const Code(""));
     expect(_noFormat(y), "() {  } ");
   });
+  test('literalMap ', () {
+    var y = literalMap({
+      "width": refer("ObjectFlagProperty").call([], {"a": literalTrue})
+    });
+    expect(_noFormat(y), "{'width': ObjectFlagProperty(a: true)}");
+  });
 }
 
 String _format(Spec item) {

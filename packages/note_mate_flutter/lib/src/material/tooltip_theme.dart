@@ -15,58 +15,111 @@ class TooltipThemeData$Mate extends _i1.TooltipThemeData with _i2.Mate {
   /// TooltipThemeData TooltipThemeData({double? height, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, double? verticalOffset, bool? preferBelow, bool? excludeFromSemantics, Decoration? decoration, TextStyle? textStyle, TextAlign? textAlign, Duration? waitDuration, Duration? showDuration, TooltipTriggerMode? triggerMode, bool? enableFeedback})
   TooltipThemeData$Mate({
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i3.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i3.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {double? verticalOffset} , default:none
-    double? verticalOffset,
+    super.verticalOffset,
 
     /// optionalParameters: {bool? preferBelow} , default:none
-    bool? preferBelow,
+    super.preferBelow,
 
     /// optionalParameters: {bool? excludeFromSemantics} , default:none
-    bool? excludeFromSemantics,
+    super.excludeFromSemantics,
 
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i4.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i5.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {TextAlign? textAlign} , default:none
-    _i6.TextAlign? textAlign,
+    super.textAlign,
 
     /// optionalParameters: {Duration? waitDuration} , default:none
-    Duration? waitDuration,
+    super.waitDuration,
 
     /// optionalParameters: {Duration? showDuration} , default:none
-    Duration? showDuration,
+    super.showDuration,
 
     /// optionalParameters: {TooltipTriggerMode? triggerMode} , default:none
-    _i1.TooltipTriggerMode? triggerMode,
+    super.triggerMode,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
-  }) : super(
-          height: height,
-          padding: padding,
-          margin: margin,
-          verticalOffset: verticalOffset,
-          preferBelow: preferBelow,
-          excludeFromSemantics: excludeFromSemantics,
-          decoration: decoration,
-          textStyle: textStyle,
-          textAlign: textAlign,
-          waitDuration: waitDuration,
-          showDuration: showDuration,
-          triggerMode: triggerMode,
-          enableFeedback: enableFeedback,
-        ) {
+    super.enableFeedback,
+  })  : mateParams = {
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i3.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i3.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'verticalOffset': _i2.BuilderArg<double?>(
+            name: 'verticalOffset',
+            init: verticalOffset,
+            isNamed: true,
+          ),
+          'preferBelow': _i2.BuilderArg<bool?>(
+            name: 'preferBelow',
+            init: preferBelow,
+            isNamed: true,
+          ),
+          'excludeFromSemantics': _i2.BuilderArg<bool?>(
+            name: 'excludeFromSemantics',
+            init: excludeFromSemantics,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i6.TextAlign?>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+          ),
+          'waitDuration': _i2.BuilderArg<Duration?>(
+            name: 'waitDuration',
+            init: waitDuration,
+            isNamed: true,
+          ),
+          'showDuration': _i2.BuilderArg<Duration?>(
+            name: 'showDuration',
+            init: showDuration,
+            isNamed: true,
+          ),
+          'triggerMode': _i2.BuilderArg<_i1.TooltipTriggerMode?>(
+            name: 'triggerMode',
+            init: triggerMode,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TooltipThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TooltipThemeData$Mate(
@@ -84,72 +137,10 @@ class TooltipThemeData$Mate extends _i1.TooltipThemeData with _i2.Mate {
           triggerMode: p.get('triggerMode').build(),
           enableFeedback: p.get('enableFeedback').build(),
         );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'verticalOffset',
-      verticalOffset,
-      isNamed: true,
-    );
-    mateUse(
-      'preferBelow',
-      preferBelow,
-      isNamed: true,
-    );
-    mateUse(
-      'excludeFromSemantics',
-      excludeFromSemantics,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-    );
-    mateUse(
-      'waitDuration',
-      waitDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'showDuration',
-      showDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'triggerMode',
-      triggerMode,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TooltipTheme extends InheritedTheme
@@ -157,18 +148,31 @@ class TooltipTheme$Mate extends _i1.TooltipTheme with _i2.Mate {
   /// TooltipTheme TooltipTheme({Key? key, required TooltipThemeData data, required Widget child})
   TooltipTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required TooltipThemeData data} , default:none
-    required _i1.TooltipThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.TooltipThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TooltipTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TooltipTheme$Mate(
@@ -176,20 +180,8 @@ class TooltipTheme$Mate extends _i1.TooltipTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

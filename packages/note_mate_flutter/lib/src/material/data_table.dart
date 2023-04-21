@@ -20,26 +20,48 @@ class DataColumn$Mate extends _i1.DataColumn with _i2.Mate {
   /// DataColumn DataColumn({required Widget label, String? tooltip, bool numeric = false, void Function(int, bool)? onSort, MaterialStateProperty<MouseCursor?>? mouseCursor})
   DataColumn$Mate({
     /// optionalParameters: {required Widget label} , default:none
-    required _i3.Widget label,
+    required super.label,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {bool numeric = false} , default:processed=BooleanLiteralImpl
-    bool numeric = false,
+    super.numeric,
 
     /// optionalParameters: {void Function(int, bool)? onSort} , default:none
-    _i1.DataColumnSortCallback? onSort,
+    super.onSort,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i4.MaterialStateProperty<_i5.MouseCursor?>? mouseCursor,
-  }) : super(
-          label: label,
-          tooltip: tooltip,
-          numeric: numeric,
-          onSort: onSort,
-          mouseCursor: mouseCursor,
-        ) {
+    super.mouseCursor,
+  })  : mateParams = {
+          'label': _i2.BuilderArg<_i3.Widget>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'numeric': _i2.BuilderArg<bool>(
+            name: 'numeric',
+            init: numeric,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onSort': _i2.BuilderArg<_i1.DataColumnSortCallback?>(
+            name: 'onSort',
+            init: onSort,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DataColumn';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataColumn$Mate(
@@ -49,33 +71,10 @@ class DataColumn$Mate extends _i1.DataColumn with _i2.Mate {
           onSort: p.get('onSort').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'numeric',
-      numeric,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onSort',
-      onSort,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DataRow
@@ -83,34 +82,64 @@ class DataRow$Mate extends _i1.DataRow with _i2.Mate {
   /// DataRow DataRow({LocalKey? key, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, MaterialStateProperty<MouseCursor?>? mouseCursor, required List<DataCell> cells})
   DataRow$Mate({
     /// optionalParameters: {LocalKey? key} , default:none
-    _i6.LocalKey? key,
+    super.key,
 
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
-    bool selected = false,
+    super.selected,
 
     /// optionalParameters: {void Function(bool?)? onSelectChanged} , default:none
-    _i7.ValueChanged<bool?>? onSelectChanged,
+    super.onSelectChanged,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i8.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
-    _i4.MaterialStateProperty<_i9.Color?>? color,
+    super.color,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i4.MaterialStateProperty<_i5.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {required List<DataCell> cells} , default:none
-    required List<_i1.DataCell> cells,
-  }) : super(
-          key: key,
-          selected: selected,
-          onSelectChanged: onSelectChanged,
-          onLongPress: onLongPress,
-          color: color,
-          mouseCursor: mouseCursor,
-          cells: cells,
-        ) {
+    required super.cells,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i6.LocalKey?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onSelectChanged': _i2.BuilderArg<_i7.ValueChanged<bool?>?>(
+            name: 'onSelectChanged',
+            init: onSelectChanged,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i8.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'cells': _i2.BuilderArg<List<_i1.DataCell>>(
+            name: 'cells',
+            init: cells,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DataRow';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataRow$Mate(
@@ -122,75 +151,69 @@ class DataRow$Mate extends _i1.DataRow with _i2.Mate {
           mouseCursor: p.get('mouseCursor').build(),
           cells: p.get('cells').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onSelectChanged',
-      onSelectChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'cells',
-      cells,
-      isNamed: true,
-    );
   }
 
   /// DataRow DataRow.byIndex({int? index, bool selected = false, void Function(bool?)? onSelectChanged, void Function()? onLongPress, MaterialStateProperty<Color?>? color, MaterialStateProperty<MouseCursor?>? mouseCursor, required List<DataCell> cells})
   DataRow$Mate.byIndex({
     /// optionalParameters: {int? index} , default:none
-    int? index,
+    super.index,
 
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
-    bool selected = false,
+    super.selected,
 
     /// optionalParameters: {void Function(bool?)? onSelectChanged} , default:none
-    _i7.ValueChanged<bool?>? onSelectChanged,
+    super.onSelectChanged,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i8.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? color} , default:none
-    _i4.MaterialStateProperty<_i9.Color?>? color,
+    super.color,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i4.MaterialStateProperty<_i5.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {required List<DataCell> cells} , default:none
-    required List<_i1.DataCell> cells,
-  }) : super.byIndex(
-          index: index,
-          selected: selected,
-          onSelectChanged: onSelectChanged,
-          onLongPress: onLongPress,
-          color: color,
-          mouseCursor: mouseCursor,
-          cells: cells,
-        ) {
+    required super.cells,
+  })  : mateParams = {
+          'index': _i2.BuilderArg<int?>(
+            name: 'index',
+            init: index,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onSelectChanged': _i2.BuilderArg<_i7.ValueChanged<bool?>?>(
+            name: 'onSelectChanged',
+            init: onSelectChanged,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i8.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i4.MaterialStateProperty<_i5.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'cells': _i2.BuilderArg<List<_i1.DataCell>>(
+            name: 'cells',
+            init: cells,
+            isNamed: true,
+          ),
+        },
+        super.byIndex() {
     mateBuilderName = 'DataRow.byIndex';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataRow$Mate.byIndex(
@@ -202,43 +225,10 @@ class DataRow$Mate extends _i1.DataRow with _i2.Mate {
           mouseCursor: p.get('mouseCursor').build(),
           cells: p.get('cells').build(),
         );
-    mateUse(
-      'index',
-      index,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onSelectChanged',
-      onSelectChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'cells',
-      cells,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DataCell
@@ -246,37 +236,72 @@ class DataCell$Mate extends _i1.DataCell with _i2.Mate {
   /// DataCell DataCell(Widget child, {bool placeholder = false, bool showEditIcon = false, void Function()? onTap, void Function()? onLongPress, void Function(TapDownDetails)? onTapDown, void Function()? onDoubleTap, void Function()? onTapCancel})
   DataCell$Mate(
     /// requiredParameters: Widget child
-    _i3.Widget child, {
+    super.child, {
     /// optionalParameters: {bool placeholder = false} , default:processed=BooleanLiteralImpl
-    bool placeholder = false,
+    super.placeholder,
 
     /// optionalParameters: {bool showEditIcon = false} , default:processed=BooleanLiteralImpl
-    bool showEditIcon = false,
+    super.showEditIcon,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i10.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i8.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
-    _i10.GestureTapDownCallback? onTapDown,
+    super.onTapDown,
 
     /// optionalParameters: {void Function()? onDoubleTap} , default:none
-    _i10.GestureTapCallback? onDoubleTap,
+    super.onDoubleTap,
 
     /// optionalParameters: {void Function()? onTapCancel} , default:none
-    _i10.GestureTapCancelCallback? onTapCancel,
-  }) : super(
-          child,
-          placeholder: placeholder,
-          showEditIcon: showEditIcon,
-          onTap: onTap,
-          onLongPress: onLongPress,
-          onTapDown: onTapDown,
-          onDoubleTap: onDoubleTap,
-          onTapCancel: onTapCancel,
-        ) {
+    super.onTapCancel,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: false,
+          ),
+          'placeholder': _i2.BuilderArg<bool>(
+            name: 'placeholder',
+            init: placeholder,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'showEditIcon': _i2.BuilderArg<bool>(
+            name: 'showEditIcon',
+            init: showEditIcon,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onTap': _i2.BuilderArg<_i10.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i8.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onTapDown': _i2.BuilderArg<_i10.GestureTapDownCallback?>(
+            name: 'onTapDown',
+            init: onTapDown,
+            isNamed: true,
+          ),
+          'onDoubleTap': _i2.BuilderArg<_i10.GestureTapCallback?>(
+            name: 'onDoubleTap',
+            init: onDoubleTap,
+            isNamed: true,
+          ),
+          'onTapCancel': _i2.BuilderArg<_i10.GestureTapCancelCallback?>(
+            name: 'onTapCancel',
+            init: onTapCancel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DataCell';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataCell$Mate(
@@ -289,49 +314,10 @@ class DataCell$Mate extends _i1.DataCell with _i2.Mate {
           onDoubleTap: p.get('onDoubleTap').build(),
           onTapCancel: p.get('onTapCancel').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: false,
-    );
-    mateUse(
-      'placeholder',
-      placeholder,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'showEditIcon',
-      showEditIcon,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapDown',
-      onTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTap',
-      onDoubleTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapCancel',
-      onTapCancel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DataTable extends StatelessWidget
@@ -339,94 +325,187 @@ class DataTable$Mate extends _i1.DataTable with _i2.Mate {
   /// DataTable DataTable({Key? key, required List<DataColumn> columns, int? sortColumnIndex, bool sortAscending = true, void Function(bool?)? onSelectAll, Decoration? decoration, MaterialStateProperty<Color?>? dataRowColor, double? dataRowHeight, double? dataRowMinHeight, double? dataRowMaxHeight, TextStyle? dataTextStyle, MaterialStateProperty<Color?>? headingRowColor, double? headingRowHeight, TextStyle? headingTextStyle, double? horizontalMargin, double? columnSpacing, bool showCheckboxColumn = true, bool showBottomBorder = false, double? dividerThickness, required List<DataRow> rows, double? checkboxHorizontalMargin, TableBorder? border, Clip clipBehavior = Clip.none})
   DataTable$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i6.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<DataColumn> columns} , default:none
-    required List<_i1.DataColumn> columns,
+    required super.columns,
 
     /// optionalParameters: {int? sortColumnIndex} , default:none
-    int? sortColumnIndex,
+    super.sortColumnIndex,
 
     /// optionalParameters: {bool sortAscending = true} , default:processed=BooleanLiteralImpl
-    bool sortAscending = true,
+    super.sortAscending,
 
     /// optionalParameters: {void Function(bool?)? onSelectAll} , default:none
-    _i7.ValueSetter<bool?>? onSelectAll,
+    super.onSelectAll,
 
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i11.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? dataRowColor} , default:none
-    _i4.MaterialStateProperty<_i9.Color?>? dataRowColor,
+    super.dataRowColor,
 
     /// optionalParameters: {double? dataRowMinHeight} , default:none
-    double? dataRowMinHeight,
+    super.dataRowMinHeight,
 
     /// optionalParameters: {double? dataRowMaxHeight} , default:none
-    double? dataRowMaxHeight,
+    super.dataRowMaxHeight,
 
     /// optionalParameters: {TextStyle? dataTextStyle} , default:none
-    _i12.TextStyle? dataTextStyle,
+    super.dataTextStyle,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? headingRowColor} , default:none
-    _i4.MaterialStateProperty<_i9.Color?>? headingRowColor,
+    super.headingRowColor,
 
     /// optionalParameters: {double? headingRowHeight} , default:none
-    double? headingRowHeight,
+    super.headingRowHeight,
 
     /// optionalParameters: {TextStyle? headingTextStyle} , default:none
-    _i12.TextStyle? headingTextStyle,
+    super.headingTextStyle,
 
     /// optionalParameters: {double? horizontalMargin} , default:none
-    double? horizontalMargin,
+    super.horizontalMargin,
 
     /// optionalParameters: {double? columnSpacing} , default:none
-    double? columnSpacing,
+    super.columnSpacing,
 
     /// optionalParameters: {bool showCheckboxColumn = true} , default:processed=BooleanLiteralImpl
-    bool showCheckboxColumn = true,
+    super.showCheckboxColumn,
 
     /// optionalParameters: {bool showBottomBorder = false} , default:processed=BooleanLiteralImpl
-    bool showBottomBorder = false,
+    super.showBottomBorder,
 
     /// optionalParameters: {double? dividerThickness} , default:none
-    double? dividerThickness,
+    super.dividerThickness,
 
     /// optionalParameters: {required List<DataRow> rows} , default:none
-    required List<_i1.DataRow> rows,
+    required super.rows,
 
     /// optionalParameters: {double? checkboxHorizontalMargin} , default:none
-    double? checkboxHorizontalMargin,
+    super.checkboxHorizontalMargin,
 
     /// optionalParameters: {TableBorder? border} , default:none
-    _i13.TableBorder? border,
+    super.border,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i9.Clip clipBehavior = _i9.Clip.none,
-  }) : super(
-          key: key,
-          columns: columns,
-          sortColumnIndex: sortColumnIndex,
-          sortAscending: sortAscending,
-          onSelectAll: onSelectAll,
-          decoration: decoration,
-          dataRowColor: dataRowColor,
-          dataRowMinHeight: dataRowMinHeight,
-          dataRowMaxHeight: dataRowMaxHeight,
-          dataTextStyle: dataTextStyle,
-          headingRowColor: headingRowColor,
-          headingRowHeight: headingRowHeight,
-          headingTextStyle: headingTextStyle,
-          horizontalMargin: horizontalMargin,
-          columnSpacing: columnSpacing,
-          showCheckboxColumn: showCheckboxColumn,
-          showBottomBorder: showBottomBorder,
-          dividerThickness: dividerThickness,
-          rows: rows,
-          checkboxHorizontalMargin: checkboxHorizontalMargin,
-          border: border,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i6.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'columns': _i2.BuilderArg<List<_i1.DataColumn>>(
+            name: 'columns',
+            init: columns,
+            isNamed: true,
+          ),
+          'sortColumnIndex': _i2.BuilderArg<int?>(
+            name: 'sortColumnIndex',
+            init: sortColumnIndex,
+            isNamed: true,
+          ),
+          'sortAscending': _i2.BuilderArg<bool>(
+            name: 'sortAscending',
+            init: sortAscending,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onSelectAll': _i2.BuilderArg<_i7.ValueSetter<bool?>?>(
+            name: 'onSelectAll',
+            init: onSelectAll,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i11.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'dataRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+            name: 'dataRowColor',
+            init: dataRowColor,
+            isNamed: true,
+          ),
+          'dataRowMinHeight': _i2.BuilderArg<double?>(
+            name: 'dataRowMinHeight',
+            init: dataRowMinHeight,
+            isNamed: true,
+          ),
+          'dataRowMaxHeight': _i2.BuilderArg<double?>(
+            name: 'dataRowMaxHeight',
+            init: dataRowMaxHeight,
+            isNamed: true,
+          ),
+          'dataTextStyle': _i2.BuilderArg<_i12.TextStyle?>(
+            name: 'dataTextStyle',
+            init: dataTextStyle,
+            isNamed: true,
+          ),
+          'headingRowColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+            name: 'headingRowColor',
+            init: headingRowColor,
+            isNamed: true,
+          ),
+          'headingRowHeight': _i2.BuilderArg<double?>(
+            name: 'headingRowHeight',
+            init: headingRowHeight,
+            isNamed: true,
+          ),
+          'headingTextStyle': _i2.BuilderArg<_i12.TextStyle?>(
+            name: 'headingTextStyle',
+            init: headingTextStyle,
+            isNamed: true,
+          ),
+          'horizontalMargin': _i2.BuilderArg<double?>(
+            name: 'horizontalMargin',
+            init: horizontalMargin,
+            isNamed: true,
+          ),
+          'columnSpacing': _i2.BuilderArg<double?>(
+            name: 'columnSpacing',
+            init: columnSpacing,
+            isNamed: true,
+          ),
+          'showCheckboxColumn': _i2.BuilderArg<bool>(
+            name: 'showCheckboxColumn',
+            init: showCheckboxColumn,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showBottomBorder': _i2.BuilderArg<bool>(
+            name: 'showBottomBorder',
+            init: showBottomBorder,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dividerThickness': _i2.BuilderArg<double?>(
+            name: 'dividerThickness',
+            init: dividerThickness,
+            isNamed: true,
+          ),
+          'rows': _i2.BuilderArg<List<_i1.DataRow>>(
+            name: 'rows',
+            init: rows,
+            isNamed: true,
+          ),
+          'checkboxHorizontalMargin': _i2.BuilderArg<double?>(
+            name: 'checkboxHorizontalMargin',
+            init: checkboxHorizontalMargin,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i13.TableBorder?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i9.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'DataTable';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DataTable$Mate(
@@ -453,121 +532,10 @@ class DataTable$Mate extends _i1.DataTable with _i2.Mate {
           border: p.get('border').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'columns',
-      columns,
-      isNamed: true,
-    );
-    mateUse(
-      'sortColumnIndex',
-      sortColumnIndex,
-      isNamed: true,
-    );
-    mateUse(
-      'sortAscending',
-      sortAscending,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onSelectAll',
-      onSelectAll,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowColor',
-      dataRowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowMinHeight',
-      dataRowMinHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'dataRowMaxHeight',
-      dataRowMaxHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'dataTextStyle',
-      dataTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'headingRowColor',
-      headingRowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'headingRowHeight',
-      headingRowHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'headingTextStyle',
-      headingTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'horizontalMargin',
-      horizontalMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'columnSpacing',
-      columnSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'showCheckboxColumn',
-      showCheckboxColumn,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showBottomBorder',
-      showBottomBorder,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dividerThickness',
-      dividerThickness,
-      isNamed: true,
-    );
-    mateUse(
-      'rows',
-      rows,
-      isNamed: true,
-    );
-    mateUse(
-      'checkboxHorizontalMargin',
-      checkboxHorizontalMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i9.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TableRowInkWell extends InkResponse
@@ -575,46 +543,87 @@ class TableRowInkWell$Mate extends _i1.TableRowInkWell with _i2.Mate {
   /// TableRowInkWell TableRowInkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(bool)? onHighlightChanged, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor})
   TableRowInkWell$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i6.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i3.Widget? child,
+    super.child,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i10.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onDoubleTap} , default:none
-    _i10.GestureTapCallback? onDoubleTap,
+    super.onDoubleTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i8.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
-    _i7.ValueChanged<bool>? onHighlightChanged,
+    super.onHighlightChanged,
 
     /// optionalParameters: {void Function()? onSecondaryTap} , default:none
-    _i10.GestureTapCallback? onSecondaryTap,
+    super.onSecondaryTap,
 
     /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , default:none
-    _i10.GestureTapDownCallback? onSecondaryTapDown,
+    super.onSecondaryTapDown,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i4.MaterialStateProperty<_i9.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i5.MouseCursor? mouseCursor,
-  }) : super(
-          key: key,
-          child: child,
-          onTap: onTap,
-          onDoubleTap: onDoubleTap,
-          onLongPress: onLongPress,
-          onHighlightChanged: onHighlightChanged,
-          onSecondaryTap: onSecondaryTap,
-          onSecondaryTapDown: onSecondaryTapDown,
-          overlayColor: overlayColor,
-          mouseCursor: mouseCursor,
-        ) {
+    super.mouseCursor,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i6.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i10.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onDoubleTap': _i2.BuilderArg<_i10.GestureTapCallback?>(
+            name: 'onDoubleTap',
+            init: onDoubleTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i8.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onHighlightChanged': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onHighlightChanged',
+            init: onHighlightChanged,
+            isNamed: true,
+          ),
+          'onSecondaryTap': _i2.BuilderArg<_i10.GestureTapCallback?>(
+            name: 'onSecondaryTap',
+            init: onSecondaryTap,
+            isNamed: true,
+          ),
+          'onSecondaryTapDown': _i2.BuilderArg<_i10.GestureTapDownCallback?>(
+            name: 'onSecondaryTapDown',
+            init: onSecondaryTapDown,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i4.MaterialStateProperty<_i9.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i5.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TableRowInkWell';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TableRowInkWell$Mate(
@@ -629,55 +638,8 @@ class TableRowInkWell$Mate extends _i1.TableRowInkWell with _i2.Mate {
           overlayColor: p.get('overlayColor').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTap',
-      onDoubleTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onHighlightChanged',
-      onHighlightChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTap',
-      onSecondaryTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapDown',
-      onSecondaryTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

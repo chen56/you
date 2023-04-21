@@ -10,17 +10,22 @@ class Category$Mate extends _i1.Category with _i2.Mate {
   Category$Mate(
 
       /// requiredParameters: List<String> sections
-      List<String> sections)
-      : super(sections) {
+      super.sections)
+      : mateParams = {
+          'sections': _i2.BuilderArg<List<String>>(
+            name: 'sections',
+            init: sections,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'Category';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Category$Mate(p.get('sections').value);
-    mateUse(
-      'sections',
-      sections,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DocumentationIcon
@@ -29,17 +34,22 @@ class DocumentationIcon$Mate extends _i1.DocumentationIcon with _i2.Mate {
   DocumentationIcon$Mate(
 
       /// requiredParameters: String url
-      String url)
-      : super(url) {
+      super.url)
+      : mateParams = {
+          'url': _i2.BuilderArg<String>(
+            name: 'url',
+            init: url,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'DocumentationIcon';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DocumentationIcon$Mate(p.get('url').value);
-    mateUse(
-      'url',
-      url,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Summary
@@ -48,15 +58,20 @@ class Summary$Mate extends _i1.Summary with _i2.Mate {
   Summary$Mate(
 
       /// requiredParameters: String text
-      String text)
-      : super(text) {
+      super.text)
+      : mateParams = {
+          'text': _i2.BuilderArg<String>(
+            name: 'text',
+            init: text,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'Summary';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Summary$Mate(p.get('text').value);
-    mateUse(
-      'text',
-      text,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

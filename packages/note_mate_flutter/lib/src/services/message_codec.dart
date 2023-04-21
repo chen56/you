@@ -9,31 +9,33 @@ class MethodCall$Mate extends _i1.MethodCall with _i2.Mate {
   /// MethodCall MethodCall(String method, [dynamic arguments])
   MethodCall$Mate(
     /// requiredParameters: String method
-    String method,
+    super.method,
 
     /// requiredParameters: [dynamic arguments]
-    dynamic arguments,
-  ) : super(
-          method,
-          arguments,
-        ) {
+    super.arguments,
+  )   : mateParams = {
+          'method': _i2.BuilderArg<String>(
+            name: 'method',
+            init: method,
+            isNamed: false,
+          ),
+          'arguments': _i2.BuilderArg<dynamic>(
+            name: 'arguments',
+            init: arguments,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'MethodCall';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MethodCall$Mate(
           p.get('method').value,
           p.get('arguments').value,
         );
-    mateUse(
-      'method',
-      method,
-      isNamed: false,
-    );
-    mateUse(
-      'arguments',
-      arguments,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PlatformException implements Exception
@@ -41,22 +43,39 @@ class PlatformException$Mate extends _i1.PlatformException with _i2.Mate {
   /// PlatformException PlatformException({required String code, String? message, dynamic details, String? stacktrace})
   PlatformException$Mate({
     /// optionalParameters: {required String code} , default:none
-    required String code,
+    required super.code,
 
     /// optionalParameters: {String? message} , default:none
-    String? message,
+    super.message,
 
     /// optionalParameters: {dynamic details} , default:none
-    dynamic details,
+    super.details,
 
     /// optionalParameters: {String? stacktrace} , default:none
-    String? stacktrace,
-  }) : super(
-          code: code,
-          message: message,
-          details: details,
-          stacktrace: stacktrace,
-        ) {
+    super.stacktrace,
+  })  : mateParams = {
+          'code': _i2.BuilderArg<String>(
+            name: 'code',
+            init: code,
+            isNamed: true,
+          ),
+          'message': _i2.BuilderArg<String?>(
+            name: 'message',
+            init: message,
+            isNamed: true,
+          ),
+          'details': _i2.BuilderArg<dynamic>(
+            name: 'details',
+            init: details,
+            isNamed: true,
+          ),
+          'stacktrace': _i2.BuilderArg<String?>(
+            name: 'stacktrace',
+            init: stacktrace,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlatformException';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => PlatformException$Mate(
@@ -65,27 +84,10 @@ class PlatformException$Mate extends _i1.PlatformException with _i2.Mate {
           details: p.get('details').build(),
           stacktrace: p.get('stacktrace').build(),
         );
-    mateUse(
-      'code',
-      code,
-      isNamed: true,
-    );
-    mateUse(
-      'message',
-      message,
-      isNamed: true,
-    );
-    mateUse(
-      'details',
-      details,
-      isNamed: true,
-    );
-    mateUse(
-      'stacktrace',
-      stacktrace,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MissingPluginException implements Exception
@@ -94,15 +96,20 @@ class MissingPluginException$Mate extends _i1.MissingPluginException with _i2.Ma
   MissingPluginException$Mate(
 
       /// requiredParameters: [String? message]
-      String? message)
-      : super(message) {
+      super.message)
+      : mateParams = {
+          'message': _i2.BuilderArg<String?>(
+            name: 'message',
+            init: message,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'MissingPluginException';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MissingPluginException$Mate(p.get('message').value);
-    mateUse(
-      'message',
-      message,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

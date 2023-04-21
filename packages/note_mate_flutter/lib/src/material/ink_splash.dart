@@ -14,50 +14,96 @@ class InkSplash$Mate extends _i1.InkSplash with _i2.Mate {
   /// InkSplash InkSplash({required MaterialInkController controller, required RenderBox referenceBox, required TextDirection textDirection, Offset? position, required Color color, bool containedInkWell = false, Rect Function()? rectCallback, BorderRadius? borderRadius, ShapeBorder? customBorder, double? radius, void Function()? onRemoved})
   InkSplash$Mate({
     /// optionalParameters: {required MaterialInkController controller} , default:none
-    required _i3.MaterialInkController controller,
+    required super.controller,
 
     /// optionalParameters: {required RenderBox referenceBox} , default:none
-    required _i4.RenderBox referenceBox,
+    required super.referenceBox,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i5.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {Offset? position} , default:none
-    _i5.Offset? position,
+    super.position,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i5.Color color,
+    required super.color,
 
     /// optionalParameters: {bool containedInkWell = false} , default:processed=BooleanLiteralImpl
-    bool containedInkWell = false,
+    super.containedInkWell,
 
     /// optionalParameters: {Rect Function()? rectCallback} , default:none
-    _i3.RectCallback? rectCallback,
+    super.rectCallback,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i6.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {ShapeBorder? customBorder} , default:none
-    _i7.ShapeBorder? customBorder,
+    super.customBorder,
 
     /// optionalParameters: {double? radius} , default:none
-    double? radius,
+    super.radius,
 
     /// optionalParameters: {void Function()? onRemoved} , default:none
-    _i5.VoidCallback? onRemoved,
-  }) : super(
-          controller: controller,
-          referenceBox: referenceBox,
-          textDirection: textDirection,
-          position: position,
-          color: color,
-          containedInkWell: containedInkWell,
-          rectCallback: rectCallback,
-          borderRadius: borderRadius,
-          customBorder: customBorder,
-          radius: radius,
-          onRemoved: onRemoved,
-        ) {
+    super.onRemoved,
+  })  : mateParams = {
+          'controller': _i2.BuilderArg<_i3.MaterialInkController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'referenceBox': _i2.BuilderArg<_i4.RenderBox>(
+            name: 'referenceBox',
+            init: referenceBox,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'position': _i2.BuilderArg<_i5.Offset?>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'containedInkWell': _i2.BuilderArg<bool>(
+            name: 'containedInkWell',
+            init: containedInkWell,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'rectCallback': _i2.BuilderArg<_i3.RectCallback?>(
+            name: 'rectCallback',
+            init: rectCallback,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i6.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'customBorder': _i2.BuilderArg<_i7.ShapeBorder?>(
+            name: 'customBorder',
+            init: customBorder,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<double?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'onRemoved': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onRemoved',
+            init: onRemoved,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InkSplash';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkSplash$Mate(
@@ -73,61 +119,8 @@ class InkSplash$Mate extends _i1.InkSplash with _i2.Mate {
           radius: p.get('radius').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'referenceBox',
-      referenceBox,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'containedInkWell',
-      containedInkWell,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'rectCallback',
-      rectCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'customBorder',
-      customBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'onRemoved',
-      onRemoved,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -11,22 +11,41 @@ class BorderSide$Mate extends _i1.BorderSide with _i2.Mate {
   /// BorderSide BorderSide({Color color = const Color(0xFF000000), double width = 1.0, BorderStyle style = BorderStyle.solid, double strokeAlign = strokeAlignInside})
   BorderSide$Mate({
     /// optionalParameters: {Color color = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color color,
+    super.color,
 
     /// optionalParameters: {double width = 1.0} , default:processed=DoubleLiteralImpl
-    double width = 1.0,
+    super.width,
 
     /// optionalParameters: {BorderStyle style = BorderStyle.solid} , default:processed=PrefixedIdentifierImpl
-    _i1.BorderStyle style = _i4.BorderStyle.solid,
+    super.style,
 
     /// optionalParameters: {double strokeAlign = strokeAlignInside} , default:unprocessed=SimpleIdentifierImpl
-    required double strokeAlign,
-  }) : super(
-          color: color,
-          width: width,
-          style: style,
-          strokeAlign: strokeAlign,
-        ) {
+    super.strokeAlign,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'style': _i2.BuilderArg<_i1.BorderStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i4.BorderStyle.solid,
+          ),
+          'strokeAlign': _i2.BuilderArg<double>(
+            name: 'strokeAlign',
+            init: strokeAlign,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BorderSide';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BorderSide$Mate(
@@ -35,27 +54,8 @@ class BorderSide$Mate extends _i1.BorderSide with _i2.Mate {
           style: p.get('style').build(),
           strokeAlign: p.get('strokeAlign').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i4.BorderStyle.solid,
-    );
-    mateUse(
-      'strokeAlign',
-      strokeAlign,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

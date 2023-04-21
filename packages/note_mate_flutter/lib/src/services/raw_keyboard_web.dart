@@ -9,26 +9,49 @@ class RawKeyEventDataWeb$Mate extends _i1.RawKeyEventDataWeb with _i2.Mate {
   /// RawKeyEventDataWeb RawKeyEventDataWeb({required String code, required String key, int location = 0, int metaState = modifierNone, int keyCode = 0})
   RawKeyEventDataWeb$Mate({
     /// optionalParameters: {required String code} , default:none
-    required String code,
+    required super.code,
 
     /// optionalParameters: {required String key} , default:none
-    required String key,
+    required super.key,
 
     /// optionalParameters: {int location = 0} , default:processed=IntegerLiteralImpl
-    int location = 0,
+    super.location,
 
     /// optionalParameters: {int metaState = modifierNone} , default:unprocessed=SimpleIdentifierImpl
-    required int metaState,
+    super.metaState,
 
     /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
-    int keyCode = 0,
-  }) : super(
-          code: code,
-          key: key,
-          location: location,
-          metaState: metaState,
-          keyCode: keyCode,
-        ) {
+    super.keyCode,
+  })  : mateParams = {
+          'code': _i2.BuilderArg<String>(
+            name: 'code',
+            init: code,
+            isNamed: true,
+          ),
+          'key': _i2.BuilderArg<String>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'location': _i2.BuilderArg<int>(
+            name: 'location',
+            init: location,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'metaState': _i2.BuilderArg<int>(
+            name: 'metaState',
+            init: metaState,
+            isNamed: true,
+          ),
+          'keyCode': _i2.BuilderArg<int>(
+            name: 'keyCode',
+            init: keyCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyEventDataWeb';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataWeb$Mate(
@@ -38,32 +61,8 @@ class RawKeyEventDataWeb$Mate extends _i1.RawKeyEventDataWeb with _i2.Mate {
           metaState: p.get('metaState').build(),
           keyCode: p.get('keyCode').build(),
         );
-    mateUse(
-      'code',
-      code,
-      isNamed: true,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'location',
-      location,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'metaState',
-      metaState,
-      isNamed: true,
-    );
-    mateUse(
-      'keyCode',
-      keyCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

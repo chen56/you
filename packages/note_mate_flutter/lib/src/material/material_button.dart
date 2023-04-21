@@ -19,134 +19,266 @@ class MaterialButton$Mate extends _i1.MaterialButton with _i2.Mate {
   /// MaterialButton MaterialButton({Key? key, required void Function()? onPressed, void Function()? onLongPress, void Function(bool)? onHighlightChanged, MouseCursor? mouseCursor, ButtonTextTheme? textTheme, Color? textColor, Color? disabledTextColor, Color? color, Color? disabledColor, Color? focusColor, Color? hoverColor, Color? highlightColor, Color? splashColor, Brightness? colorBrightness, double? elevation, double? focusElevation, double? hoverElevation, double? highlightElevation, double? disabledElevation, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, ShapeBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, MaterialTapTargetSize? materialTapTargetSize, Duration? animationDuration, double? minWidth, double? height, bool enableFeedback = true, Widget? child})
   MaterialButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
-    required _i4.VoidCallback? onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i4.VoidCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
-    _i5.ValueChanged<bool>? onHighlightChanged,
+    super.onHighlightChanged,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i6.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {ButtonTextTheme? textTheme} , default:none
-    _i7.ButtonTextTheme? textTheme,
+    super.textTheme,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i4.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {Color? disabledTextColor} , default:none
-    _i4.Color? disabledTextColor,
+    super.disabledTextColor,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i4.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i4.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i4.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i4.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i4.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {Brightness? colorBrightness} , default:none
-    _i4.Brightness? colorBrightness,
+    super.colorBrightness,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {double? focusElevation} , default:none
-    double? focusElevation,
+    super.focusElevation,
 
     /// optionalParameters: {double? hoverElevation} , default:none
-    double? hoverElevation,
+    super.hoverElevation,
 
     /// optionalParameters: {double? highlightElevation} , default:none
-    double? highlightElevation,
+    super.highlightElevation,
 
     /// optionalParameters: {double? disabledElevation} , default:none
-    double? disabledElevation,
+    super.disabledElevation,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i8.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i9.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i10.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i11.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i9.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {Duration? animationDuration} , default:none
-    Duration? animationDuration,
+    super.animationDuration,
 
     /// optionalParameters: {double? minWidth} , default:none
-    double? minWidth,
+    super.minWidth,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {bool enableFeedback = true} , default:processed=BooleanLiteralImpl
-    bool enableFeedback = true,
+    super.enableFeedback,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i12.Widget? child,
-  }) : super(
-          key: key,
-          onPressed: onPressed,
-          onLongPress: onLongPress,
-          onHighlightChanged: onHighlightChanged,
-          mouseCursor: mouseCursor,
-          textTheme: textTheme,
-          textColor: textColor,
-          disabledTextColor: disabledTextColor,
-          color: color,
-          disabledColor: disabledColor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          splashColor: splashColor,
-          colorBrightness: colorBrightness,
-          elevation: elevation,
-          focusElevation: focusElevation,
-          hoverElevation: hoverElevation,
-          highlightElevation: highlightElevation,
-          disabledElevation: disabledElevation,
-          padding: padding,
-          visualDensity: visualDensity,
-          shape: shape,
-          clipBehavior: clipBehavior,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          materialTapTargetSize: materialTapTargetSize,
-          animationDuration: animationDuration,
-          minWidth: minWidth,
-          height: height,
-          enableFeedback: enableFeedback,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onHighlightChanged': _i2.BuilderArg<_i5.ValueChanged<bool>?>(
+            name: 'onHighlightChanged',
+            init: onHighlightChanged,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i6.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'textTheme': _i2.BuilderArg<_i7.ButtonTextTheme?>(
+            name: 'textTheme',
+            init: textTheme,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'disabledTextColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'disabledTextColor',
+            init: disabledTextColor,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'colorBrightness': _i2.BuilderArg<_i4.Brightness?>(
+            name: 'colorBrightness',
+            init: colorBrightness,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'focusElevation': _i2.BuilderArg<double?>(
+            name: 'focusElevation',
+            init: focusElevation,
+            isNamed: true,
+          ),
+          'hoverElevation': _i2.BuilderArg<double?>(
+            name: 'hoverElevation',
+            init: hoverElevation,
+            isNamed: true,
+          ),
+          'highlightElevation': _i2.BuilderArg<double?>(
+            name: 'highlightElevation',
+            init: highlightElevation,
+            isNamed: true,
+          ),
+          'disabledElevation': _i2.BuilderArg<double?>(
+            name: 'disabledElevation',
+            init: disabledElevation,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i9.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i10.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'focusNode': _i2.BuilderArg<_i11.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i9.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'animationDuration': _i2.BuilderArg<Duration?>(
+            name: 'animationDuration',
+            init: animationDuration,
+            isNamed: true,
+          ),
+          'minWidth': _i2.BuilderArg<double?>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i12.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MaterialButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialButton$Mate(
@@ -183,168 +315,8 @@ class MaterialButton$Mate extends _i1.MaterialButton with _i2.Mate {
           enableFeedback: p.get('enableFeedback').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onHighlightChanged',
-      onHighlightChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'textTheme',
-      textTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledTextColor',
-      disabledTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'colorBrightness',
-      colorBrightness,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'focusElevation',
-      focusElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverElevation',
-      hoverElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightElevation',
-      highlightElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledElevation',
-      disabledElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'animationDuration',
-      animationDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

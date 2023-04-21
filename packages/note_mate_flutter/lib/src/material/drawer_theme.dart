@@ -13,38 +13,71 @@ class DrawerThemeData$Mate extends _i1.DrawerThemeData with _i2.Mate {
   /// DrawerThemeData DrawerThemeData({Color? backgroundColor, Color? scrimColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, ShapeBorder? endShape, double? width})
   DrawerThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? scrimColor} , default:none
-    _i3.Color? scrimColor,
+    super.scrimColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i4.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {ShapeBorder? endShape} , default:none
-    _i4.ShapeBorder? endShape,
+    super.endShape,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
-  }) : super(
-          backgroundColor: backgroundColor,
-          scrimColor: scrimColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          shape: shape,
-          endShape: endShape,
-          width: width,
-        ) {
+    super.width,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'scrimColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'scrimColor',
+            init: scrimColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'endShape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'endShape',
+            init: endShape,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DrawerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerThemeData$Mate(
@@ -57,47 +90,10 @@ class DrawerThemeData$Mate extends _i1.DrawerThemeData with _i2.Mate {
           endShape: p.get('endShape').build(),
           width: p.get('width').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'scrimColor',
-      scrimColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'endShape',
-      endShape,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DrawerTheme extends InheritedTheme
@@ -105,18 +101,31 @@ class DrawerTheme$Mate extends _i1.DrawerTheme with _i2.Mate {
   /// DrawerTheme DrawerTheme({Key? key, required DrawerThemeData data, required Widget child})
   DrawerTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i5.Key? key,
+    super.key,
 
     /// optionalParameters: {required DrawerThemeData data} , default:none
-    required _i1.DrawerThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i6.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i5.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.DrawerThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DrawerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerTheme$Mate(
@@ -124,20 +133,8 @@ class DrawerTheme$Mate extends _i1.DrawerTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -16,66 +16,131 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
   /// Dismissible Dismissible({required Key key, required Widget child, Widget? background, Widget? secondaryBackground, Future<bool?> Function(DismissDirection)? confirmDismiss, void Function()? onResize, void Function(DismissUpdateDetails)? onUpdate, void Function(DismissDirection)? onDismissed, DismissDirection direction = DismissDirection.horizontal, Duration? resizeDuration = const Duration(milliseconds: 300), Map<DismissDirection, double> dismissThresholds = const <DismissDirection, double>{}, Duration movementDuration = const Duration(milliseconds: 200), double crossAxisEndOffset = 0.0, DragStartBehavior dragStartBehavior = DragStartBehavior.start, HitTestBehavior behavior = HitTestBehavior.opaque})
   Dismissible$Mate({
     /// optionalParameters: {required Key key} , default:none
-    required _i3.Key key,
+    required super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {Widget? background} , default:none
-    _i4.Widget? background,
+    super.background,
 
     /// optionalParameters: {Widget? secondaryBackground} , default:none
-    _i4.Widget? secondaryBackground,
+    super.secondaryBackground,
 
     /// optionalParameters: {Future<bool?> Function(DismissDirection)? confirmDismiss} , default:none
-    _i1.ConfirmDismissCallback? confirmDismiss,
+    super.confirmDismiss,
 
     /// optionalParameters: {void Function()? onResize} , default:none
-    _i5.VoidCallback? onResize,
+    super.onResize,
 
     /// optionalParameters: {void Function(DismissUpdateDetails)? onUpdate} , default:none
-    _i1.DismissUpdateCallback? onUpdate,
+    super.onUpdate,
 
     /// optionalParameters: {void Function(DismissDirection)? onDismissed} , default:none
-    _i1.DismissDirectionCallback? onDismissed,
+    super.onDismissed,
 
     /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , default:processed=PrefixedIdentifierImpl
-    _i1.DismissDirection direction = _i6.DismissDirection.horizontal,
+    super.direction,
 
     /// optionalParameters: {Duration? resizeDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
-    required Duration? resizeDuration,
+    super.resizeDuration,
 
     /// optionalParameters: {Map<DismissDirection, double> dismissThresholds = const <DismissDirection, double>{}} , default:unprocessed=SetOrMapLiteralImpl
-    required Map<_i1.DismissDirection, double> dismissThresholds,
+    super.dismissThresholds,
 
     /// optionalParameters: {Duration movementDuration = const Duration(milliseconds: 200)} , default:unprocessed=InstanceCreationExpressionImpl
-    required Duration movementDuration,
+    super.movementDuration,
 
     /// optionalParameters: {double crossAxisEndOffset = 0.0} , default:processed=DoubleLiteralImpl
-    double crossAxisEndOffset = 0.0,
+    super.crossAxisEndOffset,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i7.DragStartBehavior dragStartBehavior = _i8.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
-    _i9.HitTestBehavior behavior = _i6.HitTestBehavior.opaque,
-  }) : super(
-          key: key,
-          child: child,
-          background: background,
-          secondaryBackground: secondaryBackground,
-          confirmDismiss: confirmDismiss,
-          onResize: onResize,
-          onUpdate: onUpdate,
-          onDismissed: onDismissed,
-          direction: direction,
-          resizeDuration: resizeDuration,
-          dismissThresholds: dismissThresholds,
-          movementDuration: movementDuration,
-          crossAxisEndOffset: crossAxisEndOffset,
-          dragStartBehavior: dragStartBehavior,
-          behavior: behavior,
-        ) {
+    super.behavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i4.Widget?>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+          ),
+          'secondaryBackground': _i2.BuilderArg<_i4.Widget?>(
+            name: 'secondaryBackground',
+            init: secondaryBackground,
+            isNamed: true,
+          ),
+          'confirmDismiss': _i2.BuilderArg<_i1.ConfirmDismissCallback?>(
+            name: 'confirmDismiss',
+            init: confirmDismiss,
+            isNamed: true,
+          ),
+          'onResize': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onResize',
+            init: onResize,
+            isNamed: true,
+          ),
+          'onUpdate': _i2.BuilderArg<_i1.DismissUpdateCallback?>(
+            name: 'onUpdate',
+            init: onUpdate,
+            isNamed: true,
+          ),
+          'onDismissed': _i2.BuilderArg<_i1.DismissDirectionCallback?>(
+            name: 'onDismissed',
+            init: onDismissed,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i1.DismissDirection>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+            defaultValue: _i6.DismissDirection.horizontal,
+          ),
+          'resizeDuration': _i2.BuilderArg<Duration?>(
+            name: 'resizeDuration',
+            init: resizeDuration,
+            isNamed: true,
+          ),
+          'dismissThresholds': _i2.BuilderArg<Map<_i1.DismissDirection, double>>(
+            name: 'dismissThresholds',
+            init: dismissThresholds,
+            isNamed: true,
+          ),
+          'movementDuration': _i2.BuilderArg<Duration>(
+            name: 'movementDuration',
+            init: movementDuration,
+            isNamed: true,
+          ),
+          'crossAxisEndOffset': _i2.BuilderArg<double>(
+            name: 'crossAxisEndOffset',
+            init: crossAxisEndOffset,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
+          ),
+          'behavior': _i2.BuilderArg<_i9.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i6.HitTestBehavior.opaque,
+          ),
+        },
+        super() {
     mateBuilderName = 'Dismissible';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Dismissible$Mate(
@@ -95,86 +160,10 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
           dragStartBehavior: p.get('dragStartBehavior').build(),
           behavior: p.get('behavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryBackground',
-      secondaryBackground,
-      isNamed: true,
-    );
-    mateUse(
-      'confirmDismiss',
-      confirmDismiss,
-      isNamed: true,
-    );
-    mateUse(
-      'onResize',
-      onResize,
-      isNamed: true,
-    );
-    mateUse(
-      'onUpdate',
-      onUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onDismissed',
-      onDismissed,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-      defaultValue: _i6.DismissDirection.horizontal,
-    );
-    mateUse(
-      'resizeDuration',
-      resizeDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'dismissThresholds',
-      dismissThresholds,
-      isNamed: true,
-    );
-    mateUse(
-      'movementDuration',
-      movementDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'crossAxisEndOffset',
-      crossAxisEndOffset,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i8.DragStartBehavior.start,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i6.HitTestBehavior.opaque,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DismissUpdateDetails
@@ -182,22 +171,43 @@ class DismissUpdateDetails$Mate extends _i1.DismissUpdateDetails with _i2.Mate {
   /// DismissUpdateDetails DismissUpdateDetails({DismissDirection direction = DismissDirection.horizontal, bool reached = false, bool previousReached = false, double progress = 0.0})
   DismissUpdateDetails$Mate({
     /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , default:processed=PrefixedIdentifierImpl
-    _i1.DismissDirection direction = _i6.DismissDirection.horizontal,
+    super.direction,
 
     /// optionalParameters: {bool reached = false} , default:processed=BooleanLiteralImpl
-    bool reached = false,
+    super.reached,
 
     /// optionalParameters: {bool previousReached = false} , default:processed=BooleanLiteralImpl
-    bool previousReached = false,
+    super.previousReached,
 
     /// optionalParameters: {double progress = 0.0} , default:processed=DoubleLiteralImpl
-    double progress = 0.0,
-  }) : super(
-          direction: direction,
-          reached: reached,
-          previousReached: previousReached,
-          progress: progress,
-        ) {
+    super.progress,
+  })  : mateParams = {
+          'direction': _i2.BuilderArg<_i1.DismissDirection>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+            defaultValue: _i6.DismissDirection.horizontal,
+          ),
+          'reached': _i2.BuilderArg<bool>(
+            name: 'reached',
+            init: reached,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'previousReached': _i2.BuilderArg<bool>(
+            name: 'previousReached',
+            init: previousReached,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'progress': _i2.BuilderArg<double>(
+            name: 'progress',
+            init: progress,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'DismissUpdateDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DismissUpdateDetails$Mate(
@@ -206,29 +216,8 @@ class DismissUpdateDetails$Mate extends _i1.DismissUpdateDetails with _i2.Mate {
           previousReached: p.get('previousReached').build(),
           progress: p.get('progress').build(),
         );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-      defaultValue: _i6.DismissDirection.horizontal,
-    );
-    mateUse(
-      'reached',
-      reached,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'previousReached',
-      previousReached,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'progress',
-      progress,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

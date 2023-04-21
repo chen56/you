@@ -66,330 +66,655 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
   /// ThemeData ThemeData.raw({required bool applyElevationOverlayColor, required NoDefaultCupertinoThemeData? cupertinoOverrideTheme, required Map<Object, ThemeExtension<dynamic>> extensions, required InputDecorationTheme inputDecorationTheme, required MaterialTapTargetSize materialTapTargetSize, required PageTransitionsTheme pageTransitionsTheme, required TargetPlatform platform, required ScrollbarThemeData scrollbarTheme, required InteractiveInkFeatureFactory splashFactory, required bool useMaterial3, required VisualDensity visualDensity, required Color canvasColor, required Color cardColor, required ColorScheme colorScheme, required Color dialogBackgroundColor, required Color disabledColor, required Color dividerColor, required Color focusColor, required Color highlightColor, required Color hintColor, required Color hoverColor, required Color indicatorColor, required Color primaryColor, required Color primaryColorDark, required Color primaryColorLight, required Color scaffoldBackgroundColor, required Color secondaryHeaderColor, required Color shadowColor, required Color splashColor, required Color unselectedWidgetColor, required IconThemeData iconTheme, required IconThemeData primaryIconTheme, required TextTheme primaryTextTheme, required TextTheme textTheme, required Typography typography, required ActionIconThemeData? actionIconTheme, required AppBarTheme appBarTheme, required BadgeThemeData badgeTheme, required MaterialBannerThemeData bannerTheme, required BottomAppBarTheme bottomAppBarTheme, required BottomNavigationBarThemeData bottomNavigationBarTheme, required BottomSheetThemeData bottomSheetTheme, required ButtonBarThemeData buttonBarTheme, required ButtonThemeData buttonTheme, required CardTheme cardTheme, required CheckboxThemeData checkboxTheme, required ChipThemeData chipTheme, required DataTableThemeData dataTableTheme, required DatePickerThemeData datePickerTheme, required DialogTheme dialogTheme, required DividerThemeData dividerTheme, required DrawerThemeData drawerTheme, required DropdownMenuThemeData dropdownMenuTheme, required ElevatedButtonThemeData elevatedButtonTheme, required ExpansionTileThemeData expansionTileTheme, required FilledButtonThemeData filledButtonTheme, required FloatingActionButtonThemeData floatingActionButtonTheme, required IconButtonThemeData iconButtonTheme, required ListTileThemeData listTileTheme, required MenuBarThemeData menuBarTheme, required MenuButtonThemeData menuButtonTheme, required MenuThemeData menuTheme, required NavigationBarThemeData navigationBarTheme, required NavigationDrawerThemeData navigationDrawerTheme, required NavigationRailThemeData navigationRailTheme, required OutlinedButtonThemeData outlinedButtonTheme, required PopupMenuThemeData popupMenuTheme, required ProgressIndicatorThemeData progressIndicatorTheme, required RadioThemeData radioTheme, required SearchBarThemeData searchBarTheme, required SearchViewThemeData searchViewTheme, required SegmentedButtonThemeData segmentedButtonTheme, required SliderThemeData sliderTheme, required SnackBarThemeData snackBarTheme, required SwitchThemeData switchTheme, required TabBarTheme tabBarTheme, required TextButtonThemeData textButtonTheme, required TextSelectionThemeData textSelectionTheme, required TimePickerThemeData timePickerTheme, required ToggleButtonsThemeData toggleButtonsTheme, required TooltipThemeData tooltipTheme, bool? fixTextFieldOutlineLabel, Brightness? primaryColorBrightness, AndroidOverscrollIndicator? androidOverscrollIndicator, Color? toggleableActiveColor, Color? selectedRowColor, Color? errorColor, Color? backgroundColor, Color? bottomAppBarColor})
   ThemeData$Mate.raw({
     /// optionalParameters: {required bool applyElevationOverlayColor} , default:none
-    required bool applyElevationOverlayColor,
+    required super.applyElevationOverlayColor,
 
     /// optionalParameters: {required NoDefaultCupertinoThemeData? cupertinoOverrideTheme} , default:none
-    required _i3.NoDefaultCupertinoThemeData? cupertinoOverrideTheme,
+    required super.cupertinoOverrideTheme,
 
     /// optionalParameters: {required Map<Object, ThemeExtension<dynamic>> extensions} , default:none
-    required Map<Object, _i1.ThemeExtension<dynamic>> extensions,
+    required super.extensions,
 
     /// optionalParameters: {required InputDecorationTheme inputDecorationTheme} , default:none
-    required _i4.InputDecorationTheme inputDecorationTheme,
+    required super.inputDecorationTheme,
 
     /// optionalParameters: {required MaterialTapTargetSize materialTapTargetSize} , default:none
-    required _i1.MaterialTapTargetSize materialTapTargetSize,
+    required super.materialTapTargetSize,
 
     /// optionalParameters: {required PageTransitionsTheme pageTransitionsTheme} , default:none
-    required _i5.PageTransitionsTheme pageTransitionsTheme,
+    required super.pageTransitionsTheme,
 
     /// optionalParameters: {required TargetPlatform platform} , default:none
-    required _i6.TargetPlatform platform,
+    required super.platform,
 
     /// optionalParameters: {required ScrollbarThemeData scrollbarTheme} , default:none
-    required _i7.ScrollbarThemeData scrollbarTheme,
+    required super.scrollbarTheme,
 
     /// optionalParameters: {required InteractiveInkFeatureFactory splashFactory} , default:none
-    required _i8.InteractiveInkFeatureFactory splashFactory,
+    required super.splashFactory,
 
     /// optionalParameters: {required bool useMaterial3} , default:none
-    required bool useMaterial3,
+    required super.useMaterial3,
 
     /// optionalParameters: {required VisualDensity visualDensity} , default:none
-    required _i1.VisualDensity visualDensity,
+    required super.visualDensity,
 
     /// optionalParameters: {required Color canvasColor} , default:none
-    required _i9.Color canvasColor,
+    required super.canvasColor,
 
     /// optionalParameters: {required Color cardColor} , default:none
-    required _i9.Color cardColor,
+    required super.cardColor,
 
     /// optionalParameters: {required ColorScheme colorScheme} , default:none
-    required _i10.ColorScheme colorScheme,
+    required super.colorScheme,
 
     /// optionalParameters: {required Color dialogBackgroundColor} , default:none
-    required _i9.Color dialogBackgroundColor,
+    required super.dialogBackgroundColor,
 
     /// optionalParameters: {required Color disabledColor} , default:none
-    required _i9.Color disabledColor,
+    required super.disabledColor,
 
     /// optionalParameters: {required Color dividerColor} , default:none
-    required _i9.Color dividerColor,
+    required super.dividerColor,
 
     /// optionalParameters: {required Color focusColor} , default:none
-    required _i9.Color focusColor,
+    required super.focusColor,
 
     /// optionalParameters: {required Color highlightColor} , default:none
-    required _i9.Color highlightColor,
+    required super.highlightColor,
 
     /// optionalParameters: {required Color hintColor} , default:none
-    required _i9.Color hintColor,
+    required super.hintColor,
 
     /// optionalParameters: {required Color hoverColor} , default:none
-    required _i9.Color hoverColor,
+    required super.hoverColor,
 
     /// optionalParameters: {required Color indicatorColor} , default:none
-    required _i9.Color indicatorColor,
+    required super.indicatorColor,
 
     /// optionalParameters: {required Color primaryColor} , default:none
-    required _i9.Color primaryColor,
+    required super.primaryColor,
 
     /// optionalParameters: {required Color primaryColorDark} , default:none
-    required _i9.Color primaryColorDark,
+    required super.primaryColorDark,
 
     /// optionalParameters: {required Color primaryColorLight} , default:none
-    required _i9.Color primaryColorLight,
+    required super.primaryColorLight,
 
     /// optionalParameters: {required Color scaffoldBackgroundColor} , default:none
-    required _i9.Color scaffoldBackgroundColor,
+    required super.scaffoldBackgroundColor,
 
     /// optionalParameters: {required Color secondaryHeaderColor} , default:none
-    required _i9.Color secondaryHeaderColor,
+    required super.secondaryHeaderColor,
 
     /// optionalParameters: {required Color shadowColor} , default:none
-    required _i9.Color shadowColor,
+    required super.shadowColor,
 
     /// optionalParameters: {required Color splashColor} , default:none
-    required _i9.Color splashColor,
+    required super.splashColor,
 
     /// optionalParameters: {required Color unselectedWidgetColor} , default:none
-    required _i9.Color unselectedWidgetColor,
+    required super.unselectedWidgetColor,
 
     /// optionalParameters: {required IconThemeData iconTheme} , default:none
-    required _i11.IconThemeData iconTheme,
+    required super.iconTheme,
 
     /// optionalParameters: {required IconThemeData primaryIconTheme} , default:none
-    required _i11.IconThemeData primaryIconTheme,
+    required super.primaryIconTheme,
 
     /// optionalParameters: {required TextTheme primaryTextTheme} , default:none
-    required _i12.TextTheme primaryTextTheme,
+    required super.primaryTextTheme,
 
     /// optionalParameters: {required TextTheme textTheme} , default:none
-    required _i12.TextTheme textTheme,
+    required super.textTheme,
 
     /// optionalParameters: {required Typography typography} , default:none
-    required _i13.Typography typography,
+    required super.typography,
 
     /// optionalParameters: {required ActionIconThemeData? actionIconTheme} , default:none
-    required _i14.ActionIconThemeData? actionIconTheme,
+    required super.actionIconTheme,
 
     /// optionalParameters: {required AppBarTheme appBarTheme} , default:none
-    required _i15.AppBarTheme appBarTheme,
+    required super.appBarTheme,
 
     /// optionalParameters: {required BadgeThemeData badgeTheme} , default:none
-    required _i16.BadgeThemeData badgeTheme,
+    required super.badgeTheme,
 
     /// optionalParameters: {required MaterialBannerThemeData bannerTheme} , default:none
-    required _i17.MaterialBannerThemeData bannerTheme,
+    required super.bannerTheme,
 
     /// optionalParameters: {required BottomAppBarTheme bottomAppBarTheme} , default:none
-    required _i18.BottomAppBarTheme bottomAppBarTheme,
+    required super.bottomAppBarTheme,
 
     /// optionalParameters: {required BottomNavigationBarThemeData bottomNavigationBarTheme} , default:none
-    required _i19.BottomNavigationBarThemeData bottomNavigationBarTheme,
+    required super.bottomNavigationBarTheme,
 
     /// optionalParameters: {required BottomSheetThemeData bottomSheetTheme} , default:none
-    required _i20.BottomSheetThemeData bottomSheetTheme,
+    required super.bottomSheetTheme,
 
     /// optionalParameters: {required ButtonBarThemeData buttonBarTheme} , default:none
-    required _i21.ButtonBarThemeData buttonBarTheme,
+    required super.buttonBarTheme,
 
     /// optionalParameters: {required ButtonThemeData buttonTheme} , default:none
-    required _i22.ButtonThemeData buttonTheme,
+    required super.buttonTheme,
 
     /// optionalParameters: {required CardTheme cardTheme} , default:none
-    required _i23.CardTheme cardTheme,
+    required super.cardTheme,
 
     /// optionalParameters: {required CheckboxThemeData checkboxTheme} , default:none
-    required _i24.CheckboxThemeData checkboxTheme,
+    required super.checkboxTheme,
 
     /// optionalParameters: {required ChipThemeData chipTheme} , default:none
-    required _i25.ChipThemeData chipTheme,
+    required super.chipTheme,
 
     /// optionalParameters: {required DataTableThemeData dataTableTheme} , default:none
-    required _i26.DataTableThemeData dataTableTheme,
+    required super.dataTableTheme,
 
     /// optionalParameters: {required DatePickerThemeData datePickerTheme} , default:none
-    required _i27.DatePickerThemeData datePickerTheme,
+    required super.datePickerTheme,
 
     /// optionalParameters: {required DialogTheme dialogTheme} , default:none
-    required _i28.DialogTheme dialogTheme,
+    required super.dialogTheme,
 
     /// optionalParameters: {required DividerThemeData dividerTheme} , default:none
-    required _i29.DividerThemeData dividerTheme,
+    required super.dividerTheme,
 
     /// optionalParameters: {required DrawerThemeData drawerTheme} , default:none
-    required _i30.DrawerThemeData drawerTheme,
+    required super.drawerTheme,
 
     /// optionalParameters: {required DropdownMenuThemeData dropdownMenuTheme} , default:none
-    required _i31.DropdownMenuThemeData dropdownMenuTheme,
+    required super.dropdownMenuTheme,
 
     /// optionalParameters: {required ElevatedButtonThemeData elevatedButtonTheme} , default:none
-    required _i32.ElevatedButtonThemeData elevatedButtonTheme,
+    required super.elevatedButtonTheme,
 
     /// optionalParameters: {required ExpansionTileThemeData expansionTileTheme} , default:none
-    required _i33.ExpansionTileThemeData expansionTileTheme,
+    required super.expansionTileTheme,
 
     /// optionalParameters: {required FilledButtonThemeData filledButtonTheme} , default:none
-    required _i34.FilledButtonThemeData filledButtonTheme,
+    required super.filledButtonTheme,
 
     /// optionalParameters: {required FloatingActionButtonThemeData floatingActionButtonTheme} , default:none
-    required _i35.FloatingActionButtonThemeData floatingActionButtonTheme,
+    required super.floatingActionButtonTheme,
 
     /// optionalParameters: {required IconButtonThemeData iconButtonTheme} , default:none
-    required _i36.IconButtonThemeData iconButtonTheme,
+    required super.iconButtonTheme,
 
     /// optionalParameters: {required ListTileThemeData listTileTheme} , default:none
-    required _i37.ListTileThemeData listTileTheme,
+    required super.listTileTheme,
 
     /// optionalParameters: {required MenuBarThemeData menuBarTheme} , default:none
-    required _i38.MenuBarThemeData menuBarTheme,
+    required super.menuBarTheme,
 
     /// optionalParameters: {required MenuButtonThemeData menuButtonTheme} , default:none
-    required _i39.MenuButtonThemeData menuButtonTheme,
+    required super.menuButtonTheme,
 
     /// optionalParameters: {required MenuThemeData menuTheme} , default:none
-    required _i40.MenuThemeData menuTheme,
+    required super.menuTheme,
 
     /// optionalParameters: {required NavigationBarThemeData navigationBarTheme} , default:none
-    required _i41.NavigationBarThemeData navigationBarTheme,
+    required super.navigationBarTheme,
 
     /// optionalParameters: {required NavigationDrawerThemeData navigationDrawerTheme} , default:none
-    required _i42.NavigationDrawerThemeData navigationDrawerTheme,
+    required super.navigationDrawerTheme,
 
     /// optionalParameters: {required NavigationRailThemeData navigationRailTheme} , default:none
-    required _i43.NavigationRailThemeData navigationRailTheme,
+    required super.navigationRailTheme,
 
     /// optionalParameters: {required OutlinedButtonThemeData outlinedButtonTheme} , default:none
-    required _i44.OutlinedButtonThemeData outlinedButtonTheme,
+    required super.outlinedButtonTheme,
 
     /// optionalParameters: {required PopupMenuThemeData popupMenuTheme} , default:none
-    required _i45.PopupMenuThemeData popupMenuTheme,
+    required super.popupMenuTheme,
 
     /// optionalParameters: {required ProgressIndicatorThemeData progressIndicatorTheme} , default:none
-    required _i46.ProgressIndicatorThemeData progressIndicatorTheme,
+    required super.progressIndicatorTheme,
 
     /// optionalParameters: {required RadioThemeData radioTheme} , default:none
-    required _i47.RadioThemeData radioTheme,
+    required super.radioTheme,
 
     /// optionalParameters: {required SearchBarThemeData searchBarTheme} , default:none
-    required _i48.SearchBarThemeData searchBarTheme,
+    required super.searchBarTheme,
 
     /// optionalParameters: {required SearchViewThemeData searchViewTheme} , default:none
-    required _i49.SearchViewThemeData searchViewTheme,
+    required super.searchViewTheme,
 
     /// optionalParameters: {required SegmentedButtonThemeData segmentedButtonTheme} , default:none
-    required _i50.SegmentedButtonThemeData segmentedButtonTheme,
+    required super.segmentedButtonTheme,
 
     /// optionalParameters: {required SliderThemeData sliderTheme} , default:none
-    required _i51.SliderThemeData sliderTheme,
+    required super.sliderTheme,
 
     /// optionalParameters: {required SnackBarThemeData snackBarTheme} , default:none
-    required _i52.SnackBarThemeData snackBarTheme,
+    required super.snackBarTheme,
 
     /// optionalParameters: {required SwitchThemeData switchTheme} , default:none
-    required _i53.SwitchThemeData switchTheme,
+    required super.switchTheme,
 
     /// optionalParameters: {required TabBarTheme tabBarTheme} , default:none
-    required _i54.TabBarTheme tabBarTheme,
+    required super.tabBarTheme,
 
     /// optionalParameters: {required TextButtonThemeData textButtonTheme} , default:none
-    required _i55.TextButtonThemeData textButtonTheme,
+    required super.textButtonTheme,
 
     /// optionalParameters: {required TextSelectionThemeData textSelectionTheme} , default:none
-    required _i56.TextSelectionThemeData textSelectionTheme,
+    required super.textSelectionTheme,
 
     /// optionalParameters: {required TimePickerThemeData timePickerTheme} , default:none
-    required _i57.TimePickerThemeData timePickerTheme,
+    required super.timePickerTheme,
 
     /// optionalParameters: {required ToggleButtonsThemeData toggleButtonsTheme} , default:none
-    required _i58.ToggleButtonsThemeData toggleButtonsTheme,
+    required super.toggleButtonsTheme,
 
     /// optionalParameters: {required TooltipThemeData tooltipTheme} , default:none
-    required _i59.TooltipThemeData tooltipTheme,
-  }) : super.raw(
-          applyElevationOverlayColor: applyElevationOverlayColor,
-          cupertinoOverrideTheme: cupertinoOverrideTheme,
-          extensions: extensions,
-          inputDecorationTheme: inputDecorationTheme,
-          materialTapTargetSize: materialTapTargetSize,
-          pageTransitionsTheme: pageTransitionsTheme,
-          platform: platform,
-          scrollbarTheme: scrollbarTheme,
-          splashFactory: splashFactory,
-          useMaterial3: useMaterial3,
-          visualDensity: visualDensity,
-          canvasColor: canvasColor,
-          cardColor: cardColor,
-          colorScheme: colorScheme,
-          dialogBackgroundColor: dialogBackgroundColor,
-          disabledColor: disabledColor,
-          dividerColor: dividerColor,
-          focusColor: focusColor,
-          highlightColor: highlightColor,
-          hintColor: hintColor,
-          hoverColor: hoverColor,
-          indicatorColor: indicatorColor,
-          primaryColor: primaryColor,
-          primaryColorDark: primaryColorDark,
-          primaryColorLight: primaryColorLight,
-          scaffoldBackgroundColor: scaffoldBackgroundColor,
-          secondaryHeaderColor: secondaryHeaderColor,
-          shadowColor: shadowColor,
-          splashColor: splashColor,
-          unselectedWidgetColor: unselectedWidgetColor,
-          iconTheme: iconTheme,
-          primaryIconTheme: primaryIconTheme,
-          primaryTextTheme: primaryTextTheme,
-          textTheme: textTheme,
-          typography: typography,
-          actionIconTheme: actionIconTheme,
-          appBarTheme: appBarTheme,
-          badgeTheme: badgeTheme,
-          bannerTheme: bannerTheme,
-          bottomAppBarTheme: bottomAppBarTheme,
-          bottomNavigationBarTheme: bottomNavigationBarTheme,
-          bottomSheetTheme: bottomSheetTheme,
-          buttonBarTheme: buttonBarTheme,
-          buttonTheme: buttonTheme,
-          cardTheme: cardTheme,
-          checkboxTheme: checkboxTheme,
-          chipTheme: chipTheme,
-          dataTableTheme: dataTableTheme,
-          datePickerTheme: datePickerTheme,
-          dialogTheme: dialogTheme,
-          dividerTheme: dividerTheme,
-          drawerTheme: drawerTheme,
-          dropdownMenuTheme: dropdownMenuTheme,
-          elevatedButtonTheme: elevatedButtonTheme,
-          expansionTileTheme: expansionTileTheme,
-          filledButtonTheme: filledButtonTheme,
-          floatingActionButtonTheme: floatingActionButtonTheme,
-          iconButtonTheme: iconButtonTheme,
-          listTileTheme: listTileTheme,
-          menuBarTheme: menuBarTheme,
-          menuButtonTheme: menuButtonTheme,
-          menuTheme: menuTheme,
-          navigationBarTheme: navigationBarTheme,
-          navigationDrawerTheme: navigationDrawerTheme,
-          navigationRailTheme: navigationRailTheme,
-          outlinedButtonTheme: outlinedButtonTheme,
-          popupMenuTheme: popupMenuTheme,
-          progressIndicatorTheme: progressIndicatorTheme,
-          radioTheme: radioTheme,
-          searchBarTheme: searchBarTheme,
-          searchViewTheme: searchViewTheme,
-          segmentedButtonTheme: segmentedButtonTheme,
-          sliderTheme: sliderTheme,
-          snackBarTheme: snackBarTheme,
-          switchTheme: switchTheme,
-          tabBarTheme: tabBarTheme,
-          textButtonTheme: textButtonTheme,
-          textSelectionTheme: textSelectionTheme,
-          timePickerTheme: timePickerTheme,
-          toggleButtonsTheme: toggleButtonsTheme,
-          tooltipTheme: tooltipTheme,
-        ) {
+    required super.tooltipTheme,
+  })  : mateParams = {
+          'applyElevationOverlayColor': _i2.BuilderArg<bool>(
+            name: 'applyElevationOverlayColor',
+            init: applyElevationOverlayColor,
+            isNamed: true,
+          ),
+          'cupertinoOverrideTheme': _i2.BuilderArg<_i3.NoDefaultCupertinoThemeData?>(
+            name: 'cupertinoOverrideTheme',
+            init: cupertinoOverrideTheme,
+            isNamed: true,
+          ),
+          'extensions': _i2.BuilderArg<Map<Object, _i1.ThemeExtension<dynamic>>>(
+            name: 'extensions',
+            init: extensions,
+            isNamed: true,
+          ),
+          'inputDecorationTheme': _i2.BuilderArg<_i4.InputDecorationTheme>(
+            name: 'inputDecorationTheme',
+            init: inputDecorationTheme,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i1.MaterialTapTargetSize>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'pageTransitionsTheme': _i2.BuilderArg<_i5.PageTransitionsTheme>(
+            name: 'pageTransitionsTheme',
+            init: pageTransitionsTheme,
+            isNamed: true,
+          ),
+          'platform': _i2.BuilderArg<_i6.TargetPlatform>(
+            name: 'platform',
+            init: platform,
+            isNamed: true,
+          ),
+          'scrollbarTheme': _i2.BuilderArg<_i7.ScrollbarThemeData>(
+            name: 'scrollbarTheme',
+            init: scrollbarTheme,
+            isNamed: true,
+          ),
+          'splashFactory': _i2.BuilderArg<_i8.InteractiveInkFeatureFactory>(
+            name: 'splashFactory',
+            init: splashFactory,
+            isNamed: true,
+          ),
+          'useMaterial3': _i2.BuilderArg<bool>(
+            name: 'useMaterial3',
+            init: useMaterial3,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i1.VisualDensity>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'canvasColor': _i2.BuilderArg<_i9.Color>(
+            name: 'canvasColor',
+            init: canvasColor,
+            isNamed: true,
+          ),
+          'cardColor': _i2.BuilderArg<_i9.Color>(
+            name: 'cardColor',
+            init: cardColor,
+            isNamed: true,
+          ),
+          'colorScheme': _i2.BuilderArg<_i10.ColorScheme>(
+            name: 'colorScheme',
+            init: colorScheme,
+            isNamed: true,
+          ),
+          'dialogBackgroundColor': _i2.BuilderArg<_i9.Color>(
+            name: 'dialogBackgroundColor',
+            init: dialogBackgroundColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i9.Color>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'dividerColor': _i2.BuilderArg<_i9.Color>(
+            name: 'dividerColor',
+            init: dividerColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i9.Color>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i9.Color>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'hintColor': _i2.BuilderArg<_i9.Color>(
+            name: 'hintColor',
+            init: hintColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i9.Color>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i9.Color>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'primaryColor': _i2.BuilderArg<_i9.Color>(
+            name: 'primaryColor',
+            init: primaryColor,
+            isNamed: true,
+          ),
+          'primaryColorDark': _i2.BuilderArg<_i9.Color>(
+            name: 'primaryColorDark',
+            init: primaryColorDark,
+            isNamed: true,
+          ),
+          'primaryColorLight': _i2.BuilderArg<_i9.Color>(
+            name: 'primaryColorLight',
+            init: primaryColorLight,
+            isNamed: true,
+          ),
+          'scaffoldBackgroundColor': _i2.BuilderArg<_i9.Color>(
+            name: 'scaffoldBackgroundColor',
+            init: scaffoldBackgroundColor,
+            isNamed: true,
+          ),
+          'secondaryHeaderColor': _i2.BuilderArg<_i9.Color>(
+            name: 'secondaryHeaderColor',
+            init: secondaryHeaderColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i9.Color>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i9.Color>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'unselectedWidgetColor': _i2.BuilderArg<_i9.Color>(
+            name: 'unselectedWidgetColor',
+            init: unselectedWidgetColor,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i11.IconThemeData>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'primaryIconTheme': _i2.BuilderArg<_i11.IconThemeData>(
+            name: 'primaryIconTheme',
+            init: primaryIconTheme,
+            isNamed: true,
+          ),
+          'primaryTextTheme': _i2.BuilderArg<_i12.TextTheme>(
+            name: 'primaryTextTheme',
+            init: primaryTextTheme,
+            isNamed: true,
+          ),
+          'textTheme': _i2.BuilderArg<_i12.TextTheme>(
+            name: 'textTheme',
+            init: textTheme,
+            isNamed: true,
+          ),
+          'typography': _i2.BuilderArg<_i13.Typography>(
+            name: 'typography',
+            init: typography,
+            isNamed: true,
+          ),
+          'actionIconTheme': _i2.BuilderArg<_i14.ActionIconThemeData?>(
+            name: 'actionIconTheme',
+            init: actionIconTheme,
+            isNamed: true,
+          ),
+          'appBarTheme': _i2.BuilderArg<_i15.AppBarTheme>(
+            name: 'appBarTheme',
+            init: appBarTheme,
+            isNamed: true,
+          ),
+          'badgeTheme': _i2.BuilderArg<_i16.BadgeThemeData>(
+            name: 'badgeTheme',
+            init: badgeTheme,
+            isNamed: true,
+          ),
+          'bannerTheme': _i2.BuilderArg<_i17.MaterialBannerThemeData>(
+            name: 'bannerTheme',
+            init: bannerTheme,
+            isNamed: true,
+          ),
+          'bottomAppBarTheme': _i2.BuilderArg<_i18.BottomAppBarTheme>(
+            name: 'bottomAppBarTheme',
+            init: bottomAppBarTheme,
+            isNamed: true,
+          ),
+          'bottomNavigationBarTheme': _i2.BuilderArg<_i19.BottomNavigationBarThemeData>(
+            name: 'bottomNavigationBarTheme',
+            init: bottomNavigationBarTheme,
+            isNamed: true,
+          ),
+          'bottomSheetTheme': _i2.BuilderArg<_i20.BottomSheetThemeData>(
+            name: 'bottomSheetTheme',
+            init: bottomSheetTheme,
+            isNamed: true,
+          ),
+          'buttonBarTheme': _i2.BuilderArg<_i21.ButtonBarThemeData>(
+            name: 'buttonBarTheme',
+            init: buttonBarTheme,
+            isNamed: true,
+          ),
+          'buttonTheme': _i2.BuilderArg<_i22.ButtonThemeData>(
+            name: 'buttonTheme',
+            init: buttonTheme,
+            isNamed: true,
+          ),
+          'cardTheme': _i2.BuilderArg<_i23.CardTheme>(
+            name: 'cardTheme',
+            init: cardTheme,
+            isNamed: true,
+          ),
+          'checkboxTheme': _i2.BuilderArg<_i24.CheckboxThemeData>(
+            name: 'checkboxTheme',
+            init: checkboxTheme,
+            isNamed: true,
+          ),
+          'chipTheme': _i2.BuilderArg<_i25.ChipThemeData>(
+            name: 'chipTheme',
+            init: chipTheme,
+            isNamed: true,
+          ),
+          'dataTableTheme': _i2.BuilderArg<_i26.DataTableThemeData>(
+            name: 'dataTableTheme',
+            init: dataTableTheme,
+            isNamed: true,
+          ),
+          'datePickerTheme': _i2.BuilderArg<_i27.DatePickerThemeData>(
+            name: 'datePickerTheme',
+            init: datePickerTheme,
+            isNamed: true,
+          ),
+          'dialogTheme': _i2.BuilderArg<_i28.DialogTheme>(
+            name: 'dialogTheme',
+            init: dialogTheme,
+            isNamed: true,
+          ),
+          'dividerTheme': _i2.BuilderArg<_i29.DividerThemeData>(
+            name: 'dividerTheme',
+            init: dividerTheme,
+            isNamed: true,
+          ),
+          'drawerTheme': _i2.BuilderArg<_i30.DrawerThemeData>(
+            name: 'drawerTheme',
+            init: drawerTheme,
+            isNamed: true,
+          ),
+          'dropdownMenuTheme': _i2.BuilderArg<_i31.DropdownMenuThemeData>(
+            name: 'dropdownMenuTheme',
+            init: dropdownMenuTheme,
+            isNamed: true,
+          ),
+          'elevatedButtonTheme': _i2.BuilderArg<_i32.ElevatedButtonThemeData>(
+            name: 'elevatedButtonTheme',
+            init: elevatedButtonTheme,
+            isNamed: true,
+          ),
+          'expansionTileTheme': _i2.BuilderArg<_i33.ExpansionTileThemeData>(
+            name: 'expansionTileTheme',
+            init: expansionTileTheme,
+            isNamed: true,
+          ),
+          'filledButtonTheme': _i2.BuilderArg<_i34.FilledButtonThemeData>(
+            name: 'filledButtonTheme',
+            init: filledButtonTheme,
+            isNamed: true,
+          ),
+          'floatingActionButtonTheme': _i2.BuilderArg<_i35.FloatingActionButtonThemeData>(
+            name: 'floatingActionButtonTheme',
+            init: floatingActionButtonTheme,
+            isNamed: true,
+          ),
+          'iconButtonTheme': _i2.BuilderArg<_i36.IconButtonThemeData>(
+            name: 'iconButtonTheme',
+            init: iconButtonTheme,
+            isNamed: true,
+          ),
+          'listTileTheme': _i2.BuilderArg<_i37.ListTileThemeData>(
+            name: 'listTileTheme',
+            init: listTileTheme,
+            isNamed: true,
+          ),
+          'menuBarTheme': _i2.BuilderArg<_i38.MenuBarThemeData>(
+            name: 'menuBarTheme',
+            init: menuBarTheme,
+            isNamed: true,
+          ),
+          'menuButtonTheme': _i2.BuilderArg<_i39.MenuButtonThemeData>(
+            name: 'menuButtonTheme',
+            init: menuButtonTheme,
+            isNamed: true,
+          ),
+          'menuTheme': _i2.BuilderArg<_i40.MenuThemeData>(
+            name: 'menuTheme',
+            init: menuTheme,
+            isNamed: true,
+          ),
+          'navigationBarTheme': _i2.BuilderArg<_i41.NavigationBarThemeData>(
+            name: 'navigationBarTheme',
+            init: navigationBarTheme,
+            isNamed: true,
+          ),
+          'navigationDrawerTheme': _i2.BuilderArg<_i42.NavigationDrawerThemeData>(
+            name: 'navigationDrawerTheme',
+            init: navigationDrawerTheme,
+            isNamed: true,
+          ),
+          'navigationRailTheme': _i2.BuilderArg<_i43.NavigationRailThemeData>(
+            name: 'navigationRailTheme',
+            init: navigationRailTheme,
+            isNamed: true,
+          ),
+          'outlinedButtonTheme': _i2.BuilderArg<_i44.OutlinedButtonThemeData>(
+            name: 'outlinedButtonTheme',
+            init: outlinedButtonTheme,
+            isNamed: true,
+          ),
+          'popupMenuTheme': _i2.BuilderArg<_i45.PopupMenuThemeData>(
+            name: 'popupMenuTheme',
+            init: popupMenuTheme,
+            isNamed: true,
+          ),
+          'progressIndicatorTheme': _i2.BuilderArg<_i46.ProgressIndicatorThemeData>(
+            name: 'progressIndicatorTheme',
+            init: progressIndicatorTheme,
+            isNamed: true,
+          ),
+          'radioTheme': _i2.BuilderArg<_i47.RadioThemeData>(
+            name: 'radioTheme',
+            init: radioTheme,
+            isNamed: true,
+          ),
+          'searchBarTheme': _i2.BuilderArg<_i48.SearchBarThemeData>(
+            name: 'searchBarTheme',
+            init: searchBarTheme,
+            isNamed: true,
+          ),
+          'searchViewTheme': _i2.BuilderArg<_i49.SearchViewThemeData>(
+            name: 'searchViewTheme',
+            init: searchViewTheme,
+            isNamed: true,
+          ),
+          'segmentedButtonTheme': _i2.BuilderArg<_i50.SegmentedButtonThemeData>(
+            name: 'segmentedButtonTheme',
+            init: segmentedButtonTheme,
+            isNamed: true,
+          ),
+          'sliderTheme': _i2.BuilderArg<_i51.SliderThemeData>(
+            name: 'sliderTheme',
+            init: sliderTheme,
+            isNamed: true,
+          ),
+          'snackBarTheme': _i2.BuilderArg<_i52.SnackBarThemeData>(
+            name: 'snackBarTheme',
+            init: snackBarTheme,
+            isNamed: true,
+          ),
+          'switchTheme': _i2.BuilderArg<_i53.SwitchThemeData>(
+            name: 'switchTheme',
+            init: switchTheme,
+            isNamed: true,
+          ),
+          'tabBarTheme': _i2.BuilderArg<_i54.TabBarTheme>(
+            name: 'tabBarTheme',
+            init: tabBarTheme,
+            isNamed: true,
+          ),
+          'textButtonTheme': _i2.BuilderArg<_i55.TextButtonThemeData>(
+            name: 'textButtonTheme',
+            init: textButtonTheme,
+            isNamed: true,
+          ),
+          'textSelectionTheme': _i2.BuilderArg<_i56.TextSelectionThemeData>(
+            name: 'textSelectionTheme',
+            init: textSelectionTheme,
+            isNamed: true,
+          ),
+          'timePickerTheme': _i2.BuilderArg<_i57.TimePickerThemeData>(
+            name: 'timePickerTheme',
+            init: timePickerTheme,
+            isNamed: true,
+          ),
+          'toggleButtonsTheme': _i2.BuilderArg<_i58.ToggleButtonsThemeData>(
+            name: 'toggleButtonsTheme',
+            init: toggleButtonsTheme,
+            isNamed: true,
+          ),
+          'tooltipTheme': _i2.BuilderArg<_i59.TooltipThemeData>(
+            name: 'tooltipTheme',
+            init: tooltipTheme,
+            isNamed: true,
+          ),
+        },
+        super.raw() {
     mateBuilderName = 'ThemeData.raw';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ThemeData$Mate.raw(
@@ -475,412 +800,10 @@ class ThemeData$Mate extends _i1.ThemeData with _i2.Mate {
           toggleButtonsTheme: p.get('toggleButtonsTheme').build(),
           tooltipTheme: p.get('tooltipTheme').build(),
         );
-    mateUse(
-      'applyElevationOverlayColor',
-      applyElevationOverlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'cupertinoOverrideTheme',
-      cupertinoOverrideTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'extensions',
-      extensions,
-      isNamed: true,
-    );
-    mateUse(
-      'inputDecorationTheme',
-      inputDecorationTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'pageTransitionsTheme',
-      pageTransitionsTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'platform',
-      platform,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollbarTheme',
-      scrollbarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'splashFactory',
-      splashFactory,
-      isNamed: true,
-    );
-    mateUse(
-      'useMaterial3',
-      useMaterial3,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'canvasColor',
-      canvasColor,
-      isNamed: true,
-    );
-    mateUse(
-      'cardColor',
-      cardColor,
-      isNamed: true,
-    );
-    mateUse(
-      'colorScheme',
-      colorScheme,
-      isNamed: true,
-    );
-    mateUse(
-      'dialogBackgroundColor',
-      dialogBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerColor',
-      dividerColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hintColor',
-      hintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'primaryColor',
-      primaryColor,
-      isNamed: true,
-    );
-    mateUse(
-      'primaryColorDark',
-      primaryColorDark,
-      isNamed: true,
-    );
-    mateUse(
-      'primaryColorLight',
-      primaryColorLight,
-      isNamed: true,
-    );
-    mateUse(
-      'scaffoldBackgroundColor',
-      scaffoldBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryHeaderColor',
-      secondaryHeaderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedWidgetColor',
-      unselectedWidgetColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'primaryIconTheme',
-      primaryIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'primaryTextTheme',
-      primaryTextTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'textTheme',
-      textTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'typography',
-      typography,
-      isNamed: true,
-    );
-    mateUse(
-      'actionIconTheme',
-      actionIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'appBarTheme',
-      appBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'badgeTheme',
-      badgeTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'bannerTheme',
-      bannerTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'bottomAppBarTheme',
-      bottomAppBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'bottomNavigationBarTheme',
-      bottomNavigationBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'bottomSheetTheme',
-      bottomSheetTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonBarTheme',
-      buttonBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonTheme',
-      buttonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'cardTheme',
-      cardTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'checkboxTheme',
-      checkboxTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'chipTheme',
-      chipTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'dataTableTheme',
-      dataTableTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'datePickerTheme',
-      datePickerTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'dialogTheme',
-      dialogTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerTheme',
-      dividerTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'drawerTheme',
-      drawerTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'dropdownMenuTheme',
-      dropdownMenuTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'elevatedButtonTheme',
-      elevatedButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'expansionTileTheme',
-      expansionTileTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'filledButtonTheme',
-      filledButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingActionButtonTheme',
-      floatingActionButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'iconButtonTheme',
-      iconButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'listTileTheme',
-      listTileTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'menuBarTheme',
-      menuBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'menuButtonTheme',
-      menuButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'menuTheme',
-      menuTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'navigationBarTheme',
-      navigationBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'navigationDrawerTheme',
-      navigationDrawerTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'navigationRailTheme',
-      navigationRailTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'outlinedButtonTheme',
-      outlinedButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'popupMenuTheme',
-      popupMenuTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'progressIndicatorTheme',
-      progressIndicatorTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'radioTheme',
-      radioTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'searchBarTheme',
-      searchBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'searchViewTheme',
-      searchViewTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'segmentedButtonTheme',
-      segmentedButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'sliderTheme',
-      sliderTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'snackBarTheme',
-      snackBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'switchTheme',
-      switchTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'tabBarTheme',
-      tabBarTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'textButtonTheme',
-      textButtonTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'textSelectionTheme',
-      textSelectionTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'timePickerTheme',
-      timePickerTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'toggleButtonsTheme',
-      toggleButtonsTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltipTheme',
-      tooltipTheme,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MaterialBasedCupertinoThemeData extends CupertinoThemeData
@@ -889,17 +812,22 @@ class MaterialBasedCupertinoThemeData$Mate extends _i1.MaterialBasedCupertinoThe
   MaterialBasedCupertinoThemeData$Mate(
       {
       /// optionalParameters: {required ThemeData materialTheme} , default:none
-      required _i1.ThemeData materialTheme})
-      : super(materialTheme: materialTheme) {
+      required super.materialTheme})
+      : mateParams = {
+          'materialTheme': _i2.BuilderArg<_i1.ThemeData>(
+            name: 'materialTheme',
+            init: materialTheme,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'MaterialBasedCupertinoThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBasedCupertinoThemeData$Mate(materialTheme: p.get('materialTheme').build());
-    mateUse(
-      'materialTheme',
-      materialTheme,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class VisualDensity with Diagnosticable
@@ -907,31 +835,33 @@ class VisualDensity$Mate extends _i1.VisualDensity with _i2.Mate {
   /// VisualDensity VisualDensity({double horizontal = 0.0, double vertical = 0.0})
   VisualDensity$Mate({
     /// optionalParameters: {double horizontal = 0.0} , default:processed=DoubleLiteralImpl
-    double horizontal = 0.0,
+    super.horizontal,
 
     /// optionalParameters: {double vertical = 0.0} , default:processed=DoubleLiteralImpl
-    double vertical = 0.0,
-  }) : super(
-          horizontal: horizontal,
-          vertical: vertical,
-        ) {
+    super.vertical,
+  })  : mateParams = {
+          'horizontal': _i2.BuilderArg<double>(
+            name: 'horizontal',
+            init: horizontal,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'vertical': _i2.BuilderArg<double>(
+            name: 'vertical',
+            init: vertical,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'VisualDensity';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => VisualDensity$Mate(
           horizontal: p.get('horizontal').build(),
           vertical: p.get('vertical').build(),
         );
-    mateUse(
-      'horizontal',
-      horizontal,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'vertical',
-      vertical,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

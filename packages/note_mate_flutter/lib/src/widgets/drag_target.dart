@@ -18,86 +18,172 @@ class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
   /// Draggable<T> Draggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, Axis? affinity, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, bool rootOverlay = false, HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild, bool Function(int)? allowedButtonsFilter})
   Draggable$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {required Widget feedback} , default:none
-    required _i4.Widget feedback,
+    required super.feedback,
 
     /// optionalParameters: {T? data} , default:none
-    T? data,
+    super.data,
 
     /// optionalParameters: {Axis? axis} , default:none
-    _i5.Axis? axis,
+    super.axis,
 
     /// optionalParameters: {Widget? childWhenDragging} , default:none
-    _i4.Widget? childWhenDragging,
+    super.childWhenDragging,
 
     /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i6.Offset feedbackOffset = _i7.Offset.zero,
+    super.feedbackOffset,
 
     /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.DragAnchorStrategy dragAnchorStrategy,
+    super.dragAnchorStrategy,
 
     /// optionalParameters: {Axis? affinity} , default:none
-    _i5.Axis? affinity,
+    super.affinity,
 
     /// optionalParameters: {int? maxSimultaneousDrags} , default:none
-    int? maxSimultaneousDrags,
+    super.maxSimultaneousDrags,
 
     /// optionalParameters: {void Function()? onDragStarted} , default:none
-    _i6.VoidCallback? onDragStarted,
+    super.onDragStarted,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onDragUpdate} , default:none
-    _i1.DragUpdateCallback? onDragUpdate,
+    super.onDragUpdate,
 
     /// optionalParameters: {void Function(Velocity, Offset)? onDraggableCanceled} , default:none
-    _i1.DraggableCanceledCallback? onDraggableCanceled,
+    super.onDraggableCanceled,
 
     /// optionalParameters: {void Function(DraggableDetails)? onDragEnd} , default:none
-    _i1.DragEndCallback? onDragEnd,
+    super.onDragEnd,
 
     /// optionalParameters: {void Function()? onDragCompleted} , default:none
-    _i6.VoidCallback? onDragCompleted,
+    super.onDragCompleted,
 
     /// optionalParameters: {bool ignoringFeedbackSemantics = true} , default:processed=BooleanLiteralImpl
-    bool ignoringFeedbackSemantics = true,
+    super.ignoringFeedbackSemantics,
 
     /// optionalParameters: {bool ignoringFeedbackPointer = true} , default:processed=BooleanLiteralImpl
-    bool ignoringFeedbackPointer = true,
+    super.ignoringFeedbackPointer,
 
     /// optionalParameters: {bool rootOverlay = false} , default:processed=BooleanLiteralImpl
-    bool rootOverlay = false,
+    super.rootOverlay,
 
     /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i8.HitTestBehavior hitTestBehavior = _i9.HitTestBehavior.deferToChild,
+    super.hitTestBehavior,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i10.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          key: key,
-          child: child,
-          feedback: feedback,
-          data: data,
-          axis: axis,
-          childWhenDragging: childWhenDragging,
-          feedbackOffset: feedbackOffset,
-          dragAnchorStrategy: dragAnchorStrategy,
-          affinity: affinity,
-          maxSimultaneousDrags: maxSimultaneousDrags,
-          onDragStarted: onDragStarted,
-          onDragUpdate: onDragUpdate,
-          onDraggableCanceled: onDraggableCanceled,
-          onDragEnd: onDragEnd,
-          onDragCompleted: onDragCompleted,
-          ignoringFeedbackSemantics: ignoringFeedbackSemantics,
-          ignoringFeedbackPointer: ignoringFeedbackPointer,
-          rootOverlay: rootOverlay,
-          hitTestBehavior: hitTestBehavior,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'feedback': _i2.BuilderArg<_i4.Widget>(
+            name: 'feedback',
+            init: feedback,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<T?>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'axis': _i2.BuilderArg<_i5.Axis?>(
+            name: 'axis',
+            init: axis,
+            isNamed: true,
+          ),
+          'childWhenDragging': _i2.BuilderArg<_i4.Widget?>(
+            name: 'childWhenDragging',
+            init: childWhenDragging,
+            isNamed: true,
+          ),
+          'feedbackOffset': _i2.BuilderArg<_i6.Offset>(
+            name: 'feedbackOffset',
+            init: feedbackOffset,
+            isNamed: true,
+            defaultValue: _i7.Offset.zero,
+          ),
+          'dragAnchorStrategy': _i2.BuilderArg<_i1.DragAnchorStrategy>(
+            name: 'dragAnchorStrategy',
+            init: dragAnchorStrategy,
+            isNamed: true,
+          ),
+          'affinity': _i2.BuilderArg<_i5.Axis?>(
+            name: 'affinity',
+            init: affinity,
+            isNamed: true,
+          ),
+          'maxSimultaneousDrags': _i2.BuilderArg<int?>(
+            name: 'maxSimultaneousDrags',
+            init: maxSimultaneousDrags,
+            isNamed: true,
+          ),
+          'onDragStarted': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onDragStarted',
+            init: onDragStarted,
+            isNamed: true,
+          ),
+          'onDragUpdate': _i2.BuilderArg<_i1.DragUpdateCallback?>(
+            name: 'onDragUpdate',
+            init: onDragUpdate,
+            isNamed: true,
+          ),
+          'onDraggableCanceled': _i2.BuilderArg<_i1.DraggableCanceledCallback?>(
+            name: 'onDraggableCanceled',
+            init: onDraggableCanceled,
+            isNamed: true,
+          ),
+          'onDragEnd': _i2.BuilderArg<_i1.DragEndCallback?>(
+            name: 'onDragEnd',
+            init: onDragEnd,
+            isNamed: true,
+          ),
+          'onDragCompleted': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onDragCompleted',
+            init: onDragCompleted,
+            isNamed: true,
+          ),
+          'ignoringFeedbackSemantics': _i2.BuilderArg<bool>(
+            name: 'ignoringFeedbackSemantics',
+            init: ignoringFeedbackSemantics,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ignoringFeedbackPointer': _i2.BuilderArg<bool>(
+            name: 'ignoringFeedbackPointer',
+            init: ignoringFeedbackPointer,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'rootOverlay': _i2.BuilderArg<bool>(
+            name: 'rootOverlay',
+            init: rootOverlay,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i8.HitTestBehavior>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+            defaultValue: _i9.HitTestBehavior.deferToChild,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i10.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Draggable';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Draggable$Mate<T>(
@@ -122,112 +208,10 @@ class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'feedback',
-      feedback,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'axis',
-      axis,
-      isNamed: true,
-    );
-    mateUse(
-      'childWhenDragging',
-      childWhenDragging,
-      isNamed: true,
-    );
-    mateUse(
-      'feedbackOffset',
-      feedbackOffset,
-      isNamed: true,
-      defaultValue: _i7.Offset.zero,
-    );
-    mateUse(
-      'dragAnchorStrategy',
-      dragAnchorStrategy,
-      isNamed: true,
-    );
-    mateUse(
-      'affinity',
-      affinity,
-      isNamed: true,
-    );
-    mateUse(
-      'maxSimultaneousDrags',
-      maxSimultaneousDrags,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragStarted',
-      onDragStarted,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragUpdate',
-      onDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onDraggableCanceled',
-      onDraggableCanceled,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragEnd',
-      onDragEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragCompleted',
-      onDragCompleted,
-      isNamed: true,
-    );
-    mateUse(
-      'ignoringFeedbackSemantics',
-      ignoringFeedbackSemantics,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ignoringFeedbackPointer',
-      ignoringFeedbackPointer,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'rootOverlay',
-      rootOverlay,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'hitTestBehavior',
-      hitTestBehavior,
-      isNamed: true,
-      defaultValue: _i9.HitTestBehavior.deferToChild,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LongPressDraggable<T extends Object> extends Draggable<T>
@@ -235,82 +219,163 @@ class LongPressDraggable$Mate<T extends Object> extends _i1.LongPressDraggable<T
   /// LongPressDraggable<T> LongPressDraggable({Key? key, required Widget child, required Widget feedback, T? data, Axis? axis, Widget? childWhenDragging, Offset feedbackOffset = Offset.zero, Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy, int? maxSimultaneousDrags, void Function()? onDragStarted, void Function(DragUpdateDetails)? onDragUpdate, void Function(Velocity, Offset)? onDraggableCanceled, void Function(DraggableDetails)? onDragEnd, void Function()? onDragCompleted, bool hapticFeedbackOnStart = true, bool ignoringFeedbackSemantics = true, bool ignoringFeedbackPointer = true, Duration delay = kLongPressTimeout, bool Function(int)? allowedButtonsFilter})
   LongPressDraggable$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {required Widget feedback} , default:none
-    required _i4.Widget feedback,
+    required super.feedback,
 
     /// optionalParameters: {T? data} , default:none
-    T? data,
+    super.data,
 
     /// optionalParameters: {Axis? axis} , default:none
-    _i5.Axis? axis,
+    super.axis,
 
     /// optionalParameters: {Widget? childWhenDragging} , default:none
-    _i4.Widget? childWhenDragging,
+    super.childWhenDragging,
 
     /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i6.Offset feedbackOffset = _i7.Offset.zero,
+    super.feedbackOffset,
 
     /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.DragAnchorStrategy dragAnchorStrategy,
+    super.dragAnchorStrategy,
 
     /// optionalParameters: {int? maxSimultaneousDrags} , default:none
-    int? maxSimultaneousDrags,
+    super.maxSimultaneousDrags,
 
     /// optionalParameters: {void Function()? onDragStarted} , default:none
-    _i6.VoidCallback? onDragStarted,
+    super.onDragStarted,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onDragUpdate} , default:none
-    _i1.DragUpdateCallback? onDragUpdate,
+    super.onDragUpdate,
 
     /// optionalParameters: {void Function(Velocity, Offset)? onDraggableCanceled} , default:none
-    _i1.DraggableCanceledCallback? onDraggableCanceled,
+    super.onDraggableCanceled,
 
     /// optionalParameters: {void Function(DraggableDetails)? onDragEnd} , default:none
-    _i1.DragEndCallback? onDragEnd,
+    super.onDragEnd,
 
     /// optionalParameters: {void Function()? onDragCompleted} , default:none
-    _i6.VoidCallback? onDragCompleted,
+    super.onDragCompleted,
 
     /// optionalParameters: {bool hapticFeedbackOnStart = true} , default:processed=BooleanLiteralImpl
-    bool hapticFeedbackOnStart = true,
+    super.hapticFeedbackOnStart,
 
     /// optionalParameters: {bool ignoringFeedbackSemantics = true} , default:processed=BooleanLiteralImpl
-    bool ignoringFeedbackSemantics = true,
+    super.ignoringFeedbackSemantics,
 
     /// optionalParameters: {bool ignoringFeedbackPointer = true} , default:processed=BooleanLiteralImpl
-    bool ignoringFeedbackPointer = true,
+    super.ignoringFeedbackPointer,
 
     /// optionalParameters: {Duration delay = kLongPressTimeout} , default:unprocessed=SimpleIdentifierImpl
-    required Duration delay,
+    super.delay,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i10.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          key: key,
-          child: child,
-          feedback: feedback,
-          data: data,
-          axis: axis,
-          childWhenDragging: childWhenDragging,
-          feedbackOffset: feedbackOffset,
-          dragAnchorStrategy: dragAnchorStrategy,
-          maxSimultaneousDrags: maxSimultaneousDrags,
-          onDragStarted: onDragStarted,
-          onDragUpdate: onDragUpdate,
-          onDraggableCanceled: onDraggableCanceled,
-          onDragEnd: onDragEnd,
-          onDragCompleted: onDragCompleted,
-          hapticFeedbackOnStart: hapticFeedbackOnStart,
-          ignoringFeedbackSemantics: ignoringFeedbackSemantics,
-          ignoringFeedbackPointer: ignoringFeedbackPointer,
-          delay: delay,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'feedback': _i2.BuilderArg<_i4.Widget>(
+            name: 'feedback',
+            init: feedback,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<T?>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'axis': _i2.BuilderArg<_i5.Axis?>(
+            name: 'axis',
+            init: axis,
+            isNamed: true,
+          ),
+          'childWhenDragging': _i2.BuilderArg<_i4.Widget?>(
+            name: 'childWhenDragging',
+            init: childWhenDragging,
+            isNamed: true,
+          ),
+          'feedbackOffset': _i2.BuilderArg<_i6.Offset>(
+            name: 'feedbackOffset',
+            init: feedbackOffset,
+            isNamed: true,
+            defaultValue: _i7.Offset.zero,
+          ),
+          'dragAnchorStrategy': _i2.BuilderArg<_i1.DragAnchorStrategy>(
+            name: 'dragAnchorStrategy',
+            init: dragAnchorStrategy,
+            isNamed: true,
+          ),
+          'maxSimultaneousDrags': _i2.BuilderArg<int?>(
+            name: 'maxSimultaneousDrags',
+            init: maxSimultaneousDrags,
+            isNamed: true,
+          ),
+          'onDragStarted': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onDragStarted',
+            init: onDragStarted,
+            isNamed: true,
+          ),
+          'onDragUpdate': _i2.BuilderArg<_i1.DragUpdateCallback?>(
+            name: 'onDragUpdate',
+            init: onDragUpdate,
+            isNamed: true,
+          ),
+          'onDraggableCanceled': _i2.BuilderArg<_i1.DraggableCanceledCallback?>(
+            name: 'onDraggableCanceled',
+            init: onDraggableCanceled,
+            isNamed: true,
+          ),
+          'onDragEnd': _i2.BuilderArg<_i1.DragEndCallback?>(
+            name: 'onDragEnd',
+            init: onDragEnd,
+            isNamed: true,
+          ),
+          'onDragCompleted': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onDragCompleted',
+            init: onDragCompleted,
+            isNamed: true,
+          ),
+          'hapticFeedbackOnStart': _i2.BuilderArg<bool>(
+            name: 'hapticFeedbackOnStart',
+            init: hapticFeedbackOnStart,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ignoringFeedbackSemantics': _i2.BuilderArg<bool>(
+            name: 'ignoringFeedbackSemantics',
+            init: ignoringFeedbackSemantics,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ignoringFeedbackPointer': _i2.BuilderArg<bool>(
+            name: 'ignoringFeedbackPointer',
+            init: ignoringFeedbackPointer,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'delay': _i2.BuilderArg<Duration>(
+            name: 'delay',
+            init: delay,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i10.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LongPressDraggable';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LongPressDraggable$Mate<T>(
@@ -334,106 +399,10 @@ class LongPressDraggable$Mate<T extends Object> extends _i1.LongPressDraggable<T
           delay: p.get('delay').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'feedback',
-      feedback,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'axis',
-      axis,
-      isNamed: true,
-    );
-    mateUse(
-      'childWhenDragging',
-      childWhenDragging,
-      isNamed: true,
-    );
-    mateUse(
-      'feedbackOffset',
-      feedbackOffset,
-      isNamed: true,
-      defaultValue: _i7.Offset.zero,
-    );
-    mateUse(
-      'dragAnchorStrategy',
-      dragAnchorStrategy,
-      isNamed: true,
-    );
-    mateUse(
-      'maxSimultaneousDrags',
-      maxSimultaneousDrags,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragStarted',
-      onDragStarted,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragUpdate',
-      onDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onDraggableCanceled',
-      onDraggableCanceled,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragEnd',
-      onDragEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragCompleted',
-      onDragCompleted,
-      isNamed: true,
-    );
-    mateUse(
-      'hapticFeedbackOnStart',
-      hapticFeedbackOnStart,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ignoringFeedbackSemantics',
-      ignoringFeedbackSemantics,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ignoringFeedbackPointer',
-      ignoringFeedbackPointer,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'delay',
-      delay,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DraggableDetails
@@ -441,18 +410,32 @@ class DraggableDetails$Mate extends _i1.DraggableDetails with _i2.Mate {
   /// DraggableDetails DraggableDetails({bool wasAccepted = false, required Velocity velocity, required Offset offset})
   DraggableDetails$Mate({
     /// optionalParameters: {bool wasAccepted = false} , default:processed=BooleanLiteralImpl
-    bool wasAccepted = false,
+    super.wasAccepted,
 
     /// optionalParameters: {required Velocity velocity} , default:none
-    required _i11.Velocity velocity,
+    required super.velocity,
 
     /// optionalParameters: {required Offset offset} , default:none
-    required _i6.Offset offset,
-  }) : super(
-          wasAccepted: wasAccepted,
-          velocity: velocity,
-          offset: offset,
-        ) {
+    required super.offset,
+  })  : mateParams = {
+          'wasAccepted': _i2.BuilderArg<bool>(
+            name: 'wasAccepted',
+            init: wasAccepted,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'velocity': _i2.BuilderArg<_i11.Velocity>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i6.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DraggableDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DraggableDetails$Mate(
@@ -460,23 +443,10 @@ class DraggableDetails$Mate extends _i1.DraggableDetails with _i2.Mate {
           velocity: p.get('velocity').build(),
           offset: p.get('offset').build(),
         );
-    mateUse(
-      'wasAccepted',
-      wasAccepted,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DragTargetDetails<T>
@@ -484,31 +454,33 @@ class DragTargetDetails$Mate<T> extends _i1.DragTargetDetails<T> with _i2.Mate {
   /// DragTargetDetails<T> DragTargetDetails({required T data, required Offset offset})
   DragTargetDetails$Mate({
     /// optionalParameters: {required T data} , default:none
-    required T data,
+    required super.data,
 
     /// optionalParameters: {required Offset offset} , default:none
-    required _i6.Offset offset,
-  }) : super(
-          data: data,
-          offset: offset,
-        ) {
+    required super.offset,
+  })  : mateParams = {
+          'data': _i2.BuilderArg<T>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i6.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DragTargetDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DragTargetDetails$Mate<T>(
           data: p.get('data').build(),
           offset: p.get('offset').build(),
         );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DragTarget<T extends Object> extends StatefulWidget
@@ -516,38 +488,72 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
   /// DragTarget<T> DragTarget({Key? key, required Widget Function(BuildContext, List<T?>, List<dynamic>) builder, bool Function(T?)? onWillAccept, void Function(T)? onAccept, void Function(DragTargetDetails<T>)? onAcceptWithDetails, void Function(T?)? onLeave, void Function(DragTargetDetails<T>)? onMove, HitTestBehavior hitTestBehavior = HitTestBehavior.translucent})
   DragTarget$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext, List<T?>, List<dynamic>) builder} , default:none
-    required _i1.DragTargetBuilder<T> builder,
+    required super.builder,
 
     /// optionalParameters: {bool Function(T?)? onWillAccept} , default:none
-    _i1.DragTargetWillAccept<T>? onWillAccept,
+    super.onWillAccept,
 
     /// optionalParameters: {void Function(T)? onAccept} , default:none
-    _i1.DragTargetAccept<T>? onAccept,
+    super.onAccept,
 
     /// optionalParameters: {void Function(DragTargetDetails<T>)? onAcceptWithDetails} , default:none
-    _i1.DragTargetAcceptWithDetails<T>? onAcceptWithDetails,
+    super.onAcceptWithDetails,
 
     /// optionalParameters: {void Function(T?)? onLeave} , default:none
-    _i1.DragTargetLeave<T>? onLeave,
+    super.onLeave,
 
     /// optionalParameters: {void Function(DragTargetDetails<T>)? onMove} , default:none
-    _i1.DragTargetMove<T>? onMove,
+    super.onMove,
 
     /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.translucent} , default:processed=PrefixedIdentifierImpl
-    _i8.HitTestBehavior hitTestBehavior = _i9.HitTestBehavior.translucent,
-  }) : super(
-          key: key,
-          builder: builder,
-          onWillAccept: onWillAccept,
-          onAccept: onAccept,
-          onAcceptWithDetails: onAcceptWithDetails,
-          onLeave: onLeave,
-          onMove: onMove,
-          hitTestBehavior: hitTestBehavior,
-        ) {
+    super.hitTestBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.DragTargetBuilder<T>>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'onWillAccept': _i2.BuilderArg<_i1.DragTargetWillAccept<T>?>(
+            name: 'onWillAccept',
+            init: onWillAccept,
+            isNamed: true,
+          ),
+          'onAccept': _i2.BuilderArg<_i1.DragTargetAccept<T>?>(
+            name: 'onAccept',
+            init: onAccept,
+            isNamed: true,
+          ),
+          'onAcceptWithDetails': _i2.BuilderArg<_i1.DragTargetAcceptWithDetails<T>?>(
+            name: 'onAcceptWithDetails',
+            init: onAcceptWithDetails,
+            isNamed: true,
+          ),
+          'onLeave': _i2.BuilderArg<_i1.DragTargetLeave<T>?>(
+            name: 'onLeave',
+            init: onLeave,
+            isNamed: true,
+          ),
+          'onMove': _i2.BuilderArg<_i1.DragTargetMove<T>?>(
+            name: 'onMove',
+            init: onMove,
+            isNamed: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i8.HitTestBehavior>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+            defaultValue: _i9.HitTestBehavior.translucent,
+          ),
+        },
+        super() {
     mateBuilderName = 'DragTarget';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DragTarget$Mate<T>(
@@ -560,46 +566,8 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
           onMove: p.get('onMove').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'onWillAccept',
-      onWillAccept,
-      isNamed: true,
-    );
-    mateUse(
-      'onAccept',
-      onAccept,
-      isNamed: true,
-    );
-    mateUse(
-      'onAcceptWithDetails',
-      onAcceptWithDetails,
-      isNamed: true,
-    );
-    mateUse(
-      'onLeave',
-      onLeave,
-      isNamed: true,
-    );
-    mateUse(
-      'onMove',
-      onMove,
-      isNamed: true,
-    );
-    mateUse(
-      'hitTestBehavior',
-      hitTestBehavior,
-      isNamed: true,
-      defaultValue: _i9.HitTestBehavior.translucent,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

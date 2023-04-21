@@ -10,17 +10,22 @@ class CachingIterable$Mate<E> extends _i1.CachingIterable<E> with _i2.Mate {
   CachingIterable$Mate(
 
       /// requiredParameters: Iterator<E> _prefillIterator
-      Iterator<E> _prefillIterator)
-      : super(_prefillIterator) {
+      super._prefillIterator)
+      : mateParams = {
+          '_prefillIterator': _i2.BuilderArg<Iterator<E>>(
+            name: '_prefillIterator',
+            init: _prefillIterator,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'CachingIterable';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => CachingIterable$Mate<E>(p.get('_prefillIterator').value);
-    mateUse(
-      '_prefillIterator',
-      _prefillIterator,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Factory<T>
@@ -29,15 +34,20 @@ class Factory$Mate<T> extends _i1.Factory<T> with _i2.Mate {
   Factory$Mate(
 
       /// requiredParameters: T Function() constructor
-      _i1.ValueGetter<T> constructor)
-      : super(constructor) {
+      super.constructor)
+      : mateParams = {
+          'constructor': _i2.BuilderArg<_i1.ValueGetter<T>>(
+            name: 'constructor',
+            init: constructor,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'Factory';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => Factory$Mate<T>(p.get('constructor').value);
-    mateUse(
-      'constructor',
-      constructor,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

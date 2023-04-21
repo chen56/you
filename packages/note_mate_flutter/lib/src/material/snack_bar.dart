@@ -18,34 +18,63 @@ class SnackBarAction$Mate extends _i1.SnackBarAction with _i2.Mate {
   /// SnackBarAction SnackBarAction({Key? key, Color? textColor, Color? disabledTextColor, Color? backgroundColor, Color? disabledBackgroundColor, required String label, required void Function() onPressed})
   SnackBarAction$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i4.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {Color? disabledTextColor} , default:none
-    _i4.Color? disabledTextColor,
+    super.disabledTextColor,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? disabledBackgroundColor} , default:none
-    _i4.Color? disabledBackgroundColor,
+    super.disabledBackgroundColor,
 
     /// optionalParameters: {required String label} , default:none
-    required String label,
+    required super.label,
 
     /// optionalParameters: {required void Function() onPressed} , default:none
-    required _i4.VoidCallback onPressed,
-  }) : super(
-          key: key,
-          textColor: textColor,
-          disabledTextColor: disabledTextColor,
-          backgroundColor: backgroundColor,
-          disabledBackgroundColor: disabledBackgroundColor,
-          label: label,
-          onPressed: onPressed,
-        ) {
+    required super.onPressed,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'disabledTextColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'disabledTextColor',
+            init: disabledTextColor,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'disabledBackgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'disabledBackgroundColor',
+            init: disabledBackgroundColor,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SnackBarAction';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SnackBarAction$Mate(
@@ -57,42 +86,10 @@ class SnackBarAction$Mate extends _i1.SnackBarAction with _i2.Mate {
           label: p.get('label').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledTextColor',
-      disabledTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledBackgroundColor',
-      disabledBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SnackBar extends StatefulWidget
@@ -100,78 +97,153 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
   /// SnackBar SnackBar({Key? key, required Widget content, Color? backgroundColor, double? elevation, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? padding, double? width, ShapeBorder? shape, SnackBarBehavior? behavior, SnackBarAction? action, double? actionOverflowThreshold, bool? showCloseIcon, Color? closeIconColor, Duration duration = _snackBarDisplayDuration, Animation<double>? animation, void Function()? onVisible, DismissDirection dismissDirection = DismissDirection.down, Clip clipBehavior = Clip.hardEdge})
   SnackBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget content} , default:none
-    required _i5.Widget content,
+    required super.content,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i6.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i6.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i7.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {SnackBarBehavior? behavior} , default:none
-    _i8.SnackBarBehavior? behavior,
+    super.behavior,
 
     /// optionalParameters: {SnackBarAction? action} , default:none
-    _i1.SnackBarAction? action,
+    super.action,
 
     /// optionalParameters: {double? actionOverflowThreshold} , default:none
-    double? actionOverflowThreshold,
+    super.actionOverflowThreshold,
 
     /// optionalParameters: {bool? showCloseIcon} , default:none
-    bool? showCloseIcon,
+    super.showCloseIcon,
 
     /// optionalParameters: {Color? closeIconColor} , default:none
-    _i4.Color? closeIconColor,
+    super.closeIconColor,
 
     /// optionalParameters: {Duration duration = _snackBarDisplayDuration} , default:unprocessed=SimpleIdentifierImpl
-    required Duration duration,
+    super.duration,
 
     /// optionalParameters: {Animation<double>? animation} , default:none
-    _i9.Animation<double>? animation,
+    super.animation,
 
     /// optionalParameters: {void Function()? onVisible} , default:none
-    _i4.VoidCallback? onVisible,
+    super.onVisible,
 
     /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i10.DismissDirection dismissDirection = _i11.DismissDirection.down,
+    super.dismissDirection,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
-  }) : super(
-          key: key,
-          content: content,
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          margin: margin,
-          padding: padding,
-          width: width,
-          shape: shape,
-          behavior: behavior,
-          action: action,
-          actionOverflowThreshold: actionOverflowThreshold,
-          showCloseIcon: showCloseIcon,
-          closeIconColor: closeIconColor,
-          duration: duration,
-          animation: animation,
-          onVisible: onVisible,
-          dismissDirection: dismissDirection,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'content': _i2.BuilderArg<_i5.Widget>(
+            name: 'content',
+            init: content,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i8.SnackBarBehavior?>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+          ),
+          'action': _i2.BuilderArg<_i1.SnackBarAction?>(
+            name: 'action',
+            init: action,
+            isNamed: true,
+          ),
+          'actionOverflowThreshold': _i2.BuilderArg<double?>(
+            name: 'actionOverflowThreshold',
+            init: actionOverflowThreshold,
+            isNamed: true,
+          ),
+          'showCloseIcon': _i2.BuilderArg<bool?>(
+            name: 'showCloseIcon',
+            init: showCloseIcon,
+            isNamed: true,
+          ),
+          'closeIconColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'closeIconColor',
+            init: closeIconColor,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'animation': _i2.BuilderArg<_i9.Animation<double>?>(
+            name: 'animation',
+            init: animation,
+            isNamed: true,
+          ),
+          'onVisible': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onVisible',
+            init: onVisible,
+            isNamed: true,
+          ),
+          'dismissDirection': _i2.BuilderArg<_i10.DismissDirection>(
+            name: 'dismissDirection',
+            init: dismissDirection,
+            isNamed: true,
+            defaultValue: _i11.DismissDirection.down,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'SnackBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SnackBar$Mate(
@@ -194,97 +266,8 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
           dismissDirection: p.get('dismissDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'content',
-      content,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-    );
-    mateUse(
-      'action',
-      action,
-      isNamed: true,
-    );
-    mateUse(
-      'actionOverflowThreshold',
-      actionOverflowThreshold,
-      isNamed: true,
-    );
-    mateUse(
-      'showCloseIcon',
-      showCloseIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'closeIconColor',
-      closeIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'animation',
-      animation,
-      isNamed: true,
-    );
-    mateUse(
-      'onVisible',
-      onVisible,
-      isNamed: true,
-    );
-    mateUse(
-      'dismissDirection',
-      dismissDirection,
-      isNamed: true,
-      defaultValue: _i11.DismissDirection.down,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

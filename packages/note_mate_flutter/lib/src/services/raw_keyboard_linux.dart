@@ -9,34 +9,67 @@ class RawKeyEventDataLinux$Mate extends _i1.RawKeyEventDataLinux with _i2.Mate {
   /// RawKeyEventDataLinux RawKeyEventDataLinux({required KeyHelper keyHelper, int unicodeScalarValues = 0, int scanCode = 0, int keyCode = 0, int modifiers = 0, required bool isDown, int? specifiedLogicalKey})
   RawKeyEventDataLinux$Mate({
     /// optionalParameters: {required KeyHelper keyHelper} , default:none
-    required _i1.KeyHelper keyHelper,
+    required super.keyHelper,
 
     /// optionalParameters: {int unicodeScalarValues = 0} , default:processed=IntegerLiteralImpl
-    int unicodeScalarValues = 0,
+    super.unicodeScalarValues,
 
     /// optionalParameters: {int scanCode = 0} , default:processed=IntegerLiteralImpl
-    int scanCode = 0,
+    super.scanCode,
 
     /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
-    int keyCode = 0,
+    super.keyCode,
 
     /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
-    int modifiers = 0,
+    super.modifiers,
 
     /// optionalParameters: {required bool isDown} , default:none
-    required bool isDown,
+    required super.isDown,
 
     /// optionalParameters: {int? specifiedLogicalKey} , default:none
-    int? specifiedLogicalKey,
-  }) : super(
-          keyHelper: keyHelper,
-          unicodeScalarValues: unicodeScalarValues,
-          scanCode: scanCode,
-          keyCode: keyCode,
-          modifiers: modifiers,
-          isDown: isDown,
-          specifiedLogicalKey: specifiedLogicalKey,
-        ) {
+    super.specifiedLogicalKey,
+  })  : mateParams = {
+          'keyHelper': _i2.BuilderArg<_i1.KeyHelper>(
+            name: 'keyHelper',
+            init: keyHelper,
+            isNamed: true,
+          ),
+          'unicodeScalarValues': _i2.BuilderArg<int>(
+            name: 'unicodeScalarValues',
+            init: unicodeScalarValues,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'scanCode': _i2.BuilderArg<int>(
+            name: 'scanCode',
+            init: scanCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'keyCode': _i2.BuilderArg<int>(
+            name: 'keyCode',
+            init: keyCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'modifiers': _i2.BuilderArg<int>(
+            name: 'modifiers',
+            init: modifiers,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'isDown': _i2.BuilderArg<bool>(
+            name: 'isDown',
+            init: isDown,
+            isNamed: true,
+          ),
+          'specifiedLogicalKey': _i2.BuilderArg<int?>(
+            name: 'specifiedLogicalKey',
+            init: specifiedLogicalKey,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyEventDataLinux';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataLinux$Mate(
@@ -48,44 +81,8 @@ class RawKeyEventDataLinux$Mate extends _i1.RawKeyEventDataLinux with _i2.Mate {
           isDown: p.get('isDown').build(),
           specifiedLogicalKey: p.get('specifiedLogicalKey').build(),
         );
-    mateUse(
-      'keyHelper',
-      keyHelper,
-      isNamed: true,
-    );
-    mateUse(
-      'unicodeScalarValues',
-      unicodeScalarValues,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'scanCode',
-      scanCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'keyCode',
-      keyCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'modifiers',
-      modifiers,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'isDown',
-      isDown,
-      isNamed: true,
-    );
-    mateUse(
-      'specifiedLogicalKey',
-      specifiedLogicalKey,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

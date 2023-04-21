@@ -19,46 +19,91 @@ class InputDecorator$Mate extends _i1.InputDecorator with _i2.Mate {
   /// InputDecorator InputDecorator({Key? key, required InputDecoration decoration, TextStyle? baseStyle, TextAlign? textAlign, TextAlignVertical? textAlignVertical, bool isFocused = false, bool isHovering = false, bool expands = false, bool isEmpty = false, Widget? child})
   InputDecorator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required InputDecoration decoration} , default:none
-    required _i1.InputDecoration decoration,
+    required super.decoration,
 
     /// optionalParameters: {TextStyle? baseStyle} , default:none
-    _i4.TextStyle? baseStyle,
+    super.baseStyle,
 
     /// optionalParameters: {TextAlign? textAlign} , default:none
-    _i5.TextAlign? textAlign,
+    super.textAlign,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
-    _i6.TextAlignVertical? textAlignVertical,
+    super.textAlignVertical,
 
     /// optionalParameters: {bool isFocused = false} , default:processed=BooleanLiteralImpl
-    bool isFocused = false,
+    super.isFocused,
 
     /// optionalParameters: {bool isHovering = false} , default:processed=BooleanLiteralImpl
-    bool isHovering = false,
+    super.isHovering,
 
     /// optionalParameters: {bool expands = false} , default:processed=BooleanLiteralImpl
-    bool expands = false,
+    super.expands,
 
     /// optionalParameters: {bool isEmpty = false} , default:processed=BooleanLiteralImpl
-    bool isEmpty = false,
+    super.isEmpty,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
-  }) : super(
-          key: key,
-          decoration: decoration,
-          baseStyle: baseStyle,
-          textAlign: textAlign,
-          textAlignVertical: textAlignVertical,
-          isFocused: isFocused,
-          isHovering: isHovering,
-          expands: expands,
-          isEmpty: isEmpty,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i1.InputDecoration>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'baseStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'baseStyle',
+            init: baseStyle,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i5.TextAlign?>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+          ),
+          'textAlignVertical': _i2.BuilderArg<_i6.TextAlignVertical?>(
+            name: 'textAlignVertical',
+            init: textAlignVertical,
+            isNamed: true,
+          ),
+          'isFocused': _i2.BuilderArg<bool>(
+            name: 'isFocused',
+            init: isFocused,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isHovering': _i2.BuilderArg<bool>(
+            name: 'isHovering',
+            init: isHovering,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'expands': _i2.BuilderArg<bool>(
+            name: 'expands',
+            init: expands,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isEmpty': _i2.BuilderArg<bool>(
+            name: 'isEmpty',
+            init: isEmpty,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InputDecorator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecorator$Mate(
@@ -73,61 +118,10 @@ class InputDecorator$Mate extends _i1.InputDecorator with _i2.Mate {
           isEmpty: p.get('isEmpty').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'baseStyle',
-      baseStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlignVertical',
-      textAlignVertical,
-      isNamed: true,
-    );
-    mateUse(
-      'isFocused',
-      isFocused,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isHovering',
-      isHovering,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'expands',
-      expands,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isEmpty',
-      isEmpty,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class InputDecoration
@@ -135,206 +129,409 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
   /// InputDecoration InputDecoration({Widget? icon, Color? iconColor, Widget? label, String? labelText, TextStyle? labelStyle, TextStyle? floatingLabelStyle, String? helperText, TextStyle? helperStyle, int? helperMaxLines, String? hintText, TextStyle? hintStyle, TextDirection? hintTextDirection, int? hintMaxLines, String? errorText, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, bool isCollapsed = false, bool? isDense, EdgeInsetsGeometry? contentPadding, Widget? prefixIcon, BoxConstraints? prefixIconConstraints, Widget? prefix, String? prefixText, TextStyle? prefixStyle, Color? prefixIconColor, Widget? suffixIcon, Widget? suffix, String? suffixText, TextStyle? suffixStyle, Color? suffixIconColor, BoxConstraints? suffixIconConstraints, Widget? counter, String? counterText, TextStyle? counterStyle, bool? filled, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool enabled = true, String? semanticCounterText, bool? alignLabelWithHint, BoxConstraints? constraints})
   InputDecoration$Mate({
     /// optionalParameters: {Widget? icon} , default:none
-    _i7.Widget? icon,
+    super.icon,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i5.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {Widget? label} , default:none
-    _i7.Widget? label,
+    super.label,
 
     /// optionalParameters: {String? labelText} , default:none
-    String? labelText,
+    super.labelText,
 
     /// optionalParameters: {TextStyle? labelStyle} , default:none
-    _i4.TextStyle? labelStyle,
+    super.labelStyle,
 
     /// optionalParameters: {TextStyle? floatingLabelStyle} , default:none
-    _i4.TextStyle? floatingLabelStyle,
+    super.floatingLabelStyle,
 
     /// optionalParameters: {String? helperText} , default:none
-    String? helperText,
+    super.helperText,
 
     /// optionalParameters: {TextStyle? helperStyle} , default:none
-    _i4.TextStyle? helperStyle,
+    super.helperStyle,
 
     /// optionalParameters: {int? helperMaxLines} , default:none
-    int? helperMaxLines,
+    super.helperMaxLines,
 
     /// optionalParameters: {String? hintText} , default:none
-    String? hintText,
+    super.hintText,
 
     /// optionalParameters: {TextStyle? hintStyle} , default:none
-    _i4.TextStyle? hintStyle,
+    super.hintStyle,
 
     /// optionalParameters: {TextDirection? hintTextDirection} , default:none
-    _i5.TextDirection? hintTextDirection,
+    super.hintTextDirection,
 
     /// optionalParameters: {int? hintMaxLines} , default:none
-    int? hintMaxLines,
+    super.hintMaxLines,
 
     /// optionalParameters: {String? errorText} , default:none
-    String? errorText,
+    super.errorText,
 
     /// optionalParameters: {TextStyle? errorStyle} , default:none
-    _i4.TextStyle? errorStyle,
+    super.errorStyle,
 
     /// optionalParameters: {int? errorMaxLines} , default:none
-    int? errorMaxLines,
+    super.errorMaxLines,
 
     /// optionalParameters: {FloatingLabelBehavior? floatingLabelBehavior} , default:none
-    _i1.FloatingLabelBehavior? floatingLabelBehavior,
+    super.floatingLabelBehavior,
 
     /// optionalParameters: {FloatingLabelAlignment? floatingLabelAlignment} , default:none
-    _i1.FloatingLabelAlignment? floatingLabelAlignment,
+    super.floatingLabelAlignment,
 
     /// optionalParameters: {bool isCollapsed = false} , default:processed=BooleanLiteralImpl
-    bool isCollapsed = false,
+    super.isCollapsed,
 
     /// optionalParameters: {bool? isDense} , default:none
-    bool? isDense,
+    super.isDense,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
-    _i8.EdgeInsetsGeometry? contentPadding,
+    super.contentPadding,
 
     /// optionalParameters: {Widget? prefixIcon} , default:none
-    _i7.Widget? prefixIcon,
+    super.prefixIcon,
 
     /// optionalParameters: {BoxConstraints? prefixIconConstraints} , default:none
-    _i9.BoxConstraints? prefixIconConstraints,
+    super.prefixIconConstraints,
 
     /// optionalParameters: {Widget? prefix} , default:none
-    _i7.Widget? prefix,
+    super.prefix,
 
     /// optionalParameters: {String? prefixText} , default:none
-    String? prefixText,
+    super.prefixText,
 
     /// optionalParameters: {TextStyle? prefixStyle} , default:none
-    _i4.TextStyle? prefixStyle,
+    super.prefixStyle,
 
     /// optionalParameters: {Color? prefixIconColor} , default:none
-    _i5.Color? prefixIconColor,
+    super.prefixIconColor,
 
     /// optionalParameters: {Widget? suffixIcon} , default:none
-    _i7.Widget? suffixIcon,
+    super.suffixIcon,
 
     /// optionalParameters: {Widget? suffix} , default:none
-    _i7.Widget? suffix,
+    super.suffix,
 
     /// optionalParameters: {String? suffixText} , default:none
-    String? suffixText,
+    super.suffixText,
 
     /// optionalParameters: {TextStyle? suffixStyle} , default:none
-    _i4.TextStyle? suffixStyle,
+    super.suffixStyle,
 
     /// optionalParameters: {Color? suffixIconColor} , default:none
-    _i5.Color? suffixIconColor,
+    super.suffixIconColor,
 
     /// optionalParameters: {BoxConstraints? suffixIconConstraints} , default:none
-    _i9.BoxConstraints? suffixIconConstraints,
+    super.suffixIconConstraints,
 
     /// optionalParameters: {Widget? counter} , default:none
-    _i7.Widget? counter,
+    super.counter,
 
     /// optionalParameters: {String? counterText} , default:none
-    String? counterText,
+    super.counterText,
 
     /// optionalParameters: {TextStyle? counterStyle} , default:none
-    _i4.TextStyle? counterStyle,
+    super.counterStyle,
 
     /// optionalParameters: {bool? filled} , default:none
-    bool? filled,
+    super.filled,
 
     /// optionalParameters: {Color? fillColor} , default:none
-    _i5.Color? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i5.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {InputBorder? errorBorder} , default:none
-    _i10.InputBorder? errorBorder,
+    super.errorBorder,
 
     /// optionalParameters: {InputBorder? focusedBorder} , default:none
-    _i10.InputBorder? focusedBorder,
+    super.focusedBorder,
 
     /// optionalParameters: {InputBorder? focusedErrorBorder} , default:none
-    _i10.InputBorder? focusedErrorBorder,
+    super.focusedErrorBorder,
 
     /// optionalParameters: {InputBorder? disabledBorder} , default:none
-    _i10.InputBorder? disabledBorder,
+    super.disabledBorder,
 
     /// optionalParameters: {InputBorder? enabledBorder} , default:none
-    _i10.InputBorder? enabledBorder,
+    super.enabledBorder,
 
     /// optionalParameters: {InputBorder? border} , default:none
-    _i10.InputBorder? border,
+    super.border,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {String? semanticCounterText} , default:none
-    String? semanticCounterText,
+    super.semanticCounterText,
 
     /// optionalParameters: {bool? alignLabelWithHint} , default:none
-    bool? alignLabelWithHint,
+    super.alignLabelWithHint,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i9.BoxConstraints? constraints,
-  }) : super(
-          icon: icon,
-          iconColor: iconColor,
-          label: label,
-          labelText: labelText,
-          labelStyle: labelStyle,
-          floatingLabelStyle: floatingLabelStyle,
-          helperText: helperText,
-          helperStyle: helperStyle,
-          helperMaxLines: helperMaxLines,
-          hintText: hintText,
-          hintStyle: hintStyle,
-          hintTextDirection: hintTextDirection,
-          hintMaxLines: hintMaxLines,
-          errorText: errorText,
-          errorStyle: errorStyle,
-          errorMaxLines: errorMaxLines,
-          floatingLabelBehavior: floatingLabelBehavior,
-          floatingLabelAlignment: floatingLabelAlignment,
-          isCollapsed: isCollapsed,
-          isDense: isDense,
-          contentPadding: contentPadding,
-          prefixIcon: prefixIcon,
-          prefixIconConstraints: prefixIconConstraints,
-          prefix: prefix,
-          prefixText: prefixText,
-          prefixStyle: prefixStyle,
-          prefixIconColor: prefixIconColor,
-          suffixIcon: suffixIcon,
-          suffix: suffix,
-          suffixText: suffixText,
-          suffixStyle: suffixStyle,
-          suffixIconColor: suffixIconColor,
-          suffixIconConstraints: suffixIconConstraints,
-          counter: counter,
-          counterText: counterText,
-          counterStyle: counterStyle,
-          filled: filled,
-          fillColor: fillColor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          errorBorder: errorBorder,
-          focusedBorder: focusedBorder,
-          focusedErrorBorder: focusedErrorBorder,
-          disabledBorder: disabledBorder,
-          enabledBorder: enabledBorder,
-          border: border,
-          enabled: enabled,
-          semanticCounterText: semanticCounterText,
-          alignLabelWithHint: alignLabelWithHint,
-          constraints: constraints,
-        ) {
+    super.constraints,
+  })  : mateParams = {
+          'icon': _i2.BuilderArg<_i7.Widget?>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i7.Widget?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'labelText': _i2.BuilderArg<String?>(
+            name: 'labelText',
+            init: labelText,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'floatingLabelStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'floatingLabelStyle',
+            init: floatingLabelStyle,
+            isNamed: true,
+          ),
+          'helperText': _i2.BuilderArg<String?>(
+            name: 'helperText',
+            init: helperText,
+            isNamed: true,
+          ),
+          'helperStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'helperStyle',
+            init: helperStyle,
+            isNamed: true,
+          ),
+          'helperMaxLines': _i2.BuilderArg<int?>(
+            name: 'helperMaxLines',
+            init: helperMaxLines,
+            isNamed: true,
+          ),
+          'hintText': _i2.BuilderArg<String?>(
+            name: 'hintText',
+            init: hintText,
+            isNamed: true,
+          ),
+          'hintStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'hintStyle',
+            init: hintStyle,
+            isNamed: true,
+          ),
+          'hintTextDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'hintTextDirection',
+            init: hintTextDirection,
+            isNamed: true,
+          ),
+          'hintMaxLines': _i2.BuilderArg<int?>(
+            name: 'hintMaxLines',
+            init: hintMaxLines,
+            isNamed: true,
+          ),
+          'errorText': _i2.BuilderArg<String?>(
+            name: 'errorText',
+            init: errorText,
+            isNamed: true,
+          ),
+          'errorStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'errorStyle',
+            init: errorStyle,
+            isNamed: true,
+          ),
+          'errorMaxLines': _i2.BuilderArg<int?>(
+            name: 'errorMaxLines',
+            init: errorMaxLines,
+            isNamed: true,
+          ),
+          'floatingLabelBehavior': _i2.BuilderArg<_i1.FloatingLabelBehavior?>(
+            name: 'floatingLabelBehavior',
+            init: floatingLabelBehavior,
+            isNamed: true,
+          ),
+          'floatingLabelAlignment': _i2.BuilderArg<_i1.FloatingLabelAlignment?>(
+            name: 'floatingLabelAlignment',
+            init: floatingLabelAlignment,
+            isNamed: true,
+          ),
+          'isCollapsed': _i2.BuilderArg<bool>(
+            name: 'isCollapsed',
+            init: isCollapsed,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isDense': _i2.BuilderArg<bool?>(
+            name: 'isDense',
+            init: isDense,
+            isNamed: true,
+          ),
+          'contentPadding': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+            name: 'contentPadding',
+            init: contentPadding,
+            isNamed: true,
+          ),
+          'prefixIcon': _i2.BuilderArg<_i7.Widget?>(
+            name: 'prefixIcon',
+            init: prefixIcon,
+            isNamed: true,
+          ),
+          'prefixIconConstraints': _i2.BuilderArg<_i9.BoxConstraints?>(
+            name: 'prefixIconConstraints',
+            init: prefixIconConstraints,
+            isNamed: true,
+          ),
+          'prefix': _i2.BuilderArg<_i7.Widget?>(
+            name: 'prefix',
+            init: prefix,
+            isNamed: true,
+          ),
+          'prefixText': _i2.BuilderArg<String?>(
+            name: 'prefixText',
+            init: prefixText,
+            isNamed: true,
+          ),
+          'prefixStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'prefixStyle',
+            init: prefixStyle,
+            isNamed: true,
+          ),
+          'prefixIconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'prefixIconColor',
+            init: prefixIconColor,
+            isNamed: true,
+          ),
+          'suffixIcon': _i2.BuilderArg<_i7.Widget?>(
+            name: 'suffixIcon',
+            init: suffixIcon,
+            isNamed: true,
+          ),
+          'suffix': _i2.BuilderArg<_i7.Widget?>(
+            name: 'suffix',
+            init: suffix,
+            isNamed: true,
+          ),
+          'suffixText': _i2.BuilderArg<String?>(
+            name: 'suffixText',
+            init: suffixText,
+            isNamed: true,
+          ),
+          'suffixStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'suffixStyle',
+            init: suffixStyle,
+            isNamed: true,
+          ),
+          'suffixIconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'suffixIconColor',
+            init: suffixIconColor,
+            isNamed: true,
+          ),
+          'suffixIconConstraints': _i2.BuilderArg<_i9.BoxConstraints?>(
+            name: 'suffixIconConstraints',
+            init: suffixIconConstraints,
+            isNamed: true,
+          ),
+          'counter': _i2.BuilderArg<_i7.Widget?>(
+            name: 'counter',
+            init: counter,
+            isNamed: true,
+          ),
+          'counterText': _i2.BuilderArg<String?>(
+            name: 'counterText',
+            init: counterText,
+            isNamed: true,
+          ),
+          'counterStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'counterStyle',
+            init: counterStyle,
+            isNamed: true,
+          ),
+          'filled': _i2.BuilderArg<bool?>(
+            name: 'filled',
+            init: filled,
+            isNamed: true,
+          ),
+          'fillColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'errorBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'errorBorder',
+            init: errorBorder,
+            isNamed: true,
+          ),
+          'focusedBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'focusedBorder',
+            init: focusedBorder,
+            isNamed: true,
+          ),
+          'focusedErrorBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'focusedErrorBorder',
+            init: focusedErrorBorder,
+            isNamed: true,
+          ),
+          'disabledBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'disabledBorder',
+            init: disabledBorder,
+            isNamed: true,
+          ),
+          'enabledBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'enabledBorder',
+            init: enabledBorder,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'semanticCounterText': _i2.BuilderArg<String?>(
+            name: 'semanticCounterText',
+            init: semanticCounterText,
+            isNamed: true,
+          ),
+          'alignLabelWithHint': _i2.BuilderArg<bool?>(
+            name: 'alignLabelWithHint',
+            init: alignLabelWithHint,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i9.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InputDecoration';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecoration$Mate(
@@ -389,307 +586,103 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
           alignLabelWithHint: p.get('alignLabelWithHint').build(),
           constraints: p.get('constraints').build(),
         );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'labelText',
-      labelText,
-      isNamed: true,
-    );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingLabelStyle',
-      floatingLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'helperText',
-      helperText,
-      isNamed: true,
-    );
-    mateUse(
-      'helperStyle',
-      helperStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'helperMaxLines',
-      helperMaxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'hintText',
-      hintText,
-      isNamed: true,
-    );
-    mateUse(
-      'hintStyle',
-      hintStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'hintTextDirection',
-      hintTextDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'hintMaxLines',
-      hintMaxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'errorText',
-      errorText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorStyle',
-      errorStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'errorMaxLines',
-      errorMaxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingLabelBehavior',
-      floatingLabelBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingLabelAlignment',
-      floatingLabelAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'isCollapsed',
-      isCollapsed,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isDense',
-      isDense,
-      isNamed: true,
-    );
-    mateUse(
-      'contentPadding',
-      contentPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixIcon',
-      prefixIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixIconConstraints',
-      prefixIconConstraints,
-      isNamed: true,
-    );
-    mateUse(
-      'prefix',
-      prefix,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixText',
-      prefixText,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixStyle',
-      prefixStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixIconColor',
-      prefixIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'suffixIcon',
-      suffixIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'suffix',
-      suffix,
-      isNamed: true,
-    );
-    mateUse(
-      'suffixText',
-      suffixText,
-      isNamed: true,
-    );
-    mateUse(
-      'suffixStyle',
-      suffixStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'suffixIconColor',
-      suffixIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'suffixIconConstraints',
-      suffixIconConstraints,
-      isNamed: true,
-    );
-    mateUse(
-      'counter',
-      counter,
-      isNamed: true,
-    );
-    mateUse(
-      'counterText',
-      counterText,
-      isNamed: true,
-    );
-    mateUse(
-      'counterStyle',
-      counterStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'filled',
-      filled,
-      isNamed: true,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'errorBorder',
-      errorBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'focusedBorder',
-      focusedBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'focusedErrorBorder',
-      focusedErrorBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledBorder',
-      disabledBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'enabledBorder',
-      enabledBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'semanticCounterText',
-      semanticCounterText,
-      isNamed: true,
-    );
-    mateUse(
-      'alignLabelWithHint',
-      alignLabelWithHint,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
   }
 
   /// InputDecoration InputDecoration.collapsed({required String? hintText, FloatingLabelBehavior? floatingLabelBehavior, FloatingLabelAlignment? floatingLabelAlignment, TextStyle? hintStyle, TextDirection? hintTextDirection, bool? filled = false, Color? fillColor, Color? focusColor, Color? hoverColor, InputBorder? border = InputBorder.none, bool enabled = true})
   InputDecoration$Mate.collapsed({
     /// optionalParameters: {required String? hintText} , default:none
-    required String? hintText,
+    required super.hintText,
 
     /// optionalParameters: {FloatingLabelBehavior? floatingLabelBehavior} , default:none
-    _i1.FloatingLabelBehavior? floatingLabelBehavior,
+    super.floatingLabelBehavior,
 
     /// optionalParameters: {FloatingLabelAlignment? floatingLabelAlignment} , default:none
-    _i1.FloatingLabelAlignment? floatingLabelAlignment,
+    super.floatingLabelAlignment,
 
     /// optionalParameters: {TextStyle? hintStyle} , default:none
-    _i4.TextStyle? hintStyle,
+    super.hintStyle,
 
     /// optionalParameters: {TextDirection? hintTextDirection} , default:none
-    _i5.TextDirection? hintTextDirection,
+    super.hintTextDirection,
 
     /// optionalParameters: {bool? filled = false} , default:processed=BooleanLiteralImpl
-    bool? filled = false,
+    super.filled,
 
     /// optionalParameters: {Color? fillColor} , default:none
-    _i5.Color? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i5.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {InputBorder? border = InputBorder.none} , default:processed=PrefixedIdentifierImpl
-    _i10.InputBorder? border = _i11.InputBorder.none,
+    super.border,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
-  }) : super.collapsed(
-          hintText: hintText,
-          floatingLabelBehavior: floatingLabelBehavior,
-          floatingLabelAlignment: floatingLabelAlignment,
-          hintStyle: hintStyle,
-          hintTextDirection: hintTextDirection,
-          filled: filled,
-          fillColor: fillColor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          border: border,
-          enabled: enabled,
-        ) {
+    super.enabled,
+  })  : mateParams = {
+          'hintText': _i2.BuilderArg<String?>(
+            name: 'hintText',
+            init: hintText,
+            isNamed: true,
+          ),
+          'floatingLabelBehavior': _i2.BuilderArg<_i1.FloatingLabelBehavior?>(
+            name: 'floatingLabelBehavior',
+            init: floatingLabelBehavior,
+            isNamed: true,
+          ),
+          'floatingLabelAlignment': _i2.BuilderArg<_i1.FloatingLabelAlignment?>(
+            name: 'floatingLabelAlignment',
+            init: floatingLabelAlignment,
+            isNamed: true,
+          ),
+          'hintStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'hintStyle',
+            init: hintStyle,
+            isNamed: true,
+          ),
+          'hintTextDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'hintTextDirection',
+            init: hintTextDirection,
+            isNamed: true,
+          ),
+          'filled': _i2.BuilderArg<bool?>(
+            name: 'filled',
+            init: filled,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'fillColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+            defaultValue: _i11.InputBorder.none,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.collapsed() {
     mateBuilderName = 'InputDecoration.collapsed';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecoration$Mate.collapsed(
@@ -705,65 +698,10 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
           border: p.get('border').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse(
-      'hintText',
-      hintText,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingLabelBehavior',
-      floatingLabelBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingLabelAlignment',
-      floatingLabelAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'hintStyle',
-      hintStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'hintTextDirection',
-      hintTextDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'filled',
-      filled,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-      defaultValue: _i11.InputBorder.none,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class InputDecorationTheme with Diagnosticable
@@ -771,134 +709,269 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
   /// InputDecorationTheme InputDecorationTheme({TextStyle? labelStyle, TextStyle? floatingLabelStyle, TextStyle? helperStyle, int? helperMaxLines, TextStyle? hintStyle, TextStyle? errorStyle, int? errorMaxLines, FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto, FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start, bool isDense = false, EdgeInsetsGeometry? contentPadding, bool isCollapsed = false, Color? iconColor, TextStyle? prefixStyle, Color? prefixIconColor, TextStyle? suffixStyle, Color? suffixIconColor, TextStyle? counterStyle, bool filled = false, Color? fillColor, BorderSide? activeIndicatorBorder, BorderSide? outlineBorder, Color? focusColor, Color? hoverColor, InputBorder? errorBorder, InputBorder? focusedBorder, InputBorder? focusedErrorBorder, InputBorder? disabledBorder, InputBorder? enabledBorder, InputBorder? border, bool alignLabelWithHint = false, BoxConstraints? constraints})
   InputDecorationTheme$Mate({
     /// optionalParameters: {TextStyle? labelStyle} , default:none
-    _i4.TextStyle? labelStyle,
+    super.labelStyle,
 
     /// optionalParameters: {TextStyle? floatingLabelStyle} , default:none
-    _i4.TextStyle? floatingLabelStyle,
+    super.floatingLabelStyle,
 
     /// optionalParameters: {TextStyle? helperStyle} , default:none
-    _i4.TextStyle? helperStyle,
+    super.helperStyle,
 
     /// optionalParameters: {int? helperMaxLines} , default:none
-    int? helperMaxLines,
+    super.helperMaxLines,
 
     /// optionalParameters: {TextStyle? hintStyle} , default:none
-    _i4.TextStyle? hintStyle,
+    super.hintStyle,
 
     /// optionalParameters: {TextStyle? errorStyle} , default:none
-    _i4.TextStyle? errorStyle,
+    super.errorStyle,
 
     /// optionalParameters: {int? errorMaxLines} , default:none
-    int? errorMaxLines,
+    super.errorMaxLines,
 
     /// optionalParameters: {FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto} , default:processed=PrefixedIdentifierImpl
-    _i1.FloatingLabelBehavior floatingLabelBehavior = _i11.FloatingLabelBehavior.auto,
+    super.floatingLabelBehavior,
 
     /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i1.FloatingLabelAlignment floatingLabelAlignment = _i11.FloatingLabelAlignment.start,
+    super.floatingLabelAlignment,
 
     /// optionalParameters: {bool isDense = false} , default:processed=BooleanLiteralImpl
-    bool isDense = false,
+    super.isDense,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
-    _i8.EdgeInsetsGeometry? contentPadding,
+    super.contentPadding,
 
     /// optionalParameters: {bool isCollapsed = false} , default:processed=BooleanLiteralImpl
-    bool isCollapsed = false,
+    super.isCollapsed,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i5.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {TextStyle? prefixStyle} , default:none
-    _i4.TextStyle? prefixStyle,
+    super.prefixStyle,
 
     /// optionalParameters: {Color? prefixIconColor} , default:none
-    _i5.Color? prefixIconColor,
+    super.prefixIconColor,
 
     /// optionalParameters: {TextStyle? suffixStyle} , default:none
-    _i4.TextStyle? suffixStyle,
+    super.suffixStyle,
 
     /// optionalParameters: {Color? suffixIconColor} , default:none
-    _i5.Color? suffixIconColor,
+    super.suffixIconColor,
 
     /// optionalParameters: {TextStyle? counterStyle} , default:none
-    _i4.TextStyle? counterStyle,
+    super.counterStyle,
 
     /// optionalParameters: {bool filled = false} , default:processed=BooleanLiteralImpl
-    bool filled = false,
+    super.filled,
 
     /// optionalParameters: {Color? fillColor} , default:none
-    _i5.Color? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {BorderSide? activeIndicatorBorder} , default:none
-    _i12.BorderSide? activeIndicatorBorder,
+    super.activeIndicatorBorder,
 
     /// optionalParameters: {BorderSide? outlineBorder} , default:none
-    _i12.BorderSide? outlineBorder,
+    super.outlineBorder,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i5.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {InputBorder? errorBorder} , default:none
-    _i10.InputBorder? errorBorder,
+    super.errorBorder,
 
     /// optionalParameters: {InputBorder? focusedBorder} , default:none
-    _i10.InputBorder? focusedBorder,
+    super.focusedBorder,
 
     /// optionalParameters: {InputBorder? focusedErrorBorder} , default:none
-    _i10.InputBorder? focusedErrorBorder,
+    super.focusedErrorBorder,
 
     /// optionalParameters: {InputBorder? disabledBorder} , default:none
-    _i10.InputBorder? disabledBorder,
+    super.disabledBorder,
 
     /// optionalParameters: {InputBorder? enabledBorder} , default:none
-    _i10.InputBorder? enabledBorder,
+    super.enabledBorder,
 
     /// optionalParameters: {InputBorder? border} , default:none
-    _i10.InputBorder? border,
+    super.border,
 
     /// optionalParameters: {bool alignLabelWithHint = false} , default:processed=BooleanLiteralImpl
-    bool alignLabelWithHint = false,
+    super.alignLabelWithHint,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i9.BoxConstraints? constraints,
-  }) : super(
-          labelStyle: labelStyle,
-          floatingLabelStyle: floatingLabelStyle,
-          helperStyle: helperStyle,
-          helperMaxLines: helperMaxLines,
-          hintStyle: hintStyle,
-          errorStyle: errorStyle,
-          errorMaxLines: errorMaxLines,
-          floatingLabelBehavior: floatingLabelBehavior,
-          floatingLabelAlignment: floatingLabelAlignment,
-          isDense: isDense,
-          contentPadding: contentPadding,
-          isCollapsed: isCollapsed,
-          iconColor: iconColor,
-          prefixStyle: prefixStyle,
-          prefixIconColor: prefixIconColor,
-          suffixStyle: suffixStyle,
-          suffixIconColor: suffixIconColor,
-          counterStyle: counterStyle,
-          filled: filled,
-          fillColor: fillColor,
-          activeIndicatorBorder: activeIndicatorBorder,
-          outlineBorder: outlineBorder,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          errorBorder: errorBorder,
-          focusedBorder: focusedBorder,
-          focusedErrorBorder: focusedErrorBorder,
-          disabledBorder: disabledBorder,
-          enabledBorder: enabledBorder,
-          border: border,
-          alignLabelWithHint: alignLabelWithHint,
-          constraints: constraints,
-        ) {
+    super.constraints,
+  })  : mateParams = {
+          'labelStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'floatingLabelStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'floatingLabelStyle',
+            init: floatingLabelStyle,
+            isNamed: true,
+          ),
+          'helperStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'helperStyle',
+            init: helperStyle,
+            isNamed: true,
+          ),
+          'helperMaxLines': _i2.BuilderArg<int?>(
+            name: 'helperMaxLines',
+            init: helperMaxLines,
+            isNamed: true,
+          ),
+          'hintStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'hintStyle',
+            init: hintStyle,
+            isNamed: true,
+          ),
+          'errorStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'errorStyle',
+            init: errorStyle,
+            isNamed: true,
+          ),
+          'errorMaxLines': _i2.BuilderArg<int?>(
+            name: 'errorMaxLines',
+            init: errorMaxLines,
+            isNamed: true,
+          ),
+          'floatingLabelBehavior': _i2.BuilderArg<_i1.FloatingLabelBehavior>(
+            name: 'floatingLabelBehavior',
+            init: floatingLabelBehavior,
+            isNamed: true,
+            defaultValue: _i11.FloatingLabelBehavior.auto,
+          ),
+          'floatingLabelAlignment': _i2.BuilderArg<_i1.FloatingLabelAlignment>(
+            name: 'floatingLabelAlignment',
+            init: floatingLabelAlignment,
+            isNamed: true,
+            defaultValue: _i11.FloatingLabelAlignment.start,
+          ),
+          'isDense': _i2.BuilderArg<bool>(
+            name: 'isDense',
+            init: isDense,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'contentPadding': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+            name: 'contentPadding',
+            init: contentPadding,
+            isNamed: true,
+          ),
+          'isCollapsed': _i2.BuilderArg<bool>(
+            name: 'isCollapsed',
+            init: isCollapsed,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'iconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'prefixStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'prefixStyle',
+            init: prefixStyle,
+            isNamed: true,
+          ),
+          'prefixIconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'prefixIconColor',
+            init: prefixIconColor,
+            isNamed: true,
+          ),
+          'suffixStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'suffixStyle',
+            init: suffixStyle,
+            isNamed: true,
+          ),
+          'suffixIconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'suffixIconColor',
+            init: suffixIconColor,
+            isNamed: true,
+          ),
+          'counterStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'counterStyle',
+            init: counterStyle,
+            isNamed: true,
+          ),
+          'filled': _i2.BuilderArg<bool>(
+            name: 'filled',
+            init: filled,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'fillColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'activeIndicatorBorder': _i2.BuilderArg<_i12.BorderSide?>(
+            name: 'activeIndicatorBorder',
+            init: activeIndicatorBorder,
+            isNamed: true,
+          ),
+          'outlineBorder': _i2.BuilderArg<_i12.BorderSide?>(
+            name: 'outlineBorder',
+            init: outlineBorder,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'errorBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'errorBorder',
+            init: errorBorder,
+            isNamed: true,
+          ),
+          'focusedBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'focusedBorder',
+            init: focusedBorder,
+            isNamed: true,
+          ),
+          'focusedErrorBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'focusedErrorBorder',
+            init: focusedErrorBorder,
+            isNamed: true,
+          ),
+          'disabledBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'disabledBorder',
+            init: disabledBorder,
+            isNamed: true,
+          ),
+          'enabledBorder': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'enabledBorder',
+            init: enabledBorder,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i10.InputBorder?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+          ),
+          'alignLabelWithHint': _i2.BuilderArg<bool>(
+            name: 'alignLabelWithHint',
+            init: alignLabelWithHint,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'constraints': _i2.BuilderArg<_i9.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InputDecorationTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDecorationTheme$Mate(
@@ -935,171 +1008,8 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
           alignLabelWithHint: p.get('alignLabelWithHint').build(),
           constraints: p.get('constraints').build(),
         );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingLabelStyle',
-      floatingLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'helperStyle',
-      helperStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'helperMaxLines',
-      helperMaxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'hintStyle',
-      hintStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'errorStyle',
-      errorStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'errorMaxLines',
-      errorMaxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingLabelBehavior',
-      floatingLabelBehavior,
-      isNamed: true,
-      defaultValue: _i11.FloatingLabelBehavior.auto,
-    );
-    mateUse(
-      'floatingLabelAlignment',
-      floatingLabelAlignment,
-      isNamed: true,
-      defaultValue: _i11.FloatingLabelAlignment.start,
-    );
-    mateUse(
-      'isDense',
-      isDense,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'contentPadding',
-      contentPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'isCollapsed',
-      isCollapsed,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixStyle',
-      prefixStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'prefixIconColor',
-      prefixIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'suffixStyle',
-      suffixStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'suffixIconColor',
-      suffixIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'counterStyle',
-      counterStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'filled',
-      filled,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeIndicatorBorder',
-      activeIndicatorBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'outlineBorder',
-      outlineBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'errorBorder',
-      errorBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'focusedBorder',
-      focusedBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'focusedErrorBorder',
-      focusedErrorBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledBorder',
-      disabledBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'enabledBorder',
-      enabledBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-    );
-    mateUse(
-      'alignLabelWithHint',
-      alignLabelWithHint,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -14,26 +14,47 @@ class TextSelectionToolbarTextButton$Mate extends _i1.TextSelectionToolbarTextBu
   /// TextSelectionToolbarTextButton TextSelectionToolbarTextButton({Key? key, required Widget child, required EdgeInsets padding, void Function()? onPressed, AlignmentGeometry? alignment})
   TextSelectionToolbarTextButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {required EdgeInsets padding} , default:none
-    required _i5.EdgeInsets padding,
+    required super.padding,
 
     /// optionalParameters: {void Function()? onPressed} , default:none
-    _i6.VoidCallback? onPressed,
+    super.onPressed,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i7.AlignmentGeometry? alignment,
-  }) : super(
-          key: key,
-          child: child,
-          padding: padding,
-          onPressed: onPressed,
-          alignment: alignment,
-        ) {
+    super.alignment,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsets>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionToolbarTextButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TextSelectionToolbarTextButton$Mate(
@@ -43,30 +64,8 @@ class TextSelectionToolbarTextButton$Mate extends _i1.TextSelectionToolbarTextBu
           onPressed: p.get('onPressed').build(),
           alignment: p.get('alignment').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

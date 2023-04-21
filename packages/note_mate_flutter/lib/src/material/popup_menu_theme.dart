@@ -16,46 +16,87 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
   /// PopupMenuThemeData PopupMenuThemeData({Color? color, ShapeBorder? shape, double? elevation, Color? shadowColor, Color? surfaceTintColor, TextStyle? textStyle, MaterialStateProperty<TextStyle?>? labelTextStyle, bool? enableFeedback, MaterialStateProperty<MouseCursor?>? mouseCursor, PopupMenuPosition? position})
   PopupMenuThemeData$Mate({
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i4.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i5.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , default:none
-    _i6.MaterialStateProperty<_i5.TextStyle?>? labelTextStyle,
+    super.labelTextStyle,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i6.MaterialStateProperty<_i7.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {PopupMenuPosition? position} , default:none
-    _i1.PopupMenuPosition? position,
-  }) : super(
-          color: color,
-          shape: shape,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          textStyle: textStyle,
-          labelTextStyle: labelTextStyle,
-          enableFeedback: enableFeedback,
-          mouseCursor: mouseCursor,
-          position: position,
-        ) {
+    super.position,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'labelTextStyle': _i2.BuilderArg<_i6.MaterialStateProperty<_i5.TextStyle?>?>(
+            name: 'labelTextStyle',
+            init: labelTextStyle,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i6.MaterialStateProperty<_i7.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'position': _i2.BuilderArg<_i1.PopupMenuPosition?>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PopupMenuThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuThemeData$Mate(
@@ -70,57 +111,10 @@ class PopupMenuThemeData$Mate extends _i1.PopupMenuThemeData with _i2.Mate {
           mouseCursor: p.get('mouseCursor').build(),
           position: p.get('position').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'labelTextStyle',
-      labelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PopupMenuTheme extends InheritedTheme
@@ -128,18 +122,31 @@ class PopupMenuTheme$Mate extends _i1.PopupMenuTheme with _i2.Mate {
   /// PopupMenuTheme PopupMenuTheme({Key? key, required PopupMenuThemeData data, required Widget child})
   PopupMenuTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i8.Key? key,
+    super.key,
 
     /// optionalParameters: {required PopupMenuThemeData data} , default:none
-    required _i1.PopupMenuThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i9.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i8.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.PopupMenuThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PopupMenuTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PopupMenuTheme$Mate(
@@ -147,20 +154,8 @@ class PopupMenuTheme$Mate extends _i1.PopupMenuTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

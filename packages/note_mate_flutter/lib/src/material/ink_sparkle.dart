@@ -14,54 +14,104 @@ class InkSparkle$Mate extends _i1.InkSparkle with _i2.Mate {
   /// InkSparkle InkSparkle({required MaterialInkController controller, required RenderBox referenceBox, required Color color, required Offset position, required TextDirection textDirection, bool containedInkWell = true, Rect Function()? rectCallback, BorderRadius? borderRadius, ShapeBorder? customBorder, double? radius, void Function()? onRemoved, double? turbulenceSeed})
   InkSparkle$Mate({
     /// optionalParameters: {required MaterialInkController controller} , default:none
-    required _i3.MaterialInkController controller,
+    required super.controller,
 
     /// optionalParameters: {required RenderBox referenceBox} , default:none
-    required _i4.RenderBox referenceBox,
+    required super.referenceBox,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i5.Color color,
+    required super.color,
 
     /// optionalParameters: {required Offset position} , default:none
-    required _i5.Offset position,
+    required super.position,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i5.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {bool containedInkWell = true} , default:processed=BooleanLiteralImpl
-    bool containedInkWell = true,
+    super.containedInkWell,
 
     /// optionalParameters: {Rect Function()? rectCallback} , default:none
-    _i3.RectCallback? rectCallback,
+    super.rectCallback,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i6.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {ShapeBorder? customBorder} , default:none
-    _i7.ShapeBorder? customBorder,
+    super.customBorder,
 
     /// optionalParameters: {double? radius} , default:none
-    double? radius,
+    super.radius,
 
     /// optionalParameters: {void Function()? onRemoved} , default:none
-    _i5.VoidCallback? onRemoved,
+    super.onRemoved,
 
     /// optionalParameters: {double? turbulenceSeed} , default:none
-    double? turbulenceSeed,
-  }) : super(
-          controller: controller,
-          referenceBox: referenceBox,
-          color: color,
-          position: position,
-          textDirection: textDirection,
-          containedInkWell: containedInkWell,
-          rectCallback: rectCallback,
-          borderRadius: borderRadius,
-          customBorder: customBorder,
-          radius: radius,
-          onRemoved: onRemoved,
-          turbulenceSeed: turbulenceSeed,
-        ) {
+    super.turbulenceSeed,
+  })  : mateParams = {
+          'controller': _i2.BuilderArg<_i3.MaterialInkController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'referenceBox': _i2.BuilderArg<_i4.RenderBox>(
+            name: 'referenceBox',
+            init: referenceBox,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'position': _i2.BuilderArg<_i5.Offset>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'containedInkWell': _i2.BuilderArg<bool>(
+            name: 'containedInkWell',
+            init: containedInkWell,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'rectCallback': _i2.BuilderArg<_i3.RectCallback?>(
+            name: 'rectCallback',
+            init: rectCallback,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i6.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'customBorder': _i2.BuilderArg<_i7.ShapeBorder?>(
+            name: 'customBorder',
+            init: customBorder,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<double?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'onRemoved': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onRemoved',
+            init: onRemoved,
+            isNamed: true,
+          ),
+          'turbulenceSeed': _i2.BuilderArg<double?>(
+            name: 'turbulenceSeed',
+            init: turbulenceSeed,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InkSparkle';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkSparkle$Mate(
@@ -78,66 +128,8 @@ class InkSparkle$Mate extends _i1.InkSparkle with _i2.Mate {
           onRemoved: p.get('onRemoved').build(),
           turbulenceSeed: p.get('turbulenceSeed').build(),
         );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'referenceBox',
-      referenceBox,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'containedInkWell',
-      containedInkWell,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'rectCallback',
-      rectCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'customBorder',
-      customBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'onRemoved',
-      onRemoved,
-      isNamed: true,
-    );
-    mateUse(
-      'turbulenceSeed',
-      turbulenceSeed,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

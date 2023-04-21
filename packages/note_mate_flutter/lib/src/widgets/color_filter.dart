@@ -12,18 +12,31 @@ class ColorFiltered$Mate extends _i1.ColorFiltered with _i2.Mate {
   /// ColorFiltered ColorFiltered({required ColorFilter colorFilter, Widget? child, Key? key})
   ColorFiltered$Mate({
     /// optionalParameters: {required ColorFilter colorFilter} , default:none
-    required _i3.ColorFilter colorFilter,
+    required super.colorFilter,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {Key? key} , default:none
-    _i5.Key? key,
-  }) : super(
-          colorFilter: colorFilter,
-          child: child,
-          key: key,
-        ) {
+    super.key,
+  })  : mateParams = {
+          'colorFilter': _i2.BuilderArg<_i3.ColorFilter>(
+            name: 'colorFilter',
+            init: colorFilter,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'key': _i2.BuilderArg<_i5.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ColorFiltered';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ColorFiltered$Mate(
@@ -31,20 +44,8 @@ class ColorFiltered$Mate extends _i1.ColorFiltered with _i2.Mate {
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse(
-      'colorFilter',
-      colorFilter,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

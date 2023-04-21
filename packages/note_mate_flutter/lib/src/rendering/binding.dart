@@ -11,15 +11,20 @@ class RenderingFlutterBinding$Mate extends _i1.RenderingFlutterBinding with _i2.
   RenderingFlutterBinding$Mate(
       {
       /// optionalParameters: {RenderBox? root} , default:none
-      _i3.RenderBox? root})
-      : super(root: root) {
+      super.root})
+      : mateParams = {
+          'root': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'root',
+            init: root,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderingFlutterBinding';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderingFlutterBinding$Mate(root: p.get('root').build());
-    mateUse(
-      'root',
-      root,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -11,15 +11,20 @@ class ContextMenuController$Mate extends _i1.ContextMenuController with _i2.Mate
   ContextMenuController$Mate(
       {
       /// optionalParameters: {void Function()? onRemove} , default:none
-      _i3.VoidCallback? onRemove})
-      : super(onRemove: onRemove) {
+      super.onRemove})
+      : mateParams = {
+          'onRemove': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onRemove',
+            init: onRemove,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ContextMenuController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ContextMenuController$Mate(onRemove: p.get('onRemove').build());
-    mateUse(
-      'onRemove',
-      onRemove,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

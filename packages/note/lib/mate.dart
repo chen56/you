@@ -134,7 +134,7 @@ abstract class Param extends ChangeNotifier {
   // todo editor 应该事先初始化好
   @nonVirtual
   Editor getEditor() {
-    return builderArg.getEditor(this, editors);
+    return editors.get(this);
   }
 
   @override
@@ -143,12 +143,12 @@ abstract class Param extends ChangeNotifier {
   }
 }
 
-Param _toParam<T>({
-  required BuilderArg<T> builderArg,
+Param _toParam({
+  required BuilderArg builderArg,
   required Param parent,
   required Editors editors,
 }) {
-  if (utils.isType<T, List>()) {
+  if (builderArg.isSubType<List>()) {
     var result = ListParam(
       builderArg: builderArg,
       parent: parent,
@@ -157,7 +157,7 @@ Param _toParam<T>({
 
     return result;
   }
-  if (utils.isType<T, Set>()) {
+  if (builderArg.isSubType<Set>()) {
     var result = SetParam(
       builderArg: builderArg,
       parent: parent,
@@ -215,7 +215,6 @@ class ListParam extends Param {
             name: "$i",
             init: notNull[i],
             isNamed: false,
-            isFromUse: false,
             defaultValue: null,
           ),
           parent: this,
@@ -256,7 +255,6 @@ class SetParam extends Param {
             name: "$_index",
             init: e,
             isNamed: false,
-            isFromUse: false,
             defaultValue: null,
           ),
           parent: this,
@@ -312,7 +310,6 @@ class ObjectParam extends Param {
             name: "",
             init: init,
             isNamed: false,
-            isFromUse: false,
             defaultValue: init,
           ),
           editors: editors,
@@ -327,7 +324,6 @@ class ObjectParam extends Param {
             name: "",
             init: "",
             isNamed: false,
-            isFromUse: false,
             defaultValue: "",
           ),
           args: {},
@@ -346,11 +342,12 @@ class ObjectParam extends Param {
           builderArg: builderArg,
           parent: parent,
           builder: init.mateBuilder,
-          args: init._mateParams,
+          args: init.mateParams,
           builderRefer: code.refer(init.mateBuilderName, init.matePackageUrl),
           editors: editors,
         );
 
+  /// todo remove ObjectParam目前并没有调用此方法的场景，可能是我们把Mate Param和 数据状态搞混了，要好好想想
   BuilderArg<E> use<E>(
     String name,
     E init, {
@@ -362,10 +359,9 @@ class ObjectParam extends Param {
       name: name,
       init: init,
       isNamed: isNamed,
-      isFromUse: true,
       defaultValue: defaultValue,
     );
-    var param = _toParam<E>(
+    var param = _toParam(
       builderArg: result,
       parent: this,
       editors: editors,
@@ -435,21 +431,20 @@ class BuilderArg<T> {
   late final bool nullable;
   late final Param param;
 
-  /// is create from [ObjectParam.use] or [Mate.mateUse]
-  /// if create by use , <T> is known
-  final bool isFromUse;
+  /// if create from [ObjectParam.use] or [Mate] <T>  type is provided
+  final bool isTypeProvided;
 
   BuilderArg({
     required this.name,
     required this.init,
     required this.isNamed,
-    required this.isFromUse,
+    this.isTypeProvided = false,
     this.defaultValue,
-  }) {
-    nullable = utils.isNullableOf<T>(init);
-  }
+  }) : nullable = utils.isNullableOf<T>(init);
 
   T get value => param.value;
+
+  Type get argType => T;
   set value(T newValue) {
     param.value = newValue;
   }
@@ -470,51 +465,47 @@ class BuilderArg<T> {
     );
   }
 
-  Editor getEditor(Param param, Editors editors) {
-    return editors.get<T>(param);
-  }
-
   T build() => param.build();
 
   String toCodeExpressionString() => param.toCodeExpressionString();
 
+  /// 此时param可能还未初始化
   isSubType<Super>() => utils.isSubTypeOf<T, Super>(init);
+
+  isSubTypeWithParam<Super>() => utils.isSubTypeOf<T, Super>(init) || param.init is Super;
+
+  @override
+  String toString() {
+    return "name:$name isNamed:$isNamed, nullable:$nullable,defaultValue:$defaultValue, init:$init";
+  }
 }
 
+/// WARN: [Mate]'s fields use for code gen, so careful to change name.
 mixin Mate {
-  // WARN: [Mate]'s fields use for code gen, so careful to change name.
-  final Map<String, BuilderArg> _mateParams = {};
+  @protected
   late final Object Function(ObjectParam param) mateBuilder;
+  @protected
   late final String mateBuilderName;
+  @protected
   late final String matePackageUrl;
   // The purpose of the cache variable is to ensure that to Root Param is only called once,
   // because multiple calls will cause BuildArg.param to initialize multiple times
   // and report an error
-  ObjectParam? _cache;
-  BuilderArg<V> mateUse<V>(
-    String name,
-    V init, {
-    required bool isNamed,
-    dynamic defaultValue,
-  }) {
-    var variable = BuilderArg(
-      name: name,
-      init: init,
-      isFromUse: true,
-      isNamed: isNamed,
-      defaultValue: defaultValue,
-    );
+  final Expando _cache = Expando("cache");
 
-    _mateParams[name] = variable;
-    return variable;
-  }
+  Map<String, BuilderArg> get mateParams;
 
   BuilderArg<C> mateGet<C>(String name) {
-    return _mateParams[name] as BuilderArg<C>;
+    return mateParams[name] as BuilderArg<C>;
   }
 
   ObjectParam toRootParam({required Editors editors}) {
-    return _cache ??= ObjectParam.rootFromMate(this, editors: editors);
+    var result = _cache[this];
+    if (result == null) {
+      result = ObjectParam.rootFromMate(this, editors: editors);
+      _cache[this] = result;
+    }
+    return result as ObjectParam;
   }
 }
 
@@ -568,7 +559,7 @@ abstract class Editor {
   }
 }
 
-typedef EditorBuilder<T> = Editor Function(Param param);
+typedef EditorBuilder = Editor Function(Param param);
 
 class Editors {
   final EnumRegister enumRegister;
@@ -587,11 +578,11 @@ class Editors {
         formatter = formatter ?? defaultDartFormatter;
 
   /// <T> There are two situations:
-  /// 1. if the parameter comes from [ObjectParam.use] or [Mate.mateUse],
+  /// 1. if the parameter comes from [ObjectParam.use] or [Mate],
   ///   it has a strongly typed value
   /// 2. otherwise <T> is dynamic type.
   /// When querying the corresponding Editor, these two situations will be handled
-  Editor get<T>(Param param, {EditorBuilder<T>? onNotFound}) {
+  Editor get(Param param, {EditorBuilder? onNotFound}) {
     // 20230401 dart2js compile error: can not use patterns.
     // flutter build web --enable-experiment=records,patterns --release --web-renderer html --base-href "/note/"
     // --------------------------------------------------
@@ -615,30 +606,31 @@ class Editors {
     }
 
     param as ValueParam;
-    if (utils.isType<T, int>() || param.init is int) {
+    BuilderArg arg = param.builderArg;
+    if (arg.isSubTypeWithParam<int>()) {
       return IntEditor(param, editors: this);
     }
-    if (utils.isType<T, double>() || param.init is double) {
+    if (arg.isSubTypeWithParam<double>()) {
       return DoubleEditor(param, editors: this);
     }
-    if (utils.isType<T, bool>() || param.init is bool) {
+    if (arg.isSubTypeWithParam<bool>()) {
       return BoolEditor(param, editors: this);
     }
-    if (utils.isType<T, String>() || param.init is String) {
+    if (arg.isSubTypeWithParam<String>()) {
       return StringEditor(param, editors: this);
     }
-    if (utils.isType<T, Color>() || param.init is Color) {
+    if (arg.isSubTypeWithParam<Color>()) {
       return ColorEditor(param, editors: this);
     }
-    if (utils.isType<T, Enum>() || param.init is Enum) {
-      return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(T));
+    if (arg.isSubTypeWithParam<Enum>()) {
+      return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(arg.argType));
     }
-    if (utils.isType<T, IconData>() || param.init is IconData) {
+    if (arg.isSubTypeWithParam<IconData>()) {
       return IconDataEditor(param, editors: this);
     }
 
     // todo Editors:这下面的函数类型越来越多啊，需要解决掉
-    if (utils.isType<T, void Function()>() || param.init is void Function()) {
+    if (arg.isSubTypeWithParam<void Function()>()) {
       var ex = code.Method((b) => b
         ..name = ''
         ..lambda = false
@@ -647,7 +639,7 @@ class Editors {
     }
 
     // todo 这些function类型的等到范例模版好了后要清理掉 github:#61
-    if (utils.isType<T, void Function(bool)>() || param.init is void Function(bool)) {
+    if (arg.isSubTypeWithParam<void Function(bool)>()) {
       var ex = code.Method((b) => b
         ..name = ''
         ..lambda = false
@@ -655,7 +647,7 @@ class Editors {
         ..body = const code.Code("")).closure;
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
-    if (utils.isType<T, void Function(int)>() || param.init is void Function(int)) {
+    if (arg.isSubTypeWithParam<void Function(int)>()) {
       var ex = code.Method((b) => b
         ..name = ''
         ..lambda = false
@@ -663,12 +655,12 @@ class Editors {
         ..body = const code.Code("")).closure;
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
-    if (utils.isType<T, Function>() || param.init is Function) {
+    if (arg.isSubTypeWithParam<Function>()) {
       var ex = code.refer("null /* not support function */");
       return ManuallyValueEditor(param, editors: this, codeExpression: ex);
     }
     // SegmentedButton.onSelectionChanged: void Function(Set<T>)?
-    if (utils.isType<T, void Function(Set<String>)>() || param.init is void Function(Set<String>)) {
+    if (arg.isSubTypeWithParam<void Function(Set<String>)>()) {
       var ex = code.Method((b) => b
         ..name = ''
         ..lambda = false

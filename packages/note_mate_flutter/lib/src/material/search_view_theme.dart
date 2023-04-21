@@ -15,42 +15,79 @@ class SearchViewThemeData$Mate extends _i1.SearchViewThemeData with _i2.Mate {
   /// SearchViewThemeData SearchViewThemeData({Color? backgroundColor, double? elevation, Color? surfaceTintColor, BoxConstraints? constraints, BorderSide? side, OutlinedBorder? shape, TextStyle? headerTextStyle, TextStyle? headerHintStyle, Color? dividerColor})
   SearchViewThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i4.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {BorderSide? side} , default:none
-    _i5.BorderSide? side,
+    super.side,
 
     /// optionalParameters: {OutlinedBorder? shape} , default:none
-    _i5.OutlinedBorder? shape,
+    super.shape,
 
     /// optionalParameters: {TextStyle? headerTextStyle} , default:none
-    _i6.TextStyle? headerTextStyle,
+    super.headerTextStyle,
 
     /// optionalParameters: {TextStyle? headerHintStyle} , default:none
-    _i6.TextStyle? headerHintStyle,
+    super.headerHintStyle,
 
     /// optionalParameters: {Color? dividerColor} , default:none
-    _i3.Color? dividerColor,
-  }) : super(
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          surfaceTintColor: surfaceTintColor,
-          constraints: constraints,
-          side: side,
-          shape: shape,
-          headerTextStyle: headerTextStyle,
-          headerHintStyle: headerHintStyle,
-          dividerColor: dividerColor,
-        ) {
+    super.dividerColor,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i4.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i5.BorderSide?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.OutlinedBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'headerTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'headerTextStyle',
+            init: headerTextStyle,
+            isNamed: true,
+          ),
+          'headerHintStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'headerHintStyle',
+            init: headerHintStyle,
+            isNamed: true,
+          ),
+          'dividerColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'dividerColor',
+            init: dividerColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SearchViewThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SearchViewThemeData$Mate(
@@ -64,52 +101,10 @@ class SearchViewThemeData$Mate extends _i1.SearchViewThemeData with _i2.Mate {
           headerHintStyle: p.get('headerHintStyle').build(),
           dividerColor: p.get('dividerColor').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'headerTextStyle',
-      headerTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'headerHintStyle',
-      headerHintStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerColor',
-      dividerColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SearchViewTheme extends InheritedWidget
@@ -117,18 +112,31 @@ class SearchViewTheme$Mate extends _i1.SearchViewTheme with _i2.Mate {
   /// SearchViewTheme SearchViewTheme({Key? key, required SearchViewThemeData data, required Widget child})
   SearchViewTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required SearchViewThemeData data} , default:none
-    required _i1.SearchViewThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.SearchViewThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SearchViewTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SearchViewTheme$Mate(
@@ -136,20 +144,8 @@ class SearchViewTheme$Mate extends _i1.SearchViewTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

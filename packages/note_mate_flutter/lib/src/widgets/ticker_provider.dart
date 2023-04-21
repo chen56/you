@@ -11,18 +11,31 @@ class TickerMode$Mate extends _i1.TickerMode with _i2.Mate {
   /// TickerMode TickerMode({Key? key, required bool enabled, required Widget child})
   TickerMode$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required bool enabled} , default:none
-    required bool enabled,
+    required super.enabled,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          enabled: enabled,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TickerMode';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TickerMode$Mate(
@@ -30,20 +43,8 @@ class TickerMode$Mate extends _i1.TickerMode with _i2.Mate {
           enabled: p.get('enabled').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

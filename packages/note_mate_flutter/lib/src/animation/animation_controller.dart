@@ -11,38 +11,74 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
   /// AnimationController AnimationController({double? value, Duration? duration, Duration? reverseDuration, String? debugLabel, double lowerBound = 0.0, double upperBound = 1.0, AnimationBehavior animationBehavior = AnimationBehavior.normal, required TickerProvider vsync})
   AnimationController$Mate({
     /// optionalParameters: {double? value} , default:none
-    double? value,
+    super.value,
 
     /// optionalParameters: {Duration? duration} , default:none
-    Duration? duration,
+    super.duration,
 
     /// optionalParameters: {Duration? reverseDuration} , default:none
-    Duration? reverseDuration,
+    super.reverseDuration,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {double lowerBound = 0.0} , default:processed=DoubleLiteralImpl
-    double lowerBound = 0.0,
+    super.lowerBound,
 
     /// optionalParameters: {double upperBound = 1.0} , default:processed=DoubleLiteralImpl
-    double upperBound = 1.0,
+    super.upperBound,
 
     /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.normal} , default:processed=PrefixedIdentifierImpl
-    _i1.AnimationBehavior animationBehavior = _i3.AnimationBehavior.normal,
+    super.animationBehavior,
 
     /// optionalParameters: {required TickerProvider vsync} , default:none
-    required _i4.TickerProvider vsync,
-  }) : super(
-          value: value,
-          duration: duration,
-          reverseDuration: reverseDuration,
-          debugLabel: debugLabel,
-          lowerBound: lowerBound,
-          upperBound: upperBound,
-          animationBehavior: animationBehavior,
-          vsync: vsync,
-        ) {
+    required super.vsync,
+  })  : mateParams = {
+          'value': _i2.BuilderArg<double?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration?>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'reverseDuration': _i2.BuilderArg<Duration?>(
+            name: 'reverseDuration',
+            init: reverseDuration,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'lowerBound': _i2.BuilderArg<double>(
+            name: 'lowerBound',
+            init: lowerBound,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'upperBound': _i2.BuilderArg<double>(
+            name: 'upperBound',
+            init: upperBound,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'animationBehavior': _i2.BuilderArg<_i1.AnimationBehavior>(
+            name: 'animationBehavior',
+            init: animationBehavior,
+            isNamed: true,
+            defaultValue: _i3.AnimationBehavior.normal,
+          ),
+          'vsync': _i2.BuilderArg<_i4.TickerProvider>(
+            name: 'vsync',
+            init: vsync,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimationController';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationController$Mate(
@@ -55,78 +91,62 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
           animationBehavior: p.get('animationBehavior').build(),
           vsync: p.get('vsync').build(),
         );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseDuration',
-      reverseDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'lowerBound',
-      lowerBound,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'upperBound',
-      upperBound,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'animationBehavior',
-      animationBehavior,
-      isNamed: true,
-      defaultValue: _i3.AnimationBehavior.normal,
-    );
-    mateUse(
-      'vsync',
-      vsync,
-      isNamed: true,
-    );
   }
 
   /// AnimationController AnimationController.unbounded({double value = 0.0, Duration? duration, Duration? reverseDuration, String? debugLabel, required TickerProvider vsync, AnimationBehavior animationBehavior = AnimationBehavior.preserve})
   AnimationController$Mate.unbounded({
     /// optionalParameters: {double value = 0.0} , default:processed=DoubleLiteralImpl
-    double value = 0.0,
+    super.value,
 
     /// optionalParameters: {Duration? duration} , default:none
-    Duration? duration,
+    super.duration,
 
     /// optionalParameters: {Duration? reverseDuration} , default:none
-    Duration? reverseDuration,
+    super.reverseDuration,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {required TickerProvider vsync} , default:none
-    required _i4.TickerProvider vsync,
+    required super.vsync,
 
     /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.preserve} , default:processed=PrefixedIdentifierImpl
-    _i1.AnimationBehavior animationBehavior = _i3.AnimationBehavior.preserve,
-  }) : super.unbounded(
-          value: value,
-          duration: duration,
-          reverseDuration: reverseDuration,
-          debugLabel: debugLabel,
-          vsync: vsync,
-          animationBehavior: animationBehavior,
-        ) {
+    super.animationBehavior,
+  })  : mateParams = {
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'duration': _i2.BuilderArg<Duration?>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'reverseDuration': _i2.BuilderArg<Duration?>(
+            name: 'reverseDuration',
+            init: reverseDuration,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'vsync': _i2.BuilderArg<_i4.TickerProvider>(
+            name: 'vsync',
+            init: vsync,
+            isNamed: true,
+          ),
+          'animationBehavior': _i2.BuilderArg<_i1.AnimationBehavior>(
+            name: 'animationBehavior',
+            init: animationBehavior,
+            isNamed: true,
+            defaultValue: _i3.AnimationBehavior.preserve,
+          ),
+        },
+        super.unbounded() {
     mateBuilderName = 'AnimationController.unbounded';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationController$Mate.unbounded(
@@ -137,37 +157,8 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
           vsync: p.get('vsync').build(),
           animationBehavior: p.get('animationBehavior').build(),
         );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseDuration',
-      reverseDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'vsync',
-      vsync,
-      isNamed: true,
-    );
-    mateUse(
-      'animationBehavior',
-      animationBehavior,
-      isNamed: true,
-      defaultValue: _i3.AnimationBehavior.preserve,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

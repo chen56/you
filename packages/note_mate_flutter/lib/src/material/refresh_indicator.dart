@@ -14,54 +14,107 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
   /// RefreshIndicator RefreshIndicator({Key? key, required Widget child, double displacement = 40.0, double edgeOffset = 0.0, required Future<void> Function() onRefresh, Color? color, Color? backgroundColor, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, String? semanticsLabel, String? semanticsValue, double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth, RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge})
   RefreshIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {double displacement = 40.0} , default:processed=DoubleLiteralImpl
-    double displacement = 40.0,
+    super.displacement,
 
     /// optionalParameters: {double edgeOffset = 0.0} , default:processed=DoubleLiteralImpl
-    double edgeOffset = 0.0,
+    super.edgeOffset,
 
     /// optionalParameters: {required Future<void> Function() onRefresh} , default:none
-    required _i1.RefreshCallback onRefresh,
+    required super.onRefresh,
 
     /// optionalParameters: {Color? color} , default:none
-    _i5.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i5.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.ScrollNotificationPredicate notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
-    String? semanticsValue,
+    super.semanticsValue,
 
     /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , default:processed=PrefixedIdentifierImpl
-    double strokeWidth = _i7.RefreshProgressIndicator.defaultStrokeWidth,
+    super.strokeWidth,
 
     /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
-    _i1.RefreshIndicatorTriggerMode triggerMode = _i7.RefreshIndicatorTriggerMode.onEdge,
-  }) : super(
-          key: key,
-          child: child,
-          displacement: displacement,
-          edgeOffset: edgeOffset,
-          onRefresh: onRefresh,
-          color: color,
-          backgroundColor: backgroundColor,
-          notificationPredicate: notificationPredicate,
-          semanticsLabel: semanticsLabel,
-          semanticsValue: semanticsValue,
-          strokeWidth: strokeWidth,
-          triggerMode: triggerMode,
-        ) {
+    super.triggerMode,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'displacement': _i2.BuilderArg<double>(
+            name: 'displacement',
+            init: displacement,
+            isNamed: true,
+            defaultValue: 40.0,
+          ),
+          'edgeOffset': _i2.BuilderArg<double>(
+            name: 'edgeOffset',
+            init: edgeOffset,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'onRefresh': _i2.BuilderArg<_i1.RefreshCallback>(
+            name: 'onRefresh',
+            init: onRefresh,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'semanticsValue': _i2.BuilderArg<String?>(
+            name: 'semanticsValue',
+            init: semanticsValue,
+            isNamed: true,
+          ),
+          'strokeWidth': _i2.BuilderArg<double>(
+            name: 'strokeWidth',
+            init: strokeWidth,
+            isNamed: true,
+            defaultValue: _i7.RefreshProgressIndicator.defaultStrokeWidth,
+          ),
+          'triggerMode': _i2.BuilderArg<_i1.RefreshIndicatorTriggerMode>(
+            name: 'triggerMode',
+            init: triggerMode,
+            isNamed: true,
+            defaultValue: _i7.RefreshIndicatorTriggerMode.onEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'RefreshIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshIndicator$Mate(
@@ -78,123 +131,112 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
           strokeWidth: p.get('strokeWidth').build(),
           triggerMode: p.get('triggerMode').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'displacement',
-      displacement,
-      isNamed: true,
-      defaultValue: 40.0,
-    );
-    mateUse(
-      'edgeOffset',
-      edgeOffset,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'onRefresh',
-      onRefresh,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsValue',
-      semanticsValue,
-      isNamed: true,
-    );
-    mateUse(
-      'strokeWidth',
-      strokeWidth,
-      isNamed: true,
-      defaultValue: _i7.RefreshProgressIndicator.defaultStrokeWidth,
-    );
-    mateUse(
-      'triggerMode',
-      triggerMode,
-      isNamed: true,
-      defaultValue: _i7.RefreshIndicatorTriggerMode.onEdge,
-    );
   }
 
   /// RefreshIndicator RefreshIndicator.adaptive({Key? key, required Widget child, double displacement = 40.0, double edgeOffset = 0.0, required Future<void> Function() onRefresh, Color? color, Color? backgroundColor, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, String? semanticsLabel, String? semanticsValue, double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth, RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge})
   RefreshIndicator$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {double displacement = 40.0} , default:processed=DoubleLiteralImpl
-    double displacement = 40.0,
+    super.displacement,
 
     /// optionalParameters: {double edgeOffset = 0.0} , default:processed=DoubleLiteralImpl
-    double edgeOffset = 0.0,
+    super.edgeOffset,
 
     /// optionalParameters: {required Future<void> Function() onRefresh} , default:none
-    required _i1.RefreshCallback onRefresh,
+    required super.onRefresh,
 
     /// optionalParameters: {Color? color} , default:none
-    _i5.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i5.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.ScrollNotificationPredicate notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
-    String? semanticsValue,
+    super.semanticsValue,
 
     /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , default:processed=PrefixedIdentifierImpl
-    double strokeWidth = _i7.RefreshProgressIndicator.defaultStrokeWidth,
+    super.strokeWidth,
 
     /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
-    _i1.RefreshIndicatorTriggerMode triggerMode = _i7.RefreshIndicatorTriggerMode.onEdge,
-  }) : super.adaptive(
-          key: key,
-          child: child,
-          displacement: displacement,
-          edgeOffset: edgeOffset,
-          onRefresh: onRefresh,
-          color: color,
-          backgroundColor: backgroundColor,
-          notificationPredicate: notificationPredicate,
-          semanticsLabel: semanticsLabel,
-          semanticsValue: semanticsValue,
-          strokeWidth: strokeWidth,
-          triggerMode: triggerMode,
-        ) {
+    super.triggerMode,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'displacement': _i2.BuilderArg<double>(
+            name: 'displacement',
+            init: displacement,
+            isNamed: true,
+            defaultValue: 40.0,
+          ),
+          'edgeOffset': _i2.BuilderArg<double>(
+            name: 'edgeOffset',
+            init: edgeOffset,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'onRefresh': _i2.BuilderArg<_i1.RefreshCallback>(
+            name: 'onRefresh',
+            init: onRefresh,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'semanticsValue': _i2.BuilderArg<String?>(
+            name: 'semanticsValue',
+            init: semanticsValue,
+            isNamed: true,
+          ),
+          'strokeWidth': _i2.BuilderArg<double>(
+            name: 'strokeWidth',
+            init: strokeWidth,
+            isNamed: true,
+            defaultValue: _i7.RefreshProgressIndicator.defaultStrokeWidth,
+          ),
+          'triggerMode': _i2.BuilderArg<_i1.RefreshIndicatorTriggerMode>(
+            name: 'triggerMode',
+            init: triggerMode,
+            isNamed: true,
+            defaultValue: _i7.RefreshIndicatorTriggerMode.onEdge,
+          ),
+        },
+        super.adaptive() {
     mateBuilderName = 'RefreshIndicator.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshIndicator$Mate.adaptive(
@@ -211,69 +253,8 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
           strokeWidth: p.get('strokeWidth').build(),
           triggerMode: p.get('triggerMode').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'displacement',
-      displacement,
-      isNamed: true,
-      defaultValue: 40.0,
-    );
-    mateUse(
-      'edgeOffset',
-      edgeOffset,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'onRefresh',
-      onRefresh,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsValue',
-      semanticsValue,
-      isNamed: true,
-    );
-    mateUse(
-      'strokeWidth',
-      strokeWidth,
-      isNamed: true,
-      defaultValue: _i7.RefreshProgressIndicator.defaultStrokeWidth,
-    );
-    mateUse(
-      'triggerMode',
-      triggerMode,
-      isNamed: true,
-      defaultValue: _i7.RefreshIndicatorTriggerMode.onEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

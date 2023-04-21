@@ -12,58 +12,111 @@ class BottomSheetThemeData$Mate extends _i1.BottomSheetThemeData with _i2.Mate {
   /// BottomSheetThemeData BottomSheetThemeData({Color? backgroundColor, Color? surfaceTintColor, double? elevation, Color? modalBackgroundColor, Color? modalBarrierColor, Color? shadowColor, double? modalElevation, ShapeBorder? shape, bool? showDragHandle, Color? dragHandleColor, Size? dragHandleSize, Clip? clipBehavior, BoxConstraints? constraints})
   BottomSheetThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? modalBackgroundColor} , default:none
-    _i3.Color? modalBackgroundColor,
+    super.modalBackgroundColor,
 
     /// optionalParameters: {Color? modalBarrierColor} , default:none
-    _i3.Color? modalBarrierColor,
+    super.modalBarrierColor,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {double? modalElevation} , default:none
-    double? modalElevation,
+    super.modalElevation,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i4.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {bool? showDragHandle} , default:none
-    bool? showDragHandle,
+    super.showDragHandle,
 
     /// optionalParameters: {Color? dragHandleColor} , default:none
-    _i3.Color? dragHandleColor,
+    super.dragHandleColor,
 
     /// optionalParameters: {Size? dragHandleSize} , default:none
-    _i3.Size? dragHandleSize,
+    super.dragHandleSize,
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i3.Clip? clipBehavior,
+    super.clipBehavior,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i5.BoxConstraints? constraints,
-  }) : super(
-          backgroundColor: backgroundColor,
-          surfaceTintColor: surfaceTintColor,
-          elevation: elevation,
-          modalBackgroundColor: modalBackgroundColor,
-          modalBarrierColor: modalBarrierColor,
-          shadowColor: shadowColor,
-          modalElevation: modalElevation,
-          shape: shape,
-          showDragHandle: showDragHandle,
-          dragHandleColor: dragHandleColor,
-          dragHandleSize: dragHandleSize,
-          clipBehavior: clipBehavior,
-          constraints: constraints,
-        ) {
+    super.constraints,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'modalBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'modalBackgroundColor',
+            init: modalBackgroundColor,
+            isNamed: true,
+          ),
+          'modalBarrierColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'modalBarrierColor',
+            init: modalBarrierColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'modalElevation': _i2.BuilderArg<double?>(
+            name: 'modalElevation',
+            init: modalElevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'showDragHandle': _i2.BuilderArg<bool?>(
+            name: 'showDragHandle',
+            init: showDragHandle,
+            isNamed: true,
+          ),
+          'dragHandleColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'dragHandleColor',
+            init: dragHandleColor,
+            isNamed: true,
+          ),
+          'dragHandleSize': _i2.BuilderArg<_i3.Size?>(
+            name: 'dragHandleSize',
+            init: dragHandleSize,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i3.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i5.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BottomSheetThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomSheetThemeData$Mate(
@@ -81,70 +134,8 @@ class BottomSheetThemeData$Mate extends _i1.BottomSheetThemeData with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           constraints: p.get('constraints').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'modalBackgroundColor',
-      modalBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'modalBarrierColor',
-      modalBarrierColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'modalElevation',
-      modalElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'showDragHandle',
-      showDragHandle,
-      isNamed: true,
-    );
-    mateUse(
-      'dragHandleColor',
-      dragHandleColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dragHandleSize',
-      dragHandleSize,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

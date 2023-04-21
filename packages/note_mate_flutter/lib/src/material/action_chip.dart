@@ -18,94 +18,185 @@ class ActionChip$Mate extends _i1.ActionChip with _i2.Mate {
   /// ActionChip ActionChip({Key? key, Widget? avatar, required Widget label, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, void Function()? onPressed, double? pressElevation, String? tooltip, BorderSide? side, OutlinedBorder? shape, Clip clipBehavior = Clip.none, FocusNode? focusNode, bool autofocus = false, Color? backgroundColor, Color? disabledColor, EdgeInsetsGeometry? padding, VisualDensity? visualDensity, MaterialTapTargetSize? materialTapTargetSize, double? elevation, Color? shadowColor, Color? surfaceTintColor, IconThemeData? iconTheme})
   ActionChip$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? avatar} , default:none
-    _i4.Widget? avatar,
+    super.avatar,
 
     /// optionalParameters: {required Widget label} , default:none
-    required _i4.Widget label,
+    required super.label,
 
     /// optionalParameters: {TextStyle? labelStyle} , default:none
-    _i5.TextStyle? labelStyle,
+    super.labelStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
-    _i6.EdgeInsetsGeometry? labelPadding,
+    super.labelPadding,
 
     /// optionalParameters: {void Function()? onPressed} , default:none
-    _i7.VoidCallback? onPressed,
+    super.onPressed,
 
     /// optionalParameters: {double? pressElevation} , default:none
-    double? pressElevation,
+    super.pressElevation,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {BorderSide? side} , default:none
-    _i8.BorderSide? side,
+    super.side,
 
     /// optionalParameters: {OutlinedBorder? shape} , default:none
-    _i8.OutlinedBorder? shape,
+    super.shape,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i7.Clip clipBehavior = _i7.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i7.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i7.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i6.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i10.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i10.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i7.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i7.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {IconThemeData? iconTheme} , default:none
-    _i11.IconThemeData? iconTheme,
-  }) : super(
-          key: key,
-          avatar: avatar,
-          label: label,
-          labelStyle: labelStyle,
-          labelPadding: labelPadding,
-          onPressed: onPressed,
-          pressElevation: pressElevation,
-          tooltip: tooltip,
-          side: side,
-          shape: shape,
-          clipBehavior: clipBehavior,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          backgroundColor: backgroundColor,
-          disabledColor: disabledColor,
-          padding: padding,
-          visualDensity: visualDensity,
-          materialTapTargetSize: materialTapTargetSize,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          iconTheme: iconTheme,
-        ) {
+    super.iconTheme,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'avatar': _i2.BuilderArg<_i4.Widget?>(
+            name: 'avatar',
+            init: avatar,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i4.Widget>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'labelPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'labelPadding',
+            init: labelPadding,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i7.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'pressElevation': _i2.BuilderArg<double?>(
+            name: 'pressElevation',
+            init: pressElevation,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i8.BorderSide?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i8.OutlinedBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i7.Clip.none,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i10.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i10.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i11.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ActionChip';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ActionChip$Mate(
@@ -132,117 +223,8 @@ class ActionChip$Mate extends _i1.ActionChip with _i2.Mate {
           surfaceTintColor: p.get('surfaceTintColor').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'avatar',
-      avatar,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'labelPadding',
-      labelPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'pressElevation',
-      pressElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i7.Clip.none,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

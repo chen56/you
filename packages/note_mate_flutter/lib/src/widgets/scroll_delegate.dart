@@ -10,37 +10,74 @@ class SliverChildBuilderDelegate$Mate extends _i1.SliverChildBuilderDelegate wit
   /// SliverChildBuilderDelegate SliverChildBuilderDelegate(Widget? Function(BuildContext, int) builder, {int? Function(Key)? findChildIndexCallback, int? childCount, bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
   SliverChildBuilderDelegate$Mate(
     /// requiredParameters: Widget? Function(BuildContext, int) builder
-    _i3.NullableIndexedWidgetBuilder builder, {
+    super.builder, {
     /// optionalParameters: {int? Function(Key)? findChildIndexCallback} , default:none
-    _i1.ChildIndexGetter? findChildIndexCallback,
+    super.findChildIndexCallback,
 
     /// optionalParameters: {int? childCount} , default:none
-    int? childCount,
+    super.childCount,
 
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.SemanticIndexCallback semanticIndexCallback,
+    super.semanticIndexCallback,
 
     /// optionalParameters: {int semanticIndexOffset = 0} , default:processed=IntegerLiteralImpl
-    int semanticIndexOffset = 0,
-  }) : super(
-          builder,
-          findChildIndexCallback: findChildIndexCallback,
-          childCount: childCount,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          semanticIndexCallback: semanticIndexCallback,
-          semanticIndexOffset: semanticIndexOffset,
-        ) {
+    super.semanticIndexOffset,
+  })  : mateParams = {
+          'builder': _i2.BuilderArg<_i3.NullableIndexedWidgetBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: false,
+          ),
+          'findChildIndexCallback': _i2.BuilderArg<_i1.ChildIndexGetter?>(
+            name: 'findChildIndexCallback',
+            init: findChildIndexCallback,
+            isNamed: true,
+          ),
+          'childCount': _i2.BuilderArg<int?>(
+            name: 'childCount',
+            init: childCount,
+            isNamed: true,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'semanticIndexCallback': _i2.BuilderArg<_i1.SemanticIndexCallback>(
+            name: 'semanticIndexCallback',
+            init: semanticIndexCallback,
+            isNamed: true,
+          ),
+          'semanticIndexOffset': _i2.BuilderArg<int>(
+            name: 'semanticIndexOffset',
+            init: semanticIndexOffset,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverChildBuilderDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverChildBuilderDelegate$Mate(
@@ -53,51 +90,10 @@ class SliverChildBuilderDelegate$Mate extends _i1.SliverChildBuilderDelegate wit
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: false,
-    );
-    mateUse(
-      'findChildIndexCallback',
-      findChildIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'childCount',
-      childCount,
-      isNamed: true,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'semanticIndexCallback',
-      semanticIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticIndexOffset',
-      semanticIndexOffset,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverChildListDelegate extends SliverChildDelegate
@@ -105,29 +101,58 @@ class SliverChildListDelegate$Mate extends _i1.SliverChildListDelegate with _i2.
   /// SliverChildListDelegate SliverChildListDelegate(List<Widget> children, {bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
   SliverChildListDelegate$Mate(
     /// requiredParameters: List<Widget> children
-    List<_i3.Widget> children, {
+    super.children, {
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.SemanticIndexCallback semanticIndexCallback,
+    super.semanticIndexCallback,
 
     /// optionalParameters: {int semanticIndexOffset = 0} , default:processed=IntegerLiteralImpl
-    int semanticIndexOffset = 0,
-  }) : super(
-          children,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          semanticIndexCallback: semanticIndexCallback,
-          semanticIndexOffset: semanticIndexOffset,
-        ) {
+    super.semanticIndexOffset,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: false,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'semanticIndexCallback': _i2.BuilderArg<_i1.SemanticIndexCallback>(
+            name: 'semanticIndexCallback',
+            init: semanticIndexCallback,
+            isNamed: true,
+          ),
+          'semanticIndexOffset': _i2.BuilderArg<int>(
+            name: 'semanticIndexOffset',
+            init: semanticIndexOffset,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverChildListDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverChildListDelegate$Mate(
@@ -138,68 +163,63 @@ class SliverChildListDelegate$Mate extends _i1.SliverChildListDelegate with _i2.
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: false,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'semanticIndexCallback',
-      semanticIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticIndexOffset',
-      semanticIndexOffset,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
 
   /// SliverChildListDelegate SliverChildListDelegate.fixed(List<Widget> children, {bool addAutomaticKeepAlives = true, bool addRepaintBoundaries = true, bool addSemanticIndexes = true, int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback, int semanticIndexOffset = 0})
   SliverChildListDelegate$Mate.fixed(
     /// requiredParameters: List<Widget> children
-    List<_i3.Widget> children, {
+    super.children, {
     /// optionalParameters: {bool addAutomaticKeepAlives = true} , default:processed=BooleanLiteralImpl
-    bool addAutomaticKeepAlives = true,
+    super.addAutomaticKeepAlives,
 
     /// optionalParameters: {bool addRepaintBoundaries = true} , default:processed=BooleanLiteralImpl
-    bool addRepaintBoundaries = true,
+    super.addRepaintBoundaries,
 
     /// optionalParameters: {bool addSemanticIndexes = true} , default:processed=BooleanLiteralImpl
-    bool addSemanticIndexes = true,
+    super.addSemanticIndexes,
 
     /// optionalParameters: {int? Function(Widget, int) semanticIndexCallback = _kDefaultSemanticIndexCallback} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.SemanticIndexCallback semanticIndexCallback,
+    super.semanticIndexCallback,
 
     /// optionalParameters: {int semanticIndexOffset = 0} , default:processed=IntegerLiteralImpl
-    int semanticIndexOffset = 0,
-  }) : super.fixed(
-          children,
-          addAutomaticKeepAlives: addAutomaticKeepAlives,
-          addRepaintBoundaries: addRepaintBoundaries,
-          addSemanticIndexes: addSemanticIndexes,
-          semanticIndexCallback: semanticIndexCallback,
-          semanticIndexOffset: semanticIndexOffset,
-        ) {
+    super.semanticIndexOffset,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: false,
+          ),
+          'addAutomaticKeepAlives': _i2.BuilderArg<bool>(
+            name: 'addAutomaticKeepAlives',
+            init: addAutomaticKeepAlives,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addRepaintBoundaries': _i2.BuilderArg<bool>(
+            name: 'addRepaintBoundaries',
+            init: addRepaintBoundaries,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'addSemanticIndexes': _i2.BuilderArg<bool>(
+            name: 'addSemanticIndexes',
+            init: addSemanticIndexes,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'semanticIndexCallback': _i2.BuilderArg<_i1.SemanticIndexCallback>(
+            name: 'semanticIndexCallback',
+            init: semanticIndexCallback,
+            isNamed: true,
+          ),
+          'semanticIndexOffset': _i2.BuilderArg<int>(
+            name: 'semanticIndexOffset',
+            init: semanticIndexOffset,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super.fixed() {
     mateBuilderName = 'SliverChildListDelegate.fixed';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverChildListDelegate$Mate.fixed(
@@ -210,39 +230,8 @@ class SliverChildListDelegate$Mate extends _i1.SliverChildListDelegate with _i2.
           semanticIndexCallback: p.get('semanticIndexCallback').build(),
           semanticIndexOffset: p.get('semanticIndexOffset').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: false,
-    );
-    mateUse(
-      'addAutomaticKeepAlives',
-      addAutomaticKeepAlives,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addRepaintBoundaries',
-      addRepaintBoundaries,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'addSemanticIndexes',
-      addSemanticIndexes,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'semanticIndexCallback',
-      semanticIndexCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticIndexOffset',
-      semanticIndexOffset,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

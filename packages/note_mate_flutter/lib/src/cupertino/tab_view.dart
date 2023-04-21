@@ -12,42 +12,79 @@ class CupertinoTabView$Mate extends _i1.CupertinoTabView with _i2.Mate {
   /// CupertinoTabView CupertinoTabView({Key? key, Widget Function(BuildContext)? builder, GlobalKey<NavigatorState>? navigatorKey, String? defaultTitle, Map<String, Widget Function(BuildContext)>? routes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], String? restorationScopeId})
   CupertinoTabView$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget Function(BuildContext)? builder} , default:none
-    _i4.WidgetBuilder? builder,
+    super.builder,
 
     /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , default:none
-    _i4.GlobalKey<_i5.NavigatorState>? navigatorKey,
+    super.navigatorKey,
 
     /// optionalParameters: {String? defaultTitle} , default:none
-    String? defaultTitle,
+    super.defaultTitle,
 
     /// optionalParameters: {Map<String, Widget Function(BuildContext)>? routes} , default:none
-    Map<String, _i4.WidgetBuilder>? routes,
+    super.routes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
-    _i5.RouteFactory? onGenerateRoute,
+    super.onGenerateRoute,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
-    _i5.RouteFactory? onUnknownRoute,
+    super.onUnknownRoute,
 
     /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.NavigatorObserver> navigatorObservers,
+    super.navigatorObservers,
 
     /// optionalParameters: {String? restorationScopeId} , default:none
-    String? restorationScopeId,
-  }) : super(
-          key: key,
-          builder: builder,
-          navigatorKey: navigatorKey,
-          defaultTitle: defaultTitle,
-          routes: routes,
-          onGenerateRoute: onGenerateRoute,
-          onUnknownRoute: onUnknownRoute,
-          navigatorObservers: navigatorObservers,
-          restorationScopeId: restorationScopeId,
-        ) {
+    super.restorationScopeId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i4.WidgetBuilder?>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'navigatorKey': _i2.BuilderArg<_i4.GlobalKey<_i5.NavigatorState>?>(
+            name: 'navigatorKey',
+            init: navigatorKey,
+            isNamed: true,
+          ),
+          'defaultTitle': _i2.BuilderArg<String?>(
+            name: 'defaultTitle',
+            init: defaultTitle,
+            isNamed: true,
+          ),
+          'routes': _i2.BuilderArg<Map<String, _i4.WidgetBuilder>?>(
+            name: 'routes',
+            init: routes,
+            isNamed: true,
+          ),
+          'onGenerateRoute': _i2.BuilderArg<_i5.RouteFactory?>(
+            name: 'onGenerateRoute',
+            init: onGenerateRoute,
+            isNamed: true,
+          ),
+          'onUnknownRoute': _i2.BuilderArg<_i5.RouteFactory?>(
+            name: 'onUnknownRoute',
+            init: onUnknownRoute,
+            isNamed: true,
+          ),
+          'navigatorObservers': _i2.BuilderArg<List<_i5.NavigatorObserver>>(
+            name: 'navigatorObservers',
+            init: navigatorObservers,
+            isNamed: true,
+          ),
+          'restorationScopeId': _i2.BuilderArg<String?>(
+            name: 'restorationScopeId',
+            init: restorationScopeId,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoTabView';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabView$Mate(
@@ -61,50 +98,8 @@ class CupertinoTabView$Mate extends _i1.CupertinoTabView with _i2.Mate {
           navigatorObservers: p.get('navigatorObservers').build(),
           restorationScopeId: p.get('restorationScopeId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'navigatorKey',
-      navigatorKey,
-      isNamed: true,
-    );
-    mateUse(
-      'defaultTitle',
-      defaultTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'routes',
-      routes,
-      isNamed: true,
-    );
-    mateUse(
-      'onGenerateRoute',
-      onGenerateRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'onUnknownRoute',
-      onUnknownRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'navigatorObservers',
-      navigatorObservers,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationScopeId',
-      restorationScopeId,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

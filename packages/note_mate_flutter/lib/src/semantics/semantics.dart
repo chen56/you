@@ -16,17 +16,22 @@ class SemanticsTag$Mate extends _i1.SemanticsTag with _i2.Mate {
   SemanticsTag$Mate(
 
       /// requiredParameters: String name
-      String name)
-      : super(name) {
+      super.name)
+      : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'SemanticsTag';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsTag$Mate(p.get('name').value);
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CustomSemanticsAction
@@ -35,46 +40,50 @@ class CustomSemanticsAction$Mate extends _i1.CustomSemanticsAction with _i2.Mate
   CustomSemanticsAction$Mate(
       {
       /// optionalParameters: {required String label} , default:none
-      required String label})
-      : super(label: label) {
+      required super.label})
+      : mateParams = {
+          'label': _i2.BuilderArg<String>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'CustomSemanticsAction';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => CustomSemanticsAction$Mate(label: p.get('label').build());
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
   }
 
   /// CustomSemanticsAction CustomSemanticsAction.overridingAction({required String hint, required SemanticsAction action})
   CustomSemanticsAction$Mate.overridingAction({
     /// optionalParameters: {required String hint} , default:none
-    required String hint,
+    required super.hint,
 
     /// optionalParameters: {required SemanticsAction action} , default:none
-    required _i3.SemanticsAction action,
-  }) : super.overridingAction(
-          hint: hint,
-          action: action,
-        ) {
+    required super.action,
+  })  : mateParams = {
+          'hint': _i2.BuilderArg<String>(
+            name: 'hint',
+            init: hint,
+            isNamed: true,
+          ),
+          'action': _i2.BuilderArg<_i3.SemanticsAction>(
+            name: 'action',
+            init: action,
+            isNamed: true,
+          ),
+        },
+        super.overridingAction() {
     mateBuilderName = 'CustomSemanticsAction.overridingAction';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => CustomSemanticsAction$Mate.overridingAction(
           hint: p.get('hint').build(),
           action: p.get('action').build(),
         );
-    mateUse(
-      'hint',
-      hint,
-      isNamed: true,
-    );
-    mateUse(
-      'action',
-      action,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AttributedString
@@ -82,30 +91,32 @@ class AttributedString$Mate extends _i1.AttributedString with _i2.Mate {
   /// AttributedString AttributedString(String string, {List<StringAttribute> attributes = const <StringAttribute>[]})
   AttributedString$Mate(
     /// requiredParameters: String string
-    String string, {
+    super.string, {
     /// optionalParameters: {List<StringAttribute> attributes = const <StringAttribute>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i3.StringAttribute> attributes,
-  }) : super(
-          string,
-          attributes: attributes,
-        ) {
+    super.attributes,
+  })  : mateParams = {
+          'string': _i2.BuilderArg<String>(
+            name: 'string',
+            init: string,
+            isNamed: false,
+          ),
+          'attributes': _i2.BuilderArg<List<_i3.StringAttribute>>(
+            name: 'attributes',
+            init: attributes,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AttributedString';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => AttributedString$Mate(
           p.get('string').value,
           attributes: p.get('attributes').build(),
         );
-    mateUse(
-      'string',
-      string,
-      isNamed: false,
-    );
-    mateUse(
-      'attributes',
-      attributes,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AttributedStringProperty extends DiagnosticsProperty<AttributedString>
@@ -113,33 +124,65 @@ class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i
   /// AttributedStringProperty AttributedStringProperty(String name, AttributedString? value, {bool showName = true, bool showWhenEmpty = false, Object? defaultValue = kNoDefaultValue, DiagnosticLevel level = DiagnosticLevel.info, String? description})
   AttributedStringProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: AttributedString? value
-    _i1.AttributedString? value, {
+    super.value, {
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {bool showWhenEmpty = false} , default:processed=BooleanLiteralImpl
-    bool showWhenEmpty = false,
+    super.showWhenEmpty,
 
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
-    required Object? defaultValue,
+    super.defaultValue,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i4.DiagnosticLevel level = _i5.DiagnosticLevel.info,
+    super.level,
 
     /// optionalParameters: {String? description} , default:none
-    String? description,
-  }) : super(
-          name,
-          value,
-          showName: showName,
-          showWhenEmpty: showWhenEmpty,
-          defaultValue: defaultValue,
-          level: level,
-          description: description,
-        ) {
+    super.description,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<_i1.AttributedString?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showWhenEmpty': _i2.BuilderArg<bool>(
+            name: 'showWhenEmpty',
+            init: showWhenEmpty,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'defaultValue': _i2.BuilderArg<Object?>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: true,
+          ),
+          'level': _i2.BuilderArg<_i4.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i5.DiagnosticLevel.info,
+          ),
+          'description': _i2.BuilderArg<String?>(
+            name: 'description',
+            init: description,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AttributedStringProperty';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => AttributedStringProperty$Mate(
@@ -151,45 +194,10 @@ class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i
           level: p.get('level').build(),
           description: p.get('description').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showWhenEmpty',
-      showWhenEmpty,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: true,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i5.DiagnosticLevel.info,
-    );
-    mateUse(
-      'description',
-      description,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SemanticsData with Diagnosticable
@@ -197,102 +205,199 @@ class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
   /// SemanticsData SemanticsData({required int flags, required int actions, required AttributedString attributedLabel, required AttributedString attributedValue, required AttributedString attributedIncreasedValue, required AttributedString attributedDecreasedValue, required AttributedString attributedHint, required String tooltip, required TextDirection? textDirection, required Rect rect, required double elevation, required double thickness, required TextSelection? textSelection, required int? scrollIndex, required int? scrollChildCount, required double? scrollPosition, required double? scrollExtentMax, required double? scrollExtentMin, required int? platformViewId, required int? maxValueLength, required int? currentValueLength, Set<SemanticsTag>? tags, Matrix4? transform, List<int>? customSemanticsActionIds})
   SemanticsData$Mate({
     /// optionalParameters: {required int flags} , default:none
-    required int flags,
+    required super.flags,
 
     /// optionalParameters: {required int actions} , default:none
-    required int actions,
+    required super.actions,
 
     /// optionalParameters: {required AttributedString attributedLabel} , default:none
-    required _i1.AttributedString attributedLabel,
+    required super.attributedLabel,
 
     /// optionalParameters: {required AttributedString attributedValue} , default:none
-    required _i1.AttributedString attributedValue,
+    required super.attributedValue,
 
     /// optionalParameters: {required AttributedString attributedIncreasedValue} , default:none
-    required _i1.AttributedString attributedIncreasedValue,
+    required super.attributedIncreasedValue,
 
     /// optionalParameters: {required AttributedString attributedDecreasedValue} , default:none
-    required _i1.AttributedString attributedDecreasedValue,
+    required super.attributedDecreasedValue,
 
     /// optionalParameters: {required AttributedString attributedHint} , default:none
-    required _i1.AttributedString attributedHint,
+    required super.attributedHint,
 
     /// optionalParameters: {required String tooltip} , default:none
-    required String tooltip,
+    required super.tooltip,
 
     /// optionalParameters: {required TextDirection? textDirection} , default:none
-    required _i3.TextDirection? textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {required Rect rect} , default:none
-    required _i3.Rect rect,
+    required super.rect,
 
     /// optionalParameters: {required double elevation} , default:none
-    required double elevation,
+    required super.elevation,
 
     /// optionalParameters: {required double thickness} , default:none
-    required double thickness,
+    required super.thickness,
 
     /// optionalParameters: {required TextSelection? textSelection} , default:none
-    required _i6.TextSelection? textSelection,
+    required super.textSelection,
 
     /// optionalParameters: {required int? scrollIndex} , default:none
-    required int? scrollIndex,
+    required super.scrollIndex,
 
     /// optionalParameters: {required int? scrollChildCount} , default:none
-    required int? scrollChildCount,
+    required super.scrollChildCount,
 
     /// optionalParameters: {required double? scrollPosition} , default:none
-    required double? scrollPosition,
+    required super.scrollPosition,
 
     /// optionalParameters: {required double? scrollExtentMax} , default:none
-    required double? scrollExtentMax,
+    required super.scrollExtentMax,
 
     /// optionalParameters: {required double? scrollExtentMin} , default:none
-    required double? scrollExtentMin,
+    required super.scrollExtentMin,
 
     /// optionalParameters: {required int? platformViewId} , default:none
-    required int? platformViewId,
+    required super.platformViewId,
 
     /// optionalParameters: {required int? maxValueLength} , default:none
-    required int? maxValueLength,
+    required super.maxValueLength,
 
     /// optionalParameters: {required int? currentValueLength} , default:none
-    required int? currentValueLength,
+    required super.currentValueLength,
 
     /// optionalParameters: {Set<SemanticsTag>? tags} , default:none
-    Set<_i1.SemanticsTag>? tags,
+    super.tags,
 
     /// optionalParameters: {Matrix4? transform} , default:none
-    _i7.Matrix4? transform,
+    super.transform,
 
     /// optionalParameters: {List<int>? customSemanticsActionIds} , default:none
-    List<int>? customSemanticsActionIds,
-  }) : super(
-          flags: flags,
-          actions: actions,
-          attributedLabel: attributedLabel,
-          attributedValue: attributedValue,
-          attributedIncreasedValue: attributedIncreasedValue,
-          attributedDecreasedValue: attributedDecreasedValue,
-          attributedHint: attributedHint,
-          tooltip: tooltip,
-          textDirection: textDirection,
-          rect: rect,
-          elevation: elevation,
-          thickness: thickness,
-          textSelection: textSelection,
-          scrollIndex: scrollIndex,
-          scrollChildCount: scrollChildCount,
-          scrollPosition: scrollPosition,
-          scrollExtentMax: scrollExtentMax,
-          scrollExtentMin: scrollExtentMin,
-          platformViewId: platformViewId,
-          maxValueLength: maxValueLength,
-          currentValueLength: currentValueLength,
-          tags: tags,
-          transform: transform,
-          customSemanticsActionIds: customSemanticsActionIds,
-        ) {
+    super.customSemanticsActionIds,
+  })  : mateParams = {
+          'flags': _i2.BuilderArg<int>(
+            name: 'flags',
+            init: flags,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<int>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'attributedLabel': _i2.BuilderArg<_i1.AttributedString>(
+            name: 'attributedLabel',
+            init: attributedLabel,
+            isNamed: true,
+          ),
+          'attributedValue': _i2.BuilderArg<_i1.AttributedString>(
+            name: 'attributedValue',
+            init: attributedValue,
+            isNamed: true,
+          ),
+          'attributedIncreasedValue': _i2.BuilderArg<_i1.AttributedString>(
+            name: 'attributedIncreasedValue',
+            init: attributedIncreasedValue,
+            isNamed: true,
+          ),
+          'attributedDecreasedValue': _i2.BuilderArg<_i1.AttributedString>(
+            name: 'attributedDecreasedValue',
+            init: attributedDecreasedValue,
+            isNamed: true,
+          ),
+          'attributedHint': _i2.BuilderArg<_i1.AttributedString>(
+            name: 'attributedHint',
+            init: attributedHint,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'rect': _i2.BuilderArg<_i3.Rect>(
+            name: 'rect',
+            init: rect,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'thickness': _i2.BuilderArg<double>(
+            name: 'thickness',
+            init: thickness,
+            isNamed: true,
+          ),
+          'textSelection': _i2.BuilderArg<_i6.TextSelection?>(
+            name: 'textSelection',
+            init: textSelection,
+            isNamed: true,
+          ),
+          'scrollIndex': _i2.BuilderArg<int?>(
+            name: 'scrollIndex',
+            init: scrollIndex,
+            isNamed: true,
+          ),
+          'scrollChildCount': _i2.BuilderArg<int?>(
+            name: 'scrollChildCount',
+            init: scrollChildCount,
+            isNamed: true,
+          ),
+          'scrollPosition': _i2.BuilderArg<double?>(
+            name: 'scrollPosition',
+            init: scrollPosition,
+            isNamed: true,
+          ),
+          'scrollExtentMax': _i2.BuilderArg<double?>(
+            name: 'scrollExtentMax',
+            init: scrollExtentMax,
+            isNamed: true,
+          ),
+          'scrollExtentMin': _i2.BuilderArg<double?>(
+            name: 'scrollExtentMin',
+            init: scrollExtentMin,
+            isNamed: true,
+          ),
+          'platformViewId': _i2.BuilderArg<int?>(
+            name: 'platformViewId',
+            init: platformViewId,
+            isNamed: true,
+          ),
+          'maxValueLength': _i2.BuilderArg<int?>(
+            name: 'maxValueLength',
+            init: maxValueLength,
+            isNamed: true,
+          ),
+          'currentValueLength': _i2.BuilderArg<int?>(
+            name: 'currentValueLength',
+            init: currentValueLength,
+            isNamed: true,
+          ),
+          'tags': _i2.BuilderArg<Set<_i1.SemanticsTag>?>(
+            name: 'tags',
+            init: tags,
+            isNamed: true,
+          ),
+          'transform': _i2.BuilderArg<_i7.Matrix4?>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+          'customSemanticsActionIds': _i2.BuilderArg<List<int>?>(
+            name: 'customSemanticsActionIds',
+            init: customSemanticsActionIds,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SemanticsData';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsData$Mate(
@@ -321,127 +426,10 @@ class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
           transform: p.get('transform').build(),
           customSemanticsActionIds: p.get('customSemanticsActionIds').build(),
         );
-    mateUse(
-      'flags',
-      flags,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedLabel',
-      attributedLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedValue',
-      attributedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedIncreasedValue',
-      attributedIncreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedDecreasedValue',
-      attributedDecreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedHint',
-      attributedHint,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'rect',
-      rect,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'thickness',
-      thickness,
-      isNamed: true,
-    );
-    mateUse(
-      'textSelection',
-      textSelection,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollIndex',
-      scrollIndex,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollChildCount',
-      scrollChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollPosition',
-      scrollPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollExtentMax',
-      scrollExtentMax,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollExtentMin',
-      scrollExtentMin,
-      isNamed: true,
-    );
-    mateUse(
-      'platformViewId',
-      platformViewId,
-      isNamed: true,
-    );
-    mateUse(
-      'maxValueLength',
-      maxValueLength,
-      isNamed: true,
-    );
-    mateUse(
-      'currentValueLength',
-      currentValueLength,
-      isNamed: true,
-    );
-    mateUse(
-      'tags',
-      tags,
-      isNamed: true,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
-    mateUse(
-      'customSemanticsActionIds',
-      customSemanticsActionIds,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SemanticsHintOverrides extends DiagnosticableTree
@@ -449,31 +437,33 @@ class SemanticsHintOverrides$Mate extends _i1.SemanticsHintOverrides with _i2.Ma
   /// SemanticsHintOverrides SemanticsHintOverrides({String? onTapHint, String? onLongPressHint})
   SemanticsHintOverrides$Mate({
     /// optionalParameters: {String? onTapHint} , default:none
-    String? onTapHint,
+    super.onTapHint,
 
     /// optionalParameters: {String? onLongPressHint} , default:none
-    String? onLongPressHint,
-  }) : super(
-          onTapHint: onTapHint,
-          onLongPressHint: onLongPressHint,
-        ) {
+    super.onLongPressHint,
+  })  : mateParams = {
+          'onTapHint': _i2.BuilderArg<String?>(
+            name: 'onTapHint',
+            init: onTapHint,
+            isNamed: true,
+          ),
+          'onLongPressHint': _i2.BuilderArg<String?>(
+            name: 'onLongPressHint',
+            init: onLongPressHint,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SemanticsHintOverrides';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsHintOverrides$Mate(
           onTapHint: p.get('onTapHint').build(),
           onLongPressHint: p.get('onLongPressHint').build(),
         );
-    mateUse(
-      'onTapHint',
-      onTapHint,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressHint',
-      onLongPressHint,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SemanticsProperties extends DiagnosticableTree
@@ -481,246 +471,487 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
   /// SemanticsProperties SemanticsProperties({bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? link, bool? header, bool? textField, bool? slider, bool? keyboardKey, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? hidden, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, String? tooltip, AttributedString? attributedHint, SemanticsHintOverrides? hintOverrides, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(bool)? onMoveCursorForwardByWord, void Function(bool)? onMoveCursorBackwardByWord, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, void Function()? onDismiss, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   SemanticsProperties$Mate({
     /// optionalParameters: {bool? enabled} , default:none
-    bool? enabled,
+    super.enabled,
 
     /// optionalParameters: {bool? checked} , default:none
-    bool? checked,
+    super.checked,
 
     /// optionalParameters: {bool? mixed} , default:none
-    bool? mixed,
+    super.mixed,
 
     /// optionalParameters: {bool? selected} , default:none
-    bool? selected,
+    super.selected,
 
     /// optionalParameters: {bool? toggled} , default:none
-    bool? toggled,
+    super.toggled,
 
     /// optionalParameters: {bool? button} , default:none
-    bool? button,
+    super.button,
 
     /// optionalParameters: {bool? link} , default:none
-    bool? link,
+    super.link,
 
     /// optionalParameters: {bool? header} , default:none
-    bool? header,
+    super.header,
 
     /// optionalParameters: {bool? textField} , default:none
-    bool? textField,
+    super.textField,
 
     /// optionalParameters: {bool? slider} , default:none
-    bool? slider,
+    super.slider,
 
     /// optionalParameters: {bool? keyboardKey} , default:none
-    bool? keyboardKey,
+    super.keyboardKey,
 
     /// optionalParameters: {bool? readOnly} , default:none
-    bool? readOnly,
+    super.readOnly,
 
     /// optionalParameters: {bool? focusable} , default:none
-    bool? focusable,
+    super.focusable,
 
     /// optionalParameters: {bool? focused} , default:none
-    bool? focused,
+    super.focused,
 
     /// optionalParameters: {bool? inMutuallyExclusiveGroup} , default:none
-    bool? inMutuallyExclusiveGroup,
+    super.inMutuallyExclusiveGroup,
 
     /// optionalParameters: {bool? hidden} , default:none
-    bool? hidden,
+    super.hidden,
 
     /// optionalParameters: {bool? obscured} , default:none
-    bool? obscured,
+    super.obscured,
 
     /// optionalParameters: {bool? multiline} , default:none
-    bool? multiline,
+    super.multiline,
 
     /// optionalParameters: {bool? scopesRoute} , default:none
-    bool? scopesRoute,
+    super.scopesRoute,
 
     /// optionalParameters: {bool? namesRoute} , default:none
-    bool? namesRoute,
+    super.namesRoute,
 
     /// optionalParameters: {bool? image} , default:none
-    bool? image,
+    super.image,
 
     /// optionalParameters: {bool? liveRegion} , default:none
-    bool? liveRegion,
+    super.liveRegion,
 
     /// optionalParameters: {int? maxValueLength} , default:none
-    int? maxValueLength,
+    super.maxValueLength,
 
     /// optionalParameters: {int? currentValueLength} , default:none
-    int? currentValueLength,
+    super.currentValueLength,
 
     /// optionalParameters: {String? label} , default:none
-    String? label,
+    super.label,
 
     /// optionalParameters: {AttributedString? attributedLabel} , default:none
-    _i1.AttributedString? attributedLabel,
+    super.attributedLabel,
 
     /// optionalParameters: {String? value} , default:none
-    String? value,
+    super.value,
 
     /// optionalParameters: {AttributedString? attributedValue} , default:none
-    _i1.AttributedString? attributedValue,
+    super.attributedValue,
 
     /// optionalParameters: {String? increasedValue} , default:none
-    String? increasedValue,
+    super.increasedValue,
 
     /// optionalParameters: {AttributedString? attributedIncreasedValue} , default:none
-    _i1.AttributedString? attributedIncreasedValue,
+    super.attributedIncreasedValue,
 
     /// optionalParameters: {String? decreasedValue} , default:none
-    String? decreasedValue,
+    super.decreasedValue,
 
     /// optionalParameters: {AttributedString? attributedDecreasedValue} , default:none
-    _i1.AttributedString? attributedDecreasedValue,
+    super.attributedDecreasedValue,
 
     /// optionalParameters: {String? hint} , default:none
-    String? hint,
+    super.hint,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {AttributedString? attributedHint} , default:none
-    _i1.AttributedString? attributedHint,
+    super.attributedHint,
 
     /// optionalParameters: {SemanticsHintOverrides? hintOverrides} , default:none
-    _i1.SemanticsHintOverrides? hintOverrides,
+    super.hintOverrides,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i3.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {SemanticsSortKey? sortKey} , default:none
-    _i1.SemanticsSortKey? sortKey,
+    super.sortKey,
 
     /// optionalParameters: {SemanticsTag? tagForChildren} , default:none
-    _i1.SemanticsTag? tagForChildren,
+    super.tagForChildren,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i3.VoidCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i3.VoidCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function()? onScrollLeft} , default:none
-    _i3.VoidCallback? onScrollLeft,
+    super.onScrollLeft,
 
     /// optionalParameters: {void Function()? onScrollRight} , default:none
-    _i3.VoidCallback? onScrollRight,
+    super.onScrollRight,
 
     /// optionalParameters: {void Function()? onScrollUp} , default:none
-    _i3.VoidCallback? onScrollUp,
+    super.onScrollUp,
 
     /// optionalParameters: {void Function()? onScrollDown} , default:none
-    _i3.VoidCallback? onScrollDown,
+    super.onScrollDown,
 
     /// optionalParameters: {void Function()? onIncrease} , default:none
-    _i3.VoidCallback? onIncrease,
+    super.onIncrease,
 
     /// optionalParameters: {void Function()? onDecrease} , default:none
-    _i3.VoidCallback? onDecrease,
+    super.onDecrease,
 
     /// optionalParameters: {void Function()? onCopy} , default:none
-    _i3.VoidCallback? onCopy,
+    super.onCopy,
 
     /// optionalParameters: {void Function()? onCut} , default:none
-    _i3.VoidCallback? onCut,
+    super.onCut,
 
     /// optionalParameters: {void Function()? onPaste} , default:none
-    _i3.VoidCallback? onPaste,
+    super.onPaste,
 
     /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , default:none
-    _i1.MoveCursorHandler? onMoveCursorForwardByCharacter,
+    super.onMoveCursorForwardByCharacter,
 
     /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , default:none
-    _i1.MoveCursorHandler? onMoveCursorBackwardByCharacter,
+    super.onMoveCursorBackwardByCharacter,
 
     /// optionalParameters: {void Function(bool)? onMoveCursorForwardByWord} , default:none
-    _i1.MoveCursorHandler? onMoveCursorForwardByWord,
+    super.onMoveCursorForwardByWord,
 
     /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByWord} , default:none
-    _i1.MoveCursorHandler? onMoveCursorBackwardByWord,
+    super.onMoveCursorBackwardByWord,
 
     /// optionalParameters: {void Function(TextSelection)? onSetSelection} , default:none
-    _i1.SetSelectionHandler? onSetSelection,
+    super.onSetSelection,
 
     /// optionalParameters: {void Function(String)? onSetText} , default:none
-    _i1.SetTextHandler? onSetText,
+    super.onSetText,
 
     /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , default:none
-    _i3.VoidCallback? onDidGainAccessibilityFocus,
+    super.onDidGainAccessibilityFocus,
 
     /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , default:none
-    _i3.VoidCallback? onDidLoseAccessibilityFocus,
+    super.onDidLoseAccessibilityFocus,
 
     /// optionalParameters: {void Function()? onDismiss} , default:none
-    _i3.VoidCallback? onDismiss,
+    super.onDismiss,
 
     /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , default:none
-    Map<_i1.CustomSemanticsAction, _i3.VoidCallback>? customSemanticsActions,
-  }) : super(
-          enabled: enabled,
-          checked: checked,
-          mixed: mixed,
-          selected: selected,
-          toggled: toggled,
-          button: button,
-          link: link,
-          header: header,
-          textField: textField,
-          slider: slider,
-          keyboardKey: keyboardKey,
-          readOnly: readOnly,
-          focusable: focusable,
-          focused: focused,
-          inMutuallyExclusiveGroup: inMutuallyExclusiveGroup,
-          hidden: hidden,
-          obscured: obscured,
-          multiline: multiline,
-          scopesRoute: scopesRoute,
-          namesRoute: namesRoute,
-          image: image,
-          liveRegion: liveRegion,
-          maxValueLength: maxValueLength,
-          currentValueLength: currentValueLength,
-          label: label,
-          attributedLabel: attributedLabel,
-          value: value,
-          attributedValue: attributedValue,
-          increasedValue: increasedValue,
-          attributedIncreasedValue: attributedIncreasedValue,
-          decreasedValue: decreasedValue,
-          attributedDecreasedValue: attributedDecreasedValue,
-          hint: hint,
-          tooltip: tooltip,
-          attributedHint: attributedHint,
-          hintOverrides: hintOverrides,
-          textDirection: textDirection,
-          sortKey: sortKey,
-          tagForChildren: tagForChildren,
-          onTap: onTap,
-          onLongPress: onLongPress,
-          onScrollLeft: onScrollLeft,
-          onScrollRight: onScrollRight,
-          onScrollUp: onScrollUp,
-          onScrollDown: onScrollDown,
-          onIncrease: onIncrease,
-          onDecrease: onDecrease,
-          onCopy: onCopy,
-          onCut: onCut,
-          onPaste: onPaste,
-          onMoveCursorForwardByCharacter: onMoveCursorForwardByCharacter,
-          onMoveCursorBackwardByCharacter: onMoveCursorBackwardByCharacter,
-          onMoveCursorForwardByWord: onMoveCursorForwardByWord,
-          onMoveCursorBackwardByWord: onMoveCursorBackwardByWord,
-          onSetSelection: onSetSelection,
-          onSetText: onSetText,
-          onDidGainAccessibilityFocus: onDidGainAccessibilityFocus,
-          onDidLoseAccessibilityFocus: onDidLoseAccessibilityFocus,
-          onDismiss: onDismiss,
-          customSemanticsActions: customSemanticsActions,
-        ) {
+    super.customSemanticsActions,
+  })  : mateParams = {
+          'enabled': _i2.BuilderArg<bool?>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+          ),
+          'checked': _i2.BuilderArg<bool?>(
+            name: 'checked',
+            init: checked,
+            isNamed: true,
+          ),
+          'mixed': _i2.BuilderArg<bool?>(
+            name: 'mixed',
+            init: mixed,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool?>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+          ),
+          'toggled': _i2.BuilderArg<bool?>(
+            name: 'toggled',
+            init: toggled,
+            isNamed: true,
+          ),
+          'button': _i2.BuilderArg<bool?>(
+            name: 'button',
+            init: button,
+            isNamed: true,
+          ),
+          'link': _i2.BuilderArg<bool?>(
+            name: 'link',
+            init: link,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<bool?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'textField': _i2.BuilderArg<bool?>(
+            name: 'textField',
+            init: textField,
+            isNamed: true,
+          ),
+          'slider': _i2.BuilderArg<bool?>(
+            name: 'slider',
+            init: slider,
+            isNamed: true,
+          ),
+          'keyboardKey': _i2.BuilderArg<bool?>(
+            name: 'keyboardKey',
+            init: keyboardKey,
+            isNamed: true,
+          ),
+          'readOnly': _i2.BuilderArg<bool?>(
+            name: 'readOnly',
+            init: readOnly,
+            isNamed: true,
+          ),
+          'focusable': _i2.BuilderArg<bool?>(
+            name: 'focusable',
+            init: focusable,
+            isNamed: true,
+          ),
+          'focused': _i2.BuilderArg<bool?>(
+            name: 'focused',
+            init: focused,
+            isNamed: true,
+          ),
+          'inMutuallyExclusiveGroup': _i2.BuilderArg<bool?>(
+            name: 'inMutuallyExclusiveGroup',
+            init: inMutuallyExclusiveGroup,
+            isNamed: true,
+          ),
+          'hidden': _i2.BuilderArg<bool?>(
+            name: 'hidden',
+            init: hidden,
+            isNamed: true,
+          ),
+          'obscured': _i2.BuilderArg<bool?>(
+            name: 'obscured',
+            init: obscured,
+            isNamed: true,
+          ),
+          'multiline': _i2.BuilderArg<bool?>(
+            name: 'multiline',
+            init: multiline,
+            isNamed: true,
+          ),
+          'scopesRoute': _i2.BuilderArg<bool?>(
+            name: 'scopesRoute',
+            init: scopesRoute,
+            isNamed: true,
+          ),
+          'namesRoute': _i2.BuilderArg<bool?>(
+            name: 'namesRoute',
+            init: namesRoute,
+            isNamed: true,
+          ),
+          'image': _i2.BuilderArg<bool?>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'liveRegion': _i2.BuilderArg<bool?>(
+            name: 'liveRegion',
+            init: liveRegion,
+            isNamed: true,
+          ),
+          'maxValueLength': _i2.BuilderArg<int?>(
+            name: 'maxValueLength',
+            init: maxValueLength,
+            isNamed: true,
+          ),
+          'currentValueLength': _i2.BuilderArg<int?>(
+            name: 'currentValueLength',
+            init: currentValueLength,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'attributedLabel': _i2.BuilderArg<_i1.AttributedString?>(
+            name: 'attributedLabel',
+            init: attributedLabel,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<String?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'attributedValue': _i2.BuilderArg<_i1.AttributedString?>(
+            name: 'attributedValue',
+            init: attributedValue,
+            isNamed: true,
+          ),
+          'increasedValue': _i2.BuilderArg<String?>(
+            name: 'increasedValue',
+            init: increasedValue,
+            isNamed: true,
+          ),
+          'attributedIncreasedValue': _i2.BuilderArg<_i1.AttributedString?>(
+            name: 'attributedIncreasedValue',
+            init: attributedIncreasedValue,
+            isNamed: true,
+          ),
+          'decreasedValue': _i2.BuilderArg<String?>(
+            name: 'decreasedValue',
+            init: decreasedValue,
+            isNamed: true,
+          ),
+          'attributedDecreasedValue': _i2.BuilderArg<_i1.AttributedString?>(
+            name: 'attributedDecreasedValue',
+            init: attributedDecreasedValue,
+            isNamed: true,
+          ),
+          'hint': _i2.BuilderArg<String?>(
+            name: 'hint',
+            init: hint,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'attributedHint': _i2.BuilderArg<_i1.AttributedString?>(
+            name: 'attributedHint',
+            init: attributedHint,
+            isNamed: true,
+          ),
+          'hintOverrides': _i2.BuilderArg<_i1.SemanticsHintOverrides?>(
+            name: 'hintOverrides',
+            init: hintOverrides,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'sortKey': _i2.BuilderArg<_i1.SemanticsSortKey?>(
+            name: 'sortKey',
+            init: sortKey,
+            isNamed: true,
+          ),
+          'tagForChildren': _i2.BuilderArg<_i1.SemanticsTag?>(
+            name: 'tagForChildren',
+            init: tagForChildren,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onScrollLeft': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onScrollLeft',
+            init: onScrollLeft,
+            isNamed: true,
+          ),
+          'onScrollRight': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onScrollRight',
+            init: onScrollRight,
+            isNamed: true,
+          ),
+          'onScrollUp': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onScrollUp',
+            init: onScrollUp,
+            isNamed: true,
+          ),
+          'onScrollDown': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onScrollDown',
+            init: onScrollDown,
+            isNamed: true,
+          ),
+          'onIncrease': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onIncrease',
+            init: onIncrease,
+            isNamed: true,
+          ),
+          'onDecrease': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onDecrease',
+            init: onDecrease,
+            isNamed: true,
+          ),
+          'onCopy': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onCopy',
+            init: onCopy,
+            isNamed: true,
+          ),
+          'onCut': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onCut',
+            init: onCut,
+            isNamed: true,
+          ),
+          'onPaste': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onPaste',
+            init: onPaste,
+            isNamed: true,
+          ),
+          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i1.MoveCursorHandler?>(
+            name: 'onMoveCursorForwardByCharacter',
+            init: onMoveCursorForwardByCharacter,
+            isNamed: true,
+          ),
+          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i1.MoveCursorHandler?>(
+            name: 'onMoveCursorBackwardByCharacter',
+            init: onMoveCursorBackwardByCharacter,
+            isNamed: true,
+          ),
+          'onMoveCursorForwardByWord': _i2.BuilderArg<_i1.MoveCursorHandler?>(
+            name: 'onMoveCursorForwardByWord',
+            init: onMoveCursorForwardByWord,
+            isNamed: true,
+          ),
+          'onMoveCursorBackwardByWord': _i2.BuilderArg<_i1.MoveCursorHandler?>(
+            name: 'onMoveCursorBackwardByWord',
+            init: onMoveCursorBackwardByWord,
+            isNamed: true,
+          ),
+          'onSetSelection': _i2.BuilderArg<_i1.SetSelectionHandler?>(
+            name: 'onSetSelection',
+            init: onSetSelection,
+            isNamed: true,
+          ),
+          'onSetText': _i2.BuilderArg<_i1.SetTextHandler?>(
+            name: 'onSetText',
+            init: onSetText,
+            isNamed: true,
+          ),
+          'onDidGainAccessibilityFocus': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onDidGainAccessibilityFocus',
+            init: onDidGainAccessibilityFocus,
+            isNamed: true,
+          ),
+          'onDidLoseAccessibilityFocus': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onDidLoseAccessibilityFocus',
+            init: onDidLoseAccessibilityFocus,
+            isNamed: true,
+          ),
+          'onDismiss': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onDismiss',
+            init: onDismiss,
+            isNamed: true,
+          ),
+          'customSemanticsActions': _i2.BuilderArg<Map<_i1.CustomSemanticsAction, _i3.VoidCallback>?>(
+            name: 'customSemanticsActions',
+            init: customSemanticsActions,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SemanticsProperties';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsProperties$Mate(
@@ -785,307 +1016,10 @@ class SemanticsProperties$Mate extends _i1.SemanticsProperties with _i2.Mate {
           onDismiss: p.get('onDismiss').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-    );
-    mateUse(
-      'checked',
-      checked,
-      isNamed: true,
-    );
-    mateUse(
-      'mixed',
-      mixed,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-    );
-    mateUse(
-      'toggled',
-      toggled,
-      isNamed: true,
-    );
-    mateUse(
-      'button',
-      button,
-      isNamed: true,
-    );
-    mateUse(
-      'link',
-      link,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'textField',
-      textField,
-      isNamed: true,
-    );
-    mateUse(
-      'slider',
-      slider,
-      isNamed: true,
-    );
-    mateUse(
-      'keyboardKey',
-      keyboardKey,
-      isNamed: true,
-    );
-    mateUse(
-      'readOnly',
-      readOnly,
-      isNamed: true,
-    );
-    mateUse(
-      'focusable',
-      focusable,
-      isNamed: true,
-    );
-    mateUse(
-      'focused',
-      focused,
-      isNamed: true,
-    );
-    mateUse(
-      'inMutuallyExclusiveGroup',
-      inMutuallyExclusiveGroup,
-      isNamed: true,
-    );
-    mateUse(
-      'hidden',
-      hidden,
-      isNamed: true,
-    );
-    mateUse(
-      'obscured',
-      obscured,
-      isNamed: true,
-    );
-    mateUse(
-      'multiline',
-      multiline,
-      isNamed: true,
-    );
-    mateUse(
-      'scopesRoute',
-      scopesRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'namesRoute',
-      namesRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'liveRegion',
-      liveRegion,
-      isNamed: true,
-    );
-    mateUse(
-      'maxValueLength',
-      maxValueLength,
-      isNamed: true,
-    );
-    mateUse(
-      'currentValueLength',
-      currentValueLength,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedLabel',
-      attributedLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedValue',
-      attributedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'increasedValue',
-      increasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedIncreasedValue',
-      attributedIncreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'decreasedValue',
-      decreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedDecreasedValue',
-      attributedDecreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'hint',
-      hint,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedHint',
-      attributedHint,
-      isNamed: true,
-    );
-    mateUse(
-      'hintOverrides',
-      hintOverrides,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'sortKey',
-      sortKey,
-      isNamed: true,
-    );
-    mateUse(
-      'tagForChildren',
-      tagForChildren,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollLeft',
-      onScrollLeft,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollRight',
-      onScrollRight,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollUp',
-      onScrollUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollDown',
-      onScrollDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onIncrease',
-      onIncrease,
-      isNamed: true,
-    );
-    mateUse(
-      'onDecrease',
-      onDecrease,
-      isNamed: true,
-    );
-    mateUse(
-      'onCopy',
-      onCopy,
-      isNamed: true,
-    );
-    mateUse(
-      'onCut',
-      onCut,
-      isNamed: true,
-    );
-    mateUse(
-      'onPaste',
-      onPaste,
-      isNamed: true,
-    );
-    mateUse(
-      'onMoveCursorForwardByCharacter',
-      onMoveCursorForwardByCharacter,
-      isNamed: true,
-    );
-    mateUse(
-      'onMoveCursorBackwardByCharacter',
-      onMoveCursorBackwardByCharacter,
-      isNamed: true,
-    );
-    mateUse(
-      'onMoveCursorForwardByWord',
-      onMoveCursorForwardByWord,
-      isNamed: true,
-    );
-    mateUse(
-      'onMoveCursorBackwardByWord',
-      onMoveCursorBackwardByWord,
-      isNamed: true,
-    );
-    mateUse(
-      'onSetSelection',
-      onSetSelection,
-      isNamed: true,
-    );
-    mateUse(
-      'onSetText',
-      onSetText,
-      isNamed: true,
-    );
-    mateUse(
-      'onDidGainAccessibilityFocus',
-      onDidGainAccessibilityFocus,
-      isNamed: true,
-    );
-    mateUse(
-      'onDidLoseAccessibilityFocus',
-      onDidLoseAccessibilityFocus,
-      isNamed: true,
-    );
-    mateUse(
-      'onDismiss',
-      onDismiss,
-      isNamed: true,
-    );
-    mateUse(
-      'customSemanticsActions',
-      customSemanticsActions,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SemanticsNode extends AbstractNode with DiagnosticableTreeMixin
@@ -1093,47 +1027,59 @@ class SemanticsNode$Mate extends _i1.SemanticsNode with _i2.Mate {
   /// SemanticsNode SemanticsNode({Key? key, void Function()? showOnScreen})
   SemanticsNode$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i8.Key? key,
+    super.key,
 
     /// optionalParameters: {void Function()? showOnScreen} , default:none
-    _i3.VoidCallback? showOnScreen,
-  }) : super(
-          key: key,
-          showOnScreen: showOnScreen,
-        ) {
+    super.showOnScreen,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i8.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'showOnScreen': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'showOnScreen',
+            init: showOnScreen,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SemanticsNode';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsNode$Mate(
           key: p.get('key').build(),
           showOnScreen: p.get('showOnScreen').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'showOnScreen',
-      showOnScreen,
-      isNamed: true,
-    );
   }
 
   /// SemanticsNode SemanticsNode.root({Key? key, void Function()? showOnScreen, required SemanticsOwner owner})
   SemanticsNode$Mate.root({
     /// optionalParameters: {Key? key} , default:none
-    _i8.Key? key,
+    super.key,
 
     /// optionalParameters: {void Function()? showOnScreen} , default:none
-    _i3.VoidCallback? showOnScreen,
+    super.showOnScreen,
 
     /// optionalParameters: {required SemanticsOwner owner} , default:none
-    required _i1.SemanticsOwner owner,
-  }) : super.root(
-          key: key,
-          showOnScreen: showOnScreen,
-          owner: owner,
-        ) {
+    required super.owner,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i8.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'showOnScreen': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'showOnScreen',
+            init: showOnScreen,
+            isNamed: true,
+          ),
+          'owner': _i2.BuilderArg<_i1.SemanticsOwner>(
+            name: 'owner',
+            init: owner,
+            isNamed: true,
+          ),
+        },
+        super.root() {
     mateBuilderName = 'SemanticsNode.root';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsNode$Mate.root(
@@ -1141,22 +1087,10 @@ class SemanticsNode$Mate extends _i1.SemanticsNode with _i2.Mate {
           showOnScreen: p.get('showOnScreen').build(),
           owner: p.get('owner').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'showOnScreen',
-      showOnScreen,
-      isNamed: true,
-    );
-    mateUse(
-      'owner',
-      owner,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SemanticsOwner extends ChangeNotifier
@@ -1165,17 +1099,22 @@ class SemanticsOwner$Mate extends _i1.SemanticsOwner with _i2.Mate {
   SemanticsOwner$Mate(
       {
       /// optionalParameters: {required void Function(SemanticsUpdate) onSemanticsUpdate} , default:none
-      required _i1.SemanticsUpdateCallback onSemanticsUpdate})
-      : super(onSemanticsUpdate: onSemanticsUpdate) {
+      required super.onSemanticsUpdate})
+      : mateParams = {
+          'onSemanticsUpdate': _i2.BuilderArg<_i1.SemanticsUpdateCallback>(
+            name: 'onSemanticsUpdate',
+            init: onSemanticsUpdate,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'SemanticsOwner';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsOwner$Mate(onSemanticsUpdate: p.get('onSemanticsUpdate').build());
-    mateUse(
-      'onSemanticsUpdate',
-      onSemanticsUpdate,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OrdinalSortKey extends SemanticsSortKey
@@ -1183,28 +1122,30 @@ class OrdinalSortKey$Mate extends _i1.OrdinalSortKey with _i2.Mate {
   /// OrdinalSortKey OrdinalSortKey(double order, {String? name})
   OrdinalSortKey$Mate(
     /// requiredParameters: double order
-    double order, {
+    super.order, {
     /// optionalParameters: {String? name} , default:none
-    String? name,
-  }) : super(
-          order,
-          name: name,
-        ) {
+    super.name,
+  })  : mateParams = {
+          'order': _i2.BuilderArg<double>(
+            name: 'order',
+            init: order,
+            isNamed: false,
+          ),
+          'name': _i2.BuilderArg<String?>(
+            name: 'name',
+            init: name,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'OrdinalSortKey';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => OrdinalSortKey$Mate(
           p.get('order').value,
           name: p.get('name').build(),
         );
-    mateUse(
-      'order',
-      order,
-      isNamed: false,
-    );
-    mateUse(
-      'name',
-      name,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

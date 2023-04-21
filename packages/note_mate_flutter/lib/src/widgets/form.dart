@@ -13,26 +13,47 @@ class Form$Mate extends _i1.Form with _i2.Mate {
   /// Form Form({Key? key, required Widget child, Future<bool> Function()? onWillPop, void Function()? onChanged, AutovalidateMode? autovalidateMode})
   Form$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {Future<bool> Function()? onWillPop} , default:none
-    _i5.WillPopCallback? onWillPop,
+    super.onWillPop,
 
     /// optionalParameters: {void Function()? onChanged} , default:none
-    _i6.VoidCallback? onChanged,
+    super.onChanged,
 
     /// optionalParameters: {AutovalidateMode? autovalidateMode} , default:none
-    _i1.AutovalidateMode? autovalidateMode,
-  }) : super(
-          key: key,
-          child: child,
-          onWillPop: onWillPop,
-          onChanged: onChanged,
-          autovalidateMode: autovalidateMode,
-        ) {
+    super.autovalidateMode,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'onWillPop': _i2.BuilderArg<_i5.WillPopCallback?>(
+            name: 'onWillPop',
+            init: onWillPop,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'autovalidateMode': _i2.BuilderArg<_i1.AutovalidateMode?>(
+            name: 'autovalidateMode',
+            init: autovalidateMode,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Form';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Form$Mate(
@@ -42,32 +63,10 @@ class Form$Mate extends _i1.Form with _i2.Mate {
           onChanged: p.get('onChanged').build(),
           autovalidateMode: p.get('autovalidateMode').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'onWillPop',
-      onWillPop,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'autovalidateMode',
-      autovalidateMode,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FormField<T> extends StatefulWidget
@@ -75,38 +74,72 @@ class FormField$Mate<T> extends _i1.FormField<T> with _i2.Mate {
   /// FormField<T> FormField({Key? key, required Widget Function(FormFieldState<T>) builder, void Function(T?)? onSaved, String? Function(T?)? validator, T? initialValue, bool enabled = true, AutovalidateMode? autovalidateMode, String? restorationId})
   FormField$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(FormFieldState<T>) builder} , default:none
-    required _i1.FormFieldBuilder<T> builder,
+    required super.builder,
 
     /// optionalParameters: {void Function(T?)? onSaved} , default:none
-    _i1.FormFieldSetter<T>? onSaved,
+    super.onSaved,
 
     /// optionalParameters: {String? Function(T?)? validator} , default:none
-    _i1.FormFieldValidator<T>? validator,
+    super.validator,
 
     /// optionalParameters: {T? initialValue} , default:none
-    T? initialValue,
+    super.initialValue,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {AutovalidateMode? autovalidateMode} , default:none
-    _i1.AutovalidateMode? autovalidateMode,
+    super.autovalidateMode,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
-  }) : super(
-          key: key,
-          builder: builder,
-          onSaved: onSaved,
-          validator: validator,
-          initialValue: initialValue,
-          enabled: enabled,
-          autovalidateMode: autovalidateMode,
-          restorationId: restorationId,
-        ) {
+    super.restorationId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.FormFieldBuilder<T>>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'onSaved': _i2.BuilderArg<_i1.FormFieldSetter<T>?>(
+            name: 'onSaved',
+            init: onSaved,
+            isNamed: true,
+          ),
+          'validator': _i2.BuilderArg<_i1.FormFieldValidator<T>?>(
+            name: 'validator',
+            init: validator,
+            isNamed: true,
+          ),
+          'initialValue': _i2.BuilderArg<T?>(
+            name: 'initialValue',
+            init: initialValue,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'autovalidateMode': _i2.BuilderArg<_i1.AutovalidateMode?>(
+            name: 'autovalidateMode',
+            init: autovalidateMode,
+            isNamed: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FormField';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FormField$Mate<T>(
@@ -119,46 +152,8 @@ class FormField$Mate<T> extends _i1.FormField<T> with _i2.Mate {
           autovalidateMode: p.get('autovalidateMode').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'onSaved',
-      onSaved,
-      isNamed: true,
-    );
-    mateUse(
-      'validator',
-      validator,
-      isNamed: true,
-    );
-    mateUse(
-      'initialValue',
-      initialValue,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'autovalidateMode',
-      autovalidateMode,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

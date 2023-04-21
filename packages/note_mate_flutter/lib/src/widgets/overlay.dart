@@ -12,18 +12,33 @@ class OverlayEntry$Mate extends _i1.OverlayEntry with _i2.Mate {
   /// OverlayEntry OverlayEntry({required Widget Function(BuildContext) builder, bool opaque = false, bool maintainState = false})
   OverlayEntry$Mate({
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
-    required _i3.WidgetBuilder builder,
+    required super.builder,
 
     /// optionalParameters: {bool opaque = false} , default:processed=BooleanLiteralImpl
-    bool opaque = false,
+    super.opaque,
 
     /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
-    bool maintainState = false,
-  }) : super(
-          builder: builder,
-          opaque: opaque,
-          maintainState: maintainState,
-        ) {
+    super.maintainState,
+  })  : mateParams = {
+          'builder': _i2.BuilderArg<_i3.WidgetBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'opaque': _i2.BuilderArg<bool>(
+            name: 'opaque',
+            init: opaque,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainState': _i2.BuilderArg<bool>(
+            name: 'maintainState',
+            init: maintainState,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'OverlayEntry';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverlayEntry$Mate(
@@ -31,24 +46,10 @@ class OverlayEntry$Mate extends _i1.OverlayEntry with _i2.Mate {
           opaque: p.get('opaque').build(),
           maintainState: p.get('maintainState').build(),
         );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'opaque',
-      opaque,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainState',
-      maintainState,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Overlay extends StatefulWidget
@@ -56,18 +57,32 @@ class Overlay$Mate extends _i1.Overlay with _i2.Mate {
   /// Overlay Overlay({Key? key, List<OverlayEntry> initialEntries = const <OverlayEntry>[], Clip clipBehavior = Clip.hardEdge})
   Overlay$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {List<OverlayEntry> initialEntries = const <OverlayEntry>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i1.OverlayEntry> initialEntries,
+    super.initialEntries,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.hardEdge,
-  }) : super(
-          key: key,
-          initialEntries: initialEntries,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialEntries': _i2.BuilderArg<List<_i1.OverlayEntry>>(
+            name: 'initialEntries',
+            init: initialEntries,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'Overlay';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Overlay$Mate(
@@ -75,23 +90,10 @@ class Overlay$Mate extends _i1.Overlay with _i2.Mate {
           initialEntries: p.get('initialEntries').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialEntries',
-      initialEntries,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OverlayPortalController
@@ -100,17 +102,22 @@ class OverlayPortalController$Mate extends _i1.OverlayPortalController with _i2.
   OverlayPortalController$Mate(
       {
       /// optionalParameters: {String? debugLabel} , default:none
-      String? debugLabel})
-      : super(debugLabel: debugLabel) {
+      super.debugLabel})
+      : mateParams = {
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'OverlayPortalController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverlayPortalController$Mate(debugLabel: p.get('debugLabel').build());
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OverlayPortal extends StatefulWidget
@@ -118,22 +125,39 @@ class OverlayPortal$Mate extends _i1.OverlayPortal with _i2.Mate {
   /// OverlayPortal OverlayPortal({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
   OverlayPortal$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required OverlayPortalController controller} , default:none
-    required _i1.OverlayPortalController controller,
+    required super.controller,
 
     /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , default:none
-    required _i3.WidgetBuilder overlayChildBuilder,
+    required super.overlayChildBuilder,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i3.Widget? child,
-  }) : super(
-          key: key,
-          controller: controller,
-          overlayChildBuilder: overlayChildBuilder,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i1.OverlayPortalController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'overlayChildBuilder': _i2.BuilderArg<_i3.WidgetBuilder>(
+            name: 'overlayChildBuilder',
+            init: overlayChildBuilder,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'OverlayPortal';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverlayPortal$Mate(
@@ -142,47 +166,44 @@ class OverlayPortal$Mate extends _i1.OverlayPortal with _i2.Mate {
           overlayChildBuilder: p.get('overlayChildBuilder').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayChildBuilder',
-      overlayChildBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// OverlayPortal OverlayPortal.targetsRootOverlay({Key? key, required OverlayPortalController controller, required Widget Function(BuildContext) overlayChildBuilder, Widget? child})
   OverlayPortal$Mate.targetsRootOverlay({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required OverlayPortalController controller} , default:none
-    required _i1.OverlayPortalController controller,
+    required super.controller,
 
     /// optionalParameters: {required Widget Function(BuildContext) overlayChildBuilder} , default:none
-    required _i3.WidgetBuilder overlayChildBuilder,
+    required super.overlayChildBuilder,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i3.Widget? child,
-  }) : super.targetsRootOverlay(
-          key: key,
-          controller: controller,
-          overlayChildBuilder: overlayChildBuilder,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i1.OverlayPortalController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'overlayChildBuilder': _i2.BuilderArg<_i3.WidgetBuilder>(
+            name: 'overlayChildBuilder',
+            init: overlayChildBuilder,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.targetsRootOverlay() {
     mateBuilderName = 'OverlayPortal.targetsRootOverlay';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverlayPortal$Mate.targetsRootOverlay(
@@ -191,25 +212,8 @@ class OverlayPortal$Mate extends _i1.OverlayPortal with _i2.Mate {
           overlayChildBuilder: p.get('overlayChildBuilder').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayChildBuilder',
-      overlayChildBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

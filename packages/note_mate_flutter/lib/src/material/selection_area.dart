@@ -17,34 +17,63 @@ class SelectionArea$Mate extends _i1.SelectionArea with _i2.Mate {
   /// SelectionArea SelectionArea({Key? key, FocusNode? focusNode, TextSelectionControls? selectionControls, Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder = _defaultContextMenuBuilder, TextMagnifierConfiguration? magnifierConfiguration, void Function(SelectedContent?)? onSelectionChanged, required Widget child})
   SelectionArea$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i4.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
-    _i5.TextSelectionControls? selectionControls,
+    super.selectionControls,
 
     /// optionalParameters: {Widget Function(BuildContext, SelectableRegionState)? contextMenuBuilder = _defaultContextMenuBuilder} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.SelectableRegionContextMenuBuilder? contextMenuBuilder,
+    super.contextMenuBuilder,
 
     /// optionalParameters: {TextMagnifierConfiguration? magnifierConfiguration} , default:none
-    _i7.TextMagnifierConfiguration? magnifierConfiguration,
+    super.magnifierConfiguration,
 
     /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , default:none
-    _i8.ValueChanged<_i9.SelectedContent?>? onSelectionChanged,
+    super.onSelectionChanged,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i10.Widget child,
-  }) : super(
-          key: key,
-          focusNode: focusNode,
-          selectionControls: selectionControls,
-          contextMenuBuilder: contextMenuBuilder,
-          magnifierConfiguration: magnifierConfiguration,
-          onSelectionChanged: onSelectionChanged,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i4.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'selectionControls': _i2.BuilderArg<_i5.TextSelectionControls?>(
+            name: 'selectionControls',
+            init: selectionControls,
+            isNamed: true,
+          ),
+          'contextMenuBuilder': _i2.BuilderArg<_i6.SelectableRegionContextMenuBuilder?>(
+            name: 'contextMenuBuilder',
+            init: contextMenuBuilder,
+            isNamed: true,
+          ),
+          'magnifierConfiguration': _i2.BuilderArg<_i7.TextMagnifierConfiguration?>(
+            name: 'magnifierConfiguration',
+            init: magnifierConfiguration,
+            isNamed: true,
+          ),
+          'onSelectionChanged': _i2.BuilderArg<_i8.ValueChanged<_i9.SelectedContent?>?>(
+            name: 'onSelectionChanged',
+            init: onSelectionChanged,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i10.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SelectionArea';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SelectionArea$Mate(
@@ -56,40 +85,8 @@ class SelectionArea$Mate extends _i1.SelectionArea with _i2.Mate {
           onSelectionChanged: p.get('onSelectionChanged').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionControls',
-      selectionControls,
-      isNamed: true,
-    );
-    mateUse(
-      'contextMenuBuilder',
-      contextMenuBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'magnifierConfiguration',
-      magnifierConfiguration,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelectionChanged',
-      onSelectionChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

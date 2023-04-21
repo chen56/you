@@ -16,22 +16,39 @@ class MagnifierInfo$Mate extends _i1.MagnifierInfo with _i2.Mate {
   /// MagnifierInfo MagnifierInfo({required Offset globalGesturePosition, required Rect caretRect, required Rect fieldBounds, required Rect currentLineBoundaries})
   MagnifierInfo$Mate({
     /// optionalParameters: {required Offset globalGesturePosition} , default:none
-    required _i3.Offset globalGesturePosition,
+    required super.globalGesturePosition,
 
     /// optionalParameters: {required Rect caretRect} , default:none
-    required _i3.Rect caretRect,
+    required super.caretRect,
 
     /// optionalParameters: {required Rect fieldBounds} , default:none
-    required _i3.Rect fieldBounds,
+    required super.fieldBounds,
 
     /// optionalParameters: {required Rect currentLineBoundaries} , default:none
-    required _i3.Rect currentLineBoundaries,
-  }) : super(
-          globalGesturePosition: globalGesturePosition,
-          caretRect: caretRect,
-          fieldBounds: fieldBounds,
-          currentLineBoundaries: currentLineBoundaries,
-        ) {
+    required super.currentLineBoundaries,
+  })  : mateParams = {
+          'globalGesturePosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalGesturePosition',
+            init: globalGesturePosition,
+            isNamed: true,
+          ),
+          'caretRect': _i2.BuilderArg<_i3.Rect>(
+            name: 'caretRect',
+            init: caretRect,
+            isNamed: true,
+          ),
+          'fieldBounds': _i2.BuilderArg<_i3.Rect>(
+            name: 'fieldBounds',
+            init: fieldBounds,
+            isNamed: true,
+          ),
+          'currentLineBoundaries': _i2.BuilderArg<_i3.Rect>(
+            name: 'currentLineBoundaries',
+            init: currentLineBoundaries,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MagnifierInfo';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MagnifierInfo$Mate(
@@ -40,27 +57,10 @@ class MagnifierInfo$Mate extends _i1.MagnifierInfo with _i2.Mate {
           fieldBounds: p.get('fieldBounds').build(),
           currentLineBoundaries: p.get('currentLineBoundaries').build(),
         );
-    mateUse(
-      'globalGesturePosition',
-      globalGesturePosition,
-      isNamed: true,
-    );
-    mateUse(
-      'caretRect',
-      caretRect,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldBounds',
-      fieldBounds,
-      isNamed: true,
-    );
-    mateUse(
-      'currentLineBoundaries',
-      currentLineBoundaries,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextMagnifierConfiguration
@@ -68,32 +68,34 @@ class TextMagnifierConfiguration$Mate extends _i1.TextMagnifierConfiguration wit
   /// TextMagnifierConfiguration TextMagnifierConfiguration({Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder, bool shouldDisplayHandlesInMagnifier = true})
   TextMagnifierConfiguration$Mate({
     /// optionalParameters: {Widget? Function(BuildContext, MagnifierController, ValueNotifier<MagnifierInfo>)? magnifierBuilder} , default:none
-    _i1.MagnifierBuilder? magnifierBuilder,
+    super.magnifierBuilder,
 
     /// optionalParameters: {bool shouldDisplayHandlesInMagnifier = true} , default:processed=BooleanLiteralImpl
-    bool shouldDisplayHandlesInMagnifier = true,
-  }) : super(
-          magnifierBuilder: magnifierBuilder,
-          shouldDisplayHandlesInMagnifier: shouldDisplayHandlesInMagnifier,
-        ) {
+    super.shouldDisplayHandlesInMagnifier,
+  })  : mateParams = {
+          'magnifierBuilder': _i2.BuilderArg<_i1.MagnifierBuilder?>(
+            name: 'magnifierBuilder',
+            init: magnifierBuilder,
+            isNamed: true,
+          ),
+          'shouldDisplayHandlesInMagnifier': _i2.BuilderArg<bool>(
+            name: 'shouldDisplayHandlesInMagnifier',
+            init: shouldDisplayHandlesInMagnifier,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextMagnifierConfiguration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextMagnifierConfiguration$Mate(
           magnifierBuilder: p.get('magnifierBuilder').build(),
           shouldDisplayHandlesInMagnifier: p.get('shouldDisplayHandlesInMagnifier').build(),
         );
-    mateUse(
-      'magnifierBuilder',
-      magnifierBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'shouldDisplayHandlesInMagnifier',
-      shouldDisplayHandlesInMagnifier,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MagnifierController
@@ -102,17 +104,22 @@ class MagnifierController$Mate extends _i1.MagnifierController with _i2.Mate {
   MagnifierController$Mate(
       {
       /// optionalParameters: {AnimationController? animationController} , default:none
-      _i4.AnimationController? animationController})
-      : super(animationController: animationController) {
+      super.animationController})
+      : mateParams = {
+          'animationController': _i2.BuilderArg<_i4.AnimationController?>(
+            name: 'animationController',
+            init: animationController,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'MagnifierController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MagnifierController$Mate(animationController: p.get('animationController').build());
-    mateUse(
-      'animationController',
-      animationController,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MagnifierDecoration extends ShapeDecoration
@@ -120,18 +127,32 @@ class MagnifierDecoration$Mate extends _i1.MagnifierDecoration with _i2.Mate {
   /// MagnifierDecoration MagnifierDecoration({double opacity = 1, List<BoxShadow>? shadows, ShapeBorder shape = const RoundedRectangleBorder()})
   MagnifierDecoration$Mate({
     /// optionalParameters: {double opacity = 1} , default:processed=IntegerLiteralImpl
-    double opacity = 1,
+    super.opacity,
 
     /// optionalParameters: {List<BoxShadow>? shadows} , default:none
-    List<_i5.BoxShadow>? shadows,
+    super.shadows,
 
     /// optionalParameters: {ShapeBorder shape = const RoundedRectangleBorder()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i6.ShapeBorder shape,
-  }) : super(
-          opacity: opacity,
-          shadows: shadows,
-          shape: shape,
-        ) {
+    super.shape,
+  })  : mateParams = {
+          'opacity': _i2.BuilderArg<double>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'shadows': _i2.BuilderArg<List<_i5.BoxShadow>?>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i6.ShapeBorder>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MagnifierDecoration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MagnifierDecoration$Mate(
@@ -139,23 +160,10 @@ class MagnifierDecoration$Mate extends _i1.MagnifierDecoration with _i2.Mate {
           shadows: p.get('shadows').build(),
           shape: p.get('shape').build(),
         );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RawMagnifier extends StatelessWidget
@@ -163,30 +171,57 @@ class RawMagnifier$Mate extends _i1.RawMagnifier with _i2.Mate {
   /// RawMagnifier RawMagnifier({Key? key, Widget? child, MagnifierDecoration decoration = const MagnifierDecoration(), Offset focalPointOffset = Offset.zero, double magnificationScale = 1, required Size size})
   RawMagnifier$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i8.Widget? child,
+    super.child,
 
     /// optionalParameters: {MagnifierDecoration decoration = const MagnifierDecoration()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i1.MagnifierDecoration decoration,
+    super.decoration,
 
     /// optionalParameters: {Offset focalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset focalPointOffset = _i9.Offset.zero,
+    super.focalPointOffset,
 
     /// optionalParameters: {double magnificationScale = 1} , default:processed=IntegerLiteralImpl
-    double magnificationScale = 1,
+    super.magnificationScale,
 
     /// optionalParameters: {required Size size} , default:none
-    required _i3.Size size,
-  }) : super(
-          key: key,
-          child: child,
-          decoration: decoration,
-          focalPointOffset: focalPointOffset,
-          magnificationScale: magnificationScale,
-          size: size,
-        ) {
+    required super.size,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i1.MagnifierDecoration>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'focalPointOffset': _i2.BuilderArg<_i3.Offset>(
+            name: 'focalPointOffset',
+            init: focalPointOffset,
+            isNamed: true,
+            defaultValue: _i9.Offset.zero,
+          ),
+          'magnificationScale': _i2.BuilderArg<double>(
+            name: 'magnificationScale',
+            init: magnificationScale,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'size': _i2.BuilderArg<_i3.Size>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawMagnifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RawMagnifier$Mate(
@@ -197,37 +232,8 @@ class RawMagnifier$Mate extends _i1.RawMagnifier with _i2.Mate {
           magnificationScale: p.get('magnificationScale').build(),
           size: p.get('size').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'focalPointOffset',
-      focalPointOffset,
-      isNamed: true,
-      defaultValue: _i9.Offset.zero,
-    );
-    mateUse(
-      'magnificationScale',
-      magnificationScale,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

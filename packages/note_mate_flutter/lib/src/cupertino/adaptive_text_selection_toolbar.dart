@@ -13,22 +13,36 @@ import 'package:flutter/src/widgets/editable_text.dart' as _i9;
 import 'package:flutter/src/rendering/selection.dart' as _i10;
 
 /// class CupertinoAdaptiveTextSelectionToolbar extends StatelessWidget
-class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTextSelectionToolbar with _i2.Mate {
+class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTextSelectionToolbar
+    with _i2.Mate {
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget>? children} , default:none
-    required List<_i4.Widget>? children,
+    required super.children,
 
     /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
-    required _i5.TextSelectionToolbarAnchors anchors,
-  }) : super(
-          key: key,
-          children: children,
-          anchors: anchors,
-        ) {
+    required super.anchors,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'anchors': _i2.BuilderArg<_i5.TextSelectionToolbarAnchors>(
+            name: 'anchors',
+            init: anchors,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoAdaptiveTextSelectionToolbar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate(
@@ -36,38 +50,36 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTe
           children: p.get('children').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'anchors',
-      anchors,
-      isNamed: true,
-    );
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.buttonItems({Key? key, required List<ContextMenuButtonItem>? buttonItems, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate.buttonItems({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<ContextMenuButtonItem>? buttonItems} , default:none
-    required List<_i6.ContextMenuButtonItem>? buttonItems,
+    required super.buttonItems,
 
     /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
-    required _i5.TextSelectionToolbarAnchors anchors,
-  }) : super.buttonItems(
-          key: key,
-          buttonItems: buttonItems,
-          anchors: anchors,
-        ) {
+    required super.anchors,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'buttonItems': _i2.BuilderArg<List<_i6.ContextMenuButtonItem>?>(
+            name: 'buttonItems',
+            init: buttonItems,
+            isNamed: true,
+          ),
+          'anchors': _i2.BuilderArg<_i5.TextSelectionToolbarAnchors>(
+            name: 'anchors',
+            init: anchors,
+            isNamed: true,
+          ),
+        },
+        super.buttonItems() {
     mateBuilderName = 'CupertinoAdaptiveTextSelectionToolbar.buttonItems';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.buttonItems(
@@ -75,54 +87,68 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTe
           buttonItems: p.get('buttonItems').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonItems',
-      buttonItems,
-      isNamed: true,
-    );
-    mateUse(
-      'anchors',
-      anchors,
-      isNamed: true,
-    );
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editable({Key? key, required ClipboardStatus clipboardStatus, required void Function()? onCopy, required void Function()? onCut, required void Function()? onPaste, required void Function()? onSelectAll, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate.editable({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ClipboardStatus clipboardStatus} , default:none
-    required _i7.ClipboardStatus clipboardStatus,
+    required super.clipboardStatus,
 
     /// optionalParameters: {required void Function()? onCopy} , default:none
-    required _i8.VoidCallback? onCopy,
+    required super.onCopy,
 
     /// optionalParameters: {required void Function()? onCut} , default:none
-    required _i8.VoidCallback? onCut,
+    required super.onCut,
 
     /// optionalParameters: {required void Function()? onPaste} , default:none
-    required _i8.VoidCallback? onPaste,
+    required super.onPaste,
 
     /// optionalParameters: {required void Function()? onSelectAll} , default:none
-    required _i8.VoidCallback? onSelectAll,
+    required super.onSelectAll,
 
     /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
-    required _i5.TextSelectionToolbarAnchors anchors,
-  }) : super.editable(
-          key: key,
-          clipboardStatus: clipboardStatus,
-          onCopy: onCopy,
-          onCut: onCut,
-          onPaste: onPaste,
-          onSelectAll: onSelectAll,
-          anchors: anchors,
-        ) {
+    required super.anchors,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'clipboardStatus': _i2.BuilderArg<_i7.ClipboardStatus>(
+            name: 'clipboardStatus',
+            init: clipboardStatus,
+            isNamed: true,
+          ),
+          'onCopy': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onCopy',
+            init: onCopy,
+            isNamed: true,
+          ),
+          'onCut': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onCut',
+            init: onCut,
+            isNamed: true,
+          ),
+          'onPaste': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onPaste',
+            init: onPaste,
+            isNamed: true,
+          ),
+          'onSelectAll': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onSelectAll',
+            init: onSelectAll,
+            isNamed: true,
+          ),
+          'anchors': _i2.BuilderArg<_i5.TextSelectionToolbarAnchors>(
+            name: 'anchors',
+            init: anchors,
+            isNamed: true,
+          ),
+        },
+        super.editable() {
     mateBuilderName = 'CupertinoAdaptiveTextSelectionToolbar.editable';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editable(
@@ -134,95 +160,80 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTe
           onSelectAll: p.get('onSelectAll').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'clipboardStatus',
-      clipboardStatus,
-      isNamed: true,
-    );
-    mateUse(
-      'onCopy',
-      onCopy,
-      isNamed: true,
-    );
-    mateUse(
-      'onCut',
-      onCut,
-      isNamed: true,
-    );
-    mateUse(
-      'onPaste',
-      onPaste,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelectAll',
-      onSelectAll,
-      isNamed: true,
-    );
-    mateUse(
-      'anchors',
-      anchors,
-      isNamed: true,
-    );
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.editableText({Key? key, required EditableTextState editableTextState})
   CupertinoAdaptiveTextSelectionToolbar$Mate.editableText({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required EditableTextState editableTextState} , default:none
-    required _i9.EditableTextState editableTextState,
-  }) : super.editableText(
-          key: key,
-          editableTextState: editableTextState,
-        ) {
+    required super.editableTextState,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'editableTextState': _i2.BuilderArg<_i9.EditableTextState>(
+            name: 'editableTextState',
+            init: editableTextState,
+            isNamed: true,
+          ),
+        },
+        super.editableText() {
     mateBuilderName = 'CupertinoAdaptiveTextSelectionToolbar.editableText';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.editableText(
           key: p.get('key').build(),
           editableTextState: p.get('editableTextState').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'editableTextState',
-      editableTextState,
-      isNamed: true,
-    );
   }
 
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar.selectable({Key? key, required void Function() onCopy, required void Function() onSelectAll, required SelectionGeometry selectionGeometry, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate.selectable({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required void Function() onCopy} , default:none
-    required _i8.VoidCallback onCopy,
+    required super.onCopy,
 
     /// optionalParameters: {required void Function() onSelectAll} , default:none
-    required _i8.VoidCallback onSelectAll,
+    required super.onSelectAll,
 
     /// optionalParameters: {required SelectionGeometry selectionGeometry} , default:none
-    required _i10.SelectionGeometry selectionGeometry,
+    required super.selectionGeometry,
 
     /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
-    required _i5.TextSelectionToolbarAnchors anchors,
-  }) : super.selectable(
-          key: key,
-          onCopy: onCopy,
-          onSelectAll: onSelectAll,
-          selectionGeometry: selectionGeometry,
-          anchors: anchors,
-        ) {
+    required super.anchors,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onCopy': _i2.BuilderArg<_i8.VoidCallback>(
+            name: 'onCopy',
+            init: onCopy,
+            isNamed: true,
+          ),
+          'onSelectAll': _i2.BuilderArg<_i8.VoidCallback>(
+            name: 'onSelectAll',
+            init: onSelectAll,
+            isNamed: true,
+          ),
+          'selectionGeometry': _i2.BuilderArg<_i10.SelectionGeometry>(
+            name: 'selectionGeometry',
+            init: selectionGeometry,
+            isNamed: true,
+          ),
+          'anchors': _i2.BuilderArg<_i5.TextSelectionToolbarAnchors>(
+            name: 'anchors',
+            init: anchors,
+            isNamed: true,
+          ),
+        },
+        super.selectable() {
     mateBuilderName = 'CupertinoAdaptiveTextSelectionToolbar.selectable';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoAdaptiveTextSelectionToolbar$Mate.selectable(
@@ -232,30 +243,8 @@ class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTe
           selectionGeometry: p.get('selectionGeometry').build(),
           anchors: p.get('anchors').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onCopy',
-      onCopy,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelectAll',
-      onSelectAll,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionGeometry',
-      selectionGeometry,
-      isNamed: true,
-    );
-    mateUse(
-      'anchors',
-      anchors,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

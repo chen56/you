@@ -11,50 +11,95 @@ class StrutStyle$Mate extends _i1.StrutStyle with _i2.Mate {
   /// StrutStyle StrutStyle({String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
   StrutStyle$Mate({
     /// optionalParameters: {String? fontFamily} , default:none
-    String? fontFamily,
+    super.fontFamily,
 
     /// optionalParameters: {List<String>? fontFamilyFallback} , default:none
-    List<String>? fontFamilyFallback,
+    super.fontFamilyFallback,
 
     /// optionalParameters: {double? fontSize} , default:none
-    double? fontSize,
+    super.fontSize,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , default:none
-    _i3.TextLeadingDistribution? leadingDistribution,
+    super.leadingDistribution,
 
     /// optionalParameters: {double? leading} , default:none
-    double? leading,
+    super.leading,
 
     /// optionalParameters: {FontWeight? fontWeight} , default:none
-    _i3.FontWeight? fontWeight,
+    super.fontWeight,
 
     /// optionalParameters: {FontStyle? fontStyle} , default:none
-    _i3.FontStyle? fontStyle,
+    super.fontStyle,
 
     /// optionalParameters: {bool? forceStrutHeight} , default:none
-    bool? forceStrutHeight,
+    super.forceStrutHeight,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {String? package} , default:none
-    String? package,
-  }) : super(
-          fontFamily: fontFamily,
-          fontFamilyFallback: fontFamilyFallback,
-          fontSize: fontSize,
-          height: height,
-          leadingDistribution: leadingDistribution,
-          leading: leading,
-          fontWeight: fontWeight,
-          fontStyle: fontStyle,
-          forceStrutHeight: forceStrutHeight,
-          debugLabel: debugLabel,
-          package: package,
-        ) {
+    super.package,
+  })  : mateParams = {
+          'fontFamily': _i2.BuilderArg<String?>(
+            name: 'fontFamily',
+            init: fontFamily,
+            isNamed: true,
+          ),
+          'fontFamilyFallback': _i2.BuilderArg<List<String>?>(
+            name: 'fontFamilyFallback',
+            init: fontFamilyFallback,
+            isNamed: true,
+          ),
+          'fontSize': _i2.BuilderArg<double?>(
+            name: 'fontSize',
+            init: fontSize,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'leadingDistribution': _i2.BuilderArg<_i3.TextLeadingDistribution?>(
+            name: 'leadingDistribution',
+            init: leadingDistribution,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<double?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'fontWeight': _i2.BuilderArg<_i3.FontWeight?>(
+            name: 'fontWeight',
+            init: fontWeight,
+            isNamed: true,
+          ),
+          'fontStyle': _i2.BuilderArg<_i3.FontStyle?>(
+            name: 'fontStyle',
+            init: fontStyle,
+            isNamed: true,
+          ),
+          'forceStrutHeight': _i2.BuilderArg<bool?>(
+            name: 'forceStrutHeight',
+            init: forceStrutHeight,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'package': _i2.BuilderArg<String?>(
+            name: 'package',
+            init: package,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'StrutStyle';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StrutStyle$Mate(
@@ -70,113 +115,107 @@ class StrutStyle$Mate extends _i1.StrutStyle with _i2.Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    mateUse(
-      'fontFamily',
-      fontFamily,
-      isNamed: true,
-    );
-    mateUse(
-      'fontFamilyFallback',
-      fontFamilyFallback,
-      isNamed: true,
-    );
-    mateUse(
-      'fontSize',
-      fontSize,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingDistribution',
-      leadingDistribution,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'fontWeight',
-      fontWeight,
-      isNamed: true,
-    );
-    mateUse(
-      'fontStyle',
-      fontStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'forceStrutHeight',
-      forceStrutHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'package',
-      package,
-      isNamed: true,
-    );
   }
 
   /// StrutStyle StrutStyle.fromTextStyle(TextStyle textStyle, {String? fontFamily, List<String>? fontFamilyFallback, double? fontSize, double? height, TextLeadingDistribution? leadingDistribution, double? leading, FontWeight? fontWeight, FontStyle? fontStyle, bool? forceStrutHeight, String? debugLabel, String? package})
   StrutStyle$Mate.fromTextStyle(
     /// requiredParameters: TextStyle textStyle
-    _i4.TextStyle textStyle, {
+    super.textStyle, {
     /// optionalParameters: {String? fontFamily} , default:none
-    String? fontFamily,
+    super.fontFamily,
 
     /// optionalParameters: {List<String>? fontFamilyFallback} , default:none
-    List<String>? fontFamilyFallback,
+    super.fontFamilyFallback,
 
     /// optionalParameters: {double? fontSize} , default:none
-    double? fontSize,
+    super.fontSize,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {TextLeadingDistribution? leadingDistribution} , default:none
-    _i3.TextLeadingDistribution? leadingDistribution,
+    super.leadingDistribution,
 
     /// optionalParameters: {double? leading} , default:none
-    double? leading,
+    super.leading,
 
     /// optionalParameters: {FontWeight? fontWeight} , default:none
-    _i3.FontWeight? fontWeight,
+    super.fontWeight,
 
     /// optionalParameters: {FontStyle? fontStyle} , default:none
-    _i3.FontStyle? fontStyle,
+    super.fontStyle,
 
     /// optionalParameters: {bool? forceStrutHeight} , default:none
-    bool? forceStrutHeight,
+    super.forceStrutHeight,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {String? package} , default:none
-    String? package,
-  }) : super.fromTextStyle(
-          textStyle,
-          fontFamily: fontFamily,
-          fontFamilyFallback: fontFamilyFallback,
-          fontSize: fontSize,
-          height: height,
-          leadingDistribution: leadingDistribution,
-          leading: leading,
-          fontWeight: fontWeight,
-          fontStyle: fontStyle,
-          forceStrutHeight: forceStrutHeight,
-          debugLabel: debugLabel,
-          package: package,
-        ) {
+    super.package,
+  })  : mateParams = {
+          'textStyle': _i2.BuilderArg<_i4.TextStyle>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: false,
+          ),
+          'fontFamily': _i2.BuilderArg<String?>(
+            name: 'fontFamily',
+            init: fontFamily,
+            isNamed: true,
+          ),
+          'fontFamilyFallback': _i2.BuilderArg<List<String>?>(
+            name: 'fontFamilyFallback',
+            init: fontFamilyFallback,
+            isNamed: true,
+          ),
+          'fontSize': _i2.BuilderArg<double?>(
+            name: 'fontSize',
+            init: fontSize,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'leadingDistribution': _i2.BuilderArg<_i3.TextLeadingDistribution?>(
+            name: 'leadingDistribution',
+            init: leadingDistribution,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<double?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'fontWeight': _i2.BuilderArg<_i3.FontWeight?>(
+            name: 'fontWeight',
+            init: fontWeight,
+            isNamed: true,
+          ),
+          'fontStyle': _i2.BuilderArg<_i3.FontStyle?>(
+            name: 'fontStyle',
+            init: fontStyle,
+            isNamed: true,
+          ),
+          'forceStrutHeight': _i2.BuilderArg<bool?>(
+            name: 'forceStrutHeight',
+            init: forceStrutHeight,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'package': _i2.BuilderArg<String?>(
+            name: 'package',
+            init: package,
+            isNamed: true,
+          ),
+        },
+        super.fromTextStyle() {
     mateBuilderName = 'StrutStyle.fromTextStyle';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StrutStyle$Mate.fromTextStyle(
@@ -193,65 +232,8 @@ class StrutStyle$Mate extends _i1.StrutStyle with _i2.Mate {
           debugLabel: p.get('debugLabel').build(),
           package: p.get('package').build(),
         );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: false,
-    );
-    mateUse(
-      'fontFamily',
-      fontFamily,
-      isNamed: true,
-    );
-    mateUse(
-      'fontFamilyFallback',
-      fontFamilyFallback,
-      isNamed: true,
-    );
-    mateUse(
-      'fontSize',
-      fontSize,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingDistribution',
-      leadingDistribution,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'fontWeight',
-      fontWeight,
-      isNamed: true,
-    );
-    mateUse(
-      'fontStyle',
-      fontStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'forceStrutHeight',
-      forceStrutHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'package',
-      package,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

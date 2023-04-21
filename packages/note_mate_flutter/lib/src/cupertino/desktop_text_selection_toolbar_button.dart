@@ -14,18 +14,31 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends _i1.CupertinoDeskt
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton({Key? key, required void Function() onPressed, required Widget child})
   CupertinoDesktopTextSelectionToolbarButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required void Function() onPressed} , default:none
-    required _i4.VoidCallback onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          onPressed: onPressed,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoDesktopTextSelectionToolbarButton';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDesktopTextSelectionToolbarButton$Mate(
@@ -33,42 +46,44 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends _i1.CupertinoDeskt
           onPressed: p.get('onPressed').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.text({Key? key, required BuildContext context, required void Function() onPressed, required String text})
   CupertinoDesktopTextSelectionToolbarButton$Mate.text({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i5.BuildContext context,
+    required super.context,
 
     /// optionalParameters: {required void Function() onPressed} , default:none
-    required _i4.VoidCallback onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {required String text} , default:none
-    required String text,
-  }) : super.text(
-          key: key,
-          context: context,
-          onPressed: onPressed,
-          text: text,
-        ) {
+    required super.text,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i5.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'text': _i2.BuilderArg<String>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+          ),
+        },
+        super.text() {
     mateBuilderName = 'CupertinoDesktopTextSelectionToolbarButton.text';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.text(
@@ -77,54 +92,36 @@ class CupertinoDesktopTextSelectionToolbarButton$Mate extends _i1.CupertinoDeskt
           onPressed: p.get('onPressed').build(),
           text: p.get('text').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-    );
   }
 
   /// CupertinoDesktopTextSelectionToolbarButton CupertinoDesktopTextSelectionToolbarButton.buttonItem({Key? key, required ContextMenuButtonItem buttonItem})
   CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ContextMenuButtonItem buttonItem} , default:none
-    required _i6.ContextMenuButtonItem buttonItem,
-  }) : super.buttonItem(
-          key: key,
-          buttonItem: buttonItem,
-        ) {
+    required super.buttonItem,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'buttonItem': _i2.BuilderArg<_i6.ContextMenuButtonItem>(
+            name: 'buttonItem',
+            init: buttonItem,
+            isNamed: true,
+          ),
+        },
+        super.buttonItem() {
     mateBuilderName = 'CupertinoDesktopTextSelectionToolbarButton.buttonItem';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoDesktopTextSelectionToolbarButton$Mate.buttonItem(
           key: p.get('key').build(),
           buttonItem: p.get('buttonItem').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonItem',
-      buttonItem,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

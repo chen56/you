@@ -14,42 +14,79 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends _i1.CupertinoSegm
   /// CupertinoSegmentedControl<T> CupertinoSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T) onValueChanged, T? groupValue, Color? unselectedColor, Color? selectedColor, Color? borderColor, Color? pressedColor, EdgeInsetsGeometry? padding})
   CupertinoSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Map<T, Widget> children} , default:none
-    required Map<T, _i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {required void Function(T) onValueChanged} , default:none
-    required _i5.ValueChanged<T> onValueChanged,
+    required super.onValueChanged,
 
     /// optionalParameters: {T? groupValue} , default:none
-    T? groupValue,
+    super.groupValue,
 
     /// optionalParameters: {Color? unselectedColor} , default:none
-    _i6.Color? unselectedColor,
+    super.unselectedColor,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i6.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {Color? borderColor} , default:none
-    _i6.Color? borderColor,
+    super.borderColor,
 
     /// optionalParameters: {Color? pressedColor} , default:none
-    _i6.Color? pressedColor,
+    super.pressedColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i7.EdgeInsetsGeometry? padding,
-  }) : super(
-          key: key,
-          children: children,
-          onValueChanged: onValueChanged,
-          groupValue: groupValue,
-          unselectedColor: unselectedColor,
-          selectedColor: selectedColor,
-          borderColor: borderColor,
-          pressedColor: pressedColor,
-          padding: padding,
-        ) {
+    super.padding,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<Map<T, _i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'onValueChanged': _i2.BuilderArg<_i5.ValueChanged<T>>(
+            name: 'onValueChanged',
+            init: onValueChanged,
+            isNamed: true,
+          ),
+          'groupValue': _i2.BuilderArg<T?>(
+            name: 'groupValue',
+            init: groupValue,
+            isNamed: true,
+          ),
+          'unselectedColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'unselectedColor',
+            init: unselectedColor,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'borderColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'borderColor',
+            init: borderColor,
+            isNamed: true,
+          ),
+          'pressedColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'pressedColor',
+            init: pressedColor,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoSegmentedControl';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSegmentedControl$Mate<T>(
@@ -63,50 +100,8 @@ class CupertinoSegmentedControl$Mate<T extends Object> extends _i1.CupertinoSegm
           pressedColor: p.get('pressedColor').build(),
           padding: p.get('padding').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'onValueChanged',
-      onValueChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'groupValue',
-      groupValue,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedColor',
-      unselectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'borderColor',
-      borderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'pressedColor',
-      pressedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

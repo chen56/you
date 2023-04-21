@@ -16,34 +16,66 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
   /// AnimatedSize AnimatedSize({Key? key, Widget? child, AlignmentGeometry alignment = Alignment.center, Curve curve = Curves.linear, required Duration duration, Duration? reverseDuration, Clip clipBehavior = Clip.hardEdge})
   AnimatedSize$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i5.AlignmentGeometry alignment = _i6.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i7.Curve curve = _i8.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {Duration? reverseDuration} , default:none
-    Duration? reverseDuration,
+    super.reverseDuration,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i9.Clip clipBehavior = _i9.Clip.hardEdge,
-  }) : super(
-          key: key,
-          child: child,
-          alignment: alignment,
-          curve: curve,
-          duration: duration,
-          reverseDuration: reverseDuration,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i5.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i6.Alignment.center,
+          ),
+          'curve': _i2.BuilderArg<_i7.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i8.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'reverseDuration': _i2.BuilderArg<Duration?>(
+            name: 'reverseDuration',
+            init: reverseDuration,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i9.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedSize';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedSize$Mate(
@@ -55,43 +87,8 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
           reverseDuration: p.get('reverseDuration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i6.Alignment.center,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i8.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseDuration',
-      reverseDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i9.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -10,22 +10,39 @@ class AutofillConfiguration$Mate extends _i1.AutofillConfiguration with _i2.Mate
   /// AutofillConfiguration AutofillConfiguration({required String uniqueIdentifier, required List<String> autofillHints, required TextEditingValue currentEditingValue, String? hintText})
   AutofillConfiguration$Mate({
     /// optionalParameters: {required String uniqueIdentifier} , default:none
-    required String uniqueIdentifier,
+    required super.uniqueIdentifier,
 
     /// optionalParameters: {required List<String> autofillHints} , default:none
-    required List<String> autofillHints,
+    required super.autofillHints,
 
     /// optionalParameters: {required TextEditingValue currentEditingValue} , default:none
-    required _i3.TextEditingValue currentEditingValue,
+    required super.currentEditingValue,
 
     /// optionalParameters: {String? hintText} , default:none
-    String? hintText,
-  }) : super(
-          uniqueIdentifier: uniqueIdentifier,
-          autofillHints: autofillHints,
-          currentEditingValue: currentEditingValue,
-          hintText: hintText,
-        ) {
+    super.hintText,
+  })  : mateParams = {
+          'uniqueIdentifier': _i2.BuilderArg<String>(
+            name: 'uniqueIdentifier',
+            init: uniqueIdentifier,
+            isNamed: true,
+          ),
+          'autofillHints': _i2.BuilderArg<List<String>>(
+            name: 'autofillHints',
+            init: autofillHints,
+            isNamed: true,
+          ),
+          'currentEditingValue': _i2.BuilderArg<_i3.TextEditingValue>(
+            name: 'currentEditingValue',
+            init: currentEditingValue,
+            isNamed: true,
+          ),
+          'hintText': _i2.BuilderArg<String?>(
+            name: 'hintText',
+            init: hintText,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AutofillConfiguration';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => AutofillConfiguration$Mate(
@@ -34,25 +51,8 @@ class AutofillConfiguration$Mate extends _i1.AutofillConfiguration with _i2.Mate
           currentEditingValue: p.get('currentEditingValue').build(),
           hintText: p.get('hintText').build(),
         );
-    mateUse(
-      'uniqueIdentifier',
-      uniqueIdentifier,
-      isNamed: true,
-    );
-    mateUse(
-      'autofillHints',
-      autofillHints,
-      isNamed: true,
-    );
-    mateUse(
-      'currentEditingValue',
-      currentEditingValue,
-      isNamed: true,
-    );
-    mateUse(
-      'hintText',
-      hintText,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

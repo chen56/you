@@ -12,26 +12,47 @@ class DividerThemeData$Mate extends _i1.DividerThemeData with _i2.Mate {
   /// DividerThemeData DividerThemeData({Color? color, double? space, double? thickness, double? indent, double? endIndent})
   DividerThemeData$Mate({
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {double? space} , default:none
-    double? space,
+    super.space,
 
     /// optionalParameters: {double? thickness} , default:none
-    double? thickness,
+    super.thickness,
 
     /// optionalParameters: {double? indent} , default:none
-    double? indent,
+    super.indent,
 
     /// optionalParameters: {double? endIndent} , default:none
-    double? endIndent,
-  }) : super(
-          color: color,
-          space: space,
-          thickness: thickness,
-          indent: indent,
-          endIndent: endIndent,
-        ) {
+    super.endIndent,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'space': _i2.BuilderArg<double?>(
+            name: 'space',
+            init: space,
+            isNamed: true,
+          ),
+          'thickness': _i2.BuilderArg<double?>(
+            name: 'thickness',
+            init: thickness,
+            isNamed: true,
+          ),
+          'indent': _i2.BuilderArg<double?>(
+            name: 'indent',
+            init: indent,
+            isNamed: true,
+          ),
+          'endIndent': _i2.BuilderArg<double?>(
+            name: 'endIndent',
+            init: endIndent,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DividerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DividerThemeData$Mate(
@@ -41,32 +62,10 @@ class DividerThemeData$Mate extends _i1.DividerThemeData with _i2.Mate {
           indent: p.get('indent').build(),
           endIndent: p.get('endIndent').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'space',
-      space,
-      isNamed: true,
-    );
-    mateUse(
-      'thickness',
-      thickness,
-      isNamed: true,
-    );
-    mateUse(
-      'indent',
-      indent,
-      isNamed: true,
-    );
-    mateUse(
-      'endIndent',
-      endIndent,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DividerTheme extends InheritedTheme
@@ -74,18 +73,31 @@ class DividerTheme$Mate extends _i1.DividerTheme with _i2.Mate {
   /// DividerTheme DividerTheme({Key? key, required DividerThemeData data, required Widget child})
   DividerTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required DividerThemeData data} , default:none
-    required _i1.DividerThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.DividerThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DividerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DividerTheme$Mate(
@@ -93,20 +105,8 @@ class DividerTheme$Mate extends _i1.DividerTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

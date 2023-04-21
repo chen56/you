@@ -15,26 +15,47 @@ class CustomPainterSemantics$Mate extends _i1.CustomPainterSemantics with _i2.Ma
   /// CustomPainterSemantics CustomPainterSemantics({Key? key, required Rect rect, required SemanticsProperties properties, Matrix4? transform, Set<SemanticsTag>? tags})
   CustomPainterSemantics$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Rect rect} , default:none
-    required _i4.Rect rect,
+    required super.rect,
 
     /// optionalParameters: {required SemanticsProperties properties} , default:none
-    required _i5.SemanticsProperties properties,
+    required super.properties,
 
     /// optionalParameters: {Matrix4? transform} , default:none
-    _i6.Matrix4? transform,
+    super.transform,
 
     /// optionalParameters: {Set<SemanticsTag>? tags} , default:none
-    Set<_i5.SemanticsTag>? tags,
-  }) : super(
-          key: key,
-          rect: rect,
-          properties: properties,
-          transform: transform,
-          tags: tags,
-        ) {
+    super.tags,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'rect': _i2.BuilderArg<_i4.Rect>(
+            name: 'rect',
+            init: rect,
+            isNamed: true,
+          ),
+          'properties': _i2.BuilderArg<_i5.SemanticsProperties>(
+            name: 'properties',
+            init: properties,
+            isNamed: true,
+          ),
+          'transform': _i2.BuilderArg<_i6.Matrix4?>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+          'tags': _i2.BuilderArg<Set<_i5.SemanticsTag>?>(
+            name: 'tags',
+            init: tags,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CustomPainterSemantics';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CustomPainterSemantics$Mate(
@@ -44,32 +65,10 @@ class CustomPainterSemantics$Mate extends _i1.CustomPainterSemantics with _i2.Ma
           transform: p.get('transform').build(),
           tags: p.get('tags').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'rect',
-      rect,
-      isNamed: true,
-    );
-    mateUse(
-      'properties',
-      properties,
-      isNamed: true,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
-    mateUse(
-      'tags',
-      tags,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderCustomPaint extends RenderProxyBox
@@ -77,30 +76,58 @@ class RenderCustomPaint$Mate extends _i1.RenderCustomPaint with _i2.Mate {
   /// RenderCustomPaint RenderCustomPaint({CustomPainter? painter, CustomPainter? foregroundPainter, Size preferredSize = Size.zero, bool isComplex = false, bool willChange = false, RenderBox? child})
   RenderCustomPaint$Mate({
     /// optionalParameters: {CustomPainter? painter} , default:none
-    _i1.CustomPainter? painter,
+    super.painter,
 
     /// optionalParameters: {CustomPainter? foregroundPainter} , default:none
-    _i1.CustomPainter? foregroundPainter,
+    super.foregroundPainter,
 
     /// optionalParameters: {Size preferredSize = Size.zero} , default:processed=PrefixedIdentifierImpl
-    _i4.Size preferredSize = _i7.Size.zero,
+    super.preferredSize,
 
     /// optionalParameters: {bool isComplex = false} , default:processed=BooleanLiteralImpl
-    bool isComplex = false,
+    super.isComplex,
 
     /// optionalParameters: {bool willChange = false} , default:processed=BooleanLiteralImpl
-    bool willChange = false,
+    super.willChange,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i8.RenderBox? child,
-  }) : super(
-          painter: painter,
-          foregroundPainter: foregroundPainter,
-          preferredSize: preferredSize,
-          isComplex: isComplex,
-          willChange: willChange,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'painter': _i2.BuilderArg<_i1.CustomPainter?>(
+            name: 'painter',
+            init: painter,
+            isNamed: true,
+          ),
+          'foregroundPainter': _i2.BuilderArg<_i1.CustomPainter?>(
+            name: 'foregroundPainter',
+            init: foregroundPainter,
+            isNamed: true,
+          ),
+          'preferredSize': _i2.BuilderArg<_i4.Size>(
+            name: 'preferredSize',
+            init: preferredSize,
+            isNamed: true,
+            defaultValue: _i7.Size.zero,
+          ),
+          'isComplex': _i2.BuilderArg<bool>(
+            name: 'isComplex',
+            init: isComplex,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'willChange': _i2.BuilderArg<bool>(
+            name: 'willChange',
+            init: willChange,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i8.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderCustomPaint';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderCustomPaint$Mate(
@@ -111,38 +138,8 @@ class RenderCustomPaint$Mate extends _i1.RenderCustomPaint with _i2.Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'painter',
-      painter,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundPainter',
-      foregroundPainter,
-      isNamed: true,
-    );
-    mateUse(
-      'preferredSize',
-      preferredSize,
-      isNamed: true,
-      defaultValue: _i7.Size.zero,
-    );
-    mateUse(
-      'isComplex',
-      isComplex,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'willChange',
-      willChange,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

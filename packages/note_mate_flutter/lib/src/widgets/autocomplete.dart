@@ -15,42 +15,79 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with
   /// RawAutocomplete<T> RawAutocomplete({Key? key, required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder, required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder, String Function(T) displayStringForOption = defaultStringForOption, Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder, FocusNode? focusNode, void Function(T)? onSelected, TextEditingController? textEditingController, TextEditingValue? initialValue})
   RawAutocomplete$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext, void Function(T), Iterable<T>) optionsViewBuilder} , default:none
-    required _i1.AutocompleteOptionsViewBuilder<T> optionsViewBuilder,
+    required super.optionsViewBuilder,
 
     /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , default:none
-    required _i1.AutocompleteOptionsBuilder<T> optionsBuilder,
+    required super.optionsBuilder,
 
     /// optionalParameters: {String Function(T) displayStringForOption = defaultStringForOption} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.AutocompleteOptionToString<T> displayStringForOption,
+    super.displayStringForOption,
 
     /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function())? fieldViewBuilder} , default:none
-    _i1.AutocompleteFieldViewBuilder? fieldViewBuilder,
+    super.fieldViewBuilder,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i4.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {void Function(T)? onSelected} , default:none
-    _i1.AutocompleteOnSelected<T>? onSelected,
+    super.onSelected,
 
     /// optionalParameters: {TextEditingController? textEditingController} , default:none
-    _i5.TextEditingController? textEditingController,
+    super.textEditingController,
 
     /// optionalParameters: {TextEditingValue? initialValue} , default:none
-    _i6.TextEditingValue? initialValue,
-  }) : super(
-          key: key,
-          optionsViewBuilder: optionsViewBuilder,
-          optionsBuilder: optionsBuilder,
-          displayStringForOption: displayStringForOption,
-          fieldViewBuilder: fieldViewBuilder,
-          focusNode: focusNode,
-          onSelected: onSelected,
-          textEditingController: textEditingController,
-          initialValue: initialValue,
-        ) {
+    super.initialValue,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'optionsViewBuilder': _i2.BuilderArg<_i1.AutocompleteOptionsViewBuilder<T>>(
+            name: 'optionsViewBuilder',
+            init: optionsViewBuilder,
+            isNamed: true,
+          ),
+          'optionsBuilder': _i2.BuilderArg<_i1.AutocompleteOptionsBuilder<T>>(
+            name: 'optionsBuilder',
+            init: optionsBuilder,
+            isNamed: true,
+          ),
+          'displayStringForOption': _i2.BuilderArg<_i1.AutocompleteOptionToString<T>>(
+            name: 'displayStringForOption',
+            init: displayStringForOption,
+            isNamed: true,
+          ),
+          'fieldViewBuilder': _i2.BuilderArg<_i1.AutocompleteFieldViewBuilder?>(
+            name: 'fieldViewBuilder',
+            init: fieldViewBuilder,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i4.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'onSelected': _i2.BuilderArg<_i1.AutocompleteOnSelected<T>?>(
+            name: 'onSelected',
+            init: onSelected,
+            isNamed: true,
+          ),
+          'textEditingController': _i2.BuilderArg<_i5.TextEditingController?>(
+            name: 'textEditingController',
+            init: textEditingController,
+            isNamed: true,
+          ),
+          'initialValue': _i2.BuilderArg<_i6.TextEditingValue?>(
+            name: 'initialValue',
+            init: initialValue,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawAutocomplete';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RawAutocomplete$Mate<T>(
@@ -64,52 +101,10 @@ class RawAutocomplete$Mate<T extends Object> extends _i1.RawAutocomplete<T> with
           textEditingController: p.get('textEditingController').build(),
           initialValue: p.get('initialValue').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'optionsViewBuilder',
-      optionsViewBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'optionsBuilder',
-      optionsBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'displayStringForOption',
-      displayStringForOption,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldViewBuilder',
-      fieldViewBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'onSelected',
-      onSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'textEditingController',
-      textEditingController,
-      isNamed: true,
-    );
-    mateUse(
-      'initialValue',
-      initialValue,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AutocompleteHighlightedOption extends InheritedNotifier<ValueNotifier<int>>
@@ -117,18 +112,31 @@ class AutocompleteHighlightedOption$Mate extends _i1.AutocompleteHighlightedOpti
   /// AutocompleteHighlightedOption AutocompleteHighlightedOption({Key? key, required ValueNotifier<int> highlightIndexNotifier, required Widget child})
   AutocompleteHighlightedOption$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ValueNotifier<int> highlightIndexNotifier} , default:none
-    required _i7.ValueNotifier<int> highlightIndexNotifier,
+    required super.highlightIndexNotifier,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          highlightIndexNotifier: highlightIndexNotifier,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'highlightIndexNotifier': _i2.BuilderArg<_i7.ValueNotifier<int>>(
+            name: 'highlightIndexNotifier',
+            init: highlightIndexNotifier,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AutocompleteHighlightedOption';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AutocompleteHighlightedOption$Mate(
@@ -136,20 +144,8 @@ class AutocompleteHighlightedOption$Mate extends _i1.AutocompleteHighlightedOpti
           highlightIndexNotifier: p.get('highlightIndexNotifier').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightIndexNotifier',
-      highlightIndexNotifier,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

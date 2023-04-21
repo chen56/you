@@ -11,17 +11,31 @@ class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Ma
   /// AnnounceSemanticsEvent AnnounceSemanticsEvent(String message, TextDirection textDirection, {Assertiveness assertiveness = Assertiveness.polite})
   AnnounceSemanticsEvent$Mate(
     /// requiredParameters: String message
-    String message,
+    super.message,
 
     /// requiredParameters: TextDirection textDirection
-    _i3.TextDirection textDirection, {
+    super.textDirection, {
     /// optionalParameters: {Assertiveness assertiveness = Assertiveness.polite} , default:processed=PrefixedIdentifierImpl
-    _i1.Assertiveness assertiveness = _i4.Assertiveness.polite,
-  }) : super(
-          message,
-          textDirection,
-          assertiveness: assertiveness,
-        ) {
+    super.assertiveness,
+  })  : mateParams = {
+          'message': _i2.BuilderArg<String>(
+            name: 'message',
+            init: message,
+            isNamed: false,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: false,
+          ),
+          'assertiveness': _i2.BuilderArg<_i1.Assertiveness>(
+            name: 'assertiveness',
+            init: assertiveness,
+            isNamed: true,
+            defaultValue: _i4.Assertiveness.polite,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnnounceSemanticsEvent';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => AnnounceSemanticsEvent$Mate(
@@ -29,23 +43,10 @@ class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Ma
           p.get('textDirection').value,
           assertiveness: p.get('assertiveness').build(),
         );
-    mateUse(
-      'message',
-      message,
-      isNamed: false,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: false,
-    );
-    mateUse(
-      'assertiveness',
-      assertiveness,
-      isNamed: true,
-      defaultValue: _i4.Assertiveness.polite,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TooltipSemanticsEvent extends SemanticsEvent
@@ -54,15 +55,20 @@ class TooltipSemanticsEvent$Mate extends _i1.TooltipSemanticsEvent with _i2.Mate
   TooltipSemanticsEvent$Mate(
 
       /// requiredParameters: String message
-      String message)
-      : super(message) {
+      super.message)
+      : mateParams = {
+          'message': _i2.BuilderArg<String>(
+            name: 'message',
+            init: message,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'TooltipSemanticsEvent';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => TooltipSemanticsEvent$Mate(p.get('message').value);
-    mateUse(
-      'message',
-      message,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

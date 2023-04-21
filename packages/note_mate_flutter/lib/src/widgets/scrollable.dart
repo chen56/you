@@ -19,54 +19,107 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
   /// Scrollable Scrollable({Key? key, AxisDirection axisDirection = AxisDirection.down, ScrollController? controller, ScrollPhysics? physics, required Widget Function(BuildContext, ViewportOffset) viewportBuilder, double Function(ScrollIncrementDetails)? incrementCalculator, bool excludeFromSemantics = false, int? semanticChildCount, DragStartBehavior dragStartBehavior = DragStartBehavior.start, String? restorationId, ScrollBehavior? scrollBehavior, Clip clipBehavior = Clip.hardEdge})
   Scrollable$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i4.AxisDirection axisDirection = _i5.AxisDirection.down,
+    super.axisDirection,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i6.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {required Widget Function(BuildContext, ViewportOffset) viewportBuilder} , default:none
-    required _i1.ViewportBuilder viewportBuilder,
+    required super.viewportBuilder,
 
     /// optionalParameters: {double Function(ScrollIncrementDetails)? incrementCalculator} , default:none
-    _i8.ScrollIncrementCalculator? incrementCalculator,
+    super.incrementCalculator,
 
     /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeFromSemantics = false,
+    super.excludeFromSemantics,
 
     /// optionalParameters: {int? semanticChildCount} , default:none
-    int? semanticChildCount,
+    super.semanticChildCount,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i9.DragStartBehavior dragStartBehavior = _i10.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
-    _i11.ScrollBehavior? scrollBehavior,
+    super.scrollBehavior,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.hardEdge,
-  }) : super(
-          key: key,
-          axisDirection: axisDirection,
-          controller: controller,
-          physics: physics,
-          viewportBuilder: viewportBuilder,
-          incrementCalculator: incrementCalculator,
-          excludeFromSemantics: excludeFromSemantics,
-          semanticChildCount: semanticChildCount,
-          dragStartBehavior: dragStartBehavior,
-          restorationId: restorationId,
-          scrollBehavior: scrollBehavior,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
+          ),
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'viewportBuilder': _i2.BuilderArg<_i1.ViewportBuilder>(
+            name: 'viewportBuilder',
+            init: viewportBuilder,
+            isNamed: true,
+          ),
+          'incrementCalculator': _i2.BuilderArg<_i8.ScrollIncrementCalculator?>(
+            name: 'incrementCalculator',
+            init: incrementCalculator,
+            isNamed: true,
+          ),
+          'excludeFromSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeFromSemantics',
+            init: excludeFromSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'semanticChildCount': _i2.BuilderArg<int?>(
+            name: 'semanticChildCount',
+            init: semanticChildCount,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i10.DragStartBehavior.start,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'scrollBehavior': _i2.BuilderArg<_i11.ScrollBehavior?>(
+            name: 'scrollBehavior',
+            init: scrollBehavior,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'Scrollable';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Scrollable$Mate(
@@ -83,69 +136,8 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
           scrollBehavior: p.get('scrollBehavior').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-      defaultValue: _i5.AxisDirection.down,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'viewportBuilder',
-      viewportBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'incrementCalculator',
-      incrementCalculator,
-      isNamed: true,
-    );
-    mateUse(
-      'excludeFromSemantics',
-      excludeFromSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'semanticChildCount',
-      semanticChildCount,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i10.DragStartBehavior.start,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollBehavior',
-      scrollBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

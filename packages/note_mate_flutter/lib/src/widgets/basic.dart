@@ -43,18 +43,31 @@ class Directionality$Mate extends _i1.Directionality with _i2.Mate {
   /// Directionality Directionality({Key? key, required TextDirection textDirection, required Widget child})
   Directionality$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i4.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          textDirection: textDirection,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Directionality';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Directionality$Mate(
@@ -62,22 +75,10 @@ class Directionality$Mate extends _i1.Directionality with _i2.Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Opacity extends SingleChildRenderObjectWidget
@@ -85,22 +86,40 @@ class Opacity$Mate extends _i1.Opacity with _i2.Mate {
   /// Opacity Opacity({Key? key, required double opacity, bool alwaysIncludeSemantics = false, Widget? child})
   Opacity$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double opacity} , default:none
-    required double opacity,
+    required super.opacity,
 
     /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool alwaysIncludeSemantics = false,
+    super.alwaysIncludeSemantics,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          opacity: opacity,
-          alwaysIncludeSemantics: alwaysIncludeSemantics,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'opacity': _i2.BuilderArg<double>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+          ),
+          'alwaysIncludeSemantics': _i2.BuilderArg<bool>(
+            name: 'alwaysIncludeSemantics',
+            init: alwaysIncludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Opacity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Opacity$Mate(
@@ -109,28 +128,10 @@ class Opacity$Mate extends _i1.Opacity with _i2.Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-    );
-    mateUse(
-      'alwaysIncludeSemantics',
-      alwaysIncludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ShaderMask extends SingleChildRenderObjectWidget
@@ -138,22 +139,40 @@ class ShaderMask$Mate extends _i1.ShaderMask with _i2.Mate {
   /// ShaderMask ShaderMask({Key? key, required Shader Function(Rect) shaderCallback, BlendMode blendMode = BlendMode.modulate, Widget? child})
   ShaderMask$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Shader Function(Rect) shaderCallback} , default:none
-    required _i6.ShaderCallback shaderCallback,
+    required super.shaderCallback,
 
     /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:processed=PrefixedIdentifierImpl
-    _i4.BlendMode blendMode = _i4.BlendMode.modulate,
+    super.blendMode,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          shaderCallback: shaderCallback,
-          blendMode: blendMode,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'shaderCallback': _i2.BuilderArg<_i6.ShaderCallback>(
+            name: 'shaderCallback',
+            init: shaderCallback,
+            isNamed: true,
+          ),
+          'blendMode': _i2.BuilderArg<_i4.BlendMode>(
+            name: 'blendMode',
+            init: blendMode,
+            isNamed: true,
+            defaultValue: _i4.BlendMode.modulate,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ShaderMask';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ShaderMask$Mate(
@@ -162,28 +181,10 @@ class ShaderMask$Mate extends _i1.ShaderMask with _i2.Mate {
           blendMode: p.get('blendMode').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'shaderCallback',
-      shaderCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'blendMode',
-      blendMode,
-      isNamed: true,
-      defaultValue: _i4.BlendMode.modulate,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BackdropFilter extends SingleChildRenderObjectWidget
@@ -191,22 +192,40 @@ class BackdropFilter$Mate extends _i1.BackdropFilter with _i2.Mate {
   /// BackdropFilter BackdropFilter({Key? key, required ImageFilter filter, Widget? child, BlendMode blendMode = BlendMode.srcOver})
   BackdropFilter$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ImageFilter filter} , default:none
-    required _i4.ImageFilter filter,
+    required super.filter,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
-    _i4.BlendMode blendMode = _i4.BlendMode.srcOver,
-  }) : super(
-          key: key,
-          filter: filter,
-          child: child,
-          blendMode: blendMode,
-        ) {
+    super.blendMode,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'filter': _i2.BuilderArg<_i4.ImageFilter>(
+            name: 'filter',
+            init: filter,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'blendMode': _i2.BuilderArg<_i4.BlendMode>(
+            name: 'blendMode',
+            init: blendMode,
+            isNamed: true,
+            defaultValue: _i4.BlendMode.srcOver,
+          ),
+        },
+        super() {
     mateBuilderName = 'BackdropFilter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BackdropFilter$Mate(
@@ -215,28 +234,10 @@ class BackdropFilter$Mate extends _i1.BackdropFilter with _i2.Mate {
           child: p.get('child').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'filter',
-      filter,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'blendMode',
-      blendMode,
-      isNamed: true,
-      defaultValue: _i4.BlendMode.srcOver,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CustomPaint extends SingleChildRenderObjectWidget
@@ -244,34 +245,66 @@ class CustomPaint$Mate extends _i1.CustomPaint with _i2.Mate {
   /// CustomPaint CustomPaint({Key? key, CustomPainter? painter, CustomPainter? foregroundPainter, Size size = Size.zero, bool isComplex = false, bool willChange = false, Widget? child})
   CustomPaint$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {CustomPainter? painter} , default:none
-    _i7.CustomPainter? painter,
+    super.painter,
 
     /// optionalParameters: {CustomPainter? foregroundPainter} , default:none
-    _i7.CustomPainter? foregroundPainter,
+    super.foregroundPainter,
 
     /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
-    _i4.Size size = _i8.Size.zero,
+    super.size,
 
     /// optionalParameters: {bool isComplex = false} , default:processed=BooleanLiteralImpl
-    bool isComplex = false,
+    super.isComplex,
 
     /// optionalParameters: {bool willChange = false} , default:processed=BooleanLiteralImpl
-    bool willChange = false,
+    super.willChange,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          painter: painter,
-          foregroundPainter: foregroundPainter,
-          size: size,
-          isComplex: isComplex,
-          willChange: willChange,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'painter': _i2.BuilderArg<_i7.CustomPainter?>(
+            name: 'painter',
+            init: painter,
+            isNamed: true,
+          ),
+          'foregroundPainter': _i2.BuilderArg<_i7.CustomPainter?>(
+            name: 'foregroundPainter',
+            init: foregroundPainter,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<_i4.Size>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: _i8.Size.zero,
+          ),
+          'isComplex': _i2.BuilderArg<bool>(
+            name: 'isComplex',
+            init: isComplex,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'willChange': _i2.BuilderArg<bool>(
+            name: 'willChange',
+            init: willChange,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CustomPaint';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CustomPaint$Mate(
@@ -283,45 +316,10 @@ class CustomPaint$Mate extends _i1.CustomPaint with _i2.Mate {
           willChange: p.get('willChange').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'painter',
-      painter,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundPainter',
-      foregroundPainter,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: _i8.Size.zero,
-    );
-    mateUse(
-      'isComplex',
-      isComplex,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'willChange',
-      willChange,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ClipRect extends SingleChildRenderObjectWidget
@@ -329,22 +327,40 @@ class ClipRect$Mate extends _i1.ClipRect with _i2.Mate {
   /// ClipRect ClipRect({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.hardEdge, Widget? child})
   ClipRect$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
-    _i6.CustomClipper<_i4.Rect>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i6.CustomClipper<_i4.Rect>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ClipRect';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ClipRect$Mate(
@@ -353,28 +369,10 @@ class ClipRect$Mate extends _i1.ClipRect with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ClipRRect extends SingleChildRenderObjectWidget
@@ -382,26 +380,49 @@ class ClipRRect$Mate extends _i1.ClipRRect with _i2.Mate {
   /// ClipRRect ClipRRect({Key? key, BorderRadiusGeometry? borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipRRect$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
-    _i9.BorderRadiusGeometry? borderRadius = _i10.BorderRadius.zero,
+    super.borderRadius,
 
     /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
-    _i6.CustomClipper<_i4.RRect>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.antiAlias,
+    super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          borderRadius: borderRadius,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadiusGeometry?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+            defaultValue: _i10.BorderRadius.zero,
+          ),
+          'clipper': _i2.BuilderArg<_i6.CustomClipper<_i4.RRect>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.antiAlias,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ClipRRect';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ClipRRect$Mate(
@@ -411,34 +432,10 @@ class ClipRRect$Mate extends _i1.ClipRRect with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-      defaultValue: _i10.BorderRadius.zero,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.antiAlias,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ClipOval extends SingleChildRenderObjectWidget
@@ -446,22 +443,40 @@ class ClipOval$Mate extends _i1.ClipOval with _i2.Mate {
   /// ClipOval ClipOval({Key? key, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipOval$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
-    _i6.CustomClipper<_i4.Rect>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.antiAlias,
+    super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i6.CustomClipper<_i4.Rect>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.antiAlias,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ClipOval';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ClipOval$Mate(
@@ -470,28 +485,10 @@ class ClipOval$Mate extends _i1.ClipOval with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.antiAlias,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ClipPath extends SingleChildRenderObjectWidget
@@ -499,22 +496,40 @@ class ClipPath$Mate extends _i1.ClipPath with _i2.Mate {
   /// ClipPath ClipPath({Key? key, CustomClipper<Path>? clipper, Clip clipBehavior = Clip.antiAlias, Widget? child})
   ClipPath$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {CustomClipper<Path>? clipper} , default:none
-    _i6.CustomClipper<_i4.Path>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.antiAlias,
+    super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i6.CustomClipper<_i4.Path>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.antiAlias,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ClipPath';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ClipPath$Mate(
@@ -523,28 +538,10 @@ class ClipPath$Mate extends _i1.ClipPath with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.antiAlias,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PhysicalModel extends SingleChildRenderObjectWidget
@@ -552,38 +549,74 @@ class PhysicalModel$Mate extends _i1.PhysicalModel with _i2.Mate {
   /// PhysicalModel PhysicalModel({Key? key, BoxShape shape = BoxShape.rectangle, Clip clipBehavior = Clip.none, BorderRadius? borderRadius, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalModel$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
-    _i11.BoxShape shape = _i10.BoxShape.rectangle,
+    super.shape,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i9.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
-    double elevation = 0.0,
+    super.elevation,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i4.Color color,
+    required super.color,
 
     /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.Color shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          shape: shape,
-          clipBehavior: clipBehavior,
-          borderRadius: borderRadius,
-          elevation: elevation,
-          color: color,
-          shadowColor: shadowColor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i11.BoxShape>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+            defaultValue: _i10.BoxShape.rectangle,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'color': _i2.BuilderArg<_i4.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PhysicalModel';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PhysicalModel$Mate(
@@ -596,50 +629,10 @@ class PhysicalModel$Mate extends _i1.PhysicalModel with _i2.Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-      defaultValue: _i10.BoxShape.rectangle,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PhysicalShape extends SingleChildRenderObjectWidget
@@ -647,34 +640,65 @@ class PhysicalShape$Mate extends _i1.PhysicalShape with _i2.Mate {
   /// PhysicalShape PhysicalShape({Key? key, required CustomClipper<Path> clipper, Clip clipBehavior = Clip.none, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000), Widget? child})
   PhysicalShape$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required CustomClipper<Path> clipper} , default:none
-    required _i6.CustomClipper<_i4.Path> clipper,
+    required super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
-    double elevation = 0.0,
+    super.elevation,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i4.Color color,
+    required super.color,
 
     /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.Color shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-          elevation: elevation,
-          color: color,
-          shadowColor: shadowColor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i6.CustomClipper<_i4.Path>>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'color': _i2.BuilderArg<_i4.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PhysicalShape';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PhysicalShape$Mate(
@@ -686,44 +710,10 @@ class PhysicalShape$Mate extends _i1.PhysicalShape with _i2.Mate {
           shadowColor: p.get('shadowColor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Transform extends SingleChildRenderObjectWidget
@@ -731,34 +721,64 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
   /// Transform Transform({Key? key, required Matrix4 transform, Offset? origin, AlignmentGeometry? alignment, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Matrix4 transform} , default:none
-    required _i12.Matrix4 transform,
+    required super.transform,
 
     /// optionalParameters: {Offset? origin} , default:none
-    _i4.Offset? origin,
+    super.origin,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i13.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i4.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          transform: transform,
-          origin: origin,
-          alignment: alignment,
-          transformHitTests: transformHitTests,
-          filterQuality: filterQuality,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'transform': _i2.BuilderArg<_i12.Matrix4>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+          'origin': _i2.BuilderArg<_i4.Offset?>(
+            name: 'origin',
+            init: origin,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'filterQuality': _i2.BuilderArg<_i4.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Transform';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Transform$Mate(
@@ -770,75 +790,70 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
-    mateUse(
-      'origin',
-      origin,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Transform Transform.rotate({Key? key, required double angle, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.rotate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double angle} , default:none
-    required double angle,
+    required super.angle,
 
     /// optionalParameters: {Offset? origin} , default:none
-    _i4.Offset? origin,
+    super.origin,
 
     /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry? alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i4.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super.rotate(
-          key: key,
-          angle: angle,
-          origin: origin,
-          alignment: alignment,
-          transformHitTests: transformHitTests,
-          filterQuality: filterQuality,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'angle': _i2.BuilderArg<double>(
+            name: 'angle',
+            init: angle,
+            isNamed: true,
+          ),
+          'origin': _i2.BuilderArg<_i4.Offset?>(
+            name: 'origin',
+            init: origin,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'filterQuality': _i2.BuilderArg<_i4.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.rotate() {
     mateBuilderName = 'Transform.rotate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Transform$Mate.rotate(
@@ -850,68 +865,53 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'angle',
-      angle,
-      isNamed: true,
-    );
-    mateUse(
-      'origin',
-      origin,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Transform Transform.translate({Key? key, required Offset offset, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.translate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Offset offset} , default:none
-    required _i4.Offset offset,
+    required super.offset,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i4.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super.translate(
-          key: key,
-          offset: offset,
-          transformHitTests: transformHitTests,
-          filterQuality: filterQuality,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i4.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'filterQuality': _i2.BuilderArg<_i4.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.translate() {
     mateBuilderName = 'Transform.translate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Transform$Mate.translate(
@@ -921,73 +921,86 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Transform Transform.scale({Key? key, double? scale, double? scaleX, double? scaleY, Offset? origin, AlignmentGeometry? alignment = Alignment.center, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.scale({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? scale} , default:none
-    double? scale,
+    super.scale,
 
     /// optionalParameters: {double? scaleX} , default:none
-    double? scaleX,
+    super.scaleX,
 
     /// optionalParameters: {double? scaleY} , default:none
-    double? scaleY,
+    super.scaleY,
 
     /// optionalParameters: {Offset? origin} , default:none
-    _i4.Offset? origin,
+    super.origin,
 
     /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry? alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i4.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super.scale(
-          key: key,
-          scale: scale,
-          scaleX: scaleX,
-          scaleY: scaleY,
-          origin: origin,
-          alignment: alignment,
-          transformHitTests: transformHitTests,
-          filterQuality: filterQuality,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double?>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+          ),
+          'scaleX': _i2.BuilderArg<double?>(
+            name: 'scaleX',
+            init: scaleX,
+            isNamed: true,
+          ),
+          'scaleY': _i2.BuilderArg<double?>(
+            name: 'scaleY',
+            init: scaleY,
+            isNamed: true,
+          ),
+          'origin': _i2.BuilderArg<_i4.Offset?>(
+            name: 'origin',
+            init: origin,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'filterQuality': _i2.BuilderArg<_i4.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.scale() {
     mateBuilderName = 'Transform.scale';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Transform$Mate.scale(
@@ -1001,86 +1014,71 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-    );
-    mateUse(
-      'scaleX',
-      scaleX,
-      isNamed: true,
-    );
-    mateUse(
-      'scaleY',
-      scaleY,
-      isNamed: true,
-    );
-    mateUse(
-      'origin',
-      origin,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Transform Transform.flip({Key? key, bool flipX = false, bool flipY = false, Offset? origin, bool transformHitTests = true, FilterQuality? filterQuality, Widget? child})
   Transform$Mate.flip({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool flipX = false} , default:processed=BooleanLiteralImpl
-    bool flipX = false,
+    super.flipX,
 
     /// optionalParameters: {bool flipY = false} , default:processed=BooleanLiteralImpl
-    bool flipY = false,
+    super.flipY,
 
     /// optionalParameters: {Offset? origin} , default:none
-    _i4.Offset? origin,
+    super.origin,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i4.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super.flip(
-          key: key,
-          flipX: flipX,
-          flipY: flipY,
-          origin: origin,
-          transformHitTests: transformHitTests,
-          filterQuality: filterQuality,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'flipX': _i2.BuilderArg<bool>(
+            name: 'flipX',
+            init: flipX,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'flipY': _i2.BuilderArg<bool>(
+            name: 'flipY',
+            init: flipY,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'origin': _i2.BuilderArg<_i4.Offset?>(
+            name: 'origin',
+            init: origin,
+            isNamed: true,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'filterQuality': _i2.BuilderArg<_i4.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.flip() {
     mateBuilderName = 'Transform.flip';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Transform$Mate.flip(
@@ -1092,45 +1090,10 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'flipX',
-      flipX,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'flipY',
-      flipY,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'origin',
-      origin,
-      isNamed: true,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CompositedTransformTarget extends SingleChildRenderObjectWidget
@@ -1138,18 +1101,31 @@ class CompositedTransformTarget$Mate extends _i1.CompositedTransformTarget with 
   /// CompositedTransformTarget CompositedTransformTarget({Key? key, required LayerLink link, Widget? child})
   CompositedTransformTarget$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required LayerLink link} , default:none
-    required _i14.LayerLink link,
+    required super.link,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          link: link,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'link': _i2.BuilderArg<_i14.LayerLink>(
+            name: 'link',
+            init: link,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CompositedTransformTarget';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CompositedTransformTarget$Mate(
@@ -1157,22 +1133,10 @@ class CompositedTransformTarget$Mate extends _i1.CompositedTransformTarget with 
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'link',
-      link,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CompositedTransformFollower extends SingleChildRenderObjectWidget
@@ -1180,34 +1144,67 @@ class CompositedTransformFollower$Mate extends _i1.CompositedTransformFollower w
   /// CompositedTransformFollower CompositedTransformFollower({Key? key, required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment targetAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, Widget? child})
   CompositedTransformFollower$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required LayerLink link} , default:none
-    required _i14.LayerLink link,
+    required super.link,
 
     /// optionalParameters: {bool showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
-    bool showWhenUnlinked = true,
+    super.showWhenUnlinked,
 
     /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i4.Offset offset = _i8.Offset.zero,
+    super.offset,
 
     /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
-    _i13.Alignment targetAnchor = _i10.Alignment.topLeft,
+    super.targetAnchor,
 
     /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
-    _i13.Alignment followerAnchor = _i10.Alignment.topLeft,
+    super.followerAnchor,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          link: link,
-          showWhenUnlinked: showWhenUnlinked,
-          offset: offset,
-          targetAnchor: targetAnchor,
-          followerAnchor: followerAnchor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'link': _i2.BuilderArg<_i14.LayerLink>(
+            name: 'link',
+            init: link,
+            isNamed: true,
+          ),
+          'showWhenUnlinked': _i2.BuilderArg<bool>(
+            name: 'showWhenUnlinked',
+            init: showWhenUnlinked,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'offset': _i2.BuilderArg<_i4.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+            defaultValue: _i8.Offset.zero,
+          ),
+          'targetAnchor': _i2.BuilderArg<_i13.Alignment>(
+            name: 'targetAnchor',
+            init: targetAnchor,
+            isNamed: true,
+            defaultValue: _i10.Alignment.topLeft,
+          ),
+          'followerAnchor': _i2.BuilderArg<_i13.Alignment>(
+            name: 'followerAnchor',
+            init: followerAnchor,
+            isNamed: true,
+            defaultValue: _i10.Alignment.topLeft,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CompositedTransformFollower';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CompositedTransformFollower$Mate(
@@ -1219,46 +1216,10 @@ class CompositedTransformFollower$Mate extends _i1.CompositedTransformFollower w
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'link',
-      link,
-      isNamed: true,
-    );
-    mateUse(
-      'showWhenUnlinked',
-      showWhenUnlinked,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-      defaultValue: _i8.Offset.zero,
-    );
-    mateUse(
-      'targetAnchor',
-      targetAnchor,
-      isNamed: true,
-      defaultValue: _i10.Alignment.topLeft,
-    );
-    mateUse(
-      'followerAnchor',
-      followerAnchor,
-      isNamed: true,
-      defaultValue: _i10.Alignment.topLeft,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FittedBox extends SingleChildRenderObjectWidget
@@ -1266,26 +1227,50 @@ class FittedBox$Mate extends _i1.FittedBox with _i2.Mate {
   /// FittedBox FittedBox({Key? key, BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, Clip clipBehavior = Clip.none, Widget? child})
   FittedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:processed=PrefixedIdentifierImpl
-    _i15.BoxFit fit = _i10.BoxFit.contain,
+    super.fit,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          fit: fit,
-          alignment: alignment,
-          clipBehavior: clipBehavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i15.BoxFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i10.BoxFit.contain,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FittedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FittedBox$Mate(
@@ -1295,35 +1280,10 @@ class FittedBox$Mate extends _i1.FittedBox with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-      defaultValue: _i10.BoxFit.contain,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FractionalTranslation extends SingleChildRenderObjectWidget
@@ -1331,22 +1291,40 @@ class FractionalTranslation$Mate extends _i1.FractionalTranslation with _i2.Mate
   /// FractionalTranslation FractionalTranslation({Key? key, required Offset translation, bool transformHitTests = true, Widget? child})
   FractionalTranslation$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Offset translation} , default:none
-    required _i4.Offset translation,
+    required super.translation,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          translation: translation,
-          transformHitTests: transformHitTests,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'translation': _i2.BuilderArg<_i4.Offset>(
+            name: 'translation',
+            init: translation,
+            isNamed: true,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FractionalTranslation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FractionalTranslation$Mate(
@@ -1355,28 +1333,10 @@ class FractionalTranslation$Mate extends _i1.FractionalTranslation with _i2.Mate
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'translation',
-      translation,
-      isNamed: true,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RotatedBox extends SingleChildRenderObjectWidget
@@ -1384,18 +1344,31 @@ class RotatedBox$Mate extends _i1.RotatedBox with _i2.Mate {
   /// RotatedBox RotatedBox({Key? key, required int quarterTurns, Widget? child})
   RotatedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required int quarterTurns} , default:none
-    required int quarterTurns,
+    required super.quarterTurns,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          quarterTurns: quarterTurns,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'quarterTurns': _i2.BuilderArg<int>(
+            name: 'quarterTurns',
+            init: quarterTurns,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RotatedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RotatedBox$Mate(
@@ -1403,22 +1376,10 @@ class RotatedBox$Mate extends _i1.RotatedBox with _i2.Mate {
           quarterTurns: p.get('quarterTurns').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'quarterTurns',
-      quarterTurns,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Padding extends SingleChildRenderObjectWidget
@@ -1426,18 +1387,31 @@ class Padding$Mate extends _i1.Padding with _i2.Mate {
   /// Padding Padding({Key? key, required EdgeInsetsGeometry padding, Widget? child})
   Padding$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
-    required _i16.EdgeInsetsGeometry padding,
+    required super.padding,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          padding: padding,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i16.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Padding';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Padding$Mate(
@@ -1445,22 +1419,10 @@ class Padding$Mate extends _i1.Padding with _i2.Mate {
           padding: p.get('padding').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Align extends SingleChildRenderObjectWidget
@@ -1468,26 +1430,48 @@ class Align$Mate extends _i1.Align with _i2.Mate {
   /// Align Align({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   Align$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {double? widthFactor} , default:none
-    double? widthFactor,
+    super.widthFactor,
 
     /// optionalParameters: {double? heightFactor} , default:none
-    double? heightFactor,
+    super.heightFactor,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          widthFactor: widthFactor,
-          heightFactor: heightFactor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'widthFactor': _i2.BuilderArg<double?>(
+            name: 'widthFactor',
+            init: widthFactor,
+            isNamed: true,
+          ),
+          'heightFactor': _i2.BuilderArg<double?>(
+            name: 'heightFactor',
+            init: heightFactor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Align';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Align$Mate(
@@ -1497,33 +1481,10 @@ class Align$Mate extends _i1.Align with _i2.Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'widthFactor',
-      widthFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'heightFactor',
-      heightFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Center extends Align
@@ -1531,22 +1492,39 @@ class Center$Mate extends _i1.Center with _i2.Mate {
   /// Center Center({Key? key, double? widthFactor, double? heightFactor, Widget? child})
   Center$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? widthFactor} , default:none
-    double? widthFactor,
+    super.widthFactor,
 
     /// optionalParameters: {double? heightFactor} , default:none
-    double? heightFactor,
+    super.heightFactor,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          widthFactor: widthFactor,
-          heightFactor: heightFactor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'widthFactor': _i2.BuilderArg<double?>(
+            name: 'widthFactor',
+            init: widthFactor,
+            isNamed: true,
+          ),
+          'heightFactor': _i2.BuilderArg<double?>(
+            name: 'heightFactor',
+            init: heightFactor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Center';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Center$Mate(
@@ -1555,27 +1533,10 @@ class Center$Mate extends _i1.Center with _i2.Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'widthFactor',
-      widthFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'heightFactor',
-      heightFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CustomSingleChildLayout extends SingleChildRenderObjectWidget
@@ -1583,18 +1544,31 @@ class CustomSingleChildLayout$Mate extends _i1.CustomSingleChildLayout with _i2.
   /// CustomSingleChildLayout CustomSingleChildLayout({Key? key, required SingleChildLayoutDelegate delegate, Widget? child})
   CustomSingleChildLayout$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required SingleChildLayoutDelegate delegate} , default:none
-    required _i17.SingleChildLayoutDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          delegate: delegate,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i17.SingleChildLayoutDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CustomSingleChildLayout';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CustomSingleChildLayout$Mate(
@@ -1602,22 +1576,10 @@ class CustomSingleChildLayout$Mate extends _i1.CustomSingleChildLayout with _i2.
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LayoutId extends ParentDataWidget<MultiChildLayoutParentData>
@@ -1625,18 +1587,31 @@ class LayoutId$Mate extends _i1.LayoutId with _i2.Mate {
   /// LayoutId LayoutId({Key? key, required Object id, required Widget child})
   LayoutId$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Object id} , default:none
-    required Object id,
+    required super.id,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          id: id,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'id': _i2.BuilderArg<Object>(
+            name: 'id',
+            init: id,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LayoutId';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LayoutId$Mate(
@@ -1644,22 +1619,10 @@ class LayoutId$Mate extends _i1.LayoutId with _i2.Mate {
           id: p.get('id').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'id',
-      id,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CustomMultiChildLayout extends MultiChildRenderObjectWidget
@@ -1667,18 +1630,31 @@ class CustomMultiChildLayout$Mate extends _i1.CustomMultiChildLayout with _i2.Ma
   /// CustomMultiChildLayout CustomMultiChildLayout({Key? key, required MultiChildLayoutDelegate delegate, List<Widget> children = const <Widget>[]})
   CustomMultiChildLayout$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required MultiChildLayoutDelegate delegate} , default:none
-    required _i18.MultiChildLayoutDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          delegate: delegate,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i18.MultiChildLayoutDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CustomMultiChildLayout';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CustomMultiChildLayout$Mate(
@@ -1686,22 +1662,10 @@ class CustomMultiChildLayout$Mate extends _i1.CustomMultiChildLayout with _i2.Ma
           delegate: p.get('delegate').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SizedBox extends SingleChildRenderObjectWidget
@@ -1709,22 +1673,39 @@ class SizedBox$Mate extends _i1.SizedBox with _i2.Mate {
   /// SizedBox SizedBox({Key? key, double? width, double? height, Widget? child})
   SizedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          width: width,
-          height: height,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SizedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SizedBox$Mate(
@@ -1733,101 +1714,92 @@ class SizedBox$Mate extends _i1.SizedBox with _i2.Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// SizedBox SizedBox.expand({Key? key, Widget? child})
   SizedBox$Mate.expand({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super.expand(
-          key: key,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.expand() {
     mateBuilderName = 'SizedBox.expand';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SizedBox$Mate.expand(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// SizedBox SizedBox.shrink({Key? key, Widget? child})
   SizedBox$Mate.shrink({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super.shrink(
-          key: key,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.shrink() {
     mateBuilderName = 'SizedBox.shrink';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SizedBox$Mate.shrink(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// SizedBox SizedBox.fromSize({Key? key, Widget? child, Size? size})
   SizedBox$Mate.fromSize({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {Size? size} , default:none
-    _i4.Size? size,
-  }) : super.fromSize(
-          key: key,
-          child: child,
-          size: size,
-        ) {
+    super.size,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<_i4.Size?>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+        },
+        super.fromSize() {
     mateBuilderName = 'SizedBox.fromSize';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SizedBox$Mate.fromSize(
@@ -1835,38 +1807,36 @@ class SizedBox$Mate extends _i1.SizedBox with _i2.Mate {
           child: p.get('child').build(),
           size: p.get('size').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
   }
 
   /// SizedBox SizedBox.square({Key? key, Widget? child, double? dimension})
   SizedBox$Mate.square({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {double? dimension} , default:none
-    double? dimension,
-  }) : super.square(
-          key: key,
-          child: child,
-          dimension: dimension,
-        ) {
+    super.dimension,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'dimension': _i2.BuilderArg<double?>(
+            name: 'dimension',
+            init: dimension,
+            isNamed: true,
+          ),
+        },
+        super.square() {
     mateBuilderName = 'SizedBox.square';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SizedBox$Mate.square(
@@ -1874,22 +1844,10 @@ class SizedBox$Mate extends _i1.SizedBox with _i2.Mate {
           child: p.get('child').build(),
           dimension: p.get('dimension').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'dimension',
-      dimension,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ConstrainedBox extends SingleChildRenderObjectWidget
@@ -1897,18 +1855,31 @@ class ConstrainedBox$Mate extends _i1.ConstrainedBox with _i2.Mate {
   /// ConstrainedBox ConstrainedBox({Key? key, required BoxConstraints constraints, Widget? child})
   ConstrainedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required BoxConstraints constraints} , default:none
-    required _i19.BoxConstraints constraints,
+    required super.constraints,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          constraints: constraints,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i19.BoxConstraints>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ConstrainedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ConstrainedBox$Mate(
@@ -1916,22 +1887,10 @@ class ConstrainedBox$Mate extends _i1.ConstrainedBox with _i2.Mate {
           constraints: p.get('constraints').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ConstraintsTransformBox extends SingleChildRenderObjectWidget
@@ -1939,34 +1898,66 @@ class ConstraintsTransformBox$Mate extends _i1.ConstraintsTransformBox with _i2.
   /// ConstraintsTransformBox ConstraintsTransformBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, required BoxConstraints Function(BoxConstraints) constraintsTransform, Clip clipBehavior = Clip.none, String debugTransformType = ''})
   ConstraintsTransformBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , default:none
-    required _i17.BoxConstraintsTransform constraintsTransform,
+    required super.constraintsTransform,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {String debugTransformType = ''} , default:processed=SimpleStringLiteralImpl
-    String debugTransformType = '',
-  }) : super(
-          key: key,
-          child: child,
-          textDirection: textDirection,
-          alignment: alignment,
-          constraintsTransform: constraintsTransform,
-          clipBehavior: clipBehavior,
-          debugTransformType: debugTransformType,
-        ) {
+    super.debugTransformType,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'constraintsTransform': _i2.BuilderArg<_i17.BoxConstraintsTransform>(
+            name: 'constraintsTransform',
+            init: constraintsTransform,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'debugTransformType': _i2.BuilderArg<String>(
+            name: 'debugTransformType',
+            init: debugTransformType,
+            isNamed: true,
+            defaultValue: '',
+          ),
+        },
+        super() {
     mateBuilderName = 'ConstraintsTransformBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ConstraintsTransformBox$Mate(
@@ -1978,45 +1969,10 @@ class ConstraintsTransformBox$Mate extends _i1.ConstraintsTransformBox with _i2.
           clipBehavior: p.get('clipBehavior').build(),
           debugTransformType: p.get('debugTransformType').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'constraintsTransform',
-      constraintsTransform,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'debugTransformType',
-      debugTransformType,
-      isNamed: true,
-      defaultValue: '',
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class UnconstrainedBox extends StatelessWidget
@@ -2024,30 +1980,57 @@ class UnconstrainedBox$Mate extends _i1.UnconstrainedBox with _i2.Mate {
   /// UnconstrainedBox UnconstrainedBox({Key? key, Widget? child, TextDirection? textDirection, AlignmentGeometry alignment = Alignment.center, Axis? constrainedAxis, Clip clipBehavior = Clip.none})
   UnconstrainedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Axis? constrainedAxis} , default:none
-    _i20.Axis? constrainedAxis,
+    super.constrainedAxis,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
-  }) : super(
-          key: key,
-          child: child,
-          textDirection: textDirection,
-          alignment: alignment,
-          constrainedAxis: constrainedAxis,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'constrainedAxis': _i2.BuilderArg<_i20.Axis?>(
+            name: 'constrainedAxis',
+            init: constrainedAxis,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'UnconstrainedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UnconstrainedBox$Mate(
@@ -2058,39 +2041,10 @@ class UnconstrainedBox$Mate extends _i1.UnconstrainedBox with _i2.Mate {
           constrainedAxis: p.get('constrainedAxis').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'constrainedAxis',
-      constrainedAxis,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FractionallySizedBox extends SingleChildRenderObjectWidget
@@ -2098,26 +2052,48 @@ class FractionallySizedBox$Mate extends _i1.FractionallySizedBox with _i2.Mate {
   /// FractionallySizedBox FractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? widthFactor, double? heightFactor, Widget? child})
   FractionallySizedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {double? widthFactor} , default:none
-    double? widthFactor,
+    super.widthFactor,
 
     /// optionalParameters: {double? heightFactor} , default:none
-    double? heightFactor,
+    super.heightFactor,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          widthFactor: widthFactor,
-          heightFactor: heightFactor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'widthFactor': _i2.BuilderArg<double?>(
+            name: 'widthFactor',
+            init: widthFactor,
+            isNamed: true,
+          ),
+          'heightFactor': _i2.BuilderArg<double?>(
+            name: 'heightFactor',
+            init: heightFactor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FractionallySizedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FractionallySizedBox$Mate(
@@ -2127,33 +2103,10 @@ class FractionallySizedBox$Mate extends _i1.FractionallySizedBox with _i2.Mate {
           heightFactor: p.get('heightFactor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'widthFactor',
-      widthFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'heightFactor',
-      heightFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LimitedBox extends SingleChildRenderObjectWidget
@@ -2161,22 +2114,41 @@ class LimitedBox$Mate extends _i1.LimitedBox with _i2.Mate {
   /// LimitedBox LimitedBox({Key? key, double maxWidth = double.infinity, double maxHeight = double.infinity, Widget? child})
   LimitedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double maxWidth = double.infinity,
+    super.maxWidth,
 
     /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double maxHeight = double.infinity,
+    super.maxHeight,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          maxWidth: maxWidth,
-          maxHeight: maxHeight,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'maxWidth': _i2.BuilderArg<double>(
+            name: 'maxWidth',
+            init: maxWidth,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+          'maxHeight': _i2.BuilderArg<double>(
+            name: 'maxHeight',
+            init: maxHeight,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LimitedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LimitedBox$Mate(
@@ -2185,29 +2157,10 @@ class LimitedBox$Mate extends _i1.LimitedBox with _i2.Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'maxWidth',
-      maxWidth,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
-    mateUse(
-      'maxHeight',
-      maxHeight,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OverflowBox extends SingleChildRenderObjectWidget
@@ -2215,34 +2168,64 @@ class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
   /// OverflowBox OverflowBox({Key? key, AlignmentGeometry alignment = Alignment.center, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, Widget? child})
   OverflowBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {double? minWidth} , default:none
-    double? minWidth,
+    super.minWidth,
 
     /// optionalParameters: {double? maxWidth} , default:none
-    double? maxWidth,
+    super.maxWidth,
 
     /// optionalParameters: {double? minHeight} , default:none
-    double? minHeight,
+    super.minHeight,
 
     /// optionalParameters: {double? maxHeight} , default:none
-    double? maxHeight,
+    super.maxHeight,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          minWidth: minWidth,
-          maxWidth: maxWidth,
-          minHeight: minHeight,
-          maxHeight: maxHeight,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'minWidth': _i2.BuilderArg<double?>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+          ),
+          'maxWidth': _i2.BuilderArg<double?>(
+            name: 'maxWidth',
+            init: maxWidth,
+            isNamed: true,
+          ),
+          'minHeight': _i2.BuilderArg<double?>(
+            name: 'minHeight',
+            init: minHeight,
+            isNamed: true,
+          ),
+          'maxHeight': _i2.BuilderArg<double?>(
+            name: 'maxHeight',
+            init: maxHeight,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'OverflowBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverflowBox$Mate(
@@ -2254,43 +2237,10 @@ class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
           maxHeight: p.get('maxHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'maxWidth',
-      maxWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'minHeight',
-      minHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'maxHeight',
-      maxHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SizedOverflowBox extends SingleChildRenderObjectWidget
@@ -2298,22 +2248,40 @@ class SizedOverflowBox$Mate extends _i1.SizedOverflowBox with _i2.Mate {
   /// SizedOverflowBox SizedOverflowBox({Key? key, required Size size, AlignmentGeometry alignment = Alignment.center, Widget? child})
   SizedOverflowBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Size size} , default:none
-    required _i4.Size size,
+    required super.size,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          size: size,
-          alignment: alignment,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<_i4.Size>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SizedOverflowBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SizedOverflowBox$Mate(
@@ -2322,28 +2290,10 @@ class SizedOverflowBox$Mate extends _i1.SizedOverflowBox with _i2.Mate {
           alignment: p.get('alignment').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Offstage extends SingleChildRenderObjectWidget
@@ -2351,18 +2301,32 @@ class Offstage$Mate extends _i1.Offstage with _i2.Mate {
   /// Offstage Offstage({Key? key, bool offstage = true, Widget? child})
   Offstage$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool offstage = true} , default:processed=BooleanLiteralImpl
-    bool offstage = true,
+    super.offstage,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          offstage: offstage,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'offstage': _i2.BuilderArg<bool>(
+            name: 'offstage',
+            init: offstage,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Offstage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Offstage$Mate(
@@ -2370,23 +2334,10 @@ class Offstage$Mate extends _i1.Offstage with _i2.Mate {
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'offstage',
-      offstage,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AspectRatio extends SingleChildRenderObjectWidget
@@ -2394,18 +2345,31 @@ class AspectRatio$Mate extends _i1.AspectRatio with _i2.Mate {
   /// AspectRatio AspectRatio({Key? key, required double aspectRatio, Widget? child})
   AspectRatio$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double aspectRatio} , default:none
-    required double aspectRatio,
+    required super.aspectRatio,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          aspectRatio: aspectRatio,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'aspectRatio': _i2.BuilderArg<double>(
+            name: 'aspectRatio',
+            init: aspectRatio,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AspectRatio';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AspectRatio$Mate(
@@ -2413,22 +2377,10 @@ class AspectRatio$Mate extends _i1.AspectRatio with _i2.Mate {
           aspectRatio: p.get('aspectRatio').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'aspectRatio',
-      aspectRatio,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IntrinsicWidth extends SingleChildRenderObjectWidget
@@ -2436,22 +2388,39 @@ class IntrinsicWidth$Mate extends _i1.IntrinsicWidth with _i2.Mate {
   /// IntrinsicWidth IntrinsicWidth({Key? key, double? stepWidth, double? stepHeight, Widget? child})
   IntrinsicWidth$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? stepWidth} , default:none
-    double? stepWidth,
+    super.stepWidth,
 
     /// optionalParameters: {double? stepHeight} , default:none
-    double? stepHeight,
+    super.stepHeight,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          stepWidth: stepWidth,
-          stepHeight: stepHeight,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'stepWidth': _i2.BuilderArg<double?>(
+            name: 'stepWidth',
+            init: stepWidth,
+            isNamed: true,
+          ),
+          'stepHeight': _i2.BuilderArg<double?>(
+            name: 'stepHeight',
+            init: stepHeight,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'IntrinsicWidth';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IntrinsicWidth$Mate(
@@ -2460,27 +2429,10 @@ class IntrinsicWidth$Mate extends _i1.IntrinsicWidth with _i2.Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'stepWidth',
-      stepWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'stepHeight',
-      stepHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IntrinsicHeight extends SingleChildRenderObjectWidget
@@ -2488,31 +2440,33 @@ class IntrinsicHeight$Mate extends _i1.IntrinsicHeight with _i2.Mate {
   /// IntrinsicHeight IntrinsicHeight({Key? key, Widget? child})
   IntrinsicHeight$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'IntrinsicHeight';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IntrinsicHeight$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Baseline extends SingleChildRenderObjectWidget
@@ -2520,22 +2474,39 @@ class Baseline$Mate extends _i1.Baseline with _i2.Mate {
   /// Baseline Baseline({Key? key, required double baseline, required TextBaseline baselineType, Widget? child})
   Baseline$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double baseline} , default:none
-    required double baseline,
+    required super.baseline,
 
     /// optionalParameters: {required TextBaseline baselineType} , default:none
-    required _i4.TextBaseline baselineType,
+    required super.baselineType,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          baseline: baseline,
-          baselineType: baselineType,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'baseline': _i2.BuilderArg<double>(
+            name: 'baseline',
+            init: baseline,
+            isNamed: true,
+          ),
+          'baselineType': _i2.BuilderArg<_i4.TextBaseline>(
+            name: 'baselineType',
+            init: baselineType,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Baseline';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Baseline$Mate(
@@ -2544,27 +2515,10 @@ class Baseline$Mate extends _i1.Baseline with _i2.Mate {
           baselineType: p.get('baselineType').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'baseline',
-      baseline,
-      isNamed: true,
-    );
-    mateUse(
-      'baselineType',
-      baselineType,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverToBoxAdapter extends SingleChildRenderObjectWidget
@@ -2572,31 +2526,33 @@ class SliverToBoxAdapter$Mate extends _i1.SliverToBoxAdapter with _i2.Mate {
   /// SliverToBoxAdapter SliverToBoxAdapter({Key? key, Widget? child})
   SliverToBoxAdapter$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverToBoxAdapter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverToBoxAdapter$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverPadding extends SingleChildRenderObjectWidget
@@ -2604,18 +2560,31 @@ class SliverPadding$Mate extends _i1.SliverPadding with _i2.Mate {
   /// SliverPadding SliverPadding({Key? key, required EdgeInsetsGeometry padding, Widget? sliver})
   SliverPadding$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
-    required _i16.EdgeInsetsGeometry padding,
+    required super.padding,
 
     /// optionalParameters: {Widget? sliver} , default:none
-    _i5.Widget? sliver,
-  }) : super(
-          key: key,
-          padding: padding,
-          sliver: sliver,
-        ) {
+    super.sliver,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i16.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i5.Widget?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverPadding';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverPadding$Mate(
@@ -2623,22 +2592,10 @@ class SliverPadding$Mate extends _i1.SliverPadding with _i2.Mate {
           padding: p.get('padding').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ListBody extends MultiChildRenderObjectWidget
@@ -2646,22 +2603,41 @@ class ListBody$Mate extends _i1.ListBody with _i2.Mate {
   /// ListBody ListBody({Key? key, Axis mainAxis = Axis.vertical, bool reverse = false, List<Widget> children = const <Widget>[]})
   ListBody$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i20.Axis mainAxis = _i10.Axis.vertical,
+    super.mainAxis,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          mainAxis: mainAxis,
-          reverse: reverse,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'mainAxis': _i2.BuilderArg<_i20.Axis>(
+            name: 'mainAxis',
+            init: mainAxis,
+            isNamed: true,
+            defaultValue: _i10.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ListBody';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ListBody$Mate(
@@ -2670,29 +2646,10 @@ class ListBody$Mate extends _i1.ListBody with _i2.Mate {
           reverse: p.get('reverse').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxis',
-      mainAxis,
-      isNamed: true,
-      defaultValue: _i10.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Stack extends MultiChildRenderObjectWidget
@@ -2700,30 +2657,58 @@ class Stack$Mate extends _i1.Stack with _i2.Mate {
   /// Stack Stack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, StackFit fit = StackFit.loose, Clip clipBehavior = Clip.hardEdge, List<Widget> children = const <Widget>[]})
   Stack$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.AlignmentDirectional.topStart,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
-    _i21.StackFit fit = _i10.StackFit.loose,
+    super.fit,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          textDirection: textDirection,
-          fit: fit,
-          clipBehavior: clipBehavior,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.AlignmentDirectional.topStart,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i21.StackFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i10.StackFit.loose,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Stack';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Stack$Mate(
@@ -2734,40 +2719,10 @@ class Stack$Mate extends _i1.Stack with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.AlignmentDirectional.topStart,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-      defaultValue: _i10.StackFit.loose,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IndexedStack extends StatelessWidget
@@ -2775,34 +2730,67 @@ class IndexedStack$Mate extends _i1.IndexedStack with _i2.Mate {
   /// IndexedStack IndexedStack({Key? key, AlignmentGeometry alignment = AlignmentDirectional.topStart, TextDirection? textDirection, Clip clipBehavior = Clip.hardEdge, StackFit sizing = StackFit.loose, int? index = 0, List<Widget> children = const <Widget>[]})
   IndexedStack$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.AlignmentDirectional.topStart,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {StackFit sizing = StackFit.loose} , default:processed=PrefixedIdentifierImpl
-    _i21.StackFit sizing = _i10.StackFit.loose,
+    super.sizing,
 
     /// optionalParameters: {int? index = 0} , default:processed=IntegerLiteralImpl
-    int? index = 0,
+    super.index,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          textDirection: textDirection,
-          clipBehavior: clipBehavior,
-          sizing: sizing,
-          index: index,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.AlignmentDirectional.topStart,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+          'sizing': _i2.BuilderArg<_i21.StackFit>(
+            name: 'sizing',
+            init: sizing,
+            isNamed: true,
+            defaultValue: _i10.StackFit.loose,
+          ),
+          'index': _i2.BuilderArg<int?>(
+            name: 'index',
+            init: index,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'IndexedStack';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IndexedStack$Mate(
@@ -2814,46 +2802,10 @@ class IndexedStack$Mate extends _i1.IndexedStack with _i2.Mate {
           index: p.get('index').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.AlignmentDirectional.topStart,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
-    mateUse(
-      'sizing',
-      sizing,
-      isNamed: true,
-      defaultValue: _i10.StackFit.loose,
-    );
-    mateUse(
-      'index',
-      index,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Positioned extends ParentDataWidget<StackParentData>
@@ -2861,38 +2813,71 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
   /// Positioned Positioned({Key? key, double? left, double? top, double? right, double? bottom, double? width, double? height, required Widget child})
   Positioned$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? left} , default:none
-    double? left,
+    super.left,
 
     /// optionalParameters: {double? top} , default:none
-    double? top,
+    super.top,
 
     /// optionalParameters: {double? right} , default:none
-    double? right,
+    super.right,
 
     /// optionalParameters: {double? bottom} , default:none
-    double? bottom,
+    super.bottom,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          left: left,
-          top: top,
-          right: right,
-          bottom: bottom,
-          width: width,
-          height: height,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'left': _i2.BuilderArg<double?>(
+            name: 'left',
+            init: left,
+            isNamed: true,
+          ),
+          'top': _i2.BuilderArg<double?>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+          ),
+          'right': _i2.BuilderArg<double?>(
+            name: 'right',
+            init: right,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<double?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Positioned';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Positioned$Mate(
@@ -2905,63 +2890,36 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'left',
-      left,
-      isNamed: true,
-    );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-    );
-    mateUse(
-      'right',
-      right,
-      isNamed: true,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Positioned Positioned.fromRect({Key? key, required Rect rect, required Widget child})
   Positioned$Mate.fromRect({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Rect rect} , default:none
-    required _i4.Rect rect,
+    required super.rect,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super.fromRect(
-          key: key,
-          rect: rect,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'rect': _i2.BuilderArg<_i4.Rect>(
+            name: 'rect',
+            init: rect,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.fromRect() {
     mateBuilderName = 'Positioned.fromRect';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Positioned$Mate.fromRect(
@@ -2969,38 +2927,36 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'rect',
-      rect,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Positioned Positioned.fromRelativeRect({Key? key, required RelativeRect rect, required Widget child})
   Positioned$Mate.fromRelativeRect({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required RelativeRect rect} , default:none
-    required _i21.RelativeRect rect,
+    required super.rect,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super.fromRelativeRect(
-          key: key,
-          rect: rect,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'rect': _i2.BuilderArg<_i21.RelativeRect>(
+            name: 'rect',
+            init: rect,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.fromRelativeRect() {
     mateBuilderName = 'Positioned.fromRelativeRect';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Positioned$Mate.fromRelativeRect(
@@ -3008,50 +2964,64 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
           rect: p.get('rect').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'rect',
-      rect,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Positioned Positioned.fill({Key? key, double? left = 0.0, double? top = 0.0, double? right = 0.0, double? bottom = 0.0, required Widget child})
   Positioned$Mate.fill({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? left = 0.0} , default:processed=DoubleLiteralImpl
-    double? left = 0.0,
+    super.left,
 
     /// optionalParameters: {double? top = 0.0} , default:processed=DoubleLiteralImpl
-    double? top = 0.0,
+    super.top,
 
     /// optionalParameters: {double? right = 0.0} , default:processed=DoubleLiteralImpl
-    double? right = 0.0,
+    super.right,
 
     /// optionalParameters: {double? bottom = 0.0} , default:processed=DoubleLiteralImpl
-    double? bottom = 0.0,
+    super.bottom,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super.fill(
-          key: key,
-          left: left,
-          top: top,
-          right: right,
-          bottom: bottom,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'left': _i2.BuilderArg<double?>(
+            name: 'left',
+            init: left,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'top': _i2.BuilderArg<double?>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'right': _i2.BuilderArg<double?>(
+            name: 'right',
+            init: right,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'bottom': _i2.BuilderArg<double?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.fill() {
     mateBuilderName = 'Positioned.fill';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Positioned$Mate.fill(
@@ -3062,41 +3032,10 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
           bottom: p.get('bottom').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'left',
-      left,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'right',
-      right,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PositionedDirectional extends StatelessWidget
@@ -3104,38 +3043,71 @@ class PositionedDirectional$Mate extends _i1.PositionedDirectional with _i2.Mate
   /// PositionedDirectional PositionedDirectional({Key? key, double? start, double? top, double? end, double? bottom, double? width, double? height, required Widget child})
   PositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? start} , default:none
-    double? start,
+    super.start,
 
     /// optionalParameters: {double? top} , default:none
-    double? top,
+    super.top,
 
     /// optionalParameters: {double? end} , default:none
-    double? end,
+    super.end,
 
     /// optionalParameters: {double? bottom} , default:none
-    double? bottom,
+    super.bottom,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          start: start,
-          top: top,
-          end: end,
-          bottom: bottom,
-          width: width,
-          height: height,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'start': _i2.BuilderArg<double?>(
+            name: 'start',
+            init: start,
+            isNamed: true,
+          ),
+          'top': _i2.BuilderArg<double?>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<double?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<double?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PositionedDirectional';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PositionedDirectional$Mate(
@@ -3148,47 +3120,10 @@ class PositionedDirectional$Mate extends _i1.PositionedDirectional with _i2.Mate
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'start',
-      start,
-      isNamed: true,
-    );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Flex extends MultiChildRenderObjectWidget
@@ -3196,46 +3131,92 @@ class Flex$Mate extends _i1.Flex with _i2.Mate {
   /// Flex Flex({Key? key, required Axis direction, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Flex$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Axis direction} , default:none
-    required _i20.Axis direction,
+    required super.direction,
 
     /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i22.MainAxisAlignment mainAxisAlignment = _i10.MainAxisAlignment.start,
+    super.mainAxisAlignment,
 
     /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
-    _i22.MainAxisSize mainAxisSize = _i10.MainAxisSize.max,
+    super.mainAxisSize,
 
     /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
-    _i22.CrossAxisAlignment crossAxisAlignment = _i10.CrossAxisAlignment.center,
+    super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i20.VerticalDirection verticalDirection = _i10.VerticalDirection.down,
+    super.verticalDirection,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
-    _i4.TextBaseline? textBaseline,
+    super.textBaseline,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          direction: direction,
-          mainAxisAlignment: mainAxisAlignment,
-          mainAxisSize: mainAxisSize,
-          crossAxisAlignment: crossAxisAlignment,
-          textDirection: textDirection,
-          verticalDirection: verticalDirection,
-          textBaseline: textBaseline,
-          clipBehavior: clipBehavior,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i20.Axis>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+          ),
+          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
+            name: 'mainAxisAlignment',
+            init: mainAxisAlignment,
+            isNamed: true,
+            defaultValue: _i10.MainAxisAlignment.start,
+          ),
+          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
+            name: 'mainAxisSize',
+            init: mainAxisSize,
+            isNamed: true,
+            defaultValue: _i10.MainAxisSize.max,
+          ),
+          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
+            name: 'crossAxisAlignment',
+            init: crossAxisAlignment,
+            isNamed: true,
+            defaultValue: _i10.CrossAxisAlignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
+            name: 'verticalDirection',
+            init: verticalDirection,
+            isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
+          ),
+          'textBaseline': _i2.BuilderArg<_i4.TextBaseline?>(
+            name: 'textBaseline',
+            init: textBaseline,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Flex';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Flex$Mate(
@@ -3250,62 +3231,10 @@ class Flex$Mate extends _i1.Flex with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisAlignment',
-      mainAxisAlignment,
-      isNamed: true,
-      defaultValue: _i10.MainAxisAlignment.start,
-    );
-    mateUse(
-      'mainAxisSize',
-      mainAxisSize,
-      isNamed: true,
-      defaultValue: _i10.MainAxisSize.max,
-    );
-    mateUse(
-      'crossAxisAlignment',
-      crossAxisAlignment,
-      isNamed: true,
-      defaultValue: _i10.CrossAxisAlignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'verticalDirection',
-      verticalDirection,
-      isNamed: true,
-      defaultValue: _i10.VerticalDirection.down,
-    );
-    mateUse(
-      'textBaseline',
-      textBaseline,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Row extends Flex
@@ -3313,38 +3242,75 @@ class Row$Mate extends _i1.Row with _i2.Mate {
   /// Row Row({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Row$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i22.MainAxisAlignment mainAxisAlignment = _i10.MainAxisAlignment.start,
+    super.mainAxisAlignment,
 
     /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
-    _i22.MainAxisSize mainAxisSize = _i10.MainAxisSize.max,
+    super.mainAxisSize,
 
     /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
-    _i22.CrossAxisAlignment crossAxisAlignment = _i10.CrossAxisAlignment.center,
+    super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i20.VerticalDirection verticalDirection = _i10.VerticalDirection.down,
+    super.verticalDirection,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
-    _i4.TextBaseline? textBaseline,
+    super.textBaseline,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          mainAxisAlignment: mainAxisAlignment,
-          mainAxisSize: mainAxisSize,
-          crossAxisAlignment: crossAxisAlignment,
-          textDirection: textDirection,
-          verticalDirection: verticalDirection,
-          textBaseline: textBaseline,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
+            name: 'mainAxisAlignment',
+            init: mainAxisAlignment,
+            isNamed: true,
+            defaultValue: _i10.MainAxisAlignment.start,
+          ),
+          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
+            name: 'mainAxisSize',
+            init: mainAxisSize,
+            isNamed: true,
+            defaultValue: _i10.MainAxisSize.max,
+          ),
+          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
+            name: 'crossAxisAlignment',
+            init: crossAxisAlignment,
+            isNamed: true,
+            defaultValue: _i10.CrossAxisAlignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
+            name: 'verticalDirection',
+            init: verticalDirection,
+            isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
+          ),
+          'textBaseline': _i2.BuilderArg<_i4.TextBaseline?>(
+            name: 'textBaseline',
+            init: textBaseline,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Row';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Row$Mate(
@@ -3357,51 +3323,10 @@ class Row$Mate extends _i1.Row with _i2.Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisAlignment',
-      mainAxisAlignment,
-      isNamed: true,
-      defaultValue: _i10.MainAxisAlignment.start,
-    );
-    mateUse(
-      'mainAxisSize',
-      mainAxisSize,
-      isNamed: true,
-      defaultValue: _i10.MainAxisSize.max,
-    );
-    mateUse(
-      'crossAxisAlignment',
-      crossAxisAlignment,
-      isNamed: true,
-      defaultValue: _i10.CrossAxisAlignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'verticalDirection',
-      verticalDirection,
-      isNamed: true,
-      defaultValue: _i10.VerticalDirection.down,
-    );
-    mateUse(
-      'textBaseline',
-      textBaseline,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Column extends Flex
@@ -3409,38 +3334,75 @@ class Column$Mate extends _i1.Column with _i2.Mate {
   /// Column Column({Key? key, MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start, MainAxisSize mainAxisSize = MainAxisSize.max, CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children = const <Widget>[]})
   Column$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i22.MainAxisAlignment mainAxisAlignment = _i10.MainAxisAlignment.start,
+    super.mainAxisAlignment,
 
     /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
-    _i22.MainAxisSize mainAxisSize = _i10.MainAxisSize.max,
+    super.mainAxisSize,
 
     /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
-    _i22.CrossAxisAlignment crossAxisAlignment = _i10.CrossAxisAlignment.center,
+    super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i20.VerticalDirection verticalDirection = _i10.VerticalDirection.down,
+    super.verticalDirection,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
-    _i4.TextBaseline? textBaseline,
+    super.textBaseline,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          mainAxisAlignment: mainAxisAlignment,
-          mainAxisSize: mainAxisSize,
-          crossAxisAlignment: crossAxisAlignment,
-          textDirection: textDirection,
-          verticalDirection: verticalDirection,
-          textBaseline: textBaseline,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
+            name: 'mainAxisAlignment',
+            init: mainAxisAlignment,
+            isNamed: true,
+            defaultValue: _i10.MainAxisAlignment.start,
+          ),
+          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
+            name: 'mainAxisSize',
+            init: mainAxisSize,
+            isNamed: true,
+            defaultValue: _i10.MainAxisSize.max,
+          ),
+          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
+            name: 'crossAxisAlignment',
+            init: crossAxisAlignment,
+            isNamed: true,
+            defaultValue: _i10.CrossAxisAlignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
+            name: 'verticalDirection',
+            init: verticalDirection,
+            isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
+          ),
+          'textBaseline': _i2.BuilderArg<_i4.TextBaseline?>(
+            name: 'textBaseline',
+            init: textBaseline,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Column';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Column$Mate(
@@ -3453,51 +3415,10 @@ class Column$Mate extends _i1.Column with _i2.Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisAlignment',
-      mainAxisAlignment,
-      isNamed: true,
-      defaultValue: _i10.MainAxisAlignment.start,
-    );
-    mateUse(
-      'mainAxisSize',
-      mainAxisSize,
-      isNamed: true,
-      defaultValue: _i10.MainAxisSize.max,
-    );
-    mateUse(
-      'crossAxisAlignment',
-      crossAxisAlignment,
-      isNamed: true,
-      defaultValue: _i10.CrossAxisAlignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'verticalDirection',
-      verticalDirection,
-      isNamed: true,
-      defaultValue: _i10.VerticalDirection.down,
-    );
-    mateUse(
-      'textBaseline',
-      textBaseline,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Flexible extends ParentDataWidget<FlexParentData>
@@ -3505,22 +3426,41 @@ class Flexible$Mate extends _i1.Flexible with _i2.Mate {
   /// Flexible Flexible({Key? key, int flex = 1, FlexFit fit = FlexFit.loose, required Widget child})
   Flexible$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
-    int flex = 1,
+    super.flex,
 
     /// optionalParameters: {FlexFit fit = FlexFit.loose} , default:processed=PrefixedIdentifierImpl
-    _i22.FlexFit fit = _i10.FlexFit.loose,
+    super.fit,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          flex: flex,
-          fit: fit,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'flex': _i2.BuilderArg<int>(
+            name: 'flex',
+            init: flex,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'fit': _i2.BuilderArg<_i22.FlexFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i10.FlexFit.loose,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Flexible';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Flexible$Mate(
@@ -3529,29 +3469,10 @@ class Flexible$Mate extends _i1.Flexible with _i2.Mate {
           fit: p.get('fit').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'flex',
-      flex,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-      defaultValue: _i10.FlexFit.loose,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Expanded extends Flexible
@@ -3559,18 +3480,32 @@ class Expanded$Mate extends _i1.Expanded with _i2.Mate {
   /// Expanded Expanded({Key? key, int flex = 1, required Widget child})
   Expanded$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
-    int flex = 1,
+    super.flex,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          flex: flex,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'flex': _i2.BuilderArg<int>(
+            name: 'flex',
+            init: flex,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Expanded';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Expanded$Mate(
@@ -3578,23 +3513,10 @@ class Expanded$Mate extends _i1.Expanded with _i2.Mate {
           flex: p.get('flex').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'flex',
-      flex,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Wrap extends MultiChildRenderObjectWidget
@@ -3602,50 +3524,103 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
   /// Wrap Wrap({Key? key, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none, List<Widget> children = const <Widget>[]})
   Wrap$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
-    _i20.Axis direction = _i10.Axis.horizontal,
+    super.direction,
 
     /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i23.WrapAlignment alignment = _i10.WrapAlignment.start,
+    super.alignment,
 
     /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
-    double spacing = 0.0,
+    super.spacing,
 
     /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i23.WrapAlignment runAlignment = _i10.WrapAlignment.start,
+    super.runAlignment,
 
     /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double runSpacing = 0.0,
+    super.runSpacing,
 
     /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i23.WrapCrossAlignment crossAxisAlignment = _i10.WrapCrossAlignment.start,
+    super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i20.VerticalDirection verticalDirection = _i10.VerticalDirection.down,
+    super.verticalDirection,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          direction: direction,
-          alignment: alignment,
-          spacing: spacing,
-          runAlignment: runAlignment,
-          runSpacing: runSpacing,
-          crossAxisAlignment: crossAxisAlignment,
-          textDirection: textDirection,
-          verticalDirection: verticalDirection,
-          clipBehavior: clipBehavior,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i20.Axis>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+            defaultValue: _i10.Axis.horizontal,
+          ),
+          'alignment': _i2.BuilderArg<_i23.WrapAlignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.WrapAlignment.start,
+          ),
+          'spacing': _i2.BuilderArg<double>(
+            name: 'spacing',
+            init: spacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'runAlignment': _i2.BuilderArg<_i23.WrapAlignment>(
+            name: 'runAlignment',
+            init: runAlignment,
+            isNamed: true,
+            defaultValue: _i10.WrapAlignment.start,
+          ),
+          'runSpacing': _i2.BuilderArg<double>(
+            name: 'runSpacing',
+            init: runSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisAlignment': _i2.BuilderArg<_i23.WrapCrossAlignment>(
+            name: 'crossAxisAlignment',
+            init: crossAxisAlignment,
+            isNamed: true,
+            defaultValue: _i10.WrapCrossAlignment.start,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
+            name: 'verticalDirection',
+            init: verticalDirection,
+            isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Wrap';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Wrap$Mate(
@@ -3661,70 +3636,10 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-      defaultValue: _i10.Axis.horizontal,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.WrapAlignment.start,
-    );
-    mateUse(
-      'spacing',
-      spacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'runAlignment',
-      runAlignment,
-      isNamed: true,
-      defaultValue: _i10.WrapAlignment.start,
-    );
-    mateUse(
-      'runSpacing',
-      runSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisAlignment',
-      crossAxisAlignment,
-      isNamed: true,
-      defaultValue: _i10.WrapCrossAlignment.start,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'verticalDirection',
-      verticalDirection,
-      isNamed: true,
-      defaultValue: _i10.VerticalDirection.down,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Flow extends MultiChildRenderObjectWidget
@@ -3732,22 +3647,40 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
   /// Flow Flow({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required FlowDelegate delegate} , default:none
-    required _i24.FlowDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
+    super.children,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
-  }) : super(
-          key: key,
-          delegate: delegate,
-          children: children,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i24.FlowDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'Flow';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Flow$Mate(
@@ -3756,48 +3689,45 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
   }
 
   /// Flow Flow.unwrapped({Key? key, required FlowDelegate delegate, List<Widget> children = const <Widget>[], Clip clipBehavior = Clip.hardEdge})
   Flow$Mate.unwrapped({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required FlowDelegate delegate} , default:none
-    required _i24.FlowDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
+    super.children,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
-  }) : super.unwrapped(
-          key: key,
-          delegate: delegate,
-          children: children,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i24.FlowDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+        },
+        super.unwrapped() {
     mateBuilderName = 'Flow.unwrapped';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Flow$Mate.unwrapped(
@@ -3806,28 +3736,10 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
           children: p.get('children').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RichText extends MultiChildRenderObjectWidget
@@ -3835,62 +3747,124 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
   /// RichText RichText({Key? key, required InlineSpan text, TextAlign textAlign = TextAlign.start, TextDirection? textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, SelectionRegistrar? selectionRegistrar, Color? selectionColor})
   RichText$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required InlineSpan text} , default:none
-    required _i25.InlineSpan text,
+    required super.text,
 
     /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
-    _i4.TextAlign textAlign = _i4.TextAlign.start,
+    super.textAlign,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
-    bool softWrap = true,
+    super.softWrap,
 
     /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
-    _i26.TextOverflow overflow = _i10.TextOverflow.clip,
+    super.overflow,
 
     /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    double textScaleFactor = 1.0,
+    super.textScaleFactor,
 
     /// optionalParameters: {int? maxLines} , default:none
-    int? maxLines,
+    super.maxLines,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i4.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
-    _i27.StrutStyle? strutStyle,
+    super.strutStyle,
 
     /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
-    _i26.TextWidthBasis textWidthBasis = _i10.TextWidthBasis.parent,
+    super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i4.TextHeightBehavior? textHeightBehavior,
+    super.textHeightBehavior,
 
     /// optionalParameters: {SelectionRegistrar? selectionRegistrar} , default:none
-    _i28.SelectionRegistrar? selectionRegistrar,
+    super.selectionRegistrar,
 
     /// optionalParameters: {Color? selectionColor} , default:none
-    _i4.Color? selectionColor,
-  }) : super(
-          key: key,
-          text: text,
-          textAlign: textAlign,
-          textDirection: textDirection,
-          softWrap: softWrap,
-          overflow: overflow,
-          textScaleFactor: textScaleFactor,
-          maxLines: maxLines,
-          locale: locale,
-          strutStyle: strutStyle,
-          textWidthBasis: textWidthBasis,
-          textHeightBehavior: textHeightBehavior,
-          selectionRegistrar: selectionRegistrar,
-          selectionColor: selectionColor,
-        ) {
+    super.selectionColor,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'text': _i2.BuilderArg<_i25.InlineSpan>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i4.TextAlign>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+            defaultValue: _i4.TextAlign.start,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'softWrap': _i2.BuilderArg<bool>(
+            name: 'softWrap',
+            init: softWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'overflow': _i2.BuilderArg<_i26.TextOverflow>(
+            name: 'overflow',
+            init: overflow,
+            isNamed: true,
+            defaultValue: _i10.TextOverflow.clip,
+          ),
+          'textScaleFactor': _i2.BuilderArg<double>(
+            name: 'textScaleFactor',
+            init: textScaleFactor,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i4.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'strutStyle': _i2.BuilderArg<_i27.StrutStyle?>(
+            name: 'strutStyle',
+            init: strutStyle,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i26.TextWidthBasis>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+            defaultValue: _i10.TextWidthBasis.parent,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i4.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'selectionRegistrar': _i2.BuilderArg<_i28.SelectionRegistrar?>(
+            name: 'selectionRegistrar',
+            init: selectionRegistrar,
+            isNamed: true,
+          ),
+          'selectionColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'selectionColor',
+            init: selectionColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RichText';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RichText$Mate(
@@ -3909,82 +3883,10 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
           selectionRegistrar: p.get('selectionRegistrar').build(),
           selectionColor: p.get('selectionColor').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-      defaultValue: _i4.TextAlign.start,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'softWrap',
-      softWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'overflow',
-      overflow,
-      isNamed: true,
-      defaultValue: _i10.TextOverflow.clip,
-    );
-    mateUse(
-      'textScaleFactor',
-      textScaleFactor,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'strutStyle',
-      strutStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-      defaultValue: _i10.TextWidthBasis.parent,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionRegistrar',
-      selectionRegistrar,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionColor',
-      selectionColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RawImage extends LeafRenderObjectWidget
@@ -3992,74 +3894,150 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
   /// RawImage RawImage({Key? key, Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, bool invertColors = false, FilterQuality filterQuality = FilterQuality.low, bool isAntiAlias = false})
   RawImage$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Image? image} , default:none
-    _i4.Image? image,
+    super.image,
 
     /// optionalParameters: {String? debugImageLabel} , default:none
-    String? debugImageLabel,
+    super.debugImageLabel,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
+    super.scale,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {Animation<double>? opacity} , default:none
-    _i29.Animation<double>? opacity,
+    super.opacity,
 
     /// optionalParameters: {BlendMode? colorBlendMode} , default:none
-    _i4.BlendMode? colorBlendMode,
+    super.colorBlendMode,
 
     /// optionalParameters: {BoxFit? fit} , default:none
-    _i15.BoxFit? fit,
+    super.fit,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i10.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
-    _i30.ImageRepeat repeat = _i10.ImageRepeat.noRepeat,
+    super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
-    _i4.Rect? centerSlice,
+    super.centerSlice,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
-    bool matchTextDirection = false,
+    super.matchTextDirection,
 
     /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
-    bool invertColors = false,
+    super.invertColors,
 
     /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
-    _i4.FilterQuality filterQuality = _i4.FilterQuality.low,
+    super.filterQuality,
 
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
-    bool isAntiAlias = false,
-  }) : super(
-          key: key,
-          image: image,
-          debugImageLabel: debugImageLabel,
-          width: width,
-          height: height,
-          scale: scale,
-          color: color,
-          opacity: opacity,
-          colorBlendMode: colorBlendMode,
-          fit: fit,
-          alignment: alignment,
-          repeat: repeat,
-          centerSlice: centerSlice,
-          matchTextDirection: matchTextDirection,
-          invertColors: invertColors,
-          filterQuality: filterQuality,
-          isAntiAlias: isAntiAlias,
-        ) {
+    super.isAntiAlias,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'image': _i2.BuilderArg<_i4.Image?>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'debugImageLabel': _i2.BuilderArg<String?>(
+            name: 'debugImageLabel',
+            init: debugImageLabel,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'opacity': _i2.BuilderArg<_i29.Animation<double>?>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+          ),
+          'colorBlendMode': _i2.BuilderArg<_i4.BlendMode?>(
+            name: 'colorBlendMode',
+            init: colorBlendMode,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i15.BoxFit?>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i10.Alignment.center,
+          ),
+          'repeat': _i2.BuilderArg<_i30.ImageRepeat>(
+            name: 'repeat',
+            init: repeat,
+            isNamed: true,
+            defaultValue: _i10.ImageRepeat.noRepeat,
+          ),
+          'centerSlice': _i2.BuilderArg<_i4.Rect?>(
+            name: 'centerSlice',
+            init: centerSlice,
+            isNamed: true,
+          ),
+          'matchTextDirection': _i2.BuilderArg<bool>(
+            name: 'matchTextDirection',
+            init: matchTextDirection,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'invertColors': _i2.BuilderArg<bool>(
+            name: 'invertColors',
+            init: invertColors,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'filterQuality': _i2.BuilderArg<_i4.FilterQuality>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+            defaultValue: _i4.FilterQuality.low,
+          ),
+          'isAntiAlias': _i2.BuilderArg<bool>(
+            name: 'isAntiAlias',
+            init: isAntiAlias,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawImage';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RawImage$Mate(
@@ -4081,99 +4059,10 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           isAntiAlias: p.get('isAntiAlias').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'debugImageLabel',
-      debugImageLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-    );
-    mateUse(
-      'colorBlendMode',
-      colorBlendMode,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i10.Alignment.center,
-    );
-    mateUse(
-      'repeat',
-      repeat,
-      isNamed: true,
-      defaultValue: _i10.ImageRepeat.noRepeat,
-    );
-    mateUse(
-      'centerSlice',
-      centerSlice,
-      isNamed: true,
-    );
-    mateUse(
-      'matchTextDirection',
-      matchTextDirection,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'invertColors',
-      invertColors,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-      defaultValue: _i4.FilterQuality.low,
-    );
-    mateUse(
-      'isAntiAlias',
-      isAntiAlias,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DefaultAssetBundle extends InheritedWidget
@@ -4181,18 +4070,31 @@ class DefaultAssetBundle$Mate extends _i1.DefaultAssetBundle with _i2.Mate {
   /// DefaultAssetBundle DefaultAssetBundle({Key? key, required AssetBundle bundle, required Widget child})
   DefaultAssetBundle$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required AssetBundle bundle} , default:none
-    required _i31.AssetBundle bundle,
+    required super.bundle,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          bundle: bundle,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'bundle': _i2.BuilderArg<_i31.AssetBundle>(
+            name: 'bundle',
+            init: bundle,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DefaultAssetBundle';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultAssetBundle$Mate(
@@ -4200,22 +4102,10 @@ class DefaultAssetBundle$Mate extends _i1.DefaultAssetBundle with _i2.Mate {
           bundle: p.get('bundle').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'bundle',
-      bundle,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class WidgetToRenderBoxAdapter extends LeafRenderObjectWidget
@@ -4223,18 +4113,31 @@ class WidgetToRenderBoxAdapter$Mate extends _i1.WidgetToRenderBoxAdapter with _i
   /// WidgetToRenderBoxAdapter WidgetToRenderBoxAdapter({required RenderBox renderBox, void Function()? onBuild, void Function()? onUnmount})
   WidgetToRenderBoxAdapter$Mate({
     /// optionalParameters: {required RenderBox renderBox} , default:none
-    required _i19.RenderBox renderBox,
+    required super.renderBox,
 
     /// optionalParameters: {void Function()? onBuild} , default:none
-    _i4.VoidCallback? onBuild,
+    super.onBuild,
 
     /// optionalParameters: {void Function()? onUnmount} , default:none
-    _i4.VoidCallback? onUnmount,
-  }) : super(
-          renderBox: renderBox,
-          onBuild: onBuild,
-          onUnmount: onUnmount,
-        ) {
+    super.onUnmount,
+  })  : mateParams = {
+          'renderBox': _i2.BuilderArg<_i19.RenderBox>(
+            name: 'renderBox',
+            init: renderBox,
+            isNamed: true,
+          ),
+          'onBuild': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onBuild',
+            init: onBuild,
+            isNamed: true,
+          ),
+          'onUnmount': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onUnmount',
+            init: onUnmount,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'WidgetToRenderBoxAdapter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => WidgetToRenderBoxAdapter$Mate(
@@ -4242,22 +4145,10 @@ class WidgetToRenderBoxAdapter$Mate extends _i1.WidgetToRenderBoxAdapter with _i
           onBuild: p.get('onBuild').build(),
           onUnmount: p.get('onUnmount').build(),
         );
-    mateUse(
-      'renderBox',
-      renderBox,
-      isNamed: true,
-    );
-    mateUse(
-      'onBuild',
-      onBuild,
-      isNamed: true,
-    );
-    mateUse(
-      'onUnmount',
-      onUnmount,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Listener extends SingleChildRenderObjectWidget
@@ -4265,54 +4156,104 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
   /// Listener Listener({Key? key, void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   Listener$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , default:none
-    _i6.PointerDownEventListener? onPointerDown,
+    super.onPointerDown,
 
     /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , default:none
-    _i6.PointerMoveEventListener? onPointerMove,
+    super.onPointerMove,
 
     /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , default:none
-    _i6.PointerUpEventListener? onPointerUp,
+    super.onPointerUp,
 
     /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , default:none
-    _i32.PointerHoverEventListener? onPointerHover,
+    super.onPointerHover,
 
     /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , default:none
-    _i6.PointerCancelEventListener? onPointerCancel,
+    super.onPointerCancel,
 
     /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , default:none
-    _i6.PointerPanZoomStartEventListener? onPointerPanZoomStart,
+    super.onPointerPanZoomStart,
 
     /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , default:none
-    _i6.PointerPanZoomUpdateEventListener? onPointerPanZoomUpdate,
+    super.onPointerPanZoomUpdate,
 
     /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , default:none
-    _i6.PointerPanZoomEndEventListener? onPointerPanZoomEnd,
+    super.onPointerPanZoomEnd,
 
     /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , default:none
-    _i6.PointerSignalEventListener? onPointerSignal,
+    super.onPointerSignal,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i6.HitTestBehavior behavior = _i10.HitTestBehavior.deferToChild,
+    super.behavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          onPointerDown: onPointerDown,
-          onPointerMove: onPointerMove,
-          onPointerUp: onPointerUp,
-          onPointerHover: onPointerHover,
-          onPointerCancel: onPointerCancel,
-          onPointerPanZoomStart: onPointerPanZoomStart,
-          onPointerPanZoomUpdate: onPointerPanZoomUpdate,
-          onPointerPanZoomEnd: onPointerPanZoomEnd,
-          onPointerSignal: onPointerSignal,
-          behavior: behavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onPointerDown': _i2.BuilderArg<_i6.PointerDownEventListener?>(
+            name: 'onPointerDown',
+            init: onPointerDown,
+            isNamed: true,
+          ),
+          'onPointerMove': _i2.BuilderArg<_i6.PointerMoveEventListener?>(
+            name: 'onPointerMove',
+            init: onPointerMove,
+            isNamed: true,
+          ),
+          'onPointerUp': _i2.BuilderArg<_i6.PointerUpEventListener?>(
+            name: 'onPointerUp',
+            init: onPointerUp,
+            isNamed: true,
+          ),
+          'onPointerHover': _i2.BuilderArg<_i32.PointerHoverEventListener?>(
+            name: 'onPointerHover',
+            init: onPointerHover,
+            isNamed: true,
+          ),
+          'onPointerCancel': _i2.BuilderArg<_i6.PointerCancelEventListener?>(
+            name: 'onPointerCancel',
+            init: onPointerCancel,
+            isNamed: true,
+          ),
+          'onPointerPanZoomStart': _i2.BuilderArg<_i6.PointerPanZoomStartEventListener?>(
+            name: 'onPointerPanZoomStart',
+            init: onPointerPanZoomStart,
+            isNamed: true,
+          ),
+          'onPointerPanZoomUpdate': _i2.BuilderArg<_i6.PointerPanZoomUpdateEventListener?>(
+            name: 'onPointerPanZoomUpdate',
+            init: onPointerPanZoomUpdate,
+            isNamed: true,
+          ),
+          'onPointerPanZoomEnd': _i2.BuilderArg<_i6.PointerPanZoomEndEventListener?>(
+            name: 'onPointerPanZoomEnd',
+            init: onPointerPanZoomEnd,
+            isNamed: true,
+          ),
+          'onPointerSignal': _i2.BuilderArg<_i6.PointerSignalEventListener?>(
+            name: 'onPointerSignal',
+            init: onPointerSignal,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i6.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i10.HitTestBehavior.deferToChild,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Listener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Listener$Mate(
@@ -4329,68 +4270,10 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerDown',
-      onPointerDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerMove',
-      onPointerMove,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerUp',
-      onPointerUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerHover',
-      onPointerHover,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerCancel',
-      onPointerCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerPanZoomStart',
-      onPointerPanZoomStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerPanZoomUpdate',
-      onPointerPanZoomUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerPanZoomEnd',
-      onPointerPanZoomEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerSignal',
-      onPointerSignal,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i10.HitTestBehavior.deferToChild,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MouseRegion extends SingleChildRenderObjectWidget
@@ -4398,38 +4281,73 @@ class MouseRegion$Mate extends _i1.MouseRegion with _i2.Mate {
   /// MouseRegion MouseRegion({Key? key, void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, void Function(PointerHoverEvent)? onHover, MouseCursor cursor = MouseCursor.defer, bool opaque = true, HitTestBehavior? hitTestBehavior, Widget? child})
   MouseRegion$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
-    _i32.PointerEnterEventListener? onEnter,
+    super.onEnter,
 
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
-    _i32.PointerExitEventListener? onExit,
+    super.onExit,
 
     /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , default:none
-    _i32.PointerHoverEventListener? onHover,
+    super.onHover,
 
     /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
-    _i33.MouseCursor cursor = _i10.MouseCursor.defer,
+    super.cursor,
 
     /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
-    bool opaque = true,
+    super.opaque,
 
     /// optionalParameters: {HitTestBehavior? hitTestBehavior} , default:none
-    _i6.HitTestBehavior? hitTestBehavior,
+    super.hitTestBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          onEnter: onEnter,
-          onExit: onExit,
-          onHover: onHover,
-          cursor: cursor,
-          opaque: opaque,
-          hitTestBehavior: hitTestBehavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onEnter': _i2.BuilderArg<_i32.PointerEnterEventListener?>(
+            name: 'onEnter',
+            init: onEnter,
+            isNamed: true,
+          ),
+          'onExit': _i2.BuilderArg<_i32.PointerExitEventListener?>(
+            name: 'onExit',
+            init: onExit,
+            isNamed: true,
+          ),
+          'onHover': _i2.BuilderArg<_i32.PointerHoverEventListener?>(
+            name: 'onHover',
+            init: onHover,
+            isNamed: true,
+          ),
+          'cursor': _i2.BuilderArg<_i33.MouseCursor>(
+            name: 'cursor',
+            init: cursor,
+            isNamed: true,
+            defaultValue: _i10.MouseCursor.defer,
+          ),
+          'opaque': _i2.BuilderArg<bool>(
+            name: 'opaque',
+            init: opaque,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i6.HitTestBehavior?>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MouseRegion';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MouseRegion$Mate(
@@ -4442,49 +4360,10 @@ class MouseRegion$Mate extends _i1.MouseRegion with _i2.Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnter',
-      onEnter,
-      isNamed: true,
-    );
-    mateUse(
-      'onExit',
-      onExit,
-      isNamed: true,
-    );
-    mateUse(
-      'onHover',
-      onHover,
-      isNamed: true,
-    );
-    mateUse(
-      'cursor',
-      cursor,
-      isNamed: true,
-      defaultValue: _i10.MouseCursor.defer,
-    );
-    mateUse(
-      'opaque',
-      opaque,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'hitTestBehavior',
-      hitTestBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RepaintBoundary extends SingleChildRenderObjectWidget
@@ -4492,31 +4371,33 @@ class RepaintBoundary$Mate extends _i1.RepaintBoundary with _i2.Mate {
   /// RepaintBoundary RepaintBoundary({Key? key, Widget? child})
   RepaintBoundary$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RepaintBoundary';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RepaintBoundary$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IgnorePointer extends SingleChildRenderObjectWidget
@@ -4524,22 +4405,40 @@ class IgnorePointer$Mate extends _i1.IgnorePointer with _i2.Mate {
   /// IgnorePointer IgnorePointer({Key? key, bool ignoring = true, bool? ignoringSemantics, Widget? child})
   IgnorePointer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
-    bool ignoring = true,
+    super.ignoring,
 
     /// optionalParameters: {bool? ignoringSemantics} , default:none
-    bool? ignoringSemantics,
+    super.ignoringSemantics,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          ignoring: ignoring,
-          ignoringSemantics: ignoringSemantics,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'ignoring': _i2.BuilderArg<bool>(
+            name: 'ignoring',
+            init: ignoring,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ignoringSemantics': _i2.BuilderArg<bool?>(
+            name: 'ignoringSemantics',
+            init: ignoringSemantics,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'IgnorePointer';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IgnorePointer$Mate(
@@ -4548,28 +4447,10 @@ class IgnorePointer$Mate extends _i1.IgnorePointer with _i2.Mate {
           ignoringSemantics: p.get('ignoringSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'ignoring',
-      ignoring,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ignoringSemantics',
-      ignoringSemantics,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AbsorbPointer extends SingleChildRenderObjectWidget
@@ -4577,22 +4458,40 @@ class AbsorbPointer$Mate extends _i1.AbsorbPointer with _i2.Mate {
   /// AbsorbPointer AbsorbPointer({Key? key, bool absorbing = true, Widget? child, bool? ignoringSemantics})
   AbsorbPointer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool absorbing = true} , default:processed=BooleanLiteralImpl
-    bool absorbing = true,
+    super.absorbing,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {bool? ignoringSemantics} , default:none
-    bool? ignoringSemantics,
-  }) : super(
-          key: key,
-          absorbing: absorbing,
-          child: child,
-          ignoringSemantics: ignoringSemantics,
-        ) {
+    super.ignoringSemantics,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'absorbing': _i2.BuilderArg<bool>(
+            name: 'absorbing',
+            init: absorbing,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'ignoringSemantics': _i2.BuilderArg<bool?>(
+            name: 'ignoringSemantics',
+            init: ignoringSemantics,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AbsorbPointer';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AbsorbPointer$Mate(
@@ -4601,28 +4500,10 @@ class AbsorbPointer$Mate extends _i1.AbsorbPointer with _i2.Mate {
           child: p.get('child').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'absorbing',
-      absorbing,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'ignoringSemantics',
-      ignoringSemantics,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MetaData extends SingleChildRenderObjectWidget
@@ -4630,22 +4511,40 @@ class MetaData$Mate extends _i1.MetaData with _i2.Mate {
   /// MetaData MetaData({Key? key, dynamic metaData, HitTestBehavior behavior = HitTestBehavior.deferToChild, Widget? child})
   MetaData$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {dynamic metaData} , default:none
-    dynamic metaData,
+    super.metaData,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i6.HitTestBehavior behavior = _i10.HitTestBehavior.deferToChild,
+    super.behavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          metaData: metaData,
-          behavior: behavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'metaData': _i2.BuilderArg<dynamic>(
+            name: 'metaData',
+            init: metaData,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i6.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i10.HitTestBehavior.deferToChild,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MetaData';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MetaData$Mate(
@@ -4654,28 +4553,10 @@ class MetaData$Mate extends _i1.MetaData with _i2.Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'metaData',
-      metaData,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i10.HitTestBehavior.deferToChild,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Semantics extends SingleChildRenderObjectWidget
@@ -4683,262 +4564,522 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
   /// Semantics Semantics({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, bool? enabled, bool? checked, bool? mixed, bool? selected, bool? toggled, bool? button, bool? slider, bool? keyboardKey, bool? link, bool? header, bool? textField, bool? readOnly, bool? focusable, bool? focused, bool? inMutuallyExclusiveGroup, bool? obscured, bool? multiline, bool? scopesRoute, bool? namesRoute, bool? hidden, bool? image, bool? liveRegion, int? maxValueLength, int? currentValueLength, String? label, AttributedString? attributedLabel, String? value, AttributedString? attributedValue, String? increasedValue, AttributedString? attributedIncreasedValue, String? decreasedValue, AttributedString? attributedDecreasedValue, String? hint, AttributedString? attributedHint, String? tooltip, String? onTapHint, String? onLongPressHint, TextDirection? textDirection, SemanticsSortKey? sortKey, SemanticsTag? tagForChildren, void Function()? onTap, void Function()? onLongPress, void Function()? onScrollLeft, void Function()? onScrollRight, void Function()? onScrollUp, void Function()? onScrollDown, void Function()? onIncrease, void Function()? onDecrease, void Function()? onCopy, void Function()? onCut, void Function()? onPaste, void Function()? onDismiss, void Function(bool)? onMoveCursorForwardByCharacter, void Function(bool)? onMoveCursorBackwardByCharacter, void Function(TextSelection)? onSetSelection, void Function(String)? onSetText, void Function()? onDidGainAccessibilityFocus, void Function()? onDidLoseAccessibilityFocus, Map<CustomSemanticsAction, void Function()>? customSemanticsActions})
   Semantics$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
-    bool container = false,
+    super.container,
 
     /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
-    bool explicitChildNodes = false,
+    super.explicitChildNodes,
 
     /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeSemantics = false,
+    super.excludeSemantics,
 
     /// optionalParameters: {bool? enabled} , default:none
-    bool? enabled,
+    super.enabled,
 
     /// optionalParameters: {bool? checked} , default:none
-    bool? checked,
+    super.checked,
 
     /// optionalParameters: {bool? mixed} , default:none
-    bool? mixed,
+    super.mixed,
 
     /// optionalParameters: {bool? selected} , default:none
-    bool? selected,
+    super.selected,
 
     /// optionalParameters: {bool? toggled} , default:none
-    bool? toggled,
+    super.toggled,
 
     /// optionalParameters: {bool? button} , default:none
-    bool? button,
+    super.button,
 
     /// optionalParameters: {bool? slider} , default:none
-    bool? slider,
+    super.slider,
 
     /// optionalParameters: {bool? keyboardKey} , default:none
-    bool? keyboardKey,
+    super.keyboardKey,
 
     /// optionalParameters: {bool? link} , default:none
-    bool? link,
+    super.link,
 
     /// optionalParameters: {bool? header} , default:none
-    bool? header,
+    super.header,
 
     /// optionalParameters: {bool? textField} , default:none
-    bool? textField,
+    super.textField,
 
     /// optionalParameters: {bool? readOnly} , default:none
-    bool? readOnly,
+    super.readOnly,
 
     /// optionalParameters: {bool? focusable} , default:none
-    bool? focusable,
+    super.focusable,
 
     /// optionalParameters: {bool? focused} , default:none
-    bool? focused,
+    super.focused,
 
     /// optionalParameters: {bool? inMutuallyExclusiveGroup} , default:none
-    bool? inMutuallyExclusiveGroup,
+    super.inMutuallyExclusiveGroup,
 
     /// optionalParameters: {bool? obscured} , default:none
-    bool? obscured,
+    super.obscured,
 
     /// optionalParameters: {bool? multiline} , default:none
-    bool? multiline,
+    super.multiline,
 
     /// optionalParameters: {bool? scopesRoute} , default:none
-    bool? scopesRoute,
+    super.scopesRoute,
 
     /// optionalParameters: {bool? namesRoute} , default:none
-    bool? namesRoute,
+    super.namesRoute,
 
     /// optionalParameters: {bool? hidden} , default:none
-    bool? hidden,
+    super.hidden,
 
     /// optionalParameters: {bool? image} , default:none
-    bool? image,
+    super.image,
 
     /// optionalParameters: {bool? liveRegion} , default:none
-    bool? liveRegion,
+    super.liveRegion,
 
     /// optionalParameters: {int? maxValueLength} , default:none
-    int? maxValueLength,
+    super.maxValueLength,
 
     /// optionalParameters: {int? currentValueLength} , default:none
-    int? currentValueLength,
+    super.currentValueLength,
 
     /// optionalParameters: {String? label} , default:none
-    String? label,
+    super.label,
 
     /// optionalParameters: {AttributedString? attributedLabel} , default:none
-    _i34.AttributedString? attributedLabel,
+    super.attributedLabel,
 
     /// optionalParameters: {String? value} , default:none
-    String? value,
+    super.value,
 
     /// optionalParameters: {AttributedString? attributedValue} , default:none
-    _i34.AttributedString? attributedValue,
+    super.attributedValue,
 
     /// optionalParameters: {String? increasedValue} , default:none
-    String? increasedValue,
+    super.increasedValue,
 
     /// optionalParameters: {AttributedString? attributedIncreasedValue} , default:none
-    _i34.AttributedString? attributedIncreasedValue,
+    super.attributedIncreasedValue,
 
     /// optionalParameters: {String? decreasedValue} , default:none
-    String? decreasedValue,
+    super.decreasedValue,
 
     /// optionalParameters: {AttributedString? attributedDecreasedValue} , default:none
-    _i34.AttributedString? attributedDecreasedValue,
+    super.attributedDecreasedValue,
 
     /// optionalParameters: {String? hint} , default:none
-    String? hint,
+    super.hint,
 
     /// optionalParameters: {AttributedString? attributedHint} , default:none
-    _i34.AttributedString? attributedHint,
+    super.attributedHint,
 
     /// optionalParameters: {String? tooltip} , default:none
-    String? tooltip,
+    super.tooltip,
 
     /// optionalParameters: {String? onTapHint} , default:none
-    String? onTapHint,
+    super.onTapHint,
 
     /// optionalParameters: {String? onLongPressHint} , default:none
-    String? onLongPressHint,
+    super.onLongPressHint,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {SemanticsSortKey? sortKey} , default:none
-    _i34.SemanticsSortKey? sortKey,
+    super.sortKey,
 
     /// optionalParameters: {SemanticsTag? tagForChildren} , default:none
-    _i34.SemanticsTag? tagForChildren,
+    super.tagForChildren,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i4.VoidCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i4.VoidCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function()? onScrollLeft} , default:none
-    _i4.VoidCallback? onScrollLeft,
+    super.onScrollLeft,
 
     /// optionalParameters: {void Function()? onScrollRight} , default:none
-    _i4.VoidCallback? onScrollRight,
+    super.onScrollRight,
 
     /// optionalParameters: {void Function()? onScrollUp} , default:none
-    _i4.VoidCallback? onScrollUp,
+    super.onScrollUp,
 
     /// optionalParameters: {void Function()? onScrollDown} , default:none
-    _i4.VoidCallback? onScrollDown,
+    super.onScrollDown,
 
     /// optionalParameters: {void Function()? onIncrease} , default:none
-    _i4.VoidCallback? onIncrease,
+    super.onIncrease,
 
     /// optionalParameters: {void Function()? onDecrease} , default:none
-    _i4.VoidCallback? onDecrease,
+    super.onDecrease,
 
     /// optionalParameters: {void Function()? onCopy} , default:none
-    _i4.VoidCallback? onCopy,
+    super.onCopy,
 
     /// optionalParameters: {void Function()? onCut} , default:none
-    _i4.VoidCallback? onCut,
+    super.onCut,
 
     /// optionalParameters: {void Function()? onPaste} , default:none
-    _i4.VoidCallback? onPaste,
+    super.onPaste,
 
     /// optionalParameters: {void Function()? onDismiss} , default:none
-    _i4.VoidCallback? onDismiss,
+    super.onDismiss,
 
     /// optionalParameters: {void Function(bool)? onMoveCursorForwardByCharacter} , default:none
-    _i34.MoveCursorHandler? onMoveCursorForwardByCharacter,
+    super.onMoveCursorForwardByCharacter,
 
     /// optionalParameters: {void Function(bool)? onMoveCursorBackwardByCharacter} , default:none
-    _i34.MoveCursorHandler? onMoveCursorBackwardByCharacter,
+    super.onMoveCursorBackwardByCharacter,
 
     /// optionalParameters: {void Function(TextSelection)? onSetSelection} , default:none
-    _i34.SetSelectionHandler? onSetSelection,
+    super.onSetSelection,
 
     /// optionalParameters: {void Function(String)? onSetText} , default:none
-    _i34.SetTextHandler? onSetText,
+    super.onSetText,
 
     /// optionalParameters: {void Function()? onDidGainAccessibilityFocus} , default:none
-    _i4.VoidCallback? onDidGainAccessibilityFocus,
+    super.onDidGainAccessibilityFocus,
 
     /// optionalParameters: {void Function()? onDidLoseAccessibilityFocus} , default:none
-    _i4.VoidCallback? onDidLoseAccessibilityFocus,
+    super.onDidLoseAccessibilityFocus,
 
     /// optionalParameters: {Map<CustomSemanticsAction, void Function()>? customSemanticsActions} , default:none
-    Map<_i34.CustomSemanticsAction, _i4.VoidCallback>? customSemanticsActions,
-  }) : super(
-          key: key,
-          child: child,
-          container: container,
-          explicitChildNodes: explicitChildNodes,
-          excludeSemantics: excludeSemantics,
-          enabled: enabled,
-          checked: checked,
-          mixed: mixed,
-          selected: selected,
-          toggled: toggled,
-          button: button,
-          slider: slider,
-          keyboardKey: keyboardKey,
-          link: link,
-          header: header,
-          textField: textField,
-          readOnly: readOnly,
-          focusable: focusable,
-          focused: focused,
-          inMutuallyExclusiveGroup: inMutuallyExclusiveGroup,
-          obscured: obscured,
-          multiline: multiline,
-          scopesRoute: scopesRoute,
-          namesRoute: namesRoute,
-          hidden: hidden,
-          image: image,
-          liveRegion: liveRegion,
-          maxValueLength: maxValueLength,
-          currentValueLength: currentValueLength,
-          label: label,
-          attributedLabel: attributedLabel,
-          value: value,
-          attributedValue: attributedValue,
-          increasedValue: increasedValue,
-          attributedIncreasedValue: attributedIncreasedValue,
-          decreasedValue: decreasedValue,
-          attributedDecreasedValue: attributedDecreasedValue,
-          hint: hint,
-          attributedHint: attributedHint,
-          tooltip: tooltip,
-          onTapHint: onTapHint,
-          onLongPressHint: onLongPressHint,
-          textDirection: textDirection,
-          sortKey: sortKey,
-          tagForChildren: tagForChildren,
-          onTap: onTap,
-          onLongPress: onLongPress,
-          onScrollLeft: onScrollLeft,
-          onScrollRight: onScrollRight,
-          onScrollUp: onScrollUp,
-          onScrollDown: onScrollDown,
-          onIncrease: onIncrease,
-          onDecrease: onDecrease,
-          onCopy: onCopy,
-          onCut: onCut,
-          onPaste: onPaste,
-          onDismiss: onDismiss,
-          onMoveCursorForwardByCharacter: onMoveCursorForwardByCharacter,
-          onMoveCursorBackwardByCharacter: onMoveCursorBackwardByCharacter,
-          onSetSelection: onSetSelection,
-          onSetText: onSetText,
-          onDidGainAccessibilityFocus: onDidGainAccessibilityFocus,
-          onDidLoseAccessibilityFocus: onDidLoseAccessibilityFocus,
-          customSemanticsActions: customSemanticsActions,
-        ) {
+    super.customSemanticsActions,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'container': _i2.BuilderArg<bool>(
+            name: 'container',
+            init: container,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'explicitChildNodes': _i2.BuilderArg<bool>(
+            name: 'explicitChildNodes',
+            init: explicitChildNodes,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'excludeSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeSemantics',
+            init: excludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'enabled': _i2.BuilderArg<bool?>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+          ),
+          'checked': _i2.BuilderArg<bool?>(
+            name: 'checked',
+            init: checked,
+            isNamed: true,
+          ),
+          'mixed': _i2.BuilderArg<bool?>(
+            name: 'mixed',
+            init: mixed,
+            isNamed: true,
+          ),
+          'selected': _i2.BuilderArg<bool?>(
+            name: 'selected',
+            init: selected,
+            isNamed: true,
+          ),
+          'toggled': _i2.BuilderArg<bool?>(
+            name: 'toggled',
+            init: toggled,
+            isNamed: true,
+          ),
+          'button': _i2.BuilderArg<bool?>(
+            name: 'button',
+            init: button,
+            isNamed: true,
+          ),
+          'slider': _i2.BuilderArg<bool?>(
+            name: 'slider',
+            init: slider,
+            isNamed: true,
+          ),
+          'keyboardKey': _i2.BuilderArg<bool?>(
+            name: 'keyboardKey',
+            init: keyboardKey,
+            isNamed: true,
+          ),
+          'link': _i2.BuilderArg<bool?>(
+            name: 'link',
+            init: link,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<bool?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'textField': _i2.BuilderArg<bool?>(
+            name: 'textField',
+            init: textField,
+            isNamed: true,
+          ),
+          'readOnly': _i2.BuilderArg<bool?>(
+            name: 'readOnly',
+            init: readOnly,
+            isNamed: true,
+          ),
+          'focusable': _i2.BuilderArg<bool?>(
+            name: 'focusable',
+            init: focusable,
+            isNamed: true,
+          ),
+          'focused': _i2.BuilderArg<bool?>(
+            name: 'focused',
+            init: focused,
+            isNamed: true,
+          ),
+          'inMutuallyExclusiveGroup': _i2.BuilderArg<bool?>(
+            name: 'inMutuallyExclusiveGroup',
+            init: inMutuallyExclusiveGroup,
+            isNamed: true,
+          ),
+          'obscured': _i2.BuilderArg<bool?>(
+            name: 'obscured',
+            init: obscured,
+            isNamed: true,
+          ),
+          'multiline': _i2.BuilderArg<bool?>(
+            name: 'multiline',
+            init: multiline,
+            isNamed: true,
+          ),
+          'scopesRoute': _i2.BuilderArg<bool?>(
+            name: 'scopesRoute',
+            init: scopesRoute,
+            isNamed: true,
+          ),
+          'namesRoute': _i2.BuilderArg<bool?>(
+            name: 'namesRoute',
+            init: namesRoute,
+            isNamed: true,
+          ),
+          'hidden': _i2.BuilderArg<bool?>(
+            name: 'hidden',
+            init: hidden,
+            isNamed: true,
+          ),
+          'image': _i2.BuilderArg<bool?>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'liveRegion': _i2.BuilderArg<bool?>(
+            name: 'liveRegion',
+            init: liveRegion,
+            isNamed: true,
+          ),
+          'maxValueLength': _i2.BuilderArg<int?>(
+            name: 'maxValueLength',
+            init: maxValueLength,
+            isNamed: true,
+          ),
+          'currentValueLength': _i2.BuilderArg<int?>(
+            name: 'currentValueLength',
+            init: currentValueLength,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'attributedLabel': _i2.BuilderArg<_i34.AttributedString?>(
+            name: 'attributedLabel',
+            init: attributedLabel,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<String?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'attributedValue': _i2.BuilderArg<_i34.AttributedString?>(
+            name: 'attributedValue',
+            init: attributedValue,
+            isNamed: true,
+          ),
+          'increasedValue': _i2.BuilderArg<String?>(
+            name: 'increasedValue',
+            init: increasedValue,
+            isNamed: true,
+          ),
+          'attributedIncreasedValue': _i2.BuilderArg<_i34.AttributedString?>(
+            name: 'attributedIncreasedValue',
+            init: attributedIncreasedValue,
+            isNamed: true,
+          ),
+          'decreasedValue': _i2.BuilderArg<String?>(
+            name: 'decreasedValue',
+            init: decreasedValue,
+            isNamed: true,
+          ),
+          'attributedDecreasedValue': _i2.BuilderArg<_i34.AttributedString?>(
+            name: 'attributedDecreasedValue',
+            init: attributedDecreasedValue,
+            isNamed: true,
+          ),
+          'hint': _i2.BuilderArg<String?>(
+            name: 'hint',
+            init: hint,
+            isNamed: true,
+          ),
+          'attributedHint': _i2.BuilderArg<_i34.AttributedString?>(
+            name: 'attributedHint',
+            init: attributedHint,
+            isNamed: true,
+          ),
+          'tooltip': _i2.BuilderArg<String?>(
+            name: 'tooltip',
+            init: tooltip,
+            isNamed: true,
+          ),
+          'onTapHint': _i2.BuilderArg<String?>(
+            name: 'onTapHint',
+            init: onTapHint,
+            isNamed: true,
+          ),
+          'onLongPressHint': _i2.BuilderArg<String?>(
+            name: 'onLongPressHint',
+            init: onLongPressHint,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'sortKey': _i2.BuilderArg<_i34.SemanticsSortKey?>(
+            name: 'sortKey',
+            init: sortKey,
+            isNamed: true,
+          ),
+          'tagForChildren': _i2.BuilderArg<_i34.SemanticsTag?>(
+            name: 'tagForChildren',
+            init: tagForChildren,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onScrollLeft': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onScrollLeft',
+            init: onScrollLeft,
+            isNamed: true,
+          ),
+          'onScrollRight': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onScrollRight',
+            init: onScrollRight,
+            isNamed: true,
+          ),
+          'onScrollUp': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onScrollUp',
+            init: onScrollUp,
+            isNamed: true,
+          ),
+          'onScrollDown': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onScrollDown',
+            init: onScrollDown,
+            isNamed: true,
+          ),
+          'onIncrease': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onIncrease',
+            init: onIncrease,
+            isNamed: true,
+          ),
+          'onDecrease': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onDecrease',
+            init: onDecrease,
+            isNamed: true,
+          ),
+          'onCopy': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onCopy',
+            init: onCopy,
+            isNamed: true,
+          ),
+          'onCut': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onCut',
+            init: onCut,
+            isNamed: true,
+          ),
+          'onPaste': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onPaste',
+            init: onPaste,
+            isNamed: true,
+          ),
+          'onDismiss': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onDismiss',
+            init: onDismiss,
+            isNamed: true,
+          ),
+          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
+            name: 'onMoveCursorForwardByCharacter',
+            init: onMoveCursorForwardByCharacter,
+            isNamed: true,
+          ),
+          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
+            name: 'onMoveCursorBackwardByCharacter',
+            init: onMoveCursorBackwardByCharacter,
+            isNamed: true,
+          ),
+          'onSetSelection': _i2.BuilderArg<_i34.SetSelectionHandler?>(
+            name: 'onSetSelection',
+            init: onSetSelection,
+            isNamed: true,
+          ),
+          'onSetText': _i2.BuilderArg<_i34.SetTextHandler?>(
+            name: 'onSetText',
+            init: onSetText,
+            isNamed: true,
+          ),
+          'onDidGainAccessibilityFocus': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onDidGainAccessibilityFocus',
+            init: onDidGainAccessibilityFocus,
+            isNamed: true,
+          ),
+          'onDidLoseAccessibilityFocus': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onDidLoseAccessibilityFocus',
+            init: onDidLoseAccessibilityFocus,
+            isNamed: true,
+          ),
+          'customSemanticsActions': _i2.BuilderArg<Map<_i34.CustomSemanticsAction, _i4.VoidCallback>?>(
+            name: 'customSemanticsActions',
+            init: customSemanticsActions,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Semantics';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Semantics$Mate(
@@ -5007,358 +5148,63 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           onDidLoseAccessibilityFocus: p.get('onDidLoseAccessibilityFocus').build(),
           customSemanticsActions: p.get('customSemanticsActions').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'container',
-      container,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'explicitChildNodes',
-      explicitChildNodes,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'excludeSemantics',
-      excludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-    );
-    mateUse(
-      'checked',
-      checked,
-      isNamed: true,
-    );
-    mateUse(
-      'mixed',
-      mixed,
-      isNamed: true,
-    );
-    mateUse(
-      'selected',
-      selected,
-      isNamed: true,
-    );
-    mateUse(
-      'toggled',
-      toggled,
-      isNamed: true,
-    );
-    mateUse(
-      'button',
-      button,
-      isNamed: true,
-    );
-    mateUse(
-      'slider',
-      slider,
-      isNamed: true,
-    );
-    mateUse(
-      'keyboardKey',
-      keyboardKey,
-      isNamed: true,
-    );
-    mateUse(
-      'link',
-      link,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'textField',
-      textField,
-      isNamed: true,
-    );
-    mateUse(
-      'readOnly',
-      readOnly,
-      isNamed: true,
-    );
-    mateUse(
-      'focusable',
-      focusable,
-      isNamed: true,
-    );
-    mateUse(
-      'focused',
-      focused,
-      isNamed: true,
-    );
-    mateUse(
-      'inMutuallyExclusiveGroup',
-      inMutuallyExclusiveGroup,
-      isNamed: true,
-    );
-    mateUse(
-      'obscured',
-      obscured,
-      isNamed: true,
-    );
-    mateUse(
-      'multiline',
-      multiline,
-      isNamed: true,
-    );
-    mateUse(
-      'scopesRoute',
-      scopesRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'namesRoute',
-      namesRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'hidden',
-      hidden,
-      isNamed: true,
-    );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'liveRegion',
-      liveRegion,
-      isNamed: true,
-    );
-    mateUse(
-      'maxValueLength',
-      maxValueLength,
-      isNamed: true,
-    );
-    mateUse(
-      'currentValueLength',
-      currentValueLength,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedLabel',
-      attributedLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedValue',
-      attributedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'increasedValue',
-      increasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedIncreasedValue',
-      attributedIncreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'decreasedValue',
-      decreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedDecreasedValue',
-      attributedDecreasedValue,
-      isNamed: true,
-    );
-    mateUse(
-      'hint',
-      hint,
-      isNamed: true,
-    );
-    mateUse(
-      'attributedHint',
-      attributedHint,
-      isNamed: true,
-    );
-    mateUse(
-      'tooltip',
-      tooltip,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapHint',
-      onTapHint,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressHint',
-      onLongPressHint,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'sortKey',
-      sortKey,
-      isNamed: true,
-    );
-    mateUse(
-      'tagForChildren',
-      tagForChildren,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollLeft',
-      onScrollLeft,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollRight',
-      onScrollRight,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollUp',
-      onScrollUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onScrollDown',
-      onScrollDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onIncrease',
-      onIncrease,
-      isNamed: true,
-    );
-    mateUse(
-      'onDecrease',
-      onDecrease,
-      isNamed: true,
-    );
-    mateUse(
-      'onCopy',
-      onCopy,
-      isNamed: true,
-    );
-    mateUse(
-      'onCut',
-      onCut,
-      isNamed: true,
-    );
-    mateUse(
-      'onPaste',
-      onPaste,
-      isNamed: true,
-    );
-    mateUse(
-      'onDismiss',
-      onDismiss,
-      isNamed: true,
-    );
-    mateUse(
-      'onMoveCursorForwardByCharacter',
-      onMoveCursorForwardByCharacter,
-      isNamed: true,
-    );
-    mateUse(
-      'onMoveCursorBackwardByCharacter',
-      onMoveCursorBackwardByCharacter,
-      isNamed: true,
-    );
-    mateUse(
-      'onSetSelection',
-      onSetSelection,
-      isNamed: true,
-    );
-    mateUse(
-      'onSetText',
-      onSetText,
-      isNamed: true,
-    );
-    mateUse(
-      'onDidGainAccessibilityFocus',
-      onDidGainAccessibilityFocus,
-      isNamed: true,
-    );
-    mateUse(
-      'onDidLoseAccessibilityFocus',
-      onDidLoseAccessibilityFocus,
-      isNamed: true,
-    );
-    mateUse(
-      'customSemanticsActions',
-      customSemanticsActions,
-      isNamed: true,
-    );
   }
 
   /// Semantics Semantics.fromProperties({Key? key, Widget? child, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, required SemanticsProperties properties})
   Semantics$Mate.fromProperties({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
-    bool container = false,
+    super.container,
 
     /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
-    bool explicitChildNodes = false,
+    super.explicitChildNodes,
 
     /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeSemantics = false,
+    super.excludeSemantics,
 
     /// optionalParameters: {required SemanticsProperties properties} , default:none
-    required _i34.SemanticsProperties properties,
-  }) : super.fromProperties(
-          key: key,
-          child: child,
-          container: container,
-          explicitChildNodes: explicitChildNodes,
-          excludeSemantics: excludeSemantics,
-          properties: properties,
-        ) {
+    required super.properties,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'container': _i2.BuilderArg<bool>(
+            name: 'container',
+            init: container,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'explicitChildNodes': _i2.BuilderArg<bool>(
+            name: 'explicitChildNodes',
+            init: explicitChildNodes,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'excludeSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeSemantics',
+            init: excludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'properties': _i2.BuilderArg<_i34.SemanticsProperties>(
+            name: 'properties',
+            init: properties,
+            isNamed: true,
+          ),
+        },
+        super.fromProperties() {
     mateBuilderName = 'Semantics.fromProperties';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Semantics$Mate.fromProperties(
@@ -5369,40 +5215,10 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
           excludeSemantics: p.get('excludeSemantics').build(),
           properties: p.get('properties').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'container',
-      container,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'explicitChildNodes',
-      explicitChildNodes,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'excludeSemantics',
-      excludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'properties',
-      properties,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MergeSemantics extends SingleChildRenderObjectWidget
@@ -5410,31 +5226,33 @@ class MergeSemantics$Mate extends _i1.MergeSemantics with _i2.Mate {
   /// MergeSemantics MergeSemantics({Key? key, Widget? child})
   MergeSemantics$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MergeSemantics';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MergeSemantics$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BlockSemantics extends SingleChildRenderObjectWidget
@@ -5442,18 +5260,32 @@ class BlockSemantics$Mate extends _i1.BlockSemantics with _i2.Mate {
   /// BlockSemantics BlockSemantics({Key? key, bool blocking = true, Widget? child})
   BlockSemantics$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool blocking = true} , default:processed=BooleanLiteralImpl
-    bool blocking = true,
+    super.blocking,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          blocking: blocking,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'blocking': _i2.BuilderArg<bool>(
+            name: 'blocking',
+            init: blocking,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BlockSemantics';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BlockSemantics$Mate(
@@ -5461,23 +5293,10 @@ class BlockSemantics$Mate extends _i1.BlockSemantics with _i2.Mate {
           blocking: p.get('blocking').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'blocking',
-      blocking,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExcludeSemantics extends SingleChildRenderObjectWidget
@@ -5485,18 +5304,32 @@ class ExcludeSemantics$Mate extends _i1.ExcludeSemantics with _i2.Mate {
   /// ExcludeSemantics ExcludeSemantics({Key? key, bool excluding = true, Widget? child})
   ExcludeSemantics$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
-    bool excluding = true,
+    super.excluding,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          excluding: excluding,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'excluding': _i2.BuilderArg<bool>(
+            name: 'excluding',
+            init: excluding,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExcludeSemantics';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExcludeSemantics$Mate(
@@ -5504,23 +5337,10 @@ class ExcludeSemantics$Mate extends _i1.ExcludeSemantics with _i2.Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'excluding',
-      excluding,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IndexedSemantics extends SingleChildRenderObjectWidget
@@ -5528,18 +5348,31 @@ class IndexedSemantics$Mate extends _i1.IndexedSemantics with _i2.Mate {
   /// IndexedSemantics IndexedSemantics({Key? key, required int index, Widget? child})
   IndexedSemantics$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required int index} , default:none
-    required int index,
+    required super.index,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          index: index,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'index': _i2.BuilderArg<int>(
+            name: 'index',
+            init: index,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'IndexedSemantics';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IndexedSemantics$Mate(
@@ -5547,22 +5380,10 @@ class IndexedSemantics$Mate extends _i1.IndexedSemantics with _i2.Mate {
           index: p.get('index').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'index',
-      index,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class KeyedSubtree extends StatelessWidget
@@ -5570,31 +5391,33 @@ class KeyedSubtree$Mate extends _i1.KeyedSubtree with _i2.Mate {
   /// KeyedSubtree KeyedSubtree({Key? key, required Widget child})
   KeyedSubtree$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'KeyedSubtree';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => KeyedSubtree$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Builder extends StatelessWidget
@@ -5602,31 +5425,33 @@ class Builder$Mate extends _i1.Builder with _i2.Mate {
   /// Builder Builder({Key? key, required Widget Function(BuildContext) builder})
   Builder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext) builder} , default:none
-    required _i5.WidgetBuilder builder,
-  }) : super(
-          key: key,
-          builder: builder,
-        ) {
+    required super.builder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i5.WidgetBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Builder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Builder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class StatefulBuilder extends StatefulWidget
@@ -5634,31 +5459,33 @@ class StatefulBuilder$Mate extends _i1.StatefulBuilder with _i2.Mate {
   /// StatefulBuilder StatefulBuilder({Key? key, required Widget Function(BuildContext, void Function(void Function())) builder})
   StatefulBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget Function(BuildContext, void Function(void Function())) builder} , default:none
-    required _i1.StatefulWidgetBuilder builder,
-  }) : super(
-          key: key,
-          builder: builder,
-        ) {
+    required super.builder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.StatefulWidgetBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'StatefulBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StatefulBuilder$Mate(
           key: p.get('key').build(),
           builder: p.get('builder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ColoredBox extends SingleChildRenderObjectWidget
@@ -5666,18 +5493,31 @@ class ColoredBox$Mate extends _i1.ColoredBox with _i2.Mate {
   /// ColoredBox ColoredBox({required Color color, Widget? child, Key? key})
   ColoredBox$Mate({
     /// optionalParameters: {required Color color} , default:none
-    required _i4.Color color,
+    required super.color,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
-  }) : super(
-          color: color,
-          child: child,
-          key: key,
-        ) {
+    super.key,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i4.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ColoredBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ColoredBox$Mate(
@@ -5685,20 +5525,8 @@ class ColoredBox$Mate extends _i1.ColoredBox with _i2.Mate {
           child: p.get('child').build(),
           key: p.get('key').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

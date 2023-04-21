@@ -15,74 +15,150 @@ class RenderImage$Mate extends _i1.RenderImage with _i2.Mate {
   /// RenderImage RenderImage({Image? image, String? debugImageLabel, double? width, double? height, double scale = 1.0, Color? color, Animation<double>? opacity, BlendMode? colorBlendMode, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, ImageRepeat repeat = ImageRepeat.noRepeat, Rect? centerSlice, bool matchTextDirection = false, TextDirection? textDirection, bool invertColors = false, bool isAntiAlias = false, FilterQuality filterQuality = FilterQuality.low})
   RenderImage$Mate({
     /// optionalParameters: {Image? image} , default:none
-    _i3.Image? image,
+    super.image,
 
     /// optionalParameters: {String? debugImageLabel} , default:none
-    String? debugImageLabel,
+    super.debugImageLabel,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
+    super.scale,
 
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {Animation<double>? opacity} , default:none
-    _i4.Animation<double>? opacity,
+    super.opacity,
 
     /// optionalParameters: {BlendMode? colorBlendMode} , default:none
-    _i3.BlendMode? colorBlendMode,
+    super.colorBlendMode,
 
     /// optionalParameters: {BoxFit? fit} , default:none
-    _i5.BoxFit? fit,
+    super.fit,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i6.AlignmentGeometry alignment = _i7.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
-    _i8.ImageRepeat repeat = _i7.ImageRepeat.noRepeat,
+    super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
-    _i3.Rect? centerSlice,
+    super.centerSlice,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
-    bool matchTextDirection = false,
+    super.matchTextDirection,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i3.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
-    bool invertColors = false,
+    super.invertColors,
 
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
-    bool isAntiAlias = false,
+    super.isAntiAlias,
 
     /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
-    _i3.FilterQuality filterQuality = _i3.FilterQuality.low,
-  }) : super(
-          image: image,
-          debugImageLabel: debugImageLabel,
-          width: width,
-          height: height,
-          scale: scale,
-          color: color,
-          opacity: opacity,
-          colorBlendMode: colorBlendMode,
-          fit: fit,
-          alignment: alignment,
-          repeat: repeat,
-          centerSlice: centerSlice,
-          matchTextDirection: matchTextDirection,
-          textDirection: textDirection,
-          invertColors: invertColors,
-          isAntiAlias: isAntiAlias,
-          filterQuality: filterQuality,
-        ) {
+    super.filterQuality,
+  })  : mateParams = {
+          'image': _i2.BuilderArg<_i3.Image?>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'debugImageLabel': _i2.BuilderArg<String?>(
+            name: 'debugImageLabel',
+            init: debugImageLabel,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'opacity': _i2.BuilderArg<_i4.Animation<double>?>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+          ),
+          'colorBlendMode': _i2.BuilderArg<_i3.BlendMode?>(
+            name: 'colorBlendMode',
+            init: colorBlendMode,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i5.BoxFit?>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i7.Alignment.center,
+          ),
+          'repeat': _i2.BuilderArg<_i8.ImageRepeat>(
+            name: 'repeat',
+            init: repeat,
+            isNamed: true,
+            defaultValue: _i7.ImageRepeat.noRepeat,
+          ),
+          'centerSlice': _i2.BuilderArg<_i3.Rect?>(
+            name: 'centerSlice',
+            init: centerSlice,
+            isNamed: true,
+          ),
+          'matchTextDirection': _i2.BuilderArg<bool>(
+            name: 'matchTextDirection',
+            init: matchTextDirection,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'invertColors': _i2.BuilderArg<bool>(
+            name: 'invertColors',
+            init: invertColors,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isAntiAlias': _i2.BuilderArg<bool>(
+            name: 'isAntiAlias',
+            init: isAntiAlias,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'filterQuality': _i2.BuilderArg<_i3.FilterQuality>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+            defaultValue: _i3.FilterQuality.low,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderImage';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderImage$Mate(
@@ -104,97 +180,8 @@ class RenderImage$Mate extends _i1.RenderImage with _i2.Mate {
           isAntiAlias: p.get('isAntiAlias').build(),
           filterQuality: p.get('filterQuality').build(),
         );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'debugImageLabel',
-      debugImageLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-    );
-    mateUse(
-      'colorBlendMode',
-      colorBlendMode,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i7.Alignment.center,
-    );
-    mateUse(
-      'repeat',
-      repeat,
-      isNamed: true,
-      defaultValue: _i7.ImageRepeat.noRepeat,
-    );
-    mateUse(
-      'centerSlice',
-      centerSlice,
-      isNamed: true,
-    );
-    mateUse(
-      'matchTextDirection',
-      matchTextDirection,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'invertColors',
-      invertColors,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isAntiAlias',
-      isAntiAlias,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-      defaultValue: _i3.FilterQuality.low,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

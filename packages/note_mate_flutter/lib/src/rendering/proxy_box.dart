@@ -30,17 +30,22 @@ class RenderProxyBox$Mate extends _i1.RenderProxyBox with _i2.Mate {
   RenderProxyBox$Mate(
 
       /// requiredParameters: [RenderBox? child]
-      _i3.RenderBox? child)
-      : super(child) {
+      super.child)
+      : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderProxyBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderProxyBox$Mate(p.get('child').value);
-    mateUse(
-      'child',
-      child,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderConstrainedBox extends RenderProxyBox
@@ -48,31 +53,33 @@ class RenderConstrainedBox$Mate extends _i1.RenderConstrainedBox with _i2.Mate {
   /// RenderConstrainedBox RenderConstrainedBox({RenderBox? child, required BoxConstraints additionalConstraints})
   RenderConstrainedBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required BoxConstraints additionalConstraints} , default:none
-    required _i3.BoxConstraints additionalConstraints,
-  }) : super(
-          child: child,
-          additionalConstraints: additionalConstraints,
-        ) {
+    required super.additionalConstraints,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'additionalConstraints': _i2.BuilderArg<_i3.BoxConstraints>(
+            name: 'additionalConstraints',
+            init: additionalConstraints,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderConstrainedBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderConstrainedBox$Mate(
           child: p.get('child').build(),
           additionalConstraints: p.get('additionalConstraints').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'additionalConstraints',
-      additionalConstraints,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderLimitedBox extends RenderProxyBox
@@ -80,18 +87,33 @@ class RenderLimitedBox$Mate extends _i1.RenderLimitedBox with _i2.Mate {
   /// RenderLimitedBox RenderLimitedBox({RenderBox? child, double maxWidth = double.infinity, double maxHeight = double.infinity})
   RenderLimitedBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double maxWidth = double.infinity,
+    super.maxWidth,
 
     /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double maxHeight = double.infinity,
-  }) : super(
-          child: child,
-          maxWidth: maxWidth,
-          maxHeight: maxHeight,
-        ) {
+    super.maxHeight,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'maxWidth': _i2.BuilderArg<double>(
+            name: 'maxWidth',
+            init: maxWidth,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+          'maxHeight': _i2.BuilderArg<double>(
+            name: 'maxHeight',
+            init: maxHeight,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderLimitedBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderLimitedBox$Mate(
@@ -99,24 +121,10 @@ class RenderLimitedBox$Mate extends _i1.RenderLimitedBox with _i2.Mate {
           maxWidth: p.get('maxWidth').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'maxWidth',
-      maxWidth,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
-    mateUse(
-      'maxHeight',
-      maxHeight,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderAspectRatio extends RenderProxyBox
@@ -124,31 +132,33 @@ class RenderAspectRatio$Mate extends _i1.RenderAspectRatio with _i2.Mate {
   /// RenderAspectRatio RenderAspectRatio({RenderBox? child, required double aspectRatio})
   RenderAspectRatio$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required double aspectRatio} , default:none
-    required double aspectRatio,
-  }) : super(
-          child: child,
-          aspectRatio: aspectRatio,
-        ) {
+    required super.aspectRatio,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'aspectRatio': _i2.BuilderArg<double>(
+            name: 'aspectRatio',
+            init: aspectRatio,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderAspectRatio';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAspectRatio$Mate(
           child: p.get('child').build(),
           aspectRatio: p.get('aspectRatio').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'aspectRatio',
-      aspectRatio,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderIntrinsicWidth extends RenderProxyBox
@@ -156,18 +166,31 @@ class RenderIntrinsicWidth$Mate extends _i1.RenderIntrinsicWidth with _i2.Mate {
   /// RenderIntrinsicWidth RenderIntrinsicWidth({double? stepWidth, double? stepHeight, RenderBox? child})
   RenderIntrinsicWidth$Mate({
     /// optionalParameters: {double? stepWidth} , default:none
-    double? stepWidth,
+    super.stepWidth,
 
     /// optionalParameters: {double? stepHeight} , default:none
-    double? stepHeight,
+    super.stepHeight,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          stepWidth: stepWidth,
-          stepHeight: stepHeight,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'stepWidth': _i2.BuilderArg<double?>(
+            name: 'stepWidth',
+            init: stepWidth,
+            isNamed: true,
+          ),
+          'stepHeight': _i2.BuilderArg<double?>(
+            name: 'stepHeight',
+            init: stepHeight,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderIntrinsicWidth';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIntrinsicWidth$Mate(
@@ -175,22 +198,10 @@ class RenderIntrinsicWidth$Mate extends _i1.RenderIntrinsicWidth with _i2.Mate {
           stepHeight: p.get('stepHeight').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'stepWidth',
-      stepWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'stepHeight',
-      stepHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderIntrinsicHeight extends RenderProxyBox
@@ -199,17 +210,22 @@ class RenderIntrinsicHeight$Mate extends _i1.RenderIntrinsicHeight with _i2.Mate
   RenderIntrinsicHeight$Mate(
       {
       /// optionalParameters: {RenderBox? child} , default:none
-      _i3.RenderBox? child})
-      : super(child: child) {
+      super.child})
+      : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderIntrinsicHeight';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIntrinsicHeight$Mate(child: p.get('child').build());
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderOpacity extends RenderProxyBox
@@ -217,18 +233,33 @@ class RenderOpacity$Mate extends _i1.RenderOpacity with _i2.Mate {
   /// RenderOpacity RenderOpacity({double opacity = 1.0, bool alwaysIncludeSemantics = false, RenderBox? child})
   RenderOpacity$Mate({
     /// optionalParameters: {double opacity = 1.0} , default:processed=DoubleLiteralImpl
-    double opacity = 1.0,
+    super.opacity,
 
     /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool alwaysIncludeSemantics = false,
+    super.alwaysIncludeSemantics,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          opacity: opacity,
-          alwaysIncludeSemantics: alwaysIncludeSemantics,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'opacity': _i2.BuilderArg<double>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'alwaysIncludeSemantics': _i2.BuilderArg<bool>(
+            name: 'alwaysIncludeSemantics',
+            init: alwaysIncludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderOpacity$Mate(
@@ -236,24 +267,10 @@ class RenderOpacity$Mate extends _i1.RenderOpacity with _i2.Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'alwaysIncludeSemantics',
-      alwaysIncludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderAnimatedOpacity extends RenderProxyBox with RenderAnimatedOpacityMixin<RenderBox>
@@ -261,18 +278,32 @@ class RenderAnimatedOpacity$Mate extends _i1.RenderAnimatedOpacity with _i2.Mate
   /// RenderAnimatedOpacity RenderAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderBox? child})
   RenderAnimatedOpacity$Mate({
     /// optionalParameters: {required Animation<double> opacity} , default:none
-    required _i4.Animation<double> opacity,
+    required super.opacity,
 
     /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool alwaysIncludeSemantics = false,
+    super.alwaysIncludeSemantics,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          opacity: opacity,
-          alwaysIncludeSemantics: alwaysIncludeSemantics,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'opacity': _i2.BuilderArg<_i4.Animation<double>>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+          ),
+          'alwaysIncludeSemantics': _i2.BuilderArg<bool>(
+            name: 'alwaysIncludeSemantics',
+            init: alwaysIncludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderAnimatedOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAnimatedOpacity$Mate(
@@ -280,23 +311,10 @@ class RenderAnimatedOpacity$Mate extends _i1.RenderAnimatedOpacity with _i2.Mate
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-    );
-    mateUse(
-      'alwaysIncludeSemantics',
-      alwaysIncludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderShaderMask extends RenderProxyBox
@@ -304,18 +322,32 @@ class RenderShaderMask$Mate extends _i1.RenderShaderMask with _i2.Mate {
   /// RenderShaderMask RenderShaderMask({RenderBox? child, required Shader Function(Rect) shaderCallback, BlendMode blendMode = BlendMode.modulate})
   RenderShaderMask$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required Shader Function(Rect) shaderCallback} , default:none
-    required _i1.ShaderCallback shaderCallback,
+    required super.shaderCallback,
 
     /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:processed=PrefixedIdentifierImpl
-    _i5.BlendMode blendMode = _i5.BlendMode.modulate,
-  }) : super(
-          child: child,
-          shaderCallback: shaderCallback,
-          blendMode: blendMode,
-        ) {
+    super.blendMode,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'shaderCallback': _i2.BuilderArg<_i1.ShaderCallback>(
+            name: 'shaderCallback',
+            init: shaderCallback,
+            isNamed: true,
+          ),
+          'blendMode': _i2.BuilderArg<_i5.BlendMode>(
+            name: 'blendMode',
+            init: blendMode,
+            isNamed: true,
+            defaultValue: _i5.BlendMode.modulate,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderShaderMask';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderShaderMask$Mate(
@@ -323,23 +355,10 @@ class RenderShaderMask$Mate extends _i1.RenderShaderMask with _i2.Mate {
           shaderCallback: p.get('shaderCallback').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'shaderCallback',
-      shaderCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'blendMode',
-      blendMode,
-      isNamed: true,
-      defaultValue: _i5.BlendMode.modulate,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderBackdropFilter extends RenderProxyBox
@@ -347,18 +366,32 @@ class RenderBackdropFilter$Mate extends _i1.RenderBackdropFilter with _i2.Mate {
   /// RenderBackdropFilter RenderBackdropFilter({RenderBox? child, required ImageFilter filter, BlendMode blendMode = BlendMode.srcOver})
   RenderBackdropFilter$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required ImageFilter filter} , default:none
-    required _i5.ImageFilter filter,
+    required super.filter,
 
     /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
-    _i5.BlendMode blendMode = _i5.BlendMode.srcOver,
-  }) : super(
-          child: child,
-          filter: filter,
-          blendMode: blendMode,
-        ) {
+    super.blendMode,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'filter': _i2.BuilderArg<_i5.ImageFilter>(
+            name: 'filter',
+            init: filter,
+            isNamed: true,
+          ),
+          'blendMode': _i2.BuilderArg<_i5.BlendMode>(
+            name: 'blendMode',
+            init: blendMode,
+            isNamed: true,
+            defaultValue: _i5.BlendMode.srcOver,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderBackdropFilter';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderBackdropFilter$Mate(
@@ -366,23 +399,10 @@ class RenderBackdropFilter$Mate extends _i1.RenderBackdropFilter with _i2.Mate {
           filter: p.get('filter').build(),
           blendMode: p.get('blendMode').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'filter',
-      filter,
-      isNamed: true,
-    );
-    mateUse(
-      'blendMode',
-      blendMode,
-      isNamed: true,
-      defaultValue: _i5.BlendMode.srcOver,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ShapeBorderClipper extends CustomClipper<Path>
@@ -390,31 +410,33 @@ class ShapeBorderClipper$Mate extends _i1.ShapeBorderClipper with _i2.Mate {
   /// ShapeBorderClipper ShapeBorderClipper({required ShapeBorder shape, TextDirection? textDirection})
   ShapeBorderClipper$Mate({
     /// optionalParameters: {required ShapeBorder shape} , default:none
-    required _i6.ShapeBorder shape,
+    required super.shape,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
-  }) : super(
-          shape: shape,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'shape': _i2.BuilderArg<_i6.ShapeBorder>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ShapeBorderClipper';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ShapeBorderClipper$Mate(
           shape: p.get('shape').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderClipRect extends _RenderCustomClip<Rect>
@@ -422,18 +444,32 @@ class RenderClipRect$Mate extends _i1.RenderClipRect with _i2.Mate {
   /// RenderClipRect RenderClipRect({RenderBox? child, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias})
   RenderClipRect$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
-    _i1.CustomClipper<_i5.Rect>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.antiAlias,
-  }) : super(
-          child: child,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i1.CustomClipper<_i5.Rect>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.antiAlias,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderClipRect';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipRect$Mate(
@@ -441,23 +477,10 @@ class RenderClipRect$Mate extends _i1.RenderClipRect with _i2.Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.antiAlias,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderClipRRect extends _RenderCustomClip<RRect>
@@ -465,26 +488,49 @@ class RenderClipRRect$Mate extends _i1.RenderClipRRect with _i2.Mate {
   /// RenderClipRRect RenderClipRRect({RenderBox? child, BorderRadiusGeometry borderRadius = BorderRadius.zero, CustomClipper<RRect>? clipper, Clip clipBehavior = Clip.antiAlias, TextDirection? textDirection})
   RenderClipRRect$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
-    _i7.BorderRadiusGeometry borderRadius = _i8.BorderRadius.zero,
+    super.borderRadius,
 
     /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
-    _i1.CustomClipper<_i5.RRect>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.antiAlias,
+    super.clipBehavior,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
-  }) : super(
-          child: child,
-          borderRadius: borderRadius,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadiusGeometry>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+            defaultValue: _i8.BorderRadius.zero,
+          ),
+          'clipper': _i2.BuilderArg<_i1.CustomClipper<_i5.RRect>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.antiAlias,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderClipRRect';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipRRect$Mate(
@@ -494,34 +540,10 @@ class RenderClipRRect$Mate extends _i1.RenderClipRRect with _i2.Mate {
           clipBehavior: p.get('clipBehavior').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-      defaultValue: _i8.BorderRadius.zero,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.antiAlias,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderClipOval extends _RenderCustomClip<Rect>
@@ -529,18 +551,32 @@ class RenderClipOval$Mate extends _i1.RenderClipOval with _i2.Mate {
   /// RenderClipOval RenderClipOval({RenderBox? child, CustomClipper<Rect>? clipper, Clip clipBehavior = Clip.antiAlias})
   RenderClipOval$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
-    _i1.CustomClipper<_i5.Rect>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.antiAlias,
-  }) : super(
-          child: child,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i1.CustomClipper<_i5.Rect>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.antiAlias,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderClipOval';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipOval$Mate(
@@ -548,23 +584,10 @@ class RenderClipOval$Mate extends _i1.RenderClipOval with _i2.Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.antiAlias,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderClipPath extends _RenderCustomClip<Path>
@@ -572,18 +595,32 @@ class RenderClipPath$Mate extends _i1.RenderClipPath with _i2.Mate {
   /// RenderClipPath RenderClipPath({RenderBox? child, CustomClipper<Path>? clipper, Clip clipBehavior = Clip.antiAlias})
   RenderClipPath$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {CustomClipper<Path>? clipper} , default:none
-    _i1.CustomClipper<_i5.Path>? clipper,
+    super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.antiAlias,
-  }) : super(
-          child: child,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i1.CustomClipper<_i5.Path>?>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.antiAlias,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderClipPath';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderClipPath$Mate(
@@ -591,23 +628,10 @@ class RenderClipPath$Mate extends _i1.RenderClipPath with _i2.Mate {
           clipper: p.get('clipper').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.antiAlias,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderPhysicalModel extends _RenderPhysicalModelBase<RRect>
@@ -615,34 +639,66 @@ class RenderPhysicalModel$Mate extends _i1.RenderPhysicalModel with _i2.Mate {
   /// RenderPhysicalModel RenderPhysicalModel({RenderBox? child, BoxShape shape = BoxShape.rectangle, Clip clipBehavior = Clip.none, BorderRadius? borderRadius, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000)})
   RenderPhysicalModel$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
-    _i9.BoxShape shape = _i8.BoxShape.rectangle,
+    super.shape,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i7.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
-    double elevation = 0.0,
+    super.elevation,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i5.Color color,
+    required super.color,
 
     /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.Color shadowColor,
-  }) : super(
-          child: child,
-          shape: shape,
-          clipBehavior: clipBehavior,
-          borderRadius: borderRadius,
-          elevation: elevation,
-          color: color,
-          shadowColor: shadowColor,
-        ) {
+    super.shadowColor,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i9.BoxShape>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+            defaultValue: _i8.BoxShape.rectangle,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.none,
+          ),
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'color': _i2.BuilderArg<_i5.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i5.Color>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderPhysicalModel';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPhysicalModel$Mate(
@@ -654,45 +710,10 @@ class RenderPhysicalModel$Mate extends _i1.RenderPhysicalModel with _i2.Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-      defaultValue: _i8.BoxShape.rectangle,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.none,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderPhysicalShape extends _RenderPhysicalModelBase<Path>
@@ -700,30 +721,57 @@ class RenderPhysicalShape$Mate extends _i1.RenderPhysicalShape with _i2.Mate {
   /// RenderPhysicalShape RenderPhysicalShape({RenderBox? child, required CustomClipper<Path> clipper, Clip clipBehavior = Clip.none, double elevation = 0.0, required Color color, Color shadowColor = const Color(0xFF000000)})
   RenderPhysicalShape$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required CustomClipper<Path> clipper} , default:none
-    required _i1.CustomClipper<_i5.Path> clipper,
+    required super.clipper,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
-    double elevation = 0.0,
+    super.elevation,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i5.Color color,
+    required super.color,
 
     /// optionalParameters: {Color shadowColor = const Color(0xFF000000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.Color shadowColor,
-  }) : super(
-          child: child,
-          clipper: clipper,
-          clipBehavior: clipBehavior,
-          elevation: elevation,
-          color: color,
-          shadowColor: shadowColor,
-        ) {
+    super.shadowColor,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipper': _i2.BuilderArg<_i1.CustomClipper<_i5.Path>>(
+            name: 'clipper',
+            init: clipper,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.none,
+          ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'color': _i2.BuilderArg<_i5.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i5.Color>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderPhysicalShape';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPhysicalShape$Mate(
@@ -734,39 +782,10 @@ class RenderPhysicalShape$Mate extends _i1.RenderPhysicalShape with _i2.Mate {
           color: p.get('color').build(),
           shadowColor: p.get('shadowColor').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipper',
-      clipper,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.none,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderDecoratedBox extends RenderProxyBox
@@ -774,22 +793,41 @@ class RenderDecoratedBox$Mate extends _i1.RenderDecoratedBox with _i2.Mate {
   /// RenderDecoratedBox RenderDecoratedBox({required Decoration decoration, DecorationPosition position = DecorationPosition.background, ImageConfiguration configuration = ImageConfiguration.empty, RenderBox? child})
   RenderDecoratedBox$Mate({
     /// optionalParameters: {required Decoration decoration} , default:none
-    required _i10.Decoration decoration,
+    required super.decoration,
 
     /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
-    _i1.DecorationPosition position = _i8.DecorationPosition.background,
+    super.position,
 
     /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:processed=PrefixedIdentifierImpl
-    _i11.ImageConfiguration configuration = _i8.ImageConfiguration.empty,
+    super.configuration,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          decoration: decoration,
-          position: position,
-          configuration: configuration,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'decoration': _i2.BuilderArg<_i10.Decoration>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'position': _i2.BuilderArg<_i1.DecorationPosition>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+            defaultValue: _i8.DecorationPosition.background,
+          ),
+          'configuration': _i2.BuilderArg<_i11.ImageConfiguration>(
+            name: 'configuration',
+            init: configuration,
+            isNamed: true,
+            defaultValue: _i8.ImageConfiguration.empty,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderDecoratedBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderDecoratedBox$Mate(
@@ -798,29 +836,10 @@ class RenderDecoratedBox$Mate extends _i1.RenderDecoratedBox with _i2.Mate {
           configuration: p.get('configuration').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-      defaultValue: _i8.DecorationPosition.background,
-    );
-    mateUse(
-      'configuration',
-      configuration,
-      isNamed: true,
-      defaultValue: _i8.ImageConfiguration.empty,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderTransform extends RenderProxyBox
@@ -828,34 +847,64 @@ class RenderTransform$Mate extends _i1.RenderTransform with _i2.Mate {
   /// RenderTransform RenderTransform({required Matrix4 transform, Offset? origin, AlignmentGeometry? alignment, TextDirection? textDirection, bool transformHitTests = true, FilterQuality? filterQuality, RenderBox? child})
   RenderTransform$Mate({
     /// optionalParameters: {required Matrix4 transform} , default:none
-    required _i12.Matrix4 transform,
+    required super.transform,
 
     /// optionalParameters: {Offset? origin} , default:none
-    _i5.Offset? origin,
+    super.origin,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i13.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i5.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          transform: transform,
-          origin: origin,
-          alignment: alignment,
-          textDirection: textDirection,
-          transformHitTests: transformHitTests,
-          filterQuality: filterQuality,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'transform': _i2.BuilderArg<_i12.Matrix4>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+          'origin': _i2.BuilderArg<_i5.Offset?>(
+            name: 'origin',
+            init: origin,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'filterQuality': _i2.BuilderArg<_i5.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderTransform';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderTransform$Mate(
@@ -867,43 +916,10 @@ class RenderTransform$Mate extends _i1.RenderTransform with _i2.Mate {
           filterQuality: p.get('filterQuality').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
-    mateUse(
-      'origin',
-      origin,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderFittedBox extends RenderProxyBox
@@ -911,26 +927,50 @@ class RenderFittedBox$Mate extends _i1.RenderFittedBox with _i2.Mate {
   /// RenderFittedBox RenderFittedBox({BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderFittedBox$Mate({
     /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:processed=PrefixedIdentifierImpl
-    _i14.BoxFit fit = _i8.BoxFit.contain,
+    super.fit,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i13.AlignmentGeometry alignment = _i8.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.none,
-  }) : super(
-          fit: fit,
-          alignment: alignment,
-          textDirection: textDirection,
-          child: child,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'fit': _i2.BuilderArg<_i14.BoxFit>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+            defaultValue: _i8.BoxFit.contain,
+          ),
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i8.Alignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderFittedBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFittedBox$Mate(
@@ -940,35 +980,10 @@ class RenderFittedBox$Mate extends _i1.RenderFittedBox with _i2.Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-      defaultValue: _i8.BoxFit.contain,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i8.Alignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderFractionalTranslation extends RenderProxyBox
@@ -976,18 +991,32 @@ class RenderFractionalTranslation$Mate extends _i1.RenderFractionalTranslation w
   /// RenderFractionalTranslation RenderFractionalTranslation({required Offset translation, bool transformHitTests = true, RenderBox? child})
   RenderFractionalTranslation$Mate({
     /// optionalParameters: {required Offset translation} , default:none
-    required _i5.Offset translation,
+    required super.translation,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
-    bool transformHitTests = true,
+    super.transformHitTests,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          translation: translation,
-          transformHitTests: transformHitTests,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'translation': _i2.BuilderArg<_i5.Offset>(
+            name: 'translation',
+            init: translation,
+            isNamed: true,
+          ),
+          'transformHitTests': _i2.BuilderArg<bool>(
+            name: 'transformHitTests',
+            init: transformHitTests,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderFractionalTranslation';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFractionalTranslation$Mate(
@@ -995,23 +1024,10 @@ class RenderFractionalTranslation$Mate extends _i1.RenderFractionalTranslation w
           transformHitTests: p.get('transformHitTests').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'translation',
-      translation,
-      isNamed: true,
-    );
-    mateUse(
-      'transformHitTests',
-      transformHitTests,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderPointerListener extends RenderProxyBoxWithHitTestBehavior
@@ -1019,50 +1035,96 @@ class RenderPointerListener$Mate extends _i1.RenderPointerListener with _i2.Mate
   /// RenderPointerListener RenderPointerListener({void Function(PointerDownEvent)? onPointerDown, void Function(PointerMoveEvent)? onPointerMove, void Function(PointerUpEvent)? onPointerUp, void Function(PointerHoverEvent)? onPointerHover, void Function(PointerCancelEvent)? onPointerCancel, void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart, void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate, void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd, void Function(PointerSignalEvent)? onPointerSignal, HitTestBehavior behavior = HitTestBehavior.deferToChild, RenderBox? child})
   RenderPointerListener$Mate({
     /// optionalParameters: {void Function(PointerDownEvent)? onPointerDown} , default:none
-    _i1.PointerDownEventListener? onPointerDown,
+    super.onPointerDown,
 
     /// optionalParameters: {void Function(PointerMoveEvent)? onPointerMove} , default:none
-    _i1.PointerMoveEventListener? onPointerMove,
+    super.onPointerMove,
 
     /// optionalParameters: {void Function(PointerUpEvent)? onPointerUp} , default:none
-    _i1.PointerUpEventListener? onPointerUp,
+    super.onPointerUp,
 
     /// optionalParameters: {void Function(PointerHoverEvent)? onPointerHover} , default:none
-    _i15.PointerHoverEventListener? onPointerHover,
+    super.onPointerHover,
 
     /// optionalParameters: {void Function(PointerCancelEvent)? onPointerCancel} , default:none
-    _i1.PointerCancelEventListener? onPointerCancel,
+    super.onPointerCancel,
 
     /// optionalParameters: {void Function(PointerPanZoomStartEvent)? onPointerPanZoomStart} , default:none
-    _i1.PointerPanZoomStartEventListener? onPointerPanZoomStart,
+    super.onPointerPanZoomStart,
 
     /// optionalParameters: {void Function(PointerPanZoomUpdateEvent)? onPointerPanZoomUpdate} , default:none
-    _i1.PointerPanZoomUpdateEventListener? onPointerPanZoomUpdate,
+    super.onPointerPanZoomUpdate,
 
     /// optionalParameters: {void Function(PointerPanZoomEndEvent)? onPointerPanZoomEnd} , default:none
-    _i1.PointerPanZoomEndEventListener? onPointerPanZoomEnd,
+    super.onPointerPanZoomEnd,
 
     /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , default:none
-    _i1.PointerSignalEventListener? onPointerSignal,
+    super.onPointerSignal,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i1.HitTestBehavior behavior = _i8.HitTestBehavior.deferToChild,
+    super.behavior,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          onPointerDown: onPointerDown,
-          onPointerMove: onPointerMove,
-          onPointerUp: onPointerUp,
-          onPointerHover: onPointerHover,
-          onPointerCancel: onPointerCancel,
-          onPointerPanZoomStart: onPointerPanZoomStart,
-          onPointerPanZoomUpdate: onPointerPanZoomUpdate,
-          onPointerPanZoomEnd: onPointerPanZoomEnd,
-          onPointerSignal: onPointerSignal,
-          behavior: behavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'onPointerDown': _i2.BuilderArg<_i1.PointerDownEventListener?>(
+            name: 'onPointerDown',
+            init: onPointerDown,
+            isNamed: true,
+          ),
+          'onPointerMove': _i2.BuilderArg<_i1.PointerMoveEventListener?>(
+            name: 'onPointerMove',
+            init: onPointerMove,
+            isNamed: true,
+          ),
+          'onPointerUp': _i2.BuilderArg<_i1.PointerUpEventListener?>(
+            name: 'onPointerUp',
+            init: onPointerUp,
+            isNamed: true,
+          ),
+          'onPointerHover': _i2.BuilderArg<_i15.PointerHoverEventListener?>(
+            name: 'onPointerHover',
+            init: onPointerHover,
+            isNamed: true,
+          ),
+          'onPointerCancel': _i2.BuilderArg<_i1.PointerCancelEventListener?>(
+            name: 'onPointerCancel',
+            init: onPointerCancel,
+            isNamed: true,
+          ),
+          'onPointerPanZoomStart': _i2.BuilderArg<_i1.PointerPanZoomStartEventListener?>(
+            name: 'onPointerPanZoomStart',
+            init: onPointerPanZoomStart,
+            isNamed: true,
+          ),
+          'onPointerPanZoomUpdate': _i2.BuilderArg<_i1.PointerPanZoomUpdateEventListener?>(
+            name: 'onPointerPanZoomUpdate',
+            init: onPointerPanZoomUpdate,
+            isNamed: true,
+          ),
+          'onPointerPanZoomEnd': _i2.BuilderArg<_i1.PointerPanZoomEndEventListener?>(
+            name: 'onPointerPanZoomEnd',
+            init: onPointerPanZoomEnd,
+            isNamed: true,
+          ),
+          'onPointerSignal': _i2.BuilderArg<_i1.PointerSignalEventListener?>(
+            name: 'onPointerSignal',
+            init: onPointerSignal,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i1.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i8.HitTestBehavior.deferToChild,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderPointerListener';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPointerListener$Mate(
@@ -1078,63 +1140,10 @@ class RenderPointerListener$Mate extends _i1.RenderPointerListener with _i2.Mate
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'onPointerDown',
-      onPointerDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerMove',
-      onPointerMove,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerUp',
-      onPointerUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerHover',
-      onPointerHover,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerCancel',
-      onPointerCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerPanZoomStart',
-      onPointerPanZoomStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerPanZoomUpdate',
-      onPointerPanZoomUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerPanZoomEnd',
-      onPointerPanZoomEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onPointerSignal',
-      onPointerSignal,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i8.HitTestBehavior.deferToChild,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderMouseRegion extends RenderProxyBoxWithHitTestBehavior implements MouseTrackerAnnotation
@@ -1142,38 +1151,75 @@ class RenderMouseRegion$Mate extends _i1.RenderMouseRegion with _i2.Mate {
   /// RenderMouseRegion RenderMouseRegion({void Function(PointerEnterEvent)? onEnter, void Function(PointerHoverEvent)? onHover, void Function(PointerExitEvent)? onExit, MouseCursor cursor = MouseCursor.defer, bool validForMouseTracker = true, bool opaque = true, RenderBox? child, HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque})
   RenderMouseRegion$Mate({
     /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
-    _i15.PointerEnterEventListener? onEnter,
+    super.onEnter,
 
     /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , default:none
-    _i15.PointerHoverEventListener? onHover,
+    super.onHover,
 
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
-    _i15.PointerExitEventListener? onExit,
+    super.onExit,
 
     /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
-    _i16.MouseCursor cursor = _i8.MouseCursor.defer,
+    super.cursor,
 
     /// optionalParameters: {bool validForMouseTracker = true} , default:processed=BooleanLiteralImpl
-    bool validForMouseTracker = true,
+    super.validForMouseTracker,
 
     /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
-    bool opaque = true,
+    super.opaque,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
-    _i1.HitTestBehavior? hitTestBehavior = _i8.HitTestBehavior.opaque,
-  }) : super(
-          onEnter: onEnter,
-          onHover: onHover,
-          onExit: onExit,
-          cursor: cursor,
-          validForMouseTracker: validForMouseTracker,
-          opaque: opaque,
-          child: child,
-          hitTestBehavior: hitTestBehavior,
-        ) {
+    super.hitTestBehavior,
+  })  : mateParams = {
+          'onEnter': _i2.BuilderArg<_i15.PointerEnterEventListener?>(
+            name: 'onEnter',
+            init: onEnter,
+            isNamed: true,
+          ),
+          'onHover': _i2.BuilderArg<_i15.PointerHoverEventListener?>(
+            name: 'onHover',
+            init: onHover,
+            isNamed: true,
+          ),
+          'onExit': _i2.BuilderArg<_i15.PointerExitEventListener?>(
+            name: 'onExit',
+            init: onExit,
+            isNamed: true,
+          ),
+          'cursor': _i2.BuilderArg<_i16.MouseCursor>(
+            name: 'cursor',
+            init: cursor,
+            isNamed: true,
+            defaultValue: _i8.MouseCursor.defer,
+          ),
+          'validForMouseTracker': _i2.BuilderArg<bool>(
+            name: 'validForMouseTracker',
+            init: validForMouseTracker,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'opaque': _i2.BuilderArg<bool>(
+            name: 'opaque',
+            init: opaque,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i1.HitTestBehavior?>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+            defaultValue: _i8.HitTestBehavior.opaque,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderMouseRegion';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderMouseRegion$Mate(
@@ -1186,51 +1232,10 @@ class RenderMouseRegion$Mate extends _i1.RenderMouseRegion with _i2.Mate {
           child: p.get('child').build(),
           hitTestBehavior: p.get('hitTestBehavior').build(),
         );
-    mateUse(
-      'onEnter',
-      onEnter,
-      isNamed: true,
-    );
-    mateUse(
-      'onHover',
-      onHover,
-      isNamed: true,
-    );
-    mateUse(
-      'onExit',
-      onExit,
-      isNamed: true,
-    );
-    mateUse(
-      'cursor',
-      cursor,
-      isNamed: true,
-      defaultValue: _i8.MouseCursor.defer,
-    );
-    mateUse(
-      'validForMouseTracker',
-      validForMouseTracker,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'opaque',
-      opaque,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'hitTestBehavior',
-      hitTestBehavior,
-      isNamed: true,
-      defaultValue: _i8.HitTestBehavior.opaque,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderRepaintBoundary extends RenderProxyBox
@@ -1239,17 +1244,22 @@ class RenderRepaintBoundary$Mate extends _i1.RenderRepaintBoundary with _i2.Mate
   RenderRepaintBoundary$Mate(
       {
       /// optionalParameters: {RenderBox? child} , default:none
-      _i3.RenderBox? child})
-      : super(child: child) {
+      super.child})
+      : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderRepaintBoundary';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderRepaintBoundary$Mate(child: p.get('child').build());
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderIgnorePointer extends RenderProxyBox
@@ -1257,18 +1267,32 @@ class RenderIgnorePointer$Mate extends _i1.RenderIgnorePointer with _i2.Mate {
   /// RenderIgnorePointer RenderIgnorePointer({RenderBox? child, bool ignoring = true, bool? ignoringSemantics})
   RenderIgnorePointer$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
-    bool ignoring = true,
+    super.ignoring,
 
     /// optionalParameters: {bool? ignoringSemantics} , default:none
-    bool? ignoringSemantics,
-  }) : super(
-          child: child,
-          ignoring: ignoring,
-          ignoringSemantics: ignoringSemantics,
-        ) {
+    super.ignoringSemantics,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'ignoring': _i2.BuilderArg<bool>(
+            name: 'ignoring',
+            init: ignoring,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ignoringSemantics': _i2.BuilderArg<bool?>(
+            name: 'ignoringSemantics',
+            init: ignoringSemantics,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderIgnorePointer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIgnorePointer$Mate(
@@ -1276,23 +1300,10 @@ class RenderIgnorePointer$Mate extends _i1.RenderIgnorePointer with _i2.Mate {
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'ignoring',
-      ignoring,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ignoringSemantics',
-      ignoringSemantics,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderOffstage extends RenderProxyBox
@@ -1300,32 +1311,34 @@ class RenderOffstage$Mate extends _i1.RenderOffstage with _i2.Mate {
   /// RenderOffstage RenderOffstage({bool offstage = true, RenderBox? child})
   RenderOffstage$Mate({
     /// optionalParameters: {bool offstage = true} , default:processed=BooleanLiteralImpl
-    bool offstage = true,
+    super.offstage,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          offstage: offstage,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'offstage': _i2.BuilderArg<bool>(
+            name: 'offstage',
+            init: offstage,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderOffstage';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderOffstage$Mate(
           offstage: p.get('offstage').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'offstage',
-      offstage,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderAbsorbPointer extends RenderProxyBox
@@ -1333,18 +1346,32 @@ class RenderAbsorbPointer$Mate extends _i1.RenderAbsorbPointer with _i2.Mate {
   /// RenderAbsorbPointer RenderAbsorbPointer({RenderBox? child, bool absorbing = true, bool? ignoringSemantics})
   RenderAbsorbPointer$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {bool absorbing = true} , default:processed=BooleanLiteralImpl
-    bool absorbing = true,
+    super.absorbing,
 
     /// optionalParameters: {bool? ignoringSemantics} , default:none
-    bool? ignoringSemantics,
-  }) : super(
-          child: child,
-          absorbing: absorbing,
-          ignoringSemantics: ignoringSemantics,
-        ) {
+    super.ignoringSemantics,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'absorbing': _i2.BuilderArg<bool>(
+            name: 'absorbing',
+            init: absorbing,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ignoringSemantics': _i2.BuilderArg<bool?>(
+            name: 'ignoringSemantics',
+            init: ignoringSemantics,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderAbsorbPointer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAbsorbPointer$Mate(
@@ -1352,23 +1379,10 @@ class RenderAbsorbPointer$Mate extends _i1.RenderAbsorbPointer with _i2.Mate {
           absorbing: p.get('absorbing').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'absorbing',
-      absorbing,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ignoringSemantics',
-      ignoringSemantics,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderMetaData extends RenderProxyBoxWithHitTestBehavior
@@ -1376,18 +1390,32 @@ class RenderMetaData$Mate extends _i1.RenderMetaData with _i2.Mate {
   /// RenderMetaData RenderMetaData({dynamic metaData, HitTestBehavior behavior = HitTestBehavior.deferToChild, RenderBox? child})
   RenderMetaData$Mate({
     /// optionalParameters: {dynamic metaData} , default:none
-    dynamic metaData,
+    super.metaData,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i1.HitTestBehavior behavior = _i8.HitTestBehavior.deferToChild,
+    super.behavior,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          metaData: metaData,
-          behavior: behavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'metaData': _i2.BuilderArg<dynamic>(
+            name: 'metaData',
+            init: metaData,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i1.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i8.HitTestBehavior.deferToChild,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderMetaData';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderMetaData$Mate(
@@ -1395,23 +1423,10 @@ class RenderMetaData$Mate extends _i1.RenderMetaData with _i2.Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'metaData',
-      metaData,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i8.HitTestBehavior.deferToChild,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSemanticsGestureHandler extends RenderProxyBoxWithHitTestBehavior
@@ -1419,34 +1434,65 @@ class RenderSemanticsGestureHandler$Mate extends _i1.RenderSemanticsGestureHandl
   /// RenderSemanticsGestureHandler RenderSemanticsGestureHandler({RenderBox? child, void Function()? onTap, void Function()? onLongPress, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragUpdateDetails)? onVerticalDragUpdate, double scrollFactor = 0.8, HitTestBehavior behavior = HitTestBehavior.deferToChild})
   RenderSemanticsGestureHandler$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i17.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i18.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onHorizontalDragUpdate} , default:none
-    _i19.GestureDragUpdateCallback? onHorizontalDragUpdate,
+    super.onHorizontalDragUpdate,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onVerticalDragUpdate} , default:none
-    _i19.GestureDragUpdateCallback? onVerticalDragUpdate,
+    super.onVerticalDragUpdate,
 
     /// optionalParameters: {double scrollFactor = 0.8} , default:processed=DoubleLiteralImpl
-    double scrollFactor = 0.8,
+    super.scrollFactor,
 
     /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
-    _i1.HitTestBehavior behavior = _i8.HitTestBehavior.deferToChild,
-  }) : super(
-          child: child,
-          onTap: onTap,
-          onLongPress: onLongPress,
-          onHorizontalDragUpdate: onHorizontalDragUpdate,
-          onVerticalDragUpdate: onVerticalDragUpdate,
-          scrollFactor: scrollFactor,
-          behavior: behavior,
-        ) {
+    super.behavior,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i17.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i18.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onHorizontalDragUpdate': _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
+            name: 'onHorizontalDragUpdate',
+            init: onHorizontalDragUpdate,
+            isNamed: true,
+          ),
+          'onVerticalDragUpdate': _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
+            name: 'onVerticalDragUpdate',
+            init: onVerticalDragUpdate,
+            isNamed: true,
+          ),
+          'scrollFactor': _i2.BuilderArg<double>(
+            name: 'scrollFactor',
+            init: scrollFactor,
+            isNamed: true,
+            defaultValue: 0.8,
+          ),
+          'behavior': _i2.BuilderArg<_i1.HitTestBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+            defaultValue: _i8.HitTestBehavior.deferToChild,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSemanticsGestureHandler';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RenderSemanticsGestureHandler$Mate(
@@ -1458,44 +1504,10 @@ class RenderSemanticsGestureHandler$Mate extends _i1.RenderSemanticsGestureHandl
           scrollFactor: p.get('scrollFactor').build(),
           behavior: p.get('behavior').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onHorizontalDragUpdate',
-      onHorizontalDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onVerticalDragUpdate',
-      onVerticalDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollFactor',
-      scrollFactor,
-      isNamed: true,
-      defaultValue: 0.8,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-      defaultValue: _i8.HitTestBehavior.deferToChild,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSemanticsAnnotations extends RenderProxyBox
@@ -1503,30 +1515,58 @@ class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations wit
   /// RenderSemanticsAnnotations RenderSemanticsAnnotations({RenderBox? child, required SemanticsProperties properties, bool container = false, bool explicitChildNodes = false, bool excludeSemantics = false, TextDirection? textDirection})
   RenderSemanticsAnnotations$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required SemanticsProperties properties} , default:none
-    required _i20.SemanticsProperties properties,
+    required super.properties,
 
     /// optionalParameters: {bool container = false} , default:processed=BooleanLiteralImpl
-    bool container = false,
+    super.container,
 
     /// optionalParameters: {bool explicitChildNodes = false} , default:processed=BooleanLiteralImpl
-    bool explicitChildNodes = false,
+    super.explicitChildNodes,
 
     /// optionalParameters: {bool excludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeSemantics = false,
+    super.excludeSemantics,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
-  }) : super(
-          child: child,
-          properties: properties,
-          container: container,
-          explicitChildNodes: explicitChildNodes,
-          excludeSemantics: excludeSemantics,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'properties': _i2.BuilderArg<_i20.SemanticsProperties>(
+            name: 'properties',
+            init: properties,
+            isNamed: true,
+          ),
+          'container': _i2.BuilderArg<bool>(
+            name: 'container',
+            init: container,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'explicitChildNodes': _i2.BuilderArg<bool>(
+            name: 'explicitChildNodes',
+            init: explicitChildNodes,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'excludeSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeSemantics',
+            init: excludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSemanticsAnnotations';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSemanticsAnnotations$Mate(
@@ -1537,40 +1577,10 @@ class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations wit
           excludeSemantics: p.get('excludeSemantics').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'properties',
-      properties,
-      isNamed: true,
-    );
-    mateUse(
-      'container',
-      container,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'explicitChildNodes',
-      explicitChildNodes,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'excludeSemantics',
-      excludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderBlockSemantics extends RenderProxyBox
@@ -1578,32 +1588,34 @@ class RenderBlockSemantics$Mate extends _i1.RenderBlockSemantics with _i2.Mate {
   /// RenderBlockSemantics RenderBlockSemantics({RenderBox? child, bool blocking = true})
   RenderBlockSemantics$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {bool blocking = true} , default:processed=BooleanLiteralImpl
-    bool blocking = true,
-  }) : super(
-          child: child,
-          blocking: blocking,
-        ) {
+    super.blocking,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'blocking': _i2.BuilderArg<bool>(
+            name: 'blocking',
+            init: blocking,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderBlockSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderBlockSemantics$Mate(
           child: p.get('child').build(),
           blocking: p.get('blocking').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'blocking',
-      blocking,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderMergeSemantics extends RenderProxyBox
@@ -1612,17 +1624,22 @@ class RenderMergeSemantics$Mate extends _i1.RenderMergeSemantics with _i2.Mate {
   RenderMergeSemantics$Mate(
       {
       /// optionalParameters: {RenderBox? child} , default:none
-      _i3.RenderBox? child})
-      : super(child: child) {
+      super.child})
+      : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderMergeSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderMergeSemantics$Mate(child: p.get('child').build());
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderExcludeSemantics extends RenderProxyBox
@@ -1630,32 +1647,34 @@ class RenderExcludeSemantics$Mate extends _i1.RenderExcludeSemantics with _i2.Ma
   /// RenderExcludeSemantics RenderExcludeSemantics({RenderBox? child, bool excluding = true})
   RenderExcludeSemantics$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
-    bool excluding = true,
-  }) : super(
-          child: child,
-          excluding: excluding,
-        ) {
+    super.excluding,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'excluding': _i2.BuilderArg<bool>(
+            name: 'excluding',
+            init: excluding,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderExcludeSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderExcludeSemantics$Mate(
           child: p.get('child').build(),
           excluding: p.get('excluding').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'excluding',
-      excluding,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderIndexedSemantics extends RenderProxyBox
@@ -1663,31 +1682,33 @@ class RenderIndexedSemantics$Mate extends _i1.RenderIndexedSemantics with _i2.Ma
   /// RenderIndexedSemantics RenderIndexedSemantics({RenderBox? child, required int index})
   RenderIndexedSemantics$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required int index} , default:none
-    required int index,
-  }) : super(
-          child: child,
-          index: index,
-        ) {
+    required super.index,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'index': _i2.BuilderArg<int>(
+            name: 'index',
+            init: index,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderIndexedSemantics';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderIndexedSemantics$Mate(
           child: p.get('child').build(),
           index: p.get('index').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'index',
-      index,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderLeaderLayer extends RenderProxyBox
@@ -1695,31 +1716,33 @@ class RenderLeaderLayer$Mate extends _i1.RenderLeaderLayer with _i2.Mate {
   /// RenderLeaderLayer RenderLeaderLayer({required LayerLink link, RenderBox? child})
   RenderLeaderLayer$Mate({
     /// optionalParameters: {required LayerLink link} , default:none
-    required _i21.LayerLink link,
+    required super.link,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          link: link,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'link': _i2.BuilderArg<_i21.LayerLink>(
+            name: 'link',
+            init: link,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderLeaderLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderLeaderLayer$Mate(
           link: p.get('link').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'link',
-      link,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderFollowerLayer extends RenderProxyBox
@@ -1727,30 +1750,59 @@ class RenderFollowerLayer$Mate extends _i1.RenderFollowerLayer with _i2.Mate {
   /// RenderFollowerLayer RenderFollowerLayer({required LayerLink link, bool showWhenUnlinked = true, Offset offset = Offset.zero, Alignment leaderAnchor = Alignment.topLeft, Alignment followerAnchor = Alignment.topLeft, RenderBox? child})
   RenderFollowerLayer$Mate({
     /// optionalParameters: {required LayerLink link} , default:none
-    required _i21.LayerLink link,
+    required super.link,
 
     /// optionalParameters: {bool showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
-    bool showWhenUnlinked = true,
+    super.showWhenUnlinked,
 
     /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.Offset offset = _i22.Offset.zero,
+    super.offset,
 
     /// optionalParameters: {Alignment leaderAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
-    _i13.Alignment leaderAnchor = _i8.Alignment.topLeft,
+    super.leaderAnchor,
 
     /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
-    _i13.Alignment followerAnchor = _i8.Alignment.topLeft,
+    super.followerAnchor,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          link: link,
-          showWhenUnlinked: showWhenUnlinked,
-          offset: offset,
-          leaderAnchor: leaderAnchor,
-          followerAnchor: followerAnchor,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'link': _i2.BuilderArg<_i21.LayerLink>(
+            name: 'link',
+            init: link,
+            isNamed: true,
+          ),
+          'showWhenUnlinked': _i2.BuilderArg<bool>(
+            name: 'showWhenUnlinked',
+            init: showWhenUnlinked,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'offset': _i2.BuilderArg<_i5.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+            defaultValue: _i22.Offset.zero,
+          ),
+          'leaderAnchor': _i2.BuilderArg<_i13.Alignment>(
+            name: 'leaderAnchor',
+            init: leaderAnchor,
+            isNamed: true,
+            defaultValue: _i8.Alignment.topLeft,
+          ),
+          'followerAnchor': _i2.BuilderArg<_i13.Alignment>(
+            name: 'followerAnchor',
+            init: followerAnchor,
+            isNamed: true,
+            defaultValue: _i8.Alignment.topLeft,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderFollowerLayer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFollowerLayer$Mate(
@@ -1761,41 +1813,10 @@ class RenderFollowerLayer$Mate extends _i1.RenderFollowerLayer with _i2.Mate {
           followerAnchor: p.get('followerAnchor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'link',
-      link,
-      isNamed: true,
-    );
-    mateUse(
-      'showWhenUnlinked',
-      showWhenUnlinked,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-      defaultValue: _i22.Offset.zero,
-    );
-    mateUse(
-      'leaderAnchor',
-      leaderAnchor,
-      isNamed: true,
-      defaultValue: _i8.Alignment.topLeft,
-    );
-    mateUse(
-      'followerAnchor',
-      followerAnchor,
-      isNamed: true,
-      defaultValue: _i8.Alignment.topLeft,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderAnnotatedRegion<T extends Object> extends RenderProxyBox
@@ -1803,18 +1824,31 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends _i1.RenderAnnotatedRe
   /// RenderAnnotatedRegion<T> RenderAnnotatedRegion({required T value, required bool sized, RenderBox? child})
   RenderAnnotatedRegion$Mate({
     /// optionalParameters: {required T value} , default:none
-    required T value,
+    required super.value,
 
     /// optionalParameters: {required bool sized} , default:none
-    required bool sized,
+    required super.sized,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i3.RenderBox? child,
-  }) : super(
-          value: value,
-          sized: sized,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'sized': _i2.BuilderArg<bool>(
+            name: 'sized',
+            init: sized,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i3.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderAnnotatedRegion';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAnnotatedRegion$Mate<T>(
@@ -1822,20 +1856,8 @@ class RenderAnnotatedRegion$Mate<T extends Object> extends _i1.RenderAnnotatedRe
           sized: p.get('sized').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'sized',
-      sized,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

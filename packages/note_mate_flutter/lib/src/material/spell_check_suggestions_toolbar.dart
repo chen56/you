@@ -12,18 +12,31 @@ class SpellCheckSuggestionsToolbar$Mate extends _i1.SpellCheckSuggestionsToolbar
   /// SpellCheckSuggestionsToolbar SpellCheckSuggestionsToolbar({Key? key, required Offset anchor, required List<ContextMenuButtonItem> buttonItems})
   SpellCheckSuggestionsToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Offset anchor} , default:none
-    required _i4.Offset anchor,
+    required super.anchor,
 
     /// optionalParameters: {required List<ContextMenuButtonItem> buttonItems} , default:none
-    required List<_i5.ContextMenuButtonItem> buttonItems,
-  }) : super(
-          key: key,
-          anchor: anchor,
-          buttonItems: buttonItems,
-        ) {
+    required super.buttonItems,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'anchor': _i2.BuilderArg<_i4.Offset>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+          ),
+          'buttonItems': _i2.BuilderArg<List<_i5.ContextMenuButtonItem>>(
+            name: 'buttonItems',
+            init: buttonItems,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SpellCheckSuggestionsToolbar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SpellCheckSuggestionsToolbar$Mate(
@@ -31,20 +44,8 @@ class SpellCheckSuggestionsToolbar$Mate extends _i1.SpellCheckSuggestionsToolbar
           anchor: p.get('anchor').build(),
           buttonItems: p.get('buttonItems').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonItems',
-      buttonItems,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
