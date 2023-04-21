@@ -10,18 +10,31 @@ class ImageSizeInfo$Mate extends _i1.ImageSizeInfo with _i2.Mate {
   /// ImageSizeInfo ImageSizeInfo({String? source, required Size displaySize, required Size imageSize})
   ImageSizeInfo$Mate({
     /// optionalParameters: {String? source} , default:none
-    String? source,
+    super.source,
 
     /// optionalParameters: {required Size displaySize} , default:none
-    required _i3.Size displaySize,
+    required super.displaySize,
 
     /// optionalParameters: {required Size imageSize} , default:none
-    required _i3.Size imageSize,
-  }) : super(
-          source: source,
-          displaySize: displaySize,
-          imageSize: imageSize,
-        ) {
+    required super.imageSize,
+  })  : mateParams = {
+          'source': _i2.BuilderArg<String?>(
+            name: 'source',
+            init: source,
+            isNamed: true,
+          ),
+          'displaySize': _i2.BuilderArg<_i3.Size>(
+            name: 'displaySize',
+            init: displaySize,
+            isNamed: true,
+          ),
+          'imageSize': _i2.BuilderArg<_i3.Size>(
+            name: 'imageSize',
+            init: imageSize,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageSizeInfo';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageSizeInfo$Mate(
@@ -29,20 +42,8 @@ class ImageSizeInfo$Mate extends _i1.ImageSizeInfo with _i2.Mate {
           displaySize: p.get('displaySize').build(),
           imageSize: p.get('imageSize').build(),
         );
-    mateUse(
-      'source',
-      source,
-      isNamed: true,
-    );
-    mateUse(
-      'displaySize',
-      displaySize,
-      isNamed: true,
-    );
-    mateUse(
-      'imageSize',
-      imageSize,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -15,34 +15,64 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends _i1.CupertinoSlidingSegme
   /// CupertinoSlidingSegmentedControl<T> CupertinoSlidingSegmentedControl({Key? key, required Map<T, Widget> children, required void Function(T?) onValueChanged, T? groupValue, Color thumbColor = _kThumbColor, EdgeInsetsGeometry padding = _kHorizontalItemPadding, Color backgroundColor = CupertinoColors.tertiarySystemFill})
   CupertinoSlidingSegmentedControl$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Map<T, Widget> children} , default:none
-    required Map<T, _i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {required void Function(T?) onValueChanged} , default:none
-    required _i5.ValueChanged<T?> onValueChanged,
+    required super.onValueChanged,
 
     /// optionalParameters: {T? groupValue} , default:none
-    T? groupValue,
+    super.groupValue,
 
     /// optionalParameters: {Color thumbColor = _kThumbColor} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.Color thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {EdgeInsetsGeometry padding = _kHorizontalItemPadding} , default:unprocessed=SimpleIdentifierImpl
-    required _i7.EdgeInsetsGeometry padding,
+    super.padding,
 
     /// optionalParameters: {Color backgroundColor = CupertinoColors.tertiarySystemFill} , default:processed=PrefixedIdentifierImpl
-    _i6.Color backgroundColor = _i8.CupertinoColors.tertiarySystemFill,
-  }) : super(
-          key: key,
-          children: children,
-          onValueChanged: onValueChanged,
-          groupValue: groupValue,
-          thumbColor: thumbColor,
-          padding: padding,
-          backgroundColor: backgroundColor,
-        ) {
+    super.backgroundColor,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<Map<T, _i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'onValueChanged': _i2.BuilderArg<_i5.ValueChanged<T?>>(
+            name: 'onValueChanged',
+            init: onValueChanged,
+            isNamed: true,
+          ),
+          'groupValue': _i2.BuilderArg<T?>(
+            name: 'groupValue',
+            init: groupValue,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i6.Color>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+            defaultValue: _i8.CupertinoColors.tertiarySystemFill,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoSlidingSegmentedControl';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSlidingSegmentedControl$Mate<T>(
@@ -54,41 +84,8 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends _i1.CupertinoSlidingSegme
           padding: p.get('padding').build(),
           backgroundColor: p.get('backgroundColor').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'onValueChanged',
-      onValueChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'groupValue',
-      groupValue,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-      defaultValue: _i8.CupertinoColors.tertiarySystemFill,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

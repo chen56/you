@@ -17,54 +17,103 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
   /// TabBarTheme TabBarTheme({Decoration? indicator, Color? indicatorColor, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, EdgeInsetsGeometry? labelPadding, TextStyle? labelStyle, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, MaterialStateProperty<Color?>? overlayColor, InteractiveInkFeatureFactory? splashFactory, MaterialStateProperty<MouseCursor?>? mouseCursor})
   TabBarTheme$Mate({
     /// optionalParameters: {Decoration? indicator} , default:none
-    _i3.Decoration? indicator,
+    super.indicator,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i4.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , default:none
-    _i5.TabBarIndicatorSize? indicatorSize,
+    super.indicatorSize,
 
     /// optionalParameters: {Color? dividerColor} , default:none
-    _i4.Color? dividerColor,
+    super.dividerColor,
 
     /// optionalParameters: {Color? labelColor} , default:none
-    _i4.Color? labelColor,
+    super.labelColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
-    _i6.EdgeInsetsGeometry? labelPadding,
+    super.labelPadding,
 
     /// optionalParameters: {TextStyle? labelStyle} , default:none
-    _i7.TextStyle? labelStyle,
+    super.labelStyle,
 
     /// optionalParameters: {Color? unselectedLabelColor} , default:none
-    _i4.Color? unselectedLabelColor,
+    super.unselectedLabelColor,
 
     /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
-    _i7.TextStyle? unselectedLabelStyle,
+    super.unselectedLabelStyle,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i8.MaterialStateProperty<_i4.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
-    _i9.InteractiveInkFeatureFactory? splashFactory,
+    super.splashFactory,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i8.MaterialStateProperty<_i10.MouseCursor?>? mouseCursor,
-  }) : super(
-          indicator: indicator,
-          indicatorColor: indicatorColor,
-          indicatorSize: indicatorSize,
-          dividerColor: dividerColor,
-          labelColor: labelColor,
-          labelPadding: labelPadding,
-          labelStyle: labelStyle,
-          unselectedLabelColor: unselectedLabelColor,
-          unselectedLabelStyle: unselectedLabelStyle,
-          overlayColor: overlayColor,
-          splashFactory: splashFactory,
-          mouseCursor: mouseCursor,
-        ) {
+    super.mouseCursor,
+  })  : mateParams = {
+          'indicator': _i2.BuilderArg<_i3.Decoration?>(
+            name: 'indicator',
+            init: indicator,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorSize': _i2.BuilderArg<_i5.TabBarIndicatorSize?>(
+            name: 'indicatorSize',
+            init: indicatorSize,
+            isNamed: true,
+          ),
+          'dividerColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'dividerColor',
+            init: dividerColor,
+            isNamed: true,
+          ),
+          'labelColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'labelColor',
+            init: labelColor,
+            isNamed: true,
+          ),
+          'labelPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'labelPadding',
+            init: labelPadding,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'unselectedLabelColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'unselectedLabelColor',
+            init: unselectedLabelColor,
+            isNamed: true,
+          ),
+          'unselectedLabelStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'unselectedLabelStyle',
+            init: unselectedLabelStyle,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i4.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashFactory': _i2.BuilderArg<_i9.InteractiveInkFeatureFactory?>(
+            name: 'splashFactory',
+            init: splashFactory,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i10.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TabBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBarTheme$Mate(
@@ -81,65 +130,8 @@ class TabBarTheme$Mate extends _i1.TabBarTheme with _i2.Mate {
           splashFactory: p.get('splashFactory').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse(
-      'indicator',
-      indicator,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorSize',
-      indicatorSize,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerColor',
-      dividerColor,
-      isNamed: true,
-    );
-    mateUse(
-      'labelColor',
-      labelColor,
-      isNamed: true,
-    );
-    mateUse(
-      'labelPadding',
-      labelPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelColor',
-      unselectedLabelColor,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelStyle',
-      unselectedLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashFactory',
-      splashFactory,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

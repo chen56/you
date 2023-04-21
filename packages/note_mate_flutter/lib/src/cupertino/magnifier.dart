@@ -19,34 +19,67 @@ class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Ma
   /// CupertinoTextMagnifier CupertinoTextMagnifier({Key? key, Curve animationCurve = Curves.easeOut, required MagnifierController controller, double dragResistance = 10.0, double hideBelowThreshold = 48.0, double horizontalScreenEdgePadding = 10.0, required ValueNotifier<MagnifierInfo> magnifierInfo})
   CupertinoTextMagnifier$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Curve animationCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
-    _i4.Curve animationCurve = _i5.Curves.easeOut,
+    super.animationCurve,
 
     /// optionalParameters: {required MagnifierController controller} , default:none
-    required _i6.MagnifierController controller,
+    required super.controller,
 
     /// optionalParameters: {double dragResistance = 10.0} , default:processed=DoubleLiteralImpl
-    double dragResistance = 10.0,
+    super.dragResistance,
 
     /// optionalParameters: {double hideBelowThreshold = 48.0} , default:processed=DoubleLiteralImpl
-    double hideBelowThreshold = 48.0,
+    super.hideBelowThreshold,
 
     /// optionalParameters: {double horizontalScreenEdgePadding = 10.0} , default:processed=DoubleLiteralImpl
-    double horizontalScreenEdgePadding = 10.0,
+    super.horizontalScreenEdgePadding,
 
     /// optionalParameters: {required ValueNotifier<MagnifierInfo> magnifierInfo} , default:none
-    required _i7.ValueNotifier<_i6.MagnifierInfo> magnifierInfo,
-  }) : super(
-          key: key,
-          animationCurve: animationCurve,
-          controller: controller,
-          dragResistance: dragResistance,
-          hideBelowThreshold: hideBelowThreshold,
-          horizontalScreenEdgePadding: horizontalScreenEdgePadding,
-          magnifierInfo: magnifierInfo,
-        ) {
+    required super.magnifierInfo,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'animationCurve': _i2.BuilderArg<_i4.Curve>(
+            name: 'animationCurve',
+            init: animationCurve,
+            isNamed: true,
+            defaultValue: _i5.Curves.easeOut,
+          ),
+          'controller': _i2.BuilderArg<_i6.MagnifierController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'dragResistance': _i2.BuilderArg<double>(
+            name: 'dragResistance',
+            init: dragResistance,
+            isNamed: true,
+            defaultValue: 10.0,
+          ),
+          'hideBelowThreshold': _i2.BuilderArg<double>(
+            name: 'hideBelowThreshold',
+            init: hideBelowThreshold,
+            isNamed: true,
+            defaultValue: 48.0,
+          ),
+          'horizontalScreenEdgePadding': _i2.BuilderArg<double>(
+            name: 'horizontalScreenEdgePadding',
+            init: horizontalScreenEdgePadding,
+            isNamed: true,
+            defaultValue: 10.0,
+          ),
+          'magnifierInfo': _i2.BuilderArg<_i7.ValueNotifier<_i6.MagnifierInfo>>(
+            name: 'magnifierInfo',
+            init: magnifierInfo,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoTextMagnifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextMagnifier$Mate(
@@ -58,46 +91,10 @@ class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Ma
           horizontalScreenEdgePadding: p.get('horizontalScreenEdgePadding').build(),
           magnifierInfo: p.get('magnifierInfo').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'animationCurve',
-      animationCurve,
-      isNamed: true,
-      defaultValue: _i5.Curves.easeOut,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'dragResistance',
-      dragResistance,
-      isNamed: true,
-      defaultValue: 10.0,
-    );
-    mateUse(
-      'hideBelowThreshold',
-      hideBelowThreshold,
-      isNamed: true,
-      defaultValue: 48.0,
-    );
-    mateUse(
-      'horizontalScreenEdgePadding',
-      horizontalScreenEdgePadding,
-      isNamed: true,
-      defaultValue: 10.0,
-    );
-    mateUse(
-      'magnifierInfo',
-      magnifierInfo,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CupertinoMagnifier extends StatelessWidget
@@ -105,34 +102,64 @@ class CupertinoMagnifier$Mate extends _i1.CupertinoMagnifier with _i2.Mate {
   /// CupertinoMagnifier CupertinoMagnifier({Key? key, Size size = kDefaultSize, BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50)), Offset additionalFocalPointOffset = Offset.zero, List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)], BorderSide borderSide = const BorderSide(color: Color.fromARGB(255, 232, 232, 232)), Animation<double>? inOutAnimation})
   CupertinoMagnifier$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Size size = kDefaultSize} , default:unprocessed=SimpleIdentifierImpl
-    required _i8.Size size,
+    super.size,
 
     /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50))} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i9.BorderRadius borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i8.Offset additionalFocalPointOffset = _i5.Offset.zero,
+    super.additionalFocalPointOffset,
 
     /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)]} , default:unprocessed=ListLiteralImpl
-    required List<_i10.BoxShadow> shadows,
+    super.shadows,
 
     /// optionalParameters: {BorderSide borderSide = const BorderSide(color: Color.fromARGB(255, 232, 232, 232))} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i11.BorderSide borderSide,
+    super.borderSide,
 
     /// optionalParameters: {Animation<double>? inOutAnimation} , default:none
-    _i12.Animation<double>? inOutAnimation,
-  }) : super(
-          key: key,
-          size: size,
-          borderRadius: borderRadius,
-          additionalFocalPointOffset: additionalFocalPointOffset,
-          shadows: shadows,
-          borderSide: borderSide,
-          inOutAnimation: inOutAnimation,
-        ) {
+    super.inOutAnimation,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<_i8.Size>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadius>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'additionalFocalPointOffset': _i2.BuilderArg<_i8.Offset>(
+            name: 'additionalFocalPointOffset',
+            init: additionalFocalPointOffset,
+            isNamed: true,
+            defaultValue: _i5.Offset.zero,
+          ),
+          'shadows': _i2.BuilderArg<List<_i10.BoxShadow>>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+          'borderSide': _i2.BuilderArg<_i11.BorderSide>(
+            name: 'borderSide',
+            init: borderSide,
+            isNamed: true,
+          ),
+          'inOutAnimation': _i2.BuilderArg<_i12.Animation<double>?>(
+            name: 'inOutAnimation',
+            init: inOutAnimation,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoMagnifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoMagnifier$Mate(
@@ -144,41 +171,8 @@ class CupertinoMagnifier$Mate extends _i1.CupertinoMagnifier with _i2.Mate {
           borderSide: p.get('borderSide').build(),
           inOutAnimation: p.get('inOutAnimation').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'additionalFocalPointOffset',
-      additionalFocalPointOffset,
-      isNamed: true,
-      defaultValue: _i5.Offset.zero,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
-    mateUse(
-      'borderSide',
-      borderSide,
-      isNamed: true,
-    );
-    mateUse(
-      'inOutAnimation',
-      inOutAnimation,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

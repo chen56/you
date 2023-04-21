@@ -14,18 +14,32 @@ class LongPressDownDetails$Mate extends _i1.LongPressDownDetails with _i2.Mate {
   /// LongPressDownDetails LongPressDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   LongPressDownDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i4.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
+    super.localPosition,
 
     /// optionalParameters: {PointerDeviceKind? kind} , default:none
-    _i3.PointerDeviceKind? kind,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-          kind: kind,
-        ) {
+    super.kind,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind?>(
+            name: 'kind',
+            init: kind,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LongPressDownDetails';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressDownDetails$Mate(
@@ -33,23 +47,10 @@ class LongPressDownDetails$Mate extends _i1.LongPressDownDetails with _i2.Mate {
           localPosition: p.get('localPosition').build(),
           kind: p.get('kind').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'kind',
-      kind,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LongPressStartDetails
@@ -57,32 +58,34 @@ class LongPressStartDetails$Mate extends _i1.LongPressStartDetails with _i2.Mate
   /// LongPressStartDetails LongPressStartDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   LongPressStartDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i4.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-        ) {
+    super.localPosition,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LongPressStartDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LongPressStartDetails$Mate(
           globalPosition: p.get('globalPosition').build(),
           localPosition: p.get('localPosition').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LongPressMoveUpdateDetails
@@ -90,22 +93,41 @@ class LongPressMoveUpdateDetails$Mate extends _i1.LongPressMoveUpdateDetails wit
   /// LongPressMoveUpdateDetails LongPressMoveUpdateDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Offset offsetFromOrigin = Offset.zero, Offset? localOffsetFromOrigin})
   LongPressMoveUpdateDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i4.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
+    super.localPosition,
 
     /// optionalParameters: {Offset offsetFromOrigin = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset offsetFromOrigin = _i4.Offset.zero,
+    super.offsetFromOrigin,
 
     /// optionalParameters: {Offset? localOffsetFromOrigin} , default:none
-    _i3.Offset? localOffsetFromOrigin,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-          offsetFromOrigin: offsetFromOrigin,
-          localOffsetFromOrigin: localOffsetFromOrigin,
-        ) {
+    super.localOffsetFromOrigin,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'offsetFromOrigin': _i2.BuilderArg<_i3.Offset>(
+            name: 'offsetFromOrigin',
+            init: offsetFromOrigin,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localOffsetFromOrigin': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localOffsetFromOrigin',
+            init: localOffsetFromOrigin,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LongPressMoveUpdateDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LongPressMoveUpdateDetails$Mate(
@@ -114,29 +136,10 @@ class LongPressMoveUpdateDetails$Mate extends _i1.LongPressMoveUpdateDetails wit
           offsetFromOrigin: p.get('offsetFromOrigin').build(),
           localOffsetFromOrigin: p.get('localOffsetFromOrigin').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'offsetFromOrigin',
-      offsetFromOrigin,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localOffsetFromOrigin',
-      localOffsetFromOrigin,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LongPressEndDetails
@@ -144,18 +147,33 @@ class LongPressEndDetails$Mate extends _i1.LongPressEndDetails with _i2.Mate {
   /// LongPressEndDetails LongPressEndDetails({Offset globalPosition = Offset.zero, Offset? localPosition, Velocity velocity = Velocity.zero})
   LongPressEndDetails$Mate({
     /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset globalPosition = _i4.Offset.zero,
+    super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
-    _i3.Offset? localPosition,
+    super.localPosition,
 
     /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.Velocity velocity = _i6.Velocity.zero,
-  }) : super(
-          globalPosition: globalPosition,
-          localPosition: localPosition,
-          velocity: velocity,
-        ) {
+    super.velocity,
+  })  : mateParams = {
+          'globalPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'globalPosition',
+            init: globalPosition,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: true,
+          ),
+          'velocity': _i2.BuilderArg<_i5.Velocity>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: true,
+            defaultValue: _i6.Velocity.zero,
+          ),
+        },
+        super() {
     mateBuilderName = 'LongPressEndDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LongPressEndDetails$Mate(
@@ -163,24 +181,10 @@ class LongPressEndDetails$Mate extends _i1.LongPressEndDetails with _i2.Mate {
           localPosition: p.get('localPosition').build(),
           velocity: p.get('velocity').build(),
         );
-    mateUse(
-      'globalPosition',
-      globalPosition,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: true,
-      defaultValue: _i6.Velocity.zero,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LongPressGestureRecognizer extends PrimaryPointerGestureRecognizer
@@ -188,26 +192,48 @@ class LongPressGestureRecognizer$Mate extends _i1.LongPressGestureRecognizer wit
   /// LongPressGestureRecognizer LongPressGestureRecognizer({Duration? duration, double? postAcceptSlopTolerance = null, Set<PointerDeviceKind>? supportedDevices, Object? debugOwner, bool Function(int)? allowedButtonsFilter})
   LongPressGestureRecognizer$Mate({
     /// optionalParameters: {Duration? duration} , default:none
-    Duration? duration,
+    super.duration,
 
     /// optionalParameters: {double? postAcceptSlopTolerance = null} , default:processed=NullLiteralImpl
-    double? postAcceptSlopTolerance = null,
+    super.postAcceptSlopTolerance,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i7.AllowedButtonsFilter? allowedButtonsFilter,
-  }) : super(
-          duration: duration,
-          postAcceptSlopTolerance: postAcceptSlopTolerance,
-          supportedDevices: supportedDevices,
-          debugOwner: debugOwner,
-          allowedButtonsFilter: allowedButtonsFilter,
-        ) {
+    super.allowedButtonsFilter,
+  })  : mateParams = {
+          'duration': _i2.BuilderArg<Duration?>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'postAcceptSlopTolerance': _i2.BuilderArg<double?>(
+            name: 'postAcceptSlopTolerance',
+            init: postAcceptSlopTolerance,
+            isNamed: true,
+            defaultValue: null,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i7.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LongPressGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LongPressGestureRecognizer$Mate(
@@ -217,31 +243,8 @@ class LongPressGestureRecognizer$Mate extends _i1.LongPressGestureRecognizer wit
           debugOwner: p.get('debugOwner').build(),
           allowedButtonsFilter: p.get('allowedButtonsFilter').build(),
         );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'postAcceptSlopTolerance',
-      postAcceptSlopTolerance,
-      isNamed: true,
-      defaultValue: null,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

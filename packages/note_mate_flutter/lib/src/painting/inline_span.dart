@@ -12,18 +12,23 @@ class Accumulator$Mate extends _i1.Accumulator with _i2.Mate {
   Accumulator$Mate(
 
       /// requiredParameters: [int _value = 0]
-      int _value)
-      : super(_value) {
+      super._value)
+      : mateParams = {
+          '_value': _i2.BuilderArg<int>(
+            name: '_value',
+            init: _value,
+            isNamed: false,
+            defaultValue: 0,
+          )
+        },
+        super() {
     mateBuilderName = 'Accumulator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Accumulator$Mate(p.get('_value').value);
-    mateUse(
-      '_value',
-      _value,
-      isNamed: false,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class InlineSpanSemanticsInformation
@@ -31,25 +36,47 @@ class InlineSpanSemanticsInformation$Mate extends _i1.InlineSpanSemanticsInforma
   /// InlineSpanSemanticsInformation InlineSpanSemanticsInformation(String text, {bool isPlaceholder = false, String? semanticsLabel, List<StringAttribute> stringAttributes = const <ui.StringAttribute>[], GestureRecognizer? recognizer})
   InlineSpanSemanticsInformation$Mate(
     /// requiredParameters: String text
-    String text, {
+    super.text, {
     /// optionalParameters: {bool isPlaceholder = false} , default:processed=BooleanLiteralImpl
-    bool isPlaceholder = false,
+    super.isPlaceholder,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {List<StringAttribute> stringAttributes = const <ui.StringAttribute>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i3.StringAttribute> stringAttributes,
+    super.stringAttributes,
 
     /// optionalParameters: {GestureRecognizer? recognizer} , default:none
-    _i4.GestureRecognizer? recognizer,
-  }) : super(
-          text,
-          isPlaceholder: isPlaceholder,
-          semanticsLabel: semanticsLabel,
-          stringAttributes: stringAttributes,
-          recognizer: recognizer,
-        ) {
+    super.recognizer,
+  })  : mateParams = {
+          'text': _i2.BuilderArg<String>(
+            name: 'text',
+            init: text,
+            isNamed: false,
+          ),
+          'isPlaceholder': _i2.BuilderArg<bool>(
+            name: 'isPlaceholder',
+            init: isPlaceholder,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'stringAttributes': _i2.BuilderArg<List<_i3.StringAttribute>>(
+            name: 'stringAttributes',
+            init: stringAttributes,
+            isNamed: true,
+          ),
+          'recognizer': _i2.BuilderArg<_i4.GestureRecognizer?>(
+            name: 'recognizer',
+            init: recognizer,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InlineSpanSemanticsInformation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => InlineSpanSemanticsInformation$Mate(
@@ -59,31 +86,8 @@ class InlineSpanSemanticsInformation$Mate extends _i1.InlineSpanSemanticsInforma
           stringAttributes: p.get('stringAttributes').build(),
           recognizer: p.get('recognizer').build(),
         );
-    mateUse(
-      'text',
-      text,
-      isNamed: false,
-    );
-    mateUse(
-      'isPlaceholder',
-      isPlaceholder,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'stringAttributes',
-      stringAttributes,
-      isNamed: true,
-    );
-    mateUse(
-      'recognizer',
-      recognizer,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

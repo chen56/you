@@ -19,22 +19,40 @@ class DecoratedBox$Mate extends _i1.DecoratedBox with _i2.Mate {
   /// DecoratedBox DecoratedBox({Key? key, required Decoration decoration, DecorationPosition position = DecorationPosition.background, Widget? child})
   DecoratedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Decoration decoration} , default:none
-    required _i4.Decoration decoration,
+    required super.decoration,
 
     /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
-    _i5.DecorationPosition position = _i6.DecorationPosition.background,
+    super.position,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
-  }) : super(
-          key: key,
-          decoration: decoration,
-          position: position,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i4.Decoration>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'position': _i2.BuilderArg<_i5.DecorationPosition>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+            defaultValue: _i6.DecorationPosition.background,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DecoratedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DecoratedBox$Mate(
@@ -43,28 +61,10 @@ class DecoratedBox$Mate extends _i1.DecoratedBox with _i2.Mate {
           position: p.get('position').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-      defaultValue: _i6.DecorationPosition.background,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Container extends StatelessWidget
@@ -72,62 +72,120 @@ class Container$Mate extends _i1.Container with _i2.Mate {
   /// Container Container({Key? key, AlignmentGeometry? alignment, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsetsGeometry? margin, Matrix4? transform, AlignmentGeometry? transformAlignment, Widget? child, Clip clipBehavior = Clip.none})
   Container$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i8.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i9.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Color? color} , default:none
-    _i10.Color? color,
+    super.color,
 
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i4.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {Decoration? foregroundDecoration} , default:none
-    _i4.Decoration? foregroundDecoration,
+    super.foregroundDecoration,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i11.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i9.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {Matrix4? transform} , default:none
-    _i12.Matrix4? transform,
+    super.transform,
 
     /// optionalParameters: {AlignmentGeometry? transformAlignment} , default:none
-    _i8.AlignmentGeometry? transformAlignment,
+    super.transformAlignment,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
+    super.child,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i10.Clip clipBehavior = _i10.Clip.none,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          padding: padding,
-          color: color,
-          decoration: decoration,
-          foregroundDecoration: foregroundDecoration,
-          width: width,
-          height: height,
-          constraints: constraints,
-          margin: margin,
-          transform: transform,
-          transformAlignment: transformAlignment,
-          child: child,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i10.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'foregroundDecoration': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'foregroundDecoration',
+            init: foregroundDecoration,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i11.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'transform': _i2.BuilderArg<_i12.Matrix4?>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+          'transformAlignment': _i2.BuilderArg<_i8.AlignmentGeometry?>(
+            name: 'transformAlignment',
+            init: transformAlignment,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i10.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'Container';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Container$Mate(
@@ -146,76 +204,8 @@ class Container$Mate extends _i1.Container with _i2.Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundDecoration',
-      foregroundDecoration,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
-    mateUse(
-      'transformAlignment',
-      transformAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i10.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

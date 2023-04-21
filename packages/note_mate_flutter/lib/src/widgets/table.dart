@@ -16,18 +16,31 @@ class TableRow$Mate extends _i1.TableRow with _i2.Mate {
   /// TableRow TableRow({LocalKey? key, Decoration? decoration, List<Widget> children = const <Widget>[]})
   TableRow$Mate({
     /// optionalParameters: {LocalKey? key} , default:none
-    _i3.LocalKey? key,
+    super.key,
 
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i4.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.Widget> children,
-  }) : super(
-          key: key,
-          decoration: decoration,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.LocalKey?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i5.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TableRow';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TableRow$Mate(
@@ -35,22 +48,10 @@ class TableRow$Mate extends _i1.TableRow with _i2.Mate {
           decoration: p.get('decoration').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Table extends RenderObjectWidget
@@ -58,38 +59,72 @@ class Table$Mate extends _i1.Table with _i2.Mate {
   /// Table Table({Key? key, List<TableRow> children = const <TableRow>[], Map<int, TableColumnWidth>? columnWidths, TableColumnWidth defaultColumnWidth = const FlexColumnWidth(), TextDirection? textDirection, TableBorder? border, TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top, TextBaseline? textBaseline})
   Table$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {List<TableRow> children = const <TableRow>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i1.TableRow> children,
+    super.children,
 
     /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , default:none
-    Map<int, _i6.TableColumnWidth>? columnWidths,
+    super.columnWidths,
 
     /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i6.TableColumnWidth defaultColumnWidth,
+    super.defaultColumnWidth,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i7.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {TableBorder? border} , default:none
-    _i8.TableBorder? border,
+    super.border,
 
     /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
-    _i6.TableCellVerticalAlignment defaultVerticalAlignment = _i9.TableCellVerticalAlignment.top,
+    super.defaultVerticalAlignment,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
-    _i7.TextBaseline? textBaseline,
-  }) : super(
-          key: key,
-          children: children,
-          columnWidths: columnWidths,
-          defaultColumnWidth: defaultColumnWidth,
-          textDirection: textDirection,
-          border: border,
-          defaultVerticalAlignment: defaultVerticalAlignment,
-          textBaseline: textBaseline,
-        ) {
+    super.textBaseline,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i1.TableRow>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'columnWidths': _i2.BuilderArg<Map<int, _i6.TableColumnWidth>?>(
+            name: 'columnWidths',
+            init: columnWidths,
+            isNamed: true,
+          ),
+          'defaultColumnWidth': _i2.BuilderArg<_i6.TableColumnWidth>(
+            name: 'defaultColumnWidth',
+            init: defaultColumnWidth,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i7.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i8.TableBorder?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+          ),
+          'defaultVerticalAlignment': _i2.BuilderArg<_i6.TableCellVerticalAlignment>(
+            name: 'defaultVerticalAlignment',
+            init: defaultVerticalAlignment,
+            isNamed: true,
+            defaultValue: _i9.TableCellVerticalAlignment.top,
+          ),
+          'textBaseline': _i2.BuilderArg<_i7.TextBaseline?>(
+            name: 'textBaseline',
+            init: textBaseline,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Table';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Table$Mate(
@@ -102,48 +137,10 @@ class Table$Mate extends _i1.Table with _i2.Mate {
           defaultVerticalAlignment: p.get('defaultVerticalAlignment').build(),
           textBaseline: p.get('textBaseline').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'columnWidths',
-      columnWidths,
-      isNamed: true,
-    );
-    mateUse(
-      'defaultColumnWidth',
-      defaultColumnWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-    );
-    mateUse(
-      'defaultVerticalAlignment',
-      defaultVerticalAlignment,
-      isNamed: true,
-      defaultValue: _i9.TableCellVerticalAlignment.top,
-    );
-    mateUse(
-      'textBaseline',
-      textBaseline,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TableCell extends ParentDataWidget<TableCellParentData>
@@ -151,18 +148,31 @@ class TableCell$Mate extends _i1.TableCell with _i2.Mate {
   /// TableCell TableCell({Key? key, TableCellVerticalAlignment? verticalAlignment, required Widget child})
   TableCell$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {TableCellVerticalAlignment? verticalAlignment} , default:none
-    _i6.TableCellVerticalAlignment? verticalAlignment,
+    super.verticalAlignment,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          verticalAlignment: verticalAlignment,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'verticalAlignment': _i2.BuilderArg<_i6.TableCellVerticalAlignment?>(
+            name: 'verticalAlignment',
+            init: verticalAlignment,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TableCell';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TableCell$Mate(
@@ -170,20 +180,8 @@ class TableCell$Mate extends _i1.TableCell with _i2.Mate {
           verticalAlignment: p.get('verticalAlignment').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'verticalAlignment',
-      verticalAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

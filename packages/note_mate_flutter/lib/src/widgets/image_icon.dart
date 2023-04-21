@@ -12,25 +12,46 @@ class ImageIcon$Mate extends _i1.ImageIcon with _i2.Mate {
   /// ImageIcon ImageIcon(ImageProvider<Object>? image, {Key? key, double? size, Color? color, String? semanticLabel})
   ImageIcon$Mate(
     /// requiredParameters: ImageProvider<Object>? image
-    _i3.ImageProvider<Object>? image, {
+    super.image, {
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {double? size} , default:none
-    double? size,
+    super.size,
 
     /// optionalParameters: {Color? color} , default:none
-    _i5.Color? color,
+    super.color,
 
     /// optionalParameters: {String? semanticLabel} , default:none
-    String? semanticLabel,
-  }) : super(
-          image,
-          key: key,
-          size: size,
-          color: color,
-          semanticLabel: semanticLabel,
-        ) {
+    super.semanticLabel,
+  })  : mateParams = {
+          'image': _i2.BuilderArg<_i3.ImageProvider<Object>?>(
+            name: 'image',
+            init: image,
+            isNamed: false,
+          ),
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<double?>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'semanticLabel': _i2.BuilderArg<String?>(
+            name: 'semanticLabel',
+            init: semanticLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageIcon';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageIcon$Mate(
@@ -40,30 +61,8 @@ class ImageIcon$Mate extends _i1.ImageIcon with _i2.Mate {
           color: p.get('color').build(),
           semanticLabel: p.get('semanticLabel').build(),
         );
-    mateUse(
-      'image',
-      image,
-      isNamed: false,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticLabel',
-      semanticLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

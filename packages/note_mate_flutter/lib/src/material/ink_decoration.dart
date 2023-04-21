@@ -22,34 +22,63 @@ class Ink$Mate extends _i1.Ink with _i2.Mate {
   /// Ink Ink({Key? key, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, double? width, double? height, Widget? child})
   Ink$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i4.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Color? color} , default:none
-    _i5.Color? color,
+    super.color,
 
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i6.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
-  }) : super(
-          key: key,
-          padding: padding,
-          color: color,
-          decoration: decoration,
-          width: width,
-          height: height,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i4.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i6.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Ink';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Ink$Mate(
@@ -61,98 +90,119 @@ class Ink$Mate extends _i1.Ink with _i2.Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Ink Ink.image({Key? key, EdgeInsetsGeometry? padding, required ImageProvider<Object> image, void Function(Object, StackTrace?)? onImageError, ColorFilter? colorFilter, BoxFit? fit, AlignmentGeometry alignment = Alignment.center, Rect? centerSlice, ImageRepeat repeat = ImageRepeat.noRepeat, bool matchTextDirection = false, double? width, double? height, Widget? child})
   Ink$Mate.image({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i4.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {required ImageProvider<Object> image} , default:none
-    required _i8.ImageProvider<Object> image,
+    required super.image,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onImageError} , default:none
-    _i9.ImageErrorListener? onImageError,
+    super.onImageError,
 
     /// optionalParameters: {ColorFilter? colorFilter} , default:none
-    _i5.ColorFilter? colorFilter,
+    super.colorFilter,
 
     /// optionalParameters: {BoxFit? fit} , default:none
-    _i10.BoxFit? fit,
+    super.fit,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i11.AlignmentGeometry alignment = _i12.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
-    _i5.Rect? centerSlice,
+    super.centerSlice,
 
     /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
-    _i13.ImageRepeat repeat = _i12.ImageRepeat.noRepeat,
+    super.repeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
-    bool matchTextDirection = false,
+    super.matchTextDirection,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
-  }) : super.image(
-          key: key,
-          padding: padding,
-          image: image,
-          onImageError: onImageError,
-          colorFilter: colorFilter,
-          fit: fit,
-          alignment: alignment,
-          centerSlice: centerSlice,
-          repeat: repeat,
-          matchTextDirection: matchTextDirection,
-          width: width,
-          height: height,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i4.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'image': _i2.BuilderArg<_i8.ImageProvider<Object>>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'onImageError': _i2.BuilderArg<_i9.ImageErrorListener?>(
+            name: 'onImageError',
+            init: onImageError,
+            isNamed: true,
+          ),
+          'colorFilter': _i2.BuilderArg<_i5.ColorFilter?>(
+            name: 'colorFilter',
+            init: colorFilter,
+            isNamed: true,
+          ),
+          'fit': _i2.BuilderArg<_i10.BoxFit?>(
+            name: 'fit',
+            init: fit,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i12.Alignment.center,
+          ),
+          'centerSlice': _i2.BuilderArg<_i5.Rect?>(
+            name: 'centerSlice',
+            init: centerSlice,
+            isNamed: true,
+          ),
+          'repeat': _i2.BuilderArg<_i13.ImageRepeat>(
+            name: 'repeat',
+            init: repeat,
+            isNamed: true,
+            defaultValue: _i12.ImageRepeat.noRepeat,
+          ),
+          'matchTextDirection': _i2.BuilderArg<bool>(
+            name: 'matchTextDirection',
+            init: matchTextDirection,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.image() {
     mateBuilderName = 'Ink.image';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Ink$Mate.image(
@@ -170,75 +220,10 @@ class Ink$Mate extends _i1.Ink with _i2.Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'onImageError',
-      onImageError,
-      isNamed: true,
-    );
-    mateUse(
-      'colorFilter',
-      colorFilter,
-      isNamed: true,
-    );
-    mateUse(
-      'fit',
-      fit,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i12.Alignment.center,
-    );
-    mateUse(
-      'centerSlice',
-      centerSlice,
-      isNamed: true,
-    );
-    mateUse(
-      'repeat',
-      repeat,
-      isNamed: true,
-      defaultValue: _i12.ImageRepeat.noRepeat,
-    );
-    mateUse(
-      'matchTextDirection',
-      matchTextDirection,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class InkDecoration extends InkFeature
@@ -246,30 +231,56 @@ class InkDecoration$Mate extends _i1.InkDecoration with _i2.Mate {
   /// InkDecoration InkDecoration({required Decoration? decoration, bool isVisible = true, required ImageConfiguration configuration, required MaterialInkController controller, required RenderBox referenceBox, void Function()? onRemoved})
   InkDecoration$Mate({
     /// optionalParameters: {required Decoration? decoration} , default:none
-    required _i6.Decoration? decoration,
+    required super.decoration,
 
     /// optionalParameters: {bool isVisible = true} , default:processed=BooleanLiteralImpl
-    bool isVisible = true,
+    super.isVisible,
 
     /// optionalParameters: {required ImageConfiguration configuration} , default:none
-    required _i8.ImageConfiguration configuration,
+    required super.configuration,
 
     /// optionalParameters: {required MaterialInkController controller} , default:none
-    required _i14.MaterialInkController controller,
+    required super.controller,
 
     /// optionalParameters: {required RenderBox referenceBox} , default:none
-    required _i15.RenderBox referenceBox,
+    required super.referenceBox,
 
     /// optionalParameters: {void Function()? onRemoved} , default:none
-    _i5.VoidCallback? onRemoved,
-  }) : super(
-          decoration: decoration,
-          isVisible: isVisible,
-          configuration: configuration,
-          controller: controller,
-          referenceBox: referenceBox,
-          onRemoved: onRemoved,
-        ) {
+    super.onRemoved,
+  })  : mateParams = {
+          'decoration': _i2.BuilderArg<_i6.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'isVisible': _i2.BuilderArg<bool>(
+            name: 'isVisible',
+            init: isVisible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'configuration': _i2.BuilderArg<_i8.ImageConfiguration>(
+            name: 'configuration',
+            init: configuration,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i14.MaterialInkController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'referenceBox': _i2.BuilderArg<_i15.RenderBox>(
+            name: 'referenceBox',
+            init: referenceBox,
+            isNamed: true,
+          ),
+          'onRemoved': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onRemoved',
+            init: onRemoved,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InkDecoration';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkDecoration$Mate(
@@ -280,36 +291,8 @@ class InkDecoration$Mate extends _i1.InkDecoration with _i2.Mate {
           referenceBox: p.get('referenceBox').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'isVisible',
-      isVisible,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'configuration',
-      configuration,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'referenceBox',
-      referenceBox,
-      isNamed: true,
-    );
-    mateUse(
-      'onRemoved',
-      onRemoved,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

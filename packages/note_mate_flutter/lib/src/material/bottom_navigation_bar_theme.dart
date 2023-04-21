@@ -17,62 +17,119 @@ class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
   /// BottomNavigationBarThemeData BottomNavigationBarThemeData({Color? backgroundColor, double? elevation, IconThemeData? selectedIconTheme, IconThemeData? unselectedIconTheme, Color? selectedItemColor, Color? unselectedItemColor, TextStyle? selectedLabelStyle, TextStyle? unselectedLabelStyle, bool? showSelectedLabels, bool? showUnselectedLabels, BottomNavigationBarType? type, bool? enableFeedback, BottomNavigationBarLandscapeLayout? landscapeLayout, MaterialStateProperty<MouseCursor?>? mouseCursor})
   BottomNavigationBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {IconThemeData? selectedIconTheme} , default:none
-    _i4.IconThemeData? selectedIconTheme,
+    super.selectedIconTheme,
 
     /// optionalParameters: {IconThemeData? unselectedIconTheme} , default:none
-    _i4.IconThemeData? unselectedIconTheme,
+    super.unselectedIconTheme,
 
     /// optionalParameters: {Color? selectedItemColor} , default:none
-    _i3.Color? selectedItemColor,
+    super.selectedItemColor,
 
     /// optionalParameters: {Color? unselectedItemColor} , default:none
-    _i3.Color? unselectedItemColor,
+    super.unselectedItemColor,
 
     /// optionalParameters: {TextStyle? selectedLabelStyle} , default:none
-    _i5.TextStyle? selectedLabelStyle,
+    super.selectedLabelStyle,
 
     /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
-    _i5.TextStyle? unselectedLabelStyle,
+    super.unselectedLabelStyle,
 
     /// optionalParameters: {bool? showSelectedLabels} , default:none
-    bool? showSelectedLabels,
+    super.showSelectedLabels,
 
     /// optionalParameters: {bool? showUnselectedLabels} , default:none
-    bool? showUnselectedLabels,
+    super.showUnselectedLabels,
 
     /// optionalParameters: {BottomNavigationBarType? type} , default:none
-    _i6.BottomNavigationBarType? type,
+    super.type,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {BottomNavigationBarLandscapeLayout? landscapeLayout} , default:none
-    _i6.BottomNavigationBarLandscapeLayout? landscapeLayout,
+    super.landscapeLayout,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i7.MaterialStateProperty<_i8.MouseCursor?>? mouseCursor,
-  }) : super(
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          selectedIconTheme: selectedIconTheme,
-          unselectedIconTheme: unselectedIconTheme,
-          selectedItemColor: selectedItemColor,
-          unselectedItemColor: unselectedItemColor,
-          selectedLabelStyle: selectedLabelStyle,
-          unselectedLabelStyle: unselectedLabelStyle,
-          showSelectedLabels: showSelectedLabels,
-          showUnselectedLabels: showUnselectedLabels,
-          type: type,
-          enableFeedback: enableFeedback,
-          landscapeLayout: landscapeLayout,
-          mouseCursor: mouseCursor,
-        ) {
+    super.mouseCursor,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'selectedIconTheme': _i2.BuilderArg<_i4.IconThemeData?>(
+            name: 'selectedIconTheme',
+            init: selectedIconTheme,
+            isNamed: true,
+          ),
+          'unselectedIconTheme': _i2.BuilderArg<_i4.IconThemeData?>(
+            name: 'unselectedIconTheme',
+            init: unselectedIconTheme,
+            isNamed: true,
+          ),
+          'selectedItemColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'selectedItemColor',
+            init: selectedItemColor,
+            isNamed: true,
+          ),
+          'unselectedItemColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'unselectedItemColor',
+            init: unselectedItemColor,
+            isNamed: true,
+          ),
+          'selectedLabelStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'selectedLabelStyle',
+            init: selectedLabelStyle,
+            isNamed: true,
+          ),
+          'unselectedLabelStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'unselectedLabelStyle',
+            init: unselectedLabelStyle,
+            isNamed: true,
+          ),
+          'showSelectedLabels': _i2.BuilderArg<bool?>(
+            name: 'showSelectedLabels',
+            init: showSelectedLabels,
+            isNamed: true,
+          ),
+          'showUnselectedLabels': _i2.BuilderArg<bool?>(
+            name: 'showUnselectedLabels',
+            init: showUnselectedLabels,
+            isNamed: true,
+          ),
+          'type': _i2.BuilderArg<_i6.BottomNavigationBarType?>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'landscapeLayout': _i2.BuilderArg<_i6.BottomNavigationBarLandscapeLayout?>(
+            name: 'landscapeLayout',
+            init: landscapeLayout,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i7.MaterialStateProperty<_i8.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BottomNavigationBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarThemeData$Mate(
@@ -91,77 +148,10 @@ class BottomNavigationBarThemeData$Mate extends _i1.BottomNavigationBarThemeData
           landscapeLayout: p.get('landscapeLayout').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIconTheme',
-      selectedIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedIconTheme',
-      unselectedIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedItemColor',
-      selectedItemColor,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedItemColor',
-      unselectedItemColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedLabelStyle',
-      selectedLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelStyle',
-      unselectedLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'showSelectedLabels',
-      showSelectedLabels,
-      isNamed: true,
-    );
-    mateUse(
-      'showUnselectedLabels',
-      showUnselectedLabels,
-      isNamed: true,
-    );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'landscapeLayout',
-      landscapeLayout,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BottomNavigationBarTheme extends InheritedWidget
@@ -169,18 +159,31 @@ class BottomNavigationBarTheme$Mate extends _i1.BottomNavigationBarTheme with _i
   /// BottomNavigationBarTheme BottomNavigationBarTheme({Key? key, required BottomNavigationBarThemeData data, required Widget child})
   BottomNavigationBarTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i9.Key? key,
+    super.key,
 
     /// optionalParameters: {required BottomNavigationBarThemeData data} , default:none
-    required _i1.BottomNavigationBarThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i10.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i9.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.BottomNavigationBarThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i10.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BottomNavigationBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BottomNavigationBarTheme$Mate(
@@ -188,20 +191,8 @@ class BottomNavigationBarTheme$Mate extends _i1.BottomNavigationBarTheme with _i
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

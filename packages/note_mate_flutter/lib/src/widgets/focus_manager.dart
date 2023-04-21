@@ -11,34 +11,67 @@ class FocusNode$Mate extends _i1.FocusNode with _i2.Mate {
   /// FocusNode FocusNode({String? debugLabel, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, bool skipTraversal = false, bool canRequestFocus = true, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true})
   FocusNode$Mate({
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , default:none
-    _i1.FocusOnKeyCallback? onKey,
+    super.onKey,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , default:none
-    _i1.FocusOnKeyEventCallback? onKeyEvent,
+    super.onKeyEvent,
 
     /// optionalParameters: {bool skipTraversal = false} , default:processed=BooleanLiteralImpl
-    bool skipTraversal = false,
+    super.skipTraversal,
 
     /// optionalParameters: {bool canRequestFocus = true} , default:processed=BooleanLiteralImpl
-    bool canRequestFocus = true,
+    super.canRequestFocus,
 
     /// optionalParameters: {bool descendantsAreFocusable = true} , default:processed=BooleanLiteralImpl
-    bool descendantsAreFocusable = true,
+    super.descendantsAreFocusable,
 
     /// optionalParameters: {bool descendantsAreTraversable = true} , default:processed=BooleanLiteralImpl
-    bool descendantsAreTraversable = true,
-  }) : super(
-          debugLabel: debugLabel,
-          onKey: onKey,
-          onKeyEvent: onKeyEvent,
-          skipTraversal: skipTraversal,
-          canRequestFocus: canRequestFocus,
-          descendantsAreFocusable: descendantsAreFocusable,
-          descendantsAreTraversable: descendantsAreTraversable,
-        ) {
+    super.descendantsAreTraversable,
+  })  : mateParams = {
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'onKey': _i2.BuilderArg<_i1.FocusOnKeyCallback?>(
+            name: 'onKey',
+            init: onKey,
+            isNamed: true,
+          ),
+          'onKeyEvent': _i2.BuilderArg<_i1.FocusOnKeyEventCallback?>(
+            name: 'onKeyEvent',
+            init: onKeyEvent,
+            isNamed: true,
+          ),
+          'skipTraversal': _i2.BuilderArg<bool>(
+            name: 'skipTraversal',
+            init: skipTraversal,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'canRequestFocus': _i2.BuilderArg<bool>(
+            name: 'canRequestFocus',
+            init: canRequestFocus,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'descendantsAreFocusable': _i2.BuilderArg<bool>(
+            name: 'descendantsAreFocusable',
+            init: descendantsAreFocusable,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'descendantsAreTraversable': _i2.BuilderArg<bool>(
+            name: 'descendantsAreTraversable',
+            init: descendantsAreTraversable,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FocusNode';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FocusNode$Mate(
@@ -50,46 +83,10 @@ class FocusNode$Mate extends _i1.FocusNode with _i2.Mate {
           descendantsAreFocusable: p.get('descendantsAreFocusable').build(),
           descendantsAreTraversable: p.get('descendantsAreTraversable').build(),
         );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'onKey',
-      onKey,
-      isNamed: true,
-    );
-    mateUse(
-      'onKeyEvent',
-      onKeyEvent,
-      isNamed: true,
-    );
-    mateUse(
-      'skipTraversal',
-      skipTraversal,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'canRequestFocus',
-      canRequestFocus,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'descendantsAreFocusable',
-      descendantsAreFocusable,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'descendantsAreTraversable',
-      descendantsAreTraversable,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FocusScopeNode extends FocusNode
@@ -97,30 +94,58 @@ class FocusScopeNode$Mate extends _i1.FocusScopeNode with _i2.Mate {
   /// FocusScopeNode FocusScopeNode({String? debugLabel, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, bool skipTraversal = false, bool canRequestFocus = true, TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop})
   FocusScopeNode$Mate({
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , default:none
-    _i1.FocusOnKeyEventCallback? onKeyEvent,
+    super.onKeyEvent,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , default:none
-    _i1.FocusOnKeyCallback? onKey,
+    super.onKey,
 
     /// optionalParameters: {bool skipTraversal = false} , default:processed=BooleanLiteralImpl
-    bool skipTraversal = false,
+    super.skipTraversal,
 
     /// optionalParameters: {bool canRequestFocus = true} , default:processed=BooleanLiteralImpl
-    bool canRequestFocus = true,
+    super.canRequestFocus,
 
     /// optionalParameters: {TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop} , default:processed=PrefixedIdentifierImpl
-    _i3.TraversalEdgeBehavior traversalEdgeBehavior = _i4.TraversalEdgeBehavior.closedLoop,
-  }) : super(
-          debugLabel: debugLabel,
-          onKeyEvent: onKeyEvent,
-          onKey: onKey,
-          skipTraversal: skipTraversal,
-          canRequestFocus: canRequestFocus,
-          traversalEdgeBehavior: traversalEdgeBehavior,
-        ) {
+    super.traversalEdgeBehavior,
+  })  : mateParams = {
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'onKeyEvent': _i2.BuilderArg<_i1.FocusOnKeyEventCallback?>(
+            name: 'onKeyEvent',
+            init: onKeyEvent,
+            isNamed: true,
+          ),
+          'onKey': _i2.BuilderArg<_i1.FocusOnKeyCallback?>(
+            name: 'onKey',
+            init: onKey,
+            isNamed: true,
+          ),
+          'skipTraversal': _i2.BuilderArg<bool>(
+            name: 'skipTraversal',
+            init: skipTraversal,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'canRequestFocus': _i2.BuilderArg<bool>(
+            name: 'canRequestFocus',
+            init: canRequestFocus,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'traversalEdgeBehavior': _i2.BuilderArg<_i3.TraversalEdgeBehavior>(
+            name: 'traversalEdgeBehavior',
+            init: traversalEdgeBehavior,
+            isNamed: true,
+            defaultValue: _i4.TraversalEdgeBehavior.closedLoop,
+          ),
+        },
+        super() {
     mateBuilderName = 'FocusScopeNode';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FocusScopeNode$Mate(
@@ -131,38 +156,8 @@ class FocusScopeNode$Mate extends _i1.FocusScopeNode with _i2.Mate {
           canRequestFocus: p.get('canRequestFocus').build(),
           traversalEdgeBehavior: p.get('traversalEdgeBehavior').build(),
         );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'onKeyEvent',
-      onKeyEvent,
-      isNamed: true,
-    );
-    mateUse(
-      'onKey',
-      onKey,
-      isNamed: true,
-    );
-    mateUse(
-      'skipTraversal',
-      skipTraversal,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'canRequestFocus',
-      canRequestFocus,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'traversalEdgeBehavior',
-      traversalEdgeBehavior,
-      isNamed: true,
-      defaultValue: _i4.TraversalEdgeBehavior.closedLoop,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

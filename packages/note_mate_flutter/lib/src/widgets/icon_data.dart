@@ -11,29 +11,57 @@ class IconDataProperty$Mate extends _i1.IconDataProperty with _i2.Mate {
   /// IconDataProperty IconDataProperty(String name, IconData? value, {String? ifNull, bool showName = true, DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine, DiagnosticLevel level = DiagnosticLevel.info})
   IconDataProperty$Mate(
     /// requiredParameters: String name
-    String name,
+    super.name,
 
     /// requiredParameters: IconData? value
-    _i1.IconData? value, {
+    super.value, {
     /// optionalParameters: {String? ifNull} , default:none
-    String? ifNull,
+    super.ifNull,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
-    bool showName = true,
+    super.showName,
 
     /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
-    _i3.DiagnosticsTreeStyle style = _i4.DiagnosticsTreeStyle.singleLine,
+    super.style,
 
     /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
-    _i3.DiagnosticLevel level = _i4.DiagnosticLevel.info,
-  }) : super(
-          name,
-          value,
-          ifNull: ifNull,
-          showName: showName,
-          style: style,
-          level: level,
-        ) {
+    super.level,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String>(
+            name: 'name',
+            init: name,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<_i1.IconData?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+          'ifNull': _i2.BuilderArg<String?>(
+            name: 'ifNull',
+            init: ifNull,
+            isNamed: true,
+          ),
+          'showName': _i2.BuilderArg<bool>(
+            name: 'showName',
+            init: showName,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'style': _i2.BuilderArg<_i3.DiagnosticsTreeStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i4.DiagnosticsTreeStyle.singleLine,
+          ),
+          'level': _i2.BuilderArg<_i3.DiagnosticLevel>(
+            name: 'level',
+            init: level,
+            isNamed: true,
+            defaultValue: _i4.DiagnosticLevel.info,
+          ),
+        },
+        super() {
     mateBuilderName = 'IconDataProperty';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IconDataProperty$Mate(
@@ -44,38 +72,8 @@ class IconDataProperty$Mate extends _i1.IconDataProperty with _i2.Mate {
           style: p.get('style').build(),
           level: p.get('level').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
-    mateUse(
-      'ifNull',
-      ifNull,
-      isNamed: true,
-    );
-    mateUse(
-      'showName',
-      showName,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i4.DiagnosticsTreeStyle.singleLine,
-    );
-    mateUse(
-      'level',
-      level,
-      isNamed: true,
-      defaultValue: _i4.DiagnosticLevel.info,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

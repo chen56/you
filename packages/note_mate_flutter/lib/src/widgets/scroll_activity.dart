@@ -15,17 +15,22 @@ class IdleScrollActivity$Mate extends _i1.IdleScrollActivity with _i2.Mate {
   IdleScrollActivity$Mate(
 
       /// requiredParameters: ScrollActivityDelegate delegate
-      _i1.ScrollActivityDelegate delegate)
-      : super(delegate) {
+      super.delegate)
+      : mateParams = {
+          'delegate': _i2.BuilderArg<_i1.ScrollActivityDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'IdleScrollActivity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IdleScrollActivity$Mate(p.get('delegate').value);
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class HoldScrollActivity extends ScrollActivity implements ScrollHoldController
@@ -33,31 +38,33 @@ class HoldScrollActivity$Mate extends _i1.HoldScrollActivity with _i2.Mate {
   /// HoldScrollActivity HoldScrollActivity({required ScrollActivityDelegate delegate, void Function()? onHoldCanceled})
   HoldScrollActivity$Mate({
     /// optionalParameters: {required ScrollActivityDelegate delegate} , default:none
-    required _i1.ScrollActivityDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {void Function()? onHoldCanceled} , default:none
-    _i3.VoidCallback? onHoldCanceled,
-  }) : super(
-          delegate: delegate,
-          onHoldCanceled: onHoldCanceled,
-        ) {
+    super.onHoldCanceled,
+  })  : mateParams = {
+          'delegate': _i2.BuilderArg<_i1.ScrollActivityDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'onHoldCanceled': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onHoldCanceled',
+            init: onHoldCanceled,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'HoldScrollActivity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => HoldScrollActivity$Mate(
           delegate: p.get('delegate').build(),
           onHoldCanceled: p.get('onHoldCanceled').build(),
         );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'onHoldCanceled',
-      onHoldCanceled,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollDragController implements Drag
@@ -65,26 +72,47 @@ class ScrollDragController$Mate extends _i1.ScrollDragController with _i2.Mate {
   /// ScrollDragController ScrollDragController({required ScrollActivityDelegate delegate, required DragStartDetails details, void Function()? onDragCanceled, double? carriedVelocity, double? motionStartDistanceThreshold})
   ScrollDragController$Mate({
     /// optionalParameters: {required ScrollActivityDelegate delegate} , default:none
-    required _i1.ScrollActivityDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {required DragStartDetails details} , default:none
-    required _i4.DragStartDetails details,
+    required super.details,
 
     /// optionalParameters: {void Function()? onDragCanceled} , default:none
-    _i3.VoidCallback? onDragCanceled,
+    super.onDragCanceled,
 
     /// optionalParameters: {double? carriedVelocity} , default:none
-    double? carriedVelocity,
+    super.carriedVelocity,
 
     /// optionalParameters: {double? motionStartDistanceThreshold} , default:none
-    double? motionStartDistanceThreshold,
-  }) : super(
-          delegate: delegate,
-          details: details,
-          onDragCanceled: onDragCanceled,
-          carriedVelocity: carriedVelocity,
-          motionStartDistanceThreshold: motionStartDistanceThreshold,
-        ) {
+    super.motionStartDistanceThreshold,
+  })  : mateParams = {
+          'delegate': _i2.BuilderArg<_i1.ScrollActivityDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'details': _i2.BuilderArg<_i4.DragStartDetails>(
+            name: 'details',
+            init: details,
+            isNamed: true,
+          ),
+          'onDragCanceled': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onDragCanceled',
+            init: onDragCanceled,
+            isNamed: true,
+          ),
+          'carriedVelocity': _i2.BuilderArg<double?>(
+            name: 'carriedVelocity',
+            init: carriedVelocity,
+            isNamed: true,
+          ),
+          'motionStartDistanceThreshold': _i2.BuilderArg<double?>(
+            name: 'motionStartDistanceThreshold',
+            init: motionStartDistanceThreshold,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollDragController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollDragController$Mate(
@@ -94,32 +122,10 @@ class ScrollDragController$Mate extends _i1.ScrollDragController with _i2.Mate {
           carriedVelocity: p.get('carriedVelocity').build(),
           motionStartDistanceThreshold: p.get('motionStartDistanceThreshold').build(),
         );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'details',
-      details,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragCanceled',
-      onDragCanceled,
-      isNamed: true,
-    );
-    mateUse(
-      'carriedVelocity',
-      carriedVelocity,
-      isNamed: true,
-    );
-    mateUse(
-      'motionStartDistanceThreshold',
-      motionStartDistanceThreshold,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DragScrollActivity extends ScrollActivity
@@ -127,31 +133,33 @@ class DragScrollActivity$Mate extends _i1.DragScrollActivity with _i2.Mate {
   /// DragScrollActivity DragScrollActivity(ScrollActivityDelegate delegate, ScrollDragController controller)
   DragScrollActivity$Mate(
     /// requiredParameters: ScrollActivityDelegate delegate
-    _i1.ScrollActivityDelegate delegate,
+    super.delegate,
 
     /// requiredParameters: ScrollDragController controller
-    _i1.ScrollDragController controller,
-  ) : super(
-          delegate,
-          controller,
-        ) {
+    super.controller,
+  )   : mateParams = {
+          'delegate': _i2.BuilderArg<_i1.ScrollActivityDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: false,
+          ),
+          'controller': _i2.BuilderArg<_i1.ScrollDragController>(
+            name: 'controller',
+            init: controller,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'DragScrollActivity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DragScrollActivity$Mate(
           p.get('delegate').value,
           p.get('controller').value,
         );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BallisticScrollActivity extends ScrollActivity
@@ -159,22 +167,39 @@ class BallisticScrollActivity$Mate extends _i1.BallisticScrollActivity with _i2.
   /// BallisticScrollActivity BallisticScrollActivity(ScrollActivityDelegate delegate, Simulation simulation, TickerProvider vsync, bool shouldIgnorePointer)
   BallisticScrollActivity$Mate(
     /// requiredParameters: ScrollActivityDelegate delegate
-    _i1.ScrollActivityDelegate delegate,
+    super.delegate,
 
     /// requiredParameters: Simulation simulation
-    _i5.Simulation simulation,
+    super.simulation,
 
     /// requiredParameters: TickerProvider vsync
-    _i6.TickerProvider vsync,
+    super.vsync,
 
     /// requiredParameters: bool shouldIgnorePointer
-    bool shouldIgnorePointer,
-  ) : super(
-          delegate,
-          simulation,
-          vsync,
-          shouldIgnorePointer,
-        ) {
+    super.shouldIgnorePointer,
+  )   : mateParams = {
+          'delegate': _i2.BuilderArg<_i1.ScrollActivityDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: false,
+          ),
+          'simulation': _i2.BuilderArg<_i5.Simulation>(
+            name: 'simulation',
+            init: simulation,
+            isNamed: false,
+          ),
+          'vsync': _i2.BuilderArg<_i6.TickerProvider>(
+            name: 'vsync',
+            init: vsync,
+            isNamed: false,
+          ),
+          'shouldIgnorePointer': _i2.BuilderArg<bool>(
+            name: 'shouldIgnorePointer',
+            init: shouldIgnorePointer,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'BallisticScrollActivity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BallisticScrollActivity$Mate(
@@ -183,27 +208,10 @@ class BallisticScrollActivity$Mate extends _i1.BallisticScrollActivity with _i2.
           p.get('vsync').value,
           p.get('shouldIgnorePointer').value,
         );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: false,
-    );
-    mateUse(
-      'simulation',
-      simulation,
-      isNamed: false,
-    );
-    mateUse(
-      'vsync',
-      vsync,
-      isNamed: false,
-    );
-    mateUse(
-      'shouldIgnorePointer',
-      shouldIgnorePointer,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DrivenScrollActivity extends ScrollActivity
@@ -211,29 +219,54 @@ class DrivenScrollActivity$Mate extends _i1.DrivenScrollActivity with _i2.Mate {
   /// DrivenScrollActivity DrivenScrollActivity(ScrollActivityDelegate delegate, {required double from, required double to, required Duration duration, required Curve curve, required TickerProvider vsync})
   DrivenScrollActivity$Mate(
     /// requiredParameters: ScrollActivityDelegate delegate
-    _i1.ScrollActivityDelegate delegate, {
+    super.delegate, {
     /// optionalParameters: {required double from} , default:none
-    required double from,
+    required super.from,
 
     /// optionalParameters: {required double to} , default:none
-    required double to,
+    required super.to,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {required Curve curve} , default:none
-    required _i7.Curve curve,
+    required super.curve,
 
     /// optionalParameters: {required TickerProvider vsync} , default:none
-    required _i6.TickerProvider vsync,
-  }) : super(
-          delegate,
-          from: from,
-          to: to,
-          duration: duration,
-          curve: curve,
-          vsync: vsync,
-        ) {
+    required super.vsync,
+  })  : mateParams = {
+          'delegate': _i2.BuilderArg<_i1.ScrollActivityDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: false,
+          ),
+          'from': _i2.BuilderArg<double>(
+            name: 'from',
+            init: from,
+            isNamed: true,
+          ),
+          'to': _i2.BuilderArg<double>(
+            name: 'to',
+            init: to,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i7.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+          ),
+          'vsync': _i2.BuilderArg<_i6.TickerProvider>(
+            name: 'vsync',
+            init: vsync,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DrivenScrollActivity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DrivenScrollActivity$Mate(
@@ -244,35 +277,8 @@ class DrivenScrollActivity$Mate extends _i1.DrivenScrollActivity with _i2.Mate {
           curve: p.get('curve').build(),
           vsync: p.get('vsync').build(),
         );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: false,
-    );
-    mateUse(
-      'from',
-      from,
-      isNamed: true,
-    );
-    mateUse(
-      'to',
-      to,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-    );
-    mateUse(
-      'vsync',
-      vsync,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

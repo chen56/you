@@ -12,33 +12,35 @@ class ViewConfiguration$Mate extends _i1.ViewConfiguration with _i2.Mate {
   /// ViewConfiguration ViewConfiguration({Size size = Size.zero, double devicePixelRatio = 1.0})
   ViewConfiguration$Mate({
     /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Size size = _i4.Size.zero,
+    super.size,
 
     /// optionalParameters: {double devicePixelRatio = 1.0} , default:processed=DoubleLiteralImpl
-    double devicePixelRatio = 1.0,
-  }) : super(
-          size: size,
-          devicePixelRatio: devicePixelRatio,
-        ) {
+    super.devicePixelRatio,
+  })  : mateParams = {
+          'size': _i2.BuilderArg<_i3.Size>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: _i4.Size.zero,
+          ),
+          'devicePixelRatio': _i2.BuilderArg<double>(
+            name: 'devicePixelRatio',
+            init: devicePixelRatio,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'ViewConfiguration';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => ViewConfiguration$Mate(
           size: p.get('size').build(),
           devicePixelRatio: p.get('devicePixelRatio').build(),
         );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: _i4.Size.zero,
-    );
-    mateUse(
-      'devicePixelRatio',
-      devicePixelRatio,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderView extends RenderObject with RenderObjectWithChildMixin<RenderBox>
@@ -46,18 +48,31 @@ class RenderView$Mate extends _i1.RenderView with _i2.Mate {
   /// RenderView RenderView({RenderBox? child, required ViewConfiguration configuration, required FlutterView view})
   RenderView$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required ViewConfiguration configuration} , default:none
-    required _i1.ViewConfiguration configuration,
+    required super.configuration,
 
     /// optionalParameters: {required FlutterView view} , default:none
-    required _i3.FlutterView view,
-  }) : super(
-          child: child,
-          configuration: configuration,
-          view: view,
-        ) {
+    required super.view,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'configuration': _i2.BuilderArg<_i1.ViewConfiguration>(
+            name: 'configuration',
+            init: configuration,
+            isNamed: true,
+          ),
+          'view': _i2.BuilderArg<_i3.FlutterView>(
+            name: 'view',
+            init: view,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderView';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderView$Mate(
@@ -65,20 +80,8 @@ class RenderView$Mate extends _i1.RenderView with _i2.Mate {
           configuration: p.get('configuration').build(),
           view: p.get('view').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'configuration',
-      configuration,
-      isNamed: true,
-    );
-    mateUse(
-      'view',
-      view,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

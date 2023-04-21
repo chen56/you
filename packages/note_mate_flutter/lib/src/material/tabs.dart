@@ -26,30 +26,55 @@ class Tab$Mate extends _i1.Tab with _i2.Mate {
   /// Tab Tab({Key? key, String? text, Widget? icon, EdgeInsetsGeometry iconMargin = const EdgeInsets.only(bottom: 10.0), double? height, Widget? child})
   Tab$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {String? text} , default:none
-    String? text,
+    super.text,
 
     /// optionalParameters: {Widget? icon} , default:none
-    _i4.Widget? icon,
+    super.icon,
 
     /// optionalParameters: {EdgeInsetsGeometry iconMargin = const EdgeInsets.only(bottom: 10.0)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.EdgeInsetsGeometry iconMargin,
+    super.iconMargin,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
-  }) : super(
-          key: key,
-          text: text,
-          icon: icon,
-          iconMargin: iconMargin,
-          height: height,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'text': _i2.BuilderArg<String?>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'iconMargin': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'iconMargin',
+            init: iconMargin,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Tab';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Tab$Mate(
@@ -60,37 +85,10 @@ class Tab$Mate extends _i1.Tab with _i2.Mate {
           height: p.get('height').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'iconMargin',
-      iconMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TabBar extends StatefulWidget implements PreferredSizeWidget
@@ -98,106 +96,212 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
   /// TabBar TabBar({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius})
   TabBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> tabs} , default:none
-    required List<_i4.Widget> tabs,
+    required super.tabs,
 
     /// optionalParameters: {TabController? controller} , default:none
-    _i6.TabController? controller,
+    super.controller,
 
     /// optionalParameters: {bool isScrollable = false} , default:processed=BooleanLiteralImpl
-    bool isScrollable = false,
+    super.isScrollable,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i7.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {bool automaticIndicatorColorAdjustment = true} , default:processed=BooleanLiteralImpl
-    bool automaticIndicatorColorAdjustment = true,
+    super.automaticIndicatorColorAdjustment,
 
     /// optionalParameters: {double indicatorWeight = 2.0} , default:processed=DoubleLiteralImpl
-    double indicatorWeight = 2.0,
+    super.indicatorWeight,
 
     /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.EdgeInsetsGeometry indicatorPadding = _i8.EdgeInsets.zero,
+    super.indicatorPadding,
 
     /// optionalParameters: {Decoration? indicator} , default:none
-    _i9.Decoration? indicator,
+    super.indicator,
 
     /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , default:none
-    _i1.TabBarIndicatorSize? indicatorSize,
+    super.indicatorSize,
 
     /// optionalParameters: {Color? dividerColor} , default:none
-    _i7.Color? dividerColor,
+    super.dividerColor,
 
     /// optionalParameters: {Color? labelColor} , default:none
-    _i7.Color? labelColor,
+    super.labelColor,
 
     /// optionalParameters: {TextStyle? labelStyle} , default:none
-    _i10.TextStyle? labelStyle,
+    super.labelStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
-    _i5.EdgeInsetsGeometry? labelPadding,
+    super.labelPadding,
 
     /// optionalParameters: {Color? unselectedLabelColor} , default:none
-    _i7.Color? unselectedLabelColor,
+    super.unselectedLabelColor,
 
     /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
-    _i10.TextStyle? unselectedLabelStyle,
+    super.unselectedLabelStyle,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i11.DragStartBehavior dragStartBehavior = _i12.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i13.MaterialStateProperty<_i7.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i14.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {void Function(int)? onTap} , default:none
-    _i15.ValueChanged<int>? onTap,
+    super.onTap,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i16.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
-    _i17.InteractiveInkFeatureFactory? splashFactory,
+    super.splashFactory,
 
     /// optionalParameters: {BorderRadius? splashBorderRadius} , default:none
-    _i18.BorderRadius? splashBorderRadius,
-  }) : super(
-          key: key,
-          tabs: tabs,
-          controller: controller,
-          isScrollable: isScrollable,
-          padding: padding,
-          indicatorColor: indicatorColor,
-          automaticIndicatorColorAdjustment: automaticIndicatorColorAdjustment,
-          indicatorWeight: indicatorWeight,
-          indicatorPadding: indicatorPadding,
-          indicator: indicator,
-          indicatorSize: indicatorSize,
-          dividerColor: dividerColor,
-          labelColor: labelColor,
-          labelStyle: labelStyle,
-          labelPadding: labelPadding,
-          unselectedLabelColor: unselectedLabelColor,
-          unselectedLabelStyle: unselectedLabelStyle,
-          dragStartBehavior: dragStartBehavior,
-          overlayColor: overlayColor,
-          mouseCursor: mouseCursor,
-          enableFeedback: enableFeedback,
-          onTap: onTap,
-          physics: physics,
-          splashFactory: splashFactory,
-          splashBorderRadius: splashBorderRadius,
-        ) {
+    super.splashBorderRadius,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'tabs': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'tabs',
+            init: tabs,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i6.TabController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'isScrollable': _i2.BuilderArg<bool>(
+            name: 'isScrollable',
+            init: isScrollable,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'automaticIndicatorColorAdjustment': _i2.BuilderArg<bool>(
+            name: 'automaticIndicatorColorAdjustment',
+            init: automaticIndicatorColorAdjustment,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'indicatorWeight': _i2.BuilderArg<double>(
+            name: 'indicatorWeight',
+            init: indicatorWeight,
+            isNamed: true,
+            defaultValue: 2.0,
+          ),
+          'indicatorPadding': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'indicatorPadding',
+            init: indicatorPadding,
+            isNamed: true,
+            defaultValue: _i8.EdgeInsets.zero,
+          ),
+          'indicator': _i2.BuilderArg<_i9.Decoration?>(
+            name: 'indicator',
+            init: indicator,
+            isNamed: true,
+          ),
+          'indicatorSize': _i2.BuilderArg<_i1.TabBarIndicatorSize?>(
+            name: 'indicatorSize',
+            init: indicatorSize,
+            isNamed: true,
+          ),
+          'dividerColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'dividerColor',
+            init: dividerColor,
+            isNamed: true,
+          ),
+          'labelColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'labelColor',
+            init: labelColor,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'labelPadding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'labelPadding',
+            init: labelPadding,
+            isNamed: true,
+          ),
+          'unselectedLabelColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'unselectedLabelColor',
+            init: unselectedLabelColor,
+            isNamed: true,
+          ),
+          'unselectedLabelStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'unselectedLabelStyle',
+            init: unselectedLabelStyle,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
+          ),
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i14.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i15.ValueChanged<int>?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i16.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'splashFactory': _i2.BuilderArg<_i17.InteractiveInkFeatureFactory?>(
+            name: 'splashFactory',
+            init: splashFactory,
+            isNamed: true,
+          ),
+          'splashBorderRadius': _i2.BuilderArg<_i18.BorderRadius?>(
+            name: 'splashBorderRadius',
+            init: splashBorderRadius,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TabBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBar$Mate(
@@ -227,241 +331,217 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           splashFactory: p.get('splashFactory').build(),
           splashBorderRadius: p.get('splashBorderRadius').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'tabs',
-      tabs,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'isScrollable',
-      isScrollable,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'automaticIndicatorColorAdjustment',
-      automaticIndicatorColorAdjustment,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'indicatorWeight',
-      indicatorWeight,
-      isNamed: true,
-      defaultValue: 2.0,
-    );
-    mateUse(
-      'indicatorPadding',
-      indicatorPadding,
-      isNamed: true,
-      defaultValue: _i8.EdgeInsets.zero,
-    );
-    mateUse(
-      'indicator',
-      indicator,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorSize',
-      indicatorSize,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerColor',
-      dividerColor,
-      isNamed: true,
-    );
-    mateUse(
-      'labelColor',
-      labelColor,
-      isNamed: true,
-    );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'labelPadding',
-      labelPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelColor',
-      unselectedLabelColor,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelStyle',
-      unselectedLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i12.DragStartBehavior.start,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'splashFactory',
-      splashFactory,
-      isNamed: true,
-    );
-    mateUse(
-      'splashBorderRadius',
-      splashBorderRadius,
-      isNamed: true,
-    );
   }
 
   /// TabBar TabBar.secondary({Key? key, required List<Widget> tabs, TabController? controller, bool isScrollable = false, EdgeInsetsGeometry? padding, Color? indicatorColor, bool automaticIndicatorColorAdjustment = true, double indicatorWeight = 2.0, EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero, Decoration? indicator, TabBarIndicatorSize? indicatorSize, Color? dividerColor, Color? labelColor, TextStyle? labelStyle, EdgeInsetsGeometry? labelPadding, Color? unselectedLabelColor, TextStyle? unselectedLabelStyle, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, bool? enableFeedback, void Function(int)? onTap, ScrollPhysics? physics, InteractiveInkFeatureFactory? splashFactory, BorderRadius? splashBorderRadius})
   TabBar$Mate.secondary({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> tabs} , default:none
-    required List<_i4.Widget> tabs,
+    required super.tabs,
 
     /// optionalParameters: {TabController? controller} , default:none
-    _i6.TabController? controller,
+    super.controller,
 
     /// optionalParameters: {bool isScrollable = false} , default:processed=BooleanLiteralImpl
-    bool isScrollable = false,
+    super.isScrollable,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i7.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {bool automaticIndicatorColorAdjustment = true} , default:processed=BooleanLiteralImpl
-    bool automaticIndicatorColorAdjustment = true,
+    super.automaticIndicatorColorAdjustment,
 
     /// optionalParameters: {double indicatorWeight = 2.0} , default:processed=DoubleLiteralImpl
-    double indicatorWeight = 2.0,
+    super.indicatorWeight,
 
     /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.EdgeInsetsGeometry indicatorPadding = _i8.EdgeInsets.zero,
+    super.indicatorPadding,
 
     /// optionalParameters: {Decoration? indicator} , default:none
-    _i9.Decoration? indicator,
+    super.indicator,
 
     /// optionalParameters: {TabBarIndicatorSize? indicatorSize} , default:none
-    _i1.TabBarIndicatorSize? indicatorSize,
+    super.indicatorSize,
 
     /// optionalParameters: {Color? dividerColor} , default:none
-    _i7.Color? dividerColor,
+    super.dividerColor,
 
     /// optionalParameters: {Color? labelColor} , default:none
-    _i7.Color? labelColor,
+    super.labelColor,
 
     /// optionalParameters: {TextStyle? labelStyle} , default:none
-    _i10.TextStyle? labelStyle,
+    super.labelStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
-    _i5.EdgeInsetsGeometry? labelPadding,
+    super.labelPadding,
 
     /// optionalParameters: {Color? unselectedLabelColor} , default:none
-    _i7.Color? unselectedLabelColor,
+    super.unselectedLabelColor,
 
     /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
-    _i10.TextStyle? unselectedLabelStyle,
+    super.unselectedLabelStyle,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i11.DragStartBehavior dragStartBehavior = _i12.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i13.MaterialStateProperty<_i7.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i14.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {void Function(int)? onTap} , default:none
-    _i15.ValueChanged<int>? onTap,
+    super.onTap,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i16.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
-    _i17.InteractiveInkFeatureFactory? splashFactory,
+    super.splashFactory,
 
     /// optionalParameters: {BorderRadius? splashBorderRadius} , default:none
-    _i18.BorderRadius? splashBorderRadius,
-  }) : super.secondary(
-          key: key,
-          tabs: tabs,
-          controller: controller,
-          isScrollable: isScrollable,
-          padding: padding,
-          indicatorColor: indicatorColor,
-          automaticIndicatorColorAdjustment: automaticIndicatorColorAdjustment,
-          indicatorWeight: indicatorWeight,
-          indicatorPadding: indicatorPadding,
-          indicator: indicator,
-          indicatorSize: indicatorSize,
-          dividerColor: dividerColor,
-          labelColor: labelColor,
-          labelStyle: labelStyle,
-          labelPadding: labelPadding,
-          unselectedLabelColor: unselectedLabelColor,
-          unselectedLabelStyle: unselectedLabelStyle,
-          dragStartBehavior: dragStartBehavior,
-          overlayColor: overlayColor,
-          mouseCursor: mouseCursor,
-          enableFeedback: enableFeedback,
-          onTap: onTap,
-          physics: physics,
-          splashFactory: splashFactory,
-          splashBorderRadius: splashBorderRadius,
-        ) {
+    super.splashBorderRadius,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'tabs': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'tabs',
+            init: tabs,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i6.TabController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'isScrollable': _i2.BuilderArg<bool>(
+            name: 'isScrollable',
+            init: isScrollable,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'automaticIndicatorColorAdjustment': _i2.BuilderArg<bool>(
+            name: 'automaticIndicatorColorAdjustment',
+            init: automaticIndicatorColorAdjustment,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'indicatorWeight': _i2.BuilderArg<double>(
+            name: 'indicatorWeight',
+            init: indicatorWeight,
+            isNamed: true,
+            defaultValue: 2.0,
+          ),
+          'indicatorPadding': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'indicatorPadding',
+            init: indicatorPadding,
+            isNamed: true,
+            defaultValue: _i8.EdgeInsets.zero,
+          ),
+          'indicator': _i2.BuilderArg<_i9.Decoration?>(
+            name: 'indicator',
+            init: indicator,
+            isNamed: true,
+          ),
+          'indicatorSize': _i2.BuilderArg<_i1.TabBarIndicatorSize?>(
+            name: 'indicatorSize',
+            init: indicatorSize,
+            isNamed: true,
+          ),
+          'dividerColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'dividerColor',
+            init: dividerColor,
+            isNamed: true,
+          ),
+          'labelColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'labelColor',
+            init: labelColor,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'labelPadding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'labelPadding',
+            init: labelPadding,
+            isNamed: true,
+          ),
+          'unselectedLabelColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'unselectedLabelColor',
+            init: unselectedLabelColor,
+            isNamed: true,
+          ),
+          'unselectedLabelStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'unselectedLabelStyle',
+            init: unselectedLabelStyle,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
+          ),
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i14.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i15.ValueChanged<int>?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i16.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'splashFactory': _i2.BuilderArg<_i17.InteractiveInkFeatureFactory?>(
+            name: 'splashFactory',
+            init: splashFactory,
+            isNamed: true,
+          ),
+          'splashBorderRadius': _i2.BuilderArg<_i18.BorderRadius?>(
+            name: 'splashBorderRadius',
+            init: splashBorderRadius,
+            isNamed: true,
+          ),
+        },
+        super.secondary() {
     mateBuilderName = 'TabBar.secondary';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBar$Mate.secondary(
@@ -491,137 +571,10 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
           splashFactory: p.get('splashFactory').build(),
           splashBorderRadius: p.get('splashBorderRadius').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'tabs',
-      tabs,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'isScrollable',
-      isScrollable,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'automaticIndicatorColorAdjustment',
-      automaticIndicatorColorAdjustment,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'indicatorWeight',
-      indicatorWeight,
-      isNamed: true,
-      defaultValue: 2.0,
-    );
-    mateUse(
-      'indicatorPadding',
-      indicatorPadding,
-      isNamed: true,
-      defaultValue: _i8.EdgeInsets.zero,
-    );
-    mateUse(
-      'indicator',
-      indicator,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorSize',
-      indicatorSize,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerColor',
-      dividerColor,
-      isNamed: true,
-    );
-    mateUse(
-      'labelColor',
-      labelColor,
-      isNamed: true,
-    );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'labelPadding',
-      labelPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelColor',
-      unselectedLabelColor,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelStyle',
-      unselectedLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i12.DragStartBehavior.start,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'splashFactory',
-      splashFactory,
-      isNamed: true,
-    );
-    mateUse(
-      'splashBorderRadius',
-      splashBorderRadius,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TabBarView extends StatefulWidget
@@ -629,34 +582,66 @@ class TabBarView$Mate extends _i1.TabBarView with _i2.Mate {
   /// TabBarView TabBarView({Key? key, required List<Widget> children, TabController? controller, ScrollPhysics? physics, DragStartBehavior dragStartBehavior = DragStartBehavior.start, double viewportFraction = 1.0, Clip clipBehavior = Clip.hardEdge})
   TabBarView$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {TabController? controller} , default:none
-    _i6.TabController? controller,
+    super.controller,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i16.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i11.DragStartBehavior dragStartBehavior = _i12.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {double viewportFraction = 1.0} , default:processed=DoubleLiteralImpl
-    double viewportFraction = 1.0,
+    super.viewportFraction,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i7.Clip clipBehavior = _i7.Clip.hardEdge,
-  }) : super(
-          key: key,
-          children: children,
-          controller: controller,
-          physics: physics,
-          dragStartBehavior: dragStartBehavior,
-          viewportFraction: viewportFraction,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i6.TabController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i16.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
+          ),
+          'viewportFraction': _i2.BuilderArg<double>(
+            name: 'viewportFraction',
+            init: viewportFraction,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i7.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'TabBarView';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabBarView$Mate(
@@ -668,45 +653,10 @@ class TabBarView$Mate extends _i1.TabBarView with _i2.Mate {
           viewportFraction: p.get('viewportFraction').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i12.DragStartBehavior.start,
-    );
-    mateUse(
-      'viewportFraction',
-      viewportFraction,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i7.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TabPageSelectorIndicator extends StatelessWidget
@@ -714,26 +664,48 @@ class TabPageSelectorIndicator$Mate extends _i1.TabPageSelectorIndicator with _i
   /// TabPageSelectorIndicator TabPageSelectorIndicator({Key? key, required Color backgroundColor, required Color borderColor, required double size, BorderStyle borderStyle = BorderStyle.solid})
   TabPageSelectorIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Color backgroundColor} , default:none
-    required _i7.Color backgroundColor,
+    required super.backgroundColor,
 
     /// optionalParameters: {required Color borderColor} , default:none
-    required _i7.Color borderColor,
+    required super.borderColor,
 
     /// optionalParameters: {required double size} , default:none
-    required double size,
+    required super.size,
 
     /// optionalParameters: {BorderStyle borderStyle = BorderStyle.solid} , default:processed=PrefixedIdentifierImpl
-    _i19.BorderStyle borderStyle = _i8.BorderStyle.solid,
-  }) : super(
-          key: key,
-          backgroundColor: backgroundColor,
-          borderColor: borderColor,
-          size: size,
-          borderStyle: borderStyle,
-        ) {
+    super.borderStyle,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'borderColor': _i2.BuilderArg<_i7.Color>(
+            name: 'borderColor',
+            init: borderColor,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<double>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'borderStyle': _i2.BuilderArg<_i19.BorderStyle>(
+            name: 'borderStyle',
+            init: borderStyle,
+            isNamed: true,
+            defaultValue: _i8.BorderStyle.solid,
+          ),
+        },
+        super() {
     mateBuilderName = 'TabPageSelectorIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelectorIndicator$Mate(
@@ -743,33 +715,10 @@ class TabPageSelectorIndicator$Mate extends _i1.TabPageSelectorIndicator with _i
           size: p.get('size').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'borderColor',
-      borderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'borderStyle',
-      borderStyle,
-      isNamed: true,
-      defaultValue: _i8.BorderStyle.solid,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TabPageSelector extends StatelessWidget
@@ -777,30 +726,56 @@ class TabPageSelector$Mate extends _i1.TabPageSelector with _i2.Mate {
   /// TabPageSelector TabPageSelector({Key? key, TabController? controller, double indicatorSize = 12.0, Color? color, Color? selectedColor, BorderStyle? borderStyle})
   TabPageSelector$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {TabController? controller} , default:none
-    _i6.TabController? controller,
+    super.controller,
 
     /// optionalParameters: {double indicatorSize = 12.0} , default:processed=DoubleLiteralImpl
-    double indicatorSize = 12.0,
+    super.indicatorSize,
 
     /// optionalParameters: {Color? color} , default:none
-    _i7.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i7.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {BorderStyle? borderStyle} , default:none
-    _i19.BorderStyle? borderStyle,
-  }) : super(
-          key: key,
-          controller: controller,
-          indicatorSize: indicatorSize,
-          color: color,
-          selectedColor: selectedColor,
-          borderStyle: borderStyle,
-        ) {
+    super.borderStyle,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i6.TabController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'indicatorSize': _i2.BuilderArg<double>(
+            name: 'indicatorSize',
+            init: indicatorSize,
+            isNamed: true,
+            defaultValue: 12.0,
+          ),
+          'color': _i2.BuilderArg<_i7.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'borderStyle': _i2.BuilderArg<_i19.BorderStyle?>(
+            name: 'borderStyle',
+            init: borderStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TabPageSelector';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TabPageSelector$Mate(
@@ -811,36 +786,8 @@ class TabPageSelector$Mate extends _i1.TabPageSelector with _i2.Mate {
           selectedColor: p.get('selectedColor').build(),
           borderStyle: p.get('borderStyle').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorSize',
-      indicatorSize,
-      isNamed: true,
-      defaultValue: 12.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'borderStyle',
-      borderStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

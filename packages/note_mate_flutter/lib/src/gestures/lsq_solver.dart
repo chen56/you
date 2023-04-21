@@ -10,17 +10,22 @@ class PolynomialFit$Mate extends _i1.PolynomialFit with _i2.Mate {
   PolynomialFit$Mate(
 
       /// requiredParameters: int degree
-      int degree)
-      : super(degree) {
+      super.degree)
+      : mateParams = {
+          'degree': _i2.BuilderArg<int>(
+            name: 'degree',
+            init: degree,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'PolynomialFit';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => PolynomialFit$Mate(p.get('degree').value);
-    mateUse(
-      'degree',
-      degree,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LeastSquaresSolver
@@ -28,18 +33,31 @@ class LeastSquaresSolver$Mate extends _i1.LeastSquaresSolver with _i2.Mate {
   /// LeastSquaresSolver LeastSquaresSolver(List<double> x, List<double> y, List<double> w)
   LeastSquaresSolver$Mate(
     /// requiredParameters: List<double> x
-    List<double> x,
+    super.x,
 
     /// requiredParameters: List<double> y
-    List<double> y,
+    super.y,
 
     /// requiredParameters: List<double> w
-    List<double> w,
-  ) : super(
-          x,
-          y,
-          w,
-        ) {
+    super.w,
+  )   : mateParams = {
+          'x': _i2.BuilderArg<List<double>>(
+            name: 'x',
+            init: x,
+            isNamed: false,
+          ),
+          'y': _i2.BuilderArg<List<double>>(
+            name: 'y',
+            init: y,
+            isNamed: false,
+          ),
+          'w': _i2.BuilderArg<List<double>>(
+            name: 'w',
+            init: w,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'LeastSquaresSolver';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => LeastSquaresSolver$Mate(
@@ -47,20 +65,8 @@ class LeastSquaresSolver$Mate extends _i1.LeastSquaresSolver with _i2.Mate {
           p.get('y').value,
           p.get('w').value,
         );
-    mateUse(
-      'x',
-      x,
-      isNamed: false,
-    );
-    mateUse(
-      'y',
-      y,
-      isNamed: false,
-    );
-    mateUse(
-      'w',
-      w,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

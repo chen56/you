@@ -19,126 +19,253 @@ class AppBar$Mate extends _i1.AppBar with _i2.Mate {
   /// AppBar AppBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double toolbarOpacity = 1.0, double bottomOpacity = 1.0, double? toolbarHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false, Clip? clipBehavior})
   AppBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
-    bool automaticallyImplyLeading = true,
+    super.automaticallyImplyLeading,
 
     /// optionalParameters: {Widget? title} , default:none
-    _i4.Widget? title,
+    super.title,
 
     /// optionalParameters: {List<Widget>? actions} , default:none
-    List<_i4.Widget>? actions,
+    super.actions,
 
     /// optionalParameters: {Widget? flexibleSpace} , default:none
-    _i4.Widget? flexibleSpace,
+    super.flexibleSpace,
 
     /// optionalParameters: {PreferredSizeWidget? bottom} , default:none
-    _i5.PreferredSizeWidget? bottom,
+    super.bottom,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {double? scrolledUnderElevation} , default:none
-    double? scrolledUnderElevation,
+    super.scrolledUnderElevation,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.ScrollNotificationPredicate notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i7.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i7.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i8.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i7.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? foregroundColor} , default:none
-    _i7.Color? foregroundColor,
+    super.foregroundColor,
 
     /// optionalParameters: {IconThemeData? iconTheme} , default:none
-    _i9.IconThemeData? iconTheme,
+    super.iconTheme,
 
     /// optionalParameters: {IconThemeData? actionsIconTheme} , default:none
-    _i9.IconThemeData? actionsIconTheme,
+    super.actionsIconTheme,
 
     /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
-    bool primary = true,
+    super.primary,
 
     /// optionalParameters: {bool? centerTitle} , default:none
-    bool? centerTitle,
+    super.centerTitle,
 
     /// optionalParameters: {bool excludeHeaderSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeHeaderSemantics = false,
+    super.excludeHeaderSemantics,
 
     /// optionalParameters: {double? titleSpacing} , default:none
-    double? titleSpacing,
+    super.titleSpacing,
 
     /// optionalParameters: {double toolbarOpacity = 1.0} , default:processed=DoubleLiteralImpl
-    double toolbarOpacity = 1.0,
+    super.toolbarOpacity,
 
     /// optionalParameters: {double bottomOpacity = 1.0} , default:processed=DoubleLiteralImpl
-    double bottomOpacity = 1.0,
+    super.bottomOpacity,
 
     /// optionalParameters: {double? toolbarHeight} , default:none
-    double? toolbarHeight,
+    super.toolbarHeight,
 
     /// optionalParameters: {double? leadingWidth} , default:none
-    double? leadingWidth,
+    super.leadingWidth,
 
     /// optionalParameters: {TextStyle? toolbarTextStyle} , default:none
-    _i10.TextStyle? toolbarTextStyle,
+    super.toolbarTextStyle,
 
     /// optionalParameters: {TextStyle? titleTextStyle} , default:none
-    _i10.TextStyle? titleTextStyle,
+    super.titleTextStyle,
 
     /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , default:none
-    _i11.SystemUiOverlayStyle? systemOverlayStyle,
+    super.systemOverlayStyle,
 
     /// optionalParameters: {bool forceMaterialTransparency = false} , default:processed=BooleanLiteralImpl
-    bool forceMaterialTransparency = false,
+    super.forceMaterialTransparency,
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i7.Clip? clipBehavior,
-  }) : super(
-          key: key,
-          leading: leading,
-          automaticallyImplyLeading: automaticallyImplyLeading,
-          title: title,
-          actions: actions,
-          flexibleSpace: flexibleSpace,
-          bottom: bottom,
-          elevation: elevation,
-          scrolledUnderElevation: scrolledUnderElevation,
-          notificationPredicate: notificationPredicate,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          shape: shape,
-          backgroundColor: backgroundColor,
-          foregroundColor: foregroundColor,
-          iconTheme: iconTheme,
-          actionsIconTheme: actionsIconTheme,
-          primary: primary,
-          centerTitle: centerTitle,
-          excludeHeaderSemantics: excludeHeaderSemantics,
-          titleSpacing: titleSpacing,
-          toolbarOpacity: toolbarOpacity,
-          bottomOpacity: bottomOpacity,
-          toolbarHeight: toolbarHeight,
-          leadingWidth: leadingWidth,
-          toolbarTextStyle: toolbarTextStyle,
-          titleTextStyle: titleTextStyle,
-          systemOverlayStyle: systemOverlayStyle,
-          forceMaterialTransparency: forceMaterialTransparency,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'automaticallyImplyLeading': _i2.BuilderArg<bool>(
+            name: 'automaticallyImplyLeading',
+            init: automaticallyImplyLeading,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'flexibleSpace': _i2.BuilderArg<_i4.Widget?>(
+            name: 'flexibleSpace',
+            init: flexibleSpace,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<_i5.PreferredSizeWidget?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'scrolledUnderElevation': _i2.BuilderArg<double?>(
+            name: 'scrolledUnderElevation',
+            init: scrolledUnderElevation,
+            isNamed: true,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'foregroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'actionsIconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'actionsIconTheme',
+            init: actionsIconTheme,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'centerTitle': _i2.BuilderArg<bool?>(
+            name: 'centerTitle',
+            init: centerTitle,
+            isNamed: true,
+          ),
+          'excludeHeaderSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeHeaderSemantics',
+            init: excludeHeaderSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'titleSpacing': _i2.BuilderArg<double?>(
+            name: 'titleSpacing',
+            init: titleSpacing,
+            isNamed: true,
+          ),
+          'toolbarOpacity': _i2.BuilderArg<double>(
+            name: 'toolbarOpacity',
+            init: toolbarOpacity,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'bottomOpacity': _i2.BuilderArg<double>(
+            name: 'bottomOpacity',
+            init: bottomOpacity,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'toolbarHeight': _i2.BuilderArg<double?>(
+            name: 'toolbarHeight',
+            init: toolbarHeight,
+            isNamed: true,
+          ),
+          'leadingWidth': _i2.BuilderArg<double?>(
+            name: 'leadingWidth',
+            init: leadingWidth,
+            isNamed: true,
+          ),
+          'toolbarTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'toolbarTextStyle',
+            init: toolbarTextStyle,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'systemOverlayStyle': _i2.BuilderArg<_i11.SystemUiOverlayStyle?>(
+            name: 'systemOverlayStyle',
+            init: systemOverlayStyle,
+            isNamed: true,
+          ),
+          'forceMaterialTransparency': _i2.BuilderArg<bool>(
+            name: 'forceMaterialTransparency',
+            init: forceMaterialTransparency,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AppBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AppBar$Mate(
@@ -173,163 +300,10 @@ class AppBar$Mate extends _i1.AppBar with _i2.Mate {
           forceMaterialTransparency: p.get('forceMaterialTransparency').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'automaticallyImplyLeading',
-      automaticallyImplyLeading,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'flexibleSpace',
-      flexibleSpace,
-      isNamed: true,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'scrolledUnderElevation',
-      scrolledUnderElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundColor',
-      foregroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'actionsIconTheme',
-      actionsIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'centerTitle',
-      centerTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'excludeHeaderSemantics',
-      excludeHeaderSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'titleSpacing',
-      titleSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarOpacity',
-      toolbarOpacity,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'bottomOpacity',
-      bottomOpacity,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'toolbarHeight',
-      toolbarHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingWidth',
-      leadingWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarTextStyle',
-      toolbarTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'titleTextStyle',
-      titleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'systemOverlayStyle',
-      systemOverlayStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'forceMaterialTransparency',
-      forceMaterialTransparency,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverAppBar extends StatefulWidget
@@ -337,150 +311,305 @@ class SliverAppBar$Mate extends _i1.SliverAppBar with _i2.Mate {
   /// SliverAppBar SliverAppBar({Key? key, Widget? leading, bool automaticallyImplyLeading = true, Widget? title, List<Widget>? actions, Widget? flexibleSpace, PreferredSizeWidget? bottom, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, bool forceElevated = false, Color? backgroundColor, Color? foregroundColor, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool primary = true, bool? centerTitle, bool excludeHeaderSemantics = false, double? titleSpacing, double? collapsedHeight, double? expandedHeight, bool floating = false, bool pinned = false, bool snap = false, bool stretch = false, double stretchTriggerOffset = 100.0, Future<void> Function()? onStretchTrigger, ShapeBorder? shape, double toolbarHeight = kToolbarHeight, double? leadingWidth, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle, bool forceMaterialTransparency = false, Clip? clipBehavior})
   SliverAppBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {bool automaticallyImplyLeading = true} , default:processed=BooleanLiteralImpl
-    bool automaticallyImplyLeading = true,
+    super.automaticallyImplyLeading,
 
     /// optionalParameters: {Widget? title} , default:none
-    _i4.Widget? title,
+    super.title,
 
     /// optionalParameters: {List<Widget>? actions} , default:none
-    List<_i4.Widget>? actions,
+    super.actions,
 
     /// optionalParameters: {Widget? flexibleSpace} , default:none
-    _i4.Widget? flexibleSpace,
+    super.flexibleSpace,
 
     /// optionalParameters: {PreferredSizeWidget? bottom} , default:none
-    _i5.PreferredSizeWidget? bottom,
+    super.bottom,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {double? scrolledUnderElevation} , default:none
-    double? scrolledUnderElevation,
+    super.scrolledUnderElevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i7.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i7.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {bool forceElevated = false} , default:processed=BooleanLiteralImpl
-    bool forceElevated = false,
+    super.forceElevated,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i7.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? foregroundColor} , default:none
-    _i7.Color? foregroundColor,
+    super.foregroundColor,
 
     /// optionalParameters: {IconThemeData? iconTheme} , default:none
-    _i9.IconThemeData? iconTheme,
+    super.iconTheme,
 
     /// optionalParameters: {IconThemeData? actionsIconTheme} , default:none
-    _i9.IconThemeData? actionsIconTheme,
+    super.actionsIconTheme,
 
     /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
-    bool primary = true,
+    super.primary,
 
     /// optionalParameters: {bool? centerTitle} , default:none
-    bool? centerTitle,
+    super.centerTitle,
 
     /// optionalParameters: {bool excludeHeaderSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeHeaderSemantics = false,
+    super.excludeHeaderSemantics,
 
     /// optionalParameters: {double? titleSpacing} , default:none
-    double? titleSpacing,
+    super.titleSpacing,
 
     /// optionalParameters: {double? collapsedHeight} , default:none
-    double? collapsedHeight,
+    super.collapsedHeight,
 
     /// optionalParameters: {double? expandedHeight} , default:none
-    double? expandedHeight,
+    super.expandedHeight,
 
     /// optionalParameters: {bool floating = false} , default:processed=BooleanLiteralImpl
-    bool floating = false,
+    super.floating,
 
     /// optionalParameters: {bool pinned = false} , default:processed=BooleanLiteralImpl
-    bool pinned = false,
+    super.pinned,
 
     /// optionalParameters: {bool snap = false} , default:processed=BooleanLiteralImpl
-    bool snap = false,
+    super.snap,
 
     /// optionalParameters: {bool stretch = false} , default:processed=BooleanLiteralImpl
-    bool stretch = false,
+    super.stretch,
 
     /// optionalParameters: {double stretchTriggerOffset = 100.0} , default:processed=DoubleLiteralImpl
-    double stretchTriggerOffset = 100.0,
+    super.stretchTriggerOffset,
 
     /// optionalParameters: {Future<void> Function()? onStretchTrigger} , default:none
-    _i12.AsyncCallback? onStretchTrigger,
+    super.onStretchTrigger,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i8.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {double toolbarHeight = kToolbarHeight} , default:unprocessed=SimpleIdentifierImpl
-    required double toolbarHeight,
+    super.toolbarHeight,
 
     /// optionalParameters: {double? leadingWidth} , default:none
-    double? leadingWidth,
+    super.leadingWidth,
 
     /// optionalParameters: {TextStyle? toolbarTextStyle} , default:none
-    _i10.TextStyle? toolbarTextStyle,
+    super.toolbarTextStyle,
 
     /// optionalParameters: {TextStyle? titleTextStyle} , default:none
-    _i10.TextStyle? titleTextStyle,
+    super.titleTextStyle,
 
     /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , default:none
-    _i11.SystemUiOverlayStyle? systemOverlayStyle,
+    super.systemOverlayStyle,
 
     /// optionalParameters: {bool forceMaterialTransparency = false} , default:processed=BooleanLiteralImpl
-    bool forceMaterialTransparency = false,
+    super.forceMaterialTransparency,
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i7.Clip? clipBehavior,
-  }) : super(
-          key: key,
-          leading: leading,
-          automaticallyImplyLeading: automaticallyImplyLeading,
-          title: title,
-          actions: actions,
-          flexibleSpace: flexibleSpace,
-          bottom: bottom,
-          elevation: elevation,
-          scrolledUnderElevation: scrolledUnderElevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          forceElevated: forceElevated,
-          backgroundColor: backgroundColor,
-          foregroundColor: foregroundColor,
-          iconTheme: iconTheme,
-          actionsIconTheme: actionsIconTheme,
-          primary: primary,
-          centerTitle: centerTitle,
-          excludeHeaderSemantics: excludeHeaderSemantics,
-          titleSpacing: titleSpacing,
-          collapsedHeight: collapsedHeight,
-          expandedHeight: expandedHeight,
-          floating: floating,
-          pinned: pinned,
-          snap: snap,
-          stretch: stretch,
-          stretchTriggerOffset: stretchTriggerOffset,
-          onStretchTrigger: onStretchTrigger,
-          shape: shape,
-          toolbarHeight: toolbarHeight,
-          leadingWidth: leadingWidth,
-          toolbarTextStyle: toolbarTextStyle,
-          titleTextStyle: titleTextStyle,
-          systemOverlayStyle: systemOverlayStyle,
-          forceMaterialTransparency: forceMaterialTransparency,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'automaticallyImplyLeading': _i2.BuilderArg<bool>(
+            name: 'automaticallyImplyLeading',
+            init: automaticallyImplyLeading,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'flexibleSpace': _i2.BuilderArg<_i4.Widget?>(
+            name: 'flexibleSpace',
+            init: flexibleSpace,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<_i5.PreferredSizeWidget?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'scrolledUnderElevation': _i2.BuilderArg<double?>(
+            name: 'scrolledUnderElevation',
+            init: scrolledUnderElevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'forceElevated': _i2.BuilderArg<bool>(
+            name: 'forceElevated',
+            init: forceElevated,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'foregroundColor': _i2.BuilderArg<_i7.Color?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'actionsIconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'actionsIconTheme',
+            init: actionsIconTheme,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'centerTitle': _i2.BuilderArg<bool?>(
+            name: 'centerTitle',
+            init: centerTitle,
+            isNamed: true,
+          ),
+          'excludeHeaderSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeHeaderSemantics',
+            init: excludeHeaderSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'titleSpacing': _i2.BuilderArg<double?>(
+            name: 'titleSpacing',
+            init: titleSpacing,
+            isNamed: true,
+          ),
+          'collapsedHeight': _i2.BuilderArg<double?>(
+            name: 'collapsedHeight',
+            init: collapsedHeight,
+            isNamed: true,
+          ),
+          'expandedHeight': _i2.BuilderArg<double?>(
+            name: 'expandedHeight',
+            init: expandedHeight,
+            isNamed: true,
+          ),
+          'floating': _i2.BuilderArg<bool>(
+            name: 'floating',
+            init: floating,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'pinned': _i2.BuilderArg<bool>(
+            name: 'pinned',
+            init: pinned,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'snap': _i2.BuilderArg<bool>(
+            name: 'snap',
+            init: snap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'stretch': _i2.BuilderArg<bool>(
+            name: 'stretch',
+            init: stretch,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'stretchTriggerOffset': _i2.BuilderArg<double>(
+            name: 'stretchTriggerOffset',
+            init: stretchTriggerOffset,
+            isNamed: true,
+            defaultValue: 100.0,
+          ),
+          'onStretchTrigger': _i2.BuilderArg<_i12.AsyncCallback?>(
+            name: 'onStretchTrigger',
+            init: onStretchTrigger,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'toolbarHeight': _i2.BuilderArg<double>(
+            name: 'toolbarHeight',
+            init: toolbarHeight,
+            isNamed: true,
+          ),
+          'leadingWidth': _i2.BuilderArg<double?>(
+            name: 'leadingWidth',
+            init: leadingWidth,
+            isNamed: true,
+          ),
+          'toolbarTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'toolbarTextStyle',
+            init: toolbarTextStyle,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'systemOverlayStyle': _i2.BuilderArg<_i11.SystemUiOverlayStyle?>(
+            name: 'systemOverlayStyle',
+            init: systemOverlayStyle,
+            isNamed: true,
+          ),
+          'forceMaterialTransparency': _i2.BuilderArg<bool>(
+            name: 'forceMaterialTransparency',
+            init: forceMaterialTransparency,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverAppBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SliverAppBar$Mate(
@@ -521,195 +650,8 @@ class SliverAppBar$Mate extends _i1.SliverAppBar with _i2.Mate {
           forceMaterialTransparency: p.get('forceMaterialTransparency').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'automaticallyImplyLeading',
-      automaticallyImplyLeading,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'flexibleSpace',
-      flexibleSpace,
-      isNamed: true,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'scrolledUnderElevation',
-      scrolledUnderElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'forceElevated',
-      forceElevated,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundColor',
-      foregroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'actionsIconTheme',
-      actionsIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'centerTitle',
-      centerTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'excludeHeaderSemantics',
-      excludeHeaderSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'titleSpacing',
-      titleSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedHeight',
-      collapsedHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'expandedHeight',
-      expandedHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'floating',
-      floating,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'pinned',
-      pinned,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'snap',
-      snap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'stretch',
-      stretch,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'stretchTriggerOffset',
-      stretchTriggerOffset,
-      isNamed: true,
-      defaultValue: 100.0,
-    );
-    mateUse(
-      'onStretchTrigger',
-      onStretchTrigger,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarHeight',
-      toolbarHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingWidth',
-      leadingWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarTextStyle',
-      toolbarTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'titleTextStyle',
-      titleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'systemOverlayStyle',
-      systemOverlayStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'forceMaterialTransparency',
-      forceMaterialTransparency,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

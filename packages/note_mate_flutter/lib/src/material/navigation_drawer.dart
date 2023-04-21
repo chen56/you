@@ -14,46 +14,88 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
   /// NavigationDrawer NavigationDrawer({Key? key, required List<Widget> children, Color? backgroundColor, Color? shadowColor, Color? surfaceTintColor, double? elevation, Color? indicatorColor, ShapeBorder? indicatorShape, void Function(int)? onDestinationSelected, int? selectedIndex = 0})
   NavigationDrawer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i5.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i5.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i5.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i5.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
-    _i6.ShapeBorder? indicatorShape,
+    super.indicatorShape,
 
     /// optionalParameters: {void Function(int)? onDestinationSelected} , default:none
-    _i7.ValueChanged<int>? onDestinationSelected,
+    super.onDestinationSelected,
 
     /// optionalParameters: {int? selectedIndex = 0} , default:processed=IntegerLiteralImpl
-    int? selectedIndex = 0,
-  }) : super(
-          key: key,
-          children: children,
-          backgroundColor: backgroundColor,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          elevation: elevation,
-          indicatorColor: indicatorColor,
-          indicatorShape: indicatorShape,
-          onDestinationSelected: onDestinationSelected,
-          selectedIndex: selectedIndex,
-        ) {
+    super.selectedIndex,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorShape': _i2.BuilderArg<_i6.ShapeBorder?>(
+            name: 'indicatorShape',
+            init: indicatorShape,
+            isNamed: true,
+          ),
+          'onDestinationSelected': _i2.BuilderArg<_i7.ValueChanged<int>?>(
+            name: 'onDestinationSelected',
+            init: onDestinationSelected,
+            isNamed: true,
+          ),
+          'selectedIndex': _i2.BuilderArg<int?>(
+            name: 'selectedIndex',
+            init: selectedIndex,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationDrawer';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawer$Mate(
@@ -68,58 +110,10 @@ class NavigationDrawer$Mate extends _i1.NavigationDrawer with _i2.Mate {
           onDestinationSelected: p.get('onDestinationSelected').build(),
           selectedIndex: p.get('selectedIndex').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorShape',
-      indicatorShape,
-      isNamed: true,
-    );
-    mateUse(
-      'onDestinationSelected',
-      onDestinationSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIndex',
-      selectedIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NavigationDrawerDestination extends StatelessWidget
@@ -127,26 +121,47 @@ class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination w
   /// NavigationDrawerDestination NavigationDrawerDestination({Key? key, Color? backgroundColor, required Widget icon, Widget? selectedIcon, required Widget label})
   NavigationDrawerDestination$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i5.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {required Widget icon} , default:none
-    required _i4.Widget icon,
+    required super.icon,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i4.Widget? selectedIcon,
+    super.selectedIcon,
 
     /// optionalParameters: {required Widget label} , default:none
-    required _i4.Widget label,
-  }) : super(
-          key: key,
-          backgroundColor: backgroundColor,
-          icon: icon,
-          selectedIcon: selectedIcon,
-          label: label,
-        ) {
+    required super.label,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'icon': _i2.BuilderArg<_i4.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i4.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i4.Widget>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationDrawerDestination';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationDrawerDestination$Mate(
@@ -156,30 +171,8 @@ class NavigationDrawerDestination$Mate extends _i1.NavigationDrawerDestination w
           selectedIcon: p.get('selectedIcon').build(),
           label: p.get('label').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

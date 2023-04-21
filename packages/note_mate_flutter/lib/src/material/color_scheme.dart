@@ -11,130 +11,255 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
   /// ColorScheme ColorScheme({required Brightness brightness, required Color primary, required Color onPrimary, Color? primaryContainer, Color? onPrimaryContainer, required Color secondary, required Color onSecondary, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, required Color error, required Color onError, Color? errorContainer, Color? onErrorContainer, required Color background, required Color onBackground, required Color surface, required Color onSurface, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant, Color? secondaryVariant})
   ColorScheme$Mate({
     /// optionalParameters: {required Brightness brightness} , default:none
-    required _i3.Brightness brightness,
+    required super.brightness,
 
     /// optionalParameters: {required Color primary} , default:none
-    required _i3.Color primary,
+    required super.primary,
 
     /// optionalParameters: {required Color onPrimary} , default:none
-    required _i3.Color onPrimary,
+    required super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
-    _i3.Color? primaryContainer,
+    super.primaryContainer,
 
     /// optionalParameters: {Color? onPrimaryContainer} , default:none
-    _i3.Color? onPrimaryContainer,
+    super.onPrimaryContainer,
 
     /// optionalParameters: {required Color secondary} , default:none
-    required _i3.Color secondary,
+    required super.secondary,
 
     /// optionalParameters: {required Color onSecondary} , default:none
-    required _i3.Color onSecondary,
+    required super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
-    _i3.Color? secondaryContainer,
+    super.secondaryContainer,
 
     /// optionalParameters: {Color? onSecondaryContainer} , default:none
-    _i3.Color? onSecondaryContainer,
+    super.onSecondaryContainer,
 
     /// optionalParameters: {Color? tertiary} , default:none
-    _i3.Color? tertiary,
+    super.tertiary,
 
     /// optionalParameters: {Color? onTertiary} , default:none
-    _i3.Color? onTertiary,
+    super.onTertiary,
 
     /// optionalParameters: {Color? tertiaryContainer} , default:none
-    _i3.Color? tertiaryContainer,
+    super.tertiaryContainer,
 
     /// optionalParameters: {Color? onTertiaryContainer} , default:none
-    _i3.Color? onTertiaryContainer,
+    super.onTertiaryContainer,
 
     /// optionalParameters: {required Color error} , default:none
-    required _i3.Color error,
+    required super.error,
 
     /// optionalParameters: {required Color onError} , default:none
-    required _i3.Color onError,
+    required super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
-    _i3.Color? errorContainer,
+    super.errorContainer,
 
     /// optionalParameters: {Color? onErrorContainer} , default:none
-    _i3.Color? onErrorContainer,
+    super.onErrorContainer,
 
     /// optionalParameters: {required Color background} , default:none
-    required _i3.Color background,
+    required super.background,
 
     /// optionalParameters: {required Color onBackground} , default:none
-    required _i3.Color onBackground,
+    required super.onBackground,
 
     /// optionalParameters: {required Color surface} , default:none
-    required _i3.Color surface,
+    required super.surface,
 
     /// optionalParameters: {required Color onSurface} , default:none
-    required _i3.Color onSurface,
+    required super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
-    _i3.Color? surfaceVariant,
+    super.surfaceVariant,
 
     /// optionalParameters: {Color? onSurfaceVariant} , default:none
-    _i3.Color? onSurfaceVariant,
+    super.onSurfaceVariant,
 
     /// optionalParameters: {Color? outline} , default:none
-    _i3.Color? outline,
+    super.outline,
 
     /// optionalParameters: {Color? outlineVariant} , default:none
-    _i3.Color? outlineVariant,
+    super.outlineVariant,
 
     /// optionalParameters: {Color? shadow} , default:none
-    _i3.Color? shadow,
+    super.shadow,
 
     /// optionalParameters: {Color? scrim} , default:none
-    _i3.Color? scrim,
+    super.scrim,
 
     /// optionalParameters: {Color? inverseSurface} , default:none
-    _i3.Color? inverseSurface,
+    super.inverseSurface,
 
     /// optionalParameters: {Color? onInverseSurface} , default:none
-    _i3.Color? onInverseSurface,
+    super.onInverseSurface,
 
     /// optionalParameters: {Color? inversePrimary} , default:none
-    _i3.Color? inversePrimary,
+    super.inversePrimary,
 
     /// optionalParameters: {Color? surfaceTint} , default:none
-    _i3.Color? surfaceTint,
-  }) : super(
-          brightness: brightness,
-          primary: primary,
-          onPrimary: onPrimary,
-          primaryContainer: primaryContainer,
-          onPrimaryContainer: onPrimaryContainer,
-          secondary: secondary,
-          onSecondary: onSecondary,
-          secondaryContainer: secondaryContainer,
-          onSecondaryContainer: onSecondaryContainer,
-          tertiary: tertiary,
-          onTertiary: onTertiary,
-          tertiaryContainer: tertiaryContainer,
-          onTertiaryContainer: onTertiaryContainer,
-          error: error,
-          onError: onError,
-          errorContainer: errorContainer,
-          onErrorContainer: onErrorContainer,
-          background: background,
-          onBackground: onBackground,
-          surface: surface,
-          onSurface: onSurface,
-          surfaceVariant: surfaceVariant,
-          onSurfaceVariant: onSurfaceVariant,
-          outline: outline,
-          outlineVariant: outlineVariant,
-          shadow: shadow,
-          scrim: scrim,
-          inverseSurface: inverseSurface,
-          onInverseSurface: onInverseSurface,
-          inversePrimary: inversePrimary,
-          surfaceTint: surfaceTint,
-        ) {
+    super.surfaceTint,
+  })  : mateParams = {
+          'brightness': _i2.BuilderArg<_i3.Brightness>(
+            name: 'brightness',
+            init: brightness,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<_i3.Color>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'onPrimary': _i2.BuilderArg<_i3.Color>(
+            name: 'onPrimary',
+            init: onPrimary,
+            isNamed: true,
+          ),
+          'primaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'primaryContainer',
+            init: primaryContainer,
+            isNamed: true,
+          ),
+          'onPrimaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onPrimaryContainer',
+            init: onPrimaryContainer,
+            isNamed: true,
+          ),
+          'secondary': _i2.BuilderArg<_i3.Color>(
+            name: 'secondary',
+            init: secondary,
+            isNamed: true,
+          ),
+          'onSecondary': _i2.BuilderArg<_i3.Color>(
+            name: 'onSecondary',
+            init: onSecondary,
+            isNamed: true,
+          ),
+          'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'secondaryContainer',
+            init: secondaryContainer,
+            isNamed: true,
+          ),
+          'onSecondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSecondaryContainer',
+            init: onSecondaryContainer,
+            isNamed: true,
+          ),
+          'tertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiary',
+            init: tertiary,
+            isNamed: true,
+          ),
+          'onTertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiary',
+            init: onTertiary,
+            isNamed: true,
+          ),
+          'tertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiaryContainer',
+            init: tertiaryContainer,
+            isNamed: true,
+          ),
+          'onTertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiaryContainer',
+            init: onTertiaryContainer,
+            isNamed: true,
+          ),
+          'error': _i2.BuilderArg<_i3.Color>(
+            name: 'error',
+            init: error,
+            isNamed: true,
+          ),
+          'onError': _i2.BuilderArg<_i3.Color>(
+            name: 'onError',
+            init: onError,
+            isNamed: true,
+          ),
+          'errorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'errorContainer',
+            init: errorContainer,
+            isNamed: true,
+          ),
+          'onErrorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onErrorContainer',
+            init: onErrorContainer,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i3.Color>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+          ),
+          'onBackground': _i2.BuilderArg<_i3.Color>(
+            name: 'onBackground',
+            init: onBackground,
+            isNamed: true,
+          ),
+          'surface': _i2.BuilderArg<_i3.Color>(
+            name: 'surface',
+            init: surface,
+            isNamed: true,
+          ),
+          'onSurface': _i2.BuilderArg<_i3.Color>(
+            name: 'onSurface',
+            init: onSurface,
+            isNamed: true,
+          ),
+          'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceVariant',
+            init: surfaceVariant,
+            isNamed: true,
+          ),
+          'onSurfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSurfaceVariant',
+            init: onSurfaceVariant,
+            isNamed: true,
+          ),
+          'outline': _i2.BuilderArg<_i3.Color?>(
+            name: 'outline',
+            init: outline,
+            isNamed: true,
+          ),
+          'outlineVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'outlineVariant',
+            init: outlineVariant,
+            isNamed: true,
+          ),
+          'shadow': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadow',
+            init: shadow,
+            isNamed: true,
+          ),
+          'scrim': _i2.BuilderArg<_i3.Color?>(
+            name: 'scrim',
+            init: scrim,
+            isNamed: true,
+          ),
+          'inverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'inverseSurface',
+            init: inverseSurface,
+            isNamed: true,
+          ),
+          'onInverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'onInverseSurface',
+            init: onInverseSurface,
+            isNamed: true,
+          ),
+          'inversePrimary': _i2.BuilderArg<_i3.Color?>(
+            name: 'inversePrimary',
+            init: inversePrimary,
+            isNamed: true,
+          ),
+          'surfaceTint': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTint',
+            init: surfaceTint,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ColorScheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate(
@@ -170,290 +295,268 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    mateUse(
-      'brightness',
-      brightness,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimary',
-      onPrimary,
-      isNamed: true,
-    );
-    mateUse(
-      'primaryContainer',
-      primaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimaryContainer',
-      onPrimaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'secondary',
-      secondary,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondary',
-      onSecondary,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryContainer',
-      secondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryContainer',
-      onSecondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiary',
-      tertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiary',
-      onTertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiaryContainer',
-      tertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryContainer',
-      onTertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: true,
-    );
-    mateUse(
-      'onError',
-      onError,
-      isNamed: true,
-    );
-    mateUse(
-      'errorContainer',
-      errorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onErrorContainer',
-      onErrorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-    );
-    mateUse(
-      'onBackground',
-      onBackground,
-      isNamed: true,
-    );
-    mateUse(
-      'surface',
-      surface,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurface',
-      onSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceVariant',
-      surfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurfaceVariant',
-      onSurfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'outline',
-      outline,
-      isNamed: true,
-    );
-    mateUse(
-      'outlineVariant',
-      outlineVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'shadow',
-      shadow,
-      isNamed: true,
-    );
-    mateUse(
-      'scrim',
-      scrim,
-      isNamed: true,
-    );
-    mateUse(
-      'inverseSurface',
-      inverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'onInverseSurface',
-      onInverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'inversePrimary',
-      inversePrimary,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTint',
-      surfaceTint,
-      isNamed: true,
-    );
   }
 
   /// ColorScheme ColorScheme.light({Brightness brightness = Brightness.light, Color primary = const Color(0xff6200ee), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffb00020), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700b3), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.light({
     /// optionalParameters: {Brightness brightness = Brightness.light} , default:processed=PrefixedIdentifierImpl
-    _i3.Brightness brightness = _i3.Brightness.light,
+    super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xff6200ee)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color primary,
+    super.primary,
 
     /// optionalParameters: {Color onPrimary = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onPrimary = _i4.Colors.white,
+    super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
-    _i3.Color? primaryContainer,
+    super.primaryContainer,
 
     /// optionalParameters: {Color? onPrimaryContainer} , default:none
-    _i3.Color? onPrimaryContainer,
+    super.onPrimaryContainer,
 
     /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color secondary,
+    super.secondary,
 
     /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSecondary = _i4.Colors.black,
+    super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
-    _i3.Color? secondaryContainer,
+    super.secondaryContainer,
 
     /// optionalParameters: {Color? onSecondaryContainer} , default:none
-    _i3.Color? onSecondaryContainer,
+    super.onSecondaryContainer,
 
     /// optionalParameters: {Color? tertiary} , default:none
-    _i3.Color? tertiary,
+    super.tertiary,
 
     /// optionalParameters: {Color? onTertiary} , default:none
-    _i3.Color? onTertiary,
+    super.onTertiary,
 
     /// optionalParameters: {Color? tertiaryContainer} , default:none
-    _i3.Color? tertiaryContainer,
+    super.tertiaryContainer,
 
     /// optionalParameters: {Color? onTertiaryContainer} , default:none
-    _i3.Color? onTertiaryContainer,
+    super.onTertiaryContainer,
 
     /// optionalParameters: {Color error = const Color(0xffb00020)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color error,
+    super.error,
 
     /// optionalParameters: {Color onError = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onError = _i4.Colors.white,
+    super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
-    _i3.Color? errorContainer,
+    super.errorContainer,
 
     /// optionalParameters: {Color? onErrorContainer} , default:none
-    _i3.Color? onErrorContainer,
+    super.onErrorContainer,
 
     /// optionalParameters: {Color background = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color background = _i4.Colors.white,
+    super.background,
 
     /// optionalParameters: {Color onBackground = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onBackground = _i4.Colors.black,
+    super.onBackground,
 
     /// optionalParameters: {Color surface = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color surface = _i4.Colors.white,
+    super.surface,
 
     /// optionalParameters: {Color onSurface = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSurface = _i4.Colors.black,
+    super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
-    _i3.Color? surfaceVariant,
+    super.surfaceVariant,
 
     /// optionalParameters: {Color? onSurfaceVariant} , default:none
-    _i3.Color? onSurfaceVariant,
+    super.onSurfaceVariant,
 
     /// optionalParameters: {Color? outline} , default:none
-    _i3.Color? outline,
+    super.outline,
 
     /// optionalParameters: {Color? outlineVariant} , default:none
-    _i3.Color? outlineVariant,
+    super.outlineVariant,
 
     /// optionalParameters: {Color? shadow} , default:none
-    _i3.Color? shadow,
+    super.shadow,
 
     /// optionalParameters: {Color? scrim} , default:none
-    _i3.Color? scrim,
+    super.scrim,
 
     /// optionalParameters: {Color? inverseSurface} , default:none
-    _i3.Color? inverseSurface,
+    super.inverseSurface,
 
     /// optionalParameters: {Color? onInverseSurface} , default:none
-    _i3.Color? onInverseSurface,
+    super.onInverseSurface,
 
     /// optionalParameters: {Color? inversePrimary} , default:none
-    _i3.Color? inversePrimary,
+    super.inversePrimary,
 
     /// optionalParameters: {Color? surfaceTint} , default:none
-    _i3.Color? surfaceTint,
-  }) : super.light(
-          brightness: brightness,
-          primary: primary,
-          onPrimary: onPrimary,
-          primaryContainer: primaryContainer,
-          onPrimaryContainer: onPrimaryContainer,
-          secondary: secondary,
-          onSecondary: onSecondary,
-          secondaryContainer: secondaryContainer,
-          onSecondaryContainer: onSecondaryContainer,
-          tertiary: tertiary,
-          onTertiary: onTertiary,
-          tertiaryContainer: tertiaryContainer,
-          onTertiaryContainer: onTertiaryContainer,
-          error: error,
-          onError: onError,
-          errorContainer: errorContainer,
-          onErrorContainer: onErrorContainer,
-          background: background,
-          onBackground: onBackground,
-          surface: surface,
-          onSurface: onSurface,
-          surfaceVariant: surfaceVariant,
-          onSurfaceVariant: onSurfaceVariant,
-          outline: outline,
-          outlineVariant: outlineVariant,
-          shadow: shadow,
-          scrim: scrim,
-          inverseSurface: inverseSurface,
-          onInverseSurface: onInverseSurface,
-          inversePrimary: inversePrimary,
-          surfaceTint: surfaceTint,
-        ) {
+    super.surfaceTint,
+  })  : mateParams = {
+          'brightness': _i2.BuilderArg<_i3.Brightness>(
+            name: 'brightness',
+            init: brightness,
+            isNamed: true,
+            defaultValue: _i3.Brightness.light,
+          ),
+          'primary': _i2.BuilderArg<_i3.Color>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'onPrimary': _i2.BuilderArg<_i3.Color>(
+            name: 'onPrimary',
+            init: onPrimary,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'primaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'primaryContainer',
+            init: primaryContainer,
+            isNamed: true,
+          ),
+          'onPrimaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onPrimaryContainer',
+            init: onPrimaryContainer,
+            isNamed: true,
+          ),
+          'secondary': _i2.BuilderArg<_i3.Color>(
+            name: 'secondary',
+            init: secondary,
+            isNamed: true,
+          ),
+          'onSecondary': _i2.BuilderArg<_i3.Color>(
+            name: 'onSecondary',
+            init: onSecondary,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'secondaryContainer',
+            init: secondaryContainer,
+            isNamed: true,
+          ),
+          'onSecondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSecondaryContainer',
+            init: onSecondaryContainer,
+            isNamed: true,
+          ),
+          'tertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiary',
+            init: tertiary,
+            isNamed: true,
+          ),
+          'onTertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiary',
+            init: onTertiary,
+            isNamed: true,
+          ),
+          'tertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiaryContainer',
+            init: tertiaryContainer,
+            isNamed: true,
+          ),
+          'onTertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiaryContainer',
+            init: onTertiaryContainer,
+            isNamed: true,
+          ),
+          'error': _i2.BuilderArg<_i3.Color>(
+            name: 'error',
+            init: error,
+            isNamed: true,
+          ),
+          'onError': _i2.BuilderArg<_i3.Color>(
+            name: 'onError',
+            init: onError,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'errorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'errorContainer',
+            init: errorContainer,
+            isNamed: true,
+          ),
+          'onErrorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onErrorContainer',
+            init: onErrorContainer,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i3.Color>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'onBackground': _i2.BuilderArg<_i3.Color>(
+            name: 'onBackground',
+            init: onBackground,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'surface': _i2.BuilderArg<_i3.Color>(
+            name: 'surface',
+            init: surface,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'onSurface': _i2.BuilderArg<_i3.Color>(
+            name: 'onSurface',
+            init: onSurface,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceVariant',
+            init: surfaceVariant,
+            isNamed: true,
+          ),
+          'onSurfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSurfaceVariant',
+            init: onSurfaceVariant,
+            isNamed: true,
+          ),
+          'outline': _i2.BuilderArg<_i3.Color?>(
+            name: 'outline',
+            init: outline,
+            isNamed: true,
+          ),
+          'outlineVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'outlineVariant',
+            init: outlineVariant,
+            isNamed: true,
+          ),
+          'shadow': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadow',
+            init: shadow,
+            isNamed: true,
+          ),
+          'scrim': _i2.BuilderArg<_i3.Color?>(
+            name: 'scrim',
+            init: scrim,
+            isNamed: true,
+          ),
+          'inverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'inverseSurface',
+            init: inverseSurface,
+            isNamed: true,
+          ),
+          'onInverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'onInverseSurface',
+            init: onInverseSurface,
+            isNamed: true,
+          ),
+          'inversePrimary': _i2.BuilderArg<_i3.Color?>(
+            name: 'inversePrimary',
+            init: inversePrimary,
+            isNamed: true,
+          ),
+          'surfaceTint': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTint',
+            init: surfaceTint,
+            isNamed: true,
+          ),
+        },
+        super.light() {
     mateBuilderName = 'ColorScheme.light';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.light(
@@ -489,298 +592,266 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    mateUse(
-      'brightness',
-      brightness,
-      isNamed: true,
-      defaultValue: _i3.Brightness.light,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimary',
-      onPrimary,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'primaryContainer',
-      primaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimaryContainer',
-      onPrimaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'secondary',
-      secondary,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondary',
-      onSecondary,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'secondaryContainer',
-      secondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryContainer',
-      onSecondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiary',
-      tertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiary',
-      onTertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiaryContainer',
-      tertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryContainer',
-      onTertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: true,
-    );
-    mateUse(
-      'onError',
-      onError,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'errorContainer',
-      errorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onErrorContainer',
-      onErrorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'onBackground',
-      onBackground,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'surface',
-      surface,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'onSurface',
-      onSurface,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'surfaceVariant',
-      surfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurfaceVariant',
-      onSurfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'outline',
-      outline,
-      isNamed: true,
-    );
-    mateUse(
-      'outlineVariant',
-      outlineVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'shadow',
-      shadow,
-      isNamed: true,
-    );
-    mateUse(
-      'scrim',
-      scrim,
-      isNamed: true,
-    );
-    mateUse(
-      'inverseSurface',
-      inverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'onInverseSurface',
-      onInverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'inversePrimary',
-      inversePrimary,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTint',
-      surfaceTint,
-      isNamed: true,
-    );
   }
 
   /// ColorScheme ColorScheme.dark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffbb86fc), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffcf6679), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700B3), Color? secondaryVariant = const Color(0xff03dac6)})
   ColorScheme$Mate.dark({
     /// optionalParameters: {Brightness brightness = Brightness.dark} , default:processed=PrefixedIdentifierImpl
-    _i3.Brightness brightness = _i3.Brightness.dark,
+    super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xffbb86fc)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color primary,
+    super.primary,
 
     /// optionalParameters: {Color onPrimary = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onPrimary = _i4.Colors.black,
+    super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
-    _i3.Color? primaryContainer,
+    super.primaryContainer,
 
     /// optionalParameters: {Color? onPrimaryContainer} , default:none
-    _i3.Color? onPrimaryContainer,
+    super.onPrimaryContainer,
 
     /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color secondary,
+    super.secondary,
 
     /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSecondary = _i4.Colors.black,
+    super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
-    _i3.Color? secondaryContainer,
+    super.secondaryContainer,
 
     /// optionalParameters: {Color? onSecondaryContainer} , default:none
-    _i3.Color? onSecondaryContainer,
+    super.onSecondaryContainer,
 
     /// optionalParameters: {Color? tertiary} , default:none
-    _i3.Color? tertiary,
+    super.tertiary,
 
     /// optionalParameters: {Color? onTertiary} , default:none
-    _i3.Color? onTertiary,
+    super.onTertiary,
 
     /// optionalParameters: {Color? tertiaryContainer} , default:none
-    _i3.Color? tertiaryContainer,
+    super.tertiaryContainer,
 
     /// optionalParameters: {Color? onTertiaryContainer} , default:none
-    _i3.Color? onTertiaryContainer,
+    super.onTertiaryContainer,
 
     /// optionalParameters: {Color error = const Color(0xffcf6679)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color error,
+    super.error,
 
     /// optionalParameters: {Color onError = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onError = _i4.Colors.black,
+    super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
-    _i3.Color? errorContainer,
+    super.errorContainer,
 
     /// optionalParameters: {Color? onErrorContainer} , default:none
-    _i3.Color? onErrorContainer,
+    super.onErrorContainer,
 
     /// optionalParameters: {Color background = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color background,
+    super.background,
 
     /// optionalParameters: {Color onBackground = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onBackground = _i4.Colors.white,
+    super.onBackground,
 
     /// optionalParameters: {Color surface = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color surface,
+    super.surface,
 
     /// optionalParameters: {Color onSurface = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSurface = _i4.Colors.white,
+    super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
-    _i3.Color? surfaceVariant,
+    super.surfaceVariant,
 
     /// optionalParameters: {Color? onSurfaceVariant} , default:none
-    _i3.Color? onSurfaceVariant,
+    super.onSurfaceVariant,
 
     /// optionalParameters: {Color? outline} , default:none
-    _i3.Color? outline,
+    super.outline,
 
     /// optionalParameters: {Color? outlineVariant} , default:none
-    _i3.Color? outlineVariant,
+    super.outlineVariant,
 
     /// optionalParameters: {Color? shadow} , default:none
-    _i3.Color? shadow,
+    super.shadow,
 
     /// optionalParameters: {Color? scrim} , default:none
-    _i3.Color? scrim,
+    super.scrim,
 
     /// optionalParameters: {Color? inverseSurface} , default:none
-    _i3.Color? inverseSurface,
+    super.inverseSurface,
 
     /// optionalParameters: {Color? onInverseSurface} , default:none
-    _i3.Color? onInverseSurface,
+    super.onInverseSurface,
 
     /// optionalParameters: {Color? inversePrimary} , default:none
-    _i3.Color? inversePrimary,
+    super.inversePrimary,
 
     /// optionalParameters: {Color? surfaceTint} , default:none
-    _i3.Color? surfaceTint,
-  }) : super.dark(
-          brightness: brightness,
-          primary: primary,
-          onPrimary: onPrimary,
-          primaryContainer: primaryContainer,
-          onPrimaryContainer: onPrimaryContainer,
-          secondary: secondary,
-          onSecondary: onSecondary,
-          secondaryContainer: secondaryContainer,
-          onSecondaryContainer: onSecondaryContainer,
-          tertiary: tertiary,
-          onTertiary: onTertiary,
-          tertiaryContainer: tertiaryContainer,
-          onTertiaryContainer: onTertiaryContainer,
-          error: error,
-          onError: onError,
-          errorContainer: errorContainer,
-          onErrorContainer: onErrorContainer,
-          background: background,
-          onBackground: onBackground,
-          surface: surface,
-          onSurface: onSurface,
-          surfaceVariant: surfaceVariant,
-          onSurfaceVariant: onSurfaceVariant,
-          outline: outline,
-          outlineVariant: outlineVariant,
-          shadow: shadow,
-          scrim: scrim,
-          inverseSurface: inverseSurface,
-          onInverseSurface: onInverseSurface,
-          inversePrimary: inversePrimary,
-          surfaceTint: surfaceTint,
-        ) {
+    super.surfaceTint,
+  })  : mateParams = {
+          'brightness': _i2.BuilderArg<_i3.Brightness>(
+            name: 'brightness',
+            init: brightness,
+            isNamed: true,
+            defaultValue: _i3.Brightness.dark,
+          ),
+          'primary': _i2.BuilderArg<_i3.Color>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'onPrimary': _i2.BuilderArg<_i3.Color>(
+            name: 'onPrimary',
+            init: onPrimary,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'primaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'primaryContainer',
+            init: primaryContainer,
+            isNamed: true,
+          ),
+          'onPrimaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onPrimaryContainer',
+            init: onPrimaryContainer,
+            isNamed: true,
+          ),
+          'secondary': _i2.BuilderArg<_i3.Color>(
+            name: 'secondary',
+            init: secondary,
+            isNamed: true,
+          ),
+          'onSecondary': _i2.BuilderArg<_i3.Color>(
+            name: 'onSecondary',
+            init: onSecondary,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'secondaryContainer',
+            init: secondaryContainer,
+            isNamed: true,
+          ),
+          'onSecondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSecondaryContainer',
+            init: onSecondaryContainer,
+            isNamed: true,
+          ),
+          'tertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiary',
+            init: tertiary,
+            isNamed: true,
+          ),
+          'onTertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiary',
+            init: onTertiary,
+            isNamed: true,
+          ),
+          'tertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiaryContainer',
+            init: tertiaryContainer,
+            isNamed: true,
+          ),
+          'onTertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiaryContainer',
+            init: onTertiaryContainer,
+            isNamed: true,
+          ),
+          'error': _i2.BuilderArg<_i3.Color>(
+            name: 'error',
+            init: error,
+            isNamed: true,
+          ),
+          'onError': _i2.BuilderArg<_i3.Color>(
+            name: 'onError',
+            init: onError,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'errorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'errorContainer',
+            init: errorContainer,
+            isNamed: true,
+          ),
+          'onErrorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onErrorContainer',
+            init: onErrorContainer,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i3.Color>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+          ),
+          'onBackground': _i2.BuilderArg<_i3.Color>(
+            name: 'onBackground',
+            init: onBackground,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'surface': _i2.BuilderArg<_i3.Color>(
+            name: 'surface',
+            init: surface,
+            isNamed: true,
+          ),
+          'onSurface': _i2.BuilderArg<_i3.Color>(
+            name: 'onSurface',
+            init: onSurface,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceVariant',
+            init: surfaceVariant,
+            isNamed: true,
+          ),
+          'onSurfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSurfaceVariant',
+            init: onSurfaceVariant,
+            isNamed: true,
+          ),
+          'outline': _i2.BuilderArg<_i3.Color?>(
+            name: 'outline',
+            init: outline,
+            isNamed: true,
+          ),
+          'outlineVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'outlineVariant',
+            init: outlineVariant,
+            isNamed: true,
+          ),
+          'shadow': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadow',
+            init: shadow,
+            isNamed: true,
+          ),
+          'scrim': _i2.BuilderArg<_i3.Color?>(
+            name: 'scrim',
+            init: scrim,
+            isNamed: true,
+          ),
+          'inverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'inverseSurface',
+            init: inverseSurface,
+            isNamed: true,
+          ),
+          'onInverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'onInverseSurface',
+            init: onInverseSurface,
+            isNamed: true,
+          ),
+          'inversePrimary': _i2.BuilderArg<_i3.Color?>(
+            name: 'inversePrimary',
+            init: inversePrimary,
+            isNamed: true,
+          ),
+          'surfaceTint': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTint',
+            init: surfaceTint,
+            isNamed: true,
+          ),
+        },
+        super.dark() {
     mateBuilderName = 'ColorScheme.dark';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.dark(
@@ -816,296 +887,268 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    mateUse(
-      'brightness',
-      brightness,
-      isNamed: true,
-      defaultValue: _i3.Brightness.dark,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimary',
-      onPrimary,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'primaryContainer',
-      primaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimaryContainer',
-      onPrimaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'secondary',
-      secondary,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondary',
-      onSecondary,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'secondaryContainer',
-      secondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryContainer',
-      onSecondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiary',
-      tertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiary',
-      onTertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiaryContainer',
-      tertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryContainer',
-      onTertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: true,
-    );
-    mateUse(
-      'onError',
-      onError,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'errorContainer',
-      errorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onErrorContainer',
-      onErrorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-    );
-    mateUse(
-      'onBackground',
-      onBackground,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'surface',
-      surface,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurface',
-      onSurface,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'surfaceVariant',
-      surfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurfaceVariant',
-      onSurfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'outline',
-      outline,
-      isNamed: true,
-    );
-    mateUse(
-      'outlineVariant',
-      outlineVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'shadow',
-      shadow,
-      isNamed: true,
-    );
-    mateUse(
-      'scrim',
-      scrim,
-      isNamed: true,
-    );
-    mateUse(
-      'inverseSurface',
-      inverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'onInverseSurface',
-      onInverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'inversePrimary',
-      inversePrimary,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTint',
-      surfaceTint,
-      isNamed: true,
-    );
   }
 
   /// ColorScheme ColorScheme.highContrastLight({Brightness brightness = Brightness.light, Color primary = const Color(0xff0000ba), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff790000), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff000088), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.highContrastLight({
     /// optionalParameters: {Brightness brightness = Brightness.light} , default:processed=PrefixedIdentifierImpl
-    _i3.Brightness brightness = _i3.Brightness.light,
+    super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xff0000ba)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color primary,
+    super.primary,
 
     /// optionalParameters: {Color onPrimary = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onPrimary = _i4.Colors.white,
+    super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
-    _i3.Color? primaryContainer,
+    super.primaryContainer,
 
     /// optionalParameters: {Color? onPrimaryContainer} , default:none
-    _i3.Color? onPrimaryContainer,
+    super.onPrimaryContainer,
 
     /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color secondary,
+    super.secondary,
 
     /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSecondary = _i4.Colors.black,
+    super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
-    _i3.Color? secondaryContainer,
+    super.secondaryContainer,
 
     /// optionalParameters: {Color? onSecondaryContainer} , default:none
-    _i3.Color? onSecondaryContainer,
+    super.onSecondaryContainer,
 
     /// optionalParameters: {Color? tertiary} , default:none
-    _i3.Color? tertiary,
+    super.tertiary,
 
     /// optionalParameters: {Color? onTertiary} , default:none
-    _i3.Color? onTertiary,
+    super.onTertiary,
 
     /// optionalParameters: {Color? tertiaryContainer} , default:none
-    _i3.Color? tertiaryContainer,
+    super.tertiaryContainer,
 
     /// optionalParameters: {Color? onTertiaryContainer} , default:none
-    _i3.Color? onTertiaryContainer,
+    super.onTertiaryContainer,
 
     /// optionalParameters: {Color error = const Color(0xff790000)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color error,
+    super.error,
 
     /// optionalParameters: {Color onError = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onError = _i4.Colors.white,
+    super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
-    _i3.Color? errorContainer,
+    super.errorContainer,
 
     /// optionalParameters: {Color? onErrorContainer} , default:none
-    _i3.Color? onErrorContainer,
+    super.onErrorContainer,
 
     /// optionalParameters: {Color background = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color background = _i4.Colors.white,
+    super.background,
 
     /// optionalParameters: {Color onBackground = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onBackground = _i4.Colors.black,
+    super.onBackground,
 
     /// optionalParameters: {Color surface = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color surface = _i4.Colors.white,
+    super.surface,
 
     /// optionalParameters: {Color onSurface = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSurface = _i4.Colors.black,
+    super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
-    _i3.Color? surfaceVariant,
+    super.surfaceVariant,
 
     /// optionalParameters: {Color? onSurfaceVariant} , default:none
-    _i3.Color? onSurfaceVariant,
+    super.onSurfaceVariant,
 
     /// optionalParameters: {Color? outline} , default:none
-    _i3.Color? outline,
+    super.outline,
 
     /// optionalParameters: {Color? outlineVariant} , default:none
-    _i3.Color? outlineVariant,
+    super.outlineVariant,
 
     /// optionalParameters: {Color? shadow} , default:none
-    _i3.Color? shadow,
+    super.shadow,
 
     /// optionalParameters: {Color? scrim} , default:none
-    _i3.Color? scrim,
+    super.scrim,
 
     /// optionalParameters: {Color? inverseSurface} , default:none
-    _i3.Color? inverseSurface,
+    super.inverseSurface,
 
     /// optionalParameters: {Color? onInverseSurface} , default:none
-    _i3.Color? onInverseSurface,
+    super.onInverseSurface,
 
     /// optionalParameters: {Color? inversePrimary} , default:none
-    _i3.Color? inversePrimary,
+    super.inversePrimary,
 
     /// optionalParameters: {Color? surfaceTint} , default:none
-    _i3.Color? surfaceTint,
-  }) : super.highContrastLight(
-          brightness: brightness,
-          primary: primary,
-          onPrimary: onPrimary,
-          primaryContainer: primaryContainer,
-          onPrimaryContainer: onPrimaryContainer,
-          secondary: secondary,
-          onSecondary: onSecondary,
-          secondaryContainer: secondaryContainer,
-          onSecondaryContainer: onSecondaryContainer,
-          tertiary: tertiary,
-          onTertiary: onTertiary,
-          tertiaryContainer: tertiaryContainer,
-          onTertiaryContainer: onTertiaryContainer,
-          error: error,
-          onError: onError,
-          errorContainer: errorContainer,
-          onErrorContainer: onErrorContainer,
-          background: background,
-          onBackground: onBackground,
-          surface: surface,
-          onSurface: onSurface,
-          surfaceVariant: surfaceVariant,
-          onSurfaceVariant: onSurfaceVariant,
-          outline: outline,
-          outlineVariant: outlineVariant,
-          shadow: shadow,
-          scrim: scrim,
-          inverseSurface: inverseSurface,
-          onInverseSurface: onInverseSurface,
-          inversePrimary: inversePrimary,
-          surfaceTint: surfaceTint,
-        ) {
+    super.surfaceTint,
+  })  : mateParams = {
+          'brightness': _i2.BuilderArg<_i3.Brightness>(
+            name: 'brightness',
+            init: brightness,
+            isNamed: true,
+            defaultValue: _i3.Brightness.light,
+          ),
+          'primary': _i2.BuilderArg<_i3.Color>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'onPrimary': _i2.BuilderArg<_i3.Color>(
+            name: 'onPrimary',
+            init: onPrimary,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'primaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'primaryContainer',
+            init: primaryContainer,
+            isNamed: true,
+          ),
+          'onPrimaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onPrimaryContainer',
+            init: onPrimaryContainer,
+            isNamed: true,
+          ),
+          'secondary': _i2.BuilderArg<_i3.Color>(
+            name: 'secondary',
+            init: secondary,
+            isNamed: true,
+          ),
+          'onSecondary': _i2.BuilderArg<_i3.Color>(
+            name: 'onSecondary',
+            init: onSecondary,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'secondaryContainer',
+            init: secondaryContainer,
+            isNamed: true,
+          ),
+          'onSecondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSecondaryContainer',
+            init: onSecondaryContainer,
+            isNamed: true,
+          ),
+          'tertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiary',
+            init: tertiary,
+            isNamed: true,
+          ),
+          'onTertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiary',
+            init: onTertiary,
+            isNamed: true,
+          ),
+          'tertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiaryContainer',
+            init: tertiaryContainer,
+            isNamed: true,
+          ),
+          'onTertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiaryContainer',
+            init: onTertiaryContainer,
+            isNamed: true,
+          ),
+          'error': _i2.BuilderArg<_i3.Color>(
+            name: 'error',
+            init: error,
+            isNamed: true,
+          ),
+          'onError': _i2.BuilderArg<_i3.Color>(
+            name: 'onError',
+            init: onError,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'errorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'errorContainer',
+            init: errorContainer,
+            isNamed: true,
+          ),
+          'onErrorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onErrorContainer',
+            init: onErrorContainer,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i3.Color>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'onBackground': _i2.BuilderArg<_i3.Color>(
+            name: 'onBackground',
+            init: onBackground,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'surface': _i2.BuilderArg<_i3.Color>(
+            name: 'surface',
+            init: surface,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'onSurface': _i2.BuilderArg<_i3.Color>(
+            name: 'onSurface',
+            init: onSurface,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceVariant',
+            init: surfaceVariant,
+            isNamed: true,
+          ),
+          'onSurfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSurfaceVariant',
+            init: onSurfaceVariant,
+            isNamed: true,
+          ),
+          'outline': _i2.BuilderArg<_i3.Color?>(
+            name: 'outline',
+            init: outline,
+            isNamed: true,
+          ),
+          'outlineVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'outlineVariant',
+            init: outlineVariant,
+            isNamed: true,
+          ),
+          'shadow': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadow',
+            init: shadow,
+            isNamed: true,
+          ),
+          'scrim': _i2.BuilderArg<_i3.Color?>(
+            name: 'scrim',
+            init: scrim,
+            isNamed: true,
+          ),
+          'inverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'inverseSurface',
+            init: inverseSurface,
+            isNamed: true,
+          ),
+          'onInverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'onInverseSurface',
+            init: onInverseSurface,
+            isNamed: true,
+          ),
+          'inversePrimary': _i2.BuilderArg<_i3.Color?>(
+            name: 'inversePrimary',
+            init: inversePrimary,
+            isNamed: true,
+          ),
+          'surfaceTint': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTint',
+            init: surfaceTint,
+            isNamed: true,
+          ),
+        },
+        super.highContrastLight() {
     mateBuilderName = 'ColorScheme.highContrastLight';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.highContrastLight(
@@ -1141,298 +1184,266 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    mateUse(
-      'brightness',
-      brightness,
-      isNamed: true,
-      defaultValue: _i3.Brightness.light,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimary',
-      onPrimary,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'primaryContainer',
-      primaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimaryContainer',
-      onPrimaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'secondary',
-      secondary,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondary',
-      onSecondary,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'secondaryContainer',
-      secondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryContainer',
-      onSecondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiary',
-      tertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiary',
-      onTertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiaryContainer',
-      tertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryContainer',
-      onTertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: true,
-    );
-    mateUse(
-      'onError',
-      onError,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'errorContainer',
-      errorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onErrorContainer',
-      onErrorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'onBackground',
-      onBackground,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'surface',
-      surface,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'onSurface',
-      onSurface,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'surfaceVariant',
-      surfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurfaceVariant',
-      onSurfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'outline',
-      outline,
-      isNamed: true,
-    );
-    mateUse(
-      'outlineVariant',
-      outlineVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'shadow',
-      shadow,
-      isNamed: true,
-    );
-    mateUse(
-      'scrim',
-      scrim,
-      isNamed: true,
-    );
-    mateUse(
-      'inverseSurface',
-      inverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'onInverseSurface',
-      onInverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'inversePrimary',
-      inversePrimary,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTint',
-      surfaceTint,
-      isNamed: true,
-    );
   }
 
   /// ColorScheme ColorScheme.highContrastDark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffefb7ff), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff9b374d), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xffbe9eff), Color? secondaryVariant = const Color(0xff66fff9)})
   ColorScheme$Mate.highContrastDark({
     /// optionalParameters: {Brightness brightness = Brightness.dark} , default:processed=PrefixedIdentifierImpl
-    _i3.Brightness brightness = _i3.Brightness.dark,
+    super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xffefb7ff)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color primary,
+    super.primary,
 
     /// optionalParameters: {Color onPrimary = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onPrimary = _i4.Colors.black,
+    super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
-    _i3.Color? primaryContainer,
+    super.primaryContainer,
 
     /// optionalParameters: {Color? onPrimaryContainer} , default:none
-    _i3.Color? onPrimaryContainer,
+    super.onPrimaryContainer,
 
     /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color secondary,
+    super.secondary,
 
     /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSecondary = _i4.Colors.black,
+    super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
-    _i3.Color? secondaryContainer,
+    super.secondaryContainer,
 
     /// optionalParameters: {Color? onSecondaryContainer} , default:none
-    _i3.Color? onSecondaryContainer,
+    super.onSecondaryContainer,
 
     /// optionalParameters: {Color? tertiary} , default:none
-    _i3.Color? tertiary,
+    super.tertiary,
 
     /// optionalParameters: {Color? onTertiary} , default:none
-    _i3.Color? onTertiary,
+    super.onTertiary,
 
     /// optionalParameters: {Color? tertiaryContainer} , default:none
-    _i3.Color? tertiaryContainer,
+    super.tertiaryContainer,
 
     /// optionalParameters: {Color? onTertiaryContainer} , default:none
-    _i3.Color? onTertiaryContainer,
+    super.onTertiaryContainer,
 
     /// optionalParameters: {Color error = const Color(0xff9b374d)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color error,
+    super.error,
 
     /// optionalParameters: {Color onError = Colors.black} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onError = _i4.Colors.black,
+    super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
-    _i3.Color? errorContainer,
+    super.errorContainer,
 
     /// optionalParameters: {Color? onErrorContainer} , default:none
-    _i3.Color? onErrorContainer,
+    super.onErrorContainer,
 
     /// optionalParameters: {Color background = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color background,
+    super.background,
 
     /// optionalParameters: {Color onBackground = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onBackground = _i4.Colors.white,
+    super.onBackground,
 
     /// optionalParameters: {Color surface = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color surface,
+    super.surface,
 
     /// optionalParameters: {Color onSurface = Colors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color onSurface = _i4.Colors.white,
+    super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
-    _i3.Color? surfaceVariant,
+    super.surfaceVariant,
 
     /// optionalParameters: {Color? onSurfaceVariant} , default:none
-    _i3.Color? onSurfaceVariant,
+    super.onSurfaceVariant,
 
     /// optionalParameters: {Color? outline} , default:none
-    _i3.Color? outline,
+    super.outline,
 
     /// optionalParameters: {Color? outlineVariant} , default:none
-    _i3.Color? outlineVariant,
+    super.outlineVariant,
 
     /// optionalParameters: {Color? shadow} , default:none
-    _i3.Color? shadow,
+    super.shadow,
 
     /// optionalParameters: {Color? scrim} , default:none
-    _i3.Color? scrim,
+    super.scrim,
 
     /// optionalParameters: {Color? inverseSurface} , default:none
-    _i3.Color? inverseSurface,
+    super.inverseSurface,
 
     /// optionalParameters: {Color? onInverseSurface} , default:none
-    _i3.Color? onInverseSurface,
+    super.onInverseSurface,
 
     /// optionalParameters: {Color? inversePrimary} , default:none
-    _i3.Color? inversePrimary,
+    super.inversePrimary,
 
     /// optionalParameters: {Color? surfaceTint} , default:none
-    _i3.Color? surfaceTint,
-  }) : super.highContrastDark(
-          brightness: brightness,
-          primary: primary,
-          onPrimary: onPrimary,
-          primaryContainer: primaryContainer,
-          onPrimaryContainer: onPrimaryContainer,
-          secondary: secondary,
-          onSecondary: onSecondary,
-          secondaryContainer: secondaryContainer,
-          onSecondaryContainer: onSecondaryContainer,
-          tertiary: tertiary,
-          onTertiary: onTertiary,
-          tertiaryContainer: tertiaryContainer,
-          onTertiaryContainer: onTertiaryContainer,
-          error: error,
-          onError: onError,
-          errorContainer: errorContainer,
-          onErrorContainer: onErrorContainer,
-          background: background,
-          onBackground: onBackground,
-          surface: surface,
-          onSurface: onSurface,
-          surfaceVariant: surfaceVariant,
-          onSurfaceVariant: onSurfaceVariant,
-          outline: outline,
-          outlineVariant: outlineVariant,
-          shadow: shadow,
-          scrim: scrim,
-          inverseSurface: inverseSurface,
-          onInverseSurface: onInverseSurface,
-          inversePrimary: inversePrimary,
-          surfaceTint: surfaceTint,
-        ) {
+    super.surfaceTint,
+  })  : mateParams = {
+          'brightness': _i2.BuilderArg<_i3.Brightness>(
+            name: 'brightness',
+            init: brightness,
+            isNamed: true,
+            defaultValue: _i3.Brightness.dark,
+          ),
+          'primary': _i2.BuilderArg<_i3.Color>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+          ),
+          'onPrimary': _i2.BuilderArg<_i3.Color>(
+            name: 'onPrimary',
+            init: onPrimary,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'primaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'primaryContainer',
+            init: primaryContainer,
+            isNamed: true,
+          ),
+          'onPrimaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onPrimaryContainer',
+            init: onPrimaryContainer,
+            isNamed: true,
+          ),
+          'secondary': _i2.BuilderArg<_i3.Color>(
+            name: 'secondary',
+            init: secondary,
+            isNamed: true,
+          ),
+          'onSecondary': _i2.BuilderArg<_i3.Color>(
+            name: 'onSecondary',
+            init: onSecondary,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'secondaryContainer',
+            init: secondaryContainer,
+            isNamed: true,
+          ),
+          'onSecondaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSecondaryContainer',
+            init: onSecondaryContainer,
+            isNamed: true,
+          ),
+          'tertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiary',
+            init: tertiary,
+            isNamed: true,
+          ),
+          'onTertiary': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiary',
+            init: onTertiary,
+            isNamed: true,
+          ),
+          'tertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'tertiaryContainer',
+            init: tertiaryContainer,
+            isNamed: true,
+          ),
+          'onTertiaryContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onTertiaryContainer',
+            init: onTertiaryContainer,
+            isNamed: true,
+          ),
+          'error': _i2.BuilderArg<_i3.Color>(
+            name: 'error',
+            init: error,
+            isNamed: true,
+          ),
+          'onError': _i2.BuilderArg<_i3.Color>(
+            name: 'onError',
+            init: onError,
+            isNamed: true,
+            defaultValue: _i4.Colors.black,
+          ),
+          'errorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'errorContainer',
+            init: errorContainer,
+            isNamed: true,
+          ),
+          'onErrorContainer': _i2.BuilderArg<_i3.Color?>(
+            name: 'onErrorContainer',
+            init: onErrorContainer,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i3.Color>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+          ),
+          'onBackground': _i2.BuilderArg<_i3.Color>(
+            name: 'onBackground',
+            init: onBackground,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'surface': _i2.BuilderArg<_i3.Color>(
+            name: 'surface',
+            init: surface,
+            isNamed: true,
+          ),
+          'onSurface': _i2.BuilderArg<_i3.Color>(
+            name: 'onSurface',
+            init: onSurface,
+            isNamed: true,
+            defaultValue: _i4.Colors.white,
+          ),
+          'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceVariant',
+            init: surfaceVariant,
+            isNamed: true,
+          ),
+          'onSurfaceVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'onSurfaceVariant',
+            init: onSurfaceVariant,
+            isNamed: true,
+          ),
+          'outline': _i2.BuilderArg<_i3.Color?>(
+            name: 'outline',
+            init: outline,
+            isNamed: true,
+          ),
+          'outlineVariant': _i2.BuilderArg<_i3.Color?>(
+            name: 'outlineVariant',
+            init: outlineVariant,
+            isNamed: true,
+          ),
+          'shadow': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadow',
+            init: shadow,
+            isNamed: true,
+          ),
+          'scrim': _i2.BuilderArg<_i3.Color?>(
+            name: 'scrim',
+            init: scrim,
+            isNamed: true,
+          ),
+          'inverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'inverseSurface',
+            init: inverseSurface,
+            isNamed: true,
+          ),
+          'onInverseSurface': _i2.BuilderArg<_i3.Color?>(
+            name: 'onInverseSurface',
+            init: onInverseSurface,
+            isNamed: true,
+          ),
+          'inversePrimary': _i2.BuilderArg<_i3.Color?>(
+            name: 'inversePrimary',
+            init: inversePrimary,
+            isNamed: true,
+          ),
+          'surfaceTint': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTint',
+            init: surfaceTint,
+            isNamed: true,
+          ),
+        },
+        super.highContrastDark() {
     mateBuilderName = 'ColorScheme.highContrastDark';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ColorScheme$Mate.highContrastDark(
@@ -1468,166 +1479,8 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
           inversePrimary: p.get('inversePrimary').build(),
           surfaceTint: p.get('surfaceTint').build(),
         );
-    mateUse(
-      'brightness',
-      brightness,
-      isNamed: true,
-      defaultValue: _i3.Brightness.dark,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimary',
-      onPrimary,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'primaryContainer',
-      primaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onPrimaryContainer',
-      onPrimaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'secondary',
-      secondary,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondary',
-      onSecondary,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'secondaryContainer',
-      secondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryContainer',
-      onSecondaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiary',
-      tertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiary',
-      onTertiary,
-      isNamed: true,
-    );
-    mateUse(
-      'tertiaryContainer',
-      tertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryContainer',
-      onTertiaryContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: true,
-    );
-    mateUse(
-      'onError',
-      onError,
-      isNamed: true,
-      defaultValue: _i4.Colors.black,
-    );
-    mateUse(
-      'errorContainer',
-      errorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'onErrorContainer',
-      onErrorContainer,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-    );
-    mateUse(
-      'onBackground',
-      onBackground,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'surface',
-      surface,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurface',
-      onSurface,
-      isNamed: true,
-      defaultValue: _i4.Colors.white,
-    );
-    mateUse(
-      'surfaceVariant',
-      surfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'onSurfaceVariant',
-      onSurfaceVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'outline',
-      outline,
-      isNamed: true,
-    );
-    mateUse(
-      'outlineVariant',
-      outlineVariant,
-      isNamed: true,
-    );
-    mateUse(
-      'shadow',
-      shadow,
-      isNamed: true,
-    );
-    mateUse(
-      'scrim',
-      scrim,
-      isNamed: true,
-    );
-    mateUse(
-      'inverseSurface',
-      inverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'onInverseSurface',
-      onInverseSurface,
-      isNamed: true,
-    );
-    mateUse(
-      'inversePrimary',
-      inversePrimary,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTint',
-      surfaceTint,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

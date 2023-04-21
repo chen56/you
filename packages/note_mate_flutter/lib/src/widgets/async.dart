@@ -11,47 +11,60 @@ class AsyncSnapshot$Mate<T> extends _i1.AsyncSnapshot<T> with _i2.Mate {
   /// AsyncSnapshot<T> AsyncSnapshot.withData(ConnectionState state, T data)
   AsyncSnapshot$Mate.withData(
     /// requiredParameters: ConnectionState state
-    _i1.ConnectionState state,
+    super.state,
 
     /// requiredParameters: T data
-    T data,
-  ) : super.withData(
-          state,
-          data,
-        ) {
+    super.data,
+  )   : mateParams = {
+          'state': _i2.BuilderArg<_i1.ConnectionState>(
+            name: 'state',
+            init: state,
+            isNamed: false,
+          ),
+          'data': _i2.BuilderArg<T>(
+            name: 'data',
+            init: data,
+            isNamed: false,
+          ),
+        },
+        super.withData() {
     mateBuilderName = 'AsyncSnapshot.withData';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AsyncSnapshot$Mate<T>.withData(
           p.get('state').value,
           p.get('data').value,
         );
-    mateUse(
-      'state',
-      state,
-      isNamed: false,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: false,
-    );
   }
 
   /// AsyncSnapshot<T> AsyncSnapshot.withError(ConnectionState state, Object error, [StackTrace stackTrace = StackTrace.empty])
   AsyncSnapshot$Mate.withError(
     /// requiredParameters: ConnectionState state
-    _i1.ConnectionState state,
+    super.state,
 
     /// requiredParameters: Object error
-    Object error,
+    super.error,
 
     /// requiredParameters: [StackTrace stackTrace = StackTrace.empty]
-    StackTrace stackTrace,
-  ) : super.withError(
-          state,
-          error,
-          stackTrace,
-        ) {
+    super.stackTrace,
+  )   : mateParams = {
+          'state': _i2.BuilderArg<_i1.ConnectionState>(
+            name: 'state',
+            init: state,
+            isNamed: false,
+          ),
+          'error': _i2.BuilderArg<Object>(
+            name: 'error',
+            init: error,
+            isNamed: false,
+          ),
+          'stackTrace': _i2.BuilderArg<StackTrace>(
+            name: 'stackTrace',
+            init: stackTrace,
+            isNamed: false,
+            defaultValue: StackTrace.empty,
+          ),
+        },
+        super.withError() {
     mateBuilderName = 'AsyncSnapshot.withError';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AsyncSnapshot$Mate<T>.withError(
@@ -59,23 +72,10 @@ class AsyncSnapshot$Mate<T> extends _i1.AsyncSnapshot<T> with _i2.Mate {
           p.get('error').value,
           p.get('stackTrace').value,
         );
-    mateUse(
-      'state',
-      state,
-      isNamed: false,
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: false,
-    );
-    mateUse(
-      'stackTrace',
-      stackTrace,
-      isNamed: false,
-      defaultValue: StackTrace.empty,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class StreamBuilder<T> extends StreamBuilderBase<T, AsyncSnapshot<T>>
@@ -83,22 +83,39 @@ class StreamBuilder$Mate<T> extends _i1.StreamBuilder<T> with _i2.Mate {
   /// StreamBuilder<T> StreamBuilder({Key? key, T? initialData, Stream<T>? stream, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   StreamBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {T? initialData} , default:none
-    T? initialData,
+    super.initialData,
 
     /// optionalParameters: {Stream<T>? stream} , default:none
-    _i4.Stream<T>? stream,
+    super.stream,
 
     /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , default:none
-    required _i1.AsyncWidgetBuilder<T> builder,
-  }) : super(
-          key: key,
-          initialData: initialData,
-          stream: stream,
-          builder: builder,
-        ) {
+    required super.builder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialData': _i2.BuilderArg<T?>(
+            name: 'initialData',
+            init: initialData,
+            isNamed: true,
+          ),
+          'stream': _i2.BuilderArg<_i4.Stream<T>?>(
+            name: 'stream',
+            init: stream,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.AsyncWidgetBuilder<T>>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'StreamBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StreamBuilder$Mate<T>(
@@ -107,27 +124,10 @@ class StreamBuilder$Mate<T> extends _i1.StreamBuilder<T> with _i2.Mate {
           stream: p.get('stream').build(),
           builder: p.get('builder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialData',
-      initialData,
-      isNamed: true,
-    );
-    mateUse(
-      'stream',
-      stream,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FutureBuilder<T> extends StatefulWidget
@@ -135,22 +135,39 @@ class FutureBuilder$Mate<T> extends _i1.FutureBuilder<T> with _i2.Mate {
   /// FutureBuilder<T> FutureBuilder({Key? key, Future<T>? future, T? initialData, required Widget Function(BuildContext, AsyncSnapshot<T>) builder})
   FutureBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Future<T>? future} , default:none
-    _i4.Future<T>? future,
+    super.future,
 
     /// optionalParameters: {T? initialData} , default:none
-    T? initialData,
+    super.initialData,
 
     /// optionalParameters: {required Widget Function(BuildContext, AsyncSnapshot<T>) builder} , default:none
-    required _i1.AsyncWidgetBuilder<T> builder,
-  }) : super(
-          key: key,
-          future: future,
-          initialData: initialData,
-          builder: builder,
-        ) {
+    required super.builder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'future': _i2.BuilderArg<_i4.Future<T>?>(
+            name: 'future',
+            init: future,
+            isNamed: true,
+          ),
+          'initialData': _i2.BuilderArg<T?>(
+            name: 'initialData',
+            init: initialData,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.AsyncWidgetBuilder<T>>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FutureBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FutureBuilder$Mate<T>(
@@ -159,25 +176,8 @@ class FutureBuilder$Mate<T> extends _i1.FutureBuilder<T> with _i2.Mate {
           initialData: p.get('initialData').build(),
           builder: p.get('builder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'future',
-      future,
-      isNamed: true,
-    );
-    mateUse(
-      'initialData',
-      initialData,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -13,18 +13,32 @@ class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator with _i2.Mate
   /// UnderlineTabIndicator UnderlineTabIndicator({BorderRadius? borderRadius, BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white), EdgeInsetsGeometry insets = EdgeInsets.zero})
   UnderlineTabIndicator$Mate({
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i3.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.BorderSide borderSide,
+    super.borderSide,
 
     /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.EdgeInsetsGeometry insets = _i6.EdgeInsets.zero,
-  }) : super(
-          borderRadius: borderRadius,
-          borderSide: borderSide,
-          insets: insets,
-        ) {
+    super.insets,
+  })  : mateParams = {
+          'borderRadius': _i2.BuilderArg<_i3.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'borderSide': _i2.BuilderArg<_i4.BorderSide>(
+            name: 'borderSide',
+            init: borderSide,
+            isNamed: true,
+          ),
+          'insets': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'insets',
+            init: insets,
+            isNamed: true,
+            defaultValue: _i6.EdgeInsets.zero,
+          ),
+        },
+        super() {
     mateBuilderName = 'UnderlineTabIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => UnderlineTabIndicator$Mate(
@@ -32,21 +46,8 @@ class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator with _i2.Mate
           borderSide: p.get('borderSide').build(),
           insets: p.get('insets').build(),
         );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'borderSide',
-      borderSide,
-      isNamed: true,
-    );
-    mateUse(
-      'insets',
-      insets,
-      isNamed: true,
-      defaultValue: _i6.EdgeInsets.zero,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

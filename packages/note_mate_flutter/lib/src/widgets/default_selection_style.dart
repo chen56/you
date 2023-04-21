@@ -12,22 +12,39 @@ class DefaultSelectionStyle$Mate extends _i1.DefaultSelectionStyle with _i2.Mate
   /// DefaultSelectionStyle DefaultSelectionStyle({Key? key, Color? cursorColor, Color? selectionColor, required Widget child})
   DefaultSelectionStyle$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? cursorColor} , default:none
-    _i4.Color? cursorColor,
+    super.cursorColor,
 
     /// optionalParameters: {Color? selectionColor} , default:none
-    _i4.Color? selectionColor,
+    super.selectionColor,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          cursorColor: cursorColor,
-          selectionColor: selectionColor,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'cursorColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'cursorColor',
+            init: cursorColor,
+            isNamed: true,
+          ),
+          'selectionColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'selectionColor',
+            init: selectionColor,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DefaultSelectionStyle';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultSelectionStyle$Mate(
@@ -36,41 +53,26 @@ class DefaultSelectionStyle$Mate extends _i1.DefaultSelectionStyle with _i2.Mate
           selectionColor: p.get('selectionColor').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'cursorColor',
-      cursorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionColor',
-      selectionColor,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// DefaultSelectionStyle DefaultSelectionStyle.fallback({Key? key})
   DefaultSelectionStyle$Mate.fallback(
       {
       /// optionalParameters: {Key? key} , default:none
-      _i3.Key? key})
-      : super.fallback(key: key) {
+      super.key})
+      : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          )
+        },
+        super.fallback() {
     mateBuilderName = 'DefaultSelectionStyle.fallback';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultSelectionStyle$Mate.fallback(key: p.get('key').build());
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

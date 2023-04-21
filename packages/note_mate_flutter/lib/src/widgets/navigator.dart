@@ -15,31 +15,33 @@ class RouteSettings$Mate extends _i1.RouteSettings with _i2.Mate {
   /// RouteSettings RouteSettings({String? name, Object? arguments})
   RouteSettings$Mate({
     /// optionalParameters: {String? name} , default:none
-    String? name,
+    super.name,
 
     /// optionalParameters: {Object? arguments} , default:none
-    Object? arguments,
-  }) : super(
-          name: name,
-          arguments: arguments,
-        ) {
+    super.arguments,
+  })  : mateParams = {
+          'name': _i2.BuilderArg<String?>(
+            name: 'name',
+            init: name,
+            isNamed: true,
+          ),
+          'arguments': _i2.BuilderArg<Object?>(
+            name: 'arguments',
+            init: arguments,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RouteSettings';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RouteSettings$Mate(
           name: p.get('name').build(),
           arguments: p.get('arguments').build(),
         );
-    mateUse(
-      'name',
-      name,
-      isNamed: true,
-    );
-    mateUse(
-      'arguments',
-      arguments,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class HeroControllerScope extends InheritedWidget
@@ -47,18 +49,31 @@ class HeroControllerScope$Mate extends _i1.HeroControllerScope with _i2.Mate {
   /// HeroControllerScope HeroControllerScope({Key? key, required HeroController controller, required Widget child})
   HeroControllerScope$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required HeroController controller} , default:none
-    required _i4.HeroController controller,
+    required super.controller,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          controller: controller,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i4.HeroController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'HeroControllerScope';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => HeroControllerScope$Mate(
@@ -66,51 +81,38 @@ class HeroControllerScope$Mate extends _i1.HeroControllerScope with _i2.Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// HeroControllerScope HeroControllerScope.none({Key? key, required Widget child})
   HeroControllerScope$Mate.none({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super.none(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.none() {
     mateBuilderName = 'HeroControllerScope.none';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => HeroControllerScope$Mate.none(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Navigator extends StatefulWidget
@@ -118,62 +120,123 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
   /// Navigator Navigator({Key? key, List<Page<dynamic>> pages = const <Page<dynamic>>[], bool Function(Route<dynamic>, dynamic)? onPopPage, String? initialRoute, List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, TransitionDelegate<dynamic> transitionDelegate = const DefaultTransitionDelegate<dynamic>(), bool reportsRouteUpdateToEngine = false, Clip clipBehavior = Clip.hardEdge, List<NavigatorObserver> observers = const <NavigatorObserver>[], bool requestFocus = true, String? restorationScopeId, TraversalEdgeBehavior routeTraversalEdgeBehavior = kDefaultRouteTraversalEdgeBehavior})
   Navigator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {List<Page<dynamic>> pages = const <Page<dynamic>>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i1.Page<dynamic>> pages,
+    super.pages,
 
     /// optionalParameters: {bool Function(Route<dynamic>, dynamic)? onPopPage} , default:none
-    _i1.PopPageCallback? onPopPage,
+    super.onPopPage,
 
     /// optionalParameters: {String? initialRoute} , default:none
-    String? initialRoute,
+    super.initialRoute,
 
     /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , default:processed=PrefixedIdentifierImpl
-    _i1.RouteListFactory onGenerateInitialRoutes = _i6.Navigator.defaultGenerateInitialRoutes,
+    super.onGenerateInitialRoutes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
-    _i1.RouteFactory? onGenerateRoute,
+    super.onGenerateRoute,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
-    _i1.RouteFactory? onUnknownRoute,
+    super.onUnknownRoute,
 
     /// optionalParameters: {TransitionDelegate<dynamic> transitionDelegate = const DefaultTransitionDelegate<dynamic>()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i1.TransitionDelegate<dynamic> transitionDelegate,
+    super.transitionDelegate,
 
     /// optionalParameters: {bool reportsRouteUpdateToEngine = false} , default:processed=BooleanLiteralImpl
-    bool reportsRouteUpdateToEngine = false,
+    super.reportsRouteUpdateToEngine,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i7.Clip clipBehavior = _i7.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {List<NavigatorObserver> observers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i1.NavigatorObserver> observers,
+    super.observers,
 
     /// optionalParameters: {bool requestFocus = true} , default:processed=BooleanLiteralImpl
-    bool requestFocus = true,
+    super.requestFocus,
 
     /// optionalParameters: {String? restorationScopeId} , default:none
-    String? restorationScopeId,
+    super.restorationScopeId,
 
     /// optionalParameters: {TraversalEdgeBehavior routeTraversalEdgeBehavior = kDefaultRouteTraversalEdgeBehavior} , default:unprocessed=SimpleIdentifierImpl
-    required _i8.TraversalEdgeBehavior routeTraversalEdgeBehavior,
-  }) : super(
-          key: key,
-          pages: pages,
-          onPopPage: onPopPage,
-          initialRoute: initialRoute,
-          onGenerateInitialRoutes: onGenerateInitialRoutes,
-          onGenerateRoute: onGenerateRoute,
-          onUnknownRoute: onUnknownRoute,
-          transitionDelegate: transitionDelegate,
-          reportsRouteUpdateToEngine: reportsRouteUpdateToEngine,
-          clipBehavior: clipBehavior,
-          observers: observers,
-          requestFocus: requestFocus,
-          restorationScopeId: restorationScopeId,
-          routeTraversalEdgeBehavior: routeTraversalEdgeBehavior,
-        ) {
+    super.routeTraversalEdgeBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'pages': _i2.BuilderArg<List<_i1.Page<dynamic>>>(
+            name: 'pages',
+            init: pages,
+            isNamed: true,
+          ),
+          'onPopPage': _i2.BuilderArg<_i1.PopPageCallback?>(
+            name: 'onPopPage',
+            init: onPopPage,
+            isNamed: true,
+          ),
+          'initialRoute': _i2.BuilderArg<String?>(
+            name: 'initialRoute',
+            init: initialRoute,
+            isNamed: true,
+          ),
+          'onGenerateInitialRoutes': _i2.BuilderArg<_i1.RouteListFactory>(
+            name: 'onGenerateInitialRoutes',
+            init: onGenerateInitialRoutes,
+            isNamed: true,
+            defaultValue: _i6.Navigator.defaultGenerateInitialRoutes,
+          ),
+          'onGenerateRoute': _i2.BuilderArg<_i1.RouteFactory?>(
+            name: 'onGenerateRoute',
+            init: onGenerateRoute,
+            isNamed: true,
+          ),
+          'onUnknownRoute': _i2.BuilderArg<_i1.RouteFactory?>(
+            name: 'onUnknownRoute',
+            init: onUnknownRoute,
+            isNamed: true,
+          ),
+          'transitionDelegate': _i2.BuilderArg<_i1.TransitionDelegate<dynamic>>(
+            name: 'transitionDelegate',
+            init: transitionDelegate,
+            isNamed: true,
+          ),
+          'reportsRouteUpdateToEngine': _i2.BuilderArg<bool>(
+            name: 'reportsRouteUpdateToEngine',
+            init: reportsRouteUpdateToEngine,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i7.Clip.hardEdge,
+          ),
+          'observers': _i2.BuilderArg<List<_i1.NavigatorObserver>>(
+            name: 'observers',
+            init: observers,
+            isNamed: true,
+          ),
+          'requestFocus': _i2.BuilderArg<bool>(
+            name: 'requestFocus',
+            init: requestFocus,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'restorationScopeId': _i2.BuilderArg<String?>(
+            name: 'restorationScopeId',
+            init: restorationScopeId,
+            isNamed: true,
+          ),
+          'routeTraversalEdgeBehavior': _i2.BuilderArg<_i8.TraversalEdgeBehavior>(
+            name: 'routeTraversalEdgeBehavior',
+            init: routeTraversalEdgeBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Navigator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Navigator$Mate(
@@ -192,81 +255,10 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
           restorationScopeId: p.get('restorationScopeId').build(),
           routeTraversalEdgeBehavior: p.get('routeTraversalEdgeBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'pages',
-      pages,
-      isNamed: true,
-    );
-    mateUse(
-      'onPopPage',
-      onPopPage,
-      isNamed: true,
-    );
-    mateUse(
-      'initialRoute',
-      initialRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'onGenerateInitialRoutes',
-      onGenerateInitialRoutes,
-      isNamed: true,
-      defaultValue: _i6.Navigator.defaultGenerateInitialRoutes,
-    );
-    mateUse(
-      'onGenerateRoute',
-      onGenerateRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'onUnknownRoute',
-      onUnknownRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'transitionDelegate',
-      transitionDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'reportsRouteUpdateToEngine',
-      reportsRouteUpdateToEngine,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i7.Clip.hardEdge,
-    );
-    mateUse(
-      'observers',
-      observers,
-      isNamed: true,
-    );
-    mateUse(
-      'requestFocus',
-      requestFocus,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'restorationScopeId',
-      restorationScopeId,
-      isNamed: true,
-    );
-    mateUse(
-      'routeTraversalEdgeBehavior',
-      routeTraversalEdgeBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RestorableRouteFuture<T> extends RestorableProperty<String?>
@@ -274,18 +266,31 @@ class RestorableRouteFuture$Mate<T> extends _i1.RestorableRouteFuture<T> with _i
   /// RestorableRouteFuture<T> RestorableRouteFuture({NavigatorState Function(BuildContext) navigatorFinder = _defaultNavigatorFinder, required String Function(NavigatorState, Object?) onPresent, void Function(T)? onComplete})
   RestorableRouteFuture$Mate({
     /// optionalParameters: {NavigatorState Function(BuildContext) navigatorFinder = _defaultNavigatorFinder} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.NavigatorFinderCallback navigatorFinder,
+    super.navigatorFinder,
 
     /// optionalParameters: {required String Function(NavigatorState, Object?) onPresent} , default:none
-    required _i1.RoutePresentationCallback onPresent,
+    required super.onPresent,
 
     /// optionalParameters: {void Function(T)? onComplete} , default:none
-    _i1.RouteCompletionCallback<T>? onComplete,
-  }) : super(
-          navigatorFinder: navigatorFinder,
-          onPresent: onPresent,
-          onComplete: onComplete,
-        ) {
+    super.onComplete,
+  })  : mateParams = {
+          'navigatorFinder': _i2.BuilderArg<_i1.NavigatorFinderCallback>(
+            name: 'navigatorFinder',
+            init: navigatorFinder,
+            isNamed: true,
+          ),
+          'onPresent': _i2.BuilderArg<_i1.RoutePresentationCallback>(
+            name: 'onPresent',
+            init: onPresent,
+            isNamed: true,
+          ),
+          'onComplete': _i2.BuilderArg<_i1.RouteCompletionCallback<T>?>(
+            name: 'onComplete',
+            init: onComplete,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RestorableRouteFuture';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorableRouteFuture$Mate<T>(
@@ -293,20 +298,8 @@ class RestorableRouteFuture$Mate<T> extends _i1.RestorableRouteFuture<T> with _i
           onPresent: p.get('onPresent').build(),
           onComplete: p.get('onComplete').build(),
         );
-    mateUse(
-      'navigatorFinder',
-      navigatorFinder,
-      isNamed: true,
-    );
-    mateUse(
-      'onPresent',
-      onPresent,
-      isNamed: true,
-    );
-    mateUse(
-      'onComplete',
-      onComplete,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

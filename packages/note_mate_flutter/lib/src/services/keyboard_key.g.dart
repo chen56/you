@@ -10,17 +10,22 @@ class LogicalKeyboardKey$Mate extends _i1.LogicalKeyboardKey with _i2.Mate {
   LogicalKeyboardKey$Mate(
 
       /// requiredParameters: int keyId
-      int keyId)
-      : super(keyId) {
+      super.keyId)
+      : mateParams = {
+          'keyId': _i2.BuilderArg<int>(
+            name: 'keyId',
+            init: keyId,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'LogicalKeyboardKey';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => LogicalKeyboardKey$Mate(p.get('keyId').value);
-    mateUse(
-      'keyId',
-      keyId,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PhysicalKeyboardKey extends KeyboardKey
@@ -29,15 +34,20 @@ class PhysicalKeyboardKey$Mate extends _i1.PhysicalKeyboardKey with _i2.Mate {
   PhysicalKeyboardKey$Mate(
 
       /// requiredParameters: int usbHidUsage
-      int usbHidUsage)
-      : super(usbHidUsage) {
+      super.usbHidUsage)
+      : mateParams = {
+          'usbHidUsage': _i2.BuilderArg<int>(
+            name: 'usbHidUsage',
+            init: usbHidUsage,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'PhysicalKeyboardKey';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => PhysicalKeyboardKey$Mate(p.get('usbHidUsage').value);
-    mateUse(
-      'usbHidUsage',
-      usbHidUsage,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

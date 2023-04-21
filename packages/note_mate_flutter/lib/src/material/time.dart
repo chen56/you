@@ -9,47 +9,51 @@ class TimeOfDay$Mate extends _i1.TimeOfDay with _i2.Mate {
   /// TimeOfDay TimeOfDay({required int hour, required int minute})
   TimeOfDay$Mate({
     /// optionalParameters: {required int hour} , default:none
-    required int hour,
+    required super.hour,
 
     /// optionalParameters: {required int minute} , default:none
-    required int minute,
-  }) : super(
-          hour: hour,
-          minute: minute,
-        ) {
+    required super.minute,
+  })  : mateParams = {
+          'hour': _i2.BuilderArg<int>(
+            name: 'hour',
+            init: hour,
+            isNamed: true,
+          ),
+          'minute': _i2.BuilderArg<int>(
+            name: 'minute',
+            init: minute,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TimeOfDay';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimeOfDay$Mate(
           hour: p.get('hour').build(),
           minute: p.get('minute').build(),
         );
-    mateUse(
-      'hour',
-      hour,
-      isNamed: true,
-    );
-    mateUse(
-      'minute',
-      minute,
-      isNamed: true,
-    );
   }
 
   /// TimeOfDay TimeOfDay.fromDateTime(DateTime time)
   TimeOfDay$Mate.fromDateTime(
 
       /// requiredParameters: DateTime time
-      DateTime time)
-      : super.fromDateTime(time) {
+      super.time)
+      : mateParams = {
+          'time': _i2.BuilderArg<DateTime>(
+            name: 'time',
+            init: time,
+            isNamed: false,
+          )
+        },
+        super.fromDateTime() {
     mateBuilderName = 'TimeOfDay.fromDateTime';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => TimeOfDay$Mate.fromDateTime(p.get('time').value);
-    mateUse(
-      'time',
-      time,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RestorableTimeOfDay extends RestorableValue<TimeOfDay>
@@ -58,15 +62,20 @@ class RestorableTimeOfDay$Mate extends _i1.RestorableTimeOfDay with _i2.Mate {
   RestorableTimeOfDay$Mate(
 
       /// requiredParameters: TimeOfDay defaultValue
-      _i1.TimeOfDay defaultValue)
-      : super(defaultValue) {
+      super.defaultValue)
+      : mateParams = {
+          'defaultValue': _i2.BuilderArg<_i1.TimeOfDay>(
+            name: 'defaultValue',
+            init: defaultValue,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'RestorableTimeOfDay';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RestorableTimeOfDay$Mate(p.get('defaultValue').value);
-    mateUse(
-      'defaultValue',
-      defaultValue,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

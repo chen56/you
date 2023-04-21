@@ -14,46 +14,89 @@ class CupertinoTabBar$Mate extends _i1.CupertinoTabBar with _i2.Mate {
   /// CupertinoTabBar CupertinoTabBar({Key? key, required List<BottomNavigationBarItem> items, void Function(int)? onTap, int currentIndex = 0, Color? backgroundColor, Color? activeColor, Color inactiveColor = _kDefaultTabBarInactiveColor, double iconSize = 30.0, double height = _kTabBarHeight, Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))})
   CupertinoTabBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<BottomNavigationBarItem> items} , default:none
-    required List<_i4.BottomNavigationBarItem> items,
+    required super.items,
 
     /// optionalParameters: {void Function(int)? onTap} , default:none
-    _i5.ValueChanged<int>? onTap,
+    super.onTap,
 
     /// optionalParameters: {int currentIndex = 0} , default:processed=IntegerLiteralImpl
-    int currentIndex = 0,
+    super.currentIndex,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i6.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i6.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color inactiveColor = _kDefaultTabBarInactiveColor} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.Color inactiveColor,
+    super.inactiveColor,
 
     /// optionalParameters: {double iconSize = 30.0} , default:processed=DoubleLiteralImpl
-    double iconSize = 30.0,
+    super.iconSize,
 
     /// optionalParameters: {double height = _kTabBarHeight} , default:unprocessed=SimpleIdentifierImpl
-    required double height,
+    super.height,
 
     /// optionalParameters: {Border? border = const Border(top: BorderSide(color: _kDefaultTabBarBorderColor, width: 0.0))} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i7.Border? border,
-  }) : super(
-          key: key,
-          items: items,
-          onTap: onTap,
-          currentIndex: currentIndex,
-          backgroundColor: backgroundColor,
-          activeColor: activeColor,
-          inactiveColor: inactiveColor,
-          iconSize: iconSize,
-          height: height,
-          border: border,
-        ) {
+    super.border,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'items': _i2.BuilderArg<List<_i4.BottomNavigationBarItem>>(
+            name: 'items',
+            init: items,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i5.ValueChanged<int>?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'currentIndex': _i2.BuilderArg<int>(
+            name: 'currentIndex',
+            init: currentIndex,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'inactiveColor': _i2.BuilderArg<_i6.Color>(
+            name: 'inactiveColor',
+            init: inactiveColor,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+            defaultValue: 30.0,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i7.Border?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoTabBar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTabBar$Mate(
@@ -68,57 +111,8 @@ class CupertinoTabBar$Mate extends _i1.CupertinoTabBar with _i2.Mate {
           height: p.get('height').build(),
           border: p.get('border').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'items',
-      items,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'currentIndex',
-      currentIndex,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveColor',
-      inactiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-      defaultValue: 30.0,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -9,76 +9,87 @@ class RestorationBucket$Mate extends _i1.RestorationBucket with _i2.Mate {
   /// RestorationBucket RestorationBucket.empty({required String restorationId, required Object? debugOwner})
   RestorationBucket$Mate.empty({
     /// optionalParameters: {required String restorationId} , default:none
-    required String restorationId,
+    required super.restorationId,
 
     /// optionalParameters: {required Object? debugOwner} , default:none
-    required Object? debugOwner,
-  }) : super.empty(
-          restorationId: restorationId,
-          debugOwner: debugOwner,
-        ) {
+    required super.debugOwner,
+  })  : mateParams = {
+          'restorationId': _i2.BuilderArg<String>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+        },
+        super.empty() {
     mateBuilderName = 'RestorationBucket.empty';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorationBucket$Mate.empty(
           restorationId: p.get('restorationId').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
   }
 
   /// RestorationBucket RestorationBucket.root({required RestorationManager manager, required Map<Object?, Object?>? rawData})
   RestorationBucket$Mate.root({
     /// optionalParameters: {required RestorationManager manager} , default:none
-    required _i1.RestorationManager manager,
+    required super.manager,
 
     /// optionalParameters: {required Map<Object?, Object?>? rawData} , default:none
-    required Map<Object?, Object?>? rawData,
-  }) : super.root(
-          manager: manager,
-          rawData: rawData,
-        ) {
+    required super.rawData,
+  })  : mateParams = {
+          'manager': _i2.BuilderArg<_i1.RestorationManager>(
+            name: 'manager',
+            init: manager,
+            isNamed: true,
+          ),
+          'rawData': _i2.BuilderArg<Map<Object?, Object?>?>(
+            name: 'rawData',
+            init: rawData,
+            isNamed: true,
+          ),
+        },
+        super.root() {
     mateBuilderName = 'RestorationBucket.root';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorationBucket$Mate.root(
           manager: p.get('manager').build(),
           rawData: p.get('rawData').build(),
         );
-    mateUse(
-      'manager',
-      manager,
-      isNamed: true,
-    );
-    mateUse(
-      'rawData',
-      rawData,
-      isNamed: true,
-    );
   }
 
   /// RestorationBucket RestorationBucket.child({required String restorationId, required RestorationBucket parent, required Object? debugOwner})
   RestorationBucket$Mate.child({
     /// optionalParameters: {required String restorationId} , default:none
-    required String restorationId,
+    required super.restorationId,
 
     /// optionalParameters: {required RestorationBucket parent} , default:none
-    required _i1.RestorationBucket parent,
+    required super.parent,
 
     /// optionalParameters: {required Object? debugOwner} , default:none
-    required Object? debugOwner,
-  }) : super.child(
-          restorationId: restorationId,
-          parent: parent,
-          debugOwner: debugOwner,
-        ) {
+    required super.debugOwner,
+  })  : mateParams = {
+          'restorationId': _i2.BuilderArg<String>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'parent': _i2.BuilderArg<_i1.RestorationBucket>(
+            name: 'parent',
+            init: parent,
+            isNamed: true,
+          ),
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+        },
+        super.child() {
     mateBuilderName = 'RestorationBucket.child';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorationBucket$Mate.child(
@@ -86,20 +97,8 @@ class RestorationBucket$Mate extends _i1.RestorationBucket with _i2.Mate {
           parent: p.get('parent').build(),
           debugOwner: p.get('debugOwner').build(),
         );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'parent',
-      parent,
-      isNamed: true,
-    );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

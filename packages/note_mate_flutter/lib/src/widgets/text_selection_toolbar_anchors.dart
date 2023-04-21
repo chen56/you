@@ -10,29 +10,31 @@ class TextSelectionToolbarAnchors$Mate extends _i1.TextSelectionToolbarAnchors w
   /// TextSelectionToolbarAnchors TextSelectionToolbarAnchors({required Offset primaryAnchor, Offset? secondaryAnchor})
   TextSelectionToolbarAnchors$Mate({
     /// optionalParameters: {required Offset primaryAnchor} , default:none
-    required _i3.Offset primaryAnchor,
+    required super.primaryAnchor,
 
     /// optionalParameters: {Offset? secondaryAnchor} , default:none
-    _i3.Offset? secondaryAnchor,
-  }) : super(
-          primaryAnchor: primaryAnchor,
-          secondaryAnchor: secondaryAnchor,
-        ) {
+    super.secondaryAnchor,
+  })  : mateParams = {
+          'primaryAnchor': _i2.BuilderArg<_i3.Offset>(
+            name: 'primaryAnchor',
+            init: primaryAnchor,
+            isNamed: true,
+          ),
+          'secondaryAnchor': _i2.BuilderArg<_i3.Offset?>(
+            name: 'secondaryAnchor',
+            init: secondaryAnchor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionToolbarAnchors';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSelectionToolbarAnchors$Mate(
           primaryAnchor: p.get('primaryAnchor').build(),
           secondaryAnchor: p.get('secondaryAnchor').build(),
         );
-    mateUse(
-      'primaryAnchor',
-      primaryAnchor,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryAnchor',
-      secondaryAnchor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,26 +12,47 @@ class ProgressIndicatorThemeData$Mate extends _i1.ProgressIndicatorThemeData wit
   /// ProgressIndicatorThemeData ProgressIndicatorThemeData({Color? color, Color? linearTrackColor, double? linearMinHeight, Color? circularTrackColor, Color? refreshBackgroundColor})
   ProgressIndicatorThemeData$Mate({
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? linearTrackColor} , default:none
-    _i3.Color? linearTrackColor,
+    super.linearTrackColor,
 
     /// optionalParameters: {double? linearMinHeight} , default:none
-    double? linearMinHeight,
+    super.linearMinHeight,
 
     /// optionalParameters: {Color? circularTrackColor} , default:none
-    _i3.Color? circularTrackColor,
+    super.circularTrackColor,
 
     /// optionalParameters: {Color? refreshBackgroundColor} , default:none
-    _i3.Color? refreshBackgroundColor,
-  }) : super(
-          color: color,
-          linearTrackColor: linearTrackColor,
-          linearMinHeight: linearMinHeight,
-          circularTrackColor: circularTrackColor,
-          refreshBackgroundColor: refreshBackgroundColor,
-        ) {
+    super.refreshBackgroundColor,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'linearTrackColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'linearTrackColor',
+            init: linearTrackColor,
+            isNamed: true,
+          ),
+          'linearMinHeight': _i2.BuilderArg<double?>(
+            name: 'linearMinHeight',
+            init: linearMinHeight,
+            isNamed: true,
+          ),
+          'circularTrackColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'circularTrackColor',
+            init: circularTrackColor,
+            isNamed: true,
+          ),
+          'refreshBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'refreshBackgroundColor',
+            init: refreshBackgroundColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ProgressIndicatorThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ProgressIndicatorThemeData$Mate(
@@ -41,32 +62,10 @@ class ProgressIndicatorThemeData$Mate extends _i1.ProgressIndicatorThemeData wit
           circularTrackColor: p.get('circularTrackColor').build(),
           refreshBackgroundColor: p.get('refreshBackgroundColor').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'linearTrackColor',
-      linearTrackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'linearMinHeight',
-      linearMinHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'circularTrackColor',
-      circularTrackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'refreshBackgroundColor',
-      refreshBackgroundColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ProgressIndicatorTheme extends InheritedTheme
@@ -74,18 +73,31 @@ class ProgressIndicatorTheme$Mate extends _i1.ProgressIndicatorTheme with _i2.Ma
   /// ProgressIndicatorTheme ProgressIndicatorTheme({Key? key, required ProgressIndicatorThemeData data, required Widget child})
   ProgressIndicatorTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required ProgressIndicatorThemeData data} , default:none
-    required _i1.ProgressIndicatorThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ProgressIndicatorThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ProgressIndicatorTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ProgressIndicatorTheme$Mate(
@@ -93,20 +105,8 @@ class ProgressIndicatorTheme$Mate extends _i1.ProgressIndicatorTheme with _i2.Ma
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

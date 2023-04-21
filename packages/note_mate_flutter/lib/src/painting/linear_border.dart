@@ -11,33 +11,35 @@ class LinearBorderEdge$Mate extends _i1.LinearBorderEdge with _i2.Mate {
   /// LinearBorderEdge LinearBorderEdge({double size = 1.0, double alignment = 0.0})
   LinearBorderEdge$Mate({
     /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
-    double size = 1.0,
+    super.size,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
-    double alignment = 0.0,
-  }) : super(
-          size: size,
-          alignment: alignment,
-        ) {
+    super.alignment,
+  })  : mateParams = {
+          'size': _i2.BuilderArg<double>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'alignment': _i2.BuilderArg<double>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+        },
+        super() {
     mateBuilderName = 'LinearBorderEdge';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LinearBorderEdge$Mate(
           size: p.get('size').build(),
           alignment: p.get('alignment').build(),
         );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LinearBorder extends OutlinedBorder
@@ -45,26 +47,48 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
   /// LinearBorder LinearBorder({BorderSide side = BorderSide.none, LinearBorderEdge? start, LinearBorderEdge? end, LinearBorderEdge? top, LinearBorderEdge? bottom})
   LinearBorder$Mate({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {LinearBorderEdge? start} , default:none
-    _i1.LinearBorderEdge? start,
+    super.start,
 
     /// optionalParameters: {LinearBorderEdge? end} , default:none
-    _i1.LinearBorderEdge? end,
+    super.end,
 
     /// optionalParameters: {LinearBorderEdge? top} , default:none
-    _i1.LinearBorderEdge? top,
+    super.top,
 
     /// optionalParameters: {LinearBorderEdge? bottom} , default:none
-    _i1.LinearBorderEdge? bottom,
-  }) : super(
-          side: side,
-          start: start,
-          end: end,
-          top: top,
-          bottom: bottom,
-        ) {
+    super.bottom,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'start': _i2.BuilderArg<_i1.LinearBorderEdge?>(
+            name: 'start',
+            init: start,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i1.LinearBorderEdge?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+          'top': _i2.BuilderArg<_i1.LinearBorderEdge?>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<_i1.LinearBorderEdge?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LinearBorder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LinearBorder$Mate(
@@ -74,49 +98,39 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
           top: p.get('top').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'start',
-      start,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-    );
   }
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.start({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
-    double alignment = 0.0,
+    super.alignment,
 
     /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
-    double size = 1.0,
-  }) : super.start(
-          side: side,
-          alignment: alignment,
-          size: size,
-        ) {
+    super.size,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'alignment': _i2.BuilderArg<double>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'size': _i2.BuilderArg<double>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super.start() {
     mateBuilderName = 'LinearBorder.start';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LinearBorder$Mate.start(
@@ -124,41 +138,39 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.end({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
-    double alignment = 0.0,
+    super.alignment,
 
     /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
-    double size = 1.0,
-  }) : super.end(
-          side: side,
-          alignment: alignment,
-          size: size,
-        ) {
+    super.size,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'alignment': _i2.BuilderArg<double>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'size': _i2.BuilderArg<double>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super.end() {
     mateBuilderName = 'LinearBorder.end';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LinearBorder$Mate.end(
@@ -166,41 +178,39 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.top({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
-    double alignment = 0.0,
+    super.alignment,
 
     /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
-    double size = 1.0,
-  }) : super.top(
-          side: side,
-          alignment: alignment,
-          size: size,
-        ) {
+    super.size,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'alignment': _i2.BuilderArg<double>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'size': _i2.BuilderArg<double>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super.top() {
     mateBuilderName = 'LinearBorder.top';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LinearBorder$Mate.top(
@@ -208,41 +218,39 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.bottom({
     /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide side = _i4.BorderSide.none,
+    super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
-    double alignment = 0.0,
+    super.alignment,
 
     /// optionalParameters: {double size = 1.0} , default:processed=DoubleLiteralImpl
-    double size = 1.0,
-  }) : super.bottom(
-          side: side,
-          alignment: alignment,
-          size: size,
-        ) {
+    super.size,
+  })  : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'alignment': _i2.BuilderArg<double>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'size': _i2.BuilderArg<double>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super.bottom() {
     mateBuilderName = 'LinearBorder.bottom';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LinearBorder$Mate.bottom(
@@ -250,23 +258,8 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
           alignment: p.get('alignment').build(),
           size: p.get('size').build(),
         );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

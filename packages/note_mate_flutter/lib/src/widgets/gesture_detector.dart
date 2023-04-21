@@ -22,31 +22,33 @@ class GestureRecognizerFactoryWithHandlers$Mate<T extends _i1.GestureRecognizer>
   /// GestureRecognizerFactoryWithHandlers<T> GestureRecognizerFactoryWithHandlers(T Function() _constructor, void Function(T) _initializer)
   GestureRecognizerFactoryWithHandlers$Mate(
     /// requiredParameters: T Function() _constructor
-    _i2.GestureRecognizerFactoryConstructor<T> _constructor,
+    super._constructor,
 
     /// requiredParameters: void Function(T) _initializer
-    _i2.GestureRecognizerFactoryInitializer<T> _initializer,
-  ) : super(
-          _constructor,
-          _initializer,
-        ) {
+    super._initializer,
+  )   : mateParams = {
+          '_constructor': _i3.BuilderArg<_i2.GestureRecognizerFactoryConstructor<T>>(
+            name: '_constructor',
+            init: _constructor,
+            isNamed: false,
+          ),
+          '_initializer': _i3.BuilderArg<_i2.GestureRecognizerFactoryInitializer<T>>(
+            name: '_initializer',
+            init: _initializer,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'GestureRecognizerFactoryWithHandlers';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GestureRecognizerFactoryWithHandlers$Mate<T>(
           p.get('_constructor').value,
           p.get('_initializer').value,
         );
-    mateUse(
-      '_constructor',
-      _constructor,
-      isNamed: false,
-    );
-    mateUse(
-      '_initializer',
-      _initializer,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i3.BuilderArg> mateParams;
 }
 
 /// class GestureDetector extends StatelessWidget
@@ -54,266 +56,530 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
   /// GestureDetector GestureDetector({Key? key, Widget? child, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTap, void Function()? onTapCancel, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapUpDetails)? onSecondaryTapUp, void Function()? onSecondaryTapCancel, void Function(TapDownDetails)? onTertiaryTapDown, void Function(TapUpDetails)? onTertiaryTapUp, void Function()? onTertiaryTapCancel, void Function(TapDownDetails)? onDoubleTapDown, void Function()? onDoubleTap, void Function()? onDoubleTapCancel, void Function(LongPressDownDetails)? onLongPressDown, void Function()? onLongPressCancel, void Function()? onLongPress, void Function(LongPressStartDetails)? onLongPressStart, void Function(LongPressMoveUpdateDetails)? onLongPressMoveUpdate, void Function()? onLongPressUp, void Function(LongPressEndDetails)? onLongPressEnd, void Function(LongPressDownDetails)? onSecondaryLongPressDown, void Function()? onSecondaryLongPressCancel, void Function()? onSecondaryLongPress, void Function(LongPressStartDetails)? onSecondaryLongPressStart, void Function(LongPressMoveUpdateDetails)? onSecondaryLongPressMoveUpdate, void Function()? onSecondaryLongPressUp, void Function(LongPressEndDetails)? onSecondaryLongPressEnd, void Function(LongPressDownDetails)? onTertiaryLongPressDown, void Function()? onTertiaryLongPressCancel, void Function()? onTertiaryLongPress, void Function(LongPressStartDetails)? onTertiaryLongPressStart, void Function(LongPressMoveUpdateDetails)? onTertiaryLongPressMoveUpdate, void Function()? onTertiaryLongPressUp, void Function(LongPressEndDetails)? onTertiaryLongPressEnd, void Function(DragDownDetails)? onVerticalDragDown, void Function(DragStartDetails)? onVerticalDragStart, void Function(DragUpdateDetails)? onVerticalDragUpdate, void Function(DragEndDetails)? onVerticalDragEnd, void Function()? onVerticalDragCancel, void Function(DragDownDetails)? onHorizontalDragDown, void Function(DragStartDetails)? onHorizontalDragStart, void Function(DragUpdateDetails)? onHorizontalDragUpdate, void Function(DragEndDetails)? onHorizontalDragEnd, void Function()? onHorizontalDragCancel, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressPeak, void Function(ForcePressDetails)? onForcePressUpdate, void Function(ForcePressDetails)? onForcePressEnd, void Function(DragDownDetails)? onPanDown, void Function(DragStartDetails)? onPanStart, void Function(DragUpdateDetails)? onPanUpdate, void Function(DragEndDetails)? onPanEnd, void Function()? onPanCancel, void Function(ScaleStartDetails)? onScaleStart, void Function(ScaleUpdateDetails)? onScaleUpdate, void Function(ScaleEndDetails)? onScaleEnd, HitTestBehavior? behavior, bool excludeFromSemantics = false, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool trackpadScrollCausesScale = false, Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor, Set<PointerDeviceKind>? supportedDevices})
   GestureDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
-    _i6.GestureTapDownCallback? onTapDown,
+    super.onTapDown,
 
     /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , default:none
-    _i6.GestureTapUpCallback? onTapUp,
+    super.onTapUp,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i6.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onTapCancel} , default:none
-    _i6.GestureTapCancelCallback? onTapCancel,
+    super.onTapCancel,
 
     /// optionalParameters: {void Function()? onSecondaryTap} , default:none
-    _i6.GestureTapCallback? onSecondaryTap,
+    super.onSecondaryTap,
 
     /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , default:none
-    _i6.GestureTapDownCallback? onSecondaryTapDown,
+    super.onSecondaryTapDown,
 
     /// optionalParameters: {void Function(TapUpDetails)? onSecondaryTapUp} , default:none
-    _i6.GestureTapUpCallback? onSecondaryTapUp,
+    super.onSecondaryTapUp,
 
     /// optionalParameters: {void Function()? onSecondaryTapCancel} , default:none
-    _i6.GestureTapCancelCallback? onSecondaryTapCancel,
+    super.onSecondaryTapCancel,
 
     /// optionalParameters: {void Function(TapDownDetails)? onTertiaryTapDown} , default:none
-    _i6.GestureTapDownCallback? onTertiaryTapDown,
+    super.onTertiaryTapDown,
 
     /// optionalParameters: {void Function(TapUpDetails)? onTertiaryTapUp} , default:none
-    _i6.GestureTapUpCallback? onTertiaryTapUp,
+    super.onTertiaryTapUp,
 
     /// optionalParameters: {void Function()? onTertiaryTapCancel} , default:none
-    _i6.GestureTapCancelCallback? onTertiaryTapCancel,
+    super.onTertiaryTapCancel,
 
     /// optionalParameters: {void Function(TapDownDetails)? onDoubleTapDown} , default:none
-    _i6.GestureTapDownCallback? onDoubleTapDown,
+    super.onDoubleTapDown,
 
     /// optionalParameters: {void Function()? onDoubleTap} , default:none
-    _i6.GestureTapCallback? onDoubleTap,
+    super.onDoubleTap,
 
     /// optionalParameters: {void Function()? onDoubleTapCancel} , default:none
-    _i6.GestureTapCancelCallback? onDoubleTapCancel,
+    super.onDoubleTapCancel,
 
     /// optionalParameters: {void Function(LongPressDownDetails)? onLongPressDown} , default:none
-    _i7.GestureLongPressDownCallback? onLongPressDown,
+    super.onLongPressDown,
 
     /// optionalParameters: {void Function()? onLongPressCancel} , default:none
-    _i7.GestureLongPressCancelCallback? onLongPressCancel,
+    super.onLongPressCancel,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i7.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(LongPressStartDetails)? onLongPressStart} , default:none
-    _i7.GestureLongPressStartCallback? onLongPressStart,
+    super.onLongPressStart,
 
     /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onLongPressMoveUpdate} , default:none
-    _i7.GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
+    super.onLongPressMoveUpdate,
 
     /// optionalParameters: {void Function()? onLongPressUp} , default:none
-    _i7.GestureLongPressUpCallback? onLongPressUp,
+    super.onLongPressUp,
 
     /// optionalParameters: {void Function(LongPressEndDetails)? onLongPressEnd} , default:none
-    _i7.GestureLongPressEndCallback? onLongPressEnd,
+    super.onLongPressEnd,
 
     /// optionalParameters: {void Function(LongPressDownDetails)? onSecondaryLongPressDown} , default:none
-    _i7.GestureLongPressDownCallback? onSecondaryLongPressDown,
+    super.onSecondaryLongPressDown,
 
     /// optionalParameters: {void Function()? onSecondaryLongPressCancel} , default:none
-    _i7.GestureLongPressCancelCallback? onSecondaryLongPressCancel,
+    super.onSecondaryLongPressCancel,
 
     /// optionalParameters: {void Function()? onSecondaryLongPress} , default:none
-    _i7.GestureLongPressCallback? onSecondaryLongPress,
+    super.onSecondaryLongPress,
 
     /// optionalParameters: {void Function(LongPressStartDetails)? onSecondaryLongPressStart} , default:none
-    _i7.GestureLongPressStartCallback? onSecondaryLongPressStart,
+    super.onSecondaryLongPressStart,
 
     /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onSecondaryLongPressMoveUpdate} , default:none
-    _i7.GestureLongPressMoveUpdateCallback? onSecondaryLongPressMoveUpdate,
+    super.onSecondaryLongPressMoveUpdate,
 
     /// optionalParameters: {void Function()? onSecondaryLongPressUp} , default:none
-    _i7.GestureLongPressUpCallback? onSecondaryLongPressUp,
+    super.onSecondaryLongPressUp,
 
     /// optionalParameters: {void Function(LongPressEndDetails)? onSecondaryLongPressEnd} , default:none
-    _i7.GestureLongPressEndCallback? onSecondaryLongPressEnd,
+    super.onSecondaryLongPressEnd,
 
     /// optionalParameters: {void Function(LongPressDownDetails)? onTertiaryLongPressDown} , default:none
-    _i7.GestureLongPressDownCallback? onTertiaryLongPressDown,
+    super.onTertiaryLongPressDown,
 
     /// optionalParameters: {void Function()? onTertiaryLongPressCancel} , default:none
-    _i7.GestureLongPressCancelCallback? onTertiaryLongPressCancel,
+    super.onTertiaryLongPressCancel,
 
     /// optionalParameters: {void Function()? onTertiaryLongPress} , default:none
-    _i7.GestureLongPressCallback? onTertiaryLongPress,
+    super.onTertiaryLongPress,
 
     /// optionalParameters: {void Function(LongPressStartDetails)? onTertiaryLongPressStart} , default:none
-    _i7.GestureLongPressStartCallback? onTertiaryLongPressStart,
+    super.onTertiaryLongPressStart,
 
     /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onTertiaryLongPressMoveUpdate} , default:none
-    _i7.GestureLongPressMoveUpdateCallback? onTertiaryLongPressMoveUpdate,
+    super.onTertiaryLongPressMoveUpdate,
 
     /// optionalParameters: {void Function()? onTertiaryLongPressUp} , default:none
-    _i7.GestureLongPressUpCallback? onTertiaryLongPressUp,
+    super.onTertiaryLongPressUp,
 
     /// optionalParameters: {void Function(LongPressEndDetails)? onTertiaryLongPressEnd} , default:none
-    _i7.GestureLongPressEndCallback? onTertiaryLongPressEnd,
+    super.onTertiaryLongPressEnd,
 
     /// optionalParameters: {void Function(DragDownDetails)? onVerticalDragDown} , default:none
-    _i8.GestureDragDownCallback? onVerticalDragDown,
+    super.onVerticalDragDown,
 
     /// optionalParameters: {void Function(DragStartDetails)? onVerticalDragStart} , default:none
-    _i8.GestureDragStartCallback? onVerticalDragStart,
+    super.onVerticalDragStart,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onVerticalDragUpdate} , default:none
-    _i8.GestureDragUpdateCallback? onVerticalDragUpdate,
+    super.onVerticalDragUpdate,
 
     /// optionalParameters: {void Function(DragEndDetails)? onVerticalDragEnd} , default:none
-    _i9.GestureDragEndCallback? onVerticalDragEnd,
+    super.onVerticalDragEnd,
 
     /// optionalParameters: {void Function()? onVerticalDragCancel} , default:none
-    _i9.GestureDragCancelCallback? onVerticalDragCancel,
+    super.onVerticalDragCancel,
 
     /// optionalParameters: {void Function(DragDownDetails)? onHorizontalDragDown} , default:none
-    _i8.GestureDragDownCallback? onHorizontalDragDown,
+    super.onHorizontalDragDown,
 
     /// optionalParameters: {void Function(DragStartDetails)? onHorizontalDragStart} , default:none
-    _i8.GestureDragStartCallback? onHorizontalDragStart,
+    super.onHorizontalDragStart,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onHorizontalDragUpdate} , default:none
-    _i8.GestureDragUpdateCallback? onHorizontalDragUpdate,
+    super.onHorizontalDragUpdate,
 
     /// optionalParameters: {void Function(DragEndDetails)? onHorizontalDragEnd} , default:none
-    _i9.GestureDragEndCallback? onHorizontalDragEnd,
+    super.onHorizontalDragEnd,
 
     /// optionalParameters: {void Function()? onHorizontalDragCancel} , default:none
-    _i9.GestureDragCancelCallback? onHorizontalDragCancel,
+    super.onHorizontalDragCancel,
 
     /// optionalParameters: {void Function(ForcePressDetails)? onForcePressStart} , default:none
-    _i10.GestureForcePressStartCallback? onForcePressStart,
+    super.onForcePressStart,
 
     /// optionalParameters: {void Function(ForcePressDetails)? onForcePressPeak} , default:none
-    _i10.GestureForcePressPeakCallback? onForcePressPeak,
+    super.onForcePressPeak,
 
     /// optionalParameters: {void Function(ForcePressDetails)? onForcePressUpdate} , default:none
-    _i10.GestureForcePressUpdateCallback? onForcePressUpdate,
+    super.onForcePressUpdate,
 
     /// optionalParameters: {void Function(ForcePressDetails)? onForcePressEnd} , default:none
-    _i10.GestureForcePressEndCallback? onForcePressEnd,
+    super.onForcePressEnd,
 
     /// optionalParameters: {void Function(DragDownDetails)? onPanDown} , default:none
-    _i8.GestureDragDownCallback? onPanDown,
+    super.onPanDown,
 
     /// optionalParameters: {void Function(DragStartDetails)? onPanStart} , default:none
-    _i8.GestureDragStartCallback? onPanStart,
+    super.onPanStart,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onPanUpdate} , default:none
-    _i8.GestureDragUpdateCallback? onPanUpdate,
+    super.onPanUpdate,
 
     /// optionalParameters: {void Function(DragEndDetails)? onPanEnd} , default:none
-    _i9.GestureDragEndCallback? onPanEnd,
+    super.onPanEnd,
 
     /// optionalParameters: {void Function()? onPanCancel} , default:none
-    _i9.GestureDragCancelCallback? onPanCancel,
+    super.onPanCancel,
 
     /// optionalParameters: {void Function(ScaleStartDetails)? onScaleStart} , default:none
-    _i11.GestureScaleStartCallback? onScaleStart,
+    super.onScaleStart,
 
     /// optionalParameters: {void Function(ScaleUpdateDetails)? onScaleUpdate} , default:none
-    _i11.GestureScaleUpdateCallback? onScaleUpdate,
+    super.onScaleUpdate,
 
     /// optionalParameters: {void Function(ScaleEndDetails)? onScaleEnd} , default:none
-    _i11.GestureScaleEndCallback? onScaleEnd,
+    super.onScaleEnd,
 
     /// optionalParameters: {HitTestBehavior? behavior} , default:none
-    _i12.HitTestBehavior? behavior,
+    super.behavior,
 
     /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeFromSemantics = false,
+    super.excludeFromSemantics,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i1.DragStartBehavior dragStartBehavior = _i13.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
-    bool trackpadScrollCausesScale = false,
+    super.trackpadScrollCausesScale,
 
     /// optionalParameters: {Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor} , default:unprocessed=SimpleIdentifierImpl
-    required _i14.Offset trackpadScrollToScaleFactor,
+    super.trackpadScrollToScaleFactor,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i14.PointerDeviceKind>? supportedDevices,
-  }) : super(
-          key: key,
-          child: child,
-          onTapDown: onTapDown,
-          onTapUp: onTapUp,
-          onTap: onTap,
-          onTapCancel: onTapCancel,
-          onSecondaryTap: onSecondaryTap,
-          onSecondaryTapDown: onSecondaryTapDown,
-          onSecondaryTapUp: onSecondaryTapUp,
-          onSecondaryTapCancel: onSecondaryTapCancel,
-          onTertiaryTapDown: onTertiaryTapDown,
-          onTertiaryTapUp: onTertiaryTapUp,
-          onTertiaryTapCancel: onTertiaryTapCancel,
-          onDoubleTapDown: onDoubleTapDown,
-          onDoubleTap: onDoubleTap,
-          onDoubleTapCancel: onDoubleTapCancel,
-          onLongPressDown: onLongPressDown,
-          onLongPressCancel: onLongPressCancel,
-          onLongPress: onLongPress,
-          onLongPressStart: onLongPressStart,
-          onLongPressMoveUpdate: onLongPressMoveUpdate,
-          onLongPressUp: onLongPressUp,
-          onLongPressEnd: onLongPressEnd,
-          onSecondaryLongPressDown: onSecondaryLongPressDown,
-          onSecondaryLongPressCancel: onSecondaryLongPressCancel,
-          onSecondaryLongPress: onSecondaryLongPress,
-          onSecondaryLongPressStart: onSecondaryLongPressStart,
-          onSecondaryLongPressMoveUpdate: onSecondaryLongPressMoveUpdate,
-          onSecondaryLongPressUp: onSecondaryLongPressUp,
-          onSecondaryLongPressEnd: onSecondaryLongPressEnd,
-          onTertiaryLongPressDown: onTertiaryLongPressDown,
-          onTertiaryLongPressCancel: onTertiaryLongPressCancel,
-          onTertiaryLongPress: onTertiaryLongPress,
-          onTertiaryLongPressStart: onTertiaryLongPressStart,
-          onTertiaryLongPressMoveUpdate: onTertiaryLongPressMoveUpdate,
-          onTertiaryLongPressUp: onTertiaryLongPressUp,
-          onTertiaryLongPressEnd: onTertiaryLongPressEnd,
-          onVerticalDragDown: onVerticalDragDown,
-          onVerticalDragStart: onVerticalDragStart,
-          onVerticalDragUpdate: onVerticalDragUpdate,
-          onVerticalDragEnd: onVerticalDragEnd,
-          onVerticalDragCancel: onVerticalDragCancel,
-          onHorizontalDragDown: onHorizontalDragDown,
-          onHorizontalDragStart: onHorizontalDragStart,
-          onHorizontalDragUpdate: onHorizontalDragUpdate,
-          onHorizontalDragEnd: onHorizontalDragEnd,
-          onHorizontalDragCancel: onHorizontalDragCancel,
-          onForcePressStart: onForcePressStart,
-          onForcePressPeak: onForcePressPeak,
-          onForcePressUpdate: onForcePressUpdate,
-          onForcePressEnd: onForcePressEnd,
-          onPanDown: onPanDown,
-          onPanStart: onPanStart,
-          onPanUpdate: onPanUpdate,
-          onPanEnd: onPanEnd,
-          onPanCancel: onPanCancel,
-          onScaleStart: onScaleStart,
-          onScaleUpdate: onScaleUpdate,
-          onScaleEnd: onScaleEnd,
-          behavior: behavior,
-          excludeFromSemantics: excludeFromSemantics,
-          dragStartBehavior: dragStartBehavior,
-          trackpadScrollCausesScale: trackpadScrollCausesScale,
-          trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
-          supportedDevices: supportedDevices,
-        ) {
+    super.supportedDevices,
+  })  : mateParams = {
+          'key': _i3.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i3.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'onTapDown': _i3.BuilderArg<_i6.GestureTapDownCallback?>(
+            name: 'onTapDown',
+            init: onTapDown,
+            isNamed: true,
+          ),
+          'onTapUp': _i3.BuilderArg<_i6.GestureTapUpCallback?>(
+            name: 'onTapUp',
+            init: onTapUp,
+            isNamed: true,
+          ),
+          'onTap': _i3.BuilderArg<_i6.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onTapCancel': _i3.BuilderArg<_i6.GestureTapCancelCallback?>(
+            name: 'onTapCancel',
+            init: onTapCancel,
+            isNamed: true,
+          ),
+          'onSecondaryTap': _i3.BuilderArg<_i6.GestureTapCallback?>(
+            name: 'onSecondaryTap',
+            init: onSecondaryTap,
+            isNamed: true,
+          ),
+          'onSecondaryTapDown': _i3.BuilderArg<_i6.GestureTapDownCallback?>(
+            name: 'onSecondaryTapDown',
+            init: onSecondaryTapDown,
+            isNamed: true,
+          ),
+          'onSecondaryTapUp': _i3.BuilderArg<_i6.GestureTapUpCallback?>(
+            name: 'onSecondaryTapUp',
+            init: onSecondaryTapUp,
+            isNamed: true,
+          ),
+          'onSecondaryTapCancel': _i3.BuilderArg<_i6.GestureTapCancelCallback?>(
+            name: 'onSecondaryTapCancel',
+            init: onSecondaryTapCancel,
+            isNamed: true,
+          ),
+          'onTertiaryTapDown': _i3.BuilderArg<_i6.GestureTapDownCallback?>(
+            name: 'onTertiaryTapDown',
+            init: onTertiaryTapDown,
+            isNamed: true,
+          ),
+          'onTertiaryTapUp': _i3.BuilderArg<_i6.GestureTapUpCallback?>(
+            name: 'onTertiaryTapUp',
+            init: onTertiaryTapUp,
+            isNamed: true,
+          ),
+          'onTertiaryTapCancel': _i3.BuilderArg<_i6.GestureTapCancelCallback?>(
+            name: 'onTertiaryTapCancel',
+            init: onTertiaryTapCancel,
+            isNamed: true,
+          ),
+          'onDoubleTapDown': _i3.BuilderArg<_i6.GestureTapDownCallback?>(
+            name: 'onDoubleTapDown',
+            init: onDoubleTapDown,
+            isNamed: true,
+          ),
+          'onDoubleTap': _i3.BuilderArg<_i6.GestureTapCallback?>(
+            name: 'onDoubleTap',
+            init: onDoubleTap,
+            isNamed: true,
+          ),
+          'onDoubleTapCancel': _i3.BuilderArg<_i6.GestureTapCancelCallback?>(
+            name: 'onDoubleTapCancel',
+            init: onDoubleTapCancel,
+            isNamed: true,
+          ),
+          'onLongPressDown': _i3.BuilderArg<_i7.GestureLongPressDownCallback?>(
+            name: 'onLongPressDown',
+            init: onLongPressDown,
+            isNamed: true,
+          ),
+          'onLongPressCancel': _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
+            name: 'onLongPressCancel',
+            init: onLongPressCancel,
+            isNamed: true,
+          ),
+          'onLongPress': _i3.BuilderArg<_i7.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onLongPressStart': _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
+            name: 'onLongPressStart',
+            init: onLongPressStart,
+            isNamed: true,
+          ),
+          'onLongPressMoveUpdate': _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
+            name: 'onLongPressMoveUpdate',
+            init: onLongPressMoveUpdate,
+            isNamed: true,
+          ),
+          'onLongPressUp': _i3.BuilderArg<_i7.GestureLongPressUpCallback?>(
+            name: 'onLongPressUp',
+            init: onLongPressUp,
+            isNamed: true,
+          ),
+          'onLongPressEnd': _i3.BuilderArg<_i7.GestureLongPressEndCallback?>(
+            name: 'onLongPressEnd',
+            init: onLongPressEnd,
+            isNamed: true,
+          ),
+          'onSecondaryLongPressDown': _i3.BuilderArg<_i7.GestureLongPressDownCallback?>(
+            name: 'onSecondaryLongPressDown',
+            init: onSecondaryLongPressDown,
+            isNamed: true,
+          ),
+          'onSecondaryLongPressCancel': _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
+            name: 'onSecondaryLongPressCancel',
+            init: onSecondaryLongPressCancel,
+            isNamed: true,
+          ),
+          'onSecondaryLongPress': _i3.BuilderArg<_i7.GestureLongPressCallback?>(
+            name: 'onSecondaryLongPress',
+            init: onSecondaryLongPress,
+            isNamed: true,
+          ),
+          'onSecondaryLongPressStart': _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
+            name: 'onSecondaryLongPressStart',
+            init: onSecondaryLongPressStart,
+            isNamed: true,
+          ),
+          'onSecondaryLongPressMoveUpdate': _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
+            name: 'onSecondaryLongPressMoveUpdate',
+            init: onSecondaryLongPressMoveUpdate,
+            isNamed: true,
+          ),
+          'onSecondaryLongPressUp': _i3.BuilderArg<_i7.GestureLongPressUpCallback?>(
+            name: 'onSecondaryLongPressUp',
+            init: onSecondaryLongPressUp,
+            isNamed: true,
+          ),
+          'onSecondaryLongPressEnd': _i3.BuilderArg<_i7.GestureLongPressEndCallback?>(
+            name: 'onSecondaryLongPressEnd',
+            init: onSecondaryLongPressEnd,
+            isNamed: true,
+          ),
+          'onTertiaryLongPressDown': _i3.BuilderArg<_i7.GestureLongPressDownCallback?>(
+            name: 'onTertiaryLongPressDown',
+            init: onTertiaryLongPressDown,
+            isNamed: true,
+          ),
+          'onTertiaryLongPressCancel': _i3.BuilderArg<_i7.GestureLongPressCancelCallback?>(
+            name: 'onTertiaryLongPressCancel',
+            init: onTertiaryLongPressCancel,
+            isNamed: true,
+          ),
+          'onTertiaryLongPress': _i3.BuilderArg<_i7.GestureLongPressCallback?>(
+            name: 'onTertiaryLongPress',
+            init: onTertiaryLongPress,
+            isNamed: true,
+          ),
+          'onTertiaryLongPressStart': _i3.BuilderArg<_i7.GestureLongPressStartCallback?>(
+            name: 'onTertiaryLongPressStart',
+            init: onTertiaryLongPressStart,
+            isNamed: true,
+          ),
+          'onTertiaryLongPressMoveUpdate': _i3.BuilderArg<_i7.GestureLongPressMoveUpdateCallback?>(
+            name: 'onTertiaryLongPressMoveUpdate',
+            init: onTertiaryLongPressMoveUpdate,
+            isNamed: true,
+          ),
+          'onTertiaryLongPressUp': _i3.BuilderArg<_i7.GestureLongPressUpCallback?>(
+            name: 'onTertiaryLongPressUp',
+            init: onTertiaryLongPressUp,
+            isNamed: true,
+          ),
+          'onTertiaryLongPressEnd': _i3.BuilderArg<_i7.GestureLongPressEndCallback?>(
+            name: 'onTertiaryLongPressEnd',
+            init: onTertiaryLongPressEnd,
+            isNamed: true,
+          ),
+          'onVerticalDragDown': _i3.BuilderArg<_i8.GestureDragDownCallback?>(
+            name: 'onVerticalDragDown',
+            init: onVerticalDragDown,
+            isNamed: true,
+          ),
+          'onVerticalDragStart': _i3.BuilderArg<_i8.GestureDragStartCallback?>(
+            name: 'onVerticalDragStart',
+            init: onVerticalDragStart,
+            isNamed: true,
+          ),
+          'onVerticalDragUpdate': _i3.BuilderArg<_i8.GestureDragUpdateCallback?>(
+            name: 'onVerticalDragUpdate',
+            init: onVerticalDragUpdate,
+            isNamed: true,
+          ),
+          'onVerticalDragEnd': _i3.BuilderArg<_i9.GestureDragEndCallback?>(
+            name: 'onVerticalDragEnd',
+            init: onVerticalDragEnd,
+            isNamed: true,
+          ),
+          'onVerticalDragCancel': _i3.BuilderArg<_i9.GestureDragCancelCallback?>(
+            name: 'onVerticalDragCancel',
+            init: onVerticalDragCancel,
+            isNamed: true,
+          ),
+          'onHorizontalDragDown': _i3.BuilderArg<_i8.GestureDragDownCallback?>(
+            name: 'onHorizontalDragDown',
+            init: onHorizontalDragDown,
+            isNamed: true,
+          ),
+          'onHorizontalDragStart': _i3.BuilderArg<_i8.GestureDragStartCallback?>(
+            name: 'onHorizontalDragStart',
+            init: onHorizontalDragStart,
+            isNamed: true,
+          ),
+          'onHorizontalDragUpdate': _i3.BuilderArg<_i8.GestureDragUpdateCallback?>(
+            name: 'onHorizontalDragUpdate',
+            init: onHorizontalDragUpdate,
+            isNamed: true,
+          ),
+          'onHorizontalDragEnd': _i3.BuilderArg<_i9.GestureDragEndCallback?>(
+            name: 'onHorizontalDragEnd',
+            init: onHorizontalDragEnd,
+            isNamed: true,
+          ),
+          'onHorizontalDragCancel': _i3.BuilderArg<_i9.GestureDragCancelCallback?>(
+            name: 'onHorizontalDragCancel',
+            init: onHorizontalDragCancel,
+            isNamed: true,
+          ),
+          'onForcePressStart': _i3.BuilderArg<_i10.GestureForcePressStartCallback?>(
+            name: 'onForcePressStart',
+            init: onForcePressStart,
+            isNamed: true,
+          ),
+          'onForcePressPeak': _i3.BuilderArg<_i10.GestureForcePressPeakCallback?>(
+            name: 'onForcePressPeak',
+            init: onForcePressPeak,
+            isNamed: true,
+          ),
+          'onForcePressUpdate': _i3.BuilderArg<_i10.GestureForcePressUpdateCallback?>(
+            name: 'onForcePressUpdate',
+            init: onForcePressUpdate,
+            isNamed: true,
+          ),
+          'onForcePressEnd': _i3.BuilderArg<_i10.GestureForcePressEndCallback?>(
+            name: 'onForcePressEnd',
+            init: onForcePressEnd,
+            isNamed: true,
+          ),
+          'onPanDown': _i3.BuilderArg<_i8.GestureDragDownCallback?>(
+            name: 'onPanDown',
+            init: onPanDown,
+            isNamed: true,
+          ),
+          'onPanStart': _i3.BuilderArg<_i8.GestureDragStartCallback?>(
+            name: 'onPanStart',
+            init: onPanStart,
+            isNamed: true,
+          ),
+          'onPanUpdate': _i3.BuilderArg<_i8.GestureDragUpdateCallback?>(
+            name: 'onPanUpdate',
+            init: onPanUpdate,
+            isNamed: true,
+          ),
+          'onPanEnd': _i3.BuilderArg<_i9.GestureDragEndCallback?>(
+            name: 'onPanEnd',
+            init: onPanEnd,
+            isNamed: true,
+          ),
+          'onPanCancel': _i3.BuilderArg<_i9.GestureDragCancelCallback?>(
+            name: 'onPanCancel',
+            init: onPanCancel,
+            isNamed: true,
+          ),
+          'onScaleStart': _i3.BuilderArg<_i11.GestureScaleStartCallback?>(
+            name: 'onScaleStart',
+            init: onScaleStart,
+            isNamed: true,
+          ),
+          'onScaleUpdate': _i3.BuilderArg<_i11.GestureScaleUpdateCallback?>(
+            name: 'onScaleUpdate',
+            init: onScaleUpdate,
+            isNamed: true,
+          ),
+          'onScaleEnd': _i3.BuilderArg<_i11.GestureScaleEndCallback?>(
+            name: 'onScaleEnd',
+            init: onScaleEnd,
+            isNamed: true,
+          ),
+          'behavior': _i3.BuilderArg<_i12.HitTestBehavior?>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+          ),
+          'excludeFromSemantics': _i3.BuilderArg<bool>(
+            name: 'excludeFromSemantics',
+            init: excludeFromSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'dragStartBehavior': _i3.BuilderArg<_i1.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i13.DragStartBehavior.start,
+          ),
+          'trackpadScrollCausesScale': _i3.BuilderArg<bool>(
+            name: 'trackpadScrollCausesScale',
+            init: trackpadScrollCausesScale,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'trackpadScrollToScaleFactor': _i3.BuilderArg<_i14.Offset>(
+            name: 'trackpadScrollToScaleFactor',
+            init: trackpadScrollToScaleFactor,
+            isNamed: true,
+          ),
+          'supportedDevices': _i3.BuilderArg<Set<_i14.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'GestureDetector';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GestureDetector$Mate(
@@ -383,335 +649,10 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
           trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
           supportedDevices: p.get('supportedDevices').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapDown',
-      onTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapUp',
-      onTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapCancel',
-      onTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTap',
-      onSecondaryTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapDown',
-      onSecondaryTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapUp',
-      onSecondaryTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapCancel',
-      onSecondaryTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryTapDown',
-      onTertiaryTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryTapUp',
-      onTertiaryTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryTapCancel',
-      onTertiaryTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTapDown',
-      onDoubleTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTap',
-      onDoubleTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTapCancel',
-      onDoubleTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressDown',
-      onLongPressDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressCancel',
-      onLongPressCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressStart',
-      onLongPressStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressMoveUpdate',
-      onLongPressMoveUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressUp',
-      onLongPressUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPressEnd',
-      onLongPressEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryLongPressDown',
-      onSecondaryLongPressDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryLongPressCancel',
-      onSecondaryLongPressCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryLongPress',
-      onSecondaryLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryLongPressStart',
-      onSecondaryLongPressStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryLongPressMoveUpdate',
-      onSecondaryLongPressMoveUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryLongPressUp',
-      onSecondaryLongPressUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryLongPressEnd',
-      onSecondaryLongPressEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryLongPressDown',
-      onTertiaryLongPressDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryLongPressCancel',
-      onTertiaryLongPressCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryLongPress',
-      onTertiaryLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryLongPressStart',
-      onTertiaryLongPressStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryLongPressMoveUpdate',
-      onTertiaryLongPressMoveUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryLongPressUp',
-      onTertiaryLongPressUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onTertiaryLongPressEnd',
-      onTertiaryLongPressEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onVerticalDragDown',
-      onVerticalDragDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onVerticalDragStart',
-      onVerticalDragStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onVerticalDragUpdate',
-      onVerticalDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onVerticalDragEnd',
-      onVerticalDragEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onVerticalDragCancel',
-      onVerticalDragCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onHorizontalDragDown',
-      onHorizontalDragDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onHorizontalDragStart',
-      onHorizontalDragStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onHorizontalDragUpdate',
-      onHorizontalDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onHorizontalDragEnd',
-      onHorizontalDragEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onHorizontalDragCancel',
-      onHorizontalDragCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onForcePressStart',
-      onForcePressStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onForcePressPeak',
-      onForcePressPeak,
-      isNamed: true,
-    );
-    mateUse(
-      'onForcePressUpdate',
-      onForcePressUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onForcePressEnd',
-      onForcePressEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onPanDown',
-      onPanDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onPanStart',
-      onPanStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onPanUpdate',
-      onPanUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onPanEnd',
-      onPanEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onPanCancel',
-      onPanCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onScaleStart',
-      onScaleStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onScaleUpdate',
-      onScaleUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onScaleEnd',
-      onScaleEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-    );
-    mateUse(
-      'excludeFromSemantics',
-      excludeFromSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i13.DragStartBehavior.start,
-    );
-    mateUse(
-      'trackpadScrollCausesScale',
-      trackpadScrollCausesScale,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'trackpadScrollToScaleFactor',
-      trackpadScrollToScaleFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i3.BuilderArg> mateParams;
 }
 
 /// class RawGestureDetector extends StatefulWidget
@@ -719,30 +660,56 @@ class RawGestureDetector$Mate extends _i2.RawGestureDetector with _i3.Mate {
   /// RawGestureDetector RawGestureDetector({Key? key, Widget? child, Map<Type, GestureRecognizerFactory<GestureRecognizer>> gestures = const <Type, GestureRecognizerFactory>{}, HitTestBehavior? behavior, bool excludeFromSemantics = false, SemanticsGestureDelegate? semantics})
   RawGestureDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {Map<Type, GestureRecognizerFactory<GestureRecognizer>> gestures = const <Type, GestureRecognizerFactory>{}} , default:unprocessed=SetOrMapLiteralImpl
-    required Map<Type, _i2.GestureRecognizerFactory<_i1.GestureRecognizer>> gestures,
+    super.gestures,
 
     /// optionalParameters: {HitTestBehavior? behavior} , default:none
-    _i12.HitTestBehavior? behavior,
+    super.behavior,
 
     /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeFromSemantics = false,
+    super.excludeFromSemantics,
 
     /// optionalParameters: {SemanticsGestureDelegate? semantics} , default:none
-    _i2.SemanticsGestureDelegate? semantics,
-  }) : super(
-          key: key,
-          child: child,
-          gestures: gestures,
-          behavior: behavior,
-          excludeFromSemantics: excludeFromSemantics,
-          semantics: semantics,
-        ) {
+    super.semantics,
+  })  : mateParams = {
+          'key': _i3.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i3.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'gestures': _i3.BuilderArg<Map<Type, _i2.GestureRecognizerFactory<_i1.GestureRecognizer>>>(
+            name: 'gestures',
+            init: gestures,
+            isNamed: true,
+          ),
+          'behavior': _i3.BuilderArg<_i12.HitTestBehavior?>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+          ),
+          'excludeFromSemantics': _i3.BuilderArg<bool>(
+            name: 'excludeFromSemantics',
+            init: excludeFromSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'semantics': _i3.BuilderArg<_i2.SemanticsGestureDelegate?>(
+            name: 'semantics',
+            init: semantics,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawGestureDetector';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RawGestureDetector$Mate(
@@ -753,36 +720,8 @@ class RawGestureDetector$Mate extends _i2.RawGestureDetector with _i3.Mate {
           excludeFromSemantics: p.get('excludeFromSemantics').build(),
           semantics: p.get('semantics').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'gestures',
-      gestures,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-    );
-    mateUse(
-      'excludeFromSemantics',
-      excludeFromSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'semantics',
-      semantics,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i3.BuilderArg> mateParams;
 }

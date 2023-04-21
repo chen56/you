@@ -21,54 +21,108 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
   /// NestedScrollView NestedScrollView({Key? key, ScrollController? controller, Axis scrollDirection = Axis.vertical, bool reverse = false, ScrollPhysics? physics, required List<Widget> Function(BuildContext, bool) headerSliverBuilder, required Widget body, DragStartBehavior dragStartBehavior = DragStartBehavior.start, bool floatHeaderSlivers = false, Clip clipBehavior = Clip.hardEdge, String? restorationId, ScrollBehavior? scrollBehavior})
   NestedScrollView$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i4.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i5.Axis scrollDirection = _i6.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {required List<Widget> Function(BuildContext, bool) headerSliverBuilder} , default:none
-    required _i1.NestedScrollViewHeaderSliversBuilder headerSliverBuilder,
+    required super.headerSliverBuilder,
 
     /// optionalParameters: {required Widget body} , default:none
-    required _i8.Widget body,
+    required super.body,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i9.DragStartBehavior dragStartBehavior = _i10.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {bool floatHeaderSlivers = false} , default:processed=BooleanLiteralImpl
-    bool floatHeaderSlivers = false,
+    super.floatHeaderSlivers,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i11.Clip clipBehavior = _i11.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
+    super.restorationId,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
-    _i12.ScrollBehavior? scrollBehavior,
-  }) : super(
-          key: key,
-          controller: controller,
-          scrollDirection: scrollDirection,
-          reverse: reverse,
-          physics: physics,
-          headerSliverBuilder: headerSliverBuilder,
-          body: body,
-          dragStartBehavior: dragStartBehavior,
-          floatHeaderSlivers: floatHeaderSlivers,
-          clipBehavior: clipBehavior,
-          restorationId: restorationId,
-          scrollBehavior: scrollBehavior,
-        ) {
+    super.scrollBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i4.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i5.Axis>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i6.Axis.vertical,
+          ),
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'headerSliverBuilder': _i2.BuilderArg<_i1.NestedScrollViewHeaderSliversBuilder>(
+            name: 'headerSliverBuilder',
+            init: headerSliverBuilder,
+            isNamed: true,
+          ),
+          'body': _i2.BuilderArg<_i8.Widget>(
+            name: 'body',
+            init: body,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i10.DragStartBehavior.start,
+          ),
+          'floatHeaderSlivers': _i2.BuilderArg<bool>(
+            name: 'floatHeaderSlivers',
+            init: floatHeaderSlivers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i11.Clip.hardEdge,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+            name: 'scrollBehavior',
+            init: scrollBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NestedScrollView';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => NestedScrollView$Mate(
@@ -85,72 +139,10 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i6.Axis.vertical,
-    );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'headerSliverBuilder',
-      headerSliverBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'body',
-      body,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i10.DragStartBehavior.start,
-    );
-    mateUse(
-      'floatHeaderSlivers',
-      floatHeaderSlivers,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i11.Clip.hardEdge,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollBehavior',
-      scrollBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverOverlapAbsorber extends SingleChildRenderObjectWidget
@@ -158,18 +150,31 @@ class SliverOverlapAbsorber$Mate extends _i1.SliverOverlapAbsorber with _i2.Mate
   /// SliverOverlapAbsorber SliverOverlapAbsorber({Key? key, required SliverOverlapAbsorberHandle handle, Widget? sliver})
   SliverOverlapAbsorber$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
-    required _i1.SliverOverlapAbsorberHandle handle,
+    required super.handle,
 
     /// optionalParameters: {Widget? sliver} , default:none
-    _i8.Widget? sliver,
-  }) : super(
-          key: key,
-          handle: handle,
-          sliver: sliver,
-        ) {
+    super.sliver,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'handle': _i2.BuilderArg<_i1.SliverOverlapAbsorberHandle>(
+            name: 'handle',
+            init: handle,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i8.Widget?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverOverlapAbsorber';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverOverlapAbsorber$Mate(
@@ -177,22 +182,10 @@ class SliverOverlapAbsorber$Mate extends _i1.SliverOverlapAbsorber with _i2.Mate
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'handle',
-      handle,
-      isNamed: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverOverlapAbsorber extends RenderSliver with RenderObjectWithChildMixin<RenderSliver>
@@ -200,31 +193,33 @@ class RenderSliverOverlapAbsorber$Mate extends _i1.RenderSliverOverlapAbsorber w
   /// RenderSliverOverlapAbsorber RenderSliverOverlapAbsorber({required SliverOverlapAbsorberHandle handle, RenderSliver? sliver})
   RenderSliverOverlapAbsorber$Mate({
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
-    required _i1.SliverOverlapAbsorberHandle handle,
+    required super.handle,
 
     /// optionalParameters: {RenderSliver? sliver} , default:none
-    _i13.RenderSliver? sliver,
-  }) : super(
-          handle: handle,
-          sliver: sliver,
-        ) {
+    super.sliver,
+  })  : mateParams = {
+          'handle': _i2.BuilderArg<_i1.SliverOverlapAbsorberHandle>(
+            name: 'handle',
+            init: handle,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i13.RenderSliver?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverOverlapAbsorber';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RenderSliverOverlapAbsorber$Mate(
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse(
-      'handle',
-      handle,
-      isNamed: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverOverlapInjector extends SingleChildRenderObjectWidget
@@ -232,18 +227,31 @@ class SliverOverlapInjector$Mate extends _i1.SliverOverlapInjector with _i2.Mate
   /// SliverOverlapInjector SliverOverlapInjector({Key? key, required SliverOverlapAbsorberHandle handle, Widget? sliver})
   SliverOverlapInjector$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
-    required _i1.SliverOverlapAbsorberHandle handle,
+    required super.handle,
 
     /// optionalParameters: {Widget? sliver} , default:none
-    _i8.Widget? sliver,
-  }) : super(
-          key: key,
-          handle: handle,
-          sliver: sliver,
-        ) {
+    super.sliver,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'handle': _i2.BuilderArg<_i1.SliverOverlapAbsorberHandle>(
+            name: 'handle',
+            init: handle,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i8.Widget?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverOverlapInjector';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverOverlapInjector$Mate(
@@ -251,22 +259,10 @@ class SliverOverlapInjector$Mate extends _i1.SliverOverlapInjector with _i2.Mate
           handle: p.get('handle').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'handle',
-      handle,
-      isNamed: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverOverlapInjector extends RenderSliver
@@ -275,17 +271,22 @@ class RenderSliverOverlapInjector$Mate extends _i1.RenderSliverOverlapInjector w
   RenderSliverOverlapInjector$Mate(
       {
       /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
-      required _i1.SliverOverlapAbsorberHandle handle})
-      : super(handle: handle) {
+      required super.handle})
+      : mateParams = {
+          'handle': _i2.BuilderArg<_i1.SliverOverlapAbsorberHandle>(
+            name: 'handle',
+            init: handle,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderSliverOverlapInjector';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RenderSliverOverlapInjector$Mate(handle: p.get('handle').build());
-    mateUse(
-      'handle',
-      handle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NestedScrollViewViewport extends Viewport
@@ -293,42 +294,82 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
   /// NestedScrollViewViewport NestedScrollViewViewport({Key? key, AxisDirection axisDirection = AxisDirection.down, AxisDirection? crossAxisDirection, double anchor = 0.0, required ViewportOffset offset, Key? center, List<Widget> slivers = const <Widget>[], required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   NestedScrollViewViewport$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i5.AxisDirection axisDirection = _i6.AxisDirection.down,
+    super.axisDirection,
 
     /// optionalParameters: {AxisDirection? crossAxisDirection} , default:none
-    _i5.AxisDirection? crossAxisDirection,
+    super.crossAxisDirection,
 
     /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
-    double anchor = 0.0,
+    super.anchor,
 
     /// optionalParameters: {required ViewportOffset offset} , default:none
-    required _i14.ViewportOffset offset,
+    required super.offset,
 
     /// optionalParameters: {Key? center} , default:none
-    _i3.Key? center,
+    super.center,
 
     /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i8.Widget> slivers,
+    super.slivers,
 
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
-    required _i1.SliverOverlapAbsorberHandle handle,
+    required super.handle,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i11.Clip clipBehavior = _i11.Clip.hardEdge,
-  }) : super(
-          key: key,
-          axisDirection: axisDirection,
-          crossAxisDirection: crossAxisDirection,
-          anchor: anchor,
-          offset: offset,
-          center: center,
-          slivers: slivers,
-          handle: handle,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'axisDirection': _i2.BuilderArg<_i5.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+            defaultValue: _i6.AxisDirection.down,
+          ),
+          'crossAxisDirection': _i2.BuilderArg<_i5.AxisDirection?>(
+            name: 'crossAxisDirection',
+            init: crossAxisDirection,
+            isNamed: true,
+          ),
+          'anchor': _i2.BuilderArg<double>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'offset': _i2.BuilderArg<_i14.ViewportOffset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'center': _i2.BuilderArg<_i3.Key?>(
+            name: 'center',
+            init: center,
+            isNamed: true,
+          ),
+          'slivers': _i2.BuilderArg<List<_i8.Widget>>(
+            name: 'slivers',
+            init: slivers,
+            isNamed: true,
+          ),
+          'handle': _i2.BuilderArg<_i1.SliverOverlapAbsorberHandle>(
+            name: 'handle',
+            init: handle,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i11.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'NestedScrollViewViewport';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => NestedScrollViewViewport$Mate(
@@ -342,55 +383,10 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-      defaultValue: _i6.AxisDirection.down,
-    );
-    mateUse(
-      'crossAxisDirection',
-      crossAxisDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'center',
-      center,
-      isNamed: true,
-    );
-    mateUse(
-      'slivers',
-      slivers,
-      isNamed: true,
-    );
-    mateUse(
-      'handle',
-      handle,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i11.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderNestedScrollViewViewport extends RenderViewport
@@ -398,38 +394,74 @@ class RenderNestedScrollViewViewport$Mate extends _i1.RenderNestedScrollViewView
   /// RenderNestedScrollViewViewport RenderNestedScrollViewViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   RenderNestedScrollViewViewport$Mate({
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i5.AxisDirection axisDirection = _i6.AxisDirection.down,
+    super.axisDirection,
 
     /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
-    required _i5.AxisDirection crossAxisDirection,
+    required super.crossAxisDirection,
 
     /// optionalParameters: {required ViewportOffset offset} , default:none
-    required _i14.ViewportOffset offset,
+    required super.offset,
 
     /// optionalParameters: {double anchor = 0.0} , default:processed=DoubleLiteralImpl
-    double anchor = 0.0,
+    super.anchor,
 
     /// optionalParameters: {List<RenderSliver>? children} , default:none
-    List<_i13.RenderSliver>? children,
+    super.children,
 
     /// optionalParameters: {RenderSliver? center} , default:none
-    _i13.RenderSliver? center,
+    super.center,
 
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
-    required _i1.SliverOverlapAbsorberHandle handle,
+    required super.handle,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i11.Clip clipBehavior = _i11.Clip.hardEdge,
-  }) : super(
-          axisDirection: axisDirection,
-          crossAxisDirection: crossAxisDirection,
-          offset: offset,
-          anchor: anchor,
-          children: children,
-          center: center,
-          handle: handle,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'axisDirection': _i2.BuilderArg<_i5.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+            defaultValue: _i6.AxisDirection.down,
+          ),
+          'crossAxisDirection': _i2.BuilderArg<_i5.AxisDirection>(
+            name: 'crossAxisDirection',
+            init: crossAxisDirection,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i14.ViewportOffset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'anchor': _i2.BuilderArg<double>(
+            name: 'anchor',
+            init: anchor,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'children': _i2.BuilderArg<List<_i13.RenderSliver>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'center': _i2.BuilderArg<_i13.RenderSliver?>(
+            name: 'center',
+            init: center,
+            isNamed: true,
+          ),
+          'handle': _i2.BuilderArg<_i1.SliverOverlapAbsorberHandle>(
+            name: 'handle',
+            init: handle,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i11.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderNestedScrollViewViewport';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RenderNestedScrollViewViewport$Mate(
@@ -442,48 +474,8 @@ class RenderNestedScrollViewViewport$Mate extends _i1.RenderNestedScrollViewView
           handle: p.get('handle').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-      defaultValue: _i6.AxisDirection.down,
-    );
-    mateUse(
-      'crossAxisDirection',
-      crossAxisDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'anchor',
-      anchor,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'center',
-      center,
-      isNamed: true,
-    );
-    mateUse(
-      'handle',
-      handle,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i11.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

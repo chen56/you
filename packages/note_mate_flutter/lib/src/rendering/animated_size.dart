@@ -16,38 +16,74 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
   /// RenderAnimatedSize RenderAnimatedSize({required TickerProvider vsync, required Duration duration, Duration? reverseDuration, Curve curve = Curves.linear, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.hardEdge})
   RenderAnimatedSize$Mate({
     /// optionalParameters: {required TickerProvider vsync} , default:none
-    required _i3.TickerProvider vsync,
+    required super.vsync,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {Duration? reverseDuration} , default:none
-    Duration? reverseDuration,
+    super.reverseDuration,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i4.Curve curve = _i5.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i6.AlignmentGeometry alignment = _i7.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i8.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i9.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i8.Clip clipBehavior = _i8.Clip.hardEdge,
-  }) : super(
-          vsync: vsync,
-          duration: duration,
-          reverseDuration: reverseDuration,
-          curve: curve,
-          alignment: alignment,
-          textDirection: textDirection,
-          child: child,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'vsync': _i2.BuilderArg<_i3.TickerProvider>(
+            name: 'vsync',
+            init: vsync,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'reverseDuration': _i2.BuilderArg<Duration?>(
+            name: 'reverseDuration',
+            init: reverseDuration,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i4.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i5.Curves.linear,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i7.Alignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i8.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i8.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i8.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderAnimatedSize';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAnimatedSize$Mate(
@@ -60,48 +96,8 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'vsync',
-      vsync,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseDuration',
-      reverseDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i5.Curves.linear,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i7.Alignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i8.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

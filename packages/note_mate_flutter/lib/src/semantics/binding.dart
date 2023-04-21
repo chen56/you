@@ -10,18 +10,31 @@ class SemanticsActionEvent$Mate extends _i1.SemanticsActionEvent with _i2.Mate {
   /// SemanticsActionEvent SemanticsActionEvent({required SemanticsAction type, required int nodeId, Object? arguments})
   SemanticsActionEvent$Mate({
     /// optionalParameters: {required SemanticsAction type} , default:none
-    required _i3.SemanticsAction type,
+    required super.type,
 
     /// optionalParameters: {required int nodeId} , default:none
-    required int nodeId,
+    required super.nodeId,
 
     /// optionalParameters: {Object? arguments} , default:none
-    Object? arguments,
-  }) : super(
-          type: type,
-          nodeId: nodeId,
-          arguments: arguments,
-        ) {
+    super.arguments,
+  })  : mateParams = {
+          'type': _i2.BuilderArg<_i3.SemanticsAction>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+          ),
+          'nodeId': _i2.BuilderArg<int>(
+            name: 'nodeId',
+            init: nodeId,
+            isNamed: true,
+          ),
+          'arguments': _i2.BuilderArg<Object?>(
+            name: 'arguments',
+            init: arguments,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SemanticsActionEvent';
     matePackageUrl = 'package:flutter/semantics.dart';
     mateBuilder = (p) => SemanticsActionEvent$Mate(
@@ -29,20 +42,8 @@ class SemanticsActionEvent$Mate extends _i1.SemanticsActionEvent with _i2.Mate {
           nodeId: p.get('nodeId').build(),
           arguments: p.get('arguments').build(),
         );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-    );
-    mateUse(
-      'nodeId',
-      nodeId,
-      isNamed: true,
-    );
-    mateUse(
-      'arguments',
-      arguments,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -10,29 +10,31 @@ class AutomaticNotchedShape$Mate extends _i1.AutomaticNotchedShape with _i2.Mate
   /// AutomaticNotchedShape AutomaticNotchedShape(ShapeBorder host, [ShapeBorder? guest])
   AutomaticNotchedShape$Mate(
     /// requiredParameters: ShapeBorder host
-    _i3.ShapeBorder host,
+    super.host,
 
     /// requiredParameters: [ShapeBorder? guest]
-    _i3.ShapeBorder? guest,
-  ) : super(
-          host,
-          guest,
-        ) {
+    super.guest,
+  )   : mateParams = {
+          'host': _i2.BuilderArg<_i3.ShapeBorder>(
+            name: 'host',
+            init: host,
+            isNamed: false,
+          ),
+          'guest': _i2.BuilderArg<_i3.ShapeBorder?>(
+            name: 'guest',
+            init: guest,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'AutomaticNotchedShape';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AutomaticNotchedShape$Mate(
           p.get('host').value,
           p.get('guest').value,
         );
-    mateUse(
-      'host',
-      host,
-      isNamed: false,
-    );
-    mateUse(
-      'guest',
-      guest,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,18 +12,31 @@ class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration with _i2.
   /// SpellCheckConfiguration SpellCheckConfiguration({SpellCheckService? spellCheckService, TextStyle? misspelledTextStyle, Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder})
   SpellCheckConfiguration$Mate({
     /// optionalParameters: {SpellCheckService? spellCheckService} , default:none
-    _i3.SpellCheckService? spellCheckService,
+    super.spellCheckService,
 
     /// optionalParameters: {TextStyle? misspelledTextStyle} , default:none
-    _i4.TextStyle? misspelledTextStyle,
+    super.misspelledTextStyle,
 
     /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder} , default:none
-    _i5.EditableTextContextMenuBuilder? spellCheckSuggestionsToolbarBuilder,
-  }) : super(
-          spellCheckService: spellCheckService,
-          misspelledTextStyle: misspelledTextStyle,
-          spellCheckSuggestionsToolbarBuilder: spellCheckSuggestionsToolbarBuilder,
-        ) {
+    super.spellCheckSuggestionsToolbarBuilder,
+  })  : mateParams = {
+          'spellCheckService': _i2.BuilderArg<_i3.SpellCheckService?>(
+            name: 'spellCheckService',
+            init: spellCheckService,
+            isNamed: true,
+          ),
+          'misspelledTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'misspelledTextStyle',
+            init: misspelledTextStyle,
+            isNamed: true,
+          ),
+          'spellCheckSuggestionsToolbarBuilder': _i2.BuilderArg<_i5.EditableTextContextMenuBuilder?>(
+            name: 'spellCheckSuggestionsToolbarBuilder',
+            init: spellCheckSuggestionsToolbarBuilder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SpellCheckConfiguration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SpellCheckConfiguration$Mate(
@@ -31,20 +44,8 @@ class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration with _i2.
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
           spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
-    mateUse(
-      'spellCheckService',
-      spellCheckService,
-      isNamed: true,
-    );
-    mateUse(
-      'misspelledTextStyle',
-      misspelledTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'spellCheckSuggestionsToolbarBuilder',
-      spellCheckSuggestionsToolbarBuilder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

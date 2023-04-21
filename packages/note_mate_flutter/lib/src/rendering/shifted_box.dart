@@ -14,18 +14,31 @@ class RenderPadding$Mate extends _i1.RenderPadding with _i2.Mate {
   /// RenderPadding RenderPadding({required EdgeInsetsGeometry padding, TextDirection? textDirection, RenderBox? child})
   RenderPadding$Mate({
     /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
-    required _i3.EdgeInsetsGeometry padding,
+    required super.padding,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
-  }) : super(
-          padding: padding,
-          textDirection: textDirection,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'padding': _i2.BuilderArg<_i3.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderPadding';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPadding$Mate(
@@ -33,22 +46,10 @@ class RenderPadding$Mate extends _i1.RenderPadding with _i2.Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderPositionedBox extends RenderAligningShiftedBox
@@ -56,26 +57,48 @@ class RenderPositionedBox$Mate extends _i1.RenderPositionedBox with _i2.Mate {
   /// RenderPositionedBox RenderPositionedBox({RenderBox? child, double? widthFactor, double? heightFactor, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderPositionedBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {double? widthFactor} , default:none
-    double? widthFactor,
+    super.widthFactor,
 
     /// optionalParameters: {double? heightFactor} , default:none
-    double? heightFactor,
+    super.heightFactor,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i6.AlignmentGeometry alignment = _i7.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
-  }) : super(
-          child: child,
-          widthFactor: widthFactor,
-          heightFactor: heightFactor,
-          alignment: alignment,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'widthFactor': _i2.BuilderArg<double?>(
+            name: 'widthFactor',
+            init: widthFactor,
+            isNamed: true,
+          ),
+          'heightFactor': _i2.BuilderArg<double?>(
+            name: 'heightFactor',
+            init: heightFactor,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i7.Alignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderPositionedBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderPositionedBox$Mate(
@@ -85,33 +108,10 @@ class RenderPositionedBox$Mate extends _i1.RenderPositionedBox with _i2.Mate {
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'widthFactor',
-      widthFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'heightFactor',
-      heightFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i7.Alignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderConstrainedOverflowBox extends RenderAligningShiftedBox
@@ -119,34 +119,64 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
   /// RenderConstrainedOverflowBox RenderConstrainedOverflowBox({RenderBox? child, double? minWidth, double? maxWidth, double? minHeight, double? maxHeight, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderConstrainedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {double? minWidth} , default:none
-    double? minWidth,
+    super.minWidth,
 
     /// optionalParameters: {double? maxWidth} , default:none
-    double? maxWidth,
+    super.maxWidth,
 
     /// optionalParameters: {double? minHeight} , default:none
-    double? minHeight,
+    super.minHeight,
 
     /// optionalParameters: {double? maxHeight} , default:none
-    double? maxHeight,
+    super.maxHeight,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i6.AlignmentGeometry alignment = _i7.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
-  }) : super(
-          child: child,
-          minWidth: minWidth,
-          maxWidth: maxWidth,
-          minHeight: minHeight,
-          maxHeight: maxHeight,
-          alignment: alignment,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'minWidth': _i2.BuilderArg<double?>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+          ),
+          'maxWidth': _i2.BuilderArg<double?>(
+            name: 'maxWidth',
+            init: maxWidth,
+            isNamed: true,
+          ),
+          'minHeight': _i2.BuilderArg<double?>(
+            name: 'minHeight',
+            init: minHeight,
+            isNamed: true,
+          ),
+          'maxHeight': _i2.BuilderArg<double?>(
+            name: 'maxHeight',
+            init: maxHeight,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i7.Alignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderConstrainedOverflowBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderConstrainedOverflowBox$Mate(
@@ -158,43 +188,10 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'maxWidth',
-      maxWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'minHeight',
-      minHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'maxHeight',
-      maxHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i7.Alignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderConstraintsTransformBox extends RenderAligningShiftedBox with DebugOverflowIndicatorMixin
@@ -202,26 +199,49 @@ class RenderConstraintsTransformBox$Mate extends _i1.RenderConstraintsTransformB
   /// RenderConstraintsTransformBox RenderConstraintsTransformBox({required AlignmentGeometry alignment = Alignment.center, required TextDirection? textDirection, required BoxConstraints Function(BoxConstraints) constraintsTransform, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderConstraintsTransformBox$Mate({
     /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i6.AlignmentGeometry alignment = _i7.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {required TextDirection? textDirection} , default:none
-    required _i4.TextDirection? textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , default:none
-    required _i1.BoxConstraintsTransform constraintsTransform,
+    required super.constraintsTransform,
 
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.none,
-  }) : super(
-          alignment: alignment,
-          textDirection: textDirection,
-          constraintsTransform: constraintsTransform,
-          child: child,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i7.Alignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'constraintsTransform': _i2.BuilderArg<_i1.BoxConstraintsTransform>(
+            name: 'constraintsTransform',
+            init: constraintsTransform,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderConstraintsTransformBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderConstraintsTransformBox$Mate(
@@ -231,34 +251,10 @@ class RenderConstraintsTransformBox$Mate extends _i1.RenderConstraintsTransformB
           child: p.get('child').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i7.Alignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'constraintsTransform',
-      constraintsTransform,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSizedOverflowBox extends RenderAligningShiftedBox
@@ -266,22 +262,40 @@ class RenderSizedOverflowBox$Mate extends _i1.RenderSizedOverflowBox with _i2.Ma
   /// RenderSizedOverflowBox RenderSizedOverflowBox({RenderBox? child, required Size requestedSize, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderSizedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required Size requestedSize} , default:none
-    required _i4.Size requestedSize,
+    required super.requestedSize,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i6.AlignmentGeometry alignment = _i7.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
-  }) : super(
-          child: child,
-          requestedSize: requestedSize,
-          alignment: alignment,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'requestedSize': _i2.BuilderArg<_i4.Size>(
+            name: 'requestedSize',
+            init: requestedSize,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i7.Alignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSizedOverflowBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSizedOverflowBox$Mate(
@@ -290,28 +304,10 @@ class RenderSizedOverflowBox$Mate extends _i1.RenderSizedOverflowBox with _i2.Ma
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'requestedSize',
-      requestedSize,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i7.Alignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderFractionallySizedOverflowBox extends RenderAligningShiftedBox
@@ -319,26 +315,48 @@ class RenderFractionallySizedOverflowBox$Mate extends _i1.RenderFractionallySize
   /// RenderFractionallySizedOverflowBox RenderFractionallySizedOverflowBox({RenderBox? child, double? widthFactor, double? heightFactor, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection})
   RenderFractionallySizedOverflowBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {double? widthFactor} , default:none
-    double? widthFactor,
+    super.widthFactor,
 
     /// optionalParameters: {double? heightFactor} , default:none
-    double? heightFactor,
+    super.heightFactor,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i6.AlignmentGeometry alignment = _i7.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
-  }) : super(
-          child: child,
-          widthFactor: widthFactor,
-          heightFactor: heightFactor,
-          alignment: alignment,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'widthFactor': _i2.BuilderArg<double?>(
+            name: 'widthFactor',
+            init: widthFactor,
+            isNamed: true,
+          ),
+          'heightFactor': _i2.BuilderArg<double?>(
+            name: 'heightFactor',
+            init: heightFactor,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i7.Alignment.center,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderFractionallySizedOverflowBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFractionallySizedOverflowBox$Mate(
@@ -348,33 +366,10 @@ class RenderFractionallySizedOverflowBox$Mate extends _i1.RenderFractionallySize
           alignment: p.get('alignment').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'widthFactor',
-      widthFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'heightFactor',
-      heightFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i7.Alignment.center,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderCustomSingleChildLayoutBox extends RenderShiftedBox
@@ -382,31 +377,33 @@ class RenderCustomSingleChildLayoutBox$Mate extends _i1.RenderCustomSingleChildL
   /// RenderCustomSingleChildLayoutBox RenderCustomSingleChildLayoutBox({RenderBox? child, required SingleChildLayoutDelegate delegate})
   RenderCustomSingleChildLayoutBox$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required SingleChildLayoutDelegate delegate} , default:none
-    required _i1.SingleChildLayoutDelegate delegate,
-  }) : super(
-          child: child,
-          delegate: delegate,
-        ) {
+    required super.delegate,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i1.SingleChildLayoutDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderCustomSingleChildLayoutBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderCustomSingleChildLayoutBox$Mate(
           child: p.get('child').build(),
           delegate: p.get('delegate').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderBaseline extends RenderShiftedBox
@@ -414,18 +411,31 @@ class RenderBaseline$Mate extends _i1.RenderBaseline with _i2.Mate {
   /// RenderBaseline RenderBaseline({RenderBox? child, required double baseline, required TextBaseline baselineType})
   RenderBaseline$Mate({
     /// optionalParameters: {RenderBox? child} , default:none
-    _i5.RenderBox? child,
+    super.child,
 
     /// optionalParameters: {required double baseline} , default:none
-    required double baseline,
+    required super.baseline,
 
     /// optionalParameters: {required TextBaseline baselineType} , default:none
-    required _i4.TextBaseline baselineType,
-  }) : super(
-          child: child,
-          baseline: baseline,
-          baselineType: baselineType,
-        ) {
+    required super.baselineType,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'baseline': _i2.BuilderArg<double>(
+            name: 'baseline',
+            init: baseline,
+            isNamed: true,
+          ),
+          'baselineType': _i2.BuilderArg<_i4.TextBaseline>(
+            name: 'baselineType',
+            init: baselineType,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderBaseline';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderBaseline$Mate(
@@ -433,20 +443,8 @@ class RenderBaseline$Mate extends _i1.RenderBaseline with _i2.Mate {
           baseline: p.get('baseline').build(),
           baselineType: p.get('baselineType').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'baseline',
-      baseline,
-      isNamed: true,
-    );
-    mateUse(
-      'baselineType',
-      baselineType,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

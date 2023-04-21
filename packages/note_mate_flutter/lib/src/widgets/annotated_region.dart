@@ -11,22 +11,40 @@ class AnnotatedRegion$Mate<T extends Object> extends _i1.AnnotatedRegion<T> with
   /// AnnotatedRegion<T> AnnotatedRegion({Key? key, required Widget child, required T value, bool sized = true})
   AnnotatedRegion$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {required T value} , default:none
-    required T value,
+    required super.value,
 
     /// optionalParameters: {bool sized = true} , default:processed=BooleanLiteralImpl
-    bool sized = true,
-  }) : super(
-          key: key,
-          child: child,
-          value: value,
-          sized: sized,
-        ) {
+    super.sized,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'sized': _i2.BuilderArg<bool>(
+            name: 'sized',
+            init: sized,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnnotatedRegion';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnnotatedRegion$Mate<T>(
@@ -35,26 +53,8 @@ class AnnotatedRegion$Mate<T extends Object> extends _i1.AnnotatedRegion<T> with
           value: p.get('value').build(),
           sized: p.get('sized').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'sized',
-      sized,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,34 +12,70 @@ class TableBorder$Mate extends _i1.TableBorder with _i2.Mate {
   /// TableBorder TableBorder({BorderSide top = BorderSide.none, BorderSide right = BorderSide.none, BorderSide bottom = BorderSide.none, BorderSide left = BorderSide.none, BorderSide horizontalInside = BorderSide.none, BorderSide verticalInside = BorderSide.none, BorderRadius borderRadius = BorderRadius.zero})
   TableBorder$Mate({
     /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide top = _i4.BorderSide.none,
+    super.top,
 
     /// optionalParameters: {BorderSide right = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide right = _i4.BorderSide.none,
+    super.right,
 
     /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide bottom = _i4.BorderSide.none,
+    super.bottom,
 
     /// optionalParameters: {BorderSide left = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide left = _i4.BorderSide.none,
+    super.left,
 
     /// optionalParameters: {BorderSide horizontalInside = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide horizontalInside = _i4.BorderSide.none,
+    super.horizontalInside,
 
     /// optionalParameters: {BorderSide verticalInside = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide verticalInside = _i4.BorderSide.none,
+    super.verticalInside,
 
     /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.BorderRadius borderRadius = _i4.BorderRadius.zero,
-  }) : super(
-          top: top,
-          right: right,
-          bottom: bottom,
-          left: left,
-          horizontalInside: horizontalInside,
-          verticalInside: verticalInside,
-          borderRadius: borderRadius,
-        ) {
+    super.borderRadius,
+  })  : mateParams = {
+          'top': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'right': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'right',
+            init: right,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'bottom': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'left': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'left',
+            init: left,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'horizontalInside': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'horizontalInside',
+            init: horizontalInside,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'verticalInside': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'verticalInside',
+            init: verticalInside,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'borderRadius': _i2.BuilderArg<_i5.BorderRadius>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+            defaultValue: _i4.BorderRadius.zero,
+          ),
+        },
+        super() {
     mateBuilderName = 'TableBorder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TableBorder$Mate(
@@ -51,47 +87,8 @@ class TableBorder$Mate extends _i1.TableBorder with _i2.Mate {
           verticalInside: p.get('verticalInside').build(),
           borderRadius: p.get('borderRadius').build(),
         );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'right',
-      right,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'left',
-      left,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'horizontalInside',
-      horizontalInside,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'verticalInside',
-      verticalInside,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-      defaultValue: _i4.BorderRadius.zero,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

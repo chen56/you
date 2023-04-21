@@ -14,38 +14,75 @@ class AnimatedSwitcher$Mate extends _i1.AnimatedSwitcher with _i2.Mate {
   /// AnimatedSwitcher AnimatedSwitcher({Key? key, Widget? child, required Duration duration, Duration? reverseDuration, Curve switchInCurve = Curves.linear, Curve switchOutCurve = Curves.linear, Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder, Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder})
   AnimatedSwitcher$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {Duration? reverseDuration} , default:none
-    Duration? reverseDuration,
+    super.reverseDuration,
 
     /// optionalParameters: {Curve switchInCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i5.Curve switchInCurve = _i6.Curves.linear,
+    super.switchInCurve,
 
     /// optionalParameters: {Curve switchOutCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i5.Curve switchOutCurve = _i6.Curves.linear,
+    super.switchOutCurve,
 
     /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , default:processed=PrefixedIdentifierImpl
-    _i1.AnimatedSwitcherTransitionBuilder transitionBuilder = _i7.AnimatedSwitcher.defaultTransitionBuilder,
+    super.transitionBuilder,
 
     /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , default:processed=PrefixedIdentifierImpl
-    _i1.AnimatedSwitcherLayoutBuilder layoutBuilder = _i7.AnimatedSwitcher.defaultLayoutBuilder,
-  }) : super(
-          key: key,
-          child: child,
-          duration: duration,
-          reverseDuration: reverseDuration,
-          switchInCurve: switchInCurve,
-          switchOutCurve: switchOutCurve,
-          transitionBuilder: transitionBuilder,
-          layoutBuilder: layoutBuilder,
-        ) {
+    super.layoutBuilder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'reverseDuration': _i2.BuilderArg<Duration?>(
+            name: 'reverseDuration',
+            init: reverseDuration,
+            isNamed: true,
+          ),
+          'switchInCurve': _i2.BuilderArg<_i5.Curve>(
+            name: 'switchInCurve',
+            init: switchInCurve,
+            isNamed: true,
+            defaultValue: _i6.Curves.linear,
+          ),
+          'switchOutCurve': _i2.BuilderArg<_i5.Curve>(
+            name: 'switchOutCurve',
+            init: switchOutCurve,
+            isNamed: true,
+            defaultValue: _i6.Curves.linear,
+          ),
+          'transitionBuilder': _i2.BuilderArg<_i1.AnimatedSwitcherTransitionBuilder>(
+            name: 'transitionBuilder',
+            init: transitionBuilder,
+            isNamed: true,
+            defaultValue: _i7.AnimatedSwitcher.defaultTransitionBuilder,
+          ),
+          'layoutBuilder': _i2.BuilderArg<_i1.AnimatedSwitcherLayoutBuilder>(
+            name: 'layoutBuilder',
+            init: layoutBuilder,
+            isNamed: true,
+            defaultValue: _i7.AnimatedSwitcher.defaultLayoutBuilder,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedSwitcher';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedSwitcher$Mate(
@@ -58,49 +95,8 @@ class AnimatedSwitcher$Mate extends _i1.AnimatedSwitcher with _i2.Mate {
           transitionBuilder: p.get('transitionBuilder').build(),
           layoutBuilder: p.get('layoutBuilder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseDuration',
-      reverseDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'switchInCurve',
-      switchInCurve,
-      isNamed: true,
-      defaultValue: _i6.Curves.linear,
-    );
-    mateUse(
-      'switchOutCurve',
-      switchOutCurve,
-      isNamed: true,
-      defaultValue: _i6.Curves.linear,
-    );
-    mateUse(
-      'transitionBuilder',
-      transitionBuilder,
-      isNamed: true,
-      defaultValue: _i7.AnimatedSwitcher.defaultTransitionBuilder,
-    );
-    mateUse(
-      'layoutBuilder',
-      layoutBuilder,
-      isNamed: true,
-      defaultValue: _i7.AnimatedSwitcher.defaultLayoutBuilder,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

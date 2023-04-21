@@ -11,22 +11,43 @@ class Border$Mate extends _i1.Border with _i2.Mate {
   /// Border Border({BorderSide top = BorderSide.none, BorderSide right = BorderSide.none, BorderSide bottom = BorderSide.none, BorderSide left = BorderSide.none})
   Border$Mate({
     /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide top = _i4.BorderSide.none,
+    super.top,
 
     /// optionalParameters: {BorderSide right = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide right = _i4.BorderSide.none,
+    super.right,
 
     /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide bottom = _i4.BorderSide.none,
+    super.bottom,
 
     /// optionalParameters: {BorderSide left = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide left = _i4.BorderSide.none,
-  }) : super(
-          top: top,
-          right: right,
-          bottom: bottom,
-          left: left,
-        ) {
+    super.left,
+  })  : mateParams = {
+          'top': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'right': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'right',
+            init: right,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'bottom': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'left': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'left',
+            init: left,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'Border';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Border$Mate(
@@ -35,78 +56,58 @@ class Border$Mate extends _i1.Border with _i2.Mate {
           bottom: p.get('bottom').build(),
           left: p.get('left').build(),
         );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'right',
-      right,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'left',
-      left,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
   }
 
   /// Border Border.fromBorderSide(BorderSide side)
   Border$Mate.fromBorderSide(
 
       /// requiredParameters: BorderSide side
-      _i3.BorderSide side)
-      : super.fromBorderSide(side) {
+      super.side)
+      : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: false,
+          )
+        },
+        super.fromBorderSide() {
     mateBuilderName = 'Border.fromBorderSide';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Border$Mate.fromBorderSide(p.get('side').value);
-    mateUse(
-      'side',
-      side,
-      isNamed: false,
-    );
   }
 
   /// Border Border.symmetric({BorderSide vertical = BorderSide.none, BorderSide horizontal = BorderSide.none})
   Border$Mate.symmetric({
     /// optionalParameters: {BorderSide vertical = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide vertical = _i4.BorderSide.none,
+    super.vertical,
 
     /// optionalParameters: {BorderSide horizontal = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide horizontal = _i4.BorderSide.none,
-  }) : super.symmetric(
-          vertical: vertical,
-          horizontal: horizontal,
-        ) {
+    super.horizontal,
+  })  : mateParams = {
+          'vertical': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'vertical',
+            init: vertical,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'horizontal': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'horizontal',
+            init: horizontal,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+        },
+        super.symmetric() {
     mateBuilderName = 'Border.symmetric';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Border$Mate.symmetric(
           vertical: p.get('vertical').build(),
           horizontal: p.get('horizontal').build(),
         );
-    mateUse(
-      'vertical',
-      vertical,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'horizontal',
-      horizontal,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BorderDirectional extends BoxBorder
@@ -114,22 +115,43 @@ class BorderDirectional$Mate extends _i1.BorderDirectional with _i2.Mate {
   /// BorderDirectional BorderDirectional({BorderSide top = BorderSide.none, BorderSide start = BorderSide.none, BorderSide end = BorderSide.none, BorderSide bottom = BorderSide.none})
   BorderDirectional$Mate({
     /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide top = _i4.BorderSide.none,
+    super.top,
 
     /// optionalParameters: {BorderSide start = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide start = _i4.BorderSide.none,
+    super.start,
 
     /// optionalParameters: {BorderSide end = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide end = _i4.BorderSide.none,
+    super.end,
 
     /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-    _i3.BorderSide bottom = _i4.BorderSide.none,
-  }) : super(
-          top: top,
-          start: start,
-          end: end,
-          bottom: bottom,
-        ) {
+    super.bottom,
+  })  : mateParams = {
+          'top': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'start': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'start',
+            init: start,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'end': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+          'bottom': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'BorderDirectional';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BorderDirectional$Mate(
@@ -138,29 +160,8 @@ class BorderDirectional$Mate extends _i1.BorderDirectional with _i2.Mate {
           end: p.get('end').build(),
           bottom: p.get('bottom').build(),
         );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'start',
-      start,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

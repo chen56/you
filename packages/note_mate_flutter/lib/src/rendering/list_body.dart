@@ -12,30 +12,32 @@ class RenderListBody$Mate extends _i1.RenderListBody with _i2.Mate {
   /// RenderListBody RenderListBody({List<RenderBox>? children, AxisDirection axisDirection = AxisDirection.down})
   RenderListBody$Mate({
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i3.RenderBox>? children,
+    super.children,
 
     /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i4.AxisDirection axisDirection = _i5.AxisDirection.down,
-  }) : super(
-          children: children,
-          axisDirection: axisDirection,
-        ) {
+    super.axisDirection,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderListBody';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderListBody$Mate(
           children: p.get('children').build(),
           axisDirection: p.get('axisDirection').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-      defaultValue: _i5.AxisDirection.down,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

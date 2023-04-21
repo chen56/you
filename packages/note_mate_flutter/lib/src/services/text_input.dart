@@ -14,33 +14,35 @@ class TextInputType$Mate extends _i1.TextInputType with _i2.Mate {
   /// TextInputType TextInputType.numberWithOptions({bool? signed = false, bool? decimal = false})
   TextInputType$Mate.numberWithOptions({
     /// optionalParameters: {bool? signed = false} , default:processed=BooleanLiteralImpl
-    bool? signed = false,
+    super.signed,
 
     /// optionalParameters: {bool? decimal = false} , default:processed=BooleanLiteralImpl
-    bool? decimal = false,
-  }) : super.numberWithOptions(
-          signed: signed,
-          decimal: decimal,
-        ) {
+    super.decimal,
+  })  : mateParams = {
+          'signed': _i2.BuilderArg<bool?>(
+            name: 'signed',
+            init: signed,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'decimal': _i2.BuilderArg<bool?>(
+            name: 'decimal',
+            init: decimal,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super.numberWithOptions() {
     mateBuilderName = 'TextInputType.numberWithOptions';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextInputType$Mate.numberWithOptions(
           signed: p.get('signed').build(),
           decimal: p.get('decimal').build(),
         );
-    mateUse(
-      'signed',
-      signed,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'decimal',
-      decimal,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextInputConfiguration
@@ -48,70 +50,147 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Ma
   /// TextInputConfiguration TextInputConfiguration({TextInputType inputType = TextInputType.text, bool readOnly = false, bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, bool enableInteractiveSelection = true, String? actionLabel, TextInputAction inputAction = TextInputAction.done, Brightness keyboardAppearance = Brightness.light, TextCapitalization textCapitalization = TextCapitalization.none, AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled, bool enableIMEPersonalizedLearning = true, List<String> allowedMimeTypes = const <String>[], bool enableDeltaModel = false})
   TextInputConfiguration$Mate({
     /// optionalParameters: {TextInputType inputType = TextInputType.text} , default:processed=PrefixedIdentifierImpl
-    _i1.TextInputType inputType = _i3.TextInputType.text,
+    super.inputType,
 
     /// optionalParameters: {bool readOnly = false} , default:processed=BooleanLiteralImpl
-    bool readOnly = false,
+    super.readOnly,
 
     /// optionalParameters: {bool obscureText = false} , default:processed=BooleanLiteralImpl
-    bool obscureText = false,
+    super.obscureText,
 
     /// optionalParameters: {bool autocorrect = true} , default:processed=BooleanLiteralImpl
-    bool autocorrect = true,
+    super.autocorrect,
 
     /// optionalParameters: {SmartDashesType? smartDashesType} , default:none
-    _i1.SmartDashesType? smartDashesType,
+    super.smartDashesType,
 
     /// optionalParameters: {SmartQuotesType? smartQuotesType} , default:none
-    _i1.SmartQuotesType? smartQuotesType,
+    super.smartQuotesType,
 
     /// optionalParameters: {bool enableSuggestions = true} , default:processed=BooleanLiteralImpl
-    bool enableSuggestions = true,
+    super.enableSuggestions,
 
     /// optionalParameters: {bool enableInteractiveSelection = true} , default:processed=BooleanLiteralImpl
-    bool enableInteractiveSelection = true,
+    super.enableInteractiveSelection,
 
     /// optionalParameters: {String? actionLabel} , default:none
-    String? actionLabel,
+    super.actionLabel,
 
     /// optionalParameters: {TextInputAction inputAction = TextInputAction.done} , default:processed=PrefixedIdentifierImpl
-    _i1.TextInputAction inputAction = _i3.TextInputAction.done,
+    super.inputAction,
 
     /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , default:processed=PrefixedIdentifierImpl
-    _i4.Brightness keyboardAppearance = _i4.Brightness.light,
+    super.keyboardAppearance,
 
     /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
-    _i1.TextCapitalization textCapitalization = _i3.TextCapitalization.none,
+    super.textCapitalization,
 
     /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    _i5.AutofillConfiguration autofillConfiguration = _i6.AutofillConfiguration.disabled,
+    super.autofillConfiguration,
 
     /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , default:processed=BooleanLiteralImpl
-    bool enableIMEPersonalizedLearning = true,
+    super.enableIMEPersonalizedLearning,
 
     /// optionalParameters: {List<String> allowedMimeTypes = const <String>[]} , default:unprocessed=ListLiteralImpl
-    required List<String> allowedMimeTypes,
+    super.allowedMimeTypes,
 
     /// optionalParameters: {bool enableDeltaModel = false} , default:processed=BooleanLiteralImpl
-    bool enableDeltaModel = false,
-  }) : super(
-          inputType: inputType,
-          readOnly: readOnly,
-          obscureText: obscureText,
-          autocorrect: autocorrect,
-          smartDashesType: smartDashesType,
-          smartQuotesType: smartQuotesType,
-          enableSuggestions: enableSuggestions,
-          enableInteractiveSelection: enableInteractiveSelection,
-          actionLabel: actionLabel,
-          inputAction: inputAction,
-          keyboardAppearance: keyboardAppearance,
-          textCapitalization: textCapitalization,
-          autofillConfiguration: autofillConfiguration,
-          enableIMEPersonalizedLearning: enableIMEPersonalizedLearning,
-          allowedMimeTypes: allowedMimeTypes,
-          enableDeltaModel: enableDeltaModel,
-        ) {
+    super.enableDeltaModel,
+  })  : mateParams = {
+          'inputType': _i2.BuilderArg<_i1.TextInputType>(
+            name: 'inputType',
+            init: inputType,
+            isNamed: true,
+            defaultValue: _i3.TextInputType.text,
+          ),
+          'readOnly': _i2.BuilderArg<bool>(
+            name: 'readOnly',
+            init: readOnly,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'obscureText': _i2.BuilderArg<bool>(
+            name: 'obscureText',
+            init: obscureText,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'autocorrect': _i2.BuilderArg<bool>(
+            name: 'autocorrect',
+            init: autocorrect,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'smartDashesType': _i2.BuilderArg<_i1.SmartDashesType?>(
+            name: 'smartDashesType',
+            init: smartDashesType,
+            isNamed: true,
+          ),
+          'smartQuotesType': _i2.BuilderArg<_i1.SmartQuotesType?>(
+            name: 'smartQuotesType',
+            init: smartQuotesType,
+            isNamed: true,
+          ),
+          'enableSuggestions': _i2.BuilderArg<bool>(
+            name: 'enableSuggestions',
+            init: enableSuggestions,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'enableInteractiveSelection': _i2.BuilderArg<bool>(
+            name: 'enableInteractiveSelection',
+            init: enableInteractiveSelection,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'actionLabel': _i2.BuilderArg<String?>(
+            name: 'actionLabel',
+            init: actionLabel,
+            isNamed: true,
+          ),
+          'inputAction': _i2.BuilderArg<_i1.TextInputAction>(
+            name: 'inputAction',
+            init: inputAction,
+            isNamed: true,
+            defaultValue: _i3.TextInputAction.done,
+          ),
+          'keyboardAppearance': _i2.BuilderArg<_i4.Brightness>(
+            name: 'keyboardAppearance',
+            init: keyboardAppearance,
+            isNamed: true,
+            defaultValue: _i4.Brightness.light,
+          ),
+          'textCapitalization': _i2.BuilderArg<_i1.TextCapitalization>(
+            name: 'textCapitalization',
+            init: textCapitalization,
+            isNamed: true,
+            defaultValue: _i3.TextCapitalization.none,
+          ),
+          'autofillConfiguration': _i2.BuilderArg<_i5.AutofillConfiguration>(
+            name: 'autofillConfiguration',
+            init: autofillConfiguration,
+            isNamed: true,
+            defaultValue: _i6.AutofillConfiguration.disabled,
+          ),
+          'enableIMEPersonalizedLearning': _i2.BuilderArg<bool>(
+            name: 'enableIMEPersonalizedLearning',
+            init: enableIMEPersonalizedLearning,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'allowedMimeTypes': _i2.BuilderArg<List<String>>(
+            name: 'allowedMimeTypes',
+            init: allowedMimeTypes,
+            isNamed: true,
+          ),
+          'enableDeltaModel': _i2.BuilderArg<bool>(
+            name: 'enableDeltaModel',
+            init: enableDeltaModel,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextInputConfiguration';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextInputConfiguration$Mate(
@@ -132,99 +211,10 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Ma
           allowedMimeTypes: p.get('allowedMimeTypes').build(),
           enableDeltaModel: p.get('enableDeltaModel').build(),
         );
-    mateUse(
-      'inputType',
-      inputType,
-      isNamed: true,
-      defaultValue: _i3.TextInputType.text,
-    );
-    mateUse(
-      'readOnly',
-      readOnly,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'obscureText',
-      obscureText,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'autocorrect',
-      autocorrect,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'smartDashesType',
-      smartDashesType,
-      isNamed: true,
-    );
-    mateUse(
-      'smartQuotesType',
-      smartQuotesType,
-      isNamed: true,
-    );
-    mateUse(
-      'enableSuggestions',
-      enableSuggestions,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'enableInteractiveSelection',
-      enableInteractiveSelection,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'actionLabel',
-      actionLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'inputAction',
-      inputAction,
-      isNamed: true,
-      defaultValue: _i3.TextInputAction.done,
-    );
-    mateUse(
-      'keyboardAppearance',
-      keyboardAppearance,
-      isNamed: true,
-      defaultValue: _i4.Brightness.light,
-    );
-    mateUse(
-      'textCapitalization',
-      textCapitalization,
-      isNamed: true,
-      defaultValue: _i3.TextCapitalization.none,
-    );
-    mateUse(
-      'autofillConfiguration',
-      autofillConfiguration,
-      isNamed: true,
-      defaultValue: _i6.AutofillConfiguration.disabled,
-    );
-    mateUse(
-      'enableIMEPersonalizedLearning',
-      enableIMEPersonalizedLearning,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'allowedMimeTypes',
-      allowedMimeTypes,
-      isNamed: true,
-    );
-    mateUse(
-      'enableDeltaModel',
-      enableDeltaModel,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RawFloatingCursorPoint
@@ -232,31 +222,33 @@ class RawFloatingCursorPoint$Mate extends _i1.RawFloatingCursorPoint with _i2.Ma
   /// RawFloatingCursorPoint RawFloatingCursorPoint({Offset? offset, required FloatingCursorDragState state})
   RawFloatingCursorPoint$Mate({
     /// optionalParameters: {Offset? offset} , default:none
-    _i4.Offset? offset,
+    super.offset,
 
     /// optionalParameters: {required FloatingCursorDragState state} , default:none
-    required _i1.FloatingCursorDragState state,
-  }) : super(
-          offset: offset,
-          state: state,
-        ) {
+    required super.state,
+  })  : mateParams = {
+          'offset': _i2.BuilderArg<_i4.Offset?>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'state': _i2.BuilderArg<_i1.FloatingCursorDragState>(
+            name: 'state',
+            init: state,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawFloatingCursorPoint';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawFloatingCursorPoint$Mate(
           offset: p.get('offset').build(),
           state: p.get('state').build(),
         );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'state',
-      state,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextEditingValue
@@ -264,18 +256,33 @@ class TextEditingValue$Mate extends _i1.TextEditingValue with _i2.Mate {
   /// TextEditingValue TextEditingValue({String text = '', TextSelection selection = const TextSelection.collapsed(offset: -1), TextRange composing = TextRange.empty})
   TextEditingValue$Mate({
     /// optionalParameters: {String text = ''} , default:processed=SimpleStringLiteralImpl
-    String text = '',
+    super.text,
 
     /// optionalParameters: {TextSelection selection = const TextSelection.collapsed(offset: -1)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i7.TextSelection selection,
+    super.selection,
 
     /// optionalParameters: {TextRange composing = TextRange.empty} , default:processed=PrefixedIdentifierImpl
-    _i4.TextRange composing = _i4.TextRange.empty,
-  }) : super(
-          text: text,
-          selection: selection,
-          composing: composing,
-        ) {
+    super.composing,
+  })  : mateParams = {
+          'text': _i2.BuilderArg<String>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'selection': _i2.BuilderArg<_i7.TextSelection>(
+            name: 'selection',
+            init: selection,
+            isNamed: true,
+          ),
+          'composing': _i2.BuilderArg<_i4.TextRange>(
+            name: 'composing',
+            init: composing,
+            isNamed: true,
+            defaultValue: _i4.TextRange.empty,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextEditingValue';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextEditingValue$Mate(
@@ -283,24 +290,10 @@ class TextEditingValue$Mate extends _i1.TextEditingValue with _i2.Mate {
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'selection',
-      selection,
-      isNamed: true,
-    );
-    mateUse(
-      'composing',
-      composing,
-      isNamed: true,
-      defaultValue: _i4.TextRange.empty,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectionRect
@@ -308,18 +301,32 @@ class SelectionRect$Mate extends _i1.SelectionRect with _i2.Mate {
   /// SelectionRect SelectionRect({required int position, required Rect bounds, TextDirection direction = TextDirection.ltr})
   SelectionRect$Mate({
     /// optionalParameters: {required int position} , default:none
-    required int position,
+    required super.position,
 
     /// optionalParameters: {required Rect bounds} , default:none
-    required _i4.Rect bounds,
+    required super.bounds,
 
     /// optionalParameters: {TextDirection direction = TextDirection.ltr} , default:processed=PrefixedIdentifierImpl
-    _i4.TextDirection direction = _i4.TextDirection.ltr,
-  }) : super(
-          position: position,
-          bounds: bounds,
-          direction: direction,
-        ) {
+    super.direction,
+  })  : mateParams = {
+          'position': _i2.BuilderArg<int>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+          ),
+          'bounds': _i2.BuilderArg<_i4.Rect>(
+            name: 'bounds',
+            init: bounds,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i4.TextDirection>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+            defaultValue: _i4.TextDirection.ltr,
+          ),
+        },
+        super() {
     mateBuilderName = 'SelectionRect';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SelectionRect$Mate(
@@ -327,21 +334,8 @@ class SelectionRect$Mate extends _i1.SelectionRect with _i2.Mate {
           bounds: p.get('bounds').build(),
           direction: p.get('direction').build(),
         );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-    );
-    mateUse(
-      'bounds',
-      bounds,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-      defaultValue: _i4.TextDirection.ltr,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -10,31 +10,33 @@ class ApplicationSwitcherDescription$Mate extends _i1.ApplicationSwitcherDescrip
   /// ApplicationSwitcherDescription ApplicationSwitcherDescription({String? label, int? primaryColor})
   ApplicationSwitcherDescription$Mate({
     /// optionalParameters: {String? label} , default:none
-    String? label,
+    super.label,
 
     /// optionalParameters: {int? primaryColor} , default:none
-    int? primaryColor,
-  }) : super(
-          label: label,
-          primaryColor: primaryColor,
-        ) {
+    super.primaryColor,
+  })  : mateParams = {
+          'label': _i2.BuilderArg<String?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'primaryColor': _i2.BuilderArg<int?>(
+            name: 'primaryColor',
+            init: primaryColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ApplicationSwitcherDescription';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ApplicationSwitcherDescription$Mate(
           label: p.get('label').build(),
           primaryColor: p.get('primaryColor').build(),
         );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'primaryColor',
-      primaryColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SystemUiOverlayStyle
@@ -42,38 +44,71 @@ class SystemUiOverlayStyle$Mate extends _i1.SystemUiOverlayStyle with _i2.Mate {
   /// SystemUiOverlayStyle SystemUiOverlayStyle({Color? systemNavigationBarColor, Color? systemNavigationBarDividerColor, Brightness? systemNavigationBarIconBrightness, bool? systemNavigationBarContrastEnforced, Color? statusBarColor, Brightness? statusBarBrightness, Brightness? statusBarIconBrightness, bool? systemStatusBarContrastEnforced})
   SystemUiOverlayStyle$Mate({
     /// optionalParameters: {Color? systemNavigationBarColor} , default:none
-    _i3.Color? systemNavigationBarColor,
+    super.systemNavigationBarColor,
 
     /// optionalParameters: {Color? systemNavigationBarDividerColor} , default:none
-    _i3.Color? systemNavigationBarDividerColor,
+    super.systemNavigationBarDividerColor,
 
     /// optionalParameters: {Brightness? systemNavigationBarIconBrightness} , default:none
-    _i3.Brightness? systemNavigationBarIconBrightness,
+    super.systemNavigationBarIconBrightness,
 
     /// optionalParameters: {bool? systemNavigationBarContrastEnforced} , default:none
-    bool? systemNavigationBarContrastEnforced,
+    super.systemNavigationBarContrastEnforced,
 
     /// optionalParameters: {Color? statusBarColor} , default:none
-    _i3.Color? statusBarColor,
+    super.statusBarColor,
 
     /// optionalParameters: {Brightness? statusBarBrightness} , default:none
-    _i3.Brightness? statusBarBrightness,
+    super.statusBarBrightness,
 
     /// optionalParameters: {Brightness? statusBarIconBrightness} , default:none
-    _i3.Brightness? statusBarIconBrightness,
+    super.statusBarIconBrightness,
 
     /// optionalParameters: {bool? systemStatusBarContrastEnforced} , default:none
-    bool? systemStatusBarContrastEnforced,
-  }) : super(
-          systemNavigationBarColor: systemNavigationBarColor,
-          systemNavigationBarDividerColor: systemNavigationBarDividerColor,
-          systemNavigationBarIconBrightness: systemNavigationBarIconBrightness,
-          systemNavigationBarContrastEnforced: systemNavigationBarContrastEnforced,
-          statusBarColor: statusBarColor,
-          statusBarBrightness: statusBarBrightness,
-          statusBarIconBrightness: statusBarIconBrightness,
-          systemStatusBarContrastEnforced: systemStatusBarContrastEnforced,
-        ) {
+    super.systemStatusBarContrastEnforced,
+  })  : mateParams = {
+          'systemNavigationBarColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'systemNavigationBarColor',
+            init: systemNavigationBarColor,
+            isNamed: true,
+          ),
+          'systemNavigationBarDividerColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'systemNavigationBarDividerColor',
+            init: systemNavigationBarDividerColor,
+            isNamed: true,
+          ),
+          'systemNavigationBarIconBrightness': _i2.BuilderArg<_i3.Brightness?>(
+            name: 'systemNavigationBarIconBrightness',
+            init: systemNavigationBarIconBrightness,
+            isNamed: true,
+          ),
+          'systemNavigationBarContrastEnforced': _i2.BuilderArg<bool?>(
+            name: 'systemNavigationBarContrastEnforced',
+            init: systemNavigationBarContrastEnforced,
+            isNamed: true,
+          ),
+          'statusBarColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'statusBarColor',
+            init: statusBarColor,
+            isNamed: true,
+          ),
+          'statusBarBrightness': _i2.BuilderArg<_i3.Brightness?>(
+            name: 'statusBarBrightness',
+            init: statusBarBrightness,
+            isNamed: true,
+          ),
+          'statusBarIconBrightness': _i2.BuilderArg<_i3.Brightness?>(
+            name: 'statusBarIconBrightness',
+            init: statusBarIconBrightness,
+            isNamed: true,
+          ),
+          'systemStatusBarContrastEnforced': _i2.BuilderArg<bool?>(
+            name: 'systemStatusBarContrastEnforced',
+            init: systemStatusBarContrastEnforced,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SystemUiOverlayStyle';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => SystemUiOverlayStyle$Mate(
@@ -86,45 +121,8 @@ class SystemUiOverlayStyle$Mate extends _i1.SystemUiOverlayStyle with _i2.Mate {
           statusBarIconBrightness: p.get('statusBarIconBrightness').build(),
           systemStatusBarContrastEnforced: p.get('systemStatusBarContrastEnforced').build(),
         );
-    mateUse(
-      'systemNavigationBarColor',
-      systemNavigationBarColor,
-      isNamed: true,
-    );
-    mateUse(
-      'systemNavigationBarDividerColor',
-      systemNavigationBarDividerColor,
-      isNamed: true,
-    );
-    mateUse(
-      'systemNavigationBarIconBrightness',
-      systemNavigationBarIconBrightness,
-      isNamed: true,
-    );
-    mateUse(
-      'systemNavigationBarContrastEnforced',
-      systemNavigationBarContrastEnforced,
-      isNamed: true,
-    );
-    mateUse(
-      'statusBarColor',
-      statusBarColor,
-      isNamed: true,
-    );
-    mateUse(
-      'statusBarBrightness',
-      statusBarBrightness,
-      isNamed: true,
-    );
-    mateUse(
-      'statusBarIconBrightness',
-      statusBarIconBrightness,
-      isNamed: true,
-    );
-    mateUse(
-      'systemStatusBarContrastEnforced',
-      systemStatusBarContrastEnforced,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

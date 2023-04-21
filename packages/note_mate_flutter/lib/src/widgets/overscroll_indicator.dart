@@ -14,34 +14,65 @@ class GlowingOverscrollIndicator$Mate extends _i1.GlowingOverscrollIndicator wit
   /// GlowingOverscrollIndicator GlowingOverscrollIndicator({Key? key, bool showLeading = true, bool showTrailing = true, required AxisDirection axisDirection, required Color color, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Widget? child})
   GlowingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool showLeading = true} , default:processed=BooleanLiteralImpl
-    bool showLeading = true,
+    super.showLeading,
 
     /// optionalParameters: {bool showTrailing = true} , default:processed=BooleanLiteralImpl
-    bool showTrailing = true,
+    super.showTrailing,
 
     /// optionalParameters: {required AxisDirection axisDirection} , default:none
-    required _i4.AxisDirection axisDirection,
+    required super.axisDirection,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i5.Color color,
+    required super.color,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.ScrollNotificationPredicate notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
-  }) : super(
-          key: key,
-          showLeading: showLeading,
-          showTrailing: showTrailing,
-          axisDirection: axisDirection,
-          color: color,
-          notificationPredicate: notificationPredicate,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'showLeading': _i2.BuilderArg<bool>(
+            name: 'showLeading',
+            init: showLeading,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'showTrailing': _i2.BuilderArg<bool>(
+            name: 'showTrailing',
+            init: showTrailing,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'GlowingOverscrollIndicator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GlowingOverscrollIndicator$Mate(
@@ -53,44 +84,10 @@ class GlowingOverscrollIndicator$Mate extends _i1.GlowingOverscrollIndicator wit
           notificationPredicate: p.get('notificationPredicate').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'showLeading',
-      showLeading,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'showTrailing',
-      showTrailing,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class StretchingOverscrollIndicator extends StatefulWidget
@@ -98,26 +95,48 @@ class StretchingOverscrollIndicator$Mate extends _i1.StretchingOverscrollIndicat
   /// StretchingOverscrollIndicator StretchingOverscrollIndicator({Key? key, required AxisDirection axisDirection, bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate, Clip clipBehavior = Clip.hardEdge, Widget? child})
   StretchingOverscrollIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required AxisDirection axisDirection} , default:none
-    required _i4.AxisDirection axisDirection,
+    required super.axisDirection,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.ScrollNotificationPredicate notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
-  }) : super(
-          key: key,
-          axisDirection: axisDirection,
-          notificationPredicate: notificationPredicate,
-          clipBehavior: clipBehavior,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
+            name: 'axisDirection',
+            init: axisDirection,
+            isNamed: true,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i6.ScrollNotificationPredicate>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.hardEdge,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'StretchingOverscrollIndicator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StretchingOverscrollIndicator$Mate(
@@ -127,33 +146,10 @@ class StretchingOverscrollIndicator$Mate extends _i1.StretchingOverscrollIndicat
           clipBehavior: p.get('clipBehavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'axisDirection',
-      axisDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.hardEdge,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OverscrollIndicatorNotification extends Notification with ViewportNotificationMixin
@@ -162,15 +158,20 @@ class OverscrollIndicatorNotification$Mate extends _i1.OverscrollIndicatorNotifi
   OverscrollIndicatorNotification$Mate(
       {
       /// optionalParameters: {required bool leading} , default:none
-      required bool leading})
-      : super(leading: leading) {
+      required super.leading})
+      : mateParams = {
+          'leading': _i2.BuilderArg<bool>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'OverscrollIndicatorNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OverscrollIndicatorNotification$Mate(leading: p.get('leading').build());
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

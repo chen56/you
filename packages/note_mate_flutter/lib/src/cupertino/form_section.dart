@@ -15,38 +15,74 @@ class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
   /// CupertinoFormSection CupertinoFormSection({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = EdgeInsets.zero, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
   CupertinoFormSection$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {Widget? footer} , default:none
-    _i4.Widget? footer,
+    super.footer,
 
     /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.EdgeInsetsGeometry margin = _i6.EdgeInsets.zero,
+    super.margin,
 
     /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
-    _i7.Color backgroundColor = _i6.CupertinoColors.systemGroupedBackground,
+    super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
-    _i8.BoxDecoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i7.Clip clipBehavior = _i7.Clip.none,
-  }) : super(
-          key: key,
-          children: children,
-          header: header,
-          footer: footer,
-          margin: margin,
-          backgroundColor: backgroundColor,
-          decoration: decoration,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'footer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+            defaultValue: _i6.EdgeInsets.zero,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+            defaultValue: _i6.CupertinoColors.systemGroupedBackground,
+          ),
+          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i7.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoFormSection';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFormSection$Mate(
@@ -59,86 +95,78 @@ class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-      defaultValue: _i6.EdgeInsets.zero,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-      defaultValue: _i6.CupertinoColors.systemGroupedBackground,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i7.Clip.none,
-    );
   }
 
   /// CupertinoFormSection CupertinoFormSection.insetGrouped({Key? key, required List<Widget> children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none})
   CupertinoFormSection$Mate.insetGrouped({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {Widget? footer} , default:none
-    _i4.Widget? footer,
+    super.footer,
 
     /// optionalParameters: {EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin} , default:unprocessed=SimpleIdentifierImpl
-    required _i5.EdgeInsetsGeometry margin,
+    super.margin,
 
     /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
-    _i7.Color backgroundColor = _i6.CupertinoColors.systemGroupedBackground,
+    super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
-    _i8.BoxDecoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i7.Clip clipBehavior = _i7.Clip.none,
-  }) : super.insetGrouped(
-          key: key,
-          children: children,
-          header: header,
-          footer: footer,
-          margin: margin,
-          backgroundColor: backgroundColor,
-          decoration: decoration,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'footer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i7.Color>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+            defaultValue: _i6.CupertinoColors.systemGroupedBackground,
+          ),
+          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i7.Clip.none,
+          ),
+        },
+        super.insetGrouped() {
     mateBuilderName = 'CupertinoFormSection.insetGrouped';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoFormSection$Mate.insetGrouped(
@@ -151,47 +179,8 @@ class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
           decoration: p.get('decoration').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-      defaultValue: _i6.CupertinoColors.systemGroupedBackground,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i7.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

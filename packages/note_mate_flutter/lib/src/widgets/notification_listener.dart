@@ -11,18 +11,31 @@ class NotificationListener$Mate<T extends _i1.Notification> extends _i1.Notifica
   /// NotificationListener<T> NotificationListener({Key? key, required Widget child, bool Function(T)? onNotification})
   NotificationListener$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {bool Function(T)? onNotification} , default:none
-    _i1.NotificationListenerCallback<T>? onNotification,
-  }) : super(
-          key: key,
-          child: child,
-          onNotification: onNotification,
-        ) {
+    super.onNotification,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'onNotification': _i2.BuilderArg<_i1.NotificationListenerCallback<T>?>(
+            name: 'onNotification',
+            init: onNotification,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NotificationListener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => NotificationListener$Mate<T>(
@@ -30,20 +43,8 @@ class NotificationListener$Mate<T extends _i1.Notification> extends _i1.Notifica
           child: p.get('child').build(),
           onNotification: p.get('onNotification').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'onNotification',
-      onNotification,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

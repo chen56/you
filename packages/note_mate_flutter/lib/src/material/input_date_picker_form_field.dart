@@ -13,58 +13,112 @@ class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField with _i
   /// InputDatePickerFormField InputDatePickerFormField({Key? key, DateTime? initialDate, required DateTime firstDate, required DateTime lastDate, void Function(DateTime)? onDateSubmitted, void Function(DateTime)? onDateSaved, bool Function(DateTime)? selectableDayPredicate, String? errorFormatText, String? errorInvalidText, String? fieldHintText, String? fieldLabelText, TextInputType? keyboardType, bool autofocus = false})
   InputDatePickerFormField$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {DateTime? initialDate} , default:none
-    DateTime? initialDate,
+    super.initialDate,
 
     /// optionalParameters: {required DateTime firstDate} , default:none
-    required DateTime firstDate,
+    required super.firstDate,
 
     /// optionalParameters: {required DateTime lastDate} , default:none
-    required DateTime lastDate,
+    required super.lastDate,
 
     /// optionalParameters: {void Function(DateTime)? onDateSubmitted} , default:none
-    _i4.ValueChanged<DateTime>? onDateSubmitted,
+    super.onDateSubmitted,
 
     /// optionalParameters: {void Function(DateTime)? onDateSaved} , default:none
-    _i4.ValueChanged<DateTime>? onDateSaved,
+    super.onDateSaved,
 
     /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , default:none
-    _i5.SelectableDayPredicate? selectableDayPredicate,
+    super.selectableDayPredicate,
 
     /// optionalParameters: {String? errorFormatText} , default:none
-    String? errorFormatText,
+    super.errorFormatText,
 
     /// optionalParameters: {String? errorInvalidText} , default:none
-    String? errorInvalidText,
+    super.errorInvalidText,
 
     /// optionalParameters: {String? fieldHintText} , default:none
-    String? fieldHintText,
+    super.fieldHintText,
 
     /// optionalParameters: {String? fieldLabelText} , default:none
-    String? fieldLabelText,
+    super.fieldLabelText,
 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
-    _i6.TextInputType? keyboardType,
+    super.keyboardType,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
-  }) : super(
-          key: key,
-          initialDate: initialDate,
-          firstDate: firstDate,
-          lastDate: lastDate,
-          onDateSubmitted: onDateSubmitted,
-          onDateSaved: onDateSaved,
-          selectableDayPredicate: selectableDayPredicate,
-          errorFormatText: errorFormatText,
-          errorInvalidText: errorInvalidText,
-          fieldHintText: fieldHintText,
-          fieldLabelText: fieldLabelText,
-          keyboardType: keyboardType,
-          autofocus: autofocus,
-        ) {
+    super.autofocus,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialDate': _i2.BuilderArg<DateTime?>(
+            name: 'initialDate',
+            init: initialDate,
+            isNamed: true,
+          ),
+          'firstDate': _i2.BuilderArg<DateTime>(
+            name: 'firstDate',
+            init: firstDate,
+            isNamed: true,
+          ),
+          'lastDate': _i2.BuilderArg<DateTime>(
+            name: 'lastDate',
+            init: lastDate,
+            isNamed: true,
+          ),
+          'onDateSubmitted': _i2.BuilderArg<_i4.ValueChanged<DateTime>?>(
+            name: 'onDateSubmitted',
+            init: onDateSubmitted,
+            isNamed: true,
+          ),
+          'onDateSaved': _i2.BuilderArg<_i4.ValueChanged<DateTime>?>(
+            name: 'onDateSaved',
+            init: onDateSaved,
+            isNamed: true,
+          ),
+          'selectableDayPredicate': _i2.BuilderArg<_i5.SelectableDayPredicate?>(
+            name: 'selectableDayPredicate',
+            init: selectableDayPredicate,
+            isNamed: true,
+          ),
+          'errorFormatText': _i2.BuilderArg<String?>(
+            name: 'errorFormatText',
+            init: errorFormatText,
+            isNamed: true,
+          ),
+          'errorInvalidText': _i2.BuilderArg<String?>(
+            name: 'errorInvalidText',
+            init: errorInvalidText,
+            isNamed: true,
+          ),
+          'fieldHintText': _i2.BuilderArg<String?>(
+            name: 'fieldHintText',
+            init: fieldHintText,
+            isNamed: true,
+          ),
+          'fieldLabelText': _i2.BuilderArg<String?>(
+            name: 'fieldLabelText',
+            init: fieldLabelText,
+            isNamed: true,
+          ),
+          'keyboardType': _i2.BuilderArg<_i6.TextInputType?>(
+            name: 'keyboardType',
+            init: keyboardType,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'InputDatePickerFormField';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InputDatePickerFormField$Mate(
@@ -82,71 +136,8 @@ class InputDatePickerFormField$Mate extends _i1.InputDatePickerFormField with _i
           keyboardType: p.get('keyboardType').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialDate',
-      initialDate,
-      isNamed: true,
-    );
-    mateUse(
-      'firstDate',
-      firstDate,
-      isNamed: true,
-    );
-    mateUse(
-      'lastDate',
-      lastDate,
-      isNamed: true,
-    );
-    mateUse(
-      'onDateSubmitted',
-      onDateSubmitted,
-      isNamed: true,
-    );
-    mateUse(
-      'onDateSaved',
-      onDateSaved,
-      isNamed: true,
-    );
-    mateUse(
-      'selectableDayPredicate',
-      selectableDayPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'errorFormatText',
-      errorFormatText,
-      isNamed: true,
-    );
-    mateUse(
-      'errorInvalidText',
-      errorInvalidText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldHintText',
-      fieldHintText,
-      isNamed: true,
-    );
-    mateUse(
-      'fieldLabelText',
-      fieldLabelText,
-      isNamed: true,
-    );
-    mateUse(
-      'keyboardType',
-      keyboardType,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

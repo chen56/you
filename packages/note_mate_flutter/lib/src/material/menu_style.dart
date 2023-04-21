@@ -16,58 +16,111 @@ class MenuStyle$Mate extends _i1.MenuStyle with _i2.Mate {
   /// MenuStyle MenuStyle({MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<double?>? elevation, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<Size?>? minimumSize, MaterialStateProperty<Size?>? fixedSize, MaterialStateProperty<Size?>? maximumSize, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity, AlignmentGeometry? alignment})
   MenuStyle$Mate({
     /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , default:none
-    _i3.MaterialStateProperty<_i4.Color?>? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {MaterialStateProperty<double?>? elevation} , default:none
-    _i3.MaterialStateProperty<double?>? elevation,
+    super.elevation,
 
     /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , default:none
-    _i3.MaterialStateProperty<_i5.EdgeInsetsGeometry?>? padding,
+    super.padding,
 
     /// optionalParameters: {MaterialStateProperty<Size?>? minimumSize} , default:none
-    _i3.MaterialStateProperty<_i4.Size?>? minimumSize,
+    super.minimumSize,
 
     /// optionalParameters: {MaterialStateProperty<Size?>? fixedSize} , default:none
-    _i3.MaterialStateProperty<_i4.Size?>? fixedSize,
+    super.fixedSize,
 
     /// optionalParameters: {MaterialStateProperty<Size?>? maximumSize} , default:none
-    _i3.MaterialStateProperty<_i4.Size?>? maximumSize,
+    super.maximumSize,
 
     /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , default:none
-    _i3.MaterialStateProperty<_i6.BorderSide?>? side,
+    super.side,
 
     /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , default:none
-    _i3.MaterialStateProperty<_i6.OutlinedBorder?>? shape,
+    super.shape,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i3.MaterialStateProperty<_i7.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i8.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i9.AlignmentGeometry? alignment,
-  }) : super(
-          backgroundColor: backgroundColor,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          elevation: elevation,
-          padding: padding,
-          minimumSize: minimumSize,
-          fixedSize: fixedSize,
-          maximumSize: maximumSize,
-          side: side,
-          shape: shape,
-          mouseCursor: mouseCursor,
-          visualDensity: visualDensity,
-          alignment: alignment,
-        ) {
+    super.alignment,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Color?>?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<_i3.MaterialStateProperty<double?>?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.EdgeInsetsGeometry?>?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'minimumSize': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Size?>?>(
+            name: 'minimumSize',
+            init: minimumSize,
+            isNamed: true,
+          ),
+          'fixedSize': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Size?>?>(
+            name: 'fixedSize',
+            init: fixedSize,
+            isNamed: true,
+          ),
+          'maximumSize': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.Size?>?>(
+            name: 'maximumSize',
+            init: maximumSize,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i3.MaterialStateProperty<_i6.BorderSide?>?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i3.MaterialStateProperty<_i6.OutlinedBorder?>?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i7.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i8.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MenuStyle';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MenuStyle$Mate(
@@ -85,70 +138,8 @@ class MenuStyle$Mate extends _i1.MenuStyle with _i2.Mate {
           visualDensity: p.get('visualDensity').build(),
           alignment: p.get('alignment').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'minimumSize',
-      minimumSize,
-      isNamed: true,
-    );
-    mateUse(
-      'fixedSize',
-      fixedSize,
-      isNamed: true,
-    );
-    mateUse(
-      'maximumSize',
-      maximumSize,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

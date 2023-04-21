@@ -16,22 +16,39 @@ class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
   /// ScrollableDetails ScrollableDetails({required AxisDirection direction, ScrollController? controller, ScrollPhysics? physics, Clip? clipBehavior, Clip? decorationClipBehavior})
   ScrollableDetails$Mate({
     /// optionalParameters: {required AxisDirection direction} , default:none
-    required _i3.AxisDirection direction,
+    required super.direction,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i4.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i5.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {Clip? decorationClipBehavior} , default:none
-    _i6.Clip? decorationClipBehavior,
-  }) : super(
-          direction: direction,
-          controller: controller,
-          physics: physics,
-          decorationClipBehavior: decorationClipBehavior,
-        ) {
+    super.decorationClipBehavior,
+  })  : mateParams = {
+          'direction': _i2.BuilderArg<_i3.AxisDirection>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i4.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i5.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'decorationClipBehavior': _i2.BuilderArg<_i6.Clip?>(
+            name: 'decorationClipBehavior',
+            init: decorationClipBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollableDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollableDetails$Mate(
@@ -40,47 +57,45 @@ class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
           physics: p.get('physics').build(),
           decorationClipBehavior: p.get('decorationClipBehavior').build(),
         );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'decorationClipBehavior',
-      decorationClipBehavior,
-      isNamed: true,
-    );
   }
 
   /// ScrollableDetails ScrollableDetails.vertical({bool reverse = false, ScrollController? controller, ScrollPhysics? physics, Clip? decorationClipBehavior})
   ScrollableDetails$Mate.vertical({
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i4.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i5.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {Clip? decorationClipBehavior} , default:none
-    _i6.Clip? decorationClipBehavior,
-  }) : super.vertical(
-          reverse: reverse,
-          controller: controller,
-          physics: physics,
-          decorationClipBehavior: decorationClipBehavior,
-        ) {
+    super.decorationClipBehavior,
+  })  : mateParams = {
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i4.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i5.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'decorationClipBehavior': _i2.BuilderArg<_i6.Clip?>(
+            name: 'decorationClipBehavior',
+            init: decorationClipBehavior,
+            isNamed: true,
+          ),
+        },
+        super.vertical() {
     mateBuilderName = 'ScrollableDetails.vertical';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollableDetails$Mate.vertical(
@@ -89,48 +104,45 @@ class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
           physics: p.get('physics').build(),
           decorationClipBehavior: p.get('decorationClipBehavior').build(),
         );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'decorationClipBehavior',
-      decorationClipBehavior,
-      isNamed: true,
-    );
   }
 
   /// ScrollableDetails ScrollableDetails.horizontal({bool reverse = false, ScrollController? controller, ScrollPhysics? physics, Clip? decorationClipBehavior})
   ScrollableDetails$Mate.horizontal({
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
-    bool reverse = false,
+    super.reverse,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i4.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i5.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {Clip? decorationClipBehavior} , default:none
-    _i6.Clip? decorationClipBehavior,
-  }) : super.horizontal(
-          reverse: reverse,
-          controller: controller,
-          physics: physics,
-          decorationClipBehavior: decorationClipBehavior,
-        ) {
+    super.decorationClipBehavior,
+  })  : mateParams = {
+          'reverse': _i2.BuilderArg<bool>(
+            name: 'reverse',
+            init: reverse,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i4.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i5.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'decorationClipBehavior': _i2.BuilderArg<_i6.Clip?>(
+            name: 'decorationClipBehavior',
+            init: decorationClipBehavior,
+            isNamed: true,
+          ),
+        },
+        super.horizontal() {
     mateBuilderName = 'ScrollableDetails.horizontal';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollableDetails$Mate.horizontal(
@@ -139,28 +151,10 @@ class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
           physics: p.get('physics').build(),
           decorationClipBehavior: p.get('decorationClipBehavior').build(),
         );
-    mateUse(
-      'reverse',
-      reverse,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'decorationClipBehavior',
-      decorationClipBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class EdgeDraggingAutoScroller
@@ -168,17 +162,30 @@ class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller with _i
   /// EdgeDraggingAutoScroller EdgeDraggingAutoScroller(ScrollableState scrollable, {void Function()? onScrollViewScrolled, double velocityScalar = _kDefaultAutoScrollVelocityScalar})
   EdgeDraggingAutoScroller$Mate(
     /// requiredParameters: ScrollableState scrollable
-    _i7.ScrollableState scrollable, {
+    super.scrollable, {
     /// optionalParameters: {void Function()? onScrollViewScrolled} , default:none
-    _i6.VoidCallback? onScrollViewScrolled,
+    super.onScrollViewScrolled,
 
     /// optionalParameters: {double velocityScalar = _kDefaultAutoScrollVelocityScalar} , default:unprocessed=SimpleIdentifierImpl
-    required double velocityScalar,
-  }) : super(
-          scrollable,
-          onScrollViewScrolled: onScrollViewScrolled,
-          velocityScalar: velocityScalar,
-        ) {
+    super.velocityScalar,
+  })  : mateParams = {
+          'scrollable': _i2.BuilderArg<_i7.ScrollableState>(
+            name: 'scrollable',
+            init: scrollable,
+            isNamed: false,
+          ),
+          'onScrollViewScrolled': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onScrollViewScrolled',
+            init: onScrollViewScrolled,
+            isNamed: true,
+          ),
+          'velocityScalar': _i2.BuilderArg<double>(
+            name: 'velocityScalar',
+            init: velocityScalar,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'EdgeDraggingAutoScroller';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => EdgeDraggingAutoScroller$Mate(
@@ -186,22 +193,10 @@ class EdgeDraggingAutoScroller$Mate extends _i1.EdgeDraggingAutoScroller with _i
           onScrollViewScrolled: p.get('onScrollViewScrolled').build(),
           velocityScalar: p.get('velocityScalar').build(),
         );
-    mateUse(
-      'scrollable',
-      scrollable,
-      isNamed: false,
-    );
-    mateUse(
-      'onScrollViewScrolled',
-      onScrollViewScrolled,
-      isNamed: true,
-    );
-    mateUse(
-      'velocityScalar',
-      velocityScalar,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollIncrementDetails
@@ -209,31 +204,33 @@ class ScrollIncrementDetails$Mate extends _i1.ScrollIncrementDetails with _i2.Ma
   /// ScrollIncrementDetails ScrollIncrementDetails({required ScrollIncrementType type, required ScrollMetrics metrics})
   ScrollIncrementDetails$Mate({
     /// optionalParameters: {required ScrollIncrementType type} , default:none
-    required _i1.ScrollIncrementType type,
+    required super.type,
 
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
-    required _i8.ScrollMetrics metrics,
-  }) : super(
-          type: type,
-          metrics: metrics,
-        ) {
+    required super.metrics,
+  })  : mateParams = {
+          'type': _i2.BuilderArg<_i1.ScrollIncrementType>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+          ),
+          'metrics': _i2.BuilderArg<_i8.ScrollMetrics>(
+            name: 'metrics',
+            init: metrics,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollIncrementDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollIncrementDetails$Mate(
           type: p.get('type').build(),
           metrics: p.get('metrics').build(),
         );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-    );
-    mateUse(
-      'metrics',
-      metrics,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollIntent extends Intent
@@ -241,30 +238,32 @@ class ScrollIntent$Mate extends _i1.ScrollIntent with _i2.Mate {
   /// ScrollIntent ScrollIntent({required AxisDirection direction, ScrollIncrementType type = ScrollIncrementType.line})
   ScrollIntent$Mate({
     /// optionalParameters: {required AxisDirection direction} , default:none
-    required _i3.AxisDirection direction,
+    required super.direction,
 
     /// optionalParameters: {ScrollIncrementType type = ScrollIncrementType.line} , default:processed=PrefixedIdentifierImpl
-    _i1.ScrollIncrementType type = _i9.ScrollIncrementType.line,
-  }) : super(
-          direction: direction,
-          type: type,
-        ) {
+    super.type,
+  })  : mateParams = {
+          'direction': _i2.BuilderArg<_i3.AxisDirection>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+          ),
+          'type': _i2.BuilderArg<_i1.ScrollIncrementType>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+            defaultValue: _i9.ScrollIncrementType.line,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollIntent$Mate(
           direction: p.get('direction').build(),
           type: p.get('type').build(),
         );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-    );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-      defaultValue: _i9.ScrollIncrementType.line,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -15,54 +15,104 @@ class Badge$Mate extends _i1.Badge with _i2.Mate {
   /// Badge Badge({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, Widget? label, bool isLabelVisible = true, Widget? child})
   Badge$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i4.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {double? smallSize} , default:none
-    double? smallSize,
+    super.smallSize,
 
     /// optionalParameters: {double? largeSize} , default:none
-    double? largeSize,
+    super.largeSize,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i5.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i6.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i7.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {Offset? offset} , default:none
-    _i4.Offset? offset,
+    super.offset,
 
     /// optionalParameters: {Widget? label} , default:none
-    _i8.Widget? label,
+    super.label,
 
     /// optionalParameters: {bool isLabelVisible = true} , default:processed=BooleanLiteralImpl
-    bool isLabelVisible = true,
+    super.isLabelVisible,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i8.Widget? child,
-  }) : super(
-          key: key,
-          backgroundColor: backgroundColor,
-          textColor: textColor,
-          smallSize: smallSize,
-          largeSize: largeSize,
-          textStyle: textStyle,
-          padding: padding,
-          alignment: alignment,
-          offset: offset,
-          label: label,
-          isLabelVisible: isLabelVisible,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'smallSize': _i2.BuilderArg<double?>(
+            name: 'smallSize',
+            init: smallSize,
+            isNamed: true,
+          ),
+          'largeSize': _i2.BuilderArg<double?>(
+            name: 'largeSize',
+            init: largeSize,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i4.Offset?>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i8.Widget?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'isLabelVisible': _i2.BuilderArg<bool>(
+            name: 'isLabelVisible',
+            init: isLabelVisible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Badge';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Badge$Mate(
@@ -79,120 +129,109 @@ class Badge$Mate extends _i1.Badge with _i2.Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'smallSize',
-      smallSize,
-      isNamed: true,
-    );
-    mateUse(
-      'largeSize',
-      largeSize,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'isLabelVisible',
-      isLabelVisible,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// Badge Badge.count({Key? key, Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset, required int count, bool isLabelVisible = true, Widget? child})
   Badge$Mate.count({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i4.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {double? smallSize} , default:none
-    double? smallSize,
+    super.smallSize,
 
     /// optionalParameters: {double? largeSize} , default:none
-    double? largeSize,
+    super.largeSize,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i5.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i6.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i7.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {Offset? offset} , default:none
-    _i4.Offset? offset,
+    super.offset,
 
     /// optionalParameters: {required int count} , default:none
-    required int count,
+    required super.count,
 
     /// optionalParameters: {bool isLabelVisible = true} , default:processed=BooleanLiteralImpl
-    bool isLabelVisible = true,
+    super.isLabelVisible,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i8.Widget? child,
-  }) : super.count(
-          key: key,
-          backgroundColor: backgroundColor,
-          textColor: textColor,
-          smallSize: smallSize,
-          largeSize: largeSize,
-          textStyle: textStyle,
-          padding: padding,
-          alignment: alignment,
-          offset: offset,
-          count: count,
-          isLabelVisible: isLabelVisible,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'smallSize': _i2.BuilderArg<double?>(
+            name: 'smallSize',
+            init: smallSize,
+            isNamed: true,
+          ),
+          'largeSize': _i2.BuilderArg<double?>(
+            name: 'largeSize',
+            init: largeSize,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i4.Offset?>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'count': _i2.BuilderArg<int>(
+            name: 'count',
+            init: count,
+            isNamed: true,
+          ),
+          'isLabelVisible': _i2.BuilderArg<bool>(
+            name: 'isLabelVisible',
+            init: isLabelVisible,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.count() {
     mateBuilderName = 'Badge.count';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Badge$Mate.count(
@@ -209,66 +248,8 @@ class Badge$Mate extends _i1.Badge with _i2.Mate {
           isLabelVisible: p.get('isLabelVisible').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'smallSize',
-      smallSize,
-      isNamed: true,
-    );
-    mateUse(
-      'largeSize',
-      largeSize,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'count',
-      count,
-      isNamed: true,
-    );
-    mateUse(
-      'isLabelVisible',
-      isLabelVisible,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -9,30 +9,32 @@ class Ticker$Mate extends _i1.Ticker with _i2.Mate {
   /// Ticker Ticker(void Function(Duration) _onTick, {String? debugLabel})
   Ticker$Mate(
     /// requiredParameters: void Function(Duration) _onTick
-    _i1.TickerCallback _onTick, {
+    super._onTick, {
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          _onTick,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          '_onTick': _i2.BuilderArg<_i1.TickerCallback>(
+            name: '_onTick',
+            init: _onTick,
+            isNamed: false,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Ticker';
     matePackageUrl = 'package:flutter/scheduler.dart';
     mateBuilder = (p) => Ticker$Mate(
           p.get('_onTick').value,
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      '_onTick',
-      _onTick,
-      isNamed: false,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TickerCanceled implements Exception
@@ -41,15 +43,20 @@ class TickerCanceled$Mate extends _i1.TickerCanceled with _i2.Mate {
   TickerCanceled$Mate(
 
       /// requiredParameters: [Ticker? ticker]
-      _i1.Ticker? ticker)
-      : super(ticker) {
+      super.ticker)
+      : mateParams = {
+          'ticker': _i2.BuilderArg<_i1.Ticker?>(
+            name: 'ticker',
+            init: ticker,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'TickerCanceled';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TickerCanceled$Mate(p.get('ticker').value);
-    mateUse(
-      'ticker',
-      ticker,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

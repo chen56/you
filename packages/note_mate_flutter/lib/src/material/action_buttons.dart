@@ -13,17 +13,22 @@ class BackButtonIcon$Mate extends _i1.BackButtonIcon with _i2.Mate {
   BackButtonIcon$Mate(
       {
       /// optionalParameters: {Key? key} , default:none
-      _i3.Key? key})
-      : super(key: key) {
+      super.key})
+      : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'BackButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BackButtonIcon$Mate(key: p.get('key').build());
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BackButton extends _ActionButton
@@ -31,22 +36,39 @@ class BackButton$Mate extends _i1.BackButton with _i2.Mate {
   /// BackButton BackButton({Key? key, Color? color, ButtonStyle? style, void Function()? onPressed})
   BackButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i5.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {void Function()? onPressed} , default:none
-    _i4.VoidCallback? onPressed,
-  }) : super(
-          key: key,
-          color: color,
-          style: style,
-          onPressed: onPressed,
-        ) {
+    super.onPressed,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i5.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BackButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BackButton$Mate(
@@ -55,27 +77,10 @@ class BackButton$Mate extends _i1.BackButton with _i2.Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CloseButtonIcon extends StatelessWidget
@@ -84,17 +89,22 @@ class CloseButtonIcon$Mate extends _i1.CloseButtonIcon with _i2.Mate {
   CloseButtonIcon$Mate(
       {
       /// optionalParameters: {Key? key} , default:none
-      _i3.Key? key})
-      : super(key: key) {
+      super.key})
+      : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'CloseButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CloseButtonIcon$Mate(key: p.get('key').build());
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CloseButton extends _ActionButton
@@ -102,22 +112,39 @@ class CloseButton$Mate extends _i1.CloseButton with _i2.Mate {
   /// CloseButton CloseButton({Key? key, Color? color, void Function()? onPressed, ButtonStyle? style})
   CloseButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {void Function()? onPressed} , default:none
-    _i4.VoidCallback? onPressed,
+    super.onPressed,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i5.ButtonStyle? style,
-  }) : super(
-          key: key,
-          color: color,
-          onPressed: onPressed,
-          style: style,
-        ) {
+    super.style,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i5.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CloseButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CloseButton$Mate(
@@ -126,27 +153,10 @@ class CloseButton$Mate extends _i1.CloseButton with _i2.Mate {
           onPressed: p.get('onPressed').build(),
           style: p.get('style').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DrawerButtonIcon extends StatelessWidget
@@ -155,17 +165,22 @@ class DrawerButtonIcon$Mate extends _i1.DrawerButtonIcon with _i2.Mate {
   DrawerButtonIcon$Mate(
       {
       /// optionalParameters: {Key? key} , default:none
-      _i3.Key? key})
-      : super(key: key) {
+      super.key})
+      : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DrawerButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerButtonIcon$Mate(key: p.get('key').build());
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DrawerButton extends _ActionButton
@@ -173,18 +188,31 @@ class DrawerButton$Mate extends _i1.DrawerButton with _i2.Mate {
   /// DrawerButton DrawerButton({Key? key, ButtonStyle? style, void Function()? onPressed})
   DrawerButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i5.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {void Function()? onPressed} , default:none
-    _i4.VoidCallback? onPressed,
-  }) : super(
-          key: key,
-          style: style,
-          onPressed: onPressed,
-        ) {
+    super.onPressed,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i5.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DrawerButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DrawerButton$Mate(
@@ -192,22 +220,10 @@ class DrawerButton$Mate extends _i1.DrawerButton with _i2.Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class EndDrawerButtonIcon extends StatelessWidget
@@ -216,17 +232,22 @@ class EndDrawerButtonIcon$Mate extends _i1.EndDrawerButtonIcon with _i2.Mate {
   EndDrawerButtonIcon$Mate(
       {
       /// optionalParameters: {Key? key} , default:none
-      _i3.Key? key})
-      : super(key: key) {
+      super.key})
+      : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'EndDrawerButtonIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EndDrawerButtonIcon$Mate(key: p.get('key').build());
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class EndDrawerButton extends _ActionButton
@@ -234,18 +255,31 @@ class EndDrawerButton$Mate extends _i1.EndDrawerButton with _i2.Mate {
   /// EndDrawerButton EndDrawerButton({Key? key, ButtonStyle? style, void Function()? onPressed})
   EndDrawerButton$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {ButtonStyle? style} , default:none
-    _i5.ButtonStyle? style,
+    super.style,
 
     /// optionalParameters: {void Function()? onPressed} , default:none
-    _i4.VoidCallback? onPressed,
-  }) : super(
-          key: key,
-          style: style,
-          onPressed: onPressed,
-        ) {
+    super.onPressed,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i5.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'EndDrawerButton';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => EndDrawerButton$Mate(
@@ -253,20 +287,8 @@ class EndDrawerButton$Mate extends _i1.EndDrawerButton with _i2.Mate {
           style: p.get('style').build(),
           onPressed: p.get('onPressed').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

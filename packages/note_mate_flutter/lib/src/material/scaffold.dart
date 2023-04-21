@@ -20,31 +20,33 @@ class ScaffoldMessenger$Mate extends _i1.ScaffoldMessenger with _i2.Mate {
   /// ScaffoldMessenger ScaffoldMessenger({Key? key, required Widget child})
   ScaffoldMessenger$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScaffoldMessenger';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldMessenger$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScaffoldPrelayoutGeometry
@@ -52,46 +54,87 @@ class ScaffoldPrelayoutGeometry$Mate extends _i1.ScaffoldPrelayoutGeometry with 
   /// ScaffoldPrelayoutGeometry ScaffoldPrelayoutGeometry({required Size bottomSheetSize, required double contentBottom, required double contentTop, required Size floatingActionButtonSize, required EdgeInsets minInsets, required EdgeInsets minViewPadding, required Size scaffoldSize, required Size snackBarSize, required Size materialBannerSize, required TextDirection textDirection})
   ScaffoldPrelayoutGeometry$Mate({
     /// optionalParameters: {required Size bottomSheetSize} , default:none
-    required _i5.Size bottomSheetSize,
+    required super.bottomSheetSize,
 
     /// optionalParameters: {required double contentBottom} , default:none
-    required double contentBottom,
+    required super.contentBottom,
 
     /// optionalParameters: {required double contentTop} , default:none
-    required double contentTop,
+    required super.contentTop,
 
     /// optionalParameters: {required Size floatingActionButtonSize} , default:none
-    required _i5.Size floatingActionButtonSize,
+    required super.floatingActionButtonSize,
 
     /// optionalParameters: {required EdgeInsets minInsets} , default:none
-    required _i6.EdgeInsets minInsets,
+    required super.minInsets,
 
     /// optionalParameters: {required EdgeInsets minViewPadding} , default:none
-    required _i6.EdgeInsets minViewPadding,
+    required super.minViewPadding,
 
     /// optionalParameters: {required Size scaffoldSize} , default:none
-    required _i5.Size scaffoldSize,
+    required super.scaffoldSize,
 
     /// optionalParameters: {required Size snackBarSize} , default:none
-    required _i5.Size snackBarSize,
+    required super.snackBarSize,
 
     /// optionalParameters: {required Size materialBannerSize} , default:none
-    required _i5.Size materialBannerSize,
+    required super.materialBannerSize,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i5.TextDirection textDirection,
-  }) : super(
-          bottomSheetSize: bottomSheetSize,
-          contentBottom: contentBottom,
-          contentTop: contentTop,
-          floatingActionButtonSize: floatingActionButtonSize,
-          minInsets: minInsets,
-          minViewPadding: minViewPadding,
-          scaffoldSize: scaffoldSize,
-          snackBarSize: snackBarSize,
-          materialBannerSize: materialBannerSize,
-          textDirection: textDirection,
-        ) {
+    required super.textDirection,
+  })  : mateParams = {
+          'bottomSheetSize': _i2.BuilderArg<_i5.Size>(
+            name: 'bottomSheetSize',
+            init: bottomSheetSize,
+            isNamed: true,
+          ),
+          'contentBottom': _i2.BuilderArg<double>(
+            name: 'contentBottom',
+            init: contentBottom,
+            isNamed: true,
+          ),
+          'contentTop': _i2.BuilderArg<double>(
+            name: 'contentTop',
+            init: contentTop,
+            isNamed: true,
+          ),
+          'floatingActionButtonSize': _i2.BuilderArg<_i5.Size>(
+            name: 'floatingActionButtonSize',
+            init: floatingActionButtonSize,
+            isNamed: true,
+          ),
+          'minInsets': _i2.BuilderArg<_i6.EdgeInsets>(
+            name: 'minInsets',
+            init: minInsets,
+            isNamed: true,
+          ),
+          'minViewPadding': _i2.BuilderArg<_i6.EdgeInsets>(
+            name: 'minViewPadding',
+            init: minViewPadding,
+            isNamed: true,
+          ),
+          'scaffoldSize': _i2.BuilderArg<_i5.Size>(
+            name: 'scaffoldSize',
+            init: scaffoldSize,
+            isNamed: true,
+          ),
+          'snackBarSize': _i2.BuilderArg<_i5.Size>(
+            name: 'snackBarSize',
+            init: snackBarSize,
+            isNamed: true,
+          ),
+          'materialBannerSize': _i2.BuilderArg<_i5.Size>(
+            name: 'materialBannerSize',
+            init: materialBannerSize,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScaffoldPrelayoutGeometry';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldPrelayoutGeometry$Mate(
@@ -106,57 +149,10 @@ class ScaffoldPrelayoutGeometry$Mate extends _i1.ScaffoldPrelayoutGeometry with 
           materialBannerSize: p.get('materialBannerSize').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'bottomSheetSize',
-      bottomSheetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'contentBottom',
-      contentBottom,
-      isNamed: true,
-    );
-    mateUse(
-      'contentTop',
-      contentTop,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingActionButtonSize',
-      floatingActionButtonSize,
-      isNamed: true,
-    );
-    mateUse(
-      'minInsets',
-      minInsets,
-      isNamed: true,
-    );
-    mateUse(
-      'minViewPadding',
-      minViewPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'scaffoldSize',
-      scaffoldSize,
-      isNamed: true,
-    );
-    mateUse(
-      'snackBarSize',
-      snackBarSize,
-      isNamed: true,
-    );
-    mateUse(
-      'materialBannerSize',
-      materialBannerSize,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScaffoldGeometry
@@ -164,31 +160,33 @@ class ScaffoldGeometry$Mate extends _i1.ScaffoldGeometry with _i2.Mate {
   /// ScaffoldGeometry ScaffoldGeometry({double? bottomNavigationBarTop, Rect? floatingActionButtonArea})
   ScaffoldGeometry$Mate({
     /// optionalParameters: {double? bottomNavigationBarTop} , default:none
-    double? bottomNavigationBarTop,
+    super.bottomNavigationBarTop,
 
     /// optionalParameters: {Rect? floatingActionButtonArea} , default:none
-    _i5.Rect? floatingActionButtonArea,
-  }) : super(
-          bottomNavigationBarTop: bottomNavigationBarTop,
-          floatingActionButtonArea: floatingActionButtonArea,
-        ) {
+    super.floatingActionButtonArea,
+  })  : mateParams = {
+          'bottomNavigationBarTop': _i2.BuilderArg<double?>(
+            name: 'bottomNavigationBarTop',
+            init: bottomNavigationBarTop,
+            isNamed: true,
+          ),
+          'floatingActionButtonArea': _i2.BuilderArg<_i5.Rect?>(
+            name: 'floatingActionButtonArea',
+            init: floatingActionButtonArea,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScaffoldGeometry';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ScaffoldGeometry$Mate(
           bottomNavigationBarTop: p.get('bottomNavigationBarTop').build(),
           floatingActionButtonArea: p.get('floatingActionButtonArea').build(),
         );
-    mateUse(
-      'bottomNavigationBarTop',
-      bottomNavigationBarTop,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingActionButtonArea',
-      floatingActionButtonArea,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Scaffold extends StatefulWidget
@@ -196,106 +194,214 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
   /// Scaffold Scaffold({Key? key, PreferredSizeWidget? appBar, Widget? body, Widget? floatingActionButton, FloatingActionButtonLocation? floatingActionButtonLocation, FloatingActionButtonAnimator? floatingActionButtonAnimator, List<Widget>? persistentFooterButtons, AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd, Widget? drawer, void Function(bool)? onDrawerChanged, Widget? endDrawer, void Function(bool)? onEndDrawerChanged, Widget? bottomNavigationBar, Widget? bottomSheet, Color? backgroundColor, bool? resizeToAvoidBottomInset, bool primary = true, DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start, bool extendBody = false, bool extendBodyBehindAppBar = false, Color? drawerScrimColor, double? drawerEdgeDragWidth, bool drawerEnableOpenDragGesture = true, bool endDrawerEnableOpenDragGesture = true, String? restorationId})
   Scaffold$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {PreferredSizeWidget? appBar} , default:none
-    _i7.PreferredSizeWidget? appBar,
+    super.appBar,
 
     /// optionalParameters: {Widget? body} , default:none
-    _i4.Widget? body,
+    super.body,
 
     /// optionalParameters: {Widget? floatingActionButton} , default:none
-    _i4.Widget? floatingActionButton,
+    super.floatingActionButton,
 
     /// optionalParameters: {FloatingActionButtonLocation? floatingActionButtonLocation} , default:none
-    _i8.FloatingActionButtonLocation? floatingActionButtonLocation,
+    super.floatingActionButtonLocation,
 
     /// optionalParameters: {FloatingActionButtonAnimator? floatingActionButtonAnimator} , default:none
-    _i8.FloatingActionButtonAnimator? floatingActionButtonAnimator,
+    super.floatingActionButtonAnimator,
 
     /// optionalParameters: {List<Widget>? persistentFooterButtons} , default:none
-    List<_i4.Widget>? persistentFooterButtons,
+    super.persistentFooterButtons,
 
     /// optionalParameters: {AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd} , default:processed=PrefixedIdentifierImpl
-    _i9.AlignmentDirectional persistentFooterAlignment = _i10.AlignmentDirectional.centerEnd,
+    super.persistentFooterAlignment,
 
     /// optionalParameters: {Widget? drawer} , default:none
-    _i4.Widget? drawer,
+    super.drawer,
 
     /// optionalParameters: {void Function(bool)? onDrawerChanged} , default:none
-    _i11.DrawerCallback? onDrawerChanged,
+    super.onDrawerChanged,
 
     /// optionalParameters: {Widget? endDrawer} , default:none
-    _i4.Widget? endDrawer,
+    super.endDrawer,
 
     /// optionalParameters: {void Function(bool)? onEndDrawerChanged} , default:none
-    _i11.DrawerCallback? onEndDrawerChanged,
+    super.onEndDrawerChanged,
 
     /// optionalParameters: {Widget? bottomNavigationBar} , default:none
-    _i4.Widget? bottomNavigationBar,
+    super.bottomNavigationBar,
 
     /// optionalParameters: {Widget? bottomSheet} , default:none
-    _i4.Widget? bottomSheet,
+    super.bottomSheet,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i5.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {bool? resizeToAvoidBottomInset} , default:none
-    bool? resizeToAvoidBottomInset,
+    super.resizeToAvoidBottomInset,
 
     /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
-    bool primary = true,
+    super.primary,
 
     /// optionalParameters: {DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i12.DragStartBehavior drawerDragStartBehavior = _i13.DragStartBehavior.start,
+    super.drawerDragStartBehavior,
 
     /// optionalParameters: {bool extendBody = false} , default:processed=BooleanLiteralImpl
-    bool extendBody = false,
+    super.extendBody,
 
     /// optionalParameters: {bool extendBodyBehindAppBar = false} , default:processed=BooleanLiteralImpl
-    bool extendBodyBehindAppBar = false,
+    super.extendBodyBehindAppBar,
 
     /// optionalParameters: {Color? drawerScrimColor} , default:none
-    _i5.Color? drawerScrimColor,
+    super.drawerScrimColor,
 
     /// optionalParameters: {double? drawerEdgeDragWidth} , default:none
-    double? drawerEdgeDragWidth,
+    super.drawerEdgeDragWidth,
 
     /// optionalParameters: {bool drawerEnableOpenDragGesture = true} , default:processed=BooleanLiteralImpl
-    bool drawerEnableOpenDragGesture = true,
+    super.drawerEnableOpenDragGesture,
 
     /// optionalParameters: {bool endDrawerEnableOpenDragGesture = true} , default:processed=BooleanLiteralImpl
-    bool endDrawerEnableOpenDragGesture = true,
+    super.endDrawerEnableOpenDragGesture,
 
     /// optionalParameters: {String? restorationId} , default:none
-    String? restorationId,
-  }) : super(
-          key: key,
-          appBar: appBar,
-          body: body,
-          floatingActionButton: floatingActionButton,
-          floatingActionButtonLocation: floatingActionButtonLocation,
-          floatingActionButtonAnimator: floatingActionButtonAnimator,
-          persistentFooterButtons: persistentFooterButtons,
-          persistentFooterAlignment: persistentFooterAlignment,
-          drawer: drawer,
-          onDrawerChanged: onDrawerChanged,
-          endDrawer: endDrawer,
-          onEndDrawerChanged: onEndDrawerChanged,
-          bottomNavigationBar: bottomNavigationBar,
-          bottomSheet: bottomSheet,
-          backgroundColor: backgroundColor,
-          resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-          primary: primary,
-          drawerDragStartBehavior: drawerDragStartBehavior,
-          extendBody: extendBody,
-          extendBodyBehindAppBar: extendBodyBehindAppBar,
-          drawerScrimColor: drawerScrimColor,
-          drawerEdgeDragWidth: drawerEdgeDragWidth,
-          drawerEnableOpenDragGesture: drawerEnableOpenDragGesture,
-          endDrawerEnableOpenDragGesture: endDrawerEnableOpenDragGesture,
-          restorationId: restorationId,
-        ) {
+    super.restorationId,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'appBar': _i2.BuilderArg<_i7.PreferredSizeWidget?>(
+            name: 'appBar',
+            init: appBar,
+            isNamed: true,
+          ),
+          'body': _i2.BuilderArg<_i4.Widget?>(
+            name: 'body',
+            init: body,
+            isNamed: true,
+          ),
+          'floatingActionButton': _i2.BuilderArg<_i4.Widget?>(
+            name: 'floatingActionButton',
+            init: floatingActionButton,
+            isNamed: true,
+          ),
+          'floatingActionButtonLocation': _i2.BuilderArg<_i8.FloatingActionButtonLocation?>(
+            name: 'floatingActionButtonLocation',
+            init: floatingActionButtonLocation,
+            isNamed: true,
+          ),
+          'floatingActionButtonAnimator': _i2.BuilderArg<_i8.FloatingActionButtonAnimator?>(
+            name: 'floatingActionButtonAnimator',
+            init: floatingActionButtonAnimator,
+            isNamed: true,
+          ),
+          'persistentFooterButtons': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'persistentFooterButtons',
+            init: persistentFooterButtons,
+            isNamed: true,
+          ),
+          'persistentFooterAlignment': _i2.BuilderArg<_i9.AlignmentDirectional>(
+            name: 'persistentFooterAlignment',
+            init: persistentFooterAlignment,
+            isNamed: true,
+            defaultValue: _i10.AlignmentDirectional.centerEnd,
+          ),
+          'drawer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'drawer',
+            init: drawer,
+            isNamed: true,
+          ),
+          'onDrawerChanged': _i2.BuilderArg<_i11.DrawerCallback?>(
+            name: 'onDrawerChanged',
+            init: onDrawerChanged,
+            isNamed: true,
+          ),
+          'endDrawer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'endDrawer',
+            init: endDrawer,
+            isNamed: true,
+          ),
+          'onEndDrawerChanged': _i2.BuilderArg<_i11.DrawerCallback?>(
+            name: 'onEndDrawerChanged',
+            init: onEndDrawerChanged,
+            isNamed: true,
+          ),
+          'bottomNavigationBar': _i2.BuilderArg<_i4.Widget?>(
+            name: 'bottomNavigationBar',
+            init: bottomNavigationBar,
+            isNamed: true,
+          ),
+          'bottomSheet': _i2.BuilderArg<_i4.Widget?>(
+            name: 'bottomSheet',
+            init: bottomSheet,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'resizeToAvoidBottomInset': _i2.BuilderArg<bool?>(
+            name: 'resizeToAvoidBottomInset',
+            init: resizeToAvoidBottomInset,
+            isNamed: true,
+          ),
+          'primary': _i2.BuilderArg<bool>(
+            name: 'primary',
+            init: primary,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'drawerDragStartBehavior': _i2.BuilderArg<_i12.DragStartBehavior>(
+            name: 'drawerDragStartBehavior',
+            init: drawerDragStartBehavior,
+            isNamed: true,
+            defaultValue: _i13.DragStartBehavior.start,
+          ),
+          'extendBody': _i2.BuilderArg<bool>(
+            name: 'extendBody',
+            init: extendBody,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'extendBodyBehindAppBar': _i2.BuilderArg<bool>(
+            name: 'extendBodyBehindAppBar',
+            init: extendBodyBehindAppBar,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'drawerScrimColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'drawerScrimColor',
+            init: drawerScrimColor,
+            isNamed: true,
+          ),
+          'drawerEdgeDragWidth': _i2.BuilderArg<double?>(
+            name: 'drawerEdgeDragWidth',
+            init: drawerEdgeDragWidth,
+            isNamed: true,
+          ),
+          'drawerEnableOpenDragGesture': _i2.BuilderArg<bool>(
+            name: 'drawerEnableOpenDragGesture',
+            init: drawerEnableOpenDragGesture,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'endDrawerEnableOpenDragGesture': _i2.BuilderArg<bool>(
+            name: 'endDrawerEnableOpenDragGesture',
+            init: endDrawerEnableOpenDragGesture,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Scaffold';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Scaffold$Mate(
@@ -325,137 +431,8 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
           endDrawerEnableOpenDragGesture: p.get('endDrawerEnableOpenDragGesture').build(),
           restorationId: p.get('restorationId').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'appBar',
-      appBar,
-      isNamed: true,
-    );
-    mateUse(
-      'body',
-      body,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingActionButton',
-      floatingActionButton,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingActionButtonLocation',
-      floatingActionButtonLocation,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingActionButtonAnimator',
-      floatingActionButtonAnimator,
-      isNamed: true,
-    );
-    mateUse(
-      'persistentFooterButtons',
-      persistentFooterButtons,
-      isNamed: true,
-    );
-    mateUse(
-      'persistentFooterAlignment',
-      persistentFooterAlignment,
-      isNamed: true,
-      defaultValue: _i10.AlignmentDirectional.centerEnd,
-    );
-    mateUse(
-      'drawer',
-      drawer,
-      isNamed: true,
-    );
-    mateUse(
-      'onDrawerChanged',
-      onDrawerChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'endDrawer',
-      endDrawer,
-      isNamed: true,
-    );
-    mateUse(
-      'onEndDrawerChanged',
-      onEndDrawerChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'bottomNavigationBar',
-      bottomNavigationBar,
-      isNamed: true,
-    );
-    mateUse(
-      'bottomSheet',
-      bottomSheet,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'resizeToAvoidBottomInset',
-      resizeToAvoidBottomInset,
-      isNamed: true,
-    );
-    mateUse(
-      'primary',
-      primary,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'drawerDragStartBehavior',
-      drawerDragStartBehavior,
-      isNamed: true,
-      defaultValue: _i13.DragStartBehavior.start,
-    );
-    mateUse(
-      'extendBody',
-      extendBody,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'extendBodyBehindAppBar',
-      extendBodyBehindAppBar,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'drawerScrimColor',
-      drawerScrimColor,
-      isNamed: true,
-    );
-    mateUse(
-      'drawerEdgeDragWidth',
-      drawerEdgeDragWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'drawerEnableOpenDragGesture',
-      drawerEnableOpenDragGesture,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'endDrawerEnableOpenDragGesture',
-      endDrawerEnableOpenDragGesture,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

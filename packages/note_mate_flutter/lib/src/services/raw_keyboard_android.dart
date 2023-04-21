@@ -9,50 +9,106 @@ class RawKeyEventDataAndroid$Mate extends _i1.RawKeyEventDataAndroid with _i2.Ma
   /// RawKeyEventDataAndroid RawKeyEventDataAndroid({int flags = 0, int codePoint = 0, int plainCodePoint = 0, int keyCode = 0, int scanCode = 0, int metaState = 0, int eventSource = 0, int vendorId = 0, int productId = 0, int deviceId = 0, int repeatCount = 0})
   RawKeyEventDataAndroid$Mate({
     /// optionalParameters: {int flags = 0} , default:processed=IntegerLiteralImpl
-    int flags = 0,
+    super.flags,
 
     /// optionalParameters: {int codePoint = 0} , default:processed=IntegerLiteralImpl
-    int codePoint = 0,
+    super.codePoint,
 
     /// optionalParameters: {int plainCodePoint = 0} , default:processed=IntegerLiteralImpl
-    int plainCodePoint = 0,
+    super.plainCodePoint,
 
     /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
-    int keyCode = 0,
+    super.keyCode,
 
     /// optionalParameters: {int scanCode = 0} , default:processed=IntegerLiteralImpl
-    int scanCode = 0,
+    super.scanCode,
 
     /// optionalParameters: {int metaState = 0} , default:processed=IntegerLiteralImpl
-    int metaState = 0,
+    super.metaState,
 
     /// optionalParameters: {int eventSource = 0} , default:processed=IntegerLiteralImpl
-    int eventSource = 0,
+    super.eventSource,
 
     /// optionalParameters: {int vendorId = 0} , default:processed=IntegerLiteralImpl
-    int vendorId = 0,
+    super.vendorId,
 
     /// optionalParameters: {int productId = 0} , default:processed=IntegerLiteralImpl
-    int productId = 0,
+    super.productId,
 
     /// optionalParameters: {int deviceId = 0} , default:processed=IntegerLiteralImpl
-    int deviceId = 0,
+    super.deviceId,
 
     /// optionalParameters: {int repeatCount = 0} , default:processed=IntegerLiteralImpl
-    int repeatCount = 0,
-  }) : super(
-          flags: flags,
-          codePoint: codePoint,
-          plainCodePoint: plainCodePoint,
-          keyCode: keyCode,
-          scanCode: scanCode,
-          metaState: metaState,
-          eventSource: eventSource,
-          vendorId: vendorId,
-          productId: productId,
-          deviceId: deviceId,
-          repeatCount: repeatCount,
-        ) {
+    super.repeatCount,
+  })  : mateParams = {
+          'flags': _i2.BuilderArg<int>(
+            name: 'flags',
+            init: flags,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'codePoint': _i2.BuilderArg<int>(
+            name: 'codePoint',
+            init: codePoint,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'plainCodePoint': _i2.BuilderArg<int>(
+            name: 'plainCodePoint',
+            init: plainCodePoint,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'keyCode': _i2.BuilderArg<int>(
+            name: 'keyCode',
+            init: keyCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'scanCode': _i2.BuilderArg<int>(
+            name: 'scanCode',
+            init: scanCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'metaState': _i2.BuilderArg<int>(
+            name: 'metaState',
+            init: metaState,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'eventSource': _i2.BuilderArg<int>(
+            name: 'eventSource',
+            init: eventSource,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'vendorId': _i2.BuilderArg<int>(
+            name: 'vendorId',
+            init: vendorId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'productId': _i2.BuilderArg<int>(
+            name: 'productId',
+            init: productId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'deviceId': _i2.BuilderArg<int>(
+            name: 'deviceId',
+            init: deviceId,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'repeatCount': _i2.BuilderArg<int>(
+            name: 'repeatCount',
+            init: repeatCount,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyEventDataAndroid';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataAndroid$Mate(
@@ -68,71 +124,8 @@ class RawKeyEventDataAndroid$Mate extends _i1.RawKeyEventDataAndroid with _i2.Ma
           deviceId: p.get('deviceId').build(),
           repeatCount: p.get('repeatCount').build(),
         );
-    mateUse(
-      'flags',
-      flags,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'codePoint',
-      codePoint,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'plainCodePoint',
-      plainCodePoint,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'keyCode',
-      keyCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'scanCode',
-      scanCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'metaState',
-      metaState,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'eventSource',
-      eventSource,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'vendorId',
-      vendorId,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'productId',
-      productId,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'deviceId',
-      deviceId,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'repeatCount',
-      repeatCount,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

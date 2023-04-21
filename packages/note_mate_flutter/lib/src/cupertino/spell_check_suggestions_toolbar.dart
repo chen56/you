@@ -12,18 +12,31 @@ class CupertinoSpellCheckSuggestionsToolbar$Mate extends _i1.CupertinoSpellCheck
   /// CupertinoSpellCheckSuggestionsToolbar CupertinoSpellCheckSuggestionsToolbar({Key? key, required TextSelectionToolbarAnchors anchors, required List<ContextMenuButtonItem> buttonItems})
   CupertinoSpellCheckSuggestionsToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required TextSelectionToolbarAnchors anchors} , default:none
-    required _i4.TextSelectionToolbarAnchors anchors,
+    required super.anchors,
 
     /// optionalParameters: {required List<ContextMenuButtonItem> buttonItems} , default:none
-    required List<_i5.ContextMenuButtonItem> buttonItems,
-  }) : super(
-          key: key,
-          anchors: anchors,
-          buttonItems: buttonItems,
-        ) {
+    required super.buttonItems,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'anchors': _i2.BuilderArg<_i4.TextSelectionToolbarAnchors>(
+            name: 'anchors',
+            init: anchors,
+            isNamed: true,
+          ),
+          'buttonItems': _i2.BuilderArg<List<_i5.ContextMenuButtonItem>>(
+            name: 'buttonItems',
+            init: buttonItems,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoSpellCheckSuggestionsToolbar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSpellCheckSuggestionsToolbar$Mate(
@@ -31,20 +44,8 @@ class CupertinoSpellCheckSuggestionsToolbar$Mate extends _i1.CupertinoSpellCheck
           anchors: p.get('anchors').build(),
           buttonItems: p.get('buttonItems').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'anchors',
-      anchors,
-      isNamed: true,
-    );
-    mateUse(
-      'buttonItems',
-      buttonItems,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

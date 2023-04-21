@@ -16,34 +16,64 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends _i1.TweenAnimationBu
   /// TweenAnimationBuilder<T> TweenAnimationBuilder({Key? key, required Tween<T> tween, required Duration duration, Curve curve = Curves.linear, required Widget Function(BuildContext, T, Widget?) builder, void Function()? onEnd, Widget? child})
   TweenAnimationBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Tween<T> tween} , default:none
-    required _i4.Tween<T> tween,
+    required super.tween,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i5.Curve curve = _i6.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , default:none
-    required _i7.ValueWidgetBuilder<T> builder,
+    required super.builder,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i8.VoidCallback? onEnd,
+    super.onEnd,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i9.Widget? child,
-  }) : super(
-          key: key,
-          tween: tween,
-          duration: duration,
-          curve: curve,
-          builder: builder,
-          onEnd: onEnd,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'tween': _i2.BuilderArg<_i4.Tween<T>>(
+            name: 'tween',
+            init: tween,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i5.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i6.Curves.linear,
+          ),
+          'builder': _i2.BuilderArg<_i7.ValueWidgetBuilder<T>>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TweenAnimationBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TweenAnimationBuilder$Mate<T>(
@@ -55,41 +85,8 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends _i1.TweenAnimationBu
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'tween',
-      tween,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i6.Curves.linear,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

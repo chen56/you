@@ -10,22 +10,39 @@ class SliverGridGeometry$Mate extends _i1.SliverGridGeometry with _i2.Mate {
   /// SliverGridGeometry SliverGridGeometry({required double scrollOffset, required double crossAxisOffset, required double mainAxisExtent, required double crossAxisExtent})
   SliverGridGeometry$Mate({
     /// optionalParameters: {required double scrollOffset} , default:none
-    required double scrollOffset,
+    required super.scrollOffset,
 
     /// optionalParameters: {required double crossAxisOffset} , default:none
-    required double crossAxisOffset,
+    required super.crossAxisOffset,
 
     /// optionalParameters: {required double mainAxisExtent} , default:none
-    required double mainAxisExtent,
+    required super.mainAxisExtent,
 
     /// optionalParameters: {required double crossAxisExtent} , default:none
-    required double crossAxisExtent,
-  }) : super(
-          scrollOffset: scrollOffset,
-          crossAxisOffset: crossAxisOffset,
-          mainAxisExtent: mainAxisExtent,
-          crossAxisExtent: crossAxisExtent,
-        ) {
+    required super.crossAxisExtent,
+  })  : mateParams = {
+          'scrollOffset': _i2.BuilderArg<double>(
+            name: 'scrollOffset',
+            init: scrollOffset,
+            isNamed: true,
+          ),
+          'crossAxisOffset': _i2.BuilderArg<double>(
+            name: 'crossAxisOffset',
+            init: crossAxisOffset,
+            isNamed: true,
+          ),
+          'mainAxisExtent': _i2.BuilderArg<double>(
+            name: 'mainAxisExtent',
+            init: mainAxisExtent,
+            isNamed: true,
+          ),
+          'crossAxisExtent': _i2.BuilderArg<double>(
+            name: 'crossAxisExtent',
+            init: crossAxisExtent,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverGridGeometry';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridGeometry$Mate(
@@ -34,27 +51,10 @@ class SliverGridGeometry$Mate extends _i1.SliverGridGeometry with _i2.Mate {
           mainAxisExtent: p.get('mainAxisExtent').build(),
           crossAxisExtent: p.get('crossAxisExtent').build(),
         );
-    mateUse(
-      'scrollOffset',
-      scrollOffset,
-      isNamed: true,
-    );
-    mateUse(
-      'crossAxisOffset',
-      crossAxisOffset,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisExtent',
-      mainAxisExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'crossAxisExtent',
-      crossAxisExtent,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverGridRegularTileLayout extends SliverGridLayout
@@ -62,30 +62,55 @@ class SliverGridRegularTileLayout$Mate extends _i1.SliverGridRegularTileLayout w
   /// SliverGridRegularTileLayout SliverGridRegularTileLayout({required int crossAxisCount, required double mainAxisStride, required double crossAxisStride, required double childMainAxisExtent, required double childCrossAxisExtent, required bool reverseCrossAxis})
   SliverGridRegularTileLayout$Mate({
     /// optionalParameters: {required int crossAxisCount} , default:none
-    required int crossAxisCount,
+    required super.crossAxisCount,
 
     /// optionalParameters: {required double mainAxisStride} , default:none
-    required double mainAxisStride,
+    required super.mainAxisStride,
 
     /// optionalParameters: {required double crossAxisStride} , default:none
-    required double crossAxisStride,
+    required super.crossAxisStride,
 
     /// optionalParameters: {required double childMainAxisExtent} , default:none
-    required double childMainAxisExtent,
+    required super.childMainAxisExtent,
 
     /// optionalParameters: {required double childCrossAxisExtent} , default:none
-    required double childCrossAxisExtent,
+    required super.childCrossAxisExtent,
 
     /// optionalParameters: {required bool reverseCrossAxis} , default:none
-    required bool reverseCrossAxis,
-  }) : super(
-          crossAxisCount: crossAxisCount,
-          mainAxisStride: mainAxisStride,
-          crossAxisStride: crossAxisStride,
-          childMainAxisExtent: childMainAxisExtent,
-          childCrossAxisExtent: childCrossAxisExtent,
-          reverseCrossAxis: reverseCrossAxis,
-        ) {
+    required super.reverseCrossAxis,
+  })  : mateParams = {
+          'crossAxisCount': _i2.BuilderArg<int>(
+            name: 'crossAxisCount',
+            init: crossAxisCount,
+            isNamed: true,
+          ),
+          'mainAxisStride': _i2.BuilderArg<double>(
+            name: 'mainAxisStride',
+            init: mainAxisStride,
+            isNamed: true,
+          ),
+          'crossAxisStride': _i2.BuilderArg<double>(
+            name: 'crossAxisStride',
+            init: crossAxisStride,
+            isNamed: true,
+          ),
+          'childMainAxisExtent': _i2.BuilderArg<double>(
+            name: 'childMainAxisExtent',
+            init: childMainAxisExtent,
+            isNamed: true,
+          ),
+          'childCrossAxisExtent': _i2.BuilderArg<double>(
+            name: 'childCrossAxisExtent',
+            init: childCrossAxisExtent,
+            isNamed: true,
+          ),
+          'reverseCrossAxis': _i2.BuilderArg<bool>(
+            name: 'reverseCrossAxis',
+            init: reverseCrossAxis,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverGridRegularTileLayout';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => SliverGridRegularTileLayout$Mate(
@@ -96,37 +121,10 @@ class SliverGridRegularTileLayout$Mate extends _i1.SliverGridRegularTileLayout w
           childCrossAxisExtent: p.get('childCrossAxisExtent').build(),
           reverseCrossAxis: p.get('reverseCrossAxis').build(),
         );
-    mateUse(
-      'crossAxisCount',
-      crossAxisCount,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisStride',
-      mainAxisStride,
-      isNamed: true,
-    );
-    mateUse(
-      'crossAxisStride',
-      crossAxisStride,
-      isNamed: true,
-    );
-    mateUse(
-      'childMainAxisExtent',
-      childMainAxisExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'childCrossAxisExtent',
-      childCrossAxisExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseCrossAxis',
-      reverseCrossAxis,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverGridDelegateWithFixedCrossAxisCount extends SliverGridDelegate
@@ -135,26 +133,50 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate extends _i1.SliverGridDeleg
   /// SliverGridDelegateWithFixedCrossAxisCount SliverGridDelegateWithFixedCrossAxisCount({required int crossAxisCount, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, double? mainAxisExtent})
   SliverGridDelegateWithFixedCrossAxisCount$Mate({
     /// optionalParameters: {required int crossAxisCount} , default:none
-    required int crossAxisCount,
+    required super.crossAxisCount,
 
     /// optionalParameters: {double mainAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double mainAxisSpacing = 0.0,
+    super.mainAxisSpacing,
 
     /// optionalParameters: {double crossAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double crossAxisSpacing = 0.0,
+    super.crossAxisSpacing,
 
     /// optionalParameters: {double childAspectRatio = 1.0} , default:processed=DoubleLiteralImpl
-    double childAspectRatio = 1.0,
+    super.childAspectRatio,
 
     /// optionalParameters: {double? mainAxisExtent} , default:none
-    double? mainAxisExtent,
-  }) : super(
-          crossAxisCount: crossAxisCount,
-          mainAxisSpacing: mainAxisSpacing,
-          crossAxisSpacing: crossAxisSpacing,
-          childAspectRatio: childAspectRatio,
-          mainAxisExtent: mainAxisExtent,
-        ) {
+    super.mainAxisExtent,
+  })  : mateParams = {
+          'crossAxisCount': _i2.BuilderArg<int>(
+            name: 'crossAxisCount',
+            init: crossAxisCount,
+            isNamed: true,
+          ),
+          'mainAxisSpacing': _i2.BuilderArg<double>(
+            name: 'mainAxisSpacing',
+            init: mainAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisSpacing': _i2.BuilderArg<double>(
+            name: 'crossAxisSpacing',
+            init: crossAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'childAspectRatio': _i2.BuilderArg<double>(
+            name: 'childAspectRatio',
+            init: childAspectRatio,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'mainAxisExtent': _i2.BuilderArg<double?>(
+            name: 'mainAxisExtent',
+            init: mainAxisExtent,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverGridDelegateWithFixedCrossAxisCount';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverGridDelegateWithFixedCrossAxisCount$Mate(
@@ -164,35 +186,10 @@ class SliverGridDelegateWithFixedCrossAxisCount$Mate extends _i1.SliverGridDeleg
           childAspectRatio: p.get('childAspectRatio').build(),
           mainAxisExtent: p.get('mainAxisExtent').build(),
         );
-    mateUse(
-      'crossAxisCount',
-      crossAxisCount,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisSpacing',
-      mainAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisSpacing',
-      crossAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'childAspectRatio',
-      childAspectRatio,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'mainAxisExtent',
-      mainAxisExtent,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverGridDelegateWithMaxCrossAxisExtent extends SliverGridDelegate
@@ -200,26 +197,50 @@ class SliverGridDelegateWithMaxCrossAxisExtent$Mate extends _i1.SliverGridDelega
   /// SliverGridDelegateWithMaxCrossAxisExtent SliverGridDelegateWithMaxCrossAxisExtent({required double maxCrossAxisExtent, double mainAxisSpacing = 0.0, double crossAxisSpacing = 0.0, double childAspectRatio = 1.0, double? mainAxisExtent})
   SliverGridDelegateWithMaxCrossAxisExtent$Mate({
     /// optionalParameters: {required double maxCrossAxisExtent} , default:none
-    required double maxCrossAxisExtent,
+    required super.maxCrossAxisExtent,
 
     /// optionalParameters: {double mainAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double mainAxisSpacing = 0.0,
+    super.mainAxisSpacing,
 
     /// optionalParameters: {double crossAxisSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double crossAxisSpacing = 0.0,
+    super.crossAxisSpacing,
 
     /// optionalParameters: {double childAspectRatio = 1.0} , default:processed=DoubleLiteralImpl
-    double childAspectRatio = 1.0,
+    super.childAspectRatio,
 
     /// optionalParameters: {double? mainAxisExtent} , default:none
-    double? mainAxisExtent,
-  }) : super(
-          maxCrossAxisExtent: maxCrossAxisExtent,
-          mainAxisSpacing: mainAxisSpacing,
-          crossAxisSpacing: crossAxisSpacing,
-          childAspectRatio: childAspectRatio,
-          mainAxisExtent: mainAxisExtent,
-        ) {
+    super.mainAxisExtent,
+  })  : mateParams = {
+          'maxCrossAxisExtent': _i2.BuilderArg<double>(
+            name: 'maxCrossAxisExtent',
+            init: maxCrossAxisExtent,
+            isNamed: true,
+          ),
+          'mainAxisSpacing': _i2.BuilderArg<double>(
+            name: 'mainAxisSpacing',
+            init: mainAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisSpacing': _i2.BuilderArg<double>(
+            name: 'crossAxisSpacing',
+            init: crossAxisSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'childAspectRatio': _i2.BuilderArg<double>(
+            name: 'childAspectRatio',
+            init: childAspectRatio,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'mainAxisExtent': _i2.BuilderArg<double?>(
+            name: 'mainAxisExtent',
+            init: mainAxisExtent,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverGridDelegateWithMaxCrossAxisExtent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverGridDelegateWithMaxCrossAxisExtent$Mate(
@@ -229,35 +250,10 @@ class SliverGridDelegateWithMaxCrossAxisExtent$Mate extends _i1.SliverGridDelega
           childAspectRatio: p.get('childAspectRatio').build(),
           mainAxisExtent: p.get('mainAxisExtent').build(),
         );
-    mateUse(
-      'maxCrossAxisExtent',
-      maxCrossAxisExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'mainAxisSpacing',
-      mainAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisSpacing',
-      crossAxisSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'childAspectRatio',
-      childAspectRatio,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'mainAxisExtent',
-      mainAxisExtent,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverGrid extends RenderSliverMultiBoxAdaptor
@@ -265,29 +261,31 @@ class RenderSliverGrid$Mate extends _i1.RenderSliverGrid with _i2.Mate {
   /// RenderSliverGrid RenderSliverGrid({required RenderSliverBoxChildManager childManager, required SliverGridDelegate gridDelegate})
   RenderSliverGrid$Mate({
     /// optionalParameters: {required RenderSliverBoxChildManager childManager} , default:none
-    required _i3.RenderSliverBoxChildManager childManager,
+    required super.childManager,
 
     /// optionalParameters: {required SliverGridDelegate gridDelegate} , default:none
-    required _i1.SliverGridDelegate gridDelegate,
-  }) : super(
-          childManager: childManager,
-          gridDelegate: gridDelegate,
-        ) {
+    required super.gridDelegate,
+  })  : mateParams = {
+          'childManager': _i2.BuilderArg<_i3.RenderSliverBoxChildManager>(
+            name: 'childManager',
+            init: childManager,
+            isNamed: true,
+          ),
+          'gridDelegate': _i2.BuilderArg<_i1.SliverGridDelegate>(
+            name: 'gridDelegate',
+            init: gridDelegate,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverGrid';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverGrid$Mate(
           childManager: p.get('childManager').build(),
           gridDelegate: p.get('gridDelegate').build(),
         );
-    mateUse(
-      'childManager',
-      childManager,
-      isNamed: true,
-    );
-    mateUse(
-      'gridDelegate',
-      gridDelegate,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

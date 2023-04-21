@@ -20,106 +20,210 @@ class ToggleButtons$Mate extends _i1.ToggleButtons with _i2.Mate {
   /// ToggleButtons ToggleButtons({Key? key, required List<Widget> children, required List<bool> isSelected, void Function(int)? onPressed, MouseCursor? mouseCursor, MaterialTapTargetSize? tapTargetSize, TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, List<FocusNode>? focusNodes, bool renderBorder = true, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth, Axis direction = Axis.horizontal, VerticalDirection verticalDirection = VerticalDirection.down})
   ToggleButtons$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Widget> children} , default:none
-    required List<_i4.Widget> children,
+    required super.children,
 
     /// optionalParameters: {required List<bool> isSelected} , default:none
-    required List<bool> isSelected,
+    required super.isSelected,
 
     /// optionalParameters: {void Function(int)? onPressed} , default:none
-    void Function(int)? onPressed,
+    super.onPressed,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i5.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {MaterialTapTargetSize? tapTargetSize} , default:none
-    _i6.MaterialTapTargetSize? tapTargetSize,
+    super.tapTargetSize,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i7.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i8.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {Color? color} , default:none
-    _i9.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i9.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i9.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {Color? fillColor} , default:none
-    _i9.Color? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i9.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i9.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i9.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i9.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {List<FocusNode>? focusNodes} , default:none
-    List<_i10.FocusNode>? focusNodes,
+    super.focusNodes,
 
     /// optionalParameters: {bool renderBorder = true} , default:processed=BooleanLiteralImpl
-    bool renderBorder = true,
+    super.renderBorder,
 
     /// optionalParameters: {Color? borderColor} , default:none
-    _i9.Color? borderColor,
+    super.borderColor,
 
     /// optionalParameters: {Color? selectedBorderColor} , default:none
-    _i9.Color? selectedBorderColor,
+    super.selectedBorderColor,
 
     /// optionalParameters: {Color? disabledBorderColor} , default:none
-    _i9.Color? disabledBorderColor,
+    super.disabledBorderColor,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i11.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {double? borderWidth} , default:none
-    double? borderWidth,
+    super.borderWidth,
 
     /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
-    _i12.Axis direction = _i13.Axis.horizontal,
+    super.direction,
 
     /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i12.VerticalDirection verticalDirection = _i13.VerticalDirection.down,
-  }) : super(
-          key: key,
-          children: children,
-          isSelected: isSelected,
-          onPressed: onPressed,
-          mouseCursor: mouseCursor,
-          tapTargetSize: tapTargetSize,
-          textStyle: textStyle,
-          constraints: constraints,
-          color: color,
-          selectedColor: selectedColor,
-          disabledColor: disabledColor,
-          fillColor: fillColor,
-          focusColor: focusColor,
-          highlightColor: highlightColor,
-          hoverColor: hoverColor,
-          splashColor: splashColor,
-          focusNodes: focusNodes,
-          renderBorder: renderBorder,
-          borderColor: borderColor,
-          selectedBorderColor: selectedBorderColor,
-          disabledBorderColor: disabledBorderColor,
-          borderRadius: borderRadius,
-          borderWidth: borderWidth,
-          direction: direction,
-          verticalDirection: verticalDirection,
-        ) {
+    super.verticalDirection,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'isSelected': _i2.BuilderArg<List<bool>>(
+            name: 'isSelected',
+            init: isSelected,
+            isNamed: true,
+          ),
+          'onPressed': _i2.BuilderArg<void Function(int)?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i5.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'tapTargetSize': _i2.BuilderArg<_i6.MaterialTapTargetSize?>(
+            name: 'tapTargetSize',
+            init: tapTargetSize,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i8.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i9.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'fillColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'focusNodes': _i2.BuilderArg<List<_i10.FocusNode>?>(
+            name: 'focusNodes',
+            init: focusNodes,
+            isNamed: true,
+          ),
+          'renderBorder': _i2.BuilderArg<bool>(
+            name: 'renderBorder',
+            init: renderBorder,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'borderColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'borderColor',
+            init: borderColor,
+            isNamed: true,
+          ),
+          'selectedBorderColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'selectedBorderColor',
+            init: selectedBorderColor,
+            isNamed: true,
+          ),
+          'disabledBorderColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'disabledBorderColor',
+            init: disabledBorderColor,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'borderWidth': _i2.BuilderArg<double?>(
+            name: 'borderWidth',
+            init: borderWidth,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i12.Axis>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+            defaultValue: _i13.Axis.horizontal,
+          ),
+          'verticalDirection': _i2.BuilderArg<_i12.VerticalDirection>(
+            name: 'verticalDirection',
+            init: verticalDirection,
+            isNamed: true,
+            defaultValue: _i13.VerticalDirection.down,
+          ),
+        },
+        super() {
     mateBuilderName = 'ToggleButtons';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtons$Mate(
@@ -149,133 +253,8 @@ class ToggleButtons$Mate extends _i1.ToggleButtons with _i2.Mate {
           direction: p.get('direction').build(),
           verticalDirection: p.get('verticalDirection').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'isSelected',
-      isSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'tapTargetSize',
-      tapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNodes',
-      focusNodes,
-      isNamed: true,
-    );
-    mateUse(
-      'renderBorder',
-      renderBorder,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'borderColor',
-      borderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedBorderColor',
-      selectedBorderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledBorderColor',
-      disabledBorderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'borderWidth',
-      borderWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-      defaultValue: _i13.Axis.horizontal,
-    );
-    mateUse(
-      'verticalDirection',
-      verticalDirection,
-      isNamed: true,
-      defaultValue: _i13.VerticalDirection.down,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

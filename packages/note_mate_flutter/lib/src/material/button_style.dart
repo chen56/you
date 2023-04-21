@@ -18,94 +18,183 @@ class ButtonStyle$Mate extends _i1.ButtonStyle with _i2.Mate {
   /// ButtonStyle ButtonStyle({MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? foregroundColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<double?>? elevation, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<Size?>? minimumSize, MaterialStateProperty<Size?>? fixedSize, MaterialStateProperty<Size?>? maximumSize, MaterialStateProperty<Color?>? iconColor, MaterialStateProperty<double?>? iconSize, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<MouseCursor?>? mouseCursor, VisualDensity? visualDensity, MaterialTapTargetSize? tapTargetSize, Duration? animationDuration, bool? enableFeedback, AlignmentGeometry? alignment, InteractiveInkFeatureFactory? splashFactory})
   ButtonStyle$Mate({
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? textStyle} , default:none
-    _i3.MaterialStateProperty<_i4.TextStyle?>? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? foregroundColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? foregroundColor,
+    super.foregroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {MaterialStateProperty<double?>? elevation} , default:none
-    _i3.MaterialStateProperty<double?>? elevation,
+    super.elevation,
 
     /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , default:none
-    _i3.MaterialStateProperty<_i6.EdgeInsetsGeometry?>? padding,
+    super.padding,
 
     /// optionalParameters: {MaterialStateProperty<Size?>? minimumSize} , default:none
-    _i3.MaterialStateProperty<_i5.Size?>? minimumSize,
+    super.minimumSize,
 
     /// optionalParameters: {MaterialStateProperty<Size?>? fixedSize} , default:none
-    _i3.MaterialStateProperty<_i5.Size?>? fixedSize,
+    super.fixedSize,
 
     /// optionalParameters: {MaterialStateProperty<Size?>? maximumSize} , default:none
-    _i3.MaterialStateProperty<_i5.Size?>? maximumSize,
+    super.maximumSize,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? iconColor} , default:none
-    _i3.MaterialStateProperty<_i5.Color?>? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {MaterialStateProperty<double?>? iconSize} , default:none
-    _i3.MaterialStateProperty<double?>? iconSize,
+    super.iconSize,
 
     /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , default:none
-    _i3.MaterialStateProperty<_i7.BorderSide?>? side,
+    super.side,
 
     /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , default:none
-    _i3.MaterialStateProperty<_i7.OutlinedBorder?>? shape,
+    super.shape,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i3.MaterialStateProperty<_i8.MouseCursor?>? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {VisualDensity? visualDensity} , default:none
-    _i9.VisualDensity? visualDensity,
+    super.visualDensity,
 
     /// optionalParameters: {MaterialTapTargetSize? tapTargetSize} , default:none
-    _i9.MaterialTapTargetSize? tapTargetSize,
+    super.tapTargetSize,
 
     /// optionalParameters: {Duration? animationDuration} , default:none
-    Duration? animationDuration,
+    super.animationDuration,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i10.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
-    _i11.InteractiveInkFeatureFactory? splashFactory,
-  }) : super(
-          textStyle: textStyle,
-          backgroundColor: backgroundColor,
-          foregroundColor: foregroundColor,
-          overlayColor: overlayColor,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          elevation: elevation,
-          padding: padding,
-          minimumSize: minimumSize,
-          fixedSize: fixedSize,
-          maximumSize: maximumSize,
-          iconColor: iconColor,
-          iconSize: iconSize,
-          side: side,
-          shape: shape,
-          mouseCursor: mouseCursor,
-          visualDensity: visualDensity,
-          tapTargetSize: tapTargetSize,
-          animationDuration: animationDuration,
-          enableFeedback: enableFeedback,
-          alignment: alignment,
-          splashFactory: splashFactory,
-        ) {
+    super.splashFactory,
+  })  : mateParams = {
+          'textStyle': _i2.BuilderArg<_i3.MaterialStateProperty<_i4.TextStyle?>?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'foregroundColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<_i3.MaterialStateProperty<double?>?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i3.MaterialStateProperty<_i6.EdgeInsetsGeometry?>?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'minimumSize': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Size?>?>(
+            name: 'minimumSize',
+            init: minimumSize,
+            isNamed: true,
+          ),
+          'fixedSize': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Size?>?>(
+            name: 'fixedSize',
+            init: fixedSize,
+            isNamed: true,
+          ),
+          'maximumSize': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Size?>?>(
+            name: 'maximumSize',
+            init: maximumSize,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i3.MaterialStateProperty<_i5.Color?>?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<_i3.MaterialStateProperty<double?>?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i3.MaterialStateProperty<_i7.BorderSide?>?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i3.MaterialStateProperty<_i7.OutlinedBorder?>?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i3.MaterialStateProperty<_i8.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'visualDensity': _i2.BuilderArg<_i9.VisualDensity?>(
+            name: 'visualDensity',
+            init: visualDensity,
+            isNamed: true,
+          ),
+          'tapTargetSize': _i2.BuilderArg<_i9.MaterialTapTargetSize?>(
+            name: 'tapTargetSize',
+            init: tapTargetSize,
+            isNamed: true,
+          ),
+          'animationDuration': _i2.BuilderArg<Duration?>(
+            name: 'animationDuration',
+            init: animationDuration,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i10.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'splashFactory': _i2.BuilderArg<_i11.InteractiveInkFeatureFactory?>(
+            name: 'splashFactory',
+            init: splashFactory,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ButtonStyle';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ButtonStyle$Mate(
@@ -132,115 +221,8 @@ class ButtonStyle$Mate extends _i1.ButtonStyle with _i2.Mate {
           alignment: p.get('alignment').build(),
           splashFactory: p.get('splashFactory').build(),
         );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundColor',
-      foregroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'minimumSize',
-      minimumSize,
-      isNamed: true,
-    );
-    mateUse(
-      'fixedSize',
-      fixedSize,
-      isNamed: true,
-    );
-    mateUse(
-      'maximumSize',
-      maximumSize,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'visualDensity',
-      visualDensity,
-      isNamed: true,
-    );
-    mateUse(
-      'tapTargetSize',
-      tapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'animationDuration',
-      animationDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'splashFactory',
-      splashFactory,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

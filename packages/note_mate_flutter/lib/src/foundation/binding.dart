@@ -10,15 +10,20 @@ class DebugReassembleConfig$Mate extends _i1.DebugReassembleConfig with _i2.Mate
   DebugReassembleConfig$Mate(
       {
       /// optionalParameters: {String? widgetName} , default:none
-      String? widgetName})
-      : super(widgetName: widgetName) {
+      super.widgetName})
+      : mateParams = {
+          'widgetName': _i2.BuilderArg<String?>(
+            name: 'widgetName',
+            init: widgetName,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DebugReassembleConfig';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => DebugReassembleConfig$Mate(widgetName: p.get('widgetName').build());
-    mateUse(
-      'widgetName',
-      widgetName,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

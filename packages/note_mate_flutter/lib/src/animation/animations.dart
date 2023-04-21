@@ -13,17 +13,22 @@ class AlwaysStoppedAnimation$Mate<T> extends _i1.AlwaysStoppedAnimation<T> with 
   AlwaysStoppedAnimation$Mate(
 
       /// requiredParameters: T value
-      T value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'AlwaysStoppedAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AlwaysStoppedAnimation$Mate<T>(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ProxyAnimation extends Animation<double> with AnimationLazyListenerMixin, AnimationLocalListenersMixin, AnimationLocalStatusListenersMixin
@@ -32,17 +37,22 @@ class ProxyAnimation$Mate extends _i1.ProxyAnimation with _i2.Mate {
   ProxyAnimation$Mate(
 
       /// requiredParameters: [Animation<double>? animation]
-      _i3.Animation<double>? animation)
-      : super(animation) {
+      super.animation)
+      : mateParams = {
+          'animation': _i2.BuilderArg<_i3.Animation<double>?>(
+            name: 'animation',
+            init: animation,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ProxyAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ProxyAnimation$Mate(p.get('animation').value);
-    mateUse(
-      'animation',
-      animation,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ReverseAnimation extends Animation<double> with AnimationLazyListenerMixin, AnimationLocalStatusListenersMixin
@@ -51,17 +61,22 @@ class ReverseAnimation$Mate extends _i1.ReverseAnimation with _i2.Mate {
   ReverseAnimation$Mate(
 
       /// requiredParameters: Animation<double> parent
-      _i3.Animation<double> parent)
-      : super(parent) {
+      super.parent)
+      : mateParams = {
+          'parent': _i2.BuilderArg<_i3.Animation<double>>(
+            name: 'parent',
+            init: parent,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ReverseAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => ReverseAnimation$Mate(p.get('parent').value);
-    mateUse(
-      'parent',
-      parent,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CurvedAnimation extends Animation<double> with AnimationWithParentMixin<double>
@@ -69,18 +84,31 @@ class CurvedAnimation$Mate extends _i1.CurvedAnimation with _i2.Mate {
   /// CurvedAnimation CurvedAnimation({required Animation<double> parent, required Curve curve, Curve? reverseCurve})
   CurvedAnimation$Mate({
     /// optionalParameters: {required Animation<double> parent} , default:none
-    required _i3.Animation<double> parent,
+    required super.parent,
 
     /// optionalParameters: {required Curve curve} , default:none
-    required _i4.Curve curve,
+    required super.curve,
 
     /// optionalParameters: {Curve? reverseCurve} , default:none
-    _i4.Curve? reverseCurve,
-  }) : super(
-          parent: parent,
-          curve: curve,
-          reverseCurve: reverseCurve,
-        ) {
+    super.reverseCurve,
+  })  : mateParams = {
+          'parent': _i2.BuilderArg<_i3.Animation<double>>(
+            name: 'parent',
+            init: parent,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i4.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+          ),
+          'reverseCurve': _i2.BuilderArg<_i4.Curve?>(
+            name: 'reverseCurve',
+            init: reverseCurve,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CurvedAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => CurvedAnimation$Mate(
@@ -88,22 +116,10 @@ class CurvedAnimation$Mate extends _i1.CurvedAnimation with _i2.Mate {
           curve: p.get('curve').build(),
           reverseCurve: p.get('reverseCurve').build(),
         );
-    mateUse(
-      'parent',
-      parent,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseCurve',
-      reverseCurve,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TrainHoppingAnimation extends Animation<double> with AnimationEagerListenerMixin, AnimationLocalListenersMixin, AnimationLocalStatusListenersMixin
@@ -111,17 +127,30 @@ class TrainHoppingAnimation$Mate extends _i1.TrainHoppingAnimation with _i2.Mate
   /// TrainHoppingAnimation TrainHoppingAnimation(Animation<double> _currentTrain, Animation<double>? _nextTrain, {void Function()? onSwitchedTrain})
   TrainHoppingAnimation$Mate(
     /// requiredParameters: Animation<double> _currentTrain
-    _i3.Animation<double> _currentTrain,
+    super._currentTrain,
 
     /// requiredParameters: Animation<double>? _nextTrain
-    _i3.Animation<double>? _nextTrain, {
+    super._nextTrain, {
     /// optionalParameters: {void Function()? onSwitchedTrain} , default:none
-    _i5.VoidCallback? onSwitchedTrain,
-  }) : super(
-          _currentTrain,
-          _nextTrain,
-          onSwitchedTrain: onSwitchedTrain,
-        ) {
+    super.onSwitchedTrain,
+  })  : mateParams = {
+          '_currentTrain': _i2.BuilderArg<_i3.Animation<double>>(
+            name: '_currentTrain',
+            init: _currentTrain,
+            isNamed: false,
+          ),
+          '_nextTrain': _i2.BuilderArg<_i3.Animation<double>?>(
+            name: '_nextTrain',
+            init: _nextTrain,
+            isNamed: false,
+          ),
+          'onSwitchedTrain': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onSwitchedTrain',
+            init: onSwitchedTrain,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TrainHoppingAnimation';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => TrainHoppingAnimation$Mate(
@@ -129,22 +158,10 @@ class TrainHoppingAnimation$Mate extends _i1.TrainHoppingAnimation with _i2.Mate
           p.get('_nextTrain').value,
           onSwitchedTrain: p.get('onSwitchedTrain').build(),
         );
-    mateUse(
-      '_currentTrain',
-      _currentTrain,
-      isNamed: false,
-    );
-    mateUse(
-      '_nextTrain',
-      _nextTrain,
-      isNamed: false,
-    );
-    mateUse(
-      'onSwitchedTrain',
-      onSwitchedTrain,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimationMean extends CompoundAnimation<double>
@@ -152,31 +169,33 @@ class AnimationMean$Mate extends _i1.AnimationMean with _i2.Mate {
   /// AnimationMean AnimationMean({required Animation<double> left, required Animation<double> right})
   AnimationMean$Mate({
     /// optionalParameters: {required Animation<double> left} , default:none
-    required _i3.Animation<double> left,
+    required super.left,
 
     /// optionalParameters: {required Animation<double> right} , default:none
-    required _i3.Animation<double> right,
-  }) : super(
-          left: left,
-          right: right,
-        ) {
+    required super.right,
+  })  : mateParams = {
+          'left': _i2.BuilderArg<_i3.Animation<double>>(
+            name: 'left',
+            init: left,
+            isNamed: true,
+          ),
+          'right': _i2.BuilderArg<_i3.Animation<double>>(
+            name: 'right',
+            init: right,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimationMean';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMean$Mate(
           left: p.get('left').build(),
           right: p.get('right').build(),
         );
-    mateUse(
-      'left',
-      left,
-      isNamed: true,
-    );
-    mateUse(
-      'right',
-      right,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimationMax<T extends num> extends CompoundAnimation<T>
@@ -184,31 +203,33 @@ class AnimationMax$Mate<T extends num> extends _i1.AnimationMax<T> with _i2.Mate
   /// AnimationMax<T> AnimationMax(Animation<T> first, Animation<T> next)
   AnimationMax$Mate(
     /// requiredParameters: Animation<T> first
-    _i3.Animation<T> first,
+    super.first,
 
     /// requiredParameters: Animation<T> next
-    _i3.Animation<T> next,
-  ) : super(
-          first,
-          next,
-        ) {
+    super.next,
+  )   : mateParams = {
+          'first': _i2.BuilderArg<_i3.Animation<T>>(
+            name: 'first',
+            init: first,
+            isNamed: false,
+          ),
+          'next': _i2.BuilderArg<_i3.Animation<T>>(
+            name: 'next',
+            init: next,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimationMax';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMax$Mate<T>(
           p.get('first').value,
           p.get('next').value,
         );
-    mateUse(
-      'first',
-      first,
-      isNamed: false,
-    );
-    mateUse(
-      'next',
-      next,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimationMin<T extends num> extends CompoundAnimation<T>
@@ -216,29 +237,31 @@ class AnimationMin$Mate<T extends num> extends _i1.AnimationMin<T> with _i2.Mate
   /// AnimationMin<T> AnimationMin(Animation<T> first, Animation<T> next)
   AnimationMin$Mate(
     /// requiredParameters: Animation<T> first
-    _i3.Animation<T> first,
+    super.first,
 
     /// requiredParameters: Animation<T> next
-    _i3.Animation<T> next,
-  ) : super(
-          first,
-          next,
-        ) {
+    super.next,
+  )   : mateParams = {
+          'first': _i2.BuilderArg<_i3.Animation<T>>(
+            name: 'first',
+            init: first,
+            isNamed: false,
+          ),
+          'next': _i2.BuilderArg<_i3.Animation<T>>(
+            name: 'next',
+            init: next,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimationMin';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => AnimationMin$Mate<T>(
           p.get('first').value,
           p.get('next').value,
         );
-    mateUse(
-      'first',
-      first,
-      isNamed: false,
-    );
-    mateUse(
-      'next',
-      next,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

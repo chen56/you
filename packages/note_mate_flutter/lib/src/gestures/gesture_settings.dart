@@ -10,15 +10,20 @@ class DeviceGestureSettings$Mate extends _i1.DeviceGestureSettings with _i2.Mate
   DeviceGestureSettings$Mate(
       {
       /// optionalParameters: {double? touchSlop} , default:none
-      double? touchSlop})
-      : super(touchSlop: touchSlop) {
+      super.touchSlop})
+      : mateParams = {
+          'touchSlop': _i2.BuilderArg<double?>(
+            name: 'touchSlop',
+            init: touchSlop,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DeviceGestureSettings';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => DeviceGestureSettings$Mate(touchSlop: p.get('touchSlop').build());
-    mateUse(
-      'touchSlop',
-      touchSlop,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

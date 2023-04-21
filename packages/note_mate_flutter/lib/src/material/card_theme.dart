@@ -12,34 +12,63 @@ class CardTheme$Mate extends _i1.CardTheme with _i2.Mate {
   /// CardTheme CardTheme({Clip? clipBehavior, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, EdgeInsetsGeometry? margin, ShapeBorder? shape})
   CardTheme$Mate({
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i3.Clip? clipBehavior,
+    super.clipBehavior,
 
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i4.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i5.ShapeBorder? shape,
-  }) : super(
-          clipBehavior: clipBehavior,
-          color: color,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          elevation: elevation,
-          margin: margin,
-          shape: shape,
-        ) {
+    super.shape,
+  })  : mateParams = {
+          'clipBehavior': _i2.BuilderArg<_i3.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i4.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CardTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CardTheme$Mate(
@@ -51,40 +80,8 @@ class CardTheme$Mate extends _i1.CardTheme with _i2.Mate {
           margin: p.get('margin').build(),
           shape: p.get('shape').build(),
         );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

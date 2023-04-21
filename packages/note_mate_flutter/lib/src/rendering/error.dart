@@ -10,16 +10,21 @@ class RenderErrorBox$Mate extends _i1.RenderErrorBox with _i2.Mate {
   RenderErrorBox$Mate(
 
       /// requiredParameters: [String message = '']
-      String message)
-      : super(message) {
+      super.message)
+      : mateParams = {
+          'message': _i2.BuilderArg<String>(
+            name: 'message',
+            init: message,
+            isNamed: false,
+            defaultValue: '',
+          )
+        },
+        super() {
     mateBuilderName = 'RenderErrorBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderErrorBox$Mate(p.get('message').value);
-    mateUse(
-      'message',
-      message,
-      isNamed: false,
-      defaultValue: '',
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

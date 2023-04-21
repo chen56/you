@@ -12,42 +12,80 @@ class CupertinoTextThemeData$Mate extends _i1.CupertinoTextThemeData with _i2.Ma
   /// CupertinoTextThemeData CupertinoTextThemeData({Color primaryColor = CupertinoColors.systemBlue, TextStyle? textStyle, TextStyle? actionTextStyle, TextStyle? tabLabelTextStyle, TextStyle? navTitleTextStyle, TextStyle? navLargeTitleTextStyle, TextStyle? navActionTextStyle, TextStyle? pickerTextStyle, TextStyle? dateTimePickerTextStyle})
   CupertinoTextThemeData$Mate({
     /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , default:processed=PrefixedIdentifierImpl
-    _i3.Color primaryColor = _i4.CupertinoColors.systemBlue,
+    super.primaryColor,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i5.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {TextStyle? actionTextStyle} , default:none
-    _i5.TextStyle? actionTextStyle,
+    super.actionTextStyle,
 
     /// optionalParameters: {TextStyle? tabLabelTextStyle} , default:none
-    _i5.TextStyle? tabLabelTextStyle,
+    super.tabLabelTextStyle,
 
     /// optionalParameters: {TextStyle? navTitleTextStyle} , default:none
-    _i5.TextStyle? navTitleTextStyle,
+    super.navTitleTextStyle,
 
     /// optionalParameters: {TextStyle? navLargeTitleTextStyle} , default:none
-    _i5.TextStyle? navLargeTitleTextStyle,
+    super.navLargeTitleTextStyle,
 
     /// optionalParameters: {TextStyle? navActionTextStyle} , default:none
-    _i5.TextStyle? navActionTextStyle,
+    super.navActionTextStyle,
 
     /// optionalParameters: {TextStyle? pickerTextStyle} , default:none
-    _i5.TextStyle? pickerTextStyle,
+    super.pickerTextStyle,
 
     /// optionalParameters: {TextStyle? dateTimePickerTextStyle} , default:none
-    _i5.TextStyle? dateTimePickerTextStyle,
-  }) : super(
-          primaryColor: primaryColor,
-          textStyle: textStyle,
-          actionTextStyle: actionTextStyle,
-          tabLabelTextStyle: tabLabelTextStyle,
-          navTitleTextStyle: navTitleTextStyle,
-          navLargeTitleTextStyle: navLargeTitleTextStyle,
-          navActionTextStyle: navActionTextStyle,
-          pickerTextStyle: pickerTextStyle,
-          dateTimePickerTextStyle: dateTimePickerTextStyle,
-        ) {
+    super.dateTimePickerTextStyle,
+  })  : mateParams = {
+          'primaryColor': _i2.BuilderArg<_i3.Color>(
+            name: 'primaryColor',
+            init: primaryColor,
+            isNamed: true,
+            defaultValue: _i4.CupertinoColors.systemBlue,
+          ),
+          'textStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'actionTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'actionTextStyle',
+            init: actionTextStyle,
+            isNamed: true,
+          ),
+          'tabLabelTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'tabLabelTextStyle',
+            init: tabLabelTextStyle,
+            isNamed: true,
+          ),
+          'navTitleTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'navTitleTextStyle',
+            init: navTitleTextStyle,
+            isNamed: true,
+          ),
+          'navLargeTitleTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'navLargeTitleTextStyle',
+            init: navLargeTitleTextStyle,
+            isNamed: true,
+          ),
+          'navActionTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'navActionTextStyle',
+            init: navActionTextStyle,
+            isNamed: true,
+          ),
+          'pickerTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'pickerTextStyle',
+            init: pickerTextStyle,
+            isNamed: true,
+          ),
+          'dateTimePickerTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'dateTimePickerTextStyle',
+            init: dateTimePickerTextStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoTextThemeData';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextThemeData$Mate(
@@ -61,51 +99,8 @@ class CupertinoTextThemeData$Mate extends _i1.CupertinoTextThemeData with _i2.Ma
           pickerTextStyle: p.get('pickerTextStyle').build(),
           dateTimePickerTextStyle: p.get('dateTimePickerTextStyle').build(),
         );
-    mateUse(
-      'primaryColor',
-      primaryColor,
-      isNamed: true,
-      defaultValue: _i4.CupertinoColors.systemBlue,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'actionTextStyle',
-      actionTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'tabLabelTextStyle',
-      tabLabelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'navTitleTextStyle',
-      navTitleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'navLargeTitleTextStyle',
-      navLargeTitleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'navActionTextStyle',
-      navActionTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'pickerTextStyle',
-      pickerTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dateTimePickerTextStyle',
-      dateTimePickerTextStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

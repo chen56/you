@@ -9,22 +9,39 @@ class GravitySimulation$Mate extends _i1.GravitySimulation with _i2.Mate {
   /// GravitySimulation GravitySimulation(double acceleration, double distance, double endDistance, double velocity)
   GravitySimulation$Mate(
     /// requiredParameters: double acceleration
-    double acceleration,
+    super.acceleration,
 
     /// requiredParameters: double distance
-    double distance,
+    super.distance,
 
     /// requiredParameters: double endDistance
-    double endDistance,
+    super.endDistance,
 
     /// requiredParameters: double velocity
-    double velocity,
-  ) : super(
-          acceleration,
-          distance,
-          endDistance,
-          velocity,
-        ) {
+    super.velocity,
+  )   : mateParams = {
+          'acceleration': _i2.BuilderArg<double>(
+            name: 'acceleration',
+            init: acceleration,
+            isNamed: false,
+          ),
+          'distance': _i2.BuilderArg<double>(
+            name: 'distance',
+            init: distance,
+            isNamed: false,
+          ),
+          'endDistance': _i2.BuilderArg<double>(
+            name: 'endDistance',
+            init: endDistance,
+            isNamed: false,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'GravitySimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => GravitySimulation$Mate(
@@ -33,25 +50,8 @@ class GravitySimulation$Mate extends _i1.GravitySimulation with _i2.Mate {
           p.get('endDistance').value,
           p.get('velocity').value,
         );
-    mateUse(
-      'acceleration',
-      acceleration,
-      isNamed: false,
-    );
-    mateUse(
-      'distance',
-      distance,
-      isNamed: false,
-    );
-    mateUse(
-      'endDistance',
-      endDistance,
-      isNamed: false,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

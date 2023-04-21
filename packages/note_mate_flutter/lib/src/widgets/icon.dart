@@ -12,49 +12,94 @@ class Icon$Mate extends _i1.Icon with _i2.Mate {
   /// Icon Icon(IconData? icon, {Key? key, double? size, double? fill, double? weight, double? grade, double? opticalSize, Color? color, List<Shadow>? shadows, String? semanticLabel, TextDirection? textDirection})
   Icon$Mate(
     /// requiredParameters: IconData? icon
-    _i3.IconData? icon, {
+    super.icon, {
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {double? size} , default:none
-    double? size,
+    super.size,
 
     /// optionalParameters: {double? fill} , default:none
-    double? fill,
+    super.fill,
 
     /// optionalParameters: {double? weight} , default:none
-    double? weight,
+    super.weight,
 
     /// optionalParameters: {double? grade} , default:none
-    double? grade,
+    super.grade,
 
     /// optionalParameters: {double? opticalSize} , default:none
-    double? opticalSize,
+    super.opticalSize,
 
     /// optionalParameters: {Color? color} , default:none
-    _i5.Color? color,
+    super.color,
 
     /// optionalParameters: {List<Shadow>? shadows} , default:none
-    List<_i5.Shadow>? shadows,
+    super.shadows,
 
     /// optionalParameters: {String? semanticLabel} , default:none
-    String? semanticLabel,
+    super.semanticLabel,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i5.TextDirection? textDirection,
-  }) : super(
-          icon,
-          key: key,
-          size: size,
-          fill: fill,
-          weight: weight,
-          grade: grade,
-          opticalSize: opticalSize,
-          color: color,
-          shadows: shadows,
-          semanticLabel: semanticLabel,
-          textDirection: textDirection,
-        ) {
+    super.textDirection,
+  })  : mateParams = {
+          'icon': _i2.BuilderArg<_i3.IconData?>(
+            name: 'icon',
+            init: icon,
+            isNamed: false,
+          ),
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<double?>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'fill': _i2.BuilderArg<double?>(
+            name: 'fill',
+            init: fill,
+            isNamed: true,
+          ),
+          'weight': _i2.BuilderArg<double?>(
+            name: 'weight',
+            init: weight,
+            isNamed: true,
+          ),
+          'grade': _i2.BuilderArg<double?>(
+            name: 'grade',
+            init: grade,
+            isNamed: true,
+          ),
+          'opticalSize': _i2.BuilderArg<double?>(
+            name: 'opticalSize',
+            init: opticalSize,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadows': _i2.BuilderArg<List<_i5.Shadow>?>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+          'semanticLabel': _i2.BuilderArg<String?>(
+            name: 'semanticLabel',
+            init: semanticLabel,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Icon';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Icon$Mate(
@@ -70,60 +115,8 @@ class Icon$Mate extends _i1.Icon with _i2.Mate {
           semanticLabel: p.get('semanticLabel').build(),
           textDirection: p.get('textDirection').build(),
         );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: false,
-    );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'fill',
-      fill,
-      isNamed: true,
-    );
-    mateUse(
-      'weight',
-      weight,
-      isNamed: true,
-    );
-    mateUse(
-      'grade',
-      grade,
-      isNamed: true,
-    );
-    mateUse(
-      'opticalSize',
-      opticalSize,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticLabel',
-      semanticLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -14,50 +14,95 @@ class CircleAvatar$Mate extends _i1.CircleAvatar with _i2.Mate {
   /// CircleAvatar CircleAvatar({Key? key, Widget? child, Color? backgroundColor, ImageProvider<Object>? backgroundImage, ImageProvider<Object>? foregroundImage, void Function(Object, StackTrace?)? onBackgroundImageError, void Function(Object, StackTrace?)? onForegroundImageError, Color? foregroundColor, double? radius, double? minRadius, double? maxRadius})
   CircleAvatar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i5.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {ImageProvider<Object>? backgroundImage} , default:none
-    _i6.ImageProvider<Object>? backgroundImage,
+    super.backgroundImage,
 
     /// optionalParameters: {ImageProvider<Object>? foregroundImage} , default:none
-    _i6.ImageProvider<Object>? foregroundImage,
+    super.foregroundImage,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onBackgroundImageError} , default:none
-    _i7.ImageErrorListener? onBackgroundImageError,
+    super.onBackgroundImageError,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onForegroundImageError} , default:none
-    _i7.ImageErrorListener? onForegroundImageError,
+    super.onForegroundImageError,
 
     /// optionalParameters: {Color? foregroundColor} , default:none
-    _i5.Color? foregroundColor,
+    super.foregroundColor,
 
     /// optionalParameters: {double? radius} , default:none
-    double? radius,
+    super.radius,
 
     /// optionalParameters: {double? minRadius} , default:none
-    double? minRadius,
+    super.minRadius,
 
     /// optionalParameters: {double? maxRadius} , default:none
-    double? maxRadius,
-  }) : super(
-          key: key,
-          child: child,
-          backgroundColor: backgroundColor,
-          backgroundImage: backgroundImage,
-          foregroundImage: foregroundImage,
-          onBackgroundImageError: onBackgroundImageError,
-          onForegroundImageError: onForegroundImageError,
-          foregroundColor: foregroundColor,
-          radius: radius,
-          minRadius: minRadius,
-          maxRadius: maxRadius,
-        ) {
+    super.maxRadius,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'backgroundImage': _i2.BuilderArg<_i6.ImageProvider<Object>?>(
+            name: 'backgroundImage',
+            init: backgroundImage,
+            isNamed: true,
+          ),
+          'foregroundImage': _i2.BuilderArg<_i6.ImageProvider<Object>?>(
+            name: 'foregroundImage',
+            init: foregroundImage,
+            isNamed: true,
+          ),
+          'onBackgroundImageError': _i2.BuilderArg<_i7.ImageErrorListener?>(
+            name: 'onBackgroundImageError',
+            init: onBackgroundImageError,
+            isNamed: true,
+          ),
+          'onForegroundImageError': _i2.BuilderArg<_i7.ImageErrorListener?>(
+            name: 'onForegroundImageError',
+            init: onForegroundImageError,
+            isNamed: true,
+          ),
+          'foregroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<double?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'minRadius': _i2.BuilderArg<double?>(
+            name: 'minRadius',
+            init: minRadius,
+            isNamed: true,
+          ),
+          'maxRadius': _i2.BuilderArg<double?>(
+            name: 'maxRadius',
+            init: maxRadius,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CircleAvatar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircleAvatar$Mate(
@@ -73,60 +118,8 @@ class CircleAvatar$Mate extends _i1.CircleAvatar with _i2.Mate {
           minRadius: p.get('minRadius').build(),
           maxRadius: p.get('maxRadius').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundImage',
-      backgroundImage,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundImage',
-      foregroundImage,
-      isNamed: true,
-    );
-    mateUse(
-      'onBackgroundImageError',
-      onBackgroundImageError,
-      isNamed: true,
-    );
-    mateUse(
-      'onForegroundImageError',
-      onForegroundImageError,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundColor',
-      foregroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'minRadius',
-      minRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'maxRadius',
-      maxRadius,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

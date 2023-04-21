@@ -11,46 +11,92 @@ class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i
   /// DraggableScrollableSheet DraggableScrollableSheet({Key? key, double initialChildSize = 0.5, double minChildSize = 0.25, double maxChildSize = 1.0, bool expand = true, bool snap = false, List<double>? snapSizes, Duration? snapAnimationDuration, DraggableScrollableController? controller, required Widget Function(BuildContext, ScrollController) builder})
   DraggableScrollableSheet$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double initialChildSize = 0.5} , default:processed=DoubleLiteralImpl
-    double initialChildSize = 0.5,
+    super.initialChildSize,
 
     /// optionalParameters: {double minChildSize = 0.25} , default:processed=DoubleLiteralImpl
-    double minChildSize = 0.25,
+    super.minChildSize,
 
     /// optionalParameters: {double maxChildSize = 1.0} , default:processed=DoubleLiteralImpl
-    double maxChildSize = 1.0,
+    super.maxChildSize,
 
     /// optionalParameters: {bool expand = true} , default:processed=BooleanLiteralImpl
-    bool expand = true,
+    super.expand,
 
     /// optionalParameters: {bool snap = false} , default:processed=BooleanLiteralImpl
-    bool snap = false,
+    super.snap,
 
     /// optionalParameters: {List<double>? snapSizes} , default:none
-    List<double>? snapSizes,
+    super.snapSizes,
 
     /// optionalParameters: {Duration? snapAnimationDuration} , default:none
-    Duration? snapAnimationDuration,
+    super.snapAnimationDuration,
 
     /// optionalParameters: {DraggableScrollableController? controller} , default:none
-    _i1.DraggableScrollableController? controller,
+    super.controller,
 
     /// optionalParameters: {required Widget Function(BuildContext, ScrollController) builder} , default:none
-    required _i1.ScrollableWidgetBuilder builder,
-  }) : super(
-          key: key,
-          initialChildSize: initialChildSize,
-          minChildSize: minChildSize,
-          maxChildSize: maxChildSize,
-          expand: expand,
-          snap: snap,
-          snapSizes: snapSizes,
-          snapAnimationDuration: snapAnimationDuration,
-          controller: controller,
-          builder: builder,
-        ) {
+    required super.builder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'initialChildSize': _i2.BuilderArg<double>(
+            name: 'initialChildSize',
+            init: initialChildSize,
+            isNamed: true,
+            defaultValue: 0.5,
+          ),
+          'minChildSize': _i2.BuilderArg<double>(
+            name: 'minChildSize',
+            init: minChildSize,
+            isNamed: true,
+            defaultValue: 0.25,
+          ),
+          'maxChildSize': _i2.BuilderArg<double>(
+            name: 'maxChildSize',
+            init: maxChildSize,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'expand': _i2.BuilderArg<bool>(
+            name: 'expand',
+            init: expand,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'snap': _i2.BuilderArg<bool>(
+            name: 'snap',
+            init: snap,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'snapSizes': _i2.BuilderArg<List<double>?>(
+            name: 'snapSizes',
+            init: snapSizes,
+            isNamed: true,
+          ),
+          'snapAnimationDuration': _i2.BuilderArg<Duration?>(
+            name: 'snapAnimationDuration',
+            init: snapAnimationDuration,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i1.DraggableScrollableController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.ScrollableWidgetBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DraggableScrollableSheet';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DraggableScrollableSheet$Mate(
@@ -65,62 +111,10 @@ class DraggableScrollableSheet$Mate extends _i1.DraggableScrollableSheet with _i
           controller: p.get('controller').build(),
           builder: p.get('builder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'initialChildSize',
-      initialChildSize,
-      isNamed: true,
-      defaultValue: 0.5,
-    );
-    mateUse(
-      'minChildSize',
-      minChildSize,
-      isNamed: true,
-      defaultValue: 0.25,
-    );
-    mateUse(
-      'maxChildSize',
-      maxChildSize,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'expand',
-      expand,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'snap',
-      snap,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'snapSizes',
-      snapSizes,
-      isNamed: true,
-    );
-    mateUse(
-      'snapAnimationDuration',
-      snapAnimationDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DraggableScrollableNotification extends Notification with ViewportNotificationMixin
@@ -128,26 +122,47 @@ class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotifi
   /// DraggableScrollableNotification DraggableScrollableNotification({required double extent, required double minExtent, required double maxExtent, required double initialExtent, required BuildContext context})
   DraggableScrollableNotification$Mate({
     /// optionalParameters: {required double extent} , default:none
-    required double extent,
+    required super.extent,
 
     /// optionalParameters: {required double minExtent} , default:none
-    required double minExtent,
+    required super.minExtent,
 
     /// optionalParameters: {required double maxExtent} , default:none
-    required double maxExtent,
+    required super.maxExtent,
 
     /// optionalParameters: {required double initialExtent} , default:none
-    required double initialExtent,
+    required super.initialExtent,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
-  }) : super(
-          extent: extent,
-          minExtent: minExtent,
-          maxExtent: maxExtent,
-          initialExtent: initialExtent,
-          context: context,
-        ) {
+    required super.context,
+  })  : mateParams = {
+          'extent': _i2.BuilderArg<double>(
+            name: 'extent',
+            init: extent,
+            isNamed: true,
+          ),
+          'minExtent': _i2.BuilderArg<double>(
+            name: 'minExtent',
+            init: minExtent,
+            isNamed: true,
+          ),
+          'maxExtent': _i2.BuilderArg<double>(
+            name: 'maxExtent',
+            init: maxExtent,
+            isNamed: true,
+          ),
+          'initialExtent': _i2.BuilderArg<double>(
+            name: 'initialExtent',
+            init: initialExtent,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DraggableScrollableNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DraggableScrollableNotification$Mate(
@@ -157,32 +172,10 @@ class DraggableScrollableNotification$Mate extends _i1.DraggableScrollableNotifi
           initialExtent: p.get('initialExtent').build(),
           context: p.get('context').build(),
         );
-    mateUse(
-      'extent',
-      extent,
-      isNamed: true,
-    );
-    mateUse(
-      'minExtent',
-      minExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'maxExtent',
-      maxExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'initialExtent',
-      initialExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DraggableScrollableActuator extends StatelessWidget
@@ -190,29 +183,31 @@ class DraggableScrollableActuator$Mate extends _i1.DraggableScrollableActuator w
   /// DraggableScrollableActuator DraggableScrollableActuator({Key? key, required Widget child})
   DraggableScrollableActuator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DraggableScrollableActuator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DraggableScrollableActuator$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

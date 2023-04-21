@@ -14,30 +14,57 @@ class KeyboardListener$Mate extends _i1.KeyboardListener with _i2.Mate {
   /// KeyboardListener KeyboardListener({Key? key, required FocusNode focusNode, bool autofocus = false, bool includeSemantics = true, void Function(KeyEvent)? onKeyEvent, required Widget child})
   KeyboardListener$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required FocusNode focusNode} , default:none
-    required _i4.FocusNode focusNode,
+    required super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {bool includeSemantics = true} , default:processed=BooleanLiteralImpl
-    bool includeSemantics = true,
+    super.includeSemantics,
 
     /// optionalParameters: {void Function(KeyEvent)? onKeyEvent} , default:none
-    _i5.ValueChanged<_i6.KeyEvent>? onKeyEvent,
+    super.onKeyEvent,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i7.Widget child,
-  }) : super(
-          key: key,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          includeSemantics: includeSemantics,
-          onKeyEvent: onKeyEvent,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i4.FocusNode>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'includeSemantics': _i2.BuilderArg<bool>(
+            name: 'includeSemantics',
+            init: includeSemantics,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onKeyEvent': _i2.BuilderArg<_i5.ValueChanged<_i6.KeyEvent>?>(
+            name: 'onKeyEvent',
+            init: onKeyEvent,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'KeyboardListener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => KeyboardListener$Mate(
@@ -48,37 +75,8 @@ class KeyboardListener$Mate extends _i1.KeyboardListener with _i2.Mate {
           onKeyEvent: p.get('onKeyEvent').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'includeSemantics',
-      includeSemantics,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onKeyEvent',
-      onKeyEvent,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

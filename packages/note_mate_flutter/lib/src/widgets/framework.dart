@@ -14,17 +14,22 @@ class ObjectKey$Mate extends _i1.ObjectKey with _i2.Mate {
   ObjectKey$Mate(
 
       /// requiredParameters: Object? value
-      Object? value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<Object?>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ObjectKey';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ObjectKey$Mate(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LabeledGlobalKey<T extends State<StatefulWidget>> extends GlobalKey<T>
@@ -33,17 +38,22 @@ class LabeledGlobalKey$Mate<T extends _i1.State<_i1.StatefulWidget>> extends _i1
   LabeledGlobalKey$Mate(
 
       /// requiredParameters: String? _debugLabel
-      String? _debugLabel)
-      : super(_debugLabel) {
+      super._debugLabel)
+      : mateParams = {
+          '_debugLabel': _i2.BuilderArg<String?>(
+            name: '_debugLabel',
+            init: _debugLabel,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'LabeledGlobalKey';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LabeledGlobalKey$Mate<T>(p.get('_debugLabel').value);
-    mateUse(
-      '_debugLabel',
-      _debugLabel,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class GlobalObjectKey<T extends State<StatefulWidget>> extends GlobalKey<T>
@@ -52,17 +62,22 @@ class GlobalObjectKey$Mate<T extends _i1.State<_i1.StatefulWidget>> extends _i1.
   GlobalObjectKey$Mate(
 
       /// requiredParameters: Object value
-      Object value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<Object>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'GlobalObjectKey';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GlobalObjectKey$Mate<T>(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BuildOwner
@@ -70,31 +85,33 @@ class BuildOwner$Mate extends _i1.BuildOwner with _i2.Mate {
   /// BuildOwner BuildOwner({void Function()? onBuildScheduled, FocusManager? focusManager})
   BuildOwner$Mate({
     /// optionalParameters: {void Function()? onBuildScheduled} , default:none
-    _i3.VoidCallback? onBuildScheduled,
+    super.onBuildScheduled,
 
     /// optionalParameters: {FocusManager? focusManager} , default:none
-    _i4.FocusManager? focusManager,
-  }) : super(
-          onBuildScheduled: onBuildScheduled,
-          focusManager: focusManager,
-        ) {
+    super.focusManager,
+  })  : mateParams = {
+          'onBuildScheduled': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onBuildScheduled',
+            init: onBuildScheduled,
+            isNamed: true,
+          ),
+          'focusManager': _i2.BuilderArg<_i4.FocusManager?>(
+            name: 'focusManager',
+            init: focusManager,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BuildOwner';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BuildOwner$Mate(
           onBuildScheduled: p.get('onBuildScheduled').build(),
           focusManager: p.get('focusManager').build(),
         );
-    mateUse(
-      'onBuildScheduled',
-      onBuildScheduled,
-      isNamed: true,
-    );
-    mateUse(
-      'focusManager',
-      focusManager,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ErrorWidget extends LeafRenderObjectWidget
@@ -103,47 +120,51 @@ class ErrorWidget$Mate extends _i1.ErrorWidget with _i2.Mate {
   ErrorWidget$Mate(
 
       /// requiredParameters: Object exception
-      Object exception)
-      : super(exception) {
+      super.exception)
+      : mateParams = {
+          'exception': _i2.BuilderArg<Object>(
+            name: 'exception',
+            init: exception,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ErrorWidget';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ErrorWidget$Mate(p.get('exception').value);
-    mateUse(
-      'exception',
-      exception,
-      isNamed: false,
-    );
   }
 
   /// ErrorWidget ErrorWidget.withDetails({String message = '', FlutterError? error})
   ErrorWidget$Mate.withDetails({
     /// optionalParameters: {String message = ''} , default:processed=SimpleStringLiteralImpl
-    String message = '',
+    super.message,
 
     /// optionalParameters: {FlutterError? error} , default:none
-    _i5.FlutterError? error,
-  }) : super.withDetails(
-          message: message,
-          error: error,
-        ) {
+    super.error,
+  })  : mateParams = {
+          'message': _i2.BuilderArg<String>(
+            name: 'message',
+            init: message,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'error': _i2.BuilderArg<_i5.FlutterError?>(
+            name: 'error',
+            init: error,
+            isNamed: true,
+          ),
+        },
+        super.withDetails() {
     mateBuilderName = 'ErrorWidget.withDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ErrorWidget$Mate.withDetails(
           message: p.get('message').build(),
           error: p.get('error').build(),
         );
-    mateUse(
-      'message',
-      message,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'error',
-      error,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class StatelessElement extends ComponentElement
@@ -152,17 +173,22 @@ class StatelessElement$Mate extends _i1.StatelessElement with _i2.Mate {
   StatelessElement$Mate(
 
       /// requiredParameters: StatelessWidget widget
-      _i1.StatelessWidget widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.StatelessWidget>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'StatelessElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StatelessElement$Mate(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class StatefulElement extends ComponentElement
@@ -171,17 +197,22 @@ class StatefulElement$Mate extends _i1.StatefulElement with _i2.Mate {
   StatefulElement$Mate(
 
       /// requiredParameters: StatefulWidget widget
-      _i1.StatefulWidget widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.StatefulWidget>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'StatefulElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StatefulElement$Mate(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ParentDataElement<T extends ParentData> extends ProxyElement
@@ -190,17 +221,22 @@ class ParentDataElement$Mate<T extends _i6.ParentData> extends _i1.ParentDataEle
   ParentDataElement$Mate(
 
       /// requiredParameters: ParentDataWidget<T> widget
-      _i1.ParentDataWidget<T> widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.ParentDataWidget<T>>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ParentDataElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ParentDataElement$Mate<T>(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class InheritedElement extends ProxyElement
@@ -209,17 +245,22 @@ class InheritedElement$Mate extends _i1.InheritedElement with _i2.Mate {
   InheritedElement$Mate(
 
       /// requiredParameters: InheritedWidget widget
-      _i1.InheritedWidget widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.InheritedWidget>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'InheritedElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => InheritedElement$Mate(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LeafRenderObjectElement extends RenderObjectElement
@@ -228,17 +269,22 @@ class LeafRenderObjectElement$Mate extends _i1.LeafRenderObjectElement with _i2.
   LeafRenderObjectElement$Mate(
 
       /// requiredParameters: LeafRenderObjectWidget widget
-      _i1.LeafRenderObjectWidget widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.LeafRenderObjectWidget>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'LeafRenderObjectElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LeafRenderObjectElement$Mate(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SingleChildRenderObjectElement extends RenderObjectElement
@@ -247,17 +293,22 @@ class SingleChildRenderObjectElement$Mate extends _i1.SingleChildRenderObjectEle
   SingleChildRenderObjectElement$Mate(
 
       /// requiredParameters: SingleChildRenderObjectWidget widget
-      _i1.SingleChildRenderObjectWidget widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.SingleChildRenderObjectWidget>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'SingleChildRenderObjectElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SingleChildRenderObjectElement$Mate(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MultiChildRenderObjectElement extends RenderObjectElement
@@ -266,17 +317,22 @@ class MultiChildRenderObjectElement$Mate extends _i1.MultiChildRenderObjectEleme
   MultiChildRenderObjectElement$Mate(
 
       /// requiredParameters: MultiChildRenderObjectWidget widget
-      _i1.MultiChildRenderObjectWidget widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.MultiChildRenderObjectWidget>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'MultiChildRenderObjectElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MultiChildRenderObjectElement$Mate(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DebugCreator
@@ -285,17 +341,22 @@ class DebugCreator$Mate extends _i1.DebugCreator with _i2.Mate {
   DebugCreator$Mate(
 
       /// requiredParameters: Element element
-      _i1.Element element)
-      : super(element) {
+      super.element)
+      : mateParams = {
+          'element': _i2.BuilderArg<_i1.Element>(
+            name: 'element',
+            init: element,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'DebugCreator';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DebugCreator$Mate(p.get('element').value);
-    mateUse(
-      'element',
-      element,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IndexedSlot<T extends Element?>
@@ -303,29 +364,31 @@ class IndexedSlot$Mate<T extends _i1.Element?> extends _i1.IndexedSlot<T> with _
   /// IndexedSlot<T> IndexedSlot(int index, T value)
   IndexedSlot$Mate(
     /// requiredParameters: int index
-    int index,
+    super.index,
 
     /// requiredParameters: T value
-    T value,
-  ) : super(
-          index,
-          value,
-        ) {
+    super.value,
+  )   : mateParams = {
+          'index': _i2.BuilderArg<int>(
+            name: 'index',
+            init: index,
+            isNamed: false,
+          ),
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'IndexedSlot';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IndexedSlot$Mate<T>(
           p.get('index').value,
           p.get('value').value,
         );
-    mateUse(
-      'index',
-      index,
-      isNamed: false,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

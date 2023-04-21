@@ -11,29 +11,31 @@ class ScrollMetricsNotification$Mate extends _i1.ScrollMetricsNotification with 
   /// ScrollMetricsNotification ScrollMetricsNotification({required ScrollMetrics metrics, required BuildContext context})
   ScrollMetricsNotification$Mate({
     /// optionalParameters: {required ScrollMetrics metrics} , default:none
-    required _i3.ScrollMetrics metrics,
+    required super.metrics,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
-  }) : super(
-          metrics: metrics,
-          context: context,
-        ) {
+    required super.context,
+  })  : mateParams = {
+          'metrics': _i2.BuilderArg<_i3.ScrollMetrics>(
+            name: 'metrics',
+            init: metrics,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollMetricsNotification';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollMetricsNotification$Mate(
           metrics: p.get('metrics').build(),
           context: p.get('context').build(),
         );
-    mateUse(
-      'metrics',
-      metrics,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

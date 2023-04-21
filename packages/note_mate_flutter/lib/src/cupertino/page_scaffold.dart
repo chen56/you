@@ -12,26 +12,48 @@ class CupertinoPageScaffold$Mate extends _i1.CupertinoPageScaffold with _i2.Mate
   /// CupertinoPageScaffold CupertinoPageScaffold({Key? key, ObstructingPreferredSizeWidget? navigationBar, Color? backgroundColor, bool resizeToAvoidBottomInset = true, required Widget child})
   CupertinoPageScaffold$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {ObstructingPreferredSizeWidget? navigationBar} , default:none
-    _i1.ObstructingPreferredSizeWidget? navigationBar,
+    super.navigationBar,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {bool resizeToAvoidBottomInset = true} , default:processed=BooleanLiteralImpl
-    bool resizeToAvoidBottomInset = true,
+    super.resizeToAvoidBottomInset,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          navigationBar: navigationBar,
-          backgroundColor: backgroundColor,
-          resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'navigationBar': _i2.BuilderArg<_i1.ObstructingPreferredSizeWidget?>(
+            name: 'navigationBar',
+            init: navigationBar,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'resizeToAvoidBottomInset': _i2.BuilderArg<bool>(
+            name: 'resizeToAvoidBottomInset',
+            init: resizeToAvoidBottomInset,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoPageScaffold';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoPageScaffold$Mate(
@@ -41,31 +63,8 @@ class CupertinoPageScaffold$Mate extends _i1.CupertinoPageScaffold with _i2.Mate
           resizeToAvoidBottomInset: p.get('resizeToAvoidBottomInset').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'navigationBar',
-      navigationBar,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'resizeToAvoidBottomInset',
-      resizeToAvoidBottomInset,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

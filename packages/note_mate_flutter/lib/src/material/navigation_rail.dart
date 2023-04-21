@@ -17,86 +17,168 @@ class NavigationRail$Mate extends _i1.NavigationRail with _i2.Mate {
   /// NavigationRail NavigationRail({Key? key, Color? backgroundColor, bool extended = false, Widget? leading, Widget? trailing, required List<NavigationRailDestination> destinations, required int? selectedIndex, void Function(int)? onDestinationSelected, double? elevation, double? groupAlignment, NavigationRailLabelType? labelType, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? minWidth, double? minExtendedWidth, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape})
   NavigationRail$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {bool extended = false} , default:processed=BooleanLiteralImpl
-    bool extended = false,
+    super.extended,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i5.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Widget? trailing} , default:none
-    _i5.Widget? trailing,
+    super.trailing,
 
     /// optionalParameters: {required List<NavigationRailDestination> destinations} , default:none
-    required List<_i1.NavigationRailDestination> destinations,
+    required super.destinations,
 
     /// optionalParameters: {required int? selectedIndex} , default:none
-    required int? selectedIndex,
+    required super.selectedIndex,
 
     /// optionalParameters: {void Function(int)? onDestinationSelected} , default:none
-    _i6.ValueChanged<int>? onDestinationSelected,
+    super.onDestinationSelected,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {double? groupAlignment} , default:none
-    double? groupAlignment,
+    super.groupAlignment,
 
     /// optionalParameters: {NavigationRailLabelType? labelType} , default:none
-    _i1.NavigationRailLabelType? labelType,
+    super.labelType,
 
     /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , default:none
-    _i7.TextStyle? unselectedLabelTextStyle,
+    super.unselectedLabelTextStyle,
 
     /// optionalParameters: {TextStyle? selectedLabelTextStyle} , default:none
-    _i7.TextStyle? selectedLabelTextStyle,
+    super.selectedLabelTextStyle,
 
     /// optionalParameters: {IconThemeData? unselectedIconTheme} , default:none
-    _i8.IconThemeData? unselectedIconTheme,
+    super.unselectedIconTheme,
 
     /// optionalParameters: {IconThemeData? selectedIconTheme} , default:none
-    _i8.IconThemeData? selectedIconTheme,
+    super.selectedIconTheme,
 
     /// optionalParameters: {double? minWidth} , default:none
-    double? minWidth,
+    super.minWidth,
 
     /// optionalParameters: {double? minExtendedWidth} , default:none
-    double? minExtendedWidth,
+    super.minExtendedWidth,
 
     /// optionalParameters: {bool? useIndicator} , default:none
-    bool? useIndicator,
+    super.useIndicator,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i4.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
-    _i9.ShapeBorder? indicatorShape,
-  }) : super(
-          key: key,
-          backgroundColor: backgroundColor,
-          extended: extended,
-          leading: leading,
-          trailing: trailing,
-          destinations: destinations,
-          selectedIndex: selectedIndex,
-          onDestinationSelected: onDestinationSelected,
-          elevation: elevation,
-          groupAlignment: groupAlignment,
-          labelType: labelType,
-          unselectedLabelTextStyle: unselectedLabelTextStyle,
-          selectedLabelTextStyle: selectedLabelTextStyle,
-          unselectedIconTheme: unselectedIconTheme,
-          selectedIconTheme: selectedIconTheme,
-          minWidth: minWidth,
-          minExtendedWidth: minExtendedWidth,
-          useIndicator: useIndicator,
-          indicatorColor: indicatorColor,
-          indicatorShape: indicatorShape,
-        ) {
+    super.indicatorShape,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'extended': _i2.BuilderArg<bool>(
+            name: 'extended',
+            init: extended,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'leading': _i2.BuilderArg<_i5.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<_i5.Widget?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+          'destinations': _i2.BuilderArg<List<_i1.NavigationRailDestination>>(
+            name: 'destinations',
+            init: destinations,
+            isNamed: true,
+          ),
+          'selectedIndex': _i2.BuilderArg<int?>(
+            name: 'selectedIndex',
+            init: selectedIndex,
+            isNamed: true,
+          ),
+          'onDestinationSelected': _i2.BuilderArg<_i6.ValueChanged<int>?>(
+            name: 'onDestinationSelected',
+            init: onDestinationSelected,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'groupAlignment': _i2.BuilderArg<double?>(
+            name: 'groupAlignment',
+            init: groupAlignment,
+            isNamed: true,
+          ),
+          'labelType': _i2.BuilderArg<_i1.NavigationRailLabelType?>(
+            name: 'labelType',
+            init: labelType,
+            isNamed: true,
+          ),
+          'unselectedLabelTextStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'unselectedLabelTextStyle',
+            init: unselectedLabelTextStyle,
+            isNamed: true,
+          ),
+          'selectedLabelTextStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'selectedLabelTextStyle',
+            init: selectedLabelTextStyle,
+            isNamed: true,
+          ),
+          'unselectedIconTheme': _i2.BuilderArg<_i8.IconThemeData?>(
+            name: 'unselectedIconTheme',
+            init: unselectedIconTheme,
+            isNamed: true,
+          ),
+          'selectedIconTheme': _i2.BuilderArg<_i8.IconThemeData?>(
+            name: 'selectedIconTheme',
+            init: selectedIconTheme,
+            isNamed: true,
+          ),
+          'minWidth': _i2.BuilderArg<double?>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+          ),
+          'minExtendedWidth': _i2.BuilderArg<double?>(
+            name: 'minExtendedWidth',
+            init: minExtendedWidth,
+            isNamed: true,
+          ),
+          'useIndicator': _i2.BuilderArg<bool?>(
+            name: 'useIndicator',
+            init: useIndicator,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorShape': _i2.BuilderArg<_i9.ShapeBorder?>(
+            name: 'indicatorShape',
+            init: indicatorShape,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationRail';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRail$Mate(
@@ -121,108 +203,10 @@ class NavigationRail$Mate extends _i1.NavigationRail with _i2.Mate {
           indicatorColor: p.get('indicatorColor').build(),
           indicatorShape: p.get('indicatorShape').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'extended',
-      extended,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
-    mateUse(
-      'destinations',
-      destinations,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIndex',
-      selectedIndex,
-      isNamed: true,
-    );
-    mateUse(
-      'onDestinationSelected',
-      onDestinationSelected,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'groupAlignment',
-      groupAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'labelType',
-      labelType,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelTextStyle',
-      unselectedLabelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedLabelTextStyle',
-      selectedLabelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedIconTheme',
-      unselectedIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIconTheme',
-      selectedIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'minExtendedWidth',
-      minExtendedWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'useIndicator',
-      useIndicator,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorShape',
-      indicatorShape,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NavigationRailDestination
@@ -230,30 +214,55 @@ class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with 
   /// NavigationRailDestination NavigationRailDestination({required Widget icon, Widget? selectedIcon, Color? indicatorColor, ShapeBorder? indicatorShape, required Widget label, EdgeInsetsGeometry? padding})
   NavigationRailDestination$Mate({
     /// optionalParameters: {required Widget icon} , default:none
-    required _i5.Widget icon,
+    required super.icon,
 
     /// optionalParameters: {Widget? selectedIcon} , default:none
-    _i5.Widget? selectedIcon,
+    super.selectedIcon,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i4.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
-    _i9.ShapeBorder? indicatorShape,
+    super.indicatorShape,
 
     /// optionalParameters: {required Widget label} , default:none
-    required _i5.Widget label,
+    required super.label,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i10.EdgeInsetsGeometry? padding,
-  }) : super(
-          icon: icon,
-          selectedIcon: selectedIcon,
-          indicatorColor: indicatorColor,
-          indicatorShape: indicatorShape,
-          label: label,
-          padding: padding,
-        ) {
+    super.padding,
+  })  : mateParams = {
+          'icon': _i2.BuilderArg<_i5.Widget>(
+            name: 'icon',
+            init: icon,
+            isNamed: true,
+          ),
+          'selectedIcon': _i2.BuilderArg<_i5.Widget?>(
+            name: 'selectedIcon',
+            init: selectedIcon,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorShape': _i2.BuilderArg<_i9.ShapeBorder?>(
+            name: 'indicatorShape',
+            init: indicatorShape,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<_i5.Widget>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i10.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationRailDestination';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRailDestination$Mate(
@@ -264,35 +273,8 @@ class NavigationRailDestination$Mate extends _i1.NavigationRailDestination with 
           label: p.get('label').build(),
           padding: p.get('padding').build(),
         );
-    mateUse(
-      'icon',
-      icon,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIcon',
-      selectedIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorShape',
-      indicatorShape,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

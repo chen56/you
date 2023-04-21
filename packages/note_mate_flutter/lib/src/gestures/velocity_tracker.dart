@@ -11,17 +11,22 @@ class Velocity$Mate extends _i1.Velocity with _i2.Mate {
   Velocity$Mate(
       {
       /// optionalParameters: {required Offset pixelsPerSecond} , default:none
-      required _i3.Offset pixelsPerSecond})
-      : super(pixelsPerSecond: pixelsPerSecond) {
+      required super.pixelsPerSecond})
+      : mateParams = {
+          'pixelsPerSecond': _i2.BuilderArg<_i3.Offset>(
+            name: 'pixelsPerSecond',
+            init: pixelsPerSecond,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'Velocity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Velocity$Mate(pixelsPerSecond: p.get('pixelsPerSecond').build());
-    mateUse(
-      'pixelsPerSecond',
-      pixelsPerSecond,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class VelocityEstimate
@@ -29,22 +34,39 @@ class VelocityEstimate$Mate extends _i1.VelocityEstimate with _i2.Mate {
   /// VelocityEstimate VelocityEstimate({required Offset pixelsPerSecond, required double confidence, required Duration duration, required Offset offset})
   VelocityEstimate$Mate({
     /// optionalParameters: {required Offset pixelsPerSecond} , default:none
-    required _i3.Offset pixelsPerSecond,
+    required super.pixelsPerSecond,
 
     /// optionalParameters: {required double confidence} , default:none
-    required double confidence,
+    required super.confidence,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {required Offset offset} , default:none
-    required _i3.Offset offset,
-  }) : super(
-          pixelsPerSecond: pixelsPerSecond,
-          confidence: confidence,
-          duration: duration,
-          offset: offset,
-        ) {
+    required super.offset,
+  })  : mateParams = {
+          'pixelsPerSecond': _i2.BuilderArg<_i3.Offset>(
+            name: 'pixelsPerSecond',
+            init: pixelsPerSecond,
+            isNamed: true,
+          ),
+          'confidence': _i2.BuilderArg<double>(
+            name: 'confidence',
+            init: confidence,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i3.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'VelocityEstimate';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VelocityEstimate$Mate(
@@ -53,27 +75,10 @@ class VelocityEstimate$Mate extends _i1.VelocityEstimate with _i2.Mate {
           duration: p.get('duration').build(),
           offset: p.get('offset').build(),
         );
-    mateUse(
-      'pixelsPerSecond',
-      pixelsPerSecond,
-      isNamed: true,
-    );
-    mateUse(
-      'confidence',
-      confidence,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class VelocityTracker
@@ -82,17 +87,22 @@ class VelocityTracker$Mate extends _i1.VelocityTracker with _i2.Mate {
   VelocityTracker$Mate.withKind(
 
       /// requiredParameters: PointerDeviceKind kind
-      _i3.PointerDeviceKind kind)
-      : super.withKind(kind) {
+      super.kind)
+      : mateParams = {
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
+            name: 'kind',
+            init: kind,
+            isNamed: false,
+          )
+        },
+        super.withKind() {
     mateBuilderName = 'VelocityTracker.withKind';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => VelocityTracker$Mate.withKind(p.get('kind').value);
-    mateUse(
-      'kind',
-      kind,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class IOSScrollViewFlingVelocityTracker extends VelocityTracker
@@ -101,17 +111,22 @@ class IOSScrollViewFlingVelocityTracker$Mate extends _i1.IOSScrollViewFlingVeloc
   IOSScrollViewFlingVelocityTracker$Mate(
 
       /// requiredParameters: PointerDeviceKind kind
-      _i3.PointerDeviceKind kind)
-      : super(kind) {
+      super.kind)
+      : mateParams = {
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
+            name: 'kind',
+            init: kind,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'IOSScrollViewFlingVelocityTracker';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => IOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    mateUse(
-      'kind',
-      kind,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MacOSScrollViewFlingVelocityTracker extends IOSScrollViewFlingVelocityTracker
@@ -120,15 +135,20 @@ class MacOSScrollViewFlingVelocityTracker$Mate extends _i1.MacOSScrollViewFlingV
   MacOSScrollViewFlingVelocityTracker$Mate(
 
       /// requiredParameters: PointerDeviceKind kind
-      _i3.PointerDeviceKind kind)
-      : super(kind) {
+      super.kind)
+      : mateParams = {
+          'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
+            name: 'kind',
+            init: kind,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'MacOSScrollViewFlingVelocityTracker';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => MacOSScrollViewFlingVelocityTracker$Mate(p.get('kind').value);
-    mateUse(
-      'kind',
-      kind,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -28,66 +28,129 @@ class TextSelectionOverlay$Mate extends _i1.TextSelectionOverlay with _i2.Mate {
   /// TextSelectionOverlay TextSelectionOverlay({required TextEditingValue value, required BuildContext context, Widget? debugRequiredFor, required LayerLink toolbarLayerLink, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, required RenderEditable renderObject, TextSelectionControls? selectionControls, bool handlesVisible = false, required TextSelectionDelegate selectionDelegate, DragStartBehavior dragStartBehavior = DragStartBehavior.start, void Function()? onSelectionHandleTapped, ClipboardStatusNotifier? clipboardStatus, Widget Function(BuildContext)? contextMenuBuilder, required TextMagnifierConfiguration magnifierConfiguration})
   TextSelectionOverlay$Mate({
     /// optionalParameters: {required TextEditingValue value} , default:none
-    required _i3.TextEditingValue value,
+    required super.value,
 
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
+    required super.context,
 
     /// optionalParameters: {Widget? debugRequiredFor} , default:none
-    _i4.Widget? debugRequiredFor,
+    super.debugRequiredFor,
 
     /// optionalParameters: {required LayerLink toolbarLayerLink} , default:none
-    required _i5.LayerLink toolbarLayerLink,
+    required super.toolbarLayerLink,
 
     /// optionalParameters: {required LayerLink startHandleLayerLink} , default:none
-    required _i5.LayerLink startHandleLayerLink,
+    required super.startHandleLayerLink,
 
     /// optionalParameters: {required LayerLink endHandleLayerLink} , default:none
-    required _i5.LayerLink endHandleLayerLink,
+    required super.endHandleLayerLink,
 
     /// optionalParameters: {required RenderEditable renderObject} , default:none
-    required _i6.RenderEditable renderObject,
+    required super.renderObject,
 
     /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
-    _i1.TextSelectionControls? selectionControls,
+    super.selectionControls,
 
     /// optionalParameters: {bool handlesVisible = false} , default:processed=BooleanLiteralImpl
-    bool handlesVisible = false,
+    super.handlesVisible,
 
     /// optionalParameters: {required TextSelectionDelegate selectionDelegate} , default:none
-    required _i3.TextSelectionDelegate selectionDelegate,
+    required super.selectionDelegate,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i7.DragStartBehavior dragStartBehavior = _i8.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {void Function()? onSelectionHandleTapped} , default:none
-    _i9.VoidCallback? onSelectionHandleTapped,
+    super.onSelectionHandleTapped,
 
     /// optionalParameters: {ClipboardStatusNotifier? clipboardStatus} , default:none
-    _i1.ClipboardStatusNotifier? clipboardStatus,
+    super.clipboardStatus,
 
     /// optionalParameters: {Widget Function(BuildContext)? contextMenuBuilder} , default:none
-    _i4.WidgetBuilder? contextMenuBuilder,
+    super.contextMenuBuilder,
 
     /// optionalParameters: {required TextMagnifierConfiguration magnifierConfiguration} , default:none
-    required _i10.TextMagnifierConfiguration magnifierConfiguration,
-  }) : super(
-          value: value,
-          context: context,
-          debugRequiredFor: debugRequiredFor,
-          toolbarLayerLink: toolbarLayerLink,
-          startHandleLayerLink: startHandleLayerLink,
-          endHandleLayerLink: endHandleLayerLink,
-          renderObject: renderObject,
-          selectionControls: selectionControls,
-          handlesVisible: handlesVisible,
-          selectionDelegate: selectionDelegate,
-          dragStartBehavior: dragStartBehavior,
-          onSelectionHandleTapped: onSelectionHandleTapped,
-          clipboardStatus: clipboardStatus,
-          contextMenuBuilder: contextMenuBuilder,
-          magnifierConfiguration: magnifierConfiguration,
-        ) {
+    required super.magnifierConfiguration,
+  })  : mateParams = {
+          'value': _i2.BuilderArg<_i3.TextEditingValue>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'debugRequiredFor': _i2.BuilderArg<_i4.Widget?>(
+            name: 'debugRequiredFor',
+            init: debugRequiredFor,
+            isNamed: true,
+          ),
+          'toolbarLayerLink': _i2.BuilderArg<_i5.LayerLink>(
+            name: 'toolbarLayerLink',
+            init: toolbarLayerLink,
+            isNamed: true,
+          ),
+          'startHandleLayerLink': _i2.BuilderArg<_i5.LayerLink>(
+            name: 'startHandleLayerLink',
+            init: startHandleLayerLink,
+            isNamed: true,
+          ),
+          'endHandleLayerLink': _i2.BuilderArg<_i5.LayerLink>(
+            name: 'endHandleLayerLink',
+            init: endHandleLayerLink,
+            isNamed: true,
+          ),
+          'renderObject': _i2.BuilderArg<_i6.RenderEditable>(
+            name: 'renderObject',
+            init: renderObject,
+            isNamed: true,
+          ),
+          'selectionControls': _i2.BuilderArg<_i1.TextSelectionControls?>(
+            name: 'selectionControls',
+            init: selectionControls,
+            isNamed: true,
+          ),
+          'handlesVisible': _i2.BuilderArg<bool>(
+            name: 'handlesVisible',
+            init: handlesVisible,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'selectionDelegate': _i2.BuilderArg<_i3.TextSelectionDelegate>(
+            name: 'selectionDelegate',
+            init: selectionDelegate,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
+          ),
+          'onSelectionHandleTapped': _i2.BuilderArg<_i9.VoidCallback?>(
+            name: 'onSelectionHandleTapped',
+            init: onSelectionHandleTapped,
+            isNamed: true,
+          ),
+          'clipboardStatus': _i2.BuilderArg<_i1.ClipboardStatusNotifier?>(
+            name: 'clipboardStatus',
+            init: clipboardStatus,
+            isNamed: true,
+          ),
+          'contextMenuBuilder': _i2.BuilderArg<_i4.WidgetBuilder?>(
+            name: 'contextMenuBuilder',
+            init: contextMenuBuilder,
+            isNamed: true,
+          ),
+          'magnifierConfiguration': _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
+            name: 'magnifierConfiguration',
+            init: magnifierConfiguration,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionOverlay';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSelectionOverlay$Mate(
@@ -107,84 +170,10 @@ class TextSelectionOverlay$Mate extends _i1.TextSelectionOverlay with _i2.Mate {
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'debugRequiredFor',
-      debugRequiredFor,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarLayerLink',
-      toolbarLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'startHandleLayerLink',
-      startHandleLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'endHandleLayerLink',
-      endHandleLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'renderObject',
-      renderObject,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionControls',
-      selectionControls,
-      isNamed: true,
-    );
-    mateUse(
-      'handlesVisible',
-      handlesVisible,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'selectionDelegate',
-      selectionDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i8.DragStartBehavior.start,
-    );
-    mateUse(
-      'onSelectionHandleTapped',
-      onSelectionHandleTapped,
-      isNamed: true,
-    );
-    mateUse(
-      'clipboardStatus',
-      clipboardStatus,
-      isNamed: true,
-    );
-    mateUse(
-      'contextMenuBuilder',
-      contextMenuBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'magnifierConfiguration',
-      magnifierConfiguration,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectionOverlay
@@ -192,106 +181,209 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
   /// SelectionOverlay SelectionOverlay({required BuildContext context, Widget? debugRequiredFor, required TextSelectionHandleType startHandleType, required double lineHeightAtStart, ValueListenable<bool>? startHandlesVisible, void Function(DragStartDetails)? onStartHandleDragStart, void Function(DragUpdateDetails)? onStartHandleDragUpdate, void Function(DragEndDetails)? onStartHandleDragEnd, required TextSelectionHandleType endHandleType, required double lineHeightAtEnd, ValueListenable<bool>? endHandlesVisible, void Function(DragStartDetails)? onEndHandleDragStart, void Function(DragUpdateDetails)? onEndHandleDragUpdate, void Function(DragEndDetails)? onEndHandleDragEnd, ValueListenable<bool>? toolbarVisible, required List<TextSelectionPoint> selectionEndpoints, required TextSelectionControls? selectionControls, required TextSelectionDelegate? selectionDelegate, required ClipboardStatusNotifier? clipboardStatus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, required LayerLink toolbarLayerLink, DragStartBehavior dragStartBehavior = DragStartBehavior.start, void Function()? onSelectionHandleTapped, Offset? toolbarLocation, TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled})
   SelectionOverlay$Mate({
     /// optionalParameters: {required BuildContext context} , default:none
-    required _i4.BuildContext context,
+    required super.context,
 
     /// optionalParameters: {Widget? debugRequiredFor} , default:none
-    _i4.Widget? debugRequiredFor,
+    super.debugRequiredFor,
 
     /// optionalParameters: {required TextSelectionHandleType startHandleType} , default:none
-    required _i11.TextSelectionHandleType startHandleType,
+    required super.startHandleType,
 
     /// optionalParameters: {required double lineHeightAtStart} , default:none
-    required double lineHeightAtStart,
+    required super.lineHeightAtStart,
 
     /// optionalParameters: {ValueListenable<bool>? startHandlesVisible} , default:none
-    _i12.ValueListenable<bool>? startHandlesVisible,
+    super.startHandlesVisible,
 
     /// optionalParameters: {void Function(DragStartDetails)? onStartHandleDragStart} , default:none
-    _i13.ValueChanged<_i14.DragStartDetails>? onStartHandleDragStart,
+    super.onStartHandleDragStart,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onStartHandleDragUpdate} , default:none
-    _i13.ValueChanged<_i14.DragUpdateDetails>? onStartHandleDragUpdate,
+    super.onStartHandleDragUpdate,
 
     /// optionalParameters: {void Function(DragEndDetails)? onStartHandleDragEnd} , default:none
-    _i13.ValueChanged<_i14.DragEndDetails>? onStartHandleDragEnd,
+    super.onStartHandleDragEnd,
 
     /// optionalParameters: {required TextSelectionHandleType endHandleType} , default:none
-    required _i11.TextSelectionHandleType endHandleType,
+    required super.endHandleType,
 
     /// optionalParameters: {required double lineHeightAtEnd} , default:none
-    required double lineHeightAtEnd,
+    required super.lineHeightAtEnd,
 
     /// optionalParameters: {ValueListenable<bool>? endHandlesVisible} , default:none
-    _i12.ValueListenable<bool>? endHandlesVisible,
+    super.endHandlesVisible,
 
     /// optionalParameters: {void Function(DragStartDetails)? onEndHandleDragStart} , default:none
-    _i13.ValueChanged<_i14.DragStartDetails>? onEndHandleDragStart,
+    super.onEndHandleDragStart,
 
     /// optionalParameters: {void Function(DragUpdateDetails)? onEndHandleDragUpdate} , default:none
-    _i13.ValueChanged<_i14.DragUpdateDetails>? onEndHandleDragUpdate,
+    super.onEndHandleDragUpdate,
 
     /// optionalParameters: {void Function(DragEndDetails)? onEndHandleDragEnd} , default:none
-    _i13.ValueChanged<_i14.DragEndDetails>? onEndHandleDragEnd,
+    super.onEndHandleDragEnd,
 
     /// optionalParameters: {ValueListenable<bool>? toolbarVisible} , default:none
-    _i12.ValueListenable<bool>? toolbarVisible,
+    super.toolbarVisible,
 
     /// optionalParameters: {required List<TextSelectionPoint> selectionEndpoints} , default:none
-    required List<_i6.TextSelectionPoint> selectionEndpoints,
+    required super.selectionEndpoints,
 
     /// optionalParameters: {required TextSelectionControls? selectionControls} , default:none
-    required _i1.TextSelectionControls? selectionControls,
+    required super.selectionControls,
 
     /// optionalParameters: {required TextSelectionDelegate? selectionDelegate} , default:none
-    required _i3.TextSelectionDelegate? selectionDelegate,
+    required super.selectionDelegate,
 
     /// optionalParameters: {required ClipboardStatusNotifier? clipboardStatus} , default:none
-    required _i1.ClipboardStatusNotifier? clipboardStatus,
+    required super.clipboardStatus,
 
     /// optionalParameters: {required LayerLink startHandleLayerLink} , default:none
-    required _i5.LayerLink startHandleLayerLink,
+    required super.startHandleLayerLink,
 
     /// optionalParameters: {required LayerLink endHandleLayerLink} , default:none
-    required _i5.LayerLink endHandleLayerLink,
+    required super.endHandleLayerLink,
 
     /// optionalParameters: {required LayerLink toolbarLayerLink} , default:none
-    required _i5.LayerLink toolbarLayerLink,
+    required super.toolbarLayerLink,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i7.DragStartBehavior dragStartBehavior = _i8.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {void Function()? onSelectionHandleTapped} , default:none
-    _i9.VoidCallback? onSelectionHandleTapped,
+    super.onSelectionHandleTapped,
 
     /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
-    _i10.TextMagnifierConfiguration magnifierConfiguration = _i15.TextMagnifierConfiguration.disabled,
-  }) : super(
-          context: context,
-          debugRequiredFor: debugRequiredFor,
-          startHandleType: startHandleType,
-          lineHeightAtStart: lineHeightAtStart,
-          startHandlesVisible: startHandlesVisible,
-          onStartHandleDragStart: onStartHandleDragStart,
-          onStartHandleDragUpdate: onStartHandleDragUpdate,
-          onStartHandleDragEnd: onStartHandleDragEnd,
-          endHandleType: endHandleType,
-          lineHeightAtEnd: lineHeightAtEnd,
-          endHandlesVisible: endHandlesVisible,
-          onEndHandleDragStart: onEndHandleDragStart,
-          onEndHandleDragUpdate: onEndHandleDragUpdate,
-          onEndHandleDragEnd: onEndHandleDragEnd,
-          toolbarVisible: toolbarVisible,
-          selectionEndpoints: selectionEndpoints,
-          selectionControls: selectionControls,
-          selectionDelegate: selectionDelegate,
-          clipboardStatus: clipboardStatus,
-          startHandleLayerLink: startHandleLayerLink,
-          endHandleLayerLink: endHandleLayerLink,
-          toolbarLayerLink: toolbarLayerLink,
-          dragStartBehavior: dragStartBehavior,
-          onSelectionHandleTapped: onSelectionHandleTapped,
-          magnifierConfiguration: magnifierConfiguration,
-        ) {
+    super.magnifierConfiguration,
+  })  : mateParams = {
+          'context': _i2.BuilderArg<_i4.BuildContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'debugRequiredFor': _i2.BuilderArg<_i4.Widget?>(
+            name: 'debugRequiredFor',
+            init: debugRequiredFor,
+            isNamed: true,
+          ),
+          'startHandleType': _i2.BuilderArg<_i11.TextSelectionHandleType>(
+            name: 'startHandleType',
+            init: startHandleType,
+            isNamed: true,
+          ),
+          'lineHeightAtStart': _i2.BuilderArg<double>(
+            name: 'lineHeightAtStart',
+            init: lineHeightAtStart,
+            isNamed: true,
+          ),
+          'startHandlesVisible': _i2.BuilderArg<_i12.ValueListenable<bool>?>(
+            name: 'startHandlesVisible',
+            init: startHandlesVisible,
+            isNamed: true,
+          ),
+          'onStartHandleDragStart': _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
+            name: 'onStartHandleDragStart',
+            init: onStartHandleDragStart,
+            isNamed: true,
+          ),
+          'onStartHandleDragUpdate': _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
+            name: 'onStartHandleDragUpdate',
+            init: onStartHandleDragUpdate,
+            isNamed: true,
+          ),
+          'onStartHandleDragEnd': _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
+            name: 'onStartHandleDragEnd',
+            init: onStartHandleDragEnd,
+            isNamed: true,
+          ),
+          'endHandleType': _i2.BuilderArg<_i11.TextSelectionHandleType>(
+            name: 'endHandleType',
+            init: endHandleType,
+            isNamed: true,
+          ),
+          'lineHeightAtEnd': _i2.BuilderArg<double>(
+            name: 'lineHeightAtEnd',
+            init: lineHeightAtEnd,
+            isNamed: true,
+          ),
+          'endHandlesVisible': _i2.BuilderArg<_i12.ValueListenable<bool>?>(
+            name: 'endHandlesVisible',
+            init: endHandlesVisible,
+            isNamed: true,
+          ),
+          'onEndHandleDragStart': _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
+            name: 'onEndHandleDragStart',
+            init: onEndHandleDragStart,
+            isNamed: true,
+          ),
+          'onEndHandleDragUpdate': _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
+            name: 'onEndHandleDragUpdate',
+            init: onEndHandleDragUpdate,
+            isNamed: true,
+          ),
+          'onEndHandleDragEnd': _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
+            name: 'onEndHandleDragEnd',
+            init: onEndHandleDragEnd,
+            isNamed: true,
+          ),
+          'toolbarVisible': _i2.BuilderArg<_i12.ValueListenable<bool>?>(
+            name: 'toolbarVisible',
+            init: toolbarVisible,
+            isNamed: true,
+          ),
+          'selectionEndpoints': _i2.BuilderArg<List<_i6.TextSelectionPoint>>(
+            name: 'selectionEndpoints',
+            init: selectionEndpoints,
+            isNamed: true,
+          ),
+          'selectionControls': _i2.BuilderArg<_i1.TextSelectionControls?>(
+            name: 'selectionControls',
+            init: selectionControls,
+            isNamed: true,
+          ),
+          'selectionDelegate': _i2.BuilderArg<_i3.TextSelectionDelegate?>(
+            name: 'selectionDelegate',
+            init: selectionDelegate,
+            isNamed: true,
+          ),
+          'clipboardStatus': _i2.BuilderArg<_i1.ClipboardStatusNotifier?>(
+            name: 'clipboardStatus',
+            init: clipboardStatus,
+            isNamed: true,
+          ),
+          'startHandleLayerLink': _i2.BuilderArg<_i5.LayerLink>(
+            name: 'startHandleLayerLink',
+            init: startHandleLayerLink,
+            isNamed: true,
+          ),
+          'endHandleLayerLink': _i2.BuilderArg<_i5.LayerLink>(
+            name: 'endHandleLayerLink',
+            init: endHandleLayerLink,
+            isNamed: true,
+          ),
+          'toolbarLayerLink': _i2.BuilderArg<_i5.LayerLink>(
+            name: 'toolbarLayerLink',
+            init: toolbarLayerLink,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
+          ),
+          'onSelectionHandleTapped': _i2.BuilderArg<_i9.VoidCallback?>(
+            name: 'onSelectionHandleTapped',
+            init: onSelectionHandleTapped,
+            isNamed: true,
+          ),
+          'magnifierConfiguration': _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
+            name: 'magnifierConfiguration',
+            init: magnifierConfiguration,
+            isNamed: true,
+            defaultValue: _i15.TextMagnifierConfiguration.disabled,
+          ),
+        },
+        super() {
     mateBuilderName = 'SelectionOverlay';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SelectionOverlay$Mate(
@@ -321,134 +413,10 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
           onSelectionHandleTapped: p.get('onSelectionHandleTapped').build(),
           magnifierConfiguration: p.get('magnifierConfiguration').build(),
         );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'debugRequiredFor',
-      debugRequiredFor,
-      isNamed: true,
-    );
-    mateUse(
-      'startHandleType',
-      startHandleType,
-      isNamed: true,
-    );
-    mateUse(
-      'lineHeightAtStart',
-      lineHeightAtStart,
-      isNamed: true,
-    );
-    mateUse(
-      'startHandlesVisible',
-      startHandlesVisible,
-      isNamed: true,
-    );
-    mateUse(
-      'onStartHandleDragStart',
-      onStartHandleDragStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onStartHandleDragUpdate',
-      onStartHandleDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onStartHandleDragEnd',
-      onStartHandleDragEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'endHandleType',
-      endHandleType,
-      isNamed: true,
-    );
-    mateUse(
-      'lineHeightAtEnd',
-      lineHeightAtEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'endHandlesVisible',
-      endHandlesVisible,
-      isNamed: true,
-    );
-    mateUse(
-      'onEndHandleDragStart',
-      onEndHandleDragStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onEndHandleDragUpdate',
-      onEndHandleDragUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onEndHandleDragEnd',
-      onEndHandleDragEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarVisible',
-      toolbarVisible,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionEndpoints',
-      selectionEndpoints,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionControls',
-      selectionControls,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionDelegate',
-      selectionDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'clipboardStatus',
-      clipboardStatus,
-      isNamed: true,
-    );
-    mateUse(
-      'startHandleLayerLink',
-      startHandleLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'endHandleLayerLink',
-      endHandleLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarLayerLink',
-      toolbarLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i8.DragStartBehavior.start,
-    );
-    mateUse(
-      'onSelectionHandleTapped',
-      onSelectionHandleTapped,
-      isNamed: true,
-    );
-    mateUse(
-      'magnifierConfiguration',
-      magnifierConfiguration,
-      isNamed: true,
-      defaultValue: _i15.TextMagnifierConfiguration.disabled,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextSelectionGestureDetectorBuilder
@@ -457,17 +425,22 @@ class TextSelectionGestureDetectorBuilder$Mate extends _i1.TextSelectionGestureD
   TextSelectionGestureDetectorBuilder$Mate(
       {
       /// optionalParameters: {required TextSelectionGestureDetectorBuilderDelegate delegate} , default:none
-      required _i1.TextSelectionGestureDetectorBuilderDelegate delegate})
-      : super(delegate: delegate) {
+      required super.delegate})
+      : mateParams = {
+          'delegate': _i2.BuilderArg<_i1.TextSelectionGestureDetectorBuilderDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'TextSelectionGestureDetectorBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSelectionGestureDetectorBuilder$Mate(delegate: p.get('delegate').build());
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextSelectionGestureDetector extends StatefulWidget
@@ -475,78 +448,151 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
   /// TextSelectionGestureDetector TextSelectionGestureDetector({Key? key, void Function(TapDragDownDetails)? onTapDown, void Function(ForcePressDetails)? onForcePressStart, void Function(ForcePressDetails)? onForcePressEnd, void Function()? onSecondaryTap, void Function(TapDownDetails)? onSecondaryTapDown, void Function(TapDragUpDetails)? onSingleTapUp, void Function()? onSingleTapCancel, void Function(LongPressStartDetails)? onSingleLongTapStart, void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate, void Function(LongPressEndDetails)? onSingleLongTapEnd, void Function(TapDragDownDetails)? onDoubleTapDown, void Function(TapDragDownDetails)? onTripleTapDown, void Function(TapDragStartDetails)? onDragSelectionStart, void Function(TapDragUpdateDetails)? onDragSelectionUpdate, void Function(TapDragEndDetails)? onDragSelectionEnd, HitTestBehavior? behavior, required Widget child})
   TextSelectionGestureDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i16.Key? key,
+    super.key,
 
     /// optionalParameters: {void Function(TapDragDownDetails)? onTapDown} , default:none
-    _i17.GestureTapDragDownCallback? onTapDown,
+    super.onTapDown,
 
     /// optionalParameters: {void Function(ForcePressDetails)? onForcePressStart} , default:none
-    _i18.GestureForcePressStartCallback? onForcePressStart,
+    super.onForcePressStart,
 
     /// optionalParameters: {void Function(ForcePressDetails)? onForcePressEnd} , default:none
-    _i18.GestureForcePressEndCallback? onForcePressEnd,
+    super.onForcePressEnd,
 
     /// optionalParameters: {void Function()? onSecondaryTap} , default:none
-    _i19.GestureTapCallback? onSecondaryTap,
+    super.onSecondaryTap,
 
     /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , default:none
-    _i19.GestureTapDownCallback? onSecondaryTapDown,
+    super.onSecondaryTapDown,
 
     /// optionalParameters: {void Function(TapDragUpDetails)? onSingleTapUp} , default:none
-    _i17.GestureTapDragUpCallback? onSingleTapUp,
+    super.onSingleTapUp,
 
     /// optionalParameters: {void Function()? onSingleTapCancel} , default:none
-    _i17.GestureCancelCallback? onSingleTapCancel,
+    super.onSingleTapCancel,
 
     /// optionalParameters: {void Function(LongPressStartDetails)? onSingleLongTapStart} , default:none
-    _i20.GestureLongPressStartCallback? onSingleLongTapStart,
+    super.onSingleLongTapStart,
 
     /// optionalParameters: {void Function(LongPressMoveUpdateDetails)? onSingleLongTapMoveUpdate} , default:none
-    _i20.GestureLongPressMoveUpdateCallback? onSingleLongTapMoveUpdate,
+    super.onSingleLongTapMoveUpdate,
 
     /// optionalParameters: {void Function(LongPressEndDetails)? onSingleLongTapEnd} , default:none
-    _i20.GestureLongPressEndCallback? onSingleLongTapEnd,
+    super.onSingleLongTapEnd,
 
     /// optionalParameters: {void Function(TapDragDownDetails)? onDoubleTapDown} , default:none
-    _i17.GestureTapDragDownCallback? onDoubleTapDown,
+    super.onDoubleTapDown,
 
     /// optionalParameters: {void Function(TapDragDownDetails)? onTripleTapDown} , default:none
-    _i17.GestureTapDragDownCallback? onTripleTapDown,
+    super.onTripleTapDown,
 
     /// optionalParameters: {void Function(TapDragStartDetails)? onDragSelectionStart} , default:none
-    _i17.GestureTapDragStartCallback? onDragSelectionStart,
+    super.onDragSelectionStart,
 
     /// optionalParameters: {void Function(TapDragUpdateDetails)? onDragSelectionUpdate} , default:none
-    _i17.GestureTapDragUpdateCallback? onDragSelectionUpdate,
+    super.onDragSelectionUpdate,
 
     /// optionalParameters: {void Function(TapDragEndDetails)? onDragSelectionEnd} , default:none
-    _i17.GestureTapDragEndCallback? onDragSelectionEnd,
+    super.onDragSelectionEnd,
 
     /// optionalParameters: {HitTestBehavior? behavior} , default:none
-    _i21.HitTestBehavior? behavior,
+    super.behavior,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          onTapDown: onTapDown,
-          onForcePressStart: onForcePressStart,
-          onForcePressEnd: onForcePressEnd,
-          onSecondaryTap: onSecondaryTap,
-          onSecondaryTapDown: onSecondaryTapDown,
-          onSingleTapUp: onSingleTapUp,
-          onSingleTapCancel: onSingleTapCancel,
-          onSingleLongTapStart: onSingleLongTapStart,
-          onSingleLongTapMoveUpdate: onSingleLongTapMoveUpdate,
-          onSingleLongTapEnd: onSingleLongTapEnd,
-          onDoubleTapDown: onDoubleTapDown,
-          onTripleTapDown: onTripleTapDown,
-          onDragSelectionStart: onDragSelectionStart,
-          onDragSelectionUpdate: onDragSelectionUpdate,
-          onDragSelectionEnd: onDragSelectionEnd,
-          behavior: behavior,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i16.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'onTapDown': _i2.BuilderArg<_i17.GestureTapDragDownCallback?>(
+            name: 'onTapDown',
+            init: onTapDown,
+            isNamed: true,
+          ),
+          'onForcePressStart': _i2.BuilderArg<_i18.GestureForcePressStartCallback?>(
+            name: 'onForcePressStart',
+            init: onForcePressStart,
+            isNamed: true,
+          ),
+          'onForcePressEnd': _i2.BuilderArg<_i18.GestureForcePressEndCallback?>(
+            name: 'onForcePressEnd',
+            init: onForcePressEnd,
+            isNamed: true,
+          ),
+          'onSecondaryTap': _i2.BuilderArg<_i19.GestureTapCallback?>(
+            name: 'onSecondaryTap',
+            init: onSecondaryTap,
+            isNamed: true,
+          ),
+          'onSecondaryTapDown': _i2.BuilderArg<_i19.GestureTapDownCallback?>(
+            name: 'onSecondaryTapDown',
+            init: onSecondaryTapDown,
+            isNamed: true,
+          ),
+          'onSingleTapUp': _i2.BuilderArg<_i17.GestureTapDragUpCallback?>(
+            name: 'onSingleTapUp',
+            init: onSingleTapUp,
+            isNamed: true,
+          ),
+          'onSingleTapCancel': _i2.BuilderArg<_i17.GestureCancelCallback?>(
+            name: 'onSingleTapCancel',
+            init: onSingleTapCancel,
+            isNamed: true,
+          ),
+          'onSingleLongTapStart': _i2.BuilderArg<_i20.GestureLongPressStartCallback?>(
+            name: 'onSingleLongTapStart',
+            init: onSingleLongTapStart,
+            isNamed: true,
+          ),
+          'onSingleLongTapMoveUpdate': _i2.BuilderArg<_i20.GestureLongPressMoveUpdateCallback?>(
+            name: 'onSingleLongTapMoveUpdate',
+            init: onSingleLongTapMoveUpdate,
+            isNamed: true,
+          ),
+          'onSingleLongTapEnd': _i2.BuilderArg<_i20.GestureLongPressEndCallback?>(
+            name: 'onSingleLongTapEnd',
+            init: onSingleLongTapEnd,
+            isNamed: true,
+          ),
+          'onDoubleTapDown': _i2.BuilderArg<_i17.GestureTapDragDownCallback?>(
+            name: 'onDoubleTapDown',
+            init: onDoubleTapDown,
+            isNamed: true,
+          ),
+          'onTripleTapDown': _i2.BuilderArg<_i17.GestureTapDragDownCallback?>(
+            name: 'onTripleTapDown',
+            init: onTripleTapDown,
+            isNamed: true,
+          ),
+          'onDragSelectionStart': _i2.BuilderArg<_i17.GestureTapDragStartCallback?>(
+            name: 'onDragSelectionStart',
+            init: onDragSelectionStart,
+            isNamed: true,
+          ),
+          'onDragSelectionUpdate': _i2.BuilderArg<_i17.GestureTapDragUpdateCallback?>(
+            name: 'onDragSelectionUpdate',
+            init: onDragSelectionUpdate,
+            isNamed: true,
+          ),
+          'onDragSelectionEnd': _i2.BuilderArg<_i17.GestureTapDragEndCallback?>(
+            name: 'onDragSelectionEnd',
+            init: onDragSelectionEnd,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i21.HitTestBehavior?>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionGestureDetector';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSelectionGestureDetector$Mate(
@@ -569,97 +615,10 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapDown',
-      onTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onForcePressStart',
-      onForcePressStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onForcePressEnd',
-      onForcePressEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTap',
-      onSecondaryTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapDown',
-      onSecondaryTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onSingleTapUp',
-      onSingleTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onSingleTapCancel',
-      onSingleTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onSingleLongTapStart',
-      onSingleLongTapStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onSingleLongTapMoveUpdate',
-      onSingleLongTapMoveUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onSingleLongTapEnd',
-      onSingleLongTapEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTapDown',
-      onDoubleTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onTripleTapDown',
-      onTripleTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragSelectionStart',
-      onDragSelectionStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragSelectionUpdate',
-      onDragSelectionUpdate,
-      isNamed: true,
-    );
-    mateUse(
-      'onDragSelectionEnd',
-      onDragSelectionEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ClipboardStatusNotifier extends ValueNotifier<ClipboardStatus> with WidgetsBindingObserver
@@ -668,16 +627,21 @@ class ClipboardStatusNotifier$Mate extends _i1.ClipboardStatusNotifier with _i2.
   ClipboardStatusNotifier$Mate(
       {
       /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , default:processed=PrefixedIdentifierImpl
-      _i1.ClipboardStatus value = _i15.ClipboardStatus.unknown})
-      : super(value: value) {
+      super.value})
+      : mateParams = {
+          'value': _i2.BuilderArg<_i1.ClipboardStatus>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+            defaultValue: _i15.ClipboardStatus.unknown,
+          )
+        },
+        super() {
     mateBuilderName = 'ClipboardStatusNotifier';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ClipboardStatusNotifier$Mate(value: p.get('value').build());
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-      defaultValue: _i15.ClipboardStatus.unknown,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

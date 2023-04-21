@@ -10,15 +10,20 @@ class StandardMethodCodec$Mate extends _i1.StandardMethodCodec with _i2.Mate {
   StandardMethodCodec$Mate(
 
       /// requiredParameters: [StandardMessageCodec messageCodec = const StandardMessageCodec()]
-      _i1.StandardMessageCodec messageCodec)
-      : super(messageCodec) {
+      super.messageCodec)
+      : mateParams = {
+          'messageCodec': _i2.BuilderArg<_i1.StandardMessageCodec>(
+            name: 'messageCodec',
+            init: messageCodec,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'StandardMethodCodec';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => StandardMethodCodec$Mate(p.get('messageCodec').value);
-    mateUse(
-      'messageCodec',
-      messageCodec,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

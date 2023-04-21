@@ -10,15 +10,20 @@ class SynchronousFuture$Mate<T> extends _i1.SynchronousFuture<T> with _i2.Mate {
   SynchronousFuture$Mate(
 
       /// requiredParameters: T _value
-      T _value)
-      : super(_value) {
+      super._value)
+      : mateParams = {
+          '_value': _i2.BuilderArg<T>(
+            name: '_value',
+            init: _value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'SynchronousFuture';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => SynchronousFuture$Mate<T>(p.get('_value').value);
-    mateUse(
-      '_value',
-      _value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

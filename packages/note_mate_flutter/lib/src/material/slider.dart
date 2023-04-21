@@ -16,82 +16,162 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
   /// Slider Slider({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, MouseCursor? mouseCursor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
   Slider$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double value} , default:none
-    required double value,
+    required super.value,
 
     /// optionalParameters: {double? secondaryTrackValue} , default:none
-    double? secondaryTrackValue,
+    super.secondaryTrackValue,
 
     /// optionalParameters: {required void Function(double)? onChanged} , default:none
-    required _i4.ValueChanged<double>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {void Function(double)? onChangeStart} , default:none
-    _i4.ValueChanged<double>? onChangeStart,
+    super.onChangeStart,
 
     /// optionalParameters: {void Function(double)? onChangeEnd} , default:none
-    _i4.ValueChanged<double>? onChangeEnd,
+    super.onChangeEnd,
 
     /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
-    double min = 0.0,
+    super.min,
 
     /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
-    double max = 1.0,
+    super.max,
 
     /// optionalParameters: {int? divisions} , default:none
-    int? divisions,
+    super.divisions,
 
     /// optionalParameters: {String? label} , default:none
-    String? label,
+    super.label,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? inactiveColor} , default:none
-    _i5.Color? inactiveColor,
+    super.inactiveColor,
 
     /// optionalParameters: {Color? secondaryActiveColor} , default:none
-    _i5.Color? secondaryActiveColor,
+    super.secondaryActiveColor,
 
     /// optionalParameters: {Color? thumbColor} , default:none
-    _i5.Color? thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i6.MaterialStateProperty<_i5.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i7.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {String Function(double)? semanticFormatterCallback} , default:none
-    _i8.SemanticFormatterCallback? semanticFormatterCallback,
+    super.semanticFormatterCallback,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
-  }) : super(
-          key: key,
-          value: value,
-          secondaryTrackValue: secondaryTrackValue,
-          onChanged: onChanged,
-          onChangeStart: onChangeStart,
-          onChangeEnd: onChangeEnd,
-          min: min,
-          max: max,
-          divisions: divisions,
-          label: label,
-          activeColor: activeColor,
-          inactiveColor: inactiveColor,
-          secondaryActiveColor: secondaryActiveColor,
-          thumbColor: thumbColor,
-          overlayColor: overlayColor,
-          mouseCursor: mouseCursor,
-          semanticFormatterCallback: semanticFormatterCallback,
-          focusNode: focusNode,
-          autofocus: autofocus,
-        ) {
+    super.autofocus,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'secondaryTrackValue': _i2.BuilderArg<double?>(
+            name: 'secondaryTrackValue',
+            init: secondaryTrackValue,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'onChangeStart': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChangeStart',
+            init: onChangeStart,
+            isNamed: true,
+          ),
+          'onChangeEnd': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChangeEnd',
+            init: onChangeEnd,
+            isNamed: true,
+          ),
+          'min': _i2.BuilderArg<double>(
+            name: 'min',
+            init: min,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'max': _i2.BuilderArg<double>(
+            name: 'max',
+            init: max,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'divisions': _i2.BuilderArg<int?>(
+            name: 'divisions',
+            init: divisions,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'inactiveColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveColor',
+            init: inactiveColor,
+            isNamed: true,
+          ),
+          'secondaryActiveColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'secondaryActiveColor',
+            init: secondaryActiveColor,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i5.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i7.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'semanticFormatterCallback': _i2.BuilderArg<_i8.SemanticFormatterCallback?>(
+            name: 'semanticFormatterCallback',
+            init: semanticFormatterCallback,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'Slider';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Slider$Mate(
@@ -115,185 +195,167 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryTrackValue',
-      secondaryTrackValue,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeStart',
-      onChangeStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeEnd',
-      onChangeEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'min',
-      min,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'max',
-      max,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'divisions',
-      divisions,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveColor',
-      inactiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryActiveColor',
-      secondaryActiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticFormatterCallback',
-      semanticFormatterCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
 
   /// Slider Slider.adaptive({Key? key, required double value, double? secondaryTrackValue, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, String? label, MouseCursor? mouseCursor, Color? activeColor, Color? inactiveColor, Color? secondaryActiveColor, Color? thumbColor, MaterialStateProperty<Color?>? overlayColor, String Function(double)? semanticFormatterCallback, FocusNode? focusNode, bool autofocus = false})
   Slider$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double value} , default:none
-    required double value,
+    required super.value,
 
     /// optionalParameters: {double? secondaryTrackValue} , default:none
-    double? secondaryTrackValue,
+    super.secondaryTrackValue,
 
     /// optionalParameters: {required void Function(double)? onChanged} , default:none
-    required _i4.ValueChanged<double>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {void Function(double)? onChangeStart} , default:none
-    _i4.ValueChanged<double>? onChangeStart,
+    super.onChangeStart,
 
     /// optionalParameters: {void Function(double)? onChangeEnd} , default:none
-    _i4.ValueChanged<double>? onChangeEnd,
+    super.onChangeEnd,
 
     /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
-    double min = 0.0,
+    super.min,
 
     /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
-    double max = 1.0,
+    super.max,
 
     /// optionalParameters: {int? divisions} , default:none
-    int? divisions,
+    super.divisions,
 
     /// optionalParameters: {String? label} , default:none
-    String? label,
+    super.label,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i7.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? inactiveColor} , default:none
-    _i5.Color? inactiveColor,
+    super.inactiveColor,
 
     /// optionalParameters: {Color? secondaryActiveColor} , default:none
-    _i5.Color? secondaryActiveColor,
+    super.secondaryActiveColor,
 
     /// optionalParameters: {Color? thumbColor} , default:none
-    _i5.Color? thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i6.MaterialStateProperty<_i5.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {String Function(double)? semanticFormatterCallback} , default:none
-    _i8.SemanticFormatterCallback? semanticFormatterCallback,
+    super.semanticFormatterCallback,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i9.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
-  }) : super.adaptive(
-          key: key,
-          value: value,
-          secondaryTrackValue: secondaryTrackValue,
-          onChanged: onChanged,
-          onChangeStart: onChangeStart,
-          onChangeEnd: onChangeEnd,
-          min: min,
-          max: max,
-          divisions: divisions,
-          label: label,
-          mouseCursor: mouseCursor,
-          activeColor: activeColor,
-          inactiveColor: inactiveColor,
-          secondaryActiveColor: secondaryActiveColor,
-          thumbColor: thumbColor,
-          overlayColor: overlayColor,
-          semanticFormatterCallback: semanticFormatterCallback,
-          focusNode: focusNode,
-          autofocus: autofocus,
-        ) {
+    super.autofocus,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'secondaryTrackValue': _i2.BuilderArg<double?>(
+            name: 'secondaryTrackValue',
+            init: secondaryTrackValue,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'onChangeStart': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChangeStart',
+            init: onChangeStart,
+            isNamed: true,
+          ),
+          'onChangeEnd': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChangeEnd',
+            init: onChangeEnd,
+            isNamed: true,
+          ),
+          'min': _i2.BuilderArg<double>(
+            name: 'min',
+            init: min,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'max': _i2.BuilderArg<double>(
+            name: 'max',
+            init: max,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'divisions': _i2.BuilderArg<int?>(
+            name: 'divisions',
+            init: divisions,
+            isNamed: true,
+          ),
+          'label': _i2.BuilderArg<String?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i7.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'inactiveColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveColor',
+            init: inactiveColor,
+            isNamed: true,
+          ),
+          'secondaryActiveColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'secondaryActiveColor',
+            init: secondaryActiveColor,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i5.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'semanticFormatterCallback': _i2.BuilderArg<_i8.SemanticFormatterCallback?>(
+            name: 'semanticFormatterCallback',
+            init: semanticFormatterCallback,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super.adaptive() {
     mateBuilderName = 'Slider.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Slider$Mate.adaptive(
@@ -317,103 +379,8 @@ class Slider$Mate extends _i1.Slider with _i2.Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryTrackValue',
-      secondaryTrackValue,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeStart',
-      onChangeStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeEnd',
-      onChangeEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'min',
-      min,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'max',
-      max,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'divisions',
-      divisions,
-      isNamed: true,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveColor',
-      inactiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryActiveColor',
-      secondaryActiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticFormatterCallback',
-      semanticFormatterCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

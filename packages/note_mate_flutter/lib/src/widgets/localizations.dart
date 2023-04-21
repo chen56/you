@@ -12,22 +12,39 @@ class Localizations$Mate extends _i1.Localizations with _i2.Mate {
   /// Localizations Localizations({Key? key, required Locale locale, required List<LocalizationsDelegate<dynamic>> delegates, Widget? child})
   Localizations$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Locale locale} , default:none
-    required _i4.Locale locale,
+    required super.locale,
 
     /// optionalParameters: {required List<LocalizationsDelegate<dynamic>> delegates} , default:none
-    required List<_i1.LocalizationsDelegate<dynamic>> delegates,
+    required super.delegates,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          locale: locale,
-          delegates: delegates,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i4.Locale>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'delegates': _i2.BuilderArg<List<_i1.LocalizationsDelegate<dynamic>>>(
+            name: 'delegates',
+            init: delegates,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Localizations';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Localizations$Mate(
@@ -36,25 +53,8 @@ class Localizations$Mate extends _i1.Localizations with _i2.Mate {
           delegates: p.get('delegates').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'delegates',
-      delegates,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

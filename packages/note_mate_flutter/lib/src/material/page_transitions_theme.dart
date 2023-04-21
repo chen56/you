@@ -10,33 +10,35 @@ class ZoomPageTransitionsBuilder$Mate extends _i1.ZoomPageTransitionsBuilder wit
   /// ZoomPageTransitionsBuilder ZoomPageTransitionsBuilder({bool allowSnapshotting = true, bool allowEnterRouteSnapshotting = true})
   ZoomPageTransitionsBuilder$Mate({
     /// optionalParameters: {bool allowSnapshotting = true} , default:processed=BooleanLiteralImpl
-    bool allowSnapshotting = true,
+    super.allowSnapshotting,
 
     /// optionalParameters: {bool allowEnterRouteSnapshotting = true} , default:processed=BooleanLiteralImpl
-    bool allowEnterRouteSnapshotting = true,
-  }) : super(
-          allowSnapshotting: allowSnapshotting,
-          allowEnterRouteSnapshotting: allowEnterRouteSnapshotting,
-        ) {
+    super.allowEnterRouteSnapshotting,
+  })  : mateParams = {
+          'allowSnapshotting': _i2.BuilderArg<bool>(
+            name: 'allowSnapshotting',
+            init: allowSnapshotting,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'allowEnterRouteSnapshotting': _i2.BuilderArg<bool>(
+            name: 'allowEnterRouteSnapshotting',
+            init: allowEnterRouteSnapshotting,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ZoomPageTransitionsBuilder';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ZoomPageTransitionsBuilder$Mate(
           allowSnapshotting: p.get('allowSnapshotting').build(),
           allowEnterRouteSnapshotting: p.get('allowEnterRouteSnapshotting').build(),
         );
-    mateUse(
-      'allowSnapshotting',
-      allowSnapshotting,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'allowEnterRouteSnapshotting',
-      allowEnterRouteSnapshotting,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PageTransitionsTheme with Diagnosticable
@@ -45,15 +47,20 @@ class PageTransitionsTheme$Mate extends _i1.PageTransitionsTheme with _i2.Mate {
   PageTransitionsTheme$Mate(
       {
       /// optionalParameters: {Map<TargetPlatform, PageTransitionsBuilder> builders = _defaultBuilders} , default:unprocessed=SimpleIdentifierImpl
-      required Map<_i3.TargetPlatform, _i1.PageTransitionsBuilder> builders})
-      : super(builders: builders) {
+      super.builders})
+      : mateParams = {
+          'builders': _i2.BuilderArg<Map<_i3.TargetPlatform, _i1.PageTransitionsBuilder>>(
+            name: 'builders',
+            init: builders,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'PageTransitionsTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => PageTransitionsTheme$Mate(builders: p.get('builders').build());
-    mateUse(
-      'builders',
-      builders,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

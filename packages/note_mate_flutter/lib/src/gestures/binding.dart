@@ -14,38 +14,73 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends _i1.FlutterError
   /// FlutterErrorDetailsForPointerEventDispatcher FlutterErrorDetailsForPointerEventDispatcher({required Object exception, StackTrace? stack, String? library = 'Flutter framework', DiagnosticsNode? context, PointerEvent? event, HitTestEntry<HitTestTarget>? hitTestEntry, Iterable<DiagnosticsNode> Function()? informationCollector, bool silent = false})
   FlutterErrorDetailsForPointerEventDispatcher$Mate({
     /// optionalParameters: {required Object exception} , default:none
-    required Object exception,
+    required super.exception,
 
     /// optionalParameters: {StackTrace? stack} , default:none
-    StackTrace? stack,
+    super.stack,
 
     /// optionalParameters: {String? library = 'Flutter framework'} , default:processed=SimpleStringLiteralImpl
-    String? library = 'Flutter framework',
+    super.library,
 
     /// optionalParameters: {DiagnosticsNode? context} , default:none
-    _i3.DiagnosticsNode? context,
+    super.context,
 
     /// optionalParameters: {PointerEvent? event} , default:none
-    _i4.PointerEvent? event,
+    super.event,
 
     /// optionalParameters: {HitTestEntry<HitTestTarget>? hitTestEntry} , default:none
-    _i5.HitTestEntry<_i5.HitTestTarget>? hitTestEntry,
+    super.hitTestEntry,
 
     /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
-    _i6.InformationCollector? informationCollector,
+    super.informationCollector,
 
     /// optionalParameters: {bool silent = false} , default:processed=BooleanLiteralImpl
-    bool silent = false,
-  }) : super(
-          exception: exception,
-          stack: stack,
-          library: library,
-          context: context,
-          event: event,
-          hitTestEntry: hitTestEntry,
-          informationCollector: informationCollector,
-          silent: silent,
-        ) {
+    super.silent,
+  })  : mateParams = {
+          'exception': _i2.BuilderArg<Object>(
+            name: 'exception',
+            init: exception,
+            isNamed: true,
+          ),
+          'stack': _i2.BuilderArg<StackTrace?>(
+            name: 'stack',
+            init: stack,
+            isNamed: true,
+          ),
+          'library': _i2.BuilderArg<String?>(
+            name: 'library',
+            init: library,
+            isNamed: true,
+            defaultValue: 'Flutter framework',
+          ),
+          'context': _i2.BuilderArg<_i3.DiagnosticsNode?>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'event': _i2.BuilderArg<_i4.PointerEvent?>(
+            name: 'event',
+            init: event,
+            isNamed: true,
+          ),
+          'hitTestEntry': _i2.BuilderArg<_i5.HitTestEntry<_i5.HitTestTarget>?>(
+            name: 'hitTestEntry',
+            init: hitTestEntry,
+            isNamed: true,
+          ),
+          'informationCollector': _i2.BuilderArg<_i6.InformationCollector?>(
+            name: 'informationCollector',
+            init: informationCollector,
+            isNamed: true,
+          ),
+          'silent': _i2.BuilderArg<bool>(
+            name: 'silent',
+            init: silent,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'FlutterErrorDetailsForPointerEventDispatcher';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => FlutterErrorDetailsForPointerEventDispatcher$Mate(
@@ -58,47 +93,8 @@ class FlutterErrorDetailsForPointerEventDispatcher$Mate extends _i1.FlutterError
           informationCollector: p.get('informationCollector').build(),
           silent: p.get('silent').build(),
         );
-    mateUse(
-      'exception',
-      exception,
-      isNamed: true,
-    );
-    mateUse(
-      'stack',
-      stack,
-      isNamed: true,
-    );
-    mateUse(
-      'library',
-      library,
-      isNamed: true,
-      defaultValue: 'Flutter framework',
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'event',
-      event,
-      isNamed: true,
-    );
-    mateUse(
-      'hitTestEntry',
-      hitTestEntry,
-      isNamed: true,
-    );
-    mateUse(
-      'informationCollector',
-      informationCollector,
-      isNamed: true,
-    );
-    mateUse(
-      'silent',
-      silent,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

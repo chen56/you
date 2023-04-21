@@ -11,18 +11,32 @@ class RenderFlow$Mate extends _i1.RenderFlow with _i2.Mate {
   /// RenderFlow RenderFlow({List<RenderBox>? children, required FlowDelegate delegate, Clip clipBehavior = Clip.hardEdge})
   RenderFlow$Mate({
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i3.RenderBox>? children,
+    super.children,
 
     /// optionalParameters: {required FlowDelegate delegate} , default:none
-    required _i1.FlowDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i4.Clip clipBehavior = _i4.Clip.hardEdge,
-  }) : super(
-          children: children,
-          delegate: delegate,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i1.FlowDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderFlow';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderFlow$Mate(
@@ -30,21 +44,8 @@ class RenderFlow$Mate extends _i1.RenderFlow with _i2.Mate {
           delegate: p.get('delegate').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i4.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

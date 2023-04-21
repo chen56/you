@@ -17,22 +17,39 @@ class ActionListener$Mate extends _i1.ActionListener with _i2.Mate {
   /// ActionListener ActionListener({Key? key, required void Function(Action<Intent>) listener, required Action<Intent> action, required Widget child})
   ActionListener$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required void Function(Action<Intent>) listener} , default:none
-    required _i1.ActionListenerCallback listener,
+    required super.listener,
 
     /// optionalParameters: {required Action<Intent> action} , default:none
-    required _i1.Action<_i1.Intent> action,
+    required super.action,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          listener: listener,
-          action: action,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'listener': _i2.BuilderArg<_i1.ActionListenerCallback>(
+            name: 'listener',
+            init: listener,
+            isNamed: true,
+          ),
+          'action': _i2.BuilderArg<_i1.Action<_i1.Intent>>(
+            name: 'action',
+            init: action,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ActionListener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ActionListener$Mate(
@@ -41,27 +58,10 @@ class ActionListener$Mate extends _i1.ActionListener with _i2.Mate {
           action: p.get('action').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'listener',
-      listener,
-      isNamed: true,
-    );
-    mateUse(
-      'action',
-      action,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CallbackAction<T extends Intent> extends Action<T>
@@ -70,17 +70,22 @@ class CallbackAction$Mate<T extends _i1.Intent> extends _i1.CallbackAction<T> wi
   CallbackAction$Mate(
       {
       /// optionalParameters: {required Object? Function(T) onInvoke} , default:none
-      required _i1.OnInvokeCallback<T> onInvoke})
-      : super(onInvoke: onInvoke) {
+      required super.onInvoke})
+      : mateParams = {
+          'onInvoke': _i2.BuilderArg<_i1.OnInvokeCallback<T>>(
+            name: 'onInvoke',
+            init: onInvoke,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'CallbackAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CallbackAction$Mate<T>(onInvoke: p.get('onInvoke').build());
-    mateUse(
-      'onInvoke',
-      onInvoke,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Actions extends StatefulWidget
@@ -88,22 +93,39 @@ class Actions$Mate extends _i1.Actions with _i2.Mate {
   /// Actions Actions({Key? key, ActionDispatcher? dispatcher, required Map<Type, Action<Intent>> actions, required Widget child})
   Actions$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {ActionDispatcher? dispatcher} , default:none
-    _i1.ActionDispatcher? dispatcher,
+    super.dispatcher,
 
     /// optionalParameters: {required Map<Type, Action<Intent>> actions} , default:none
-    required Map<Type, _i1.Action<_i1.Intent>> actions,
+    required super.actions,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          dispatcher: dispatcher,
-          actions: actions,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'dispatcher': _i2.BuilderArg<_i1.ActionDispatcher?>(
+            name: 'dispatcher',
+            init: dispatcher,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<Map<Type, _i1.Action<_i1.Intent>>>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Actions';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Actions$Mate(
@@ -112,27 +134,10 @@ class Actions$Mate extends _i1.Actions with _i2.Mate {
           actions: p.get('actions').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'dispatcher',
-      dispatcher,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FocusableActionDetector extends StatefulWidget
@@ -140,62 +145,125 @@ class FocusableActionDetector$Mate extends _i1.FocusableActionDetector with _i2.
   /// FocusableActionDetector FocusableActionDetector({Key? key, bool enabled = true, FocusNode? focusNode, bool autofocus = false, bool descendantsAreFocusable = true, bool descendantsAreTraversable = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, void Function(bool)? onShowFocusHighlight, void Function(bool)? onShowHoverHighlight, void Function(bool)? onFocusChange, MouseCursor mouseCursor = MouseCursor.defer, bool includeFocusSemantics = true, required Widget child})
   FocusableActionDetector$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
+    super.enabled,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i5.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {bool descendantsAreFocusable = true} , default:processed=BooleanLiteralImpl
-    bool descendantsAreFocusable = true,
+    super.descendantsAreFocusable,
 
     /// optionalParameters: {bool descendantsAreTraversable = true} , default:processed=BooleanLiteralImpl
-    bool descendantsAreTraversable = true,
+    super.descendantsAreTraversable,
 
     /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , default:none
-    Map<_i6.ShortcutActivator, _i1.Intent>? shortcuts,
+    super.shortcuts,
 
     /// optionalParameters: {Map<Type, Action<Intent>>? actions} , default:none
-    Map<Type, _i1.Action<_i1.Intent>>? actions,
+    super.actions,
 
     /// optionalParameters: {void Function(bool)? onShowFocusHighlight} , default:none
-    _i7.ValueChanged<bool>? onShowFocusHighlight,
+    super.onShowFocusHighlight,
 
     /// optionalParameters: {void Function(bool)? onShowHoverHighlight} , default:none
-    _i7.ValueChanged<bool>? onShowHoverHighlight,
+    super.onShowHoverHighlight,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i7.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {MouseCursor mouseCursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
-    _i8.MouseCursor mouseCursor = _i9.MouseCursor.defer,
+    super.mouseCursor,
 
     /// optionalParameters: {bool includeFocusSemantics = true} , default:processed=BooleanLiteralImpl
-    bool includeFocusSemantics = true,
+    super.includeFocusSemantics,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          enabled: enabled,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          descendantsAreFocusable: descendantsAreFocusable,
-          descendantsAreTraversable: descendantsAreTraversable,
-          shortcuts: shortcuts,
-          actions: actions,
-          onShowFocusHighlight: onShowFocusHighlight,
-          onShowHoverHighlight: onShowHoverHighlight,
-          onFocusChange: onFocusChange,
-          mouseCursor: mouseCursor,
-          includeFocusSemantics: includeFocusSemantics,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i5.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'descendantsAreFocusable': _i2.BuilderArg<bool>(
+            name: 'descendantsAreFocusable',
+            init: descendantsAreFocusable,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'descendantsAreTraversable': _i2.BuilderArg<bool>(
+            name: 'descendantsAreTraversable',
+            init: descendantsAreTraversable,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'shortcuts': _i2.BuilderArg<Map<_i6.ShortcutActivator, _i1.Intent>?>(
+            name: 'shortcuts',
+            init: shortcuts,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<Map<Type, _i1.Action<_i1.Intent>>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'onShowFocusHighlight': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onShowFocusHighlight',
+            init: onShowFocusHighlight,
+            isNamed: true,
+          ),
+          'onShowHoverHighlight': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onShowHoverHighlight',
+            init: onShowHoverHighlight,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+            defaultValue: _i9.MouseCursor.defer,
+          ),
+          'includeFocusSemantics': _i2.BuilderArg<bool>(
+            name: 'includeFocusSemantics',
+            init: includeFocusSemantics,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FocusableActionDetector';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FocusableActionDetector$Mate(
@@ -214,83 +282,10 @@ class FocusableActionDetector$Mate extends _i1.FocusableActionDetector with _i2.
           includeFocusSemantics: p.get('includeFocusSemantics').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'descendantsAreFocusable',
-      descendantsAreFocusable,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'descendantsAreTraversable',
-      descendantsAreTraversable,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'shortcuts',
-      shortcuts,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'onShowFocusHighlight',
-      onShowFocusHighlight,
-      isNamed: true,
-    );
-    mateUse(
-      'onShowHoverHighlight',
-      onShowHoverHighlight,
-      isNamed: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-      defaultValue: _i9.MouseCursor.defer,
-    );
-    mateUse(
-      'includeFocusSemantics',
-      includeFocusSemantics,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class VoidCallbackIntent extends Intent
@@ -299,17 +294,22 @@ class VoidCallbackIntent$Mate extends _i1.VoidCallbackIntent with _i2.Mate {
   VoidCallbackIntent$Mate(
 
       /// requiredParameters: void Function() callback
-      _i10.VoidCallback callback)
-      : super(callback) {
+      super.callback)
+      : mateParams = {
+          'callback': _i2.BuilderArg<_i10.VoidCallback>(
+            name: 'callback',
+            init: callback,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'VoidCallbackIntent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => VoidCallbackIntent$Mate(p.get('callback').value);
-    mateUse(
-      'callback',
-      callback,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DoNothingAction extends Action<Intent>
@@ -318,18 +318,23 @@ class DoNothingAction$Mate extends _i1.DoNothingAction with _i2.Mate {
   DoNothingAction$Mate(
       {
       /// optionalParameters: {bool consumesKey = true} , default:processed=BooleanLiteralImpl
-      bool consumesKey = true})
-      : super(consumesKey: consumesKey) {
+      super.consumesKey})
+      : mateParams = {
+          'consumesKey': _i2.BuilderArg<bool>(
+            name: 'consumesKey',
+            init: consumesKey,
+            isNamed: true,
+            defaultValue: true,
+          )
+        },
+        super() {
     mateBuilderName = 'DoNothingAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DoNothingAction$Mate(consumesKey: p.get('consumesKey').build());
-    mateUse(
-      'consumesKey',
-      consumesKey,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PrioritizedIntents extends Intent
@@ -338,15 +343,20 @@ class PrioritizedIntents$Mate extends _i1.PrioritizedIntents with _i2.Mate {
   PrioritizedIntents$Mate(
       {
       /// optionalParameters: {required List<Intent> orderedIntents} , default:none
-      required List<_i1.Intent> orderedIntents})
-      : super(orderedIntents: orderedIntents) {
+      required super.orderedIntents})
+      : mateParams = {
+          'orderedIntents': _i2.BuilderArg<List<_i1.Intent>>(
+            name: 'orderedIntents',
+            init: orderedIntents,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'PrioritizedIntents';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PrioritizedIntents$Mate(orderedIntents: p.get('orderedIntents').build());
-    mateUse(
-      'orderedIntents',
-      orderedIntents,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

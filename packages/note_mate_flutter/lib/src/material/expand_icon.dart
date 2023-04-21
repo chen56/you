@@ -13,38 +13,73 @@ class ExpandIcon$Mate extends _i1.ExpandIcon with _i2.Mate {
   /// ExpandIcon ExpandIcon({Key? key, bool isExpanded = false, double size = 24.0, required void Function(bool)? onPressed, EdgeInsetsGeometry padding = const EdgeInsets.all(8.0), Color? color, Color? disabledColor, Color? expandedColor})
   ExpandIcon$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool isExpanded = false} , default:processed=BooleanLiteralImpl
-    bool isExpanded = false,
+    super.isExpanded,
 
     /// optionalParameters: {double size = 24.0} , default:processed=DoubleLiteralImpl
-    double size = 24.0,
+    super.size,
 
     /// optionalParameters: {required void Function(bool)? onPressed} , default:none
-    required _i4.ValueChanged<bool>? onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsets.all(8.0)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.EdgeInsetsGeometry padding,
+    super.padding,
 
     /// optionalParameters: {Color? color} , default:none
-    _i6.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i6.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {Color? expandedColor} , default:none
-    _i6.Color? expandedColor,
-  }) : super(
-          key: key,
-          isExpanded: isExpanded,
-          size: size,
-          onPressed: onPressed,
-          padding: padding,
-          color: color,
-          disabledColor: disabledColor,
-          expandedColor: expandedColor,
-        ) {
+    super.expandedColor,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'isExpanded': _i2.BuilderArg<bool>(
+            name: 'isExpanded',
+            init: isExpanded,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'size': _i2.BuilderArg<double>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+            defaultValue: 24.0,
+          ),
+          'onPressed': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i6.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'expandedColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'expandedColor',
+            init: expandedColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExpandIcon';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpandIcon$Mate(
@@ -57,47 +92,8 @@ class ExpandIcon$Mate extends _i1.ExpandIcon with _i2.Mate {
           disabledColor: p.get('disabledColor').build(),
           expandedColor: p.get('expandedColor').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'isExpanded',
-      isExpanded,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-      defaultValue: 24.0,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'expandedColor',
-      expandedColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

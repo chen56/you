@@ -17,74 +17,145 @@ class MaterialBanner$Mate extends _i1.MaterialBanner with _i2.Mate {
   /// MaterialBanner MaterialBanner({Key? key, required Widget content, TextStyle? contentTextStyle, required List<Widget> actions, double? elevation, Widget? leading, Color? backgroundColor, Color? surfaceTintColor, Color? shadowColor, Color? dividerColor, EdgeInsetsGeometry? padding, EdgeInsetsGeometry? margin, EdgeInsetsGeometry? leadingPadding, bool forceActionsBelow = false, OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end, Animation<double>? animation, void Function()? onVisible})
   MaterialBanner$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget content} , default:none
-    required _i4.Widget content,
+    required super.content,
 
     /// optionalParameters: {TextStyle? contentTextStyle} , default:none
-    _i5.TextStyle? contentTextStyle,
+    super.contentTextStyle,
 
     /// optionalParameters: {required List<Widget> actions} , default:none
-    required List<_i4.Widget> actions,
+    required super.actions,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i6.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i6.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i6.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? dividerColor} , default:none
-    _i6.Color? dividerColor,
+    super.dividerColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i7.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i7.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {EdgeInsetsGeometry? leadingPadding} , default:none
-    _i7.EdgeInsetsGeometry? leadingPadding,
+    super.leadingPadding,
 
     /// optionalParameters: {bool forceActionsBelow = false} , default:processed=BooleanLiteralImpl
-    bool forceActionsBelow = false,
+    super.forceActionsBelow,
 
     /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , default:processed=PrefixedIdentifierImpl
-    _i8.OverflowBarAlignment overflowAlignment = _i9.OverflowBarAlignment.end,
+    super.overflowAlignment,
 
     /// optionalParameters: {Animation<double>? animation} , default:none
-    _i10.Animation<double>? animation,
+    super.animation,
 
     /// optionalParameters: {void Function()? onVisible} , default:none
-    _i6.VoidCallback? onVisible,
-  }) : super(
-          key: key,
-          content: content,
-          contentTextStyle: contentTextStyle,
-          actions: actions,
-          elevation: elevation,
-          leading: leading,
-          backgroundColor: backgroundColor,
-          surfaceTintColor: surfaceTintColor,
-          shadowColor: shadowColor,
-          dividerColor: dividerColor,
-          padding: padding,
-          margin: margin,
-          leadingPadding: leadingPadding,
-          forceActionsBelow: forceActionsBelow,
-          overflowAlignment: overflowAlignment,
-          animation: animation,
-          onVisible: onVisible,
-        ) {
+    super.onVisible,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'content': _i2.BuilderArg<_i4.Widget>(
+            name: 'content',
+            init: content,
+            isNamed: true,
+          ),
+          'contentTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'contentTextStyle',
+            init: contentTextStyle,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'dividerColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'dividerColor',
+            init: dividerColor,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'leadingPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'leadingPadding',
+            init: leadingPadding,
+            isNamed: true,
+          ),
+          'forceActionsBelow': _i2.BuilderArg<bool>(
+            name: 'forceActionsBelow',
+            init: forceActionsBelow,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'overflowAlignment': _i2.BuilderArg<_i8.OverflowBarAlignment>(
+            name: 'overflowAlignment',
+            init: overflowAlignment,
+            isNamed: true,
+            defaultValue: _i9.OverflowBarAlignment.end,
+          ),
+          'animation': _i2.BuilderArg<_i10.Animation<double>?>(
+            name: 'animation',
+            init: animation,
+            isNamed: true,
+          ),
+          'onVisible': _i2.BuilderArg<_i6.VoidCallback?>(
+            name: 'onVisible',
+            init: onVisible,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MaterialBanner';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => MaterialBanner$Mate(
@@ -106,92 +177,8 @@ class MaterialBanner$Mate extends _i1.MaterialBanner with _i2.Mate {
           animation: p.get('animation').build(),
           onVisible: p.get('onVisible').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'content',
-      content,
-      isNamed: true,
-    );
-    mateUse(
-      'contentTextStyle',
-      contentTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerColor',
-      dividerColor,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingPadding',
-      leadingPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'forceActionsBelow',
-      forceActionsBelow,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'overflowAlignment',
-      overflowAlignment,
-      isNamed: true,
-      defaultValue: _i9.OverflowBarAlignment.end,
-    );
-    mateUse(
-      'animation',
-      animation,
-      isNamed: true,
-    );
-    mateUse(
-      'onVisible',
-      onVisible,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -23,7 +23,7 @@ main() async {
   List<String> include = [
     "package:flutter/",
     "package:flutter/src/cupertino/radio.dart",
-    "package:flutter/src/cupertino/segmented_control.dart",
+    // "package:flutter/src/cupertino/segmented_control.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
@@ -349,6 +349,8 @@ extension _InterfaceElement on InterfaceElement {
   }
 }
 
+/// default value handle: The default parameter processing is too complicated,
+/// so use whitelist mode, We only deal with what we understand
 ({String info, code.Expression? value}) resolveDefaultValue(
     ParameterElement param, TypeRefers typeRefers) {
   // guard clause
@@ -472,6 +474,13 @@ void _genMateLib({
             ))
         ..types.addAll(clazz.typeParameters
             .map((typeParam) => typeRefers.elementRef(typeParam, debugRef: clazz)))
+        ..fields.add(code.Field((b) => b
+          ..name = "mateParams"
+          ..type = TypeReference((b) => b
+            ..symbol = "Map"
+            ..types.addAll([refer("String"), refer("BuilderArg", "package:note/mate.dart")]))
+          ..annotations.add(refer('override'))
+          ..modifier = FieldModifier.final$))
         ..constructors.addAll(clazz.constructors.where(constructorFilter).map((constructor) {
           return Constructor((b) {
             // Expression constructorEx = TypeReference((b) =>
@@ -497,67 +506,88 @@ void _genMateLib({
               // A const constructor can't have a body. but we need body.
               ..constant = false
               ..factory = constructor.isFactory
+              // 改全super.xx了，这一套use()模式的就不要了
               // lib code_builder's requiredParameters == lib analyzer's isPositional
+              // ..requiredParameters
+              //     .addAll(parameters.where((e) => e.isPositional).map((param) => Parameter((b) => b
+              //       ..docs.add(
+              //           "/// requiredParameters: ${param.getDisplayString(withNullability: true)} ")
+              //       ..type = typeRefers.elementRef(param, debugRef: clazz)
+              //       ..name = param.name
+              //       ..named = param.isNamed
+              //       // analyzer's positional args no required keyword
+              //       ..required = false)))
+              // ..optionalParameters
+              //     .addAll(parameters.where((e) => !e.isPositional).map((param) => Parameter((b) {
+              //           b
+              //             ..name = param.name
+              //             ..named = param.isNamed
+              //             ..type = typeRefers.elementRef(param, debugRef: clazz);
+              //           // default value handle: The default parameter processing is too complicated,
+              //           // so use whitelist mode, We only deal with what we understand
+              //
+              //           var resolveResult = resolveDefaultValue(param, typeRefers);
+              //
+              //           b.docs.add(
+              //               "/// optionalParameters: ${param.getDisplayString(withNullability: true)} , ${resolveResult.info}");
+              //           b.defaultTo = resolveResult.value?.code;
+              //           //有缺省值的，但无法处理的，就加个required，自己投参吧
+              //           b.required = param.hasDefaultValue
+              //               ? (resolveResult.value == null ? true : false)
+              //               : param.isRequired;
+              //         })))
+              // ..initializers.add(
+              //     refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
+              //         .call(
+              //             constructor.parameters
+              //                 .where((e) => e.isPositional)
+              //                 .map((e) => refer(e.name)),
+              //             Map.fromEntries(parameters
+              //                 .where((e) => e.isNamed)
+              //                 .map((e) => MapEntry(e.name, refer(e.name)))))
+              //         .code)
               ..requiredParameters
                   .addAll(parameters.where((e) => e.isPositional).map((param) => Parameter((b) => b
                     ..docs.add(
                         "/// requiredParameters: ${param.getDisplayString(withNullability: true)} ")
-                    ..type = typeRefers.elementRef(param, debugRef: clazz)
                     ..name = param.name
                     ..named = param.isNamed
-                    // analyzer's positional args no required keyword
+                    ..toSuper = true
                     ..required = false)))
               ..optionalParameters
                   .addAll(parameters.where((e) => !e.isPositional).map((param) => Parameter((b) {
+                        var resolveResult = resolveDefaultValue(param, typeRefers);
                         b
                           ..name = param.name
                           ..named = param.isNamed
-                          ..type = typeRefers.elementRef(param, debugRef: clazz);
-                        // default value handle: The default parameter processing is too complicated,
-                        // so use whitelist mode, We only deal with what we understand
-
-                        var resolveResult = resolveDefaultValue(param, typeRefers);
-
-                        b.docs.add(
-                            "/// optionalParameters: ${param.getDisplayString(withNullability: true)} , ${resolveResult.info}");
-                        b.defaultTo = resolveResult.value?.code;
-                        //有缺省值的，但无法处理的，就加个required，自己投参吧
-                        b.required = param.hasDefaultValue
-                            ? (resolveResult.value == null ? true : false)
-                            : param.isRequired;
+                          ..toSuper = true
+                          ..docs.add(
+                              "/// optionalParameters: ${param.getDisplayString(withNullability: true)} , ${resolveResult.info}")
+                          ..required = param.hasDefaultValue ? false : param.isRequired;
                       })))
               ..initializers.add(
+                refer("mateParams").assign(literalMap(Map.fromEntries(parameters.map((param) {
+                  var defaultValue = resolveDefaultValue(param, typeRefers);
+                  var namedArguments = {
+                    "name": code.literalString(param.name),
+                    "init": code.refer(param.name),
+                    "isNamed": code.literalBool(param.isNamed),
+                    if (defaultValue.value != null) "defaultValue": defaultValue.value!,
+                  };
+                  return MapEntry(
+                    param.name,
+                    TypeReference((b) => b
+                          ..symbol = "BuilderArg"
+                          ..url = "package:note/mate.dart"
+                          ..types.add(typeRefers.elementRef(param, debugRef: clazz)))
+                        .newInstance([], namedArguments),
+                  );
+                })))).code,
+              )
+              ..initializers.add(
                   refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
-                      .call(
-                          constructor.parameters
-                              .where((e) => e.isPositional)
-                              .map((e) => refer(e.name)),
-                          Map.fromEntries(parameters
-                              .where((e) => e.isNamed)
-                              .map((e) => MapEntry(e.name, refer(e.name)))))
-                      .code)
-              // ref: package:note/lib/experiment_mates.dart
+                      .call([]).code)
               ..body = Block.of([
-                // refer("mateParams")
-                //     .assign(refer("ObjectParam", "package:note/mate.dart").call([], {
-                //       "init": refer("this"),
-                //       "builder": Method((b) => b
-                //         ..name = ''
-                //         ..requiredParameters.add(Parameter((b) => b.name = "p"))
-                //         ..body = refer(mateConstructorCallName)
-                //             .call(
-                //                 parameters.where((e) => e.isPositional).map((e) =>
-                //                     refer("p.get").call([code.literal(e.name)]).property("value")),
-                //                 Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
-                //                     MapEntry(
-                //                         e.name,
-                //                         refer("p.get")
-                //                             .call([literal(e.name)])
-                //                             .property("build")
-                //                             .call([])))))
-                //             .code).closure,
-                //     }))
-                //     .statement,
                 refer("mateBuilderName").assign(literalString(constructor.displayName)).statement,
                 refer("matePackageUrl")
                     .assign(literalString(typeRefers.elementRef(clazz, debugRef: clazz).url!))
@@ -586,21 +616,22 @@ void _genMateLib({
                         ..body = invoke;
                     }).closure)
                     .statement,
-                ...parameters.map((e) {
-                  var defaultValue = resolveDefaultValue(e, typeRefers);
-                  var methodName = "mateUse";
-                  var positionalArguments = [code.literalString(e.name), code.refer(e.name)];
-                  var namedArguments = {
-                    "isNamed": code.literalBool(e.isNamed),
-                  };
-                  if (defaultValue.value != null) {
-                    namedArguments["defaultValue"] = defaultValue.value!;
-                  }
-                  return code.refer(methodName).call(positionalArguments, namedArguments).statement;
-                  // return e.type.isDartCoreList
-                  //     ? Code("mateUseList('${e.name}', ${e.name}, isNamed:${e.isNamed} );")
-                  //     : Code("mateUse('${e.name}', ${e.name}, isNamed:${e.isNamed} );");
-                }),
+                // 改全super.xx了，这一套use()就不要了
+                // ...parameters.map((e) {
+                //   var defaultValue = resolveDefaultValue(e, typeRefers);
+                //   var methodName = "mateUse";
+                //   var positionalArguments = [code.literalString(e.name), code.refer(e.name)];
+                //   var namedArguments = {
+                //     "isNamed": code.literalBool(e.isNamed),
+                //   };
+                //   if (defaultValue.value != null) {
+                //     namedArguments["defaultValue"] = defaultValue.value!;
+                //   }
+                //   return code.refer(methodName).call(positionalArguments, namedArguments).statement;
+                //   // return e.type.isDartCoreList
+                //   //     ? Code("mateUseList('${e.name}', ${e.name}, isNamed:${e.isNamed} );")
+                //   //     : Code("mateUse('${e.name}', ${e.name}, isNamed:${e.isNamed} );");
+                // }),
               ]);
           });
         })));

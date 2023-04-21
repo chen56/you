@@ -9,18 +9,31 @@ class Tolerance$Mate extends _i1.Tolerance with _i2.Mate {
   /// Tolerance Tolerance({double distance = _epsilonDefault, double time = _epsilonDefault, double velocity = _epsilonDefault})
   Tolerance$Mate({
     /// optionalParameters: {double distance = _epsilonDefault} , default:unprocessed=SimpleIdentifierImpl
-    required double distance,
+    super.distance,
 
     /// optionalParameters: {double time = _epsilonDefault} , default:unprocessed=SimpleIdentifierImpl
-    required double time,
+    super.time,
 
     /// optionalParameters: {double velocity = _epsilonDefault} , default:unprocessed=SimpleIdentifierImpl
-    required double velocity,
-  }) : super(
-          distance: distance,
-          time: time,
-          velocity: velocity,
-        ) {
+    super.velocity,
+  })  : mateParams = {
+          'distance': _i2.BuilderArg<double>(
+            name: 'distance',
+            init: distance,
+            isNamed: true,
+          ),
+          'time': _i2.BuilderArg<double>(
+            name: 'time',
+            init: time,
+            isNamed: true,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Tolerance';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Tolerance$Mate(
@@ -28,20 +41,8 @@ class Tolerance$Mate extends _i1.Tolerance with _i2.Mate {
           time: p.get('time').build(),
           velocity: p.get('velocity').build(),
         );
-    mateUse(
-      'distance',
-      distance,
-      isNamed: true,
-    );
-    mateUse(
-      'time',
-      time,
-      isNamed: true,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

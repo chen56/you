@@ -10,26 +10,51 @@ class PerformanceOverlay$Mate extends _i1.PerformanceOverlay with _i2.Mate {
   /// PerformanceOverlay PerformanceOverlay({Key? key, int optionsMask = 0, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   PerformanceOverlay$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {int optionsMask = 0} , default:processed=IntegerLiteralImpl
-    int optionsMask = 0,
+    super.optionsMask,
 
     /// optionalParameters: {int rasterizerThreshold = 0} , default:processed=IntegerLiteralImpl
-    int rasterizerThreshold = 0,
+    super.rasterizerThreshold,
 
     /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardRasterCacheImages = false,
+    super.checkerboardRasterCacheImages,
 
     /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardOffscreenLayers = false,
-  }) : super(
-          key: key,
-          optionsMask: optionsMask,
-          rasterizerThreshold: rasterizerThreshold,
-          checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-          checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-        ) {
+    super.checkerboardOffscreenLayers,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'optionsMask': _i2.BuilderArg<int>(
+            name: 'optionsMask',
+            init: optionsMask,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'rasterizerThreshold': _i2.BuilderArg<int>(
+            name: 'rasterizerThreshold',
+            init: rasterizerThreshold,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'checkerboardRasterCacheImages': _i2.BuilderArg<bool>(
+            name: 'checkerboardRasterCacheImages',
+            init: checkerboardRasterCacheImages,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardOffscreenLayers': _i2.BuilderArg<bool>(
+            name: 'checkerboardOffscreenLayers',
+            init: checkerboardOffscreenLayers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'PerformanceOverlay';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate(
@@ -39,56 +64,47 @@ class PerformanceOverlay$Mate extends _i1.PerformanceOverlay with _i2.Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'optionsMask',
-      optionsMask,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'rasterizerThreshold',
-      rasterizerThreshold,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'checkerboardRasterCacheImages',
-      checkerboardRasterCacheImages,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardOffscreenLayers',
-      checkerboardOffscreenLayers,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
 
   /// PerformanceOverlay PerformanceOverlay.allEnabled({Key? key, int rasterizerThreshold = 0, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false})
   PerformanceOverlay$Mate.allEnabled({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {int rasterizerThreshold = 0} , default:processed=IntegerLiteralImpl
-    int rasterizerThreshold = 0,
+    super.rasterizerThreshold,
 
     /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardRasterCacheImages = false,
+    super.checkerboardRasterCacheImages,
 
     /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardOffscreenLayers = false,
-  }) : super.allEnabled(
-          key: key,
-          rasterizerThreshold: rasterizerThreshold,
-          checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-          checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-        ) {
+    super.checkerboardOffscreenLayers,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'rasterizerThreshold': _i2.BuilderArg<int>(
+            name: 'rasterizerThreshold',
+            init: rasterizerThreshold,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'checkerboardRasterCacheImages': _i2.BuilderArg<bool>(
+            name: 'checkerboardRasterCacheImages',
+            init: checkerboardRasterCacheImages,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardOffscreenLayers': _i2.BuilderArg<bool>(
+            name: 'checkerboardOffscreenLayers',
+            init: checkerboardOffscreenLayers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super.allEnabled() {
     mateBuilderName = 'PerformanceOverlay.allEnabled';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PerformanceOverlay$Mate.allEnabled(
@@ -97,28 +113,8 @@ class PerformanceOverlay$Mate extends _i1.PerformanceOverlay with _i2.Mate {
           checkerboardRasterCacheImages: p.get('checkerboardRasterCacheImages').build(),
           checkerboardOffscreenLayers: p.get('checkerboardOffscreenLayers').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'rasterizerThreshold',
-      rasterizerThreshold,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'checkerboardRasterCacheImages',
-      checkerboardRasterCacheImages,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardOffscreenLayers',
-      checkerboardOffscreenLayers,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

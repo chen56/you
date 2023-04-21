@@ -12,34 +12,65 @@ class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation with _i
   /// BouncingScrollSimulation BouncingScrollSimulation({required double position, required double velocity, required double leadingExtent, required double trailingExtent, required SpringDescription spring, double constantDeceleration = 0, Tolerance tolerance = Tolerance.defaultTolerance})
   BouncingScrollSimulation$Mate({
     /// optionalParameters: {required double position} , default:none
-    required double position,
+    required super.position,
 
     /// optionalParameters: {required double velocity} , default:none
-    required double velocity,
+    required super.velocity,
 
     /// optionalParameters: {required double leadingExtent} , default:none
-    required double leadingExtent,
+    required super.leadingExtent,
 
     /// optionalParameters: {required double trailingExtent} , default:none
-    required double trailingExtent,
+    required super.trailingExtent,
 
     /// optionalParameters: {required SpringDescription spring} , default:none
-    required _i3.SpringDescription spring,
+    required super.spring,
 
     /// optionalParameters: {double constantDeceleration = 0} , default:processed=IntegerLiteralImpl
-    double constantDeceleration = 0,
+    super.constantDeceleration,
 
     /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
-    _i4.Tolerance tolerance = _i5.Tolerance.defaultTolerance,
-  }) : super(
-          position: position,
-          velocity: velocity,
-          leadingExtent: leadingExtent,
-          trailingExtent: trailingExtent,
-          spring: spring,
-          constantDeceleration: constantDeceleration,
-          tolerance: tolerance,
-        ) {
+    super.tolerance,
+  })  : mateParams = {
+          'position': _i2.BuilderArg<double>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: true,
+          ),
+          'leadingExtent': _i2.BuilderArg<double>(
+            name: 'leadingExtent',
+            init: leadingExtent,
+            isNamed: true,
+          ),
+          'trailingExtent': _i2.BuilderArg<double>(
+            name: 'trailingExtent',
+            init: trailingExtent,
+            isNamed: true,
+          ),
+          'spring': _i2.BuilderArg<_i3.SpringDescription>(
+            name: 'spring',
+            init: spring,
+            isNamed: true,
+          ),
+          'constantDeceleration': _i2.BuilderArg<double>(
+            name: 'constantDeceleration',
+            init: constantDeceleration,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'tolerance': _i2.BuilderArg<_i4.Tolerance>(
+            name: 'tolerance',
+            init: tolerance,
+            isNamed: true,
+            defaultValue: _i5.Tolerance.defaultTolerance,
+          ),
+        },
+        super() {
     mateBuilderName = 'BouncingScrollSimulation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BouncingScrollSimulation$Mate(
@@ -51,44 +82,10 @@ class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation with _i
           constantDeceleration: p.get('constantDeceleration').build(),
           tolerance: p.get('tolerance').build(),
         );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingExtent',
-      leadingExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'trailingExtent',
-      trailingExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'spring',
-      spring,
-      isNamed: true,
-    );
-    mateUse(
-      'constantDeceleration',
-      constantDeceleration,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'tolerance',
-      tolerance,
-      isNamed: true,
-      defaultValue: _i5.Tolerance.defaultTolerance,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ClampingScrollSimulation extends Simulation
@@ -96,22 +93,41 @@ class ClampingScrollSimulation$Mate extends _i1.ClampingScrollSimulation with _i
   /// ClampingScrollSimulation ClampingScrollSimulation({required double position, required double velocity, double friction = 0.015, Tolerance tolerance = Tolerance.defaultTolerance})
   ClampingScrollSimulation$Mate({
     /// optionalParameters: {required double position} , default:none
-    required double position,
+    required super.position,
 
     /// optionalParameters: {required double velocity} , default:none
-    required double velocity,
+    required super.velocity,
 
     /// optionalParameters: {double friction = 0.015} , default:processed=DoubleLiteralImpl
-    double friction = 0.015,
+    super.friction,
 
     /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
-    _i4.Tolerance tolerance = _i5.Tolerance.defaultTolerance,
-  }) : super(
-          position: position,
-          velocity: velocity,
-          friction: friction,
-          tolerance: tolerance,
-        ) {
+    super.tolerance,
+  })  : mateParams = {
+          'position': _i2.BuilderArg<double>(
+            name: 'position',
+            init: position,
+            isNamed: true,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: true,
+          ),
+          'friction': _i2.BuilderArg<double>(
+            name: 'friction',
+            init: friction,
+            isNamed: true,
+            defaultValue: 0.015,
+          ),
+          'tolerance': _i2.BuilderArg<_i4.Tolerance>(
+            name: 'tolerance',
+            init: tolerance,
+            isNamed: true,
+            defaultValue: _i5.Tolerance.defaultTolerance,
+          ),
+        },
+        super() {
     mateBuilderName = 'ClampingScrollSimulation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ClampingScrollSimulation$Mate(
@@ -120,27 +136,8 @@ class ClampingScrollSimulation$Mate extends _i1.ClampingScrollSimulation with _i
           friction: p.get('friction').build(),
           tolerance: p.get('tolerance').build(),
         );
-    mateUse(
-      'position',
-      position,
-      isNamed: true,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: true,
-    );
-    mateUse(
-      'friction',
-      friction,
-      isNamed: true,
-      defaultValue: 0.015,
-    );
-    mateUse(
-      'tolerance',
-      tolerance,
-      isNamed: true,
-      defaultValue: _i5.Tolerance.defaultTolerance,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

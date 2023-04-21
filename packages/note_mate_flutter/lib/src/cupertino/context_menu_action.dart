@@ -13,30 +13,57 @@ class CupertinoContextMenuAction$Mate extends _i1.CupertinoContextMenuAction wit
   /// CupertinoContextMenuAction CupertinoContextMenuAction({Key? key, required Widget child, bool isDefaultAction = false, bool isDestructiveAction = false, void Function()? onPressed, IconData? trailingIcon})
   CupertinoContextMenuAction$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {bool isDefaultAction = false} , default:processed=BooleanLiteralImpl
-    bool isDefaultAction = false,
+    super.isDefaultAction,
 
     /// optionalParameters: {bool isDestructiveAction = false} , default:processed=BooleanLiteralImpl
-    bool isDestructiveAction = false,
+    super.isDestructiveAction,
 
     /// optionalParameters: {void Function()? onPressed} , default:none
-    _i5.VoidCallback? onPressed,
+    super.onPressed,
 
     /// optionalParameters: {IconData? trailingIcon} , default:none
-    _i6.IconData? trailingIcon,
-  }) : super(
-          key: key,
-          child: child,
-          isDefaultAction: isDefaultAction,
-          isDestructiveAction: isDestructiveAction,
-          onPressed: onPressed,
-          trailingIcon: trailingIcon,
-        ) {
+    super.trailingIcon,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'isDefaultAction': _i2.BuilderArg<bool>(
+            name: 'isDefaultAction',
+            init: isDefaultAction,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'isDestructiveAction': _i2.BuilderArg<bool>(
+            name: 'isDestructiveAction',
+            init: isDestructiveAction,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onPressed': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'trailingIcon': _i2.BuilderArg<_i6.IconData?>(
+            name: 'trailingIcon',
+            init: trailingIcon,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoContextMenuAction';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoContextMenuAction$Mate(
@@ -47,37 +74,8 @@ class CupertinoContextMenuAction$Mate extends _i1.CupertinoContextMenuAction wit
           onPressed: p.get('onPressed').build(),
           trailingIcon: p.get('trailingIcon').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'isDefaultAction',
-      isDefaultAction,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'isDestructiveAction',
-      isDestructiveAction,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'trailingIcon',
-      trailingIcon,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

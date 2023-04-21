@@ -11,18 +11,31 @@ class SpringDescription$Mate extends _i1.SpringDescription with _i2.Mate {
   /// SpringDescription SpringDescription({required double mass, required double stiffness, required double damping})
   SpringDescription$Mate({
     /// optionalParameters: {required double mass} , default:none
-    required double mass,
+    required super.mass,
 
     /// optionalParameters: {required double stiffness} , default:none
-    required double stiffness,
+    required super.stiffness,
 
     /// optionalParameters: {required double damping} , default:none
-    required double damping,
-  }) : super(
-          mass: mass,
-          stiffness: stiffness,
-          damping: damping,
-        ) {
+    required super.damping,
+  })  : mateParams = {
+          'mass': _i2.BuilderArg<double>(
+            name: 'mass',
+            init: mass,
+            isNamed: true,
+          ),
+          'stiffness': _i2.BuilderArg<double>(
+            name: 'stiffness',
+            init: stiffness,
+            isNamed: true,
+          ),
+          'damping': _i2.BuilderArg<double>(
+            name: 'damping',
+            init: damping,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SpringDescription';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SpringDescription$Mate(
@@ -30,38 +43,37 @@ class SpringDescription$Mate extends _i1.SpringDescription with _i2.Mate {
           stiffness: p.get('stiffness').build(),
           damping: p.get('damping').build(),
         );
-    mateUse(
-      'mass',
-      mass,
-      isNamed: true,
-    );
-    mateUse(
-      'stiffness',
-      stiffness,
-      isNamed: true,
-    );
-    mateUse(
-      'damping',
-      damping,
-      isNamed: true,
-    );
   }
 
   /// SpringDescription SpringDescription.withDampingRatio({required double mass, required double stiffness, double ratio = 1.0})
   SpringDescription$Mate.withDampingRatio({
     /// optionalParameters: {required double mass} , default:none
-    required double mass,
+    required super.mass,
 
     /// optionalParameters: {required double stiffness} , default:none
-    required double stiffness,
+    required super.stiffness,
 
     /// optionalParameters: {double ratio = 1.0} , default:processed=DoubleLiteralImpl
-    double ratio = 1.0,
-  }) : super.withDampingRatio(
-          mass: mass,
-          stiffness: stiffness,
-          ratio: ratio,
-        ) {
+    super.ratio,
+  })  : mateParams = {
+          'mass': _i2.BuilderArg<double>(
+            name: 'mass',
+            init: mass,
+            isNamed: true,
+          ),
+          'stiffness': _i2.BuilderArg<double>(
+            name: 'stiffness',
+            init: stiffness,
+            isNamed: true,
+          ),
+          'ratio': _i2.BuilderArg<double>(
+            name: 'ratio',
+            init: ratio,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+        },
+        super.withDampingRatio() {
     mateBuilderName = 'SpringDescription.withDampingRatio';
     matePackageUrl = 'package:flutter/animation.dart';
     mateBuilder = (p) => SpringDescription$Mate.withDampingRatio(
@@ -69,23 +81,10 @@ class SpringDescription$Mate extends _i1.SpringDescription with _i2.Mate {
           stiffness: p.get('stiffness').build(),
           ratio: p.get('ratio').build(),
         );
-    mateUse(
-      'mass',
-      mass,
-      isNamed: true,
-    );
-    mateUse(
-      'stiffness',
-      stiffness,
-      isNamed: true,
-    );
-    mateUse(
-      'ratio',
-      ratio,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SpringSimulation extends Simulation
@@ -93,25 +92,47 @@ class SpringSimulation$Mate extends _i1.SpringSimulation with _i2.Mate {
   /// SpringSimulation SpringSimulation(SpringDescription spring, double start, double end, double velocity, {Tolerance tolerance = Tolerance.defaultTolerance})
   SpringSimulation$Mate(
     /// requiredParameters: SpringDescription spring
-    _i1.SpringDescription spring,
+    super.spring,
 
     /// requiredParameters: double start
-    double start,
+    super.start,
 
     /// requiredParameters: double end
-    double end,
+    super.end,
 
     /// requiredParameters: double velocity
-    double velocity, {
+    super.velocity, {
     /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
-    _i3.Tolerance tolerance = _i4.Tolerance.defaultTolerance,
-  }) : super(
-          spring,
-          start,
-          end,
-          velocity,
-          tolerance: tolerance,
-        ) {
+    super.tolerance,
+  })  : mateParams = {
+          'spring': _i2.BuilderArg<_i1.SpringDescription>(
+            name: 'spring',
+            init: spring,
+            isNamed: false,
+          ),
+          'start': _i2.BuilderArg<double>(
+            name: 'start',
+            init: start,
+            isNamed: false,
+          ),
+          'end': _i2.BuilderArg<double>(
+            name: 'end',
+            init: end,
+            isNamed: false,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: false,
+          ),
+          'tolerance': _i2.BuilderArg<_i3.Tolerance>(
+            name: 'tolerance',
+            init: tolerance,
+            isNamed: true,
+            defaultValue: _i4.Tolerance.defaultTolerance,
+          ),
+        },
+        super() {
     mateBuilderName = 'SpringSimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => SpringSimulation$Mate(
@@ -121,33 +142,10 @@ class SpringSimulation$Mate extends _i1.SpringSimulation with _i2.Mate {
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateUse(
-      'spring',
-      spring,
-      isNamed: false,
-    );
-    mateUse(
-      'start',
-      start,
-      isNamed: false,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: false,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: false,
-    );
-    mateUse(
-      'tolerance',
-      tolerance,
-      isNamed: true,
-      defaultValue: _i4.Tolerance.defaultTolerance,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScrollSpringSimulation extends SpringSimulation
@@ -155,25 +153,47 @@ class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation with _i2.Ma
   /// ScrollSpringSimulation ScrollSpringSimulation(SpringDescription spring, double start, double end, double velocity, {Tolerance tolerance = Tolerance.defaultTolerance})
   ScrollSpringSimulation$Mate(
     /// requiredParameters: SpringDescription spring
-    _i1.SpringDescription spring,
+    super.spring,
 
     /// requiredParameters: double start
-    double start,
+    super.start,
 
     /// requiredParameters: double end
-    double end,
+    super.end,
 
     /// requiredParameters: double velocity
-    double velocity, {
+    super.velocity, {
     /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
-    _i3.Tolerance tolerance = _i4.Tolerance.defaultTolerance,
-  }) : super(
-          spring,
-          start,
-          end,
-          velocity,
-          tolerance: tolerance,
-        ) {
+    super.tolerance,
+  })  : mateParams = {
+          'spring': _i2.BuilderArg<_i1.SpringDescription>(
+            name: 'spring',
+            init: spring,
+            isNamed: false,
+          ),
+          'start': _i2.BuilderArg<double>(
+            name: 'start',
+            init: start,
+            isNamed: false,
+          ),
+          'end': _i2.BuilderArg<double>(
+            name: 'end',
+            init: end,
+            isNamed: false,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: false,
+          ),
+          'tolerance': _i2.BuilderArg<_i3.Tolerance>(
+            name: 'tolerance',
+            init: tolerance,
+            isNamed: true,
+            defaultValue: _i4.Tolerance.defaultTolerance,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollSpringSimulation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollSpringSimulation$Mate(
@@ -183,31 +203,8 @@ class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation with _i2.Ma
           p.get('velocity').value,
           tolerance: p.get('tolerance').build(),
         );
-    mateUse(
-      'spring',
-      spring,
-      isNamed: false,
-    );
-    mateUse(
-      'start',
-      start,
-      isNamed: false,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: false,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: false,
-    );
-    mateUse(
-      'tolerance',
-      tolerance,
-      isNamed: true,
-      defaultValue: _i4.Tolerance.defaultTolerance,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

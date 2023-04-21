@@ -11,29 +11,31 @@ class DefaultTextEditingShortcuts$Mate extends _i1.DefaultTextEditingShortcuts w
   /// DefaultTextEditingShortcuts DefaultTextEditingShortcuts({Key? key, required Widget child})
   DefaultTextEditingShortcuts$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DefaultTextEditingShortcuts';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DefaultTextEditingShortcuts$Mate(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

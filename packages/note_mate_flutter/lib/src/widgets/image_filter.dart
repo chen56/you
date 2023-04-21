@@ -12,22 +12,40 @@ class ImageFiltered$Mate extends _i1.ImageFiltered with _i2.Mate {
   /// ImageFiltered ImageFiltered({Key? key, required ImageFilter imageFilter, Widget? child, bool enabled = true})
   ImageFiltered$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ImageFilter imageFilter} , default:none
-    required _i4.ImageFilter imageFilter,
+    required super.imageFilter,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
-  }) : super(
-          key: key,
-          imageFilter: imageFilter,
-          child: child,
-          enabled: enabled,
-        ) {
+    super.enabled,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'imageFilter': _i2.BuilderArg<_i4.ImageFilter>(
+            name: 'imageFilter',
+            init: imageFilter,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageFiltered';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageFiltered$Mate(
@@ -36,26 +54,8 @@ class ImageFiltered$Mate extends _i1.ImageFiltered with _i2.Mate {
           child: p.get('child').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'imageFilter',
-      imageFilter,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

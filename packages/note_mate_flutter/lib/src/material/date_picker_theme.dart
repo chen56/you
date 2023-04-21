@@ -15,134 +15,263 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
   /// DatePickerThemeData DatePickerThemeData({Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, Color? headerBackgroundColor, Color? headerForegroundColor, TextStyle? headerHeadlineStyle, TextStyle? headerHelpStyle, TextStyle? weekdayStyle, TextStyle? dayStyle, MaterialStateProperty<Color?>? dayForegroundColor, MaterialStateProperty<Color?>? dayBackgroundColor, MaterialStateProperty<Color?>? dayOverlayColor, MaterialStateProperty<Color?>? todayForegroundColor, MaterialStateProperty<Color?>? todayBackgroundColor, BorderSide? todayBorder, TextStyle? yearStyle, MaterialStateProperty<Color?>? yearForegroundColor, MaterialStateProperty<Color?>? yearBackgroundColor, MaterialStateProperty<Color?>? yearOverlayColor, Color? rangePickerBackgroundColor, double? rangePickerElevation, Color? rangePickerShadowColor, Color? rangePickerSurfaceTintColor, ShapeBorder? rangePickerShape, Color? rangePickerHeaderBackgroundColor, Color? rangePickerHeaderForegroundColor, TextStyle? rangePickerHeaderHeadlineStyle, TextStyle? rangePickerHeaderHelpStyle, Color? rangeSelectionBackgroundColor, MaterialStateProperty<Color?>? rangeSelectionOverlayColor})
   DatePickerThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i4.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {Color? headerBackgroundColor} , default:none
-    _i3.Color? headerBackgroundColor,
+    super.headerBackgroundColor,
 
     /// optionalParameters: {Color? headerForegroundColor} , default:none
-    _i3.Color? headerForegroundColor,
+    super.headerForegroundColor,
 
     /// optionalParameters: {TextStyle? headerHeadlineStyle} , default:none
-    _i5.TextStyle? headerHeadlineStyle,
+    super.headerHeadlineStyle,
 
     /// optionalParameters: {TextStyle? headerHelpStyle} , default:none
-    _i5.TextStyle? headerHelpStyle,
+    super.headerHelpStyle,
 
     /// optionalParameters: {TextStyle? weekdayStyle} , default:none
-    _i5.TextStyle? weekdayStyle,
+    super.weekdayStyle,
 
     /// optionalParameters: {TextStyle? dayStyle} , default:none
-    _i5.TextStyle? dayStyle,
+    super.dayStyle,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? dayForegroundColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? dayForegroundColor,
+    super.dayForegroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? dayBackgroundColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? dayBackgroundColor,
+    super.dayBackgroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? dayOverlayColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? dayOverlayColor,
+    super.dayOverlayColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? todayForegroundColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? todayForegroundColor,
+    super.todayForegroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? todayBackgroundColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? todayBackgroundColor,
+    super.todayBackgroundColor,
 
     /// optionalParameters: {BorderSide? todayBorder} , default:none
-    _i4.BorderSide? todayBorder,
+    super.todayBorder,
 
     /// optionalParameters: {TextStyle? yearStyle} , default:none
-    _i5.TextStyle? yearStyle,
+    super.yearStyle,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? yearForegroundColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? yearForegroundColor,
+    super.yearForegroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? yearBackgroundColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? yearBackgroundColor,
+    super.yearBackgroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? yearOverlayColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? yearOverlayColor,
+    super.yearOverlayColor,
 
     /// optionalParameters: {Color? rangePickerBackgroundColor} , default:none
-    _i3.Color? rangePickerBackgroundColor,
+    super.rangePickerBackgroundColor,
 
     /// optionalParameters: {double? rangePickerElevation} , default:none
-    double? rangePickerElevation,
+    super.rangePickerElevation,
 
     /// optionalParameters: {Color? rangePickerShadowColor} , default:none
-    _i3.Color? rangePickerShadowColor,
+    super.rangePickerShadowColor,
 
     /// optionalParameters: {Color? rangePickerSurfaceTintColor} , default:none
-    _i3.Color? rangePickerSurfaceTintColor,
+    super.rangePickerSurfaceTintColor,
 
     /// optionalParameters: {ShapeBorder? rangePickerShape} , default:none
-    _i4.ShapeBorder? rangePickerShape,
+    super.rangePickerShape,
 
     /// optionalParameters: {Color? rangePickerHeaderBackgroundColor} , default:none
-    _i3.Color? rangePickerHeaderBackgroundColor,
+    super.rangePickerHeaderBackgroundColor,
 
     /// optionalParameters: {Color? rangePickerHeaderForegroundColor} , default:none
-    _i3.Color? rangePickerHeaderForegroundColor,
+    super.rangePickerHeaderForegroundColor,
 
     /// optionalParameters: {TextStyle? rangePickerHeaderHeadlineStyle} , default:none
-    _i5.TextStyle? rangePickerHeaderHeadlineStyle,
+    super.rangePickerHeaderHeadlineStyle,
 
     /// optionalParameters: {TextStyle? rangePickerHeaderHelpStyle} , default:none
-    _i5.TextStyle? rangePickerHeaderHelpStyle,
+    super.rangePickerHeaderHelpStyle,
 
     /// optionalParameters: {Color? rangeSelectionBackgroundColor} , default:none
-    _i3.Color? rangeSelectionBackgroundColor,
+    super.rangeSelectionBackgroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? rangeSelectionOverlayColor} , default:none
-    _i6.MaterialStateProperty<_i3.Color?>? rangeSelectionOverlayColor,
-  }) : super(
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          shape: shape,
-          headerBackgroundColor: headerBackgroundColor,
-          headerForegroundColor: headerForegroundColor,
-          headerHeadlineStyle: headerHeadlineStyle,
-          headerHelpStyle: headerHelpStyle,
-          weekdayStyle: weekdayStyle,
-          dayStyle: dayStyle,
-          dayForegroundColor: dayForegroundColor,
-          dayBackgroundColor: dayBackgroundColor,
-          dayOverlayColor: dayOverlayColor,
-          todayForegroundColor: todayForegroundColor,
-          todayBackgroundColor: todayBackgroundColor,
-          todayBorder: todayBorder,
-          yearStyle: yearStyle,
-          yearForegroundColor: yearForegroundColor,
-          yearBackgroundColor: yearBackgroundColor,
-          yearOverlayColor: yearOverlayColor,
-          rangePickerBackgroundColor: rangePickerBackgroundColor,
-          rangePickerElevation: rangePickerElevation,
-          rangePickerShadowColor: rangePickerShadowColor,
-          rangePickerSurfaceTintColor: rangePickerSurfaceTintColor,
-          rangePickerShape: rangePickerShape,
-          rangePickerHeaderBackgroundColor: rangePickerHeaderBackgroundColor,
-          rangePickerHeaderForegroundColor: rangePickerHeaderForegroundColor,
-          rangePickerHeaderHeadlineStyle: rangePickerHeaderHeadlineStyle,
-          rangePickerHeaderHelpStyle: rangePickerHeaderHelpStyle,
-          rangeSelectionBackgroundColor: rangeSelectionBackgroundColor,
-          rangeSelectionOverlayColor: rangeSelectionOverlayColor,
-        ) {
+    super.rangeSelectionOverlayColor,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'headerBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'headerBackgroundColor',
+            init: headerBackgroundColor,
+            isNamed: true,
+          ),
+          'headerForegroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'headerForegroundColor',
+            init: headerForegroundColor,
+            isNamed: true,
+          ),
+          'headerHeadlineStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'headerHeadlineStyle',
+            init: headerHeadlineStyle,
+            isNamed: true,
+          ),
+          'headerHelpStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'headerHelpStyle',
+            init: headerHelpStyle,
+            isNamed: true,
+          ),
+          'weekdayStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'weekdayStyle',
+            init: weekdayStyle,
+            isNamed: true,
+          ),
+          'dayStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'dayStyle',
+            init: dayStyle,
+            isNamed: true,
+          ),
+          'dayForegroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'dayForegroundColor',
+            init: dayForegroundColor,
+            isNamed: true,
+          ),
+          'dayBackgroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'dayBackgroundColor',
+            init: dayBackgroundColor,
+            isNamed: true,
+          ),
+          'dayOverlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'dayOverlayColor',
+            init: dayOverlayColor,
+            isNamed: true,
+          ),
+          'todayForegroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'todayForegroundColor',
+            init: todayForegroundColor,
+            isNamed: true,
+          ),
+          'todayBackgroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'todayBackgroundColor',
+            init: todayBackgroundColor,
+            isNamed: true,
+          ),
+          'todayBorder': _i2.BuilderArg<_i4.BorderSide?>(
+            name: 'todayBorder',
+            init: todayBorder,
+            isNamed: true,
+          ),
+          'yearStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'yearStyle',
+            init: yearStyle,
+            isNamed: true,
+          ),
+          'yearForegroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'yearForegroundColor',
+            init: yearForegroundColor,
+            isNamed: true,
+          ),
+          'yearBackgroundColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'yearBackgroundColor',
+            init: yearBackgroundColor,
+            isNamed: true,
+          ),
+          'yearOverlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'yearOverlayColor',
+            init: yearOverlayColor,
+            isNamed: true,
+          ),
+          'rangePickerBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'rangePickerBackgroundColor',
+            init: rangePickerBackgroundColor,
+            isNamed: true,
+          ),
+          'rangePickerElevation': _i2.BuilderArg<double?>(
+            name: 'rangePickerElevation',
+            init: rangePickerElevation,
+            isNamed: true,
+          ),
+          'rangePickerShadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'rangePickerShadowColor',
+            init: rangePickerShadowColor,
+            isNamed: true,
+          ),
+          'rangePickerSurfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'rangePickerSurfaceTintColor',
+            init: rangePickerSurfaceTintColor,
+            isNamed: true,
+          ),
+          'rangePickerShape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'rangePickerShape',
+            init: rangePickerShape,
+            isNamed: true,
+          ),
+          'rangePickerHeaderBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'rangePickerHeaderBackgroundColor',
+            init: rangePickerHeaderBackgroundColor,
+            isNamed: true,
+          ),
+          'rangePickerHeaderForegroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'rangePickerHeaderForegroundColor',
+            init: rangePickerHeaderForegroundColor,
+            isNamed: true,
+          ),
+          'rangePickerHeaderHeadlineStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'rangePickerHeaderHeadlineStyle',
+            init: rangePickerHeaderHeadlineStyle,
+            isNamed: true,
+          ),
+          'rangePickerHeaderHelpStyle': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'rangePickerHeaderHelpStyle',
+            init: rangePickerHeaderHelpStyle,
+            isNamed: true,
+          ),
+          'rangeSelectionBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'rangeSelectionBackgroundColor',
+            init: rangeSelectionBackgroundColor,
+            isNamed: true,
+          ),
+          'rangeSelectionOverlayColor': _i2.BuilderArg<_i6.MaterialStateProperty<_i3.Color?>?>(
+            name: 'rangeSelectionOverlayColor',
+            init: rangeSelectionOverlayColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DatePickerThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerThemeData$Mate(
@@ -179,167 +308,10 @@ class DatePickerThemeData$Mate extends _i1.DatePickerThemeData with _i2.Mate {
           rangeSelectionBackgroundColor: p.get('rangeSelectionBackgroundColor').build(),
           rangeSelectionOverlayColor: p.get('rangeSelectionOverlayColor').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'headerBackgroundColor',
-      headerBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'headerForegroundColor',
-      headerForegroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'headerHeadlineStyle',
-      headerHeadlineStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'headerHelpStyle',
-      headerHelpStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'weekdayStyle',
-      weekdayStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dayStyle',
-      dayStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dayForegroundColor',
-      dayForegroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dayBackgroundColor',
-      dayBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'dayOverlayColor',
-      dayOverlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'todayForegroundColor',
-      todayForegroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'todayBackgroundColor',
-      todayBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'todayBorder',
-      todayBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'yearStyle',
-      yearStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'yearForegroundColor',
-      yearForegroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'yearBackgroundColor',
-      yearBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'yearOverlayColor',
-      yearOverlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerBackgroundColor',
-      rangePickerBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerElevation',
-      rangePickerElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerShadowColor',
-      rangePickerShadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerSurfaceTintColor',
-      rangePickerSurfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerShape',
-      rangePickerShape,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerHeaderBackgroundColor',
-      rangePickerHeaderBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerHeaderForegroundColor',
-      rangePickerHeaderForegroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerHeaderHeadlineStyle',
-      rangePickerHeaderHeadlineStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'rangePickerHeaderHelpStyle',
-      rangePickerHeaderHelpStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'rangeSelectionBackgroundColor',
-      rangeSelectionBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'rangeSelectionOverlayColor',
-      rangeSelectionOverlayColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DatePickerTheme extends InheritedTheme
@@ -347,18 +319,31 @@ class DatePickerTheme$Mate extends _i1.DatePickerTheme with _i2.Mate {
   /// DatePickerTheme DatePickerTheme({Key? key, required DatePickerThemeData data, required Widget child})
   DatePickerTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required DatePickerThemeData data} , default:none
-    required _i1.DatePickerThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.DatePickerThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DatePickerTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => DatePickerTheme$Mate(
@@ -366,20 +351,8 @@ class DatePickerTheme$Mate extends _i1.DatePickerTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -16,58 +16,111 @@ class NavigationRailThemeData$Mate extends _i1.NavigationRailThemeData with _i2.
   /// NavigationRailThemeData NavigationRailThemeData({Color? backgroundColor, double? elevation, TextStyle? unselectedLabelTextStyle, TextStyle? selectedLabelTextStyle, IconThemeData? unselectedIconTheme, IconThemeData? selectedIconTheme, double? groupAlignment, NavigationRailLabelType? labelType, bool? useIndicator, Color? indicatorColor, ShapeBorder? indicatorShape, double? minWidth, double? minExtendedWidth})
   NavigationRailThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {TextStyle? unselectedLabelTextStyle} , default:none
-    _i4.TextStyle? unselectedLabelTextStyle,
+    super.unselectedLabelTextStyle,
 
     /// optionalParameters: {TextStyle? selectedLabelTextStyle} , default:none
-    _i4.TextStyle? selectedLabelTextStyle,
+    super.selectedLabelTextStyle,
 
     /// optionalParameters: {IconThemeData? unselectedIconTheme} , default:none
-    _i5.IconThemeData? unselectedIconTheme,
+    super.unselectedIconTheme,
 
     /// optionalParameters: {IconThemeData? selectedIconTheme} , default:none
-    _i5.IconThemeData? selectedIconTheme,
+    super.selectedIconTheme,
 
     /// optionalParameters: {double? groupAlignment} , default:none
-    double? groupAlignment,
+    super.groupAlignment,
 
     /// optionalParameters: {NavigationRailLabelType? labelType} , default:none
-    _i6.NavigationRailLabelType? labelType,
+    super.labelType,
 
     /// optionalParameters: {bool? useIndicator} , default:none
-    bool? useIndicator,
+    super.useIndicator,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i3.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
-    _i7.ShapeBorder? indicatorShape,
+    super.indicatorShape,
 
     /// optionalParameters: {double? minWidth} , default:none
-    double? minWidth,
+    super.minWidth,
 
     /// optionalParameters: {double? minExtendedWidth} , default:none
-    double? minExtendedWidth,
-  }) : super(
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          unselectedLabelTextStyle: unselectedLabelTextStyle,
-          selectedLabelTextStyle: selectedLabelTextStyle,
-          unselectedIconTheme: unselectedIconTheme,
-          selectedIconTheme: selectedIconTheme,
-          groupAlignment: groupAlignment,
-          labelType: labelType,
-          useIndicator: useIndicator,
-          indicatorColor: indicatorColor,
-          indicatorShape: indicatorShape,
-          minWidth: minWidth,
-          minExtendedWidth: minExtendedWidth,
-        ) {
+    super.minExtendedWidth,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'unselectedLabelTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'unselectedLabelTextStyle',
+            init: unselectedLabelTextStyle,
+            isNamed: true,
+          ),
+          'selectedLabelTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'selectedLabelTextStyle',
+            init: selectedLabelTextStyle,
+            isNamed: true,
+          ),
+          'unselectedIconTheme': _i2.BuilderArg<_i5.IconThemeData?>(
+            name: 'unselectedIconTheme',
+            init: unselectedIconTheme,
+            isNamed: true,
+          ),
+          'selectedIconTheme': _i2.BuilderArg<_i5.IconThemeData?>(
+            name: 'selectedIconTheme',
+            init: selectedIconTheme,
+            isNamed: true,
+          ),
+          'groupAlignment': _i2.BuilderArg<double?>(
+            name: 'groupAlignment',
+            init: groupAlignment,
+            isNamed: true,
+          ),
+          'labelType': _i2.BuilderArg<_i6.NavigationRailLabelType?>(
+            name: 'labelType',
+            init: labelType,
+            isNamed: true,
+          ),
+          'useIndicator': _i2.BuilderArg<bool?>(
+            name: 'useIndicator',
+            init: useIndicator,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorShape': _i2.BuilderArg<_i7.ShapeBorder?>(
+            name: 'indicatorShape',
+            init: indicatorShape,
+            isNamed: true,
+          ),
+          'minWidth': _i2.BuilderArg<double?>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+          ),
+          'minExtendedWidth': _i2.BuilderArg<double?>(
+            name: 'minExtendedWidth',
+            init: minExtendedWidth,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationRailThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRailThemeData$Mate(
@@ -85,72 +138,10 @@ class NavigationRailThemeData$Mate extends _i1.NavigationRailThemeData with _i2.
           minWidth: p.get('minWidth').build(),
           minExtendedWidth: p.get('minExtendedWidth').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedLabelTextStyle',
-      unselectedLabelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedLabelTextStyle',
-      selectedLabelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'unselectedIconTheme',
-      unselectedIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedIconTheme',
-      selectedIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'groupAlignment',
-      groupAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'labelType',
-      labelType,
-      isNamed: true,
-    );
-    mateUse(
-      'useIndicator',
-      useIndicator,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorShape',
-      indicatorShape,
-      isNamed: true,
-    );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'minExtendedWidth',
-      minExtendedWidth,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NavigationRailTheme extends InheritedTheme
@@ -158,18 +149,31 @@ class NavigationRailTheme$Mate extends _i1.NavigationRailTheme with _i2.Mate {
   /// NavigationRailTheme NavigationRailTheme({Key? key, required NavigationRailThemeData data, required Widget child})
   NavigationRailTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i8.Key? key,
+    super.key,
 
     /// optionalParameters: {required NavigationRailThemeData data} , default:none
-    required _i1.NavigationRailThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i9.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i8.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.NavigationRailThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationRailTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationRailTheme$Mate(
@@ -177,20 +181,8 @@ class NavigationRailTheme$Mate extends _i1.NavigationRailTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

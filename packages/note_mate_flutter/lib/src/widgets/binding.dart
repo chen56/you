@@ -12,18 +12,31 @@ class RenderObjectToWidgetAdapter$Mate<T extends _i1.RenderObject> extends _i2.R
   /// RenderObjectToWidgetAdapter<T> RenderObjectToWidgetAdapter({Widget? child, required RenderObjectWithChildMixin<T> container, String? debugShortDescription})
   RenderObjectToWidgetAdapter$Mate({
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {required RenderObjectWithChildMixin<T> container} , default:none
-    required _i1.RenderObjectWithChildMixin<T> container,
+    required super.container,
 
     /// optionalParameters: {String? debugShortDescription} , default:none
-    String? debugShortDescription,
-  }) : super(
-          child: child,
-          container: container,
-          debugShortDescription: debugShortDescription,
-        ) {
+    super.debugShortDescription,
+  })  : mateParams = {
+          'child': _i3.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'container': _i3.BuilderArg<_i1.RenderObjectWithChildMixin<T>>(
+            name: 'container',
+            init: container,
+            isNamed: true,
+          ),
+          'debugShortDescription': _i3.BuilderArg<String?>(
+            name: 'debugShortDescription',
+            init: debugShortDescription,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderObjectToWidgetAdapter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RenderObjectToWidgetAdapter$Mate<T>(
@@ -31,22 +44,10 @@ class RenderObjectToWidgetAdapter$Mate<T extends _i1.RenderObject> extends _i2.R
           container: p.get('container').build(),
           debugShortDescription: p.get('debugShortDescription').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'container',
-      container,
-      isNamed: true,
-    );
-    mateUse(
-      'debugShortDescription',
-      debugShortDescription,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i3.BuilderArg> mateParams;
 }
 
 /// class RenderObjectToWidgetElement<T extends RenderObject> extends RenderObjectElement with RootElementMixin
@@ -56,15 +57,20 @@ class RenderObjectToWidgetElement$Mate<T extends _i1.RenderObject> extends _i2.R
   RenderObjectToWidgetElement$Mate(
 
       /// requiredParameters: RenderObjectToWidgetAdapter<T> widget
-      _i2.RenderObjectToWidgetAdapter<T> widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i3.BuilderArg<_i2.RenderObjectToWidgetAdapter<T>>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'RenderObjectToWidgetElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RenderObjectToWidgetElement$Mate<T>(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i3.BuilderArg> mateParams;
 }

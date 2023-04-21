@@ -13,46 +13,95 @@ class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
   /// RenderWrap RenderWrap({List<RenderBox>? children, Axis direction = Axis.horizontal, WrapAlignment alignment = WrapAlignment.start, double spacing = 0.0, WrapAlignment runAlignment = WrapAlignment.start, double runSpacing = 0.0, WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start, TextDirection? textDirection, VerticalDirection verticalDirection = VerticalDirection.down, Clip clipBehavior = Clip.none})
   RenderWrap$Mate({
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i3.RenderBox>? children,
+    super.children,
 
     /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
-    _i4.Axis direction = _i5.Axis.horizontal,
+    super.direction,
 
     /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i1.WrapAlignment alignment = _i5.WrapAlignment.start,
+    super.alignment,
 
     /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
-    double spacing = 0.0,
+    super.spacing,
 
     /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i1.WrapAlignment runAlignment = _i5.WrapAlignment.start,
+    super.runAlignment,
 
     /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
-    double runSpacing = 0.0,
+    super.runSpacing,
 
     /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
-    _i1.WrapCrossAlignment crossAxisAlignment = _i5.WrapCrossAlignment.start,
+    super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i6.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
-    _i4.VerticalDirection verticalDirection = _i5.VerticalDirection.down,
+    super.verticalDirection,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i6.Clip clipBehavior = _i6.Clip.none,
-  }) : super(
-          children: children,
-          direction: direction,
-          alignment: alignment,
-          spacing: spacing,
-          runAlignment: runAlignment,
-          runSpacing: runSpacing,
-          crossAxisAlignment: crossAxisAlignment,
-          textDirection: textDirection,
-          verticalDirection: verticalDirection,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'direction': _i2.BuilderArg<_i4.Axis>(
+            name: 'direction',
+            init: direction,
+            isNamed: true,
+            defaultValue: _i5.Axis.horizontal,
+          ),
+          'alignment': _i2.BuilderArg<_i1.WrapAlignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i5.WrapAlignment.start,
+          ),
+          'spacing': _i2.BuilderArg<double>(
+            name: 'spacing',
+            init: spacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'runAlignment': _i2.BuilderArg<_i1.WrapAlignment>(
+            name: 'runAlignment',
+            init: runAlignment,
+            isNamed: true,
+            defaultValue: _i5.WrapAlignment.start,
+          ),
+          'runSpacing': _i2.BuilderArg<double>(
+            name: 'runSpacing',
+            init: runSpacing,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'crossAxisAlignment': _i2.BuilderArg<_i1.WrapCrossAlignment>(
+            name: 'crossAxisAlignment',
+            init: crossAxisAlignment,
+            isNamed: true,
+            defaultValue: _i5.WrapCrossAlignment.start,
+          ),
+          'textDirection': _i2.BuilderArg<_i6.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'verticalDirection': _i2.BuilderArg<_i4.VerticalDirection>(
+            name: 'verticalDirection',
+            init: verticalDirection,
+            isNamed: true,
+            defaultValue: _i5.VerticalDirection.down,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i6.Clip.none,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderWrap';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderWrap$Mate(
@@ -67,63 +116,8 @@ class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
           verticalDirection: p.get('verticalDirection').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: true,
-      defaultValue: _i5.Axis.horizontal,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i5.WrapAlignment.start,
-    );
-    mateUse(
-      'spacing',
-      spacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'runAlignment',
-      runAlignment,
-      isNamed: true,
-      defaultValue: _i5.WrapAlignment.start,
-    );
-    mateUse(
-      'runSpacing',
-      runSpacing,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'crossAxisAlignment',
-      crossAxisAlignment,
-      isNamed: true,
-      defaultValue: _i5.WrapCrossAlignment.start,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'verticalDirection',
-      verticalDirection,
-      isNamed: true,
-      defaultValue: _i5.VerticalDirection.down,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i6.Clip.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -11,15 +11,20 @@ class ReadBuffer$Mate extends _i1.ReadBuffer with _i2.Mate {
   ReadBuffer$Mate(
 
       /// requiredParameters: ByteData data
-      _i3.ByteData data)
-      : super(data) {
+      super.data)
+      : mateParams = {
+          'data': _i2.BuilderArg<_i3.ByteData>(
+            name: 'data',
+            init: data,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ReadBuffer';
     matePackageUrl = 'package:flutter/foundation.dart';
     mateBuilder = (p) => ReadBuffer$Mate(p.get('data').value);
-    mateUse(
-      'data',
-      data,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

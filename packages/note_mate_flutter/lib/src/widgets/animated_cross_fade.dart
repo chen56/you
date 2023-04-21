@@ -15,54 +15,108 @@ class AnimatedCrossFade$Mate extends _i1.AnimatedCrossFade with _i2.Mate {
   /// AnimatedCrossFade AnimatedCrossFade({Key? key, required Widget firstChild, required Widget secondChild, Curve firstCurve = Curves.linear, Curve secondCurve = Curves.linear, Curve sizeCurve = Curves.linear, AlignmentGeometry alignment = Alignment.topCenter, required CrossFadeState crossFadeState, required Duration duration, Duration? reverseDuration, Widget Function(Widget, Key, Widget, Key) layoutBuilder = defaultLayoutBuilder, bool excludeBottomFocus = true})
   AnimatedCrossFade$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget firstChild} , default:none
-    required _i4.Widget firstChild,
+    required super.firstChild,
 
     /// optionalParameters: {required Widget secondChild} , default:none
-    required _i4.Widget secondChild,
+    required super.secondChild,
 
     /// optionalParameters: {Curve firstCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i5.Curve firstCurve = _i6.Curves.linear,
+    super.firstCurve,
 
     /// optionalParameters: {Curve secondCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i5.Curve secondCurve = _i6.Curves.linear,
+    super.secondCurve,
 
     /// optionalParameters: {Curve sizeCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i5.Curve sizeCurve = _i6.Curves.linear,
+    super.sizeCurve,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.topCenter} , default:processed=PrefixedIdentifierImpl
-    _i7.AlignmentGeometry alignment = _i8.Alignment.topCenter,
+    super.alignment,
 
     /// optionalParameters: {required CrossFadeState crossFadeState} , default:none
-    required _i1.CrossFadeState crossFadeState,
+    required super.crossFadeState,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {Duration? reverseDuration} , default:none
-    Duration? reverseDuration,
+    super.reverseDuration,
 
     /// optionalParameters: {Widget Function(Widget, Key, Widget, Key) layoutBuilder = defaultLayoutBuilder} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.AnimatedCrossFadeBuilder layoutBuilder,
+    super.layoutBuilder,
 
     /// optionalParameters: {bool excludeBottomFocus = true} , default:processed=BooleanLiteralImpl
-    bool excludeBottomFocus = true,
-  }) : super(
-          key: key,
-          firstChild: firstChild,
-          secondChild: secondChild,
-          firstCurve: firstCurve,
-          secondCurve: secondCurve,
-          sizeCurve: sizeCurve,
-          alignment: alignment,
-          crossFadeState: crossFadeState,
-          duration: duration,
-          reverseDuration: reverseDuration,
-          layoutBuilder: layoutBuilder,
-          excludeBottomFocus: excludeBottomFocus,
-        ) {
+    super.excludeBottomFocus,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'firstChild': _i2.BuilderArg<_i4.Widget>(
+            name: 'firstChild',
+            init: firstChild,
+            isNamed: true,
+          ),
+          'secondChild': _i2.BuilderArg<_i4.Widget>(
+            name: 'secondChild',
+            init: secondChild,
+            isNamed: true,
+          ),
+          'firstCurve': _i2.BuilderArg<_i5.Curve>(
+            name: 'firstCurve',
+            init: firstCurve,
+            isNamed: true,
+            defaultValue: _i6.Curves.linear,
+          ),
+          'secondCurve': _i2.BuilderArg<_i5.Curve>(
+            name: 'secondCurve',
+            init: secondCurve,
+            isNamed: true,
+            defaultValue: _i6.Curves.linear,
+          ),
+          'sizeCurve': _i2.BuilderArg<_i5.Curve>(
+            name: 'sizeCurve',
+            init: sizeCurve,
+            isNamed: true,
+            defaultValue: _i6.Curves.linear,
+          ),
+          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i8.Alignment.topCenter,
+          ),
+          'crossFadeState': _i2.BuilderArg<_i1.CrossFadeState>(
+            name: 'crossFadeState',
+            init: crossFadeState,
+            isNamed: true,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'reverseDuration': _i2.BuilderArg<Duration?>(
+            name: 'reverseDuration',
+            init: reverseDuration,
+            isNamed: true,
+          ),
+          'layoutBuilder': _i2.BuilderArg<_i1.AnimatedCrossFadeBuilder>(
+            name: 'layoutBuilder',
+            init: layoutBuilder,
+            isNamed: true,
+          ),
+          'excludeBottomFocus': _i2.BuilderArg<bool>(
+            name: 'excludeBottomFocus',
+            init: excludeBottomFocus,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedCrossFade';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedCrossFade$Mate(
@@ -79,70 +133,8 @@ class AnimatedCrossFade$Mate extends _i1.AnimatedCrossFade with _i2.Mate {
           layoutBuilder: p.get('layoutBuilder').build(),
           excludeBottomFocus: p.get('excludeBottomFocus').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'firstChild',
-      firstChild,
-      isNamed: true,
-    );
-    mateUse(
-      'secondChild',
-      secondChild,
-      isNamed: true,
-    );
-    mateUse(
-      'firstCurve',
-      firstCurve,
-      isNamed: true,
-      defaultValue: _i6.Curves.linear,
-    );
-    mateUse(
-      'secondCurve',
-      secondCurve,
-      isNamed: true,
-      defaultValue: _i6.Curves.linear,
-    );
-    mateUse(
-      'sizeCurve',
-      sizeCurve,
-      isNamed: true,
-      defaultValue: _i6.Curves.linear,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i8.Alignment.topCenter,
-    );
-    mateUse(
-      'crossFadeState',
-      crossFadeState,
-      isNamed: true,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseDuration',
-      reverseDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'layoutBuilder',
-      layoutBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'excludeBottomFocus',
-      excludeBottomFocus,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

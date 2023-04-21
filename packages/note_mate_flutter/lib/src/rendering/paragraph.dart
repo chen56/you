@@ -17,17 +17,22 @@ class PlaceholderSpanIndexSemanticsTag$Mate extends _i1.PlaceholderSpanIndexSema
   PlaceholderSpanIndexSemanticsTag$Mate(
 
       /// requiredParameters: int index
-      int index)
-      : super(index) {
+      super.index)
+      : mateParams = {
+          'index': _i2.BuilderArg<int>(
+            name: 'index',
+            init: index,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'PlaceholderSpanIndexSemanticsTag';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlaceholderSpanIndexSemanticsTag$Mate(p.get('index').value);
-    mateUse(
-      'index',
-      index,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderParagraph extends RenderBox with ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderBoxContainerDefaultsMixin<RenderBox, TextParentData>, RelayoutWhenSystemFontsChangeMixin
@@ -35,61 +40,123 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
   /// RenderParagraph RenderParagraph(InlineSpan text, {TextAlign textAlign = TextAlign.start, required TextDirection textDirection, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, double textScaleFactor = 1.0, int? maxLines, Locale? locale, StrutStyle? strutStyle, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, List<RenderBox>? children, Color? selectionColor, SelectionRegistrar? registrar})
   RenderParagraph$Mate(
     /// requiredParameters: InlineSpan text
-    _i3.InlineSpan text, {
+    super.text, {
     /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
-    _i4.TextAlign textAlign = _i4.TextAlign.start,
+    super.textAlign,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i4.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
-    bool softWrap = true,
+    super.softWrap,
 
     /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
-    _i5.TextOverflow overflow = _i6.TextOverflow.clip,
+    super.overflow,
 
     /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    double textScaleFactor = 1.0,
+    super.textScaleFactor,
 
     /// optionalParameters: {int? maxLines} , default:none
-    int? maxLines,
+    super.maxLines,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i4.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
-    _i7.StrutStyle? strutStyle,
+    super.strutStyle,
 
     /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
-    _i5.TextWidthBasis textWidthBasis = _i6.TextWidthBasis.parent,
+    super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i4.TextHeightBehavior? textHeightBehavior,
+    super.textHeightBehavior,
 
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i8.RenderBox>? children,
+    super.children,
 
     /// optionalParameters: {Color? selectionColor} , default:none
-    _i4.Color? selectionColor,
+    super.selectionColor,
 
     /// optionalParameters: {SelectionRegistrar? registrar} , default:none
-    _i9.SelectionRegistrar? registrar,
-  }) : super(
-          text,
-          textAlign: textAlign,
-          textDirection: textDirection,
-          softWrap: softWrap,
-          overflow: overflow,
-          textScaleFactor: textScaleFactor,
-          maxLines: maxLines,
-          locale: locale,
-          strutStyle: strutStyle,
-          textWidthBasis: textWidthBasis,
-          textHeightBehavior: textHeightBehavior,
-          children: children,
-          selectionColor: selectionColor,
-          registrar: registrar,
-        ) {
+    super.registrar,
+  })  : mateParams = {
+          'text': _i2.BuilderArg<_i3.InlineSpan>(
+            name: 'text',
+            init: text,
+            isNamed: false,
+          ),
+          'textAlign': _i2.BuilderArg<_i4.TextAlign>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+            defaultValue: _i4.TextAlign.start,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'softWrap': _i2.BuilderArg<bool>(
+            name: 'softWrap',
+            init: softWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'overflow': _i2.BuilderArg<_i5.TextOverflow>(
+            name: 'overflow',
+            init: overflow,
+            isNamed: true,
+            defaultValue: _i6.TextOverflow.clip,
+          ),
+          'textScaleFactor': _i2.BuilderArg<double>(
+            name: 'textScaleFactor',
+            init: textScaleFactor,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i4.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'strutStyle': _i2.BuilderArg<_i7.StrutStyle?>(
+            name: 'strutStyle',
+            init: strutStyle,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i5.TextWidthBasis>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+            defaultValue: _i6.TextWidthBasis.parent,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i4.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i8.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'selectionColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'selectionColor',
+            init: selectionColor,
+            isNamed: true,
+          ),
+          'registrar': _i2.BuilderArg<_i9.SelectionRegistrar?>(
+            name: 'registrar',
+            init: registrar,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderParagraph';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderParagraph$Mate(
@@ -108,80 +175,8 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
           selectionColor: p.get('selectionColor').build(),
           registrar: p.get('registrar').build(),
         );
-    mateUse(
-      'text',
-      text,
-      isNamed: false,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-      defaultValue: _i4.TextAlign.start,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'softWrap',
-      softWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'overflow',
-      overflow,
-      isNamed: true,
-      defaultValue: _i6.TextOverflow.clip,
-    );
-    mateUse(
-      'textScaleFactor',
-      textScaleFactor,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'strutStyle',
-      strutStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-      defaultValue: _i6.TextWidthBasis.parent,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionColor',
-      selectionColor,
-      isNamed: true,
-    );
-    mateUse(
-      'registrar',
-      registrar,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

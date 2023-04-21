@@ -11,18 +11,32 @@ class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate
   /// ContextMenuButtonItem ContextMenuButtonItem({required void Function() onPressed, ContextMenuButtonType type = ContextMenuButtonType.custom, String? label})
   ContextMenuButtonItem$Mate({
     /// optionalParameters: {required void Function() onPressed} , default:none
-    required _i3.VoidCallback onPressed,
+    required super.onPressed,
 
     /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , default:processed=PrefixedIdentifierImpl
-    _i1.ContextMenuButtonType type = _i4.ContextMenuButtonType.custom,
+    super.type,
 
     /// optionalParameters: {String? label} , default:none
-    String? label,
-  }) : super(
-          onPressed: onPressed,
-          type: type,
-          label: label,
-        ) {
+    super.label,
+  })  : mateParams = {
+          'onPressed': _i2.BuilderArg<_i3.VoidCallback>(
+            name: 'onPressed',
+            init: onPressed,
+            isNamed: true,
+          ),
+          'type': _i2.BuilderArg<_i1.ContextMenuButtonType>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+            defaultValue: _i4.ContextMenuButtonType.custom,
+          ),
+          'label': _i2.BuilderArg<String?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ContextMenuButtonItem';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ContextMenuButtonItem$Mate(
@@ -30,21 +44,8 @@ class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate
           type: p.get('type').build(),
           label: p.get('label').build(),
         );
-    mateUse(
-      'onPressed',
-      onPressed,
-      isNamed: true,
-    );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-      defaultValue: _i4.ContextMenuButtonType.custom,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

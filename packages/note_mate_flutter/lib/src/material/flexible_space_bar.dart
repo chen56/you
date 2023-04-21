@@ -13,38 +13,73 @@ class FlexibleSpaceBar$Mate extends _i1.FlexibleSpaceBar with _i2.Mate {
   /// FlexibleSpaceBar FlexibleSpaceBar({Key? key, Widget? title, Widget? background, bool? centerTitle, EdgeInsetsGeometry? titlePadding, CollapseMode collapseMode = CollapseMode.parallax, List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground], double expandedTitleScale = 1.5})
   FlexibleSpaceBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? title} , default:none
-    _i4.Widget? title,
+    super.title,
 
     /// optionalParameters: {Widget? background} , default:none
-    _i4.Widget? background,
+    super.background,
 
     /// optionalParameters: {bool? centerTitle} , default:none
-    bool? centerTitle,
+    super.centerTitle,
 
     /// optionalParameters: {EdgeInsetsGeometry? titlePadding} , default:none
-    _i5.EdgeInsetsGeometry? titlePadding,
+    super.titlePadding,
 
     /// optionalParameters: {CollapseMode collapseMode = CollapseMode.parallax} , default:processed=PrefixedIdentifierImpl
-    _i1.CollapseMode collapseMode = _i6.CollapseMode.parallax,
+    super.collapseMode,
 
     /// optionalParameters: {List<StretchMode> stretchModes = const <StretchMode>[StretchMode.zoomBackground]} , default:unprocessed=ListLiteralImpl
-    required List<_i1.StretchMode> stretchModes,
+    super.stretchModes,
 
     /// optionalParameters: {double expandedTitleScale = 1.5} , default:processed=DoubleLiteralImpl
-    double expandedTitleScale = 1.5,
-  }) : super(
-          key: key,
-          title: title,
-          background: background,
-          centerTitle: centerTitle,
-          titlePadding: titlePadding,
-          collapseMode: collapseMode,
-          stretchModes: stretchModes,
-          expandedTitleScale: expandedTitleScale,
-        ) {
+    super.expandedTitleScale,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'background': _i2.BuilderArg<_i4.Widget?>(
+            name: 'background',
+            init: background,
+            isNamed: true,
+          ),
+          'centerTitle': _i2.BuilderArg<bool?>(
+            name: 'centerTitle',
+            init: centerTitle,
+            isNamed: true,
+          ),
+          'titlePadding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'titlePadding',
+            init: titlePadding,
+            isNamed: true,
+          ),
+          'collapseMode': _i2.BuilderArg<_i1.CollapseMode>(
+            name: 'collapseMode',
+            init: collapseMode,
+            isNamed: true,
+            defaultValue: _i6.CollapseMode.parallax,
+          ),
+          'stretchModes': _i2.BuilderArg<List<_i1.StretchMode>>(
+            name: 'stretchModes',
+            init: stretchModes,
+            isNamed: true,
+          ),
+          'expandedTitleScale': _i2.BuilderArg<double>(
+            name: 'expandedTitleScale',
+            init: expandedTitleScale,
+            isNamed: true,
+            defaultValue: 1.5,
+          ),
+        },
+        super() {
     mateBuilderName = 'FlexibleSpaceBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlexibleSpaceBar$Mate(
@@ -57,49 +92,10 @@ class FlexibleSpaceBar$Mate extends _i1.FlexibleSpaceBar with _i2.Mate {
           stretchModes: p.get('stretchModes').build(),
           expandedTitleScale: p.get('expandedTitleScale').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'background',
-      background,
-      isNamed: true,
-    );
-    mateUse(
-      'centerTitle',
-      centerTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'titlePadding',
-      titlePadding,
-      isNamed: true,
-    );
-    mateUse(
-      'collapseMode',
-      collapseMode,
-      isNamed: true,
-      defaultValue: _i6.CollapseMode.parallax,
-    );
-    mateUse(
-      'stretchModes',
-      stretchModes,
-      isNamed: true,
-    );
-    mateUse(
-      'expandedTitleScale',
-      expandedTitleScale,
-      isNamed: true,
-      defaultValue: 1.5,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FlexibleSpaceBarSettings extends InheritedWidget
@@ -107,34 +103,63 @@ class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings with _i
   /// FlexibleSpaceBarSettings FlexibleSpaceBarSettings({Key? key, required double toolbarOpacity, required double minExtent, required double maxExtent, required double currentExtent, required Widget child, bool? isScrolledUnder})
   FlexibleSpaceBarSettings$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double toolbarOpacity} , default:none
-    required double toolbarOpacity,
+    required super.toolbarOpacity,
 
     /// optionalParameters: {required double minExtent} , default:none
-    required double minExtent,
+    required super.minExtent,
 
     /// optionalParameters: {required double maxExtent} , default:none
-    required double maxExtent,
+    required super.maxExtent,
 
     /// optionalParameters: {required double currentExtent} , default:none
-    required double currentExtent,
+    required super.currentExtent,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {bool? isScrolledUnder} , default:none
-    bool? isScrolledUnder,
-  }) : super(
-          key: key,
-          toolbarOpacity: toolbarOpacity,
-          minExtent: minExtent,
-          maxExtent: maxExtent,
-          currentExtent: currentExtent,
-          child: child,
-          isScrolledUnder: isScrolledUnder,
-        ) {
+    super.isScrolledUnder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'toolbarOpacity': _i2.BuilderArg<double>(
+            name: 'toolbarOpacity',
+            init: toolbarOpacity,
+            isNamed: true,
+          ),
+          'minExtent': _i2.BuilderArg<double>(
+            name: 'minExtent',
+            init: minExtent,
+            isNamed: true,
+          ),
+          'maxExtent': _i2.BuilderArg<double>(
+            name: 'maxExtent',
+            init: maxExtent,
+            isNamed: true,
+          ),
+          'currentExtent': _i2.BuilderArg<double>(
+            name: 'currentExtent',
+            init: currentExtent,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'isScrolledUnder': _i2.BuilderArg<bool?>(
+            name: 'isScrolledUnder',
+            init: isScrolledUnder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FlexibleSpaceBarSettings';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlexibleSpaceBarSettings$Mate(
@@ -146,40 +171,8 @@ class FlexibleSpaceBarSettings$Mate extends _i1.FlexibleSpaceBarSettings with _i
           child: p.get('child').build(),
           isScrolledUnder: p.get('isScrolledUnder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarOpacity',
-      toolbarOpacity,
-      isNamed: true,
-    );
-    mateUse(
-      'minExtent',
-      minExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'maxExtent',
-      maxExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'currentExtent',
-      currentExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'isScrolledUnder',
-      isScrolledUnder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

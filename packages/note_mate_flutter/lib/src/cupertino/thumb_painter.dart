@@ -12,60 +12,61 @@ class CupertinoThumbPainter$Mate extends _i1.CupertinoThumbPainter with _i2.Mate
   /// CupertinoThumbPainter CupertinoThumbPainter({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSliderBoxShadows})
   CupertinoThumbPainter$Mate({
     /// optionalParameters: {Color color = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color color = _i4.CupertinoColors.white,
+    super.color,
 
     /// optionalParameters: {List<BoxShadow> shadows = _kSliderBoxShadows} , default:unprocessed=SimpleIdentifierImpl
-    required List<_i5.BoxShadow> shadows,
-  }) : super(
-          color: color,
-          shadows: shadows,
-        ) {
+    super.shadows,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+            defaultValue: _i4.CupertinoColors.white,
+          ),
+          'shadows': _i2.BuilderArg<List<_i5.BoxShadow>>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoThumbPainter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThumbPainter$Mate(
           color: p.get('color').build(),
           shadows: p.get('shadows').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-      defaultValue: _i4.CupertinoColors.white,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
   }
 
   /// CupertinoThumbPainter CupertinoThumbPainter.switchThumb({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSwitchBoxShadows})
   CupertinoThumbPainter$Mate.switchThumb({
     /// optionalParameters: {Color color = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
-    _i3.Color color = _i4.CupertinoColors.white,
+    super.color,
 
     /// optionalParameters: {List<BoxShadow> shadows = _kSwitchBoxShadows} , default:unprocessed=SimpleIdentifierImpl
-    required List<_i5.BoxShadow> shadows,
-  }) : super.switchThumb(
-          color: color,
-          shadows: shadows,
-        ) {
+    super.shadows,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+            defaultValue: _i4.CupertinoColors.white,
+          ),
+          'shadows': _i2.BuilderArg<List<_i5.BoxShadow>>(
+            name: 'shadows',
+            init: shadows,
+            isNamed: true,
+          ),
+        },
+        super.switchThumb() {
     mateBuilderName = 'CupertinoThumbPainter.switchThumb';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoThumbPainter$Mate.switchThumb(
           color: p.get('color').build(),
           shadows: p.get('shadows').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-      defaultValue: _i4.CupertinoColors.white,
-    );
-    mateUse(
-      'shadows',
-      shadows,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

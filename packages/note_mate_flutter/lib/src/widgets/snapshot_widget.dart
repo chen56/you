@@ -13,18 +13,23 @@ class SnapshotController$Mate extends _i1.SnapshotController with _i2.Mate {
   SnapshotController$Mate(
       {
       /// optionalParameters: {bool allowSnapshotting = false} , default:processed=BooleanLiteralImpl
-      bool allowSnapshotting = false})
-      : super(allowSnapshotting: allowSnapshotting) {
+      super.allowSnapshotting})
+      : mateParams = {
+          'allowSnapshotting': _i2.BuilderArg<bool>(
+            name: 'allowSnapshotting',
+            init: allowSnapshotting,
+            isNamed: true,
+            defaultValue: false,
+          )
+        },
+        super() {
     mateBuilderName = 'SnapshotController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SnapshotController$Mate(allowSnapshotting: p.get('allowSnapshotting').build());
-    mateUse(
-      'allowSnapshotting',
-      allowSnapshotting,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SnapshotWidget extends SingleChildRenderObjectWidget
@@ -32,30 +37,57 @@ class SnapshotWidget$Mate extends _i1.SnapshotWidget with _i2.Mate {
   /// SnapshotWidget SnapshotWidget({Key? key, SnapshotMode mode = SnapshotMode.normal, SnapshotPainter painter = const _DefaultSnapshotPainter(), bool autoresize = false, required SnapshotController controller, required Widget? child})
   SnapshotWidget$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {SnapshotMode mode = SnapshotMode.normal} , default:processed=PrefixedIdentifierImpl
-    _i1.SnapshotMode mode = _i4.SnapshotMode.normal,
+    super.mode,
 
     /// optionalParameters: {SnapshotPainter painter = const _DefaultSnapshotPainter()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i1.SnapshotPainter painter,
+    super.painter,
 
     /// optionalParameters: {bool autoresize = false} , default:processed=BooleanLiteralImpl
-    bool autoresize = false,
+    super.autoresize,
 
     /// optionalParameters: {required SnapshotController controller} , default:none
-    required _i1.SnapshotController controller,
+    required super.controller,
 
     /// optionalParameters: {required Widget? child} , default:none
-    required _i5.Widget? child,
-  }) : super(
-          key: key,
-          mode: mode,
-          painter: painter,
-          autoresize: autoresize,
-          controller: controller,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'mode': _i2.BuilderArg<_i1.SnapshotMode>(
+            name: 'mode',
+            init: mode,
+            isNamed: true,
+            defaultValue: _i4.SnapshotMode.normal,
+          ),
+          'painter': _i2.BuilderArg<_i1.SnapshotPainter>(
+            name: 'painter',
+            init: painter,
+            isNamed: true,
+          ),
+          'autoresize': _i2.BuilderArg<bool>(
+            name: 'autoresize',
+            init: autoresize,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'controller': _i2.BuilderArg<_i1.SnapshotController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SnapshotWidget';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SnapshotWidget$Mate(
@@ -66,37 +98,8 @@ class SnapshotWidget$Mate extends _i1.SnapshotWidget with _i2.Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'mode',
-      mode,
-      isNamed: true,
-      defaultValue: _i4.SnapshotMode.normal,
-    );
-    mateUse(
-      'painter',
-      painter,
-      isNamed: true,
-    );
-    mateUse(
-      'autoresize',
-      autoresize,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

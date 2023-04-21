@@ -10,29 +10,31 @@ class OffsetPair$Mate extends _i1.OffsetPair with _i2.Mate {
   /// OffsetPair OffsetPair({required Offset local, required Offset global})
   OffsetPair$Mate({
     /// optionalParameters: {required Offset local} , default:none
-    required _i3.Offset local,
+    required super.local,
 
     /// optionalParameters: {required Offset global} , default:none
-    required _i3.Offset global,
-  }) : super(
-          local: local,
-          global: global,
-        ) {
+    required super.global,
+  })  : mateParams = {
+          'local': _i2.BuilderArg<_i3.Offset>(
+            name: 'local',
+            init: local,
+            isNamed: true,
+          ),
+          'global': _i2.BuilderArg<_i3.Offset>(
+            name: 'global',
+            init: global,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'OffsetPair';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => OffsetPair$Mate(
           local: p.get('local').build(),
           global: p.get('global').build(),
         );
-    mateUse(
-      'local',
-      local,
-      isNamed: true,
-    );
-    mateUse(
-      'global',
-      global,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

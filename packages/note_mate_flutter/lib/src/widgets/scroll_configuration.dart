@@ -11,18 +11,31 @@ class ScrollConfiguration$Mate extends _i1.ScrollConfiguration with _i2.Mate {
   /// ScrollConfiguration ScrollConfiguration({Key? key, required ScrollBehavior behavior, required Widget child})
   ScrollConfiguration$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ScrollBehavior behavior} , default:none
-    required _i1.ScrollBehavior behavior,
+    required super.behavior,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          behavior: behavior,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i1.ScrollBehavior>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollConfiguration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollConfiguration$Mate(
@@ -30,20 +43,8 @@ class ScrollConfiguration$Mate extends _i1.ScrollConfiguration with _i2.Mate {
           behavior: p.get('behavior').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -22,31 +22,33 @@ class TextSelectionPoint$Mate extends _i1.TextSelectionPoint with _i2.Mate {
   /// TextSelectionPoint TextSelectionPoint(Offset point, TextDirection? direction)
   TextSelectionPoint$Mate(
     /// requiredParameters: Offset point
-    _i3.Offset point,
+    super.point,
 
     /// requiredParameters: TextDirection? direction
-    _i3.TextDirection? direction,
-  ) : super(
-          point,
-          direction,
-        ) {
+    super.direction,
+  )   : mateParams = {
+          'point': _i2.BuilderArg<_i3.Offset>(
+            name: 'point',
+            init: point,
+            isNamed: false,
+          ),
+          'direction': _i2.BuilderArg<_i3.TextDirection?>(
+            name: 'direction',
+            init: direction,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionPoint';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSelectionPoint$Mate(
           p.get('point').value,
           p.get('direction').value,
         );
-    mateUse(
-      'point',
-      point,
-      isNamed: false,
-    );
-    mateUse(
-      'direction',
-      direction,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderEditable extends RenderBox with RelayoutWhenSystemFontsChangeMixin, ContainerRenderObjectMixin<RenderBox, TextParentData>, RenderBoxContainerDefaultsMixin<RenderBox, TextParentData> implements TextLayoutMetrics
@@ -54,178 +56,366 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
   /// RenderEditable RenderEditable({InlineSpan? text, required TextDirection textDirection, TextAlign textAlign = TextAlign.start, Color? cursorColor, Color? backgroundCursorColor, ValueNotifier<bool>? showCursor, bool? hasFocus, required LayerLink startHandleLayerLink, required LayerLink endHandleLayerLink, int? maxLines = 1, int? minLines, bool expands = false, StrutStyle? strutStyle, Color? selectionColor, double textScaleFactor = 1.0, TextSelection? selection, required ViewportOffset offset, void Function(Rect)? onCaretChanged, bool ignorePointer = false, bool readOnly = false, bool forceLine = true, TextHeightBehavior? textHeightBehavior, TextWidthBasis textWidthBasis = TextWidthBasis.parent, String obscuringCharacter = '•', bool obscureText = false, Locale? locale, double cursorWidth = 1.0, double? cursorHeight, Radius? cursorRadius, bool paintCursorAboveText = false, Offset cursorOffset = Offset.zero, double devicePixelRatio = 1.0, BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight, BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight, bool? enableInteractiveSelection, EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5), TextRange? promptRectRange, Color? promptRectColor, Clip clipBehavior = Clip.hardEdge, required TextSelectionDelegate textSelectionDelegate, RenderEditablePainter? painter, RenderEditablePainter? foregroundPainter, List<RenderBox>? children})
   RenderEditable$Mate({
     /// optionalParameters: {InlineSpan? text} , default:none
-    _i4.InlineSpan? text,
+    super.text,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i3.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
-    _i3.TextAlign textAlign = _i3.TextAlign.start,
+    super.textAlign,
 
     /// optionalParameters: {Color? cursorColor} , default:none
-    _i3.Color? cursorColor,
+    super.cursorColor,
 
     /// optionalParameters: {Color? backgroundCursorColor} , default:none
-    _i3.Color? backgroundCursorColor,
+    super.backgroundCursorColor,
 
     /// optionalParameters: {ValueNotifier<bool>? showCursor} , default:none
-    _i5.ValueNotifier<bool>? showCursor,
+    super.showCursor,
 
     /// optionalParameters: {bool? hasFocus} , default:none
-    bool? hasFocus,
+    super.hasFocus,
 
     /// optionalParameters: {required LayerLink startHandleLayerLink} , default:none
-    required _i6.LayerLink startHandleLayerLink,
+    required super.startHandleLayerLink,
 
     /// optionalParameters: {required LayerLink endHandleLayerLink} , default:none
-    required _i6.LayerLink endHandleLayerLink,
+    required super.endHandleLayerLink,
 
     /// optionalParameters: {int? maxLines = 1} , default:processed=IntegerLiteralImpl
-    int? maxLines = 1,
+    super.maxLines,
 
     /// optionalParameters: {int? minLines} , default:none
-    int? minLines,
+    super.minLines,
 
     /// optionalParameters: {bool expands = false} , default:processed=BooleanLiteralImpl
-    bool expands = false,
+    super.expands,
 
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
-    _i7.StrutStyle? strutStyle,
+    super.strutStyle,
 
     /// optionalParameters: {Color? selectionColor} , default:none
-    _i3.Color? selectionColor,
+    super.selectionColor,
 
     /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
-    double textScaleFactor = 1.0,
+    super.textScaleFactor,
 
     /// optionalParameters: {TextSelection? selection} , default:none
-    _i8.TextSelection? selection,
+    super.selection,
 
     /// optionalParameters: {required ViewportOffset offset} , default:none
-    required _i9.ViewportOffset offset,
+    required super.offset,
 
     /// optionalParameters: {void Function(Rect)? onCaretChanged} , default:none
-    _i1.CaretChangedHandler? onCaretChanged,
+    super.onCaretChanged,
 
     /// optionalParameters: {bool ignorePointer = false} , default:processed=BooleanLiteralImpl
-    bool ignorePointer = false,
+    super.ignorePointer,
 
     /// optionalParameters: {bool readOnly = false} , default:processed=BooleanLiteralImpl
-    bool readOnly = false,
+    super.readOnly,
 
     /// optionalParameters: {bool forceLine = true} , default:processed=BooleanLiteralImpl
-    bool forceLine = true,
+    super.forceLine,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i3.TextHeightBehavior? textHeightBehavior,
+    super.textHeightBehavior,
 
     /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
-    _i10.TextWidthBasis textWidthBasis = _i11.TextWidthBasis.parent,
+    super.textWidthBasis,
 
     /// optionalParameters: {String obscuringCharacter = '•'} , default:processed=SimpleStringLiteralImpl
-    String obscuringCharacter = '•',
+    super.obscuringCharacter,
 
     /// optionalParameters: {bool obscureText = false} , default:processed=BooleanLiteralImpl
-    bool obscureText = false,
+    super.obscureText,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i3.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {double cursorWidth = 1.0} , default:processed=DoubleLiteralImpl
-    double cursorWidth = 1.0,
+    super.cursorWidth,
 
     /// optionalParameters: {double? cursorHeight} , default:none
-    double? cursorHeight,
+    super.cursorHeight,
 
     /// optionalParameters: {Radius? cursorRadius} , default:none
-    _i3.Radius? cursorRadius,
+    super.cursorRadius,
 
     /// optionalParameters: {bool paintCursorAboveText = false} , default:processed=BooleanLiteralImpl
-    bool paintCursorAboveText = false,
+    super.paintCursorAboveText,
 
     /// optionalParameters: {Offset cursorOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset cursorOffset = _i12.Offset.zero,
+    super.cursorOffset,
 
     /// optionalParameters: {double devicePixelRatio = 1.0} , default:processed=DoubleLiteralImpl
-    double devicePixelRatio = 1.0,
+    super.devicePixelRatio,
 
     /// optionalParameters: {BoxHeightStyle selectionHeightStyle = ui.BoxHeightStyle.tight} , default:unprocessed=PropertyAccessImpl
-    required _i3.BoxHeightStyle selectionHeightStyle,
+    super.selectionHeightStyle,
 
     /// optionalParameters: {BoxWidthStyle selectionWidthStyle = ui.BoxWidthStyle.tight} , default:unprocessed=PropertyAccessImpl
-    required _i3.BoxWidthStyle selectionWidthStyle,
+    super.selectionWidthStyle,
 
     /// optionalParameters: {bool? enableInteractiveSelection} , default:none
-    bool? enableInteractiveSelection,
+    super.enableInteractiveSelection,
 
     /// optionalParameters: {EdgeInsets floatingCursorAddedMargin = const EdgeInsets.fromLTRB(4, 4, 4, 5)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i13.EdgeInsets floatingCursorAddedMargin,
+    super.floatingCursorAddedMargin,
 
     /// optionalParameters: {TextRange? promptRectRange} , default:none
-    _i3.TextRange? promptRectRange,
+    super.promptRectRange,
 
     /// optionalParameters: {Color? promptRectColor} , default:none
-    _i3.Color? promptRectColor,
+    super.promptRectColor,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i3.Clip clipBehavior = _i3.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {required TextSelectionDelegate textSelectionDelegate} , default:none
-    required _i14.TextSelectionDelegate textSelectionDelegate,
+    required super.textSelectionDelegate,
 
     /// optionalParameters: {RenderEditablePainter? painter} , default:none
-    _i1.RenderEditablePainter? painter,
+    super.painter,
 
     /// optionalParameters: {RenderEditablePainter? foregroundPainter} , default:none
-    _i1.RenderEditablePainter? foregroundPainter,
+    super.foregroundPainter,
 
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i15.RenderBox>? children,
-  }) : super(
-          text: text,
-          textDirection: textDirection,
-          textAlign: textAlign,
-          cursorColor: cursorColor,
-          backgroundCursorColor: backgroundCursorColor,
-          showCursor: showCursor,
-          hasFocus: hasFocus,
-          startHandleLayerLink: startHandleLayerLink,
-          endHandleLayerLink: endHandleLayerLink,
-          maxLines: maxLines,
-          minLines: minLines,
-          expands: expands,
-          strutStyle: strutStyle,
-          selectionColor: selectionColor,
-          textScaleFactor: textScaleFactor,
-          selection: selection,
-          offset: offset,
-          onCaretChanged: onCaretChanged,
-          ignorePointer: ignorePointer,
-          readOnly: readOnly,
-          forceLine: forceLine,
-          textHeightBehavior: textHeightBehavior,
-          textWidthBasis: textWidthBasis,
-          obscuringCharacter: obscuringCharacter,
-          obscureText: obscureText,
-          locale: locale,
-          cursorWidth: cursorWidth,
-          cursorHeight: cursorHeight,
-          cursorRadius: cursorRadius,
-          paintCursorAboveText: paintCursorAboveText,
-          cursorOffset: cursorOffset,
-          devicePixelRatio: devicePixelRatio,
-          selectionHeightStyle: selectionHeightStyle,
-          selectionWidthStyle: selectionWidthStyle,
-          enableInteractiveSelection: enableInteractiveSelection,
-          floatingCursorAddedMargin: floatingCursorAddedMargin,
-          promptRectRange: promptRectRange,
-          promptRectColor: promptRectColor,
-          clipBehavior: clipBehavior,
-          textSelectionDelegate: textSelectionDelegate,
-          painter: painter,
-          foregroundPainter: foregroundPainter,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'text': _i2.BuilderArg<_i4.InlineSpan?>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i3.TextAlign>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+            defaultValue: _i3.TextAlign.start,
+          ),
+          'cursorColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'cursorColor',
+            init: cursorColor,
+            isNamed: true,
+          ),
+          'backgroundCursorColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundCursorColor',
+            init: backgroundCursorColor,
+            isNamed: true,
+          ),
+          'showCursor': _i2.BuilderArg<_i5.ValueNotifier<bool>?>(
+            name: 'showCursor',
+            init: showCursor,
+            isNamed: true,
+          ),
+          'hasFocus': _i2.BuilderArg<bool?>(
+            name: 'hasFocus',
+            init: hasFocus,
+            isNamed: true,
+          ),
+          'startHandleLayerLink': _i2.BuilderArg<_i6.LayerLink>(
+            name: 'startHandleLayerLink',
+            init: startHandleLayerLink,
+            isNamed: true,
+          ),
+          'endHandleLayerLink': _i2.BuilderArg<_i6.LayerLink>(
+            name: 'endHandleLayerLink',
+            init: endHandleLayerLink,
+            isNamed: true,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'minLines': _i2.BuilderArg<int?>(
+            name: 'minLines',
+            init: minLines,
+            isNamed: true,
+          ),
+          'expands': _i2.BuilderArg<bool>(
+            name: 'expands',
+            init: expands,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'strutStyle': _i2.BuilderArg<_i7.StrutStyle?>(
+            name: 'strutStyle',
+            init: strutStyle,
+            isNamed: true,
+          ),
+          'selectionColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'selectionColor',
+            init: selectionColor,
+            isNamed: true,
+          ),
+          'textScaleFactor': _i2.BuilderArg<double>(
+            name: 'textScaleFactor',
+            init: textScaleFactor,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'selection': _i2.BuilderArg<_i8.TextSelection?>(
+            name: 'selection',
+            init: selection,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i9.ViewportOffset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'onCaretChanged': _i2.BuilderArg<_i1.CaretChangedHandler?>(
+            name: 'onCaretChanged',
+            init: onCaretChanged,
+            isNamed: true,
+          ),
+          'ignorePointer': _i2.BuilderArg<bool>(
+            name: 'ignorePointer',
+            init: ignorePointer,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'readOnly': _i2.BuilderArg<bool>(
+            name: 'readOnly',
+            init: readOnly,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'forceLine': _i2.BuilderArg<bool>(
+            name: 'forceLine',
+            init: forceLine,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i3.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i10.TextWidthBasis>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+            defaultValue: _i11.TextWidthBasis.parent,
+          ),
+          'obscuringCharacter': _i2.BuilderArg<String>(
+            name: 'obscuringCharacter',
+            init: obscuringCharacter,
+            isNamed: true,
+            defaultValue: '•',
+          ),
+          'obscureText': _i2.BuilderArg<bool>(
+            name: 'obscureText',
+            init: obscureText,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'locale': _i2.BuilderArg<_i3.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'cursorWidth': _i2.BuilderArg<double>(
+            name: 'cursorWidth',
+            init: cursorWidth,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'cursorHeight': _i2.BuilderArg<double?>(
+            name: 'cursorHeight',
+            init: cursorHeight,
+            isNamed: true,
+          ),
+          'cursorRadius': _i2.BuilderArg<_i3.Radius?>(
+            name: 'cursorRadius',
+            init: cursorRadius,
+            isNamed: true,
+          ),
+          'paintCursorAboveText': _i2.BuilderArg<bool>(
+            name: 'paintCursorAboveText',
+            init: paintCursorAboveText,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'cursorOffset': _i2.BuilderArg<_i3.Offset>(
+            name: 'cursorOffset',
+            init: cursorOffset,
+            isNamed: true,
+            defaultValue: _i12.Offset.zero,
+          ),
+          'devicePixelRatio': _i2.BuilderArg<double>(
+            name: 'devicePixelRatio',
+            init: devicePixelRatio,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'selectionHeightStyle': _i2.BuilderArg<_i3.BoxHeightStyle>(
+            name: 'selectionHeightStyle',
+            init: selectionHeightStyle,
+            isNamed: true,
+          ),
+          'selectionWidthStyle': _i2.BuilderArg<_i3.BoxWidthStyle>(
+            name: 'selectionWidthStyle',
+            init: selectionWidthStyle,
+            isNamed: true,
+          ),
+          'enableInteractiveSelection': _i2.BuilderArg<bool?>(
+            name: 'enableInteractiveSelection',
+            init: enableInteractiveSelection,
+            isNamed: true,
+          ),
+          'floatingCursorAddedMargin': _i2.BuilderArg<_i13.EdgeInsets>(
+            name: 'floatingCursorAddedMargin',
+            init: floatingCursorAddedMargin,
+            isNamed: true,
+          ),
+          'promptRectRange': _i2.BuilderArg<_i3.TextRange?>(
+            name: 'promptRectRange',
+            init: promptRectRange,
+            isNamed: true,
+          ),
+          'promptRectColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'promptRectColor',
+            init: promptRectColor,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i3.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i3.Clip.hardEdge,
+          ),
+          'textSelectionDelegate': _i2.BuilderArg<_i14.TextSelectionDelegate>(
+            name: 'textSelectionDelegate',
+            init: textSelectionDelegate,
+            isNamed: true,
+          ),
+          'painter': _i2.BuilderArg<_i1.RenderEditablePainter?>(
+            name: 'painter',
+            init: painter,
+            isNamed: true,
+          ),
+          'foregroundPainter': _i2.BuilderArg<_i1.RenderEditablePainter?>(
+            name: 'foregroundPainter',
+            init: foregroundPainter,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i15.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderEditable';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderEditable$Mate(
@@ -273,235 +463,8 @@ class RenderEditable$Mate extends _i1.RenderEditable with _i2.Mate {
           foregroundPainter: p.get('foregroundPainter').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-      defaultValue: _i3.TextAlign.start,
-    );
-    mateUse(
-      'cursorColor',
-      cursorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundCursorColor',
-      backgroundCursorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'showCursor',
-      showCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'hasFocus',
-      hasFocus,
-      isNamed: true,
-    );
-    mateUse(
-      'startHandleLayerLink',
-      startHandleLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'endHandleLayerLink',
-      endHandleLayerLink,
-      isNamed: true,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'minLines',
-      minLines,
-      isNamed: true,
-    );
-    mateUse(
-      'expands',
-      expands,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'strutStyle',
-      strutStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionColor',
-      selectionColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textScaleFactor',
-      textScaleFactor,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'selection',
-      selection,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'onCaretChanged',
-      onCaretChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'ignorePointer',
-      ignorePointer,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'readOnly',
-      readOnly,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'forceLine',
-      forceLine,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-      defaultValue: _i11.TextWidthBasis.parent,
-    );
-    mateUse(
-      'obscuringCharacter',
-      obscuringCharacter,
-      isNamed: true,
-      defaultValue: '•',
-    );
-    mateUse(
-      'obscureText',
-      obscureText,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'cursorWidth',
-      cursorWidth,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'cursorHeight',
-      cursorHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'cursorRadius',
-      cursorRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'paintCursorAboveText',
-      paintCursorAboveText,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'cursorOffset',
-      cursorOffset,
-      isNamed: true,
-      defaultValue: _i12.Offset.zero,
-    );
-    mateUse(
-      'devicePixelRatio',
-      devicePixelRatio,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'selectionHeightStyle',
-      selectionHeightStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'selectionWidthStyle',
-      selectionWidthStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'enableInteractiveSelection',
-      enableInteractiveSelection,
-      isNamed: true,
-    );
-    mateUse(
-      'floatingCursorAddedMargin',
-      floatingCursorAddedMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'promptRectRange',
-      promptRectRange,
-      isNamed: true,
-    );
-    mateUse(
-      'promptRectColor',
-      promptRectColor,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i3.Clip.hardEdge,
-    );
-    mateUse(
-      'textSelectionDelegate',
-      textSelectionDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'painter',
-      painter,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundPainter',
-      foregroundPainter,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

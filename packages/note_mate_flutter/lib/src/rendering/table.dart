@@ -16,17 +16,22 @@ class IntrinsicColumnWidth$Mate extends _i1.IntrinsicColumnWidth with _i2.Mate {
   IntrinsicColumnWidth$Mate(
       {
       /// optionalParameters: {double? flex} , default:none
-      double? flex})
-      : super(flex: flex) {
+      super.flex})
+      : mateParams = {
+          'flex': _i2.BuilderArg<double?>(
+            name: 'flex',
+            init: flex,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'IntrinsicColumnWidth';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => IntrinsicColumnWidth$Mate(flex: p.get('flex').build());
-    mateUse(
-      'flex',
-      flex,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FixedColumnWidth extends TableColumnWidth
@@ -35,17 +40,22 @@ class FixedColumnWidth$Mate extends _i1.FixedColumnWidth with _i2.Mate {
   FixedColumnWidth$Mate(
 
       /// requiredParameters: double value
-      double value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'FixedColumnWidth';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FixedColumnWidth$Mate(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FractionColumnWidth extends TableColumnWidth
@@ -54,17 +64,22 @@ class FractionColumnWidth$Mate extends _i1.FractionColumnWidth with _i2.Mate {
   FractionColumnWidth$Mate(
 
       /// requiredParameters: double value
-      double value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'FractionColumnWidth';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FractionColumnWidth$Mate(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FlexColumnWidth extends TableColumnWidth
@@ -73,18 +88,23 @@ class FlexColumnWidth$Mate extends _i1.FlexColumnWidth with _i2.Mate {
   FlexColumnWidth$Mate(
 
       /// requiredParameters: [double value = 1.0]
-      double value)
-      : super(value) {
+      super.value)
+      : mateParams = {
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: false,
+            defaultValue: 1.0,
+          )
+        },
+        super() {
     mateBuilderName = 'FlexColumnWidth';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FlexColumnWidth$Mate(p.get('value').value);
-    mateUse(
-      'value',
-      value,
-      isNamed: false,
-      defaultValue: 1.0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MaxColumnWidth extends TableColumnWidth
@@ -92,31 +112,33 @@ class MaxColumnWidth$Mate extends _i1.MaxColumnWidth with _i2.Mate {
   /// MaxColumnWidth MaxColumnWidth(TableColumnWidth a, TableColumnWidth b)
   MaxColumnWidth$Mate(
     /// requiredParameters: TableColumnWidth a
-    _i1.TableColumnWidth a,
+    super.a,
 
     /// requiredParameters: TableColumnWidth b
-    _i1.TableColumnWidth b,
-  ) : super(
-          a,
-          b,
-        ) {
+    super.b,
+  )   : mateParams = {
+          'a': _i2.BuilderArg<_i1.TableColumnWidth>(
+            name: 'a',
+            init: a,
+            isNamed: false,
+          ),
+          'b': _i2.BuilderArg<_i1.TableColumnWidth>(
+            name: 'b',
+            init: b,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'MaxColumnWidth';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MaxColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
         );
-    mateUse(
-      'a',
-      a,
-      isNamed: false,
-    );
-    mateUse(
-      'b',
-      b,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MinColumnWidth extends TableColumnWidth
@@ -124,31 +146,33 @@ class MinColumnWidth$Mate extends _i1.MinColumnWidth with _i2.Mate {
   /// MinColumnWidth MinColumnWidth(TableColumnWidth a, TableColumnWidth b)
   MinColumnWidth$Mate(
     /// requiredParameters: TableColumnWidth a
-    _i1.TableColumnWidth a,
+    super.a,
 
     /// requiredParameters: TableColumnWidth b
-    _i1.TableColumnWidth b,
-  ) : super(
-          a,
-          b,
-        ) {
+    super.b,
+  )   : mateParams = {
+          'a': _i2.BuilderArg<_i1.TableColumnWidth>(
+            name: 'a',
+            init: a,
+            isNamed: false,
+          ),
+          'b': _i2.BuilderArg<_i1.TableColumnWidth>(
+            name: 'b',
+            init: b,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'MinColumnWidth';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MinColumnWidth$Mate(
           p.get('a').value,
           p.get('b').value,
         );
-    mateUse(
-      'a',
-      a,
-      isNamed: false,
-    );
-    mateUse(
-      'b',
-      b,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderTable extends RenderBox
@@ -156,50 +180,97 @@ class RenderTable$Mate extends _i1.RenderTable with _i2.Mate {
   /// RenderTable RenderTable({int? columns, int? rows, Map<int, TableColumnWidth>? columnWidths, TableColumnWidth defaultColumnWidth = const FlexColumnWidth(), required TextDirection textDirection, TableBorder? border, List<Decoration?>? rowDecorations, ImageConfiguration configuration = ImageConfiguration.empty, TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top, TextBaseline? textBaseline, List<List<RenderBox>>? children})
   RenderTable$Mate({
     /// optionalParameters: {int? columns} , default:none
-    int? columns,
+    super.columns,
 
     /// optionalParameters: {int? rows} , default:none
-    int? rows,
+    super.rows,
 
     /// optionalParameters: {Map<int, TableColumnWidth>? columnWidths} , default:none
-    Map<int, _i1.TableColumnWidth>? columnWidths,
+    super.columnWidths,
 
     /// optionalParameters: {TableColumnWidth defaultColumnWidth = const FlexColumnWidth()} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i1.TableColumnWidth defaultColumnWidth,
+    super.defaultColumnWidth,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i3.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {TableBorder? border} , default:none
-    _i4.TableBorder? border,
+    super.border,
 
     /// optionalParameters: {List<Decoration?>? rowDecorations} , default:none
-    List<_i5.Decoration?>? rowDecorations,
+    super.rowDecorations,
 
     /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:processed=PrefixedIdentifierImpl
-    _i6.ImageConfiguration configuration = _i7.ImageConfiguration.empty,
+    super.configuration,
 
     /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
-    _i1.TableCellVerticalAlignment defaultVerticalAlignment = _i7.TableCellVerticalAlignment.top,
+    super.defaultVerticalAlignment,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
-    _i3.TextBaseline? textBaseline,
+    super.textBaseline,
 
     /// optionalParameters: {List<List<RenderBox>>? children} , default:none
-    List<List<_i8.RenderBox>>? children,
-  }) : super(
-          columns: columns,
-          rows: rows,
-          columnWidths: columnWidths,
-          defaultColumnWidth: defaultColumnWidth,
-          textDirection: textDirection,
-          border: border,
-          rowDecorations: rowDecorations,
-          configuration: configuration,
-          defaultVerticalAlignment: defaultVerticalAlignment,
-          textBaseline: textBaseline,
-          children: children,
-        ) {
+    super.children,
+  })  : mateParams = {
+          'columns': _i2.BuilderArg<int?>(
+            name: 'columns',
+            init: columns,
+            isNamed: true,
+          ),
+          'rows': _i2.BuilderArg<int?>(
+            name: 'rows',
+            init: rows,
+            isNamed: true,
+          ),
+          'columnWidths': _i2.BuilderArg<Map<int, _i1.TableColumnWidth>?>(
+            name: 'columnWidths',
+            init: columnWidths,
+            isNamed: true,
+          ),
+          'defaultColumnWidth': _i2.BuilderArg<_i1.TableColumnWidth>(
+            name: 'defaultColumnWidth',
+            init: defaultColumnWidth,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i3.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i4.TableBorder?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+          ),
+          'rowDecorations': _i2.BuilderArg<List<_i5.Decoration?>?>(
+            name: 'rowDecorations',
+            init: rowDecorations,
+            isNamed: true,
+          ),
+          'configuration': _i2.BuilderArg<_i6.ImageConfiguration>(
+            name: 'configuration',
+            init: configuration,
+            isNamed: true,
+            defaultValue: _i7.ImageConfiguration.empty,
+          ),
+          'defaultVerticalAlignment': _i2.BuilderArg<_i1.TableCellVerticalAlignment>(
+            name: 'defaultVerticalAlignment',
+            init: defaultVerticalAlignment,
+            isNamed: true,
+            defaultValue: _i7.TableCellVerticalAlignment.top,
+          ),
+          'textBaseline': _i2.BuilderArg<_i3.TextBaseline?>(
+            name: 'textBaseline',
+            init: textBaseline,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<List<_i8.RenderBox>>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderTable';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderTable$Mate(
@@ -215,62 +286,8 @@ class RenderTable$Mate extends _i1.RenderTable with _i2.Mate {
           textBaseline: p.get('textBaseline').build(),
           children: p.get('children').build(),
         );
-    mateUse(
-      'columns',
-      columns,
-      isNamed: true,
-    );
-    mateUse(
-      'rows',
-      rows,
-      isNamed: true,
-    );
-    mateUse(
-      'columnWidths',
-      columnWidths,
-      isNamed: true,
-    );
-    mateUse(
-      'defaultColumnWidth',
-      defaultColumnWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-    );
-    mateUse(
-      'rowDecorations',
-      rowDecorations,
-      isNamed: true,
-    );
-    mateUse(
-      'configuration',
-      configuration,
-      isNamed: true,
-      defaultValue: _i7.ImageConfiguration.empty,
-    );
-    mateUse(
-      'defaultVerticalAlignment',
-      defaultVerticalAlignment,
-      isNamed: true,
-      defaultValue: _i7.TableCellVerticalAlignment.top,
-    );
-    mateUse(
-      'textBaseline',
-      textBaseline,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,18 +12,33 @@ class FlutterLogoDecoration$Mate extends _i1.FlutterLogoDecoration with _i2.Mate
   /// FlutterLogoDecoration FlutterLogoDecoration({Color textColor = const Color(0xFF757575), FlutterLogoStyle style = FlutterLogoStyle.markOnly, EdgeInsets margin = EdgeInsets.zero})
   FlutterLogoDecoration$Mate({
     /// optionalParameters: {Color textColor = const Color(0xFF757575)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i3.Color textColor,
+    super.textColor,
 
     /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , default:processed=PrefixedIdentifierImpl
-    _i1.FlutterLogoStyle style = _i4.FlutterLogoStyle.markOnly,
+    super.style,
 
     /// optionalParameters: {EdgeInsets margin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.EdgeInsets margin = _i4.EdgeInsets.zero,
-  }) : super(
-          textColor: textColor,
-          style: style,
-          margin: margin,
-        ) {
+    super.margin,
+  })  : mateParams = {
+          'textColor': _i2.BuilderArg<_i3.Color>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i1.FlutterLogoStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i4.FlutterLogoStyle.markOnly,
+          ),
+          'margin': _i2.BuilderArg<_i5.EdgeInsets>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+            defaultValue: _i4.EdgeInsets.zero,
+          ),
+        },
+        super() {
     mateBuilderName = 'FlutterLogoDecoration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FlutterLogoDecoration$Mate(
@@ -31,22 +46,8 @@ class FlutterLogoDecoration$Mate extends _i1.FlutterLogoDecoration with _i2.Mate
           style: p.get('style').build(),
           margin: p.get('margin').build(),
         );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i4.FlutterLogoStyle.markOnly,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-      defaultValue: _i4.EdgeInsets.zero,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -16,22 +16,39 @@ class ControlsDetails$Mate extends _i1.ControlsDetails with _i2.Mate {
   /// ControlsDetails ControlsDetails({required int currentStep, required int stepIndex, void Function()? onStepCancel, void Function()? onStepContinue})
   ControlsDetails$Mate({
     /// optionalParameters: {required int currentStep} , default:none
-    required int currentStep,
+    required super.currentStep,
 
     /// optionalParameters: {required int stepIndex} , default:none
-    required int stepIndex,
+    required super.stepIndex,
 
     /// optionalParameters: {void Function()? onStepCancel} , default:none
-    _i3.VoidCallback? onStepCancel,
+    super.onStepCancel,
 
     /// optionalParameters: {void Function()? onStepContinue} , default:none
-    _i3.VoidCallback? onStepContinue,
-  }) : super(
-          currentStep: currentStep,
-          stepIndex: stepIndex,
-          onStepCancel: onStepCancel,
-          onStepContinue: onStepContinue,
-        ) {
+    super.onStepContinue,
+  })  : mateParams = {
+          'currentStep': _i2.BuilderArg<int>(
+            name: 'currentStep',
+            init: currentStep,
+            isNamed: true,
+          ),
+          'stepIndex': _i2.BuilderArg<int>(
+            name: 'stepIndex',
+            init: stepIndex,
+            isNamed: true,
+          ),
+          'onStepCancel': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onStepCancel',
+            init: onStepCancel,
+            isNamed: true,
+          ),
+          'onStepContinue': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onStepContinue',
+            init: onStepContinue,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ControlsDetails';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ControlsDetails$Mate(
@@ -40,27 +57,10 @@ class ControlsDetails$Mate extends _i1.ControlsDetails with _i2.Mate {
           onStepCancel: p.get('onStepCancel').build(),
           onStepContinue: p.get('onStepContinue').build(),
         );
-    mateUse(
-      'currentStep',
-      currentStep,
-      isNamed: true,
-    );
-    mateUse(
-      'stepIndex',
-      stepIndex,
-      isNamed: true,
-    );
-    mateUse(
-      'onStepCancel',
-      onStepCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onStepContinue',
-      onStepContinue,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Step
@@ -68,30 +68,57 @@ class Step$Mate extends _i1.Step with _i2.Mate {
   /// Step Step({required Widget title, Widget? subtitle, required Widget content, StepState state = StepState.indexed, bool isActive = false, Widget? label})
   Step$Mate({
     /// optionalParameters: {required Widget title} , default:none
-    required _i4.Widget title,
+    required super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i4.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {required Widget content} , default:none
-    required _i4.Widget content,
+    required super.content,
 
     /// optionalParameters: {StepState state = StepState.indexed} , default:processed=PrefixedIdentifierImpl
-    _i1.StepState state = _i5.StepState.indexed,
+    super.state,
 
     /// optionalParameters: {bool isActive = false} , default:processed=BooleanLiteralImpl
-    bool isActive = false,
+    super.isActive,
 
     /// optionalParameters: {Widget? label} , default:none
-    _i4.Widget? label,
-  }) : super(
-          title: title,
-          subtitle: subtitle,
-          content: content,
-          state: state,
-          isActive: isActive,
-          label: label,
-        ) {
+    super.label,
+  })  : mateParams = {
+          'title': _i2.BuilderArg<_i4.Widget>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i4.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'content': _i2.BuilderArg<_i4.Widget>(
+            name: 'content',
+            init: content,
+            isNamed: true,
+          ),
+          'state': _i2.BuilderArg<_i1.StepState>(
+            name: 'state',
+            init: state,
+            isNamed: true,
+            defaultValue: _i5.StepState.indexed,
+          ),
+          'isActive': _i2.BuilderArg<bool>(
+            name: 'isActive',
+            init: isActive,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'label': _i2.BuilderArg<_i4.Widget?>(
+            name: 'label',
+            init: label,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Step';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Step$Mate(
@@ -102,39 +129,10 @@ class Step$Mate extends _i1.Step with _i2.Mate {
           isActive: p.get('isActive').build(),
           label: p.get('label').build(),
         );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'content',
-      content,
-      isNamed: true,
-    );
-    mateUse(
-      'state',
-      state,
-      isNamed: true,
-      defaultValue: _i5.StepState.indexed,
-    );
-    mateUse(
-      'isActive',
-      isActive,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'label',
-      label,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Stepper extends StatefulWidget
@@ -142,54 +140,105 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
   /// Stepper Stepper({Key? key, required List<Step> steps, ScrollPhysics? physics, StepperType type = StepperType.vertical, int currentStep = 0, void Function(int)? onStepTapped, void Function()? onStepContinue, void Function()? onStepCancel, Widget Function(BuildContext, ControlsDetails)? controlsBuilder, double? elevation, EdgeInsetsGeometry? margin, Widget? Function(int, StepState)? stepIconBuilder})
   Stepper$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i6.Key? key,
+    super.key,
 
     /// optionalParameters: {required List<Step> steps} , default:none
-    required List<_i1.Step> steps,
+    required super.steps,
 
     /// optionalParameters: {ScrollPhysics? physics} , default:none
-    _i7.ScrollPhysics? physics,
+    super.physics,
 
     /// optionalParameters: {StepperType type = StepperType.vertical} , default:processed=PrefixedIdentifierImpl
-    _i1.StepperType type = _i5.StepperType.vertical,
+    super.type,
 
     /// optionalParameters: {int currentStep = 0} , default:processed=IntegerLiteralImpl
-    int currentStep = 0,
+    super.currentStep,
 
     /// optionalParameters: {void Function(int)? onStepTapped} , default:none
-    _i8.ValueChanged<int>? onStepTapped,
+    super.onStepTapped,
 
     /// optionalParameters: {void Function()? onStepContinue} , default:none
-    _i3.VoidCallback? onStepContinue,
+    super.onStepContinue,
 
     /// optionalParameters: {void Function()? onStepCancel} , default:none
-    _i3.VoidCallback? onStepCancel,
+    super.onStepCancel,
 
     /// optionalParameters: {Widget Function(BuildContext, ControlsDetails)? controlsBuilder} , default:none
-    _i1.ControlsWidgetBuilder? controlsBuilder,
+    super.controlsBuilder,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i9.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {Widget? Function(int, StepState)? stepIconBuilder} , default:none
-    _i1.StepIconBuilder? stepIconBuilder,
-  }) : super(
-          key: key,
-          steps: steps,
-          physics: physics,
-          type: type,
-          currentStep: currentStep,
-          onStepTapped: onStepTapped,
-          onStepContinue: onStepContinue,
-          onStepCancel: onStepCancel,
-          controlsBuilder: controlsBuilder,
-          elevation: elevation,
-          margin: margin,
-          stepIconBuilder: stepIconBuilder,
-        ) {
+    super.stepIconBuilder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i6.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'steps': _i2.BuilderArg<List<_i1.Step>>(
+            name: 'steps',
+            init: steps,
+            isNamed: true,
+          ),
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'type': _i2.BuilderArg<_i1.StepperType>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+            defaultValue: _i5.StepperType.vertical,
+          ),
+          'currentStep': _i2.BuilderArg<int>(
+            name: 'currentStep',
+            init: currentStep,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'onStepTapped': _i2.BuilderArg<_i8.ValueChanged<int>?>(
+            name: 'onStepTapped',
+            init: onStepTapped,
+            isNamed: true,
+          ),
+          'onStepContinue': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onStepContinue',
+            init: onStepContinue,
+            isNamed: true,
+          ),
+          'onStepCancel': _i2.BuilderArg<_i3.VoidCallback?>(
+            name: 'onStepCancel',
+            init: onStepCancel,
+            isNamed: true,
+          ),
+          'controlsBuilder': _i2.BuilderArg<_i1.ControlsWidgetBuilder?>(
+            name: 'controlsBuilder',
+            init: controlsBuilder,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'stepIconBuilder': _i2.BuilderArg<_i1.StepIconBuilder?>(
+            name: 'stepIconBuilder',
+            init: stepIconBuilder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Stepper';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Stepper$Mate(
@@ -206,67 +255,8 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
           margin: p.get('margin').build(),
           stepIconBuilder: p.get('stepIconBuilder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'steps',
-      steps,
-      isNamed: true,
-    );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-      defaultValue: _i5.StepperType.vertical,
-    );
-    mateUse(
-      'currentStep',
-      currentStep,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'onStepTapped',
-      onStepTapped,
-      isNamed: true,
-    );
-    mateUse(
-      'onStepContinue',
-      onStepContinue,
-      isNamed: true,
-    );
-    mateUse(
-      'onStepCancel',
-      onStepCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'controlsBuilder',
-      controlsBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'stepIconBuilder',
-      stepIconBuilder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,16 +12,21 @@ class StadiumBorder$Mate extends _i1.StadiumBorder with _i2.Mate {
   StadiumBorder$Mate(
       {
       /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
-      _i3.BorderSide side = _i4.BorderSide.none})
-      : super(side: side) {
+      super.side})
+      : mateParams = {
+          'side': _i2.BuilderArg<_i3.BorderSide>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+            defaultValue: _i4.BorderSide.none,
+          )
+        },
+        super() {
     mateBuilderName = 'StadiumBorder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => StadiumBorder$Mate(side: p.get('side').build());
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-      defaultValue: _i4.BorderSide.none,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

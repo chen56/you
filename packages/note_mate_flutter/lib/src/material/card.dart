@@ -14,50 +14,97 @@ class Card$Mate extends _i1.Card with _i2.Mate {
   /// Card Card({Key? key, Color? color, Color? shadowColor, Color? surfaceTintColor, double? elevation, ShapeBorder? shape, bool borderOnForeground = true, EdgeInsetsGeometry? margin, Clip? clipBehavior, Widget? child, bool semanticContainer = true})
   Card$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i4.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i4.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i5.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {bool borderOnForeground = true} , default:processed=BooleanLiteralImpl
-    bool borderOnForeground = true,
+    super.borderOnForeground,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i6.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i4.Clip? clipBehavior,
+    super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i7.Widget? child,
+    super.child,
 
     /// optionalParameters: {bool semanticContainer = true} , default:processed=BooleanLiteralImpl
-    bool semanticContainer = true,
-  }) : super(
-          key: key,
-          color: color,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          elevation: elevation,
-          shape: shape,
-          borderOnForeground: borderOnForeground,
-          margin: margin,
-          clipBehavior: clipBehavior,
-          child: child,
-          semanticContainer: semanticContainer,
-        ) {
+    super.semanticContainer,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'borderOnForeground': _i2.BuilderArg<bool>(
+            name: 'borderOnForeground',
+            init: borderOnForeground,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'margin': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i4.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i7.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'semanticContainer': _i2.BuilderArg<bool>(
+            name: 'semanticContainer',
+            init: semanticContainer,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Card';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Card$Mate(
@@ -73,62 +120,8 @@ class Card$Mate extends _i1.Card with _i2.Mate {
           child: p.get('child').build(),
           semanticContainer: p.get('semanticContainer').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'borderOnForeground',
-      borderOnForeground,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticContainer',
-      semanticContainer,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

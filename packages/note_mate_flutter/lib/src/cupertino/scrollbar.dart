@@ -15,46 +15,87 @@ class CupertinoScrollbar$Mate extends _i1.CupertinoScrollbar with _i2.Mate {
   /// CupertinoScrollbar CupertinoScrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, double thickness = defaultThickness, double thicknessWhileDragging = defaultThicknessWhileDragging, Radius radius = defaultRadius, Radius radiusWhileDragging = defaultRadiusWhileDragging, bool Function(ScrollNotification)? notificationPredicate, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown})
   CupertinoScrollbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i5.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? thumbVisibility} , default:none
-    bool? thumbVisibility,
+    super.thumbVisibility,
 
     /// optionalParameters: {double thickness = defaultThickness} , default:unprocessed=SimpleIdentifierImpl
-    required double thickness,
+    super.thickness,
 
     /// optionalParameters: {double thicknessWhileDragging = defaultThicknessWhileDragging} , default:unprocessed=SimpleIdentifierImpl
-    required double thicknessWhileDragging,
+    super.thicknessWhileDragging,
 
     /// optionalParameters: {Radius radius = defaultRadius} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.Radius radius,
+    super.radius,
 
     /// optionalParameters: {Radius radiusWhileDragging = defaultRadiusWhileDragging} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.Radius radiusWhileDragging,
+    super.radiusWhileDragging,
 
     /// optionalParameters: {bool Function(ScrollNotification)? notificationPredicate} , default:none
-    _i7.ScrollNotificationPredicate? notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , default:none
-    _i8.ScrollbarOrientation? scrollbarOrientation,
-  }) : super(
-          key: key,
-          child: child,
-          controller: controller,
-          thumbVisibility: thumbVisibility,
-          thickness: thickness,
-          thicknessWhileDragging: thicknessWhileDragging,
-          radius: radius,
-          radiusWhileDragging: radiusWhileDragging,
-          notificationPredicate: notificationPredicate,
-          scrollbarOrientation: scrollbarOrientation,
-        ) {
+    super.scrollbarOrientation,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'thumbVisibility': _i2.BuilderArg<bool?>(
+            name: 'thumbVisibility',
+            init: thumbVisibility,
+            isNamed: true,
+          ),
+          'thickness': _i2.BuilderArg<double>(
+            name: 'thickness',
+            init: thickness,
+            isNamed: true,
+          ),
+          'thicknessWhileDragging': _i2.BuilderArg<double>(
+            name: 'thicknessWhileDragging',
+            init: thicknessWhileDragging,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<_i6.Radius>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'radiusWhileDragging': _i2.BuilderArg<_i6.Radius>(
+            name: 'radiusWhileDragging',
+            init: radiusWhileDragging,
+            isNamed: true,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'scrollbarOrientation': _i2.BuilderArg<_i8.ScrollbarOrientation?>(
+            name: 'scrollbarOrientation',
+            init: scrollbarOrientation,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoScrollbar';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoScrollbar$Mate(
@@ -69,55 +110,8 @@ class CupertinoScrollbar$Mate extends _i1.CupertinoScrollbar with _i2.Mate {
           notificationPredicate: p.get('notificationPredicate').build(),
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbVisibility',
-      thumbVisibility,
-      isNamed: true,
-    );
-    mateUse(
-      'thickness',
-      thickness,
-      isNamed: true,
-    );
-    mateUse(
-      'thicknessWhileDragging',
-      thicknessWhileDragging,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'radiusWhileDragging',
-      radiusWhileDragging,
-      isNamed: true,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollbarOrientation',
-      scrollbarOrientation,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

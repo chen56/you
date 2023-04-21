@@ -10,29 +10,31 @@ class FittedSizes$Mate extends _i1.FittedSizes with _i2.Mate {
   /// FittedSizes FittedSizes(Size source, Size destination)
   FittedSizes$Mate(
     /// requiredParameters: Size source
-    _i3.Size source,
+    super.source,
 
     /// requiredParameters: Size destination
-    _i3.Size destination,
-  ) : super(
-          source,
-          destination,
-        ) {
+    super.destination,
+  )   : mateParams = {
+          'source': _i2.BuilderArg<_i3.Size>(
+            name: 'source',
+            init: source,
+            isNamed: false,
+          ),
+          'destination': _i2.BuilderArg<_i3.Size>(
+            name: 'destination',
+            init: destination,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'FittedSizes';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FittedSizes$Mate(
           p.get('source').value,
           p.get('destination').value,
         );
-    mateUse(
-      'source',
-      source,
-      isNamed: false,
-    );
-    mateUse(
-      'destination',
-      destination,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

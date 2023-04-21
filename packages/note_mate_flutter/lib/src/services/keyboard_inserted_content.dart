@@ -10,18 +10,31 @@ class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent with _i2.
   /// KeyboardInsertedContent KeyboardInsertedContent({required String mimeType, required String uri, Uint8List? data})
   KeyboardInsertedContent$Mate({
     /// optionalParameters: {required String mimeType} , default:none
-    required String mimeType,
+    required super.mimeType,
 
     /// optionalParameters: {required String uri} , default:none
-    required String uri,
+    required super.uri,
 
     /// optionalParameters: {Uint8List? data} , default:none
-    _i3.Uint8List? data,
-  }) : super(
-          mimeType: mimeType,
-          uri: uri,
-          data: data,
-        ) {
+    super.data,
+  })  : mateParams = {
+          'mimeType': _i2.BuilderArg<String>(
+            name: 'mimeType',
+            init: mimeType,
+            isNamed: true,
+          ),
+          'uri': _i2.BuilderArg<String>(
+            name: 'uri',
+            init: uri,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i3.Uint8List?>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'KeyboardInsertedContent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate(
@@ -29,36 +42,26 @@ class KeyboardInsertedContent$Mate extends _i1.KeyboardInsertedContent with _i2.
           uri: p.get('uri').build(),
           data: p.get('data').build(),
         );
-    mateUse(
-      'mimeType',
-      mimeType,
-      isNamed: true,
-    );
-    mateUse(
-      'uri',
-      uri,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
   }
 
   /// KeyboardInsertedContent KeyboardInsertedContent.fromJson(Map<String, dynamic> metadata)
   KeyboardInsertedContent$Mate.fromJson(
 
       /// requiredParameters: Map<String, dynamic> metadata
-      Map<String, dynamic> metadata)
-      : super.fromJson(metadata) {
+      super.metadata)
+      : mateParams = {
+          'metadata': _i2.BuilderArg<Map<String, dynamic>>(
+            name: 'metadata',
+            init: metadata,
+            isNamed: false,
+          )
+        },
+        super.fromJson() {
     mateBuilderName = 'KeyboardInsertedContent.fromJson';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => KeyboardInsertedContent$Mate.fromJson(p.get('metadata').value);
-    mateUse(
-      'metadata',
-      metadata,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

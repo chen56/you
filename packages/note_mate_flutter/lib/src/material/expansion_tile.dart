@@ -18,102 +18,201 @@ class ExpansionTile$Mate extends _i1.ExpansionTile with _i2.Mate {
   /// ExpansionTile ExpansionTile({Key? key, Widget? leading, required Widget title, Widget? subtitle, void Function(bool)? onExpansionChanged, List<Widget> children = const <Widget>[], Widget? trailing, bool initiallyExpanded = false, bool maintainState = false, EdgeInsetsGeometry? tilePadding, CrossAxisAlignment? expandedCrossAxisAlignment, Alignment? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? backgroundColor, Color? collapsedBackgroundColor, Color? textColor, Color? collapsedTextColor, Color? iconColor, Color? collapsedIconColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior, ListTileControlAffinity? controlAffinity, ExpansionTileController? controller})
   ExpansionTile$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {required Widget title} , default:none
-    required _i4.Widget title,
+    required super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i4.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {void Function(bool)? onExpansionChanged} , default:none
-    _i5.ValueChanged<bool>? onExpansionChanged,
+    super.onExpansionChanged,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i4.Widget> children,
+    super.children,
 
     /// optionalParameters: {Widget? trailing} , default:none
-    _i4.Widget? trailing,
+    super.trailing,
 
     /// optionalParameters: {bool initiallyExpanded = false} , default:processed=BooleanLiteralImpl
-    bool initiallyExpanded = false,
+    super.initiallyExpanded,
 
     /// optionalParameters: {bool maintainState = false} , default:processed=BooleanLiteralImpl
-    bool maintainState = false,
+    super.maintainState,
 
     /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , default:none
-    _i6.EdgeInsetsGeometry? tilePadding,
+    super.tilePadding,
 
     /// optionalParameters: {CrossAxisAlignment? expandedCrossAxisAlignment} , default:none
-    _i7.CrossAxisAlignment? expandedCrossAxisAlignment,
+    super.expandedCrossAxisAlignment,
 
     /// optionalParameters: {Alignment? expandedAlignment} , default:none
-    _i8.Alignment? expandedAlignment,
+    super.expandedAlignment,
 
     /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , default:none
-    _i6.EdgeInsetsGeometry? childrenPadding,
+    super.childrenPadding,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i9.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? collapsedBackgroundColor} , default:none
-    _i9.Color? collapsedBackgroundColor,
+    super.collapsedBackgroundColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i9.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {Color? collapsedTextColor} , default:none
-    _i9.Color? collapsedTextColor,
+    super.collapsedTextColor,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i9.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {Color? collapsedIconColor} , default:none
-    _i9.Color? collapsedIconColor,
+    super.collapsedIconColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i10.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {ShapeBorder? collapsedShape} , default:none
-    _i10.ShapeBorder? collapsedShape,
+    super.collapsedShape,
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i9.Clip? clipBehavior,
+    super.clipBehavior,
 
     /// optionalParameters: {ListTileControlAffinity? controlAffinity} , default:none
-    _i11.ListTileControlAffinity? controlAffinity,
+    super.controlAffinity,
 
     /// optionalParameters: {ExpansionTileController? controller} , default:none
-    _i1.ExpansionTileController? controller,
-  }) : super(
-          key: key,
-          leading: leading,
-          title: title,
-          subtitle: subtitle,
-          onExpansionChanged: onExpansionChanged,
-          children: children,
-          trailing: trailing,
-          initiallyExpanded: initiallyExpanded,
-          maintainState: maintainState,
-          tilePadding: tilePadding,
-          expandedCrossAxisAlignment: expandedCrossAxisAlignment,
-          expandedAlignment: expandedAlignment,
-          childrenPadding: childrenPadding,
-          backgroundColor: backgroundColor,
-          collapsedBackgroundColor: collapsedBackgroundColor,
-          textColor: textColor,
-          collapsedTextColor: collapsedTextColor,
-          iconColor: iconColor,
-          collapsedIconColor: collapsedIconColor,
-          shape: shape,
-          collapsedShape: collapsedShape,
-          clipBehavior: clipBehavior,
-          controlAffinity: controlAffinity,
-          controller: controller,
-        ) {
+    super.controller,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i4.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'onExpansionChanged': _i2.BuilderArg<_i5.ValueChanged<bool>?>(
+            name: 'onExpansionChanged',
+            init: onExpansionChanged,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<_i4.Widget?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+          'initiallyExpanded': _i2.BuilderArg<bool>(
+            name: 'initiallyExpanded',
+            init: initiallyExpanded,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maintainState': _i2.BuilderArg<bool>(
+            name: 'maintainState',
+            init: maintainState,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'tilePadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'tilePadding',
+            init: tilePadding,
+            isNamed: true,
+          ),
+          'expandedCrossAxisAlignment': _i2.BuilderArg<_i7.CrossAxisAlignment?>(
+            name: 'expandedCrossAxisAlignment',
+            init: expandedCrossAxisAlignment,
+            isNamed: true,
+          ),
+          'expandedAlignment': _i2.BuilderArg<_i8.Alignment?>(
+            name: 'expandedAlignment',
+            init: expandedAlignment,
+            isNamed: true,
+          ),
+          'childrenPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'childrenPadding',
+            init: childrenPadding,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'collapsedBackgroundColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'collapsedBackgroundColor',
+            init: collapsedBackgroundColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'collapsedTextColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'collapsedTextColor',
+            init: collapsedTextColor,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'collapsedIconColor': _i2.BuilderArg<_i9.Color?>(
+            name: 'collapsedIconColor',
+            init: collapsedIconColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i10.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'collapsedShape': _i2.BuilderArg<_i10.ShapeBorder?>(
+            name: 'collapsedShape',
+            init: collapsedShape,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i9.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+          'controlAffinity': _i2.BuilderArg<_i11.ListTileControlAffinity?>(
+            name: 'controlAffinity',
+            init: controlAffinity,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i1.ExpansionTileController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExpansionTile';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTile$Mate(
@@ -142,127 +241,8 @@ class ExpansionTile$Mate extends _i1.ExpansionTile with _i2.Mate {
           controlAffinity: p.get('controlAffinity').build(),
           controller: p.get('controller').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'onExpansionChanged',
-      onExpansionChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
-    mateUse(
-      'initiallyExpanded',
-      initiallyExpanded,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maintainState',
-      maintainState,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'tilePadding',
-      tilePadding,
-      isNamed: true,
-    );
-    mateUse(
-      'expandedCrossAxisAlignment',
-      expandedCrossAxisAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'expandedAlignment',
-      expandedAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'childrenPadding',
-      childrenPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedBackgroundColor',
-      collapsedBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedTextColor',
-      collapsedTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedIconColor',
-      collapsedIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedShape',
-      collapsedShape,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'controlAffinity',
-      controlAffinity,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

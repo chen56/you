@@ -27,202 +27,412 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
   /// CupertinoTextFormFieldRow CupertinoTextFormFieldRow({Key? key, Widget? prefix, EdgeInsetsGeometry? padding, TextEditingController? controller, String? initialValue, FocusNode? focusNode, BoxDecoration? decoration, TextInputType? keyboardType, TextCapitalization textCapitalization = TextCapitalization.none, TextInputAction? textInputAction, TextStyle? style, StrutStyle? strutStyle, TextDirection? textDirection, TextAlign textAlign = TextAlign.start, TextAlignVertical? textAlignVertical, bool autofocus = false, bool readOnly = false, ToolbarOptions? toolbarOptions, bool? showCursor, String obscuringCharacter = '•', bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, int? maxLines = 1, int? minLines, bool expands = false, int? maxLength, void Function(String)? onChanged, void Function()? onTap, void Function()? onEditingComplete, void Function(String)? onFieldSubmitted, void Function(String?)? onSaved, String? Function(String?)? validator, List<TextInputFormatter>? inputFormatters, bool? enabled, double cursorWidth = 2.0, double? cursorHeight, Color? cursorColor, Brightness? keyboardAppearance, EdgeInsets scrollPadding = const EdgeInsets.all(20.0), bool enableInteractiveSelection = true, TextSelectionControls? selectionControls, ScrollPhysics? scrollPhysics, Iterable<String>? autofillHints, AutovalidateMode autovalidateMode = AutovalidateMode.disabled, String? placeholder, TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText), Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder})
   CupertinoTextFormFieldRow$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? prefix} , default:none
-    _i4.Widget? prefix,
+    super.prefix,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {TextEditingController? controller} , default:none
-    _i6.TextEditingController? controller,
+    super.controller,
 
     /// optionalParameters: {String? initialValue} , default:none
-    String? initialValue,
+    super.initialValue,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i7.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
-    _i8.BoxDecoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
-    _i9.TextInputType? keyboardType,
+    super.keyboardType,
 
     /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
-    _i9.TextCapitalization textCapitalization = _i10.TextCapitalization.none,
+    super.textCapitalization,
 
     /// optionalParameters: {TextInputAction? textInputAction} , default:none
-    _i9.TextInputAction? textInputAction,
+    super.textInputAction,
 
     /// optionalParameters: {TextStyle? style} , default:none
-    _i11.TextStyle? style,
+    super.style,
 
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
-    _i12.StrutStyle? strutStyle,
+    super.strutStyle,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i13.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
-    _i13.TextAlign textAlign = _i13.TextAlign.start,
+    super.textAlign,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
-    _i14.TextAlignVertical? textAlignVertical,
+    super.textAlignVertical,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {bool readOnly = false} , default:processed=BooleanLiteralImpl
-    bool readOnly = false,
+    super.readOnly,
 
     /// optionalParameters: {bool? showCursor} , default:none
-    bool? showCursor,
+    super.showCursor,
 
     /// optionalParameters: {String obscuringCharacter = '•'} , default:processed=SimpleStringLiteralImpl
-    String obscuringCharacter = '•',
+    super.obscuringCharacter,
 
     /// optionalParameters: {bool obscureText = false} , default:processed=BooleanLiteralImpl
-    bool obscureText = false,
+    super.obscureText,
 
     /// optionalParameters: {bool autocorrect = true} , default:processed=BooleanLiteralImpl
-    bool autocorrect = true,
+    super.autocorrect,
 
     /// optionalParameters: {SmartDashesType? smartDashesType} , default:none
-    _i9.SmartDashesType? smartDashesType,
+    super.smartDashesType,
 
     /// optionalParameters: {SmartQuotesType? smartQuotesType} , default:none
-    _i9.SmartQuotesType? smartQuotesType,
+    super.smartQuotesType,
 
     /// optionalParameters: {bool enableSuggestions = true} , default:processed=BooleanLiteralImpl
-    bool enableSuggestions = true,
+    super.enableSuggestions,
 
     /// optionalParameters: {int? maxLines = 1} , default:processed=IntegerLiteralImpl
-    int? maxLines = 1,
+    super.maxLines,
 
     /// optionalParameters: {int? minLines} , default:none
-    int? minLines,
+    super.minLines,
 
     /// optionalParameters: {bool expands = false} , default:processed=BooleanLiteralImpl
-    bool expands = false,
+    super.expands,
 
     /// optionalParameters: {int? maxLength} , default:none
-    int? maxLength,
+    super.maxLength,
 
     /// optionalParameters: {void Function(String)? onChanged} , default:none
-    _i15.ValueChanged<String>? onChanged,
+    super.onChanged,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i16.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onEditingComplete} , default:none
-    _i13.VoidCallback? onEditingComplete,
+    super.onEditingComplete,
 
     /// optionalParameters: {void Function(String)? onFieldSubmitted} , default:none
-    _i15.ValueChanged<String>? onFieldSubmitted,
+    super.onFieldSubmitted,
 
     /// optionalParameters: {void Function(String?)? onSaved} , default:none
-    _i17.FormFieldSetter<String>? onSaved,
+    super.onSaved,
 
     /// optionalParameters: {String? Function(String?)? validator} , default:none
-    _i17.FormFieldValidator<String>? validator,
+    super.validator,
 
     /// optionalParameters: {List<TextInputFormatter>? inputFormatters} , default:none
-    List<_i18.TextInputFormatter>? inputFormatters,
+    super.inputFormatters,
 
     /// optionalParameters: {bool? enabled} , default:none
-    bool? enabled,
+    super.enabled,
 
     /// optionalParameters: {double cursorWidth = 2.0} , default:processed=DoubleLiteralImpl
-    double cursorWidth = 2.0,
+    super.cursorWidth,
 
     /// optionalParameters: {double? cursorHeight} , default:none
-    double? cursorHeight,
+    super.cursorHeight,
 
     /// optionalParameters: {Color? cursorColor} , default:none
-    _i13.Color? cursorColor,
+    super.cursorColor,
 
     /// optionalParameters: {Brightness? keyboardAppearance} , default:none
-    _i13.Brightness? keyboardAppearance,
+    super.keyboardAppearance,
 
     /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i5.EdgeInsets scrollPadding,
+    super.scrollPadding,
 
     /// optionalParameters: {bool enableInteractiveSelection = true} , default:processed=BooleanLiteralImpl
-    bool enableInteractiveSelection = true,
+    super.enableInteractiveSelection,
 
     /// optionalParameters: {TextSelectionControls? selectionControls} , default:none
-    _i19.TextSelectionControls? selectionControls,
+    super.selectionControls,
 
     /// optionalParameters: {ScrollPhysics? scrollPhysics} , default:none
-    _i20.ScrollPhysics? scrollPhysics,
+    super.scrollPhysics,
 
     /// optionalParameters: {Iterable<String>? autofillHints} , default:none
-    Iterable<String>? autofillHints,
+    super.autofillHints,
 
     /// optionalParameters: {AutovalidateMode autovalidateMode = AutovalidateMode.disabled} , default:processed=PrefixedIdentifierImpl
-    _i17.AutovalidateMode autovalidateMode = _i10.AutovalidateMode.disabled,
+    super.autovalidateMode,
 
     /// optionalParameters: {String? placeholder} , default:none
-    String? placeholder,
+    super.placeholder,
 
     /// optionalParameters: {TextStyle? placeholderStyle = const TextStyle(fontWeight: FontWeight.w400, color: CupertinoColors.placeholderText)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i11.TextStyle? placeholderStyle,
+    super.placeholderStyle,
 
     /// optionalParameters: {Widget Function(BuildContext, EditableTextState)? contextMenuBuilder = _defaultContextMenuBuilder} , default:unprocessed=SimpleIdentifierImpl
-    required _i6.EditableTextContextMenuBuilder? contextMenuBuilder,
-  }) : super(
-          key: key,
-          prefix: prefix,
-          padding: padding,
-          controller: controller,
-          initialValue: initialValue,
-          focusNode: focusNode,
-          decoration: decoration,
-          keyboardType: keyboardType,
-          textCapitalization: textCapitalization,
-          textInputAction: textInputAction,
-          style: style,
-          strutStyle: strutStyle,
-          textDirection: textDirection,
-          textAlign: textAlign,
-          textAlignVertical: textAlignVertical,
-          autofocus: autofocus,
-          readOnly: readOnly,
-          showCursor: showCursor,
-          obscuringCharacter: obscuringCharacter,
-          obscureText: obscureText,
-          autocorrect: autocorrect,
-          smartDashesType: smartDashesType,
-          smartQuotesType: smartQuotesType,
-          enableSuggestions: enableSuggestions,
-          maxLines: maxLines,
-          minLines: minLines,
-          expands: expands,
-          maxLength: maxLength,
-          onChanged: onChanged,
-          onTap: onTap,
-          onEditingComplete: onEditingComplete,
-          onFieldSubmitted: onFieldSubmitted,
-          onSaved: onSaved,
-          validator: validator,
-          inputFormatters: inputFormatters,
-          enabled: enabled,
-          cursorWidth: cursorWidth,
-          cursorHeight: cursorHeight,
-          cursorColor: cursorColor,
-          keyboardAppearance: keyboardAppearance,
-          scrollPadding: scrollPadding,
-          enableInteractiveSelection: enableInteractiveSelection,
-          selectionControls: selectionControls,
-          scrollPhysics: scrollPhysics,
-          autofillHints: autofillHints,
-          autovalidateMode: autovalidateMode,
-          placeholder: placeholder,
-          placeholderStyle: placeholderStyle,
-          contextMenuBuilder: contextMenuBuilder,
-        ) {
+    super.contextMenuBuilder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'prefix': _i2.BuilderArg<_i4.Widget?>(
+            name: 'prefix',
+            init: prefix,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i6.TextEditingController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'initialValue': _i2.BuilderArg<String?>(
+            name: 'initialValue',
+            init: initialValue,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i7.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'keyboardType': _i2.BuilderArg<_i9.TextInputType?>(
+            name: 'keyboardType',
+            init: keyboardType,
+            isNamed: true,
+          ),
+          'textCapitalization': _i2.BuilderArg<_i9.TextCapitalization>(
+            name: 'textCapitalization',
+            init: textCapitalization,
+            isNamed: true,
+            defaultValue: _i10.TextCapitalization.none,
+          ),
+          'textInputAction': _i2.BuilderArg<_i9.TextInputAction?>(
+            name: 'textInputAction',
+            init: textInputAction,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i11.TextStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'strutStyle': _i2.BuilderArg<_i12.StrutStyle?>(
+            name: 'strutStyle',
+            init: strutStyle,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i13.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i13.TextAlign>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+            defaultValue: _i13.TextAlign.start,
+          ),
+          'textAlignVertical': _i2.BuilderArg<_i14.TextAlignVertical?>(
+            name: 'textAlignVertical',
+            init: textAlignVertical,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'readOnly': _i2.BuilderArg<bool>(
+            name: 'readOnly',
+            init: readOnly,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'showCursor': _i2.BuilderArg<bool?>(
+            name: 'showCursor',
+            init: showCursor,
+            isNamed: true,
+          ),
+          'obscuringCharacter': _i2.BuilderArg<String>(
+            name: 'obscuringCharacter',
+            init: obscuringCharacter,
+            isNamed: true,
+            defaultValue: '•',
+          ),
+          'obscureText': _i2.BuilderArg<bool>(
+            name: 'obscureText',
+            init: obscureText,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'autocorrect': _i2.BuilderArg<bool>(
+            name: 'autocorrect',
+            init: autocorrect,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'smartDashesType': _i2.BuilderArg<_i9.SmartDashesType?>(
+            name: 'smartDashesType',
+            init: smartDashesType,
+            isNamed: true,
+          ),
+          'smartQuotesType': _i2.BuilderArg<_i9.SmartQuotesType?>(
+            name: 'smartQuotesType',
+            init: smartQuotesType,
+            isNamed: true,
+          ),
+          'enableSuggestions': _i2.BuilderArg<bool>(
+            name: 'enableSuggestions',
+            init: enableSuggestions,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+            defaultValue: 1,
+          ),
+          'minLines': _i2.BuilderArg<int?>(
+            name: 'minLines',
+            init: minLines,
+            isNamed: true,
+          ),
+          'expands': _i2.BuilderArg<bool>(
+            name: 'expands',
+            init: expands,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'maxLength': _i2.BuilderArg<int?>(
+            name: 'maxLength',
+            init: maxLength,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i15.ValueChanged<String>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i16.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onEditingComplete': _i2.BuilderArg<_i13.VoidCallback?>(
+            name: 'onEditingComplete',
+            init: onEditingComplete,
+            isNamed: true,
+          ),
+          'onFieldSubmitted': _i2.BuilderArg<_i15.ValueChanged<String>?>(
+            name: 'onFieldSubmitted',
+            init: onFieldSubmitted,
+            isNamed: true,
+          ),
+          'onSaved': _i2.BuilderArg<_i17.FormFieldSetter<String>?>(
+            name: 'onSaved',
+            init: onSaved,
+            isNamed: true,
+          ),
+          'validator': _i2.BuilderArg<_i17.FormFieldValidator<String>?>(
+            name: 'validator',
+            init: validator,
+            isNamed: true,
+          ),
+          'inputFormatters': _i2.BuilderArg<List<_i18.TextInputFormatter>?>(
+            name: 'inputFormatters',
+            init: inputFormatters,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool?>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+          ),
+          'cursorWidth': _i2.BuilderArg<double>(
+            name: 'cursorWidth',
+            init: cursorWidth,
+            isNamed: true,
+            defaultValue: 2.0,
+          ),
+          'cursorHeight': _i2.BuilderArg<double?>(
+            name: 'cursorHeight',
+            init: cursorHeight,
+            isNamed: true,
+          ),
+          'cursorColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'cursorColor',
+            init: cursorColor,
+            isNamed: true,
+          ),
+          'keyboardAppearance': _i2.BuilderArg<_i13.Brightness?>(
+            name: 'keyboardAppearance',
+            init: keyboardAppearance,
+            isNamed: true,
+          ),
+          'scrollPadding': _i2.BuilderArg<_i5.EdgeInsets>(
+            name: 'scrollPadding',
+            init: scrollPadding,
+            isNamed: true,
+          ),
+          'enableInteractiveSelection': _i2.BuilderArg<bool>(
+            name: 'enableInteractiveSelection',
+            init: enableInteractiveSelection,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'selectionControls': _i2.BuilderArg<_i19.TextSelectionControls?>(
+            name: 'selectionControls',
+            init: selectionControls,
+            isNamed: true,
+          ),
+          'scrollPhysics': _i2.BuilderArg<_i20.ScrollPhysics?>(
+            name: 'scrollPhysics',
+            init: scrollPhysics,
+            isNamed: true,
+          ),
+          'autofillHints': _i2.BuilderArg<Iterable<String>?>(
+            name: 'autofillHints',
+            init: autofillHints,
+            isNamed: true,
+          ),
+          'autovalidateMode': _i2.BuilderArg<_i17.AutovalidateMode>(
+            name: 'autovalidateMode',
+            init: autovalidateMode,
+            isNamed: true,
+            defaultValue: _i10.AutovalidateMode.disabled,
+          ),
+          'placeholder': _i2.BuilderArg<String?>(
+            name: 'placeholder',
+            init: placeholder,
+            isNamed: true,
+          ),
+          'placeholderStyle': _i2.BuilderArg<_i11.TextStyle?>(
+            name: 'placeholderStyle',
+            init: placeholderStyle,
+            isNamed: true,
+          ),
+          'contextMenuBuilder': _i2.BuilderArg<_i6.EditableTextContextMenuBuilder?>(
+            name: 'contextMenuBuilder',
+            init: contextMenuBuilder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoTextFormFieldRow';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoTextFormFieldRow$Mate(
@@ -276,263 +486,8 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
           placeholderStyle: p.get('placeholderStyle').build(),
           contextMenuBuilder: p.get('contextMenuBuilder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'prefix',
-      prefix,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'initialValue',
-      initialValue,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'keyboardType',
-      keyboardType,
-      isNamed: true,
-    );
-    mateUse(
-      'textCapitalization',
-      textCapitalization,
-      isNamed: true,
-      defaultValue: _i10.TextCapitalization.none,
-    );
-    mateUse(
-      'textInputAction',
-      textInputAction,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'strutStyle',
-      strutStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-      defaultValue: _i13.TextAlign.start,
-    );
-    mateUse(
-      'textAlignVertical',
-      textAlignVertical,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'readOnly',
-      readOnly,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'showCursor',
-      showCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'obscuringCharacter',
-      obscuringCharacter,
-      isNamed: true,
-      defaultValue: '•',
-    );
-    mateUse(
-      'obscureText',
-      obscureText,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'autocorrect',
-      autocorrect,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'smartDashesType',
-      smartDashesType,
-      isNamed: true,
-    );
-    mateUse(
-      'smartQuotesType',
-      smartQuotesType,
-      isNamed: true,
-    );
-    mateUse(
-      'enableSuggestions',
-      enableSuggestions,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-      defaultValue: 1,
-    );
-    mateUse(
-      'minLines',
-      minLines,
-      isNamed: true,
-    );
-    mateUse(
-      'expands',
-      expands,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'maxLength',
-      maxLength,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onEditingComplete',
-      onEditingComplete,
-      isNamed: true,
-    );
-    mateUse(
-      'onFieldSubmitted',
-      onFieldSubmitted,
-      isNamed: true,
-    );
-    mateUse(
-      'onSaved',
-      onSaved,
-      isNamed: true,
-    );
-    mateUse(
-      'validator',
-      validator,
-      isNamed: true,
-    );
-    mateUse(
-      'inputFormatters',
-      inputFormatters,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-    );
-    mateUse(
-      'cursorWidth',
-      cursorWidth,
-      isNamed: true,
-      defaultValue: 2.0,
-    );
-    mateUse(
-      'cursorHeight',
-      cursorHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'cursorColor',
-      cursorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'keyboardAppearance',
-      keyboardAppearance,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollPadding',
-      scrollPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'enableInteractiveSelection',
-      enableInteractiveSelection,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'selectionControls',
-      selectionControls,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollPhysics',
-      scrollPhysics,
-      isNamed: true,
-    );
-    mateUse(
-      'autofillHints',
-      autofillHints,
-      isNamed: true,
-    );
-    mateUse(
-      'autovalidateMode',
-      autovalidateMode,
-      isNamed: true,
-      defaultValue: _i10.AutovalidateMode.disabled,
-    );
-    mateUse(
-      'placeholder',
-      placeholder,
-      isNamed: true,
-    );
-    mateUse(
-      'placeholderStyle',
-      placeholderStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'contextMenuBuilder',
-      contextMenuBuilder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

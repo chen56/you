@@ -13,62 +13,121 @@ class Focus$Mate extends _i1.Focus with _i2.Mate {
   /// Focus Focus({Key? key, required Widget child, FocusNode? focusNode, FocusNode? parentNode, bool autofocus = false, void Function(bool)? onFocusChange, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, bool? canRequestFocus, bool? skipTraversal, bool? descendantsAreFocusable, bool? descendantsAreTraversable, bool includeSemantics = true, String? debugLabel})
   Focus$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i5.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {FocusNode? parentNode} , default:none
-    _i5.FocusNode? parentNode,
+    super.parentNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i6.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , default:none
-    _i5.FocusOnKeyEventCallback? onKeyEvent,
+    super.onKeyEvent,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , default:none
-    _i5.FocusOnKeyCallback? onKey,
+    super.onKey,
 
     /// optionalParameters: {bool? canRequestFocus} , default:none
-    bool? canRequestFocus,
+    super.canRequestFocus,
 
     /// optionalParameters: {bool? skipTraversal} , default:none
-    bool? skipTraversal,
+    super.skipTraversal,
 
     /// optionalParameters: {bool? descendantsAreFocusable} , default:none
-    bool? descendantsAreFocusable,
+    super.descendantsAreFocusable,
 
     /// optionalParameters: {bool? descendantsAreTraversable} , default:none
-    bool? descendantsAreTraversable,
+    super.descendantsAreTraversable,
 
     /// optionalParameters: {bool includeSemantics = true} , default:processed=BooleanLiteralImpl
-    bool includeSemantics = true,
+    super.includeSemantics,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          key: key,
-          child: child,
-          focusNode: focusNode,
-          parentNode: parentNode,
-          autofocus: autofocus,
-          onFocusChange: onFocusChange,
-          onKeyEvent: onKeyEvent,
-          onKey: onKey,
-          canRequestFocus: canRequestFocus,
-          skipTraversal: skipTraversal,
-          descendantsAreFocusable: descendantsAreFocusable,
-          descendantsAreTraversable: descendantsAreTraversable,
-          includeSemantics: includeSemantics,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i5.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'parentNode': _i2.BuilderArg<_i5.FocusNode?>(
+            name: 'parentNode',
+            init: parentNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i6.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'onKeyEvent': _i2.BuilderArg<_i5.FocusOnKeyEventCallback?>(
+            name: 'onKeyEvent',
+            init: onKeyEvent,
+            isNamed: true,
+          ),
+          'onKey': _i2.BuilderArg<_i5.FocusOnKeyCallback?>(
+            name: 'onKey',
+            init: onKey,
+            isNamed: true,
+          ),
+          'canRequestFocus': _i2.BuilderArg<bool?>(
+            name: 'canRequestFocus',
+            init: canRequestFocus,
+            isNamed: true,
+          ),
+          'skipTraversal': _i2.BuilderArg<bool?>(
+            name: 'skipTraversal',
+            init: skipTraversal,
+            isNamed: true,
+          ),
+          'descendantsAreFocusable': _i2.BuilderArg<bool?>(
+            name: 'descendantsAreFocusable',
+            init: descendantsAreFocusable,
+            isNamed: true,
+          ),
+          'descendantsAreTraversable': _i2.BuilderArg<bool?>(
+            name: 'descendantsAreTraversable',
+            init: descendantsAreTraversable,
+            isNamed: true,
+          ),
+          'includeSemantics': _i2.BuilderArg<bool>(
+            name: 'includeSemantics',
+            init: includeSemantics,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Focus';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Focus$Mate(
@@ -87,79 +146,10 @@ class Focus$Mate extends _i1.Focus with _i2.Mate {
           includeSemantics: p.get('includeSemantics').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'parentNode',
-      parentNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'onKeyEvent',
-      onKeyEvent,
-      isNamed: true,
-    );
-    mateUse(
-      'onKey',
-      onKey,
-      isNamed: true,
-    );
-    mateUse(
-      'canRequestFocus',
-      canRequestFocus,
-      isNamed: true,
-    );
-    mateUse(
-      'skipTraversal',
-      skipTraversal,
-      isNamed: true,
-    );
-    mateUse(
-      'descendantsAreFocusable',
-      descendantsAreFocusable,
-      isNamed: true,
-    );
-    mateUse(
-      'descendantsAreTraversable',
-      descendantsAreTraversable,
-      isNamed: true,
-    );
-    mateUse(
-      'includeSemantics',
-      includeSemantics,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FocusScope extends Focus
@@ -167,50 +157,96 @@ class FocusScope$Mate extends _i1.FocusScope with _i2.Mate {
   /// FocusScope FocusScope({Key? key, FocusScopeNode? node, FocusNode? parentNode, required Widget child, bool autofocus = false, void Function(bool)? onFocusChange, bool? canRequestFocus, bool? skipTraversal, KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent, KeyEventResult Function(FocusNode, RawKeyEvent)? onKey, String? debugLabel})
   FocusScope$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {FocusScopeNode? node} , default:none
-    _i5.FocusScopeNode? node,
+    super.node,
 
     /// optionalParameters: {FocusNode? parentNode} , default:none
-    _i5.FocusNode? parentNode,
+    super.parentNode,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i6.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {bool? canRequestFocus} , default:none
-    bool? canRequestFocus,
+    super.canRequestFocus,
 
     /// optionalParameters: {bool? skipTraversal} , default:none
-    bool? skipTraversal,
+    super.skipTraversal,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, KeyEvent)? onKeyEvent} , default:none
-    _i5.FocusOnKeyEventCallback? onKeyEvent,
+    super.onKeyEvent,
 
     /// optionalParameters: {KeyEventResult Function(FocusNode, RawKeyEvent)? onKey} , default:none
-    _i5.FocusOnKeyCallback? onKey,
+    super.onKey,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          key: key,
-          node: node,
-          parentNode: parentNode,
-          child: child,
-          autofocus: autofocus,
-          onFocusChange: onFocusChange,
-          canRequestFocus: canRequestFocus,
-          skipTraversal: skipTraversal,
-          onKeyEvent: onKeyEvent,
-          onKey: onKey,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'node': _i2.BuilderArg<_i5.FocusScopeNode?>(
+            name: 'node',
+            init: node,
+            isNamed: true,
+          ),
+          'parentNode': _i2.BuilderArg<_i5.FocusNode?>(
+            name: 'parentNode',
+            init: parentNode,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i6.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'canRequestFocus': _i2.BuilderArg<bool?>(
+            name: 'canRequestFocus',
+            init: canRequestFocus,
+            isNamed: true,
+          ),
+          'skipTraversal': _i2.BuilderArg<bool?>(
+            name: 'skipTraversal',
+            init: skipTraversal,
+            isNamed: true,
+          ),
+          'onKeyEvent': _i2.BuilderArg<_i5.FocusOnKeyEventCallback?>(
+            name: 'onKeyEvent',
+            init: onKeyEvent,
+            isNamed: true,
+          ),
+          'onKey': _i2.BuilderArg<_i5.FocusOnKeyCallback?>(
+            name: 'onKey',
+            init: onKey,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FocusScope';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => FocusScope$Mate(
@@ -226,63 +262,10 @@ class FocusScope$Mate extends _i1.FocusScope with _i2.Mate {
           onKey: p.get('onKey').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'node',
-      node,
-      isNamed: true,
-    );
-    mateUse(
-      'parentNode',
-      parentNode,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'canRequestFocus',
-      canRequestFocus,
-      isNamed: true,
-    );
-    mateUse(
-      'skipTraversal',
-      skipTraversal,
-      isNamed: true,
-    );
-    mateUse(
-      'onKeyEvent',
-      onKeyEvent,
-      isNamed: true,
-    );
-    mateUse(
-      'onKey',
-      onKey,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExcludeFocus extends StatelessWidget
@@ -290,18 +273,32 @@ class ExcludeFocus$Mate extends _i1.ExcludeFocus with _i2.Mate {
   /// ExcludeFocus ExcludeFocus({Key? key, bool excluding = true, required Widget child})
   ExcludeFocus$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool excluding = true} , default:processed=BooleanLiteralImpl
-    bool excluding = true,
+    super.excluding,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          excluding: excluding,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'excluding': _i2.BuilderArg<bool>(
+            name: 'excluding',
+            init: excluding,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExcludeFocus';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ExcludeFocus$Mate(
@@ -309,21 +306,8 @@ class ExcludeFocus$Mate extends _i1.ExcludeFocus with _i2.Mate {
           excluding: p.get('excluding').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'excluding',
-      excluding,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

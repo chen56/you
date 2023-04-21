@@ -13,62 +13,119 @@ class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
   /// SnackBarThemeData SnackBarThemeData({Color? backgroundColor, Color? actionTextColor, Color? disabledActionTextColor, TextStyle? contentTextStyle, double? elevation, ShapeBorder? shape, SnackBarBehavior? behavior, double? width, EdgeInsets? insetPadding, bool? showCloseIcon, Color? closeIconColor, double? actionOverflowThreshold, Color? actionBackgroundColor, Color? disabledActionBackgroundColor})
   SnackBarThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? actionTextColor} , default:none
-    _i3.Color? actionTextColor,
+    super.actionTextColor,
 
     /// optionalParameters: {Color? disabledActionTextColor} , default:none
-    _i3.Color? disabledActionTextColor,
+    super.disabledActionTextColor,
 
     /// optionalParameters: {TextStyle? contentTextStyle} , default:none
-    _i4.TextStyle? contentTextStyle,
+    super.contentTextStyle,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i5.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {SnackBarBehavior? behavior} , default:none
-    _i1.SnackBarBehavior? behavior,
+    super.behavior,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {EdgeInsets? insetPadding} , default:none
-    _i6.EdgeInsets? insetPadding,
+    super.insetPadding,
 
     /// optionalParameters: {bool? showCloseIcon} , default:none
-    bool? showCloseIcon,
+    super.showCloseIcon,
 
     /// optionalParameters: {Color? closeIconColor} , default:none
-    _i3.Color? closeIconColor,
+    super.closeIconColor,
 
     /// optionalParameters: {double? actionOverflowThreshold} , default:none
-    double? actionOverflowThreshold,
+    super.actionOverflowThreshold,
 
     /// optionalParameters: {Color? actionBackgroundColor} , default:none
-    _i3.Color? actionBackgroundColor,
+    super.actionBackgroundColor,
 
     /// optionalParameters: {Color? disabledActionBackgroundColor} , default:none
-    _i3.Color? disabledActionBackgroundColor,
-  }) : super(
-          backgroundColor: backgroundColor,
-          actionTextColor: actionTextColor,
-          disabledActionTextColor: disabledActionTextColor,
-          contentTextStyle: contentTextStyle,
-          elevation: elevation,
-          shape: shape,
-          behavior: behavior,
-          width: width,
-          insetPadding: insetPadding,
-          showCloseIcon: showCloseIcon,
-          closeIconColor: closeIconColor,
-          actionOverflowThreshold: actionOverflowThreshold,
-          actionBackgroundColor: actionBackgroundColor,
-          disabledActionBackgroundColor: disabledActionBackgroundColor,
-        ) {
+    super.disabledActionBackgroundColor,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'actionTextColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'actionTextColor',
+            init: actionTextColor,
+            isNamed: true,
+          ),
+          'disabledActionTextColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'disabledActionTextColor',
+            init: disabledActionTextColor,
+            isNamed: true,
+          ),
+          'contentTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'contentTextStyle',
+            init: contentTextStyle,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'behavior': _i2.BuilderArg<_i1.SnackBarBehavior?>(
+            name: 'behavior',
+            init: behavior,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'insetPadding': _i2.BuilderArg<_i6.EdgeInsets?>(
+            name: 'insetPadding',
+            init: insetPadding,
+            isNamed: true,
+          ),
+          'showCloseIcon': _i2.BuilderArg<bool?>(
+            name: 'showCloseIcon',
+            init: showCloseIcon,
+            isNamed: true,
+          ),
+          'closeIconColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'closeIconColor',
+            init: closeIconColor,
+            isNamed: true,
+          ),
+          'actionOverflowThreshold': _i2.BuilderArg<double?>(
+            name: 'actionOverflowThreshold',
+            init: actionOverflowThreshold,
+            isNamed: true,
+          ),
+          'actionBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'actionBackgroundColor',
+            init: actionBackgroundColor,
+            isNamed: true,
+          ),
+          'disabledActionBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'disabledActionBackgroundColor',
+            init: disabledActionBackgroundColor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SnackBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SnackBarThemeData$Mate(
@@ -87,75 +144,8 @@ class SnackBarThemeData$Mate extends _i1.SnackBarThemeData with _i2.Mate {
           actionBackgroundColor: p.get('actionBackgroundColor').build(),
           disabledActionBackgroundColor: p.get('disabledActionBackgroundColor').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'actionTextColor',
-      actionTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledActionTextColor',
-      disabledActionTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'contentTextStyle',
-      contentTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'behavior',
-      behavior,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'insetPadding',
-      insetPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'showCloseIcon',
-      showCloseIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'closeIconColor',
-      closeIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'actionOverflowThreshold',
-      actionOverflowThreshold,
-      isNamed: true,
-    );
-    mateUse(
-      'actionBackgroundColor',
-      actionBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledActionBackgroundColor',
-      disabledActionBackgroundColor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

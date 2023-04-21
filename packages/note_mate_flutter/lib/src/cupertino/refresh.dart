@@ -10,26 +10,47 @@ class CupertinoSliverRefreshControl$Mate extends _i1.CupertinoSliverRefreshContr
   /// CupertinoSliverRefreshControl CupertinoSliverRefreshControl({Key? key, double refreshTriggerPullDistance = _defaultRefreshTriggerPullDistance, double refreshIndicatorExtent = _defaultRefreshIndicatorExtent, Widget Function(BuildContext, RefreshIndicatorMode, double, double, double)? builder = buildRefreshIndicator, Future<void> Function()? onRefresh})
   CupertinoSliverRefreshControl$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double refreshTriggerPullDistance = _defaultRefreshTriggerPullDistance} , default:unprocessed=SimpleIdentifierImpl
-    required double refreshTriggerPullDistance,
+    super.refreshTriggerPullDistance,
 
     /// optionalParameters: {double refreshIndicatorExtent = _defaultRefreshIndicatorExtent} , default:unprocessed=SimpleIdentifierImpl
-    required double refreshIndicatorExtent,
+    super.refreshIndicatorExtent,
 
     /// optionalParameters: {Widget Function(BuildContext, RefreshIndicatorMode, double, double, double)? builder = buildRefreshIndicator} , default:unprocessed=SimpleIdentifierImpl
-    required _i1.RefreshControlIndicatorBuilder? builder,
+    super.builder,
 
     /// optionalParameters: {Future<void> Function()? onRefresh} , default:none
-    _i1.RefreshCallback? onRefresh,
-  }) : super(
-          key: key,
-          refreshTriggerPullDistance: refreshTriggerPullDistance,
-          refreshIndicatorExtent: refreshIndicatorExtent,
-          builder: builder,
-          onRefresh: onRefresh,
-        ) {
+    super.onRefresh,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'refreshTriggerPullDistance': _i2.BuilderArg<double>(
+            name: 'refreshTriggerPullDistance',
+            init: refreshTriggerPullDistance,
+            isNamed: true,
+          ),
+          'refreshIndicatorExtent': _i2.BuilderArg<double>(
+            name: 'refreshIndicatorExtent',
+            init: refreshIndicatorExtent,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.RefreshControlIndicatorBuilder?>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'onRefresh': _i2.BuilderArg<_i1.RefreshCallback?>(
+            name: 'onRefresh',
+            init: onRefresh,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoSliverRefreshControl';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSliverRefreshControl$Mate(
@@ -39,30 +60,8 @@ class CupertinoSliverRefreshControl$Mate extends _i1.CupertinoSliverRefreshContr
           builder: p.get('builder').build(),
           onRefresh: p.get('onRefresh').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'refreshTriggerPullDistance',
-      refreshTriggerPullDistance,
-      isNamed: true,
-    );
-    mateUse(
-      'refreshIndicatorExtent',
-      refreshIndicatorExtent,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'onRefresh',
-      onRefresh,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

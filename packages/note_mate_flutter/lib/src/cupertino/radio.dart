@@ -13,50 +13,97 @@ class CupertinoRadio$Mate<T> extends _i1.CupertinoRadio<T> with _i2.Mate {
   /// CupertinoRadio<T> CupertinoRadio({Key? key, required T value, required T? groupValue, required void Function(T?)? onChanged, bool toggleable = false, Color? activeColor, Color? inactiveColor, Color? fillColor, Color? focusColor, FocusNode? focusNode, bool autofocus = false})
   CupertinoRadio$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required T value} , default:none
-    required T value,
+    required super.value,
 
     /// optionalParameters: {required T? groupValue} , default:none
-    required T? groupValue,
+    required super.groupValue,
 
     /// optionalParameters: {required void Function(T?)? onChanged} , default:none
-    required _i4.ValueChanged<T?>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {bool toggleable = false} , default:processed=BooleanLiteralImpl
-    bool toggleable = false,
+    super.toggleable,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? inactiveColor} , default:none
-    _i5.Color? inactiveColor,
+    super.inactiveColor,
 
     /// optionalParameters: {Color? fillColor} , default:none
-    _i5.Color? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i6.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
-  }) : super(
-          key: key,
-          value: value,
-          groupValue: groupValue,
-          onChanged: onChanged,
-          toggleable: toggleable,
-          activeColor: activeColor,
-          inactiveColor: inactiveColor,
-          fillColor: fillColor,
-          focusColor: focusColor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-        ) {
+    super.autofocus,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<T>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'groupValue': _i2.BuilderArg<T?>(
+            name: 'groupValue',
+            init: groupValue,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<T?>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'toggleable': _i2.BuilderArg<bool>(
+            name: 'toggleable',
+            init: toggleable,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'inactiveColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveColor',
+            init: inactiveColor,
+            isNamed: true,
+          ),
+          'fillColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i6.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoRadio';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoRadio$Mate<T>(
@@ -72,62 +119,8 @@ class CupertinoRadio$Mate<T> extends _i1.CupertinoRadio<T> with _i2.Mate {
           focusNode: p.get('focusNode').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'groupValue',
-      groupValue,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'toggleable',
-      toggleable,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveColor',
-      inactiveColor,
-      isNamed: true,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

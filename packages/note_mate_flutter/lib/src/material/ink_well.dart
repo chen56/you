@@ -22,138 +22,277 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
   /// InkResponse InkResponse({Key? key, Widget? child, void Function()? onTap, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onDoubleTap, void Function()? onLongPress, void Function()? onSecondaryTap, void Function(TapUpDetails)? onSecondaryTapUp, void Function(TapDownDetails)? onSecondaryTapDown, void Function()? onSecondaryTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, bool containedInkWell = false, BoxShape highlightShape = BoxShape.circle, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, bool enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
   InkResponse$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i5.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
-    _i5.GestureTapDownCallback? onTapDown,
+    super.onTapDown,
 
     /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , default:none
-    _i5.GestureTapUpCallback? onTapUp,
+    super.onTapUp,
 
     /// optionalParameters: {void Function()? onTapCancel} , default:none
-    _i5.GestureTapCallback? onTapCancel,
+    super.onTapCancel,
 
     /// optionalParameters: {void Function()? onDoubleTap} , default:none
-    _i5.GestureTapCallback? onDoubleTap,
+    super.onDoubleTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i6.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function()? onSecondaryTap} , default:none
-    _i5.GestureTapCallback? onSecondaryTap,
+    super.onSecondaryTap,
 
     /// optionalParameters: {void Function(TapUpDetails)? onSecondaryTapUp} , default:none
-    _i5.GestureTapUpCallback? onSecondaryTapUp,
+    super.onSecondaryTapUp,
 
     /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , default:none
-    _i5.GestureTapDownCallback? onSecondaryTapDown,
+    super.onSecondaryTapDown,
 
     /// optionalParameters: {void Function()? onSecondaryTapCancel} , default:none
-    _i5.GestureTapCallback? onSecondaryTapCancel,
+    super.onSecondaryTapCancel,
 
     /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
-    _i7.ValueChanged<bool>? onHighlightChanged,
+    super.onHighlightChanged,
 
     /// optionalParameters: {void Function(bool)? onHover} , default:none
-    _i7.ValueChanged<bool>? onHover,
+    super.onHover,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {bool containedInkWell = false} , default:processed=BooleanLiteralImpl
-    bool containedInkWell = false,
+    super.containedInkWell,
 
     /// optionalParameters: {BoxShape highlightShape = BoxShape.circle} , default:processed=PrefixedIdentifierImpl
-    _i9.BoxShape highlightShape = _i10.BoxShape.circle,
+    super.highlightShape,
 
     /// optionalParameters: {double? radius} , default:none
-    double? radius,
+    super.radius,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i11.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {ShapeBorder? customBorder} , default:none
-    _i12.ShapeBorder? customBorder,
+    super.customBorder,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i13.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i13.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i13.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i14.MaterialStateProperty<_i13.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i13.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
-    _i1.InteractiveInkFeatureFactory? splashFactory,
+    super.splashFactory,
 
     /// optionalParameters: {bool enableFeedback = true} , default:processed=BooleanLiteralImpl
-    bool enableFeedback = true,
+    super.enableFeedback,
 
     /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeFromSemantics = false,
+    super.excludeFromSemantics,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i15.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool canRequestFocus = true} , default:processed=BooleanLiteralImpl
-    bool canRequestFocus = true,
+    super.canRequestFocus,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i7.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
-    _i14.MaterialStatesController? statesController,
-  }) : super(
-          key: key,
-          child: child,
-          onTap: onTap,
-          onTapDown: onTapDown,
-          onTapUp: onTapUp,
-          onTapCancel: onTapCancel,
-          onDoubleTap: onDoubleTap,
-          onLongPress: onLongPress,
-          onSecondaryTap: onSecondaryTap,
-          onSecondaryTapUp: onSecondaryTapUp,
-          onSecondaryTapDown: onSecondaryTapDown,
-          onSecondaryTapCancel: onSecondaryTapCancel,
-          onHighlightChanged: onHighlightChanged,
-          onHover: onHover,
-          mouseCursor: mouseCursor,
-          containedInkWell: containedInkWell,
-          highlightShape: highlightShape,
-          radius: radius,
-          borderRadius: borderRadius,
-          customBorder: customBorder,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          overlayColor: overlayColor,
-          splashColor: splashColor,
-          splashFactory: splashFactory,
-          enableFeedback: enableFeedback,
-          excludeFromSemantics: excludeFromSemantics,
-          focusNode: focusNode,
-          canRequestFocus: canRequestFocus,
-          onFocusChange: onFocusChange,
-          autofocus: autofocus,
-          statesController: statesController,
-        ) {
+    super.statesController,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onTapDown': _i2.BuilderArg<_i5.GestureTapDownCallback?>(
+            name: 'onTapDown',
+            init: onTapDown,
+            isNamed: true,
+          ),
+          'onTapUp': _i2.BuilderArg<_i5.GestureTapUpCallback?>(
+            name: 'onTapUp',
+            init: onTapUp,
+            isNamed: true,
+          ),
+          'onTapCancel': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onTapCancel',
+            init: onTapCancel,
+            isNamed: true,
+          ),
+          'onDoubleTap': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onDoubleTap',
+            init: onDoubleTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i6.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onSecondaryTap': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onSecondaryTap',
+            init: onSecondaryTap,
+            isNamed: true,
+          ),
+          'onSecondaryTapUp': _i2.BuilderArg<_i5.GestureTapUpCallback?>(
+            name: 'onSecondaryTapUp',
+            init: onSecondaryTapUp,
+            isNamed: true,
+          ),
+          'onSecondaryTapDown': _i2.BuilderArg<_i5.GestureTapDownCallback?>(
+            name: 'onSecondaryTapDown',
+            init: onSecondaryTapDown,
+            isNamed: true,
+          ),
+          'onSecondaryTapCancel': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onSecondaryTapCancel',
+            init: onSecondaryTapCancel,
+            isNamed: true,
+          ),
+          'onHighlightChanged': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onHighlightChanged',
+            init: onHighlightChanged,
+            isNamed: true,
+          ),
+          'onHover': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onHover',
+            init: onHover,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'containedInkWell': _i2.BuilderArg<bool>(
+            name: 'containedInkWell',
+            init: containedInkWell,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'highlightShape': _i2.BuilderArg<_i9.BoxShape>(
+            name: 'highlightShape',
+            init: highlightShape,
+            isNamed: true,
+            defaultValue: _i10.BoxShape.circle,
+          ),
+          'radius': _i2.BuilderArg<double?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'customBorder': _i2.BuilderArg<_i12.ShapeBorder?>(
+            name: 'customBorder',
+            init: customBorder,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'splashFactory': _i2.BuilderArg<_i1.InteractiveInkFeatureFactory?>(
+            name: 'splashFactory',
+            init: splashFactory,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'excludeFromSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeFromSemantics',
+            init: excludeFromSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'focusNode': _i2.BuilderArg<_i15.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'canRequestFocus': _i2.BuilderArg<bool>(
+            name: 'canRequestFocus',
+            init: canRequestFocus,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'statesController': _i2.BuilderArg<_i14.MaterialStatesController?>(
+            name: 'statesController',
+            init: statesController,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InkResponse';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkResponse$Mate(
@@ -191,178 +330,10 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
           autofocus: p.get('autofocus').build(),
           statesController: p.get('statesController').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapDown',
-      onTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapUp',
-      onTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapCancel',
-      onTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTap',
-      onDoubleTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTap',
-      onSecondaryTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapUp',
-      onSecondaryTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapDown',
-      onSecondaryTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapCancel',
-      onSecondaryTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onHighlightChanged',
-      onHighlightChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onHover',
-      onHover,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'containedInkWell',
-      containedInkWell,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'highlightShape',
-      highlightShape,
-      isNamed: true,
-      defaultValue: _i10.BoxShape.circle,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'customBorder',
-      customBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashFactory',
-      splashFactory,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'excludeFromSemantics',
-      excludeFromSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'canRequestFocus',
-      canRequestFocus,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'statesController',
-      statesController,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class InkWell extends InkResponse
@@ -370,130 +341,259 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
   /// InkWell InkWell({Key? key, Widget? child, void Function()? onTap, void Function()? onDoubleTap, void Function()? onLongPress, void Function(TapDownDetails)? onTapDown, void Function(TapUpDetails)? onTapUp, void Function()? onTapCancel, void Function()? onSecondaryTap, void Function(TapUpDetails)? onSecondaryTapUp, void Function(TapDownDetails)? onSecondaryTapDown, void Function()? onSecondaryTapCancel, void Function(bool)? onHighlightChanged, void Function(bool)? onHover, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, Color? highlightColor, MaterialStateProperty<Color?>? overlayColor, Color? splashColor, InteractiveInkFeatureFactory? splashFactory, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, bool? enableFeedback = true, bool excludeFromSemantics = false, FocusNode? focusNode, bool canRequestFocus = true, void Function(bool)? onFocusChange, bool autofocus = false, MaterialStatesController? statesController})
   InkWell$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i4.Widget? child,
+    super.child,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i5.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function()? onDoubleTap} , default:none
-    _i5.GestureTapCallback? onDoubleTap,
+    super.onDoubleTap,
 
     /// optionalParameters: {void Function()? onLongPress} , default:none
-    _i6.GestureLongPressCallback? onLongPress,
+    super.onLongPress,
 
     /// optionalParameters: {void Function(TapDownDetails)? onTapDown} , default:none
-    _i5.GestureTapDownCallback? onTapDown,
+    super.onTapDown,
 
     /// optionalParameters: {void Function(TapUpDetails)? onTapUp} , default:none
-    _i5.GestureTapUpCallback? onTapUp,
+    super.onTapUp,
 
     /// optionalParameters: {void Function()? onTapCancel} , default:none
-    _i5.GestureTapCallback? onTapCancel,
+    super.onTapCancel,
 
     /// optionalParameters: {void Function()? onSecondaryTap} , default:none
-    _i5.GestureTapCallback? onSecondaryTap,
+    super.onSecondaryTap,
 
     /// optionalParameters: {void Function(TapUpDetails)? onSecondaryTapUp} , default:none
-    _i5.GestureTapUpCallback? onSecondaryTapUp,
+    super.onSecondaryTapUp,
 
     /// optionalParameters: {void Function(TapDownDetails)? onSecondaryTapDown} , default:none
-    _i5.GestureTapDownCallback? onSecondaryTapDown,
+    super.onSecondaryTapDown,
 
     /// optionalParameters: {void Function()? onSecondaryTapCancel} , default:none
-    _i5.GestureTapCallback? onSecondaryTapCancel,
+    super.onSecondaryTapCancel,
 
     /// optionalParameters: {void Function(bool)? onHighlightChanged} , default:none
-    _i7.ValueChanged<bool>? onHighlightChanged,
+    super.onHighlightChanged,
 
     /// optionalParameters: {void Function(bool)? onHover} , default:none
-    _i7.ValueChanged<bool>? onHover,
+    super.onHover,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i8.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i13.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i13.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i13.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i14.MaterialStateProperty<_i13.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i13.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {InteractiveInkFeatureFactory? splashFactory} , default:none
-    _i1.InteractiveInkFeatureFactory? splashFactory,
+    super.splashFactory,
 
     /// optionalParameters: {double? radius} , default:none
-    double? radius,
+    super.radius,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i11.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {ShapeBorder? customBorder} , default:none
-    _i12.ShapeBorder? customBorder,
+    super.customBorder,
 
     /// optionalParameters: {bool? enableFeedback = true} , default:processed=BooleanLiteralImpl
-    bool? enableFeedback = true,
+    super.enableFeedback,
 
     /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
-    bool excludeFromSemantics = false,
+    super.excludeFromSemantics,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i15.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {bool canRequestFocus = true} , default:processed=BooleanLiteralImpl
-    bool canRequestFocus = true,
+    super.canRequestFocus,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i7.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
-    _i14.MaterialStatesController? statesController,
-  }) : super(
-          key: key,
-          child: child,
-          onTap: onTap,
-          onDoubleTap: onDoubleTap,
-          onLongPress: onLongPress,
-          onTapDown: onTapDown,
-          onTapUp: onTapUp,
-          onTapCancel: onTapCancel,
-          onSecondaryTap: onSecondaryTap,
-          onSecondaryTapUp: onSecondaryTapUp,
-          onSecondaryTapDown: onSecondaryTapDown,
-          onSecondaryTapCancel: onSecondaryTapCancel,
-          onHighlightChanged: onHighlightChanged,
-          onHover: onHover,
-          mouseCursor: mouseCursor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          highlightColor: highlightColor,
-          overlayColor: overlayColor,
-          splashColor: splashColor,
-          splashFactory: splashFactory,
-          radius: radius,
-          borderRadius: borderRadius,
-          customBorder: customBorder,
-          enableFeedback: enableFeedback,
-          excludeFromSemantics: excludeFromSemantics,
-          focusNode: focusNode,
-          canRequestFocus: canRequestFocus,
-          onFocusChange: onFocusChange,
-          autofocus: autofocus,
-          statesController: statesController,
-        ) {
+    super.statesController,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onDoubleTap': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onDoubleTap',
+            init: onDoubleTap,
+            isNamed: true,
+          ),
+          'onLongPress': _i2.BuilderArg<_i6.GestureLongPressCallback?>(
+            name: 'onLongPress',
+            init: onLongPress,
+            isNamed: true,
+          ),
+          'onTapDown': _i2.BuilderArg<_i5.GestureTapDownCallback?>(
+            name: 'onTapDown',
+            init: onTapDown,
+            isNamed: true,
+          ),
+          'onTapUp': _i2.BuilderArg<_i5.GestureTapUpCallback?>(
+            name: 'onTapUp',
+            init: onTapUp,
+            isNamed: true,
+          ),
+          'onTapCancel': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onTapCancel',
+            init: onTapCancel,
+            isNamed: true,
+          ),
+          'onSecondaryTap': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onSecondaryTap',
+            init: onSecondaryTap,
+            isNamed: true,
+          ),
+          'onSecondaryTapUp': _i2.BuilderArg<_i5.GestureTapUpCallback?>(
+            name: 'onSecondaryTapUp',
+            init: onSecondaryTapUp,
+            isNamed: true,
+          ),
+          'onSecondaryTapDown': _i2.BuilderArg<_i5.GestureTapDownCallback?>(
+            name: 'onSecondaryTapDown',
+            init: onSecondaryTapDown,
+            isNamed: true,
+          ),
+          'onSecondaryTapCancel': _i2.BuilderArg<_i5.GestureTapCallback?>(
+            name: 'onSecondaryTapCancel',
+            init: onSecondaryTapCancel,
+            isNamed: true,
+          ),
+          'onHighlightChanged': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onHighlightChanged',
+            init: onHighlightChanged,
+            isNamed: true,
+          ),
+          'onHover': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onHover',
+            init: onHover,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i13.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'splashFactory': _i2.BuilderArg<_i1.InteractiveInkFeatureFactory?>(
+            name: 'splashFactory',
+            init: splashFactory,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<double?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'customBorder': _i2.BuilderArg<_i12.ShapeBorder?>(
+            name: 'customBorder',
+            init: customBorder,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'excludeFromSemantics': _i2.BuilderArg<bool>(
+            name: 'excludeFromSemantics',
+            init: excludeFromSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'focusNode': _i2.BuilderArg<_i15.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'canRequestFocus': _i2.BuilderArg<bool>(
+            name: 'canRequestFocus',
+            init: canRequestFocus,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i7.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'statesController': _i2.BuilderArg<_i14.MaterialStatesController?>(
+            name: 'statesController',
+            init: statesController,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InkWell';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkWell$Mate(
@@ -529,164 +629,8 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
           autofocus: p.get('autofocus').build(),
           statesController: p.get('statesController').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onDoubleTap',
-      onDoubleTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onLongPress',
-      onLongPress,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapDown',
-      onTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapUp',
-      onTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onTapCancel',
-      onTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTap',
-      onSecondaryTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapUp',
-      onSecondaryTapUp,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapDown',
-      onSecondaryTapDown,
-      isNamed: true,
-    );
-    mateUse(
-      'onSecondaryTapCancel',
-      onSecondaryTapCancel,
-      isNamed: true,
-    );
-    mateUse(
-      'onHighlightChanged',
-      onHighlightChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onHover',
-      onHover,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashFactory',
-      splashFactory,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'customBorder',
-      customBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'excludeFromSemantics',
-      excludeFromSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'canRequestFocus',
-      canRequestFocus,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'statesController',
-      statesController,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

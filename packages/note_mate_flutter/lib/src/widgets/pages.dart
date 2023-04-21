@@ -12,54 +12,108 @@ class PageRouteBuilder$Mate<T> extends _i1.PageRouteBuilder<T> with _i2.Mate {
   /// PageRouteBuilder<T> PageRouteBuilder({RouteSettings? settings, required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder, Widget Function(BuildContext, Animation<double>, Animation<double>, Widget) transitionsBuilder = _defaultTransitionsBuilder, Duration transitionDuration = const Duration(milliseconds: 300), Duration reverseTransitionDuration = const Duration(milliseconds: 300), bool opaque = true, bool barrierDismissible = false, Color? barrierColor, String? barrierLabel, bool maintainState = true, bool fullscreenDialog = false, bool allowSnapshotting = true})
   PageRouteBuilder$Mate({
     /// optionalParameters: {RouteSettings? settings} , default:none
-    _i3.RouteSettings? settings,
+    super.settings,
 
     /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Animation<double>) pageBuilder} , default:none
-    required _i4.RoutePageBuilder pageBuilder,
+    required super.pageBuilder,
 
     /// optionalParameters: {Widget Function(BuildContext, Animation<double>, Animation<double>, Widget) transitionsBuilder = _defaultTransitionsBuilder} , default:unprocessed=SimpleIdentifierImpl
-    required _i4.RouteTransitionsBuilder transitionsBuilder,
+    super.transitionsBuilder,
 
     /// optionalParameters: {Duration transitionDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
-    required Duration transitionDuration,
+    super.transitionDuration,
 
     /// optionalParameters: {Duration reverseTransitionDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
-    required Duration reverseTransitionDuration,
+    super.reverseTransitionDuration,
 
     /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
-    bool opaque = true,
+    super.opaque,
 
     /// optionalParameters: {bool barrierDismissible = false} , default:processed=BooleanLiteralImpl
-    bool barrierDismissible = false,
+    super.barrierDismissible,
 
     /// optionalParameters: {Color? barrierColor} , default:none
-    _i5.Color? barrierColor,
+    super.barrierColor,
 
     /// optionalParameters: {String? barrierLabel} , default:none
-    String? barrierLabel,
+    super.barrierLabel,
 
     /// optionalParameters: {bool maintainState = true} , default:processed=BooleanLiteralImpl
-    bool maintainState = true,
+    super.maintainState,
 
     /// optionalParameters: {bool fullscreenDialog = false} , default:processed=BooleanLiteralImpl
-    bool fullscreenDialog = false,
+    super.fullscreenDialog,
 
     /// optionalParameters: {bool allowSnapshotting = true} , default:processed=BooleanLiteralImpl
-    bool allowSnapshotting = true,
-  }) : super(
-          settings: settings,
-          pageBuilder: pageBuilder,
-          transitionsBuilder: transitionsBuilder,
-          transitionDuration: transitionDuration,
-          reverseTransitionDuration: reverseTransitionDuration,
-          opaque: opaque,
-          barrierDismissible: barrierDismissible,
-          barrierColor: barrierColor,
-          barrierLabel: barrierLabel,
-          maintainState: maintainState,
-          fullscreenDialog: fullscreenDialog,
-          allowSnapshotting: allowSnapshotting,
-        ) {
+    super.allowSnapshotting,
+  })  : mateParams = {
+          'settings': _i2.BuilderArg<_i3.RouteSettings?>(
+            name: 'settings',
+            init: settings,
+            isNamed: true,
+          ),
+          'pageBuilder': _i2.BuilderArg<_i4.RoutePageBuilder>(
+            name: 'pageBuilder',
+            init: pageBuilder,
+            isNamed: true,
+          ),
+          'transitionsBuilder': _i2.BuilderArg<_i4.RouteTransitionsBuilder>(
+            name: 'transitionsBuilder',
+            init: transitionsBuilder,
+            isNamed: true,
+          ),
+          'transitionDuration': _i2.BuilderArg<Duration>(
+            name: 'transitionDuration',
+            init: transitionDuration,
+            isNamed: true,
+          ),
+          'reverseTransitionDuration': _i2.BuilderArg<Duration>(
+            name: 'reverseTransitionDuration',
+            init: reverseTransitionDuration,
+            isNamed: true,
+          ),
+          'opaque': _i2.BuilderArg<bool>(
+            name: 'opaque',
+            init: opaque,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'barrierDismissible': _i2.BuilderArg<bool>(
+            name: 'barrierDismissible',
+            init: barrierDismissible,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'barrierColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'barrierColor',
+            init: barrierColor,
+            isNamed: true,
+          ),
+          'barrierLabel': _i2.BuilderArg<String?>(
+            name: 'barrierLabel',
+            init: barrierLabel,
+            isNamed: true,
+          ),
+          'maintainState': _i2.BuilderArg<bool>(
+            name: 'maintainState',
+            init: maintainState,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'fullscreenDialog': _i2.BuilderArg<bool>(
+            name: 'fullscreenDialog',
+            init: fullscreenDialog,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'allowSnapshotting': _i2.BuilderArg<bool>(
+            name: 'allowSnapshotting',
+            init: allowSnapshotting,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PageRouteBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PageRouteBuilder$Mate<T>(
@@ -76,70 +130,8 @@ class PageRouteBuilder$Mate<T> extends _i1.PageRouteBuilder<T> with _i2.Mate {
           fullscreenDialog: p.get('fullscreenDialog').build(),
           allowSnapshotting: p.get('allowSnapshotting').build(),
         );
-    mateUse(
-      'settings',
-      settings,
-      isNamed: true,
-    );
-    mateUse(
-      'pageBuilder',
-      pageBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'transitionsBuilder',
-      transitionsBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'transitionDuration',
-      transitionDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseTransitionDuration',
-      reverseTransitionDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'opaque',
-      opaque,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'barrierDismissible',
-      barrierDismissible,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'barrierColor',
-      barrierColor,
-      isNamed: true,
-    );
-    mateUse(
-      'barrierLabel',
-      barrierLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'maintainState',
-      maintainState,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'fullscreenDialog',
-      fullscreenDialog,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'allowSnapshotting',
-      allowSnapshotting,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

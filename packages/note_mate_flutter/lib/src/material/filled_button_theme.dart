@@ -13,17 +13,22 @@ class FilledButtonThemeData$Mate extends _i1.FilledButtonThemeData with _i2.Mate
   FilledButtonThemeData$Mate(
       {
       /// optionalParameters: {ButtonStyle? style} , default:none
-      _i3.ButtonStyle? style})
-      : super(style: style) {
+      super.style})
+      : mateParams = {
+          'style': _i2.BuilderArg<_i3.ButtonStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'FilledButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButtonThemeData$Mate(style: p.get('style').build());
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class FilledButtonTheme extends InheritedTheme
@@ -31,18 +36,31 @@ class FilledButtonTheme$Mate extends _i1.FilledButtonTheme with _i2.Mate {
   /// FilledButtonTheme FilledButtonTheme({Key? key, required FilledButtonThemeData data, required Widget child})
   FilledButtonTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i4.Key? key,
+    super.key,
 
     /// optionalParameters: {required FilledButtonThemeData data} , default:none
-    required _i1.FilledButtonThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i4.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.FilledButtonThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FilledButtonTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FilledButtonTheme$Mate(
@@ -50,20 +68,8 @@ class FilledButtonTheme$Mate extends _i1.FilledButtonTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

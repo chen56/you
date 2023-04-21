@@ -12,38 +12,71 @@ class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.
   /// LinearProgressIndicator LinearProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double? minHeight, String? semanticsLabel, String? semanticsValue})
   LinearProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? value} , default:none
-    double? value,
+    super.value,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {Animation<Color?>? valueColor} , default:none
-    _i5.Animation<_i4.Color?>? valueColor,
+    super.valueColor,
 
     /// optionalParameters: {double? minHeight} , default:none
-    double? minHeight,
+    super.minHeight,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
-    String? semanticsValue,
-  }) : super(
-          key: key,
-          value: value,
-          backgroundColor: backgroundColor,
-          color: color,
-          valueColor: valueColor,
-          minHeight: minHeight,
-          semanticsLabel: semanticsLabel,
-          semanticsValue: semanticsValue,
-        ) {
+    super.semanticsValue,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<double?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'valueColor': _i2.BuilderArg<_i5.Animation<_i4.Color?>?>(
+            name: 'valueColor',
+            init: valueColor,
+            isNamed: true,
+          ),
+          'minHeight': _i2.BuilderArg<double?>(
+            name: 'minHeight',
+            init: minHeight,
+            isNamed: true,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'semanticsValue': _i2.BuilderArg<String?>(
+            name: 'semanticsValue',
+            init: semanticsValue,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LinearProgressIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => LinearProgressIndicator$Mate(
@@ -56,47 +89,10 @@ class LinearProgressIndicator$Mate extends _i1.LinearProgressIndicator with _i2.
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'valueColor',
-      valueColor,
-      isNamed: true,
-    );
-    mateUse(
-      'minHeight',
-      minHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsValue',
-      semanticsValue,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CircularProgressIndicator extends ProgressIndicator
@@ -104,38 +100,72 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
   /// CircularProgressIndicator CircularProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? value} , default:none
-    double? value,
+    super.value,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {Animation<Color?>? valueColor} , default:none
-    _i5.Animation<_i4.Color?>? valueColor,
+    super.valueColor,
 
     /// optionalParameters: {double strokeWidth = 4.0} , default:processed=DoubleLiteralImpl
-    double strokeWidth = 4.0,
+    super.strokeWidth,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
-    String? semanticsValue,
-  }) : super(
-          key: key,
-          value: value,
-          backgroundColor: backgroundColor,
-          color: color,
-          valueColor: valueColor,
-          strokeWidth: strokeWidth,
-          semanticsLabel: semanticsLabel,
-          semanticsValue: semanticsValue,
-        ) {
+    super.semanticsValue,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<double?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'valueColor': _i2.BuilderArg<_i5.Animation<_i4.Color?>?>(
+            name: 'valueColor',
+            init: valueColor,
+            isNamed: true,
+          ),
+          'strokeWidth': _i2.BuilderArg<double>(
+            name: 'strokeWidth',
+            init: strokeWidth,
+            isNamed: true,
+            defaultValue: 4.0,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'semanticsValue': _i2.BuilderArg<String?>(
+            name: 'semanticsValue',
+            init: semanticsValue,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CircularProgressIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircularProgressIndicator$Mate(
@@ -148,80 +178,69 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'valueColor',
-      valueColor,
-      isNamed: true,
-    );
-    mateUse(
-      'strokeWidth',
-      strokeWidth,
-      isNamed: true,
-      defaultValue: 4.0,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsValue',
-      semanticsValue,
-      isNamed: true,
-    );
   }
 
   /// CircularProgressIndicator CircularProgressIndicator.adaptive({Key? key, double? value, Color? backgroundColor, Animation<Color?>? valueColor, double strokeWidth = 4.0, String? semanticsLabel, String? semanticsValue})
   CircularProgressIndicator$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? value} , default:none
-    double? value,
+    super.value,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Animation<Color?>? valueColor} , default:none
-    _i5.Animation<_i4.Color?>? valueColor,
+    super.valueColor,
 
     /// optionalParameters: {double strokeWidth = 4.0} , default:processed=DoubleLiteralImpl
-    double strokeWidth = 4.0,
+    super.strokeWidth,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
-    String? semanticsValue,
-  }) : super.adaptive(
-          key: key,
-          value: value,
-          backgroundColor: backgroundColor,
-          valueColor: valueColor,
-          strokeWidth: strokeWidth,
-          semanticsLabel: semanticsLabel,
-          semanticsValue: semanticsValue,
-        ) {
+    super.semanticsValue,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<double?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'valueColor': _i2.BuilderArg<_i5.Animation<_i4.Color?>?>(
+            name: 'valueColor',
+            init: valueColor,
+            isNamed: true,
+          ),
+          'strokeWidth': _i2.BuilderArg<double>(
+            name: 'strokeWidth',
+            init: strokeWidth,
+            isNamed: true,
+            defaultValue: 4.0,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'semanticsValue': _i2.BuilderArg<String?>(
+            name: 'semanticsValue',
+            init: semanticsValue,
+            isNamed: true,
+          ),
+        },
+        super.adaptive() {
     mateBuilderName = 'CircularProgressIndicator.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => CircularProgressIndicator$Mate.adaptive(
@@ -233,43 +252,10 @@ class CircularProgressIndicator$Mate extends _i1.CircularProgressIndicator with 
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'valueColor',
-      valueColor,
-      isNamed: true,
-    );
-    mateUse(
-      'strokeWidth',
-      strokeWidth,
-      isNamed: true,
-      defaultValue: 4.0,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsValue',
-      semanticsValue,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RefreshProgressIndicator extends CircularProgressIndicator
@@ -277,38 +263,71 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
   /// RefreshProgressIndicator RefreshProgressIndicator({Key? key, double? value, Color? backgroundColor, Color? color, Animation<Color?>? valueColor, double strokeWidth = defaultStrokeWidth, String? semanticsLabel, String? semanticsValue})
   RefreshProgressIndicator$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? value} , default:none
-    double? value,
+    super.value,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? color} , default:none
-    _i4.Color? color,
+    super.color,
 
     /// optionalParameters: {Animation<Color?>? valueColor} , default:none
-    _i5.Animation<_i4.Color?>? valueColor,
+    super.valueColor,
 
     /// optionalParameters: {double strokeWidth = defaultStrokeWidth} , default:unprocessed=SimpleIdentifierImpl
-    required double strokeWidth,
+    super.strokeWidth,
 
     /// optionalParameters: {String? semanticsLabel} , default:none
-    String? semanticsLabel,
+    super.semanticsLabel,
 
     /// optionalParameters: {String? semanticsValue} , default:none
-    String? semanticsValue,
-  }) : super(
-          key: key,
-          value: value,
-          backgroundColor: backgroundColor,
-          color: color,
-          valueColor: valueColor,
-          strokeWidth: strokeWidth,
-          semanticsLabel: semanticsLabel,
-          semanticsValue: semanticsValue,
-        ) {
+    super.semanticsValue,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<double?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'valueColor': _i2.BuilderArg<_i5.Animation<_i4.Color?>?>(
+            name: 'valueColor',
+            init: valueColor,
+            isNamed: true,
+          ),
+          'strokeWidth': _i2.BuilderArg<double>(
+            name: 'strokeWidth',
+            init: strokeWidth,
+            isNamed: true,
+          ),
+          'semanticsLabel': _i2.BuilderArg<String?>(
+            name: 'semanticsLabel',
+            init: semanticsLabel,
+            isNamed: true,
+          ),
+          'semanticsValue': _i2.BuilderArg<String?>(
+            name: 'semanticsValue',
+            init: semanticsValue,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RefreshProgressIndicator';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => RefreshProgressIndicator$Mate(
@@ -321,45 +340,8 @@ class RefreshProgressIndicator$Mate extends _i1.RefreshProgressIndicator with _i
           semanticsLabel: p.get('semanticsLabel').build(),
           semanticsValue: p.get('semanticsValue').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'valueColor',
-      valueColor,
-      isNamed: true,
-    );
-    mateUse(
-      'strokeWidth',
-      strokeWidth,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsLabel',
-      semanticsLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'semanticsValue',
-      semanticsValue,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

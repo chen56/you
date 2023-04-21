@@ -10,29 +10,31 @@ class RenderCustomMultiChildLayoutBox$Mate extends _i1.RenderCustomMultiChildLay
   /// RenderCustomMultiChildLayoutBox RenderCustomMultiChildLayoutBox({List<RenderBox>? children, required MultiChildLayoutDelegate delegate})
   RenderCustomMultiChildLayoutBox$Mate({
     /// optionalParameters: {List<RenderBox>? children} , default:none
-    List<_i3.RenderBox>? children,
+    super.children,
 
     /// optionalParameters: {required MultiChildLayoutDelegate delegate} , default:none
-    required _i1.MultiChildLayoutDelegate delegate,
-  }) : super(
-          children: children,
-          delegate: delegate,
-        ) {
+    required super.delegate,
+  })  : mateParams = {
+          'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i1.MultiChildLayoutDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderCustomMultiChildLayoutBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderCustomMultiChildLayoutBox$Mate(
           children: p.get('children').build(),
           delegate: p.get('delegate').build(),
         );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

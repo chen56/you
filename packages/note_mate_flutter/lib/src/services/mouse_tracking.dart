@@ -11,22 +11,41 @@ class MouseTrackerAnnotation$Mate extends _i1.MouseTrackerAnnotation with _i2.Ma
   /// MouseTrackerAnnotation MouseTrackerAnnotation({void Function(PointerEnterEvent)? onEnter, void Function(PointerExitEvent)? onExit, MouseCursor cursor = MouseCursor.defer, bool validForMouseTracker = true})
   MouseTrackerAnnotation$Mate({
     /// optionalParameters: {void Function(PointerEnterEvent)? onEnter} , default:none
-    _i1.PointerEnterEventListener? onEnter,
+    super.onEnter,
 
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
-    _i1.PointerExitEventListener? onExit,
+    super.onExit,
 
     /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
-    _i3.MouseCursor cursor = _i4.MouseCursor.defer,
+    super.cursor,
 
     /// optionalParameters: {bool validForMouseTracker = true} , default:processed=BooleanLiteralImpl
-    bool validForMouseTracker = true,
-  }) : super(
-          onEnter: onEnter,
-          onExit: onExit,
-          cursor: cursor,
-          validForMouseTracker: validForMouseTracker,
-        ) {
+    super.validForMouseTracker,
+  })  : mateParams = {
+          'onEnter': _i2.BuilderArg<_i1.PointerEnterEventListener?>(
+            name: 'onEnter',
+            init: onEnter,
+            isNamed: true,
+          ),
+          'onExit': _i2.BuilderArg<_i1.PointerExitEventListener?>(
+            name: 'onExit',
+            init: onExit,
+            isNamed: true,
+          ),
+          'cursor': _i2.BuilderArg<_i3.MouseCursor>(
+            name: 'cursor',
+            init: cursor,
+            isNamed: true,
+            defaultValue: _i4.MouseCursor.defer,
+          ),
+          'validForMouseTracker': _i2.BuilderArg<bool>(
+            name: 'validForMouseTracker',
+            init: validForMouseTracker,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MouseTrackerAnnotation';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => MouseTrackerAnnotation$Mate(
@@ -35,27 +54,8 @@ class MouseTrackerAnnotation$Mate extends _i1.MouseTrackerAnnotation with _i2.Ma
           cursor: p.get('cursor').build(),
           validForMouseTracker: p.get('validForMouseTracker').build(),
         );
-    mateUse(
-      'onEnter',
-      onEnter,
-      isNamed: true,
-    );
-    mateUse(
-      'onExit',
-      onExit,
-      isNamed: true,
-    );
-    mateUse(
-      'cursor',
-      cursor,
-      isNamed: true,
-      defaultValue: _i4.MouseCursor.defer,
-    );
-    mateUse(
-      'validForMouseTracker',
-      validForMouseTracker,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

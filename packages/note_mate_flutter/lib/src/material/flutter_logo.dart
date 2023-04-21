@@ -15,30 +15,57 @@ class FlutterLogo$Mate extends _i1.FlutterLogo with _i2.Mate {
   /// FlutterLogo FlutterLogo({Key? key, double? size, Color textColor = const Color(0xFF757575), FlutterLogoStyle style = FlutterLogoStyle.markOnly, Duration duration = const Duration(milliseconds: 750), Curve curve = Curves.fastOutSlowIn})
   FlutterLogo$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {double? size} , default:none
-    double? size,
+    super.size,
 
     /// optionalParameters: {Color textColor = const Color(0xFF757575)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.Color textColor,
+    super.textColor,
 
     /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , default:processed=PrefixedIdentifierImpl
-    _i5.FlutterLogoStyle style = _i6.FlutterLogoStyle.markOnly,
+    super.style,
 
     /// optionalParameters: {Duration duration = const Duration(milliseconds: 750)} , default:unprocessed=InstanceCreationExpressionImpl
-    required Duration duration,
+    super.duration,
 
     /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , default:processed=PrefixedIdentifierImpl
-    _i7.Curve curve = _i8.Curves.fastOutSlowIn,
-  }) : super(
-          key: key,
-          size: size,
-          textColor: textColor,
-          style: style,
-          duration: duration,
-          curve: curve,
-        ) {
+    super.curve,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'size': _i2.BuilderArg<double?>(
+            name: 'size',
+            init: size,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i4.Color>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i5.FlutterLogoStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+            defaultValue: _i6.FlutterLogoStyle.markOnly,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i7.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i8.Curves.fastOutSlowIn,
+          ),
+        },
+        super() {
     mateBuilderName = 'FlutterLogo';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FlutterLogo$Mate(
@@ -49,37 +76,8 @@ class FlutterLogo$Mate extends _i1.FlutterLogo with _i2.Mate {
           duration: p.get('duration').build(),
           curve: p.get('curve').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'size',
-      size,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-      defaultValue: _i6.FlutterLogoStyle.markOnly,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i8.Curves.fastOutSlowIn,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

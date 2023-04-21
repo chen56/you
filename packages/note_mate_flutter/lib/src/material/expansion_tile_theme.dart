@@ -15,54 +15,103 @@ class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData with _i2.Ma
   /// ExpansionTileThemeData ExpansionTileThemeData({Color? backgroundColor, Color? collapsedBackgroundColor, EdgeInsetsGeometry? tilePadding, AlignmentGeometry? expandedAlignment, EdgeInsetsGeometry? childrenPadding, Color? iconColor, Color? collapsedIconColor, Color? textColor, Color? collapsedTextColor, ShapeBorder? shape, ShapeBorder? collapsedShape, Clip? clipBehavior})
   ExpansionTileThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? collapsedBackgroundColor} , default:none
-    _i3.Color? collapsedBackgroundColor,
+    super.collapsedBackgroundColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? tilePadding} , default:none
-    _i4.EdgeInsetsGeometry? tilePadding,
+    super.tilePadding,
 
     /// optionalParameters: {AlignmentGeometry? expandedAlignment} , default:none
-    _i5.AlignmentGeometry? expandedAlignment,
+    super.expandedAlignment,
 
     /// optionalParameters: {EdgeInsetsGeometry? childrenPadding} , default:none
-    _i4.EdgeInsetsGeometry? childrenPadding,
+    super.childrenPadding,
 
     /// optionalParameters: {Color? iconColor} , default:none
-    _i3.Color? iconColor,
+    super.iconColor,
 
     /// optionalParameters: {Color? collapsedIconColor} , default:none
-    _i3.Color? collapsedIconColor,
+    super.collapsedIconColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i3.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {Color? collapsedTextColor} , default:none
-    _i3.Color? collapsedTextColor,
+    super.collapsedTextColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i6.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {ShapeBorder? collapsedShape} , default:none
-    _i6.ShapeBorder? collapsedShape,
+    super.collapsedShape,
 
     /// optionalParameters: {Clip? clipBehavior} , default:none
-    _i3.Clip? clipBehavior,
-  }) : super(
-          backgroundColor: backgroundColor,
-          collapsedBackgroundColor: collapsedBackgroundColor,
-          tilePadding: tilePadding,
-          expandedAlignment: expandedAlignment,
-          childrenPadding: childrenPadding,
-          iconColor: iconColor,
-          collapsedIconColor: collapsedIconColor,
-          textColor: textColor,
-          collapsedTextColor: collapsedTextColor,
-          shape: shape,
-          collapsedShape: collapsedShape,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'collapsedBackgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'collapsedBackgroundColor',
+            init: collapsedBackgroundColor,
+            isNamed: true,
+          ),
+          'tilePadding': _i2.BuilderArg<_i4.EdgeInsetsGeometry?>(
+            name: 'tilePadding',
+            init: tilePadding,
+            isNamed: true,
+          ),
+          'expandedAlignment': _i2.BuilderArg<_i5.AlignmentGeometry?>(
+            name: 'expandedAlignment',
+            init: expandedAlignment,
+            isNamed: true,
+          ),
+          'childrenPadding': _i2.BuilderArg<_i4.EdgeInsetsGeometry?>(
+            name: 'childrenPadding',
+            init: childrenPadding,
+            isNamed: true,
+          ),
+          'iconColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'iconColor',
+            init: iconColor,
+            isNamed: true,
+          ),
+          'collapsedIconColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'collapsedIconColor',
+            init: collapsedIconColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'collapsedTextColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'collapsedTextColor',
+            init: collapsedTextColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i6.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'collapsedShape': _i2.BuilderArg<_i6.ShapeBorder?>(
+            name: 'collapsedShape',
+            init: collapsedShape,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i3.Clip?>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExpansionTileThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTileThemeData$Mate(
@@ -79,67 +128,10 @@ class ExpansionTileThemeData$Mate extends _i1.ExpansionTileThemeData with _i2.Ma
           collapsedShape: p.get('collapsedShape').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedBackgroundColor',
-      collapsedBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'tilePadding',
-      tilePadding,
-      isNamed: true,
-    );
-    mateUse(
-      'expandedAlignment',
-      expandedAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'childrenPadding',
-      childrenPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'iconColor',
-      iconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedIconColor',
-      collapsedIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedTextColor',
-      collapsedTextColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'collapsedShape',
-      collapsedShape,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ExpansionTileTheme extends InheritedTheme
@@ -147,18 +139,31 @@ class ExpansionTileTheme$Mate extends _i1.ExpansionTileTheme with _i2.Mate {
   /// ExpansionTileTheme ExpansionTileTheme({Key? key, required ExpansionTileThemeData data, required Widget child})
   ExpansionTileTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required ExpansionTileThemeData data} , default:none
-    required _i1.ExpansionTileThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ExpansionTileThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ExpansionTileTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ExpansionTileTheme$Mate(
@@ -166,20 +171,8 @@ class ExpansionTileTheme$Mate extends _i1.ExpansionTileTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

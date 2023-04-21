@@ -10,18 +10,31 @@ class TextSelectionToolbarLayoutDelegate$Mate extends _i1.TextSelectionToolbarLa
   /// TextSelectionToolbarLayoutDelegate TextSelectionToolbarLayoutDelegate({required Offset anchorAbove, required Offset anchorBelow, bool? fitsAbove})
   TextSelectionToolbarLayoutDelegate$Mate({
     /// optionalParameters: {required Offset anchorAbove} , default:none
-    required _i3.Offset anchorAbove,
+    required super.anchorAbove,
 
     /// optionalParameters: {required Offset anchorBelow} , default:none
-    required _i3.Offset anchorBelow,
+    required super.anchorBelow,
 
     /// optionalParameters: {bool? fitsAbove} , default:none
-    bool? fitsAbove,
-  }) : super(
-          anchorAbove: anchorAbove,
-          anchorBelow: anchorBelow,
-          fitsAbove: fitsAbove,
-        ) {
+    super.fitsAbove,
+  })  : mateParams = {
+          'anchorAbove': _i2.BuilderArg<_i3.Offset>(
+            name: 'anchorAbove',
+            init: anchorAbove,
+            isNamed: true,
+          ),
+          'anchorBelow': _i2.BuilderArg<_i3.Offset>(
+            name: 'anchorBelow',
+            init: anchorBelow,
+            isNamed: true,
+          ),
+          'fitsAbove': _i2.BuilderArg<bool?>(
+            name: 'fitsAbove',
+            init: fitsAbove,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextSelectionToolbarLayoutDelegate';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextSelectionToolbarLayoutDelegate$Mate(
@@ -29,20 +42,8 @@ class TextSelectionToolbarLayoutDelegate$Mate extends _i1.TextSelectionToolbarLa
           anchorBelow: p.get('anchorBelow').build(),
           fitsAbove: p.get('fitsAbove').build(),
         );
-    mateUse(
-      'anchorAbove',
-      anchorAbove,
-      isNamed: true,
-    );
-    mateUse(
-      'anchorBelow',
-      anchorBelow,
-      isNamed: true,
-    );
-    mateUse(
-      'fitsAbove',
-      fitsAbove,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

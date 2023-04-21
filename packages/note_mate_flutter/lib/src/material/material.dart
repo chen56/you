@@ -16,58 +16,115 @@ class Material$Mate extends _i1.Material with _i2.Mate {
   /// Material Material({Key? key, MaterialType type = MaterialType.canvas, double elevation = 0.0, Color? color, Color? shadowColor, Color? surfaceTintColor, TextStyle? textStyle, BorderRadiusGeometry? borderRadius, ShapeBorder? shape, bool borderOnForeground = true, Clip clipBehavior = Clip.none, Duration animationDuration = kThemeChangeDuration, Widget? child})
   Material$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {MaterialType type = MaterialType.canvas} , default:processed=PrefixedIdentifierImpl
-    _i1.MaterialType type = _i4.MaterialType.canvas,
+    super.type,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
-    double elevation = 0.0,
+    super.elevation,
 
     /// optionalParameters: {Color? color} , default:none
-    _i5.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i5.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i5.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i6.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {BorderRadiusGeometry? borderRadius} , default:none
-    _i7.BorderRadiusGeometry? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i8.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {bool borderOnForeground = true} , default:processed=BooleanLiteralImpl
-    bool borderOnForeground = true,
+    super.borderOnForeground,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i5.Clip clipBehavior = _i5.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , default:unprocessed=SimpleIdentifierImpl
-    required Duration animationDuration,
+    super.animationDuration,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i9.Widget? child,
-  }) : super(
-          key: key,
-          type: type,
-          elevation: elevation,
-          color: color,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          textStyle: textStyle,
-          borderRadius: borderRadius,
-          shape: shape,
-          borderOnForeground: borderOnForeground,
-          clipBehavior: clipBehavior,
-          animationDuration: animationDuration,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'type': _i2.BuilderArg<_i1.MaterialType>(
+            name: 'type',
+            init: type,
+            isNamed: true,
+            defaultValue: _i4.MaterialType.canvas,
+          ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'color': _i2.BuilderArg<_i5.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadiusGeometry?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'borderOnForeground': _i2.BuilderArg<bool>(
+            name: 'borderOnForeground',
+            init: borderOnForeground,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i5.Clip.none,
+          ),
+          'animationDuration': _i2.BuilderArg<Duration>(
+            name: 'animationDuration',
+            init: animationDuration,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i9.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Material';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Material$Mate(
@@ -85,76 +142,10 @@ class Material$Mate extends _i1.Material with _i2.Mate {
           animationDuration: p.get('animationDuration').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'type',
-      type,
-      isNamed: true,
-      defaultValue: _i4.MaterialType.canvas,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'borderOnForeground',
-      borderOnForeground,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i5.Clip.none,
-    );
-    mateUse(
-      'animationDuration',
-      animationDuration,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ShapeBorderTween extends Tween<ShapeBorder?>
@@ -162,29 +153,31 @@ class ShapeBorderTween$Mate extends _i1.ShapeBorderTween with _i2.Mate {
   /// ShapeBorderTween ShapeBorderTween({ShapeBorder? begin, ShapeBorder? end})
   ShapeBorderTween$Mate({
     /// optionalParameters: {ShapeBorder? begin} , default:none
-    _i8.ShapeBorder? begin,
+    super.begin,
 
     /// optionalParameters: {ShapeBorder? end} , default:none
-    _i8.ShapeBorder? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i8.ShapeBorder?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i8.ShapeBorder?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ShapeBorderTween';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ShapeBorderTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

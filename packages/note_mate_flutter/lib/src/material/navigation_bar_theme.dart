@@ -17,46 +17,87 @@ class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Ma
   /// NavigationBarThemeData NavigationBarThemeData({double? height, Color? backgroundColor, double? elevation, Color? shadowColor, Color? surfaceTintColor, Color? indicatorColor, ShapeBorder? indicatorShape, MaterialStateProperty<TextStyle?>? labelTextStyle, MaterialStateProperty<IconThemeData?>? iconTheme, NavigationDestinationLabelBehavior? labelBehavior})
   NavigationBarThemeData$Mate({
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {Color? indicatorColor} , default:none
-    _i3.Color? indicatorColor,
+    super.indicatorColor,
 
     /// optionalParameters: {ShapeBorder? indicatorShape} , default:none
-    _i4.ShapeBorder? indicatorShape,
+    super.indicatorShape,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? labelTextStyle} , default:none
-    _i5.MaterialStateProperty<_i6.TextStyle?>? labelTextStyle,
+    super.labelTextStyle,
 
     /// optionalParameters: {MaterialStateProperty<IconThemeData?>? iconTheme} , default:none
-    _i5.MaterialStateProperty<_i7.IconThemeData?>? iconTheme,
+    super.iconTheme,
 
     /// optionalParameters: {NavigationDestinationLabelBehavior? labelBehavior} , default:none
-    _i8.NavigationDestinationLabelBehavior? labelBehavior,
-  }) : super(
-          height: height,
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          indicatorColor: indicatorColor,
-          indicatorShape: indicatorShape,
-          labelTextStyle: labelTextStyle,
-          iconTheme: iconTheme,
-          labelBehavior: labelBehavior,
-        ) {
+    super.labelBehavior,
+  })  : mateParams = {
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'indicatorColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'indicatorColor',
+            init: indicatorColor,
+            isNamed: true,
+          ),
+          'indicatorShape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'indicatorShape',
+            init: indicatorShape,
+            isNamed: true,
+          ),
+          'labelTextStyle': _i2.BuilderArg<_i5.MaterialStateProperty<_i6.TextStyle?>?>(
+            name: 'labelTextStyle',
+            init: labelTextStyle,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i5.MaterialStateProperty<_i7.IconThemeData?>?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'labelBehavior': _i2.BuilderArg<_i8.NavigationDestinationLabelBehavior?>(
+            name: 'labelBehavior',
+            init: labelBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationBarThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationBarThemeData$Mate(
@@ -71,57 +112,10 @@ class NavigationBarThemeData$Mate extends _i1.NavigationBarThemeData with _i2.Ma
           iconTheme: p.get('iconTheme').build(),
           labelBehavior: p.get('labelBehavior').build(),
         );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorColor',
-      indicatorColor,
-      isNamed: true,
-    );
-    mateUse(
-      'indicatorShape',
-      indicatorShape,
-      isNamed: true,
-    );
-    mateUse(
-      'labelTextStyle',
-      labelTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'labelBehavior',
-      labelBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class NavigationBarTheme extends InheritedTheme
@@ -129,18 +123,31 @@ class NavigationBarTheme$Mate extends _i1.NavigationBarTheme with _i2.Mate {
   /// NavigationBarTheme NavigationBarTheme({Key? key, required NavigationBarThemeData data, required Widget child})
   NavigationBarTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i9.Key? key,
+    super.key,
 
     /// optionalParameters: {required NavigationBarThemeData data} , default:none
-    required _i1.NavigationBarThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i10.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i9.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.NavigationBarThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i10.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NavigationBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NavigationBarTheme$Mate(
@@ -148,20 +155,8 @@ class NavigationBarTheme$Mate extends _i1.NavigationBarTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

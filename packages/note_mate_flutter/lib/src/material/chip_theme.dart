@@ -16,18 +16,31 @@ class ChipTheme$Mate extends _i1.ChipTheme with _i2.Mate {
   /// ChipTheme ChipTheme({Key? key, required ChipThemeData data, required Widget child})
   ChipTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ChipThemeData data} , default:none
-    required _i1.ChipThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ChipThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ChipTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ChipTheme$Mate(
@@ -35,22 +48,10 @@ class ChipTheme$Mate extends _i1.ChipTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ChipThemeData with Diagnosticable
@@ -58,86 +59,167 @@ class ChipThemeData$Mate extends _i1.ChipThemeData with _i2.Mate {
   /// ChipThemeData ChipThemeData({Color? backgroundColor, Color? deleteIconColor, Color? disabledColor, Color? selectedColor, Color? secondarySelectedColor, Color? shadowColor, Color? surfaceTintColor, Color? selectedShadowColor, bool? showCheckmark, Color? checkmarkColor, EdgeInsetsGeometry? labelPadding, EdgeInsetsGeometry? padding, BorderSide? side, OutlinedBorder? shape, TextStyle? labelStyle, TextStyle? secondaryLabelStyle, Brightness? brightness, double? elevation, double? pressElevation, IconThemeData? iconTheme})
   ChipThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i5.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? deleteIconColor} , default:none
-    _i5.Color? deleteIconColor,
+    super.deleteIconColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i5.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i5.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {Color? secondarySelectedColor} , default:none
-    _i5.Color? secondarySelectedColor,
+    super.secondarySelectedColor,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i5.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i5.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {Color? selectedShadowColor} , default:none
-    _i5.Color? selectedShadowColor,
+    super.selectedShadowColor,
 
     /// optionalParameters: {bool? showCheckmark} , default:none
-    bool? showCheckmark,
+    super.showCheckmark,
 
     /// optionalParameters: {Color? checkmarkColor} , default:none
-    _i5.Color? checkmarkColor,
+    super.checkmarkColor,
 
     /// optionalParameters: {EdgeInsetsGeometry? labelPadding} , default:none
-    _i6.EdgeInsetsGeometry? labelPadding,
+    super.labelPadding,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i6.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {BorderSide? side} , default:none
-    _i7.BorderSide? side,
+    super.side,
 
     /// optionalParameters: {OutlinedBorder? shape} , default:none
-    _i7.OutlinedBorder? shape,
+    super.shape,
 
     /// optionalParameters: {TextStyle? labelStyle} , default:none
-    _i8.TextStyle? labelStyle,
+    super.labelStyle,
 
     /// optionalParameters: {TextStyle? secondaryLabelStyle} , default:none
-    _i8.TextStyle? secondaryLabelStyle,
+    super.secondaryLabelStyle,
 
     /// optionalParameters: {Brightness? brightness} , default:none
-    _i5.Brightness? brightness,
+    super.brightness,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {double? pressElevation} , default:none
-    double? pressElevation,
+    super.pressElevation,
 
     /// optionalParameters: {IconThemeData? iconTheme} , default:none
-    _i9.IconThemeData? iconTheme,
-  }) : super(
-          backgroundColor: backgroundColor,
-          deleteIconColor: deleteIconColor,
-          disabledColor: disabledColor,
-          selectedColor: selectedColor,
-          secondarySelectedColor: secondarySelectedColor,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          selectedShadowColor: selectedShadowColor,
-          showCheckmark: showCheckmark,
-          checkmarkColor: checkmarkColor,
-          labelPadding: labelPadding,
-          padding: padding,
-          side: side,
-          shape: shape,
-          labelStyle: labelStyle,
-          secondaryLabelStyle: secondaryLabelStyle,
-          brightness: brightness,
-          elevation: elevation,
-          pressElevation: pressElevation,
-          iconTheme: iconTheme,
-        ) {
+    super.iconTheme,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'deleteIconColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'deleteIconColor',
+            init: deleteIconColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'secondarySelectedColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'secondarySelectedColor',
+            init: secondarySelectedColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'selectedShadowColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedShadowColor',
+            init: selectedShadowColor,
+            isNamed: true,
+          ),
+          'showCheckmark': _i2.BuilderArg<bool?>(
+            name: 'showCheckmark',
+            init: showCheckmark,
+            isNamed: true,
+          ),
+          'checkmarkColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'checkmarkColor',
+            init: checkmarkColor,
+            isNamed: true,
+          ),
+          'labelPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'labelPadding',
+            init: labelPadding,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i7.BorderSide?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.OutlinedBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'labelStyle': _i2.BuilderArg<_i8.TextStyle?>(
+            name: 'labelStyle',
+            init: labelStyle,
+            isNamed: true,
+          ),
+          'secondaryLabelStyle': _i2.BuilderArg<_i8.TextStyle?>(
+            name: 'secondaryLabelStyle',
+            init: secondaryLabelStyle,
+            isNamed: true,
+          ),
+          'brightness': _i2.BuilderArg<_i5.Brightness?>(
+            name: 'brightness',
+            init: brightness,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'pressElevation': _i2.BuilderArg<double?>(
+            name: 'pressElevation',
+            init: pressElevation,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i9.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ChipThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ChipThemeData$Mate(
@@ -162,105 +244,8 @@ class ChipThemeData$Mate extends _i1.ChipThemeData with _i2.Mate {
           pressElevation: p.get('pressElevation').build(),
           iconTheme: p.get('iconTheme').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'deleteIconColor',
-      deleteIconColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'secondarySelectedColor',
-      secondarySelectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedShadowColor',
-      selectedShadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'showCheckmark',
-      showCheckmark,
-      isNamed: true,
-    );
-    mateUse(
-      'checkmarkColor',
-      checkmarkColor,
-      isNamed: true,
-    );
-    mateUse(
-      'labelPadding',
-      labelPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'labelStyle',
-      labelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'secondaryLabelStyle',
-      secondaryLabelStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'brightness',
-      brightness,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'pressElevation',
-      pressElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

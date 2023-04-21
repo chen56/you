@@ -12,22 +12,39 @@ class NoSplash$Mate extends _i1.NoSplash with _i2.Mate {
   /// NoSplash NoSplash({required MaterialInkController controller, required RenderBox referenceBox, required Color color, void Function()? onRemoved})
   NoSplash$Mate({
     /// optionalParameters: {required MaterialInkController controller} , default:none
-    required _i3.MaterialInkController controller,
+    required super.controller,
 
     /// optionalParameters: {required RenderBox referenceBox} , default:none
-    required _i4.RenderBox referenceBox,
+    required super.referenceBox,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i5.Color color,
+    required super.color,
 
     /// optionalParameters: {void Function()? onRemoved} , default:none
-    _i5.VoidCallback? onRemoved,
-  }) : super(
-          controller: controller,
-          referenceBox: referenceBox,
-          color: color,
-          onRemoved: onRemoved,
-        ) {
+    super.onRemoved,
+  })  : mateParams = {
+          'controller': _i2.BuilderArg<_i3.MaterialInkController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'referenceBox': _i2.BuilderArg<_i4.RenderBox>(
+            name: 'referenceBox',
+            init: referenceBox,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'onRemoved': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onRemoved',
+            init: onRemoved,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'NoSplash';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => NoSplash$Mate(
@@ -36,25 +53,8 @@ class NoSplash$Mate extends _i1.NoSplash with _i2.Mate {
           color: p.get('color').build(),
           onRemoved: p.get('onRemoved').build(),
         );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'referenceBox',
-      referenceBox,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'onRemoved',
-      onRemoved,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

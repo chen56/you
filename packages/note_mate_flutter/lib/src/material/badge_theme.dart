@@ -15,38 +15,71 @@ class BadgeThemeData$Mate extends _i1.BadgeThemeData with _i2.Mate {
   /// BadgeThemeData BadgeThemeData({Color? backgroundColor, Color? textColor, double? smallSize, double? largeSize, TextStyle? textStyle, EdgeInsetsGeometry? padding, AlignmentGeometry? alignment, Offset? offset})
   BadgeThemeData$Mate({
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? textColor} , default:none
-    _i3.Color? textColor,
+    super.textColor,
 
     /// optionalParameters: {double? smallSize} , default:none
-    double? smallSize,
+    super.smallSize,
 
     /// optionalParameters: {double? largeSize} , default:none
-    double? largeSize,
+    super.largeSize,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i4.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i6.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {Offset? offset} , default:none
-    _i3.Offset? offset,
-  }) : super(
-          backgroundColor: backgroundColor,
-          textColor: textColor,
-          smallSize: smallSize,
-          largeSize: largeSize,
-          textStyle: textStyle,
-          padding: padding,
-          alignment: alignment,
-          offset: offset,
-        ) {
+    super.offset,
+  })  : mateParams = {
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'textColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'textColor',
+            init: textColor,
+            isNamed: true,
+          ),
+          'smallSize': _i2.BuilderArg<double?>(
+            name: 'smallSize',
+            init: smallSize,
+            isNamed: true,
+          ),
+          'largeSize': _i2.BuilderArg<double?>(
+            name: 'largeSize',
+            init: largeSize,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i4.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i3.Offset?>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BadgeThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BadgeThemeData$Mate(
@@ -59,47 +92,10 @@ class BadgeThemeData$Mate extends _i1.BadgeThemeData with _i2.Mate {
           alignment: p.get('alignment').build(),
           offset: p.get('offset').build(),
         );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'textColor',
-      textColor,
-      isNamed: true,
-    );
-    mateUse(
-      'smallSize',
-      smallSize,
-      isNamed: true,
-    );
-    mateUse(
-      'largeSize',
-      largeSize,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BadgeTheme extends InheritedTheme
@@ -107,18 +103,31 @@ class BadgeTheme$Mate extends _i1.BadgeTheme with _i2.Mate {
   /// BadgeTheme BadgeTheme({Key? key, required BadgeThemeData data, required Widget child})
   BadgeTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required BadgeThemeData data} , default:none
-    required _i1.BadgeThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.BadgeThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BadgeTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => BadgeTheme$Mate(
@@ -126,20 +135,8 @@ class BadgeTheme$Mate extends _i1.BadgeTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -9,22 +9,43 @@ class RawKeyEventDataIos$Mate extends _i1.RawKeyEventDataIos with _i2.Mate {
   /// RawKeyEventDataIos RawKeyEventDataIos({String characters = '', String charactersIgnoringModifiers = '', int keyCode = 0, int modifiers = 0})
   RawKeyEventDataIos$Mate({
     /// optionalParameters: {String characters = ''} , default:processed=SimpleStringLiteralImpl
-    String characters = '',
+    super.characters,
 
     /// optionalParameters: {String charactersIgnoringModifiers = ''} , default:processed=SimpleStringLiteralImpl
-    String charactersIgnoringModifiers = '',
+    super.charactersIgnoringModifiers,
 
     /// optionalParameters: {int keyCode = 0} , default:processed=IntegerLiteralImpl
-    int keyCode = 0,
+    super.keyCode,
 
     /// optionalParameters: {int modifiers = 0} , default:processed=IntegerLiteralImpl
-    int modifiers = 0,
-  }) : super(
-          characters: characters,
-          charactersIgnoringModifiers: charactersIgnoringModifiers,
-          keyCode: keyCode,
-          modifiers: modifiers,
-        ) {
+    super.modifiers,
+  })  : mateParams = {
+          'characters': _i2.BuilderArg<String>(
+            name: 'characters',
+            init: characters,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'charactersIgnoringModifiers': _i2.BuilderArg<String>(
+            name: 'charactersIgnoringModifiers',
+            init: charactersIgnoringModifiers,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'keyCode': _i2.BuilderArg<int>(
+            name: 'keyCode',
+            init: keyCode,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'modifiers': _i2.BuilderArg<int>(
+            name: 'modifiers',
+            init: modifiers,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'RawKeyEventDataIos';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => RawKeyEventDataIos$Mate(
@@ -33,29 +54,8 @@ class RawKeyEventDataIos$Mate extends _i1.RawKeyEventDataIos with _i2.Mate {
           keyCode: p.get('keyCode').build(),
           modifiers: p.get('modifiers').build(),
         );
-    mateUse(
-      'characters',
-      characters,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'charactersIgnoringModifiers',
-      charactersIgnoringModifiers,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'keyCode',
-      keyCode,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'modifiers',
-      modifiers,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -12,22 +12,41 @@ class SliverFillViewport$Mate extends _i1.SliverFillViewport with _i2.Mate {
   /// SliverFillViewport SliverFillViewport({Key? key, required SliverChildDelegate delegate, double viewportFraction = 1.0, bool padEnds = true})
   SliverFillViewport$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required SliverChildDelegate delegate} , default:none
-    required _i4.SliverChildDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {double viewportFraction = 1.0} , default:processed=DoubleLiteralImpl
-    double viewportFraction = 1.0,
+    super.viewportFraction,
 
     /// optionalParameters: {bool padEnds = true} , default:processed=BooleanLiteralImpl
-    bool padEnds = true,
-  }) : super(
-          key: key,
-          delegate: delegate,
-          viewportFraction: viewportFraction,
-          padEnds: padEnds,
-        ) {
+    super.padEnds,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i4.SliverChildDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'viewportFraction': _i2.BuilderArg<double>(
+            name: 'viewportFraction',
+            init: viewportFraction,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'padEnds': _i2.BuilderArg<bool>(
+            name: 'padEnds',
+            init: padEnds,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverFillViewport';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverFillViewport$Mate(
@@ -36,29 +55,10 @@ class SliverFillViewport$Mate extends _i1.SliverFillViewport with _i2.Mate {
           viewportFraction: p.get('viewportFraction').build(),
           padEnds: p.get('padEnds').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'viewportFraction',
-      viewportFraction,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'padEnds',
-      padEnds,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverFillRemaining extends StatelessWidget
@@ -66,22 +66,41 @@ class SliverFillRemaining$Mate extends _i1.SliverFillRemaining with _i2.Mate {
   /// SliverFillRemaining SliverFillRemaining({Key? key, Widget? child, bool hasScrollBody = true, bool fillOverscroll = false})
   SliverFillRemaining$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
+    super.child,
 
     /// optionalParameters: {bool hasScrollBody = true} , default:processed=BooleanLiteralImpl
-    bool hasScrollBody = true,
+    super.hasScrollBody,
 
     /// optionalParameters: {bool fillOverscroll = false} , default:processed=BooleanLiteralImpl
-    bool fillOverscroll = false,
-  }) : super(
-          key: key,
-          child: child,
-          hasScrollBody: hasScrollBody,
-          fillOverscroll: fillOverscroll,
-        ) {
+    super.fillOverscroll,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'hasScrollBody': _i2.BuilderArg<bool>(
+            name: 'hasScrollBody',
+            init: hasScrollBody,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'fillOverscroll': _i2.BuilderArg<bool>(
+            name: 'fillOverscroll',
+            init: fillOverscroll,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverFillRemaining';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverFillRemaining$Mate(
@@ -90,27 +109,8 @@ class SliverFillRemaining$Mate extends _i1.SliverFillRemaining with _i2.Mate {
           hasScrollBody: p.get('hasScrollBody').build(),
           fillOverscroll: p.get('fillOverscroll').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'hasScrollBody',
-      hasScrollBody,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'fillOverscroll',
-      fillOverscroll,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

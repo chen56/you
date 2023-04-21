@@ -24,31 +24,33 @@ class BoxConstraintsTween$Mate extends _i1.BoxConstraintsTween with _i2.Mate {
   /// BoxConstraintsTween BoxConstraintsTween({BoxConstraints? begin, BoxConstraints? end})
   BoxConstraintsTween$Mate({
     /// optionalParameters: {BoxConstraints? begin} , default:none
-    _i3.BoxConstraints? begin,
+    super.begin,
 
     /// optionalParameters: {BoxConstraints? end} , default:none
-    _i3.BoxConstraints? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.BoxConstraints?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i3.BoxConstraints?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BoxConstraintsTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxConstraintsTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DecorationTween extends Tween<Decoration>
@@ -56,31 +58,33 @@ class DecorationTween$Mate extends _i1.DecorationTween with _i2.Mate {
   /// DecorationTween DecorationTween({Decoration? begin, Decoration? end})
   DecorationTween$Mate({
     /// optionalParameters: {Decoration? begin} , default:none
-    _i4.Decoration? begin,
+    super.begin,
 
     /// optionalParameters: {Decoration? end} , default:none
-    _i4.Decoration? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DecorationTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DecorationTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class EdgeInsetsTween extends Tween<EdgeInsets>
@@ -88,31 +92,33 @@ class EdgeInsetsTween$Mate extends _i1.EdgeInsetsTween with _i2.Mate {
   /// EdgeInsetsTween EdgeInsetsTween({EdgeInsets? begin, EdgeInsets? end})
   EdgeInsetsTween$Mate({
     /// optionalParameters: {EdgeInsets? begin} , default:none
-    _i5.EdgeInsets? begin,
+    super.begin,
 
     /// optionalParameters: {EdgeInsets? end} , default:none
-    _i5.EdgeInsets? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i5.EdgeInsets?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i5.EdgeInsets?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'EdgeInsetsTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => EdgeInsetsTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class EdgeInsetsGeometryTween extends Tween<EdgeInsetsGeometry>
@@ -120,31 +126,33 @@ class EdgeInsetsGeometryTween$Mate extends _i1.EdgeInsetsGeometryTween with _i2.
   /// EdgeInsetsGeometryTween EdgeInsetsGeometryTween({EdgeInsetsGeometry? begin, EdgeInsetsGeometry? end})
   EdgeInsetsGeometryTween$Mate({
     /// optionalParameters: {EdgeInsetsGeometry? begin} , default:none
-    _i5.EdgeInsetsGeometry? begin,
+    super.begin,
 
     /// optionalParameters: {EdgeInsetsGeometry? end} , default:none
-    _i5.EdgeInsetsGeometry? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'EdgeInsetsGeometryTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => EdgeInsetsGeometryTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BorderRadiusTween extends Tween<BorderRadius?>
@@ -152,31 +160,33 @@ class BorderRadiusTween$Mate extends _i1.BorderRadiusTween with _i2.Mate {
   /// BorderRadiusTween BorderRadiusTween({BorderRadius? begin, BorderRadius? end})
   BorderRadiusTween$Mate({
     /// optionalParameters: {BorderRadius? begin} , default:none
-    _i6.BorderRadius? begin,
+    super.begin,
 
     /// optionalParameters: {BorderRadius? end} , default:none
-    _i6.BorderRadius? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i6.BorderRadius?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i6.BorderRadius?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BorderRadiusTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BorderRadiusTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BorderTween extends Tween<Border?>
@@ -184,31 +194,33 @@ class BorderTween$Mate extends _i1.BorderTween with _i2.Mate {
   /// BorderTween BorderTween({Border? begin, Border? end})
   BorderTween$Mate({
     /// optionalParameters: {Border? begin} , default:none
-    _i7.Border? begin,
+    super.begin,
 
     /// optionalParameters: {Border? end} , default:none
-    _i7.Border? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i7.Border?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i7.Border?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'BorderTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BorderTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class Matrix4Tween extends Tween<Matrix4>
@@ -216,31 +228,33 @@ class Matrix4Tween$Mate extends _i1.Matrix4Tween with _i2.Mate {
   /// Matrix4Tween Matrix4Tween({Matrix4? begin, Matrix4? end})
   Matrix4Tween$Mate({
     /// optionalParameters: {Matrix4? begin} , default:none
-    _i8.Matrix4? begin,
+    super.begin,
 
     /// optionalParameters: {Matrix4? end} , default:none
-    _i8.Matrix4? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i8.Matrix4?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i8.Matrix4?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Matrix4Tween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Matrix4Tween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextStyleTween extends Tween<TextStyle>
@@ -248,31 +262,33 @@ class TextStyleTween$Mate extends _i1.TextStyleTween with _i2.Mate {
   /// TextStyleTween TextStyleTween({TextStyle? begin, TextStyle? end})
   TextStyleTween$Mate({
     /// optionalParameters: {TextStyle? begin} , default:none
-    _i9.TextStyle? begin,
+    super.begin,
 
     /// optionalParameters: {TextStyle? end} , default:none
-    _i9.TextStyle? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i9.TextStyle?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i9.TextStyle?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextStyleTween';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => TextStyleTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedContainer extends ImplicitlyAnimatedWidget
@@ -280,74 +296,145 @@ class AnimatedContainer$Mate extends _i1.AnimatedContainer with _i2.Mate {
   /// AnimatedContainer AnimatedContainer({Key? key, AlignmentGeometry? alignment, EdgeInsetsGeometry? padding, Color? color, Decoration? decoration, Decoration? foregroundDecoration, double? width, double? height, BoxConstraints? constraints, EdgeInsetsGeometry? margin, Matrix4? transform, AlignmentGeometry? transformAlignment, Widget? child, Clip clipBehavior = Clip.none, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedContainer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry? alignment} , default:none
-    _i11.AlignmentGeometry? alignment,
+    super.alignment,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i5.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {Color? color} , default:none
-    _i12.Color? color,
+    super.color,
 
     /// optionalParameters: {Decoration? decoration} , default:none
-    _i4.Decoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {Decoration? foregroundDecoration} , default:none
-    _i4.Decoration? foregroundDecoration,
+    super.foregroundDecoration,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i3.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i5.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {Matrix4? transform} , default:none
-    _i8.Matrix4? transform,
+    super.transform,
 
     /// optionalParameters: {AlignmentGeometry? transformAlignment} , default:none
-    _i11.AlignmentGeometry? transformAlignment,
+    super.transformAlignment,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          padding: padding,
-          color: color,
-          decoration: decoration,
-          foregroundDecoration: foregroundDecoration,
-          width: width,
-          height: height,
-          constraints: constraints,
-          margin: margin,
-          transform: transform,
-          transformAlignment: transformAlignment,
-          child: child,
-          clipBehavior: clipBehavior,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry?>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i12.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'decoration': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'foregroundDecoration': _i2.BuilderArg<_i4.Decoration?>(
+            name: 'foregroundDecoration',
+            init: foregroundDecoration,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i3.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'transform': _i2.BuilderArg<_i8.Matrix4?>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+          'transformAlignment': _i2.BuilderArg<_i11.AlignmentGeometry?>(
+            name: 'transformAlignment',
+            init: transformAlignment,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.none,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedContainer';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedContainer$Mate(
@@ -369,94 +456,10 @@ class AnimatedContainer$Mate extends _i1.AnimatedContainer with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundDecoration',
-      foregroundDecoration,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
-    mateUse(
-      'transformAlignment',
-      transformAlignment,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.none,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedPadding extends ImplicitlyAnimatedWidget
@@ -464,30 +467,56 @@ class AnimatedPadding$Mate extends _i1.AnimatedPadding with _i2.Mate {
   /// AnimatedPadding AnimatedPadding({Key? key, required EdgeInsetsGeometry padding, Widget? child, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPadding$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
-    required _i5.EdgeInsetsGeometry padding,
+    required super.padding,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          padding: padding,
-          child: child,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedPadding';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedPadding$Mate(
@@ -498,38 +527,10 @@ class AnimatedPadding$Mate extends _i1.AnimatedPadding with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedAlign extends ImplicitlyAnimatedWidget
@@ -537,38 +538,72 @@ class AnimatedAlign$Mate extends _i1.AnimatedAlign with _i2.Mate {
   /// AnimatedAlign AnimatedAlign({Key? key, required AlignmentGeometry alignment, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedAlign$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {required AlignmentGeometry alignment} , default:none
-    required _i11.AlignmentGeometry alignment,
+    required super.alignment,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {double? heightFactor} , default:none
-    double? heightFactor,
+    super.heightFactor,
 
     /// optionalParameters: {double? widthFactor} , default:none
-    double? widthFactor,
+    super.widthFactor,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          child: child,
-          heightFactor: heightFactor,
-          widthFactor: widthFactor,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'heightFactor': _i2.BuilderArg<double?>(
+            name: 'heightFactor',
+            init: heightFactor,
+            isNamed: true,
+          ),
+          'widthFactor': _i2.BuilderArg<double?>(
+            name: 'widthFactor',
+            init: widthFactor,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedAlign';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedAlign$Mate(
@@ -581,48 +616,10 @@ class AnimatedAlign$Mate extends _i1.AnimatedAlign with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'heightFactor',
-      heightFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'widthFactor',
-      widthFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedPositioned extends ImplicitlyAnimatedWidget
@@ -630,50 +627,96 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
   /// AnimatedPositioned AnimatedPositioned({Key? key, required Widget child, double? left, double? top, double? right, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositioned$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i13.Widget child,
+    required super.child,
 
     /// optionalParameters: {double? left} , default:none
-    double? left,
+    super.left,
 
     /// optionalParameters: {double? top} , default:none
-    double? top,
+    super.top,
 
     /// optionalParameters: {double? right} , default:none
-    double? right,
+    super.right,
 
     /// optionalParameters: {double? bottom} , default:none
-    double? bottom,
+    super.bottom,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          child: child,
-          left: left,
-          top: top,
-          right: right,
-          bottom: bottom,
-          width: width,
-          height: height,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'left': _i2.BuilderArg<double?>(
+            name: 'left',
+            init: left,
+            isNamed: true,
+          ),
+          'top': _i2.BuilderArg<double?>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+          ),
+          'right': _i2.BuilderArg<double?>(
+            name: 'right',
+            init: right,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<double?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedPositioned';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedPositioned$Mate(
@@ -689,91 +732,61 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'left',
-      left,
-      isNamed: true,
-    );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-    );
-    mateUse(
-      'right',
-      right,
-      isNamed: true,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
 
   /// AnimatedPositioned AnimatedPositioned.fromRect({Key? key, required Widget child, required Rect rect, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositioned$Mate.fromRect({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i13.Widget child,
+    required super.child,
 
     /// optionalParameters: {required Rect rect} , default:none
-    required _i12.Rect rect,
+    required super.rect,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super.fromRect(
-          key: key,
-          child: child,
-          rect: rect,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'rect': _i2.BuilderArg<_i12.Rect>(
+            name: 'rect',
+            init: rect,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super.fromRect() {
     mateBuilderName = 'AnimatedPositioned.fromRect';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedPositioned$Mate.fromRect(
@@ -784,38 +797,10 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'rect',
-      rect,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedPositionedDirectional extends ImplicitlyAnimatedWidget
@@ -823,50 +808,96 @@ class AnimatedPositionedDirectional$Mate extends _i1.AnimatedPositionedDirection
   /// AnimatedPositionedDirectional AnimatedPositionedDirectional({Key? key, required Widget child, double? start, double? top, double? end, double? bottom, double? width, double? height, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPositionedDirectional$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i13.Widget child,
+    required super.child,
 
     /// optionalParameters: {double? start} , default:none
-    double? start,
+    super.start,
 
     /// optionalParameters: {double? top} , default:none
-    double? top,
+    super.top,
 
     /// optionalParameters: {double? end} , default:none
-    double? end,
+    super.end,
 
     /// optionalParameters: {double? bottom} , default:none
-    double? bottom,
+    super.bottom,
 
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
+    super.height,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          child: child,
-          start: start,
-          top: top,
-          end: end,
-          bottom: bottom,
-          width: width,
-          height: height,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'start': _i2.BuilderArg<double?>(
+            name: 'start',
+            init: start,
+            isNamed: true,
+          ),
+          'top': _i2.BuilderArg<double?>(
+            name: 'top',
+            init: top,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<double?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+          'bottom': _i2.BuilderArg<double?>(
+            name: 'bottom',
+            init: bottom,
+            isNamed: true,
+          ),
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedPositionedDirectional';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedPositionedDirectional$Mate(
@@ -882,63 +913,10 @@ class AnimatedPositionedDirectional$Mate extends _i1.AnimatedPositionedDirection
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'start',
-      start,
-      isNamed: true,
-    );
-    mateUse(
-      'top',
-      top,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
-    mateUse(
-      'bottom',
-      bottom,
-      isNamed: true,
-    );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedScale extends ImplicitlyAnimatedWidget
@@ -946,38 +924,73 @@ class AnimatedScale$Mate extends _i1.AnimatedScale with _i2.Mate {
   /// AnimatedScale AnimatedScale({Key? key, Widget? child, required double scale, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedScale$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {required double scale} , default:none
-    required double scale,
+    required super.scale,
 
     /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i11.Alignment alignment = _i16.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i12.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          child: child,
-          scale: scale,
-          alignment: alignment,
-          filterQuality: filterQuality,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i11.Alignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i16.Alignment.center,
+          ),
+          'filterQuality': _i2.BuilderArg<_i12.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedScale';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedScale$Mate(
@@ -990,49 +1003,10 @@ class AnimatedScale$Mate extends _i1.AnimatedScale with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i16.Alignment.center,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedRotation extends ImplicitlyAnimatedWidget
@@ -1040,38 +1014,73 @@ class AnimatedRotation$Mate extends _i1.AnimatedRotation with _i2.Mate {
   /// AnimatedRotation AnimatedRotation({Key? key, Widget? child, required double turns, Alignment alignment = Alignment.center, FilterQuality? filterQuality, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedRotation$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {required double turns} , default:none
-    required double turns,
+    required super.turns,
 
     /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i11.Alignment alignment = _i16.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
-    _i12.FilterQuality? filterQuality,
+    super.filterQuality,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          child: child,
-          turns: turns,
-          alignment: alignment,
-          filterQuality: filterQuality,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'turns': _i2.BuilderArg<double>(
+            name: 'turns',
+            init: turns,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i11.Alignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i16.Alignment.center,
+          ),
+          'filterQuality': _i2.BuilderArg<_i12.FilterQuality?>(
+            name: 'filterQuality',
+            init: filterQuality,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedRotation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedRotation$Mate(
@@ -1084,49 +1093,10 @@ class AnimatedRotation$Mate extends _i1.AnimatedRotation with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'turns',
-      turns,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i16.Alignment.center,
-    );
-    mateUse(
-      'filterQuality',
-      filterQuality,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedSlide extends ImplicitlyAnimatedWidget
@@ -1134,30 +1104,56 @@ class AnimatedSlide$Mate extends _i1.AnimatedSlide with _i2.Mate {
   /// AnimatedSlide AnimatedSlide({Key? key, Widget? child, required Offset offset, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedSlide$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {required Offset offset} , default:none
-    required _i12.Offset offset,
+    required super.offset,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          child: child,
-          offset: offset,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'offset': _i2.BuilderArg<_i12.Offset>(
+            name: 'offset',
+            init: offset,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedSlide';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedSlide$Mate(
@@ -1168,38 +1164,10 @@ class AnimatedSlide$Mate extends _i1.AnimatedSlide with _i2.Mate {
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'offset',
-      offset,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedOpacity extends ImplicitlyAnimatedWidget
@@ -1207,34 +1175,65 @@ class AnimatedOpacity$Mate extends _i1.AnimatedOpacity with _i2.Mate {
   /// AnimatedOpacity AnimatedOpacity({Key? key, Widget? child, required double opacity, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd, bool alwaysIncludeSemantics = false})
   AnimatedOpacity$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {required double opacity} , default:none
-    required double opacity,
+    required super.opacity,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
+    super.onEnd,
 
     /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool alwaysIncludeSemantics = false,
-  }) : super(
-          key: key,
-          child: child,
-          opacity: opacity,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-          alwaysIncludeSemantics: alwaysIncludeSemantics,
-        ) {
+    super.alwaysIncludeSemantics,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'opacity': _i2.BuilderArg<double>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+          'alwaysIncludeSemantics': _i2.BuilderArg<bool>(
+            name: 'alwaysIncludeSemantics',
+            init: alwaysIncludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedOpacity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedOpacity$Mate(
@@ -1246,44 +1245,10 @@ class AnimatedOpacity$Mate extends _i1.AnimatedOpacity with _i2.Mate {
           onEnd: p.get('onEnd').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'alwaysIncludeSemantics',
-      alwaysIncludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SliverAnimatedOpacity extends ImplicitlyAnimatedWidget
@@ -1291,34 +1256,65 @@ class SliverAnimatedOpacity$Mate extends _i1.SliverAnimatedOpacity with _i2.Mate
   /// SliverAnimatedOpacity SliverAnimatedOpacity({Key? key, Widget? sliver, required double opacity, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd, bool alwaysIncludeSemantics = false})
   SliverAnimatedOpacity$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {Widget? sliver} , default:none
-    _i13.Widget? sliver,
+    super.sliver,
 
     /// optionalParameters: {required double opacity} , default:none
-    required double opacity,
+    required super.opacity,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
+    super.onEnd,
 
     /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool alwaysIncludeSemantics = false,
-  }) : super(
-          key: key,
-          sliver: sliver,
-          opacity: opacity,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-          alwaysIncludeSemantics: alwaysIncludeSemantics,
-        ) {
+    super.alwaysIncludeSemantics,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'sliver': _i2.BuilderArg<_i13.Widget?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+          'opacity': _i2.BuilderArg<double>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+          'alwaysIncludeSemantics': _i2.BuilderArg<bool>(
+            name: 'alwaysIncludeSemantics',
+            init: alwaysIncludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'SliverAnimatedOpacity';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SliverAnimatedOpacity$Mate(
@@ -1330,44 +1326,10 @@ class SliverAnimatedOpacity$Mate extends _i1.SliverAnimatedOpacity with _i2.Mate
           onEnd: p.get('onEnd').build(),
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'alwaysIncludeSemantics',
-      alwaysIncludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedDefaultTextStyle extends ImplicitlyAnimatedWidget
@@ -1375,54 +1337,107 @@ class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle with _i
   /// AnimatedDefaultTextStyle AnimatedDefaultTextStyle({Key? key, required Widget child, required TextStyle style, TextAlign? textAlign, bool softWrap = true, TextOverflow overflow = TextOverflow.clip, int? maxLines, TextWidthBasis textWidthBasis = TextWidthBasis.parent, TextHeightBehavior? textHeightBehavior, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedDefaultTextStyle$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i13.Widget child,
+    required super.child,
 
     /// optionalParameters: {required TextStyle style} , default:none
-    required _i9.TextStyle style,
+    required super.style,
 
     /// optionalParameters: {TextAlign? textAlign} , default:none
-    _i12.TextAlign? textAlign,
+    super.textAlign,
 
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
-    bool softWrap = true,
+    super.softWrap,
 
     /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
-    _i17.TextOverflow overflow = _i16.TextOverflow.clip,
+    super.overflow,
 
     /// optionalParameters: {int? maxLines} , default:none
-    int? maxLines,
+    super.maxLines,
 
     /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
-    _i17.TextWidthBasis textWidthBasis = _i16.TextWidthBasis.parent,
+    super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
-    _i12.TextHeightBehavior? textHeightBehavior,
+    super.textHeightBehavior,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          child: child,
-          style: style,
-          textAlign: textAlign,
-          softWrap: softWrap,
-          overflow: overflow,
-          maxLines: maxLines,
-          textWidthBasis: textWidthBasis,
-          textHeightBehavior: textHeightBehavior,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i9.TextStyle>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+          'textAlign': _i2.BuilderArg<_i12.TextAlign?>(
+            name: 'textAlign',
+            init: textAlign,
+            isNamed: true,
+          ),
+          'softWrap': _i2.BuilderArg<bool>(
+            name: 'softWrap',
+            init: softWrap,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'overflow': _i2.BuilderArg<_i17.TextOverflow>(
+            name: 'overflow',
+            init: overflow,
+            isNamed: true,
+            defaultValue: _i16.TextOverflow.clip,
+          ),
+          'maxLines': _i2.BuilderArg<int?>(
+            name: 'maxLines',
+            init: maxLines,
+            isNamed: true,
+          ),
+          'textWidthBasis': _i2.BuilderArg<_i17.TextWidthBasis>(
+            name: 'textWidthBasis',
+            init: textWidthBasis,
+            isNamed: true,
+            defaultValue: _i16.TextWidthBasis.parent,
+          ),
+          'textHeightBehavior': _i2.BuilderArg<_i12.TextHeightBehavior?>(
+            name: 'textHeightBehavior',
+            init: textHeightBehavior,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedDefaultTextStyle';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedDefaultTextStyle$Mate(
@@ -1439,71 +1454,10 @@ class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle with _i
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
-    mateUse(
-      'textAlign',
-      textAlign,
-      isNamed: true,
-    );
-    mateUse(
-      'softWrap',
-      softWrap,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'overflow',
-      overflow,
-      isNamed: true,
-      defaultValue: _i16.TextOverflow.clip,
-    );
-    mateUse(
-      'maxLines',
-      maxLines,
-      isNamed: true,
-    );
-    mateUse(
-      'textWidthBasis',
-      textWidthBasis,
-      isNamed: true,
-      defaultValue: _i16.TextWidthBasis.parent,
-    );
-    mateUse(
-      'textHeightBehavior',
-      textHeightBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedPhysicalModel extends ImplicitlyAnimatedWidget
@@ -1511,58 +1465,116 @@ class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel with _i2.Mate
   /// AnimatedPhysicalModel AnimatedPhysicalModel({Key? key, required Widget child, required BoxShape shape, Clip clipBehavior = Clip.none, BorderRadius borderRadius = BorderRadius.zero, required double elevation, required Color color, bool animateColor = true, required Color shadowColor, bool animateShadowColor = true, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedPhysicalModel$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i13.Widget child,
+    required super.child,
 
     /// optionalParameters: {required BoxShape shape} , default:none
-    required _i7.BoxShape shape,
+    required super.shape,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i12.Clip clipBehavior = _i12.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
-    _i6.BorderRadius borderRadius = _i16.BorderRadius.zero,
+    super.borderRadius,
 
     /// optionalParameters: {required double elevation} , default:none
-    required double elevation,
+    required super.elevation,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i12.Color color,
+    required super.color,
 
     /// optionalParameters: {bool animateColor = true} , default:processed=BooleanLiteralImpl
-    bool animateColor = true,
+    super.animateColor,
 
     /// optionalParameters: {required Color shadowColor} , default:none
-    required _i12.Color shadowColor,
+    required super.shadowColor,
 
     /// optionalParameters: {bool animateShadowColor = true} , default:processed=BooleanLiteralImpl
-    bool animateShadowColor = true,
+    super.animateShadowColor,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          child: child,
-          shape: shape,
-          clipBehavior: clipBehavior,
-          borderRadius: borderRadius,
-          elevation: elevation,
-          color: color,
-          animateColor: animateColor,
-          shadowColor: shadowColor,
-          animateShadowColor: animateShadowColor,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i7.BoxShape>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i12.Clip.none,
+          ),
+          'borderRadius': _i2.BuilderArg<_i6.BorderRadius>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+            defaultValue: _i16.BorderRadius.zero,
+          ),
+          'elevation': _i2.BuilderArg<double>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i12.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'animateColor': _i2.BuilderArg<bool>(
+            name: 'animateColor',
+            init: animateColor,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i12.Color>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'animateShadowColor': _i2.BuilderArg<bool>(
+            name: 'animateShadowColor',
+            init: animateShadowColor,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedPhysicalModel';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedPhysicalModel$Mate(
@@ -1580,77 +1592,10 @@ class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel with _i2.Mate
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i12.Clip.none,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-      defaultValue: _i16.BorderRadius.zero,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'animateColor',
-      animateColor,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'animateShadowColor',
-      animateShadowColor,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedFractionallySizedBox extends ImplicitlyAnimatedWidget
@@ -1658,38 +1603,73 @@ class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox
   /// AnimatedFractionallySizedBox AnimatedFractionallySizedBox({Key? key, AlignmentGeometry alignment = Alignment.center, Widget? child, double? heightFactor, double? widthFactor, Curve curve = Curves.linear, required Duration duration, void Function()? onEnd})
   AnimatedFractionallySizedBox$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i10.Key? key,
+    super.key,
 
     /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i11.AlignmentGeometry alignment = _i16.Alignment.center,
+    super.alignment,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i13.Widget? child,
+    super.child,
 
     /// optionalParameters: {double? heightFactor} , default:none
-    double? heightFactor,
+    super.heightFactor,
 
     /// optionalParameters: {double? widthFactor} , default:none
-    double? widthFactor,
+    super.widthFactor,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i14.Curve curve = _i15.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
-    required Duration duration,
+    required super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i12.VoidCallback? onEnd,
-  }) : super(
-          key: key,
-          alignment: alignment,
-          child: child,
-          heightFactor: heightFactor,
-          widthFactor: widthFactor,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-        ) {
+    super.onEnd,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i10.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+            defaultValue: _i16.Alignment.center,
+          ),
+          'child': _i2.BuilderArg<_i13.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'heightFactor': _i2.BuilderArg<double?>(
+            name: 'heightFactor',
+            init: heightFactor,
+            isNamed: true,
+          ),
+          'widthFactor': _i2.BuilderArg<double?>(
+            name: 'widthFactor',
+            init: widthFactor,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i14.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i15.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i12.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedFractionallySizedBox';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => AnimatedFractionallySizedBox$Mate(
@@ -1702,47 +1682,8 @@ class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox
           duration: p.get('duration').build(),
           onEnd: p.get('onEnd').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-      defaultValue: _i16.Alignment.center,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'heightFactor',
-      heightFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'widthFactor',
-      widthFactor,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i15.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -15,46 +15,87 @@ class Scrollbar$Mate extends _i1.Scrollbar with _i2.Mate {
   /// Scrollbar Scrollbar({Key? key, required Widget child, ScrollController? controller, bool? thumbVisibility, bool? trackVisibility, double? thickness, Radius? radius, bool Function(ScrollNotification)? notificationPredicate, bool? interactive, ScrollbarOrientation? scrollbarOrientation, bool? isAlwaysShown, bool? showTrackOnHover, double? hoverThickness})
   Scrollbar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {ScrollController? controller} , default:none
-    _i5.ScrollController? controller,
+    super.controller,
 
     /// optionalParameters: {bool? thumbVisibility} , default:none
-    bool? thumbVisibility,
+    super.thumbVisibility,
 
     /// optionalParameters: {bool? trackVisibility} , default:none
-    bool? trackVisibility,
+    super.trackVisibility,
 
     /// optionalParameters: {double? thickness} , default:none
-    double? thickness,
+    super.thickness,
 
     /// optionalParameters: {Radius? radius} , default:none
-    _i6.Radius? radius,
+    super.radius,
 
     /// optionalParameters: {bool Function(ScrollNotification)? notificationPredicate} , default:none
-    _i7.ScrollNotificationPredicate? notificationPredicate,
+    super.notificationPredicate,
 
     /// optionalParameters: {bool? interactive} , default:none
-    bool? interactive,
+    super.interactive,
 
     /// optionalParameters: {ScrollbarOrientation? scrollbarOrientation} , default:none
-    _i8.ScrollbarOrientation? scrollbarOrientation,
-  }) : super(
-          key: key,
-          child: child,
-          controller: controller,
-          thumbVisibility: thumbVisibility,
-          trackVisibility: trackVisibility,
-          thickness: thickness,
-          radius: radius,
-          notificationPredicate: notificationPredicate,
-          interactive: interactive,
-          scrollbarOrientation: scrollbarOrientation,
-        ) {
+    super.scrollbarOrientation,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'thumbVisibility': _i2.BuilderArg<bool?>(
+            name: 'thumbVisibility',
+            init: thumbVisibility,
+            isNamed: true,
+          ),
+          'trackVisibility': _i2.BuilderArg<bool?>(
+            name: 'trackVisibility',
+            init: trackVisibility,
+            isNamed: true,
+          ),
+          'thickness': _i2.BuilderArg<double?>(
+            name: 'thickness',
+            init: thickness,
+            isNamed: true,
+          ),
+          'radius': _i2.BuilderArg<_i6.Radius?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'notificationPredicate': _i2.BuilderArg<_i7.ScrollNotificationPredicate?>(
+            name: 'notificationPredicate',
+            init: notificationPredicate,
+            isNamed: true,
+          ),
+          'interactive': _i2.BuilderArg<bool?>(
+            name: 'interactive',
+            init: interactive,
+            isNamed: true,
+          ),
+          'scrollbarOrientation': _i2.BuilderArg<_i8.ScrollbarOrientation?>(
+            name: 'scrollbarOrientation',
+            init: scrollbarOrientation,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Scrollbar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Scrollbar$Mate(
@@ -69,55 +110,8 @@ class Scrollbar$Mate extends _i1.Scrollbar with _i2.Mate {
           interactive: p.get('interactive').build(),
           scrollbarOrientation: p.get('scrollbarOrientation').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbVisibility',
-      thumbVisibility,
-      isNamed: true,
-    );
-    mateUse(
-      'trackVisibility',
-      trackVisibility,
-      isNamed: true,
-    );
-    mateUse(
-      'thickness',
-      thickness,
-      isNamed: true,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'notificationPredicate',
-      notificationPredicate,
-      isNamed: true,
-    );
-    mateUse(
-      'interactive',
-      interactive,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollbarOrientation',
-      scrollbarOrientation,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

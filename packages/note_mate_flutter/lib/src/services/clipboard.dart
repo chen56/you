@@ -10,15 +10,20 @@ class ClipboardData$Mate extends _i1.ClipboardData with _i2.Mate {
   ClipboardData$Mate(
       {
       /// optionalParameters: {required String text} , default:none
-      required String text})
-      : super(text: text) {
+      required super.text})
+      : mateParams = {
+          'text': _i2.BuilderArg<String>(
+            name: 'text',
+            init: text,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'ClipboardData';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ClipboardData$Mate(text: p.get('text').build());
-    mateUse(
-      'text',
-      text,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -16,38 +16,72 @@ class BoxDecoration$Mate extends _i1.BoxDecoration with _i2.Mate {
   /// BoxDecoration BoxDecoration({Color? color, DecorationImage? image, BoxBorder? border, BorderRadiusGeometry? borderRadius, List<BoxShadow>? boxShadow, Gradient? gradient, BlendMode? backgroundBlendMode, BoxShape shape = BoxShape.rectangle})
   BoxDecoration$Mate({
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {DecorationImage? image} , default:none
-    _i4.DecorationImage? image,
+    super.image,
 
     /// optionalParameters: {BoxBorder? border} , default:none
-    _i5.BoxBorder? border,
+    super.border,
 
     /// optionalParameters: {BorderRadiusGeometry? borderRadius} , default:none
-    _i6.BorderRadiusGeometry? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {List<BoxShadow>? boxShadow} , default:none
-    List<_i7.BoxShadow>? boxShadow,
+    super.boxShadow,
 
     /// optionalParameters: {Gradient? gradient} , default:none
-    _i8.Gradient? gradient,
+    super.gradient,
 
     /// optionalParameters: {BlendMode? backgroundBlendMode} , default:none
-    _i3.BlendMode? backgroundBlendMode,
+    super.backgroundBlendMode,
 
     /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
-    _i5.BoxShape shape = _i9.BoxShape.rectangle,
-  }) : super(
-          color: color,
-          image: image,
-          border: border,
-          borderRadius: borderRadius,
-          boxShadow: boxShadow,
-          gradient: gradient,
-          backgroundBlendMode: backgroundBlendMode,
-          shape: shape,
-        ) {
+    super.shape,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'image': _i2.BuilderArg<_i4.DecorationImage?>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'border': _i2.BuilderArg<_i5.BoxBorder?>(
+            name: 'border',
+            init: border,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i6.BorderRadiusGeometry?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'boxShadow': _i2.BuilderArg<List<_i7.BoxShadow>?>(
+            name: 'boxShadow',
+            init: boxShadow,
+            isNamed: true,
+          ),
+          'gradient': _i2.BuilderArg<_i8.Gradient?>(
+            name: 'gradient',
+            init: gradient,
+            isNamed: true,
+          ),
+          'backgroundBlendMode': _i2.BuilderArg<_i3.BlendMode?>(
+            name: 'backgroundBlendMode',
+            init: backgroundBlendMode,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i5.BoxShape>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+            defaultValue: _i9.BoxShape.rectangle,
+          ),
+        },
+        super() {
     mateBuilderName = 'BoxDecoration';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxDecoration$Mate(
@@ -60,46 +94,8 @@ class BoxDecoration$Mate extends _i1.BoxDecoration with _i2.Mate {
           backgroundBlendMode: p.get('backgroundBlendMode').build(),
           shape: p.get('shape').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'border',
-      border,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'boxShadow',
-      boxShadow,
-      isNamed: true,
-    );
-    mateUse(
-      'gradient',
-      gradient,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundBlendMode',
-      backgroundBlendMode,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-      defaultValue: _i9.BoxShape.rectangle,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

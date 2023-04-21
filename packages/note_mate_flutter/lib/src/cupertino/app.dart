@@ -20,118 +20,237 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
   /// CupertinoApp CupertinoApp({Key? key, GlobalKey<NavigatorState>? navigatorKey, Widget? home, CupertinoThemeData? theme, Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}, String? initialRoute, Route<dynamic>? Function(RouteSettings)? onGenerateRoute, List<Route<dynamic>> Function(String)? onGenerateInitialRoutes, Route<dynamic>? Function(RouteSettings)? onUnknownRoute, List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[], Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   CupertinoApp$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {GlobalKey<NavigatorState>? navigatorKey} , default:none
-    _i4.GlobalKey<_i5.NavigatorState>? navigatorKey,
+    super.navigatorKey,
 
     /// optionalParameters: {Widget? home} , default:none
-    _i4.Widget? home,
+    super.home,
 
     /// optionalParameters: {CupertinoThemeData? theme} , default:none
-    _i6.CupertinoThemeData? theme,
+    super.theme,
 
     /// optionalParameters: {Map<String, Widget Function(BuildContext)> routes = const <String, WidgetBuilder>{}} , default:unprocessed=SetOrMapLiteralImpl
-    required Map<String, _i4.Widget Function(_i4.BuildContext)> routes,
+    super.routes,
 
     /// optionalParameters: {String? initialRoute} , default:none
-    String? initialRoute,
+    super.initialRoute,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
-    _i5.RouteFactory? onGenerateRoute,
+    super.onGenerateRoute,
 
     /// optionalParameters: {List<Route<dynamic>> Function(String)? onGenerateInitialRoutes} , default:none
-    _i7.InitialRouteListFactory? onGenerateInitialRoutes,
+    super.onGenerateInitialRoutes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onUnknownRoute} , default:none
-    _i5.RouteFactory? onUnknownRoute,
+    super.onUnknownRoute,
 
     /// optionalParameters: {List<NavigatorObserver> navigatorObservers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
-    required List<_i5.NavigatorObserver> navigatorObservers,
+    super.navigatorObservers,
 
     /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , default:none
-    _i4.TransitionBuilder? builder,
+    super.builder,
 
     /// optionalParameters: {String title = ''} , default:processed=SimpleStringLiteralImpl
-    String title = '',
+    super.title,
 
     /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , default:none
-    _i7.GenerateAppTitle? onGenerateTitle,
+    super.onGenerateTitle,
 
     /// optionalParameters: {Color? color} , default:none
-    _i8.Color? color,
+    super.color,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i8.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , default:none
-    Iterable<_i9.LocalizationsDelegate<dynamic>>? localizationsDelegates,
+    super.localizationsDelegates,
 
     /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , default:none
-    _i7.LocaleListResolutionCallback? localeListResolutionCallback,
+    super.localeListResolutionCallback,
 
     /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , default:none
-    _i7.LocaleResolutionCallback? localeResolutionCallback,
+    super.localeResolutionCallback,
 
     /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , default:unprocessed=ListLiteralImpl
-    required Iterable<_i8.Locale> supportedLocales,
+    super.supportedLocales,
 
     /// optionalParameters: {bool showPerformanceOverlay = false} , default:processed=BooleanLiteralImpl
-    bool showPerformanceOverlay = false,
+    super.showPerformanceOverlay,
 
     /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardRasterCacheImages = false,
+    super.checkerboardRasterCacheImages,
 
     /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardOffscreenLayers = false,
+    super.checkerboardOffscreenLayers,
 
     /// optionalParameters: {bool showSemanticsDebugger = false} , default:processed=BooleanLiteralImpl
-    bool showSemanticsDebugger = false,
+    super.showSemanticsDebugger,
 
     /// optionalParameters: {bool debugShowCheckedModeBanner = true} , default:processed=BooleanLiteralImpl
-    bool debugShowCheckedModeBanner = true,
+    super.debugShowCheckedModeBanner,
 
     /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , default:none
-    Map<_i10.ShortcutActivator, _i11.Intent>? shortcuts,
+    super.shortcuts,
 
     /// optionalParameters: {Map<Type, Action<Intent>>? actions} , default:none
-    Map<Type, _i11.Action<_i11.Intent>>? actions,
+    super.actions,
 
     /// optionalParameters: {String? restorationScopeId} , default:none
-    String? restorationScopeId,
+    super.restorationScopeId,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
-    _i12.ScrollBehavior? scrollBehavior,
-  }) : super(
-          key: key,
-          navigatorKey: navigatorKey,
-          home: home,
-          theme: theme,
-          routes: routes,
-          initialRoute: initialRoute,
-          onGenerateRoute: onGenerateRoute,
-          onGenerateInitialRoutes: onGenerateInitialRoutes,
-          onUnknownRoute: onUnknownRoute,
-          navigatorObservers: navigatorObservers,
-          builder: builder,
-          title: title,
-          onGenerateTitle: onGenerateTitle,
-          color: color,
-          locale: locale,
-          localizationsDelegates: localizationsDelegates,
-          localeListResolutionCallback: localeListResolutionCallback,
-          localeResolutionCallback: localeResolutionCallback,
-          supportedLocales: supportedLocales,
-          showPerformanceOverlay: showPerformanceOverlay,
-          checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-          checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-          showSemanticsDebugger: showSemanticsDebugger,
-          debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-          shortcuts: shortcuts,
-          actions: actions,
-          restorationScopeId: restorationScopeId,
-          scrollBehavior: scrollBehavior,
-        ) {
+    super.scrollBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'navigatorKey': _i2.BuilderArg<_i4.GlobalKey<_i5.NavigatorState>?>(
+            name: 'navigatorKey',
+            init: navigatorKey,
+            isNamed: true,
+          ),
+          'home': _i2.BuilderArg<_i4.Widget?>(
+            name: 'home',
+            init: home,
+            isNamed: true,
+          ),
+          'theme': _i2.BuilderArg<_i6.CupertinoThemeData?>(
+            name: 'theme',
+            init: theme,
+            isNamed: true,
+          ),
+          'routes': _i2.BuilderArg<Map<String, _i4.Widget Function(_i4.BuildContext)>>(
+            name: 'routes',
+            init: routes,
+            isNamed: true,
+          ),
+          'initialRoute': _i2.BuilderArg<String?>(
+            name: 'initialRoute',
+            init: initialRoute,
+            isNamed: true,
+          ),
+          'onGenerateRoute': _i2.BuilderArg<_i5.RouteFactory?>(
+            name: 'onGenerateRoute',
+            init: onGenerateRoute,
+            isNamed: true,
+          ),
+          'onGenerateInitialRoutes': _i2.BuilderArg<_i7.InitialRouteListFactory?>(
+            name: 'onGenerateInitialRoutes',
+            init: onGenerateInitialRoutes,
+            isNamed: true,
+          ),
+          'onUnknownRoute': _i2.BuilderArg<_i5.RouteFactory?>(
+            name: 'onUnknownRoute',
+            init: onUnknownRoute,
+            isNamed: true,
+          ),
+          'navigatorObservers': _i2.BuilderArg<List<_i5.NavigatorObserver>>(
+            name: 'navigatorObservers',
+            init: navigatorObservers,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i4.TransitionBuilder?>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<String>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'onGenerateTitle': _i2.BuilderArg<_i7.GenerateAppTitle?>(
+            name: 'onGenerateTitle',
+            init: onGenerateTitle,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i8.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i8.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
+            name: 'localizationsDelegates',
+            init: localizationsDelegates,
+            isNamed: true,
+          ),
+          'localeListResolutionCallback': _i2.BuilderArg<_i7.LocaleListResolutionCallback?>(
+            name: 'localeListResolutionCallback',
+            init: localeListResolutionCallback,
+            isNamed: true,
+          ),
+          'localeResolutionCallback': _i2.BuilderArg<_i7.LocaleResolutionCallback?>(
+            name: 'localeResolutionCallback',
+            init: localeResolutionCallback,
+            isNamed: true,
+          ),
+          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
+            name: 'supportedLocales',
+            init: supportedLocales,
+            isNamed: true,
+          ),
+          'showPerformanceOverlay': _i2.BuilderArg<bool>(
+            name: 'showPerformanceOverlay',
+            init: showPerformanceOverlay,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardRasterCacheImages': _i2.BuilderArg<bool>(
+            name: 'checkerboardRasterCacheImages',
+            init: checkerboardRasterCacheImages,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardOffscreenLayers': _i2.BuilderArg<bool>(
+            name: 'checkerboardOffscreenLayers',
+            init: checkerboardOffscreenLayers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'showSemanticsDebugger': _i2.BuilderArg<bool>(
+            name: 'showSemanticsDebugger',
+            init: showSemanticsDebugger,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'debugShowCheckedModeBanner': _i2.BuilderArg<bool>(
+            name: 'debugShowCheckedModeBanner',
+            init: debugShowCheckedModeBanner,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+            name: 'shortcuts',
+            init: shortcuts,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'restorationScopeId': _i2.BuilderArg<String?>(
+            name: 'restorationScopeId',
+            init: restorationScopeId,
+            isNamed: true,
+          ),
+          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+            name: 'scrollBehavior',
+            init: scrollBehavior,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoApp';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoApp$Mate(
@@ -164,257 +283,218 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
           restorationScopeId: p.get('restorationScopeId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'navigatorKey',
-      navigatorKey,
-      isNamed: true,
-    );
-    mateUse(
-      'home',
-      home,
-      isNamed: true,
-    );
-    mateUse(
-      'theme',
-      theme,
-      isNamed: true,
-    );
-    mateUse(
-      'routes',
-      routes,
-      isNamed: true,
-    );
-    mateUse(
-      'initialRoute',
-      initialRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'onGenerateRoute',
-      onGenerateRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'onGenerateInitialRoutes',
-      onGenerateInitialRoutes,
-      isNamed: true,
-    );
-    mateUse(
-      'onUnknownRoute',
-      onUnknownRoute,
-      isNamed: true,
-    );
-    mateUse(
-      'navigatorObservers',
-      navigatorObservers,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'onGenerateTitle',
-      onGenerateTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'localizationsDelegates',
-      localizationsDelegates,
-      isNamed: true,
-    );
-    mateUse(
-      'localeListResolutionCallback',
-      localeListResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'localeResolutionCallback',
-      localeResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedLocales',
-      supportedLocales,
-      isNamed: true,
-    );
-    mateUse(
-      'showPerformanceOverlay',
-      showPerformanceOverlay,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardRasterCacheImages',
-      checkerboardRasterCacheImages,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardOffscreenLayers',
-      checkerboardOffscreenLayers,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'showSemanticsDebugger',
-      showSemanticsDebugger,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'debugShowCheckedModeBanner',
-      debugShowCheckedModeBanner,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'shortcuts',
-      shortcuts,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationScopeId',
-      restorationScopeId,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollBehavior',
-      scrollBehavior,
-      isNamed: true,
-    );
   }
 
   /// CupertinoApp CupertinoApp.router({Key? key, RouteInformationProvider? routeInformationProvider, RouteInformationParser<Object>? routeInformationParser, RouterDelegate<Object>? routerDelegate, BackButtonDispatcher? backButtonDispatcher, RouterConfig<Object>? routerConfig, CupertinoThemeData? theme, Widget Function(BuildContext, Widget?)? builder, String title = '', String Function(BuildContext)? onGenerateTitle, Color? color, Locale? locale, Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates, Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback, Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback, Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')], bool showPerformanceOverlay = false, bool checkerboardRasterCacheImages = false, bool checkerboardOffscreenLayers = false, bool showSemanticsDebugger = false, bool debugShowCheckedModeBanner = true, Map<ShortcutActivator, Intent>? shortcuts, Map<Type, Action<Intent>>? actions, String? restorationScopeId, ScrollBehavior? scrollBehavior, bool useInheritedMediaQuery = false})
   CupertinoApp$Mate.router({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {RouteInformationProvider? routeInformationProvider} , default:none
-    _i13.RouteInformationProvider? routeInformationProvider,
+    super.routeInformationProvider,
 
     /// optionalParameters: {RouteInformationParser<Object>? routeInformationParser} , default:none
-    _i13.RouteInformationParser<Object>? routeInformationParser,
+    super.routeInformationParser,
 
     /// optionalParameters: {RouterDelegate<Object>? routerDelegate} , default:none
-    _i13.RouterDelegate<Object>? routerDelegate,
+    super.routerDelegate,
 
     /// optionalParameters: {BackButtonDispatcher? backButtonDispatcher} , default:none
-    _i13.BackButtonDispatcher? backButtonDispatcher,
+    super.backButtonDispatcher,
 
     /// optionalParameters: {RouterConfig<Object>? routerConfig} , default:none
-    _i13.RouterConfig<Object>? routerConfig,
+    super.routerConfig,
 
     /// optionalParameters: {CupertinoThemeData? theme} , default:none
-    _i6.CupertinoThemeData? theme,
+    super.theme,
 
     /// optionalParameters: {Widget Function(BuildContext, Widget?)? builder} , default:none
-    _i4.TransitionBuilder? builder,
+    super.builder,
 
     /// optionalParameters: {String title = ''} , default:processed=SimpleStringLiteralImpl
-    String title = '',
+    super.title,
 
     /// optionalParameters: {String Function(BuildContext)? onGenerateTitle} , default:none
-    _i7.GenerateAppTitle? onGenerateTitle,
+    super.onGenerateTitle,
 
     /// optionalParameters: {Color? color} , default:none
-    _i8.Color? color,
+    super.color,
 
     /// optionalParameters: {Locale? locale} , default:none
-    _i8.Locale? locale,
+    super.locale,
 
     /// optionalParameters: {Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates} , default:none
-    Iterable<_i9.LocalizationsDelegate<dynamic>>? localizationsDelegates,
+    super.localizationsDelegates,
 
     /// optionalParameters: {Locale? Function(List<Locale>?, Iterable<Locale>)? localeListResolutionCallback} , default:none
-    _i7.LocaleListResolutionCallback? localeListResolutionCallback,
+    super.localeListResolutionCallback,
 
     /// optionalParameters: {Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback} , default:none
-    _i7.LocaleResolutionCallback? localeResolutionCallback,
+    super.localeResolutionCallback,
 
     /// optionalParameters: {Iterable<Locale> supportedLocales = const <Locale>[Locale('en', 'US')]} , default:unprocessed=ListLiteralImpl
-    required Iterable<_i8.Locale> supportedLocales,
+    super.supportedLocales,
 
     /// optionalParameters: {bool showPerformanceOverlay = false} , default:processed=BooleanLiteralImpl
-    bool showPerformanceOverlay = false,
+    super.showPerformanceOverlay,
 
     /// optionalParameters: {bool checkerboardRasterCacheImages = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardRasterCacheImages = false,
+    super.checkerboardRasterCacheImages,
 
     /// optionalParameters: {bool checkerboardOffscreenLayers = false} , default:processed=BooleanLiteralImpl
-    bool checkerboardOffscreenLayers = false,
+    super.checkerboardOffscreenLayers,
 
     /// optionalParameters: {bool showSemanticsDebugger = false} , default:processed=BooleanLiteralImpl
-    bool showSemanticsDebugger = false,
+    super.showSemanticsDebugger,
 
     /// optionalParameters: {bool debugShowCheckedModeBanner = true} , default:processed=BooleanLiteralImpl
-    bool debugShowCheckedModeBanner = true,
+    super.debugShowCheckedModeBanner,
 
     /// optionalParameters: {Map<ShortcutActivator, Intent>? shortcuts} , default:none
-    Map<_i10.ShortcutActivator, _i11.Intent>? shortcuts,
+    super.shortcuts,
 
     /// optionalParameters: {Map<Type, Action<Intent>>? actions} , default:none
-    Map<Type, _i11.Action<_i11.Intent>>? actions,
+    super.actions,
 
     /// optionalParameters: {String? restorationScopeId} , default:none
-    String? restorationScopeId,
+    super.restorationScopeId,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
-    _i12.ScrollBehavior? scrollBehavior,
-  }) : super.router(
-          key: key,
-          routeInformationProvider: routeInformationProvider,
-          routeInformationParser: routeInformationParser,
-          routerDelegate: routerDelegate,
-          backButtonDispatcher: backButtonDispatcher,
-          routerConfig: routerConfig,
-          theme: theme,
-          builder: builder,
-          title: title,
-          onGenerateTitle: onGenerateTitle,
-          color: color,
-          locale: locale,
-          localizationsDelegates: localizationsDelegates,
-          localeListResolutionCallback: localeListResolutionCallback,
-          localeResolutionCallback: localeResolutionCallback,
-          supportedLocales: supportedLocales,
-          showPerformanceOverlay: showPerformanceOverlay,
-          checkerboardRasterCacheImages: checkerboardRasterCacheImages,
-          checkerboardOffscreenLayers: checkerboardOffscreenLayers,
-          showSemanticsDebugger: showSemanticsDebugger,
-          debugShowCheckedModeBanner: debugShowCheckedModeBanner,
-          shortcuts: shortcuts,
-          actions: actions,
-          restorationScopeId: restorationScopeId,
-          scrollBehavior: scrollBehavior,
-        ) {
+    super.scrollBehavior,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'routeInformationProvider': _i2.BuilderArg<_i13.RouteInformationProvider?>(
+            name: 'routeInformationProvider',
+            init: routeInformationProvider,
+            isNamed: true,
+          ),
+          'routeInformationParser': _i2.BuilderArg<_i13.RouteInformationParser<Object>?>(
+            name: 'routeInformationParser',
+            init: routeInformationParser,
+            isNamed: true,
+          ),
+          'routerDelegate': _i2.BuilderArg<_i13.RouterDelegate<Object>?>(
+            name: 'routerDelegate',
+            init: routerDelegate,
+            isNamed: true,
+          ),
+          'backButtonDispatcher': _i2.BuilderArg<_i13.BackButtonDispatcher?>(
+            name: 'backButtonDispatcher',
+            init: backButtonDispatcher,
+            isNamed: true,
+          ),
+          'routerConfig': _i2.BuilderArg<_i13.RouterConfig<Object>?>(
+            name: 'routerConfig',
+            init: routerConfig,
+            isNamed: true,
+          ),
+          'theme': _i2.BuilderArg<_i6.CupertinoThemeData?>(
+            name: 'theme',
+            init: theme,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i4.TransitionBuilder?>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<String>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+            defaultValue: '',
+          ),
+          'onGenerateTitle': _i2.BuilderArg<_i7.GenerateAppTitle?>(
+            name: 'onGenerateTitle',
+            init: onGenerateTitle,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i8.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'locale': _i2.BuilderArg<_i8.Locale?>(
+            name: 'locale',
+            init: locale,
+            isNamed: true,
+          ),
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i9.LocalizationsDelegate<dynamic>>?>(
+            name: 'localizationsDelegates',
+            init: localizationsDelegates,
+            isNamed: true,
+          ),
+          'localeListResolutionCallback': _i2.BuilderArg<_i7.LocaleListResolutionCallback?>(
+            name: 'localeListResolutionCallback',
+            init: localeListResolutionCallback,
+            isNamed: true,
+          ),
+          'localeResolutionCallback': _i2.BuilderArg<_i7.LocaleResolutionCallback?>(
+            name: 'localeResolutionCallback',
+            init: localeResolutionCallback,
+            isNamed: true,
+          ),
+          'supportedLocales': _i2.BuilderArg<Iterable<_i8.Locale>>(
+            name: 'supportedLocales',
+            init: supportedLocales,
+            isNamed: true,
+          ),
+          'showPerformanceOverlay': _i2.BuilderArg<bool>(
+            name: 'showPerformanceOverlay',
+            init: showPerformanceOverlay,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardRasterCacheImages': _i2.BuilderArg<bool>(
+            name: 'checkerboardRasterCacheImages',
+            init: checkerboardRasterCacheImages,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'checkerboardOffscreenLayers': _i2.BuilderArg<bool>(
+            name: 'checkerboardOffscreenLayers',
+            init: checkerboardOffscreenLayers,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'showSemanticsDebugger': _i2.BuilderArg<bool>(
+            name: 'showSemanticsDebugger',
+            init: showSemanticsDebugger,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'debugShowCheckedModeBanner': _i2.BuilderArg<bool>(
+            name: 'debugShowCheckedModeBanner',
+            init: debugShowCheckedModeBanner,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'shortcuts': _i2.BuilderArg<Map<_i10.ShortcutActivator, _i11.Intent>?>(
+            name: 'shortcuts',
+            init: shortcuts,
+            isNamed: true,
+          ),
+          'actions': _i2.BuilderArg<Map<Type, _i11.Action<_i11.Intent>>?>(
+            name: 'actions',
+            init: actions,
+            isNamed: true,
+          ),
+          'restorationScopeId': _i2.BuilderArg<String?>(
+            name: 'restorationScopeId',
+            init: restorationScopeId,
+            isNamed: true,
+          ),
+          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+            name: 'scrollBehavior',
+            init: scrollBehavior,
+            isNamed: true,
+          ),
+        },
+        super.router() {
     mateBuilderName = 'CupertinoApp.router';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoApp$Mate.router(
@@ -444,136 +524,8 @@ class CupertinoApp$Mate extends _i1.CupertinoApp with _i2.Mate {
           restorationScopeId: p.get('restorationScopeId').build(),
           scrollBehavior: p.get('scrollBehavior').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'routeInformationProvider',
-      routeInformationProvider,
-      isNamed: true,
-    );
-    mateUse(
-      'routeInformationParser',
-      routeInformationParser,
-      isNamed: true,
-    );
-    mateUse(
-      'routerDelegate',
-      routerDelegate,
-      isNamed: true,
-    );
-    mateUse(
-      'backButtonDispatcher',
-      backButtonDispatcher,
-      isNamed: true,
-    );
-    mateUse(
-      'routerConfig',
-      routerConfig,
-      isNamed: true,
-    );
-    mateUse(
-      'theme',
-      theme,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-      defaultValue: '',
-    );
-    mateUse(
-      'onGenerateTitle',
-      onGenerateTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'locale',
-      locale,
-      isNamed: true,
-    );
-    mateUse(
-      'localizationsDelegates',
-      localizationsDelegates,
-      isNamed: true,
-    );
-    mateUse(
-      'localeListResolutionCallback',
-      localeListResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'localeResolutionCallback',
-      localeResolutionCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedLocales',
-      supportedLocales,
-      isNamed: true,
-    );
-    mateUse(
-      'showPerformanceOverlay',
-      showPerformanceOverlay,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardRasterCacheImages',
-      checkerboardRasterCacheImages,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'checkerboardOffscreenLayers',
-      checkerboardOffscreenLayers,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'showSemanticsDebugger',
-      showSemanticsDebugger,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'debugShowCheckedModeBanner',
-      debugShowCheckedModeBanner,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'shortcuts',
-      shortcuts,
-      isNamed: true,
-    );
-    mateUse(
-      'actions',
-      actions,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationScopeId',
-      restorationScopeId,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollBehavior',
-      scrollBehavior,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

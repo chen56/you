@@ -10,15 +10,20 @@ class SlottedRenderObjectElement$Mate<S> extends _i1.SlottedRenderObjectElement<
   SlottedRenderObjectElement$Mate(
 
       /// requiredParameters: SlottedMultiChildRenderObjectWidgetMixin<S> widget
-      _i1.SlottedMultiChildRenderObjectWidgetMixin<S> widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.SlottedMultiChildRenderObjectWidgetMixin<S>>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'SlottedRenderObjectElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SlottedRenderObjectElement$Mate<S>(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

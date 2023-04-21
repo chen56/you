@@ -12,22 +12,39 @@ class SelectionContainer$Mate extends _i1.SelectionContainer with _i2.Mate {
   /// SelectionContainer SelectionContainer({Key? key, SelectionRegistrar? registrar, required SelectionContainerDelegate delegate, required Widget child})
   SelectionContainer$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {SelectionRegistrar? registrar} , default:none
-    _i4.SelectionRegistrar? registrar,
+    super.registrar,
 
     /// optionalParameters: {required SelectionContainerDelegate delegate} , default:none
-    required _i1.SelectionContainerDelegate delegate,
+    required super.delegate,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          registrar: registrar,
-          delegate: delegate,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'registrar': _i2.BuilderArg<_i4.SelectionRegistrar?>(
+            name: 'registrar',
+            init: registrar,
+            isNamed: true,
+          ),
+          'delegate': _i2.BuilderArg<_i1.SelectionContainerDelegate>(
+            name: 'delegate',
+            init: delegate,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SelectionContainer';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SelectionContainer$Mate(
@@ -36,56 +53,38 @@ class SelectionContainer$Mate extends _i1.SelectionContainer with _i2.Mate {
           delegate: p.get('delegate').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'registrar',
-      registrar,
-      isNamed: true,
-    );
-    mateUse(
-      'delegate',
-      delegate,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// SelectionContainer SelectionContainer.disabled({Key? key, required Widget child})
   SelectionContainer$Mate.disabled({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super.disabled(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.disabled() {
     mateBuilderName = 'SelectionContainer.disabled';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SelectionContainer$Mate.disabled(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SelectionRegistrarScope extends InheritedWidget
@@ -93,18 +92,31 @@ class SelectionRegistrarScope$Mate extends _i1.SelectionRegistrarScope with _i2.
   /// SelectionRegistrarScope SelectionRegistrarScope({Key? key, required SelectionRegistrar registrar, required Widget child})
   SelectionRegistrarScope$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required SelectionRegistrar registrar} , default:none
-    required _i4.SelectionRegistrar registrar,
+    required super.registrar,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          registrar: registrar,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'registrar': _i2.BuilderArg<_i4.SelectionRegistrar>(
+            name: 'registrar',
+            init: registrar,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SelectionRegistrarScope';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SelectionRegistrarScope$Mate(
@@ -112,20 +124,8 @@ class SelectionRegistrarScope$Mate extends _i1.SelectionRegistrarScope with _i2.
           registrar: p.get('registrar').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'registrar',
-      registrar,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

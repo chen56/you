@@ -10,15 +10,20 @@ class InheritedModelElement$Mate<T> extends _i1.InheritedModelElement<T> with _i
   InheritedModelElement$Mate(
 
       /// requiredParameters: InheritedModel<T> widget
-      _i1.InheritedModel<T> widget)
-      : super(widget) {
+      super.widget)
+      : mateParams = {
+          'widget': _i2.BuilderArg<_i1.InheritedModel<T>>(
+            name: 'widget',
+            init: widget,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'InheritedModelElement';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => InheritedModelElement$Mate<T>(p.get('widget').value);
-    mateUse(
-      'widget',
-      widget,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

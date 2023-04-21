@@ -11,25 +11,48 @@ class FrictionSimulation$Mate extends _i1.FrictionSimulation with _i2.Mate {
   /// FrictionSimulation FrictionSimulation(double drag, double position, double velocity, {Tolerance tolerance = Tolerance.defaultTolerance, double constantDeceleration = 0})
   FrictionSimulation$Mate(
     /// requiredParameters: double drag
-    double drag,
+    super.drag,
 
     /// requiredParameters: double position
-    double position,
+    super.position,
 
     /// requiredParameters: double velocity
-    double velocity, {
+    super.velocity, {
     /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
-    _i3.Tolerance tolerance = _i4.Tolerance.defaultTolerance,
+    super.tolerance,
 
     /// optionalParameters: {double constantDeceleration = 0} , default:processed=IntegerLiteralImpl
-    double constantDeceleration = 0,
-  }) : super(
-          drag,
-          position,
-          velocity,
-          tolerance: tolerance,
-          constantDeceleration: constantDeceleration,
-        ) {
+    super.constantDeceleration,
+  })  : mateParams = {
+          'drag': _i2.BuilderArg<double>(
+            name: 'drag',
+            init: drag,
+            isNamed: false,
+          ),
+          'position': _i2.BuilderArg<double>(
+            name: 'position',
+            init: position,
+            isNamed: false,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: false,
+          ),
+          'tolerance': _i2.BuilderArg<_i3.Tolerance>(
+            name: 'tolerance',
+            init: tolerance,
+            isNamed: true,
+            defaultValue: _i4.Tolerance.defaultTolerance,
+          ),
+          'constantDeceleration': _i2.BuilderArg<double>(
+            name: 'constantDeceleration',
+            init: constantDeceleration,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'FrictionSimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => FrictionSimulation$Mate(
@@ -39,34 +62,10 @@ class FrictionSimulation$Mate extends _i1.FrictionSimulation with _i2.Mate {
           tolerance: p.get('tolerance').build(),
           constantDeceleration: p.get('constantDeceleration').build(),
         );
-    mateUse(
-      'drag',
-      drag,
-      isNamed: false,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: false,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: false,
-    );
-    mateUse(
-      'tolerance',
-      tolerance,
-      isNamed: true,
-      defaultValue: _i4.Tolerance.defaultTolerance,
-    );
-    mateUse(
-      'constantDeceleration',
-      constantDeceleration,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BoundedFrictionSimulation extends FrictionSimulation
@@ -74,26 +73,47 @@ class BoundedFrictionSimulation$Mate extends _i1.BoundedFrictionSimulation with 
   /// BoundedFrictionSimulation BoundedFrictionSimulation(double drag, double position, double velocity, double _minX, double _maxX)
   BoundedFrictionSimulation$Mate(
     /// requiredParameters: double drag
-    double drag,
+    super.drag,
 
     /// requiredParameters: double position
-    double position,
+    super.position,
 
     /// requiredParameters: double velocity
-    double velocity,
+    super.velocity,
 
     /// requiredParameters: double _minX
-    double _minX,
+    super._minX,
 
     /// requiredParameters: double _maxX
-    double _maxX,
-  ) : super(
-          drag,
-          position,
-          velocity,
-          _minX,
-          _maxX,
-        ) {
+    super._maxX,
+  )   : mateParams = {
+          'drag': _i2.BuilderArg<double>(
+            name: 'drag',
+            init: drag,
+            isNamed: false,
+          ),
+          'position': _i2.BuilderArg<double>(
+            name: 'position',
+            init: position,
+            isNamed: false,
+          ),
+          'velocity': _i2.BuilderArg<double>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: false,
+          ),
+          '_minX': _i2.BuilderArg<double>(
+            name: '_minX',
+            init: _minX,
+            isNamed: false,
+          ),
+          '_maxX': _i2.BuilderArg<double>(
+            name: '_maxX',
+            init: _maxX,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'BoundedFrictionSimulation';
     matePackageUrl = 'package:flutter/physics.dart';
     mateBuilder = (p) => BoundedFrictionSimulation$Mate(
@@ -103,30 +123,8 @@ class BoundedFrictionSimulation$Mate extends _i1.BoundedFrictionSimulation with 
           p.get('_minX').value,
           p.get('_maxX').value,
         );
-    mateUse(
-      'drag',
-      drag,
-      isNamed: false,
-    );
-    mateUse(
-      'position',
-      position,
-      isNamed: false,
-    );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: false,
-    );
-    mateUse(
-      '_minX',
-      _minX,
-      isNamed: false,
-    );
-    mateUse(
-      '_maxX',
-      _maxX,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

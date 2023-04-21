@@ -11,17 +11,22 @@ class CharacterBoundary$Mate extends _i1.CharacterBoundary with _i2.Mate {
   CharacterBoundary$Mate(
 
       /// requiredParameters: String _text
-      String _text)
-      : super(_text) {
+      super._text)
+      : mateParams = {
+          '_text': _i2.BuilderArg<String>(
+            name: '_text',
+            init: _text,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'CharacterBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => CharacterBoundary$Mate(p.get('_text').value);
-    mateUse(
-      '_text',
-      _text,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LineBoundary extends TextBoundary
@@ -30,17 +35,22 @@ class LineBoundary$Mate extends _i1.LineBoundary with _i2.Mate {
   LineBoundary$Mate(
 
       /// requiredParameters: TextLayoutMetrics _textLayout
-      _i3.TextLayoutMetrics _textLayout)
-      : super(_textLayout) {
+      super._textLayout)
+      : mateParams = {
+          '_textLayout': _i2.BuilderArg<_i3.TextLayoutMetrics>(
+            name: '_textLayout',
+            init: _textLayout,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'LineBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => LineBoundary$Mate(p.get('_textLayout').value);
-    mateUse(
-      '_textLayout',
-      _textLayout,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ParagraphBoundary extends TextBoundary
@@ -49,17 +59,22 @@ class ParagraphBoundary$Mate extends _i1.ParagraphBoundary with _i2.Mate {
   ParagraphBoundary$Mate(
 
       /// requiredParameters: String _text
-      String _text)
-      : super(_text) {
+      super._text)
+      : mateParams = {
+          '_text': _i2.BuilderArg<String>(
+            name: '_text',
+            init: _text,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'ParagraphBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => ParagraphBoundary$Mate(p.get('_text').value);
-    mateUse(
-      '_text',
-      _text,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class DocumentBoundary extends TextBoundary
@@ -68,15 +83,20 @@ class DocumentBoundary$Mate extends _i1.DocumentBoundary with _i2.Mate {
   DocumentBoundary$Mate(
 
       /// requiredParameters: String _text
-      String _text)
-      : super(_text) {
+      super._text)
+      : mateParams = {
+          '_text': _i2.BuilderArg<String>(
+            name: '_text',
+            init: _text,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'DocumentBoundary';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => DocumentBoundary$Mate(p.get('_text').value);
-    mateUse(
-      '_text',
-      _text,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

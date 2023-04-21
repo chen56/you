@@ -15,26 +15,48 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.
   /// PrimaryScrollController PrimaryScrollController({Key? key, required ScrollController controller, Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms, Axis? scrollDirection = Axis.vertical, required Widget child})
   PrimaryScrollController$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ScrollController controller} , default:none
-    required _i4.ScrollController controller,
+    required super.controller,
 
     /// optionalParameters: {Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms} , default:unprocessed=SimpleIdentifierImpl
-    required Set<_i5.TargetPlatform> automaticallyInheritForPlatforms,
+    super.automaticallyInheritForPlatforms,
 
     /// optionalParameters: {Axis? scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
-    _i6.Axis? scrollDirection = _i7.Axis.vertical,
+    super.scrollDirection,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          controller: controller,
-          automaticallyInheritForPlatforms: automaticallyInheritForPlatforms,
-          scrollDirection: scrollDirection,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i4.ScrollController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'automaticallyInheritForPlatforms': _i2.BuilderArg<Set<_i5.TargetPlatform>>(
+            name: 'automaticallyInheritForPlatforms',
+            init: automaticallyInheritForPlatforms,
+            isNamed: true,
+          ),
+          'scrollDirection': _i2.BuilderArg<_i6.Axis?>(
+            name: 'scrollDirection',
+            init: scrollDirection,
+            isNamed: true,
+            defaultValue: _i7.Axis.vertical,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PrimaryScrollController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate(
@@ -44,60 +66,36 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.
           scrollDirection: p.get('scrollDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'automaticallyInheritForPlatforms',
-      automaticallyInheritForPlatforms,
-      isNamed: true,
-    );
-    mateUse(
-      'scrollDirection',
-      scrollDirection,
-      isNamed: true,
-      defaultValue: _i7.Axis.vertical,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
 
   /// PrimaryScrollController PrimaryScrollController.none({Key? key, required Widget child})
   PrimaryScrollController$Mate.none({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super.none(
-          key: key,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super.none() {
     mateBuilderName = 'PrimaryScrollController.none';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => PrimaryScrollController$Mate.none(
           key: p.get('key').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

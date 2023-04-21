@@ -13,37 +13,67 @@ class UndoHistory$Mate<T> extends _i1.UndoHistory<T> with _i2.Mate {
   /// UndoHistory<T> UndoHistory({Key? key, bool Function(T?, T)? shouldChangeUndoStack, required ValueNotifier<T> value, required void Function(T) onTriggered, required FocusNode focusNode, UndoHistoryController? controller, required Widget child})
   UndoHistory$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool Function(T?, T)? shouldChangeUndoStack} , default:none
-    bool Function(
-      T?,
-      T,
-    )? shouldChangeUndoStack,
+    super.shouldChangeUndoStack,
 
     /// optionalParameters: {required ValueNotifier<T> value} , default:none
-    required _i4.ValueNotifier<T> value,
+    required super.value,
 
     /// optionalParameters: {required void Function(T) onTriggered} , default:none
-    required void Function(T) onTriggered,
+    required super.onTriggered,
 
     /// optionalParameters: {required FocusNode focusNode} , default:none
-    required _i5.FocusNode focusNode,
+    required super.focusNode,
 
     /// optionalParameters: {UndoHistoryController? controller} , default:none
-    _i1.UndoHistoryController? controller,
+    super.controller,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i6.Widget child,
-  }) : super(
-          key: key,
-          shouldChangeUndoStack: shouldChangeUndoStack,
-          value: value,
-          onTriggered: onTriggered,
-          focusNode: focusNode,
-          controller: controller,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'shouldChangeUndoStack': _i2.BuilderArg<
+              bool Function(
+                T?,
+                T,
+              )?>(
+            name: 'shouldChangeUndoStack',
+            init: shouldChangeUndoStack,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<_i4.ValueNotifier<T>>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onTriggered': _i2.BuilderArg<void Function(T)>(
+            name: 'onTriggered',
+            init: onTriggered,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i5.FocusNode>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i1.UndoHistoryController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i6.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'UndoHistory';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UndoHistory$Mate<T>(
@@ -55,42 +85,10 @@ class UndoHistory$Mate<T> extends _i1.UndoHistory<T> with _i2.Mate {
           controller: p.get('controller').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'shouldChangeUndoStack',
-      shouldChangeUndoStack,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onTriggered',
-      onTriggered,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class UndoHistoryValue
@@ -98,33 +96,35 @@ class UndoHistoryValue$Mate extends _i1.UndoHistoryValue with _i2.Mate {
   /// UndoHistoryValue UndoHistoryValue({bool canUndo = false, bool canRedo = false})
   UndoHistoryValue$Mate({
     /// optionalParameters: {bool canUndo = false} , default:processed=BooleanLiteralImpl
-    bool canUndo = false,
+    super.canUndo,
 
     /// optionalParameters: {bool canRedo = false} , default:processed=BooleanLiteralImpl
-    bool canRedo = false,
-  }) : super(
-          canUndo: canUndo,
-          canRedo: canRedo,
-        ) {
+    super.canRedo,
+  })  : mateParams = {
+          'canUndo': _i2.BuilderArg<bool>(
+            name: 'canUndo',
+            init: canUndo,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'canRedo': _i2.BuilderArg<bool>(
+            name: 'canRedo',
+            init: canRedo,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'UndoHistoryValue';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UndoHistoryValue$Mate(
           canUndo: p.get('canUndo').build(),
           canRedo: p.get('canRedo').build(),
         );
-    mateUse(
-      'canUndo',
-      canUndo,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'canRedo',
-      canRedo,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class UndoHistoryController extends ValueNotifier<UndoHistoryValue>
@@ -133,15 +133,20 @@ class UndoHistoryController$Mate extends _i1.UndoHistoryController with _i2.Mate
   UndoHistoryController$Mate(
       {
       /// optionalParameters: {UndoHistoryValue? value} , default:none
-      _i1.UndoHistoryValue? value})
-      : super(value: value) {
+      super.value})
+      : mateParams = {
+          'value': _i2.BuilderArg<_i1.UndoHistoryValue?>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'UndoHistoryController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UndoHistoryController$Mate(value: p.get('value').build());
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

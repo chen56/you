@@ -15,18 +15,33 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
   /// ScaleStartDetails ScaleStartDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, int pointerCount = 0})
   ScaleStartDetails$Mate({
     /// optionalParameters: {Offset focalPoint = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset focalPoint = _i4.Offset.zero,
+    super.focalPoint,
 
     /// optionalParameters: {Offset? localFocalPoint} , default:none
-    _i3.Offset? localFocalPoint,
+    super.localFocalPoint,
 
     /// optionalParameters: {int pointerCount = 0} , default:processed=IntegerLiteralImpl
-    int pointerCount = 0,
-  }) : super(
-          focalPoint: focalPoint,
-          localFocalPoint: localFocalPoint,
-          pointerCount: pointerCount,
-        ) {
+    super.pointerCount,
+  })  : mateParams = {
+          'focalPoint': _i2.BuilderArg<_i3.Offset>(
+            name: 'focalPoint',
+            init: focalPoint,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localFocalPoint': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localFocalPoint',
+            init: localFocalPoint,
+            isNamed: true,
+          ),
+          'pointerCount': _i2.BuilderArg<int>(
+            name: 'pointerCount',
+            init: pointerCount,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScaleStartDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScaleStartDetails$Mate(
@@ -34,24 +49,10 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
           localFocalPoint: p.get('localFocalPoint').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    mateUse(
-      'focalPoint',
-      focalPoint,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localFocalPoint',
-      localFocalPoint,
-      isNamed: true,
-    );
-    mateUse(
-      'pointerCount',
-      pointerCount,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScaleUpdateDetails
@@ -59,38 +60,78 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
   /// ScaleUpdateDetails ScaleUpdateDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, double scale = 1.0, double horizontalScale = 1.0, double verticalScale = 1.0, double rotation = 0.0, int pointerCount = 0, Offset focalPointDelta = Offset.zero})
   ScaleUpdateDetails$Mate({
     /// optionalParameters: {Offset focalPoint = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset focalPoint = _i4.Offset.zero,
+    super.focalPoint,
 
     /// optionalParameters: {Offset? localFocalPoint} , default:none
-    _i3.Offset? localFocalPoint,
+    super.localFocalPoint,
 
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
+    super.scale,
 
     /// optionalParameters: {double horizontalScale = 1.0} , default:processed=DoubleLiteralImpl
-    double horizontalScale = 1.0,
+    super.horizontalScale,
 
     /// optionalParameters: {double verticalScale = 1.0} , default:processed=DoubleLiteralImpl
-    double verticalScale = 1.0,
+    super.verticalScale,
 
     /// optionalParameters: {double rotation = 0.0} , default:processed=DoubleLiteralImpl
-    double rotation = 0.0,
+    super.rotation,
 
     /// optionalParameters: {int pointerCount = 0} , default:processed=IntegerLiteralImpl
-    int pointerCount = 0,
+    super.pointerCount,
 
     /// optionalParameters: {Offset focalPointDelta = Offset.zero} , default:processed=PrefixedIdentifierImpl
-    _i3.Offset focalPointDelta = _i4.Offset.zero,
-  }) : super(
-          focalPoint: focalPoint,
-          localFocalPoint: localFocalPoint,
-          scale: scale,
-          horizontalScale: horizontalScale,
-          verticalScale: verticalScale,
-          rotation: rotation,
-          pointerCount: pointerCount,
-          focalPointDelta: focalPointDelta,
-        ) {
+    super.focalPointDelta,
+  })  : mateParams = {
+          'focalPoint': _i2.BuilderArg<_i3.Offset>(
+            name: 'focalPoint',
+            init: focalPoint,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+          'localFocalPoint': _i2.BuilderArg<_i3.Offset?>(
+            name: 'localFocalPoint',
+            init: localFocalPoint,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'horizontalScale': _i2.BuilderArg<double>(
+            name: 'horizontalScale',
+            init: horizontalScale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'verticalScale': _i2.BuilderArg<double>(
+            name: 'verticalScale',
+            init: verticalScale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'rotation': _i2.BuilderArg<double>(
+            name: 'rotation',
+            init: rotation,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'pointerCount': _i2.BuilderArg<int>(
+            name: 'pointerCount',
+            init: pointerCount,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'focalPointDelta': _i2.BuilderArg<_i3.Offset>(
+            name: 'focalPointDelta',
+            init: focalPointDelta,
+            isNamed: true,
+            defaultValue: _i4.Offset.zero,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScaleUpdateDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScaleUpdateDetails$Mate(
@@ -103,54 +144,10 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
           pointerCount: p.get('pointerCount').build(),
           focalPointDelta: p.get('focalPointDelta').build(),
         );
-    mateUse(
-      'focalPoint',
-      focalPoint,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
-    mateUse(
-      'localFocalPoint',
-      localFocalPoint,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'horizontalScale',
-      horizontalScale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'verticalScale',
-      verticalScale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'rotation',
-      rotation,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'pointerCount',
-      pointerCount,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'focalPointDelta',
-      focalPointDelta,
-      isNamed: true,
-      defaultValue: _i4.Offset.zero,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScaleEndDetails
@@ -158,18 +155,34 @@ class ScaleEndDetails$Mate extends _i1.ScaleEndDetails with _i2.Mate {
   /// ScaleEndDetails ScaleEndDetails({Velocity velocity = Velocity.zero, double scaleVelocity = 0, int pointerCount = 0})
   ScaleEndDetails$Mate({
     /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
-    _i5.Velocity velocity = _i6.Velocity.zero,
+    super.velocity,
 
     /// optionalParameters: {double scaleVelocity = 0} , default:processed=IntegerLiteralImpl
-    double scaleVelocity = 0,
+    super.scaleVelocity,
 
     /// optionalParameters: {int pointerCount = 0} , default:processed=IntegerLiteralImpl
-    int pointerCount = 0,
-  }) : super(
-          velocity: velocity,
-          scaleVelocity: scaleVelocity,
-          pointerCount: pointerCount,
-        ) {
+    super.pointerCount,
+  })  : mateParams = {
+          'velocity': _i2.BuilderArg<_i5.Velocity>(
+            name: 'velocity',
+            init: velocity,
+            isNamed: true,
+            defaultValue: _i6.Velocity.zero,
+          ),
+          'scaleVelocity': _i2.BuilderArg<double>(
+            name: 'scaleVelocity',
+            init: scaleVelocity,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+          'pointerCount': _i2.BuilderArg<int>(
+            name: 'pointerCount',
+            init: pointerCount,
+            isNamed: true,
+            defaultValue: 0,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScaleEndDetails';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScaleEndDetails$Mate(
@@ -177,25 +190,10 @@ class ScaleEndDetails$Mate extends _i1.ScaleEndDetails with _i2.Mate {
           scaleVelocity: p.get('scaleVelocity').build(),
           pointerCount: p.get('pointerCount').build(),
         );
-    mateUse(
-      'velocity',
-      velocity,
-      isNamed: true,
-      defaultValue: _i6.Velocity.zero,
-    );
-    mateUse(
-      'scaleVelocity',
-      scaleVelocity,
-      isNamed: true,
-      defaultValue: 0,
-    );
-    mateUse(
-      'pointerCount',
-      pointerCount,
-      isNamed: true,
-      defaultValue: 0,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ScaleGestureRecognizer extends OneSequenceGestureRecognizer
@@ -203,30 +201,57 @@ class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer with _i2.Ma
   /// ScaleGestureRecognizer ScaleGestureRecognizer({Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter, DragStartBehavior dragStartBehavior = DragStartBehavior.down, bool trackpadScrollCausesScale = false, Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor})
   ScaleGestureRecognizer$Mate({
     /// optionalParameters: {Object? debugOwner} , default:none
-    Object? debugOwner,
+    super.debugOwner,
 
     /// optionalParameters: {Set<PointerDeviceKind>? supportedDevices} , default:none
-    Set<_i3.PointerDeviceKind>? supportedDevices,
+    super.supportedDevices,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
-    _i7.AllowedButtonsFilter? allowedButtonsFilter,
+    super.allowedButtonsFilter,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.down} , default:processed=PrefixedIdentifierImpl
-    _i7.DragStartBehavior dragStartBehavior = _i8.DragStartBehavior.down,
+    super.dragStartBehavior,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
-    bool trackpadScrollCausesScale = false,
+    super.trackpadScrollCausesScale,
 
     /// optionalParameters: {Offset trackpadScrollToScaleFactor = kDefaultTrackpadScrollToScaleFactor} , default:unprocessed=SimpleIdentifierImpl
-    required _i3.Offset trackpadScrollToScaleFactor,
-  }) : super(
-          debugOwner: debugOwner,
-          supportedDevices: supportedDevices,
-          allowedButtonsFilter: allowedButtonsFilter,
-          dragStartBehavior: dragStartBehavior,
-          trackpadScrollCausesScale: trackpadScrollCausesScale,
-          trackpadScrollToScaleFactor: trackpadScrollToScaleFactor,
-        ) {
+    super.trackpadScrollToScaleFactor,
+  })  : mateParams = {
+          'debugOwner': _i2.BuilderArg<Object?>(
+            name: 'debugOwner',
+            init: debugOwner,
+            isNamed: true,
+          ),
+          'supportedDevices': _i2.BuilderArg<Set<_i3.PointerDeviceKind>?>(
+            name: 'supportedDevices',
+            init: supportedDevices,
+            isNamed: true,
+          ),
+          'allowedButtonsFilter': _i2.BuilderArg<_i7.AllowedButtonsFilter?>(
+            name: 'allowedButtonsFilter',
+            init: allowedButtonsFilter,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i8.DragStartBehavior.down,
+          ),
+          'trackpadScrollCausesScale': _i2.BuilderArg<bool>(
+            name: 'trackpadScrollCausesScale',
+            init: trackpadScrollCausesScale,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'trackpadScrollToScaleFactor': _i2.BuilderArg<_i3.Offset>(
+            name: 'trackpadScrollToScaleFactor',
+            init: trackpadScrollToScaleFactor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScaleGestureRecognizer';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => ScaleGestureRecognizer$Mate(
@@ -237,37 +262,8 @@ class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer with _i2.Ma
           trackpadScrollCausesScale: p.get('trackpadScrollCausesScale').build(),
           trackpadScrollToScaleFactor: p.get('trackpadScrollToScaleFactor').build(),
         );
-    mateUse(
-      'debugOwner',
-      debugOwner,
-      isNamed: true,
-    );
-    mateUse(
-      'supportedDevices',
-      supportedDevices,
-      isNamed: true,
-    );
-    mateUse(
-      'allowedButtonsFilter',
-      allowedButtonsFilter,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i8.DragStartBehavior.down,
-    );
-    mateUse(
-      'trackpadScrollCausesScale',
-      trackpadScrollCausesScale,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'trackpadScrollToScaleFactor',
-      trackpadScrollToScaleFactor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

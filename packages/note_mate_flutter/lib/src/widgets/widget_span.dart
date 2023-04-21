@@ -12,22 +12,39 @@ class WidgetSpan$Mate extends _i1.WidgetSpan with _i2.Mate {
   /// WidgetSpan WidgetSpan({required Widget child, PlaceholderAlignment alignment = ui.PlaceholderAlignment.bottom, TextBaseline? baseline, TextStyle? style})
   WidgetSpan$Mate({
     /// optionalParameters: {required Widget child} , default:none
-    required _i3.Widget child,
+    required super.child,
 
     /// optionalParameters: {PlaceholderAlignment alignment = ui.PlaceholderAlignment.bottom} , default:unprocessed=PropertyAccessImpl
-    required _i4.PlaceholderAlignment alignment,
+    super.alignment,
 
     /// optionalParameters: {TextBaseline? baseline} , default:none
-    _i4.TextBaseline? baseline,
+    super.baseline,
 
     /// optionalParameters: {TextStyle? style} , default:none
-    _i5.TextStyle? style,
-  }) : super(
-          child: child,
-          alignment: alignment,
-          baseline: baseline,
-          style: style,
-        ) {
+    super.style,
+  })  : mateParams = {
+          'child': _i2.BuilderArg<_i3.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'alignment': _i2.BuilderArg<_i4.PlaceholderAlignment>(
+            name: 'alignment',
+            init: alignment,
+            isNamed: true,
+          ),
+          'baseline': _i2.BuilderArg<_i4.TextBaseline?>(
+            name: 'baseline',
+            init: baseline,
+            isNamed: true,
+          ),
+          'style': _i2.BuilderArg<_i5.TextStyle?>(
+            name: 'style',
+            init: style,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'WidgetSpan';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => WidgetSpan$Mate(
@@ -36,25 +53,8 @@ class WidgetSpan$Mate extends _i1.WidgetSpan with _i2.Mate {
           baseline: p.get('baseline').build(),
           style: p.get('style').build(),
         );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'alignment',
-      alignment,
-      isNamed: true,
-    );
-    mateUse(
-      'baseline',
-      baseline,
-      isNamed: true,
-    );
-    mateUse(
-      'style',
-      style,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

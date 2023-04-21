@@ -12,18 +12,31 @@ class RenderSliverPadding$Mate extends _i1.RenderSliverPadding with _i2.Mate {
   /// RenderSliverPadding RenderSliverPadding({required EdgeInsetsGeometry padding, TextDirection? textDirection, RenderSliver? child})
   RenderSliverPadding$Mate({
     /// optionalParameters: {required EdgeInsetsGeometry padding} , default:none
-    required _i3.EdgeInsetsGeometry padding,
+    required super.padding,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
-    _i4.TextDirection? textDirection,
+    super.textDirection,
 
     /// optionalParameters: {RenderSliver? child} , default:none
-    _i5.RenderSliver? child,
-  }) : super(
-          padding: padding,
-          textDirection: textDirection,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'padding': _i2.BuilderArg<_i3.EdgeInsetsGeometry>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.RenderSliver?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverPadding';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverPadding$Mate(
@@ -31,20 +44,8 @@ class RenderSliverPadding$Mate extends _i1.RenderSliverPadding with _i2.Mate {
           textDirection: p.get('textDirection').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

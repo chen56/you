@@ -11,18 +11,33 @@ class RenderSliverOpacity$Mate extends _i1.RenderSliverOpacity with _i2.Mate {
   /// RenderSliverOpacity RenderSliverOpacity({double opacity = 1.0, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverOpacity$Mate({
     /// optionalParameters: {double opacity = 1.0} , default:processed=DoubleLiteralImpl
-    double opacity = 1.0,
+    super.opacity,
 
     /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool alwaysIncludeSemantics = false,
+    super.alwaysIncludeSemantics,
 
     /// optionalParameters: {RenderSliver? sliver} , default:none
-    _i3.RenderSliver? sliver,
-  }) : super(
-          opacity: opacity,
-          alwaysIncludeSemantics: alwaysIncludeSemantics,
-          sliver: sliver,
-        ) {
+    super.sliver,
+  })  : mateParams = {
+          'opacity': _i2.BuilderArg<double>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'alwaysIncludeSemantics': _i2.BuilderArg<bool>(
+            name: 'alwaysIncludeSemantics',
+            init: alwaysIncludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'sliver': _i2.BuilderArg<_i3.RenderSliver?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverOpacity$Mate(
@@ -30,24 +45,10 @@ class RenderSliverOpacity$Mate extends _i1.RenderSliverOpacity with _i2.Mate {
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'alwaysIncludeSemantics',
-      alwaysIncludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverIgnorePointer extends RenderProxySliver
@@ -55,18 +56,32 @@ class RenderSliverIgnorePointer$Mate extends _i1.RenderSliverIgnorePointer with 
   /// RenderSliverIgnorePointer RenderSliverIgnorePointer({RenderSliver? sliver, bool ignoring = true, bool? ignoringSemantics})
   RenderSliverIgnorePointer$Mate({
     /// optionalParameters: {RenderSliver? sliver} , default:none
-    _i3.RenderSliver? sliver,
+    super.sliver,
 
     /// optionalParameters: {bool ignoring = true} , default:processed=BooleanLiteralImpl
-    bool ignoring = true,
+    super.ignoring,
 
     /// optionalParameters: {bool? ignoringSemantics} , default:none
-    bool? ignoringSemantics,
-  }) : super(
-          sliver: sliver,
-          ignoring: ignoring,
-          ignoringSemantics: ignoringSemantics,
-        ) {
+    super.ignoringSemantics,
+  })  : mateParams = {
+          'sliver': _i2.BuilderArg<_i3.RenderSliver?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+          'ignoring': _i2.BuilderArg<bool>(
+            name: 'ignoring',
+            init: ignoring,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'ignoringSemantics': _i2.BuilderArg<bool?>(
+            name: 'ignoringSemantics',
+            init: ignoringSemantics,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverIgnorePointer';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverIgnorePointer$Mate(
@@ -74,23 +89,10 @@ class RenderSliverIgnorePointer$Mate extends _i1.RenderSliverIgnorePointer with 
           ignoring: p.get('ignoring').build(),
           ignoringSemantics: p.get('ignoringSemantics').build(),
         );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
-    mateUse(
-      'ignoring',
-      ignoring,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'ignoringSemantics',
-      ignoringSemantics,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverOffstage extends RenderProxySliver
@@ -98,32 +100,34 @@ class RenderSliverOffstage$Mate extends _i1.RenderSliverOffstage with _i2.Mate {
   /// RenderSliverOffstage RenderSliverOffstage({bool offstage = true, RenderSliver? sliver})
   RenderSliverOffstage$Mate({
     /// optionalParameters: {bool offstage = true} , default:processed=BooleanLiteralImpl
-    bool offstage = true,
+    super.offstage,
 
     /// optionalParameters: {RenderSliver? sliver} , default:none
-    _i3.RenderSliver? sliver,
-  }) : super(
-          offstage: offstage,
-          sliver: sliver,
-        ) {
+    super.sliver,
+  })  : mateParams = {
+          'offstage': _i2.BuilderArg<bool>(
+            name: 'offstage',
+            init: offstage,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'sliver': _i2.BuilderArg<_i3.RenderSliver?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverOffstage';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverOffstage$Mate(
           offstage: p.get('offstage').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse(
-      'offstage',
-      offstage,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderSliverAnimatedOpacity extends RenderProxySliver with RenderAnimatedOpacityMixin<RenderSliver>
@@ -131,18 +135,32 @@ class RenderSliverAnimatedOpacity$Mate extends _i1.RenderSliverAnimatedOpacity w
   /// RenderSliverAnimatedOpacity RenderSliverAnimatedOpacity({required Animation<double> opacity, bool alwaysIncludeSemantics = false, RenderSliver? sliver})
   RenderSliverAnimatedOpacity$Mate({
     /// optionalParameters: {required Animation<double> opacity} , default:none
-    required _i4.Animation<double> opacity,
+    required super.opacity,
 
     /// optionalParameters: {bool alwaysIncludeSemantics = false} , default:processed=BooleanLiteralImpl
-    bool alwaysIncludeSemantics = false,
+    super.alwaysIncludeSemantics,
 
     /// optionalParameters: {RenderSliver? sliver} , default:none
-    _i3.RenderSliver? sliver,
-  }) : super(
-          opacity: opacity,
-          alwaysIncludeSemantics: alwaysIncludeSemantics,
-          sliver: sliver,
-        ) {
+    super.sliver,
+  })  : mateParams = {
+          'opacity': _i2.BuilderArg<_i4.Animation<double>>(
+            name: 'opacity',
+            init: opacity,
+            isNamed: true,
+          ),
+          'alwaysIncludeSemantics': _i2.BuilderArg<bool>(
+            name: 'alwaysIncludeSemantics',
+            init: alwaysIncludeSemantics,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'sliver': _i2.BuilderArg<_i3.RenderSliver?>(
+            name: 'sliver',
+            init: sliver,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderSliverAnimatedOpacity';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderSliverAnimatedOpacity$Mate(
@@ -150,21 +168,8 @@ class RenderSliverAnimatedOpacity$Mate extends _i1.RenderSliverAnimatedOpacity w
           alwaysIncludeSemantics: p.get('alwaysIncludeSemantics').build(),
           sliver: p.get('sliver').build(),
         );
-    mateUse(
-      'opacity',
-      opacity,
-      isNamed: true,
-    );
-    mateUse(
-      'alwaysIncludeSemantics',
-      alwaysIncludeSemantics,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'sliver',
-      sliver,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

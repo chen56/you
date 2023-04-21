@@ -12,18 +12,32 @@ class ImageInfo$Mate extends _i1.ImageInfo with _i2.Mate {
   /// ImageInfo ImageInfo({required Image image, double scale = 1.0, String? debugLabel})
   ImageInfo$Mate({
     /// optionalParameters: {required Image image} , default:none
-    required _i3.Image image,
+    required super.image,
 
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
-    double scale = 1.0,
+    super.scale,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          image: image,
-          scale: scale,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'image': _i2.BuilderArg<_i3.Image>(
+            name: 'image',
+            init: image,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageInfo';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageInfo$Mate(
@@ -31,23 +45,10 @@ class ImageInfo$Mate extends _i1.ImageInfo with _i2.Mate {
           scale: p.get('scale').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'image',
-      image,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ImageStreamListener
@@ -55,17 +56,30 @@ class ImageStreamListener$Mate extends _i1.ImageStreamListener with _i2.Mate {
   /// ImageStreamListener ImageStreamListener(void Function(ImageInfo, bool) onImage, {void Function(ImageChunkEvent)? onChunk, void Function(Object, StackTrace?)? onError})
   ImageStreamListener$Mate(
     /// requiredParameters: void Function(ImageInfo, bool) onImage
-    _i1.ImageListener onImage, {
+    super.onImage, {
     /// optionalParameters: {void Function(ImageChunkEvent)? onChunk} , default:none
-    _i1.ImageChunkListener? onChunk,
+    super.onChunk,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onError} , default:none
-    _i1.ImageErrorListener? onError,
-  }) : super(
-          onImage,
-          onChunk: onChunk,
-          onError: onError,
-        ) {
+    super.onError,
+  })  : mateParams = {
+          'onImage': _i2.BuilderArg<_i1.ImageListener>(
+            name: 'onImage',
+            init: onImage,
+            isNamed: false,
+          ),
+          'onChunk': _i2.BuilderArg<_i1.ImageChunkListener?>(
+            name: 'onChunk',
+            init: onChunk,
+            isNamed: true,
+          ),
+          'onError': _i2.BuilderArg<_i1.ImageErrorListener?>(
+            name: 'onError',
+            init: onError,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageStreamListener';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageStreamListener$Mate(
@@ -73,22 +87,10 @@ class ImageStreamListener$Mate extends _i1.ImageStreamListener with _i2.Mate {
           onChunk: p.get('onChunk').build(),
           onError: p.get('onError').build(),
         );
-    mateUse(
-      'onImage',
-      onImage,
-      isNamed: false,
-    );
-    mateUse(
-      'onChunk',
-      onChunk,
-      isNamed: true,
-    );
-    mateUse(
-      'onError',
-      onError,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ImageChunkEvent with Diagnosticable
@@ -96,31 +98,33 @@ class ImageChunkEvent$Mate extends _i1.ImageChunkEvent with _i2.Mate {
   /// ImageChunkEvent ImageChunkEvent({required int cumulativeBytesLoaded, required int? expectedTotalBytes})
   ImageChunkEvent$Mate({
     /// optionalParameters: {required int cumulativeBytesLoaded} , default:none
-    required int cumulativeBytesLoaded,
+    required super.cumulativeBytesLoaded,
 
     /// optionalParameters: {required int? expectedTotalBytes} , default:none
-    required int? expectedTotalBytes,
-  }) : super(
-          cumulativeBytesLoaded: cumulativeBytesLoaded,
-          expectedTotalBytes: expectedTotalBytes,
-        ) {
+    required super.expectedTotalBytes,
+  })  : mateParams = {
+          'cumulativeBytesLoaded': _i2.BuilderArg<int>(
+            name: 'cumulativeBytesLoaded',
+            init: cumulativeBytesLoaded,
+            isNamed: true,
+          ),
+          'expectedTotalBytes': _i2.BuilderArg<int?>(
+            name: 'expectedTotalBytes',
+            init: expectedTotalBytes,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ImageChunkEvent';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ImageChunkEvent$Mate(
           cumulativeBytesLoaded: p.get('cumulativeBytesLoaded').build(),
           expectedTotalBytes: p.get('expectedTotalBytes').build(),
         );
-    mateUse(
-      'cumulativeBytesLoaded',
-      cumulativeBytesLoaded,
-      isNamed: true,
-    );
-    mateUse(
-      'expectedTotalBytes',
-      expectedTotalBytes,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class OneFrameImageStreamCompleter extends ImageStreamCompleter
@@ -128,30 +132,32 @@ class OneFrameImageStreamCompleter$Mate extends _i1.OneFrameImageStreamCompleter
   /// OneFrameImageStreamCompleter OneFrameImageStreamCompleter(Future<ImageInfo> image, {Iterable<DiagnosticsNode> Function()? informationCollector})
   OneFrameImageStreamCompleter$Mate(
     /// requiredParameters: Future<ImageInfo> image
-    _i4.Future<_i1.ImageInfo> image, {
+    super.image, {
     /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
-    _i5.InformationCollector? informationCollector,
-  }) : super(
-          image,
-          informationCollector: informationCollector,
-        ) {
+    super.informationCollector,
+  })  : mateParams = {
+          'image': _i2.BuilderArg<_i4.Future<_i1.ImageInfo>>(
+            name: 'image',
+            init: image,
+            isNamed: false,
+          ),
+          'informationCollector': _i2.BuilderArg<_i5.InformationCollector?>(
+            name: 'informationCollector',
+            init: informationCollector,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'OneFrameImageStreamCompleter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => OneFrameImageStreamCompleter$Mate(
           p.get('image').value,
           informationCollector: p.get('informationCollector').build(),
         );
-    mateUse(
-      'image',
-      image,
-      isNamed: false,
-    );
-    mateUse(
-      'informationCollector',
-      informationCollector,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class MultiFrameImageStreamCompleter extends ImageStreamCompleter
@@ -159,26 +165,47 @@ class MultiFrameImageStreamCompleter$Mate extends _i1.MultiFrameImageStreamCompl
   /// MultiFrameImageStreamCompleter MultiFrameImageStreamCompleter({required Future<Codec> codec, required double scale, String? debugLabel, Stream<ImageChunkEvent>? chunkEvents, Iterable<DiagnosticsNode> Function()? informationCollector})
   MultiFrameImageStreamCompleter$Mate({
     /// optionalParameters: {required Future<Codec> codec} , default:none
-    required _i4.Future<_i3.Codec> codec,
+    required super.codec,
 
     /// optionalParameters: {required double scale} , default:none
-    required double scale,
+    required super.scale,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
+    super.debugLabel,
 
     /// optionalParameters: {Stream<ImageChunkEvent>? chunkEvents} , default:none
-    _i4.Stream<_i1.ImageChunkEvent>? chunkEvents,
+    super.chunkEvents,
 
     /// optionalParameters: {Iterable<DiagnosticsNode> Function()? informationCollector} , default:none
-    _i5.InformationCollector? informationCollector,
-  }) : super(
-          codec: codec,
-          scale: scale,
-          debugLabel: debugLabel,
-          chunkEvents: chunkEvents,
-          informationCollector: informationCollector,
-        ) {
+    super.informationCollector,
+  })  : mateParams = {
+          'codec': _i2.BuilderArg<_i4.Future<_i3.Codec>>(
+            name: 'codec',
+            init: codec,
+            isNamed: true,
+          ),
+          'scale': _i2.BuilderArg<double>(
+            name: 'scale',
+            init: scale,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+          'chunkEvents': _i2.BuilderArg<_i4.Stream<_i1.ImageChunkEvent>?>(
+            name: 'chunkEvents',
+            init: chunkEvents,
+            isNamed: true,
+          ),
+          'informationCollector': _i2.BuilderArg<_i5.InformationCollector?>(
+            name: 'informationCollector',
+            init: informationCollector,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'MultiFrameImageStreamCompleter';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => MultiFrameImageStreamCompleter$Mate(
@@ -188,30 +215,8 @@ class MultiFrameImageStreamCompleter$Mate extends _i1.MultiFrameImageStreamCompl
           chunkEvents: p.get('chunkEvents').build(),
           informationCollector: p.get('informationCollector').build(),
         );
-    mateUse(
-      'codec',
-      codec,
-      isNamed: true,
-    );
-    mateUse(
-      'scale',
-      scale,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
-    mateUse(
-      'chunkEvents',
-      chunkEvents,
-      isNamed: true,
-    );
-    mateUse(
-      'informationCollector',
-      informationCollector,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

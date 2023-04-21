@@ -15,54 +15,106 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
   /// CupertinoListSection CupertinoListSection({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry margin = _kDefaultRowsMargin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.none, double dividerMargin = _kBaseDividerMargin, double? additionalDividerMargin, double? topMargin = _kMarginTop, bool hasLeading = true})
   CupertinoListSection$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {List<Widget>? children} , default:none
-    List<_i4.Widget>? children,
+    super.children,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {Widget? footer} , default:none
-    _i4.Widget? footer,
+    super.footer,
 
     /// optionalParameters: {EdgeInsetsGeometry margin = _kDefaultRowsMargin} , default:unprocessed=SimpleIdentifierImpl
-    required _i5.EdgeInsetsGeometry margin,
+    super.margin,
 
     /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
-    _i6.Color backgroundColor = _i7.CupertinoColors.systemGroupedBackground,
+    super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
-    _i8.BoxDecoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
-    _i6.Clip clipBehavior = _i6.Clip.none,
+    super.clipBehavior,
 
     /// optionalParameters: {double dividerMargin = _kBaseDividerMargin} , default:unprocessed=SimpleIdentifierImpl
-    required double dividerMargin,
+    super.dividerMargin,
 
     /// optionalParameters: {double? additionalDividerMargin} , default:none
-    double? additionalDividerMargin,
+    super.additionalDividerMargin,
 
     /// optionalParameters: {double? topMargin = _kMarginTop} , default:unprocessed=SimpleIdentifierImpl
-    required double? topMargin,
+    super.topMargin,
 
     /// optionalParameters: {bool hasLeading = true} , default:processed=BooleanLiteralImpl
-    bool hasLeading = true,
-  }) : super(
-          key: key,
-          children: children,
-          header: header,
-          footer: footer,
-          margin: margin,
-          backgroundColor: backgroundColor,
-          decoration: decoration,
-          clipBehavior: clipBehavior,
-          dividerMargin: dividerMargin,
-          additionalDividerMargin: additionalDividerMargin,
-          topMargin: topMargin,
-          hasLeading: hasLeading,
-        ) {
+    super.hasLeading,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'footer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i5.EdgeInsetsGeometry>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+            defaultValue: _i7.CupertinoColors.systemGroupedBackground,
+          ),
+          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i6.Clip.none,
+          ),
+          'dividerMargin': _i2.BuilderArg<double>(
+            name: 'dividerMargin',
+            init: dividerMargin,
+            isNamed: true,
+          ),
+          'additionalDividerMargin': _i2.BuilderArg<double?>(
+            name: 'additionalDividerMargin',
+            init: additionalDividerMargin,
+            isNamed: true,
+          ),
+          'topMargin': _i2.BuilderArg<double?>(
+            name: 'topMargin',
+            init: topMargin,
+            isNamed: true,
+          ),
+          'hasLeading': _i2.BuilderArg<bool>(
+            name: 'hasLeading',
+            init: hasLeading,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoListSection';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListSection$Mate(
@@ -79,122 +131,111 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-      defaultValue: _i7.CupertinoColors.systemGroupedBackground,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i6.Clip.none,
-    );
-    mateUse(
-      'dividerMargin',
-      dividerMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'additionalDividerMargin',
-      additionalDividerMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'topMargin',
-      topMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'hasLeading',
-      hasLeading,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
 
   /// CupertinoListSection CupertinoListSection.insetGrouped({Key? key, List<Widget>? children, Widget? header, Widget? footer, EdgeInsetsGeometry? margin, Color backgroundColor = CupertinoColors.systemGroupedBackground, BoxDecoration? decoration, Clip clipBehavior = Clip.hardEdge, double dividerMargin = _kInsetDividerMargin, double? additionalDividerMargin, double? topMargin, bool hasLeading = true})
   CupertinoListSection$Mate.insetGrouped({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {List<Widget>? children} , default:none
-    List<_i4.Widget>? children,
+    super.children,
 
     /// optionalParameters: {Widget? header} , default:none
-    _i4.Widget? header,
+    super.header,
 
     /// optionalParameters: {Widget? footer} , default:none
-    _i4.Widget? footer,
+    super.footer,
 
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
-    _i5.EdgeInsetsGeometry? margin,
+    super.margin,
 
     /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
-    _i6.Color backgroundColor = _i7.CupertinoColors.systemGroupedBackground,
+    super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
-    _i8.BoxDecoration? decoration,
+    super.decoration,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i6.Clip clipBehavior = _i6.Clip.hardEdge,
+    super.clipBehavior,
 
     /// optionalParameters: {double dividerMargin = _kInsetDividerMargin} , default:unprocessed=SimpleIdentifierImpl
-    required double dividerMargin,
+    super.dividerMargin,
 
     /// optionalParameters: {double? additionalDividerMargin} , default:none
-    double? additionalDividerMargin,
+    super.additionalDividerMargin,
 
     /// optionalParameters: {double? topMargin} , default:none
-    double? topMargin,
+    super.topMargin,
 
     /// optionalParameters: {bool hasLeading = true} , default:processed=BooleanLiteralImpl
-    bool hasLeading = true,
-  }) : super.insetGrouped(
-          key: key,
-          children: children,
-          header: header,
-          footer: footer,
-          margin: margin,
-          backgroundColor: backgroundColor,
-          decoration: decoration,
-          clipBehavior: clipBehavior,
-          dividerMargin: dividerMargin,
-          additionalDividerMargin: additionalDividerMargin,
-          topMargin: topMargin,
-          hasLeading: hasLeading,
-        ) {
+    super.hasLeading,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'children': _i2.BuilderArg<List<_i4.Widget>?>(
+            name: 'children',
+            init: children,
+            isNamed: true,
+          ),
+          'header': _i2.BuilderArg<_i4.Widget?>(
+            name: 'header',
+            init: header,
+            isNamed: true,
+          ),
+          'footer': _i2.BuilderArg<_i4.Widget?>(
+            name: 'footer',
+            init: footer,
+            isNamed: true,
+          ),
+          'margin': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
+            name: 'margin',
+            init: margin,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+            defaultValue: _i7.CupertinoColors.systemGroupedBackground,
+          ),
+          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
+            name: 'decoration',
+            init: decoration,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i6.Clip.hardEdge,
+          ),
+          'dividerMargin': _i2.BuilderArg<double>(
+            name: 'dividerMargin',
+            init: dividerMargin,
+            isNamed: true,
+          ),
+          'additionalDividerMargin': _i2.BuilderArg<double?>(
+            name: 'additionalDividerMargin',
+            init: additionalDividerMargin,
+            isNamed: true,
+          ),
+          'topMargin': _i2.BuilderArg<double?>(
+            name: 'topMargin',
+            init: topMargin,
+            isNamed: true,
+          ),
+          'hasLeading': _i2.BuilderArg<bool>(
+            name: 'hasLeading',
+            init: hasLeading,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super.insetGrouped() {
     mateBuilderName = 'CupertinoListSection.insetGrouped';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListSection$Mate.insetGrouped(
@@ -211,68 +252,8 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
           topMargin: p.get('topMargin').build(),
           hasLeading: p.get('hasLeading').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'children',
-      children,
-      isNamed: true,
-    );
-    mateUse(
-      'header',
-      header,
-      isNamed: true,
-    );
-    mateUse(
-      'footer',
-      footer,
-      isNamed: true,
-    );
-    mateUse(
-      'margin',
-      margin,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-      defaultValue: _i7.CupertinoColors.systemGroupedBackground,
-    );
-    mateUse(
-      'decoration',
-      decoration,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i6.Clip.hardEdge,
-    );
-    mateUse(
-      'dividerMargin',
-      dividerMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'additionalDividerMargin',
-      additionalDividerMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'topMargin',
-      topMargin,
-      isNamed: true,
-    );
-    mateUse(
-      'hasLeading',
-      hasLeading,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

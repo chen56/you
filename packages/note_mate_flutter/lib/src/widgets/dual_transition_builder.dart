@@ -12,26 +12,47 @@ class DualTransitionBuilder$Mate extends _i1.DualTransitionBuilder with _i2.Mate
   /// DualTransitionBuilder DualTransitionBuilder({Key? key, required Animation<double> animation, required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder, required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder, Widget? child})
   DualTransitionBuilder$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Animation<double> animation} , default:none
-    required _i4.Animation<double> animation,
+    required super.animation,
 
     /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) forwardBuilder} , default:none
-    required _i1.AnimatedTransitionBuilder forwardBuilder,
+    required super.forwardBuilder,
 
     /// optionalParameters: {required Widget Function(BuildContext, Animation<double>, Widget?) reverseBuilder} , default:none
-    required _i1.AnimatedTransitionBuilder reverseBuilder,
+    required super.reverseBuilder,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          animation: animation,
-          forwardBuilder: forwardBuilder,
-          reverseBuilder: reverseBuilder,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'animation': _i2.BuilderArg<_i4.Animation<double>>(
+            name: 'animation',
+            init: animation,
+            isNamed: true,
+          ),
+          'forwardBuilder': _i2.BuilderArg<_i1.AnimatedTransitionBuilder>(
+            name: 'forwardBuilder',
+            init: forwardBuilder,
+            isNamed: true,
+          ),
+          'reverseBuilder': _i2.BuilderArg<_i1.AnimatedTransitionBuilder>(
+            name: 'reverseBuilder',
+            init: reverseBuilder,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'DualTransitionBuilder';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DualTransitionBuilder$Mate(
@@ -41,30 +62,8 @@ class DualTransitionBuilder$Mate extends _i1.DualTransitionBuilder with _i2.Mate
           reverseBuilder: p.get('reverseBuilder').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'animation',
-      animation,
-      isNamed: true,
-    );
-    mateUse(
-      'forwardBuilder',
-      forwardBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'reverseBuilder',
-      reverseBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

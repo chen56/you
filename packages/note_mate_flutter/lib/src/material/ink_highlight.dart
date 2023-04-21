@@ -16,50 +16,96 @@ class InkHighlight$Mate extends _i1.InkHighlight with _i2.Mate {
   /// InkHighlight InkHighlight({required MaterialInkController controller, required RenderBox referenceBox, required Color color, required TextDirection textDirection, BoxShape shape = BoxShape.rectangle, double? radius, BorderRadius? borderRadius, ShapeBorder? customBorder, Rect Function()? rectCallback, void Function()? onRemoved, Duration fadeDuration = _kDefaultHighlightFadeDuration})
   InkHighlight$Mate({
     /// optionalParameters: {required MaterialInkController controller} , default:none
-    required _i3.MaterialInkController controller,
+    required super.controller,
 
     /// optionalParameters: {required RenderBox referenceBox} , default:none
-    required _i4.RenderBox referenceBox,
+    required super.referenceBox,
 
     /// optionalParameters: {required Color color} , default:none
-    required _i5.Color color,
+    required super.color,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
-    required _i5.TextDirection textDirection,
+    required super.textDirection,
 
     /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
-    _i6.BoxShape shape = _i7.BoxShape.rectangle,
+    super.shape,
 
     /// optionalParameters: {double? radius} , default:none
-    double? radius,
+    super.radius,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i8.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {ShapeBorder? customBorder} , default:none
-    _i9.ShapeBorder? customBorder,
+    super.customBorder,
 
     /// optionalParameters: {Rect Function()? rectCallback} , default:none
-    _i3.RectCallback? rectCallback,
+    super.rectCallback,
 
     /// optionalParameters: {void Function()? onRemoved} , default:none
-    _i5.VoidCallback? onRemoved,
+    super.onRemoved,
 
     /// optionalParameters: {Duration fadeDuration = _kDefaultHighlightFadeDuration} , default:unprocessed=SimpleIdentifierImpl
-    required Duration fadeDuration,
-  }) : super(
-          controller: controller,
-          referenceBox: referenceBox,
-          color: color,
-          textDirection: textDirection,
-          shape: shape,
-          radius: radius,
-          borderRadius: borderRadius,
-          customBorder: customBorder,
-          rectCallback: rectCallback,
-          onRemoved: onRemoved,
-          fadeDuration: fadeDuration,
-        ) {
+    super.fadeDuration,
+  })  : mateParams = {
+          'controller': _i2.BuilderArg<_i3.MaterialInkController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'referenceBox': _i2.BuilderArg<_i4.RenderBox>(
+            name: 'referenceBox',
+            init: referenceBox,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'textDirection': _i2.BuilderArg<_i5.TextDirection>(
+            name: 'textDirection',
+            init: textDirection,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i6.BoxShape>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+            defaultValue: _i7.BoxShape.rectangle,
+          ),
+          'radius': _i2.BuilderArg<double?>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i8.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'customBorder': _i2.BuilderArg<_i9.ShapeBorder?>(
+            name: 'customBorder',
+            init: customBorder,
+            isNamed: true,
+          ),
+          'rectCallback': _i2.BuilderArg<_i3.RectCallback?>(
+            name: 'rectCallback',
+            init: rectCallback,
+            isNamed: true,
+          ),
+          'onRemoved': _i2.BuilderArg<_i5.VoidCallback?>(
+            name: 'onRemoved',
+            init: onRemoved,
+            isNamed: true,
+          ),
+          'fadeDuration': _i2.BuilderArg<Duration>(
+            name: 'fadeDuration',
+            init: fadeDuration,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'InkHighlight';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => InkHighlight$Mate(
@@ -75,61 +121,8 @@ class InkHighlight$Mate extends _i1.InkHighlight with _i2.Mate {
           onRemoved: p.get('onRemoved').build(),
           fadeDuration: p.get('fadeDuration').build(),
         );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'referenceBox',
-      referenceBox,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'textDirection',
-      textDirection,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-      defaultValue: _i7.BoxShape.rectangle,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'customBorder',
-      customBorder,
-      isNamed: true,
-    );
-    mateUse(
-      'rectCallback',
-      rectCallback,
-      isNamed: true,
-    );
-    mateUse(
-      'onRemoved',
-      onRemoved,
-      isNamed: true,
-    );
-    mateUse(
-      'fadeDuration',
-      fadeDuration,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

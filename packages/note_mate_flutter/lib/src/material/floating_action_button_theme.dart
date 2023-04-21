@@ -16,90 +16,175 @@ class FloatingActionButtonThemeData$Mate extends _i1.FloatingActionButtonThemeDa
   /// FloatingActionButtonThemeData FloatingActionButtonThemeData({Color? foregroundColor, Color? backgroundColor, Color? focusColor, Color? hoverColor, Color? splashColor, double? elevation, double? focusElevation, double? hoverElevation, double? disabledElevation, double? highlightElevation, ShapeBorder? shape, bool? enableFeedback, double? iconSize, BoxConstraints? sizeConstraints, BoxConstraints? smallSizeConstraints, BoxConstraints? largeSizeConstraints, BoxConstraints? extendedSizeConstraints, double? extendedIconLabelSpacing, EdgeInsetsGeometry? extendedPadding, TextStyle? extendedTextStyle, MaterialStateProperty<MouseCursor?>? mouseCursor})
   FloatingActionButtonThemeData$Mate({
     /// optionalParameters: {Color? foregroundColor} , default:none
-    _i3.Color? foregroundColor,
+    super.foregroundColor,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i3.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i3.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i3.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {double? focusElevation} , default:none
-    double? focusElevation,
+    super.focusElevation,
 
     /// optionalParameters: {double? hoverElevation} , default:none
-    double? hoverElevation,
+    super.hoverElevation,
 
     /// optionalParameters: {double? disabledElevation} , default:none
-    double? disabledElevation,
+    super.disabledElevation,
 
     /// optionalParameters: {double? highlightElevation} , default:none
-    double? highlightElevation,
+    super.highlightElevation,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i4.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {bool? enableFeedback} , default:none
-    bool? enableFeedback,
+    super.enableFeedback,
 
     /// optionalParameters: {double? iconSize} , default:none
-    double? iconSize,
+    super.iconSize,
 
     /// optionalParameters: {BoxConstraints? sizeConstraints} , default:none
-    _i5.BoxConstraints? sizeConstraints,
+    super.sizeConstraints,
 
     /// optionalParameters: {BoxConstraints? smallSizeConstraints} , default:none
-    _i5.BoxConstraints? smallSizeConstraints,
+    super.smallSizeConstraints,
 
     /// optionalParameters: {BoxConstraints? largeSizeConstraints} , default:none
-    _i5.BoxConstraints? largeSizeConstraints,
+    super.largeSizeConstraints,
 
     /// optionalParameters: {BoxConstraints? extendedSizeConstraints} , default:none
-    _i5.BoxConstraints? extendedSizeConstraints,
+    super.extendedSizeConstraints,
 
     /// optionalParameters: {double? extendedIconLabelSpacing} , default:none
-    double? extendedIconLabelSpacing,
+    super.extendedIconLabelSpacing,
 
     /// optionalParameters: {EdgeInsetsGeometry? extendedPadding} , default:none
-    _i6.EdgeInsetsGeometry? extendedPadding,
+    super.extendedPadding,
 
     /// optionalParameters: {TextStyle? extendedTextStyle} , default:none
-    _i7.TextStyle? extendedTextStyle,
+    super.extendedTextStyle,
 
     /// optionalParameters: {MaterialStateProperty<MouseCursor?>? mouseCursor} , default:none
-    _i8.MaterialStateProperty<_i9.MouseCursor?>? mouseCursor,
-  }) : super(
-          foregroundColor: foregroundColor,
-          backgroundColor: backgroundColor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          splashColor: splashColor,
-          elevation: elevation,
-          focusElevation: focusElevation,
-          hoverElevation: hoverElevation,
-          disabledElevation: disabledElevation,
-          highlightElevation: highlightElevation,
-          shape: shape,
-          enableFeedback: enableFeedback,
-          iconSize: iconSize,
-          sizeConstraints: sizeConstraints,
-          smallSizeConstraints: smallSizeConstraints,
-          largeSizeConstraints: largeSizeConstraints,
-          extendedSizeConstraints: extendedSizeConstraints,
-          extendedIconLabelSpacing: extendedIconLabelSpacing,
-          extendedPadding: extendedPadding,
-          extendedTextStyle: extendedTextStyle,
-          mouseCursor: mouseCursor,
-        ) {
+    super.mouseCursor,
+  })  : mateParams = {
+          'foregroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'focusElevation': _i2.BuilderArg<double?>(
+            name: 'focusElevation',
+            init: focusElevation,
+            isNamed: true,
+          ),
+          'hoverElevation': _i2.BuilderArg<double?>(
+            name: 'hoverElevation',
+            init: hoverElevation,
+            isNamed: true,
+          ),
+          'disabledElevation': _i2.BuilderArg<double?>(
+            name: 'disabledElevation',
+            init: disabledElevation,
+            isNamed: true,
+          ),
+          'highlightElevation': _i2.BuilderArg<double?>(
+            name: 'highlightElevation',
+            init: highlightElevation,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'enableFeedback': _i2.BuilderArg<bool?>(
+            name: 'enableFeedback',
+            init: enableFeedback,
+            isNamed: true,
+          ),
+          'iconSize': _i2.BuilderArg<double?>(
+            name: 'iconSize',
+            init: iconSize,
+            isNamed: true,
+          ),
+          'sizeConstraints': _i2.BuilderArg<_i5.BoxConstraints?>(
+            name: 'sizeConstraints',
+            init: sizeConstraints,
+            isNamed: true,
+          ),
+          'smallSizeConstraints': _i2.BuilderArg<_i5.BoxConstraints?>(
+            name: 'smallSizeConstraints',
+            init: smallSizeConstraints,
+            isNamed: true,
+          ),
+          'largeSizeConstraints': _i2.BuilderArg<_i5.BoxConstraints?>(
+            name: 'largeSizeConstraints',
+            init: largeSizeConstraints,
+            isNamed: true,
+          ),
+          'extendedSizeConstraints': _i2.BuilderArg<_i5.BoxConstraints?>(
+            name: 'extendedSizeConstraints',
+            init: extendedSizeConstraints,
+            isNamed: true,
+          ),
+          'extendedIconLabelSpacing': _i2.BuilderArg<double?>(
+            name: 'extendedIconLabelSpacing',
+            init: extendedIconLabelSpacing,
+            isNamed: true,
+          ),
+          'extendedPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+            name: 'extendedPadding',
+            init: extendedPadding,
+            isNamed: true,
+          ),
+          'extendedTextStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'extendedTextStyle',
+            init: extendedTextStyle,
+            isNamed: true,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.MouseCursor?>?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'FloatingActionButtonThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => FloatingActionButtonThemeData$Mate(
@@ -125,110 +210,8 @@ class FloatingActionButtonThemeData$Mate extends _i1.FloatingActionButtonThemeDa
           extendedTextStyle: p.get('extendedTextStyle').build(),
           mouseCursor: p.get('mouseCursor').build(),
         );
-    mateUse(
-      'foregroundColor',
-      foregroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'focusElevation',
-      focusElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverElevation',
-      hoverElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledElevation',
-      disabledElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightElevation',
-      highlightElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'enableFeedback',
-      enableFeedback,
-      isNamed: true,
-    );
-    mateUse(
-      'iconSize',
-      iconSize,
-      isNamed: true,
-    );
-    mateUse(
-      'sizeConstraints',
-      sizeConstraints,
-      isNamed: true,
-    );
-    mateUse(
-      'smallSizeConstraints',
-      smallSizeConstraints,
-      isNamed: true,
-    );
-    mateUse(
-      'largeSizeConstraints',
-      largeSizeConstraints,
-      isNamed: true,
-    );
-    mateUse(
-      'extendedSizeConstraints',
-      extendedSizeConstraints,
-      isNamed: true,
-    );
-    mateUse(
-      'extendedIconLabelSpacing',
-      extendedIconLabelSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'extendedPadding',
-      extendedPadding,
-      isNamed: true,
-    );
-    mateUse(
-      'extendedTextStyle',
-      extendedTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

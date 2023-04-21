@@ -11,34 +11,64 @@ class Hero$Mate extends _i1.Hero with _i2.Mate {
   /// Hero Hero({Key? key, required Object tag, Tween<Rect?> Function(Rect?, Rect?)? createRectTween, Widget Function(BuildContext, Animation<double>, HeroFlightDirection, BuildContext, BuildContext)? flightShuttleBuilder, Widget Function(BuildContext, Size, Widget)? placeholderBuilder, bool transitionOnUserGestures = false, required Widget child})
   Hero$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Object tag} , default:none
-    required Object tag,
+    required super.tag,
 
     /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , default:none
-    _i1.CreateRectTween? createRectTween,
+    super.createRectTween,
 
     /// optionalParameters: {Widget Function(BuildContext, Animation<double>, HeroFlightDirection, BuildContext, BuildContext)? flightShuttleBuilder} , default:none
-    _i1.HeroFlightShuttleBuilder? flightShuttleBuilder,
+    super.flightShuttleBuilder,
 
     /// optionalParameters: {Widget Function(BuildContext, Size, Widget)? placeholderBuilder} , default:none
-    _i1.HeroPlaceholderBuilder? placeholderBuilder,
+    super.placeholderBuilder,
 
     /// optionalParameters: {bool transitionOnUserGestures = false} , default:processed=BooleanLiteralImpl
-    bool transitionOnUserGestures = false,
+    super.transitionOnUserGestures,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          tag: tag,
-          createRectTween: createRectTween,
-          flightShuttleBuilder: flightShuttleBuilder,
-          placeholderBuilder: placeholderBuilder,
-          transitionOnUserGestures: transitionOnUserGestures,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'tag': _i2.BuilderArg<Object>(
+            name: 'tag',
+            init: tag,
+            isNamed: true,
+          ),
+          'createRectTween': _i2.BuilderArg<_i1.CreateRectTween?>(
+            name: 'createRectTween',
+            init: createRectTween,
+            isNamed: true,
+          ),
+          'flightShuttleBuilder': _i2.BuilderArg<_i1.HeroFlightShuttleBuilder?>(
+            name: 'flightShuttleBuilder',
+            init: flightShuttleBuilder,
+            isNamed: true,
+          ),
+          'placeholderBuilder': _i2.BuilderArg<_i1.HeroPlaceholderBuilder?>(
+            name: 'placeholderBuilder',
+            init: placeholderBuilder,
+            isNamed: true,
+          ),
+          'transitionOnUserGestures': _i2.BuilderArg<bool>(
+            name: 'transitionOnUserGestures',
+            init: transitionOnUserGestures,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Hero';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => Hero$Mate(
@@ -50,43 +80,10 @@ class Hero$Mate extends _i1.Hero with _i2.Mate {
           transitionOnUserGestures: p.get('transitionOnUserGestures').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'tag',
-      tag,
-      isNamed: true,
-    );
-    mateUse(
-      'createRectTween',
-      createRectTween,
-      isNamed: true,
-    );
-    mateUse(
-      'flightShuttleBuilder',
-      flightShuttleBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'placeholderBuilder',
-      placeholderBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'transitionOnUserGestures',
-      transitionOnUserGestures,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class HeroController extends NavigatorObserver
@@ -95,17 +92,22 @@ class HeroController$Mate extends _i1.HeroController with _i2.Mate {
   HeroController$Mate(
       {
       /// optionalParameters: {Tween<Rect?> Function(Rect?, Rect?)? createRectTween} , default:none
-      _i1.CreateRectTween? createRectTween})
-      : super(createRectTween: createRectTween) {
+      super.createRectTween})
+      : mateParams = {
+          'createRectTween': _i2.BuilderArg<_i1.CreateRectTween?>(
+            name: 'createRectTween',
+            init: createRectTween,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'HeroController';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => HeroController$Mate(createRectTween: p.get('createRectTween').build());
-    mateUse(
-      'createRectTween',
-      createRectTween,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class HeroMode extends StatelessWidget
@@ -113,18 +115,32 @@ class HeroMode$Mate extends _i1.HeroMode with _i2.Mate {
   /// HeroMode HeroMode({Key? key, required Widget child, bool enabled = true})
   HeroMode$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
+    required super.child,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
-    bool enabled = true,
-  }) : super(
-          key: key,
-          child: child,
-          enabled: enabled,
-        ) {
+    super.enabled,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+          'enabled': _i2.BuilderArg<bool>(
+            name: 'enabled',
+            init: enabled,
+            isNamed: true,
+            defaultValue: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'HeroMode';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => HeroMode$Mate(
@@ -132,21 +148,8 @@ class HeroMode$Mate extends _i1.HeroMode with _i2.Mate {
           child: p.get('child').build(),
           enabled: p.get('enabled').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
-    mateUse(
-      'enabled',
-      enabled,
-      isNamed: true,
-      defaultValue: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

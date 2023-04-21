@@ -15,18 +15,31 @@ class Theme$Mate extends _i1.Theme with _i2.Mate {
   /// Theme Theme({Key? key, required ThemeData data, required Widget child})
   Theme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ThemeData data} , default:none
-    required _i4.ThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i4.ThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'Theme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Theme$Mate(
@@ -34,22 +47,10 @@ class Theme$Mate extends _i1.Theme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ThemeDataTween extends Tween<ThemeData>
@@ -57,31 +58,33 @@ class ThemeDataTween$Mate extends _i1.ThemeDataTween with _i2.Mate {
   /// ThemeDataTween ThemeDataTween({ThemeData? begin, ThemeData? end})
   ThemeDataTween$Mate({
     /// optionalParameters: {ThemeData? begin} , default:none
-    _i4.ThemeData? begin,
+    super.begin,
 
     /// optionalParameters: {ThemeData? end} , default:none
-    _i4.ThemeData? end,
-  }) : super(
-          begin: begin,
-          end: end,
-        ) {
+    super.end,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i4.ThemeData?>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+          ),
+          'end': _i2.BuilderArg<_i4.ThemeData?>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ThemeDataTween';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ThemeDataTween$Mate(
           begin: p.get('begin').build(),
           end: p.get('end').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class AnimatedTheme extends ImplicitlyAnimatedWidget
@@ -89,30 +92,56 @@ class AnimatedTheme$Mate extends _i1.AnimatedTheme with _i2.Mate {
   /// AnimatedTheme AnimatedTheme({Key? key, required ThemeData data, Curve curve = Curves.linear, Duration duration = kThemeAnimationDuration, void Function()? onEnd, required Widget child})
   AnimatedTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required ThemeData data} , default:none
-    required _i4.ThemeData data,
+    required super.data,
 
     /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
-    _i6.Curve curve = _i7.Curves.linear,
+    super.curve,
 
     /// optionalParameters: {Duration duration = kThemeAnimationDuration} , default:unprocessed=SimpleIdentifierImpl
-    required Duration duration,
+    super.duration,
 
     /// optionalParameters: {void Function()? onEnd} , default:none
-    _i8.VoidCallback? onEnd,
+    super.onEnd,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i5.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          curve: curve,
-          duration: duration,
-          onEnd: onEnd,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i4.ThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'curve': _i2.BuilderArg<_i6.Curve>(
+            name: 'curve',
+            init: curve,
+            isNamed: true,
+            defaultValue: _i7.Curves.linear,
+          ),
+          'duration': _i2.BuilderArg<Duration>(
+            name: 'duration',
+            init: duration,
+            isNamed: true,
+          ),
+          'onEnd': _i2.BuilderArg<_i8.VoidCallback?>(
+            name: 'onEnd',
+            init: onEnd,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AnimatedTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AnimatedTheme$Mate(
@@ -123,36 +152,8 @@ class AnimatedTheme$Mate extends _i1.AnimatedTheme with _i2.Mate {
           onEnd: p.get('onEnd').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'curve',
-      curve,
-      isNamed: true,
-      defaultValue: _i7.Curves.linear,
-    );
-    mateUse(
-      'duration',
-      duration,
-      isNamed: true,
-    );
-    mateUse(
-      'onEnd',
-      onEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

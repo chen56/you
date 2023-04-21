@@ -12,30 +12,58 @@ class GridPaper$Mate extends _i1.GridPaper with _i2.Mate {
   /// GridPaper GridPaper({Key? key, Color color = const Color(0x7FC3E8F3), double interval = 100.0, int divisions = 2, int subdivisions = 5, Widget? child})
   GridPaper$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color color = const Color(0x7FC3E8F3)} , default:unprocessed=InstanceCreationExpressionImpl
-    required _i4.Color color,
+    super.color,
 
     /// optionalParameters: {double interval = 100.0} , default:processed=DoubleLiteralImpl
-    double interval = 100.0,
+    super.interval,
 
     /// optionalParameters: {int divisions = 2} , default:processed=IntegerLiteralImpl
-    int divisions = 2,
+    super.divisions,
 
     /// optionalParameters: {int subdivisions = 5} , default:processed=IntegerLiteralImpl
-    int subdivisions = 5,
+    super.subdivisions,
 
     /// optionalParameters: {Widget? child} , default:none
-    _i5.Widget? child,
-  }) : super(
-          key: key,
-          color: color,
-          interval: interval,
-          divisions: divisions,
-          subdivisions: subdivisions,
-          child: child,
-        ) {
+    super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i4.Color>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'interval': _i2.BuilderArg<double>(
+            name: 'interval',
+            init: interval,
+            isNamed: true,
+            defaultValue: 100.0,
+          ),
+          'divisions': _i2.BuilderArg<int>(
+            name: 'divisions',
+            init: divisions,
+            isNamed: true,
+            defaultValue: 2,
+          ),
+          'subdivisions': _i2.BuilderArg<int>(
+            name: 'subdivisions',
+            init: subdivisions,
+            isNamed: true,
+            defaultValue: 5,
+          ),
+          'child': _i2.BuilderArg<_i5.Widget?>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'GridPaper';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GridPaper$Mate(
@@ -46,38 +74,8 @@ class GridPaper$Mate extends _i1.GridPaper with _i2.Mate {
           subdivisions: p.get('subdivisions').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'interval',
-      interval,
-      isNamed: true,
-      defaultValue: 100.0,
-    );
-    mateUse(
-      'divisions',
-      divisions,
-      isNamed: true,
-      defaultValue: 2,
-    );
-    mateUse(
-      'subdivisions',
-      subdivisions,
-      isNamed: true,
-      defaultValue: 5,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

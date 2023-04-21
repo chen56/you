@@ -11,26 +11,47 @@ class TextEditingDeltaInsertion$Mate extends _i1.TextEditingDeltaInsertion with 
   /// TextEditingDeltaInsertion TextEditingDeltaInsertion({required String oldText, required String textInserted, required int insertionOffset, required TextSelection selection, required TextRange composing})
   TextEditingDeltaInsertion$Mate({
     /// optionalParameters: {required String oldText} , default:none
-    required String oldText,
+    required super.oldText,
 
     /// optionalParameters: {required String textInserted} , default:none
-    required String textInserted,
+    required super.textInserted,
 
     /// optionalParameters: {required int insertionOffset} , default:none
-    required int insertionOffset,
+    required super.insertionOffset,
 
     /// optionalParameters: {required TextSelection selection} , default:none
-    required _i3.TextSelection selection,
+    required super.selection,
 
     /// optionalParameters: {required TextRange composing} , default:none
-    required _i4.TextRange composing,
-  }) : super(
-          oldText: oldText,
-          textInserted: textInserted,
-          insertionOffset: insertionOffset,
-          selection: selection,
-          composing: composing,
-        ) {
+    required super.composing,
+  })  : mateParams = {
+          'oldText': _i2.BuilderArg<String>(
+            name: 'oldText',
+            init: oldText,
+            isNamed: true,
+          ),
+          'textInserted': _i2.BuilderArg<String>(
+            name: 'textInserted',
+            init: textInserted,
+            isNamed: true,
+          ),
+          'insertionOffset': _i2.BuilderArg<int>(
+            name: 'insertionOffset',
+            init: insertionOffset,
+            isNamed: true,
+          ),
+          'selection': _i2.BuilderArg<_i3.TextSelection>(
+            name: 'selection',
+            init: selection,
+            isNamed: true,
+          ),
+          'composing': _i2.BuilderArg<_i4.TextRange>(
+            name: 'composing',
+            init: composing,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextEditingDeltaInsertion';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaInsertion$Mate(
@@ -40,32 +61,10 @@ class TextEditingDeltaInsertion$Mate extends _i1.TextEditingDeltaInsertion with 
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse(
-      'oldText',
-      oldText,
-      isNamed: true,
-    );
-    mateUse(
-      'textInserted',
-      textInserted,
-      isNamed: true,
-    );
-    mateUse(
-      'insertionOffset',
-      insertionOffset,
-      isNamed: true,
-    );
-    mateUse(
-      'selection',
-      selection,
-      isNamed: true,
-    );
-    mateUse(
-      'composing',
-      composing,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextEditingDeltaDeletion extends TextEditingDelta
@@ -73,22 +72,39 @@ class TextEditingDeltaDeletion$Mate extends _i1.TextEditingDeltaDeletion with _i
   /// TextEditingDeltaDeletion TextEditingDeltaDeletion({required String oldText, required TextRange deletedRange, required TextSelection selection, required TextRange composing})
   TextEditingDeltaDeletion$Mate({
     /// optionalParameters: {required String oldText} , default:none
-    required String oldText,
+    required super.oldText,
 
     /// optionalParameters: {required TextRange deletedRange} , default:none
-    required _i4.TextRange deletedRange,
+    required super.deletedRange,
 
     /// optionalParameters: {required TextSelection selection} , default:none
-    required _i3.TextSelection selection,
+    required super.selection,
 
     /// optionalParameters: {required TextRange composing} , default:none
-    required _i4.TextRange composing,
-  }) : super(
-          oldText: oldText,
-          deletedRange: deletedRange,
-          selection: selection,
-          composing: composing,
-        ) {
+    required super.composing,
+  })  : mateParams = {
+          'oldText': _i2.BuilderArg<String>(
+            name: 'oldText',
+            init: oldText,
+            isNamed: true,
+          ),
+          'deletedRange': _i2.BuilderArg<_i4.TextRange>(
+            name: 'deletedRange',
+            init: deletedRange,
+            isNamed: true,
+          ),
+          'selection': _i2.BuilderArg<_i3.TextSelection>(
+            name: 'selection',
+            init: selection,
+            isNamed: true,
+          ),
+          'composing': _i2.BuilderArg<_i4.TextRange>(
+            name: 'composing',
+            init: composing,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextEditingDeltaDeletion';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaDeletion$Mate(
@@ -97,27 +113,10 @@ class TextEditingDeltaDeletion$Mate extends _i1.TextEditingDeltaDeletion with _i
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse(
-      'oldText',
-      oldText,
-      isNamed: true,
-    );
-    mateUse(
-      'deletedRange',
-      deletedRange,
-      isNamed: true,
-    );
-    mateUse(
-      'selection',
-      selection,
-      isNamed: true,
-    );
-    mateUse(
-      'composing',
-      composing,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextEditingDeltaReplacement extends TextEditingDelta
@@ -125,26 +124,47 @@ class TextEditingDeltaReplacement$Mate extends _i1.TextEditingDeltaReplacement w
   /// TextEditingDeltaReplacement TextEditingDeltaReplacement({required String oldText, required String replacementText, required TextRange replacedRange, required TextSelection selection, required TextRange composing})
   TextEditingDeltaReplacement$Mate({
     /// optionalParameters: {required String oldText} , default:none
-    required String oldText,
+    required super.oldText,
 
     /// optionalParameters: {required String replacementText} , default:none
-    required String replacementText,
+    required super.replacementText,
 
     /// optionalParameters: {required TextRange replacedRange} , default:none
-    required _i4.TextRange replacedRange,
+    required super.replacedRange,
 
     /// optionalParameters: {required TextSelection selection} , default:none
-    required _i3.TextSelection selection,
+    required super.selection,
 
     /// optionalParameters: {required TextRange composing} , default:none
-    required _i4.TextRange composing,
-  }) : super(
-          oldText: oldText,
-          replacementText: replacementText,
-          replacedRange: replacedRange,
-          selection: selection,
-          composing: composing,
-        ) {
+    required super.composing,
+  })  : mateParams = {
+          'oldText': _i2.BuilderArg<String>(
+            name: 'oldText',
+            init: oldText,
+            isNamed: true,
+          ),
+          'replacementText': _i2.BuilderArg<String>(
+            name: 'replacementText',
+            init: replacementText,
+            isNamed: true,
+          ),
+          'replacedRange': _i2.BuilderArg<_i4.TextRange>(
+            name: 'replacedRange',
+            init: replacedRange,
+            isNamed: true,
+          ),
+          'selection': _i2.BuilderArg<_i3.TextSelection>(
+            name: 'selection',
+            init: selection,
+            isNamed: true,
+          ),
+          'composing': _i2.BuilderArg<_i4.TextRange>(
+            name: 'composing',
+            init: composing,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextEditingDeltaReplacement';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaReplacement$Mate(
@@ -154,32 +174,10 @@ class TextEditingDeltaReplacement$Mate extends _i1.TextEditingDeltaReplacement w
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse(
-      'oldText',
-      oldText,
-      isNamed: true,
-    );
-    mateUse(
-      'replacementText',
-      replacementText,
-      isNamed: true,
-    );
-    mateUse(
-      'replacedRange',
-      replacedRange,
-      isNamed: true,
-    );
-    mateUse(
-      'selection',
-      selection,
-      isNamed: true,
-    );
-    mateUse(
-      'composing',
-      composing,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class TextEditingDeltaNonTextUpdate extends TextEditingDelta
@@ -187,18 +185,31 @@ class TextEditingDeltaNonTextUpdate$Mate extends _i1.TextEditingDeltaNonTextUpda
   /// TextEditingDeltaNonTextUpdate TextEditingDeltaNonTextUpdate({required String oldText, required TextSelection selection, required TextRange composing})
   TextEditingDeltaNonTextUpdate$Mate({
     /// optionalParameters: {required String oldText} , default:none
-    required String oldText,
+    required super.oldText,
 
     /// optionalParameters: {required TextSelection selection} , default:none
-    required _i3.TextSelection selection,
+    required super.selection,
 
     /// optionalParameters: {required TextRange composing} , default:none
-    required _i4.TextRange composing,
-  }) : super(
-          oldText: oldText,
-          selection: selection,
-          composing: composing,
-        ) {
+    required super.composing,
+  })  : mateParams = {
+          'oldText': _i2.BuilderArg<String>(
+            name: 'oldText',
+            init: oldText,
+            isNamed: true,
+          ),
+          'selection': _i2.BuilderArg<_i3.TextSelection>(
+            name: 'selection',
+            init: selection,
+            isNamed: true,
+          ),
+          'composing': _i2.BuilderArg<_i4.TextRange>(
+            name: 'composing',
+            init: composing,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'TextEditingDeltaNonTextUpdate';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => TextEditingDeltaNonTextUpdate$Mate(
@@ -206,20 +217,8 @@ class TextEditingDeltaNonTextUpdate$Mate extends _i1.TextEditingDeltaNonTextUpda
           selection: p.get('selection').build(),
           composing: p.get('composing').build(),
         );
-    mateUse(
-      'oldText',
-      oldText,
-      isNamed: true,
-    );
-    mateUse(
-      'selection',
-      selection,
-      isNamed: true,
-    );
-    mateUse(
-      'composing',
-      composing,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

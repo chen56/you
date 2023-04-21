@@ -12,30 +12,55 @@ class GridTileBar$Mate extends _i1.GridTileBar with _i2.Mate {
   /// GridTileBar GridTileBar({Key? key, Color? backgroundColor, Widget? leading, Widget? title, Widget? subtitle, Widget? trailing})
   GridTileBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i4.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i5.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Widget? title} , default:none
-    _i5.Widget? title,
+    super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i5.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {Widget? trailing} , default:none
-    _i5.Widget? trailing,
-  }) : super(
-          key: key,
-          backgroundColor: backgroundColor,
-          leading: leading,
-          title: title,
-          subtitle: subtitle,
-          trailing: trailing,
-        ) {
+    super.trailing,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i5.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i5.Widget?>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i5.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<_i5.Widget?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'GridTileBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => GridTileBar$Mate(
@@ -46,35 +71,8 @@ class GridTileBar$Mate extends _i1.GridTileBar with _i2.Mate {
           subtitle: p.get('subtitle').build(),
           trailing: p.get('trailing').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

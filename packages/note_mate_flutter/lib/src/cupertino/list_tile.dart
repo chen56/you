@@ -14,54 +14,103 @@ class CupertinoListTile$Mate extends _i1.CupertinoListTile with _i2.Mate {
   /// CupertinoListTile CupertinoListTile({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kLeadingSize, double leadingToTitle = _kLeadingToTitle})
   CupertinoListTile$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget title} , default:none
-    required _i4.Widget title,
+    required super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i4.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {Widget? additionalInfo} , default:none
-    _i4.Widget? additionalInfo,
+    super.additionalInfo,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Widget? trailing} , default:none
-    _i4.Widget? trailing,
+    super.trailing,
 
     /// optionalParameters: {FutureOr<void> Function()? onTap} , default:none
-    _i5.FutureOr<void> Function()? onTap,
+    super.onTap,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i6.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? backgroundColorActivated} , default:none
-    _i6.Color? backgroundColorActivated,
+    super.backgroundColorActivated,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i7.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {double leadingSize = _kLeadingSize} , default:unprocessed=SimpleIdentifierImpl
-    required double leadingSize,
+    super.leadingSize,
 
     /// optionalParameters: {double leadingToTitle = _kLeadingToTitle} , default:unprocessed=SimpleIdentifierImpl
-    required double leadingToTitle,
-  }) : super(
-          key: key,
-          title: title,
-          subtitle: subtitle,
-          additionalInfo: additionalInfo,
-          leading: leading,
-          trailing: trailing,
-          onTap: onTap,
-          backgroundColor: backgroundColor,
-          backgroundColorActivated: backgroundColorActivated,
-          padding: padding,
-          leadingSize: leadingSize,
-          leadingToTitle: leadingToTitle,
-        ) {
+    super.leadingToTitle,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i4.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'additionalInfo': _i2.BuilderArg<_i4.Widget?>(
+            name: 'additionalInfo',
+            init: additionalInfo,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<_i4.Widget?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i5.FutureOr<void> Function()?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'backgroundColorActivated': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColorActivated',
+            init: backgroundColorActivated,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'leadingSize': _i2.BuilderArg<double>(
+            name: 'leadingSize',
+            init: leadingSize,
+            isNamed: true,
+          ),
+          'leadingToTitle': _i2.BuilderArg<double>(
+            name: 'leadingToTitle',
+            init: leadingToTitle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoListTile';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListTile$Mate(
@@ -78,119 +127,108 @@ class CupertinoListTile$Mate extends _i1.CupertinoListTile with _i2.Mate {
           leadingSize: p.get('leadingSize').build(),
           leadingToTitle: p.get('leadingToTitle').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'additionalInfo',
-      additionalInfo,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColorActivated',
-      backgroundColorActivated,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingSize',
-      leadingSize,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingToTitle',
-      leadingToTitle,
-      isNamed: true,
-    );
   }
 
   /// CupertinoListTile CupertinoListTile.notched({Key? key, required Widget title, Widget? subtitle, Widget? additionalInfo, Widget? leading, Widget? trailing, FutureOr<void> Function()? onTap, Color? backgroundColor, Color? backgroundColorActivated, EdgeInsetsGeometry? padding, double leadingSize = _kNotchedLeadingSize, double leadingToTitle = _kNotchedLeadingToTitle})
   CupertinoListTile$Mate.notched({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required Widget title} , default:none
-    required _i4.Widget title,
+    required super.title,
 
     /// optionalParameters: {Widget? subtitle} , default:none
-    _i4.Widget? subtitle,
+    super.subtitle,
 
     /// optionalParameters: {Widget? additionalInfo} , default:none
-    _i4.Widget? additionalInfo,
+    super.additionalInfo,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Widget? trailing} , default:none
-    _i4.Widget? trailing,
+    super.trailing,
 
     /// optionalParameters: {FutureOr<void> Function()? onTap} , default:none
-    _i5.FutureOr<void> Function()? onTap,
+    super.onTap,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i6.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? backgroundColorActivated} , default:none
-    _i6.Color? backgroundColorActivated,
+    super.backgroundColorActivated,
 
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
-    _i7.EdgeInsetsGeometry? padding,
+    super.padding,
 
     /// optionalParameters: {double leadingSize = _kNotchedLeadingSize} , default:unprocessed=SimpleIdentifierImpl
-    required double leadingSize,
+    super.leadingSize,
 
     /// optionalParameters: {double leadingToTitle = _kNotchedLeadingToTitle} , default:unprocessed=SimpleIdentifierImpl
-    required double leadingToTitle,
-  }) : super.notched(
-          key: key,
-          title: title,
-          subtitle: subtitle,
-          additionalInfo: additionalInfo,
-          leading: leading,
-          trailing: trailing,
-          onTap: onTap,
-          backgroundColor: backgroundColor,
-          backgroundColorActivated: backgroundColorActivated,
-          padding: padding,
-          leadingSize: leadingSize,
-          leadingToTitle: leadingToTitle,
-        ) {
+    super.leadingToTitle,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'title': _i2.BuilderArg<_i4.Widget>(
+            name: 'title',
+            init: title,
+            isNamed: true,
+          ),
+          'subtitle': _i2.BuilderArg<_i4.Widget?>(
+            name: 'subtitle',
+            init: subtitle,
+            isNamed: true,
+          ),
+          'additionalInfo': _i2.BuilderArg<_i4.Widget?>(
+            name: 'additionalInfo',
+            init: additionalInfo,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<_i4.Widget?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i5.FutureOr<void> Function()?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'backgroundColorActivated': _i2.BuilderArg<_i6.Color?>(
+            name: 'backgroundColorActivated',
+            init: backgroundColorActivated,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'leadingSize': _i2.BuilderArg<double>(
+            name: 'leadingSize',
+            init: leadingSize,
+            isNamed: true,
+          ),
+          'leadingToTitle': _i2.BuilderArg<double>(
+            name: 'leadingToTitle',
+            init: leadingToTitle,
+            isNamed: true,
+          ),
+        },
+        super.notched() {
     mateBuilderName = 'CupertinoListTile.notched';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListTile$Mate.notched(
@@ -207,67 +245,10 @@ class CupertinoListTile$Mate extends _i1.CupertinoListTile with _i2.Mate {
           leadingSize: p.get('leadingSize').build(),
           leadingToTitle: p.get('leadingToTitle').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'title',
-      title,
-      isNamed: true,
-    );
-    mateUse(
-      'subtitle',
-      subtitle,
-      isNamed: true,
-    );
-    mateUse(
-      'additionalInfo',
-      additionalInfo,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColorActivated',
-      backgroundColorActivated,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingSize',
-      leadingSize,
-      isNamed: true,
-    );
-    mateUse(
-      'leadingToTitle',
-      leadingToTitle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class CupertinoListTileChevron extends StatelessWidget
@@ -276,15 +257,20 @@ class CupertinoListTileChevron$Mate extends _i1.CupertinoListTileChevron with _i
   CupertinoListTileChevron$Mate(
       {
       /// optionalParameters: {Key? key} , default:none
-      _i3.Key? key})
-      : super(key: key) {
+      super.key})
+      : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          )
+        },
+        super() {
     mateBuilderName = 'CupertinoListTileChevron';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoListTileChevron$Mate(key: p.get('key').build());
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

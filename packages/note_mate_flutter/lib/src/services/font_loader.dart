@@ -10,15 +10,20 @@ class FontLoader$Mate extends _i1.FontLoader with _i2.Mate {
   FontLoader$Mate(
 
       /// requiredParameters: String family
-      String family)
-      : super(family) {
+      super.family)
+      : mateParams = {
+          'family': _i2.BuilderArg<String>(
+            name: 'family',
+            init: family,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'FontLoader';
     matePackageUrl = 'package:flutter/services.dart';
     mateBuilder = (p) => FontLoader$Mate(p.get('family').value);
-    mateUse(
-      'family',
-      family,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

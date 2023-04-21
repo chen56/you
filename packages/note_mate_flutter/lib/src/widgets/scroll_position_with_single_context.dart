@@ -12,30 +12,57 @@ class ScrollPositionWithSingleContext$Mate extends _i1.ScrollPositionWithSingleC
   /// ScrollPositionWithSingleContext ScrollPositionWithSingleContext({required ScrollPhysics physics, required ScrollContext context, double? initialPixels = 0.0, bool keepScrollOffset = true, ScrollPosition? oldPosition, String? debugLabel})
   ScrollPositionWithSingleContext$Mate({
     /// optionalParameters: {required ScrollPhysics physics} , default:none
-    required _i3.ScrollPhysics physics,
+    required super.physics,
 
     /// optionalParameters: {required ScrollContext context} , default:none
-    required _i4.ScrollContext context,
+    required super.context,
 
     /// optionalParameters: {double? initialPixels = 0.0} , default:processed=DoubleLiteralImpl
-    double? initialPixels = 0.0,
+    super.initialPixels,
 
     /// optionalParameters: {bool keepScrollOffset = true} , default:processed=BooleanLiteralImpl
-    bool keepScrollOffset = true,
+    super.keepScrollOffset,
 
     /// optionalParameters: {ScrollPosition? oldPosition} , default:none
-    _i5.ScrollPosition? oldPosition,
+    super.oldPosition,
 
     /// optionalParameters: {String? debugLabel} , default:none
-    String? debugLabel,
-  }) : super(
-          physics: physics,
-          context: context,
-          initialPixels: initialPixels,
-          keepScrollOffset: keepScrollOffset,
-          oldPosition: oldPosition,
-          debugLabel: debugLabel,
-        ) {
+    super.debugLabel,
+  })  : mateParams = {
+          'physics': _i2.BuilderArg<_i3.ScrollPhysics>(
+            name: 'physics',
+            init: physics,
+            isNamed: true,
+          ),
+          'context': _i2.BuilderArg<_i4.ScrollContext>(
+            name: 'context',
+            init: context,
+            isNamed: true,
+          ),
+          'initialPixels': _i2.BuilderArg<double?>(
+            name: 'initialPixels',
+            init: initialPixels,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'keepScrollOffset': _i2.BuilderArg<bool>(
+            name: 'keepScrollOffset',
+            init: keepScrollOffset,
+            isNamed: true,
+            defaultValue: true,
+          ),
+          'oldPosition': _i2.BuilderArg<_i5.ScrollPosition?>(
+            name: 'oldPosition',
+            init: oldPosition,
+            isNamed: true,
+          ),
+          'debugLabel': _i2.BuilderArg<String?>(
+            name: 'debugLabel',
+            init: debugLabel,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ScrollPositionWithSingleContext';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => ScrollPositionWithSingleContext$Mate(
@@ -46,37 +73,8 @@ class ScrollPositionWithSingleContext$Mate extends _i1.ScrollPositionWithSingleC
           oldPosition: p.get('oldPosition').build(),
           debugLabel: p.get('debugLabel').build(),
         );
-    mateUse(
-      'physics',
-      physics,
-      isNamed: true,
-    );
-    mateUse(
-      'context',
-      context,
-      isNamed: true,
-    );
-    mateUse(
-      'initialPixels',
-      initialPixels,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'keepScrollOffset',
-      keepScrollOffset,
-      isNamed: true,
-      defaultValue: true,
-    );
-    mateUse(
-      'oldPosition',
-      oldPosition,
-      isNamed: true,
-    );
-    mateUse(
-      'debugLabel',
-      debugLabel,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

@@ -14,70 +14,135 @@ class AppBarTheme$Mate extends _i1.AppBarTheme with _i2.Mate {
   /// AppBarTheme AppBarTheme({Color? color, Color? backgroundColor, Color? foregroundColor, double? elevation, double? scrolledUnderElevation, Color? shadowColor, Color? surfaceTintColor, ShapeBorder? shape, IconThemeData? iconTheme, IconThemeData? actionsIconTheme, bool? centerTitle, double? titleSpacing, double? toolbarHeight, TextStyle? toolbarTextStyle, TextStyle? titleTextStyle, SystemUiOverlayStyle? systemOverlayStyle})
   AppBarTheme$Mate({
     /// optionalParameters: {Color? color} , default:none
-    _i3.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
-    _i3.Color? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {Color? foregroundColor} , default:none
-    _i3.Color? foregroundColor,
+    super.foregroundColor,
 
     /// optionalParameters: {double? elevation} , default:none
-    double? elevation,
+    super.elevation,
 
     /// optionalParameters: {double? scrolledUnderElevation} , default:none
-    double? scrolledUnderElevation,
+    super.scrolledUnderElevation,
 
     /// optionalParameters: {Color? shadowColor} , default:none
-    _i3.Color? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {Color? surfaceTintColor} , default:none
-    _i3.Color? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
-    _i4.ShapeBorder? shape,
+    super.shape,
 
     /// optionalParameters: {IconThemeData? iconTheme} , default:none
-    _i5.IconThemeData? iconTheme,
+    super.iconTheme,
 
     /// optionalParameters: {IconThemeData? actionsIconTheme} , default:none
-    _i5.IconThemeData? actionsIconTheme,
+    super.actionsIconTheme,
 
     /// optionalParameters: {bool? centerTitle} , default:none
-    bool? centerTitle,
+    super.centerTitle,
 
     /// optionalParameters: {double? titleSpacing} , default:none
-    double? titleSpacing,
+    super.titleSpacing,
 
     /// optionalParameters: {double? toolbarHeight} , default:none
-    double? toolbarHeight,
+    super.toolbarHeight,
 
     /// optionalParameters: {TextStyle? toolbarTextStyle} , default:none
-    _i6.TextStyle? toolbarTextStyle,
+    super.toolbarTextStyle,
 
     /// optionalParameters: {TextStyle? titleTextStyle} , default:none
-    _i6.TextStyle? titleTextStyle,
+    super.titleTextStyle,
 
     /// optionalParameters: {SystemUiOverlayStyle? systemOverlayStyle} , default:none
-    _i7.SystemUiOverlayStyle? systemOverlayStyle,
-  }) : super(
-          color: color,
-          backgroundColor: backgroundColor,
-          foregroundColor: foregroundColor,
-          elevation: elevation,
-          scrolledUnderElevation: scrolledUnderElevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          shape: shape,
-          iconTheme: iconTheme,
-          actionsIconTheme: actionsIconTheme,
-          centerTitle: centerTitle,
-          titleSpacing: titleSpacing,
-          toolbarHeight: toolbarHeight,
-          toolbarTextStyle: toolbarTextStyle,
-          titleTextStyle: titleTextStyle,
-          systemOverlayStyle: systemOverlayStyle,
-        ) {
+    super.systemOverlayStyle,
+  })  : mateParams = {
+          'color': _i2.BuilderArg<_i3.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'foregroundColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'foregroundColor',
+            init: foregroundColor,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<double?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'scrolledUnderElevation': _i2.BuilderArg<double?>(
+            name: 'scrolledUnderElevation',
+            init: scrolledUnderElevation,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i3.Color?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i4.ShapeBorder?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'iconTheme': _i2.BuilderArg<_i5.IconThemeData?>(
+            name: 'iconTheme',
+            init: iconTheme,
+            isNamed: true,
+          ),
+          'actionsIconTheme': _i2.BuilderArg<_i5.IconThemeData?>(
+            name: 'actionsIconTheme',
+            init: actionsIconTheme,
+            isNamed: true,
+          ),
+          'centerTitle': _i2.BuilderArg<bool?>(
+            name: 'centerTitle',
+            init: centerTitle,
+            isNamed: true,
+          ),
+          'titleSpacing': _i2.BuilderArg<double?>(
+            name: 'titleSpacing',
+            init: titleSpacing,
+            isNamed: true,
+          ),
+          'toolbarHeight': _i2.BuilderArg<double?>(
+            name: 'toolbarHeight',
+            init: toolbarHeight,
+            isNamed: true,
+          ),
+          'toolbarTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'toolbarTextStyle',
+            init: toolbarTextStyle,
+            isNamed: true,
+          ),
+          'titleTextStyle': _i2.BuilderArg<_i6.TextStyle?>(
+            name: 'titleTextStyle',
+            init: titleTextStyle,
+            isNamed: true,
+          ),
+          'systemOverlayStyle': _i2.BuilderArg<_i7.SystemUiOverlayStyle?>(
+            name: 'systemOverlayStyle',
+            init: systemOverlayStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'AppBarTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => AppBarTheme$Mate(
@@ -98,85 +163,8 @@ class AppBarTheme$Mate extends _i1.AppBarTheme with _i2.Mate {
           titleTextStyle: p.get('titleTextStyle').build(),
           systemOverlayStyle: p.get('systemOverlayStyle').build(),
         );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'foregroundColor',
-      foregroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'scrolledUnderElevation',
-      scrolledUnderElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'iconTheme',
-      iconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'actionsIconTheme',
-      actionsIconTheme,
-      isNamed: true,
-    );
-    mateUse(
-      'centerTitle',
-      centerTitle,
-      isNamed: true,
-    );
-    mateUse(
-      'titleSpacing',
-      titleSpacing,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarHeight',
-      toolbarHeight,
-      isNamed: true,
-    );
-    mateUse(
-      'toolbarTextStyle',
-      toolbarTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'titleTextStyle',
-      titleTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'systemOverlayStyle',
-      systemOverlayStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

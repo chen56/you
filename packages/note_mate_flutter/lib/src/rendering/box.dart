@@ -11,22 +11,43 @@ class BoxConstraints$Mate extends _i1.BoxConstraints with _i2.Mate {
   /// BoxConstraints BoxConstraints({double minWidth = 0.0, double maxWidth = double.infinity, double minHeight = 0.0, double maxHeight = double.infinity})
   BoxConstraints$Mate({
     /// optionalParameters: {double minWidth = 0.0} , default:processed=DoubleLiteralImpl
-    double minWidth = 0.0,
+    super.minWidth,
 
     /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double maxWidth = double.infinity,
+    super.maxWidth,
 
     /// optionalParameters: {double minHeight = 0.0} , default:processed=DoubleLiteralImpl
-    double minHeight = 0.0,
+    super.minHeight,
 
     /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double maxHeight = double.infinity,
-  }) : super(
-          minWidth: minWidth,
-          maxWidth: maxWidth,
-          minHeight: minHeight,
-          maxHeight: maxHeight,
-        ) {
+    super.maxHeight,
+  })  : mateParams = {
+          'minWidth': _i2.BuilderArg<double>(
+            name: 'minWidth',
+            init: minWidth,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'maxWidth': _i2.BuilderArg<double>(
+            name: 'maxWidth',
+            init: maxWidth,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+          'minHeight': _i2.BuilderArg<double>(
+            name: 'minHeight',
+            init: minHeight,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'maxHeight': _i2.BuilderArg<double>(
+            name: 'maxHeight',
+            init: maxHeight,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+        },
+        super() {
     mateBuilderName = 'BoxConstraints';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxConstraints$Mate(
@@ -35,152 +56,132 @@ class BoxConstraints$Mate extends _i1.BoxConstraints with _i2.Mate {
           minHeight: p.get('minHeight').build(),
           maxHeight: p.get('maxHeight').build(),
         );
-    mateUse(
-      'minWidth',
-      minWidth,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'maxWidth',
-      maxWidth,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
-    mateUse(
-      'minHeight',
-      minHeight,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'maxHeight',
-      maxHeight,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
   }
 
   /// BoxConstraints BoxConstraints.tight(Size size)
   BoxConstraints$Mate.tight(
 
       /// requiredParameters: Size size
-      _i3.Size size)
-      : super.tight(size) {
+      super.size)
+      : mateParams = {
+          'size': _i2.BuilderArg<_i3.Size>(
+            name: 'size',
+            init: size,
+            isNamed: false,
+          )
+        },
+        super.tight() {
     mateBuilderName = 'BoxConstraints.tight';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tight(p.get('size').value);
-    mateUse(
-      'size',
-      size,
-      isNamed: false,
-    );
   }
 
   /// BoxConstraints BoxConstraints.tightFor({double? width, double? height})
   BoxConstraints$Mate.tightFor({
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
-  }) : super.tightFor(
-          width: width,
-          height: height,
-        ) {
+    super.height,
+  })  : mateParams = {
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+        },
+        super.tightFor() {
     mateBuilderName = 'BoxConstraints.tightFor';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightFor(
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
   }
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
   BoxConstraints$Mate.tightForFinite({
     /// optionalParameters: {double width = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double width = double.infinity,
+    super.width,
 
     /// optionalParameters: {double height = double.infinity} , default:processed=PrefixedIdentifierImpl
-    double height = double.infinity,
-  }) : super.tightForFinite(
-          width: width,
-          height: height,
-        ) {
+    super.height,
+  })  : mateParams = {
+          'width': _i2.BuilderArg<double>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+          'height': _i2.BuilderArg<double>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+            defaultValue: double.infinity,
+          ),
+        },
+        super.tightForFinite() {
     mateBuilderName = 'BoxConstraints.tightForFinite';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxConstraints$Mate.tightForFinite(
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-      defaultValue: double.infinity,
-    );
   }
 
   /// BoxConstraints BoxConstraints.loose(Size size)
   BoxConstraints$Mate.loose(
 
       /// requiredParameters: Size size
-      _i3.Size size)
-      : super.loose(size) {
+      super.size)
+      : mateParams = {
+          'size': _i2.BuilderArg<_i3.Size>(
+            name: 'size',
+            init: size,
+            isNamed: false,
+          )
+        },
+        super.loose() {
     mateBuilderName = 'BoxConstraints.loose';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxConstraints$Mate.loose(p.get('size').value);
-    mateUse(
-      'size',
-      size,
-      isNamed: false,
-    );
   }
 
   /// BoxConstraints BoxConstraints.expand({double? width, double? height})
   BoxConstraints$Mate.expand({
     /// optionalParameters: {double? width} , default:none
-    double? width,
+    super.width,
 
     /// optionalParameters: {double? height} , default:none
-    double? height,
-  }) : super.expand(
-          width: width,
-          height: height,
-        ) {
+    super.height,
+  })  : mateParams = {
+          'width': _i2.BuilderArg<double?>(
+            name: 'width',
+            init: width,
+            isNamed: true,
+          ),
+          'height': _i2.BuilderArg<double?>(
+            name: 'height',
+            init: height,
+            isNamed: true,
+          ),
+        },
+        super.expand() {
     mateBuilderName = 'BoxConstraints.expand';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => BoxConstraints$Mate.expand(
           width: p.get('width').build(),
           height: p.get('height').build(),
         );
-    mateUse(
-      'width',
-      width,
-      isNamed: true,
-    );
-    mateUse(
-      'height',
-      height,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BoxHitTestResult extends HitTestResult
@@ -189,17 +190,22 @@ class BoxHitTestResult$Mate extends _i1.BoxHitTestResult with _i2.Mate {
   BoxHitTestResult$Mate.wrap(
 
       /// requiredParameters: HitTestResult result
-      _i4.HitTestResult result)
-      : super.wrap(result) {
+      super.result)
+      : mateParams = {
+          'result': _i2.BuilderArg<_i4.HitTestResult>(
+            name: 'result',
+            init: result,
+            isNamed: false,
+          )
+        },
+        super.wrap() {
     mateBuilderName = 'BoxHitTestResult.wrap';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxHitTestResult$Mate.wrap(p.get('result').value);
-    mateUse(
-      'result',
-      result,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class BoxHitTestEntry extends HitTestEntry<RenderBox>
@@ -207,29 +213,31 @@ class BoxHitTestEntry$Mate extends _i1.BoxHitTestEntry with _i2.Mate {
   /// BoxHitTestEntry BoxHitTestEntry(RenderBox target, Offset localPosition)
   BoxHitTestEntry$Mate(
     /// requiredParameters: RenderBox target
-    _i1.RenderBox target,
+    super.target,
 
     /// requiredParameters: Offset localPosition
-    _i3.Offset localPosition,
-  ) : super(
-          target,
-          localPosition,
-        ) {
+    super.localPosition,
+  )   : mateParams = {
+          'target': _i2.BuilderArg<_i1.RenderBox>(
+            name: 'target',
+            init: target,
+            isNamed: false,
+          ),
+          'localPosition': _i2.BuilderArg<_i3.Offset>(
+            name: 'localPosition',
+            init: localPosition,
+            isNamed: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'BoxHitTestEntry';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => BoxHitTestEntry$Mate(
           p.get('target').value,
           p.get('localPosition').value,
         );
-    mateUse(
-      'target',
-      target,
-      isNamed: false,
-    );
-    mateUse(
-      'localPosition',
-      localPosition,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

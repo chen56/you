@@ -12,15 +12,20 @@ class DisposableBuildContext$Mate<T extends _i1.State<_i1.StatefulWidget>> exten
   DisposableBuildContext$Mate(
 
       /// requiredParameters: T _state
-      T _state)
-      : super(_state) {
+      super._state)
+      : mateParams = {
+          '_state': _i3.BuilderArg<T>(
+            name: '_state',
+            init: _state,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'DisposableBuildContext';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => DisposableBuildContext$Mate<T>(p.get('_state').value);
-    mateUse(
-      '_state',
-      _state,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i3.BuilderArg> mateParams;
 }

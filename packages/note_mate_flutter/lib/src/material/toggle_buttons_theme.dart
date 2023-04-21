@@ -15,66 +15,127 @@ class ToggleButtonsThemeData$Mate extends _i1.ToggleButtonsThemeData with _i2.Ma
   /// ToggleButtonsThemeData ToggleButtonsThemeData({TextStyle? textStyle, BoxConstraints? constraints, Color? color, Color? selectedColor, Color? disabledColor, Color? fillColor, Color? focusColor, Color? highlightColor, Color? hoverColor, Color? splashColor, Color? borderColor, Color? selectedBorderColor, Color? disabledBorderColor, BorderRadius? borderRadius, double? borderWidth})
   ToggleButtonsThemeData$Mate({
     /// optionalParameters: {TextStyle? textStyle} , default:none
-    _i3.TextStyle? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i4.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {Color? color} , default:none
-    _i5.Color? color,
+    super.color,
 
     /// optionalParameters: {Color? selectedColor} , default:none
-    _i5.Color? selectedColor,
+    super.selectedColor,
 
     /// optionalParameters: {Color? disabledColor} , default:none
-    _i5.Color? disabledColor,
+    super.disabledColor,
 
     /// optionalParameters: {Color? fillColor} , default:none
-    _i5.Color? fillColor,
+    super.fillColor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? highlightColor} , default:none
-    _i5.Color? highlightColor,
+    super.highlightColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i5.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {Color? splashColor} , default:none
-    _i5.Color? splashColor,
+    super.splashColor,
 
     /// optionalParameters: {Color? borderColor} , default:none
-    _i5.Color? borderColor,
+    super.borderColor,
 
     /// optionalParameters: {Color? selectedBorderColor} , default:none
-    _i5.Color? selectedBorderColor,
+    super.selectedBorderColor,
 
     /// optionalParameters: {Color? disabledBorderColor} , default:none
-    _i5.Color? disabledBorderColor,
+    super.disabledBorderColor,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
-    _i6.BorderRadius? borderRadius,
+    super.borderRadius,
 
     /// optionalParameters: {double? borderWidth} , default:none
-    double? borderWidth,
-  }) : super(
-          textStyle: textStyle,
-          constraints: constraints,
-          color: color,
-          selectedColor: selectedColor,
-          disabledColor: disabledColor,
-          fillColor: fillColor,
-          focusColor: focusColor,
-          highlightColor: highlightColor,
-          hoverColor: hoverColor,
-          splashColor: splashColor,
-          borderColor: borderColor,
-          selectedBorderColor: selectedBorderColor,
-          disabledBorderColor: disabledBorderColor,
-          borderRadius: borderRadius,
-          borderWidth: borderWidth,
-        ) {
+    super.borderWidth,
+  })  : mateParams = {
+          'textStyle': _i2.BuilderArg<_i3.TextStyle?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i4.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'color': _i2.BuilderArg<_i5.Color?>(
+            name: 'color',
+            init: color,
+            isNamed: true,
+          ),
+          'selectedColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedColor',
+            init: selectedColor,
+            isNamed: true,
+          ),
+          'disabledColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'disabledColor',
+            init: disabledColor,
+            isNamed: true,
+          ),
+          'fillColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'fillColor',
+            init: fillColor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'highlightColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'highlightColor',
+            init: highlightColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'splashColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'splashColor',
+            init: splashColor,
+            isNamed: true,
+          ),
+          'borderColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'borderColor',
+            init: borderColor,
+            isNamed: true,
+          ),
+          'selectedBorderColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'selectedBorderColor',
+            init: selectedBorderColor,
+            isNamed: true,
+          ),
+          'disabledBorderColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'disabledBorderColor',
+            init: disabledBorderColor,
+            isNamed: true,
+          ),
+          'borderRadius': _i2.BuilderArg<_i6.BorderRadius?>(
+            name: 'borderRadius',
+            init: borderRadius,
+            isNamed: true,
+          ),
+          'borderWidth': _i2.BuilderArg<double?>(
+            name: 'borderWidth',
+            init: borderWidth,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ToggleButtonsThemeData';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtonsThemeData$Mate(
@@ -94,82 +155,10 @@ class ToggleButtonsThemeData$Mate extends _i1.ToggleButtonsThemeData with _i2.Ma
           borderRadius: p.get('borderRadius').build(),
           borderWidth: p.get('borderWidth').build(),
         );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'color',
-      color,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedColor',
-      selectedColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledColor',
-      disabledColor,
-      isNamed: true,
-    );
-    mateUse(
-      'fillColor',
-      fillColor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'highlightColor',
-      highlightColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashColor',
-      splashColor,
-      isNamed: true,
-    );
-    mateUse(
-      'borderColor',
-      borderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'selectedBorderColor',
-      selectedBorderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'disabledBorderColor',
-      disabledBorderColor,
-      isNamed: true,
-    );
-    mateUse(
-      'borderRadius',
-      borderRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'borderWidth',
-      borderWidth,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class ToggleButtonsTheme extends InheritedTheme
@@ -177,18 +166,31 @@ class ToggleButtonsTheme$Mate extends _i1.ToggleButtonsTheme with _i2.Mate {
   /// ToggleButtonsTheme ToggleButtonsTheme({Key? key, required ToggleButtonsThemeData data, required Widget child})
   ToggleButtonsTheme$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i7.Key? key,
+    super.key,
 
     /// optionalParameters: {required ToggleButtonsThemeData data} , default:none
-    required _i1.ToggleButtonsThemeData data,
+    required super.data,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i8.Widget child,
-  }) : super(
-          key: key,
-          data: data,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i7.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'data': _i2.BuilderArg<_i1.ToggleButtonsThemeData>(
+            name: 'data',
+            init: data,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i8.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'ToggleButtonsTheme';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => ToggleButtonsTheme$Mate(
@@ -196,20 +198,8 @@ class ToggleButtonsTheme$Mate extends _i1.ToggleButtonsTheme with _i2.Mate {
           data: p.get('data').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'data',
-      data,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

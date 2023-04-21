@@ -13,22 +13,40 @@ class RenderAndroidView$Mate extends _i1.RenderAndroidView with _i2.Mate {
   /// RenderAndroidView RenderAndroidView({required AndroidViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers, Clip clipBehavior = Clip.hardEdge})
   RenderAndroidView$Mate({
     /// optionalParameters: {required AndroidViewController viewController} , default:none
-    required _i3.AndroidViewController viewController,
+    required super.viewController,
 
     /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
-    required _i1.PlatformViewHitTestBehavior hitTestBehavior,
+    required super.hitTestBehavior,
 
     /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
-    required Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>> gestureRecognizers,
+    required super.gestureRecognizers,
 
     /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
-    _i6.Clip clipBehavior = _i6.Clip.hardEdge,
-  }) : super(
-          viewController: viewController,
-          hitTestBehavior: hitTestBehavior,
-          gestureRecognizers: gestureRecognizers,
-          clipBehavior: clipBehavior,
-        ) {
+    super.clipBehavior,
+  })  : mateParams = {
+          'viewController': _i2.BuilderArg<_i3.AndroidViewController>(
+            name: 'viewController',
+            init: viewController,
+            isNamed: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i1.PlatformViewHitTestBehavior>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+          ),
+          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+            name: 'gestureRecognizers',
+            init: gestureRecognizers,
+            isNamed: true,
+          ),
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+            name: 'clipBehavior',
+            init: clipBehavior,
+            isNamed: true,
+            defaultValue: _i6.Clip.hardEdge,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderAndroidView';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderAndroidView$Mate(
@@ -37,28 +55,10 @@ class RenderAndroidView$Mate extends _i1.RenderAndroidView with _i2.Mate {
           gestureRecognizers: p.get('gestureRecognizers').build(),
           clipBehavior: p.get('clipBehavior').build(),
         );
-    mateUse(
-      'viewController',
-      viewController,
-      isNamed: true,
-    );
-    mateUse(
-      'hitTestBehavior',
-      hitTestBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'gestureRecognizers',
-      gestureRecognizers,
-      isNamed: true,
-    );
-    mateUse(
-      'clipBehavior',
-      clipBehavior,
-      isNamed: true,
-      defaultValue: _i6.Clip.hardEdge,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RenderUiKitView extends RenderBox
@@ -66,18 +66,31 @@ class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
   /// RenderUiKitView RenderUiKitView({required UiKitViewController viewController, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   RenderUiKitView$Mate({
     /// optionalParameters: {required UiKitViewController viewController} , default:none
-    required _i3.UiKitViewController viewController,
+    required super.viewController,
 
     /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
-    required _i1.PlatformViewHitTestBehavior hitTestBehavior,
+    required super.hitTestBehavior,
 
     /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
-    required Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>> gestureRecognizers,
-  }) : super(
-          viewController: viewController,
-          hitTestBehavior: hitTestBehavior,
-          gestureRecognizers: gestureRecognizers,
-        ) {
+    required super.gestureRecognizers,
+  })  : mateParams = {
+          'viewController': _i2.BuilderArg<_i3.UiKitViewController>(
+            name: 'viewController',
+            init: viewController,
+            isNamed: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i1.PlatformViewHitTestBehavior>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+          ),
+          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+            name: 'gestureRecognizers',
+            init: gestureRecognizers,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RenderUiKitView';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => RenderUiKitView$Mate(
@@ -85,22 +98,10 @@ class RenderUiKitView$Mate extends _i1.RenderUiKitView with _i2.Mate {
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateUse(
-      'viewController',
-      viewController,
-      isNamed: true,
-    );
-    mateUse(
-      'hitTestBehavior',
-      hitTestBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'gestureRecognizers',
-      gestureRecognizers,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class PlatformViewRenderBox extends RenderBox with _PlatformViewGestureMixin
@@ -108,18 +109,31 @@ class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox with _i2.Mate
   /// PlatformViewRenderBox PlatformViewRenderBox({required PlatformViewController controller, required PlatformViewHitTestBehavior hitTestBehavior, required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers})
   PlatformViewRenderBox$Mate({
     /// optionalParameters: {required PlatformViewController controller} , default:none
-    required _i3.PlatformViewController controller,
+    required super.controller,
 
     /// optionalParameters: {required PlatformViewHitTestBehavior hitTestBehavior} , default:none
-    required _i1.PlatformViewHitTestBehavior hitTestBehavior,
+    required super.hitTestBehavior,
 
     /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
-    required Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>> gestureRecognizers,
-  }) : super(
-          controller: controller,
-          hitTestBehavior: hitTestBehavior,
-          gestureRecognizers: gestureRecognizers,
-        ) {
+    required super.gestureRecognizers,
+  })  : mateParams = {
+          'controller': _i2.BuilderArg<_i3.PlatformViewController>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'hitTestBehavior': _i2.BuilderArg<_i1.PlatformViewHitTestBehavior>(
+            name: 'hitTestBehavior',
+            init: hitTestBehavior,
+            isNamed: true,
+          ),
+          'gestureRecognizers': _i2.BuilderArg<Set<_i4.Factory<_i5.OneSequenceGestureRecognizer>>>(
+            name: 'gestureRecognizers',
+            init: gestureRecognizers,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'PlatformViewRenderBox';
     matePackageUrl = 'package:flutter/rendering.dart';
     mateBuilder = (p) => PlatformViewRenderBox$Mate(
@@ -127,20 +141,8 @@ class PlatformViewRenderBox$Mate extends _i1.PlatformViewRenderBox with _i2.Mate
           hitTestBehavior: p.get('hitTestBehavior').build(),
           gestureRecognizers: p.get('gestureRecognizers').build(),
         );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'hitTestBehavior',
-      hitTestBehavior,
-      isNamed: true,
-    );
-    mateUse(
-      'gestureRecognizers',
-      gestureRecognizers,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

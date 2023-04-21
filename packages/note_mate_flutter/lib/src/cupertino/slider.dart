@@ -13,46 +13,90 @@ class CupertinoSlider$Mate extends _i1.CupertinoSlider with _i2.Mate {
   /// CupertinoSlider CupertinoSlider({Key? key, required double value, required void Function(double)? onChanged, void Function(double)? onChangeStart, void Function(double)? onChangeEnd, double min = 0.0, double max = 1.0, int? divisions, Color? activeColor, Color thumbColor = CupertinoColors.white})
   CupertinoSlider$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required double value} , default:none
-    required double value,
+    required super.value,
 
     /// optionalParameters: {required void Function(double)? onChanged} , default:none
-    required _i4.ValueChanged<double>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {void Function(double)? onChangeStart} , default:none
-    _i4.ValueChanged<double>? onChangeStart,
+    super.onChangeStart,
 
     /// optionalParameters: {void Function(double)? onChangeEnd} , default:none
-    _i4.ValueChanged<double>? onChangeEnd,
+    super.onChangeEnd,
 
     /// optionalParameters: {double min = 0.0} , default:processed=DoubleLiteralImpl
-    double min = 0.0,
+    super.min,
 
     /// optionalParameters: {double max = 1.0} , default:processed=DoubleLiteralImpl
-    double max = 1.0,
+    super.max,
 
     /// optionalParameters: {int? divisions} , default:none
-    int? divisions,
+    super.divisions,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color thumbColor = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
-    _i5.Color thumbColor = _i6.CupertinoColors.white,
-  }) : super(
-          key: key,
-          value: value,
-          onChanged: onChanged,
-          onChangeStart: onChangeStart,
-          onChangeEnd: onChangeEnd,
-          min: min,
-          max: max,
-          divisions: divisions,
-          activeColor: activeColor,
-          thumbColor: thumbColor,
-        ) {
+    super.thumbColor,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<double>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'onChangeStart': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChangeStart',
+            init: onChangeStart,
+            isNamed: true,
+          ),
+          'onChangeEnd': _i2.BuilderArg<_i4.ValueChanged<double>?>(
+            name: 'onChangeEnd',
+            init: onChangeEnd,
+            isNamed: true,
+          ),
+          'min': _i2.BuilderArg<double>(
+            name: 'min',
+            init: min,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'max': _i2.BuilderArg<double>(
+            name: 'max',
+            init: max,
+            isNamed: true,
+            defaultValue: 1.0,
+          ),
+          'divisions': _i2.BuilderArg<int?>(
+            name: 'divisions',
+            init: divisions,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i5.Color>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+            defaultValue: _i6.CupertinoColors.white,
+          ),
+        },
+        super() {
     mateBuilderName = 'CupertinoSlider';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => CupertinoSlider$Mate(
@@ -67,58 +111,8 @@ class CupertinoSlider$Mate extends _i1.CupertinoSlider with _i2.Mate {
           activeColor: p.get('activeColor').build(),
           thumbColor: p.get('thumbColor').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeStart',
-      onChangeStart,
-      isNamed: true,
-    );
-    mateUse(
-      'onChangeEnd',
-      onChangeEnd,
-      isNamed: true,
-    );
-    mateUse(
-      'min',
-      min,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'max',
-      max,
-      isNamed: true,
-      defaultValue: 1.0,
-    );
-    mateUse(
-      'divisions',
-      divisions,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-      defaultValue: _i6.CupertinoColors.white,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

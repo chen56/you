@@ -21,78 +21,151 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
   /// SearchAnchor SearchAnchor({Key? key, bool? isFullScreen, SearchController? searchController, Widget Function(Iterable<Widget>)? viewBuilder, Widget? viewLeading, Iterable<Widget>? viewTrailing, String? viewHintText, Color? viewBackgroundColor, double? viewElevation, Color? viewSurfaceTintColor, BorderSide? viewSide, OutlinedBorder? viewShape, TextStyle? headerTextStyle, TextStyle? headerHintStyle, Color? dividerColor, BoxConstraints? viewConstraints, required Widget Function(BuildContext, SearchController) builder, required Iterable<Widget> Function(BuildContext, SearchController) suggestionsBuilder})
   SearchAnchor$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {bool? isFullScreen} , default:none
-    bool? isFullScreen,
+    super.isFullScreen,
 
     /// optionalParameters: {SearchController? searchController} , default:none
-    _i1.SearchController? searchController,
+    super.searchController,
 
     /// optionalParameters: {Widget Function(Iterable<Widget>)? viewBuilder} , default:none
-    _i1.ViewBuilder? viewBuilder,
+    super.viewBuilder,
 
     /// optionalParameters: {Widget? viewLeading} , default:none
-    _i4.Widget? viewLeading,
+    super.viewLeading,
 
     /// optionalParameters: {Iterable<Widget>? viewTrailing} , default:none
-    Iterable<_i4.Widget>? viewTrailing,
+    super.viewTrailing,
 
     /// optionalParameters: {String? viewHintText} , default:none
-    String? viewHintText,
+    super.viewHintText,
 
     /// optionalParameters: {Color? viewBackgroundColor} , default:none
-    _i5.Color? viewBackgroundColor,
+    super.viewBackgroundColor,
 
     /// optionalParameters: {double? viewElevation} , default:none
-    double? viewElevation,
+    super.viewElevation,
 
     /// optionalParameters: {Color? viewSurfaceTintColor} , default:none
-    _i5.Color? viewSurfaceTintColor,
+    super.viewSurfaceTintColor,
 
     /// optionalParameters: {BorderSide? viewSide} , default:none
-    _i6.BorderSide? viewSide,
+    super.viewSide,
 
     /// optionalParameters: {OutlinedBorder? viewShape} , default:none
-    _i6.OutlinedBorder? viewShape,
+    super.viewShape,
 
     /// optionalParameters: {TextStyle? headerTextStyle} , default:none
-    _i7.TextStyle? headerTextStyle,
+    super.headerTextStyle,
 
     /// optionalParameters: {TextStyle? headerHintStyle} , default:none
-    _i7.TextStyle? headerHintStyle,
+    super.headerHintStyle,
 
     /// optionalParameters: {Color? dividerColor} , default:none
-    _i5.Color? dividerColor,
+    super.dividerColor,
 
     /// optionalParameters: {BoxConstraints? viewConstraints} , default:none
-    _i8.BoxConstraints? viewConstraints,
+    super.viewConstraints,
 
     /// optionalParameters: {required Widget Function(BuildContext, SearchController) builder} , default:none
-    required _i1.SearchAnchorChildBuilder builder,
+    required super.builder,
 
     /// optionalParameters: {required Iterable<Widget> Function(BuildContext, SearchController) suggestionsBuilder} , default:none
-    required _i1.SuggestionsBuilder suggestionsBuilder,
-  }) : super(
-          key: key,
-          isFullScreen: isFullScreen,
-          searchController: searchController,
-          viewBuilder: viewBuilder,
-          viewLeading: viewLeading,
-          viewTrailing: viewTrailing,
-          viewHintText: viewHintText,
-          viewBackgroundColor: viewBackgroundColor,
-          viewElevation: viewElevation,
-          viewSurfaceTintColor: viewSurfaceTintColor,
-          viewSide: viewSide,
-          viewShape: viewShape,
-          headerTextStyle: headerTextStyle,
-          headerHintStyle: headerHintStyle,
-          dividerColor: dividerColor,
-          viewConstraints: viewConstraints,
-          builder: builder,
-          suggestionsBuilder: suggestionsBuilder,
-        ) {
+    required super.suggestionsBuilder,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'isFullScreen': _i2.BuilderArg<bool?>(
+            name: 'isFullScreen',
+            init: isFullScreen,
+            isNamed: true,
+          ),
+          'searchController': _i2.BuilderArg<_i1.SearchController?>(
+            name: 'searchController',
+            init: searchController,
+            isNamed: true,
+          ),
+          'viewBuilder': _i2.BuilderArg<_i1.ViewBuilder?>(
+            name: 'viewBuilder',
+            init: viewBuilder,
+            isNamed: true,
+          ),
+          'viewLeading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'viewLeading',
+            init: viewLeading,
+            isNamed: true,
+          ),
+          'viewTrailing': _i2.BuilderArg<Iterable<_i4.Widget>?>(
+            name: 'viewTrailing',
+            init: viewTrailing,
+            isNamed: true,
+          ),
+          'viewHintText': _i2.BuilderArg<String?>(
+            name: 'viewHintText',
+            init: viewHintText,
+            isNamed: true,
+          ),
+          'viewBackgroundColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'viewBackgroundColor',
+            init: viewBackgroundColor,
+            isNamed: true,
+          ),
+          'viewElevation': _i2.BuilderArg<double?>(
+            name: 'viewElevation',
+            init: viewElevation,
+            isNamed: true,
+          ),
+          'viewSurfaceTintColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'viewSurfaceTintColor',
+            init: viewSurfaceTintColor,
+            isNamed: true,
+          ),
+          'viewSide': _i2.BuilderArg<_i6.BorderSide?>(
+            name: 'viewSide',
+            init: viewSide,
+            isNamed: true,
+          ),
+          'viewShape': _i2.BuilderArg<_i6.OutlinedBorder?>(
+            name: 'viewShape',
+            init: viewShape,
+            isNamed: true,
+          ),
+          'headerTextStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'headerTextStyle',
+            init: headerTextStyle,
+            isNamed: true,
+          ),
+          'headerHintStyle': _i2.BuilderArg<_i7.TextStyle?>(
+            name: 'headerHintStyle',
+            init: headerHintStyle,
+            isNamed: true,
+          ),
+          'dividerColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'dividerColor',
+            init: dividerColor,
+            isNamed: true,
+          ),
+          'viewConstraints': _i2.BuilderArg<_i8.BoxConstraints?>(
+            name: 'viewConstraints',
+            init: viewConstraints,
+            isNamed: true,
+          ),
+          'builder': _i2.BuilderArg<_i1.SearchAnchorChildBuilder>(
+            name: 'builder',
+            init: builder,
+            isNamed: true,
+          ),
+          'suggestionsBuilder': _i2.BuilderArg<_i1.SuggestionsBuilder>(
+            name: 'suggestionsBuilder',
+            init: suggestionsBuilder,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SearchAnchor';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SearchAnchor$Mate(
@@ -115,97 +188,10 @@ class SearchAnchor$Mate extends _i1.SearchAnchor with _i2.Mate {
           builder: p.get('builder').build(),
           suggestionsBuilder: p.get('suggestionsBuilder').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'isFullScreen',
-      isFullScreen,
-      isNamed: true,
-    );
-    mateUse(
-      'searchController',
-      searchController,
-      isNamed: true,
-    );
-    mateUse(
-      'viewBuilder',
-      viewBuilder,
-      isNamed: true,
-    );
-    mateUse(
-      'viewLeading',
-      viewLeading,
-      isNamed: true,
-    );
-    mateUse(
-      'viewTrailing',
-      viewTrailing,
-      isNamed: true,
-    );
-    mateUse(
-      'viewHintText',
-      viewHintText,
-      isNamed: true,
-    );
-    mateUse(
-      'viewBackgroundColor',
-      viewBackgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'viewElevation',
-      viewElevation,
-      isNamed: true,
-    );
-    mateUse(
-      'viewSurfaceTintColor',
-      viewSurfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'viewSide',
-      viewSide,
-      isNamed: true,
-    );
-    mateUse(
-      'viewShape',
-      viewShape,
-      isNamed: true,
-    );
-    mateUse(
-      'headerTextStyle',
-      headerTextStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'headerHintStyle',
-      headerHintStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'dividerColor',
-      dividerColor,
-      isNamed: true,
-    );
-    mateUse(
-      'viewConstraints',
-      viewConstraints,
-      isNamed: true,
-    );
-    mateUse(
-      'builder',
-      builder,
-      isNamed: true,
-    );
-    mateUse(
-      'suggestionsBuilder',
-      suggestionsBuilder,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SearchBar extends StatefulWidget
@@ -213,82 +199,159 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
   /// SearchBar SearchBar({Key? key, TextEditingController? controller, FocusNode? focusNode, String? hintText, Widget? leading, Iterable<Widget>? trailing, void Function()? onTap, void Function(String)? onChanged, BoxConstraints? constraints, MaterialStateProperty<double?>? elevation, MaterialStateProperty<Color?>? backgroundColor, MaterialStateProperty<Color?>? shadowColor, MaterialStateProperty<Color?>? surfaceTintColor, MaterialStateProperty<Color?>? overlayColor, MaterialStateProperty<BorderSide?>? side, MaterialStateProperty<OutlinedBorder?>? shape, MaterialStateProperty<EdgeInsetsGeometry?>? padding, MaterialStateProperty<TextStyle?>? textStyle, MaterialStateProperty<TextStyle?>? hintStyle})
   SearchBar$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {TextEditingController? controller} , default:none
-    _i9.TextEditingController? controller,
+    super.controller,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i10.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {String? hintText} , default:none
-    String? hintText,
+    super.hintText,
 
     /// optionalParameters: {Widget? leading} , default:none
-    _i4.Widget? leading,
+    super.leading,
 
     /// optionalParameters: {Iterable<Widget>? trailing} , default:none
-    Iterable<_i4.Widget>? trailing,
+    super.trailing,
 
     /// optionalParameters: {void Function()? onTap} , default:none
-    _i11.GestureTapCallback? onTap,
+    super.onTap,
 
     /// optionalParameters: {void Function(String)? onChanged} , default:none
-    _i12.ValueChanged<String>? onChanged,
+    super.onChanged,
 
     /// optionalParameters: {BoxConstraints? constraints} , default:none
-    _i8.BoxConstraints? constraints,
+    super.constraints,
 
     /// optionalParameters: {MaterialStateProperty<double?>? elevation} , default:none
-    _i13.MaterialStateProperty<double?>? elevation,
+    super.elevation,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? backgroundColor} , default:none
-    _i13.MaterialStateProperty<_i5.Color?>? backgroundColor,
+    super.backgroundColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? shadowColor} , default:none
-    _i13.MaterialStateProperty<_i5.Color?>? shadowColor,
+    super.shadowColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? surfaceTintColor} , default:none
-    _i13.MaterialStateProperty<_i5.Color?>? surfaceTintColor,
+    super.surfaceTintColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i13.MaterialStateProperty<_i5.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {MaterialStateProperty<BorderSide?>? side} , default:none
-    _i13.MaterialStateProperty<_i6.BorderSide?>? side,
+    super.side,
 
     /// optionalParameters: {MaterialStateProperty<OutlinedBorder?>? shape} , default:none
-    _i13.MaterialStateProperty<_i6.OutlinedBorder?>? shape,
+    super.shape,
 
     /// optionalParameters: {MaterialStateProperty<EdgeInsetsGeometry?>? padding} , default:none
-    _i13.MaterialStateProperty<_i14.EdgeInsetsGeometry?>? padding,
+    super.padding,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? textStyle} , default:none
-    _i13.MaterialStateProperty<_i7.TextStyle?>? textStyle,
+    super.textStyle,
 
     /// optionalParameters: {MaterialStateProperty<TextStyle?>? hintStyle} , default:none
-    _i13.MaterialStateProperty<_i7.TextStyle?>? hintStyle,
-  }) : super(
-          key: key,
-          controller: controller,
-          focusNode: focusNode,
-          hintText: hintText,
-          leading: leading,
-          trailing: trailing,
-          onTap: onTap,
-          onChanged: onChanged,
-          constraints: constraints,
-          elevation: elevation,
-          backgroundColor: backgroundColor,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          overlayColor: overlayColor,
-          side: side,
-          shape: shape,
-          padding: padding,
-          textStyle: textStyle,
-          hintStyle: hintStyle,
-        ) {
+    super.hintStyle,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'controller': _i2.BuilderArg<_i9.TextEditingController?>(
+            name: 'controller',
+            init: controller,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i10.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'hintText': _i2.BuilderArg<String?>(
+            name: 'hintText',
+            init: hintText,
+            isNamed: true,
+          ),
+          'leading': _i2.BuilderArg<_i4.Widget?>(
+            name: 'leading',
+            init: leading,
+            isNamed: true,
+          ),
+          'trailing': _i2.BuilderArg<Iterable<_i4.Widget>?>(
+            name: 'trailing',
+            init: trailing,
+            isNamed: true,
+          ),
+          'onTap': _i2.BuilderArg<_i11.GestureTapCallback?>(
+            name: 'onTap',
+            init: onTap,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i12.ValueChanged<String>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'constraints': _i2.BuilderArg<_i8.BoxConstraints?>(
+            name: 'constraints',
+            init: constraints,
+            isNamed: true,
+          ),
+          'elevation': _i2.BuilderArg<_i13.MaterialStateProperty<double?>?>(
+            name: 'elevation',
+            init: elevation,
+            isNamed: true,
+          ),
+          'backgroundColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+            name: 'backgroundColor',
+            init: backgroundColor,
+            isNamed: true,
+          ),
+          'shadowColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+            name: 'shadowColor',
+            init: shadowColor,
+            isNamed: true,
+          ),
+          'surfaceTintColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+            name: 'surfaceTintColor',
+            init: surfaceTintColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i5.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'side': _i2.BuilderArg<_i13.MaterialStateProperty<_i6.BorderSide?>?>(
+            name: 'side',
+            init: side,
+            isNamed: true,
+          ),
+          'shape': _i2.BuilderArg<_i13.MaterialStateProperty<_i6.OutlinedBorder?>?>(
+            name: 'shape',
+            init: shape,
+            isNamed: true,
+          ),
+          'padding': _i2.BuilderArg<_i13.MaterialStateProperty<_i14.EdgeInsetsGeometry?>?>(
+            name: 'padding',
+            init: padding,
+            isNamed: true,
+          ),
+          'textStyle': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.TextStyle?>?>(
+            name: 'textStyle',
+            init: textStyle,
+            isNamed: true,
+          ),
+          'hintStyle': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.TextStyle?>?>(
+            name: 'hintStyle',
+            init: hintStyle,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SearchBar';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => SearchBar$Mate(
@@ -312,100 +375,8 @@ class SearchBar$Mate extends _i1.SearchBar with _i2.Mate {
           textStyle: p.get('textStyle').build(),
           hintStyle: p.get('hintStyle').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'controller',
-      controller,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'hintText',
-      hintText,
-      isNamed: true,
-    );
-    mateUse(
-      'leading',
-      leading,
-      isNamed: true,
-    );
-    mateUse(
-      'trailing',
-      trailing,
-      isNamed: true,
-    );
-    mateUse(
-      'onTap',
-      onTap,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'constraints',
-      constraints,
-      isNamed: true,
-    );
-    mateUse(
-      'elevation',
-      elevation,
-      isNamed: true,
-    );
-    mateUse(
-      'backgroundColor',
-      backgroundColor,
-      isNamed: true,
-    );
-    mateUse(
-      'shadowColor',
-      shadowColor,
-      isNamed: true,
-    );
-    mateUse(
-      'surfaceTintColor',
-      surfaceTintColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'side',
-      side,
-      isNamed: true,
-    );
-    mateUse(
-      'shape',
-      shape,
-      isNamed: true,
-    );
-    mateUse(
-      'padding',
-      padding,
-      isNamed: true,
-    );
-    mateUse(
-      'textStyle',
-      textStyle,
-      isNamed: true,
-    );
-    mateUse(
-      'hintStyle',
-      hintStyle,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

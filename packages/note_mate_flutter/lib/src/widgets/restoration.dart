@@ -12,18 +12,31 @@ class RestorationScope$Mate extends _i1.RestorationScope with _i2.Mate {
   /// RestorationScope RestorationScope({Key? key, required String? restorationId, required Widget child})
   RestorationScope$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required String? restorationId} , default:none
-    required String? restorationId,
+    required super.restorationId,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          restorationId: restorationId,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RestorationScope';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RestorationScope$Mate(
@@ -31,22 +44,10 @@ class RestorationScope$Mate extends _i1.RestorationScope with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class UnmanagedRestorationScope extends InheritedWidget
@@ -54,18 +55,31 @@ class UnmanagedRestorationScope$Mate extends _i1.UnmanagedRestorationScope with 
   /// UnmanagedRestorationScope UnmanagedRestorationScope({Key? key, RestorationBucket? bucket, required Widget child})
   UnmanagedRestorationScope$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {RestorationBucket? bucket} , default:none
-    _i5.RestorationBucket? bucket,
+    super.bucket,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          bucket: bucket,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'bucket': _i2.BuilderArg<_i5.RestorationBucket?>(
+            name: 'bucket',
+            init: bucket,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'UnmanagedRestorationScope';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => UnmanagedRestorationScope$Mate(
@@ -73,22 +87,10 @@ class UnmanagedRestorationScope$Mate extends _i1.UnmanagedRestorationScope with 
           bucket: p.get('bucket').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'bucket',
-      bucket,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RootRestorationScope extends StatefulWidget
@@ -96,18 +98,31 @@ class RootRestorationScope$Mate extends _i1.RootRestorationScope with _i2.Mate {
   /// RootRestorationScope RootRestorationScope({Key? key, required String? restorationId, required Widget child})
   RootRestorationScope$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required String? restorationId} , default:none
-    required String? restorationId,
+    required super.restorationId,
 
     /// optionalParameters: {required Widget child} , default:none
-    required _i4.Widget child,
-  }) : super(
-          key: key,
-          restorationId: restorationId,
-          child: child,
-        ) {
+    required super.child,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'restorationId': _i2.BuilderArg<String?>(
+            name: 'restorationId',
+            init: restorationId,
+            isNamed: true,
+          ),
+          'child': _i2.BuilderArg<_i4.Widget>(
+            name: 'child',
+            init: child,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RootRestorationScope';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RootRestorationScope$Mate(
@@ -115,20 +130,8 @@ class RootRestorationScope$Mate extends _i1.RootRestorationScope with _i2.Mate {
           restorationId: p.get('restorationId').build(),
           child: p.get('child').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'restorationId',
-      restorationId,
-      isNamed: true,
-    );
-    mateUse(
-      'child',
-      child,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

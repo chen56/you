@@ -13,17 +13,22 @@ class GradientRotation$Mate extends _i1.GradientRotation with _i2.Mate {
   GradientRotation$Mate(
 
       /// requiredParameters: double radians
-      double radians)
-      : super(radians) {
+      super.radians)
+      : mateParams = {
+          'radians': _i2.BuilderArg<double>(
+            name: 'radians',
+            init: radians,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'GradientRotation';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => GradientRotation$Mate(p.get('radians').value);
-    mateUse(
-      'radians',
-      radians,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class LinearGradient extends Gradient
@@ -31,30 +36,58 @@ class LinearGradient$Mate extends _i1.LinearGradient with _i2.Mate {
   /// LinearGradient LinearGradient({AlignmentGeometry begin = Alignment.centerLeft, AlignmentGeometry end = Alignment.centerRight, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   LinearGradient$Mate({
     /// optionalParameters: {AlignmentGeometry begin = Alignment.centerLeft} , default:processed=PrefixedIdentifierImpl
-    _i3.AlignmentGeometry begin = _i4.Alignment.centerLeft,
+    super.begin,
 
     /// optionalParameters: {AlignmentGeometry end = Alignment.centerRight} , default:processed=PrefixedIdentifierImpl
-    _i3.AlignmentGeometry end = _i4.Alignment.centerRight,
+    super.end,
 
     /// optionalParameters: {required List<Color> colors} , default:none
-    required List<_i5.Color> colors,
+    required super.colors,
 
     /// optionalParameters: {List<double>? stops} , default:none
-    List<double>? stops,
+    super.stops,
 
     /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
-    _i5.TileMode tileMode = _i5.TileMode.clamp,
+    super.tileMode,
 
     /// optionalParameters: {GradientTransform? transform} , default:none
-    _i1.GradientTransform? transform,
-  }) : super(
-          begin: begin,
-          end: end,
-          colors: colors,
-          stops: stops,
-          tileMode: tileMode,
-          transform: transform,
-        ) {
+    super.transform,
+  })  : mateParams = {
+          'begin': _i2.BuilderArg<_i3.AlignmentGeometry>(
+            name: 'begin',
+            init: begin,
+            isNamed: true,
+            defaultValue: _i4.Alignment.centerLeft,
+          ),
+          'end': _i2.BuilderArg<_i3.AlignmentGeometry>(
+            name: 'end',
+            init: end,
+            isNamed: true,
+            defaultValue: _i4.Alignment.centerRight,
+          ),
+          'colors': _i2.BuilderArg<List<_i5.Color>>(
+            name: 'colors',
+            init: colors,
+            isNamed: true,
+          ),
+          'stops': _i2.BuilderArg<List<double>?>(
+            name: 'stops',
+            init: stops,
+            isNamed: true,
+          ),
+          'tileMode': _i2.BuilderArg<_i5.TileMode>(
+            name: 'tileMode',
+            init: tileMode,
+            isNamed: true,
+            defaultValue: _i5.TileMode.clamp,
+          ),
+          'transform': _i2.BuilderArg<_i1.GradientTransform?>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'LinearGradient';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => LinearGradient$Mate(
@@ -65,40 +98,10 @@ class LinearGradient$Mate extends _i1.LinearGradient with _i2.Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    mateUse(
-      'begin',
-      begin,
-      isNamed: true,
-      defaultValue: _i4.Alignment.centerLeft,
-    );
-    mateUse(
-      'end',
-      end,
-      isNamed: true,
-      defaultValue: _i4.Alignment.centerRight,
-    );
-    mateUse(
-      'colors',
-      colors,
-      isNamed: true,
-    );
-    mateUse(
-      'stops',
-      stops,
-      isNamed: true,
-    );
-    mateUse(
-      'tileMode',
-      tileMode,
-      isNamed: true,
-      defaultValue: _i5.TileMode.clamp,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class RadialGradient extends Gradient
@@ -106,38 +109,75 @@ class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
   /// RadialGradient RadialGradient({AlignmentGeometry center = Alignment.center, double radius = 0.5, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, AlignmentGeometry? focal, double focalRadius = 0.0, GradientTransform? transform})
   RadialGradient$Mate({
     /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i3.AlignmentGeometry center = _i4.Alignment.center,
+    super.center,
 
     /// optionalParameters: {double radius = 0.5} , default:processed=DoubleLiteralImpl
-    double radius = 0.5,
+    super.radius,
 
     /// optionalParameters: {required List<Color> colors} , default:none
-    required List<_i5.Color> colors,
+    required super.colors,
 
     /// optionalParameters: {List<double>? stops} , default:none
-    List<double>? stops,
+    super.stops,
 
     /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
-    _i5.TileMode tileMode = _i5.TileMode.clamp,
+    super.tileMode,
 
     /// optionalParameters: {AlignmentGeometry? focal} , default:none
-    _i3.AlignmentGeometry? focal,
+    super.focal,
 
     /// optionalParameters: {double focalRadius = 0.0} , default:processed=DoubleLiteralImpl
-    double focalRadius = 0.0,
+    super.focalRadius,
 
     /// optionalParameters: {GradientTransform? transform} , default:none
-    _i1.GradientTransform? transform,
-  }) : super(
-          center: center,
-          radius: radius,
-          colors: colors,
-          stops: stops,
-          tileMode: tileMode,
-          focal: focal,
-          focalRadius: focalRadius,
-          transform: transform,
-        ) {
+    super.transform,
+  })  : mateParams = {
+          'center': _i2.BuilderArg<_i3.AlignmentGeometry>(
+            name: 'center',
+            init: center,
+            isNamed: true,
+            defaultValue: _i4.Alignment.center,
+          ),
+          'radius': _i2.BuilderArg<double>(
+            name: 'radius',
+            init: radius,
+            isNamed: true,
+            defaultValue: 0.5,
+          ),
+          'colors': _i2.BuilderArg<List<_i5.Color>>(
+            name: 'colors',
+            init: colors,
+            isNamed: true,
+          ),
+          'stops': _i2.BuilderArg<List<double>?>(
+            name: 'stops',
+            init: stops,
+            isNamed: true,
+          ),
+          'tileMode': _i2.BuilderArg<_i5.TileMode>(
+            name: 'tileMode',
+            init: tileMode,
+            isNamed: true,
+            defaultValue: _i5.TileMode.clamp,
+          ),
+          'focal': _i2.BuilderArg<_i3.AlignmentGeometry?>(
+            name: 'focal',
+            init: focal,
+            isNamed: true,
+          ),
+          'focalRadius': _i2.BuilderArg<double>(
+            name: 'focalRadius',
+            init: focalRadius,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'transform': _i2.BuilderArg<_i1.GradientTransform?>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'RadialGradient';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => RadialGradient$Mate(
@@ -150,51 +190,10 @@ class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
           focalRadius: p.get('focalRadius').build(),
           transform: p.get('transform').build(),
         );
-    mateUse(
-      'center',
-      center,
-      isNamed: true,
-      defaultValue: _i4.Alignment.center,
-    );
-    mateUse(
-      'radius',
-      radius,
-      isNamed: true,
-      defaultValue: 0.5,
-    );
-    mateUse(
-      'colors',
-      colors,
-      isNamed: true,
-    );
-    mateUse(
-      'stops',
-      stops,
-      isNamed: true,
-    );
-    mateUse(
-      'tileMode',
-      tileMode,
-      isNamed: true,
-      defaultValue: _i5.TileMode.clamp,
-    );
-    mateUse(
-      'focal',
-      focal,
-      isNamed: true,
-    );
-    mateUse(
-      'focalRadius',
-      focalRadius,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class SweepGradient extends Gradient
@@ -202,34 +201,66 @@ class SweepGradient$Mate extends _i1.SweepGradient with _i2.Mate {
   /// SweepGradient SweepGradient({AlignmentGeometry center = Alignment.center, double startAngle = 0.0, double endAngle = math.pi * 2, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   SweepGradient$Mate({
     /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:processed=PrefixedIdentifierImpl
-    _i3.AlignmentGeometry center = _i4.Alignment.center,
+    super.center,
 
     /// optionalParameters: {double startAngle = 0.0} , default:processed=DoubleLiteralImpl
-    double startAngle = 0.0,
+    super.startAngle,
 
     /// optionalParameters: {double endAngle = math.pi * 2} , default:unprocessed=BinaryExpressionImpl
-    required double endAngle,
+    super.endAngle,
 
     /// optionalParameters: {required List<Color> colors} , default:none
-    required List<_i5.Color> colors,
+    required super.colors,
 
     /// optionalParameters: {List<double>? stops} , default:none
-    List<double>? stops,
+    super.stops,
 
     /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
-    _i5.TileMode tileMode = _i5.TileMode.clamp,
+    super.tileMode,
 
     /// optionalParameters: {GradientTransform? transform} , default:none
-    _i1.GradientTransform? transform,
-  }) : super(
-          center: center,
-          startAngle: startAngle,
-          endAngle: endAngle,
-          colors: colors,
-          stops: stops,
-          tileMode: tileMode,
-          transform: transform,
-        ) {
+    super.transform,
+  })  : mateParams = {
+          'center': _i2.BuilderArg<_i3.AlignmentGeometry>(
+            name: 'center',
+            init: center,
+            isNamed: true,
+            defaultValue: _i4.Alignment.center,
+          ),
+          'startAngle': _i2.BuilderArg<double>(
+            name: 'startAngle',
+            init: startAngle,
+            isNamed: true,
+            defaultValue: 0.0,
+          ),
+          'endAngle': _i2.BuilderArg<double>(
+            name: 'endAngle',
+            init: endAngle,
+            isNamed: true,
+          ),
+          'colors': _i2.BuilderArg<List<_i5.Color>>(
+            name: 'colors',
+            init: colors,
+            isNamed: true,
+          ),
+          'stops': _i2.BuilderArg<List<double>?>(
+            name: 'stops',
+            init: stops,
+            isNamed: true,
+          ),
+          'tileMode': _i2.BuilderArg<_i5.TileMode>(
+            name: 'tileMode',
+            init: tileMode,
+            isNamed: true,
+            defaultValue: _i5.TileMode.clamp,
+          ),
+          'transform': _i2.BuilderArg<_i1.GradientTransform?>(
+            name: 'transform',
+            init: transform,
+            isNamed: true,
+          ),
+        },
+        super() {
     mateBuilderName = 'SweepGradient';
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SweepGradient$Mate(
@@ -241,43 +272,8 @@ class SweepGradient$Mate extends _i1.SweepGradient with _i2.Mate {
           tileMode: p.get('tileMode').build(),
           transform: p.get('transform').build(),
         );
-    mateUse(
-      'center',
-      center,
-      isNamed: true,
-      defaultValue: _i4.Alignment.center,
-    );
-    mateUse(
-      'startAngle',
-      startAngle,
-      isNamed: true,
-      defaultValue: 0.0,
-    );
-    mateUse(
-      'endAngle',
-      endAngle,
-      isNamed: true,
-    );
-    mateUse(
-      'colors',
-      colors,
-      isNamed: true,
-    );
-    mateUse(
-      'stops',
-      stops,
-      isNamed: true,
-    );
-    mateUse(
-      'tileMode',
-      tileMode,
-      isNamed: true,
-      defaultValue: _i5.TileMode.clamp,
-    );
-    mateUse(
-      'transform',
-      transform,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

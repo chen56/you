@@ -10,17 +10,22 @@ class HitTestEntry$Mate<T extends _i1.HitTestTarget> extends _i1.HitTestEntry<T>
   HitTestEntry$Mate(
 
       /// requiredParameters: T target
-      T target)
-      : super(target) {
+      super.target)
+      : mateParams = {
+          'target': _i2.BuilderArg<T>(
+            name: 'target',
+            init: target,
+            isNamed: false,
+          )
+        },
+        super() {
     mateBuilderName = 'HitTestEntry';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HitTestEntry$Mate<T>(p.get('target').value);
-    mateUse(
-      'target',
-      target,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
 
 /// class HitTestResult
@@ -29,15 +34,20 @@ class HitTestResult$Mate extends _i1.HitTestResult with _i2.Mate {
   HitTestResult$Mate.wrap(
 
       /// requiredParameters: HitTestResult result
-      _i1.HitTestResult result)
-      : super.wrap(result) {
+      super.result)
+      : mateParams = {
+          'result': _i2.BuilderArg<_i1.HitTestResult>(
+            name: 'result',
+            init: result,
+            isNamed: false,
+          )
+        },
+        super.wrap() {
     mateBuilderName = 'HitTestResult.wrap';
     matePackageUrl = 'package:flutter/gestures.dart';
     mateBuilder = (p) => HitTestResult$Mate.wrap(p.get('result').value);
-    mateUse(
-      'result',
-      result,
-      isNamed: false,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }

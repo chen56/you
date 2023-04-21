@@ -21,106 +21,209 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
   /// Switch Switch({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, MaterialTapTargetSize? materialTapTargetSize, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false})
   Switch$Mate({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required bool value} , default:none
-    required bool value,
+    required super.value,
 
     /// optionalParameters: {required void Function(bool)? onChanged} , default:none
-    required _i4.ValueChanged<bool>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? activeTrackColor} , default:none
-    _i5.Color? activeTrackColor,
+    super.activeTrackColor,
 
     /// optionalParameters: {Color? inactiveThumbColor} , default:none
-    _i5.Color? inactiveThumbColor,
+    super.inactiveThumbColor,
 
     /// optionalParameters: {Color? inactiveTrackColor} , default:none
-    _i5.Color? inactiveTrackColor,
+    super.inactiveTrackColor,
 
     /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , default:none
-    _i6.ImageProvider<Object>? activeThumbImage,
+    super.activeThumbImage,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , default:none
-    _i7.ImageErrorListener? onActiveThumbImageError,
+    super.onActiveThumbImageError,
 
     /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , default:none
-    _i6.ImageProvider<Object>? inactiveThumbImage,
+    super.inactiveThumbImage,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , default:none
-    _i7.ImageErrorListener? onInactiveThumbImageError,
+    super.onInactiveThumbImageError,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? trackColor,
+    super.trackColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? trackOutlineColor,
+    super.trackOutlineColor,
 
     /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , default:none
-    _i8.MaterialStateProperty<_i9.Icon?>? thumbIcon,
+    super.thumbIcon,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i10.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i11.DragStartBehavior dragStartBehavior = _i12.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i13.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i5.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i14.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i4.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
-  }) : super(
-          key: key,
-          value: value,
-          onChanged: onChanged,
-          activeColor: activeColor,
-          activeTrackColor: activeTrackColor,
-          inactiveThumbColor: inactiveThumbColor,
-          inactiveTrackColor: inactiveTrackColor,
-          activeThumbImage: activeThumbImage,
-          onActiveThumbImageError: onActiveThumbImageError,
-          inactiveThumbImage: inactiveThumbImage,
-          onInactiveThumbImageError: onInactiveThumbImageError,
-          thumbColor: thumbColor,
-          trackColor: trackColor,
-          trackOutlineColor: trackOutlineColor,
-          thumbIcon: thumbIcon,
-          materialTapTargetSize: materialTapTargetSize,
-          dragStartBehavior: dragStartBehavior,
-          mouseCursor: mouseCursor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          overlayColor: overlayColor,
-          splashRadius: splashRadius,
-          focusNode: focusNode,
-          onFocusChange: onFocusChange,
-          autofocus: autofocus,
-        ) {
+    super.autofocus,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<bool>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'activeTrackColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeTrackColor',
+            init: activeTrackColor,
+            isNamed: true,
+          ),
+          'inactiveThumbColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveThumbColor',
+            init: inactiveThumbColor,
+            isNamed: true,
+          ),
+          'inactiveTrackColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveTrackColor',
+            init: inactiveTrackColor,
+            isNamed: true,
+          ),
+          'activeThumbImage': _i2.BuilderArg<_i6.ImageProvider<Object>?>(
+            name: 'activeThumbImage',
+            init: activeThumbImage,
+            isNamed: true,
+          ),
+          'onActiveThumbImageError': _i2.BuilderArg<_i7.ImageErrorListener?>(
+            name: 'onActiveThumbImageError',
+            init: onActiveThumbImageError,
+            isNamed: true,
+          ),
+          'inactiveThumbImage': _i2.BuilderArg<_i6.ImageProvider<Object>?>(
+            name: 'inactiveThumbImage',
+            init: inactiveThumbImage,
+            isNamed: true,
+          ),
+          'onInactiveThumbImageError': _i2.BuilderArg<_i7.ImageErrorListener?>(
+            name: 'onInactiveThumbImageError',
+            init: onInactiveThumbImageError,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'trackColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'trackColor',
+            init: trackColor,
+            isNamed: true,
+          ),
+          'trackOutlineColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'trackOutlineColor',
+            init: trackOutlineColor,
+            isNamed: true,
+          ),
+          'thumbIcon': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.Icon?>?>(
+            name: 'thumbIcon',
+            init: thumbIcon,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i10.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i13.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+        },
+        super() {
     mateBuilderName = 'Switch';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Switch$Mate(
@@ -150,242 +253,222 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
           onFocusChange: p.get('onFocusChange').build(),
           autofocus: p.get('autofocus').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeTrackColor',
-      activeTrackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveThumbColor',
-      inactiveThumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveTrackColor',
-      inactiveTrackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeThumbImage',
-      activeThumbImage,
-      isNamed: true,
-    );
-    mateUse(
-      'onActiveThumbImageError',
-      onActiveThumbImageError,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveThumbImage',
-      inactiveThumbImage,
-      isNamed: true,
-    );
-    mateUse(
-      'onInactiveThumbImageError',
-      onInactiveThumbImageError,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackColor',
-      trackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackOutlineColor',
-      trackOutlineColor,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbIcon',
-      thumbIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i12.DragStartBehavior.start,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
   }
 
   /// Switch Switch.adaptive({Key? key, required bool value, required void Function(bool)? onChanged, Color? activeColor, Color? activeTrackColor, Color? inactiveThumbColor, Color? inactiveTrackColor, ImageProvider<Object>? activeThumbImage, void Function(Object, StackTrace?)? onActiveThumbImageError, ImageProvider<Object>? inactiveThumbImage, void Function(Object, StackTrace?)? onInactiveThumbImageError, MaterialTapTargetSize? materialTapTargetSize, MaterialStateProperty<Color?>? thumbColor, MaterialStateProperty<Color?>? trackColor, MaterialStateProperty<Color?>? trackOutlineColor, MaterialStateProperty<Icon?>? thumbIcon, DragStartBehavior dragStartBehavior = DragStartBehavior.start, MouseCursor? mouseCursor, Color? focusColor, Color? hoverColor, MaterialStateProperty<Color?>? overlayColor, double? splashRadius, FocusNode? focusNode, void Function(bool)? onFocusChange, bool autofocus = false, bool? applyCupertinoTheme})
   Switch$Mate.adaptive({
     /// optionalParameters: {Key? key} , default:none
-    _i3.Key? key,
+    super.key,
 
     /// optionalParameters: {required bool value} , default:none
-    required bool value,
+    required super.value,
 
     /// optionalParameters: {required void Function(bool)? onChanged} , default:none
-    required _i4.ValueChanged<bool>? onChanged,
+    required super.onChanged,
 
     /// optionalParameters: {Color? activeColor} , default:none
-    _i5.Color? activeColor,
+    super.activeColor,
 
     /// optionalParameters: {Color? activeTrackColor} , default:none
-    _i5.Color? activeTrackColor,
+    super.activeTrackColor,
 
     /// optionalParameters: {Color? inactiveThumbColor} , default:none
-    _i5.Color? inactiveThumbColor,
+    super.inactiveThumbColor,
 
     /// optionalParameters: {Color? inactiveTrackColor} , default:none
-    _i5.Color? inactiveTrackColor,
+    super.inactiveTrackColor,
 
     /// optionalParameters: {ImageProvider<Object>? activeThumbImage} , default:none
-    _i6.ImageProvider<Object>? activeThumbImage,
+    super.activeThumbImage,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onActiveThumbImageError} , default:none
-    _i7.ImageErrorListener? onActiveThumbImageError,
+    super.onActiveThumbImageError,
 
     /// optionalParameters: {ImageProvider<Object>? inactiveThumbImage} , default:none
-    _i6.ImageProvider<Object>? inactiveThumbImage,
+    super.inactiveThumbImage,
 
     /// optionalParameters: {void Function(Object, StackTrace?)? onInactiveThumbImageError} , default:none
-    _i7.ImageErrorListener? onInactiveThumbImageError,
+    super.onInactiveThumbImageError,
 
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
-    _i10.MaterialTapTargetSize? materialTapTargetSize,
+    super.materialTapTargetSize,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? thumbColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? thumbColor,
+    super.thumbColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? trackColor,
+    super.trackColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? trackOutlineColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? trackOutlineColor,
+    super.trackOutlineColor,
 
     /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , default:none
-    _i8.MaterialStateProperty<_i9.Icon?>? thumbIcon,
+    super.thumbIcon,
 
     /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
-    _i11.DragStartBehavior dragStartBehavior = _i12.DragStartBehavior.start,
+    super.dragStartBehavior,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
-    _i13.MouseCursor? mouseCursor,
+    super.mouseCursor,
 
     /// optionalParameters: {Color? focusColor} , default:none
-    _i5.Color? focusColor,
+    super.focusColor,
 
     /// optionalParameters: {Color? hoverColor} , default:none
-    _i5.Color? hoverColor,
+    super.hoverColor,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
-    _i8.MaterialStateProperty<_i5.Color?>? overlayColor,
+    super.overlayColor,
 
     /// optionalParameters: {double? splashRadius} , default:none
-    double? splashRadius,
+    super.splashRadius,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
-    _i14.FocusNode? focusNode,
+    super.focusNode,
 
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
-    _i4.ValueChanged<bool>? onFocusChange,
+    super.onFocusChange,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
-    bool autofocus = false,
+    super.autofocus,
 
     /// optionalParameters: {bool? applyCupertinoTheme} , default:none
-    bool? applyCupertinoTheme,
-  }) : super.adaptive(
-          key: key,
-          value: value,
-          onChanged: onChanged,
-          activeColor: activeColor,
-          activeTrackColor: activeTrackColor,
-          inactiveThumbColor: inactiveThumbColor,
-          inactiveTrackColor: inactiveTrackColor,
-          activeThumbImage: activeThumbImage,
-          onActiveThumbImageError: onActiveThumbImageError,
-          inactiveThumbImage: inactiveThumbImage,
-          onInactiveThumbImageError: onInactiveThumbImageError,
-          materialTapTargetSize: materialTapTargetSize,
-          thumbColor: thumbColor,
-          trackColor: trackColor,
-          trackOutlineColor: trackOutlineColor,
-          thumbIcon: thumbIcon,
-          dragStartBehavior: dragStartBehavior,
-          mouseCursor: mouseCursor,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          overlayColor: overlayColor,
-          splashRadius: splashRadius,
-          focusNode: focusNode,
-          onFocusChange: onFocusChange,
-          autofocus: autofocus,
-          applyCupertinoTheme: applyCupertinoTheme,
-        ) {
+    super.applyCupertinoTheme,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'value': _i2.BuilderArg<bool>(
+            name: 'value',
+            init: value,
+            isNamed: true,
+          ),
+          'onChanged': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onChanged',
+            init: onChanged,
+            isNamed: true,
+          ),
+          'activeColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeColor',
+            init: activeColor,
+            isNamed: true,
+          ),
+          'activeTrackColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'activeTrackColor',
+            init: activeTrackColor,
+            isNamed: true,
+          ),
+          'inactiveThumbColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveThumbColor',
+            init: inactiveThumbColor,
+            isNamed: true,
+          ),
+          'inactiveTrackColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'inactiveTrackColor',
+            init: inactiveTrackColor,
+            isNamed: true,
+          ),
+          'activeThumbImage': _i2.BuilderArg<_i6.ImageProvider<Object>?>(
+            name: 'activeThumbImage',
+            init: activeThumbImage,
+            isNamed: true,
+          ),
+          'onActiveThumbImageError': _i2.BuilderArg<_i7.ImageErrorListener?>(
+            name: 'onActiveThumbImageError',
+            init: onActiveThumbImageError,
+            isNamed: true,
+          ),
+          'inactiveThumbImage': _i2.BuilderArg<_i6.ImageProvider<Object>?>(
+            name: 'inactiveThumbImage',
+            init: inactiveThumbImage,
+            isNamed: true,
+          ),
+          'onInactiveThumbImageError': _i2.BuilderArg<_i7.ImageErrorListener?>(
+            name: 'onInactiveThumbImageError',
+            init: onInactiveThumbImageError,
+            isNamed: true,
+          ),
+          'materialTapTargetSize': _i2.BuilderArg<_i10.MaterialTapTargetSize?>(
+            name: 'materialTapTargetSize',
+            init: materialTapTargetSize,
+            isNamed: true,
+          ),
+          'thumbColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'thumbColor',
+            init: thumbColor,
+            isNamed: true,
+          ),
+          'trackColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'trackColor',
+            init: trackColor,
+            isNamed: true,
+          ),
+          'trackOutlineColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'trackOutlineColor',
+            init: trackOutlineColor,
+            isNamed: true,
+          ),
+          'thumbIcon': _i2.BuilderArg<_i8.MaterialStateProperty<_i9.Icon?>?>(
+            name: 'thumbIcon',
+            init: thumbIcon,
+            isNamed: true,
+          ),
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+            name: 'dragStartBehavior',
+            init: dragStartBehavior,
+            isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
+          ),
+          'mouseCursor': _i2.BuilderArg<_i13.MouseCursor?>(
+            name: 'mouseCursor',
+            init: mouseCursor,
+            isNamed: true,
+          ),
+          'focusColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'focusColor',
+            init: focusColor,
+            isNamed: true,
+          ),
+          'hoverColor': _i2.BuilderArg<_i5.Color?>(
+            name: 'hoverColor',
+            init: hoverColor,
+            isNamed: true,
+          ),
+          'overlayColor': _i2.BuilderArg<_i8.MaterialStateProperty<_i5.Color?>?>(
+            name: 'overlayColor',
+            init: overlayColor,
+            isNamed: true,
+          ),
+          'splashRadius': _i2.BuilderArg<double?>(
+            name: 'splashRadius',
+            init: splashRadius,
+            isNamed: true,
+          ),
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
+            name: 'focusNode',
+            init: focusNode,
+            isNamed: true,
+          ),
+          'onFocusChange': _i2.BuilderArg<_i4.ValueChanged<bool>?>(
+            name: 'onFocusChange',
+            init: onFocusChange,
+            isNamed: true,
+          ),
+          'autofocus': _i2.BuilderArg<bool>(
+            name: 'autofocus',
+            init: autofocus,
+            isNamed: true,
+            defaultValue: false,
+          ),
+          'applyCupertinoTheme': _i2.BuilderArg<bool?>(
+            name: 'applyCupertinoTheme',
+            init: applyCupertinoTheme,
+            isNamed: true,
+          ),
+        },
+        super.adaptive() {
     mateBuilderName = 'Switch.adaptive';
     matePackageUrl = 'package:flutter/material.dart';
     mateBuilder = (p) => Switch$Mate.adaptive(
@@ -416,137 +499,8 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
           autofocus: p.get('autofocus').build(),
           applyCupertinoTheme: p.get('applyCupertinoTheme').build(),
         );
-    mateUse(
-      'key',
-      key,
-      isNamed: true,
-    );
-    mateUse(
-      'value',
-      value,
-      isNamed: true,
-    );
-    mateUse(
-      'onChanged',
-      onChanged,
-      isNamed: true,
-    );
-    mateUse(
-      'activeColor',
-      activeColor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeTrackColor',
-      activeTrackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveThumbColor',
-      inactiveThumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveTrackColor',
-      inactiveTrackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'activeThumbImage',
-      activeThumbImage,
-      isNamed: true,
-    );
-    mateUse(
-      'onActiveThumbImageError',
-      onActiveThumbImageError,
-      isNamed: true,
-    );
-    mateUse(
-      'inactiveThumbImage',
-      inactiveThumbImage,
-      isNamed: true,
-    );
-    mateUse(
-      'onInactiveThumbImageError',
-      onInactiveThumbImageError,
-      isNamed: true,
-    );
-    mateUse(
-      'materialTapTargetSize',
-      materialTapTargetSize,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbColor',
-      thumbColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackColor',
-      trackColor,
-      isNamed: true,
-    );
-    mateUse(
-      'trackOutlineColor',
-      trackOutlineColor,
-      isNamed: true,
-    );
-    mateUse(
-      'thumbIcon',
-      thumbIcon,
-      isNamed: true,
-    );
-    mateUse(
-      'dragStartBehavior',
-      dragStartBehavior,
-      isNamed: true,
-      defaultValue: _i12.DragStartBehavior.start,
-    );
-    mateUse(
-      'mouseCursor',
-      mouseCursor,
-      isNamed: true,
-    );
-    mateUse(
-      'focusColor',
-      focusColor,
-      isNamed: true,
-    );
-    mateUse(
-      'hoverColor',
-      hoverColor,
-      isNamed: true,
-    );
-    mateUse(
-      'overlayColor',
-      overlayColor,
-      isNamed: true,
-    );
-    mateUse(
-      'splashRadius',
-      splashRadius,
-      isNamed: true,
-    );
-    mateUse(
-      'focusNode',
-      focusNode,
-      isNamed: true,
-    );
-    mateUse(
-      'onFocusChange',
-      onFocusChange,
-      isNamed: true,
-    );
-    mateUse(
-      'autofocus',
-      autofocus,
-      isNamed: true,
-      defaultValue: false,
-    );
-    mateUse(
-      'applyCupertinoTheme',
-      applyCupertinoTheme,
-      isNamed: true,
-    );
   }
+
+  @override
+  final Map<String, _i2.BuilderArg> mateParams;
 }
