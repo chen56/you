@@ -251,7 +251,8 @@ enable_experiment=""
   /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
   /run() {
     (
-      cd packages/note_app; run flutter run --web-renderer html --device-id chrome $enable_experiment "$@" ;
+      cd packages/note_app;
+      run flutter run --web-hostname 172.20.10.8 --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@" ;
     )
   }
 }

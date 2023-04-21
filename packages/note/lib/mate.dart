@@ -78,11 +78,6 @@ abstract class Param extends ChangeNotifier {
     return name;
   }
 
-  @override
-  String toString() {
-    return "$runtimeType:${init.runtimeType}:$path";
-  }
-
   bool get isLeaf => children.isEmpty;
 
   int get level => isRoot ? 0 : _parent!.level + 1;
@@ -136,9 +131,15 @@ abstract class Param extends ChangeNotifier {
     return getEditor().valueWidget(context);
   }
 
+  // todo editor 应该事先初始化好
   @nonVirtual
   Editor getEditor() {
     return builderArg.getEditor(this, editors);
+  }
+
+  @override
+  String toString() {
+    return "$runtimeType:${init.runtimeType}:$path";
   }
 }
 
@@ -534,21 +535,26 @@ abstract class Editor {
     if (param._parent is ListParam && param is ObjectParam) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [if (icon != null) icon, Text("${(param as ObjectParam).builderRefer.symbol}")],
+        children: [
+          if (icon != null) icon,
+          // Text加Expanded 防止溢出
+          Expanded(child: Text("${(param as ObjectParam).builderRefer.symbol}"))
+        ],
       );
     }
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [if (icon != null) icon, Text("${param.displayName}${param.isRoot ? '' : ': '} ")],
+      children: [
+        if (icon != null) icon,
+        // Text加Expanded 防止溢出
+        Expanded(child: Text("${param.displayName}${param.isRoot ? '' : ': '} "))
+      ],
     );
   }
 
   Param get param;
 
-  Widget valueWidget(BuildContext context) {
-    return const Text("");
-  }
-
+  Widget valueWidget(BuildContext context);
   code.Expression toCode();
 
   /// sub class should not override

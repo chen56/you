@@ -349,18 +349,19 @@ class _MateSampleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var paramAndCodeView = _ParamAndCodeView(
+      rootParam: rootParam,
+      editors: editors,
+      content: content,
+      title: title,
+    );
+
     return Card(
       elevation: 5,
       child: ListenableBuilder(
         listenable: rootParam,
         builder: (context, _) {
           var renderView = rootParam.build() as Widget;
-          var paramAndCodeView = _ParamAndCodeView(
-            rootParam: rootParam,
-            editors: editors,
-            content: content,
-            title: title,
-          );
           return Column(
             children: [
               paramAndCodeView,
@@ -388,30 +389,37 @@ class _ParamAndCodeView extends StatelessWidget {
     required this.content,
   });
 
-  Widget responsiveUI(BuildContext context, Widget paramView, Widget codeView) {
+  Widget responsiveUI({
+    required BuildContext context,
+    required Widget paramView,
+    required Widget codeView,
+  }) {
     WindowClass win = WindowClass.fromContext(context);
+
+    // screen large enough
     if (win == WindowClass.expanded) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (content.isShowParamEditor) Expanded(child: paramView),
           if (content.isShowCode) Expanded(child: codeView),
+          if (content.isShowParamEditor) Expanded(child: paramView),
         ],
       );
     }
+
+    // screen large not enough
     var codeViewFillWidth = LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return SizedBox(width: constraints.maxWidth, child: codeView);
       },
     );
-
     return Column(
       // mainAxisAlignment: MainAxisAlignment.start,
       // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (content.isShowParamEditor) paramView,
         if (content.isShowCode) codeViewFillWidth,
+        if (content.isShowParamEditor) paramView,
       ],
     );
   }
@@ -424,18 +432,17 @@ class _ParamAndCodeView extends StatelessWidget {
         child: param.nameWidget(context, editors),
       );
 
-      var row = TextButton(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Flexible(child: nameWidget),
-            Flexible(child: param.valueWidget(context, editors)),
-          ],
-        ),
-        onPressed: () {},
+      var row = Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(flex: 40, child: nameWidget),
+          // Flexible(child: param.valueWidget(context, editors)),
+          Expanded(flex: 60, child: param.valueWidget(context, editors)),
+        ],
       );
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
-      return Padding(
+      // ignore: unused_local_variable
+      var padding = Padding(
         // 缩进模仿树形
         padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
         child: Container(
@@ -444,8 +451,11 @@ class _ParamAndCodeView extends StatelessWidget {
           child: row,
         ),
       );
+
+      return padding;
     }
 
+    // codeView do not listen param changed, because we want keep Input widget
     var paramView = Column(
       children: [
         ...rootParam
@@ -454,22 +464,27 @@ class _ParamAndCodeView extends StatelessWidget {
             .map(paramRow)
       ],
     );
-    var codeView = HighlightView(
-      // The original code to be highlighted
-      rootParam.toSampleCodeString(snippet: false, format: true),
 
-      // Specify language
-      // It is recommended to give it a value for performance
-      language: 'dart',
+    // codeView listen param changed
+    var codeView = ListenableBuilder(
+      listenable: rootParam,
+      builder: (context, _) {
+        return HighlightView(
+          // The original code to be highlighted
+          rootParam.toSampleCodeString(snippet: false, format: true),
 
-      // Specify highlight theme
-      // All available themes are listed in `themes` folder
-      theme: vs2015Theme,
+          // Specify language
+          // It is recommended to give it a value for performance
+          language: 'dart',
 
-      // Specify padding
-      padding: const EdgeInsets.all(6),
+          // Specify highlight theme
+          // All available themes are listed in `themes` folder
+          theme: vs2015Theme,
 
-      // Specify text style
+          // Specify padding
+          padding: const EdgeInsets.all(6),
+        );
+      },
     );
     return ExpansionTile(
       initiallyExpanded: false,
@@ -477,7 +492,7 @@ class _ParamAndCodeView extends StatelessWidget {
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
       title: Row(children: [Text(title)]),
       children: [
-        responsiveUI(context, paramView, codeView),
+        responsiveUI(context: context, codeView: codeView, paramView: paramView),
       ],
     );
   }
@@ -511,7 +526,7 @@ class _NoteCellView extends StatelessWidget {
         content: e,
         rootParam: e.mate.toRootParam(editors: editors),
         editors: editors,
-        title: "展开代码",
+        title: "展开代码(手机上暂时无法编辑文本、数字参数)",
       );
     }
 

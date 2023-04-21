@@ -67,8 +67,8 @@ build(BuildContext context, Pen print) {
         children: <Widget>[
           ...List.generate(3, (index) {
             return Container$Mate(
-              width: 100,
-              height: 100,
+              width: 50,
+              height: 50,
               color: Colors.primaries[index + 5 % Colors.primaries.length],
             );
           })
