@@ -388,30 +388,37 @@ class _ParamAndCodeView extends StatelessWidget {
     required this.content,
   });
 
-  Widget responsiveUI(BuildContext context, Widget paramView, Widget codeView) {
+  Widget responsiveUI({
+    required BuildContext context,
+    required Widget paramView,
+    required Widget codeView,
+  }) {
     WindowClass win = WindowClass.fromContext(context);
+
+    // screen large enough
     if (win == WindowClass.expanded) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (content.isShowParamEditor) Expanded(child: paramView),
           if (content.isShowCode) Expanded(child: codeView),
+          if (content.isShowParamEditor) Expanded(child: paramView),
         ],
       );
     }
+
+    // screen large not enough
     var codeViewFillWidth = LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return SizedBox(width: constraints.maxWidth, child: codeView);
       },
     );
-
     return Column(
       // mainAxisAlignment: MainAxisAlignment.start,
       // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (content.isShowParamEditor) paramView,
         if (content.isShowCode) codeViewFillWidth,
+        if (content.isShowParamEditor) paramView,
       ],
     );
   }
@@ -424,18 +431,17 @@ class _ParamAndCodeView extends StatelessWidget {
         child: param.nameWidget(context, editors),
       );
 
-      var row = TextButton(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Flexible(child: nameWidget),
-            Flexible(child: param.valueWidget(context, editors)),
-          ],
-        ),
-        onPressed: () {},
+      var row = Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Flexible(child: nameWidget),
+          // Flexible(child: param.valueWidget(context, editors)),
+          Flexible(child: param.valueWidget(context, editors)),
+        ],
       );
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
-      return Padding(
+      // ignore: unused_local_variable
+      var padding = Padding(
         // 缩进模仿树形
         padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
         child: Container(
@@ -444,6 +450,8 @@ class _ParamAndCodeView extends StatelessWidget {
           child: row,
         ),
       );
+
+      return row;
     }
 
     var paramView = Column(
@@ -477,7 +485,7 @@ class _ParamAndCodeView extends StatelessWidget {
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
       title: Row(children: [Text(title)]),
       children: [
-        responsiveUI(context, paramView, codeView),
+        responsiveUI(context: context, codeView: codeView, paramView: paramView),
       ],
     );
   }

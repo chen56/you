@@ -695,8 +695,11 @@ class NoteCell extends ChangeNotifier {
 
 /// https://m3.material.io/foundations/layout/applying-layout/window-size-classes
 enum WindowClass {
+  // phone
   compact,
+  // pad
   medium,
+  // full screen pc
   expanded;
 
   factory WindowClass.fromContext(BuildContext context) {

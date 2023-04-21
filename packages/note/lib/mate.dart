@@ -78,11 +78,6 @@ abstract class Param extends ChangeNotifier {
     return name;
   }
 
-  @override
-  String toString() {
-    return "$runtimeType:${init.runtimeType}:$path";
-  }
-
   bool get isLeaf => children.isEmpty;
 
   int get level => isRoot ? 0 : _parent!.level + 1;
@@ -136,9 +131,15 @@ abstract class Param extends ChangeNotifier {
     return getEditor().valueWidget(context);
   }
 
+  // todo editor 应该事先初始化好
   @nonVirtual
   Editor getEditor() {
     return builderArg.getEditor(this, editors);
+  }
+
+  @override
+  String toString() {
+    return "$runtimeType:${init.runtimeType}:$path";
   }
 }
 
