@@ -526,7 +526,7 @@ class _NoteCellView extends StatelessWidget {
         content: e,
         rootParam: e.mate.toRootParam(editors: editors),
         editors: editors,
-        title: "展开代码",
+        title: "展开代码(手机上暂时无法编辑文本、数字参数)",
       );
     }
 

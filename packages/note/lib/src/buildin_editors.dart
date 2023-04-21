@@ -8,26 +8,28 @@ abstract class BaseValueInputEditor extends BaseValueEditor {
   BaseValueInputEditor(super.param, {required super.editors});
 
   @override
+  @nonVirtual
   Widget valueWidget(BuildContext context) {
     var platform = Theme.of(context).platform;
     bool isAndroid = platform == TargetPlatform.android;
     bool isIOS = platform == TargetPlatform.iOS;
     var isMobileBrowser = kIsWeb && (isAndroid || isIOS);
 
-    return TextFormField(
-      initialValue: "${param.init}",
-      autofocus: true,
-      decoration: InputDecoration(
-        hintText: isMobileBrowser ? "当前还不支持手机版浏览器编辑" : param.name,
-      ),
-      readOnly: isMobileBrowser,
-      onChanged: (value) {
-        var newValue = toParamValue(value);
-        if (newValue != null) {
-          param.value = newValue;
-        }
-      },
-    );
+    return isMobileBrowser
+        ? Text("${param.value}")
+        : TextFormField(
+            initialValue: "${param.init}",
+            autofocus: true,
+            decoration: InputDecoration(
+              hintText: param.name,
+            ),
+            onChanged: (value) {
+              var newValue = toParamValue(value);
+              if (newValue != null) {
+                param.value = newValue;
+              }
+            },
+          );
   }
 
   Object? toParamValue(String value);
