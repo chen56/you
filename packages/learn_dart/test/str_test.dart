@@ -24,13 +24,17 @@ void main() {
   });
 
   test('substring', () {
+    expect("".substring(0, 0), "");
+
     try {
       "abc".substring(1, 20);
       fail("not here");
     } catch (e) {
       expect(e, isA<RangeError>());
       expect(
-          e.toString(), equals("RangeError (end): Invalid value: Not in inclusive range 1..3: 20"));
+          e.toString(),
+          equals(
+              "RangeError (end): Invalid value: Not in inclusive range 1..3: 20"));
     }
   });
   group("length", () {

@@ -65,7 +65,6 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
     Pen pen = Pen.build(
       context,
       widget.current,
-      editors: widget.editors,
       defaultCodeExpand: widget.defaultCodeExpand,
     );
     return (
@@ -114,7 +113,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       ),
     );
     var appBar = AppBar(
-      title: Text(widget.current.title),
+      title: Text(widget.current.shortTitle),
       toolbarHeight: 36,
     );
 
@@ -212,7 +211,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       // children: [Flexible(child: Text("$icon ${node.title}"))],
       // 但是Flexible要上面套一个Flex的子类
       var link = TextButton(
-        onPressed: node.hasPage ? click : null,
+        onPressed: node.isNotEmpty ? click : null,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -221,7 +220,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
               child: Text(iconExtend),
             ),
             Text(icon),
-            Flexible(child: Text(node.title)),
+            Flexible(child: Text(node.shortTitle)),
           ],
         ),
       );
@@ -229,7 +228,8 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
       return Padding(
         // 缩进模仿树形
-        padding: EdgeInsets.only(left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
+        padding: EdgeInsets.only(
+            left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
         child: link,
       );
     }
@@ -281,14 +281,17 @@ class _OutlineView extends StatelessWidget {
   // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
   final ScrollController mainContentViewController;
 
-  const _OutlineView({required this.outline, required this.mainContentViewController});
+  const _OutlineView(
+      {required this.outline, required this.mainContentViewController});
 
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
     Widget headLink(OutlineNode node) {
       var link2 = TextButton(
-        style: ButtonStyle(padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
+        style: ButtonStyle(
+            padding:
+                MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -443,7 +446,8 @@ class _ParamAndCodeView extends StatelessWidget {
         // 缩进模仿树形
         padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
         child: Container(
-          decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
+          decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey))),
           height: 30,
           child: row,
         ),
@@ -489,7 +493,8 @@ class _ParamAndCodeView extends StatelessWidget {
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
       title: Row(children: [Text(title)]),
       children: [
-        responsiveUI(context: context, codeView: codeView, paramView: paramView),
+        responsiveUI(
+            context: context, codeView: codeView, paramView: paramView),
       ],
     );
   }
@@ -538,7 +543,7 @@ class _NoteCellView extends StatelessWidget {
   Widget build(BuildContext context) {
     var codeHighlightView = HighlightView(
       // The original code to be highlighted
-      cell.code,
+      cell.cellCode.code,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -566,15 +571,15 @@ class _NoteCellView extends StatelessWidget {
           //   size = Size(20, 20);
           // }
 
-          var barText = cell.isCodeEmpty
+          var barText = cell.cellCode.isCodeEmpty
               ? "  "
-              : cell.expand
+              : cell.codeExpand
                   ? "${cell.singleCharName}▽"
                   : "${cell.singleCharName}▷";
           var leftBar = Material(
             child: InkWell(
               onTap: () {
-                cell.expand = !cell.expand;
+                cell.codeExpand = !cell.codeExpand;
               },
               child: Container(
                 height: size.height,
@@ -590,7 +595,8 @@ class _NoteCellView extends StatelessWidget {
           // codeVeiw默认很窄，需扩展到占满所有宽度
           var codeViewFillWidth = LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
-              return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
+              return SizedBox(
+                  width: constraints.maxWidth, child: codeHighlightView);
             },
           );
 
@@ -602,7 +608,8 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.isCodeNotEmpty && cell.expand) codeViewFillWidth,
+                    if (cell.cellCode.isCodeNotEmpty && cell.codeExpand)
+                      codeViewFillWidth,
                     ...contentWidgets,
                     _cellSplitBlock,
                   ],
@@ -619,7 +626,9 @@ class _NoteCellView extends StatelessWidget {
         return GetSizeBuilder(builder: resizeBuilder);
       },
     );
-    return cell.contents.isEmpty && cell.isCodeEmpty ? Container() : cellView;
+    return cell.contents.isEmpty && cell.cellCode.isCodeEmpty
+        ? Container()
+        : cellView;
   }
 }
 
@@ -653,7 +662,8 @@ class SizeProvider extends StatefulWidget {
   final Widget child;
   final Function(Size) onChildSize;
 
-  const SizeProvider({Key? key, required this.onChildSize, required this.child}) : super(key: key);
+  const SizeProvider({Key? key, required this.onChildSize, required this.child})
+      : super(key: key);
   @override
   SizeProviderState createState() => SizeProviderState();
 }

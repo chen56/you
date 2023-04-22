@@ -130,9 +130,14 @@ class _Page {
       log(" ${lib.identifier} [build] func not found, so it is not a note");
       return (
         code: compilationUnit.content,
-        header: (offset: 0, end: unit.end, cellStatements: []),
-        body: [],
-        tail: (offset: 0, end: 0, cellStatements: [])
+        cells: [
+          (
+            cellType: CellType.header.name,
+            offset: 0,
+            end: unit.end,
+            cellStatements: []
+          )
+        ],
       );
     }
     var buildBody = findBuild.functionExpression.body;
@@ -158,6 +163,7 @@ class _Page {
         // The line [cellStatementType.line] was ignored
         body.add(
             (
+              cellType: CellType.body.name,
               offset: offset,
               end: st.offset,
               cellStatements: collectCellStatements
@@ -173,6 +179,7 @@ class _Page {
         // Submit previously collected statements first
         body.add(
             (
+              cellType: CellType.body.name,
               offset: offset,
               end: st.offset,
               cellStatements: collectCellStatements
@@ -181,7 +188,13 @@ class _Page {
         collectCellStatements = [];
 
         // The builder itself is a new cell
-        body.add((offset: st.offset, end: st.end, cellStatements: [st]));
+        body.add(
+            (
+              cellType: CellType.body.name,
+              offset: st.offset,
+              end: st.end,
+              cellStatements: [st]
+            ));
 
         // The starting point of the new cell is located below the line statement
         offset = st.end;
@@ -189,9 +202,28 @@ class _Page {
       }
       throw Exception("not here! statementType:$statementType  statement:$st");
     }
+
+    //如果page没有定义build函数，整个文件被认为是一个cell
+    // If Page does not define the build function, the entire file as one cell.
+    if (body.isEmpty) {
+      return (
+        code: compilationUnit.content,
+        cells: [
+          (
+            cellType: CellType.header.name,
+            offset: unit.offset,
+            end: unit.end,
+            cellStatements: []
+          )
+        ],
+      );
+    }
+
+    // body is not empty
     // Finally, add a cell as the end
     body.add(
         (
+          cellType: CellType.body.name,
           offset: offset,
           end: buildBodyBlock.rightBracket.offset,
           cellStatements: collectCellStatements
@@ -212,28 +244,32 @@ class _Page {
     return (
       code: compilationUnit.content,
       // from:build start file start to:build start 'build(context,print){'
-      header: (
-        offset: 0,
-        end: buildBodyBlock.leftBracket.end,
-        cellStatements: []
-      ),
-      body: body,
+      cells: [
+        (
+          cellType: CellType.header.name,
+          offset: 0,
+          end: buildBodyBlock.leftBracket.end,
+          cellStatements: []
+        ),
+        ...body,
+        (
+          cellType: CellType.tail.name,
+          offset: buildBodyBlock.rightBracket.offset,
+          end: unit.end,
+          cellStatements: []
+        )
+      ],
       // from:build end '}' to: file end
-      tail: (
-        offset: buildBodyBlock.rightBracket.offset,
-        end: unit.end,
-        cellStatements: []
-      )
     );
   }
 
   /// _cellStatementType.line :
   /// ```dart
-  ///    print.nextCell___________________________();
+  ///    print.$____________________________________________________________________();
   /// ```
   /// _cellStatementType.lineWithBuilder :
   /// ```dart
-  ///    print.nextCell___________________________((context,print){
+  ///    print.$____________________________________________________________________((context,print){
   ///        // code in cell
   ///    });
   /// ```
@@ -247,7 +283,7 @@ class _Page {
       return _cellStatementType.none;
     }
 
-    // print.nextCell___________________________()
+    // print.$____________________________________________________________________()
     if (expression.target?.staticType
             ?.getDisplayString(withNullability: true) !=
         "Pen") {
@@ -267,37 +303,35 @@ class _Page {
   }
 
   /*
-    import 'package:note/page_core.dart';
     // ignore: always_use_package_imports
     import 'page.dart';
 
-    final noteInfo = NoteInfo(
+    final noteInfo = (
       meta: page,
-      source: NoteSource(
-        header: CodeBlock(offset: 0, end: 20),
-        body: [
-          CodeBlock(offset: 100, end: 120),
-          CodeBlock(offset: 100, end: 120),
-        ],
-        tail: CodeBlock(offset: 100, end: 120),
-      ),
+      cells: [
+        ///
+        (cellType: 'header', offset: 0, end: 255, statementCount: 0),
+      ],
+      code:
+          ""
     );
   */
   void genPageInfoPackage(_NoteInfo source) {
     final encodedCode = base64.encode(utf8.encode(source.code));
 
-    source.body.map((e) => refer("CodeBlock").newInstance(
-          [],
-          {
-            "offset": code.literalNum(e.offset),
-            "end": code.literalNum(e.end),
-          },
-        ));
-    var body = source.body
-        .map((e) =>
-            """ /// ${e.cellStatements.map((e) => e.toString().replaceAll("\n", " ").safeSubstring(0, 30))}
-    CodeBlock(offset:${e.offset}, end:${e.end}, statementCount: ${e.cellStatements.length} ) """)
-        .join(",");
+    var cells = source.cells.map((e) {
+      var comment = e.cellStatements
+          .map((e) => e.toString().replaceAll("\n", " ").safeSubstring(0, 30));
+      return """
+             /// $comment
+             (
+               cellType:'${e.cellType}', 
+               offset:${e.offset}, 
+               end:${e.end}, 
+               statementCount: ${e.cellStatements.length},
+             ) 
+             """;
+    }).join(",");
     Library lib = Library((b) => b
       ..comments
           .addAll(["/// Generated by gen_maters.dart, please don't edit! "])
@@ -305,19 +339,15 @@ class _Page {
         code.Block((b) => b
           ..statements.addAll([
             Code('''
-    import 'package:note/page_core.dart';
-    // ignore: always_use_package_imports
-    import 'page.dart';
-
-    final noteInfo = NoteInfo(
-      meta: page,
-      source: NoteSource(
-        header: CodeBlock(offset:  ${source.header.offset}, end: ${source.header.end}, statementCount: ${source.header.cellStatements.length}),
-        body: [ $body ],
-        tail: CodeBlock(offset:  ${source.tail.offset}, end: ${source.tail.end}, statementCount: ${source.tail.cellStatements.length}),
-        code: """$encodedCode"""
-      ),
-    ); '''),
+                // ignore: always_use_package_imports
+                import 'page.dart';
+            
+                final noteInfo = (
+                  meta: page,
+                  cells: [ $cells ],
+                  code: "$encodedCode"
+                ); 
+                '''),
           ])),
       ));
 
@@ -337,16 +367,17 @@ class _Page {
   }
 }
 
+enum CellType { header, body, tail }
+
 typedef _CodeBlock = ({
+  String cellType,
   int offset,
   int end,
   List<Statement> cellStatements,
 });
 typedef _NoteInfo = ({
   String code,
-  _CodeBlock header,
-  List<_CodeBlock> body,
-  _CodeBlock tail,
+  List<_CodeBlock> cells,
 });
 
 /// 包名平整化：

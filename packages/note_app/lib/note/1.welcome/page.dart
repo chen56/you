@@ -8,6 +8,9 @@ PageMeta page = PageMeta(
 );
 
 build(BuildContext context, Pen print) {
+  print.cells.forEach((e) {
+    // print("${e.p}\n");
+  });
   print.markdown(r'''
 # flutter note项目
 

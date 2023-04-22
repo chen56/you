@@ -70,17 +70,22 @@ class BoolEditor extends BaseValueEditor {
 
   @override
   Widget valueWidget(BuildContext context) {
-    var yesNo = Switch(
-      // This bool value toggles the switch.
-      value: param.value,
-      activeColor: Colors.red,
-      onChanged: (bool value) {
-        param.value = value;
-      },
-    );
-    return Row(
-      children: [Text("${param.value}"), yesNo],
-    );
+    return ListenableBuilder(
+        listenable: param,
+        builder: (context, child) {
+          return Row(
+            children: [
+              Text("${param.value}"),
+              Switch(
+                value: param.value,
+                activeColor: Colors.red,
+                onChanged: (bool value) {
+                  param.value = value;
+                },
+              ),
+            ],
+          );
+        });
   }
 
   @override
@@ -105,7 +110,8 @@ class EnumEditor extends BaseValueEditor {
       onChanged: (Enum? value) {
         param.value = value;
       },
-      items: enums.map((e) => e as Enum).map<DropdownMenuItem<Enum>>((Enum value) {
+      items:
+          enums.map((e) => e as Enum).map<DropdownMenuItem<Enum>>((Enum value) {
         return DropdownMenuItem<Enum>(
           value: value,
           child: Text(value.name),
@@ -263,7 +269,8 @@ class _ColorRegister {
   code.Expression get(Color? o) {
     if (o == null) return code.literalNull;
     var result = colors[o];
-    return result ?? code.refer("'Color(0x${o.value.toRadixString(16).padLeft(8, '0')})';");
+    return result ??
+        code.refer("'Color(0x${o.value.toRadixString(16).padLeft(8, '0')})';");
   }
 }
 
@@ -292,7 +299,8 @@ class ObjectParamEditor extends Editor {
         .map((e) => e.value.toCodeExpression(editors: editors));
     var namedArguments = Map.fromEntries(filtered
         .where((e) => e.value.isNamed)
-        .map((e) => MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
+        .map((e) =>
+            MapEntry(e.key, e.value.toCodeExpression(editors: editors))));
     return param.builderRefer.call(positionalArguments, namedArguments);
   }
 
@@ -300,7 +308,9 @@ class ObjectParamEditor extends Editor {
   Widget valueWidget(BuildContext context) {
     if (param.isRoot) return const Text("");
 
-    return param.parent is ListParam ? const Text("") : Text("${param.builderRefer.symbol}");
+    return param.parent is ListParam
+        ? const Text("")
+        : Text("${param.builderRefer.symbol}");
   }
 }
 
@@ -312,7 +322,8 @@ class ListParamEditor extends Editor {
 
   @override
   code.Expression toCode() {
-    return code.literalList(param.children.map((e) => e.toCodeExpression(editors: editors)));
+    return code.literalList(
+        param.children.map((e) => e.toCodeExpression(editors: editors)));
   }
 
   @override
@@ -329,7 +340,8 @@ class SetParamEditor extends Editor {
 
   @override
   code.Expression toCode() {
-    return code.literalSet(param.children.map((e) => e.toCodeExpression(editors: editors)));
+    return code.literalSet(
+        param.children.map((e) => e.toCodeExpression(editors: editors)));
   }
 
   @override
@@ -341,7 +353,8 @@ class SetParamEditor extends Editor {
 class ManuallyValueEditor extends BaseValueEditor {
   code.Expression codeExpression;
 
-  ManuallyValueEditor(super.param, {required super.editors, required this.codeExpression});
+  ManuallyValueEditor(super.param,
+      {required super.editors, required this.codeExpression});
 
   @override
   code.Expression toCode() {
