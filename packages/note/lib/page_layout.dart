@@ -543,7 +543,7 @@ class _NoteCellView extends StatelessWidget {
   Widget build(BuildContext context) {
     var codeHighlightView = HighlightView(
       // The original code to be highlighted
-      cell.cellCode.code,
+      cell.code.sourceCode,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -563,7 +563,7 @@ class _NoteCellView extends StatelessWidget {
       listenable: cell,
       builder: (context, child) {
         Iterable<Widget> contentWidgets =
-            cell.build(context).map((e) => contentToWidget(context, e));
+            cell.contents.map((e) => contentToWidget(context, e));
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
         resizeBuilder(BuildContext context, Size size, Widget? child) {
@@ -571,11 +571,11 @@ class _NoteCellView extends StatelessWidget {
           //   size = Size(20, 20);
           // }
 
-          var barText = cell.cellCode.isCodeEmpty
+          var barText = cell.code.isCodeEmpty
               ? "  "
               : cell.codeExpand
-                  ? "${cell.singleCharName}▽"
-                  : "${cell.singleCharName}▷";
+                  ? "${cell.index}▽"
+                  : "${cell.index}▷";
           var leftBar = Material(
             child: InkWell(
               onTap: () {
@@ -608,7 +608,7 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.cellCode.isCodeNotEmpty && cell.codeExpand)
+                    if (cell.code.isCodeNotEmpty && cell.codeExpand)
                       codeViewFillWidth,
                     ...contentWidgets,
                     _cellSplitBlock,
@@ -626,7 +626,7 @@ class _NoteCellView extends StatelessWidget {
         return GetSizeBuilder(builder: resizeBuilder);
       },
     );
-    return cell.contents.isEmpty && cell.cellCode.isCodeEmpty
+    return cell.contents.isEmpty && cell.code.isCodeEmpty
         ? Container()
         : cellView;
   }

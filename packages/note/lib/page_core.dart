@@ -37,18 +37,21 @@ class PageMeta<T> {
   final PageBuilder builder;
   late final Layout? layout;
   final bool empty;
+
   PageMeta({
     required this.shortTitle,
     required this.builder,
     this.layout,
     this.empty = false,
   });
+
   PageMeta.empty({String shortTitle = ""})
       : this(
           empty: true,
           shortTitle: shortTitle,
           builder: (context, print) {},
         );
+
   @override
   String toString() {
     return "PageMeta($shortTitle)";
@@ -82,6 +85,7 @@ class Path<T> {
         parent = null;
 
   bool get isEmpty => _meta.empty;
+
   bool get isNotEmpty => !_meta.empty;
 
   List<Path> get children => List.unmodifiable(_children);
@@ -248,6 +252,7 @@ class Pen {
 
   final Path path;
   final bool defaultCodeExpand;
+
   // Pen({required this.editors});
   Pen.build(
     BuildContext context,
@@ -260,7 +265,6 @@ class Pen {
     List<NoteCell> cells = List.empty(growable: true);
     for (int i = 0; i < path._genPageInfo.cells.length; i++) {
       cells.add(NoteCell(
-        cellType: CellType.body,
         pen: this,
         index: i,
         pageInfo: path._genPageInfo,
@@ -468,17 +472,18 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
 }
 
 class PageCode {
-  late final String code;
+  late final String sourceCode;
+
   PageCode({required PageGenInfo pageInfo}) {
     var decoded = base64.decode(pageInfo.code);
-    code = utf8.decode(decoded);
+    sourceCode = utf8.decode(decoded);
   }
 
   String _getCode(CellCode cellCode) {
-    if (cellCode.end >= code.length) {
-      return "// ${cellCode.offset}:(${cellCode.end}) >= code.length(${code.length})  ";
+    if (cellCode.end > sourceCode.length) {
+      return "// ${cellCode.offset}:(${cellCode.end}) >= code.length(${sourceCode.length})  ";
     }
-    return code.substring(cellCode.offset, cellCode.end);
+    return sourceCode.substring(cellCode.offset, cellCode.end);
   }
 }
 
@@ -486,9 +491,12 @@ class CellCode {
   final int offset;
   final int end;
   final int index;
+  final CellType cellType;
+
   final int statementCount;
   final PageCode _pageCode;
   CellCode({
+    required this.cellType,
     required this.offset,
     required this.end,
     this.statementCount = 0,
@@ -496,12 +504,12 @@ class CellCode {
   })  : index = cell.index,
         _pageCode = cell.pen.path.pageCode;
 
-  String get code {
+  String get sourceCode {
     return _pageCode._getCode(this);
   }
 
   bool get isCodeEmpty {
-    return code.contains(RegExp(r'^\s*$'));
+    return sourceCode.contains(RegExp(r'^\s*$'));
   }
 
   bool get isCodeNotEmpty {
@@ -514,7 +522,18 @@ class CellCode {
   }
 }
 
-enum CellType { header, body, tail }
+enum CellType {
+  header,
+  body,
+  tail;
+
+  static CellType parse(String name) {
+    for (CellType t in CellType.values) {
+      if (t.name == name) return t;
+    }
+    throw Exception("CellType.name:$name not exist");
+  }
+}
 
 /// todo cell内函数太乱，待整理重构
 /// 一个cell代表note中的一个代码块及其产生的内容
@@ -525,56 +544,30 @@ class NoteCell extends ChangeNotifier {
   // index use to find code
   final int index;
   final Pen pen;
-  bool? _codeExpand;
-  final CellType cellType;
-  late final CellCode cellCode;
+  late final CellCode code;
+
   NoteCell({
     required this.pen,
     required this.index,
-    required this.cellType,
     required PageGenInfo pageInfo,
   }) {
     var codeCell = pageInfo.cells[index];
-    cellCode = CellCode(
+    code = CellCode(
       offset: codeCell.offset,
       end: codeCell.end,
       statementCount: codeCell.statementCount,
+      cellType: CellType.parse(codeCell.cellType),
       cell: this,
     );
   }
 
   List<NoteContent> get contents => List.unmodifiable(_contents);
 
-  // String get name {
-  //   if (cellType == CellType.header) {
-  //     return "cell[header]";
-  //   }
-  //   if (cellType == CellType.tail) {
-  //     return "cell[tail]";
-  //   }
-  //   return "cell[$index]";
-  // }
   get name {
     return "cell[$index]";
-    // return switch (cellType) {
-    //   CellType.header => "cell[header]",
-    //   CellType.tail => "cell[tail]",
-    //   CellType.body => "cell[$index]",
-    //   _ => "error:not here",
-    // };
   }
 
-  get singleCharName {
-    return "$index";
-    // return switch (cellType) {
-    //   CellType.header => "H",
-    //   CellType.tail => "T",
-    //   CellType.body => "$index",
-    //   _ => "error:not here",
-    // };
-  }
-
-  bool isEmpty() => contents.isEmpty;
+  bool isContentEmpty() => contents.isEmpty;
 
   void print(Object? object) {
     call(object);
@@ -588,7 +581,7 @@ class NoteCell extends ChangeNotifier {
     call(MarkdownContent(content));
   }
 
-  bool get isMarkdownCell {
+  bool get isAllMarkdownContent {
     if (_contents.isEmpty) return false;
     return _contents.every((e) => e is MarkdownContent);
   }
@@ -614,15 +607,16 @@ class NoteCell extends ChangeNotifier {
     notifyListeners();
   }
 
+  bool? _codeExpand;
   // show == expand
   bool get codeExpand {
-    if (cellCode.isCodeEmpty) return false;
+    if (code.isCodeEmpty) return false;
     //markdown cell default hidden code
     if (_codeExpand == null) {
-      return switch (cellType) {
+      return switch (code.cellType) {
         CellType.header => false,
         CellType.tail => false,
-        CellType.body => pen.defaultCodeExpand && !isMarkdownCell,
+        CellType.body => pen.defaultCodeExpand && !isAllMarkdownContent,
         _ => false,
       };
     }
@@ -634,12 +628,8 @@ class NoteCell extends ChangeNotifier {
     notifyListeners();
   }
 
-  List<NoteContent> build(BuildContext context) {
-    return List.unmodifiable(_contents);
-  }
-
   @override
   String toString() {
-    return "$name(hash:$hashCode, expend:$codeExpand,isMarkdownCell:$isMarkdownCell, isEmptyCode:$cellCode.isCodeEmpty contents-${contents.length}:$contents)";
+    return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$code.isCodeEmpty contents-${contents.length}:$contents)";
   }
 }
