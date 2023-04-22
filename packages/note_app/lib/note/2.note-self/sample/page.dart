@@ -31,29 +31,29 @@ build(BuildContext context, Pen print) {
 请您点击开下面范例小箭头，修改Container.height，观察范例展示及代码的变化：
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Container$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Container$Mate(
     height: 100,
     child: Text$Mate("请修改height,调节高度"),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown('''
 ### String参数
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Text$Mate("我是Text.data,修改我")));
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Text$Mate("我是Text.data,修改我")));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown('''
 ### Color参数
 
 TODO 暂时只能显示，还不能编辑
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Container$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Container$Mate(
     width: 200,
     height: 100,
     color: Colors.green.shade400,
@@ -68,28 +68,28 @@ TODO 暂时只能显示，还不能编辑
     ),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown('''
 ### bool参数
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Container$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Container$Mate(
     width: 100,
     // height: 100,
     color: Colors.blue.shade100,
     child: Text$Mate("修改Text.softWrap: 自动换行", softWrap: true),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ### 枚举参数 
 
 修改下mainAxisAlignment：
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Row$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Row$Mate(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
@@ -97,21 +97,23 @@ TODO 暂时只能显示，还不能编辑
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## 其他特性
 ### 用循环一次性构造一组范例
   ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   for (var mainAxisAlignment in MainAxisAlignment.values) {
-    print(SampleContent(Row$Mate(
+    print(MateSampleContent(Row$Mate(
       mainAxisAlignment: mainAxisAlignment,
       children: [
         ElevatedButton$Mate(
-            onPressed: () {}, child: Text$Mate("${mainAxisAlignment.name}:Button1")),
+            onPressed: () {},
+            child: Text$Mate("${mainAxisAlignment.name}:Button1")),
         ElevatedButton$Mate(
-            onPressed: () {}, child: Text$Mate("${mainAxisAlignment.name}:Button2")),
+            onPressed: () {},
+            child: Text$Mate("${mainAxisAlignment.name}:Button2")),
       ],
     )));
   }

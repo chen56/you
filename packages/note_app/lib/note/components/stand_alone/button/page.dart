@@ -10,7 +10,7 @@ PageMeta page = PageMeta(
 build(BuildContext context, Pen print) {
   int id = 0;
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 # button
 
@@ -24,42 +24,48 @@ the Material Design button types and how they should be used in designs.
 以下几种主要Button都继承自[ButtonStyleButton]
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Wrap$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Wrap$Mate(
     children: [
       ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
       FilledButton$Mate(onPressed: () {}, child: Text$Mate('FilledButton')),
-      FilledButton$Mate.tonal(onPressed: () {}, child: Text$Mate('FilledButton.tonal')),
+      FilledButton$Mate.tonal(
+          onPressed: () {}, child: Text$Mate('FilledButton.tonal')),
       OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
       TextButton$Mate(onPressed: () {}, child: Text$Mate('TextButton')),
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ### IconButton
 
 图标按钮。
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Row$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Row$Mate(
     children: [
-      IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.wifi)),
-      IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.add)),
-      IconButton$Mate(onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.ac_unit)),
+      IconButton$Mate(
+          onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.wifi)),
+      IconButton$Mate(
+          onPressed: () {}, tooltip: "IconButton", icon: Icon$Mate(Icons.add)),
+      IconButton$Mate(
+          onPressed: () {},
+          tooltip: "IconButton",
+          icon: Icon$Mate(Icons.ac_unit)),
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ### FloatingActionButton
 
 浮动按钮，常见于[Scaffold]右下角的浮动按钮。
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Row$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Row$Mate(
     children: [
       FloatingActionButton$Mate(
         onPressed: () {},
@@ -89,7 +95,7 @@ the Material Design button types and how they should be used in designs.
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ### 几个特殊的系统Button
 
@@ -102,8 +108,8 @@ the Material Design button types and how they should be used in designs.
     - [EndDrawerButton] A Material Design drawer icon button
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Row$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Row$Mate(
     children: [
       BackButton$Mate(),
       CloseButton$Mate(),
@@ -112,7 +118,7 @@ the Material Design button types and how they should be used in designs.
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 
 ### ToggleButtons
@@ -122,8 +128,8 @@ the Material Design button types and how they should be used in designs.
 > **📣提示**：此组件实现于Material 2，类似于Material 3的[SegmentedButton]。可用[SegmentedButton]替换之。
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Row$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Row$Mate(
     children: [
       ToggleButtons$Mate(
         onPressed: (int index) {},
@@ -137,7 +143,7 @@ the Material Design button types and how they should be used in designs.
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ### SegmentedButton
 
@@ -148,22 +154,28 @@ the Material Design button types and how they should be used in designs.
 <https://m3.material.io/components/segmented-buttons>
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Row$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Row$Mate(
     children: [
       SegmentedButton$Mate<String>(
         multiSelectionEnabled: true,
         segments: <ButtonSegment<String>>[
           ButtonSegment$Mate<String>(
-              value: "Day", label: Text$Mate('Day'), icon: Icon$Mate(Icons.calendar_view_day)),
+              value: "Day",
+              label: Text$Mate('Day'),
+              icon: Icon$Mate(Icons.calendar_view_day)),
           ButtonSegment$Mate<String>(
-              value: "Week", label: Text$Mate('Week'), icon: Icon$Mate(Icons.calendar_view_week)),
+              value: "Week",
+              label: Text$Mate('Week'),
+              icon: Icon$Mate(Icons.calendar_view_week)),
           ButtonSegment$Mate<String>(
               value: "Month",
               label: Text$Mate('Month'),
               icon: Icon$Mate(Icons.calendar_view_month)),
           ButtonSegment$Mate<String>(
-              value: "Year", label: Text$Mate('Year'), icon: Icon$Mate(Icons.calendar_today)),
+              value: "Year",
+              label: Text$Mate('Year'),
+              icon: Icon$Mate(Icons.calendar_today)),
         ],
         selected: <String>{"Month"},
         onSelectionChanged: (Set<String> newSelection) {},
@@ -171,7 +183,7 @@ the Material Design button types and how they should be used in designs.
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## 相关组件
 
@@ -195,7 +207,7 @@ GestureDetector(
   //   onTap: () {/**todo UI log，显示到控制台便于一般性的事件展示**/},
   // ));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ### Ink*组件
 
@@ -211,8 +223,8 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
 您在下面三种不同的文本上点点看区别：
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Column$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Column$Mate(
     children: [
       Text$Mate("1.普通Text"),
       InkWell$Mate(
@@ -226,23 +238,27 @@ InkWell/InkResponse = GestureDetector + Material风格的动态效果 。
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ### ButtonBar 
 
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，您把下面范例中父容器Container.width调小些看看：
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Container$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Container$Mate(
     width: 600,
     color: Colors.lime.shade50,
     child: ButtonBar$Mate(
       children: [
-        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton2")),
-        OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
+        ElevatedButton$Mate(
+            onPressed: () {}, child: Text$Mate("ElevatedButton2")),
+        OutlinedButton$Mate(
+            onPressed: () {}, child: Text$Mate('OutlinedButton')),
         CheckboxMenuButton$Mate(
-            value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
+            value: true,
+            onChanged: (bool? value) {},
+            child: Text$Mate('CheckboxMenuButton')),
       ],
     ),
   )));

@@ -9,5 +9,3 @@ insert_final_newline = false
 max_line_length = 80
 tab_width = 4
 
-[*.dart]
-max_line_length = 100

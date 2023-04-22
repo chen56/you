@@ -17,17 +17,21 @@ build(BuildContext context, Pen print) {
 
   ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print(
-    SampleContent(Container$Mate(
+    MateSampleContent(Container$Mate(
       width: 800,
       color: Colors.blueAccent.shade100,
       child: ButtonBar$Mate(
         children: [
-          ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
-          OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
+          ElevatedButton$Mate(
+              onPressed: () {}, child: Text$Mate("ElevatedButton")),
+          OutlinedButton$Mate(
+              onPressed: () {}, child: Text$Mate('OutlinedButton')),
           CheckboxMenuButton$Mate(
-              value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
+              value: true,
+              onChanged: (bool? value) {},
+              child: Text$Mate('CheckboxMenuButton')),
         ],
       ),
     )),

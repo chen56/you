@@ -58,7 +58,11 @@ class Path<T> {
   List<Path> get children => List.unmodifiable(_children);
 
   Path<C> put<C>(String fullPath, NoteInfo? noteInfo) {
-    var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
+    var p = fullPath
+        .split("/")
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty)
+        .toList();
     var path = _ensurePath(p);
     assert(path._meta == null,
         " $path add child '$fullPath': duplicate put , ${path._meta} already exists ");
@@ -73,7 +77,8 @@ class Path<T> {
       return this;
     }
     String name = nameList[0];
-    assert(name != "" && name != "/", "path:$nameList, path[0]:'$name' must not be '' and '/' ");
+    assert(name != "" && name != "/",
+        "path:$nameList, path[0]:'$name' must not be '' and '/' ");
     var next = _childrenMap.putIfAbsent(name, () {
       var child = Path._child(name, parent: this);
       _children.add(child);
@@ -140,7 +145,8 @@ class Path<T> {
 
   Path? child(String path) {
     Path? result = this;
-    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split
+        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._childrenMap[split];
       if (result == null) break;
     }
@@ -214,7 +220,6 @@ extension X on void {
 class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
-  // ignore: non_constant_identifier_names
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
@@ -246,7 +251,7 @@ class Pen {
     currentCell = blocks.isEmpty ? NoteCell.empty(this) : cells.first;
 
     // Skip the header code block
-    nextCell___________________________();
+    $____________________________________________________________________();
 
     path._meta!.builder(context, this);
   }
@@ -256,7 +261,7 @@ class Pen {
   ///
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
-  void nextCell___________________________() {
+  void $____________________________________________________________________() {
     int nextCellIndex = currentCell.index + 1;
     // It is already the last cell
     // It is possible that the code generation has not been synchronized
@@ -320,12 +325,12 @@ class WidgetContent extends NoteContent {
 }
 
 // {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
-class SampleContent extends NoteContent {
+class MateSampleContent extends NoteContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
 
-  SampleContent(
+  MateSampleContent(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
@@ -333,7 +338,7 @@ class SampleContent extends NoteContent {
 
   @override
   String toString() {
-    return "SampleNote('${mate.toString()}')";
+    return "MateSampleContent('${mate.toString()}')";
   }
 }
 
@@ -428,7 +433,8 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
         child: Center(
           child: Text(
             "WARN：当前Path上未配置任何Layout: ${current.path}",
-            style: theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.error),
+            style: theme.textTheme.titleLarge
+                ?.copyWith(color: theme.colorScheme.error),
           ),
         ),
       ),
@@ -608,7 +614,7 @@ class NoteCell extends ChangeNotifier {
       return;
     }
     if (object is Mate) {
-      _add(SampleContent(object));
+      _add(MateSampleContent(object));
       return;
     }
     if (object is Widget) {
@@ -632,7 +638,9 @@ class NoteCell extends ChangeNotifier {
     if (_contents.isNotEmpty && CodeBlock.Empty == codeBlock) {
       return "cell have content ,but code source is null, please gen page.g.dart";
     }
-    return path.noteInfo == null ? "" : path.noteInfo!.source.getCode(codeBlock);
+    return path.noteInfo == null
+        ? ""
+        : path.noteInfo!.source.getCode(codeBlock);
   }
 
   Path get path => pen.path;

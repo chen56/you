@@ -19,11 +19,13 @@ build(BuildContext context, Pen print) {
 
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Row$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Row$Mate(
     children: [
       CheckboxMenuButton$Mate(
-          value: true, onChanged: (bool? value) {}, child: Text$Mate('CheckboxMenuButton')),
+          value: true,
+          onChanged: (bool? value) {},
+          child: Text$Mate('CheckboxMenuButton')),
     ],
   )));
 }

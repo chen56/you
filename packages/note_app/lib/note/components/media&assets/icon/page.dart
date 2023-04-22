@@ -11,7 +11,8 @@ PageMeta page = PageMeta(
 
 Set<String> iconExts = {"sharp", "rounded", "outlined"};
 IconRegister materialIconRegister = mate_icons.registerIcon();
-Map<String, IconData> icons = materialIconRegister.icons.map((key, value) => MapEntry(value, key));
+Map<String, IconData> icons =
+    materialIconRegister.icons.map((key, value) => MapEntry(value, key));
 List<String> mainIconNames = icons.keys
     .where((name) => iconExts.every((iconExt) => !name.endsWith(iconExt)))
     .toList()
@@ -27,7 +28,7 @@ build(BuildContext context, Pen print) {
 
   ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   // ignore: constant_identifier_names
   const access_time__icons = {
     "access_time",
@@ -36,7 +37,7 @@ build(BuildContext context, Pen print) {
     "access_time_filled"
   };
   for (var name in access_time__icons) {
-    print(SampleContent(Row$Mate(
+    print(MateSampleContent(Row$Mate(
       children: [
         Icon$Mate(
           icons[name],
@@ -48,7 +49,7 @@ build(BuildContext context, Pen print) {
     )));
   }
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown('''
 ## 图标浏览
 
@@ -62,7 +63,7 @@ package:flutter/material/icons.dart 图标库，共图标 ${icons.length}个，�
 按此规律，共有 ${mainIconNames.length}组， 不符合此规律的图标暂未收录.
   ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   ValueNotifier<Set<String>> currentSelect = ValueNotifier({""});
   print(ValueListenableBuilder(
       valueListenable: currentSelect,
@@ -102,7 +103,8 @@ package:flutter/material/icons.dart 图标库，共图标 ${icons.length}个，�
         var selectedResult = Wrap(
           children: [
             ...mainIconNames
-                .expand((mainName) => currentSelect.value.map((suffix) => "$mainName$suffix"))
+                .expand((mainName) =>
+                    currentSelect.value.map((suffix) => "$mainName$suffix"))
                 .where((name) => icons.containsKey(name))
                 .map((name) {
               assert(icons.containsKey(name), "icon $name should be exists");

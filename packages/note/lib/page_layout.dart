@@ -334,7 +334,7 @@ class _MateSampleWidget extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final SampleContent content;
+  final MateSampleContent content;
   const _MateSampleWidget({
     // ignore: unused_element
     super.key,
@@ -375,7 +375,7 @@ class _ParamAndCodeView extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final SampleContent content;
+  final MateSampleContent content;
 
   const _ParamAndCodeView({
     // ignore: unused_element
@@ -518,7 +518,7 @@ class _NoteCellView extends StatelessWidget {
     if (e is WidgetContent) {
       return e.widget;
     }
-    if (e is SampleContent) {
+    if (e is MateSampleContent) {
       return _MateSampleWidget(
         content: e,
         rootParam: e.mate.toRootParam(editors: editors),

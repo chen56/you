@@ -19,8 +19,8 @@ build(BuildContext context, Pen print) {
   - [IconButton] 
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Wrap$Mate(children: [
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Wrap$Mate(children: [
     // IconButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton")),
   ])));
 }

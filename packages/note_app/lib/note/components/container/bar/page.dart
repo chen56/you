@@ -18,13 +18,14 @@ build(BuildContext context, Pen print) {
 > ref: <https://api.flutter.dev/flutter/material/AppBar-class.html>
 ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(AppBar$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(AppBar$Mate(
     title: Text$Mate('AppBar Title'),
     leading: DrawerButton$Mate(),
     actions: <flutter.Widget>[
       IconButton$Mate(icon: Icon$Mate(flutter.Icons.add), onPressed: () {}),
-      IconButton$Mate(icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
+      IconButton$Mate(
+          icon: Icon$Mate(flutter.Icons.access_alarm), onPressed: () {}),
       CheckboxMenuButton$Mate(
         value: true,
         onChanged: (b) {},
@@ -35,7 +36,7 @@ build(BuildContext context, Pen print) {
     notificationPredicate: flutter.defaultScrollNotificationPredicate,
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## BottomAppBar
 
@@ -46,8 +47,8 @@ build(BuildContext context, Pen print) {
 ''');
   //
 
-  print.nextCell___________________________();
-  print(SampleContent(BottomAppBar$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(BottomAppBar$Mate(
     // shape: CircularNotchedRectangle(),
     child: Row$Mate(
       children: <flutter.Widget>[
@@ -71,7 +72,7 @@ build(BuildContext context, Pen print) {
     ),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
   
 ## ~~BottomNavigationBar~~
@@ -90,8 +91,8 @@ build(BuildContext context, Pen print) {
 先看看不加逻辑时NavigationBar的长相：
 ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Column$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Column$Mate(
     children: [
       Container$Mate(
         height: 100,
@@ -102,19 +103,21 @@ build(BuildContext context, Pen print) {
         onDestinationSelected: (int index) {},
         selectedIndex: 1,
         destinations: <flutter.Widget>[
-          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
-          NavigationDestination$Mate(icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
+          NavigationDestination$Mate(
+              icon: Icon$Mate(flutter.Icons.explore), label: 'Explore'),
+          NavigationDestination$Mate(
+              icon: Icon$Mate(flutter.Icons.commute), label: 'Commute'),
         ],
       )
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSelected]的事件，就能在不同页面切换，如下：
 ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   var currentPageIndex = 0;
 
   flutter.Widget buildNavigationBar(context, setState) {
@@ -132,10 +135,12 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
           selectedIndex: currentPageIndex,
           destinations: const <flutter.Widget>[
             flutter.NavigationDestination(
-                icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.lime),
+                icon: flutter.Icon(flutter.Icons.explore,
+                    color: flutter.Colors.lime),
                 label: 'lime page'),
             flutter.NavigationDestination(
-                icon: flutter.Icon(flutter.Icons.explore, color: flutter.Colors.purple),
+                icon: flutter.Icon(flutter.Icons.explore,
+                    color: flutter.Colors.purple),
                 label: 'purple page'),
           ],
         )
@@ -143,11 +148,11 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     );
   }
 
-  print(SampleContent(StatefulBuilder$Mate(
+  print(MateSampleContent(StatefulBuilder$Mate(
     builder: buildNavigationBar,
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## NavigationRail
 
@@ -159,7 +164,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
 > a BottomNavigationBar should be used instead.
 ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   var navigationRail$Mate = NavigationRail$Mate(
     // minWidth: 10,
     minExtendedWidth: 50,
@@ -182,11 +187,12 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
       NavigationRailDestination$Mate(
           icon: Icon$Mate(flutter.Icons.sanitizer), label: Text$Mate('First')),
       NavigationRailDestination$Mate(
-          icon: Icon$Mate(flutter.Icons.accessible), label: Text$Mate('Second')),
+          icon: Icon$Mate(flutter.Icons.accessible),
+          label: Text$Mate('Second')),
     ],
   );
 
-  print(SampleContent(Row$Mate(
+  print(MateSampleContent(Row$Mate(
     children: [
       Container$Mate(
         height: 300,
@@ -201,7 +207,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ],
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## TabBar
 
@@ -220,8 +226,8 @@ TabController主要是为了协调Tab和TabView的切换关系。
 TabBar不加TabView长这样：
 ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(DefaultTabController$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(DefaultTabController$Mate(
     length: 3,
     child: TabBar$Mate(
       tabs: <flutter.Widget>[
@@ -241,13 +247,13 @@ TabBar不加TabView长这样：
     ),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 再来看看加了TabView的完整体，即TabBar实际使用模式：
 ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(DefaultTabController$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(DefaultTabController$Mate(
     initialIndex: 1,
     length: 3,
     child: Column$Mate(
@@ -282,7 +288,7 @@ TabBar不加TabView长这样：
     ),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown("""
 上面用法和[NavigationBar]很像，主要就是在多个页面间切换，好处在，连事件逻辑都不需要，组件树如下结构即可：
 
@@ -300,7 +306,7 @@ DefaultTabController
   ## SnackBar
 """);
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   onPressed() {
     flutter.ScaffoldMessenger.of(context).showSnackBar(
       flutter.SnackBar(
@@ -308,9 +314,11 @@ DefaultTabController
         content: flutter.Column(
           children: [
             const flutter.Text("Show Snackbar 6 seconds"),
-            flutter.IconButton(icon: const flutter.Icon(flutter.Icons.add), onPressed: () {}),
             flutter.IconButton(
-                icon: const flutter.Icon(flutter.Icons.access_alarm), onPressed: () {}),
+                icon: const flutter.Icon(flutter.Icons.add), onPressed: () {}),
+            flutter.IconButton(
+                icon: const flutter.Icon(flutter.Icons.access_alarm),
+                onPressed: () {}),
           ],
         ),
         action: flutter.SnackBarAction(
@@ -322,7 +330,7 @@ DefaultTabController
     );
   }
 
-  print(SampleContent(SizedBox$Mate(
+  print(MateSampleContent(SizedBox$Mate(
     height: 100,
     child: flutter.FilledButton(
       onPressed: onPressed,
@@ -330,7 +338,7 @@ DefaultTabController
     ),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## ButtonBar 
 
@@ -341,19 +349,21 @@ DefaultTabController
 按钮的布局容器，可以按内容的实际宽度在行或列之间调整，其横向还是纵向排列，取决于其宽度：
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Container$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Container$Mate(
     width: 600,
     color: flutter.Colors.lime.shade50,
     child: ButtonBar$Mate(
       children: [
-        ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("ElevatedButton2")),
-        OutlinedButton$Mate(onPressed: () {}, child: Text$Mate('OutlinedButton')),
+        ElevatedButton$Mate(
+            onPressed: () {}, child: Text$Mate("ElevatedButton2")),
+        OutlinedButton$Mate(
+            onPressed: () {}, child: Text$Mate('OutlinedButton')),
       ],
     ),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## OverflowBar
 
@@ -362,8 +372,8 @@ DefaultTabController
 OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出)，横着排，不够（溢出），就竖着排，修改下面最外层Container.width看看：
   ''');
 
-  print.nextCell___________________________();
-  print(SampleContent(Container$Mate(
+  print.$____________________________________________________________________();
+  print(MateSampleContent(Container$Mate(
     width: 300,
     child: Column$Mate(
       children: [
@@ -385,15 +395,17 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
           // 超出时 裁剪方式
           // 子组件
           children: [
-            ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Cancel横排还是竖排取决于width")),
-            ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Ok对齐方式取决于排列")),
+            ElevatedButton$Mate(
+                onPressed: () {}, child: Text$Mate("Cancel横排还是竖排取决于width")),
+            ElevatedButton$Mate(
+                onPressed: () {}, child: Text$Mate("Ok对齐方式取决于排列")),
           ],
         )
       ],
     ),
   )));
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   print.markdown(r'''
 ## PlatformMenuBar
 
@@ -412,7 +424,7 @@ MenuBar相关组件：
 - MenuItemButton, a leaf menu item which displays the label, an optional shortcut label, and optional leading and trailing icons.
   ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   var click = () {
     flutter.showAboutDialog(
       context: context,
@@ -420,7 +432,7 @@ MenuBar相关组件：
       applicationVersion: '1.0.0',
     );
   };
-  print(SampleContent(MenuBar$Mate(
+  print(MateSampleContent(MenuBar$Mate(
     children: [
       MenuItemButton$Mate(
         onPressed: () {},

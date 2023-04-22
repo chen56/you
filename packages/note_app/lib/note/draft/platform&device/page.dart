@@ -18,7 +18,7 @@ build(BuildContext context, Pen print) {
 ## 平台参数 
   ''');
 
-  print.nextCell___________________________();
+  print.$____________________________________________________________________();
   ThemeData theme = Theme.of(context);
   MediaQueryData mediaQuery = MediaQuery.of(context);
   print.markdown('''

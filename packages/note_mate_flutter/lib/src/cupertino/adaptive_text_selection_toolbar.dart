@@ -13,8 +13,7 @@ import 'package:flutter/src/widgets/editable_text.dart' as _i9;
 import 'package:flutter/src/rendering/selection.dart' as _i10;
 
 /// class CupertinoAdaptiveTextSelectionToolbar extends StatelessWidget
-class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTextSelectionToolbar
-    with _i2.Mate {
+class CupertinoAdaptiveTextSelectionToolbar$Mate extends _i1.CupertinoAdaptiveTextSelectionToolbar with _i2.Mate {
   /// CupertinoAdaptiveTextSelectionToolbar CupertinoAdaptiveTextSelectionToolbar({Key? key, required List<Widget>? children, required TextSelectionToolbarAnchors anchors})
   CupertinoAdaptiveTextSelectionToolbar$Mate({
     /// optionalParameters: {Key? key} , default:none
