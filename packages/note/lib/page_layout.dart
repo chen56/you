@@ -7,6 +7,8 @@ import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
+import 'sys.dart';
+
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
@@ -53,8 +55,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
     });
   }
 
-  ({List<Widget> cells, Widget header, Widget tail, Outline outline}) buildNote(
-      BuildContext context) {
+  ({List<Widget> cells, Outline outline}) buildNote(BuildContext context) {
     _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
@@ -68,9 +69,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       defaultCodeExpand: widget.defaultCodeExpand,
     );
     return (
-      header: newCellView(pen.header),
       cells: pen.cells.map((cell) => newCellView(cell)).toList(),
-      tail: newCellView(pen.tail),
       outline: outline,
     );
   }
@@ -108,9 +107,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       controller: controllerV,
       child: ListBody(
         children: [
-          noteResult.header,
           ...noteResult.cells,
-          noteResult.tail,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],

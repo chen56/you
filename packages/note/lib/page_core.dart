@@ -1,7 +1,10 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/foundation.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
+import 'package:note/utils.dart';
 import 'dart:convert';
 
 typedef PageBuilder = void Function(BuildContext context, Pen pen);
@@ -181,25 +184,33 @@ class Path<T> {
 ///
 /// - flutter_note 的cell在界面上是只读的
 /// - cell是我们对dart文件的一种视角
-/// - cell 分两种，
-///   - 一种是代码中用[cell]函数明确指定的cell，是可以单独运行的。（[Pen]级别的方法包括markdown()等都是cell函数）
-///   - 另一种是自然cell，即非明确指定的，夹在cell函数之间的代码段，要重新运行这种cell，相当于重新运行整个build函数
-/// 自然cell在build函数的最外层，可以用来放置公共变量、函数。
 ///
-/// - implicit cell
-/// - explicit cell
+/// 一个dart文件被识别为以下cells
+/// ================================= cell[0] header code block
+/// import 'package:some/package.dart';
+///
+/// class X{}
+/// var x = "some var";
+///
+/// build(context,print){
+/// ================================= cell[1] code block
+///   do something
+///   print.$_______________________;   // new cell directive
+/// ================================= cell[2] code block
+///   do something
+/// ================================= cell[3] tail code block
+/// } // end of build()
+/// class Y{}
+/// var y = "some var";
 ///
 ///
-// build(){
-//   // this line belongs to implicit cell: cell-0
-//   pen.cell((context,pen){
-//     // this block is explicit： cell-1
-//   });
-//   // this block is implicit cell: cell-2
-//   pen.markdown("this line is explicit cell： cell-3");
-//   // this line is implicit cell: cell-4
-// }
-///
+
+extension X on void {
+  xxx() {
+    print("xxx vlid");
+  }
+}
+
 class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
@@ -208,7 +219,7 @@ class Pen {
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
   final List<NoteCell> cells = List.empty(growable: true);
-
+  late NoteCell currentCell;
   final Editors editors;
 
   final Path path;
@@ -220,47 +231,24 @@ class Pen {
     required this.editors,
     required this.defaultCodeExpand,
   }) {
-    // firstCell
-    _nextCell();
-    if (path._meta == null) return;
+    var blocks = path.noteInfo!.source.blocks;
+    int index = 0;
+    for (var block in blocks) {
+      cells.add(NoteCell(
+        cellType: CellType.body,
+        pen: this,
+        index: index++,
+        codeBlock: block,
+      ));
+    }
+
+    // first cell is dart head code , All code before the build() function
+    currentCell = blocks.isEmpty ? NoteCell.empty(this) : cells.first;
+
+    // Skip the header code block
+    nextCell___________________________();
 
     path._meta!.builder(context, this);
-  }
-
-  NoteCell get header => NoteCell(
-        cellType: CellType.header,
-        index: 0,
-        codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.header,
-        pen: this,
-      );
-
-  NoteCell get tail => NoteCell(
-        cellType: CellType.tail,
-        index: 0,
-        codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.tail,
-        pen: this,
-      );
-
-  /// markdown 独占一个新cell
-  void markdown(String content) {
-    currentCell.print(MarkdownContent(content));
-  }
-
-  /// 新增一个自然cell
-  /// add a nature cell
-  ///
-  /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
-  /// The meaning of natural cell is the code block between [Pen. cell] function blocks
-  NoteCell _nextCell() {
-    int cellIndex = cells.length;
-    var next = NoteCell(
-      cellType: CellType.body,
-      pen: this,
-      index: cellIndex,
-      codeBlock: NoteSource.getBodyCellBlock(path, cellIndex),
-    );
-    cells.add(next);
-    return next;
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
@@ -269,8 +257,19 @@ class Pen {
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
   void nextCell___________________________() {
-    // add a normal cell
-    _nextCell();
+    int nextCellIndex = currentCell.index + 1;
+    // It is already the last cell
+    // It is possible that the code generation has not been synchronized
+    if (nextCellIndex >= cells.length) {
+      return;
+    }
+
+    currentCell = cells[nextCellIndex];
+  }
+
+  /// markdown 独占一个新cell
+  void markdown(String content) {
+    currentCell.print(MarkdownContent(content));
   }
 
   void call(Object? object) {
@@ -282,8 +281,6 @@ class Pen {
   void runInCurrentCell(void Function(NoteCell print) callback) {
     callback(currentCell);
   }
-
-  NoteCell get currentCell => cells.last;
 }
 
 /// note content is not widget , it is data.
@@ -293,6 +290,11 @@ class MarkdownContent extends NoteContent {
   final String content;
 
   MarkdownContent(this.content);
+
+  @override
+  String toString() {
+    return "MarkdownContent('${content.replaceAll("\n", "\\n").safeSubstring(0, 50)}')";
+  }
 }
 
 class ObjectContent extends NoteContent {
@@ -478,33 +480,21 @@ class NoteSource {
     }
   }
 
-  String get headerCode {
-    return code.substring(header.offset, header.end);
+  List<CodeBlock> get blocks {
+    return [header, ...body, tail];
   }
 
-  String get tailCode {
-    return code.substring(tail.offset, tail.end);
-  }
-
+  /// todo change to blocks[index]
   static CodeBlock getBodyCellBlock(Path path, int cellIndex) {
     if (path.noteInfo == null) return CodeBlock.Empty;
-    if (cellIndex >= path.noteInfo!.source.body.length) {
+    if (cellIndex >= path.noteInfo!.source.blocks.length) {
       return CodeBlock.Empty;
     }
-    return path.noteInfo!.source.body[cellIndex];
+    return path.noteInfo!.source.blocks[cellIndex];
   }
 
   String getCode(CodeBlock codeBlock) {
     return code.substring(codeBlock.offset, codeBlock.end);
-  }
-
-  String getMainCellCode(int index) {
-    if (index >= body.length) {
-      // not sync
-      return "cell code not sync, please gen page.g.dart";
-    }
-    var c = body[index];
-    return code.substring(c.offset, c.end);
   }
 }
 
@@ -554,6 +544,13 @@ class NoteCell extends ChangeNotifier {
     required this.index,
     required this.cellType,
   });
+  NoteCell.empty(Pen pen)
+      : this(
+          codeBlock: CodeBlock.Empty,
+          pen: pen,
+          index: 0,
+          cellType: CellType.body,
+        );
 
   List<NoteContent> get contents => List.unmodifiable(_contents);
 
@@ -566,19 +563,25 @@ class NoteCell extends ChangeNotifier {
   //   }
   //   return "cell[$index]";
   // }
-  get name => switch (cellType) {
-        CellType.header => "cell[header]",
-        CellType.tail => "cell[tail]",
-        CellType.body => "cell[$index]",
-        _ => "error:not here",
-      };
+  get name {
+    return "cell[$index]";
+    // return switch (cellType) {
+    //   CellType.header => "cell[header]",
+    //   CellType.tail => "cell[tail]",
+    //   CellType.body => "cell[$index]",
+    //   _ => "error:not here",
+    // };
+  }
 
-  get singleCharName => switch (cellType) {
-        CellType.header => "H",
-        CellType.tail => "T",
-        CellType.body => "$index",
-        _ => "error:not here",
-      };
+  get singleCharName {
+    return "$index";
+    // return switch (cellType) {
+    //   CellType.header => "H",
+    //   CellType.tail => "T",
+    //   CellType.body => "$index",
+    //   _ => "error:not here",
+    // };
+  }
 
   bool isEmpty() => contents.isEmpty;
 
@@ -673,22 +676,5 @@ class NoteCell extends ChangeNotifier {
   @override
   String toString() {
     return "$name(hash:$hashCode, expend:$expand,isMarkdownCell:$isMarkdownCell, isEmptyCode:$isCodeEmpty contents-${contents.length}:$contents)";
-  }
-}
-
-/// https://m3.material.io/foundations/layout/applying-layout/window-size-classes
-enum WindowClass {
-  // phone
-  compact,
-  // pad
-  medium,
-  // full screen pc
-  expanded;
-
-  factory WindowClass.fromContext(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    if (width >= 1400) return WindowClass.expanded;
-    if (width >= 900) return WindowClass.medium;
-    return WindowClass.compact;
   }
 }
