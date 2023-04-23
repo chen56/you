@@ -14,8 +14,8 @@ final noteInfo = (
       offset: 0,
       end: 232,
       statementCount: 0,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
@@ -27,8 +27,8 @@ final noteInfo = (
       offset: 232,
       end: 1381,
       statementCount: 1,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
@@ -40,13 +40,13 @@ final noteInfo = (
       offset: 1381,
       end: 1383,
       statementCount: 0,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
     )
   ],
-  code:
+  encodedCode:
       "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9wYWdlX2NvcmUuZGFydCc7CgpQYWdlTWV0YSBwYWdlID0gUGFnZU1ldGEoCiAgc2hvcnRUaXRsZTogIndlYiBvcHRpbWl6YXRpb24iLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyB3ZWIg5LyY5YyWIAoKIyMgd2Vi5Yqg6L295LyY5YyWCgojIyMg5Y+C6ICDCgojIyMjIEZsb3JpYW5GbGF0c2NoZXIKCkZsb3JpYW5GbGF0c2NoZXIgY29tbWVudGVkIG9uIEZlYiAxMyAyMDIzCjxodHRwczovL2dpdGh1Yi5jb20vZmx1dHRlci9mbHV0dGVyL2lzc3Vlcy80NjU4OSNpc3N1ZWNvbW1lbnQtMTQyNzEzODA3Nj4KCj4gU3RhcnRlZCB3aXRoIH40TUIgbWFpbi5kYXJ0LmpzCj4gRGlzY292ZXJlZCB0aGF0IGh0dHBzOi8vcHViLmRldi9wYWNrYWdlcy9zeW5jZnVzaW9uX2ZsdXR0ZXJfcGRmdmlld2VyIGNvbnRyaWJ1dGVzIGEgbG90LCB1c2luZyB0aGUgbW9iaWxlIGJ1bmRsZSBhbmFseXNpcy4KPiBCeSBsb2FkaW5nIHRoZSBQREYgdmlldyBkZWZlcnJlZCBJIGRlY3JlYXNlZCBteSBtYWluLmRhcnQuanMgYnkgbW9yZSB0aGFuIDFNQiDwn5iLCj4gVXNlZCBkZWZlcnJlZCBsb2FkaW5nIGZvciBvdGhlciByb3V0ZXMgYXMgd2VsbCA9PiBvbmx5IG1pbm9yIGltcHJvdmVtZW50Cj4gSSBhZG9idGVkIHRoZSBpbmRleC5odG1sIGZyb20gZmx1dHRlciBnYWxsZXJ5OiBodHRwczovL2dpdGh1Yi5jb20vZmx1dHRlci9nYWxsZXJ5L2Jsb2IvbWFpbi93ZWIvaW5kZXguaHRtbCAobWFkZSB0aGUgbG9hZGluZyBhbmltYXRpb24gbXVjaCBtb3JlIGVuam95YWJsZSkKPiBBZGRlZCBjb21wcmVzc2lvbiB0byBteSBOR0lOWCBwcm94eS4gTm93IG15IG1haW4uZGFydC5qcyBmaWxlIGlzIG9ubHkgfjAuOE1CIPCfmLUKCgojIyMjIGRlZmVyIGhvdyB0bwoKb25haHdpbGxpYW1zIGNvbW1lbnRlZCBvbiBGZWIgNiwgMjAyMAo8aHR0cHM6Ly9naXRodWIuY29tL2ZsdXR0ZXIvZmx1dHRlci9pc3N1ZXMvNTAxOTYjaXNzdWVjb21tZW50LTU4MjUwMzQ4OT4KCmBgYGRhcnQKaW1wb3J0ICdteXdpZGdldC5kYXJ0JyBkZWZlcnJlZCBhcyBmb28KCmZpbmFsIEZ1dHVyZTx2b2lkPiBsb2FkZWRMaWJyYXJ5ID0gZm9vLmxvYWRMaWJyYXJ5KCk7CgpXaWRnZXQgYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQpIHsKICByZXR1cm4gRnV0dXJlQnVpbGRlcihmdXR1cmU6IGxvYWRlZExpYnJhcnksIChzbmFwc2hvdCwgY29udGV4dCkgeyByZXR1cm4gZm9vLk15V2lkZ2V0KCk7IH0pOwp9CmBgYAoKCiMjIFNFTwoKdG8gZG8KCiAgJycnKTsKfQo="
 );

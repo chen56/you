@@ -16,16 +16,16 @@ typedef PageGenInfo = ({
         int offset,
         List<
             ({
-              String blockType,
+              String nodeType,
               int end,
               int offset,
-            })> specialBlocks,
+            })> specialNodes,
         int statementCount
       })> cells,
-  String code,
+  String encodedCode,
   PageMeta meta
 });
-// List<({String blockType, int end, int offset})> specialBlocks
+// List<({String blockType, int end, int offset})> specialNodes
 
 PageGenInfo _emptyPageGenInfo = (
   cells: [
@@ -34,10 +34,10 @@ PageGenInfo _emptyPageGenInfo = (
       offset: 0,
       end: 0,
       statementCount: 0,
-      specialBlocks: [],
+      specialNodes: [],
     )
   ],
-  code: "",
+  encodedCode: "",
   meta: PageMeta.empty(),
 );
 PageSource _emptyPageSource = PageSource(pageGenInfo: _emptyPageGenInfo);
@@ -377,10 +377,14 @@ class MateSample extends NoteContent {
   final bool isShowCode;
   final bool isShowParamEditor;
 
+  /// if true , we will return : cell code + mate gen code
+  /// and we will erase MateSample call statement and Pen.runInCurrentCell statement
+  final bool isUseCellCodeAsTemplate;
   MateSample(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
+    this.isUseCellCodeAsTemplate = true,
   });
 
   @override
@@ -496,48 +500,51 @@ class PageSource {
   late final String code;
   final PageGenInfo _pageGenInfo;
   PageSource({required PageGenInfo pageGenInfo}) : _pageGenInfo = pageGenInfo {
-    var decoded = base64.decode(pageGenInfo.code);
+    var decoded = base64.decode(pageGenInfo.encodedCode);
     code = utf8.decode(decoded);
   }
 
-  String _getCellCode(SourceBlock block) {
-    if (block.end > code.length) {
-      return "// ${block.offset}:(${block.end}) >= code.length(${code.length})  ";
+  String _getCellCode(CodeEntity codeEntity) {
+    if (codeEntity.end > code.length) {
+      return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${code.length})  ";
     }
-    return code.safeSubstring(block.offset, block.end);
+    return code.safeSubstring(codeEntity.offset, codeEntity.end);
   }
 }
 
-class SourceBlock {
+/// CodeEntity is same as analyzer [SyntacticEntity]
+class CodeEntity {
   final int offset;
   final int end;
-  SourceBlock({required this.offset, required this.end});
+  CodeEntity({required this.offset, required this.end});
+
+  int get length => end - offset;
 
   @override
   String toString() {
-    return "SourceBlock(offset:$offset, end:$end)";
+    return "CodeEntity(offset:$offset, end:$end, length:$length )";
   }
 }
 
 class CellSource {
   final int index;
   final CellType cellType;
-  final SourceBlock block;
+  final CodeEntity codeEntity;
   final int statementCount;
   final PageSource _pageSource;
-  List<SpecialBlockSource> specialBlockSources;
+  List<SpecialSource> specialSources;
 
   CellSource({
     required this.cellType,
-    required this.block,
-    required this.specialBlockSources,
+    required this.codeEntity,
+    required this.specialSources,
     required this.statementCount,
     required NoteCell cell,
   })  : index = cell.index,
         _pageSource = cell.pen.path._source {}
 
   String get code {
-    return _pageSource._getCellCode(block);
+    return _pageSource._getCellCode(codeEntity);
   }
 
   bool get isCodeEmpty {
@@ -550,23 +557,23 @@ class CellSource {
 
   @override
   String toString() {
-    return "CellCode(index:$index, block:$block, statementCount:$statementCount )";
+    return "CellSource(index:$index, block:$codeEntity, statementCount:$statementCount )";
   }
 }
 
-class SpecialBlockSource {
-  String blockType;
-  final SourceBlock block;
+class SpecialSource {
+  String codeType;
+  final CodeEntity codeEntity;
   final NoteCell cell;
   final PageSource pageSource;
-  SpecialBlockSource({
-    required this.blockType,
-    required this.block,
+  SpecialSource({
+    required this.codeType,
+    required this.codeEntity,
     required this.cell,
   }) : pageSource = cell.pen.path.source;
 
   String get code {
-    return pageSource._getCellCode(block);
+    return pageSource._getCellCode(codeEntity);
   }
 }
 
@@ -601,14 +608,15 @@ class NoteCell extends ChangeNotifier {
   }) {
     var codeCell = pageSource._pageGenInfo.cells[index];
     source = CellSource(
-      block: SourceBlock(offset: codeCell.offset, end: codeCell.end),
+      codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
       statementCount: codeCell.statementCount,
       cellType: CellType.parse(codeCell.cellType),
       cell: this,
-      specialBlockSources: codeCell.specialBlocks
-          .map((e) => SpecialBlockSource(
-                blockType: e.blockType,
-                block: SourceBlock(offset: codeCell.offset, end: codeCell.end),
+      specialSources: codeCell.specialNodes
+          .map((e) => SpecialSource(
+                codeType: e.nodeType,
+                codeEntity:
+                    CodeEntity(offset: codeCell.offset, end: codeCell.end),
                 cell: this,
               ))
           .toList(),

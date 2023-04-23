@@ -12,10 +12,10 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 424,
+      end: 194,
       statementCount: 0,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
@@ -24,23 +24,23 @@ final noteInfo = (
     /// (var i = 1;, print.runInCurrentCell((print), {void x() {print.runInCurrentC)
     (
       cellType: 'body',
-      offset: 424,
-      end: 614,
+      offset: 194,
+      end: 384,
       statementCount: 3,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[
         (
-          blockType: 'Pen.runInCurrentCell',
-          offset: 440,
-          end: 492,
+          nodeType: 'Pen.runInCurrentCell',
+          offset: 210,
+          end: 262,
         ),
         (
-          blockType: 'Pen.runInCurrentCell',
-          offset: 533,
-          end: 593,
+          nodeType: 'Pen.runInCurrentCell',
+          offset: 303,
+          end: 363,
         )
       ],
     ),
@@ -48,16 +48,16 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 614,
-      end: 616,
+      offset: 384,
+      end: 386,
       statementCount: 0,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
     )
   ],
-  code:
-      "aW1wb3J0ICdkYXJ0OmlvJzsKCmltcG9ydCAncGFja2FnZTphbmFseXplci9kYXJ0L2FuYWx5c2lzL2ZlYXR1cmVzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci9mb3VuZGF0aW9uLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci9tYXRlcmlhbC5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6YW5hbHl6ZXIvZGFydC9hbmFseXNpcy91dGlsaXRpZXMuZGFydCcgYXMgYW5hbHl6ZXJfdXRpbDsKaW1wb3J0ICdwYWNrYWdlOnBhdGgvcGF0aC5kYXJ0JyBhcyBwYXRoOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJ0ZW1wIHBhZ2UiLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHZhciBpID0gMTsKICBwcmludC5ydW5JbkN1cnJlbnRDZWxsKChwcmludCkgewogICAgcHJpbnQoaSk7CiAgfSk7CgogIHsKICAgIHZvaWQgeCgpIHsKICAgICAgLy8g54m55q6K6K+t5Y+lCiAgICAgIHByaW50LnJ1bkluQ3VycmVudENlbGwoKHByaW50KSB7CiAgICAgICAgcHJpbnQoaSk7CiAgICAgIH0pOwogICAgfQoKICAgIHgoKTsKICB9Cn0K"
+  encodedCode:
+      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAidGVtcCBwYWdlIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICB2YXIgaSA9IDE7CiAgcHJpbnQucnVuSW5DdXJyZW50Q2VsbCgocHJpbnQpIHsKICAgIHByaW50KGkpOwogIH0pOwoKICB7CiAgICB2b2lkIHgoKSB7CiAgICAgIC8vIOeJueauiuivreWPpQogICAgICBwcmludC5ydW5JbkN1cnJlbnRDZWxsKChwcmludCkgewogICAgICAgIHByaW50KGkpOwogICAgICB9KTsKICAgIH0KCiAgICB4KCk7CiAgfQp9Cg=="
 );

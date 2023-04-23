@@ -14,8 +14,8 @@ final noteInfo = (
       offset: 0,
       end: 191,
       statementCount: 0,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
@@ -27,8 +27,8 @@ final noteInfo = (
       offset: 191,
       end: 455,
       statementCount: 2,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
@@ -40,13 +40,13 @@ final noteInfo = (
       offset: 455,
       end: 457,
       statementCount: 0,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
     )
   ],
-  code:
+  encodedCode:
       "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJkZWJ1Z+ebuOWFsyIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIyDojIPkvosxIOaZrumAmuaWh+acrCAKCnByaW50KFdpZGdldEluc3BlY3RvclNlcnZpY2UuaW5zdGFuY2UuZ2V0Um9vdFdpZGdldFN1bW1hcnlUcmVlKCJncm91cE5hbWUiKSk7CgrmiZPljbDnu4Tku7bmoJEKCnByaW50KFdpZGdldHNCaW5kaW5nLmluc3RhbmNlLnJlbmRlclZpZXdFbGVtZW50Py50b0RpYWdub3N0aWNzTm9kZSgpLnRvU3RyaW5nRGVlcCgpKTsKCgogICcnJyk7CgogIHByaW50Lm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDmma7pgJrmlofmnKwgCgogICcnJyk7Cn0K"
 );

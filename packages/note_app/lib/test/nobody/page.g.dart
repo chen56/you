@@ -14,13 +14,13 @@ final noteInfo = (
       offset: 0,
       end: 129,
       statementCount: 0,
-      specialBlocks: <({
-        String blockType,
+      specialNodes: <({
+        String nodeType,
         int end,
         int offset,
       })>[],
     )
   ],
-  code:
+  encodedCode:
       "aW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJ0ZXN0LeaXoGJ1aWxkIiwKICBidWlsZGVyOiAoY29udGV4dCwgcHJpbnQpIHt9LAopOwo="
 );

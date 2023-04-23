@@ -125,7 +125,7 @@ class _Page {
 
     String fileContent = compilationUnit.content;
 
-    if (fullPath.contains("test/temp/page.dart")) {
+    if (fullPath.contains("stand_alone/button/page.dart")) {
       log("debug use $fullPath");
     }
     var findBuild = buildFunction;
@@ -139,7 +139,7 @@ class _Page {
             offset: 0,
             end: unit.end,
             cellStatements: [],
-            runInCellStatements: [],
+            specialNodes: [],
           )
         ],
       );
@@ -172,7 +172,7 @@ class _Page {
               offset: offset,
               end: st.offset,
               cellStatements: cellStatements,
-              runInCellStatements: collectRunInCellStatements(cellStatements),
+              specialNodes: collectRunInCellStatements(cellStatements),
             ));
         //reset collect
         cellStatements = [];
@@ -192,7 +192,7 @@ class _Page {
           offset: offset,
           end: buildBodyBlock.rightBracket.offset,
           cellStatements: cellStatements,
-          runInCellStatements: collectRunInCellStatements(cellStatements),
+          specialNodes: collectRunInCellStatements(cellStatements),
         ));
 
     //  build(BuildContext context, Pen pen, MainCell print){
@@ -215,7 +215,7 @@ class _Page {
           offset: 0,
           end: buildBodyBlock.leftBracket.end,
           cellStatements: [],
-          runInCellStatements: [],
+          specialNodes: [],
         ),
         ...body,
         (
@@ -223,7 +223,7 @@ class _Page {
           offset: buildBodyBlock.rightBracket.offset,
           end: unit.end,
           cellStatements: [],
-          runInCellStatements: [],
+          specialNodes: [],
         )
       ],
     );
@@ -279,11 +279,11 @@ class _Page {
       var comment = e.cellStatements
           .map((e) => e.toString().replaceAll("\n", " ").safeSubstring(0, 30));
 
-      var specialBlocks = e.runInCellStatements.map((e) => """
+      var specialNodes = e.specialNodes.map((e) => """
             (
-            blockType: 'Pen.runInCurrentCell',
-            offset: ${e.offset},
-            end: ${e.end},
+            nodeType: '${e.nodeType}',
+            offset: ${e.node.offset},
+            end: ${e.node.end},
             )
           """).join(",");
       return """
@@ -293,11 +293,11 @@ class _Page {
                offset:${e.offset}, 
                end:${e.end}, 
                statementCount: ${e.cellStatements.length},
-               specialBlocks: <({
-                                  String blockType,
+               specialNodes: <({
+                                  String nodeType,
                                   int end,
                                   int offset,
-                               })>[ $specialBlocks ] ,
+                               })>[ $specialNodes ] ,
              ) 
              """;
     }).join(",");
@@ -316,7 +316,7 @@ class _Page {
                   /// it is use to register page meta info
                   meta: page,
                   cells: [ $cells ],
-                  code: "$encodedCode"
+                  encodedCode: "$encodedCode"
                 ); 
                 '''),
           ])),
@@ -337,12 +337,20 @@ class _Page {
     writeFS.file(toFile).writeAsStringSync(fmt.format(writeContent));
   }
 
-  List<Statement> collectRunInCellStatements(List<Statement> cellStatements) {
-    FindRunInCell findRunInCell = FindRunInCell();
-    for (var e in cellStatements) {
-      e.visitChildren(findRunInCell);
+  List<({String nodeType, AstNode node})> collectRunInCellStatements(
+      List<Statement> topLevelCellStatements) {
+    List<({String nodeType, AstNode node})> collected =
+        List.empty(growable: true);
+    List<AstVisitor> collectors = [
+      FindRunInCell(collected),
+      FindMateSampleStatement(collected)
+    ];
+    for (var st in topLevelCellStatements) {
+      for (AstVisitor collector in collectors) {
+        st.visitChildren(collector);
+      }
     }
-    return findRunInCell.runInCellStatements;
+    return collected;
   }
 }
 
@@ -353,7 +361,11 @@ typedef _CellInfo = ({
   int offset,
   int end,
   List<Statement> cellStatements,
-  List<Statement> runInCellStatements,
+  List<
+      ({
+        String nodeType,
+        AstNode node,
+      })> specialNodes,
 });
 typedef _PageInfo = ({
   String code,
@@ -407,18 +419,44 @@ enum _CellStatementType {
   normal,
 }
 
+Statement findFirstParentStatement(AstNode node) {
+  if (node is Statement) return node;
+  return findFirstParentStatement(node.parent!);
+}
+
 class FindRunInCell extends GeneralizingAstVisitor {
-  List<Statement> runInCellStatements = List.empty(growable: true);
+  static const String nodeType = "Pen.runInCurrentCell";
+  final List<
+      ({
+        String nodeType,
+        AstNode node,
+      })> collect;
+
+  FindRunInCell(this.collect);
 
   @override
   visitMethodInvocation(MethodInvocation node) {
     var targetType =
         node.target?.staticType?.getDisplayString(withNullability: false);
     if (targetType == "Pen" && node.methodName.name == "runInCurrentCell") {
-      if (node.parent is Statement) {
-        runInCellStatements.add(node.parent as Statement);
-      }
+      collect.add((nodeType: nodeType, node: findFirstParentStatement(node)));
     }
     return super.visitMethodInvocation(node);
+  }
+}
+
+class FindMateSampleStatement extends GeneralizingAstVisitor {
+  static const String nodeType = "MateSample.new.firstParentStatement";
+
+  final List<({String nodeType, AstNode node})> collect;
+
+  FindMateSampleStatement(this.collect);
+
+  @override
+  visitInstanceCreationExpression(InstanceCreationExpression node) {
+    if ("${node.constructorName.type.name}" == "MateSample") {
+      collect.add((nodeType: nodeType, node: findFirstParentStatement(node)));
+    }
+    return super.visitInstanceCreationExpression(node);
   }
 }
