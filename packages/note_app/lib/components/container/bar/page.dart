@@ -19,7 +19,7 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(AppBar$Mate(
+  print(MateSample(AppBar$Mate(
     title: Text$Mate('AppBar Title'),
     leading: DrawerButton$Mate(),
     actions: <flutter.Widget>[
@@ -48,7 +48,7 @@ build(BuildContext context, Pen print) {
   //
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(BottomAppBar$Mate(
+  print(MateSample(BottomAppBar$Mate(
     // shape: CircularNotchedRectangle(),
     child: Row$Mate(
       children: <flutter.Widget>[
@@ -92,7 +92,7 @@ build(BuildContext context, Pen print) {
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Column$Mate(
+  print(MateSample(Column$Mate(
     children: [
       Container$Mate(
         height: 100,
@@ -148,7 +148,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     );
   }
 
-  print(MateSampleContent(StatefulBuilder$Mate(
+  print(MateSample(StatefulBuilder$Mate(
     builder: buildNavigationBar,
   )));
 
@@ -192,7 +192,7 @@ NavigationBar 的主要用途类似TabBar，加上[NavigationBar.onDestinationSe
     ],
   );
 
-  print(MateSampleContent(Row$Mate(
+  print(MateSample(Row$Mate(
     children: [
       Container$Mate(
         height: 300,
@@ -227,7 +227,7 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(DefaultTabController$Mate(
+  print(MateSample(DefaultTabController$Mate(
     length: 3,
     child: TabBar$Mate(
       tabs: <flutter.Widget>[
@@ -253,7 +253,7 @@ TabBar不加TabView长这样：
 ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(DefaultTabController$Mate(
+  print(MateSample(DefaultTabController$Mate(
     initialIndex: 1,
     length: 3,
     child: Column$Mate(
@@ -330,7 +330,7 @@ DefaultTabController
     );
   }
 
-  print(MateSampleContent(SizedBox$Mate(
+  print(MateSample(SizedBox$Mate(
     height: 100,
     child: flutter.FilledButton(
       onPressed: onPressed,
@@ -350,7 +350,7 @@ DefaultTabController
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
+  print(MateSample(Container$Mate(
     width: 600,
     color: flutter.Colors.lime.shade50,
     child: ButtonBar$Mate(
@@ -373,7 +373,7 @@ OverflowBar常用场景是Dialog的按钮组容器，children宽度够(未溢出
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Container$Mate(
+  print(MateSample(Container$Mate(
     width: 300,
     child: Column$Mate(
       children: [
@@ -432,7 +432,7 @@ MenuBar相关组件：
       applicationVersion: '1.0.0',
     );
   };
-  print(MateSampleContent(MenuBar$Mate(
+  print(MateSample(MenuBar$Mate(
     children: [
       MenuItemButton$Mate(
         onPressed: () {},

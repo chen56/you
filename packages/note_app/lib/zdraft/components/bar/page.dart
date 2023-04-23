@@ -19,7 +19,7 @@ build(BuildContext context, Pen print) {
 
   print.$____________________________________________________________________();
   print(
-    MateSampleContent(Container$Mate(
+    MateSample(Container$Mate(
       width: 800,
       color: Colors.blueAccent.shade100,
       child: ButtonBar$Mate(

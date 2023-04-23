@@ -134,7 +134,7 @@ sample的代码是独立运行的flutter使用范例代码，实际的其他范�
 
   print.$____________________________________________________________________();
   // 形式1：
-  print(MateSampleContent(
+  print(MateSample(
       Container$Mate(width: 100, height: 100, color: Colors.deepPurple)));
   // 形式2：简化形式，Mate类型的Widget通通认为是范例
   print(Container$Mate(width: 100, height: 100, color: Colors.deepPurple));

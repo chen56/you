@@ -20,7 +20,7 @@ build(BuildContext context, Pen print) {
   ''');
 
   print.$____________________________________________________________________();
-  print(MateSampleContent(Row$Mate(
+  print(MateSample(Row$Mate(
     children: [
       CheckboxMenuButton$Mate(
           value: true,

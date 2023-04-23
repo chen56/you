@@ -37,7 +37,7 @@ build(BuildContext context, Pen print) {
     "access_time_filled"
   };
   for (var name in access_time__icons) {
-    print(MateSampleContent(Row$Mate(
+    print(MateSample(Row$Mate(
       children: [
         Icon$Mate(
           icons[name],

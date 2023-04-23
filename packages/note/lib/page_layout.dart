@@ -313,7 +313,7 @@ class _MateSampleWidget extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final MateSampleContent content;
+  final MateSample content;
   const _MateSampleWidget({
     // ignore: unused_element
     super.key,
@@ -323,52 +323,11 @@ class _MateSampleWidget extends StatelessWidget {
     required this.content,
   });
 
-  @override
-  Widget build(BuildContext context) {
-    var paramAndCodeView = _ParamAndCodeView(
-      rootParam: rootParam,
-      editors: editors,
-      content: content,
-      title: title,
-    );
-
-    return Card(
-      elevation: 5,
-      child: ListenableBuilder(
-        listenable: rootParam,
-        builder: (context, _) {
-          var renderView = rootParam.build() as Widget;
-          return Column(
-            children: [
-              paramAndCodeView,
-              renderView,
-            ],
-          );
-        },
-      ),
-    );
-  }
-}
-
-class _ParamAndCodeView extends StatelessWidget {
-  final ObjectParam rootParam;
-  final Editors editors;
-  final String title;
-  final MateSampleContent content;
-
-  const _ParamAndCodeView({
-    // ignore: unused_element
-    super.key,
-    required this.rootParam,
-    required this.editors,
-    required this.title,
-    required this.content,
-  });
-
-  Widget responsiveUI({
+  static Widget responsiveUI({
     required BuildContext context,
     required Widget paramView,
     required Widget codeView,
+    required MateSample content,
   }) {
     WindowClass win = WindowClass.fromContext(context);
 
@@ -400,45 +359,45 @@ class _ParamAndCodeView extends StatelessWidget {
     );
   }
 
+  Widget buildParamRow(BuildContext context, Param param) {
+    var nameWidget = Container(
+      padding: EdgeInsets.only(left: param.level * 15),
+      child: param.nameWidget(context, editors),
+    );
+
+    var row = Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(flex: 40, child: nameWidget),
+        // Flexible(child: param.valueWidget(context, editors)),
+        Expanded(flex: 60, child: param.valueWidget(context, editors)),
+      ],
+    );
+    // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
+    // ignore: unused_local_variable
+    var padding = Padding(
+      // 缩进模仿树形
+      padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
+      child: Container(
+        decoration: const BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey))),
+        height: 30,
+        child: row,
+      ),
+    );
+
+    return padding;
+  }
+
   @override
   Widget build(BuildContext context) {
-    Widget paramRow(Param param) {
-      var nameWidget = Container(
-        padding: EdgeInsets.only(left: param.level * 15),
-        child: param.nameWidget(context, editors),
-      );
-
-      var row = Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(flex: 40, child: nameWidget),
-          // Flexible(child: param.valueWidget(context, editors)),
-          Expanded(flex: 60, child: param.valueWidget(context, editors)),
-        ],
-      );
-      // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
-      // ignore: unused_local_variable
-      var padding = Padding(
-        // 缩进模仿树形
-        padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
-        child: Container(
-          decoration: const BoxDecoration(
-              border: Border(bottom: BorderSide(color: Colors.grey))),
-          height: 30,
-          child: row,
-        ),
-      );
-
-      return padding;
-    }
-
     // codeView do not listen param changed, because we want keep Input widget
     var paramView = Column(
       children: [
         ...rootParam
             // hide null value
             .flat(test: (param) => param.isShow)
-            .map(paramRow)
+            .map((param) => buildParamRow(context, param))
       ],
     );
 
@@ -463,15 +422,35 @@ class _ParamAndCodeView extends StatelessWidget {
         );
       },
     );
-    return ExpansionTile(
-      initiallyExpanded: false,
-      expandedAlignment: Alignment.topLeft,
-      expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: Row(children: [Text(title)]),
-      children: [
-        responsiveUI(
-            context: context, codeView: codeView, paramView: paramView),
-      ],
+    var paramAndCodeView = responsiveUI(
+        context: context,
+        codeView: codeView,
+        paramView: paramView,
+        content: content);
+
+    return Card(
+      elevation: 5,
+      child: ListenableBuilder(
+        listenable: rootParam,
+        builder: (context, _) {
+          var renderView = rootParam.build() as Widget;
+
+          return Column(
+            children: [
+              ExpansionTile(
+                initiallyExpanded: false,
+                expandedAlignment: Alignment.topLeft,
+                expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                title: Row(children: [Text(title)]),
+                children: [
+                  paramAndCodeView,
+                ],
+              ),
+              renderView,
+            ],
+          );
+        },
+      ),
     );
   }
 }
@@ -499,7 +478,7 @@ class _NoteCellView extends StatelessWidget {
     if (e is WidgetContent) {
       return e.widget;
     }
-    if (e is MateSampleContent) {
+    if (e is MateSample) {
       return _MateSampleWidget(
         content: e,
         rootParam: e.mate.toRootParam(editors: editors),

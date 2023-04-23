@@ -1,6 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:flutter/foundation.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
@@ -373,13 +372,12 @@ class WidgetContent extends NoteContent {
   }
 }
 
-// {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
-class MateSampleContent extends NoteContent {
+class MateSample extends NoteContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
 
-  MateSampleContent(
+  MateSample(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
@@ -387,7 +385,7 @@ class MateSampleContent extends NoteContent {
 
   @override
   String toString() {
-    return "MateSampleContent('${mate.toString()}')";
+    return "MateSample('${mate.toString()}')";
   }
 }
 
@@ -648,7 +646,7 @@ class NoteCell extends ChangeNotifier {
       return;
     }
     if (object is Mate) {
-      _add(MateSampleContent(object));
+      _add(MateSample(object));
       return;
     }
     if (object is Widget) {
