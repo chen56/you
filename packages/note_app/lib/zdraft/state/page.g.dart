@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 197,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' # flutter )
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 197,
       end: 288,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 288,
       end: 290,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
+import 'package:note_app/note_app.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "Flutter Cheat sheet",
+  layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,
 );
 

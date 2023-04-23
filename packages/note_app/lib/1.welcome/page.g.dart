@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 255,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.cells.forEach((e) {});, print.markdown(r''' # flutter )
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 255,
       end: 927,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Row$Ma)
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 1005,
       end: 1390,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' 如果只是实验性的摆弄)
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 1468,
       end: 1597,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Row$Ma)
@@ -46,6 +66,11 @@ final noteInfo = (
       offset: 1675,
       end: 2075,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' 暂时不支持代码编辑，)
@@ -54,6 +79,11 @@ final noteInfo = (
       offset: 2153,
       end: 2395,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Column)
@@ -62,6 +92,11 @@ final noteInfo = (
       offset: 2473,
       end: 2677,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r'''  组件组合是不是很棒)
@@ -70,6 +105,11 @@ final noteInfo = (
       offset: 2755,
       end: 6468,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -78,6 +118,11 @@ final noteInfo = (
       offset: 6468,
       end: 6470,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

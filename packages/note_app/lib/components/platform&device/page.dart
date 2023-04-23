@@ -6,11 +6,13 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
+import 'package:note_app/note_app.dart';
 import 'package:path/path.dart' as path;
 
 PageMeta page = PageMeta(
-  shortTitle: "Platform和设备信息",
+  shortTitle: "Platform和设备",
   builder: build,
+  layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );
 
 build(BuildContext context, Pen print) {
@@ -56,6 +58,8 @@ path很有意思
 ## environment
 
   ''');
+
+  print.$____________________________________________________________________();
   if (kIsWeb) {
     print("web版无法使用环境变量,会报错：Unsupported operation: Platform._environment");
   } else {

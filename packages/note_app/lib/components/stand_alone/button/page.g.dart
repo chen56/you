@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 242,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 242,
       end: 245,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' # button  )
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 323,
       end: 574,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Wrap$M)
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 652,
       end: 1135,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ### IconBu)
@@ -46,6 +66,11 @@ final noteInfo = (
       offset: 1213,
       end: 1269,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Row$Ma)
@@ -54,6 +79,11 @@ final noteInfo = (
       offset: 1347,
       end: 1751,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ### Floati)
@@ -62,6 +92,11 @@ final noteInfo = (
       offset: 1829,
       end: 1917,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (int id = 0;, print(MateSampleContent(Row$Ma)
@@ -70,6 +105,11 @@ final noteInfo = (
       offset: 1995,
       end: 2908,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ### 几个特殊的系)
@@ -78,6 +118,11 @@ final noteInfo = (
       offset: 2986,
       end: 3315,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Row$Ma)
@@ -86,6 +131,11 @@ final noteInfo = (
       offset: 3393,
       end: 3571,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r'''  ### Toggl)
@@ -94,6 +144,11 @@ final noteInfo = (
       offset: 3649,
       end: 3802,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Row$Ma)
@@ -102,6 +157,11 @@ final noteInfo = (
       offset: 3880,
       end: 4208,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ### Segmen)
@@ -110,6 +170,11 @@ final noteInfo = (
       offset: 4286,
       end: 4491,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Row$Ma)
@@ -118,6 +183,11 @@ final noteInfo = (
       offset: 4569,
       end: 5527,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## 相关组件  #)
@@ -126,6 +196,11 @@ final noteInfo = (
       offset: 5605,
       end: 6145,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ### Ink*组件)
@@ -134,6 +209,11 @@ final noteInfo = (
       offset: 6223,
       end: 6421,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Column)
@@ -142,6 +222,11 @@ final noteInfo = (
       offset: 6499,
       end: 6804,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ### Button)
@@ -150,6 +235,11 @@ final noteInfo = (
       offset: 6882,
       end: 6991,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Contai)
@@ -158,6 +248,11 @@ final noteInfo = (
       offset: 7069,
       end: 7573,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -166,6 +261,11 @@ final noteInfo = (
       offset: 7573,
       end: 7575,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

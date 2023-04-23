@@ -4,6 +4,7 @@ import 'package:analyzer/dart/analysis/analysis_context_collection.dart';
 import 'package:analyzer/dart/analysis/context_root.dart';
 import 'package:analyzer/dart/analysis/results.dart';
 import 'package:analyzer/dart/ast/ast.dart';
+import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/file_system/physical_file_system.dart';
 import 'package:code_builder/code_builder.dart' as code;
@@ -119,12 +120,12 @@ class _Page {
     return whereBuild.isEmpty ? null : whereBuild.first;
   }
 
-  _NoteInfo collectPageInfo() {
+  _PageInfo collectPageInfo() {
     log('genPages Info ${lib.identifier}');
 
     String fileContent = compilationUnit.content;
 
-    if (fullPath.contains("note/draft/temp/page.dart")) {
+    if (fullPath.contains("test/temp/page.dart")) {
       log("debug use $fullPath");
     }
     var findBuild = buildFunction;
@@ -137,7 +138,8 @@ class _Page {
             cellType: CellType.header.name,
             offset: 0,
             end: unit.end,
-            cellStatements: []
+            cellStatements: [],
+            runInCellStatements: [],
           )
         ],
       );
@@ -148,60 +150,38 @@ class _Page {
 
     var buildBodyBlock = (buildBody as BlockFunctionBody).block;
 
-    List<_CodeBlock> body = [];
-    List<Statement> collectCellStatements = [];
+    List<_CellInfo> body = [];
+    List<Statement> cellStatements = [];
     int offset = buildBodyBlock.offset + 1;
     for (var st in buildBodyBlock.statements) {
       log("statement runtimeType:${st.runtimeType} - offset:${st.offset} len:${st.length} end:${st.end}    file.len:${fileContent.length} ,unit.len:${unit.length}  ");
       log("---${fileContent.toString().safeSubstring(st.offset, st.offset + 20)}---");
       var statementType = cellStatementType(st);
-      if (statementType == _cellStatementType.none) {
-        collectCellStatements.add(st);
+      if (statementType == _CellStatementType.normal) {
+        cellStatements.add(st);
         continue;
       }
-      if (statementType == _cellStatementType.line) {
+      if (statementType == _CellStatementType.line) {
         // Submit previously collected statements first
         // Cell boundary line without builder :  code above line statements
         // The line [cellStatementType.line] was ignored
+
         body.add(
             (
               cellType: CellType.body.name,
               offset: offset,
               end: st.offset,
-              cellStatements: collectCellStatements
+              cellStatements: cellStatements,
+              runInCellStatements: collectRunInCellStatements(cellStatements),
             ));
         //reset collect
-        collectCellStatements = [];
+        cellStatements = [];
 
         // The starting point of the new cell is located below the line statement
         offset = st.end;
         continue;
       }
-      if (statementType == _cellStatementType.lineWithBuilder) {
-        // Submit previously collected statements first
-        body.add(
-            (
-              cellType: CellType.body.name,
-              offset: offset,
-              end: st.offset,
-              cellStatements: collectCellStatements
-            ));
-        //reset collect
-        collectCellStatements = [];
 
-        // The builder itself is a new cell
-        body.add(
-            (
-              cellType: CellType.body.name,
-              offset: st.offset,
-              end: st.end,
-              cellStatements: [st]
-            ));
-
-        // The starting point of the new cell is located below the line statement
-        offset = st.end;
-        continue;
-      }
       throw Exception("not here! statementType:$statementType  statement:$st");
     }
 
@@ -211,7 +191,8 @@ class _Page {
           cellType: CellType.body.name,
           offset: offset,
           end: buildBodyBlock.rightBracket.offset,
-          cellStatements: collectCellStatements
+          cellStatements: cellStatements,
+          runInCellStatements: collectRunInCellStatements(cellStatements),
         ));
 
     //  build(BuildContext context, Pen pen, MainCell print){
@@ -228,23 +209,23 @@ class _Page {
 
     return (
       code: compilationUnit.content,
-      // from:build start file start to:build start 'build(context,print){'
       cells: [
         (
           cellType: CellType.header.name,
           offset: 0,
           end: buildBodyBlock.leftBracket.end,
-          cellStatements: []
+          cellStatements: [],
+          runInCellStatements: [],
         ),
         ...body,
         (
           cellType: CellType.tail.name,
           offset: buildBodyBlock.rightBracket.offset,
           end: unit.end,
-          cellStatements: []
+          cellStatements: [],
+          runInCellStatements: [],
         )
       ],
-      // from:build end '}' to: file end
     );
   }
 
@@ -252,39 +233,29 @@ class _Page {
   /// ```dart
   ///    print.$____________________________________________________________________();
   /// ```
-  /// _cellStatementType.lineWithBuilder :
-  /// ```dart
-  ///    print.$____________________________________________________________________((context,print){
-  ///        // code in cell
-  ///    });
-  /// ```
-  _cellStatementType cellStatementType(Statement statement) {
+  _CellStatementType cellStatementType(Statement statement) {
     if (statement is! ExpressionStatement) {
-      return _cellStatementType.none;
+      return _CellStatementType.normal;
     }
     var expression = statement.expression;
 
     if (expression is! MethodInvocation) {
-      return _cellStatementType.none;
+      return _CellStatementType.normal;
     }
 
     // print.$____________________________________________________________________()
     if (expression.target?.staticType
             ?.getDisplayString(withNullability: true) !=
         "Pen") {
-      return _cellStatementType.none;
+      return _CellStatementType.normal;
     }
     //
     if (expression.methodName.name !=
         "\$____________________________________________________________________") {
-      return _cellStatementType.none;
+      return _CellStatementType.normal;
     }
 
-    if (expression.argumentList.arguments.isEmpty) {
-      return _cellStatementType.line;
-    } else {
-      return _cellStatementType.lineWithBuilder;
-    }
+    return _CellStatementType.line;
   }
 
   /*
@@ -301,12 +272,20 @@ class _Page {
           ""
     );
   */
-  void genPageInfoPackage(_NoteInfo source) {
+  void genPageInfoPackage(_PageInfo source) {
     final encodedCode = base64.encode(utf8.encode(source.code));
 
     var cells = source.cells.map((e) {
       var comment = e.cellStatements
           .map((e) => e.toString().replaceAll("\n", " ").safeSubstring(0, 30));
+
+      var specialBlocks = e.runInCellStatements.map((e) => """
+            (
+            blockType: 'Pen.runInCurrentCell',
+            offset: ${e.offset},
+            end: ${e.end},
+            )
+          """).join(",");
       return """
              /// $comment
              (
@@ -314,6 +293,11 @@ class _Page {
                offset:${e.offset}, 
                end:${e.end}, 
                statementCount: ${e.cellStatements.length},
+               specialBlocks: <({
+                                  String blockType,
+                                  int end,
+                                  int offset,
+                               })>[ $specialBlocks ] ,
              ) 
              """;
     }).join(",");
@@ -352,19 +336,28 @@ class _Page {
     // 写2次文件，方便调试，如果格式化出错，还可以看下上面未格式化的版本看看哪错了
     writeFS.file(toFile).writeAsStringSync(fmt.format(writeContent));
   }
+
+  List<Statement> collectRunInCellStatements(List<Statement> cellStatements) {
+    FindRunInCell findRunInCell = FindRunInCell();
+    for (var e in cellStatements) {
+      e.visitChildren(findRunInCell);
+    }
+    return findRunInCell.runInCellStatements;
+  }
 }
 
 enum CellType { header, body, tail }
 
-typedef _CodeBlock = ({
+typedef _CellInfo = ({
   String cellType,
   int offset,
   int end,
   List<Statement> cellStatements,
+  List<Statement> runInCellStatements,
 });
-typedef _NoteInfo = ({
+typedef _PageInfo = ({
   String code,
-  List<_CodeBlock> cells,
+  List<_CellInfo> cells,
 });
 
 /// 包名平整化：
@@ -406,4 +399,26 @@ log(Object? o) {
   print("${DateTime.now()} - $o");
 }
 
-enum _cellStatementType { line, lineWithBuilder, none }
+enum _CellStatementType {
+  /// cell split line statement
+  line,
+
+  /// normal statement , not a cell split statement
+  normal,
+}
+
+class FindRunInCell extends GeneralizingAstVisitor {
+  List<Statement> runInCellStatements = List.empty(growable: true);
+
+  @override
+  visitMethodInvocation(MethodInvocation node) {
+    var targetType =
+        node.target?.staticType?.getDisplayString(withNullability: false);
+    if (targetType == "Pen" && node.methodName.name == "runInCurrentCell") {
+      if (node.parent is Statement) {
+        runInCellStatements.add(node.parent as Statement);
+      }
+    }
+    return super.visitMethodInvocation(node);
+  }
+}

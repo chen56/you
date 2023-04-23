@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 730,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(''' # Material )
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 730,
       end: 832,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (const access_time__icons = {"a, for (var name in access_time__)
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 910,
       end: 1337,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(''' ## 图标浏览  pa)
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 1415,
       end: 1703,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (ValueNotifier<Set<String>> cur, print(ValueListenableBuilder(v)
@@ -46,6 +66,11 @@ final noteInfo = (
       offset: 1781,
       end: 3741,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -54,6 +79,11 @@ final noteInfo = (
       offset: 3741,
       end: 3743,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

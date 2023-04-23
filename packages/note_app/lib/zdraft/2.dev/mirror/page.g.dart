@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 191,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r'''    ## flut)
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 191,
       end: 3025,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 3025,
       end: 3027,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

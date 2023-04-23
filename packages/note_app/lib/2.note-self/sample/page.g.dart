@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 242,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(''' # 参数化范例  ##)
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 242,
       end: 712,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Contai)
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 790,
       end: 900,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(''' ### String参)
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 978,
       end: 1024,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Text$M)
@@ -46,6 +66,11 @@ final noteInfo = (
       offset: 1102,
       end: 1164,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(''' ### Color参数)
@@ -54,6 +79,11 @@ final noteInfo = (
       offset: 1242,
       end: 1306,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Contai)
@@ -62,6 +92,11 @@ final noteInfo = (
       offset: 1384,
       end: 1711,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(''' ### bool参数 )
@@ -70,6 +105,11 @@ final noteInfo = (
       offset: 1789,
       end: 1833,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Contai)
@@ -78,6 +118,11 @@ final noteInfo = (
       offset: 1911,
       end: 2096,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ### 枚举参数  )
@@ -86,6 +131,11 @@ final noteInfo = (
       offset: 2174,
       end: 2241,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Row$Ma)
@@ -94,6 +144,11 @@ final noteInfo = (
       offset: 2319,
       end: 2591,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## 其他特性 ##)
@@ -102,6 +157,11 @@ final noteInfo = (
       offset: 2669,
       end: 2728,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (for (var mainAxisAlignment in )
@@ -110,6 +170,11 @@ final noteInfo = (
       offset: 2806,
       end: 3243,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -118,6 +183,11 @@ final noteInfo = (
       offset: 3243,
       end: 3245,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 252,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' # ButtonSt)
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 252,
       end: 807,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Wrap$M)
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 885,
       end: 1024,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## 范例2 Met)
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 1102,
       end: 1147,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -46,6 +66,11 @@ final noteInfo = (
       offset: 1147,
       end: 1149,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

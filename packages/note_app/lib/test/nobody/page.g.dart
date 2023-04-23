@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 129,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

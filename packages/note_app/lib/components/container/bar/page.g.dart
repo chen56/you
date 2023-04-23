@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 352,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## AppBar )
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 352,
       end: 487,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(AppBar)
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 565,
       end: 1183,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## BottomA)
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 1261,
       end: 1426,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Bottom)
@@ -46,6 +66,11 @@ final noteInfo = (
       offset: 1504,
       end: 2138,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r'''    ## ~~Bo)
@@ -54,6 +79,11 @@ final noteInfo = (
       offset: 2216,
       end: 2581,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Column)
@@ -62,6 +92,11 @@ final noteInfo = (
       offset: 2659,
       end: 3242,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' Navigation)
@@ -70,6 +105,11 @@ final noteInfo = (
       offset: 3320,
       end: 3437,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (var currentPageIndex = 0;, flutter.Widget buildNavigation, print(MateSampleContent(Statef)
@@ -78,6 +118,11 @@ final noteInfo = (
       offset: 3515,
       end: 4588,
       statementCount: 3,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## Navigat)
@@ -86,6 +131,11 @@ final noteInfo = (
       offset: 4666,
       end: 5013,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (var navigationRail$Mate = Navi, print(MateSampleContent(Row$Ma)
@@ -94,6 +144,11 @@ final noteInfo = (
       offset: 5091,
       end: 6307,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## TabBar )
@@ -102,6 +157,11 @@ final noteInfo = (
       offset: 6385,
       end: 6883,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Defaul)
@@ -110,6 +170,11 @@ final noteInfo = (
       offset: 6961,
       end: 7544,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' 再来看看加了TabV)
@@ -118,6 +183,11 @@ final noteInfo = (
       offset: 7622,
       end: 7687,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Defaul)
@@ -126,6 +196,11 @@ final noteInfo = (
       offset: 7765,
       end: 8836,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(""" 上面用法和[Navig)
@@ -134,6 +209,11 @@ final noteInfo = (
       offset: 8914,
       end: 9185,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (onPressed() {flutter.ScaffoldM, print(MateSampleContent(SizedB)
@@ -142,6 +222,11 @@ final noteInfo = (
       offset: 9263,
       end: 10182,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## ButtonB)
@@ -150,6 +235,11 @@ final noteInfo = (
       offset: 10260,
       end: 10591,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Contai)
@@ -158,6 +248,11 @@ final noteInfo = (
       offset: 10669,
       end: 11032,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## Overflo)
@@ -166,6 +261,11 @@ final noteInfo = (
       offset: 11110,
       end: 11317,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Contai)
@@ -174,6 +274,11 @@ final noteInfo = (
       offset: 11395,
       end: 12421,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' ## Platfor)
@@ -182,6 +287,11 @@ final noteInfo = (
       offset: 12499,
       end: 13034,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (var click = () {flutter.showAb, print(MateSampleContent(MenuBa)
@@ -190,6 +300,11 @@ final noteInfo = (
       offset: 13112,
       end: 13956,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -198,6 +313,11 @@ final noteInfo = (
       offset: 13956,
       end: 13958,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

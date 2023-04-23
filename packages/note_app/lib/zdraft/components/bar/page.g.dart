@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 238,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' # bar  ## )
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 238,
       end: 354,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Contai)
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 432,
       end: 981,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 981,
       end: 983,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

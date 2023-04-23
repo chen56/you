@@ -10,19 +10,38 @@ import 'dart:convert';
 typedef PageBuilder = void Function(BuildContext context, Pen pen);
 
 typedef PageGenInfo = ({
-  List<({String cellType, int offset, int end, int statementCount})> cells,
+  List<
+      ({
+        String cellType,
+        int end,
+        int offset,
+        List<
+            ({
+              String blockType,
+              int end,
+              int offset,
+            })> specialBlocks,
+        int statementCount
+      })> cells,
   String code,
   PageMeta meta
 });
+// List<({String blockType, int end, int offset})> specialBlocks
 
-PageGenInfo _emptyPageInfo = (
+PageGenInfo _emptyPageGenInfo = (
   cells: [
-    (cellType: CellType.header.name, offset: 0, end: 0, statementCount: 0)
+    (
+      cellType: CellType.header.name,
+      offset: 0,
+      end: 0,
+      statementCount: 0,
+      specialBlocks: [],
+    )
   ],
   code: "",
   meta: PageMeta.empty(),
 );
-PageSource _emptyPageCode = PageSource(pageInfo: _emptyPageInfo);
+PageSource _emptyPageSource = PageSource(pageGenInfo: _emptyPageGenInfo);
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -71,9 +90,7 @@ class Path<T> {
     builder: (context, print) {},
   );
 
-  PageGenInfo _genPageInfo = _emptyPageInfo;
-
-  PageSource _source = _emptyPageCode;
+  PageSource _source = _emptyPageSource;
 
   Path._child(
     this.name, {
@@ -99,7 +116,7 @@ class Path<T> {
 
   PageSource get source => _source;
 
-  Path<C> put<C>(String fullPath, PageGenInfo pageInfo) {
+  Path<C> put<C>(String fullPath, PageGenInfo pageGenInfo) {
     var p = fullPath
         .split("/")
         .map((e) => e.trim())
@@ -107,9 +124,8 @@ class Path<T> {
         .toList();
     var path = _ensurePath(p);
 
-    path._meta = pageInfo.meta;
-    path._genPageInfo = pageInfo;
-    path._source = PageSource(pageInfo: pageInfo);
+    path._meta = pageGenInfo.meta;
+    path._source = PageSource(pageGenInfo: pageGenInfo);
     return path as Path<C>;
   }
 
@@ -268,15 +284,15 @@ class Pen {
     this.path, {
     required this.defaultCodeExpand,
   }) {
-    assert(
-        path._genPageInfo.cells.isNotEmpty, "page cells should not be empty");
+    assert(path.source._pageGenInfo.cells.isNotEmpty,
+        "page cells should not be empty");
 
     List<NoteCell> cells = List.empty(growable: true);
-    for (int i = 0; i < path._genPageInfo.cells.length; i++) {
+    for (int i = 0; i < path.source._pageGenInfo.cells.length; i++) {
       cells.add(NoteCell(
         pen: this,
         index: i,
-        pageInfo: path._genPageInfo,
+        pageSource: path.source,
       ));
     }
     this.cells = List.unmodifiable(cells);
@@ -480,39 +496,50 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
 
 class PageSource {
   late final String code;
-
-  PageSource({required PageGenInfo pageInfo}) {
-    var decoded = base64.decode(pageInfo.code);
+  final PageGenInfo _pageGenInfo;
+  PageSource({required PageGenInfo pageGenInfo}) : _pageGenInfo = pageGenInfo {
+    var decoded = base64.decode(pageGenInfo.code);
     code = utf8.decode(decoded);
   }
 
-  String _getCellCode(CellSource cellCode) {
-    if (cellCode.end > code.length) {
-      return "// ${cellCode.offset}:(${cellCode.end}) >= code.length(${code.length})  ";
+  String _getCellCode(SourceBlock block) {
+    if (block.end > code.length) {
+      return "// ${block.offset}:(${block.end}) >= code.length(${code.length})  ";
     }
-    return code.safeSubstring(cellCode.offset, cellCode.end);
+    return code.safeSubstring(block.offset, block.end);
+  }
+}
+
+class SourceBlock {
+  final int offset;
+  final int end;
+  SourceBlock({required this.offset, required this.end});
+
+  @override
+  String toString() {
+    return "SourceBlock(offset:$offset, end:$end)";
   }
 }
 
 class CellSource {
-  final int offset;
-  final int end;
   final int index;
   final CellType cellType;
-
+  final SourceBlock block;
   final int statementCount;
   final PageSource _pageSource;
+  List<SpecialBlockSource> specialBlockSources;
+
   CellSource({
     required this.cellType,
-    required this.offset,
-    required this.end,
-    this.statementCount = 0,
+    required this.block,
+    required this.specialBlockSources,
+    required this.statementCount,
     required NoteCell cell,
   })  : index = cell.index,
-        _pageSource = cell.pen.path._source;
+        _pageSource = cell.pen.path._source {}
 
   String get code {
-    return _pageSource._getCellCode(this);
+    return _pageSource._getCellCode(block);
   }
 
   bool get isCodeEmpty {
@@ -525,7 +552,23 @@ class CellSource {
 
   @override
   String toString() {
-    return "CellCode(index:$index, offset:$offset, end:$end, statementCount:$statementCount )";
+    return "CellCode(index:$index, block:$block, statementCount:$statementCount )";
+  }
+}
+
+class SpecialBlockSource {
+  String blockType;
+  final SourceBlock block;
+  final NoteCell cell;
+  final PageSource pageSource;
+  SpecialBlockSource({
+    required this.blockType,
+    required this.block,
+    required this.cell,
+  }) : pageSource = cell.pen.path.source;
+
+  String get code {
+    return pageSource._getCellCode(block);
   }
 }
 
@@ -556,15 +599,21 @@ class NoteCell extends ChangeNotifier {
   NoteCell({
     required this.pen,
     required this.index,
-    required PageGenInfo pageInfo,
+    required PageSource pageSource,
   }) {
-    var codeCell = pageInfo.cells[index];
+    var codeCell = pageSource._pageGenInfo.cells[index];
     source = CellSource(
-      offset: codeCell.offset,
-      end: codeCell.end,
+      block: SourceBlock(offset: codeCell.offset, end: codeCell.end),
       statementCount: codeCell.statementCount,
       cellType: CellType.parse(codeCell.cellType),
       cell: this,
+      specialBlockSources: codeCell.specialBlocks
+          .map((e) => SpecialBlockSource(
+                blockType: e.blockType,
+                block: SourceBlock(offset: codeCell.offset, end: codeCell.end),
+                cell: this,
+              ))
+          .toList(),
     );
   }
 

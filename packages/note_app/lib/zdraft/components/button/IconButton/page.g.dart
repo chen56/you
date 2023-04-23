@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 245,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' # IconButt)
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 245,
       end: 345,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print(MateSampleContent(Wrap$M)
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 423,
       end: 558,
       statementCount: 1,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -38,6 +53,11 @@ final noteInfo = (
       offset: 558,
       end: 560,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:

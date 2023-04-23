@@ -226,8 +226,8 @@ sample的代码是独立运行的flutter使用范例代码，实际的其他范�
 
   print.$____________________________________________________________________();
   print("源文件中当前cell的index：${print.currentCell.source.index}");
-  print("源文件中当前cell的起始字符位置：${print.currentCell.source.offset}");
-  print("源文件中当前cell的结束字符位置：${print.currentCell.source.end}");
+  print("源文件中当前cell的起始字符位置：${print.currentCell.source.block.offset}");
+  print("源文件中当前cell的结束字符位置：${print.currentCell.source.block.end}");
   print("源文件中当前cell的代码块：${print.currentCell.source.code}");
 
   print.$____________________________________________________________________();

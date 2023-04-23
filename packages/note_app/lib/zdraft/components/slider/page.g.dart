@@ -14,6 +14,11 @@ final noteInfo = (
       offset: 0,
       end: 193,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// (print.markdown(r''' # 进度条    #, print.markdown(r''' ## 范例1 富文本)
@@ -22,6 +27,11 @@ final noteInfo = (
       offset: 193,
       end: 316,
       statementCount: 2,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     ),
 
     /// ()
@@ -30,6 +40,11 @@ final noteInfo = (
       offset: 316,
       end: 318,
       statementCount: 0,
+      specialBlocks: <({
+        String blockType,
+        int end,
+        int offset,
+      })>[],
     )
   ],
   code:
