@@ -42,7 +42,7 @@ import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
 class Paths with Navigable, PathsMixin {
   late final Path<void> initial;
   Paths._() {
-    initial = note_welcome;
+    initial = test_temp;
   }
 
   @override
@@ -61,11 +61,11 @@ put<C>(String path, PageGenInfo noteInfo) {
 
 class Layouts {
   static Layout defaultLayout<T>({
-    bool defaultCodeExpand = false,
+    bool defaultCodeExpand = true,
   }) {
     return (path) => LayoutScreen<T>(
           current: path as Path<T>,
-          tree: paths.note,
+          tree: paths.root,
           editors: Editors(
             enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
             iconRegisters: IconRegisters([flutter_icons.registerIcon()]),

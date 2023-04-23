@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
@@ -14,13 +15,13 @@ const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class LayoutScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
-  final Path? tree;
+  final Path tree;
   final bool defaultCodeExpand;
   final Editors editors;
 
   LayoutScreen({
     super.key,
-    this.tree,
+    required this.tree,
     required this.current,
     required this.editors,
     this.defaultCodeExpand = false,
@@ -77,7 +78,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
   Widget build(BuildContext context) {
     var noteResult = buildNote(context);
 
-    var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
+    var navigatorTree = _NoteTreeView(widget.tree);
 
     var outlineView = _OutlineView(
       mainContentViewController: controllerV,
@@ -116,26 +117,32 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       title: Text(widget.current.shortTitle),
       toolbarHeight: 36,
     );
+    var bottomDevBar = BottomAppBar(
+        height: 36,
+        padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
+        child: Row(children: [
+          const Text("Dev Bar"),
+          Spacer(),
+          IconButton(
+            onPressed: () {},
+            tooltip: 'Search',
+            icon: Icon(Icons.search),
+          ),
+          IconButton(
+            onPressed: () {},
+            tooltip: 'Favorite',
+            icon: Icon(Icons.favorite),
+          ),
+        ]));
 
     ///  Responsive UI:
     ///  Since StatefulWidget will automatically build() when the screen size changes,
     ///  the processing of responsive UI does not require special processing,
     ///  such as ListenableBuilder
     var w = WindowClass.fromContext(context);
-    if (w == WindowClass.compact) {
-      return Scaffold(
-        drawer: Drawer(child: navigatorTree),
-        endDrawer: Drawer(child: outlineView),
-        appBar: appBar,
-        body: scrollV,
-      );
-    }
-
-    if (w == WindowClass.medium) {
-      return Scaffold(
-        drawer: Drawer(child: navigatorTree),
-        appBar: appBar,
-        body: SafeArea(
+    var body = switch (w) {
+      WindowClass.compact => scrollV,
+      WindowClass.medium => SafeArea(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -144,21 +151,22 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
             ],
           ),
         ),
-      );
-    }
-
+      _ => SafeArea(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(width: 220, child: navigatorTree),
+              Expanded(child: scrollV),
+              SizedBox(width: 250, child: outlineView),
+            ],
+          ),
+        ),
+    };
     return Scaffold(
       appBar: appBar,
-      body: SafeArea(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(width: 220, child: navigatorTree),
-            Expanded(child: scrollV),
-            SizedBox(width: 250, child: outlineView),
-          ],
-        ),
-      ),
+      //only for debug mode
+      bottomNavigationBar: kDebugMode ? bottomDevBar : null,
+      body: body,
     );
   }
 
@@ -179,10 +187,7 @@ class _NoteTreeView extends StatefulWidget {
   _NoteTreeView(
     this.root, {
     Key? key,
-  }) : super(key: key) {
-    // 当前文档较少，先都展开
-    root.extendAll(true);
-  }
+  }) : super(key: key);
 
   @override
   State<_NoteTreeView> createState() => _NoteTreeViewState();
@@ -201,7 +206,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
 
       String iconExtend = node.isLeaf
           ? "     "
-          : node.extend
+          : node.expand
               ? "▽  "
               : "▷︎  ";
       String icon = "🗓";
@@ -216,7 +221,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () => setState(() => node.extend = !node.extend),
+              onTap: () => setState(() => node.expand = !node.expand),
               child: Text(iconExtend),
             ),
             Text(icon),
@@ -234,44 +239,15 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       );
     }
 
-    // var notes = widget.root.toListWithExtend(includeThis: false, hiddenNoExpend: true);
-    var notes = widget.root.toList(
+    var pages = widget.root.toList(
       includeThis: false,
-      test: (e) => e.isRoot ? true : e.parent!.extend,
+      test: (e) => e.isRoot ? true : e.parent!.expand,
     );
-    var column = Column(children: notes.map((e) => newLink(e)).toList());
+    var column = Column(children: [...pages.map(newLink)]);
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: column,
     );
-  }
-}
-
-// 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension _PathExt on Path {
-  static const _extendAttrName = "note/page_layout/extend";
-
-  //展开状态
-  bool get extend {
-    if (isLeaf) {
-      return false;
-    }
-    Object? result = attributes[_extendAttrName];
-    return result == null ? true : result as bool;
-  }
-
-  set extend(bool extend) {
-    if (isLeaf) {
-      return;
-    }
-    attributes[_extendAttrName] = extend;
-  }
-
-  void extendAll(bool extend) {
-    extend = extend;
-    children.forEach((e) {
-      e.extendAll(extend);
-    });
   }
 }
 
@@ -543,7 +519,7 @@ class _NoteCellView extends StatelessWidget {
   Widget build(BuildContext context) {
     var codeHighlightView = HighlightView(
       // The original code to be highlighted
-      cell.code.sourceCode,
+      cell.source.code,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -570,12 +546,11 @@ class _NoteCellView extends StatelessWidget {
           // if (size.width < 20 || size.height < 20) {
           //   size = Size(20, 20);
           // }
-
-          var barText = cell.code.isCodeEmpty
-              ? "  "
+          var barText = cell.source.isCodeEmpty
+              ? " "
               : cell.codeExpand
-                  ? "${cell.index}▽"
-                  : "${cell.index}▷";
+                  ? "▽"
+                  : "▷";
           var leftBar = Material(
             child: InkWell(
               onTap: () {
@@ -585,7 +560,7 @@ class _NoteCellView extends StatelessWidget {
                 height: size.height,
                 alignment: Alignment.topCenter,
                 child: Tooltip(
-                  message: '${cell.name}，序号可能不连续，因为会隐藏空cell',
+                  message: '${cell.name}',
                   child: Text(barText),
                 ),
               ),
@@ -608,7 +583,7 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.code.isCodeNotEmpty && cell.codeExpand)
+                    if (cell.source.isCodeNotEmpty && cell.codeExpand)
                       codeViewFillWidth,
                     ...contentWidgets,
                     _cellSplitBlock,
@@ -626,7 +601,7 @@ class _NoteCellView extends StatelessWidget {
         return GetSizeBuilder(builder: resizeBuilder);
       },
     );
-    return cell.contents.isEmpty && cell.code.isCodeEmpty
+    return cell.contents.isEmpty && cell.source.isCodeEmpty
         ? Container()
         : cellView;
   }

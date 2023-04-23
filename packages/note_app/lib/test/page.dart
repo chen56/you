@@ -5,16 +5,16 @@ import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "home",
+  shortTitle: "自测目录",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-# home 
+# test自测目录
 
-本页面应该是不暴露的 ,但现在并未做任何限制，通过 / 可以看到
+本目录放置自测页面，以验证基础功能。
 
   ''');
 }

@@ -5,16 +5,16 @@ import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 
 PageMeta page = PageMeta(
-  shortTitle: "home",
+  shortTitle: "草稿目录",
   builder: build,
-  layout: Layouts.defaultLayout(defaultCodeExpand: true),
+  layout: Layouts.defaultLayout(),
 );
 
 build(BuildContext context, Pen print) {
   print.markdown(r'''
-# home 
+# 草稿 
 
-本页面应该是不暴露的 ,但现在并未做任何限制，通过 / 可以看到
+本目录放置草稿，乱七八糟。
 
   ''');
 }

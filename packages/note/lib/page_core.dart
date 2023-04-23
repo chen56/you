@@ -22,7 +22,7 @@ PageGenInfo _emptyPageInfo = (
   code: "",
   meta: PageMeta.empty(),
 );
-PageCode _emptyPageCode = PageCode(pageInfo: _emptyPageInfo);
+PageSource _emptyPageCode = PageSource(pageInfo: _emptyPageInfo);
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -63,7 +63,7 @@ class Path<T> {
   final List<Path> _children = List.empty(growable: true);
   final Map<String, Path> _childrenMap = {};
   final Path? parent;
-
+  bool expand = false;
   final Map<String, Object> attributes = {};
   PageMeta<T> _meta = PageMeta(
     empty: true,
@@ -73,7 +73,7 @@ class Path<T> {
 
   PageGenInfo _genPageInfo = _emptyPageInfo;
 
-  PageCode pageCode = _emptyPageCode;
+  PageSource _source = _emptyPageCode;
 
   Path._child(
     this.name, {
@@ -84,11 +84,20 @@ class Path<T> {
       : name = "",
         parent = null;
 
+  void extendTree(bool value) {
+    expand = value;
+    for (var e in children) {
+      e.extendTree(value);
+    }
+  }
+
   bool get isEmpty => _meta.empty;
 
   bool get isNotEmpty => !_meta.empty;
 
   List<Path> get children => List.unmodifiable(_children);
+
+  PageSource get source => _source;
 
   Path<C> put<C>(String fullPath, PageGenInfo pageInfo) {
     var p = fullPath
@@ -100,7 +109,7 @@ class Path<T> {
 
     path._meta = pageInfo.meta;
     path._genPageInfo = pageInfo;
-    path.pageCode = PageCode(pageInfo: pageInfo);
+    path._source = PageSource(pageInfo: pageInfo);
     return path as Path<C>;
   }
 
@@ -296,8 +305,6 @@ class Pen {
     currentCell = cells[nextCellIndex];
   }
 
-  void $_______________________________(String name) {}
-
   /// markdown 独占一个新cell
   void markdown(String content) {
     currentCell.print(MarkdownContent(content));
@@ -471,45 +478,45 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
   String get location => current.path;
 }
 
-class PageCode {
-  late final String sourceCode;
+class PageSource {
+  late final String code;
 
-  PageCode({required PageGenInfo pageInfo}) {
+  PageSource({required PageGenInfo pageInfo}) {
     var decoded = base64.decode(pageInfo.code);
-    sourceCode = utf8.decode(decoded);
+    code = utf8.decode(decoded);
   }
 
-  String _getCode(CellCode cellCode) {
-    if (cellCode.end > sourceCode.length) {
-      return "// ${cellCode.offset}:(${cellCode.end}) >= code.length(${sourceCode.length})  ";
+  String _getCellCode(CellSource cellCode) {
+    if (cellCode.end > code.length) {
+      return "// ${cellCode.offset}:(${cellCode.end}) >= code.length(${code.length})  ";
     }
-    return sourceCode.substring(cellCode.offset, cellCode.end);
+    return code.safeSubstring(cellCode.offset, cellCode.end);
   }
 }
 
-class CellCode {
+class CellSource {
   final int offset;
   final int end;
   final int index;
   final CellType cellType;
 
   final int statementCount;
-  final PageCode _pageCode;
-  CellCode({
+  final PageSource _pageSource;
+  CellSource({
     required this.cellType,
     required this.offset,
     required this.end,
     this.statementCount = 0,
     required NoteCell cell,
   })  : index = cell.index,
-        _pageCode = cell.pen.path.pageCode;
+        _pageSource = cell.pen.path._source;
 
-  String get sourceCode {
-    return _pageCode._getCode(this);
+  String get code {
+    return _pageSource._getCellCode(this);
   }
 
   bool get isCodeEmpty {
-    return sourceCode.contains(RegExp(r'^\s*$'));
+    return code.contains(RegExp(r'^\s*$'));
   }
 
   bool get isCodeNotEmpty {
@@ -544,7 +551,7 @@ class NoteCell extends ChangeNotifier {
   // index use to find code
   final int index;
   final Pen pen;
-  late final CellCode code;
+  late final CellSource source;
 
   NoteCell({
     required this.pen,
@@ -552,7 +559,7 @@ class NoteCell extends ChangeNotifier {
     required PageGenInfo pageInfo,
   }) {
     var codeCell = pageInfo.cells[index];
-    code = CellCode(
+    source = CellSource(
       offset: codeCell.offset,
       end: codeCell.end,
       statementCount: codeCell.statementCount,
@@ -610,10 +617,10 @@ class NoteCell extends ChangeNotifier {
   bool? _codeExpand;
   // show == expand
   bool get codeExpand {
-    if (code.isCodeEmpty) return false;
+    if (source.isCodeEmpty) return false;
     //markdown cell default hidden code
     if (_codeExpand == null) {
-      return switch (code.cellType) {
+      return switch (source.cellType) {
         CellType.header => false,
         CellType.tail => false,
         CellType.body => pen.defaultCodeExpand && !isAllMarkdownContent,
@@ -630,6 +637,6 @@ class NoteCell extends ChangeNotifier {
 
   @override
   String toString() {
-    return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$code.isCodeEmpty contents-${contents.length}:$contents)";
+    return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
   }
 }

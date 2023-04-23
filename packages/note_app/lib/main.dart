@@ -6,15 +6,6 @@ import 'package:note/navigator_v2.dart';
 void main() {
   // ignore: prefer_const_constructors
   runApp(NoteApp());
-  // runApp(MaterialApp(
-  //   home: Scaffold(
-  //     appBar: AppBar(title: const Text("Drawer Sample")),
-  //     body: Row(children: [
-  //       Layouts.defaultLayout()(paths.note_welcome),
-  //       // const Text("Drawer 除了弹出、收起，还可以直接做普通左边栏"),
-  //     ]),
-  //   ),
-  // ));
 }
 
 Logger logger = Logger();
@@ -24,6 +15,8 @@ class NoteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    paths.root.extendTree(true);
+    paths.zdraft.extendTree(false);
     return MaterialApp.router(
       title: 'Flutter Note',
       theme: ThemeData(

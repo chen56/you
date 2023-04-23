@@ -70,13 +70,15 @@ void genPages(
     ..directives.add(code.Directive.import("package:note/page_core.dart"))
     ..directives.add(code.Directive.import("package:note_app/note_app.dart"))
     ..directives.addAll(libs.map((lib) {
-      var p = path.join(path.dirname(lib.identifier), "page.g.dart");
-      return code.Directive.import(p, as: "${_flatLibPath(p)}_");
+      String flatPagePath = flatLibPath(lib.identifier);
+      return code.Directive.import(
+          path.join(path.dirname(lib.identifier), "page.g.dart"),
+          as: "${flatPagePath}_");
     }))
     ..body.add(Mixin((b) => b
       ..name = "PathsMixin"
       ..fields.addAll(libs.map((lib) {
-        String flatPagePath = _flatLibPath(lib.identifier);
+        String flatPagePath = flatLibPath(lib.identifier);
         String path = lib.identifier
             .replaceAll("package:note_app", "")
             .replaceAll("/page.dart", "");
@@ -122,7 +124,7 @@ class _Page {
 
     String fileContent = compilationUnit.content;
 
-    if (fullPath.contains("notebook")) {
+    if (fullPath.contains("note/draft/temp/page.dart")) {
       log("debug use $fullPath");
     }
     var findBuild = buildFunction;
@@ -203,24 +205,7 @@ class _Page {
       throw Exception("not here! statementType:$statementType  statement:$st");
     }
 
-    //如果page没有定义build函数，整个文件被认为是一个cell
-    // If Page does not define the build function, the entire file as one cell.
-    if (body.isEmpty) {
-      return (
-        code: compilationUnit.content,
-        cells: [
-          (
-            cellType: CellType.header.name,
-            offset: unit.offset,
-            end: unit.end,
-            cellStatements: []
-          )
-        ],
-      );
-    }
-
-    // body is not empty
-    // Finally, add a cell as the end
+    // Finally, add a collectCellStatements to cell, as the last cell
     body.add(
         (
           cellType: CellType.body.name,
@@ -343,6 +328,8 @@ class _Page {
                 import 'page.dart';
             
                 final noteInfo = (
+                  /// you need define page variable in page.dart 
+                  /// it is use to register page meta info
                   meta: page,
                   cells: [ $cells ],
                   code: "$encodedCode"
@@ -390,18 +377,21 @@ typedef _NoteInfo = ({
 /// - 去掉用来排序的数字前缀"1."
 /// - '/'换成'$'
 /// - 其他特殊字符换成'_'
-String _flatLibPath(String packageName) {
-  String result = packageName.replaceAll("package:note_app/", "");
+String flatLibPath(String packageName) {
+  String result = packageName.replaceAll("package:note_app", "");
   result = path.dirname(result);
 
-  if (result == ".") {
+  if (result == "/") {
     return "root";
   }
   return result
       // .replaceAll(RegExp("/page.dart\$"), "") // 后缀
       // .replaceAll(RegExp("/page.g.dart\$"), "") // 后缀
 // ignore: unnecessary_string_escapes
-      .replaceAll(RegExp("/\\d+\."), "/") // 1.note-self -> note-self
+      .replaceAll(
+          RegExp("/\\d+\."), "/") // /note/1.note-self -> /note_note-self
+      // .replaceAll(RegExp("^\\d+\."), "") // /1.note-self -> note-self
+      .replaceAll(RegExp("^/"), "") // 去第一个杠
       .replaceAll("/", "_")
       .replaceAll(".", "_")
       .replaceAll("-", "_")

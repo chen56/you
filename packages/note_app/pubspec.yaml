@@ -32,6 +32,7 @@ dependencies:
   # 应该是不需要这个东东的，暂时注释掉
   cupertino_icons: ^1.0.2
 
+  path: ^1.8.2
 
 dev_dependencies:
 
@@ -47,7 +48,6 @@ dev_dependencies:
   dart_style: ^2.0.0
   code_builder: ^4.4.0
   glob: ^2.1.1
-  path: ^1.8.2
 
 #dependency_overrides:
 
