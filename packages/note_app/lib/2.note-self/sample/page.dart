@@ -1,13 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
+import 'package:note_app/note_app.dart';
 import 'package:note_mate_flutter/material.dart';
+import 'package:code_builder/code_builder.dart' as code;
 
 PageMeta page = PageMeta(
   shortTitle: "参数化范例机制",
+  layout: Layouts.defaultLayout(defaultCodeExpand: true),
   builder: build,
 );
 
 build(BuildContext context, Pen print) {
+  print.$____________________________________________________________________();
+  print.markdown(r'''
+## 其他特性
+
+### 按cell模版生成范例代码
+
+我们的范例代码生成机制虽然看起来还不错，但有个小问题，函数代码无法生成，但我们通过提取
+Notebook 当前cell的代码作为模版，配合代码生成一起，可以解决此疑难，您可以观察下cell本身的代码
+和范例生成的代码的异同：
+  ''');
+
+  print.$____________________________________________________________________();
+  showAbout() {
+    showAboutDialog(
+      context: context,
+      applicationName: 'MenuBar Sample',
+      applicationVersion: '1.0.0',
+    );
+  }
+
+  // 包含MateSample调用的语句会被范例代码擦除
+  print(
+    MateSample(
+      ElevatedButton$Mate(
+          onPressed: showAbout..simpleCode = code.refer("showAbout"),
+          child: Text$Mate("Button1")),
+      template: MateSample.template1,
+    ),
+  );
+
+  print.$____________________________________________________________________();
   print.markdown('''
 # 参数化范例
 
@@ -99,7 +133,6 @@ TODO 暂时只能显示，还不能编辑
 
   print.$____________________________________________________________________();
   print.markdown(r'''
-## 其他特性
 ### 用循环一次性构造一组范例
   ''');
 

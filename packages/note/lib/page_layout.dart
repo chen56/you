@@ -7,7 +7,6 @@ import 'package:note/navigator_v2.dart';
 import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
-import 'package:note/utils.dart';
 
 import 'sys.dart';
 
@@ -410,7 +409,7 @@ class _MateSampleWidget extends StatelessWidget {
       builder: (context, _) {
         return HighlightView(
           // The original code to be highlighted
-          getSampleCode(),
+          content.toSampleCode(cell, rootParam, editors),
 
           // Specify language
           // It is recommended to give it a value for performance
@@ -455,33 +454,6 @@ class _MateSampleWidget extends StatelessWidget {
         },
       ),
     );
-  }
-
-  String getSampleCode() {
-    return content.isUseCellCodeAsTemplate
-        ? cellCodeAsTemplate()
-        : rootParam.toSampleCodeString(snippet: false, format: true);
-  }
-
-  static const Set<String> eraseCodeTypes = {
-    "MateSample.new.firstParentStatement",
-    "Pen.runInCurrentCell"
-  };
-  String cellCodeAsTemplate() {
-    var sources = cell.source.specialSources
-        .where((e) => eraseCodeTypes.contains(e.codeType))
-        .toList();
-
-    sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
-
-    int offset = cell.source.codeEntity.offset;
-    List<String> codes = List.empty(growable: true);
-    for (var s in sources) {
-      codes.add(
-          cell.pen.path.source.code.safeSubstring(offset, s.codeEntity.offset));
-      offset = s.codeEntity.end;
-    }
-    return "${codes.join("")}  ${rootParam.toSampleCodeString(snippet: false, format: true)} ";
   }
 }
 

@@ -9,7 +9,7 @@ void main() {
   setUp(() {});
   String toCode(Mate mate, {format = false}) {
     var y = ObjectParam.rootFromMate(mate, editors: Editors());
-    var result = y.toSampleCodeString(format: format);
+    var result = y.toSampleCode(format: format);
     // ignore: avoid_print
     print(result);
     return result;

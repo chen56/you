@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:note/mate.dart';
+import 'package:note/page_core.dart';
 
 abstract class BaseValueInputEditor extends BaseValueEditor {
   BaseValueInputEditor(super.param, {required super.editors});
@@ -368,12 +369,17 @@ class ManuallyValueEditor extends BaseValueEditor {
   }
 }
 
-class DefaultValueParamEditor extends BaseValueEditor {
-  DefaultValueParamEditor(super.param, {required super.editors});
+class UnknowTypeParamEditor extends BaseValueEditor {
+  UnknowTypeParamEditor(super.param, {required super.editors});
 
   @override
   code.Expression toCode() {
-    return code.refer("${param.value}");
+    if (param.value == null) {
+      return code.literalNull;
+    }
+    Object result = param.value;
+    return result.simpleCode ??
+        code.literalString("应该使用[NoteExt.simpleCode]替换掉无法生成的代码${result}");
   }
 
   @override

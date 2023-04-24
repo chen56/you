@@ -93,11 +93,13 @@ class ListenableMap extends MapBase<String, Object> with ChangeNotifier {
 extension StringExt on String {
   String safeSubstring(int start, [int? end]) {
     end ??= length;
+    start = start <= length ? start : length;
     end = end <= length ? end : length;
+    start = start <= end ? start : end;
     try {
       return substring(start, end);
     } catch (e) {
-      throw Exception("$e, string $this");
+      throw Exception("safeSubstring($start:$end,$length) $e, string $this");
     }
   }
 }

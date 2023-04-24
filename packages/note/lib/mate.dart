@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:note/src/buildin_editors.dart';
 import 'package:note/utils.dart' as utils;
 
-final defaultEmitter = code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
+final defaultEmitter =
+    code.DartEmitter(allocator: code.Allocator(), useNullSafetySyntax: true);
 
 // 一般以80个字符为编辑器宽度
 final defaultDartFormatter = DartFormatter(
@@ -102,7 +103,10 @@ abstract class Param extends ChangeNotifier {
     bool includeThis = true,
     bool Function(Param element)? test,
   }) {
-    return [this, ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))];
+    return [
+      this,
+      ...children.where(test ?? (e) => true).expand((e) => e.flat(test: test))
+    ];
   }
 
   @nonVirtual
@@ -209,7 +213,8 @@ class ListParam extends Param {
     if (init != null) {
       List notNull = init as List;
       for (int i = 0; i < notNull.length; i++) {
-        assert(notNull[i] != null, "list element [$i] should not be null init: $init");
+        assert(notNull[i] != null,
+            "list element [$i] should not be null init: $init");
         params.add(_toParam(
           builderArg: BuilderArg(
             name: "$i",
@@ -231,7 +236,8 @@ class ListParam extends Param {
     // 直接返回map后的list会转型错误：🔔⚠️❗️💡👉
     //     exception : return params.map((e)=>e.build()).toList() as T
     // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
-    return utils.castList<dynamic>(from: params.map((e) => e.build()), to: init as List);
+    return utils.castList<dynamic>(
+        from: params.map((e) => e.build()), to: init as List);
   }
 
   @override
@@ -249,7 +255,8 @@ class SetParam extends Param {
     if (init != null) {
       Iterable notNull = init as Iterable;
       for (var e in notNull) {
-        assert(e != null, "set element[$_index] should not be null init: $init");
+        assert(
+            e != null, "set element[$_index] should not be null init: $init");
         params.add(_toParam(
           builderArg: BuilderArg(
             name: "$_index",
@@ -272,7 +279,8 @@ class SetParam extends Param {
     // 直接返回map后的toSet()会转型错误：🔔⚠️❗️💡👉
     //     exception : return params.map((e)=>e.build()).toSet() as T
     // 可以利用init的原始类型复制出来做基础，再转型就不会错了。
-    return utils.castSet<dynamic>(from: params.map((e) => e.build()), to: init as Set);
+    return utils.castSet<dynamic>(
+        from: params.map((e) => e.build()), to: init as Set);
   }
 
   @override
@@ -296,8 +304,8 @@ class ObjectParam extends Param {
     required this.builderRefer,
     required super.editors,
   }) {
-    _params.addAll(
-        args.map((key, value) => MapEntry(key, value.toParam(parent: this, editors: editors))));
+    _params.addAll(args.map((key, value) =>
+        MapEntry(key, value.toParam(parent: this, editors: editors))));
   }
 
   Map<String, Param> get params => _params;
@@ -354,7 +362,8 @@ class ObjectParam extends Param {
     bool isNamed = true,
     dynamic defaultValue,
   }) {
-    if (_params.containsKey(name)) return (_params[name] as Param).builderArg as BuilderArg<E>;
+    if (_params.containsKey(name))
+      return (_params[name] as Param).builderArg as BuilderArg<E>;
     var result = BuilderArg<E>(
       name: name,
       init: init,
@@ -382,7 +391,7 @@ class ObjectParam extends Param {
   Iterable<Param> get children => _params.values;
 
   /// 为编辑器提供完整的代码
-  String toSampleCodeString({
+  String toSampleCode({
     bool snippet = true,
     bool format = false,
     Editors? editors,
@@ -413,7 +422,9 @@ void main() {
 
     String result = toCode.accept(emitter).toString();
     if (format) {
-      result = snippet ? formatter.formatStatement(result) : formatter.format(result);
+      result = snippet
+          ? formatter.formatStatement(result)
+          : formatter.format(result);
     }
     return result;
   }
@@ -472,7 +483,8 @@ class BuilderArg<T> {
   /// 此时param可能还未初始化
   isSubType<Super>() => utils.isSubTypeOf<T, Super>(init);
 
-  isSubTypeWithParam<Super>() => utils.isSubTypeOf<T, Super>(init) || param.init is Super;
+  isSubTypeWithParam<Super>() =>
+      utils.isSubTypeOf<T, Super>(init) || param.init is Super;
 
   @override
   String toString() {
@@ -538,7 +550,8 @@ abstract class Editor {
       children: [
         if (icon != null) icon,
         // Text加Expanded 防止溢出
-        Expanded(child: Text("${param.displayName}${param.isRoot ? '' : ': '} "))
+        Expanded(
+            child: Text("${param.displayName}${param.isRoot ? '' : ': '} "))
       ],
     );
   }
@@ -623,52 +636,55 @@ class Editors {
       return ColorEditor(param, editors: this);
     }
     if (arg.isSubTypeWithParam<Enum>()) {
-      return EnumEditor(param, editors: this, enums: enumRegister.getOrEmpty(arg.argType));
+      return EnumEditor(param,
+          editors: this, enums: enumRegister.getOrEmpty(arg.argType));
     }
     if (arg.isSubTypeWithParam<IconData>()) {
       return IconDataEditor(param, editors: this);
     }
 
     // todo Editors:这下面的函数类型越来越多啊，需要解决掉
-    if (arg.isSubTypeWithParam<void Function()>()) {
-      var ex = code.Method((b) => b
-        ..name = ''
-        ..lambda = false
-        ..body = const code.Code("")).closure;
-      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
-    }
-
-    // todo 这些function类型的等到范例模版好了后要清理掉 github:#61
-    if (arg.isSubTypeWithParam<void Function(bool)>()) {
-      var ex = code.Method((b) => b
-        ..name = ''
-        ..lambda = false
-        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
-        ..body = const code.Code("")).closure;
-      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
-    }
-    if (arg.isSubTypeWithParam<void Function(int)>()) {
-      var ex = code.Method((b) => b
-        ..name = ''
-        ..lambda = false
-        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
-        ..body = const code.Code("")).closure;
-      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
-    }
-    if (arg.isSubTypeWithParam<Function>()) {
-      var ex = code.refer("null /* not support function */");
-      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
-    }
-    // SegmentedButton.onSelectionChanged: void Function(Set<T>)?
-    if (arg.isSubTypeWithParam<void Function(Set<String>)>()) {
-      var ex = code.Method((b) => b
-        ..name = ''
-        ..lambda = false
-        ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
-        ..body = const code.Code("")).closure;
-      return ManuallyValueEditor(param, editors: this, codeExpression: ex);
-    }
-    return onNotFound != null ? onNotFound(param) : DefaultValueParamEditor(param, editors: this);
+    // if (arg.isSubTypeWithParam<void Function()>()) {
+    //   var ex = code.Method((b) => b
+    //     ..name = ''
+    //     ..lambda = false
+    //     ..body = const code.Code("")).closure;
+    //   return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    // }
+    //
+    // // todo 这些function类型的等到范例模版好了后要清理掉 github:#61
+    // if (arg.isSubTypeWithParam<void Function(bool)>()) {
+    //   var ex = code.Method((b) => b
+    //     ..name = ''
+    //     ..lambda = false
+    //     ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+    //     ..body = const code.Code("")).closure;
+    //   return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    // }
+    // if (arg.isSubTypeWithParam<void Function(int)>()) {
+    //   var ex = code.Method((b) => b
+    //     ..name = ''
+    //     ..lambda = false
+    //     ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+    //     ..body = const code.Code("")).closure;
+    //   return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    // }
+    // if (arg.isSubTypeWithParam<Function>()) {
+    //   var ex = code.refer("null /* not support function */");
+    //   return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    // }
+    // // SegmentedButton.onSelectionChanged: void Function(Set<T>)?
+    // if (arg.isSubTypeWithParam<void Function(Set<String>)>()) {
+    //   var ex = code.Method((b) => b
+    //     ..name = ''
+    //     ..lambda = false
+    //     ..requiredParameters.add(code.Parameter((b) => b..name = "b"))
+    //     ..body = const code.Code("")).closure;
+    //   return ManuallyValueEditor(param, editors: this, codeExpression: ex);
+    // }
+    return onNotFound != null
+        ? onNotFound(param)
+        : UnknowTypeParamEditor(param, editors: this);
   }
 }
 
@@ -727,7 +743,8 @@ class IconRegisters {
 class IconRegister {
   final Map<IconData, String> icons = {};
   final code.Reference ref;
-  IconRegister(String refSymbol, String refUrl) : ref = code.Reference(refSymbol, refUrl);
+  IconRegister(String refSymbol, String refUrl)
+      : ref = code.Reference(refSymbol, refUrl);
 
   void register(IconData icon, String name) {
     icons[icon] = name;

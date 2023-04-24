@@ -52,6 +52,13 @@ void main() {
       expect("# 中文abc".runes.length, 7);
     });
   });
+  group("字符串变量替换", () {
+    test('无法先声明字符串模版，再填充它', () {
+      // String template = "a $arg";
+      // int arg
+      // print(template);
+    });
+  });
 }
 
 class Animal {}

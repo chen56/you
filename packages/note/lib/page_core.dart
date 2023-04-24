@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:note/utils.dart';
 import 'dart:convert';
+import 'package:code_builder/code_builder.dart' as code;
 
 typedef PageBuilder = void Function(BuildContext context, Pen pen);
 
@@ -373,25 +374,110 @@ class WidgetContent extends NoteContent {
 }
 
 class MateSample extends NoteContent {
+  // ignore: prefer_function_declarations_over_variables
+  static final SampleCodeTemplate defaultTemplate = (cell, param, editors) {
+    var emitter = editors.emitter;
+    var formatter = editors.formatter;
+
+    var mateExpression = param.toCodeExpression(editors: editors);
+
+    var toCode = code.Block.of([
+      const code.Code("""
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      var sample="""),
+      mateExpression.statement,
+      const code.Code("""      
+      runApp(MaterialApp(home: Scaffold(body: sample)));
+    }
+    """),
+    ]);
+
+    String result = toCode.accept(emitter).toString();
+    result = formatter.format(result);
+    return result;
+  };
+  // ignore: prefer_function_declarations_over_variables
+  static final SampleCodeTemplate template1 = (cell, param, editors) {
+    var emitter = editors.emitter;
+    var formatter = editors.formatter;
+
+    var mateExpression = param.toCodeExpression(editors: editors);
+    var toCode = code.Block.of([
+      code.Code("""
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      
+      ${_cleanCellCode(cell, param)}
+      
+      var sample="""),
+      mateExpression.statement,
+      const code.Code("""      
+      runApp(MaterialApp(home: Scaffold(body: sample)));
+    }
+    """),
+    ]);
+
+    String result = toCode.accept(emitter).toString();
+    result = formatter.format(result);
+    return result;
+  };
+
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
+  final SampleCodeTemplate? codeTemplate;
 
   /// if true , we will return : cell code + mate gen code
   /// and we will erase MateSample call statement and Pen.runInCurrentCell statement
-  final bool isUseCellCodeAsTemplate;
+  // final bool isUseCellCodeAsTemplate;
   MateSample(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
-    this.isUseCellCodeAsTemplate = true,
-  });
+    SampleCodeTemplate? template,
+  }) : codeTemplate = template ?? defaultTemplate;
 
   @override
   String toString() {
     return "MateSample('${mate.toString()}')";
   }
+
+  String toSampleCode(NoteCell cell, ObjectParam param, Editors editors) {
+    return codeTemplate!(cell, param, editors);
+  }
+
+  /// The piece of code to be erased from the cell code
+  static const Set<String> _eraseCodeTypes = {
+    "MateSample.new.firstParentStatement",
+    "Pen.runInCurrentCell"
+  };
+
+  /// cell代码被转换后作为范例代码
+  /// The cell code is transformed as sample code
+  static String _cleanCellCode(NoteCell cell, ObjectParam rootParam) {
+    var sources = cell.source.specialSources
+        .where((e) => _eraseCodeTypes.contains(e.codeType))
+        .toList();
+
+    sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
+
+    int offset = cell.source.codeEntity.offset;
+    List<String> codes = List.empty(growable: true);
+    for (var s in sources) {
+      codes.add(
+          cell.pen.path.source.code.safeSubstring(offset, s.codeEntity.offset));
+
+      offset = s.codeEntity.end;
+    }
+    return codes.join(" ");
+  }
 }
+
+typedef SampleCodeTemplate = String Function(
+    NoteCell cell, ObjectParam param, Editors editors);
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -575,6 +661,11 @@ class SpecialSource {
   String get code {
     return pageSource._getCellCode(codeEntity);
   }
+
+  @override
+  String toString() {
+    return "SpecialSource(codeType:$codeType,codeEntity:$codeEntity,)";
+  }
 }
 
 enum CellType {
@@ -615,8 +706,7 @@ class NoteCell extends ChangeNotifier {
       specialSources: codeCell.specialNodes
           .map((e) => SpecialSource(
                 codeType: e.nodeType,
-                codeEntity:
-                    CodeEntity(offset: codeCell.offset, end: codeCell.end),
+                codeEntity: CodeEntity(offset: e.offset, end: e.end),
                 cell: this,
               ))
           .toList(),
@@ -694,4 +784,10 @@ class NoteCell extends ChangeNotifier {
   String toString() {
     return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
   }
+}
+
+extension NoteExt<T> on Object {
+  static final _code = Expando<code.Expression>();
+  code.Expression? get simpleCode => _code[this];
+  set simpleCode(code.Expression? v) => _code[this] = v;
 }
