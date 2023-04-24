@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 import 'package:note_mate_flutter/material.dart';
-import 'package:code_builder/code_builder.dart' as code;
+import 'package:code_builder/code_builder.dart';
 
 PageMeta page = PageMeta(
   shortTitle: "参数化范例机制",
-  layout: Layouts.defaultLayout(defaultCodeExpand: true),
+  layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,
 );
 
@@ -35,9 +35,9 @@ Notebook 当前cell的代码作为模版，配合代码生成一起，可以解�
   print(
     MateSample(
       ElevatedButton$Mate(
-          onPressed: showAbout..simpleCode = code.refer("showAbout"),
+          onPressed: showAbout..sampleCode = refer("showAbout"),
           child: Text$Mate("Button1")),
-      template: MateSample.template1,
+      sampleTemplate: SampleTemplate.includeCleanCellCode,
     ),
   );
 
@@ -126,8 +126,16 @@ TODO 暂时只能显示，还不能编辑
   print(MateSample(Row$Mate(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
-      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button1")),
-      ElevatedButton$Mate(onPressed: () {}, child: Text$Mate("Button2")),
+      Container$Mate(
+        width: 100,
+        height: 100,
+        color: Colors.blue,
+      ),
+      Container$Mate(
+        width: 100,
+        height: 100,
+        color: Colors.green,
+      ),
     ],
   )));
 
@@ -142,10 +150,10 @@ TODO 暂时只能显示，还不能编辑
       mainAxisAlignment: mainAxisAlignment,
       children: [
         ElevatedButton$Mate(
-            onPressed: () {},
+            onPressed: () {}..sampleCodeStr = "(){}",
             child: Text$Mate("${mainAxisAlignment.name}:Button1")),
         ElevatedButton$Mate(
-            onPressed: () {},
+            onPressed: () {}..sampleCodeStr = "(){}",
             child: Text$Mate("${mainAxisAlignment.name}:Button2")),
       ],
     )));

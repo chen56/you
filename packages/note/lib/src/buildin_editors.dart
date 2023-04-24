@@ -351,24 +351,6 @@ class SetParamEditor extends Editor {
   }
 }
 
-class ManuallyValueEditor extends BaseValueEditor {
-  code.Expression codeExpression;
-
-  ManuallyValueEditor(super.param,
-      {required super.editors, required this.codeExpression});
-
-  @override
-  code.Expression toCode() {
-    if (param.value == null) return code.literalNull;
-    return codeExpression;
-  }
-
-  @override
-  Widget valueWidget(BuildContext context) {
-    return Text("${param.value}");
-  }
-}
-
 class UnknowTypeParamEditor extends BaseValueEditor {
   UnknowTypeParamEditor(super.param, {required super.editors});
 
@@ -378,12 +360,12 @@ class UnknowTypeParamEditor extends BaseValueEditor {
       return code.literalNull;
     }
     Object result = param.value;
-    return result.simpleCode ??
+    return result.sampleCode ??
         code.literalString("应该使用[NoteExt.simpleCode]替换掉无法生成的代码${result}");
   }
 
   @override
   Widget valueWidget(BuildContext context) {
-    return Text("${param.value}");
+    return Text(toCode().accept(emitter).toString());
   }
 }

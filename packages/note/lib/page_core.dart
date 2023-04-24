@@ -374,61 +374,10 @@ class WidgetContent extends NoteContent {
 }
 
 class MateSample extends NoteContent {
-  // ignore: prefer_function_declarations_over_variables
-  static final SampleCodeTemplate defaultTemplate = (cell, param, editors) {
-    var emitter = editors.emitter;
-    var formatter = editors.formatter;
-
-    var mateExpression = param.toCodeExpression(editors: editors);
-
-    var toCode = code.Block.of([
-      const code.Code("""
-    import 'package:flutter/material.dart';
-    
-    void main() {
-      var sample="""),
-      mateExpression.statement,
-      const code.Code("""      
-      runApp(MaterialApp(home: Scaffold(body: sample)));
-    }
-    """),
-    ]);
-
-    String result = toCode.accept(emitter).toString();
-    result = formatter.format(result);
-    return result;
-  };
-  // ignore: prefer_function_declarations_over_variables
-  static final SampleCodeTemplate template1 = (cell, param, editors) {
-    var emitter = editors.emitter;
-    var formatter = editors.formatter;
-
-    var mateExpression = param.toCodeExpression(editors: editors);
-    var toCode = code.Block.of([
-      code.Code("""
-    import 'package:flutter/material.dart';
-    
-    void main() {
-      
-      ${_cleanCellCode(cell, param)}
-      
-      var sample="""),
-      mateExpression.statement,
-      const code.Code("""      
-      runApp(MaterialApp(home: Scaffold(body: sample)));
-    }
-    """),
-    ]);
-
-    String result = toCode.accept(emitter).toString();
-    result = formatter.format(result);
-    return result;
-  };
-
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
-  final SampleCodeTemplate? codeTemplate;
+  final SampleTemplate codeTemplate;
 
   /// if true , we will return : cell code + mate gen code
   /// and we will erase MateSample call statement and Pen.runInCurrentCell statement
@@ -437,8 +386,8 @@ class MateSample extends NoteContent {
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
-    SampleCodeTemplate? template,
-  }) : codeTemplate = template ?? defaultTemplate;
+    SampleTemplate? sampleTemplate,
+  }) : codeTemplate = sampleTemplate ?? SampleTemplate.notIncludeCellCode;
 
   @override
   String toString() {
@@ -446,8 +395,72 @@ class MateSample extends NoteContent {
   }
 
   String toSampleCode(NoteCell cell, ObjectParam param, Editors editors) {
-    return codeTemplate!(cell, param, editors);
+    return codeTemplate.codeBuilder(cell, param, editors);
   }
+}
+
+typedef SampleCodeBuilder = String Function(
+    NoteCell cell, ObjectParam param, Editors editors);
+
+class SampleTemplate {
+  String name;
+  SampleCodeBuilder codeBuilder;
+  SampleTemplate({required this.name, required this.codeBuilder});
+
+  // ignore: prefer_function_declarations_over_variables
+  static final SampleTemplate notIncludeCellCode = SampleTemplate(
+      name: "notIncludeCellCode",
+      codeBuilder: (cell, param, editors) {
+        var emitter = editors.emitter;
+        var formatter = editors.formatter;
+
+        var mateExpression = param.toCodeExpression(editors: editors);
+
+        var toCode = code.Block.of([
+          const code.Code("""
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      var sample="""),
+          mateExpression.statement,
+          const code.Code("""      
+      runApp(MaterialApp(home: Scaffold(body: sample)));
+    }
+    """),
+        ]);
+
+        String result = toCode.accept(emitter).toString();
+        result = formatter.format(result);
+        return result;
+      });
+  // ignore: prefer_function_declarations_over_variables
+  static final SampleTemplate includeCleanCellCode = SampleTemplate(
+      name: "includeCleanCellCode",
+      codeBuilder: (cell, param, editors) {
+        var emitter = editors.emitter;
+        var formatter = editors.formatter;
+
+        var mateExpression = param.toCodeExpression(editors: editors);
+        var toCode = code.Block.of([
+          code.Code("""
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      
+      ${_cleanCellCode(cell, param)}
+      
+      var sample="""),
+          mateExpression.statement,
+          const code.Code("""      
+      runApp(MaterialApp(home: Scaffold(body: sample)));
+    }
+    """),
+        ]);
+
+        String result = toCode.accept(emitter).toString();
+        result = formatter.format(result);
+        return result;
+      });
 
   /// The piece of code to be erased from the cell code
   static const Set<String> _eraseCodeTypes = {
@@ -475,9 +488,6 @@ class MateSample extends NoteContent {
     return codes.join(" ");
   }
 }
-
-typedef SampleCodeTemplate = String Function(
-    NoteCell cell, ObjectParam param, Editors editors);
 
 // markdown 的结构轮廓，主要用来显示TOC
 class Outline {
@@ -786,8 +796,10 @@ class NoteCell extends ChangeNotifier {
   }
 }
 
-extension NoteExt<T> on Object {
+extension NoteSampleExt on Object {
   static final _code = Expando<code.Expression>();
-  code.Expression? get simpleCode => _code[this];
-  set simpleCode(code.Expression? v) => _code[this] = v;
+  code.Expression? get sampleCode => _code[this];
+  set sampleCode(code.Expression? v) => _code[this] = v;
+  set sampleCodeStr(String? v) =>
+      _code[this] = v == null ? null : code.CodeExpression(code.Code(v));
 }

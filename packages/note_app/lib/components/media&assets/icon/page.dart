@@ -9,12 +9,12 @@ PageMeta page = PageMeta(
   builder: build,
 );
 
-Set<String> iconExts = {"sharp", "rounded", "outlined"};
+Set<String> iconTypes = {"sharp", "rounded", "outlined"};
 IconRegister materialIconRegister = mate_icons.registerIcon();
 Map<String, IconData> icons =
     materialIconRegister.icons.map((key, value) => MapEntry(value, key));
 List<String> mainIconNames = icons.keys
-    .where((name) => iconExts.every((iconExt) => !name.endsWith(iconExt)))
+    .where((name) => iconTypes.every((iconExt) => !name.endsWith(iconExt)))
     .toList()
   ..sort((a, b) => a.compareTo(b));
 
@@ -44,7 +44,7 @@ build(BuildContext context, Pen print) {
           size: 24,
           color: Colors.blue,
         ),
-        Text("Icons.$name"),
+        Text$Mate("Icons.$name"),
       ],
     )));
   }

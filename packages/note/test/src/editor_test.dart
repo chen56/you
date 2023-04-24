@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:note/page_core.dart';
 
 typedef OnClick = void Function();
 // ignore: camel_case_types
@@ -15,7 +16,8 @@ void isInt<T>() {
 
 void main() {
   late ObjectParam obj;
-  Editors editors = Editors(emitter: defaultEmitter, formatter: defaultDartFormatter);
+  Editors editors =
+      Editors(emitter: defaultEmitter, formatter: defaultDartFormatter);
   setUp(() {
     obj = ObjectParam.root(editors: editors);
   });
@@ -64,20 +66,13 @@ void main() {
       expect(singleCode<Color?>(Colors.red.shade100), "Colors.red.shade100");
       expect(singleCode<Color?>(null), "null");
     });
-    test("void Function()", () {
-      expect(singleCode<void Function()>(() {}), "() {  } ");
-      expect(singleCode<void Function()?>(() {}), "() {  } ");
-      expect(singleCode<void Function()?>(null), "null");
-    });
-    test("void Function(bool?)", () {
-      expect(singleCode<void Function(bool?)>((b) {}), "(b) {  } ");
-      expect(singleCode<void Function(bool?)?>((b) {}), "(b) {  } ");
-      expect(singleCode<void Function(bool?)?>(null), "null");
-    });
-    test("void Function(bool)", () {
-      expect(singleCode<void Function(bool)>((b) {}), "(b) {  } ");
-      expect(singleCode<void Function(bool)?>((b) {}), "(b) {  } ");
-      expect(singleCode<void Function(bool)?>(null), "null");
+    test("unknow value type :void Function()", () {
+      expect(singleCode<void Function()>(() {}),
+          contains("应该使用[NoteExt.simpleCode]替换掉无法生成的代码Closure: () => void"));
+
+      // but can inject code
+      expect(
+          singleCode<void Function()>(() {}..sampleCodeStr = "(){}"), "(){}");
     });
   });
 }

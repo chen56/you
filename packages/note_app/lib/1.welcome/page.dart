@@ -94,7 +94,7 @@ build(BuildContext context, Pen print) {
     children: [
       Text$Mate("1.普通Text,点我"),
       InkResponse$Mate(
-        onTap: () {},
+        onTap: () {}..sampleCodeStr = "(){}",
         child: Text$Mate("2.包Ink的Text,点我"),
       ),
     ],
