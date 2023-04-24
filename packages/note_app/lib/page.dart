@@ -7,7 +7,7 @@ import 'package:note_app/note_app.dart';
 PageMeta page = PageMeta(
   shortTitle: "home",
   builder: build,
-  layout: Layouts.defaultLayout(defaultCodeExpand: false),
+  layout: Layouts.defaultLayout(defaultCodeExpand: true),
 );
 
 build(BuildContext context, Pen print) {

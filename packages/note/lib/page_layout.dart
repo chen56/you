@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/atelier-forest-light.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
@@ -7,18 +8,20 @@ import 'package:note/page_core.dart';
 import 'package:note/pen_markdown.dart';
 import 'package:note/src/flutter_highlight.dart';
 
+import 'sys.dart';
+
 /// 分割块，在cell间分割留白
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class LayoutScreen<T> extends StatefulWidget with Screen<T> {
   final Path<T> current;
-  final Path? tree;
+  final Path tree;
   final bool defaultCodeExpand;
   final Editors editors;
 
   LayoutScreen({
     super.key,
-    this.tree,
+    required this.tree,
     required this.current,
     required this.editors,
     this.defaultCodeExpand = false,
@@ -53,8 +56,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
     });
   }
 
-  ({List<Widget> cells, Widget header, Widget tail, Outline outline}) buildNote(
-      BuildContext context) {
+  ({List<Widget> cells, Outline outline}) buildNote(BuildContext context) {
     _NoteCellView newCellView(NoteCell cell) => _NoteCellView(
           cell,
           outline: outline,
@@ -64,13 +66,10 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
     Pen pen = Pen.build(
       context,
       widget.current,
-      editors: widget.editors,
       defaultCodeExpand: widget.defaultCodeExpand,
     );
     return (
-      header: newCellView(pen.header),
       cells: pen.cells.map((cell) => newCellView(cell)).toList(),
-      tail: newCellView(pen.tail),
       outline: outline,
     );
   }
@@ -79,7 +78,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
   Widget build(BuildContext context) {
     var noteResult = buildNote(context);
 
-    var navigatorTree = _NoteTreeView(widget.tree ?? widget.current.root);
+    var navigatorTree = _NoteTreeView(widget.tree);
 
     var outlineView = _OutlineView(
       mainContentViewController: controllerV,
@@ -108,38 +107,42 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       controller: controllerV,
       child: ListBody(
         children: [
-          noteResult.header,
           ...noteResult.cells,
-          noteResult.tail,
           //page下留白，避免被os工具栏遮挡
           const SizedBox(height: 300),
         ],
       ),
     );
     var appBar = AppBar(
-      title: Text(widget.current.title),
+      title: Text(widget.current.shortTitle),
       toolbarHeight: 36,
     );
+    var bottomDevBar = BottomAppBar(
+        height: 36,
+        padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
+        child: Row(children: [
+          const Text("Dev Bar"),
+          Spacer(),
+          IconButton(
+            onPressed: () {},
+            tooltip: 'Search',
+            icon: Icon(Icons.search),
+          ),
+          IconButton(
+            onPressed: () {},
+            tooltip: 'Favorite',
+            icon: Icon(Icons.favorite),
+          ),
+        ]));
 
     ///  Responsive UI:
     ///  Since StatefulWidget will automatically build() when the screen size changes,
     ///  the processing of responsive UI does not require special processing,
     ///  such as ListenableBuilder
     var w = WindowClass.fromContext(context);
-    if (w == WindowClass.compact) {
-      return Scaffold(
-        drawer: Drawer(child: navigatorTree),
-        endDrawer: Drawer(child: outlineView),
-        appBar: appBar,
-        body: scrollV,
-      );
-    }
-
-    if (w == WindowClass.medium) {
-      return Scaffold(
-        drawer: Drawer(child: navigatorTree),
-        appBar: appBar,
-        body: SafeArea(
+    var body = switch (w) {
+      WindowClass.compact => scrollV,
+      WindowClass.medium => SafeArea(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -148,21 +151,22 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
             ],
           ),
         ),
-      );
-    }
-
+      _ => SafeArea(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(width: 220, child: navigatorTree),
+              Expanded(child: scrollV),
+              SizedBox(width: 250, child: outlineView),
+            ],
+          ),
+        ),
+    };
     return Scaffold(
       appBar: appBar,
-      body: SafeArea(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(width: 220, child: navigatorTree),
-            Expanded(child: scrollV),
-            SizedBox(width: 250, child: outlineView),
-          ],
-        ),
-      ),
+      //only for debug mode
+      bottomNavigationBar: kDebugMode ? bottomDevBar : null,
+      body: body,
     );
   }
 
@@ -183,10 +187,7 @@ class _NoteTreeView extends StatefulWidget {
   _NoteTreeView(
     this.root, {
     Key? key,
-  }) : super(key: key) {
-    // 当前文档较少，先都展开
-    root.extendAll(true);
-  }
+  }) : super(key: key);
 
   @override
   State<_NoteTreeView> createState() => _NoteTreeViewState();
@@ -205,7 +206,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
 
       String iconExtend = node.isLeaf
           ? "     "
-          : node.extend
+          : node.expand
               ? "▽  "
               : "▷︎  ";
       String icon = "🗓";
@@ -215,16 +216,16 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       // children: [Flexible(child: Text("$icon ${node.title}"))],
       // 但是Flexible要上面套一个Flex的子类
       var link = TextButton(
-        onPressed: node.hasPage ? click : null,
+        onPressed: node.isNotEmpty ? click : null,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () => setState(() => node.extend = !node.extend),
+              onTap: () => setState(() => node.expand = !node.expand),
               child: Text(iconExtend),
             ),
             Text(icon),
-            Flexible(child: Text(node.title)),
+            Flexible(child: Text(node.shortTitle)),
           ],
         ),
       );
@@ -232,49 +233,21 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
       // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
       return Padding(
         // 缩进模仿树形
-        padding: EdgeInsets.only(left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
+        padding: EdgeInsets.only(
+            left: 20 * (node.levelTo(widget.root) - 1).toDouble()),
         child: link,
       );
     }
 
-    // var notes = widget.root.toListWithExtend(includeThis: false, hiddenNoExpend: true);
-    var notes = widget.root.toList(
+    var pages = widget.root.toList(
       includeThis: false,
-      test: (e) => e.isRoot ? true : e.parent!.extend,
+      test: (e) => e.isRoot ? true : e.parent!.expand,
     );
-    var column = Column(children: notes.map((e) => newLink(e)).toList());
+    var column = Column(children: [...pages.map(newLink)]);
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: column,
     );
-  }
-}
-
-// 在Note上扩展出UI相关的字段，比如目录树的点开状态`extend`
-extension _PathExt on Path {
-  static const _extendAttrName = "note/page_layout/extend";
-
-  //展开状态
-  bool get extend {
-    if (isLeaf) {
-      return false;
-    }
-    Object? result = attributes[_extendAttrName];
-    return result == null ? true : result as bool;
-  }
-
-  set extend(bool extend) {
-    if (isLeaf) {
-      return;
-    }
-    attributes[_extendAttrName] = extend;
-  }
-
-  void extendAll(bool extend) {
-    extend = extend;
-    children.forEach((e) {
-      e.extendAll(extend);
-    });
   }
 }
 
@@ -284,14 +257,17 @@ class _OutlineView extends StatelessWidget {
   // 主内容部分的滚动控制，点击outline触发主屏滚动到指定标题
   final ScrollController mainContentViewController;
 
-  const _OutlineView({required this.outline, required this.mainContentViewController});
+  const _OutlineView(
+      {required this.outline, required this.mainContentViewController});
 
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
     Widget headLink(OutlineNode node) {
       var link2 = TextButton(
-        style: ButtonStyle(padding: MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
+        style: ButtonStyle(
+            padding:
+                MaterialStateProperty.all<EdgeInsets>(const EdgeInsets.all(2))),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -337,7 +313,8 @@ class _MateSampleWidget extends StatelessWidget {
   final ObjectParam rootParam;
   final Editors editors;
   final String title;
-  final SampleContent content;
+  final MateSample content;
+  final NoteCell cell;
   const _MateSampleWidget({
     // ignore: unused_element
     super.key,
@@ -345,54 +322,14 @@ class _MateSampleWidget extends StatelessWidget {
     required this.editors,
     required this.title,
     required this.content,
+    required this.cell,
   });
 
-  @override
-  Widget build(BuildContext context) {
-    var paramAndCodeView = _ParamAndCodeView(
-      rootParam: rootParam,
-      editors: editors,
-      content: content,
-      title: title,
-    );
-
-    return Card(
-      elevation: 5,
-      child: ListenableBuilder(
-        listenable: rootParam,
-        builder: (context, _) {
-          var renderView = rootParam.build() as Widget;
-          return Column(
-            children: [
-              paramAndCodeView,
-              renderView,
-            ],
-          );
-        },
-      ),
-    );
-  }
-}
-
-class _ParamAndCodeView extends StatelessWidget {
-  final ObjectParam rootParam;
-  final Editors editors;
-  final String title;
-  final SampleContent content;
-
-  const _ParamAndCodeView({
-    // ignore: unused_element
-    super.key,
-    required this.rootParam,
-    required this.editors,
-    required this.title,
-    required this.content,
-  });
-
-  Widget responsiveUI({
+  static Widget responsiveUI({
     required BuildContext context,
     required Widget paramView,
     required Widget codeView,
+    required MateSample content,
   }) {
     WindowClass win = WindowClass.fromContext(context);
 
@@ -424,44 +361,45 @@ class _ParamAndCodeView extends StatelessWidget {
     );
   }
 
+  Widget buildParamRow(BuildContext context, Param param) {
+    var nameWidget = Container(
+      padding: EdgeInsets.only(left: param.level * 15),
+      child: param.nameWidget(context, editors),
+    );
+
+    var row = Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(flex: 40, child: nameWidget),
+        // Flexible(child: param.valueWidget(context, editors)),
+        Expanded(flex: 60, child: param.valueWidget(context, editors)),
+      ],
+    );
+    // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
+    // ignore: unused_local_variable
+    var padding = Padding(
+      // 缩进模仿树形
+      padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
+      child: Container(
+        decoration: const BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey))),
+        height: 30,
+        child: row,
+      ),
+    );
+
+    return padding;
+  }
+
   @override
   Widget build(BuildContext context) {
-    Widget paramRow(Param param) {
-      var nameWidget = Container(
-        padding: EdgeInsets.only(left: param.level * 15),
-        child: param.nameWidget(context, editors),
-      );
-
-      var row = Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(flex: 40, child: nameWidget),
-          // Flexible(child: param.valueWidget(context, editors)),
-          Expanded(flex: 60, child: param.valueWidget(context, editors)),
-        ],
-      );
-      // TextButton link = TextButton(onPressed: (){}, child: Text(node.title));
-      // ignore: unused_local_variable
-      var padding = Padding(
-        // 缩进模仿树形
-        padding: EdgeInsets.only(left: 2 * (param.level).toDouble()),
-        child: Container(
-          decoration: const BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey))),
-          height: 30,
-          child: row,
-        ),
-      );
-
-      return padding;
-    }
-
     // codeView do not listen param changed, because we want keep Input widget
     var paramView = Column(
       children: [
         ...rootParam
             // hide null value
             .flat(test: (param) => param.isShow)
-            .map(paramRow)
+            .map((param) => buildParamRow(context, param))
       ],
     );
 
@@ -471,7 +409,7 @@ class _ParamAndCodeView extends StatelessWidget {
       builder: (context, _) {
         return HighlightView(
           // The original code to be highlighted
-          rootParam.toSampleCodeString(snippet: false, format: true),
+          content.toSampleCode(cell, rootParam, editors),
 
           // Specify language
           // It is recommended to give it a value for performance
@@ -486,14 +424,35 @@ class _ParamAndCodeView extends StatelessWidget {
         );
       },
     );
-    return ExpansionTile(
-      initiallyExpanded: false,
-      expandedAlignment: Alignment.topLeft,
-      expandedCrossAxisAlignment: CrossAxisAlignment.start,
-      title: Row(children: [Text(title)]),
-      children: [
-        responsiveUI(context: context, codeView: codeView, paramView: paramView),
-      ],
+    var paramAndCodeView = responsiveUI(
+        context: context,
+        codeView: codeView,
+        paramView: paramView,
+        content: content);
+
+    return Card(
+      elevation: 5,
+      child: ListenableBuilder(
+        listenable: rootParam,
+        builder: (context, _) {
+          var renderView = rootParam.build() as Widget;
+
+          return Column(
+            children: [
+              ExpansionTile(
+                initiallyExpanded: false,
+                expandedAlignment: Alignment.topLeft,
+                expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                title: Row(children: [Text(title)]),
+                children: [
+                  paramAndCodeView,
+                ],
+              ),
+              renderView,
+            ],
+          );
+        },
+      ),
     );
   }
 }
@@ -521,12 +480,13 @@ class _NoteCellView extends StatelessWidget {
     if (e is WidgetContent) {
       return e.widget;
     }
-    if (e is SampleContent) {
+    if (e is MateSample) {
       return _MateSampleWidget(
         content: e,
         rootParam: e.mate.toRootParam(editors: editors),
         editors: editors,
         title: "展开代码(手机上暂时无法编辑文本、数字参数)",
+        cell: cell,
       );
     }
 
@@ -541,7 +501,7 @@ class _NoteCellView extends StatelessWidget {
   Widget build(BuildContext context) {
     var codeHighlightView = HighlightView(
       // The original code to be highlighted
-      cell.code,
+      cell.source.code,
 
       // Specify language
       // It is recommended to give it a value for performance
@@ -561,29 +521,28 @@ class _NoteCellView extends StatelessWidget {
       listenable: cell,
       builder: (context, child) {
         Iterable<Widget> contentWidgets =
-            cell.build(context).map((e) => contentToWidget(context, e));
+            cell.contents.map((e) => contentToWidget(context, e));
         // GetSizeBuilder: 总高度和cell的code及其展示相关，leftBar在第一次build时无法占满总高度，
         // 所以用GetSizeBuilder来重新获得codeView的高度并适配之
         resizeBuilder(BuildContext context, Size size, Widget? child) {
           // if (size.width < 20 || size.height < 20) {
           //   size = Size(20, 20);
           // }
-
-          var barText = cell.isCodeEmpty
-              ? "  "
-              : cell.expand
-                  ? "${cell.singleCharName}▽"
-                  : "${cell.singleCharName}▷";
+          var barText = cell.source.isCodeEmpty
+              ? " "
+              : cell.codeExpand
+                  ? "▽"
+                  : "▷";
           var leftBar = Material(
             child: InkWell(
               onTap: () {
-                cell.expand = !cell.expand;
+                cell.codeExpand = !cell.codeExpand;
               },
               child: Container(
                 height: size.height,
                 alignment: Alignment.topCenter,
                 child: Tooltip(
-                  message: '${cell.name}，序号可能不连续，因为会隐藏空cell',
+                  message: '${cell.name}',
                   child: Text(barText),
                 ),
               ),
@@ -593,7 +552,8 @@ class _NoteCellView extends StatelessWidget {
           // codeVeiw默认很窄，需扩展到占满所有宽度
           var codeViewFillWidth = LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
-              return SizedBox(width: constraints.maxWidth, child: codeHighlightView);
+              return SizedBox(
+                  width: constraints.maxWidth, child: codeHighlightView);
             },
           );
 
@@ -605,7 +565,8 @@ class _NoteCellView extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (cell.isCodeNotEmpty && cell.expand) codeViewFillWidth,
+                    if (cell.source.isCodeNotEmpty && cell.codeExpand)
+                      codeViewFillWidth,
                     ...contentWidgets,
                     _cellSplitBlock,
                   ],
@@ -622,7 +583,9 @@ class _NoteCellView extends StatelessWidget {
         return GetSizeBuilder(builder: resizeBuilder);
       },
     );
-    return cell.contents.isEmpty && cell.isCodeEmpty ? Container() : cellView;
+    return cell.contents.isEmpty && cell.source.isCodeEmpty
+        ? Container()
+        : cellView;
   }
 }
 
@@ -656,7 +619,8 @@ class SizeProvider extends StatefulWidget {
   final Widget child;
   final Function(Size) onChildSize;
 
-  const SizeProvider({Key? key, required this.onChildSize, required this.child}) : super(key: key);
+  const SizeProvider({Key? key, required this.onChildSize, required this.child})
+      : super(key: key);
   @override
   SizeProviderState createState() => SizeProviderState();
 }

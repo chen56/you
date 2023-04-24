@@ -1,10 +1,47 @@
-import 'package:flutter/foundation.dart';
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:note/navigator_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
+import 'package:note/utils.dart';
 import 'dart:convert';
+import 'package:code_builder/code_builder.dart' as code;
 
 typedef PageBuilder = void Function(BuildContext context, Pen pen);
+
+typedef PageGenInfo = ({
+  List<
+      ({
+        String cellType,
+        int end,
+        int offset,
+        List<
+            ({
+              String nodeType,
+              int end,
+              int offset,
+            })> specialNodes,
+        int statementCount
+      })> cells,
+  String encodedCode,
+  PageMeta meta
+});
+// List<({String blockType, int end, int offset})> specialNodes
+
+PageGenInfo _emptyPageGenInfo = (
+  cells: [
+    (
+      cellType: CellType.header.name,
+      offset: 0,
+      end: 0,
+      statementCount: 0,
+      specialNodes: [],
+    )
+  ],
+  encodedCode: "",
+  meta: PageMeta.empty(),
+);
+PageSource _emptyPageSource = PageSource(pageGenInfo: _emptyPageGenInfo);
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -12,17 +49,27 @@ typedef PageBuilder = void Function(BuildContext context, Pen pen);
 /// 本package关注page模型的逻辑数据，并不参与展示页面的具体样式构造
 
 /// <T>: [NavigatorV2.push] 的返回类型
+/// todo 因此类是页面定义元数据，应该是临时格式的record对象，不应是个类
 class PageMeta<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
   final PageBuilder builder;
   late final Layout? layout;
+  final bool empty;
 
   PageMeta({
     required this.shortTitle,
     required this.builder,
     this.layout,
+    this.empty = false,
   });
+
+  PageMeta.empty({String shortTitle = ""})
+      : this(
+          empty: true,
+          shortTitle: shortTitle,
+          builder: (context, print) {},
+        );
 
   @override
   String toString() {
@@ -35,33 +82,50 @@ class Path<T> {
   final List<Path> _children = List.empty(growable: true);
   final Map<String, Path> _childrenMap = {};
   final Path? parent;
-
+  bool expand = false;
   final Map<String, Object> attributes = {};
-  PageMeta<T>? _meta;
+  PageMeta<T> _meta = PageMeta(
+    empty: true,
+    shortTitle: "",
+    builder: (context, print) {},
+  );
 
-  NoteInfo? _noteInfo;
+  PageSource _source = _emptyPageSource;
 
   Path._child(
     this.name, {
     required Path this.parent,
-  });
+  }) : _meta = PageMeta.empty(shortTitle: name);
 
   Path.root()
       : name = "",
         parent = null;
 
-  bool get hasPage => _meta != null;
+  void extendTree(bool value) {
+    expand = value;
+    for (var e in children) {
+      e.extendTree(value);
+    }
+  }
+
+  bool get isEmpty => _meta.empty;
+
+  bool get isNotEmpty => !_meta.empty;
 
   List<Path> get children => List.unmodifiable(_children);
 
-  Path<C> put<C>(String fullPath, NoteInfo? noteInfo) {
-    var p = fullPath.split("/").map((e) => e.trim()).where((e) => e.isNotEmpty).toList();
-    var path = _ensurePath(p);
-    assert(path._meta == null,
-        " $path add child '$fullPath': duplicate put , ${path._meta} already exists ");
+  PageSource get source => _source;
 
-    path._meta = noteInfo?.meta;
-    path._noteInfo = noteInfo;
+  Path<C> put<C>(String fullPath, PageGenInfo pageGenInfo) {
+    var p = fullPath
+        .split("/")
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty)
+        .toList();
+    var path = _ensurePath(p);
+
+    path._meta = pageGenInfo.meta;
+    path._source = PageSource(pageGenInfo: pageGenInfo);
     return path as Path<C>;
   }
 
@@ -70,7 +134,8 @@ class Path<T> {
       return this;
     }
     String name = nameList[0];
-    assert(name != "" && name != "/", "path:$nameList, path[0]:'$name' must not be '' and '/' ");
+    assert(name != "" && name != "/",
+        "path:$nameList, path[0]:'$name' must not be '' and '/' ");
     var next = _childrenMap.putIfAbsent(name, () {
       var child = Path._child(name, parent: this);
       _children.add(child);
@@ -83,8 +148,8 @@ class Path<T> {
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   Layout get layout {
-    if (_meta != null && _meta!.layout != null) {
-      return _meta!.layout!;
+    if (_meta.layout != null) {
+      return _meta.layout!;
     }
 
     if (isRoot) {
@@ -107,9 +172,7 @@ class Path<T> {
 
   Path get root => isRoot ? this : parent!.root;
 
-  String get title => _meta == null ? nameFlat : _meta!.shortTitle;
-
-  NoteInfo? get noteInfo => _noteInfo;
+  String get shortTitle => _meta.shortTitle;
 
   String get path {
     if (isRoot) return "/";
@@ -137,7 +200,8 @@ class Path<T> {
 
   Path? child(String path) {
     Path? result = this;
-    for (var split in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
+    for (var split
+        in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._childrenMap[split];
       if (result == null) break;
     }
@@ -181,86 +245,64 @@ class Path<T> {
 ///
 /// - flutter_note 的cell在界面上是只读的
 /// - cell是我们对dart文件的一种视角
-/// - cell 分两种，
-///   - 一种是代码中用[cell]函数明确指定的cell，是可以单独运行的。（[Pen]级别的方法包括markdown()等都是cell函数）
-///   - 另一种是自然cell，即非明确指定的，夹在cell函数之间的代码段，要重新运行这种cell，相当于重新运行整个build函数
-/// 自然cell在build函数的最外层，可以用来放置公共变量、函数。
 ///
-/// - implicit cell
-/// - explicit cell
+/// 一个dart文件被识别为以下cells
+/// ================================= cell[0] header code block
+/// import 'package:some/package.dart';
+///
+/// class X{}
+/// var x = "some var";
+///
+/// build(context,print){
+/// ================================= cell[1] code block
+///   do something
+///   print.$_______________________;   // new cell directive
+/// ================================= cell[2] code block
+///   do something
+/// ================================= cell[3] tail code block
+/// } // end of build()
+/// class Y{}
+/// var y = "some var";
 ///
 ///
-// build(){
-//   // this line belongs to implicit cell: cell-0
-//   pen.cell((context,pen){
-//     // this block is explicit： cell-1
-//   });
-//   // this block is implicit cell: cell-2
-//   pen.markdown("this line is explicit cell： cell-3");
-//   // this line is implicit cell: cell-4
-// }
-///
+
 class Pen {
   /// 这个方法作用是代码区块隔离，方便语法分析器
   /// 这个函数会在代码显示器中擦除
-  // ignore: non_constant_identifier_names
   // void cell(CellBuilder builder);
   // final List<NoteCell> cells = List.empty(growable: true);
   // NoteCell _currentCell = NoteCell(index: 0);
-  final List<NoteCell> cells = List.empty(growable: true);
-
-  final Editors editors;
+  late final List<NoteCell> cells;
+  late NoteCell currentCell;
 
   final Path path;
   final bool defaultCodeExpand;
+
   // Pen({required this.editors});
   Pen.build(
     BuildContext context,
     this.path, {
-    required this.editors,
     required this.defaultCodeExpand,
   }) {
-    // firstCell
-    _nextCell();
-    if (path._meta == null) return;
+    assert(path.source._pageGenInfo.cells.isNotEmpty,
+        "page cells should not be empty");
 
-    path._meta!.builder(context, this);
-  }
-
-  NoteCell get header => NoteCell(
-        cellType: CellType.header,
-        index: 0,
-        codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.header,
+    List<NoteCell> cells = List.empty(growable: true);
+    for (int i = 0; i < path.source._pageGenInfo.cells.length; i++) {
+      cells.add(NoteCell(
         pen: this,
-      );
+        index: i,
+        pageSource: path.source,
+      ));
+    }
+    this.cells = List.unmodifiable(cells);
+    // first cell is dart head code , All code before the build() function
+    currentCell = cells.first;
 
-  NoteCell get tail => NoteCell(
-        cellType: CellType.tail,
-        index: 0,
-        codeBlock: path.noteInfo == null ? CodeBlock.Empty : path.noteInfo!.source.tail,
-        pen: this,
-      );
+    // Skip the header code block
+    $____________________________________________________________________();
 
-  /// markdown 独占一个新cell
-  void markdown(String content) {
-    currentCell.print(MarkdownContent(content));
-  }
-
-  /// 新增一个自然cell
-  /// add a nature cell
-  ///
-  /// 自然cell的意思是，在[Pen.cell]函数块之间的代码块
-  /// The meaning of natural cell is the code block between [Pen. cell] function blocks
-  NoteCell _nextCell() {
-    int cellIndex = cells.length;
-    var next = NoteCell(
-      cellType: CellType.body,
-      pen: this,
-      index: cellIndex,
-      codeBlock: NoteSource.getBodyCellBlock(path, cellIndex),
-    );
-    cells.add(next);
-    return next;
+    path._meta.builder(context, this);
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容
@@ -268,9 +310,20 @@ class Pen {
   ///
   /// 通过[builder]参数可以重建此cell
   /// cell can be rebuilt using the [builder] arg
-  void nextCell___________________________() {
-    // add a normal cell
-    _nextCell();
+  void $____________________________________________________________________() {
+    int nextCellIndex = currentCell.index + 1;
+    // It is already the last cell
+    // It is possible that the code generation has not been synchronized
+    if (nextCellIndex >= cells.length) {
+      return;
+    }
+
+    currentCell = cells[nextCellIndex];
+  }
+
+  /// markdown 独占一个新cell
+  void markdown(String content) {
+    currentCell.print(MarkdownContent(content));
   }
 
   void call(Object? object) {
@@ -282,8 +335,6 @@ class Pen {
   void runInCurrentCell(void Function(NoteCell print) callback) {
     callback(currentCell);
   }
-
-  NoteCell get currentCell => cells.last;
 }
 
 /// note content is not widget , it is data.
@@ -293,6 +344,11 @@ class MarkdownContent extends NoteContent {
   final String content;
 
   MarkdownContent(this.content);
+
+  @override
+  String toString() {
+    return "MarkdownContent('${content.replaceAll("\n", "\\n").safeSubstring(0, 50)}')";
+  }
 }
 
 class ObjectContent extends NoteContent {
@@ -317,21 +373,119 @@ class WidgetContent extends NoteContent {
   }
 }
 
-// {String title = "展开代码&编辑器", bool isShowCode = true, bool isShowParamEditor = true}
-class SampleContent extends NoteContent {
+class MateSample extends NoteContent {
   final Mate mate;
   final bool isShowCode;
   final bool isShowParamEditor;
+  final SampleTemplate codeTemplate;
 
-  SampleContent(
+  /// if true , we will return : cell code + mate gen code
+  /// and we will erase MateSample call statement and Pen.runInCurrentCell statement
+  // final bool isUseCellCodeAsTemplate;
+  MateSample(
     this.mate, {
     this.isShowCode = true,
     this.isShowParamEditor = true,
-  });
+    SampleTemplate? sampleTemplate,
+  }) : codeTemplate = sampleTemplate ?? SampleTemplate.notIncludeCellCode;
 
   @override
   String toString() {
-    return "SampleNote('${mate.toString()}')";
+    return "MateSample('${mate.toString()}')";
+  }
+
+  String toSampleCode(NoteCell cell, ObjectParam param, Editors editors) {
+    return codeTemplate.codeBuilder(cell, param, editors);
+  }
+}
+
+typedef SampleCodeBuilder = String Function(
+    NoteCell cell, ObjectParam param, Editors editors);
+
+class SampleTemplate {
+  String name;
+  SampleCodeBuilder codeBuilder;
+  SampleTemplate({required this.name, required this.codeBuilder});
+
+  // ignore: prefer_function_declarations_over_variables
+  static final SampleTemplate notIncludeCellCode = SampleTemplate(
+      name: "notIncludeCellCode",
+      codeBuilder: (cell, param, editors) {
+        var emitter = editors.emitter;
+        var formatter = editors.formatter;
+
+        var mateExpression = param.toCodeExpression(editors: editors);
+
+        var toCode = code.Block.of([
+          const code.Code("""
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      var sample="""),
+          mateExpression.statement,
+          const code.Code("""      
+      runApp(MaterialApp(home: Scaffold(body: sample)));
+    }
+    """),
+        ]);
+
+        String result = toCode.accept(emitter).toString();
+        result = formatter.format(result);
+        return result;
+      });
+  // ignore: prefer_function_declarations_over_variables
+  static final SampleTemplate includeCleanCellCode = SampleTemplate(
+      name: "includeCleanCellCode",
+      codeBuilder: (cell, param, editors) {
+        var emitter = editors.emitter;
+        var formatter = editors.formatter;
+
+        var mateExpression = param.toCodeExpression(editors: editors);
+        var toCode = code.Block.of([
+          code.Code("""
+    import 'package:flutter/material.dart';
+    
+    void main() {
+      
+      ${_cleanCellCode(cell, param)}
+      
+      var sample="""),
+          mateExpression.statement,
+          const code.Code("""      
+      runApp(MaterialApp(home: Scaffold(body: sample)));
+    }
+    """),
+        ]);
+
+        String result = toCode.accept(emitter).toString();
+        result = formatter.format(result);
+        return result;
+      });
+
+  /// The piece of code to be erased from the cell code
+  static const Set<String> _eraseCodeTypes = {
+    "MateSample.new.firstParentStatement",
+    "Pen.runInCurrentCell"
+  };
+
+  /// cell代码被转换后作为范例代码
+  /// The cell code is transformed as sample code
+  static String _cleanCellCode(NoteCell cell, ObjectParam rootParam) {
+    var sources = cell.source.specialSources
+        .where((e) => _eraseCodeTypes.contains(e.codeType))
+        .toList();
+
+    sources.sort((a, b) => a.codeEntity.offset.compareTo(b.codeEntity.offset));
+
+    int offset = cell.source.codeEntity.offset;
+    List<String> codes = List.empty(growable: true);
+    for (var s in sources) {
+      codes.add(
+          cell.pen.path.source.code.safeSubstring(offset, s.codeEntity.offset));
+
+      offset = s.codeEntity.end;
+    }
+    return codes.join(" ");
   }
 }
 
@@ -426,7 +580,8 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
         child: Center(
           child: Text(
             "WARN：当前Path上未配置任何Layout: ${current.path}",
-            style: theme.textTheme.titleLarge?.copyWith(color: theme.colorScheme.error),
+            style: theme.textTheme.titleLarge
+                ?.copyWith(color: theme.colorScheme.error),
           ),
         ),
       ),
@@ -437,150 +592,144 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
   String get location => current.path;
 }
 
-class NotePage {
-  final Path path;
-  final NoteSource source;
-  final PageMeta meta;
+class PageSource {
+  late final String code;
+  final PageGenInfo _pageGenInfo;
+  PageSource({required PageGenInfo pageGenInfo}) : _pageGenInfo = pageGenInfo {
+    var decoded = base64.decode(pageGenInfo.encodedCode);
+    code = utf8.decode(decoded);
+  }
 
-  NotePage({
-    required this.path,
-    required NoteInfo info,
-  })  : source = info.source,
-        meta = info.meta;
-}
-
-class NoteInfo {
-  final NoteSource source;
-  final PageMeta meta;
-
-  NoteInfo({
-    required this.source,
-    required this.meta,
-  });
-}
-
-class NoteSource {
-  final CodeBlock header;
-  final List<CodeBlock> body;
-  final CodeBlock tail;
-  final String code;
-
-  NoteSource({
-    required String code,
-    required this.header,
-    this.body = const [],
-    required this.tail,
-  }) : code = utf8.decode(base64.decode(code)) {
-    header.source = this;
-    tail.source = this;
-    for (var e in body) {
-      e.source = this;
+  String _getCellCode(CodeEntity codeEntity) {
+    if (codeEntity.end > code.length) {
+      return "// ${codeEntity.offset}:(${codeEntity.end}) >= code.length(${code.length})  ";
     }
-  }
-
-  String get headerCode {
-    return code.substring(header.offset, header.end);
-  }
-
-  String get tailCode {
-    return code.substring(tail.offset, tail.end);
-  }
-
-  static CodeBlock getBodyCellBlock(Path path, int cellIndex) {
-    if (path.noteInfo == null) return CodeBlock.Empty;
-    if (cellIndex >= path.noteInfo!.source.body.length) {
-      return CodeBlock.Empty;
-    }
-    return path.noteInfo!.source.body[cellIndex];
-  }
-
-  String getCode(CodeBlock codeBlock) {
-    return code.substring(codeBlock.offset, codeBlock.end);
-  }
-
-  String getMainCellCode(int index) {
-    if (index >= body.length) {
-      // not sync
-      return "cell code not sync, please gen page.g.dart";
-    }
-    var c = body[index];
-    return code.substring(c.offset, c.end);
+    return code.safeSubstring(codeEntity.offset, codeEntity.end);
   }
 }
 
-class CodeBlock {
-  late final NoteSource source;
+/// CodeEntity is same as analyzer [SyntacticEntity]
+class CodeEntity {
   final int offset;
   final int end;
-  final int statementCount;
+  CodeEntity({required this.offset, required this.end});
 
-  CodeBlock({
-    required this.offset,
-    required this.end,
-    this.statementCount = 0,
-  });
+  int get length => end - offset;
 
-  /// 是否为不存在的代码块
-  bool get isExists => offset == end;
-  static CodeBlock Empty = CodeBlock(offset: 0, end: 0);
-
-  /// 是否为不包含任何有意义的语句的空块
-// bool get isEmpty => isExists || ;
-  ///     final encodedCode = base64.encode(utf8.encode(source.code));
-  ///
   @override
   String toString() {
-    return "CodeBlock($offset:$end)";
+    return "CodeEntity(offset:$offset, end:$end, length:$length )";
   }
 }
 
-enum CellType { header, body, tail }
+class CellSource {
+  final int index;
+  final CellType cellType;
+  final CodeEntity codeEntity;
+  final int statementCount;
+  final PageSource _pageSource;
+  List<SpecialSource> specialSources;
 
+  CellSource({
+    required this.cellType,
+    required this.codeEntity,
+    required this.specialSources,
+    required this.statementCount,
+    required NoteCell cell,
+  })  : index = cell.index,
+        _pageSource = cell.pen.path._source {}
+
+  String get code {
+    return _pageSource._getCellCode(codeEntity);
+  }
+
+  bool get isCodeEmpty {
+    return code.contains(RegExp(r'^\s*$'));
+  }
+
+  bool get isCodeNotEmpty {
+    return !isCodeEmpty;
+  }
+
+  @override
+  String toString() {
+    return "CellSource(index:$index, block:$codeEntity, statementCount:$statementCount )";
+  }
+}
+
+class SpecialSource {
+  String codeType;
+  final CodeEntity codeEntity;
+  final NoteCell cell;
+  final PageSource pageSource;
+  SpecialSource({
+    required this.codeType,
+    required this.codeEntity,
+    required this.cell,
+  }) : pageSource = cell.pen.path.source;
+
+  String get code {
+    return pageSource._getCellCode(codeEntity);
+  }
+
+  @override
+  String toString() {
+    return "SpecialSource(codeType:$codeType,codeEntity:$codeEntity,)";
+  }
+}
+
+enum CellType {
+  header,
+  body,
+  tail;
+
+  static CellType parse(String name) {
+    for (CellType t in CellType.values) {
+      if (t.name == name) return t;
+    }
+    throw Exception("CellType.name:$name not exist");
+  }
+}
+
+/// todo cell内函数太乱，待整理重构
 /// 一个cell代表note中的一个代码块及其产生的内容
 /// A cell represents a code block in a note and its generated content
 class NoteCell extends ChangeNotifier {
   final List<NoteContent> _contents = List.empty(growable: true);
 
   // index use to find code
-  final CodeBlock codeBlock;
   final int index;
   final Pen pen;
-  bool? _expand;
-  final CellType cellType;
+  late final CellSource source;
 
   NoteCell({
-    required this.codeBlock,
     required this.pen,
     required this.index,
-    required this.cellType,
-  });
+    required PageSource pageSource,
+  }) {
+    var codeCell = pageSource._pageGenInfo.cells[index];
+    source = CellSource(
+      codeEntity: CodeEntity(offset: codeCell.offset, end: codeCell.end),
+      statementCount: codeCell.statementCount,
+      cellType: CellType.parse(codeCell.cellType),
+      cell: this,
+      specialSources: codeCell.specialNodes
+          .map((e) => SpecialSource(
+                codeType: e.nodeType,
+                codeEntity: CodeEntity(offset: e.offset, end: e.end),
+                cell: this,
+              ))
+          .toList(),
+    );
+  }
 
   List<NoteContent> get contents => List.unmodifiable(_contents);
 
-  // String get name {
-  //   if (cellType == CellType.header) {
-  //     return "cell[header]";
-  //   }
-  //   if (cellType == CellType.tail) {
-  //     return "cell[tail]";
-  //   }
-  //   return "cell[$index]";
-  // }
-  get name => switch (cellType) {
-        CellType.header => "cell[header]",
-        CellType.tail => "cell[tail]",
-        CellType.body => "cell[$index]",
-        _ => "error:not here",
-      };
+  get name {
+    return "cell[$index]";
+  }
 
-  get singleCharName => switch (cellType) {
-        CellType.header => "H",
-        CellType.tail => "T",
-        CellType.body => "$index",
-        _ => "error:not here",
-      };
-
-  bool isEmpty() => contents.isEmpty;
+  bool isContentEmpty() => contents.isEmpty;
 
   void print(Object? object) {
     call(object);
@@ -594,7 +743,7 @@ class NoteCell extends ChangeNotifier {
     call(MarkdownContent(content));
   }
 
-  bool get isMarkdownCell {
+  bool get isAllMarkdownContent {
     if (_contents.isEmpty) return false;
     return _contents.every((e) => e is MarkdownContent);
   }
@@ -605,7 +754,7 @@ class NoteCell extends ChangeNotifier {
       return;
     }
     if (object is Mate) {
-      _add(SampleContent(object));
+      _add(MateSample(object));
       return;
     }
     if (object is Widget) {
@@ -620,75 +769,37 @@ class NoteCell extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// 不包含pen相关调用的代码
-  String get noPenCode {
-    return "code source... todo \n code.... \n code...";
-  }
-
-  String get code {
-    if (_contents.isNotEmpty && CodeBlock.Empty == codeBlock) {
-      return "cell have content ,but code source is null, please gen page.g.dart";
-    }
-    return path.noteInfo == null ? "" : path.noteInfo!.source.getCode(codeBlock);
-  }
-
-  Path get path => pen.path;
-
+  bool? _codeExpand;
   // show == expand
-  bool get expand {
-    if (isCodeEmpty) return false;
+  bool get codeExpand {
+    if (source.isCodeEmpty) return false;
     //markdown cell default hidden code
-    if (_expand == null) {
-      return switch (cellType) {
+    if (_codeExpand == null) {
+      return switch (source.cellType) {
         CellType.header => false,
         CellType.tail => false,
-        CellType.body => pen.defaultCodeExpand && !isMarkdownCell,
+        CellType.body => pen.defaultCodeExpand && !isAllMarkdownContent,
         _ => false,
       };
     }
-    return _expand ?? pen.defaultCodeExpand;
+    return _codeExpand ?? pen.defaultCodeExpand;
   }
 
-  bool get isShowCode {
-    return !isCodeEmpty;
-  }
-
-  set expand(bool newValue) {
-    _expand = newValue;
+  set codeExpand(bool newValue) {
+    _codeExpand = newValue;
     notifyListeners();
-  }
-
-  bool get isCodeEmpty {
-    return code.contains(RegExp(r'^\s*$'));
-  }
-
-  bool get isCodeNotEmpty {
-    return !isCodeEmpty;
-  }
-
-  List<NoteContent> build(BuildContext context) {
-    return List.unmodifiable(_contents);
   }
 
   @override
   String toString() {
-    return "$name(hash:$hashCode, expend:$expand,isMarkdownCell:$isMarkdownCell, isEmptyCode:$isCodeEmpty contents-${contents.length}:$contents)";
+    return "$name(hash:$hashCode,isMarkdownCell:$isAllMarkdownContent, isEmptyCode:$source.isCodeEmpty contents-${contents.length}:$contents)";
   }
 }
 
-/// https://m3.material.io/foundations/layout/applying-layout/window-size-classes
-enum WindowClass {
-  // phone
-  compact,
-  // pad
-  medium,
-  // full screen pc
-  expanded;
-
-  factory WindowClass.fromContext(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    if (width >= 1400) return WindowClass.expanded;
-    if (width >= 900) return WindowClass.medium;
-    return WindowClass.compact;
-  }
+extension NoteSampleExt on Object {
+  static final _code = Expando<code.Expression>();
+  code.Expression? get sampleCode => _code[this];
+  set sampleCode(code.Expression? v) => _code[this] = v;
+  set sampleCodeStr(String? v) =>
+      _code[this] = v == null ? null : code.CodeExpression(code.Code(v));
 }

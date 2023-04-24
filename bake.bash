@@ -185,9 +185,20 @@ enable_experiment=""
   /preview() {
 #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
 #    /build "$@"
-    /build
+    /build "$@"
     # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-docknet npm:http-server  ./packages/note_app/build/web --port 8000  -g --brotli
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server  ./packages/note_app/build/web --port 8000  -g --brotli
+  }
+}
+
+/preview_macos?() {
+  /preview_macos?shortHelp() { cat <<<"预览preview_macos版"; }
+  /preview_macos() {
+    (
+      cd packages/note_app;
+      run flutter build macos -v $enable_experiment \
+                           --release --tree-shake-icons "$@" ;
+    )
   }
 }
 
@@ -248,11 +259,14 @@ enable_experiment=""
 }
 
 /run?() {
-  /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8000"; }
+  /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8888"; }
   /run() {
+    # only work on macos
+    # shellcheck disable=SC2155
+    local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true;
     (
       cd packages/note_app;
-      run flutter run --web-hostname 172.20.10.8 --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@" ;
+      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@" ;
     )
   }
 }

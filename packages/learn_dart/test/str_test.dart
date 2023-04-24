@@ -24,13 +24,17 @@ void main() {
   });
 
   test('substring', () {
+    expect("".substring(0, 0), "");
+
     try {
       "abc".substring(1, 20);
       fail("not here");
     } catch (e) {
       expect(e, isA<RangeError>());
       expect(
-          e.toString(), equals("RangeError (end): Invalid value: Not in inclusive range 1..3: 20"));
+          e.toString(),
+          equals(
+              "RangeError (end): Invalid value: Not in inclusive range 1..3: 20"));
     }
   });
   group("length", () {
@@ -46,6 +50,13 @@ void main() {
       expect("中文字符串长度".runes.length, 7);
       expect("# 中文abc".length, 7);
       expect("# 中文abc".runes.length, 7);
+    });
+  });
+  group("字符串变量替换", () {
+    test('无法先声明字符串模版，再填充它', () {
+      // String template = "a $arg";
+      // int arg
+      // print(template);
     });
   });
 }
