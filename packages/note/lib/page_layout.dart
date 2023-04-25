@@ -589,6 +589,8 @@ class _NoteCellView extends StatelessWidget {
   }
 }
 
+/// todo 貌似有更先进的测量size方案，可以不用刷2次
+/// /flutter/examples/api/lib/widgets/framework/build_owner.0.dart
 class GetSizeBuilder extends StatelessWidget {
   final ValueNotifier<Size> size = ValueNotifier(const Size(0, 0));
   final ValueWidgetBuilder<Size> builder;
