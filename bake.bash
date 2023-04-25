@@ -61,6 +61,9 @@ function follow_links() (
 )
 declare BAKE_HOME
 BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
+# 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
+cd "${BAKE_HOME}"
+
 
 /test1?() {
   /test1?shortHelp() {
@@ -222,7 +225,8 @@ enable_experiment=""
     (
       docker build --tag younpc/note:latest . ;
       mkdir -p build
-      docker run --workdir / younpc/note  tar cf - app | ( cd build;tar xf -)
+      docker run --workdir / younpc/note  tar -cf - app | ( cd build;tar -xf -)
+      mv build/app build/web
     )
   }
 }
@@ -406,8 +410,6 @@ print_commands() {
 
 trap " set +x; on_error " ERR
 
-# 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
-cd "${BAKE_HOME}"
 
 # init all sub commands
 initCommands
