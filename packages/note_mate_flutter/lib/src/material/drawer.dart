@@ -8,7 +8,6 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/borders.dart' as _i5;
 import 'package:flutter/src/widgets/framework.dart' as _i6;
 import 'package:flutter/src/gestures/recognizer.dart' as _i7;
-import 'package:flutter/gestures.dart' as _i8;
 
 /// class Drawer extends StatelessWidget
 class Drawer$Mate extends _i1.Drawer with _i2.Mate {
@@ -135,7 +134,7 @@ class DrawerController$Mate extends _i1.DrawerController with _i2.Mate {
     /// optionalParameters: {void Function(bool)? drawerCallback} , default:none
     super.drawerCallback,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {Color? scrimColor} , default:none
@@ -177,7 +176,6 @@ class DrawerController$Mate extends _i1.DrawerController with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i8.DragStartBehavior.start,
           ),
           'scrimColor': _i2.BuilderArg<_i4.Color?>(
             name: 'scrimColor',

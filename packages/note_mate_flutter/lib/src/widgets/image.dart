@@ -9,11 +9,10 @@ import 'dart:ui' as _i5;
 import 'package:flutter/src/animation/animation.dart' as _i6;
 import 'package:flutter/src/painting/box_fit.dart' as _i7;
 import 'package:flutter/src/painting/alignment.dart' as _i8;
-import 'package:flutter/cupertino.dart' as _i9;
-import 'package:flutter/src/painting/decoration_image.dart' as _i10;
-import 'dart:io' as _i11;
-import 'package:flutter/src/services/asset_bundle.dart' as _i12;
-import 'dart:typed_data' as _i13;
+import 'package:flutter/src/painting/decoration_image.dart' as _i9;
+import 'dart:io' as _i10;
+import 'package:flutter/src/services/asset_bundle.dart' as _i11;
+import 'dart:typed_data' as _i12;
 
 /// class Image extends StatefulWidget
 class Image$Mate extends _i1.Image with _i2.Mate {
@@ -58,10 +57,10 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
@@ -76,7 +75,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
     super.isAntiAlias,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -149,13 +148,11 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i9.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i9.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
-            defaultValue: _i9.ImageRepeat.noRepeat,
           ),
           'centerSlice': _i2.BuilderArg<_i5.Rect?>(
             name: 'centerSlice',
@@ -184,7 +181,6 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i5.FilterQuality.low,
           ),
         },
         super() {
@@ -257,10 +253,10 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
@@ -272,7 +268,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {bool gaplessPlayback = false} , default:processed=BooleanLiteralImpl
     super.gaplessPlayback,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
@@ -363,13 +359,11 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i9.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i9.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
-            defaultValue: _i9.ImageRepeat.noRepeat,
           ),
           'centerSlice': _i2.BuilderArg<_i5.Rect?>(
             name: 'centerSlice',
@@ -392,7 +386,6 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i5.FilterQuality.low,
           ),
           'isAntiAlias': _i2.BuilderArg<bool>(
             name: 'isAntiAlias',
@@ -487,10 +480,10 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
@@ -505,7 +498,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
     super.isAntiAlias,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {int? cacheWidth} , default:none
@@ -514,7 +507,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {int? cacheHeight} , default:none
     super.cacheHeight,
   })  : mateParams = {
-          'file': _i2.BuilderArg<_i11.File>(
+          'file': _i2.BuilderArg<_i10.File>(
             name: 'file',
             init: file,
             isNamed: false,
@@ -585,13 +578,11 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i9.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i9.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
-            defaultValue: _i9.ImageRepeat.noRepeat,
           ),
           'centerSlice': _i2.BuilderArg<_i5.Rect?>(
             name: 'centerSlice',
@@ -620,7 +611,6 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i5.FilterQuality.low,
           ),
           'cacheWidth': _i2.BuilderArg<int?>(
             name: 'cacheWidth',
@@ -705,10 +695,10 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
@@ -726,7 +716,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {String? package} , default:none
     super.package,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {int? cacheWidth} , default:none
@@ -745,7 +735,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'bundle': _i2.BuilderArg<_i12.AssetBundle?>(
+          'bundle': _i2.BuilderArg<_i11.AssetBundle?>(
             name: 'bundle',
             init: bundle,
             isNamed: true,
@@ -810,13 +800,11 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i9.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i9.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
-            defaultValue: _i9.ImageRepeat.noRepeat,
           ),
           'centerSlice': _i2.BuilderArg<_i5.Rect?>(
             name: 'centerSlice',
@@ -850,7 +838,6 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i5.FilterQuality.low,
           ),
           'cacheWidth': _i2.BuilderArg<int?>(
             name: 'cacheWidth',
@@ -934,10 +921,10 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
@@ -952,7 +939,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
     super.isAntiAlias,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {int? cacheWidth} , default:none
@@ -961,7 +948,7 @@ class Image$Mate extends _i1.Image with _i2.Mate {
     /// optionalParameters: {int? cacheHeight} , default:none
     super.cacheHeight,
   })  : mateParams = {
-          'bytes': _i2.BuilderArg<_i13.Uint8List>(
+          'bytes': _i2.BuilderArg<_i12.Uint8List>(
             name: 'bytes',
             init: bytes,
             isNamed: false,
@@ -1032,13 +1019,11 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i9.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i9.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
-            defaultValue: _i9.ImageRepeat.noRepeat,
           ),
           'centerSlice': _i2.BuilderArg<_i5.Rect?>(
             name: 'centerSlice',
@@ -1067,7 +1052,6 @@ class Image$Mate extends _i1.Image with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i5.FilterQuality.low,
           ),
           'cacheWidth': _i2.BuilderArg<int?>(
             name: 'cacheWidth',

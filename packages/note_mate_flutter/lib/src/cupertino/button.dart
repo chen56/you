@@ -7,9 +7,8 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 import 'dart:ui' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
-import 'package:flutter/src/painting/border_radius.dart' as _i8;
-import 'package:flutter/src/painting/alignment.dart' as _i9;
+import 'package:flutter/src/painting/border_radius.dart' as _i7;
+import 'package:flutter/src/painting/alignment.dart' as _i8;
 
 /// class CupertinoButton extends StatefulWidget
 class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
@@ -27,7 +26,7 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
     /// optionalParameters: {Color? color} , default:none
     super.color,
 
-    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , default:unprocessed=PrefixedIdentifierImpl
     super.disabledColor,
 
     /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , default:unprocessed=SimpleIdentifierImpl
@@ -39,7 +38,7 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
     /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , default:unprocessed=InstanceCreationExpressionImpl
     super.borderRadius,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
@@ -69,7 +68,6 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
             name: 'disabledColor',
             init: disabledColor,
             isNamed: true,
-            defaultValue: _i7.CupertinoColors.quaternarySystemFill,
           ),
           'minSize': _i2.BuilderArg<double?>(
             name: 'minSize',
@@ -82,16 +80,15 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
             isNamed: true,
             defaultValue: 0.4,
           ),
-          'borderRadius': _i2.BuilderArg<_i8.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
           'onPressed': _i2.BuilderArg<_i6.VoidCallback?>(
             name: 'onPressed',
@@ -127,7 +124,7 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     super.padding,
 
-    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color disabledColor = CupertinoColors.quaternarySystemFill} , default:unprocessed=PrefixedIdentifierImpl
     super.disabledColor,
 
     /// optionalParameters: {double? minSize = kMinInteractiveDimensionCupertino} , default:unprocessed=SimpleIdentifierImpl
@@ -139,7 +136,7 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
     /// optionalParameters: {BorderRadius? borderRadius = const BorderRadius.all(Radius.circular(8.0))} , default:unprocessed=InstanceCreationExpressionImpl
     super.borderRadius,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {required void Function()? onPressed} , default:none
@@ -164,7 +161,6 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
             name: 'disabledColor',
             init: disabledColor,
             isNamed: true,
-            defaultValue: _i7.CupertinoColors.quaternarySystemFill,
           ),
           'minSize': _i2.BuilderArg<double?>(
             name: 'minSize',
@@ -177,16 +173,15 @@ class CupertinoButton$Mate extends _i1.CupertinoButton with _i2.Mate {
             isNamed: true,
             defaultValue: 0.4,
           ),
-          'borderRadius': _i2.BuilderArg<_i8.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
           'onPressed': _i2.BuilderArg<_i6.VoidCallback?>(
             name: 'onPressed',

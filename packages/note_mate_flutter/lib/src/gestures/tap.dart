@@ -4,14 +4,13 @@
 import 'package:flutter/src/gestures/tap.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/animation.dart' as _i4;
-import 'package:flutter/src/gestures/recognizer.dart' as _i5;
+import 'package:flutter/src/gestures/recognizer.dart' as _i4;
 
 /// class TapDownDetails
 class TapDownDetails$Mate extends _i1.TapDownDetails with _i2.Mate {
   /// TapDownDetails TapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind})
   TapDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
@@ -24,7 +23,6 @@ class TapDownDetails$Mate extends _i1.TapDownDetails with _i2.Mate {
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'localPosition': _i2.BuilderArg<_i3.Offset?>(
             name: 'localPosition',
@@ -58,7 +56,7 @@ class TapUpDetails$Mate extends _i1.TapUpDetails with _i2.Mate {
     /// optionalParameters: {required PointerDeviceKind kind} , default:none
     required super.kind,
 
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
@@ -73,7 +71,6 @@ class TapUpDetails$Mate extends _i1.TapUpDetails with _i2.Mate {
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'localPosition': _i2.BuilderArg<_i3.Offset?>(
             name: 'localPosition',
@@ -118,7 +115,7 @@ class TapGestureRecognizer$Mate extends _i1.TapGestureRecognizer with _i2.Mate {
             init: supportedDevices,
             isNamed: true,
           ),
-          'allowedButtonsFilter': _i2.BuilderArg<_i5.AllowedButtonsFilter?>(
+          'allowedButtonsFilter': _i2.BuilderArg<_i4.AllowedButtonsFilter?>(
             name: 'allowedButtonsFilter',
             init: allowedButtonsFilter,
             isNamed: true,

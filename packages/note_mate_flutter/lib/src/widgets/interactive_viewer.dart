@@ -5,12 +5,11 @@ import 'package:flutter/src/widgets/interactive_viewer.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
-import 'package:flutter/src/painting/edge_insets.dart' as _i6;
-import 'package:flutter/src/gestures/scale.dart' as _i7;
-import 'package:flutter/src/painting/alignment.dart' as _i8;
-import 'package:flutter/src/widgets/framework.dart' as _i9;
-import 'package:vector_math/vector_math_64.dart' as _i10;
+import 'package:flutter/src/painting/edge_insets.dart' as _i5;
+import 'package:flutter/src/gestures/scale.dart' as _i6;
+import 'package:flutter/src/painting/alignment.dart' as _i7;
+import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:vector_math/vector_math_64.dart' as _i9;
 
 /// class InteractiveViewer extends StatefulWidget
 class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
@@ -19,13 +18,13 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
-    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:unprocessed=PrefixedIdentifierImpl
     super.panAxis,
 
-    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.boundaryMargin,
 
     /// optionalParameters: {bool constrained = true} , default:processed=BooleanLiteralImpl
@@ -79,19 +78,16 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.hardEdge,
           ),
           'panAxis': _i2.BuilderArg<_i1.PanAxis>(
             name: 'panAxis',
             init: panAxis,
             isNamed: true,
-            defaultValue: _i5.PanAxis.free,
           ),
-          'boundaryMargin': _i2.BuilderArg<_i6.EdgeInsets>(
+          'boundaryMargin': _i2.BuilderArg<_i5.EdgeInsets>(
             name: 'boundaryMargin',
             init: boundaryMargin,
             isNamed: true,
-            defaultValue: _i5.EdgeInsets.zero,
           ),
           'constrained': _i2.BuilderArg<bool>(
             name: 'constrained',
@@ -116,17 +112,17 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             init: interactionEndFrictionCoefficient,
             isNamed: true,
           ),
-          'onInteractionEnd': _i2.BuilderArg<_i7.GestureScaleEndCallback?>(
+          'onInteractionEnd': _i2.BuilderArg<_i6.GestureScaleEndCallback?>(
             name: 'onInteractionEnd',
             init: onInteractionEnd,
             isNamed: true,
           ),
-          'onInteractionStart': _i2.BuilderArg<_i7.GestureScaleStartCallback?>(
+          'onInteractionStart': _i2.BuilderArg<_i6.GestureScaleStartCallback?>(
             name: 'onInteractionStart',
             init: onInteractionStart,
             isNamed: true,
           ),
-          'onInteractionUpdate': _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
+          'onInteractionUpdate': _i2.BuilderArg<_i6.GestureScaleUpdateCallback?>(
             name: 'onInteractionUpdate',
             init: onInteractionUpdate,
             isNamed: true,
@@ -153,7 +149,7 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             init: transformationController,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i8.Alignment?>(
+          'alignment': _i2.BuilderArg<_i7.Alignment?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
@@ -164,7 +160,7 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'child': _i2.BuilderArg<_i9.Widget>(
+          'child': _i2.BuilderArg<_i8.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -200,13 +196,13 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
-    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {PanAxis panAxis = PanAxis.free} , default:unprocessed=PrefixedIdentifierImpl
     super.panAxis,
 
-    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsets boundaryMargin = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.boundaryMargin,
 
     /// optionalParameters: {double maxScale = 2.5} , default:processed=DoubleLiteralImpl
@@ -257,19 +253,16 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.hardEdge,
           ),
           'panAxis': _i2.BuilderArg<_i1.PanAxis>(
             name: 'panAxis',
             init: panAxis,
             isNamed: true,
-            defaultValue: _i5.PanAxis.free,
           ),
-          'boundaryMargin': _i2.BuilderArg<_i6.EdgeInsets>(
+          'boundaryMargin': _i2.BuilderArg<_i5.EdgeInsets>(
             name: 'boundaryMargin',
             init: boundaryMargin,
             isNamed: true,
-            defaultValue: _i5.EdgeInsets.zero,
           ),
           'maxScale': _i2.BuilderArg<double>(
             name: 'maxScale',
@@ -288,17 +281,17 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             init: interactionEndFrictionCoefficient,
             isNamed: true,
           ),
-          'onInteractionEnd': _i2.BuilderArg<_i7.GestureScaleEndCallback?>(
+          'onInteractionEnd': _i2.BuilderArg<_i6.GestureScaleEndCallback?>(
             name: 'onInteractionEnd',
             init: onInteractionEnd,
             isNamed: true,
           ),
-          'onInteractionStart': _i2.BuilderArg<_i7.GestureScaleStartCallback?>(
+          'onInteractionStart': _i2.BuilderArg<_i6.GestureScaleStartCallback?>(
             name: 'onInteractionStart',
             init: onInteractionStart,
             isNamed: true,
           ),
-          'onInteractionUpdate': _i2.BuilderArg<_i7.GestureScaleUpdateCallback?>(
+          'onInteractionUpdate': _i2.BuilderArg<_i6.GestureScaleUpdateCallback?>(
             name: 'onInteractionUpdate',
             init: onInteractionUpdate,
             isNamed: true,
@@ -326,7 +319,7 @@ class InteractiveViewer$Mate extends _i1.InteractiveViewer with _i2.Mate {
             init: transformationController,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i8.Alignment?>(
+          'alignment': _i2.BuilderArg<_i7.Alignment?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
@@ -379,7 +372,7 @@ class TransformationController$Mate extends _i1.TransformationController with _i
       /// requiredParameters: [Matrix4? value]
       super.value)
       : mateParams = {
-          'value': _i2.BuilderArg<_i10.Matrix4?>(
+          'value': _i2.BuilderArg<_i9.Matrix4?>(
             name: 'value',
             init: value,
             isNamed: false,

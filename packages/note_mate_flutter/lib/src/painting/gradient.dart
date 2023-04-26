@@ -4,8 +4,7 @@
 import 'package:flutter/src/painting/gradient.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/alignment.dart' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
-import 'dart:ui' as _i5;
+import 'dart:ui' as _i4;
 
 /// class GradientRotation extends GradientTransform
 class GradientRotation$Mate extends _i1.GradientRotation with _i2.Mate {
@@ -35,10 +34,10 @@ class GradientRotation$Mate extends _i1.GradientRotation with _i2.Mate {
 class LinearGradient$Mate extends _i1.LinearGradient with _i2.Mate {
   /// LinearGradient LinearGradient({AlignmentGeometry begin = Alignment.centerLeft, AlignmentGeometry end = Alignment.centerRight, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   LinearGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry begin = Alignment.centerLeft} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry begin = Alignment.centerLeft} , default:unprocessed=PrefixedIdentifierImpl
     super.begin,
 
-    /// optionalParameters: {AlignmentGeometry end = Alignment.centerRight} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry end = Alignment.centerRight} , default:unprocessed=PrefixedIdentifierImpl
     super.end,
 
     /// optionalParameters: {required List<Color> colors} , default:none
@@ -47,7 +46,7 @@ class LinearGradient$Mate extends _i1.LinearGradient with _i2.Mate {
     /// optionalParameters: {List<double>? stops} , default:none
     super.stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:unprocessed=PrefixedIdentifierImpl
     super.tileMode,
 
     /// optionalParameters: {GradientTransform? transform} , default:none
@@ -57,15 +56,13 @@ class LinearGradient$Mate extends _i1.LinearGradient with _i2.Mate {
             name: 'begin',
             init: begin,
             isNamed: true,
-            defaultValue: _i4.Alignment.centerLeft,
           ),
           'end': _i2.BuilderArg<_i3.AlignmentGeometry>(
             name: 'end',
             init: end,
             isNamed: true,
-            defaultValue: _i4.Alignment.centerRight,
           ),
-          'colors': _i2.BuilderArg<List<_i5.Color>>(
+          'colors': _i2.BuilderArg<List<_i4.Color>>(
             name: 'colors',
             init: colors,
             isNamed: true,
@@ -75,11 +72,10 @@ class LinearGradient$Mate extends _i1.LinearGradient with _i2.Mate {
             init: stops,
             isNamed: true,
           ),
-          'tileMode': _i2.BuilderArg<_i5.TileMode>(
+          'tileMode': _i2.BuilderArg<_i4.TileMode>(
             name: 'tileMode',
             init: tileMode,
             isNamed: true,
-            defaultValue: _i5.TileMode.clamp,
           ),
           'transform': _i2.BuilderArg<_i1.GradientTransform?>(
             name: 'transform',
@@ -108,7 +104,7 @@ class LinearGradient$Mate extends _i1.LinearGradient with _i2.Mate {
 class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
   /// RadialGradient RadialGradient({AlignmentGeometry center = Alignment.center, double radius = 0.5, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, AlignmentGeometry? focal, double focalRadius = 0.0, GradientTransform? transform})
   RadialGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.center,
 
     /// optionalParameters: {double radius = 0.5} , default:processed=DoubleLiteralImpl
@@ -120,7 +116,7 @@ class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
     /// optionalParameters: {List<double>? stops} , default:none
     super.stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:unprocessed=PrefixedIdentifierImpl
     super.tileMode,
 
     /// optionalParameters: {AlignmentGeometry? focal} , default:none
@@ -136,7 +132,6 @@ class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
             name: 'center',
             init: center,
             isNamed: true,
-            defaultValue: _i4.Alignment.center,
           ),
           'radius': _i2.BuilderArg<double>(
             name: 'radius',
@@ -144,7 +139,7 @@ class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
             isNamed: true,
             defaultValue: 0.5,
           ),
-          'colors': _i2.BuilderArg<List<_i5.Color>>(
+          'colors': _i2.BuilderArg<List<_i4.Color>>(
             name: 'colors',
             init: colors,
             isNamed: true,
@@ -154,11 +149,10 @@ class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
             init: stops,
             isNamed: true,
           ),
-          'tileMode': _i2.BuilderArg<_i5.TileMode>(
+          'tileMode': _i2.BuilderArg<_i4.TileMode>(
             name: 'tileMode',
             init: tileMode,
             isNamed: true,
-            defaultValue: _i5.TileMode.clamp,
           ),
           'focal': _i2.BuilderArg<_i3.AlignmentGeometry?>(
             name: 'focal',
@@ -200,7 +194,7 @@ class RadialGradient$Mate extends _i1.RadialGradient with _i2.Mate {
 class SweepGradient$Mate extends _i1.SweepGradient with _i2.Mate {
   /// SweepGradient SweepGradient({AlignmentGeometry center = Alignment.center, double startAngle = 0.0, double endAngle = math.pi * 2, required List<Color> colors, List<double>? stops, TileMode tileMode = TileMode.clamp, GradientTransform? transform})
   SweepGradient$Mate({
-    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry center = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.center,
 
     /// optionalParameters: {double startAngle = 0.0} , default:processed=DoubleLiteralImpl
@@ -215,7 +209,7 @@ class SweepGradient$Mate extends _i1.SweepGradient with _i2.Mate {
     /// optionalParameters: {List<double>? stops} , default:none
     super.stops,
 
-    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TileMode tileMode = TileMode.clamp} , default:unprocessed=PrefixedIdentifierImpl
     super.tileMode,
 
     /// optionalParameters: {GradientTransform? transform} , default:none
@@ -225,7 +219,6 @@ class SweepGradient$Mate extends _i1.SweepGradient with _i2.Mate {
             name: 'center',
             init: center,
             isNamed: true,
-            defaultValue: _i4.Alignment.center,
           ),
           'startAngle': _i2.BuilderArg<double>(
             name: 'startAngle',
@@ -238,7 +231,7 @@ class SweepGradient$Mate extends _i1.SweepGradient with _i2.Mate {
             init: endAngle,
             isNamed: true,
           ),
-          'colors': _i2.BuilderArg<List<_i5.Color>>(
+          'colors': _i2.BuilderArg<List<_i4.Color>>(
             name: 'colors',
             init: colors,
             isNamed: true,
@@ -248,11 +241,10 @@ class SweepGradient$Mate extends _i1.SweepGradient with _i2.Mate {
             init: stops,
             isNamed: true,
           ),
-          'tileMode': _i2.BuilderArg<_i5.TileMode>(
+          'tileMode': _i2.BuilderArg<_i4.TileMode>(
             name: 'tileMode',
             init: tileMode,
             isNamed: true,
-            defaultValue: _i5.TileMode.clamp,
           ),
           'transform': _i2.BuilderArg<_i1.GradientTransform?>(
             name: 'transform',

@@ -8,24 +8,23 @@ import 'package:flutter/src/widgets/editable_text.dart' as _i4;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
 import 'package:flutter/src/material/input_decorator.dart' as _i6;
 import 'package:flutter/src/services/text_input.dart' as _i7;
-import 'package:flutter/cupertino.dart' as _i8;
-import 'package:flutter/src/painting/text_style.dart' as _i9;
-import 'package:flutter/src/painting/strut_style.dart' as _i10;
-import 'dart:ui' as _i11;
-import 'package:flutter/src/painting/alignment.dart' as _i12;
-import 'package:flutter/src/services/text_formatter.dart' as _i13;
-import 'package:flutter/src/foundation/basic_types.dart' as _i14;
-import 'package:flutter/src/gestures/tap.dart' as _i15;
-import 'package:flutter/src/widgets/tap_region.dart' as _i16;
-import 'package:flutter/src/widgets/form.dart' as _i17;
-import 'package:flutter/src/painting/edge_insets.dart' as _i18;
-import 'package:flutter/src/widgets/text_selection.dart' as _i19;
-import 'package:flutter/src/material/text_field.dart' as _i20;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i21;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i22;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i23;
-import 'package:flutter/src/widgets/spell_check.dart' as _i24;
-import 'package:flutter/src/widgets/magnifier.dart' as _i25;
+import 'package:flutter/src/painting/text_style.dart' as _i8;
+import 'package:flutter/src/painting/strut_style.dart' as _i9;
+import 'dart:ui' as _i10;
+import 'package:flutter/src/painting/alignment.dart' as _i11;
+import 'package:flutter/src/services/text_formatter.dart' as _i12;
+import 'package:flutter/src/foundation/basic_types.dart' as _i13;
+import 'package:flutter/src/gestures/tap.dart' as _i14;
+import 'package:flutter/src/widgets/tap_region.dart' as _i15;
+import 'package:flutter/src/widgets/form.dart' as _i16;
+import 'package:flutter/src/painting/edge_insets.dart' as _i17;
+import 'package:flutter/src/widgets/text_selection.dart' as _i18;
+import 'package:flutter/src/material/text_field.dart' as _i19;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i20;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i21;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i22;
+import 'package:flutter/src/widgets/spell_check.dart' as _i23;
+import 'package:flutter/src/widgets/magnifier.dart' as _i24;
 
 /// class TextFormField extends FormField<String>
 class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
@@ -49,7 +48,7 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
     /// optionalParameters: {TextInputType? keyboardType} , default:none
     super.keyboardType,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:unprocessed=PrefixedIdentifierImpl
     super.textCapitalization,
 
     /// optionalParameters: {TextInputAction? textInputAction} , default:none
@@ -64,7 +63,7 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
@@ -230,35 +229,33 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             name: 'textCapitalization',
             init: textCapitalization,
             isNamed: true,
-            defaultValue: _i8.TextCapitalization.none,
           ),
           'textInputAction': _i2.BuilderArg<_i7.TextInputAction?>(
             name: 'textInputAction',
             init: textInputAction,
             isNamed: true,
           ),
-          'style': _i2.BuilderArg<_i9.TextStyle?>(
+          'style': _i2.BuilderArg<_i8.TextStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i10.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i9.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
           ),
-          'textDirection': _i2.BuilderArg<_i11.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i10.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'textAlign': _i2.BuilderArg<_i11.TextAlign>(
+          'textAlign': _i2.BuilderArg<_i10.TextAlign>(
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
-            defaultValue: _i11.TextAlign.start,
           ),
-          'textAlignVertical': _i2.BuilderArg<_i12.TextAlignVertical?>(
+          'textAlignVertical': _i2.BuilderArg<_i11.TextAlignVertical?>(
             name: 'textAlignVertical',
             init: textAlignVertical,
             isNamed: true,
@@ -314,7 +311,7 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'maxLengthEnforcement': _i2.BuilderArg<_i13.MaxLengthEnforcement?>(
+          'maxLengthEnforcement': _i2.BuilderArg<_i12.MaxLengthEnforcement?>(
             name: 'maxLengthEnforcement',
             init: maxLengthEnforcement,
             isNamed: true,
@@ -341,42 +338,42 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: maxLength,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i14.ValueChanged<String>?>(
+          'onChanged': _i2.BuilderArg<_i13.ValueChanged<String>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i15.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i14.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'onTapOutside': _i2.BuilderArg<_i16.TapRegionCallback?>(
+          'onTapOutside': _i2.BuilderArg<_i15.TapRegionCallback?>(
             name: 'onTapOutside',
             init: onTapOutside,
             isNamed: true,
           ),
-          'onEditingComplete': _i2.BuilderArg<_i11.VoidCallback?>(
+          'onEditingComplete': _i2.BuilderArg<_i10.VoidCallback?>(
             name: 'onEditingComplete',
             init: onEditingComplete,
             isNamed: true,
           ),
-          'onFieldSubmitted': _i2.BuilderArg<_i14.ValueChanged<String>?>(
+          'onFieldSubmitted': _i2.BuilderArg<_i13.ValueChanged<String>?>(
             name: 'onFieldSubmitted',
             init: onFieldSubmitted,
             isNamed: true,
           ),
-          'onSaved': _i2.BuilderArg<_i17.FormFieldSetter<String>?>(
+          'onSaved': _i2.BuilderArg<_i16.FormFieldSetter<String>?>(
             name: 'onSaved',
             init: onSaved,
             isNamed: true,
           ),
-          'validator': _i2.BuilderArg<_i17.FormFieldValidator<String>?>(
+          'validator': _i2.BuilderArg<_i16.FormFieldValidator<String>?>(
             name: 'validator',
             init: validator,
             isNamed: true,
           ),
-          'inputFormatters': _i2.BuilderArg<List<_i13.TextInputFormatter>?>(
+          'inputFormatters': _i2.BuilderArg<List<_i12.TextInputFormatter>?>(
             name: 'inputFormatters',
             init: inputFormatters,
             isNamed: true,
@@ -397,22 +394,22 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: cursorHeight,
             isNamed: true,
           ),
-          'cursorRadius': _i2.BuilderArg<_i11.Radius?>(
+          'cursorRadius': _i2.BuilderArg<_i10.Radius?>(
             name: 'cursorRadius',
             init: cursorRadius,
             isNamed: true,
           ),
-          'cursorColor': _i2.BuilderArg<_i11.Color?>(
+          'cursorColor': _i2.BuilderArg<_i10.Color?>(
             name: 'cursorColor',
             init: cursorColor,
             isNamed: true,
           ),
-          'keyboardAppearance': _i2.BuilderArg<_i11.Brightness?>(
+          'keyboardAppearance': _i2.BuilderArg<_i10.Brightness?>(
             name: 'keyboardAppearance',
             init: keyboardAppearance,
             isNamed: true,
           ),
-          'scrollPadding': _i2.BuilderArg<_i18.EdgeInsets>(
+          'scrollPadding': _i2.BuilderArg<_i17.EdgeInsets>(
             name: 'scrollPadding',
             init: scrollPadding,
             isNamed: true,
@@ -422,17 +419,17 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: enableInteractiveSelection,
             isNamed: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i19.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i18.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'buildCounter': _i2.BuilderArg<_i20.InputCounterWidgetBuilder?>(
+          'buildCounter': _i2.BuilderArg<_i19.InputCounterWidgetBuilder?>(
             name: 'buildCounter',
             init: buildCounter,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i21.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i20.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -442,12 +439,12 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: autofillHints,
             isNamed: true,
           ),
-          'autovalidateMode': _i2.BuilderArg<_i17.AutovalidateMode?>(
+          'autovalidateMode': _i2.BuilderArg<_i16.AutovalidateMode?>(
             name: 'autovalidateMode',
             init: autovalidateMode,
             isNamed: true,
           ),
-          'scrollController': _i2.BuilderArg<_i22.ScrollController?>(
+          'scrollController': _i2.BuilderArg<_i21.ScrollController?>(
             name: 'scrollController',
             init: scrollController,
             isNamed: true,
@@ -463,7 +460,7 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i23.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i22.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -473,12 +470,12 @@ class TextFormField$Mate extends _i1.TextFormField with _i2.Mate {
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i24.SpellCheckConfiguration?>(
+          'spellCheckConfiguration': _i2.BuilderArg<_i23.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i25.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i24.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,

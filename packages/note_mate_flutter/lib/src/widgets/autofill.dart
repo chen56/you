@@ -5,7 +5,6 @@ import 'package:flutter/src/widgets/autofill.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
 
 /// class AutofillGroup extends StatefulWidget
 class AutofillGroup$Mate extends _i1.AutofillGroup with _i2.Mate {
@@ -17,7 +16,7 @@ class AutofillGroup$Mate extends _i1.AutofillGroup with _i2.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
 
-    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AutofillContextAction onDisposeAction = AutofillContextAction.commit} , default:unprocessed=PrefixedIdentifierImpl
     super.onDisposeAction,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -34,7 +33,6 @@ class AutofillGroup$Mate extends _i1.AutofillGroup with _i2.Mate {
             name: 'onDisposeAction',
             init: onDisposeAction,
             isNamed: true,
-            defaultValue: _i5.AutofillContextAction.commit,
           ),
         },
         super() {

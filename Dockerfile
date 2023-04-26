@@ -13,9 +13,17 @@ ENV FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 RUN cd note && ./bake get
 
+FROM base as build
+
+RUN cd note && ./bake build --base-href "/note/"
+
+
 FROM base as ci
 
-RUN pwd && ls
+RUN cd note && ./bake test \
+            && ./bake build --base-href "/note/"
+
+
 
 #RUN cd note && ./bake get \
 #            && (  [[ "$test" == "true" ]] && ./bake test ) \

@@ -19,7 +19,7 @@ class Texture$Mate extends _i1.Texture with _i2.Mate {
     /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
     super.freeze,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -42,7 +42,6 @@ class Texture$Mate extends _i1.Texture with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i4.FilterQuality.low,
           ),
         },
         super() {

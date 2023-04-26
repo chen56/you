@@ -6,14 +6,12 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/basic_types.dart' as _i3;
 import 'package:flutter/src/widgets/scroll_physics.dart' as _i4;
 import 'package:flutter/src/foundation/key.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'package:flutter/src/foundation/basic_types.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'package:flutter/src/gestures/recognizer.dart' as _i9;
-import 'package:flutter/gestures.dart' as _i10;
-import 'dart:ui' as _i11;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i12;
-import 'package:flutter/src/widgets/scroll_delegate.dart' as _i13;
+import 'package:flutter/src/foundation/basic_types.dart' as _i6;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
+import 'package:flutter/src/gestures/recognizer.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i10;
+import 'package:flutter/src/widgets/scroll_delegate.dart' as _i11;
 
 /// class PageController extends ScrollController
 class PageController$Mate extends _i1.PageController with _i2.Mate {
@@ -171,7 +169,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -192,7 +190,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     super.children,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool allowImplicitScrolling = false} , default:processed=BooleanLiteralImpl
@@ -201,7 +199,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
@@ -219,7 +217,6 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i6.Axis.horizontal,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -243,21 +240,20 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'onPageChanged': _i2.BuilderArg<_i7.ValueChanged<int>?>(
+          'onPageChanged': _i2.BuilderArg<_i6.ValueChanged<int>?>(
             name: 'onPageChanged',
             init: onPageChanged,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i8.Widget>>(
+          'children': _i2.BuilderArg<List<_i7.Widget>>(
             name: 'children',
             init: children,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i8.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i10.DragStartBehavior.start,
           ),
           'allowImplicitScrolling': _i2.BuilderArg<bool>(
             name: 'allowImplicitScrolling',
@@ -270,13 +266,12 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i11.Clip.hardEdge,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i10.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -314,7 +309,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -341,7 +336,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {int? itemCount} , default:none
     super.itemCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool allowImplicitScrolling = false} , default:processed=BooleanLiteralImpl
@@ -350,7 +345,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
@@ -368,7 +363,6 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i6.Axis.horizontal,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -392,17 +386,17 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'onPageChanged': _i2.BuilderArg<_i7.ValueChanged<int>?>(
+          'onPageChanged': _i2.BuilderArg<_i6.ValueChanged<int>?>(
             name: 'onPageChanged',
             init: onPageChanged,
             isNamed: true,
           ),
-          'itemBuilder': _i2.BuilderArg<_i8.NullableIndexedWidgetBuilder>(
+          'itemBuilder': _i2.BuilderArg<_i7.NullableIndexedWidgetBuilder>(
             name: 'itemBuilder',
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i13.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i11.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -412,11 +406,10 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             init: itemCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i8.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i10.DragStartBehavior.start,
           ),
           'allowImplicitScrolling': _i2.BuilderArg<bool>(
             name: 'allowImplicitScrolling',
@@ -429,13 +422,12 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i11.Clip.hardEdge,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i10.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -475,7 +467,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.horizontal} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -496,7 +488,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {required SliverChildDelegate childrenDelegate} , default:none
     required super.childrenDelegate,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool allowImplicitScrolling = false} , default:processed=BooleanLiteralImpl
@@ -505,7 +497,7 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
@@ -523,7 +515,6 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i6.Axis.horizontal,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -547,21 +538,20 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'onPageChanged': _i2.BuilderArg<_i7.ValueChanged<int>?>(
+          'onPageChanged': _i2.BuilderArg<_i6.ValueChanged<int>?>(
             name: 'onPageChanged',
             init: onPageChanged,
             isNamed: true,
           ),
-          'childrenDelegate': _i2.BuilderArg<_i13.SliverChildDelegate>(
+          'childrenDelegate': _i2.BuilderArg<_i11.SliverChildDelegate>(
             name: 'childrenDelegate',
             init: childrenDelegate,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i8.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i10.DragStartBehavior.start,
           ),
           'allowImplicitScrolling': _i2.BuilderArg<bool>(
             name: 'allowImplicitScrolling',
@@ -574,13 +564,12 @@ class PageView$Mate extends _i1.PageView with _i2.Mate {
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i11.Clip.hardEdge,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i10.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,

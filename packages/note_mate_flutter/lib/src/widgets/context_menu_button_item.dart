@@ -4,7 +4,6 @@
 import 'package:flutter/src/widgets/context_menu_button_item.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
 
 /// class ContextMenuButtonItem
 class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate {
@@ -13,7 +12,7 @@ class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate
     /// optionalParameters: {required void Function() onPressed} , default:none
     required super.onPressed,
 
-    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ContextMenuButtonType type = ContextMenuButtonType.custom} , default:unprocessed=PrefixedIdentifierImpl
     super.type,
 
     /// optionalParameters: {String? label} , default:none
@@ -28,7 +27,6 @@ class ContextMenuButtonItem$Mate extends _i1.ContextMenuButtonItem with _i2.Mate
             name: 'type',
             init: type,
             isNamed: true,
-            defaultValue: _i4.ContextMenuButtonType.custom,
           ),
           'label': _i2.BuilderArg<String?>(
             name: 'label',

@@ -5,8 +5,7 @@ import 'package:flutter/src/material/time_picker.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/material/time.dart' as _i4;
-import 'package:flutter/material.dart' as _i5;
-import 'package:flutter/src/widgets/media_query.dart' as _i6;
+import 'package:flutter/src/widgets/media_query.dart' as _i5;
 
 /// class TimePickerDialog extends StatefulWidget
 class TimePickerDialog$Mate extends _i1.TimePickerDialog with _i2.Mate {
@@ -39,7 +38,7 @@ class TimePickerDialog$Mate extends _i1.TimePickerDialog with _i2.Mate {
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TimePickerEntryMode initialEntryMode = TimePickerEntryMode.dial} , default:unprocessed=PrefixedIdentifierImpl
     super.initialEntryMode,
 
     /// optionalParameters: {Orientation? orientation} , default:none
@@ -97,9 +96,8 @@ class TimePickerDialog$Mate extends _i1.TimePickerDialog with _i2.Mate {
             name: 'initialEntryMode',
             init: initialEntryMode,
             isNamed: true,
-            defaultValue: _i5.TimePickerEntryMode.dial,
           ),
-          'orientation': _i2.BuilderArg<_i6.Orientation?>(
+          'orientation': _i2.BuilderArg<_i5.Orientation?>(
             name: 'orientation',
             init: orientation,
             isNamed: true,

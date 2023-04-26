@@ -4,14 +4,13 @@
 import 'package:flutter/src/cupertino/thumb_painter.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
-import 'package:flutter/src/painting/box_shadow.dart' as _i5;
+import 'package:flutter/src/painting/box_shadow.dart' as _i4;
 
 /// class CupertinoThumbPainter
 class CupertinoThumbPainter$Mate extends _i1.CupertinoThumbPainter with _i2.Mate {
   /// CupertinoThumbPainter CupertinoThumbPainter({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSliderBoxShadows})
   CupertinoThumbPainter$Mate({
-    /// optionalParameters: {Color color = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color color = CupertinoColors.white} , default:unprocessed=PrefixedIdentifierImpl
     super.color,
 
     /// optionalParameters: {List<BoxShadow> shadows = _kSliderBoxShadows} , default:unprocessed=SimpleIdentifierImpl
@@ -21,9 +20,8 @@ class CupertinoThumbPainter$Mate extends _i1.CupertinoThumbPainter with _i2.Mate
             name: 'color',
             init: color,
             isNamed: true,
-            defaultValue: _i4.CupertinoColors.white,
           ),
-          'shadows': _i2.BuilderArg<List<_i5.BoxShadow>>(
+          'shadows': _i2.BuilderArg<List<_i4.BoxShadow>>(
             name: 'shadows',
             init: shadows,
             isNamed: true,
@@ -40,7 +38,7 @@ class CupertinoThumbPainter$Mate extends _i1.CupertinoThumbPainter with _i2.Mate
 
   /// CupertinoThumbPainter CupertinoThumbPainter.switchThumb({Color color = CupertinoColors.white, List<BoxShadow> shadows = _kSwitchBoxShadows})
   CupertinoThumbPainter$Mate.switchThumb({
-    /// optionalParameters: {Color color = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color color = CupertinoColors.white} , default:unprocessed=PrefixedIdentifierImpl
     super.color,
 
     /// optionalParameters: {List<BoxShadow> shadows = _kSwitchBoxShadows} , default:unprocessed=SimpleIdentifierImpl
@@ -50,9 +48,8 @@ class CupertinoThumbPainter$Mate extends _i1.CupertinoThumbPainter with _i2.Mate
             name: 'color',
             init: color,
             isNamed: true,
-            defaultValue: _i4.CupertinoColors.white,
           ),
-          'shadows': _i2.BuilderArg<List<_i5.BoxShadow>>(
+          'shadows': _i2.BuilderArg<List<_i4.BoxShadow>>(
             name: 'shadows',
             init: shadows,
             isNamed: true,

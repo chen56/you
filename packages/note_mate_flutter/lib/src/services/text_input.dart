@@ -3,11 +3,9 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/services/text_input.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
-import 'package:flutter/cupertino.dart' as _i3;
-import 'dart:ui' as _i4;
-import 'package:flutter/src/services/autofill.dart' as _i5;
-import 'package:flutter/services.dart' as _i6;
-import 'package:flutter/src/services/text_editing.dart' as _i7;
+import 'dart:ui' as _i3;
+import 'package:flutter/src/services/autofill.dart' as _i4;
+import 'package:flutter/src/services/text_editing.dart' as _i5;
 
 /// class TextInputType
 class TextInputType$Mate extends _i1.TextInputType with _i2.Mate {
@@ -49,7 +47,7 @@ class TextInputType$Mate extends _i1.TextInputType with _i2.Mate {
 class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Mate {
   /// TextInputConfiguration TextInputConfiguration({TextInputType inputType = TextInputType.text, bool readOnly = false, bool obscureText = false, bool autocorrect = true, SmartDashesType? smartDashesType, SmartQuotesType? smartQuotesType, bool enableSuggestions = true, bool enableInteractiveSelection = true, String? actionLabel, TextInputAction inputAction = TextInputAction.done, Brightness keyboardAppearance = Brightness.light, TextCapitalization textCapitalization = TextCapitalization.none, AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled, bool enableIMEPersonalizedLearning = true, List<String> allowedMimeTypes = const <String>[], bool enableDeltaModel = false})
   TextInputConfiguration$Mate({
-    /// optionalParameters: {TextInputType inputType = TextInputType.text} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextInputType inputType = TextInputType.text} , default:unprocessed=PrefixedIdentifierImpl
     super.inputType,
 
     /// optionalParameters: {bool readOnly = false} , default:processed=BooleanLiteralImpl
@@ -76,16 +74,16 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Ma
     /// optionalParameters: {String? actionLabel} , default:none
     super.actionLabel,
 
-    /// optionalParameters: {TextInputAction inputAction = TextInputAction.done} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextInputAction inputAction = TextInputAction.done} , default:unprocessed=PrefixedIdentifierImpl
     super.inputAction,
 
-    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Brightness keyboardAppearance = Brightness.light} , default:unprocessed=PrefixedIdentifierImpl
     super.keyboardAppearance,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:unprocessed=PrefixedIdentifierImpl
     super.textCapitalization,
 
-    /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AutofillConfiguration autofillConfiguration = AutofillConfiguration.disabled} , default:unprocessed=PrefixedIdentifierImpl
     super.autofillConfiguration,
 
     /// optionalParameters: {bool enableIMEPersonalizedLearning = true} , default:processed=BooleanLiteralImpl
@@ -101,7 +99,6 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Ma
             name: 'inputType',
             init: inputType,
             isNamed: true,
-            defaultValue: _i3.TextInputType.text,
           ),
           'readOnly': _i2.BuilderArg<bool>(
             name: 'readOnly',
@@ -152,25 +149,21 @@ class TextInputConfiguration$Mate extends _i1.TextInputConfiguration with _i2.Ma
             name: 'inputAction',
             init: inputAction,
             isNamed: true,
-            defaultValue: _i3.TextInputAction.done,
           ),
-          'keyboardAppearance': _i2.BuilderArg<_i4.Brightness>(
+          'keyboardAppearance': _i2.BuilderArg<_i3.Brightness>(
             name: 'keyboardAppearance',
             init: keyboardAppearance,
             isNamed: true,
-            defaultValue: _i4.Brightness.light,
           ),
           'textCapitalization': _i2.BuilderArg<_i1.TextCapitalization>(
             name: 'textCapitalization',
             init: textCapitalization,
             isNamed: true,
-            defaultValue: _i3.TextCapitalization.none,
           ),
-          'autofillConfiguration': _i2.BuilderArg<_i5.AutofillConfiguration>(
+          'autofillConfiguration': _i2.BuilderArg<_i4.AutofillConfiguration>(
             name: 'autofillConfiguration',
             init: autofillConfiguration,
             isNamed: true,
-            defaultValue: _i6.AutofillConfiguration.disabled,
           ),
           'enableIMEPersonalizedLearning': _i2.BuilderArg<bool>(
             name: 'enableIMEPersonalizedLearning',
@@ -227,7 +220,7 @@ class RawFloatingCursorPoint$Mate extends _i1.RawFloatingCursorPoint with _i2.Ma
     /// optionalParameters: {required FloatingCursorDragState state} , default:none
     required super.state,
   })  : mateParams = {
-          'offset': _i2.BuilderArg<_i4.Offset?>(
+          'offset': _i2.BuilderArg<_i3.Offset?>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -261,7 +254,7 @@ class TextEditingValue$Mate extends _i1.TextEditingValue with _i2.Mate {
     /// optionalParameters: {TextSelection selection = const TextSelection.collapsed(offset: -1)} , default:unprocessed=InstanceCreationExpressionImpl
     super.selection,
 
-    /// optionalParameters: {TextRange composing = TextRange.empty} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextRange composing = TextRange.empty} , default:unprocessed=PrefixedIdentifierImpl
     super.composing,
   })  : mateParams = {
           'text': _i2.BuilderArg<String>(
@@ -270,16 +263,15 @@ class TextEditingValue$Mate extends _i1.TextEditingValue with _i2.Mate {
             isNamed: true,
             defaultValue: '',
           ),
-          'selection': _i2.BuilderArg<_i7.TextSelection>(
+          'selection': _i2.BuilderArg<_i5.TextSelection>(
             name: 'selection',
             init: selection,
             isNamed: true,
           ),
-          'composing': _i2.BuilderArg<_i4.TextRange>(
+          'composing': _i2.BuilderArg<_i3.TextRange>(
             name: 'composing',
             init: composing,
             isNamed: true,
-            defaultValue: _i4.TextRange.empty,
           ),
         },
         super() {
@@ -306,7 +298,7 @@ class SelectionRect$Mate extends _i1.SelectionRect with _i2.Mate {
     /// optionalParameters: {required Rect bounds} , default:none
     required super.bounds,
 
-    /// optionalParameters: {TextDirection direction = TextDirection.ltr} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextDirection direction = TextDirection.ltr} , default:unprocessed=PrefixedIdentifierImpl
     super.direction,
   })  : mateParams = {
           'position': _i2.BuilderArg<int>(
@@ -314,16 +306,15 @@ class SelectionRect$Mate extends _i1.SelectionRect with _i2.Mate {
             init: position,
             isNamed: true,
           ),
-          'bounds': _i2.BuilderArg<_i4.Rect>(
+          'bounds': _i2.BuilderArg<_i3.Rect>(
             name: 'bounds',
             init: bounds,
             isNamed: true,
           ),
-          'direction': _i2.BuilderArg<_i4.TextDirection>(
+          'direction': _i2.BuilderArg<_i3.TextDirection>(
             name: 'direction',
             init: direction,
             isNamed: true,
-            defaultValue: _i4.TextDirection.ltr,
           ),
         },
         super() {

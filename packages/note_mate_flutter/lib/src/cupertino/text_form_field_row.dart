@@ -10,17 +10,16 @@ import 'package:flutter/src/widgets/editable_text.dart' as _i6;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i7;
 import 'package:flutter/src/painting/box_decoration.dart' as _i8;
 import 'package:flutter/src/services/text_input.dart' as _i9;
-import 'package:flutter/cupertino.dart' as _i10;
-import 'package:flutter/src/painting/text_style.dart' as _i11;
-import 'package:flutter/src/painting/strut_style.dart' as _i12;
-import 'dart:ui' as _i13;
-import 'package:flutter/src/painting/alignment.dart' as _i14;
-import 'package:flutter/src/foundation/basic_types.dart' as _i15;
-import 'package:flutter/src/gestures/tap.dart' as _i16;
-import 'package:flutter/src/widgets/form.dart' as _i17;
-import 'package:flutter/src/services/text_formatter.dart' as _i18;
-import 'package:flutter/src/widgets/text_selection.dart' as _i19;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i20;
+import 'package:flutter/src/painting/text_style.dart' as _i10;
+import 'package:flutter/src/painting/strut_style.dart' as _i11;
+import 'dart:ui' as _i12;
+import 'package:flutter/src/painting/alignment.dart' as _i13;
+import 'package:flutter/src/foundation/basic_types.dart' as _i14;
+import 'package:flutter/src/gestures/tap.dart' as _i15;
+import 'package:flutter/src/widgets/form.dart' as _i16;
+import 'package:flutter/src/services/text_formatter.dart' as _i17;
+import 'package:flutter/src/widgets/text_selection.dart' as _i18;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i19;
 
 /// class CupertinoTextFormFieldRow extends FormField<String>
 class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with _i2.Mate {
@@ -50,7 +49,7 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
     super.keyboardType,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:unprocessed=PrefixedIdentifierImpl
     super.textCapitalization,
 
     /// optionalParameters: {TextInputAction? textInputAction} , default:none
@@ -65,7 +64,7 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
@@ -161,7 +160,7 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
     /// optionalParameters: {Iterable<String>? autofillHints} , default:none
     super.autofillHints,
 
-    /// optionalParameters: {AutovalidateMode autovalidateMode = AutovalidateMode.disabled} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AutovalidateMode autovalidateMode = AutovalidateMode.disabled} , default:unprocessed=PrefixedIdentifierImpl
     super.autovalidateMode,
 
     /// optionalParameters: {String? placeholder} , default:none
@@ -217,35 +216,33 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
             name: 'textCapitalization',
             init: textCapitalization,
             isNamed: true,
-            defaultValue: _i10.TextCapitalization.none,
           ),
           'textInputAction': _i2.BuilderArg<_i9.TextInputAction?>(
             name: 'textInputAction',
             init: textInputAction,
             isNamed: true,
           ),
-          'style': _i2.BuilderArg<_i11.TextStyle?>(
+          'style': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i12.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i11.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
           ),
-          'textDirection': _i2.BuilderArg<_i13.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i12.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'textAlign': _i2.BuilderArg<_i13.TextAlign>(
+          'textAlign': _i2.BuilderArg<_i12.TextAlign>(
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
-            defaultValue: _i13.TextAlign.start,
           ),
-          'textAlignVertical': _i2.BuilderArg<_i14.TextAlignVertical?>(
+          'textAlignVertical': _i2.BuilderArg<_i13.TextAlignVertical?>(
             name: 'textAlignVertical',
             init: textAlignVertical,
             isNamed: true,
@@ -323,37 +320,37 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
             init: maxLength,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i15.ValueChanged<String>?>(
+          'onChanged': _i2.BuilderArg<_i14.ValueChanged<String>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i16.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i15.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'onEditingComplete': _i2.BuilderArg<_i13.VoidCallback?>(
+          'onEditingComplete': _i2.BuilderArg<_i12.VoidCallback?>(
             name: 'onEditingComplete',
             init: onEditingComplete,
             isNamed: true,
           ),
-          'onFieldSubmitted': _i2.BuilderArg<_i15.ValueChanged<String>?>(
+          'onFieldSubmitted': _i2.BuilderArg<_i14.ValueChanged<String>?>(
             name: 'onFieldSubmitted',
             init: onFieldSubmitted,
             isNamed: true,
           ),
-          'onSaved': _i2.BuilderArg<_i17.FormFieldSetter<String>?>(
+          'onSaved': _i2.BuilderArg<_i16.FormFieldSetter<String>?>(
             name: 'onSaved',
             init: onSaved,
             isNamed: true,
           ),
-          'validator': _i2.BuilderArg<_i17.FormFieldValidator<String>?>(
+          'validator': _i2.BuilderArg<_i16.FormFieldValidator<String>?>(
             name: 'validator',
             init: validator,
             isNamed: true,
           ),
-          'inputFormatters': _i2.BuilderArg<List<_i18.TextInputFormatter>?>(
+          'inputFormatters': _i2.BuilderArg<List<_i17.TextInputFormatter>?>(
             name: 'inputFormatters',
             init: inputFormatters,
             isNamed: true,
@@ -374,12 +371,12 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
             init: cursorHeight,
             isNamed: true,
           ),
-          'cursorColor': _i2.BuilderArg<_i13.Color?>(
+          'cursorColor': _i2.BuilderArg<_i12.Color?>(
             name: 'cursorColor',
             init: cursorColor,
             isNamed: true,
           ),
-          'keyboardAppearance': _i2.BuilderArg<_i13.Brightness?>(
+          'keyboardAppearance': _i2.BuilderArg<_i12.Brightness?>(
             name: 'keyboardAppearance',
             init: keyboardAppearance,
             isNamed: true,
@@ -395,12 +392,12 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
             isNamed: true,
             defaultValue: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i19.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i18.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i20.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i19.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -410,18 +407,17 @@ class CupertinoTextFormFieldRow$Mate extends _i1.CupertinoTextFormFieldRow with 
             init: autofillHints,
             isNamed: true,
           ),
-          'autovalidateMode': _i2.BuilderArg<_i17.AutovalidateMode>(
+          'autovalidateMode': _i2.BuilderArg<_i16.AutovalidateMode>(
             name: 'autovalidateMode',
             init: autovalidateMode,
             isNamed: true,
-            defaultValue: _i10.AutovalidateMode.disabled,
           ),
           'placeholder': _i2.BuilderArg<String?>(
             name: 'placeholder',
             init: placeholder,
             isNamed: true,
           ),
-          'placeholderStyle': _i2.BuilderArg<_i11.TextStyle?>(
+          'placeholderStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'placeholderStyle',
             init: placeholderStyle,
             isNamed: true,

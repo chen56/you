@@ -11,22 +11,20 @@ import 'package:flutter/src/painting/box_decoration.dart' as _i7;
 import 'package:flutter/src/painting/edge_insets.dart' as _i8;
 import 'package:flutter/src/painting/text_style.dart' as _i9;
 import 'package:flutter/src/widgets/framework.dart' as _i10;
-import 'package:flutter/cupertino.dart' as _i11;
-import 'package:flutter/src/services/text_input.dart' as _i12;
-import 'package:flutter/src/painting/strut_style.dart' as _i13;
-import 'dart:ui' as _i14;
-import 'package:flutter/src/painting/alignment.dart' as _i15;
-import 'package:flutter/src/services/text_formatter.dart' as _i16;
-import 'package:flutter/src/foundation/basic_types.dart' as _i17;
-import 'package:flutter/src/widgets/tap_region.dart' as _i18;
-import 'package:flutter/src/gestures/recognizer.dart' as _i19;
-import 'package:flutter/gestures.dart' as _i20;
-import 'package:flutter/src/widgets/text_selection.dart' as _i21;
-import 'package:flutter/src/gestures/tap.dart' as _i22;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i23;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i24;
-import 'package:flutter/src/widgets/spell_check.dart' as _i25;
-import 'package:flutter/src/widgets/magnifier.dart' as _i26;
+import 'package:flutter/src/services/text_input.dart' as _i11;
+import 'package:flutter/src/painting/strut_style.dart' as _i12;
+import 'dart:ui' as _i13;
+import 'package:flutter/src/painting/alignment.dart' as _i14;
+import 'package:flutter/src/services/text_formatter.dart' as _i15;
+import 'package:flutter/src/foundation/basic_types.dart' as _i16;
+import 'package:flutter/src/widgets/tap_region.dart' as _i17;
+import 'package:flutter/src/gestures/recognizer.dart' as _i18;
+import 'package:flutter/src/widgets/text_selection.dart' as _i19;
+import 'package:flutter/src/gestures/tap.dart' as _i20;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i21;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i22;
+import 'package:flutter/src/widgets/spell_check.dart' as _i23;
+import 'package:flutter/src/widgets/magnifier.dart' as _i24;
 
 /// class CupertinoTextField extends StatefulWidget
 class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
@@ -59,16 +57,16 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {Widget? prefix} , default:none
     super.prefix,
 
-    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , default:unprocessed=PrefixedIdentifierImpl
     super.prefixMode,
 
     /// optionalParameters: {Widget? suffix} , default:none
     super.suffix,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , default:unprocessed=PrefixedIdentifierImpl
     super.suffixMode,
 
-    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:unprocessed=PrefixedIdentifierImpl
     super.clearButtonMode,
 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
@@ -77,7 +75,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {TextInputAction? textInputAction} , default:none
     super.textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:unprocessed=PrefixedIdentifierImpl
     super.textCapitalization,
 
     /// optionalParameters: {TextStyle? style} , default:none
@@ -86,7 +84,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
     super.strutStyle,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
@@ -182,7 +180,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , default:unprocessed=InstanceCreationExpressionImpl
     super.scrollPadding,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool? enableInteractiveSelection} , default:none
@@ -206,7 +204,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , default:none
     super.contentInsertionConfiguration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -276,7 +274,6 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             name: 'prefixMode',
             init: prefixMode,
             isNamed: true,
-            defaultValue: _i11.OverlayVisibilityMode.always,
           ),
           'suffix': _i2.BuilderArg<_i10.Widget?>(
             name: 'suffix',
@@ -287,52 +284,48 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             name: 'suffixMode',
             init: suffixMode,
             isNamed: true,
-            defaultValue: _i11.OverlayVisibilityMode.always,
           ),
           'clearButtonMode': _i2.BuilderArg<_i1.OverlayVisibilityMode>(
             name: 'clearButtonMode',
             init: clearButtonMode,
             isNamed: true,
-            defaultValue: _i11.OverlayVisibilityMode.never,
           ),
-          'keyboardType': _i2.BuilderArg<_i12.TextInputType?>(
+          'keyboardType': _i2.BuilderArg<_i11.TextInputType?>(
             name: 'keyboardType',
             init: keyboardType,
             isNamed: true,
           ),
-          'textInputAction': _i2.BuilderArg<_i12.TextInputAction?>(
+          'textInputAction': _i2.BuilderArg<_i11.TextInputAction?>(
             name: 'textInputAction',
             init: textInputAction,
             isNamed: true,
           ),
-          'textCapitalization': _i2.BuilderArg<_i12.TextCapitalization>(
+          'textCapitalization': _i2.BuilderArg<_i11.TextCapitalization>(
             name: 'textCapitalization',
             init: textCapitalization,
             isNamed: true,
-            defaultValue: _i11.TextCapitalization.none,
           ),
           'style': _i2.BuilderArg<_i9.TextStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i13.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i12.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
           ),
-          'textAlign': _i2.BuilderArg<_i14.TextAlign>(
+          'textAlign': _i2.BuilderArg<_i13.TextAlign>(
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
-            defaultValue: _i14.TextAlign.start,
           ),
-          'textAlignVertical': _i2.BuilderArg<_i15.TextAlignVertical?>(
+          'textAlignVertical': _i2.BuilderArg<_i14.TextAlignVertical?>(
             name: 'textAlignVertical',
             init: textAlignVertical,
             isNamed: true,
           ),
-          'textDirection': _i2.BuilderArg<_i14.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i13.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
@@ -372,12 +365,12 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'smartDashesType': _i2.BuilderArg<_i12.SmartDashesType?>(
+          'smartDashesType': _i2.BuilderArg<_i11.SmartDashesType?>(
             name: 'smartDashesType',
             init: smartDashesType,
             isNamed: true,
           ),
-          'smartQuotesType': _i2.BuilderArg<_i12.SmartQuotesType?>(
+          'smartQuotesType': _i2.BuilderArg<_i11.SmartQuotesType?>(
             name: 'smartQuotesType',
             init: smartQuotesType,
             isNamed: true,
@@ -410,32 +403,32 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: maxLength,
             isNamed: true,
           ),
-          'maxLengthEnforcement': _i2.BuilderArg<_i16.MaxLengthEnforcement?>(
+          'maxLengthEnforcement': _i2.BuilderArg<_i15.MaxLengthEnforcement?>(
             name: 'maxLengthEnforcement',
             init: maxLengthEnforcement,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i17.ValueChanged<String>?>(
+          'onChanged': _i2.BuilderArg<_i16.ValueChanged<String>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
           ),
-          'onEditingComplete': _i2.BuilderArg<_i14.VoidCallback?>(
+          'onEditingComplete': _i2.BuilderArg<_i13.VoidCallback?>(
             name: 'onEditingComplete',
             init: onEditingComplete,
             isNamed: true,
           ),
-          'onSubmitted': _i2.BuilderArg<_i17.ValueChanged<String>?>(
+          'onSubmitted': _i2.BuilderArg<_i16.ValueChanged<String>?>(
             name: 'onSubmitted',
             init: onSubmitted,
             isNamed: true,
           ),
-          'onTapOutside': _i2.BuilderArg<_i18.TapRegionCallback?>(
+          'onTapOutside': _i2.BuilderArg<_i17.TapRegionCallback?>(
             name: 'onTapOutside',
             init: onTapOutside,
             isNamed: true,
           ),
-          'inputFormatters': _i2.BuilderArg<List<_i16.TextInputFormatter>?>(
+          'inputFormatters': _i2.BuilderArg<List<_i15.TextInputFormatter>?>(
             name: 'inputFormatters',
             init: inputFormatters,
             isNamed: true,
@@ -456,7 +449,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: cursorHeight,
             isNamed: true,
           ),
-          'cursorRadius': _i2.BuilderArg<_i14.Radius>(
+          'cursorRadius': _i2.BuilderArg<_i13.Radius>(
             name: 'cursorRadius',
             init: cursorRadius,
             isNamed: true,
@@ -467,22 +460,22 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'cursorColor': _i2.BuilderArg<_i14.Color?>(
+          'cursorColor': _i2.BuilderArg<_i13.Color?>(
             name: 'cursorColor',
             init: cursorColor,
             isNamed: true,
           ),
-          'selectionHeightStyle': _i2.BuilderArg<_i14.BoxHeightStyle>(
+          'selectionHeightStyle': _i2.BuilderArg<_i13.BoxHeightStyle>(
             name: 'selectionHeightStyle',
             init: selectionHeightStyle,
             isNamed: true,
           ),
-          'selectionWidthStyle': _i2.BuilderArg<_i14.BoxWidthStyle>(
+          'selectionWidthStyle': _i2.BuilderArg<_i13.BoxWidthStyle>(
             name: 'selectionWidthStyle',
             init: selectionWidthStyle,
             isNamed: true,
           ),
-          'keyboardAppearance': _i2.BuilderArg<_i14.Brightness?>(
+          'keyboardAppearance': _i2.BuilderArg<_i13.Brightness?>(
             name: 'keyboardAppearance',
             init: keyboardAppearance,
             isNamed: true,
@@ -492,33 +485,32 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: scrollPadding,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i19.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i18.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i20.DragStartBehavior.start,
           ),
           'enableInteractiveSelection': _i2.BuilderArg<bool?>(
             name: 'enableInteractiveSelection',
             init: enableInteractiveSelection,
             isNamed: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i21.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i19.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i22.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i20.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'scrollController': _i2.BuilderArg<_i23.ScrollController?>(
+          'scrollController': _i2.BuilderArg<_i21.ScrollController?>(
             name: 'scrollController',
             init: scrollController,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i24.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i22.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -533,11 +525,10 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: contentInsertionConfiguration,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i14.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i13.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i14.Clip.hardEdge,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
@@ -561,12 +552,12 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i25.SpellCheckConfiguration?>(
+          'spellCheckConfiguration': _i2.BuilderArg<_i23.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i26.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i24.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -673,16 +664,16 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {Widget? prefix} , default:none
     super.prefix,
 
-    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverlayVisibilityMode prefixMode = OverlayVisibilityMode.always} , default:unprocessed=PrefixedIdentifierImpl
     super.prefixMode,
 
     /// optionalParameters: {Widget? suffix} , default:none
     super.suffix,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.always} , default:unprocessed=PrefixedIdentifierImpl
     super.suffixMode,
 
-    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverlayVisibilityMode clearButtonMode = OverlayVisibilityMode.never} , default:unprocessed=PrefixedIdentifierImpl
     super.clearButtonMode,
 
     /// optionalParameters: {TextInputType? keyboardType} , default:none
@@ -691,7 +682,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {TextInputAction? textInputAction} , default:none
     super.textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:unprocessed=PrefixedIdentifierImpl
     super.textCapitalization,
 
     /// optionalParameters: {TextStyle? style} , default:none
@@ -700,7 +691,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
     super.strutStyle,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
@@ -796,7 +787,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , default:unprocessed=InstanceCreationExpressionImpl
     super.scrollPadding,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool? enableInteractiveSelection} , default:none
@@ -820,7 +811,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
     /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , default:none
     super.contentInsertionConfiguration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -890,7 +881,6 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             name: 'prefixMode',
             init: prefixMode,
             isNamed: true,
-            defaultValue: _i11.OverlayVisibilityMode.always,
           ),
           'suffix': _i2.BuilderArg<_i10.Widget?>(
             name: 'suffix',
@@ -901,52 +891,48 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             name: 'suffixMode',
             init: suffixMode,
             isNamed: true,
-            defaultValue: _i11.OverlayVisibilityMode.always,
           ),
           'clearButtonMode': _i2.BuilderArg<_i1.OverlayVisibilityMode>(
             name: 'clearButtonMode',
             init: clearButtonMode,
             isNamed: true,
-            defaultValue: _i11.OverlayVisibilityMode.never,
           ),
-          'keyboardType': _i2.BuilderArg<_i12.TextInputType?>(
+          'keyboardType': _i2.BuilderArg<_i11.TextInputType?>(
             name: 'keyboardType',
             init: keyboardType,
             isNamed: true,
           ),
-          'textInputAction': _i2.BuilderArg<_i12.TextInputAction?>(
+          'textInputAction': _i2.BuilderArg<_i11.TextInputAction?>(
             name: 'textInputAction',
             init: textInputAction,
             isNamed: true,
           ),
-          'textCapitalization': _i2.BuilderArg<_i12.TextCapitalization>(
+          'textCapitalization': _i2.BuilderArg<_i11.TextCapitalization>(
             name: 'textCapitalization',
             init: textCapitalization,
             isNamed: true,
-            defaultValue: _i11.TextCapitalization.none,
           ),
           'style': _i2.BuilderArg<_i9.TextStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i13.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i12.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
           ),
-          'textAlign': _i2.BuilderArg<_i14.TextAlign>(
+          'textAlign': _i2.BuilderArg<_i13.TextAlign>(
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
-            defaultValue: _i14.TextAlign.start,
           ),
-          'textAlignVertical': _i2.BuilderArg<_i15.TextAlignVertical?>(
+          'textAlignVertical': _i2.BuilderArg<_i14.TextAlignVertical?>(
             name: 'textAlignVertical',
             init: textAlignVertical,
             isNamed: true,
           ),
-          'textDirection': _i2.BuilderArg<_i14.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i13.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
@@ -986,12 +972,12 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'smartDashesType': _i2.BuilderArg<_i12.SmartDashesType?>(
+          'smartDashesType': _i2.BuilderArg<_i11.SmartDashesType?>(
             name: 'smartDashesType',
             init: smartDashesType,
             isNamed: true,
           ),
-          'smartQuotesType': _i2.BuilderArg<_i12.SmartQuotesType?>(
+          'smartQuotesType': _i2.BuilderArg<_i11.SmartQuotesType?>(
             name: 'smartQuotesType',
             init: smartQuotesType,
             isNamed: true,
@@ -1024,32 +1010,32 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: maxLength,
             isNamed: true,
           ),
-          'maxLengthEnforcement': _i2.BuilderArg<_i16.MaxLengthEnforcement?>(
+          'maxLengthEnforcement': _i2.BuilderArg<_i15.MaxLengthEnforcement?>(
             name: 'maxLengthEnforcement',
             init: maxLengthEnforcement,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i17.ValueChanged<String>?>(
+          'onChanged': _i2.BuilderArg<_i16.ValueChanged<String>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
           ),
-          'onEditingComplete': _i2.BuilderArg<_i14.VoidCallback?>(
+          'onEditingComplete': _i2.BuilderArg<_i13.VoidCallback?>(
             name: 'onEditingComplete',
             init: onEditingComplete,
             isNamed: true,
           ),
-          'onSubmitted': _i2.BuilderArg<_i17.ValueChanged<String>?>(
+          'onSubmitted': _i2.BuilderArg<_i16.ValueChanged<String>?>(
             name: 'onSubmitted',
             init: onSubmitted,
             isNamed: true,
           ),
-          'onTapOutside': _i2.BuilderArg<_i18.TapRegionCallback?>(
+          'onTapOutside': _i2.BuilderArg<_i17.TapRegionCallback?>(
             name: 'onTapOutside',
             init: onTapOutside,
             isNamed: true,
           ),
-          'inputFormatters': _i2.BuilderArg<List<_i16.TextInputFormatter>?>(
+          'inputFormatters': _i2.BuilderArg<List<_i15.TextInputFormatter>?>(
             name: 'inputFormatters',
             init: inputFormatters,
             isNamed: true,
@@ -1070,7 +1056,7 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: cursorHeight,
             isNamed: true,
           ),
-          'cursorRadius': _i2.BuilderArg<_i14.Radius>(
+          'cursorRadius': _i2.BuilderArg<_i13.Radius>(
             name: 'cursorRadius',
             init: cursorRadius,
             isNamed: true,
@@ -1081,22 +1067,22 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'cursorColor': _i2.BuilderArg<_i14.Color?>(
+          'cursorColor': _i2.BuilderArg<_i13.Color?>(
             name: 'cursorColor',
             init: cursorColor,
             isNamed: true,
           ),
-          'selectionHeightStyle': _i2.BuilderArg<_i14.BoxHeightStyle>(
+          'selectionHeightStyle': _i2.BuilderArg<_i13.BoxHeightStyle>(
             name: 'selectionHeightStyle',
             init: selectionHeightStyle,
             isNamed: true,
           ),
-          'selectionWidthStyle': _i2.BuilderArg<_i14.BoxWidthStyle>(
+          'selectionWidthStyle': _i2.BuilderArg<_i13.BoxWidthStyle>(
             name: 'selectionWidthStyle',
             init: selectionWidthStyle,
             isNamed: true,
           ),
-          'keyboardAppearance': _i2.BuilderArg<_i14.Brightness?>(
+          'keyboardAppearance': _i2.BuilderArg<_i13.Brightness?>(
             name: 'keyboardAppearance',
             init: keyboardAppearance,
             isNamed: true,
@@ -1106,33 +1092,32 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: scrollPadding,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i19.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i18.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i20.DragStartBehavior.start,
           ),
           'enableInteractiveSelection': _i2.BuilderArg<bool?>(
             name: 'enableInteractiveSelection',
             init: enableInteractiveSelection,
             isNamed: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i21.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i19.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i22.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i20.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'scrollController': _i2.BuilderArg<_i23.ScrollController?>(
+          'scrollController': _i2.BuilderArg<_i21.ScrollController?>(
             name: 'scrollController',
             init: scrollController,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i24.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i22.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -1147,11 +1132,10 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: contentInsertionConfiguration,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i14.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i13.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i14.Clip.hardEdge,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
@@ -1175,12 +1159,12 @@ class CupertinoTextField$Mate extends _i1.CupertinoTextField with _i2.Mate {
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i25.SpellCheckConfiguration?>(
+          'spellCheckConfiguration': _i2.BuilderArg<_i23.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i26.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i24.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,

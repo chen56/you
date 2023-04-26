@@ -8,14 +8,13 @@ import 'package:flutter/src/animation/animation.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/widgets/framework.dart' as _i6;
 import 'package:flutter/src/painting/alignment.dart' as _i7;
-import 'package:flutter/cupertino.dart' as _i8;
-import 'package:flutter/src/painting/basic_types.dart' as _i9;
-import 'package:flutter/src/rendering/stack.dart' as _i10;
-import 'package:flutter/src/painting/decoration.dart' as _i11;
-import 'package:flutter/src/rendering/proxy_box.dart' as _i12;
-import 'package:flutter/src/painting/text_style.dart' as _i13;
-import 'package:flutter/src/painting/text_painter.dart' as _i14;
-import 'package:flutter/src/foundation/change_notifier.dart' as _i15;
+import 'package:flutter/src/painting/basic_types.dart' as _i8;
+import 'package:flutter/src/rendering/stack.dart' as _i9;
+import 'package:flutter/src/painting/decoration.dart' as _i10;
+import 'package:flutter/src/rendering/proxy_box.dart' as _i11;
+import 'package:flutter/src/painting/text_style.dart' as _i12;
+import 'package:flutter/src/painting/text_painter.dart' as _i13;
+import 'package:flutter/src/foundation/change_notifier.dart' as _i14;
 
 /// class SlideTransition extends AnimatedWidget
 class SlideTransition$Mate extends _i1.SlideTransition with _i2.Mate {
@@ -89,7 +88,7 @@ class ScaleTransition$Mate extends _i1.ScaleTransition with _i2.Mate {
     /// optionalParameters: {required Animation<double> scale} , default:none
     required super.scale,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
@@ -112,7 +111,6 @@ class ScaleTransition$Mate extends _i1.ScaleTransition with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i8.Alignment.center,
           ),
           'filterQuality': _i2.BuilderArg<_i5.FilterQuality?>(
             name: 'filterQuality',
@@ -151,7 +149,7 @@ class RotationTransition$Mate extends _i1.RotationTransition with _i2.Mate {
     /// optionalParameters: {required Animation<double> turns} , default:none
     required super.turns,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
@@ -174,7 +172,6 @@ class RotationTransition$Mate extends _i1.RotationTransition with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i8.Alignment.center,
           ),
           'filterQuality': _i2.BuilderArg<_i5.FilterQuality?>(
             name: 'filterQuality',
@@ -210,7 +207,7 @@ class SizeTransition$Mate extends _i1.SizeTransition with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis axis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis axis = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
     super.axis,
 
     /// optionalParameters: {required Animation<double> sizeFactor} , default:none
@@ -227,11 +224,10 @@ class SizeTransition$Mate extends _i1.SizeTransition with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'axis': _i2.BuilderArg<_i9.Axis>(
+          'axis': _i2.BuilderArg<_i8.Axis>(
             name: 'axis',
             init: axis,
             isNamed: true,
-            defaultValue: _i8.Axis.vertical,
           ),
           'sizeFactor': _i2.BuilderArg<_i4.Animation<double>>(
             name: 'sizeFactor',
@@ -382,12 +378,12 @@ class RelativeRectTween$Mate extends _i1.RelativeRectTween with _i2.Mate {
     /// optionalParameters: {RelativeRect? end} , default:none
     super.end,
   })  : mateParams = {
-          'begin': _i2.BuilderArg<_i10.RelativeRect?>(
+          'begin': _i2.BuilderArg<_i9.RelativeRect?>(
             name: 'begin',
             init: begin,
             isNamed: true,
           ),
-          'end': _i2.BuilderArg<_i10.RelativeRect?>(
+          'end': _i2.BuilderArg<_i9.RelativeRect?>(
             name: 'end',
             init: end,
             isNamed: true,
@@ -424,7 +420,7 @@ class PositionedTransition$Mate extends _i1.PositionedTransition with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'rect': _i2.BuilderArg<_i4.Animation<_i10.RelativeRect>>(
+          'rect': _i2.BuilderArg<_i4.Animation<_i9.RelativeRect>>(
             name: 'rect',
             init: rect,
             isNamed: true,
@@ -511,7 +507,7 @@ class DecoratedBoxTransition$Mate extends _i1.DecoratedBoxTransition with _i2.Ma
     /// optionalParameters: {required Animation<Decoration> decoration} , default:none
     required super.decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:unprocessed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {required Widget child} , default:none
@@ -522,16 +518,15 @@ class DecoratedBoxTransition$Mate extends _i1.DecoratedBoxTransition with _i2.Ma
             init: key,
             isNamed: true,
           ),
-          'decoration': _i2.BuilderArg<_i4.Animation<_i11.Decoration>>(
+          'decoration': _i2.BuilderArg<_i4.Animation<_i10.Decoration>>(
             name: 'decoration',
             init: decoration,
             isNamed: true,
           ),
-          'position': _i2.BuilderArg<_i12.DecorationPosition>(
+          'position': _i2.BuilderArg<_i11.DecorationPosition>(
             name: 'position',
             init: position,
             isNamed: true,
-            defaultValue: _i8.DecorationPosition.background,
           ),
           'child': _i2.BuilderArg<_i6.Widget>(
             name: 'child',
@@ -634,7 +629,7 @@ class DefaultTextStyleTransition$Mate extends _i1.DefaultTextStyleTransition wit
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     super.softWrap,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:unprocessed=PrefixedIdentifierImpl
     super.overflow,
 
     /// optionalParameters: {int? maxLines} , default:none
@@ -645,7 +640,7 @@ class DefaultTextStyleTransition$Mate extends _i1.DefaultTextStyleTransition wit
             init: key,
             isNamed: true,
           ),
-          'style': _i2.BuilderArg<_i4.Animation<_i13.TextStyle>>(
+          'style': _i2.BuilderArg<_i4.Animation<_i12.TextStyle>>(
             name: 'style',
             init: style,
             isNamed: true,
@@ -666,11 +661,10 @@ class DefaultTextStyleTransition$Mate extends _i1.DefaultTextStyleTransition wit
             isNamed: true,
             defaultValue: true,
           ),
-          'overflow': _i2.BuilderArg<_i14.TextOverflow>(
+          'overflow': _i2.BuilderArg<_i13.TextOverflow>(
             name: 'overflow',
             init: overflow,
             isNamed: true,
-            defaultValue: _i8.TextOverflow.clip,
           ),
           'maxLines': _i2.BuilderArg<int?>(
             name: 'maxLines',
@@ -717,7 +711,7 @@ class ListenableBuilder$Mate extends _i1.ListenableBuilder with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'listenable': _i2.BuilderArg<_i15.Listenable>(
+          'listenable': _i2.BuilderArg<_i14.Listenable>(
             name: 'listenable',
             init: listenable,
             isNamed: true,
@@ -769,7 +763,7 @@ class AnimatedBuilder$Mate extends _i1.AnimatedBuilder with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'animation': _i2.BuilderArg<_i15.Listenable>(
+          'animation': _i2.BuilderArg<_i14.Listenable>(
             name: 'animation',
             init: animation,
             isNamed: true,

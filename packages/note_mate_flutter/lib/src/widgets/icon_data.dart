@@ -4,7 +4,6 @@
 import 'package:flutter/src/widgets/icon_data.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i3;
-import 'package:flutter/foundation.dart' as _i4;
 
 /// class IconDataProperty extends DiagnosticsProperty<IconData>
 class IconDataProperty$Mate extends _i1.IconDataProperty with _i2.Mate {
@@ -21,10 +20,10 @@ class IconDataProperty$Mate extends _i1.IconDataProperty with _i2.Mate {
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
     super.showName,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -52,13 +51,11 @@ class IconDataProperty$Mate extends _i1.IconDataProperty with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i4.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i3.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i4.DiagnosticLevel.info,
           ),
         },
         super() {

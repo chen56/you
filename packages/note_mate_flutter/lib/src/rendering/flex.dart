@@ -5,8 +5,7 @@ import 'package:flutter/src/rendering/flex.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/rendering/box.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
-import 'dart:ui' as _i6;
+import 'dart:ui' as _i5;
 
 /// class RenderFlex extends RenderBox with ContainerRenderObjectMixin<RenderBox, FlexParentData>, RenderBoxContainerDefaultsMixin<RenderBox, FlexParentData>, DebugOverflowIndicatorMixin
 class RenderFlex$Mate extends _i1.RenderFlex with _i2.Mate {
@@ -15,28 +14,28 @@ class RenderFlex$Mate extends _i1.RenderFlex with _i2.Mate {
     /// optionalParameters: {List<RenderBox>? children} , default:none
     super.children,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:unprocessed=PrefixedIdentifierImpl
     super.direction,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:unprocessed=PrefixedIdentifierImpl
     super.mainAxisSize,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
     super.mainAxisAlignment,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
     super.verticalDirection,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
     super.textBaseline,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
@@ -48,27 +47,23 @@ class RenderFlex$Mate extends _i1.RenderFlex with _i2.Mate {
             name: 'direction',
             init: direction,
             isNamed: true,
-            defaultValue: _i5.Axis.horizontal,
           ),
           'mainAxisSize': _i2.BuilderArg<_i1.MainAxisSize>(
             name: 'mainAxisSize',
             init: mainAxisSize,
             isNamed: true,
-            defaultValue: _i5.MainAxisSize.max,
           ),
           'mainAxisAlignment': _i2.BuilderArg<_i1.MainAxisAlignment>(
             name: 'mainAxisAlignment',
             init: mainAxisAlignment,
             isNamed: true,
-            defaultValue: _i5.MainAxisAlignment.start,
           ),
           'crossAxisAlignment': _i2.BuilderArg<_i1.CrossAxisAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
-            defaultValue: _i5.CrossAxisAlignment.center,
           ),
-          'textDirection': _i2.BuilderArg<_i6.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
@@ -77,18 +72,16 @@ class RenderFlex$Mate extends _i1.RenderFlex with _i2.Mate {
             name: 'verticalDirection',
             init: verticalDirection,
             isNamed: true,
-            defaultValue: _i5.VerticalDirection.down,
           ),
-          'textBaseline': _i2.BuilderArg<_i6.TextBaseline?>(
+          'textBaseline': _i2.BuilderArg<_i5.TextBaseline?>(
             name: 'textBaseline',
             init: textBaseline,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i6.Clip.none,
           ),
         },
         super() {

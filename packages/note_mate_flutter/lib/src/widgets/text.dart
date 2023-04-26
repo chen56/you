@@ -7,10 +7,9 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/text_style.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/text_painter.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'package:flutter/src/painting/strut_style.dart' as _i9;
-import 'package:flutter/src/painting/inline_span.dart' as _i10;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
+import 'package:flutter/src/painting/strut_style.dart' as _i8;
+import 'package:flutter/src/painting/inline_span.dart' as _i9;
 
 /// class DefaultTextStyle extends InheritedTheme
 class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
@@ -28,13 +27,13 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     super.softWrap,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:unprocessed=PrefixedIdentifierImpl
     super.overflow,
 
     /// optionalParameters: {int? maxLines} , default:none
     super.maxLines,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:unprocessed=PrefixedIdentifierImpl
     super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
@@ -68,7 +67,6 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
             name: 'overflow',
             init: overflow,
             isNamed: true,
-            defaultValue: _i7.TextOverflow.clip,
           ),
           'maxLines': _i2.BuilderArg<int?>(
             name: 'maxLines',
@@ -79,14 +77,13 @@ class DefaultTextStyle$Mate extends _i1.DefaultTextStyle with _i2.Mate {
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
-            defaultValue: _i7.TextWidthBasis.parent,
           ),
           'textHeightBehavior': _i2.BuilderArg<_i5.TextHeightBehavior?>(
             name: 'textHeightBehavior',
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -153,7 +150,7 @@ class DefaultTextHeightBehavior$Mate extends _i1.DefaultTextHeightBehavior with 
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -236,7 +233,7 @@ class Text$Mate extends _i1.Text with _i2.Mate {
             init: style,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i9.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i8.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
@@ -365,7 +362,7 @@ class Text$Mate extends _i1.Text with _i2.Mate {
     /// optionalParameters: {Color? selectionColor} , default:none
     super.selectionColor,
   })  : mateParams = {
-          'textSpan': _i2.BuilderArg<_i10.InlineSpan>(
+          'textSpan': _i2.BuilderArg<_i9.InlineSpan>(
             name: 'textSpan',
             init: textSpan,
             isNamed: false,
@@ -380,7 +377,7 @@ class Text$Mate extends _i1.Text with _i2.Mate {
             init: style,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i9.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i8.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,

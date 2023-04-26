@@ -13,8 +13,7 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i9;
 import 'package:flutter/src/painting/borders.dart' as _i10;
 import 'package:flutter/src/widgets/framework.dart' as _i11;
 import 'package:flutter/src/material/list_tile.dart' as _i12;
-import 'package:flutter/material.dart' as _i13;
-import 'package:flutter/src/painting/edge_insets.dart' as _i14;
+import 'package:flutter/src/painting/edge_insets.dart' as _i13;
 
 /// class CheckboxListTile extends StatelessWidget
 class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
@@ -95,7 +94,7 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     super.selected,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:unprocessed=PrefixedIdentifierImpl
     super.controlAffinity,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
@@ -249,9 +248,8 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
             name: 'controlAffinity',
             init: controlAffinity,
             isNamed: true,
-            defaultValue: _i13.ListTileControlAffinity.platform,
           ),
-          'contentPadding': _i2.BuilderArg<_i14.EdgeInsetsGeometry?>(
+          'contentPadding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,
@@ -399,7 +397,7 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     super.selected,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:unprocessed=PrefixedIdentifierImpl
     super.controlAffinity,
 
     /// optionalParameters: {EdgeInsetsGeometry? contentPadding} , default:none
@@ -553,9 +551,8 @@ class CheckboxListTile$Mate extends _i1.CheckboxListTile with _i2.Mate {
             name: 'controlAffinity',
             init: controlAffinity,
             isNamed: true,
-            defaultValue: _i13.ListTileControlAffinity.platform,
           ),
-          'contentPadding': _i2.BuilderArg<_i14.EdgeInsetsGeometry?>(
+          'contentPadding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,

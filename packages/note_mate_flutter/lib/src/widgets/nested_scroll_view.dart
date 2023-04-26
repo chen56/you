@@ -6,15 +6,13 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i4;
 import 'package:flutter/src/painting/basic_types.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'package:flutter/src/gestures/recognizer.dart' as _i9;
-import 'package:flutter/gestures.dart' as _i10;
-import 'dart:ui' as _i11;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i12;
-import 'package:flutter/src/rendering/sliver.dart' as _i13;
-import 'package:flutter/src/rendering/viewport_offset.dart' as _i14;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i6;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
+import 'package:flutter/src/gestures/recognizer.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i10;
+import 'package:flutter/src/rendering/sliver.dart' as _i11;
+import 'package:flutter/src/rendering/viewport_offset.dart' as _i12;
 
 /// class NestedScrollView extends StatefulWidget
 class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
@@ -26,7 +24,7 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
     /// optionalParameters: {ScrollController? controller} , default:none
     super.controller,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -41,13 +39,13 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
     /// optionalParameters: {required Widget body} , default:none
     required super.body,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool floatHeaderSlivers = false} , default:processed=BooleanLiteralImpl
     super.floatHeaderSlivers,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -70,7 +68,6 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i6.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -78,7 +75,7 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -88,16 +85,15 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
             init: headerSliverBuilder,
             isNamed: true,
           ),
-          'body': _i2.BuilderArg<_i8.Widget>(
+          'body': _i2.BuilderArg<_i7.Widget>(
             name: 'body',
             init: body,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i8.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i10.DragStartBehavior.start,
           ),
           'floatHeaderSlivers': _i2.BuilderArg<bool>(
             name: 'floatHeaderSlivers',
@@ -105,18 +101,17 @@ class NestedScrollView$Mate extends _i1.NestedScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i11.Clip.hardEdge,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i12.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i10.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -168,7 +163,7 @@ class SliverOverlapAbsorber$Mate extends _i1.SliverOverlapAbsorber with _i2.Mate
             init: handle,
             isNamed: true,
           ),
-          'sliver': _i2.BuilderArg<_i8.Widget?>(
+          'sliver': _i2.BuilderArg<_i7.Widget?>(
             name: 'sliver',
             init: sliver,
             isNamed: true,
@@ -203,7 +198,7 @@ class RenderSliverOverlapAbsorber$Mate extends _i1.RenderSliverOverlapAbsorber w
             init: handle,
             isNamed: true,
           ),
-          'sliver': _i2.BuilderArg<_i13.RenderSliver?>(
+          'sliver': _i2.BuilderArg<_i11.RenderSliver?>(
             name: 'sliver',
             init: sliver,
             isNamed: true,
@@ -245,7 +240,7 @@ class SliverOverlapInjector$Mate extends _i1.SliverOverlapInjector with _i2.Mate
             init: handle,
             isNamed: true,
           ),
-          'sliver': _i2.BuilderArg<_i8.Widget?>(
+          'sliver': _i2.BuilderArg<_i7.Widget?>(
             name: 'sliver',
             init: sliver,
             isNamed: true,
@@ -296,7 +291,7 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
     super.axisDirection,
 
     /// optionalParameters: {AxisDirection? crossAxisDirection} , default:none
@@ -317,7 +312,7 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
     required super.handle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -329,7 +324,6 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
-            defaultValue: _i6.AxisDirection.down,
           ),
           'crossAxisDirection': _i2.BuilderArg<_i5.AxisDirection?>(
             name: 'crossAxisDirection',
@@ -342,7 +336,7 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'offset': _i2.BuilderArg<_i14.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i12.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -352,7 +346,7 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
             init: center,
             isNamed: true,
           ),
-          'slivers': _i2.BuilderArg<List<_i8.Widget>>(
+          'slivers': _i2.BuilderArg<List<_i7.Widget>>(
             name: 'slivers',
             init: slivers,
             isNamed: true,
@@ -362,11 +356,10 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
             init: handle,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i11.Clip.hardEdge,
           ),
         },
         super() {
@@ -393,7 +386,7 @@ class NestedScrollViewViewport$Mate extends _i1.NestedScrollViewViewport with _i
 class RenderNestedScrollViewViewport$Mate extends _i1.RenderNestedScrollViewViewport with _i2.Mate {
   /// RenderNestedScrollViewViewport RenderNestedScrollViewViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, required SliverOverlapAbsorberHandle handle, Clip clipBehavior = Clip.hardEdge})
   RenderNestedScrollViewViewport$Mate({
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
     super.axisDirection,
 
     /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
@@ -414,21 +407,20 @@ class RenderNestedScrollViewViewport$Mate extends _i1.RenderNestedScrollViewView
     /// optionalParameters: {required SliverOverlapAbsorberHandle handle} , default:none
     required super.handle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'axisDirection': _i2.BuilderArg<_i5.AxisDirection>(
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
-            defaultValue: _i6.AxisDirection.down,
           ),
           'crossAxisDirection': _i2.BuilderArg<_i5.AxisDirection>(
             name: 'crossAxisDirection',
             init: crossAxisDirection,
             isNamed: true,
           ),
-          'offset': _i2.BuilderArg<_i14.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i12.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -439,12 +431,12 @@ class RenderNestedScrollViewViewport$Mate extends _i1.RenderNestedScrollViewView
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'children': _i2.BuilderArg<List<_i13.RenderSliver>?>(
+          'children': _i2.BuilderArg<List<_i11.RenderSliver>?>(
             name: 'children',
             init: children,
             isNamed: true,
           ),
-          'center': _i2.BuilderArg<_i13.RenderSliver?>(
+          'center': _i2.BuilderArg<_i11.RenderSliver?>(
             name: 'center',
             init: center,
             isNamed: true,
@@ -454,11 +446,10 @@ class RenderNestedScrollViewViewport$Mate extends _i1.RenderNestedScrollViewView
             init: handle,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i11.Clip.hardEdge,
           ),
         },
         super() {

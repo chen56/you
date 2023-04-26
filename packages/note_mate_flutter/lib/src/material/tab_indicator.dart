@@ -6,7 +6,6 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/border_radius.dart' as _i3;
 import 'package:flutter/src/painting/borders.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
 
 /// class UnderlineTabIndicator extends Decoration
 class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator with _i2.Mate {
@@ -18,7 +17,7 @@ class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator with _i2.Mate
     /// optionalParameters: {BorderSide borderSide = const BorderSide(width: 2.0, color: Colors.white)} , default:unprocessed=InstanceCreationExpressionImpl
     super.borderSide,
 
-    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsetsGeometry insets = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.insets,
   })  : mateParams = {
           'borderRadius': _i2.BuilderArg<_i3.BorderRadius?>(
@@ -35,7 +34,6 @@ class UnderlineTabIndicator$Mate extends _i1.UnderlineTabIndicator with _i2.Mate
             name: 'insets',
             init: insets,
             isNamed: true,
-            defaultValue: _i6.EdgeInsets.zero,
           ),
         },
         super() {

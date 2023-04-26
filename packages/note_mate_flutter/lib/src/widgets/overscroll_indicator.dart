@@ -103,7 +103,7 @@ class StretchingOverscrollIndicator$Mate extends _i1.StretchingOverscrollIndicat
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
     super.notificationPredicate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -128,7 +128,6 @@ class StretchingOverscrollIndicator$Mate extends _i1.StretchingOverscrollIndicat
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.hardEdge,
           ),
           'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',

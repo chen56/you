@@ -3,7 +3,6 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/widgets/scroll_physics.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
-import 'package:flutter/cupertino.dart' as _i3;
 
 /// class ScrollPhysics
 class ScrollPhysics$Mate extends _i1.ScrollPhysics with _i2.Mate {
@@ -57,7 +56,7 @@ class RangeMaintainingScrollPhysics$Mate extends _i1.RangeMaintainingScrollPhysi
 class BouncingScrollPhysics$Mate extends _i1.BouncingScrollPhysics with _i2.Mate {
   /// BouncingScrollPhysics BouncingScrollPhysics({ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal, ScrollPhysics? parent})
   BouncingScrollPhysics$Mate({
-    /// optionalParameters: {ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollDecelerationRate decelerationRate = ScrollDecelerationRate.normal} , default:unprocessed=PrefixedIdentifierImpl
     super.decelerationRate,
 
     /// optionalParameters: {ScrollPhysics? parent} , default:none
@@ -67,7 +66,6 @@ class BouncingScrollPhysics$Mate extends _i1.BouncingScrollPhysics with _i2.Mate
             name: 'decelerationRate',
             init: decelerationRate,
             isNamed: true,
-            defaultValue: _i3.ScrollDecelerationRate.normal,
           ),
           'parent': _i2.BuilderArg<_i1.ScrollPhysics?>(
             name: 'parent',

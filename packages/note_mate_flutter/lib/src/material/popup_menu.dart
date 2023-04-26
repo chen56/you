@@ -10,10 +10,9 @@ import 'package:flutter/src/painting/text_style.dart' as _i6;
 import 'package:flutter/src/material/material_state.dart' as _i7;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i8;
 import 'package:flutter/src/widgets/framework.dart' as _i9;
-import 'package:flutter/animation.dart' as _i10;
-import 'package:flutter/src/painting/borders.dart' as _i11;
-import 'package:flutter/src/rendering/box.dart' as _i12;
-import 'package:flutter/src/material/popup_menu_theme.dart' as _i13;
+import 'package:flutter/src/painting/borders.dart' as _i10;
+import 'package:flutter/src/rendering/box.dart' as _i11;
+import 'package:flutter/src/material/popup_menu_theme.dart' as _i12;
 
 /// class PopupMenuDivider extends PopupMenuEntry<Never>
 class PopupMenuDivider$Mate extends _i1.PopupMenuDivider with _i2.Mate {
@@ -295,7 +294,7 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
     /// optionalParameters: {double? iconSize} , default:none
     super.iconSize,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.offset,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
@@ -316,7 +315,7 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
     /// optionalParameters: {PopupMenuPosition? position} , default:none
     super.position,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -398,7 +397,6 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
             name: 'offset',
             init: offset,
             isNamed: true,
-            defaultValue: _i10.Offset.zero,
           ),
           'enabled': _i2.BuilderArg<bool>(
             name: 'enabled',
@@ -406,7 +404,7 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shape': _i2.BuilderArg<_i11.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i10.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -421,12 +419,12 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'constraints': _i2.BuilderArg<_i12.BoxConstraints?>(
+          'constraints': _i2.BuilderArg<_i11.BoxConstraints?>(
             name: 'constraints',
             init: constraints,
             isNamed: true,
           ),
-          'position': _i2.BuilderArg<_i13.PopupMenuPosition?>(
+          'position': _i2.BuilderArg<_i12.PopupMenuPosition?>(
             name: 'position',
             init: position,
             isNamed: true,
@@ -435,7 +433,6 @@ class PopupMenuButton$Mate<T> extends _i1.PopupMenuButton<T> with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.none,
           ),
         },
         super() {

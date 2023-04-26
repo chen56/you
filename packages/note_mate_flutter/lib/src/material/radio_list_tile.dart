@@ -11,10 +11,9 @@ import 'package:flutter/src/material/material_state.dart' as _i7;
 import 'package:flutter/src/material/theme_data.dart' as _i8;
 import 'package:flutter/src/widgets/framework.dart' as _i9;
 import 'package:flutter/src/material/list_tile.dart' as _i10;
-import 'package:flutter/material.dart' as _i11;
-import 'package:flutter/src/painting/edge_insets.dart' as _i12;
-import 'package:flutter/src/painting/borders.dart' as _i13;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i14;
+import 'package:flutter/src/painting/edge_insets.dart' as _i11;
+import 'package:flutter/src/painting/borders.dart' as _i12;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i13;
 
 /// class RadioListTile<T> extends StatelessWidget
 class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
@@ -74,7 +73,7 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     super.selected,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:unprocessed=PrefixedIdentifierImpl
     super.controlAffinity,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
@@ -201,7 +200,6 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
             name: 'controlAffinity',
             init: controlAffinity,
             isNamed: true,
-            defaultValue: _i11.ListTileControlAffinity.platform,
           ),
           'autofocus': _i2.BuilderArg<bool>(
             name: 'autofocus',
@@ -209,12 +207,12 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'contentPadding': _i2.BuilderArg<_i12.EdgeInsetsGeometry?>(
+          'contentPadding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i13.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i12.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -234,7 +232,7 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
             init: visualDensity,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i13.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -341,7 +339,7 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     super.selected,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:unprocessed=PrefixedIdentifierImpl
     super.controlAffinity,
 
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
@@ -468,7 +466,6 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
             name: 'controlAffinity',
             init: controlAffinity,
             isNamed: true,
-            defaultValue: _i11.ListTileControlAffinity.platform,
           ),
           'autofocus': _i2.BuilderArg<bool>(
             name: 'autofocus',
@@ -476,12 +473,12 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'contentPadding': _i2.BuilderArg<_i12.EdgeInsetsGeometry?>(
+          'contentPadding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i13.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i12.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -501,7 +498,7 @@ class RadioListTile$Mate<T> extends _i1.RadioListTile<T> with _i2.Mate {
             init: visualDensity,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i13.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,

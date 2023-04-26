@@ -9,7 +9,6 @@ import 'package:flutter/src/painting/box_shadow.dart' as _i5;
 import 'package:flutter/src/painting/borders.dart' as _i6;
 import 'package:flutter/src/foundation/key.dart' as _i7;
 import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'package:flutter/animation.dart' as _i9;
 
 /// class MagnifierInfo
 class MagnifierInfo$Mate extends _i1.MagnifierInfo with _i2.Mate {
@@ -179,7 +178,7 @@ class RawMagnifier$Mate extends _i1.RawMagnifier with _i2.Mate {
     /// optionalParameters: {MagnifierDecoration decoration = const MagnifierDecoration()} , default:unprocessed=InstanceCreationExpressionImpl
     super.decoration,
 
-    /// optionalParameters: {Offset focalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset focalPointOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.focalPointOffset,
 
     /// optionalParameters: {double magnificationScale = 1} , default:processed=IntegerLiteralImpl
@@ -207,7 +206,6 @@ class RawMagnifier$Mate extends _i1.RawMagnifier with _i2.Mate {
             name: 'focalPointOffset',
             init: focalPointOffset,
             isNamed: true,
-            defaultValue: _i9.Offset.zero,
           ),
           'magnificationScale': _i2.BuilderArg<double>(
             name: 'magnificationScale',

@@ -8,11 +8,10 @@ import 'package:flutter/src/painting/basic_types.dart' as _i4;
 import 'package:flutter/src/widgets/scroll_physics.dart' as _i5;
 import 'package:flutter/src/foundation/key.dart' as _i6;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i7;
-import 'package:flutter/rendering.dart' as _i8;
-import 'package:flutter/src/foundation/basic_types.dart' as _i9;
-import 'dart:ui' as _i10;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i11;
-import 'package:flutter/src/rendering/viewport_offset.dart' as _i12;
+import 'package:flutter/src/foundation/basic_types.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i10;
+import 'package:flutter/src/rendering/viewport_offset.dart' as _i11;
 
 /// class ListWheelChildListDelegate extends ListWheelChildDelegate
 class ListWheelChildListDelegate$Mate extends _i1.ListWheelChildListDelegate with _i2.Mate {
@@ -237,10 +236,10 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
     /// optionalParameters: {ScrollPhysics? physics} , default:none
     super.physics,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:unprocessed=PrefixedIdentifierImpl
     super.diameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:unprocessed=PrefixedIdentifierImpl
     super.perspective,
 
     /// optionalParameters: {double offAxisFraction = 0.0} , default:processed=DoubleLiteralImpl
@@ -267,7 +266,7 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
     /// optionalParameters: {bool renderChildrenOutsideViewport = false} , default:processed=BooleanLiteralImpl
     super.renderChildrenOutsideViewport,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -298,13 +297,11 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
             name: 'diameterRatio',
             init: diameterRatio,
             isNamed: true,
-            defaultValue: _i8.RenderListWheelViewport.defaultDiameterRatio,
           ),
           'perspective': _i2.BuilderArg<double>(
             name: 'perspective',
             init: perspective,
             isNamed: true,
-            defaultValue: _i8.RenderListWheelViewport.defaultPerspective,
           ),
           'offAxisFraction': _i2.BuilderArg<double>(
             name: 'offAxisFraction',
@@ -341,7 +338,7 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: 1.0,
           ),
-          'onSelectedItemChanged': _i2.BuilderArg<_i9.ValueChanged<int>?>(
+          'onSelectedItemChanged': _i2.BuilderArg<_i8.ValueChanged<int>?>(
             name: 'onSelectedItemChanged',
             init: onSelectedItemChanged,
             isNamed: true,
@@ -352,18 +349,17 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i10.Clip.hardEdge,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i11.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i10.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -409,10 +405,10 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
     /// optionalParameters: {ScrollPhysics? physics} , default:none
     super.physics,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:unprocessed=PrefixedIdentifierImpl
     super.diameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:unprocessed=PrefixedIdentifierImpl
     super.perspective,
 
     /// optionalParameters: {double offAxisFraction = 0.0} , default:processed=DoubleLiteralImpl
@@ -439,7 +435,7 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
     /// optionalParameters: {bool renderChildrenOutsideViewport = false} , default:processed=BooleanLiteralImpl
     super.renderChildrenOutsideViewport,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -470,13 +466,11 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
             name: 'diameterRatio',
             init: diameterRatio,
             isNamed: true,
-            defaultValue: _i8.RenderListWheelViewport.defaultDiameterRatio,
           ),
           'perspective': _i2.BuilderArg<double>(
             name: 'perspective',
             init: perspective,
             isNamed: true,
-            defaultValue: _i8.RenderListWheelViewport.defaultPerspective,
           ),
           'offAxisFraction': _i2.BuilderArg<double>(
             name: 'offAxisFraction',
@@ -513,7 +507,7 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: 1.0,
           ),
-          'onSelectedItemChanged': _i2.BuilderArg<_i9.ValueChanged<int>?>(
+          'onSelectedItemChanged': _i2.BuilderArg<_i8.ValueChanged<int>?>(
             name: 'onSelectedItemChanged',
             init: onSelectedItemChanged,
             isNamed: true,
@@ -524,18 +518,17 @@ class ListWheelScrollView$Mate extends _i1.ListWheelScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i10.Clip.hardEdge,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i11.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i10.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -605,10 +598,10 @@ class ListWheelViewport$Mate extends _i1.ListWheelViewport with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double diameterRatio = RenderListWheelViewport.defaultDiameterRatio} , default:unprocessed=PrefixedIdentifierImpl
     super.diameterRatio,
 
-    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double perspective = RenderListWheelViewport.defaultPerspective} , default:unprocessed=PrefixedIdentifierImpl
     super.perspective,
 
     /// optionalParameters: {double offAxisFraction = 0.0} , default:processed=DoubleLiteralImpl
@@ -638,7 +631,7 @@ class ListWheelViewport$Mate extends _i1.ListWheelViewport with _i2.Mate {
     /// optionalParameters: {required ListWheelChildDelegate childDelegate} , default:none
     required super.childDelegate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i6.Key?>(
@@ -650,13 +643,11 @@ class ListWheelViewport$Mate extends _i1.ListWheelViewport with _i2.Mate {
             name: 'diameterRatio',
             init: diameterRatio,
             isNamed: true,
-            defaultValue: _i8.RenderListWheelViewport.defaultDiameterRatio,
           ),
           'perspective': _i2.BuilderArg<double>(
             name: 'perspective',
             init: perspective,
             isNamed: true,
-            defaultValue: _i8.RenderListWheelViewport.defaultPerspective,
           ),
           'offAxisFraction': _i2.BuilderArg<double>(
             name: 'offAxisFraction',
@@ -699,7 +690,7 @@ class ListWheelViewport$Mate extends _i1.ListWheelViewport with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'offset': _i2.BuilderArg<_i12.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i11.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -709,11 +700,10 @@ class ListWheelViewport$Mate extends _i1.ListWheelViewport with _i2.Mate {
             init: childDelegate,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i10.Clip.hardEdge,
           ),
         },
         super() {

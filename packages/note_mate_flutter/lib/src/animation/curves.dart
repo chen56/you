@@ -3,8 +3,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/animation/curves.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
-import 'package:flutter/animation.dart' as _i3;
-import 'dart:ui' as _i4;
+import 'dart:ui' as _i3;
 
 /// class SawTooth extends Curve
 class SawTooth$Mate extends _i1.SawTooth with _i2.Mate {
@@ -39,7 +38,7 @@ class Interval$Mate extends _i1.Interval with _i2.Mate {
 
     /// requiredParameters: double end
     super.end, {
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
   })  : mateParams = {
           'begin': _i2.BuilderArg<double>(
@@ -56,7 +55,6 @@ class Interval$Mate extends _i1.Interval with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i3.Curves.linear,
           ),
         },
         super() {
@@ -168,27 +166,27 @@ class ThreePointCubic$Mate extends _i1.ThreePointCubic with _i2.Mate {
     /// requiredParameters: Offset b2
     super.b2,
   )   : mateParams = {
-          'a1': _i2.BuilderArg<_i4.Offset>(
+          'a1': _i2.BuilderArg<_i3.Offset>(
             name: 'a1',
             init: a1,
             isNamed: false,
           ),
-          'b1': _i2.BuilderArg<_i4.Offset>(
+          'b1': _i2.BuilderArg<_i3.Offset>(
             name: 'b1',
             init: b1,
             isNamed: false,
           ),
-          'midpoint': _i2.BuilderArg<_i4.Offset>(
+          'midpoint': _i2.BuilderArg<_i3.Offset>(
             name: 'midpoint',
             init: midpoint,
             isNamed: false,
           ),
-          'a2': _i2.BuilderArg<_i4.Offset>(
+          'a2': _i2.BuilderArg<_i3.Offset>(
             name: 'a2',
             init: a2,
             isNamed: false,
           ),
-          'b2': _i2.BuilderArg<_i4.Offset>(
+          'b2': _i2.BuilderArg<_i3.Offset>(
             name: 'b2',
             init: b2,
             isNamed: false,
@@ -225,7 +223,7 @@ class Curve2DSample$Mate extends _i1.Curve2DSample with _i2.Mate {
             init: t,
             isNamed: false,
           ),
-          'value': _i2.BuilderArg<_i4.Offset>(
+          'value': _i2.BuilderArg<_i3.Offset>(
             name: 'value',
             init: value,
             isNamed: false,
@@ -259,7 +257,7 @@ class CatmullRomSpline$Mate extends _i1.CatmullRomSpline with _i2.Mate {
     /// optionalParameters: {Offset? endHandle} , default:none
     super.endHandle,
   })  : mateParams = {
-          'controlPoints': _i2.BuilderArg<List<_i4.Offset>>(
+          'controlPoints': _i2.BuilderArg<List<_i3.Offset>>(
             name: 'controlPoints',
             init: controlPoints,
             isNamed: false,
@@ -270,12 +268,12 @@ class CatmullRomSpline$Mate extends _i1.CatmullRomSpline with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'startHandle': _i2.BuilderArg<_i4.Offset?>(
+          'startHandle': _i2.BuilderArg<_i3.Offset?>(
             name: 'startHandle',
             init: startHandle,
             isNamed: true,
           ),
-          'endHandle': _i2.BuilderArg<_i4.Offset?>(
+          'endHandle': _i2.BuilderArg<_i3.Offset?>(
             name: 'endHandle',
             init: endHandle,
             isNamed: true,
@@ -305,7 +303,7 @@ class CatmullRomSpline$Mate extends _i1.CatmullRomSpline with _i2.Mate {
     /// optionalParameters: {Offset? endHandle} , default:none
     super.endHandle,
   })  : mateParams = {
-          'controlPoints': _i2.BuilderArg<List<_i4.Offset>>(
+          'controlPoints': _i2.BuilderArg<List<_i3.Offset>>(
             name: 'controlPoints',
             init: controlPoints,
             isNamed: false,
@@ -316,12 +314,12 @@ class CatmullRomSpline$Mate extends _i1.CatmullRomSpline with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'startHandle': _i2.BuilderArg<_i4.Offset?>(
+          'startHandle': _i2.BuilderArg<_i3.Offset?>(
             name: 'startHandle',
             init: startHandle,
             isNamed: true,
           ),
-          'endHandle': _i2.BuilderArg<_i4.Offset?>(
+          'endHandle': _i2.BuilderArg<_i3.Offset?>(
             name: 'endHandle',
             init: endHandle,
             isNamed: true,
@@ -351,7 +349,7 @@ class CatmullRomCurve$Mate extends _i1.CatmullRomCurve with _i2.Mate {
     /// optionalParameters: {double tension = 0.0} , default:processed=DoubleLiteralImpl
     super.tension,
   })  : mateParams = {
-          'controlPoints': _i2.BuilderArg<List<_i4.Offset>>(
+          'controlPoints': _i2.BuilderArg<List<_i3.Offset>>(
             name: 'controlPoints',
             init: controlPoints,
             isNamed: false,
@@ -379,7 +377,7 @@ class CatmullRomCurve$Mate extends _i1.CatmullRomCurve with _i2.Mate {
     /// optionalParameters: {double tension = 0.0} , default:processed=DoubleLiteralImpl
     super.tension,
   })  : mateParams = {
-          'controlPoints': _i2.BuilderArg<List<_i4.Offset>>(
+          'controlPoints': _i2.BuilderArg<List<_i3.Offset>>(
             name: 'controlPoints',
             init: controlPoints,
             isNamed: false,

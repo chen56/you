@@ -4,15 +4,13 @@
 import 'package:flutter/src/gestures/drag_details.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/animation.dart' as _i4;
-import 'package:flutter/src/gestures/velocity_tracker.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
+import 'package:flutter/src/gestures/velocity_tracker.dart' as _i4;
 
 /// class DragDownDetails
 class DragDownDetails$Mate extends _i1.DragDownDetails with _i2.Mate {
   /// DragDownDetails DragDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition})
   DragDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
@@ -22,7 +20,6 @@ class DragDownDetails$Mate extends _i1.DragDownDetails with _i2.Mate {
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'localPosition': _i2.BuilderArg<_i3.Offset?>(
             name: 'localPosition',
@@ -50,7 +47,7 @@ class DragStartDetails$Mate extends _i1.DragStartDetails with _i2.Mate {
     /// optionalParameters: {Duration? sourceTimeStamp} , default:none
     super.sourceTimeStamp,
 
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
@@ -68,7 +65,6 @@ class DragStartDetails$Mate extends _i1.DragStartDetails with _i2.Mate {
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'localPosition': _i2.BuilderArg<_i3.Offset?>(
             name: 'localPosition',
@@ -103,7 +99,7 @@ class DragUpdateDetails$Mate extends _i1.DragUpdateDetails with _i2.Mate {
     /// optionalParameters: {Duration? sourceTimeStamp} , default:none
     super.sourceTimeStamp,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset delta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.delta,
 
     /// optionalParameters: {double? primaryDelta} , default:none
@@ -124,7 +120,6 @@ class DragUpdateDetails$Mate extends _i1.DragUpdateDetails with _i2.Mate {
             name: 'delta',
             init: delta,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'primaryDelta': _i2.BuilderArg<double?>(
             name: 'primaryDelta',
@@ -162,17 +157,16 @@ class DragUpdateDetails$Mate extends _i1.DragUpdateDetails with _i2.Mate {
 class DragEndDetails$Mate extends _i1.DragEndDetails with _i2.Mate {
   /// DragEndDetails DragEndDetails({Velocity velocity = Velocity.zero, double? primaryVelocity})
   DragEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.velocity,
 
     /// optionalParameters: {double? primaryVelocity} , default:none
     super.primaryVelocity,
   })  : mateParams = {
-          'velocity': _i2.BuilderArg<_i5.Velocity>(
+          'velocity': _i2.BuilderArg<_i4.Velocity>(
             name: 'velocity',
             init: velocity,
             isNamed: true,
-            defaultValue: _i6.Velocity.zero,
           ),
           'primaryVelocity': _i2.BuilderArg<double?>(
             name: 'primaryVelocity',

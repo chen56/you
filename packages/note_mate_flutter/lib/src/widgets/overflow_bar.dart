@@ -5,10 +5,9 @@ import 'package:flutter/src/widgets/overflow_bar.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/rendering/flex.dart' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
-import 'package:flutter/src/painting/basic_types.dart' as _i6;
-import 'dart:ui' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:flutter/src/painting/basic_types.dart' as _i5;
+import 'dart:ui' as _i6;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
 
 /// class OverflowBar extends MultiChildRenderObjectWidget
 class OverflowBar$Mate extends _i1.OverflowBar with _i2.Mate {
@@ -26,16 +25,16 @@ class OverflowBar$Mate extends _i1.OverflowBar with _i2.Mate {
     /// optionalParameters: {double overflowSpacing = 0.0} , default:processed=DoubleLiteralImpl
     super.overflowSpacing,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
     super.overflowAlignment,
 
-    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection overflowDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
     super.overflowDirection,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
@@ -67,26 +66,23 @@ class OverflowBar$Mate extends _i1.OverflowBar with _i2.Mate {
             name: 'overflowAlignment',
             init: overflowAlignment,
             isNamed: true,
-            defaultValue: _i5.OverflowBarAlignment.start,
           ),
-          'overflowDirection': _i2.BuilderArg<_i6.VerticalDirection>(
+          'overflowDirection': _i2.BuilderArg<_i5.VerticalDirection>(
             name: 'overflowDirection',
             init: overflowDirection,
             isNamed: true,
-            defaultValue: _i5.VerticalDirection.down,
           ),
-          'textDirection': _i2.BuilderArg<_i7.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i6.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i7.Clip.none,
           ),
-          'children': _i2.BuilderArg<List<_i8.Widget>>(
+          'children': _i2.BuilderArg<List<_i7.Widget>>(
             name: 'children',
             init: children,
             isNamed: true,

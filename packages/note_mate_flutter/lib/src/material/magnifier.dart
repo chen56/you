@@ -7,10 +7,8 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/change_notifier.dart' as _i4;
 import 'package:flutter/src/widgets/magnifier.dart' as _i5;
 import 'dart:ui' as _i6;
-import 'package:flutter/animation.dart' as _i7;
-import 'package:flutter/src/painting/border_radius.dart' as _i8;
-import 'package:flutter/src/painting/box_shadow.dart' as _i9;
-import 'package:flutter/material.dart' as _i10;
+import 'package:flutter/src/painting/border_radius.dart' as _i7;
+import 'package:flutter/src/painting/box_shadow.dart' as _i8;
 
 /// class TextMagnifier extends StatefulWidget
 class TextMagnifier$Mate extends _i1.TextMagnifier with _i2.Mate {
@@ -53,7 +51,7 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.additionalFocalPointOffset,
 
     /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.circular(_borderRadius))} , default:unprocessed=InstanceCreationExpressionImpl
@@ -65,7 +63,7 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
     /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(blurRadius: 1.5, offset: Offset(0, 2), spreadRadius: 0.75, color: Color.fromARGB(25, 0, 0, 0))]} , default:unprocessed=ListLiteralImpl
     super.shadows,
 
-    /// optionalParameters: {Size size = Magnifier.kDefaultMagnifierSize} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Size size = Magnifier.kDefaultMagnifierSize} , default:unprocessed=PrefixedIdentifierImpl
     super.size,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -77,9 +75,8 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
             name: 'additionalFocalPointOffset',
             init: additionalFocalPointOffset,
             isNamed: true,
-            defaultValue: _i7.Offset.zero,
           ),
-          'borderRadius': _i2.BuilderArg<_i8.BorderRadius>(
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadius>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
@@ -89,7 +86,7 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
             init: filmColor,
             isNamed: true,
           ),
-          'shadows': _i2.BuilderArg<List<_i9.BoxShadow>>(
+          'shadows': _i2.BuilderArg<List<_i8.BoxShadow>>(
             name: 'shadows',
             init: shadows,
             isNamed: true,
@@ -98,7 +95,6 @@ class Magnifier$Mate extends _i1.Magnifier with _i2.Mate {
             name: 'size',
             init: size,
             isNamed: true,
-            defaultValue: _i10.Magnifier.kDefaultMagnifierSize,
           ),
         },
         super() {

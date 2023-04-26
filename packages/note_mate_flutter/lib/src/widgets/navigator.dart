@@ -6,9 +6,8 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/heroes.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'dart:ui' as _i7;
-import 'package:flutter/src/widgets/focus_traversal.dart' as _i8;
+import 'dart:ui' as _i6;
+import 'package:flutter/src/widgets/focus_traversal.dart' as _i7;
 
 /// class RouteSettings
 class RouteSettings$Mate extends _i1.RouteSettings with _i2.Mate {
@@ -131,7 +130,7 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
     /// optionalParameters: {String? initialRoute} , default:none
     super.initialRoute,
 
-    /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {List<Route<dynamic>> Function(NavigatorState, String) onGenerateInitialRoutes = Navigator.defaultGenerateInitialRoutes} , default:unprocessed=PrefixedIdentifierImpl
     super.onGenerateInitialRoutes,
 
     /// optionalParameters: {Route<dynamic>? Function(RouteSettings)? onGenerateRoute} , default:none
@@ -146,7 +145,7 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
     /// optionalParameters: {bool reportsRouteUpdateToEngine = false} , default:processed=BooleanLiteralImpl
     super.reportsRouteUpdateToEngine,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<NavigatorObserver> observers = const <NavigatorObserver>[]} , default:unprocessed=ListLiteralImpl
@@ -185,7 +184,6 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
             name: 'onGenerateInitialRoutes',
             init: onGenerateInitialRoutes,
             isNamed: true,
-            defaultValue: _i6.Navigator.defaultGenerateInitialRoutes,
           ),
           'onGenerateRoute': _i2.BuilderArg<_i1.RouteFactory?>(
             name: 'onGenerateRoute',
@@ -208,11 +206,10 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i7.Clip.hardEdge,
           ),
           'observers': _i2.BuilderArg<List<_i1.NavigatorObserver>>(
             name: 'observers',
@@ -230,7 +227,7 @@ class Navigator$Mate extends _i1.Navigator with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'routeTraversalEdgeBehavior': _i2.BuilderArg<_i8.TraversalEdgeBehavior>(
+          'routeTraversalEdgeBehavior': _i2.BuilderArg<_i7.TraversalEdgeBehavior>(
             name: 'routeTraversalEdgeBehavior',
             init: routeTraversalEdgeBehavior,
             isNamed: true,

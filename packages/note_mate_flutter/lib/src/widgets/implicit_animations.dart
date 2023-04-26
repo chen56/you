@@ -15,9 +15,7 @@ import 'package:flutter/src/painting/alignment.dart' as _i11;
 import 'dart:ui' as _i12;
 import 'package:flutter/src/widgets/framework.dart' as _i13;
 import 'package:flutter/src/animation/curves.dart' as _i14;
-import 'package:flutter/animation.dart' as _i15;
-import 'package:flutter/cupertino.dart' as _i16;
-import 'package:flutter/src/painting/text_painter.dart' as _i17;
+import 'package:flutter/src/painting/text_painter.dart' as _i15;
 
 /// class BoxConstraintsTween extends Tween<BoxConstraints>
 class BoxConstraintsTween$Mate extends _i1.BoxConstraintsTween with _i2.Mate {
@@ -334,10 +332,10 @@ class AnimatedContainer$Mate extends _i1.AnimatedContainer with _i2.Mate {
     /// optionalParameters: {Widget? child} , default:none
     super.child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -415,13 +413,11 @@ class AnimatedContainer$Mate extends _i1.AnimatedContainer with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i12.Clip.none,
           ),
           'curve': _i2.BuilderArg<_i14.Curve>(
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -475,7 +471,7 @@ class AnimatedPadding$Mate extends _i1.AnimatedPadding with _i2.Mate {
     /// optionalParameters: {Widget? child} , default:none
     super.child,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -503,7 +499,6 @@ class AnimatedPadding$Mate extends _i1.AnimatedPadding with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -552,7 +547,7 @@ class AnimatedAlign$Mate extends _i1.AnimatedAlign with _i2.Mate {
     /// optionalParameters: {double? widthFactor} , default:none
     super.widthFactor,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -590,7 +585,6 @@ class AnimatedAlign$Mate extends _i1.AnimatedAlign with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -650,7 +644,7 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
     /// optionalParameters: {double? height} , default:none
     super.height,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -703,7 +697,6 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -745,7 +738,7 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
     /// optionalParameters: {required Rect rect} , default:none
     required super.rect,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -773,7 +766,6 @@ class AnimatedPositioned$Mate extends _i1.AnimatedPositioned with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -831,7 +823,7 @@ class AnimatedPositionedDirectional$Mate extends _i1.AnimatedPositionedDirection
     /// optionalParameters: {double? height} , default:none
     super.height,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -884,7 +876,6 @@ class AnimatedPositionedDirectional$Mate extends _i1.AnimatedPositionedDirection
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -932,13 +923,13 @@ class AnimatedScale$Mate extends _i1.AnimatedScale with _i2.Mate {
     /// optionalParameters: {required double scale} , default:none
     required super.scale,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
     super.filterQuality,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -966,7 +957,6 @@ class AnimatedScale$Mate extends _i1.AnimatedScale with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i16.Alignment.center,
           ),
           'filterQuality': _i2.BuilderArg<_i12.FilterQuality?>(
             name: 'filterQuality',
@@ -977,7 +967,6 @@ class AnimatedScale$Mate extends _i1.AnimatedScale with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -1022,13 +1011,13 @@ class AnimatedRotation$Mate extends _i1.AnimatedRotation with _i2.Mate {
     /// optionalParameters: {required double turns} , default:none
     required super.turns,
 
-    /// optionalParameters: {Alignment alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {FilterQuality? filterQuality} , default:none
     super.filterQuality,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -1056,7 +1045,6 @@ class AnimatedRotation$Mate extends _i1.AnimatedRotation with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i16.Alignment.center,
           ),
           'filterQuality': _i2.BuilderArg<_i12.FilterQuality?>(
             name: 'filterQuality',
@@ -1067,7 +1055,6 @@ class AnimatedRotation$Mate extends _i1.AnimatedRotation with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -1112,7 +1099,7 @@ class AnimatedSlide$Mate extends _i1.AnimatedSlide with _i2.Mate {
     /// optionalParameters: {required Offset offset} , default:none
     required super.offset,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -1140,7 +1127,6 @@ class AnimatedSlide$Mate extends _i1.AnimatedSlide with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -1183,7 +1169,7 @@ class AnimatedOpacity$Mate extends _i1.AnimatedOpacity with _i2.Mate {
     /// optionalParameters: {required double opacity} , default:none
     required super.opacity,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -1214,7 +1200,6 @@ class AnimatedOpacity$Mate extends _i1.AnimatedOpacity with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -1264,7 +1249,7 @@ class SliverAnimatedOpacity$Mate extends _i1.SliverAnimatedOpacity with _i2.Mate
     /// optionalParameters: {required double opacity} , default:none
     required super.opacity,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -1295,7 +1280,6 @@ class SliverAnimatedOpacity$Mate extends _i1.SliverAnimatedOpacity with _i2.Mate
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -1351,19 +1335,19 @@ class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle with _i
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     super.softWrap,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:unprocessed=PrefixedIdentifierImpl
     super.overflow,
 
     /// optionalParameters: {int? maxLines} , default:none
     super.maxLines,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:unprocessed=PrefixedIdentifierImpl
     super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
     super.textHeightBehavior,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -1398,22 +1382,20 @@ class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle with _i
             isNamed: true,
             defaultValue: true,
           ),
-          'overflow': _i2.BuilderArg<_i17.TextOverflow>(
+          'overflow': _i2.BuilderArg<_i15.TextOverflow>(
             name: 'overflow',
             init: overflow,
             isNamed: true,
-            defaultValue: _i16.TextOverflow.clip,
           ),
           'maxLines': _i2.BuilderArg<int?>(
             name: 'maxLines',
             init: maxLines,
             isNamed: true,
           ),
-          'textWidthBasis': _i2.BuilderArg<_i17.TextWidthBasis>(
+          'textWidthBasis': _i2.BuilderArg<_i15.TextWidthBasis>(
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
-            defaultValue: _i16.TextWidthBasis.parent,
           ),
           'textHeightBehavior': _i2.BuilderArg<_i12.TextHeightBehavior?>(
             name: 'textHeightBehavior',
@@ -1424,7 +1406,6 @@ class AnimatedDefaultTextStyle$Mate extends _i1.AnimatedDefaultTextStyle with _i
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -1473,10 +1454,10 @@ class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel with _i2.Mate
     /// optionalParameters: {required BoxShape shape} , default:none
     required super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
-    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderRadius borderRadius = BorderRadius.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.borderRadius,
 
     /// optionalParameters: {required double elevation} , default:none
@@ -1494,7 +1475,7 @@ class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel with _i2.Mate
     /// optionalParameters: {bool animateShadowColor = true} , default:processed=BooleanLiteralImpl
     super.animateShadowColor,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -1522,13 +1503,11 @@ class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel with _i2.Mate
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i12.Clip.none,
           ),
           'borderRadius': _i2.BuilderArg<_i6.BorderRadius>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
-            defaultValue: _i16.BorderRadius.zero,
           ),
           'elevation': _i2.BuilderArg<double>(
             name: 'elevation',
@@ -1561,7 +1540,6 @@ class AnimatedPhysicalModel$Mate extends _i1.AnimatedPhysicalModel with _i2.Mate
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -1605,7 +1583,7 @@ class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -1617,7 +1595,7 @@ class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox
     /// optionalParameters: {double? widthFactor} , default:none
     super.widthFactor,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -1635,7 +1613,6 @@ class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i16.Alignment.center,
           ),
           'child': _i2.BuilderArg<_i13.Widget?>(
             name: 'child',
@@ -1656,7 +1633,6 @@ class AnimatedFractionallySizedBox$Mate extends _i1.AnimatedFractionallySizedBox
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i15.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',

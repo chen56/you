@@ -5,13 +5,12 @@ import 'package:flutter/src/widgets/animated_scroll_view.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i6;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i7;
-import 'package:flutter/src/painting/edge_insets.dart' as _i8;
-import 'dart:ui' as _i9;
-import 'package:flutter/src/rendering/sliver_grid.dart' as _i10;
-import 'package:flutter/src/widgets/scroll_delegate.dart' as _i11;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i5;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i6;
+import 'package:flutter/src/painting/edge_insets.dart' as _i7;
+import 'dart:ui' as _i8;
+import 'package:flutter/src/rendering/sliver_grid.dart' as _i9;
+import 'package:flutter/src/widgets/scroll_delegate.dart' as _i10;
 
 /// class AnimatedList extends _AnimatedScrollView
 class AnimatedList$Mate extends _i1.AnimatedList with _i2.Mate {
@@ -26,7 +25,7 @@ class AnimatedList$Mate extends _i1.AnimatedList with _i2.Mate {
     /// optionalParameters: {int initialItemCount = 0} , default:processed=IntegerLiteralImpl
     super.initialItemCount,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -47,7 +46,7 @@ class AnimatedList$Mate extends _i1.AnimatedList with _i2.Mate {
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     super.padding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -70,7 +69,6 @@ class AnimatedList$Mate extends _i1.AnimatedList with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -78,7 +76,7 @@ class AnimatedList$Mate extends _i1.AnimatedList with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+          'controller': _i2.BuilderArg<_i5.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -88,7 +86,7 @@ class AnimatedList$Mate extends _i1.AnimatedList with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -99,16 +97,15 @@ class AnimatedList$Mate extends _i1.AnimatedList with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i8.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i9.Clip.hardEdge,
           ),
         },
         super() {
@@ -149,7 +146,7 @@ class AnimatedGrid$Mate extends _i1.AnimatedGrid with _i2.Mate {
     /// optionalParameters: {int initialItemCount = 0} , default:processed=IntegerLiteralImpl
     super.initialItemCount,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -167,7 +164,7 @@ class AnimatedGrid$Mate extends _i1.AnimatedGrid with _i2.Mate {
     /// optionalParameters: {EdgeInsetsGeometry? padding} , default:none
     super.padding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -180,7 +177,7 @@ class AnimatedGrid$Mate extends _i1.AnimatedGrid with _i2.Mate {
             init: itemBuilder,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i10.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i9.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
@@ -195,7 +192,6 @@ class AnimatedGrid$Mate extends _i1.AnimatedGrid with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -203,7 +199,7 @@ class AnimatedGrid$Mate extends _i1.AnimatedGrid with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i6.ScrollController?>(
+          'controller': _i2.BuilderArg<_i5.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -213,21 +209,20 @@ class AnimatedGrid$Mate extends _i1.AnimatedGrid with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i8.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i9.Clip.hardEdge,
           ),
         },
         super() {
@@ -278,7 +273,7 @@ class SliverAnimatedList$Mate extends _i1.SliverAnimatedList with _i2.Mate {
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i11.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i10.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -334,12 +329,12 @@ class SliverAnimatedGrid$Mate extends _i1.SliverAnimatedGrid with _i2.Mate {
             init: itemBuilder,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i10.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i9.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i11.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i10.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,

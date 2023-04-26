@@ -11,16 +11,16 @@ class ClampedSimulation$Mate extends _i1.ClampedSimulation with _i2.Mate {
   ClampedSimulation$Mate(
     /// requiredParameters: Simulation simulation
     super.simulation, {
-    /// optionalParameters: {double xMin = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double xMin = double.negativeInfinity} , default:unprocessed=PrefixedIdentifierImpl
     super.xMin,
 
-    /// optionalParameters: {double xMax = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double xMax = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.xMax,
 
-    /// optionalParameters: {double dxMin = double.negativeInfinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double dxMin = double.negativeInfinity} , default:unprocessed=PrefixedIdentifierImpl
     super.dxMin,
 
-    /// optionalParameters: {double dxMax = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double dxMax = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.dxMax,
   })  : mateParams = {
           'simulation': _i2.BuilderArg<_i3.Simulation>(
@@ -32,25 +32,21 @@ class ClampedSimulation$Mate extends _i1.ClampedSimulation with _i2.Mate {
             name: 'xMin',
             init: xMin,
             isNamed: true,
-            defaultValue: double.negativeInfinity,
           ),
           'xMax': _i2.BuilderArg<double>(
             name: 'xMax',
             init: xMax,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
           'dxMin': _i2.BuilderArg<double>(
             name: 'dxMin',
             init: dxMin,
             isNamed: true,
-            defaultValue: double.negativeInfinity,
           ),
           'dxMax': _i2.BuilderArg<double>(
             name: 'dxMax',
             init: dxMax,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
         },
         super() {

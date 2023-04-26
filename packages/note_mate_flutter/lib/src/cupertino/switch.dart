@@ -7,7 +7,6 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/gestures/recognizer.dart' as _i6;
-import 'package:flutter/gestures.dart' as _i7;
 
 /// class CupertinoSwitch extends StatefulWidget
 class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
@@ -37,7 +36,7 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
     /// optionalParameters: {Color? focusColor} , default:none
     super.focusColor,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -84,7 +83,6 @@ class CupertinoSwitch$Mate extends _i1.CupertinoSwitch with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i7.DragStartBehavior.start,
           ),
         },
         super() {

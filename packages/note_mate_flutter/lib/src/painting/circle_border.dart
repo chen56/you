@@ -4,13 +4,12 @@
 import 'package:flutter/src/painting/circle_border.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
 
 /// class CircleBorder extends OutlinedBorder
 class CircleBorder$Mate extends _i1.CircleBorder with _i2.Mate {
   /// CircleBorder CircleBorder({BorderSide side = BorderSide.none, double eccentricity = 0.0})
   CircleBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {double eccentricity = 0.0} , default:processed=DoubleLiteralImpl
@@ -20,7 +19,6 @@ class CircleBorder$Mate extends _i1.CircleBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'eccentricity': _i2.BuilderArg<double>(
             name: 'eccentricity',

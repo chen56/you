@@ -7,11 +7,9 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/basic_types.dart' as _i5;
 import 'dart:ui' as _i6;
-import 'package:flutter/animation.dart' as _i7;
-import 'package:flutter/src/rendering/proxy_box.dart' as _i8;
-import 'package:flutter/cupertino.dart' as _i9;
-import 'package:flutter/src/gestures/recognizer.dart' as _i10;
-import 'package:flutter/src/gestures/velocity_tracker.dart' as _i11;
+import 'package:flutter/src/rendering/proxy_box.dart' as _i7;
+import 'package:flutter/src/gestures/recognizer.dart' as _i8;
+import 'package:flutter/src/gestures/velocity_tracker.dart' as _i9;
 
 /// class Draggable<T extends Object> extends StatefulWidget
 class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
@@ -35,7 +33,7 @@ class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
     /// optionalParameters: {Widget? childWhenDragging} , default:none
     super.childWhenDragging,
 
-    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.feedbackOffset,
 
     /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , default:unprocessed=SimpleIdentifierImpl
@@ -71,7 +69,7 @@ class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
     /// optionalParameters: {bool rootOverlay = false} , default:processed=BooleanLiteralImpl
     super.rootOverlay,
 
-    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild} , default:unprocessed=PrefixedIdentifierImpl
     super.hitTestBehavior,
 
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
@@ -111,7 +109,6 @@ class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
             name: 'feedbackOffset',
             init: feedbackOffset,
             isNamed: true,
-            defaultValue: _i7.Offset.zero,
           ),
           'dragAnchorStrategy': _i2.BuilderArg<_i1.DragAnchorStrategy>(
             name: 'dragAnchorStrategy',
@@ -171,13 +168,12 @@ class Draggable$Mate<T extends Object> extends _i1.Draggable<T> with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'hitTestBehavior': _i2.BuilderArg<_i8.HitTestBehavior>(
+          'hitTestBehavior': _i2.BuilderArg<_i7.HitTestBehavior>(
             name: 'hitTestBehavior',
             init: hitTestBehavior,
             isNamed: true,
-            defaultValue: _i9.HitTestBehavior.deferToChild,
           ),
-          'allowedButtonsFilter': _i2.BuilderArg<_i10.AllowedButtonsFilter?>(
+          'allowedButtonsFilter': _i2.BuilderArg<_i8.AllowedButtonsFilter?>(
             name: 'allowedButtonsFilter',
             init: allowedButtonsFilter,
             isNamed: true,
@@ -236,7 +232,7 @@ class LongPressDraggable$Mate<T extends Object> extends _i1.LongPressDraggable<T
     /// optionalParameters: {Widget? childWhenDragging} , default:none
     super.childWhenDragging,
 
-    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset feedbackOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.feedbackOffset,
 
     /// optionalParameters: {Offset Function(Draggable<Object>, BuildContext, Offset) dragAnchorStrategy = childDragAnchorStrategy} , default:unprocessed=SimpleIdentifierImpl
@@ -309,7 +305,6 @@ class LongPressDraggable$Mate<T extends Object> extends _i1.LongPressDraggable<T
             name: 'feedbackOffset',
             init: feedbackOffset,
             isNamed: true,
-            defaultValue: _i7.Offset.zero,
           ),
           'dragAnchorStrategy': _i2.BuilderArg<_i1.DragAnchorStrategy>(
             name: 'dragAnchorStrategy',
@@ -369,7 +364,7 @@ class LongPressDraggable$Mate<T extends Object> extends _i1.LongPressDraggable<T
             init: delay,
             isNamed: true,
           ),
-          'allowedButtonsFilter': _i2.BuilderArg<_i10.AllowedButtonsFilter?>(
+          'allowedButtonsFilter': _i2.BuilderArg<_i8.AllowedButtonsFilter?>(
             name: 'allowedButtonsFilter',
             init: allowedButtonsFilter,
             isNamed: true,
@@ -424,7 +419,7 @@ class DraggableDetails$Mate extends _i1.DraggableDetails with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'velocity': _i2.BuilderArg<_i11.Velocity>(
+          'velocity': _i2.BuilderArg<_i9.Velocity>(
             name: 'velocity',
             init: velocity,
             isNamed: true,
@@ -508,7 +503,7 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
     /// optionalParameters: {void Function(DragTargetDetails<T>)? onMove} , default:none
     super.onMove,
 
-    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.translucent} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior hitTestBehavior = HitTestBehavior.translucent} , default:unprocessed=PrefixedIdentifierImpl
     super.hitTestBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -546,11 +541,10 @@ class DragTarget$Mate<T extends Object> extends _i1.DragTarget<T> with _i2.Mate 
             init: onMove,
             isNamed: true,
           ),
-          'hitTestBehavior': _i2.BuilderArg<_i8.HitTestBehavior>(
+          'hitTestBehavior': _i2.BuilderArg<_i7.HitTestBehavior>(
             name: 'hitTestBehavior',
             init: hitTestBehavior,
             isNamed: true,
-            defaultValue: _i9.HitTestBehavior.translucent,
           ),
         },
         super() {

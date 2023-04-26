@@ -12,10 +12,9 @@ import 'package:flutter/src/painting/image_provider.dart' as _i8;
 import 'package:flutter/src/painting/image_stream.dart' as _i9;
 import 'package:flutter/src/painting/box_fit.dart' as _i10;
 import 'package:flutter/src/painting/alignment.dart' as _i11;
-import 'package:flutter/cupertino.dart' as _i12;
-import 'package:flutter/src/painting/decoration_image.dart' as _i13;
-import 'package:flutter/src/material/material.dart' as _i14;
-import 'package:flutter/src/rendering/box.dart' as _i15;
+import 'package:flutter/src/painting/decoration_image.dart' as _i12;
+import 'package:flutter/src/material/material.dart' as _i13;
+import 'package:flutter/src/rendering/box.dart' as _i14;
 
 /// class Ink extends StatefulWidget
 class Ink$Mate extends _i1.Ink with _i2.Mate {
@@ -112,13 +111,13 @@ class Ink$Mate extends _i1.Ink with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
     super.centerSlice,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
@@ -167,18 +166,16 @@ class Ink$Mate extends _i1.Ink with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i12.Alignment.center,
           ),
           'centerSlice': _i2.BuilderArg<_i5.Rect?>(
             name: 'centerSlice',
             init: centerSlice,
             isNamed: true,
           ),
-          'repeat': _i2.BuilderArg<_i13.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i12.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
-            defaultValue: _i12.ImageRepeat.noRepeat,
           ),
           'matchTextDirection': _i2.BuilderArg<bool>(
             name: 'matchTextDirection',
@@ -264,12 +261,12 @@ class InkDecoration$Mate extends _i1.InkDecoration with _i2.Mate {
             init: configuration,
             isNamed: true,
           ),
-          'controller': _i2.BuilderArg<_i14.MaterialInkController>(
+          'controller': _i2.BuilderArg<_i13.MaterialInkController>(
             name: 'controller',
             init: controller,
             isNamed: true,
           ),
-          'referenceBox': _i2.BuilderArg<_i15.RenderBox>(
+          'referenceBox': _i2.BuilderArg<_i14.RenderBox>(
             name: 'referenceBox',
             init: referenceBox,
             isNamed: true,

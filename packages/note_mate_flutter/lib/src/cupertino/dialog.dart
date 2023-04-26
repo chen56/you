@@ -7,9 +7,8 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i5;
 import 'package:flutter/src/animation/curves.dart' as _i6;
-import 'package:flutter/animation.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/painting/text_style.dart' as _i9;
+import 'dart:ui' as _i7;
+import 'package:flutter/src/painting/text_style.dart' as _i8;
 
 /// class CupertinoAlertDialog extends StatelessWidget
 class CupertinoAlertDialog$Mate extends _i1.CupertinoAlertDialog with _i2.Mate {
@@ -36,7 +35,7 @@ class CupertinoAlertDialog$Mate extends _i1.CupertinoAlertDialog with _i2.Mate {
     /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , default:unprocessed=InstanceCreationExpressionImpl
     super.insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , default:unprocessed=PrefixedIdentifierImpl
     super.insetAnimationCurve,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -78,7 +77,6 @@ class CupertinoAlertDialog$Mate extends _i1.CupertinoAlertDialog with _i2.Mate {
             name: 'insetAnimationCurve',
             init: insetAnimationCurve,
             isNamed: true,
-            defaultValue: _i7.Curves.decelerate,
           ),
         },
         super() {
@@ -247,7 +245,7 @@ class CupertinoActionSheetAction$Mate extends _i1.CupertinoActionSheetAction wit
             init: key,
             isNamed: true,
           ),
-          'onPressed': _i2.BuilderArg<_i8.VoidCallback>(
+          'onPressed': _i2.BuilderArg<_i7.VoidCallback>(
             name: 'onPressed',
             init: onPressed,
             isNamed: true,
@@ -313,7 +311,7 @@ class CupertinoDialogAction$Mate extends _i1.CupertinoDialogAction with _i2.Mate
             init: key,
             isNamed: true,
           ),
-          'onPressed': _i2.BuilderArg<_i8.VoidCallback?>(
+          'onPressed': _i2.BuilderArg<_i7.VoidCallback?>(
             name: 'onPressed',
             init: onPressed,
             isNamed: true,
@@ -330,7 +328,7 @@ class CupertinoDialogAction$Mate extends _i1.CupertinoDialogAction with _i2.Mate
             isNamed: true,
             defaultValue: false,
           ),
-          'textStyle': _i2.BuilderArg<_i9.TextStyle?>(
+          'textStyle': _i2.BuilderArg<_i8.TextStyle?>(
             name: 'textStyle',
             init: textStyle,
             isNamed: true,

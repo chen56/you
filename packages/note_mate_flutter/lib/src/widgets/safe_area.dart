@@ -5,8 +5,7 @@ import 'package:flutter/src/widgets/safe_area.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/edge_insets.dart' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
-import 'package:flutter/src/widgets/framework.dart' as _i6;
+import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class SafeArea extends StatelessWidget
 class SafeArea$Mate extends _i1.SafeArea with _i2.Mate {
@@ -27,7 +26,7 @@ class SafeArea$Mate extends _i1.SafeArea with _i2.Mate {
     /// optionalParameters: {bool bottom = true} , default:processed=BooleanLiteralImpl
     super.bottom,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.minimum,
 
     /// optionalParameters: {bool maintainBottomViewPadding = false} , default:processed=BooleanLiteralImpl
@@ -69,7 +68,6 @@ class SafeArea$Mate extends _i1.SafeArea with _i2.Mate {
             name: 'minimum',
             init: minimum,
             isNamed: true,
-            defaultValue: _i5.EdgeInsets.zero,
           ),
           'maintainBottomViewPadding': _i2.BuilderArg<bool>(
             name: 'maintainBottomViewPadding',
@@ -77,7 +75,7 @@ class SafeArea$Mate extends _i1.SafeArea with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'child': _i2.BuilderArg<_i6.Widget>(
+          'child': _i2.BuilderArg<_i5.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -121,7 +119,7 @@ class SliverSafeArea$Mate extends _i1.SliverSafeArea with _i2.Mate {
     /// optionalParameters: {bool bottom = true} , default:processed=BooleanLiteralImpl
     super.bottom,
 
-    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsets minimum = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.minimum,
 
     /// optionalParameters: {required Widget sliver} , default:none
@@ -160,9 +158,8 @@ class SliverSafeArea$Mate extends _i1.SliverSafeArea with _i2.Mate {
             name: 'minimum',
             init: minimum,
             isNamed: true,
-            defaultValue: _i5.EdgeInsets.zero,
           ),
-          'sliver': _i2.BuilderArg<_i6.Widget>(
+          'sliver': _i2.BuilderArg<_i5.Widget>(
             name: 'sliver',
             init: sliver,
             isNamed: true,

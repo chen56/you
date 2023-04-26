@@ -4,7 +4,6 @@
 import 'package:flutter/src/painting/borders.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
 
 /// class BorderSide with Diagnosticable
 class BorderSide$Mate extends _i1.BorderSide with _i2.Mate {
@@ -16,7 +15,7 @@ class BorderSide$Mate extends _i1.BorderSide with _i2.Mate {
     /// optionalParameters: {double width = 1.0} , default:processed=DoubleLiteralImpl
     super.width,
 
-    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderStyle style = BorderStyle.solid} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
     /// optionalParameters: {double strokeAlign = strokeAlignInside} , default:unprocessed=SimpleIdentifierImpl
@@ -37,7 +36,6 @@ class BorderSide$Mate extends _i1.BorderSide with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i4.BorderStyle.solid,
           ),
           'strokeAlign': _i2.BuilderArg<double>(
             name: 'strokeAlign',

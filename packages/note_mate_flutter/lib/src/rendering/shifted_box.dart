@@ -7,7 +7,6 @@ import 'package:flutter/src/painting/edge_insets.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/rendering/box.dart' as _i5;
 import 'package:flutter/src/painting/alignment.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
 
 /// class RenderPadding extends RenderShiftedBox
 class RenderPadding$Mate extends _i1.RenderPadding with _i2.Mate {
@@ -65,7 +64,7 @@ class RenderPositionedBox$Mate extends _i1.RenderPositionedBox with _i2.Mate {
     /// optionalParameters: {double? heightFactor} , default:none
     super.heightFactor,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -90,7 +89,6 @@ class RenderPositionedBox$Mate extends _i1.RenderPositionedBox with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
@@ -133,7 +131,7 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
     /// optionalParameters: {double? maxHeight} , default:none
     super.maxHeight,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -168,7 +166,6 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
@@ -198,7 +195,7 @@ class RenderConstrainedOverflowBox$Mate extends _i1.RenderConstrainedOverflowBox
 class RenderConstraintsTransformBox$Mate extends _i1.RenderConstraintsTransformBox with _i2.Mate {
   /// RenderConstraintsTransformBox RenderConstraintsTransformBox({required AlignmentGeometry alignment = Alignment.center, required TextDirection? textDirection, required BoxConstraints Function(BoxConstraints) constraintsTransform, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderConstraintsTransformBox$Mate({
-    /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {required AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {required TextDirection? textDirection} , default:none
@@ -210,14 +207,13 @@ class RenderConstraintsTransformBox$Mate extends _i1.RenderConstraintsTransformB
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
@@ -238,7 +234,6 @@ class RenderConstraintsTransformBox$Mate extends _i1.RenderConstraintsTransformB
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.none,
           ),
         },
         super() {
@@ -267,7 +262,7 @@ class RenderSizedOverflowBox$Mate extends _i1.RenderSizedOverflowBox with _i2.Ma
     /// optionalParameters: {required Size requestedSize} , default:none
     required super.requestedSize,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -287,7 +282,6 @@ class RenderSizedOverflowBox$Mate extends _i1.RenderSizedOverflowBox with _i2.Ma
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
@@ -323,7 +317,7 @@ class RenderFractionallySizedOverflowBox$Mate extends _i1.RenderFractionallySize
     /// optionalParameters: {double? heightFactor} , default:none
     super.heightFactor,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -348,7 +342,6 @@ class RenderFractionallySizedOverflowBox$Mate extends _i1.RenderFractionallySize
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',

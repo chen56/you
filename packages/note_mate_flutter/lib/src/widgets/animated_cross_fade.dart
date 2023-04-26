@@ -6,9 +6,7 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/animation/curves.dart' as _i5;
-import 'package:flutter/animation.dart' as _i6;
-import 'package:flutter/src/painting/alignment.dart' as _i7;
-import 'package:flutter/cupertino.dart' as _i8;
+import 'package:flutter/src/painting/alignment.dart' as _i6;
 
 /// class AnimatedCrossFade extends StatefulWidget
 class AnimatedCrossFade$Mate extends _i1.AnimatedCrossFade with _i2.Mate {
@@ -23,16 +21,16 @@ class AnimatedCrossFade$Mate extends _i1.AnimatedCrossFade with _i2.Mate {
     /// optionalParameters: {required Widget secondChild} , default:none
     required super.secondChild,
 
-    /// optionalParameters: {Curve firstCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve firstCurve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.firstCurve,
 
-    /// optionalParameters: {Curve secondCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve secondCurve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.secondCurve,
 
-    /// optionalParameters: {Curve sizeCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve sizeCurve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.sizeCurve,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.topCenter} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.topCenter} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {required CrossFadeState crossFadeState} , default:none
@@ -69,25 +67,21 @@ class AnimatedCrossFade$Mate extends _i1.AnimatedCrossFade with _i2.Mate {
             name: 'firstCurve',
             init: firstCurve,
             isNamed: true,
-            defaultValue: _i6.Curves.linear,
           ),
           'secondCurve': _i2.BuilderArg<_i5.Curve>(
             name: 'secondCurve',
             init: secondCurve,
             isNamed: true,
-            defaultValue: _i6.Curves.linear,
           ),
           'sizeCurve': _i2.BuilderArg<_i5.Curve>(
             name: 'sizeCurve',
             init: sizeCurve,
             isNamed: true,
-            defaultValue: _i6.Curves.linear,
           ),
-          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i8.Alignment.topCenter,
           ),
           'crossFadeState': _i2.BuilderArg<_i1.CrossFadeState>(
             name: 'crossFadeState',

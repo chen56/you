@@ -13,7 +13,6 @@ import 'dart:ui' as _i9;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i10;
 import 'package:flutter/src/painting/border_radius.dart' as _i11;
 import 'package:flutter/src/painting/basic_types.dart' as _i12;
-import 'package:flutter/cupertino.dart' as _i13;
 
 /// class ToggleButtons extends StatelessWidget
 class ToggleButtons$Mate extends _i1.ToggleButtons with _i2.Mate {
@@ -88,10 +87,10 @@ class ToggleButtons$Mate extends _i1.ToggleButtons with _i2.Mate {
     /// optionalParameters: {double? borderWidth} , default:none
     super.borderWidth,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:unprocessed=PrefixedIdentifierImpl
     super.direction,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
     super.verticalDirection,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -214,13 +213,11 @@ class ToggleButtons$Mate extends _i1.ToggleButtons with _i2.Mate {
             name: 'direction',
             init: direction,
             isNamed: true,
-            defaultValue: _i13.Axis.horizontal,
           ),
           'verticalDirection': _i2.BuilderArg<_i12.VerticalDirection>(
             name: 'verticalDirection',
             init: verticalDirection,
             isNamed: true,
-            defaultValue: _i13.VerticalDirection.down,
           ),
         },
         super() {

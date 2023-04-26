@@ -7,8 +7,7 @@ import 'dart:ui' as _i3;
 import 'package:flutter/src/animation/animation.dart' as _i4;
 import 'package:flutter/src/painting/box_fit.dart' as _i5;
 import 'package:flutter/src/painting/alignment.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
-import 'package:flutter/src/painting/decoration_image.dart' as _i8;
+import 'package:flutter/src/painting/decoration_image.dart' as _i7;
 
 /// class RenderImage extends RenderBox
 class RenderImage$Mate extends _i1.RenderImage with _i2.Mate {
@@ -41,10 +40,10 @@ class RenderImage$Mate extends _i1.RenderImage with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
@@ -62,7 +61,7 @@ class RenderImage$Mate extends _i1.RenderImage with _i2.Mate {
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
     super.isAntiAlias,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
   })  : mateParams = {
           'image': _i2.BuilderArg<_i3.Image?>(
@@ -115,13 +114,11 @@ class RenderImage$Mate extends _i1.RenderImage with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i8.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i7.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
-            defaultValue: _i7.ImageRepeat.noRepeat,
           ),
           'centerSlice': _i2.BuilderArg<_i3.Rect?>(
             name: 'centerSlice',
@@ -155,7 +152,6 @@ class RenderImage$Mate extends _i1.RenderImage with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i3.FilterQuality.low,
           ),
         },
         super() {

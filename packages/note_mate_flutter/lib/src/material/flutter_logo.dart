@@ -6,9 +6,7 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/flutter_logo.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'package:flutter/src/animation/curves.dart' as _i7;
-import 'package:flutter/animation.dart' as _i8;
+import 'package:flutter/src/animation/curves.dart' as _i6;
 
 /// class FlutterLogo extends StatelessWidget
 class FlutterLogo$Mate extends _i1.FlutterLogo with _i2.Mate {
@@ -23,13 +21,13 @@ class FlutterLogo$Mate extends _i1.FlutterLogo with _i2.Mate {
     /// optionalParameters: {Color textColor = const Color(0xFF757575)} , default:unprocessed=InstanceCreationExpressionImpl
     super.textColor,
 
-    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
     /// optionalParameters: {Duration duration = const Duration(milliseconds: 750)} , default:unprocessed=InstanceCreationExpressionImpl
     super.duration,
 
-    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -51,18 +49,16 @@ class FlutterLogo$Mate extends _i1.FlutterLogo with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i6.FlutterLogoStyle.markOnly,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
             init: duration,
             isNamed: true,
           ),
-          'curve': _i2.BuilderArg<_i7.Curve>(
+          'curve': _i2.BuilderArg<_i6.Curve>(
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i8.Curves.fastOutSlowIn,
           ),
         },
         super() {

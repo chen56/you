@@ -9,8 +9,7 @@ import 'package:flutter/src/painting/text_style.dart' as _i5;
 import 'dart:ui' as _i6;
 import 'package:flutter/src/painting/edge_insets.dart' as _i7;
 import 'package:flutter/src/widgets/overflow_bar.dart' as _i8;
-import 'package:flutter/cupertino.dart' as _i9;
-import 'package:flutter/src/animation/animation.dart' as _i10;
+import 'package:flutter/src/animation/animation.dart' as _i9;
 
 /// class MaterialBanner extends StatefulWidget
 class MaterialBanner$Mate extends _i1.MaterialBanner with _i2.Mate {
@@ -58,7 +57,7 @@ class MaterialBanner$Mate extends _i1.MaterialBanner with _i2.Mate {
     /// optionalParameters: {bool forceActionsBelow = false} , default:processed=BooleanLiteralImpl
     super.forceActionsBelow,
 
-    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverflowBarAlignment overflowAlignment = OverflowBarAlignment.end} , default:unprocessed=PrefixedIdentifierImpl
     super.overflowAlignment,
 
     /// optionalParameters: {Animation<double>? animation} , default:none
@@ -142,9 +141,8 @@ class MaterialBanner$Mate extends _i1.MaterialBanner with _i2.Mate {
             name: 'overflowAlignment',
             init: overflowAlignment,
             isNamed: true,
-            defaultValue: _i9.OverflowBarAlignment.end,
           ),
-          'animation': _i2.BuilderArg<_i10.Animation<double>?>(
+          'animation': _i2.BuilderArg<_i9.Animation<double>?>(
             name: 'animation',
             init: animation,
             isNamed: true,

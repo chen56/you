@@ -4,47 +4,42 @@
 import 'package:flutter/src/painting/box_border.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
 
 /// class Border extends BoxBorder
 class Border$Mate extends _i1.Border with _i2.Mate {
   /// Border Border({BorderSide top = BorderSide.none, BorderSide right = BorderSide.none, BorderSide bottom = BorderSide.none, BorderSide left = BorderSide.none})
   Border$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide top = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.top,
 
-    /// optionalParameters: {BorderSide right = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide right = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.right,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.bottom,
 
-    /// optionalParameters: {BorderSide left = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide left = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.left,
   })  : mateParams = {
           'top': _i2.BuilderArg<_i3.BorderSide>(
             name: 'top',
             init: top,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'right': _i2.BuilderArg<_i3.BorderSide>(
             name: 'right',
             init: right,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'bottom': _i2.BuilderArg<_i3.BorderSide>(
             name: 'bottom',
             init: bottom,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'left': _i2.BuilderArg<_i3.BorderSide>(
             name: 'left',
             init: left,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
         },
         super() {
@@ -78,23 +73,21 @@ class Border$Mate extends _i1.Border with _i2.Mate {
 
   /// Border Border.symmetric({BorderSide vertical = BorderSide.none, BorderSide horizontal = BorderSide.none})
   Border$Mate.symmetric({
-    /// optionalParameters: {BorderSide vertical = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide vertical = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.vertical,
 
-    /// optionalParameters: {BorderSide horizontal = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide horizontal = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.horizontal,
   })  : mateParams = {
           'vertical': _i2.BuilderArg<_i3.BorderSide>(
             name: 'vertical',
             init: vertical,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'horizontal': _i2.BuilderArg<_i3.BorderSide>(
             name: 'horizontal',
             init: horizontal,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
         },
         super.symmetric() {
@@ -114,41 +107,37 @@ class Border$Mate extends _i1.Border with _i2.Mate {
 class BorderDirectional$Mate extends _i1.BorderDirectional with _i2.Mate {
   /// BorderDirectional BorderDirectional({BorderSide top = BorderSide.none, BorderSide start = BorderSide.none, BorderSide end = BorderSide.none, BorderSide bottom = BorderSide.none})
   BorderDirectional$Mate({
-    /// optionalParameters: {BorderSide top = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide top = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.top,
 
-    /// optionalParameters: {BorderSide start = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide start = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.start,
 
-    /// optionalParameters: {BorderSide end = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide end = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.end,
 
-    /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide bottom = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.bottom,
   })  : mateParams = {
           'top': _i2.BuilderArg<_i3.BorderSide>(
             name: 'top',
             init: top,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'start': _i2.BuilderArg<_i3.BorderSide>(
             name: 'start',
             init: start,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'end': _i2.BuilderArg<_i3.BorderSide>(
             name: 'end',
             init: end,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'bottom': _i2.BuilderArg<_i3.BorderSide>(
             name: 'bottom',
             init: bottom,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
         },
         super() {

@@ -7,12 +7,11 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i4;
 import 'package:flutter/src/material/menu_style.dart' as _i5;
 import 'dart:ui' as _i6;
-import 'package:flutter/animation.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'package:flutter/src/foundation/basic_types.dart' as _i9;
-import 'package:flutter/src/widgets/platform_menu_bar.dart' as _i10;
-import 'package:flutter/src/material/button_style.dart' as _i11;
-import 'package:flutter/src/material/material_state.dart' as _i12;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
+import 'package:flutter/src/foundation/basic_types.dart' as _i8;
+import 'package:flutter/src/widgets/platform_menu_bar.dart' as _i9;
+import 'package:flutter/src/material/button_style.dart' as _i10;
+import 'package:flutter/src/material/material_state.dart' as _i11;
 
 /// class MenuAnchor extends StatefulWidget
 class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
@@ -30,10 +29,10 @@ class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
     /// optionalParameters: {MenuStyle? style} , default:none
     super.style,
 
-    /// optionalParameters: {Offset? alignmentOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset? alignmentOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.alignmentOffset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {bool anchorTapClosesMenu = false} , default:processed=BooleanLiteralImpl
@@ -81,13 +80,11 @@ class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
             name: 'alignmentOffset',
             init: alignmentOffset,
             isNamed: true,
-            defaultValue: _i7.Offset.zero,
           ),
           'clipBehavior': _i2.BuilderArg<_i6.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i6.Clip.hardEdge,
           ),
           'anchorTapClosesMenu': _i2.BuilderArg<bool>(
             name: 'anchorTapClosesMenu',
@@ -111,7 +108,7 @@ class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'menuChildren': _i2.BuilderArg<List<_i8.Widget>>(
+          'menuChildren': _i2.BuilderArg<List<_i7.Widget>>(
             name: 'menuChildren',
             init: menuChildren,
             isNamed: true,
@@ -121,7 +118,7 @@ class MenuAnchor$Mate extends _i1.MenuAnchor with _i2.Mate {
             init: builder,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget?>(
+          'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -161,7 +158,7 @@ class MenuBar$Mate extends _i1.MenuBar with _i2.Mate {
     /// optionalParameters: {MenuStyle? style} , default:none
     super.style,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {MenuController? controller} , default:none
@@ -184,14 +181,13 @@ class MenuBar$Mate extends _i1.MenuBar with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i6.Clip.none,
           ),
           'controller': _i2.BuilderArg<_i1.MenuController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i8.Widget>>(
+          'children': _i2.BuilderArg<List<_i7.Widget>>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -244,7 +240,7 @@ class MenuItemButton$Mate extends _i1.MenuItemButton with _i2.Mate {
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
     super.statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? leadingIcon} , default:none
@@ -269,7 +265,7 @@ class MenuItemButton$Mate extends _i1.MenuItemButton with _i2.Mate {
             init: onPressed,
             isNamed: true,
           ),
-          'onHover': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onHover': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
@@ -280,7 +276,7 @@ class MenuItemButton$Mate extends _i1.MenuItemButton with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'onFocusChange': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onFocusChange': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onFocusChange',
             init: onFocusChange,
             isNamed: true,
@@ -290,17 +286,17 @@ class MenuItemButton$Mate extends _i1.MenuItemButton with _i2.Mate {
             init: focusNode,
             isNamed: true,
           ),
-          'shortcut': _i2.BuilderArg<_i10.MenuSerializableShortcut?>(
+          'shortcut': _i2.BuilderArg<_i9.MenuSerializableShortcut?>(
             name: 'shortcut',
             init: shortcut,
             isNamed: true,
           ),
-          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+          'style': _i2.BuilderArg<_i10.ButtonStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'statesController': _i2.BuilderArg<_i12.MaterialStatesController?>(
+          'statesController': _i2.BuilderArg<_i11.MaterialStatesController?>(
             name: 'statesController',
             init: statesController,
             isNamed: true,
@@ -309,14 +305,13 @@ class MenuItemButton$Mate extends _i1.MenuItemButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i6.Clip.none,
           ),
-          'leadingIcon': _i2.BuilderArg<_i8.Widget?>(
+          'leadingIcon': _i2.BuilderArg<_i7.Widget?>(
             name: 'leadingIcon',
             init: leadingIcon,
             isNamed: true,
           ),
-          'trailingIcon': _i2.BuilderArg<_i8.Widget?>(
+          'trailingIcon': _i2.BuilderArg<_i7.Widget?>(
             name: 'trailingIcon',
             init: trailingIcon,
             isNamed: true,
@@ -327,7 +322,7 @@ class MenuItemButton$Mate extends _i1.MenuItemButton with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget?>(
+          'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -395,7 +390,7 @@ class CheckboxMenuButton$Mate extends _i1.CheckboxMenuButton with _i2.Mate {
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
     super.statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? trailingIcon} , default:none
@@ -429,17 +424,17 @@ class CheckboxMenuButton$Mate extends _i1.CheckboxMenuButton with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'onChanged': _i2.BuilderArg<_i9.ValueChanged<bool?>?>(
+          'onChanged': _i2.BuilderArg<_i8.ValueChanged<bool?>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
           ),
-          'onHover': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onHover': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
           ),
-          'onFocusChange': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onFocusChange': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onFocusChange',
             init: onFocusChange,
             isNamed: true,
@@ -449,17 +444,17 @@ class CheckboxMenuButton$Mate extends _i1.CheckboxMenuButton with _i2.Mate {
             init: focusNode,
             isNamed: true,
           ),
-          'shortcut': _i2.BuilderArg<_i10.MenuSerializableShortcut?>(
+          'shortcut': _i2.BuilderArg<_i9.MenuSerializableShortcut?>(
             name: 'shortcut',
             init: shortcut,
             isNamed: true,
           ),
-          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+          'style': _i2.BuilderArg<_i10.ButtonStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'statesController': _i2.BuilderArg<_i12.MaterialStatesController?>(
+          'statesController': _i2.BuilderArg<_i11.MaterialStatesController?>(
             name: 'statesController',
             init: statesController,
             isNamed: true,
@@ -468,9 +463,8 @@ class CheckboxMenuButton$Mate extends _i1.CheckboxMenuButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i6.Clip.none,
           ),
-          'trailingIcon': _i2.BuilderArg<_i8.Widget?>(
+          'trailingIcon': _i2.BuilderArg<_i7.Widget?>(
             name: 'trailingIcon',
             init: trailingIcon,
             isNamed: true,
@@ -481,7 +475,7 @@ class CheckboxMenuButton$Mate extends _i1.CheckboxMenuButton with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget?>(
+          'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -550,7 +544,7 @@ class RadioMenuButton$Mate<T> extends _i1.RadioMenuButton<T> with _i2.Mate {
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
     super.statesController,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? trailingIcon} , default:none
@@ -577,7 +571,7 @@ class RadioMenuButton$Mate<T> extends _i1.RadioMenuButton<T> with _i2.Mate {
             init: groupValue,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i9.ValueChanged<T?>?>(
+          'onChanged': _i2.BuilderArg<_i8.ValueChanged<T?>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
@@ -588,12 +582,12 @@ class RadioMenuButton$Mate<T> extends _i1.RadioMenuButton<T> with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'onHover': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onHover': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
           ),
-          'onFocusChange': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onFocusChange': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onFocusChange',
             init: onFocusChange,
             isNamed: true,
@@ -603,17 +597,17 @@ class RadioMenuButton$Mate<T> extends _i1.RadioMenuButton<T> with _i2.Mate {
             init: focusNode,
             isNamed: true,
           ),
-          'shortcut': _i2.BuilderArg<_i10.MenuSerializableShortcut?>(
+          'shortcut': _i2.BuilderArg<_i9.MenuSerializableShortcut?>(
             name: 'shortcut',
             init: shortcut,
             isNamed: true,
           ),
-          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+          'style': _i2.BuilderArg<_i10.ButtonStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'statesController': _i2.BuilderArg<_i12.MaterialStatesController?>(
+          'statesController': _i2.BuilderArg<_i11.MaterialStatesController?>(
             name: 'statesController',
             init: statesController,
             isNamed: true,
@@ -622,9 +616,8 @@ class RadioMenuButton$Mate<T> extends _i1.RadioMenuButton<T> with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i6.Clip.none,
           ),
-          'trailingIcon': _i2.BuilderArg<_i8.Widget?>(
+          'trailingIcon': _i2.BuilderArg<_i7.Widget?>(
             name: 'trailingIcon',
             init: trailingIcon,
             isNamed: true,
@@ -635,7 +628,7 @@ class RadioMenuButton$Mate<T> extends _i1.RadioMenuButton<T> with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget?>(
+          'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -695,7 +688,7 @@ class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
     /// optionalParameters: {Offset? alignmentOffset} , default:none
     super.alignmentOffset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -721,12 +714,12 @@ class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'onHover': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onHover': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
           ),
-          'onFocusChange': _i2.BuilderArg<_i9.ValueChanged<bool>?>(
+          'onFocusChange': _i2.BuilderArg<_i8.ValueChanged<bool>?>(
             name: 'onFocusChange',
             init: onFocusChange,
             isNamed: true,
@@ -741,7 +734,7 @@ class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
             init: onClose,
             isNamed: true,
           ),
-          'style': _i2.BuilderArg<_i11.ButtonStyle?>(
+          'style': _i2.BuilderArg<_i10.ButtonStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
@@ -760,34 +753,33 @@ class SubmenuButton$Mate extends _i1.SubmenuButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i6.Clip.hardEdge,
           ),
           'focusNode': _i2.BuilderArg<_i4.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
           ),
-          'statesController': _i2.BuilderArg<_i12.MaterialStatesController?>(
+          'statesController': _i2.BuilderArg<_i11.MaterialStatesController?>(
             name: 'statesController',
             init: statesController,
             isNamed: true,
           ),
-          'leadingIcon': _i2.BuilderArg<_i8.Widget?>(
+          'leadingIcon': _i2.BuilderArg<_i7.Widget?>(
             name: 'leadingIcon',
             init: leadingIcon,
             isNamed: true,
           ),
-          'trailingIcon': _i2.BuilderArg<_i8.Widget?>(
+          'trailingIcon': _i2.BuilderArg<_i7.Widget?>(
             name: 'trailingIcon',
             init: trailingIcon,
             isNamed: true,
           ),
-          'menuChildren': _i2.BuilderArg<List<_i8.Widget>>(
+          'menuChildren': _i2.BuilderArg<List<_i7.Widget>>(
             name: 'menuChildren',
             init: menuChildren,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget?>(
+          'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -875,7 +867,7 @@ class MenuAcceleratorCallbackBinding$Mate extends _i1.MenuAcceleratorCallbackBin
             isNamed: true,
             defaultValue: false,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

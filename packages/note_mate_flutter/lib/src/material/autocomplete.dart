@@ -5,8 +5,7 @@ import 'package:flutter/src/material/autocomplete.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/autocomplete.dart' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
-import 'package:flutter/src/services/text_input.dart' as _i6;
+import 'package:flutter/src/services/text_input.dart' as _i5;
 
 /// class Autocomplete<T extends Object> extends StatelessWidget
 class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.Mate {
@@ -18,7 +17,7 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
     /// optionalParameters: {required FutureOr<Iterable<T>> Function(TextEditingValue) optionsBuilder} , default:none
     required super.optionsBuilder,
 
-    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {String Function(T) displayStringForOption = RawAutocomplete.defaultStringForOption} , default:unprocessed=PrefixedIdentifierImpl
     super.displayStringForOption,
 
     /// optionalParameters: {Widget Function(BuildContext, TextEditingController, FocusNode, void Function()) fieldViewBuilder = _defaultFieldViewBuilder} , default:unprocessed=SimpleIdentifierImpl
@@ -50,7 +49,6 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
             name: 'displayStringForOption',
             init: displayStringForOption,
             isNamed: true,
-            defaultValue: _i5.RawAutocomplete.defaultStringForOption,
           ),
           'fieldViewBuilder': _i2.BuilderArg<_i4.AutocompleteFieldViewBuilder>(
             name: 'fieldViewBuilder',
@@ -73,7 +71,7 @@ class Autocomplete$Mate<T extends Object> extends _i1.Autocomplete<T> with _i2.M
             init: optionsViewBuilder,
             isNamed: true,
           ),
-          'initialValue': _i2.BuilderArg<_i6.TextEditingValue?>(
+          'initialValue': _i2.BuilderArg<_i5.TextEditingValue?>(
             name: 'initialValue',
             init: initialValue,
             isNamed: true,

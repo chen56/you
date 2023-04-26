@@ -6,10 +6,9 @@ import 'package:flutter/src/widgets/shortcuts.dart' as _i2;
 import 'package:note/mate.dart' as _i3;
 import 'package:flutter/src/widgets/actions.dart' as _i4;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i5;
-import 'package:flutter/foundation.dart' as _i6;
-import 'package:flutter/src/foundation/key.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'dart:ui' as _i9;
+import 'package:flutter/src/foundation/key.dart' as _i6;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
+import 'dart:ui' as _i8;
 
 /// class KeySet<T extends KeyboardKey>
 class KeySet$Mate<T extends _i1.KeyboardKey> extends _i2.KeySet<T> with _i3.Mate {
@@ -166,7 +165,7 @@ class ShortcutMapProperty$Mate extends _i2.ShortcutMapProperty with _i3.Mate {
     /// optionalParameters: {Object defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
 
     /// optionalParameters: {String? description} , default:none
@@ -197,7 +196,6 @@ class ShortcutMapProperty$Mate extends _i2.ShortcutMapProperty with _i3.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i6.DiagnosticLevel.info,
           ),
           'description': _i3.BuilderArg<String?>(
             name: 'description',
@@ -411,7 +409,7 @@ class Shortcuts$Mate extends _i2.Shortcuts with _i3.Mate {
     /// optionalParameters: {String? debugLabel} , default:none
     super.debugLabel,
   })  : mateParams = {
-          'key': _i3.BuilderArg<_i7.Key?>(
+          'key': _i3.BuilderArg<_i6.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -421,7 +419,7 @@ class Shortcuts$Mate extends _i2.Shortcuts with _i3.Mate {
             init: shortcuts,
             isNamed: true,
           ),
-          'child': _i3.BuilderArg<_i8.Widget>(
+          'child': _i3.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -457,7 +455,7 @@ class Shortcuts$Mate extends _i2.Shortcuts with _i3.Mate {
     /// optionalParameters: {String? debugLabel} , default:none
     super.debugLabel,
   })  : mateParams = {
-          'key': _i3.BuilderArg<_i7.Key?>(
+          'key': _i3.BuilderArg<_i6.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -467,7 +465,7 @@ class Shortcuts$Mate extends _i2.Shortcuts with _i3.Mate {
             init: manager,
             isNamed: true,
           ),
-          'child': _i3.BuilderArg<_i8.Widget>(
+          'child': _i3.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -506,17 +504,17 @@ class CallbackShortcuts$Mate extends _i2.CallbackShortcuts with _i3.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
   })  : mateParams = {
-          'key': _i3.BuilderArg<_i7.Key?>(
+          'key': _i3.BuilderArg<_i6.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'bindings': _i3.BuilderArg<Map<_i2.ShortcutActivator, _i9.VoidCallback>>(
+          'bindings': _i3.BuilderArg<Map<_i2.ShortcutActivator, _i8.VoidCallback>>(
             name: 'bindings',
             init: bindings,
             isNamed: true,
           ),
-          'child': _i3.BuilderArg<_i8.Widget>(
+          'child': _i3.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -546,12 +544,12 @@ class ShortcutRegistrar$Mate extends _i2.ShortcutRegistrar with _i3.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
   })  : mateParams = {
-          'key': _i3.BuilderArg<_i7.Key?>(
+          'key': _i3.BuilderArg<_i6.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'child': _i3.BuilderArg<_i8.Widget>(
+          'child': _i3.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

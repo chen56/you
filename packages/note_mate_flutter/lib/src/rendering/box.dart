@@ -13,13 +13,13 @@ class BoxConstraints$Mate extends _i1.BoxConstraints with _i2.Mate {
     /// optionalParameters: {double minWidth = 0.0} , default:processed=DoubleLiteralImpl
     super.minWidth,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double maxWidth = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.maxWidth,
 
     /// optionalParameters: {double minHeight = 0.0} , default:processed=DoubleLiteralImpl
     super.minHeight,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double maxHeight = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.maxHeight,
   })  : mateParams = {
           'minWidth': _i2.BuilderArg<double>(
@@ -32,7 +32,6 @@ class BoxConstraints$Mate extends _i1.BoxConstraints with _i2.Mate {
             name: 'maxWidth',
             init: maxWidth,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
           'minHeight': _i2.BuilderArg<double>(
             name: 'minHeight',
@@ -44,7 +43,6 @@ class BoxConstraints$Mate extends _i1.BoxConstraints with _i2.Mate {
             name: 'maxHeight',
             init: maxHeight,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
         },
         super() {
@@ -106,23 +104,21 @@ class BoxConstraints$Mate extends _i1.BoxConstraints with _i2.Mate {
 
   /// BoxConstraints BoxConstraints.tightForFinite({double width = double.infinity, double height = double.infinity})
   BoxConstraints$Mate.tightForFinite({
-    /// optionalParameters: {double width = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double width = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.width,
 
-    /// optionalParameters: {double height = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double height = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.height,
   })  : mateParams = {
           'width': _i2.BuilderArg<double>(
             name: 'width',
             init: width,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
           'height': _i2.BuilderArg<double>(
             name: 'height',
             init: height,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
         },
         super.tightForFinite() {

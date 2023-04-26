@@ -223,7 +223,7 @@ enable_experiment=""
   /docker?shortHelp() { cat <<<"docker build"; }
   /docker() {
     (
-      docker build --tag younpc/note:latest . ;
+      docker build --target ci --tag younpc/note:latest . ;
       mkdir -p build
       docker run --workdir / younpc/note  tar -cf - app | ( cd build;tar -xf -)
       mv build/app build/web

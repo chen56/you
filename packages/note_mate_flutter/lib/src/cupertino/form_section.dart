@@ -6,9 +6,8 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'dart:ui' as _i7;
-import 'package:flutter/src/painting/box_decoration.dart' as _i8;
+import 'dart:ui' as _i6;
+import 'package:flutter/src/painting/box_decoration.dart' as _i7;
 
 /// class CupertinoFormSection extends StatelessWidget
 class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
@@ -26,16 +25,16 @@ class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
     /// optionalParameters: {Widget? footer} , default:none
     super.footer,
 
-    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsetsGeometry margin = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:unprocessed=PrefixedIdentifierImpl
     super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
     super.decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -62,24 +61,21 @@ class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
             name: 'margin',
             init: margin,
             isNamed: true,
-            defaultValue: _i6.EdgeInsets.zero,
           ),
-          'backgroundColor': _i2.BuilderArg<_i7.Color>(
+          'backgroundColor': _i2.BuilderArg<_i6.Color>(
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
-            defaultValue: _i6.CupertinoColors.systemGroupedBackground,
           ),
-          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
+          'decoration': _i2.BuilderArg<_i7.BoxDecoration?>(
             name: 'decoration',
             init: decoration,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i7.Clip.none,
           ),
         },
         super() {
@@ -114,13 +110,13 @@ class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
     /// optionalParameters: {EdgeInsetsGeometry margin = _kFormDefaultInsetGroupedRowsMargin} , default:unprocessed=SimpleIdentifierImpl
     super.margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:unprocessed=PrefixedIdentifierImpl
     super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
     super.decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -148,22 +144,20 @@ class CupertinoFormSection$Mate extends _i1.CupertinoFormSection with _i2.Mate {
             init: margin,
             isNamed: true,
           ),
-          'backgroundColor': _i2.BuilderArg<_i7.Color>(
+          'backgroundColor': _i2.BuilderArg<_i6.Color>(
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
-            defaultValue: _i6.CupertinoColors.systemGroupedBackground,
           ),
-          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
+          'decoration': _i2.BuilderArg<_i7.BoxDecoration?>(
             name: 'decoration',
             init: decoration,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i7.Clip.none,
           ),
         },
         super.insetGrouped() {

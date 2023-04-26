@@ -6,8 +6,6 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/animation/curves.dart' as _i5;
-import 'package:flutter/animation.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
 
 /// class AnimatedSwitcher extends StatefulWidget
 class AnimatedSwitcher$Mate extends _i1.AnimatedSwitcher with _i2.Mate {
@@ -25,16 +23,16 @@ class AnimatedSwitcher$Mate extends _i1.AnimatedSwitcher with _i2.Mate {
     /// optionalParameters: {Duration? reverseDuration} , default:none
     super.reverseDuration,
 
-    /// optionalParameters: {Curve switchInCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve switchInCurve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.switchInCurve,
 
-    /// optionalParameters: {Curve switchOutCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve switchOutCurve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.switchOutCurve,
 
-    /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Widget Function(Widget, Animation<double>) transitionBuilder = AnimatedSwitcher.defaultTransitionBuilder} , default:unprocessed=PrefixedIdentifierImpl
     super.transitionBuilder,
 
-    /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Widget Function(Widget?, List<Widget>) layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder} , default:unprocessed=PrefixedIdentifierImpl
     super.layoutBuilder,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -61,25 +59,21 @@ class AnimatedSwitcher$Mate extends _i1.AnimatedSwitcher with _i2.Mate {
             name: 'switchInCurve',
             init: switchInCurve,
             isNamed: true,
-            defaultValue: _i6.Curves.linear,
           ),
           'switchOutCurve': _i2.BuilderArg<_i5.Curve>(
             name: 'switchOutCurve',
             init: switchOutCurve,
             isNamed: true,
-            defaultValue: _i6.Curves.linear,
           ),
           'transitionBuilder': _i2.BuilderArg<_i1.AnimatedSwitcherTransitionBuilder>(
             name: 'transitionBuilder',
             init: transitionBuilder,
             isNamed: true,
-            defaultValue: _i7.AnimatedSwitcher.defaultTransitionBuilder,
           ),
           'layoutBuilder': _i2.BuilderArg<_i1.AnimatedSwitcherLayoutBuilder>(
             name: 'layoutBuilder',
             init: layoutBuilder,
             isNamed: true,
-            defaultValue: _i7.AnimatedSwitcher.defaultLayoutBuilder,
           ),
         },
         super() {

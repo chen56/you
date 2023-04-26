@@ -22,7 +22,7 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter/",
-    "package:flutter/src/cupertino/radio.dart",
+    "package:flutter/src/material/app_bar.dart",
     // "package:flutter/src/cupertino/segmented_control.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
@@ -32,7 +32,8 @@ main() async {
     env: Env(),
     entryFile: path.normalize(path.absolute("tools/gen_mates_sample.dart")),
     mateFilter: (lib) =>
-        lib.identifier.endsWith(".dart") && include.any((uri) => lib.identifier.startsWith(uri)),
+        lib.identifier.endsWith(".dart") &&
+        include.any((uri) => lib.identifier.startsWith(uri)),
     // writeFS: MemoryFileSystem(),
     writeFS: const LocalFileSystem(),
     // libPath: 比如包package:flutter/material.dart 应提供的libPath: material.dart
@@ -57,14 +58,16 @@ Future<void> genAll({
     sdkPath: env.sdkDir,
     resourceProvider: PhysicalResourceProvider.INSTANCE,
   );
-  var entryLib = (await collection.contexts.first.currentSession.getResolvedLibrary(entryFile)
-          as ResolvedLibraryResult)
+  var entryLib = (await collection.contexts.first.currentSession
+          .getResolvedLibrary(entryFile) as ResolvedLibraryResult)
       .element;
 
   _log("## collect lib start, create LibNode tree and remove duplicate,");
   Set<LibraryElement> allMateLibs = {};
   LibNode root = LibNode(entryLib,
-      children: entryLib.importedLibraries, allLibs: allMateLibs, mateFilter: mateFilter);
+      children: entryLib.importedLibraries,
+      allLibs: allMateLibs,
+      mateFilter: mateFilter);
   _log("## collect lib ok!");
 
   _log("## collect AllTypes start");
@@ -72,7 +75,8 @@ Future<void> genAll({
   _log("## collect AllTypes ok!");
   _log("## AllTypes print:");
   for (var key in allTypes.keys) {
-    _log("allTypes--- $key - runtimeType:${key.runtimeType}  lib:${allTypes[key]!.identifier}");
+    _log(
+        "allTypes--- $key - runtimeType:${key.runtimeType}  lib:${allTypes[key]!.identifier}");
   }
 
   _log("## gen enum register:");
@@ -135,7 +139,9 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     if (element is TypeParameterElement) {
       return TypeReference((b) => b
         ..symbol = element.name
-        ..bound = element.bound == null ? null : typeRef(element.bound!, debugRef: debugRef));
+        ..bound = element.bound == null
+            ? null
+            : typeRef(element.bound!, debugRef: debugRef));
     }
     //TypeParameterizedElement
     //EnumOrAugmentationElement
@@ -143,7 +149,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
       return TypeReference((b) => b
         ..symbol = element.name
         ..url = typeRefers[element]?.identifier
-        ..types.addAll(element.typeParameters.map((e) => elementRef(e, debugRef: debugRef))));
+        ..types.addAll(element.typeParameters
+            .map((e) => elementRef(e, debugRef: debugRef))));
     }
     throw UnimplementedError(
         "element type:${element.runtimeType} not implemented : ${element.source?.uri.path}");
@@ -151,7 +158,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
 
   Reference typeRef(DartType type, {required Element debugRef}) {
     LibraryElement? lib = type.element?.library;
-    bool coreType = type is VoidType || type is t.FunctionType || type is DynamicType;
+    bool coreType =
+        type is VoidType || type is t.FunctionType || type is DynamicType;
     if (lib == null && !coreType) {
       _log("typeRef $type  lib is null");
     }
@@ -168,7 +176,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
         ..symbol = alias.element.name
         ..url = alias.element.library.identifier
         ..isNullable = type.nullabilitySuffix == NullabilitySuffix.question
-        ..types.addAll(alias.typeArguments.map((e) => typeRef(e, debugRef: debugRef))));
+        ..types.addAll(
+            alias.typeArguments.map((e) => typeRef(e, debugRef: debugRef))));
     }
 
     // ParameterizedType主要是有范型的类及接口等
@@ -182,7 +191,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
         ..symbol = type.element?.name
         ..isNullable = type.nullabilitySuffix == NullabilitySuffix.question
         ..url = lib?.identifier
-        ..types.addAll(type.typeArguments.map((e) => typeRef(e, debugRef: debugRef))));
+        ..types.addAll(
+            type.typeArguments.map((e) => typeRef(e, debugRef: debugRef))));
       return ref;
     }
 
@@ -200,7 +210,8 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     if (type is t.FunctionType) {
       code.FunctionType ref = code.FunctionType((b) => b
         ..returnType = typeRef(type.returnType, debugRef: debugRef)
-        ..types.addAll(type.typeFormals.map((e) => elementRef(e, debugRef: debugRef)))
+        ..types.addAll(
+            type.typeFormals.map((e) => elementRef(e, debugRef: debugRef)))
         ..requiredParameters.addAll(type.parameters
             .where((e) => e.isPositional)
             .map((e) => typeRef(e.type, debugRef: debugRef)))
@@ -220,9 +231,11 @@ class TypeRefers extends MapBase<Element, LibraryElement> {
     }
 
     if (!coreType) {
-      _log("TypeRefers.createRefer: no coreType default - ${type.runtimeType} : $type");
+      _log(
+          "TypeRefers.createRefer: no coreType default - ${type.runtimeType} : $type");
     }
-    return Reference(type.getDisplayString(withNullability: true), lib?.identifier);
+    return Reference(
+        type.getDisplayString(withNullability: true), lib?.identifier);
   }
 }
 
@@ -285,7 +298,8 @@ class LibNode {
 
   int get level => parent == null ? 0 : parent!.level + 1;
 
-  String get path => parent == null ? lib.identifier : "${lib.identifier} | ${parent!.path}";
+  String get path =>
+      parent == null ? lib.identifier : "${lib.identifier} | ${parent!.path}";
 
   bool get isPublic => !lib.source.uri.path.startsWith("src/");
 
@@ -332,7 +346,8 @@ bool classFilter(ClassElement clazz) {
 
 bool libFilter(LibraryElement lib) {
   bool notPrivate = !path.basename(lib.identifier).startsWith("_");
-  return notPrivate && lib.definingCompilationUnit.classes.where(classFilter).isNotEmpty;
+  return notPrivate &&
+      lib.definingCompilationUnit.classes.where(classFilter).isNotEmpty;
 }
 
 extension _InterfaceElement on InterfaceElement {
@@ -345,7 +360,8 @@ extension _InterfaceElement on InterfaceElement {
     if (supertype == null) {
       return false;
     }
-    return supertype!.element.isSubClassOf(className: className, package: package);
+    return supertype!.element
+        .isSubClassOf(className: className, package: package);
   }
 }
 
@@ -353,16 +369,25 @@ extension _InterfaceElement on InterfaceElement {
 /// so use whitelist mode, We only deal with what we understand
 ({String info, code.Expression? value}) resolveDefaultValue(
     ParameterElement param, TypeRefers typeRefers) {
+  if (param
+      .getDisplayString(withNullability: true)
+      .contains("_MediumScrollUnderFlexibleConfig.collapsedHeight")) {
+    _log("Breakpoint ${param.getDisplayString(withNullability: true)}}");
+  }
+
   // guard clause
   if (!param.hasDefaultValue) return (info: "default:none", value: null);
-  assert(param is ConstVariableElement, "hasDefaultValue , type is ConstVariableElement ");
+  assert(param is ConstVariableElement,
+      "hasDefaultValue , type is ConstVariableElement ");
 
   // Known situation
   ConstVariableElement constParam = param as ConstVariableElement;
 
-  if (constParam.constantInitializer == null && constParam is SuperFormalParameterElement) {
+  if (constParam.constantInitializer == null &&
+      constParam is SuperFormalParameterElement) {
     var x = constParam as SuperFormalParameterElement;
-    return resolveDefaultValue(x.superConstructorParameter!.declaration, typeRefers);
+    return resolveDefaultValue(
+        x.superConstructorParameter!.declaration, typeRefers);
   }
   var init = constParam.constantInitializer!;
 
@@ -377,9 +402,15 @@ extension _InterfaceElement on InterfaceElement {
       return code.refer(param.defaultValueCode!);
     }
 
-    // Colors.red | XEnum.xxx
+    // example : Color color = Colors.red
     if (init is ast.PrefixedIdentifier) {
-      var ref = typeRefers.elementRef(init.prefix.staticElement!, debugRef: param);
+      // private can not use :
+      //   double toolbarHeight = _MediumScrollUnderFlexibleConfig.collapsedHeight_MediumScrollUnderFlexibleConfig.collapsedHeight
+      if (!init.prefix.staticElement!.isPrivate) {
+        return null;
+      }
+      var ref =
+          typeRefers.elementRef(init.prefix.staticElement!, debugRef: param);
       return code.refer("${init.prefix}.${init.identifier}", ref.url);
     }
 
@@ -406,7 +437,8 @@ void _genMateLib({
   required DartFormatter dartFormatter,
   required TypeRefers typeRefers,
 }) {
-  _log("_genLibMate: identifier:${lib.identifier} importedLibraries:${lib.importedLibraries}  ");
+  _log(
+      "_genLibMate: identifier:${lib.identifier} importedLibraries:${lib.importedLibraries}  ");
 
   Library buildLib = Library((libb) => libb
     ..name = lib.name.isEmpty ? null : lib.name
@@ -444,8 +476,9 @@ void _genMateLib({
       //     ..url = "dart:ui")
       //   ,
     ])
-    ..directives.addAll(lib.libraryExports.where((e) => e.combinators.isEmpty).map((libExport) =>
-        Directive((b) => b
+    ..directives.addAll(lib.libraryExports
+        .where((e) => e.combinators.isEmpty)
+        .map((libExport) => Directive((b) => b
           ..type = DirectiveType.export
           ..url = (libExport.uri as DirectiveUriWithLibrary).relativeUriString
           ..show.addAll(libExport.combinators
@@ -454,7 +487,8 @@ void _genMateLib({
           ..hide.addAll(libExport.combinators
               .whereType<HideElementCombinator>()
               .expand((hide) => hide.hiddenNames)))))
-    ..body.addAll(lib.definingCompilationUnit.classes.where(classFilter).map((clazz) {
+    ..body.addAll(
+        lib.definingCompilationUnit.classes.where(classFilter).map((clazz) {
       String mateClassName = "${clazz.name}\$Mate";
 
       return Class((b) => b
@@ -472,16 +506,20 @@ void _genMateLib({
             // Mate 暂时不要类型参数了
             // ..types.add(refer(mateClassName)),
             ))
-        ..types.addAll(clazz.typeParameters
-            .map((typeParam) => typeRefers.elementRef(typeParam, debugRef: clazz)))
+        ..types.addAll(clazz.typeParameters.map(
+            (typeParam) => typeRefers.elementRef(typeParam, debugRef: clazz)))
         ..fields.add(code.Field((b) => b
           ..name = "mateParams"
           ..type = TypeReference((b) => b
             ..symbol = "Map"
-            ..types.addAll([refer("String"), refer("BuilderArg", "package:note/mate.dart")]))
+            ..types.addAll([
+              refer("String"),
+              refer("BuilderArg", "package:note/mate.dart")
+            ]))
           ..annotations.add(refer('override'))
           ..modifier = FieldModifier.final$))
-        ..constructors.addAll(clazz.constructors.where(constructorFilter).map((constructor) {
+        ..constructors.addAll(
+            clazz.constructors.where(constructorFilter).map((constructor) {
           return Constructor((b) {
             // Expression constructorEx = TypeReference((b) =>
             // b
@@ -546,68 +584,87 @@ void _genMateLib({
               //                 .where((e) => e.isNamed)
               //                 .map((e) => MapEntry(e.name, refer(e.name)))))
               //         .code)
-              ..requiredParameters
-                  .addAll(parameters.where((e) => e.isPositional).map((param) => Parameter((b) => b
+              ..requiredParameters.addAll(parameters
+                  .where((e) => e.isPositional)
+                  .map((param) => Parameter((b) => b
                     ..docs.add(
                         "/// requiredParameters: ${param.getDisplayString(withNullability: true)} ")
                     ..name = param.name
                     ..named = param.isNamed
                     ..toSuper = true
                     ..required = false)))
-              ..optionalParameters
-                  .addAll(parameters.where((e) => !e.isPositional).map((param) => Parameter((b) {
-                        var resolveResult = resolveDefaultValue(param, typeRefers);
+              ..optionalParameters.addAll(parameters
+                  .where((e) => !e.isPositional)
+                  .map((param) => Parameter((b) {
+                        var resolveResult =
+                            resolveDefaultValue(param, typeRefers);
                         b
                           ..name = param.name
                           ..named = param.isNamed
                           ..toSuper = true
                           ..docs.add(
                               "/// optionalParameters: ${param.getDisplayString(withNullability: true)} , ${resolveResult.info}")
-                          ..required = param.hasDefaultValue ? false : param.isRequired;
+                          ..required =
+                              param.hasDefaultValue ? false : param.isRequired;
                       })))
               ..initializers.add(
-                refer("mateParams").assign(literalMap(Map.fromEntries(parameters.map((param) {
+                refer("mateParams")
+                    .assign(literalMap(Map.fromEntries(parameters.map((param) {
                   var defaultValue = resolveDefaultValue(param, typeRefers);
                   var namedArguments = {
                     "name": code.literalString(param.name),
                     "init": code.refer(param.name),
                     "isNamed": code.literalBool(param.isNamed),
-                    if (defaultValue.value != null) "defaultValue": defaultValue.value!,
+                    if (defaultValue.value != null)
+                      "defaultValue": defaultValue.value!,
                   };
                   return MapEntry(
                     param.name,
                     TypeReference((b) => b
                           ..symbol = "BuilderArg"
                           ..url = "package:note/mate.dart"
-                          ..types.add(typeRefers.elementRef(param, debugRef: clazz)))
+                          ..types.add(
+                              typeRefers.elementRef(param, debugRef: clazz)))
                         .newInstance([], namedArguments),
                   );
                 })))).code,
               )
-              ..initializers.add(
-                  refer(constructor.name.isEmpty ? "super" : "super.${constructor.name}")
-                      .call([]).code)
+              ..initializers.add(refer(constructor.name.isEmpty
+                      ? "super"
+                      : "super.${constructor.name}")
+                  .call([]).code)
               ..body = Block.of([
-                refer("mateBuilderName").assign(literalString(constructor.displayName)).statement,
+                refer("mateBuilderName")
+                    .assign(literalString(constructor.displayName))
+                    .statement,
                 refer("matePackageUrl")
-                    .assign(literalString(typeRefers.elementRef(clazz, debugRef: clazz).url!))
+                    .assign(literalString(
+                        typeRefers.elementRef(clazz, debugRef: clazz).url!))
                     .statement,
                 refer("mateBuilder")
                     .assign(Method((b) {
                       var c = TypeReference((b) => b
                         ..symbol = mateClassName
-                        ..types.addAll(
-                            clazz.typeParameters.map((typeParam) => refer(typeParam.name))));
+                        ..types.addAll(clazz.typeParameters
+                            .map((typeParam) => refer(typeParam.name))));
 
-                      var name = constructor.name.isEmpty ? null : constructor.name;
-                      var positionalArgs = parameters.where((e) => e.isPositional).map(
-                          (e) => refer("p.get").call([code.literal(e.name)]).property("value"));
-                      var namedArgs = Map.fromEntries(parameters.where((e) => e.isNamed).map((e) =>
-                          MapEntry(e.name,
-                              refer("p.get").call([literal(e.name)]).property("build").call([]))));
-                      var invoke =
-                          InvokeExpression.newOf(c, positionalArgs.toList(), namedArgs, [], name)
-                              .code;
+                      var name =
+                          constructor.name.isEmpty ? null : constructor.name;
+                      var positionalArgs = parameters
+                          .where((e) => e.isPositional)
+                          .map((e) => refer("p.get")
+                              .call([code.literal(e.name)]).property("value"));
+                      var namedArgs = Map.fromEntries(parameters
+                          .where((e) => e.isNamed)
+                          .map((e) => MapEntry(
+                              e.name,
+                              refer("p.get")
+                                  .call([literal(e.name)])
+                                  .property("build")
+                                  .call([]))));
+                      var invoke = InvokeExpression.newOf(
+                              c, positionalArgs.toList(), namedArgs, [], name)
+                          .code;
 
                       b
                         ..name = ''
@@ -638,7 +695,8 @@ void _genMateLib({
     })));
   var toFile = writeTo(lib.identifier.replaceFirst("package:flutter/", ""));
 
-  var emitter = DartEmitter(allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true);
+  var emitter = DartEmitter(
+      allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true);
   String writeContent = buildLib.accept(emitter).toString();
 
   writeContent = dartFormatter.format(writeContent);
@@ -663,16 +721,19 @@ _genEnums({
       return result;
     }
     */
-  var emitter = DartEmitter(allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true);
+  var emitter = DartEmitter(
+      allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true);
 
-  var statements =
-      typeRefers.keys.whereType<EnumElement>().map((e) => refer("result.register").call(
+  var statements = typeRefers.keys
+      .whereType<EnumElement>()
+      .map((e) => refer("result.register").call(
             [typeRefers.elementRef(e, debugRef: e).property("values")],
           ).statement);
 
   Library lib = Library(
     (b) => b
-      ..comments.addAll(["/// Generated by gen_maters.dart, please don't edit! "])
+      ..comments
+          .addAll(["/// Generated by gen_maters.dart, please don't edit! "])
       ..directives.add(Directive((b) => b
         ..type = DirectiveType.import
         ..url = "package:note/mate.dart"))

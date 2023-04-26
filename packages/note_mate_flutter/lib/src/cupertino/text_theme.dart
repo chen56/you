@@ -4,14 +4,13 @@
 import 'package:flutter/src/cupertino/text_theme.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
-import 'package:flutter/src/painting/text_style.dart' as _i5;
+import 'package:flutter/src/painting/text_style.dart' as _i4;
 
 /// class CupertinoTextThemeData with Diagnosticable
 class CupertinoTextThemeData$Mate extends _i1.CupertinoTextThemeData with _i2.Mate {
   /// CupertinoTextThemeData CupertinoTextThemeData({Color primaryColor = CupertinoColors.systemBlue, TextStyle? textStyle, TextStyle? actionTextStyle, TextStyle? tabLabelTextStyle, TextStyle? navTitleTextStyle, TextStyle? navLargeTitleTextStyle, TextStyle? navActionTextStyle, TextStyle? pickerTextStyle, TextStyle? dateTimePickerTextStyle})
   CupertinoTextThemeData$Mate({
-    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color primaryColor = CupertinoColors.systemBlue} , default:unprocessed=PrefixedIdentifierImpl
     super.primaryColor,
 
     /// optionalParameters: {TextStyle? textStyle} , default:none
@@ -42,44 +41,43 @@ class CupertinoTextThemeData$Mate extends _i1.CupertinoTextThemeData with _i2.Ma
             name: 'primaryColor',
             init: primaryColor,
             isNamed: true,
-            defaultValue: _i4.CupertinoColors.systemBlue,
           ),
-          'textStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'textStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'textStyle',
             init: textStyle,
             isNamed: true,
           ),
-          'actionTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'actionTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'actionTextStyle',
             init: actionTextStyle,
             isNamed: true,
           ),
-          'tabLabelTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'tabLabelTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'tabLabelTextStyle',
             init: tabLabelTextStyle,
             isNamed: true,
           ),
-          'navTitleTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'navTitleTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'navTitleTextStyle',
             init: navTitleTextStyle,
             isNamed: true,
           ),
-          'navLargeTitleTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'navLargeTitleTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'navLargeTitleTextStyle',
             init: navLargeTitleTextStyle,
             isNamed: true,
           ),
-          'navActionTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'navActionTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'navActionTextStyle',
             init: navActionTextStyle,
             isNamed: true,
           ),
-          'pickerTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'pickerTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'pickerTextStyle',
             init: pickerTextStyle,
             isNamed: true,
           ),
-          'dateTimePickerTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'dateTimePickerTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
             name: 'dateTimePickerTextStyle',
             init: dateTimePickerTextStyle,
             isNamed: true,

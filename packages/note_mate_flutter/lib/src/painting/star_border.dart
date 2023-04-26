@@ -4,13 +4,12 @@
 import 'package:flutter/src/painting/star_border.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
 
 /// class StarBorder extends OutlinedBorder
 class StarBorder$Mate extends _i1.StarBorder with _i2.Mate {
   /// StarBorder StarBorder({BorderSide side = BorderSide.none, double points = 5, double innerRadiusRatio = 0.4, double pointRounding = 0, double valleyRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {double points = 5} , default:processed=IntegerLiteralImpl
@@ -35,7 +34,6 @@ class StarBorder$Mate extends _i1.StarBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'points': _i2.BuilderArg<double>(
             name: 'points',
@@ -90,7 +88,7 @@ class StarBorder$Mate extends _i1.StarBorder with _i2.Mate {
 
   /// StarBorder StarBorder.polygon({BorderSide side = BorderSide.none, double sides = 5, double pointRounding = 0, double rotation = 0, double squash = 0})
   StarBorder$Mate.polygon({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {double sides = 5} , default:processed=IntegerLiteralImpl
@@ -109,7 +107,6 @@ class StarBorder$Mate extends _i1.StarBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
           'sides': _i2.BuilderArg<double>(
             name: 'sides',

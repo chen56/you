@@ -6,9 +6,7 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'package:flutter/src/material/date.dart' as _i5;
-import 'package:flutter/material.dart' as _i6;
-import 'package:flutter/src/gestures/recognizer.dart' as _i7;
-import 'package:flutter/gestures.dart' as _i8;
+import 'package:flutter/src/gestures/recognizer.dart' as _i6;
 
 /// class CalendarDatePicker extends StatefulWidget
 class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
@@ -35,7 +33,7 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
     /// optionalParameters: {void Function(DateTime)? onDisplayedMonthChanged} , default:none
     super.onDisplayedMonthChanged,
 
-    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:unprocessed=PrefixedIdentifierImpl
     super.initialCalendarMode,
 
     /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , default:none
@@ -80,7 +78,6 @@ class CalendarDatePicker$Mate extends _i1.CalendarDatePicker with _i2.Mate {
             name: 'initialCalendarMode',
             init: initialCalendarMode,
             isNamed: true,
-            defaultValue: _i6.DatePickerMode.day,
           ),
           'selectableDayPredicate': _i2.BuilderArg<_i5.SelectableDayPredicate?>(
             name: 'selectableDayPredicate',
@@ -133,7 +130,7 @@ class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
     /// optionalParameters: {required void Function(DateTime) onChanged} , default:none
     required super.onChanged,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -171,11 +168,10 @@ class YearPicker$Mate extends _i1.YearPicker with _i2.Mate {
             init: onChanged,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i6.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i8.DragStartBehavior.start,
           ),
         },
         super() {

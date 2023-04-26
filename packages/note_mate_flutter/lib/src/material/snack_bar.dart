@@ -11,7 +11,6 @@ import 'package:flutter/src/painting/borders.dart' as _i7;
 import 'package:flutter/src/material/snack_bar_theme.dart' as _i8;
 import 'package:flutter/src/animation/animation.dart' as _i9;
 import 'package:flutter/src/widgets/dismissible.dart' as _i10;
-import 'package:flutter/cupertino.dart' as _i11;
 
 /// class SnackBarAction extends StatefulWidget
 class SnackBarAction$Mate extends _i1.SnackBarAction with _i2.Mate {
@@ -144,10 +143,10 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
     /// optionalParameters: {void Function()? onVisible} , default:none
     super.onVisible,
 
-    /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DismissDirection dismissDirection = DismissDirection.down} , default:unprocessed=PrefixedIdentifierImpl
     super.dismissDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -234,13 +233,11 @@ class SnackBar$Mate extends _i1.SnackBar with _i2.Mate {
             name: 'dismissDirection',
             init: dismissDirection,
             isNamed: true,
-            defaultValue: _i11.DismissDirection.down,
           ),
           'clipBehavior': _i2.BuilderArg<_i4.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.hardEdge,
           ),
         },
         super() {

@@ -6,15 +6,14 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/alignment.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'package:flutter/src/widgets/framework.dart' as _i7;
-import 'package:flutter/src/foundation/basic_types.dart' as _i8;
-import 'package:flutter/src/painting/text_style.dart' as _i9;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i10;
-import 'package:flutter/src/painting/border_radius.dart' as _i11;
-import 'package:flutter/src/painting/edge_insets.dart' as _i12;
-import 'package:flutter/src/material/input_decorator.dart' as _i13;
-import 'package:flutter/src/widgets/form.dart' as _i14;
+import 'package:flutter/src/widgets/framework.dart' as _i6;
+import 'package:flutter/src/foundation/basic_types.dart' as _i7;
+import 'package:flutter/src/painting/text_style.dart' as _i8;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i9;
+import 'package:flutter/src/painting/border_radius.dart' as _i10;
+import 'package:flutter/src/painting/edge_insets.dart' as _i11;
+import 'package:flutter/src/material/input_decorator.dart' as _i12;
+import 'package:flutter/src/widgets/form.dart' as _i13;
 
 /// class DropdownMenuItem<T> extends _DropdownMenuItemContainer
 class DropdownMenuItem$Mate<T> extends _i1.DropdownMenuItem<T> with _i2.Mate {
@@ -32,7 +31,7 @@ class DropdownMenuItem$Mate<T> extends _i1.DropdownMenuItem<T> with _i2.Mate {
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
     super.enabled,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {required Widget child} , default:none
@@ -63,9 +62,8 @@ class DropdownMenuItem$Mate<T> extends _i1.DropdownMenuItem<T> with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i6.AlignmentDirectional.centerStart,
           ),
-          'child': _i2.BuilderArg<_i7.Widget>(
+          'child': _i2.BuilderArg<_i6.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -103,7 +101,7 @@ class DropdownButtonHideUnderline$Mate extends _i1.DropdownButtonHideUnderline w
             init: key,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i7.Widget>(
+          'child': _i2.BuilderArg<_i6.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -198,7 +196,7 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
     /// optionalParameters: {bool? enableFeedback} , default:none
     super.enableFeedback,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
@@ -227,17 +225,17 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
             init: value,
             isNamed: true,
           ),
-          'hint': _i2.BuilderArg<_i7.Widget?>(
+          'hint': _i2.BuilderArg<_i6.Widget?>(
             name: 'hint',
             init: hint,
             isNamed: true,
           ),
-          'disabledHint': _i2.BuilderArg<_i7.Widget?>(
+          'disabledHint': _i2.BuilderArg<_i6.Widget?>(
             name: 'disabledHint',
             init: disabledHint,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i8.ValueChanged<T?>?>(
+          'onChanged': _i2.BuilderArg<_i7.ValueChanged<T?>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
@@ -253,17 +251,17 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
             isNamed: true,
             defaultValue: 8,
           ),
-          'style': _i2.BuilderArg<_i9.TextStyle?>(
+          'style': _i2.BuilderArg<_i8.TextStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'underline': _i2.BuilderArg<_i7.Widget?>(
+          'underline': _i2.BuilderArg<_i6.Widget?>(
             name: 'underline',
             init: underline,
             isNamed: true,
           ),
-          'icon': _i2.BuilderArg<_i7.Widget?>(
+          'icon': _i2.BuilderArg<_i6.Widget?>(
             name: 'icon',
             init: icon,
             isNamed: true,
@@ -306,7 +304,7 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
             init: focusColor,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i10.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -336,14 +334,13 @@ class DropdownButton$Mate<T> extends _i1.DropdownButton<T> with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i6.AlignmentDirectional.centerStart,
           ),
-          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i10.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i12.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -472,7 +469,7 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
     /// optionalParameters: {bool? enableFeedback} , default:none
     super.enableFeedback,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.centerStart} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
@@ -501,17 +498,17 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
             init: value,
             isNamed: true,
           ),
-          'hint': _i2.BuilderArg<_i7.Widget?>(
+          'hint': _i2.BuilderArg<_i6.Widget?>(
             name: 'hint',
             init: hint,
             isNamed: true,
           ),
-          'disabledHint': _i2.BuilderArg<_i7.Widget?>(
+          'disabledHint': _i2.BuilderArg<_i6.Widget?>(
             name: 'disabledHint',
             init: disabledHint,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i8.ValueChanged<T?>?>(
+          'onChanged': _i2.BuilderArg<_i7.ValueChanged<T?>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
@@ -527,12 +524,12 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
             isNamed: true,
             defaultValue: 8,
           ),
-          'style': _i2.BuilderArg<_i9.TextStyle?>(
+          'style': _i2.BuilderArg<_i8.TextStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'icon': _i2.BuilderArg<_i7.Widget?>(
+          'icon': _i2.BuilderArg<_i6.Widget?>(
             name: 'icon',
             init: icon,
             isNamed: true,
@@ -575,7 +572,7 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
             init: focusColor,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i10.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -591,22 +588,22 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
             init: dropdownColor,
             isNamed: true,
           ),
-          'decoration': _i2.BuilderArg<_i13.InputDecoration?>(
+          'decoration': _i2.BuilderArg<_i12.InputDecoration?>(
             name: 'decoration',
             init: decoration,
             isNamed: true,
           ),
-          'onSaved': _i2.BuilderArg<_i14.FormFieldSetter<T>?>(
+          'onSaved': _i2.BuilderArg<_i13.FormFieldSetter<T>?>(
             name: 'onSaved',
             init: onSaved,
             isNamed: true,
           ),
-          'validator': _i2.BuilderArg<_i14.FormFieldValidator<T>?>(
+          'validator': _i2.BuilderArg<_i13.FormFieldValidator<T>?>(
             name: 'validator',
             init: validator,
             isNamed: true,
           ),
-          'autovalidateMode': _i2.BuilderArg<_i14.AutovalidateMode?>(
+          'autovalidateMode': _i2.BuilderArg<_i13.AutovalidateMode?>(
             name: 'autovalidateMode',
             init: autovalidateMode,
             isNamed: true,
@@ -625,14 +622,13 @@ class DropdownButtonFormField$Mate<T> extends _i1.DropdownButtonFormField<T> wit
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i6.AlignmentDirectional.centerStart,
           ),
-          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i10.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i12.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,

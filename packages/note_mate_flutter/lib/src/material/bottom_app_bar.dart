@@ -25,7 +25,7 @@ class BottomAppBar$Mate extends _i1.BottomAppBar with _i2.Mate {
     /// optionalParameters: {NotchedShape? shape} , default:none
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {double notchMargin = 4.0} , default:processed=DoubleLiteralImpl
@@ -70,7 +70,6 @@ class BottomAppBar$Mate extends _i1.BottomAppBar with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.none,
           ),
           'notchMargin': _i2.BuilderArg<double>(
             name: 'notchMargin',

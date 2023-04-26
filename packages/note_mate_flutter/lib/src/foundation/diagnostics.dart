@@ -3,7 +3,6 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/foundation/diagnostics.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
-import 'package:flutter/foundation.dart' as _i3;
 
 /// class TextTreeConfiguration
 class TextTreeConfiguration$Mate extends _i1.TextTreeConfiguration with _i2.Mate {
@@ -268,7 +267,7 @@ class TextTreeConfiguration$Mate extends _i1.TextTreeConfiguration with _i2.Mate
 class TextTreeRenderer$Mate extends _i1.TextTreeRenderer with _i2.Mate {
   /// TextTreeRenderer TextTreeRenderer({DiagnosticLevel minLevel = DiagnosticLevel.debug, int wrapWidth = 100, int wrapWidthProperties = 65, int maxDescendentsTruncatableNode = -1})
   TextTreeRenderer$Mate({
-    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel minLevel = DiagnosticLevel.debug} , default:unprocessed=PrefixedIdentifierImpl
     super.minLevel,
 
     /// optionalParameters: {int wrapWidth = 100} , default:processed=IntegerLiteralImpl
@@ -284,7 +283,6 @@ class TextTreeRenderer$Mate extends _i1.TextTreeRenderer with _i2.Mate {
             name: 'minLevel',
             init: minLevel,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.debug,
           ),
           'wrapWidth': _i2.BuilderArg<int>(
             name: 'wrapWidth',
@@ -329,10 +327,10 @@ class MessageProperty$Mate extends _i1.MessageProperty with _i2.Mate {
 
     /// requiredParameters: String message
     super.message, {
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -349,13 +347,11 @@ class MessageProperty$Mate extends _i1.MessageProperty with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -400,10 +396,10 @@ class StringProperty$Mate extends _i1.StringProperty with _i2.Mate {
     /// optionalParameters: {String? ifEmpty} , default:none
     super.ifEmpty,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -452,13 +448,11 @@ class StringProperty$Mate extends _i1.StringProperty with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -506,10 +500,10 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
     super.showName,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -552,13 +546,11 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -599,7 +591,7 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -642,7 +634,6 @@ class DoubleProperty$Mate extends _i1.DoubleProperty with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super.lazy() {
@@ -685,10 +676,10 @@ class IntProperty$Mate extends _i1.IntProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -726,13 +717,11 @@ class IntProperty$Mate extends _i1.IntProperty with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -775,7 +764,7 @@ class PercentProperty$Mate extends _i1.PercentProperty with _i2.Mate {
     /// optionalParameters: {String? unit} , default:none
     super.unit,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -813,7 +802,6 @@ class PercentProperty$Mate extends _i1.PercentProperty with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -855,7 +843,7 @@ class FlagProperty$Mate extends _i1.FlagProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue} , default:none
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -893,7 +881,6 @@ class FlagProperty$Mate extends _i1.FlagProperty with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -932,7 +919,7 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
     /// optionalParameters: {String? ifEmpty = '[]'} , default:processed=SimpleStringLiteralImpl
     super.ifEmpty,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
@@ -941,7 +928,7 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     super.showSeparator,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -974,7 +961,6 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
           ),
           'showName': _i2.BuilderArg<bool>(
             name: 'showName',
@@ -992,7 +978,6 @@ class IterableProperty$Mate<T> extends _i1.IterableProperty<T> with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -1027,7 +1012,7 @@ class EnumProperty$Mate<T> extends _i1.EnumProperty<T> with _i2.Mate {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1049,7 +1034,6 @@ class EnumProperty$Mate<T> extends _i1.EnumProperty<T> with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -1085,7 +1069,7 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
     /// optionalParameters: {bool showName = false} , default:processed=BooleanLiteralImpl
     super.showName,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1118,7 +1102,6 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -1141,7 +1124,7 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
 
     /// requiredParameters: T? value
     super.value, {
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1158,7 +1141,6 @@ class ObjectFlagProperty$Mate<T> extends _i1.ObjectFlagProperty<T> with _i2.Mate
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super.has() {
@@ -1193,7 +1175,7 @@ class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
     /// optionalParameters: {bool showSeparator = true} , default:processed=BooleanLiteralImpl
     super.showSeparator,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -1227,7 +1209,6 @@ class FlagsSummary$Mate<T> extends _i1.FlagsSummary<T> with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -1292,10 +1273,10 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
     /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
     super.allowNameWrap,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String?>(
@@ -1378,13 +1359,11 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super() {
@@ -1450,10 +1429,10 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
     /// optionalParameters: {bool allowNameWrap = true} , default:processed=BooleanLiteralImpl
     super.allowNameWrap,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String?>(
@@ -1531,13 +1510,11 @@ class DiagnosticsProperty$Mate<T> extends _i1.DiagnosticsProperty<T> with _i2.Ma
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i1.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
         },
         super.lazy() {
@@ -1683,7 +1660,7 @@ class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
     /// optionalParameters: {String? name} , default:none
     super.name,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.whitespace} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
     /// optionalParameters: {bool showName = true} , default:processed=BooleanLiteralImpl
@@ -1701,7 +1678,7 @@ class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
     /// optionalParameters: {String? description} , default:none
     super.description,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
 
     /// optionalParameters: {bool allowTruncate = false} , default:processed=BooleanLiteralImpl
@@ -1722,7 +1699,6 @@ class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i3.DiagnosticsTreeStyle.whitespace,
           ),
           'showName': _i2.BuilderArg<bool>(
             name: 'showName',
@@ -1755,7 +1731,6 @@ class DiagnosticsBlock$Mate extends _i1.DiagnosticsBlock with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i3.DiagnosticLevel.info,
           ),
           'allowTruncate': _i2.BuilderArg<bool>(
             name: 'allowTruncate',

@@ -10,12 +10,11 @@ import 'package:flutter/src/gestures/long_press.dart' as _i6;
 import 'package:flutter/src/foundation/basic_types.dart' as _i7;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i8;
 import 'package:flutter/src/painting/box_border.dart' as _i9;
-import 'package:flutter/cupertino.dart' as _i10;
-import 'package:flutter/src/painting/border_radius.dart' as _i11;
-import 'package:flutter/src/painting/borders.dart' as _i12;
-import 'dart:ui' as _i13;
-import 'package:flutter/src/material/material_state.dart' as _i14;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i15;
+import 'package:flutter/src/painting/border_radius.dart' as _i10;
+import 'package:flutter/src/painting/borders.dart' as _i11;
+import 'dart:ui' as _i12;
+import 'package:flutter/src/material/material_state.dart' as _i13;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i14;
 
 /// class InkResponse extends StatelessWidget
 class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
@@ -69,7 +68,7 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
     /// optionalParameters: {bool containedInkWell = false} , default:processed=BooleanLiteralImpl
     super.containedInkWell,
 
-    /// optionalParameters: {BoxShape highlightShape = BoxShape.circle} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BoxShape highlightShape = BoxShape.circle} , default:unprocessed=PrefixedIdentifierImpl
     super.highlightShape,
 
     /// optionalParameters: {double? radius} , default:none
@@ -205,44 +204,43 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
             name: 'highlightShape',
             init: highlightShape,
             isNamed: true,
-            defaultValue: _i10.BoxShape.circle,
           ),
           'radius': _i2.BuilderArg<double?>(
             name: 'radius',
             init: radius,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i10.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'customBorder': _i2.BuilderArg<_i12.ShapeBorder?>(
+          'customBorder': _i2.BuilderArg<_i11.ShapeBorder?>(
             name: 'customBorder',
             init: customBorder,
             isNamed: true,
           ),
-          'focusColor': _i2.BuilderArg<_i13.Color?>(
+          'focusColor': _i2.BuilderArg<_i12.Color?>(
             name: 'focusColor',
             init: focusColor,
             isNamed: true,
           ),
-          'hoverColor': _i2.BuilderArg<_i13.Color?>(
+          'hoverColor': _i2.BuilderArg<_i12.Color?>(
             name: 'hoverColor',
             init: hoverColor,
             isNamed: true,
           ),
-          'highlightColor': _i2.BuilderArg<_i13.Color?>(
+          'highlightColor': _i2.BuilderArg<_i12.Color?>(
             name: 'highlightColor',
             init: highlightColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i12.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
           ),
-          'splashColor': _i2.BuilderArg<_i13.Color?>(
+          'splashColor': _i2.BuilderArg<_i12.Color?>(
             name: 'splashColor',
             init: splashColor,
             isNamed: true,
@@ -264,7 +262,7 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'focusNode': _i2.BuilderArg<_i15.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -286,7 +284,7 @@ class InkResponse$Mate extends _i1.InkResponse with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'statesController': _i2.BuilderArg<_i14.MaterialStatesController?>(
+          'statesController': _i2.BuilderArg<_i13.MaterialStatesController?>(
             name: 'statesController',
             init: statesController,
             isNamed: true,
@@ -508,27 +506,27 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
             init: mouseCursor,
             isNamed: true,
           ),
-          'focusColor': _i2.BuilderArg<_i13.Color?>(
+          'focusColor': _i2.BuilderArg<_i12.Color?>(
             name: 'focusColor',
             init: focusColor,
             isNamed: true,
           ),
-          'hoverColor': _i2.BuilderArg<_i13.Color?>(
+          'hoverColor': _i2.BuilderArg<_i12.Color?>(
             name: 'hoverColor',
             init: hoverColor,
             isNamed: true,
           ),
-          'highlightColor': _i2.BuilderArg<_i13.Color?>(
+          'highlightColor': _i2.BuilderArg<_i12.Color?>(
             name: 'highlightColor',
             init: highlightColor,
             isNamed: true,
           ),
-          'overlayColor': _i2.BuilderArg<_i14.MaterialStateProperty<_i13.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i12.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
           ),
-          'splashColor': _i2.BuilderArg<_i13.Color?>(
+          'splashColor': _i2.BuilderArg<_i12.Color?>(
             name: 'splashColor',
             init: splashColor,
             isNamed: true,
@@ -543,12 +541,12 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
             init: radius,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i11.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i10.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'customBorder': _i2.BuilderArg<_i12.ShapeBorder?>(
+          'customBorder': _i2.BuilderArg<_i11.ShapeBorder?>(
             name: 'customBorder',
             init: customBorder,
             isNamed: true,
@@ -565,7 +563,7 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'focusNode': _i2.BuilderArg<_i15.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -587,7 +585,7 @@ class InkWell$Mate extends _i1.InkWell with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'statesController': _i2.BuilderArg<_i14.MaterialStatesController?>(
+          'statesController': _i2.BuilderArg<_i13.MaterialStatesController?>(
             name: 'statesController',
             init: statesController,
             isNamed: true,

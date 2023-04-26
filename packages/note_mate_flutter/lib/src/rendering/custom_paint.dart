@@ -7,8 +7,7 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/semantics/semantics.dart' as _i5;
 import 'package:vector_math/vector_math_64.dart' as _i6;
-import 'package:flutter/animation.dart' as _i7;
-import 'package:flutter/src/rendering/box.dart' as _i8;
+import 'package:flutter/src/rendering/box.dart' as _i7;
 
 /// class CustomPainterSemantics
 class CustomPainterSemantics$Mate extends _i1.CustomPainterSemantics with _i2.Mate {
@@ -81,7 +80,7 @@ class RenderCustomPaint$Mate extends _i1.RenderCustomPaint with _i2.Mate {
     /// optionalParameters: {CustomPainter? foregroundPainter} , default:none
     super.foregroundPainter,
 
-    /// optionalParameters: {Size preferredSize = Size.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Size preferredSize = Size.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.preferredSize,
 
     /// optionalParameters: {bool isComplex = false} , default:processed=BooleanLiteralImpl
@@ -107,7 +106,6 @@ class RenderCustomPaint$Mate extends _i1.RenderCustomPaint with _i2.Mate {
             name: 'preferredSize',
             init: preferredSize,
             isNamed: true,
-            defaultValue: _i7.Size.zero,
           ),
           'isComplex': _i2.BuilderArg<bool>(
             name: 'isComplex',
@@ -121,7 +119,7 @@ class RenderCustomPaint$Mate extends _i1.RenderCustomPaint with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'child': _i2.BuilderArg<_i8.RenderBox?>(
+          'child': _i2.BuilderArg<_i7.RenderBox?>(
             name: 'child',
             init: child,
             isNamed: true,

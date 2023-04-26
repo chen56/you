@@ -4,7 +4,6 @@
 import 'package:flutter/src/painting/box_shadow.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/animation.dart' as _i4;
 
 /// class BoxShadow extends Shadow
 class BoxShadow$Mate extends _i1.BoxShadow with _i2.Mate {
@@ -13,7 +12,7 @@ class BoxShadow$Mate extends _i1.BoxShadow with _i2.Mate {
     /// optionalParameters: {Color color = const Color(_kColorDefault)} , default:unprocessed=InstanceCreationExpressionImpl
     super.color,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.offset,
 
     /// optionalParameters: {double blurRadius = 0.0} , default:processed=DoubleLiteralImpl
@@ -22,7 +21,7 @@ class BoxShadow$Mate extends _i1.BoxShadow with _i2.Mate {
     /// optionalParameters: {double spreadRadius = 0.0} , default:processed=DoubleLiteralImpl
     super.spreadRadius,
 
-    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BlurStyle blurStyle = BlurStyle.normal} , default:unprocessed=PrefixedIdentifierImpl
     super.blurStyle,
   })  : mateParams = {
           'color': _i2.BuilderArg<_i3.Color>(
@@ -34,7 +33,6 @@ class BoxShadow$Mate extends _i1.BoxShadow with _i2.Mate {
             name: 'offset',
             init: offset,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'blurRadius': _i2.BuilderArg<double>(
             name: 'blurRadius',
@@ -52,7 +50,6 @@ class BoxShadow$Mate extends _i1.BoxShadow with _i2.Mate {
             name: 'blurStyle',
             init: blurStyle,
             isNamed: true,
-            defaultValue: _i3.BlurStyle.normal,
           ),
         },
         super() {

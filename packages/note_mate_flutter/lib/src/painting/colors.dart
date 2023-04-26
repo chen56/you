@@ -5,7 +5,6 @@ import 'package:flutter/src/painting/colors.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i4;
-import 'package:flutter/foundation.dart' as _i5;
 
 /// class HSVColor
 class HSVColor$Mate extends _i1.HSVColor with _i2.Mate {
@@ -160,10 +159,10 @@ class ColorProperty$Mate extends _i1.ColorProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticsTreeStyle style = DiagnosticsTreeStyle.singleLine} , default:unprocessed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -191,13 +190,11 @@ class ColorProperty$Mate extends _i1.ColorProperty with _i2.Mate {
             name: 'style',
             init: style,
             isNamed: true,
-            defaultValue: _i5.DiagnosticsTreeStyle.singleLine,
           ),
           'level': _i2.BuilderArg<_i4.DiagnosticLevel>(
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i5.DiagnosticLevel.info,
           ),
         },
         super() {

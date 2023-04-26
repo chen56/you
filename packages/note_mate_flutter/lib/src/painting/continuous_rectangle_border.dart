@@ -4,30 +4,27 @@
 import 'package:flutter/src/painting/continuous_rectangle_border.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
-import 'package:flutter/src/painting/border_radius.dart' as _i5;
+import 'package:flutter/src/painting/border_radius.dart' as _i4;
 
 /// class ContinuousRectangleBorder extends OutlinedBorder
 class ContinuousRectangleBorder$Mate extends _i1.ContinuousRectangleBorder with _i2.Mate {
   /// ContinuousRectangleBorder ContinuousRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   ContinuousRectangleBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
     super.side,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.borderRadius,
   })  : mateParams = {
           'side': _i2.BuilderArg<_i3.BorderSide>(
             name: 'side',
             init: side,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           ),
-          'borderRadius': _i2.BuilderArg<_i5.BorderRadiusGeometry>(
+          'borderRadius': _i2.BuilderArg<_i4.BorderRadiusGeometry>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
-            defaultValue: _i4.BorderRadius.zero,
           ),
         },
         super() {

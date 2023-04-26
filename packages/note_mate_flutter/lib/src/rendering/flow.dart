@@ -16,7 +16,7 @@ class RenderFlow$Mate extends _i1.RenderFlow with _i2.Mate {
     /// optionalParameters: {required FlowDelegate delegate} , default:none
     required super.delegate,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
@@ -33,7 +33,6 @@ class RenderFlow$Mate extends _i1.RenderFlow with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.hardEdge,
           ),
         },
         super() {

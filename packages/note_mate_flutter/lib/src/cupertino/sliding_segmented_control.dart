@@ -8,7 +8,6 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/foundation/basic_types.dart' as _i5;
 import 'dart:ui' as _i6;
 import 'package:flutter/src/painting/edge_insets.dart' as _i7;
-import 'package:flutter/cupertino.dart' as _i8;
 
 /// class CupertinoSlidingSegmentedControl<T> extends StatefulWidget
 class CupertinoSlidingSegmentedControl$Mate<T> extends _i1.CupertinoSlidingSegmentedControl<T> with _i2.Mate {
@@ -32,7 +31,7 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends _i1.CupertinoSlidingSegme
     /// optionalParameters: {EdgeInsetsGeometry padding = _kHorizontalItemPadding} , default:unprocessed=SimpleIdentifierImpl
     super.padding,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.tertiarySystemFill} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.tertiarySystemFill} , default:unprocessed=PrefixedIdentifierImpl
     super.backgroundColor,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -69,7 +68,6 @@ class CupertinoSlidingSegmentedControl$Mate<T> extends _i1.CupertinoSlidingSegme
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
-            defaultValue: _i8.CupertinoColors.tertiarySystemFill,
           ),
         },
         super() {

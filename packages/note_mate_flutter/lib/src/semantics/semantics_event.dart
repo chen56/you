@@ -4,7 +4,6 @@
 import 'package:flutter/src/semantics/semantics_event.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/semantics.dart' as _i4;
 
 /// class AnnounceSemanticsEvent extends SemanticsEvent
 class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Mate {
@@ -15,7 +14,7 @@ class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Ma
 
     /// requiredParameters: TextDirection textDirection
     super.textDirection, {
-    /// optionalParameters: {Assertiveness assertiveness = Assertiveness.polite} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Assertiveness assertiveness = Assertiveness.polite} , default:unprocessed=PrefixedIdentifierImpl
     super.assertiveness,
   })  : mateParams = {
           'message': _i2.BuilderArg<String>(
@@ -32,7 +31,6 @@ class AnnounceSemanticsEvent$Mate extends _i1.AnnounceSemanticsEvent with _i2.Ma
             name: 'assertiveness',
             init: assertiveness,
             isNamed: true,
-            defaultValue: _i4.Assertiveness.polite,
           ),
         },
         super() {

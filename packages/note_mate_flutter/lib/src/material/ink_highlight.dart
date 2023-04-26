@@ -7,9 +7,8 @@ import 'package:flutter/src/material/material.dart' as _i3;
 import 'package:flutter/src/rendering/box.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/box_border.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
-import 'package:flutter/src/painting/border_radius.dart' as _i8;
-import 'package:flutter/src/painting/borders.dart' as _i9;
+import 'package:flutter/src/painting/border_radius.dart' as _i7;
+import 'package:flutter/src/painting/borders.dart' as _i8;
 
 /// class InkHighlight extends InteractiveInkFeature
 class InkHighlight$Mate extends _i1.InkHighlight with _i2.Mate {
@@ -27,7 +26,7 @@ class InkHighlight$Mate extends _i1.InkHighlight with _i2.Mate {
     /// optionalParameters: {required TextDirection textDirection} , default:none
     required super.textDirection,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:unprocessed=PrefixedIdentifierImpl
     super.shape,
 
     /// optionalParameters: {double? radius} , default:none
@@ -72,19 +71,18 @@ class InkHighlight$Mate extends _i1.InkHighlight with _i2.Mate {
             name: 'shape',
             init: shape,
             isNamed: true,
-            defaultValue: _i7.BoxShape.rectangle,
           ),
           'radius': _i2.BuilderArg<double?>(
             name: 'radius',
             init: radius,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i8.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'customBorder': _i2.BuilderArg<_i9.ShapeBorder?>(
+          'customBorder': _i2.BuilderArg<_i8.ShapeBorder?>(
             name: 'customBorder',
             init: customBorder,
             isNamed: true,

@@ -10,14 +10,12 @@ import 'package:flutter/src/material/scaffold.dart' as _i6;
 import 'package:flutter/src/widgets/app.dart' as _i7;
 import 'dart:ui' as _i8;
 import 'package:flutter/src/material/theme_data.dart' as _i9;
-import 'package:flutter/material.dart' as _i10;
-import 'package:flutter/src/animation/curves.dart' as _i11;
-import 'package:flutter/animation.dart' as _i12;
-import 'package:flutter/src/widgets/localizations.dart' as _i13;
-import 'package:flutter/src/widgets/shortcuts.dart' as _i14;
-import 'package:flutter/src/widgets/actions.dart' as _i15;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i16;
-import 'package:flutter/src/widgets/router.dart' as _i17;
+import 'package:flutter/src/animation/curves.dart' as _i10;
+import 'package:flutter/src/widgets/localizations.dart' as _i11;
+import 'package:flutter/src/widgets/shortcuts.dart' as _i12;
+import 'package:flutter/src/widgets/actions.dart' as _i13;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i14;
+import 'package:flutter/src/widgets/router.dart' as _i15;
 
 /// class MaterialApp extends StatefulWidget
 class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
@@ -77,13 +75,13 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
     /// optionalParameters: {ThemeData? highContrastDarkTheme} , default:none
     super.highContrastDarkTheme,
 
-    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , default:unprocessed=PrefixedIdentifierImpl
     super.themeMode,
 
     /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , default:unprocessed=SimpleIdentifierImpl
     super.themeAnimationDuration,
 
-    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.themeAnimationCurve,
 
     /// optionalParameters: {Locale? locale} , default:none
@@ -226,25 +224,23 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             name: 'themeMode',
             init: themeMode,
             isNamed: true,
-            defaultValue: _i10.ThemeMode.system,
           ),
           'themeAnimationDuration': _i2.BuilderArg<Duration>(
             name: 'themeAnimationDuration',
             init: themeAnimationDuration,
             isNamed: true,
           ),
-          'themeAnimationCurve': _i2.BuilderArg<_i11.Curve>(
+          'themeAnimationCurve': _i2.BuilderArg<_i10.Curve>(
             name: 'themeAnimationCurve',
             init: themeAnimationCurve,
             isNamed: true,
-            defaultValue: _i12.Curves.linear,
           ),
           'locale': _i2.BuilderArg<_i8.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i13.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i11.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -300,12 +296,12 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i14.ShortcutActivator, _i15.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i12.ShortcutActivator, _i13.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i15.Action<_i15.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i13.Action<_i13.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -315,7 +311,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i16.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i14.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -411,13 +407,13 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
     /// optionalParameters: {ThemeData? highContrastDarkTheme} , default:none
     super.highContrastDarkTheme,
 
-    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ThemeMode? themeMode = ThemeMode.system} , default:unprocessed=PrefixedIdentifierImpl
     super.themeMode,
 
     /// optionalParameters: {Duration themeAnimationDuration = kThemeAnimationDuration} , default:unprocessed=SimpleIdentifierImpl
     super.themeAnimationDuration,
 
-    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve themeAnimationCurve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.themeAnimationCurve,
 
     /// optionalParameters: {Locale? locale} , default:none
@@ -475,27 +471,27 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: scaffoldMessengerKey,
             isNamed: true,
           ),
-          'routeInformationProvider': _i2.BuilderArg<_i17.RouteInformationProvider?>(
+          'routeInformationProvider': _i2.BuilderArg<_i15.RouteInformationProvider?>(
             name: 'routeInformationProvider',
             init: routeInformationProvider,
             isNamed: true,
           ),
-          'routeInformationParser': _i2.BuilderArg<_i17.RouteInformationParser<Object>?>(
+          'routeInformationParser': _i2.BuilderArg<_i15.RouteInformationParser<Object>?>(
             name: 'routeInformationParser',
             init: routeInformationParser,
             isNamed: true,
           ),
-          'routerDelegate': _i2.BuilderArg<_i17.RouterDelegate<Object>?>(
+          'routerDelegate': _i2.BuilderArg<_i15.RouterDelegate<Object>?>(
             name: 'routerDelegate',
             init: routerDelegate,
             isNamed: true,
           ),
-          'routerConfig': _i2.BuilderArg<_i17.RouterConfig<Object>?>(
+          'routerConfig': _i2.BuilderArg<_i15.RouterConfig<Object>?>(
             name: 'routerConfig',
             init: routerConfig,
             isNamed: true,
           ),
-          'backButtonDispatcher': _i2.BuilderArg<_i17.BackButtonDispatcher?>(
+          'backButtonDispatcher': _i2.BuilderArg<_i15.BackButtonDispatcher?>(
             name: 'backButtonDispatcher',
             init: backButtonDispatcher,
             isNamed: true,
@@ -545,25 +541,23 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             name: 'themeMode',
             init: themeMode,
             isNamed: true,
-            defaultValue: _i10.ThemeMode.system,
           ),
           'themeAnimationDuration': _i2.BuilderArg<Duration>(
             name: 'themeAnimationDuration',
             init: themeAnimationDuration,
             isNamed: true,
           ),
-          'themeAnimationCurve': _i2.BuilderArg<_i11.Curve>(
+          'themeAnimationCurve': _i2.BuilderArg<_i10.Curve>(
             name: 'themeAnimationCurve',
             init: themeAnimationCurve,
             isNamed: true,
-            defaultValue: _i12.Curves.linear,
           ),
           'locale': _i2.BuilderArg<_i8.Locale?>(
             name: 'locale',
             init: locale,
             isNamed: true,
           ),
-          'localizationsDelegates': _i2.BuilderArg<Iterable<_i13.LocalizationsDelegate<dynamic>>?>(
+          'localizationsDelegates': _i2.BuilderArg<Iterable<_i11.LocalizationsDelegate<dynamic>>?>(
             name: 'localizationsDelegates',
             init: localizationsDelegates,
             isNamed: true,
@@ -619,12 +613,12 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'shortcuts': _i2.BuilderArg<Map<_i14.ShortcutActivator, _i15.Intent>?>(
+          'shortcuts': _i2.BuilderArg<Map<_i12.ShortcutActivator, _i13.Intent>?>(
             name: 'shortcuts',
             init: shortcuts,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<Map<Type, _i15.Action<_i15.Intent>>?>(
+          'actions': _i2.BuilderArg<Map<Type, _i13.Action<_i13.Intent>>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
@@ -634,7 +628,7 @@ class MaterialApp$Mate extends _i1.MaterialApp with _i2.Mate {
             init: restorationScopeId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i16.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i14.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,

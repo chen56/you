@@ -3,8 +3,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:flutter/src/animation/animation_controller.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
-import 'package:flutter/animation.dart' as _i3;
-import 'package:flutter/src/scheduler/ticker.dart' as _i4;
+import 'package:flutter/src/scheduler/ticker.dart' as _i3;
 
 /// class AnimationController extends Animation<double> with AnimationEagerListenerMixin, AnimationLocalListenersMixin, AnimationLocalStatusListenersMixin
 class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
@@ -28,7 +27,7 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
     /// optionalParameters: {double upperBound = 1.0} , default:processed=DoubleLiteralImpl
     super.upperBound,
 
-    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.normal} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.normal} , default:unprocessed=PrefixedIdentifierImpl
     super.animationBehavior,
 
     /// optionalParameters: {required TickerProvider vsync} , default:none
@@ -70,9 +69,8 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
             name: 'animationBehavior',
             init: animationBehavior,
             isNamed: true,
-            defaultValue: _i3.AnimationBehavior.normal,
           ),
-          'vsync': _i2.BuilderArg<_i4.TickerProvider>(
+          'vsync': _i2.BuilderArg<_i3.TickerProvider>(
             name: 'vsync',
             init: vsync,
             isNamed: true,
@@ -110,7 +108,7 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
     /// optionalParameters: {required TickerProvider vsync} , default:none
     required super.vsync,
 
-    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.preserve} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AnimationBehavior animationBehavior = AnimationBehavior.preserve} , default:unprocessed=PrefixedIdentifierImpl
     super.animationBehavior,
   })  : mateParams = {
           'value': _i2.BuilderArg<double>(
@@ -134,7 +132,7 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
             init: debugLabel,
             isNamed: true,
           ),
-          'vsync': _i2.BuilderArg<_i4.TickerProvider>(
+          'vsync': _i2.BuilderArg<_i3.TickerProvider>(
             name: 'vsync',
             init: vsync,
             isNamed: true,
@@ -143,7 +141,6 @@ class AnimationController$Mate extends _i1.AnimationController with _i2.Mate {
             name: 'animationBehavior',
             init: animationBehavior,
             isNamed: true,
-            defaultValue: _i3.AnimationBehavior.preserve,
           ),
         },
         super.unbounded() {

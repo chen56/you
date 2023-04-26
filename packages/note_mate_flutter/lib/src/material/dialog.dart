@@ -6,19 +6,17 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/animation/curves.dart' as _i5;
-import 'package:flutter/animation.dart' as _i6;
-import 'package:flutter/src/painting/edge_insets.dart' as _i7;
-import 'package:flutter/src/painting/borders.dart' as _i8;
-import 'package:flutter/src/painting/alignment.dart' as _i9;
-import 'package:flutter/src/widgets/framework.dart' as _i10;
-import 'package:flutter/src/painting/text_style.dart' as _i11;
-import 'package:flutter/src/rendering/flex.dart' as _i12;
-import 'package:flutter/src/widgets/overflow_bar.dart' as _i13;
-import 'package:flutter/src/painting/basic_types.dart' as _i14;
-import 'package:flutter/src/widgets/inherited_theme.dart' as _i15;
-import 'package:flutter/material.dart' as _i16;
-import 'package:flutter/src/widgets/navigator.dart' as _i17;
-import 'package:flutter/src/widgets/focus_traversal.dart' as _i18;
+import 'package:flutter/src/painting/edge_insets.dart' as _i6;
+import 'package:flutter/src/painting/borders.dart' as _i7;
+import 'package:flutter/src/painting/alignment.dart' as _i8;
+import 'package:flutter/src/widgets/framework.dart' as _i9;
+import 'package:flutter/src/painting/text_style.dart' as _i10;
+import 'package:flutter/src/rendering/flex.dart' as _i11;
+import 'package:flutter/src/widgets/overflow_bar.dart' as _i12;
+import 'package:flutter/src/painting/basic_types.dart' as _i13;
+import 'package:flutter/src/widgets/inherited_theme.dart' as _i14;
+import 'package:flutter/src/widgets/navigator.dart' as _i15;
+import 'package:flutter/src/widgets/focus_traversal.dart' as _i16;
 
 /// class Dialog extends StatelessWidget
 class Dialog$Mate extends _i1.Dialog with _i2.Mate {
@@ -42,13 +40,13 @@ class Dialog$Mate extends _i1.Dialog with _i2.Mate {
     /// optionalParameters: {Duration insetAnimationDuration = const Duration(milliseconds: 100)} , default:unprocessed=InstanceCreationExpressionImpl
     super.insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , default:unprocessed=PrefixedIdentifierImpl
     super.insetAnimationCurve,
 
     /// optionalParameters: {EdgeInsets? insetPadding = _defaultInsetPadding} , default:unprocessed=SimpleIdentifierImpl
     super.insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
@@ -94,9 +92,8 @@ class Dialog$Mate extends _i1.Dialog with _i2.Mate {
             name: 'insetAnimationCurve',
             init: insetAnimationCurve,
             isNamed: true,
-            defaultValue: _i6.Curves.decelerate,
           ),
-          'insetPadding': _i2.BuilderArg<_i7.EdgeInsets?>(
+          'insetPadding': _i2.BuilderArg<_i6.EdgeInsets?>(
             name: 'insetPadding',
             init: insetPadding,
             isNamed: true,
@@ -105,19 +102,18 @@ class Dialog$Mate extends _i1.Dialog with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.none,
           ),
-          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i7.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i10.Widget?>(
+          'child': _i2.BuilderArg<_i9.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -150,10 +146,10 @@ class Dialog$Mate extends _i1.Dialog with _i2.Mate {
     /// optionalParameters: {Color? backgroundColor} , default:none
     super.backgroundColor,
 
-    /// optionalParameters: {Duration insetAnimationDuration = Duration.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration insetAnimationDuration = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.insetAnimationDuration,
 
-    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve insetAnimationCurve = Curves.decelerate} , default:unprocessed=PrefixedIdentifierImpl
     super.insetAnimationCurve,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -173,15 +169,13 @@ class Dialog$Mate extends _i1.Dialog with _i2.Mate {
             name: 'insetAnimationDuration',
             init: insetAnimationDuration,
             isNamed: true,
-            defaultValue: Duration.zero,
           ),
           'insetAnimationCurve': _i2.BuilderArg<_i5.Curve>(
             name: 'insetAnimationCurve',
             init: insetAnimationCurve,
             isNamed: true,
-            defaultValue: _i6.Curves.decelerate,
           ),
-          'child': _i2.BuilderArg<_i10.Widget?>(
+          'child': _i2.BuilderArg<_i9.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -276,7 +270,7 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
     /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , default:unprocessed=SimpleIdentifierImpl
     super.insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
@@ -293,12 +287,12 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'icon': _i2.BuilderArg<_i10.Widget?>(
+          'icon': _i2.BuilderArg<_i9.Widget?>(
             name: 'icon',
             init: icon,
             isNamed: true,
           ),
-          'iconPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+          'iconPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
             name: 'iconPadding',
             init: iconPadding,
             isNamed: true,
@@ -308,57 +302,57 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
             init: iconColor,
             isNamed: true,
           ),
-          'title': _i2.BuilderArg<_i10.Widget?>(
+          'title': _i2.BuilderArg<_i9.Widget?>(
             name: 'title',
             init: title,
             isNamed: true,
           ),
-          'titlePadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+          'titlePadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
             name: 'titlePadding',
             init: titlePadding,
             isNamed: true,
           ),
-          'titleTextStyle': _i2.BuilderArg<_i11.TextStyle?>(
+          'titleTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'titleTextStyle',
             init: titleTextStyle,
             isNamed: true,
           ),
-          'content': _i2.BuilderArg<_i10.Widget?>(
+          'content': _i2.BuilderArg<_i9.Widget?>(
             name: 'content',
             init: content,
             isNamed: true,
           ),
-          'contentPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+          'contentPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,
           ),
-          'contentTextStyle': _i2.BuilderArg<_i11.TextStyle?>(
+          'contentTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'contentTextStyle',
             init: contentTextStyle,
             isNamed: true,
           ),
-          'actions': _i2.BuilderArg<List<_i10.Widget>?>(
+          'actions': _i2.BuilderArg<List<_i9.Widget>?>(
             name: 'actions',
             init: actions,
             isNamed: true,
           ),
-          'actionsPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+          'actionsPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
             name: 'actionsPadding',
             init: actionsPadding,
             isNamed: true,
           ),
-          'actionsAlignment': _i2.BuilderArg<_i12.MainAxisAlignment?>(
+          'actionsAlignment': _i2.BuilderArg<_i11.MainAxisAlignment?>(
             name: 'actionsAlignment',
             init: actionsAlignment,
             isNamed: true,
           ),
-          'actionsOverflowAlignment': _i2.BuilderArg<_i13.OverflowBarAlignment?>(
+          'actionsOverflowAlignment': _i2.BuilderArg<_i12.OverflowBarAlignment?>(
             name: 'actionsOverflowAlignment',
             init: actionsOverflowAlignment,
             isNamed: true,
           ),
-          'actionsOverflowDirection': _i2.BuilderArg<_i14.VerticalDirection?>(
+          'actionsOverflowDirection': _i2.BuilderArg<_i13.VerticalDirection?>(
             name: 'actionsOverflowDirection',
             init: actionsOverflowDirection,
             isNamed: true,
@@ -368,7 +362,7 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
             init: actionsOverflowButtonSpacing,
             isNamed: true,
           ),
-          'buttonPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry?>(
+          'buttonPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
             name: 'buttonPadding',
             init: buttonPadding,
             isNamed: true,
@@ -398,7 +392,7 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
             init: semanticLabel,
             isNamed: true,
           ),
-          'insetPadding': _i2.BuilderArg<_i7.EdgeInsets>(
+          'insetPadding': _i2.BuilderArg<_i6.EdgeInsets>(
             name: 'insetPadding',
             init: insetPadding,
             isNamed: true,
@@ -407,14 +401,13 @@ class AlertDialog$Mate extends _i1.AlertDialog with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.none,
           ),
-          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i7.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
@@ -490,12 +483,12 @@ class SimpleDialogOption$Mate extends _i1.SimpleDialogOption with _i2.Mate {
             init: onPressed,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i7.EdgeInsets?>(
+          'padding': _i2.BuilderArg<_i6.EdgeInsets?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i10.Widget?>(
+          'child': _i2.BuilderArg<_i9.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -556,7 +549,7 @@ class SimpleDialog$Mate extends _i1.SimpleDialog with _i2.Mate {
     /// optionalParameters: {EdgeInsets insetPadding = _defaultInsetPadding} , default:unprocessed=SimpleIdentifierImpl
     super.insetPadding,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
@@ -570,27 +563,27 @@ class SimpleDialog$Mate extends _i1.SimpleDialog with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'title': _i2.BuilderArg<_i10.Widget?>(
+          'title': _i2.BuilderArg<_i9.Widget?>(
             name: 'title',
             init: title,
             isNamed: true,
           ),
-          'titlePadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry>(
+          'titlePadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry>(
             name: 'titlePadding',
             init: titlePadding,
             isNamed: true,
           ),
-          'titleTextStyle': _i2.BuilderArg<_i11.TextStyle?>(
+          'titleTextStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'titleTextStyle',
             init: titleTextStyle,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i10.Widget>?>(
+          'children': _i2.BuilderArg<List<_i9.Widget>?>(
             name: 'children',
             init: children,
             isNamed: true,
           ),
-          'contentPadding': _i2.BuilderArg<_i7.EdgeInsetsGeometry>(
+          'contentPadding': _i2.BuilderArg<_i6.EdgeInsetsGeometry>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,
@@ -620,7 +613,7 @@ class SimpleDialog$Mate extends _i1.SimpleDialog with _i2.Mate {
             init: semanticLabel,
             isNamed: true,
           ),
-          'insetPadding': _i2.BuilderArg<_i7.EdgeInsets>(
+          'insetPadding': _i2.BuilderArg<_i6.EdgeInsets>(
             name: 'insetPadding',
             init: insetPadding,
             isNamed: true,
@@ -629,14 +622,13 @@ class SimpleDialog$Mate extends _i1.SimpleDialog with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i4.Clip.none,
           ),
-          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i7.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
@@ -681,7 +673,7 @@ class DialogRoute$Mate<T> extends _i1.DialogRoute<T> with _i2.Mate {
     /// optionalParameters: {CapturedThemes? themes} , default:none
     super.themes,
 
-    /// optionalParameters: {Color? barrierColor = Colors.black54} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color? barrierColor = Colors.black54} , default:unprocessed=PrefixedIdentifierImpl
     super.barrierColor,
 
     /// optionalParameters: {bool barrierDismissible = true} , default:processed=BooleanLiteralImpl
@@ -702,17 +694,17 @@ class DialogRoute$Mate<T> extends _i1.DialogRoute<T> with _i2.Mate {
     /// optionalParameters: {TraversalEdgeBehavior? traversalEdgeBehavior} , default:none
     super.traversalEdgeBehavior,
   })  : mateParams = {
-          'context': _i2.BuilderArg<_i10.BuildContext>(
+          'context': _i2.BuilderArg<_i9.BuildContext>(
             name: 'context',
             init: context,
             isNamed: true,
           ),
-          'builder': _i2.BuilderArg<_i10.WidgetBuilder>(
+          'builder': _i2.BuilderArg<_i9.WidgetBuilder>(
             name: 'builder',
             init: builder,
             isNamed: true,
           ),
-          'themes': _i2.BuilderArg<_i15.CapturedThemes?>(
+          'themes': _i2.BuilderArg<_i14.CapturedThemes?>(
             name: 'themes',
             init: themes,
             isNamed: true,
@@ -721,7 +713,6 @@ class DialogRoute$Mate<T> extends _i1.DialogRoute<T> with _i2.Mate {
             name: 'barrierColor',
             init: barrierColor,
             isNamed: true,
-            defaultValue: _i16.Colors.black54,
           ),
           'barrierDismissible': _i2.BuilderArg<bool>(
             name: 'barrierDismissible',
@@ -740,7 +731,7 @@ class DialogRoute$Mate<T> extends _i1.DialogRoute<T> with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'settings': _i2.BuilderArg<_i17.RouteSettings?>(
+          'settings': _i2.BuilderArg<_i15.RouteSettings?>(
             name: 'settings',
             init: settings,
             isNamed: true,
@@ -750,7 +741,7 @@ class DialogRoute$Mate<T> extends _i1.DialogRoute<T> with _i2.Mate {
             init: anchorPoint,
             isNamed: true,
           ),
-          'traversalEdgeBehavior': _i2.BuilderArg<_i18.TraversalEdgeBehavior?>(
+          'traversalEdgeBehavior': _i2.BuilderArg<_i16.TraversalEdgeBehavior?>(
             name: 'traversalEdgeBehavior',
             init: traversalEdgeBehavior,
             isNamed: true,

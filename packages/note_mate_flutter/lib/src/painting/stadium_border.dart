@@ -4,21 +4,19 @@
 import 'package:flutter/src/painting/stadium_border.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
-import 'package:flutter/cupertino.dart' as _i4;
 
 /// class StadiumBorder extends OutlinedBorder
 class StadiumBorder$Mate extends _i1.StadiumBorder with _i2.Mate {
   /// StadiumBorder StadiumBorder({BorderSide side = BorderSide.none})
   StadiumBorder$Mate(
       {
-      /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
+      /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
       super.side})
       : mateParams = {
           'side': _i2.BuilderArg<_i3.BorderSide>(
             name: 'side',
             init: side,
             isNamed: true,
-            defaultValue: _i4.BorderSide.none,
           )
         },
         super() {

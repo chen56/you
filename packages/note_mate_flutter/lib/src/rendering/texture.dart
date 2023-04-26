@@ -15,7 +15,7 @@ class TextureBox$Mate extends _i1.TextureBox with _i2.Mate {
     /// optionalParameters: {bool freeze = false} , default:processed=BooleanLiteralImpl
     super.freeze,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
     super.filterQuality,
   })  : mateParams = {
           'textureId': _i2.BuilderArg<int>(
@@ -33,7 +33,6 @@ class TextureBox$Mate extends _i1.TextureBox with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
-            defaultValue: _i3.FilterQuality.low,
           ),
         },
         super() {

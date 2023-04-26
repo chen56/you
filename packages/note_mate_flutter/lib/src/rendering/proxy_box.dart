@@ -8,21 +8,19 @@ import 'package:flutter/src/animation/animation.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/borders.dart' as _i6;
 import 'package:flutter/src/painting/border_radius.dart' as _i7;
-import 'package:flutter/cupertino.dart' as _i8;
-import 'package:flutter/src/painting/box_border.dart' as _i9;
-import 'package:flutter/src/painting/decoration.dart' as _i10;
-import 'package:flutter/src/painting/image_provider.dart' as _i11;
-import 'package:vector_math/vector_math_64.dart' as _i12;
-import 'package:flutter/src/painting/alignment.dart' as _i13;
-import 'package:flutter/src/painting/box_fit.dart' as _i14;
-import 'package:flutter/src/services/mouse_tracking.dart' as _i15;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i16;
-import 'package:flutter/src/gestures/tap.dart' as _i17;
-import 'package:flutter/src/gestures/long_press.dart' as _i18;
-import 'package:flutter/src/gestures/drag_details.dart' as _i19;
-import 'package:flutter/src/semantics/semantics.dart' as _i20;
-import 'package:flutter/src/rendering/layer.dart' as _i21;
-import 'package:flutter/animation.dart' as _i22;
+import 'package:flutter/src/painting/box_border.dart' as _i8;
+import 'package:flutter/src/painting/decoration.dart' as _i9;
+import 'package:flutter/src/painting/image_provider.dart' as _i10;
+import 'package:vector_math/vector_math_64.dart' as _i11;
+import 'package:flutter/src/painting/alignment.dart' as _i12;
+import 'package:flutter/src/painting/box_fit.dart' as _i13;
+import 'package:flutter/src/services/mouse_tracking.dart' as _i14;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i15;
+import 'package:flutter/src/gestures/tap.dart' as _i16;
+import 'package:flutter/src/gestures/long_press.dart' as _i17;
+import 'package:flutter/src/gestures/drag_details.dart' as _i18;
+import 'package:flutter/src/semantics/semantics.dart' as _i19;
+import 'package:flutter/src/rendering/layer.dart' as _i20;
 
 /// class RenderProxyBox extends RenderBox with RenderObjectWithChildMixin<RenderBox>, RenderProxyBoxMixin<RenderBox>
 class RenderProxyBox$Mate extends _i1.RenderProxyBox with _i2.Mate {
@@ -89,10 +87,10 @@ class RenderLimitedBox$Mate extends _i1.RenderLimitedBox with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double maxWidth = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.maxWidth,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {double maxHeight = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
     super.maxHeight,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
@@ -104,13 +102,11 @@ class RenderLimitedBox$Mate extends _i1.RenderLimitedBox with _i2.Mate {
             name: 'maxWidth',
             init: maxWidth,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
           'maxHeight': _i2.BuilderArg<double>(
             name: 'maxHeight',
             init: maxHeight,
             isNamed: true,
-            defaultValue: double.infinity,
           ),
         },
         super() {
@@ -327,7 +323,7 @@ class RenderShaderMask$Mate extends _i1.RenderShaderMask with _i2.Mate {
     /// optionalParameters: {required Shader Function(Rect) shaderCallback} , default:none
     required super.shaderCallback,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:unprocessed=PrefixedIdentifierImpl
     super.blendMode,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
@@ -344,7 +340,6 @@ class RenderShaderMask$Mate extends _i1.RenderShaderMask with _i2.Mate {
             name: 'blendMode',
             init: blendMode,
             isNamed: true,
-            defaultValue: _i5.BlendMode.modulate,
           ),
         },
         super() {
@@ -371,7 +366,7 @@ class RenderBackdropFilter$Mate extends _i1.RenderBackdropFilter with _i2.Mate {
     /// optionalParameters: {required ImageFilter filter} , default:none
     required super.filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:unprocessed=PrefixedIdentifierImpl
     super.blendMode,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
@@ -388,7 +383,6 @@ class RenderBackdropFilter$Mate extends _i1.RenderBackdropFilter with _i2.Mate {
             name: 'blendMode',
             init: blendMode,
             isNamed: true,
-            defaultValue: _i5.BlendMode.srcOver,
           ),
         },
         super() {
@@ -449,7 +443,7 @@ class RenderClipRect$Mate extends _i1.RenderClipRect with _i2.Mate {
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
@@ -466,7 +460,6 @@ class RenderClipRect$Mate extends _i1.RenderClipRect with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.antiAlias,
           ),
         },
         super() {
@@ -490,13 +483,13 @@ class RenderClipRRect$Mate extends _i1.RenderClipRRect with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.borderRadius,
 
     /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -511,7 +504,6 @@ class RenderClipRRect$Mate extends _i1.RenderClipRRect with _i2.Mate {
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
-            defaultValue: _i8.BorderRadius.zero,
           ),
           'clipper': _i2.BuilderArg<_i1.CustomClipper<_i5.RRect>?>(
             name: 'clipper',
@@ -522,7 +514,6 @@ class RenderClipRRect$Mate extends _i1.RenderClipRRect with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.antiAlias,
           ),
           'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
             name: 'textDirection',
@@ -556,7 +547,7 @@ class RenderClipOval$Mate extends _i1.RenderClipOval with _i2.Mate {
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
@@ -573,7 +564,6 @@ class RenderClipOval$Mate extends _i1.RenderClipOval with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.antiAlias,
           ),
         },
         super() {
@@ -600,7 +590,7 @@ class RenderClipPath$Mate extends _i1.RenderClipPath with _i2.Mate {
     /// optionalParameters: {CustomClipper<Path>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
@@ -617,7 +607,6 @@ class RenderClipPath$Mate extends _i1.RenderClipPath with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.antiAlias,
           ),
         },
         super() {
@@ -641,10 +630,10 @@ class RenderPhysicalModel$Mate extends _i1.RenderPhysicalModel with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:unprocessed=PrefixedIdentifierImpl
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
@@ -664,17 +653,15 @@ class RenderPhysicalModel$Mate extends _i1.RenderPhysicalModel with _i2.Mate {
             init: child,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i9.BoxShape>(
+          'shape': _i2.BuilderArg<_i8.BoxShape>(
             name: 'shape',
             init: shape,
             isNamed: true,
-            defaultValue: _i8.BoxShape.rectangle,
           ),
           'clipBehavior': _i2.BuilderArg<_i5.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.none,
           ),
           'borderRadius': _i2.BuilderArg<_i7.BorderRadius?>(
             name: 'borderRadius',
@@ -726,7 +713,7 @@ class RenderPhysicalShape$Mate extends _i1.RenderPhysicalShape with _i2.Mate {
     /// optionalParameters: {required CustomClipper<Path> clipper} , default:none
     required super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
@@ -752,7 +739,6 @@ class RenderPhysicalShape$Mate extends _i1.RenderPhysicalShape with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.none,
           ),
           'elevation': _i2.BuilderArg<double>(
             name: 'elevation',
@@ -795,16 +781,16 @@ class RenderDecoratedBox$Mate extends _i1.RenderDecoratedBox with _i2.Mate {
     /// optionalParameters: {required Decoration decoration} , default:none
     required super.decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:unprocessed=PrefixedIdentifierImpl
     super.position,
 
-    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:unprocessed=PrefixedIdentifierImpl
     super.configuration,
 
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
   })  : mateParams = {
-          'decoration': _i2.BuilderArg<_i10.Decoration>(
+          'decoration': _i2.BuilderArg<_i9.Decoration>(
             name: 'decoration',
             init: decoration,
             isNamed: true,
@@ -813,13 +799,11 @@ class RenderDecoratedBox$Mate extends _i1.RenderDecoratedBox with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
-            defaultValue: _i8.DecorationPosition.background,
           ),
-          'configuration': _i2.BuilderArg<_i11.ImageConfiguration>(
+          'configuration': _i2.BuilderArg<_i10.ImageConfiguration>(
             name: 'configuration',
             init: configuration,
             isNamed: true,
-            defaultValue: _i8.ImageConfiguration.empty,
           ),
           'child': _i2.BuilderArg<_i3.RenderBox?>(
             name: 'child',
@@ -867,7 +851,7 @@ class RenderTransform$Mate extends _i1.RenderTransform with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
   })  : mateParams = {
-          'transform': _i2.BuilderArg<_i12.Matrix4>(
+          'transform': _i2.BuilderArg<_i11.Matrix4>(
             name: 'transform',
             init: transform,
             isNamed: true,
@@ -877,7 +861,7 @@ class RenderTransform$Mate extends _i1.RenderTransform with _i2.Mate {
             init: origin,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i12.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
@@ -926,10 +910,10 @@ class RenderTransform$Mate extends _i1.RenderTransform with _i2.Mate {
 class RenderFittedBox$Mate extends _i1.RenderFittedBox with _i2.Mate {
   /// RenderFittedBox RenderFittedBox({BoxFit fit = BoxFit.contain, AlignmentGeometry alignment = Alignment.center, TextDirection? textDirection, RenderBox? child, Clip clipBehavior = Clip.none})
   RenderFittedBox$Mate({
-    /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:unprocessed=PrefixedIdentifierImpl
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -938,20 +922,18 @@ class RenderFittedBox$Mate extends _i1.RenderFittedBox with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
-          'fit': _i2.BuilderArg<_i14.BoxFit>(
+          'fit': _i2.BuilderArg<_i13.BoxFit>(
             name: 'fit',
             init: fit,
             isNamed: true,
-            defaultValue: _i8.BoxFit.contain,
           ),
-          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i12.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i8.Alignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
             name: 'textDirection',
@@ -967,7 +949,6 @@ class RenderFittedBox$Mate extends _i1.RenderFittedBox with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i5.Clip.none,
           ),
         },
         super() {
@@ -1061,7 +1042,7 @@ class RenderPointerListener$Mate extends _i1.RenderPointerListener with _i2.Mate
     /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , default:none
     super.onPointerSignal,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:unprocessed=PrefixedIdentifierImpl
     super.behavior,
 
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1082,7 +1063,7 @@ class RenderPointerListener$Mate extends _i1.RenderPointerListener with _i2.Mate
             init: onPointerUp,
             isNamed: true,
           ),
-          'onPointerHover': _i2.BuilderArg<_i15.PointerHoverEventListener?>(
+          'onPointerHover': _i2.BuilderArg<_i14.PointerHoverEventListener?>(
             name: 'onPointerHover',
             init: onPointerHover,
             isNamed: true,
@@ -1116,7 +1097,6 @@ class RenderPointerListener$Mate extends _i1.RenderPointerListener with _i2.Mate
             name: 'behavior',
             init: behavior,
             isNamed: true,
-            defaultValue: _i8.HitTestBehavior.deferToChild,
           ),
           'child': _i2.BuilderArg<_i3.RenderBox?>(
             name: 'child',
@@ -1159,7 +1139,7 @@ class RenderMouseRegion$Mate extends _i1.RenderMouseRegion with _i2.Mate {
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     super.onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:unprocessed=PrefixedIdentifierImpl
     super.cursor,
 
     /// optionalParameters: {bool validForMouseTracker = true} , default:processed=BooleanLiteralImpl
@@ -1171,29 +1151,28 @@ class RenderMouseRegion$Mate extends _i1.RenderMouseRegion with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior? hitTestBehavior = HitTestBehavior.opaque} , default:unprocessed=PrefixedIdentifierImpl
     super.hitTestBehavior,
   })  : mateParams = {
-          'onEnter': _i2.BuilderArg<_i15.PointerEnterEventListener?>(
+          'onEnter': _i2.BuilderArg<_i14.PointerEnterEventListener?>(
             name: 'onEnter',
             init: onEnter,
             isNamed: true,
           ),
-          'onHover': _i2.BuilderArg<_i15.PointerHoverEventListener?>(
+          'onHover': _i2.BuilderArg<_i14.PointerHoverEventListener?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
           ),
-          'onExit': _i2.BuilderArg<_i15.PointerExitEventListener?>(
+          'onExit': _i2.BuilderArg<_i14.PointerExitEventListener?>(
             name: 'onExit',
             init: onExit,
             isNamed: true,
           ),
-          'cursor': _i2.BuilderArg<_i16.MouseCursor>(
+          'cursor': _i2.BuilderArg<_i15.MouseCursor>(
             name: 'cursor',
             init: cursor,
             isNamed: true,
-            defaultValue: _i8.MouseCursor.defer,
           ),
           'validForMouseTracker': _i2.BuilderArg<bool>(
             name: 'validForMouseTracker',
@@ -1216,7 +1195,6 @@ class RenderMouseRegion$Mate extends _i1.RenderMouseRegion with _i2.Mate {
             name: 'hitTestBehavior',
             init: hitTestBehavior,
             isNamed: true,
-            defaultValue: _i8.HitTestBehavior.opaque,
           ),
         },
         super() {
@@ -1392,7 +1370,7 @@ class RenderMetaData$Mate extends _i1.RenderMetaData with _i2.Mate {
     /// optionalParameters: {dynamic metaData} , default:none
     super.metaData,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:unprocessed=PrefixedIdentifierImpl
     super.behavior,
 
     /// optionalParameters: {RenderBox? child} , default:none
@@ -1407,7 +1385,6 @@ class RenderMetaData$Mate extends _i1.RenderMetaData with _i2.Mate {
             name: 'behavior',
             init: behavior,
             isNamed: true,
-            defaultValue: _i8.HitTestBehavior.deferToChild,
           ),
           'child': _i2.BuilderArg<_i3.RenderBox?>(
             name: 'child',
@@ -1451,7 +1428,7 @@ class RenderSemanticsGestureHandler$Mate extends _i1.RenderSemanticsGestureHandl
     /// optionalParameters: {double scrollFactor = 0.8} , default:processed=DoubleLiteralImpl
     super.scrollFactor,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:unprocessed=PrefixedIdentifierImpl
     super.behavior,
   })  : mateParams = {
           'child': _i2.BuilderArg<_i3.RenderBox?>(
@@ -1459,22 +1436,22 @@ class RenderSemanticsGestureHandler$Mate extends _i1.RenderSemanticsGestureHandl
             init: child,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i17.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i16.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'onLongPress': _i2.BuilderArg<_i18.GestureLongPressCallback?>(
+          'onLongPress': _i2.BuilderArg<_i17.GestureLongPressCallback?>(
             name: 'onLongPress',
             init: onLongPress,
             isNamed: true,
           ),
-          'onHorizontalDragUpdate': _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
+          'onHorizontalDragUpdate': _i2.BuilderArg<_i18.GestureDragUpdateCallback?>(
             name: 'onHorizontalDragUpdate',
             init: onHorizontalDragUpdate,
             isNamed: true,
           ),
-          'onVerticalDragUpdate': _i2.BuilderArg<_i19.GestureDragUpdateCallback?>(
+          'onVerticalDragUpdate': _i2.BuilderArg<_i18.GestureDragUpdateCallback?>(
             name: 'onVerticalDragUpdate',
             init: onVerticalDragUpdate,
             isNamed: true,
@@ -1489,7 +1466,6 @@ class RenderSemanticsGestureHandler$Mate extends _i1.RenderSemanticsGestureHandl
             name: 'behavior',
             init: behavior,
             isNamed: true,
-            defaultValue: _i8.HitTestBehavior.deferToChild,
           ),
         },
         super() {
@@ -1537,7 +1513,7 @@ class RenderSemanticsAnnotations$Mate extends _i1.RenderSemanticsAnnotations wit
             init: child,
             isNamed: true,
           ),
-          'properties': _i2.BuilderArg<_i20.SemanticsProperties>(
+          'properties': _i2.BuilderArg<_i19.SemanticsProperties>(
             name: 'properties',
             init: properties,
             isNamed: true,
@@ -1721,7 +1697,7 @@ class RenderLeaderLayer$Mate extends _i1.RenderLeaderLayer with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
   })  : mateParams = {
-          'link': _i2.BuilderArg<_i21.LayerLink>(
+          'link': _i2.BuilderArg<_i20.LayerLink>(
             name: 'link',
             init: link,
             isNamed: true,
@@ -1755,19 +1731,19 @@ class RenderFollowerLayer$Mate extends _i1.RenderFollowerLayer with _i2.Mate {
     /// optionalParameters: {bool showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
     super.showWhenUnlinked,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.offset,
 
-    /// optionalParameters: {Alignment leaderAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment leaderAnchor = Alignment.topLeft} , default:unprocessed=PrefixedIdentifierImpl
     super.leaderAnchor,
 
-    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:unprocessed=PrefixedIdentifierImpl
     super.followerAnchor,
 
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
   })  : mateParams = {
-          'link': _i2.BuilderArg<_i21.LayerLink>(
+          'link': _i2.BuilderArg<_i20.LayerLink>(
             name: 'link',
             init: link,
             isNamed: true,
@@ -1782,19 +1758,16 @@ class RenderFollowerLayer$Mate extends _i1.RenderFollowerLayer with _i2.Mate {
             name: 'offset',
             init: offset,
             isNamed: true,
-            defaultValue: _i22.Offset.zero,
           ),
-          'leaderAnchor': _i2.BuilderArg<_i13.Alignment>(
+          'leaderAnchor': _i2.BuilderArg<_i12.Alignment>(
             name: 'leaderAnchor',
             init: leaderAnchor,
             isNamed: true,
-            defaultValue: _i8.Alignment.topLeft,
           ),
-          'followerAnchor': _i2.BuilderArg<_i13.Alignment>(
+          'followerAnchor': _i2.BuilderArg<_i12.Alignment>(
             name: 'followerAnchor',
             init: followerAnchor,
             isNamed: true,
-            defaultValue: _i8.Alignment.topLeft,
           ),
           'child': _i2.BuilderArg<_i3.RenderBox?>(
             name: 'child',

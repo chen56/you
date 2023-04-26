@@ -7,7 +7,6 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/basic_types.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
 
 /// class MaterialSlice extends MergeableMaterialItem
 class MaterialSlice$Mate extends _i1.MaterialSlice with _i2.Mate {
@@ -94,7 +93,7 @@ class MergeableMaterial$Mate extends _i1.MergeableMaterial with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
     super.mainAxis,
 
     /// optionalParameters: {double elevation = 2} , default:processed=IntegerLiteralImpl
@@ -118,7 +117,6 @@ class MergeableMaterial$Mate extends _i1.MergeableMaterial with _i2.Mate {
             name: 'mainAxis',
             init: mainAxis,
             isNamed: true,
-            defaultValue: _i7.Axis.vertical,
           ),
           'elevation': _i2.BuilderArg<double>(
             name: 'elevation',

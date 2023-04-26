@@ -7,8 +7,7 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/scroll_controller.dart' as _i4;
 import 'package:flutter/src/foundation/platform.dart' as _i5;
 import 'package:flutter/src/painting/basic_types.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
 
 /// class PrimaryScrollController extends InheritedWidget
 class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.Mate {
@@ -23,7 +22,7 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.
     /// optionalParameters: {Set<TargetPlatform> automaticallyInheritForPlatforms = _kMobilePlatforms} , default:unprocessed=SimpleIdentifierImpl
     super.automaticallyInheritForPlatforms,
 
-    /// optionalParameters: {Axis? scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis? scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {required Widget child} , default:none
@@ -48,9 +47,8 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i7.Axis.vertical,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -81,7 +79,7 @@ class PrimaryScrollController$Mate extends _i1.PrimaryScrollController with _i2.
             init: key,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i7.Widget>(
             name: 'child',
             init: child,
             isNamed: true,

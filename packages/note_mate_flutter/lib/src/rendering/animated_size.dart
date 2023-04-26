@@ -5,11 +5,9 @@ import 'package:flutter/src/rendering/animated_size.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/scheduler/ticker.dart' as _i3;
 import 'package:flutter/src/animation/curves.dart' as _i4;
-import 'package:flutter/animation.dart' as _i5;
-import 'package:flutter/src/painting/alignment.dart' as _i6;
-import 'package:flutter/cupertino.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/rendering/box.dart' as _i9;
+import 'package:flutter/src/painting/alignment.dart' as _i5;
+import 'dart:ui' as _i6;
+import 'package:flutter/src/rendering/box.dart' as _i7;
 
 /// class RenderAnimatedSize extends RenderAligningShiftedBox
 class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
@@ -24,10 +22,10 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
     /// optionalParameters: {Duration? reverseDuration} , default:none
     super.reverseDuration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -36,7 +34,7 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
     /// optionalParameters: {RenderBox? child} , default:none
     super.child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'vsync': _i2.BuilderArg<_i3.TickerProvider>(
@@ -58,29 +56,26 @@ class RenderAnimatedSize$Mate extends _i1.RenderAnimatedSize with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i5.Curves.linear,
           ),
-          'alignment': _i2.BuilderArg<_i6.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i5.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
-            defaultValue: _i7.Alignment.center,
           ),
-          'textDirection': _i2.BuilderArg<_i8.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i6.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i9.RenderBox?>(
+          'child': _i2.BuilderArg<_i7.RenderBox?>(
             name: 'child',
             init: child,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i8.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i8.Clip.hardEdge,
           ),
         },
         super() {

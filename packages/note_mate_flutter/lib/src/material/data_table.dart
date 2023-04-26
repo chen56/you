@@ -387,7 +387,7 @@ class DataTable$Mate extends _i1.DataTable with _i2.Mate {
     /// optionalParameters: {TableBorder? border} , default:none
     super.border,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i6.Key?>(
@@ -502,7 +502,6 @@ class DataTable$Mate extends _i1.DataTable with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i9.Clip.none,
           ),
         },
         super() {

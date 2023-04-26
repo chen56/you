@@ -6,10 +6,9 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/animation/tween.dart' as _i4;
 import 'package:flutter/src/animation/curves.dart' as _i5;
-import 'package:flutter/animation.dart' as _i6;
-import 'package:flutter/src/widgets/value_listenable_builder.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/widgets/framework.dart' as _i9;
+import 'package:flutter/src/widgets/value_listenable_builder.dart' as _i6;
+import 'dart:ui' as _i7;
+import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class TweenAnimationBuilder<T extends Object?> extends ImplicitlyAnimatedWidget
 class TweenAnimationBuilder$Mate<T extends Object?> extends _i1.TweenAnimationBuilder<T> with _i2.Mate {
@@ -24,7 +23,7 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends _i1.TweenAnimationBu
     /// optionalParameters: {required Duration duration} , default:none
     required super.duration,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Widget Function(BuildContext, T, Widget?) builder} , default:none
@@ -55,19 +54,18 @@ class TweenAnimationBuilder$Mate<T extends Object?> extends _i1.TweenAnimationBu
             name: 'curve',
             init: curve,
             isNamed: true,
-            defaultValue: _i6.Curves.linear,
           ),
-          'builder': _i2.BuilderArg<_i7.ValueWidgetBuilder<T>>(
+          'builder': _i2.BuilderArg<_i6.ValueWidgetBuilder<T>>(
             name: 'builder',
             init: builder,
             isNamed: true,
           ),
-          'onEnd': _i2.BuilderArg<_i8.VoidCallback?>(
+          'onEnd': _i2.BuilderArg<_i7.VoidCallback?>(
             name: 'onEnd',
             init: onEnd,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i9.Widget?>(
+          'child': _i2.BuilderArg<_i8.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,

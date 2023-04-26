@@ -4,17 +4,14 @@
 import 'package:flutter/src/gestures/scale.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/animation.dart' as _i4;
-import 'package:flutter/src/gestures/velocity_tracker.dart' as _i5;
-import 'package:flutter/cupertino.dart' as _i6;
-import 'package:flutter/src/gestures/recognizer.dart' as _i7;
-import 'package:flutter/gestures.dart' as _i8;
+import 'package:flutter/src/gestures/velocity_tracker.dart' as _i4;
+import 'package:flutter/src/gestures/recognizer.dart' as _i5;
 
 /// class ScaleStartDetails
 class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
   /// ScaleStartDetails ScaleStartDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, int pointerCount = 0})
   ScaleStartDetails$Mate({
-    /// optionalParameters: {Offset focalPoint = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset focalPoint = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.focalPoint,
 
     /// optionalParameters: {Offset? localFocalPoint} , default:none
@@ -27,7 +24,6 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
             name: 'focalPoint',
             init: focalPoint,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'localFocalPoint': _i2.BuilderArg<_i3.Offset?>(
             name: 'localFocalPoint',
@@ -59,7 +55,7 @@ class ScaleStartDetails$Mate extends _i1.ScaleStartDetails with _i2.Mate {
 class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
   /// ScaleUpdateDetails ScaleUpdateDetails({Offset focalPoint = Offset.zero, Offset? localFocalPoint, double scale = 1.0, double horizontalScale = 1.0, double verticalScale = 1.0, double rotation = 0.0, int pointerCount = 0, Offset focalPointDelta = Offset.zero})
   ScaleUpdateDetails$Mate({
-    /// optionalParameters: {Offset focalPoint = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset focalPoint = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.focalPoint,
 
     /// optionalParameters: {Offset? localFocalPoint} , default:none
@@ -80,14 +76,13 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
     /// optionalParameters: {int pointerCount = 0} , default:processed=IntegerLiteralImpl
     super.pointerCount,
 
-    /// optionalParameters: {Offset focalPointDelta = Offset.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset focalPointDelta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.focalPointDelta,
   })  : mateParams = {
           'focalPoint': _i2.BuilderArg<_i3.Offset>(
             name: 'focalPoint',
             init: focalPoint,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
           'localFocalPoint': _i2.BuilderArg<_i3.Offset?>(
             name: 'localFocalPoint',
@@ -128,7 +123,6 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
             name: 'focalPointDelta',
             init: focalPointDelta,
             isNamed: true,
-            defaultValue: _i4.Offset.zero,
           ),
         },
         super() {
@@ -154,7 +148,7 @@ class ScaleUpdateDetails$Mate extends _i1.ScaleUpdateDetails with _i2.Mate {
 class ScaleEndDetails$Mate extends _i1.ScaleEndDetails with _i2.Mate {
   /// ScaleEndDetails ScaleEndDetails({Velocity velocity = Velocity.zero, double scaleVelocity = 0, int pointerCount = 0})
   ScaleEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:unprocessed=PrefixedIdentifierImpl
     super.velocity,
 
     /// optionalParameters: {double scaleVelocity = 0} , default:processed=IntegerLiteralImpl
@@ -163,11 +157,10 @@ class ScaleEndDetails$Mate extends _i1.ScaleEndDetails with _i2.Mate {
     /// optionalParameters: {int pointerCount = 0} , default:processed=IntegerLiteralImpl
     super.pointerCount,
   })  : mateParams = {
-          'velocity': _i2.BuilderArg<_i5.Velocity>(
+          'velocity': _i2.BuilderArg<_i4.Velocity>(
             name: 'velocity',
             init: velocity,
             isNamed: true,
-            defaultValue: _i6.Velocity.zero,
           ),
           'scaleVelocity': _i2.BuilderArg<double>(
             name: 'scaleVelocity',
@@ -209,7 +202,7 @@ class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer with _i2.Ma
     /// optionalParameters: {bool Function(int)? allowedButtonsFilter} , default:none
     super.allowedButtonsFilter,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.down} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.down} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
@@ -228,16 +221,15 @@ class ScaleGestureRecognizer$Mate extends _i1.ScaleGestureRecognizer with _i2.Ma
             init: supportedDevices,
             isNamed: true,
           ),
-          'allowedButtonsFilter': _i2.BuilderArg<_i7.AllowedButtonsFilter?>(
+          'allowedButtonsFilter': _i2.BuilderArg<_i5.AllowedButtonsFilter?>(
             name: 'allowedButtonsFilter',
             init: allowedButtonsFilter,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i5.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i8.DragStartBehavior.down,
           ),
           'trackpadScrollCausesScale': _i2.BuilderArg<bool>(
             name: 'trackpadScrollCausesScale',

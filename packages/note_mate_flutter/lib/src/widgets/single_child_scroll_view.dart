@@ -5,15 +5,13 @@ import 'package:flutter/src/widgets/single_child_scroll_view.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/cupertino.dart' as _i5;
-import 'package:flutter/src/painting/edge_insets.dart' as _i6;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i7;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i8;
-import 'package:flutter/src/widgets/framework.dart' as _i9;
-import 'package:flutter/src/gestures/recognizer.dart' as _i10;
-import 'package:flutter/gestures.dart' as _i11;
-import 'dart:ui' as _i12;
-import 'package:flutter/src/widgets/scroll_view.dart' as _i13;
+import 'package:flutter/src/painting/edge_insets.dart' as _i5;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i6;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i7;
+import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:flutter/src/gestures/recognizer.dart' as _i9;
+import 'dart:ui' as _i10;
+import 'package:flutter/src/widgets/scroll_view.dart' as _i11;
 
 /// class SingleChildScrollView extends StatelessWidget
 class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate {
@@ -22,7 +20,7 @@ class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -43,16 +41,16 @@ class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate
     /// optionalParameters: {Widget? child} , default:none
     super.child,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -64,7 +62,6 @@ class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
-            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -72,7 +69,7 @@ class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i6.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i5.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -82,43 +79,40 @@ class SingleChildScrollView$Mate extends _i1.SingleChildScrollView with _i2.Mate
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
           ),
-          'controller': _i2.BuilderArg<_i8.ScrollController?>(
+          'controller': _i2.BuilderArg<_i7.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i9.Widget?>(
+          'child': _i2.BuilderArg<_i8.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
-            defaultValue: _i11.DragStartBehavior.start,
           ),
-          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
-            defaultValue: _i12.Clip.hardEdge,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'keyboardDismissBehavior': _i2.BuilderArg<_i13.ScrollViewKeyboardDismissBehavior>(
+          'keyboardDismissBehavior': _i2.BuilderArg<_i11.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
-            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
         },
         super() {

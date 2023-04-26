@@ -5,7 +5,6 @@ import 'package:flutter/src/painting/matrix_utils.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:vector_math/vector_math_64.dart' as _i3;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i4;
-import 'package:flutter/foundation.dart' as _i5;
 
 /// class TransformProperty extends DiagnosticsProperty<Matrix4>
 class TransformProperty$Mate extends _i1.TransformProperty with _i2.Mate {
@@ -22,7 +21,7 @@ class TransformProperty$Mate extends _i1.TransformProperty with _i2.Mate {
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
     super.level,
   })  : mateParams = {
           'name': _i2.BuilderArg<String>(
@@ -50,7 +49,6 @@ class TransformProperty$Mate extends _i1.TransformProperty with _i2.Mate {
             name: 'level',
             init: level,
             isNamed: true,
-            defaultValue: _i5.DiagnosticLevel.info,
           ),
         },
         super() {

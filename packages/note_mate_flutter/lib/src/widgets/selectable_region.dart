@@ -8,9 +8,8 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i4;
 import 'package:flutter/src/widgets/text_selection.dart' as _i5;
 import 'package:flutter/src/widgets/framework.dart' as _i6;
 import 'package:flutter/src/widgets/magnifier.dart' as _i7;
-import 'package:flutter/cupertino.dart' as _i8;
-import 'package:flutter/src/foundation/basic_types.dart' as _i9;
-import 'package:flutter/src/rendering/selection.dart' as _i10;
+import 'package:flutter/src/foundation/basic_types.dart' as _i8;
+import 'package:flutter/src/rendering/selection.dart' as _i9;
 
 /// class SelectableRegion extends StatefulWidget
 class SelectableRegion$Mate extends _i1.SelectableRegion with _i2.Mate {
@@ -31,7 +30,7 @@ class SelectableRegion$Mate extends _i1.SelectableRegion with _i2.Mate {
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
 
-    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:unprocessed=PrefixedIdentifierImpl
     super.magnifierConfiguration,
 
     /// optionalParameters: {void Function(SelectedContent?)? onSelectionChanged} , default:none
@@ -66,9 +65,8 @@ class SelectableRegion$Mate extends _i1.SelectableRegion with _i2.Mate {
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
-            defaultValue: _i8.TextMagnifierConfiguration.disabled,
           ),
-          'onSelectionChanged': _i2.BuilderArg<_i9.ValueChanged<_i10.SelectedContent?>?>(
+          'onSelectionChanged': _i2.BuilderArg<_i8.ValueChanged<_i9.SelectedContent?>?>(
             name: 'onSelectionChanged',
             init: onSelectionChanged,
             isNamed: true,
