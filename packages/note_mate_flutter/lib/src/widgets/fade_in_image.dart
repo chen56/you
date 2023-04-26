@@ -7,12 +7,14 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/image_provider.dart' as _i4;
 import 'package:flutter/src/widgets/image.dart' as _i5;
 import 'package:flutter/src/animation/curves.dart' as _i6;
-import 'package:flutter/src/painting/box_fit.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/painting/alignment.dart' as _i9;
-import 'package:flutter/src/painting/decoration_image.dart' as _i10;
-import 'dart:typed_data' as _i11;
-import 'package:flutter/src/services/asset_bundle.dart' as _i12;
+import 'package:flutter/animation.dart' as _i7;
+import 'package:flutter/src/painting/box_fit.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/painting/alignment.dart' as _i10;
+import 'package:flutter/cupertino.dart' as _i11;
+import 'package:flutter/src/painting/decoration_image.dart' as _i12;
+import 'dart:typed_data' as _i13;
+import 'package:flutter/src/services/asset_bundle.dart' as _i14;
 
 /// class FadeInImage extends StatefulWidget
 class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
@@ -42,13 +44,13 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
     /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     super.fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
     super.fadeOutCurve,
 
     /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , default:unprocessed=InstanceCreationExpressionImpl
     super.fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:processed=PrefixedIdentifierImpl
     super.fadeInCurve,
 
     /// optionalParameters: {double? width} , default:none
@@ -63,16 +65,16 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
     /// optionalParameters: {BoxFit? placeholderFit} , default:none
     super.placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {FilterQuality? placeholderFilterQuality} , default:none
     super.placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
@@ -123,6 +125,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             name: 'fadeOutCurve',
             init: fadeOutCurve,
             isNamed: true,
+            defaultValue: _i7.Curves.easeOut,
           ),
           'fadeInDuration': _i2.BuilderArg<Duration>(
             name: 'fadeInDuration',
@@ -133,6 +136,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             name: 'fadeInCurve',
             init: fadeInCurve,
             isNamed: true,
+            defaultValue: _i7.Curves.easeIn,
           ),
           'width': _i2.BuilderArg<double?>(
             name: 'width',
@@ -144,35 +148,38 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i7.BoxFit?>(
+          'fit': _i2.BuilderArg<_i8.BoxFit?>(
             name: 'fit',
             init: fit,
             isNamed: true,
           ),
-          'placeholderFit': _i2.BuilderArg<_i7.BoxFit?>(
+          'placeholderFit': _i2.BuilderArg<_i8.BoxFit?>(
             name: 'placeholderFit',
             init: placeholderFit,
             isNamed: true,
           ),
-          'filterQuality': _i2.BuilderArg<_i8.FilterQuality>(
+          'filterQuality': _i2.BuilderArg<_i9.FilterQuality>(
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
+            defaultValue: _i9.FilterQuality.low,
           ),
-          'placeholderFilterQuality': _i2.BuilderArg<_i8.FilterQuality?>(
+          'placeholderFilterQuality': _i2.BuilderArg<_i9.FilterQuality?>(
             name: 'placeholderFilterQuality',
             init: placeholderFilterQuality,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i10.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i11.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i12.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
+            defaultValue: _i11.ImageRepeat.noRepeat,
           ),
           'matchTextDirection': _i2.BuilderArg<bool>(
             name: 'matchTextDirection',
@@ -240,13 +247,13 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
     /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     super.fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
     super.fadeOutCurve,
 
     /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , default:unprocessed=InstanceCreationExpressionImpl
     super.fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:processed=PrefixedIdentifierImpl
     super.fadeInCurve,
 
     /// optionalParameters: {double? width} , default:none
@@ -261,16 +268,16 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
     /// optionalParameters: {BoxFit? placeholderFit} , default:none
     super.placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {FilterQuality? placeholderFilterQuality} , default:none
     super.placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
@@ -293,7 +300,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'placeholder': _i2.BuilderArg<_i11.Uint8List>(
+          'placeholder': _i2.BuilderArg<_i13.Uint8List>(
             name: 'placeholder',
             init: placeholder,
             isNamed: true,
@@ -345,6 +352,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             name: 'fadeOutCurve',
             init: fadeOutCurve,
             isNamed: true,
+            defaultValue: _i7.Curves.easeOut,
           ),
           'fadeInDuration': _i2.BuilderArg<Duration>(
             name: 'fadeInDuration',
@@ -355,6 +363,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             name: 'fadeInCurve',
             init: fadeInCurve,
             isNamed: true,
+            defaultValue: _i7.Curves.easeIn,
           ),
           'width': _i2.BuilderArg<double?>(
             name: 'width',
@@ -366,35 +375,38 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i7.BoxFit?>(
+          'fit': _i2.BuilderArg<_i8.BoxFit?>(
             name: 'fit',
             init: fit,
             isNamed: true,
           ),
-          'placeholderFit': _i2.BuilderArg<_i7.BoxFit?>(
+          'placeholderFit': _i2.BuilderArg<_i8.BoxFit?>(
             name: 'placeholderFit',
             init: placeholderFit,
             isNamed: true,
           ),
-          'filterQuality': _i2.BuilderArg<_i8.FilterQuality>(
+          'filterQuality': _i2.BuilderArg<_i9.FilterQuality>(
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
+            defaultValue: _i9.FilterQuality.low,
           ),
-          'placeholderFilterQuality': _i2.BuilderArg<_i8.FilterQuality?>(
+          'placeholderFilterQuality': _i2.BuilderArg<_i9.FilterQuality?>(
             name: 'placeholderFilterQuality',
             init: placeholderFilterQuality,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i10.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i11.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i12.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
+            defaultValue: _i11.ImageRepeat.noRepeat,
           ),
           'matchTextDirection': _i2.BuilderArg<bool>(
             name: 'matchTextDirection',
@@ -491,13 +503,13 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
     /// optionalParameters: {Duration fadeOutDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
     super.fadeOutDuration,
 
-    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve fadeOutCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
     super.fadeOutCurve,
 
     /// optionalParameters: {Duration fadeInDuration = const Duration(milliseconds: 700)} , default:unprocessed=InstanceCreationExpressionImpl
     super.fadeInDuration,
 
-    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve fadeInCurve = Curves.easeIn} , default:processed=PrefixedIdentifierImpl
     super.fadeInCurve,
 
     /// optionalParameters: {double? width} , default:none
@@ -512,16 +524,16 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
     /// optionalParameters: {BoxFit? placeholderFit} , default:none
     super.placeholderFit,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {FilterQuality? placeholderFilterQuality} , default:none
     super.placeholderFilterQuality,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
@@ -564,7 +576,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: imageErrorBuilder,
             isNamed: true,
           ),
-          'bundle': _i2.BuilderArg<_i12.AssetBundle?>(
+          'bundle': _i2.BuilderArg<_i14.AssetBundle?>(
             name: 'bundle',
             init: bundle,
             isNamed: true,
@@ -600,6 +612,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             name: 'fadeOutCurve',
             init: fadeOutCurve,
             isNamed: true,
+            defaultValue: _i7.Curves.easeOut,
           ),
           'fadeInDuration': _i2.BuilderArg<Duration>(
             name: 'fadeInDuration',
@@ -610,6 +623,7 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             name: 'fadeInCurve',
             init: fadeInCurve,
             isNamed: true,
+            defaultValue: _i7.Curves.easeIn,
           ),
           'width': _i2.BuilderArg<double?>(
             name: 'width',
@@ -621,35 +635,38 @@ class FadeInImage$Mate extends _i1.FadeInImage with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i7.BoxFit?>(
+          'fit': _i2.BuilderArg<_i8.BoxFit?>(
             name: 'fit',
             init: fit,
             isNamed: true,
           ),
-          'placeholderFit': _i2.BuilderArg<_i7.BoxFit?>(
+          'placeholderFit': _i2.BuilderArg<_i8.BoxFit?>(
             name: 'placeholderFit',
             init: placeholderFit,
             isNamed: true,
           ),
-          'filterQuality': _i2.BuilderArg<_i8.FilterQuality>(
+          'filterQuality': _i2.BuilderArg<_i9.FilterQuality>(
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
+            defaultValue: _i9.FilterQuality.low,
           ),
-          'placeholderFilterQuality': _i2.BuilderArg<_i8.FilterQuality?>(
+          'placeholderFilterQuality': _i2.BuilderArg<_i9.FilterQuality?>(
             name: 'placeholderFilterQuality',
             init: placeholderFilterQuality,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i9.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i10.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i11.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i10.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i12.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
+            defaultValue: _i11.ImageRepeat.noRepeat,
           ),
           'matchTextDirection': _i2.BuilderArg<bool>(
             name: 'matchTextDirection',

@@ -6,8 +6,10 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
-import 'package:flutter/src/gestures/recognizer.dart' as _i6;
-import 'package:flutter/src/rendering/proxy_box.dart' as _i7;
+import 'package:flutter/cupertino.dart' as _i6;
+import 'package:flutter/src/gestures/recognizer.dart' as _i7;
+import 'package:flutter/gestures.dart' as _i8;
+import 'package:flutter/src/rendering/proxy_box.dart' as _i9;
 
 /// class Dismissible extends StatefulWidget
 class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
@@ -37,7 +39,7 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
     /// optionalParameters: {void Function(DismissDirection)? onDismissed} , default:none
     super.onDismissed,
 
-    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , default:processed=PrefixedIdentifierImpl
     super.direction,
 
     /// optionalParameters: {Duration? resizeDuration = const Duration(milliseconds: 300)} , default:unprocessed=InstanceCreationExpressionImpl
@@ -52,10 +54,10 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
     /// optionalParameters: {double crossAxisEndOffset = 0.0} , default:processed=DoubleLiteralImpl
     super.crossAxisEndOffset,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.opaque} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
     super.behavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key>(
@@ -102,6 +104,7 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
             name: 'direction',
             init: direction,
             isNamed: true,
+            defaultValue: _i6.DismissDirection.horizontal,
           ),
           'resizeDuration': _i2.BuilderArg<Duration?>(
             name: 'resizeDuration',
@@ -124,15 +127,17 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i6.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i7.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
           ),
-          'behavior': _i2.BuilderArg<_i7.HitTestBehavior>(
+          'behavior': _i2.BuilderArg<_i9.HitTestBehavior>(
             name: 'behavior',
             init: behavior,
             isNamed: true,
+            defaultValue: _i6.HitTestBehavior.opaque,
           ),
         },
         super() {
@@ -165,7 +170,7 @@ class Dismissible$Mate extends _i1.Dismissible with _i2.Mate {
 class DismissUpdateDetails$Mate extends _i1.DismissUpdateDetails with _i2.Mate {
   /// DismissUpdateDetails DismissUpdateDetails({DismissDirection direction = DismissDirection.horizontal, bool reached = false, bool previousReached = false, double progress = 0.0})
   DismissUpdateDetails$Mate({
-    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DismissDirection direction = DismissDirection.horizontal} , default:processed=PrefixedIdentifierImpl
     super.direction,
 
     /// optionalParameters: {bool reached = false} , default:processed=BooleanLiteralImpl
@@ -181,6 +186,7 @@ class DismissUpdateDetails$Mate extends _i1.DismissUpdateDetails with _i2.Mate {
             name: 'direction',
             init: direction,
             isNamed: true,
+            defaultValue: _i6.DismissDirection.horizontal,
           ),
           'reached': _i2.BuilderArg<bool>(
             name: 'reached',

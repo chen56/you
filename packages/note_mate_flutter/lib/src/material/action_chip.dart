@@ -47,7 +47,7 @@ class ActionChip$Mate extends _i1.ActionChip with _i2.Mate {
     /// optionalParameters: {OutlinedBorder? shape} , default:none
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -137,6 +137,7 @@ class ActionChip$Mate extends _i1.ActionChip with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i7.Clip.none,
           ),
           'focusNode': _i2.BuilderArg<_i9.FocusNode?>(
             name: 'focusNode',

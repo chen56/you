@@ -6,8 +6,10 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/alignment.dart' as _i5;
-import 'package:flutter/src/animation/curves.dart' as _i6;
-import 'dart:ui' as _i7;
+import 'package:flutter/cupertino.dart' as _i6;
+import 'package:flutter/src/animation/curves.dart' as _i7;
+import 'package:flutter/animation.dart' as _i8;
+import 'dart:ui' as _i9;
 
 /// class AnimatedSize extends StatefulWidget
 class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
@@ -19,10 +21,10 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
     /// optionalParameters: {Widget? child} , default:none
     super.child,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Duration duration} , default:none
@@ -31,7 +33,7 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
     /// optionalParameters: {Duration? reverseDuration} , default:none
     super.reverseDuration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -48,11 +50,13 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i6.Alignment.center,
           ),
-          'curve': _i2.BuilderArg<_i6.Curve>(
+          'curve': _i2.BuilderArg<_i7.Curve>(
             name: 'curve',
             init: curve,
             isNamed: true,
+            defaultValue: _i8.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
@@ -64,10 +68,11 @@ class AnimatedSize$Mate extends _i1.AnimatedSize with _i2.Mate {
             init: reverseDuration,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i9.Clip.hardEdge,
           ),
         },
         super() {

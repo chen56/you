@@ -12,8 +12,9 @@ import 'package:flutter/src/material/material_state.dart' as _i8;
 import 'package:flutter/src/widgets/icon.dart' as _i9;
 import 'package:flutter/src/material/theme_data.dart' as _i10;
 import 'package:flutter/src/gestures/recognizer.dart' as _i11;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i12;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i13;
+import 'package:flutter/gestures.dart' as _i12;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i13;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i14;
 
 /// class Switch extends StatelessWidget
 class Switch$Mate extends _i1.Switch with _i2.Mate {
@@ -67,7 +68,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     super.materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
@@ -178,8 +179,9 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
-          'mouseCursor': _i2.BuilderArg<_i12.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i13.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -204,7 +206,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: splashRadius,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i13.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -303,7 +305,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
     /// optionalParameters: {MaterialStateProperty<Icon?>? thumbIcon} , default:none
     super.thumbIcon,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
@@ -417,8 +419,9 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
-          'mouseCursor': _i2.BuilderArg<_i12.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i13.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -443,7 +446,7 @@ class Switch$Mate extends _i1.Switch with _i2.Mate {
             init: splashRadius,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i13.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,

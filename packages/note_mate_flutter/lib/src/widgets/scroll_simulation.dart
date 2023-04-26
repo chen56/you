@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/scroll_simulation.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/physics/spring_simulation.dart' as _i3;
 import 'package:flutter/src/physics/tolerance.dart' as _i4;
+import 'package:flutter/cupertino.dart' as _i5;
 
 /// class BouncingScrollSimulation extends Simulation
 class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation with _i2.Mate {
@@ -28,7 +29,7 @@ class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation with _i
     /// optionalParameters: {double constantDeceleration = 0} , default:processed=IntegerLiteralImpl
     super.constantDeceleration,
 
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     super.tolerance,
   })  : mateParams = {
           'position': _i2.BuilderArg<double>(
@@ -66,6 +67,7 @@ class BouncingScrollSimulation$Mate extends _i1.BouncingScrollSimulation with _i
             name: 'tolerance',
             init: tolerance,
             isNamed: true,
+            defaultValue: _i5.Tolerance.defaultTolerance,
           ),
         },
         super() {
@@ -99,7 +101,7 @@ class ClampingScrollSimulation$Mate extends _i1.ClampingScrollSimulation with _i
     /// optionalParameters: {double friction = 0.015} , default:processed=DoubleLiteralImpl
     super.friction,
 
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     super.tolerance,
   })  : mateParams = {
           'position': _i2.BuilderArg<double>(
@@ -122,6 +124,7 @@ class ClampingScrollSimulation$Mate extends _i1.ClampingScrollSimulation with _i
             name: 'tolerance',
             init: tolerance,
             isNamed: true,
+            defaultValue: _i5.Tolerance.defaultTolerance,
           ),
         },
         super() {

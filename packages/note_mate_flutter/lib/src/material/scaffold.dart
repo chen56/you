@@ -10,8 +10,10 @@ import 'package:flutter/src/painting/edge_insets.dart' as _i6;
 import 'package:flutter/src/widgets/preferred_size.dart' as _i7;
 import 'package:flutter/src/material/floating_action_button_location.dart' as _i8;
 import 'package:flutter/src/painting/alignment.dart' as _i9;
-import 'package:flutter/src/material/drawer.dart' as _i10;
-import 'package:flutter/src/gestures/recognizer.dart' as _i11;
+import 'package:flutter/cupertino.dart' as _i10;
+import 'package:flutter/src/material/drawer.dart' as _i11;
+import 'package:flutter/src/gestures/recognizer.dart' as _i12;
+import 'package:flutter/gestures.dart' as _i13;
 
 /// class ScaffoldMessenger extends StatefulWidget
 class ScaffoldMessenger$Mate extends _i1.ScaffoldMessenger with _i2.Mate {
@@ -212,7 +214,7 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
     /// optionalParameters: {List<Widget>? persistentFooterButtons} , default:none
     super.persistentFooterButtons,
 
-    /// optionalParameters: {AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentDirectional persistentFooterAlignment = AlignmentDirectional.centerEnd} , default:processed=PrefixedIdentifierImpl
     super.persistentFooterAlignment,
 
     /// optionalParameters: {Widget? drawer} , default:none
@@ -242,7 +244,7 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
     /// optionalParameters: {bool primary = true} , default:processed=BooleanLiteralImpl
     super.primary,
 
-    /// optionalParameters: {DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior drawerDragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.drawerDragStartBehavior,
 
     /// optionalParameters: {bool extendBody = false} , default:processed=BooleanLiteralImpl
@@ -305,13 +307,14 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
             name: 'persistentFooterAlignment',
             init: persistentFooterAlignment,
             isNamed: true,
+            defaultValue: _i10.AlignmentDirectional.centerEnd,
           ),
           'drawer': _i2.BuilderArg<_i4.Widget?>(
             name: 'drawer',
             init: drawer,
             isNamed: true,
           ),
-          'onDrawerChanged': _i2.BuilderArg<_i10.DrawerCallback?>(
+          'onDrawerChanged': _i2.BuilderArg<_i11.DrawerCallback?>(
             name: 'onDrawerChanged',
             init: onDrawerChanged,
             isNamed: true,
@@ -321,7 +324,7 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
             init: endDrawer,
             isNamed: true,
           ),
-          'onEndDrawerChanged': _i2.BuilderArg<_i10.DrawerCallback?>(
+          'onEndDrawerChanged': _i2.BuilderArg<_i11.DrawerCallback?>(
             name: 'onEndDrawerChanged',
             init: onEndDrawerChanged,
             isNamed: true,
@@ -352,10 +355,11 @@ class Scaffold$Mate extends _i1.Scaffold with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'drawerDragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
+          'drawerDragStartBehavior': _i2.BuilderArg<_i12.DragStartBehavior>(
             name: 'drawerDragStartBehavior',
             init: drawerDragStartBehavior,
             isNamed: true,
+            defaultValue: _i13.DragStartBehavior.start,
           ),
           'extendBody': _i2.BuilderArg<bool>(
             name: 'extendBody',

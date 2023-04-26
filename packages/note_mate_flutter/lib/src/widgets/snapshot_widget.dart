@@ -4,7 +4,8 @@
 import 'package:flutter/src/widgets/snapshot_widget.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
-import 'package:flutter/src/widgets/framework.dart' as _i4;
+import 'package:flutter/cupertino.dart' as _i4;
+import 'package:flutter/src/widgets/framework.dart' as _i5;
 
 /// class SnapshotController extends ChangeNotifier
 class SnapshotController$Mate extends _i1.SnapshotController with _i2.Mate {
@@ -38,7 +39,7 @@ class SnapshotWidget$Mate extends _i1.SnapshotWidget with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {SnapshotMode mode = SnapshotMode.normal} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {SnapshotMode mode = SnapshotMode.normal} , default:processed=PrefixedIdentifierImpl
     super.mode,
 
     /// optionalParameters: {SnapshotPainter painter = const _DefaultSnapshotPainter()} , default:unprocessed=InstanceCreationExpressionImpl
@@ -62,6 +63,7 @@ class SnapshotWidget$Mate extends _i1.SnapshotWidget with _i2.Mate {
             name: 'mode',
             init: mode,
             isNamed: true,
+            defaultValue: _i4.SnapshotMode.normal,
           ),
           'painter': _i2.BuilderArg<_i1.SnapshotPainter>(
             name: 'painter',
@@ -79,7 +81,7 @@ class SnapshotWidget$Mate extends _i1.SnapshotWidget with _i2.Mate {
             init: controller,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i4.Widget?>(
+          'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,

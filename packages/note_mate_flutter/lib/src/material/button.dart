@@ -9,11 +9,13 @@ import 'package:flutter/src/foundation/basic_types.dart' as _i5;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i6;
 import 'package:flutter/src/painting/text_style.dart' as _i7;
 import 'package:flutter/src/painting/edge_insets.dart' as _i8;
-import 'package:flutter/src/material/theme_data.dart' as _i9;
-import 'package:flutter/src/rendering/box.dart' as _i10;
-import 'package:flutter/src/painting/borders.dart' as _i11;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i12;
-import 'package:flutter/src/widgets/framework.dart' as _i13;
+import 'package:flutter/cupertino.dart' as _i9;
+import 'package:flutter/src/material/theme_data.dart' as _i10;
+import 'package:flutter/material.dart' as _i11;
+import 'package:flutter/src/rendering/box.dart' as _i12;
+import 'package:flutter/src/painting/borders.dart' as _i13;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i14;
+import 'package:flutter/src/widgets/framework.dart' as _i15;
 
 /// class RawMaterialButton extends StatefulWidget
 class RawMaterialButton$Mate extends _i1.RawMaterialButton with _i2.Mate {
@@ -67,10 +69,10 @@ class RawMaterialButton$Mate extends _i1.RawMaterialButton with _i2.Mate {
     /// optionalParameters: {double disabledElevation = 0.0} , default:processed=DoubleLiteralImpl
     super.disabledElevation,
 
-    /// optionalParameters: {EdgeInsetsGeometry padding = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsetsGeometry padding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     super.padding,
 
-    /// optionalParameters: {VisualDensity visualDensity = VisualDensity.standard} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {VisualDensity visualDensity = VisualDensity.standard} , default:processed=PrefixedIdentifierImpl
     super.visualDensity,
 
     /// optionalParameters: {BoxConstraints constraints = const BoxConstraints(minWidth: 88.0, minHeight: 36.0)} , default:unprocessed=InstanceCreationExpressionImpl
@@ -82,7 +84,7 @@ class RawMaterialButton$Mate extends _i1.RawMaterialButton with _i2.Mate {
     /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , default:unprocessed=SimpleIdentifierImpl
     super.animationDuration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -189,18 +191,20 @@ class RawMaterialButton$Mate extends _i1.RawMaterialButton with _i2.Mate {
             name: 'padding',
             init: padding,
             isNamed: true,
+            defaultValue: _i9.EdgeInsets.zero,
           ),
-          'visualDensity': _i2.BuilderArg<_i9.VisualDensity>(
+          'visualDensity': _i2.BuilderArg<_i10.VisualDensity>(
             name: 'visualDensity',
             init: visualDensity,
             isNamed: true,
+            defaultValue: _i11.VisualDensity.standard,
           ),
-          'constraints': _i2.BuilderArg<_i10.BoxConstraints>(
+          'constraints': _i2.BuilderArg<_i12.BoxConstraints>(
             name: 'constraints',
             init: constraints,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i11.ShapeBorder>(
+          'shape': _i2.BuilderArg<_i13.ShapeBorder>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -214,8 +218,9 @@ class RawMaterialButton$Mate extends _i1.RawMaterialButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
-          'focusNode': _i2.BuilderArg<_i12.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -226,12 +231,12 @@ class RawMaterialButton$Mate extends _i1.RawMaterialButton with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'materialTapTargetSize': _i2.BuilderArg<_i9.MaterialTapTargetSize?>(
+          'materialTapTargetSize': _i2.BuilderArg<_i10.MaterialTapTargetSize?>(
             name: 'materialTapTargetSize',
             init: materialTapTargetSize,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i13.Widget?>(
+          'child': _i2.BuilderArg<_i15.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,

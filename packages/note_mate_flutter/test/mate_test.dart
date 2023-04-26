@@ -9,7 +9,8 @@ import "package:path/path.dart" as path;
 
 void main() {
   group('A group of tests', () {
-    var entryFile = path.normalize(path.absolute("tools/gen_mates_sample.dart"));
+    var entryFile =
+        path.normalize(path.absolute("tools/gen_mates_sample.dart"));
 
     Env env = Env();
     AnalysisContextCollection collection;
@@ -19,11 +20,11 @@ void main() {
     setUpAll(() async {
       collection = AnalysisContextCollection(
         includedPaths: [entryFile],
-        sdkPath: env.sdkDir,
+        sdkPath: env.dartSdkDir,
         resourceProvider: fs,
       );
-      entryLib = (await collection.contexts.first.currentSession.getResolvedLibrary(entryFile)
-              as ResolvedLibraryResult)
+      entryLib = (await collection.contexts.first.currentSession
+              .getResolvedLibrary(entryFile) as ResolvedLibraryResult)
           .element;
     });
 

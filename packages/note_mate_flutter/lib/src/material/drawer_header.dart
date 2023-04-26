@@ -7,7 +7,8 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/decoration.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 import 'package:flutter/src/animation/curves.dart' as _i6;
-import 'package:flutter/src/widgets/framework.dart' as _i7;
+import 'package:flutter/animation.dart' as _i7;
+import 'package:flutter/src/widgets/framework.dart' as _i8;
 
 /// class DrawerHeader extends StatelessWidget
 class DrawerHeader$Mate extends _i1.DrawerHeader with _i2.Mate {
@@ -28,7 +29,7 @@ class DrawerHeader$Mate extends _i1.DrawerHeader with _i2.Mate {
     /// optionalParameters: {Duration duration = const Duration(milliseconds: 250)} , default:unprocessed=InstanceCreationExpressionImpl
     super.duration,
 
-    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.fastOutSlowIn} , default:processed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {required Widget? child} , default:none
@@ -63,8 +64,9 @@ class DrawerHeader$Mate extends _i1.DrawerHeader with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
+            defaultValue: _i7.Curves.fastOutSlowIn,
           ),
-          'child': _i2.BuilderArg<_i7.Widget?>(
+          'child': _i2.BuilderArg<_i8.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,

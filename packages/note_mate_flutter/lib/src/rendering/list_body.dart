@@ -5,6 +5,7 @@ import 'package:flutter/src/rendering/list_body.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/rendering/box.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
+import 'package:flutter/cupertino.dart' as _i5;
 
 /// class RenderListBody extends RenderBox with ContainerRenderObjectMixin<RenderBox, ListBodyParentData>, RenderBoxContainerDefaultsMixin<RenderBox, ListBodyParentData>
 class RenderListBody$Mate extends _i1.RenderListBody with _i2.Mate {
@@ -13,7 +14,7 @@ class RenderListBody$Mate extends _i1.RenderListBody with _i2.Mate {
     /// optionalParameters: {List<RenderBox>? children} , default:none
     super.children,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
     super.axisDirection,
   })  : mateParams = {
           'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
@@ -25,6 +26,7 @@ class RenderListBody$Mate extends _i1.RenderListBody with _i2.Mate {
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
           ),
         },
         super() {

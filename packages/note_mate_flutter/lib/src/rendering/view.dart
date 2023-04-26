@@ -4,13 +4,14 @@
 import 'package:flutter/src/rendering/view.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/src/rendering/box.dart' as _i4;
+import 'package:flutter/animation.dart' as _i4;
+import 'package:flutter/src/rendering/box.dart' as _i5;
 
 /// class ViewConfiguration
 class ViewConfiguration$Mate extends _i1.ViewConfiguration with _i2.Mate {
   /// ViewConfiguration ViewConfiguration({Size size = Size.zero, double devicePixelRatio = 1.0})
   ViewConfiguration$Mate({
-    /// optionalParameters: {Size size = Size.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
     super.size,
 
     /// optionalParameters: {double devicePixelRatio = 1.0} , default:processed=DoubleLiteralImpl
@@ -20,6 +21,7 @@ class ViewConfiguration$Mate extends _i1.ViewConfiguration with _i2.Mate {
             name: 'size',
             init: size,
             isNamed: true,
+            defaultValue: _i4.Size.zero,
           ),
           'devicePixelRatio': _i2.BuilderArg<double>(
             name: 'devicePixelRatio',
@@ -54,7 +56,7 @@ class RenderView$Mate extends _i1.RenderView with _i2.Mate {
     /// optionalParameters: {required FlutterView view} , default:none
     required super.view,
   })  : mateParams = {
-          'child': _i2.BuilderArg<_i4.RenderBox?>(
+          'child': _i2.BuilderArg<_i5.RenderBox?>(
             name: 'child',
             init: child,
             isNamed: true,

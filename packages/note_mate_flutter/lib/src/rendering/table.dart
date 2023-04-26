@@ -7,7 +7,8 @@ import 'dart:ui' as _i3;
 import 'package:flutter/src/rendering/table_border.dart' as _i4;
 import 'package:flutter/src/painting/decoration.dart' as _i5;
 import 'package:flutter/src/painting/image_provider.dart' as _i6;
-import 'package:flutter/src/rendering/box.dart' as _i7;
+import 'package:flutter/cupertino.dart' as _i7;
+import 'package:flutter/src/rendering/box.dart' as _i8;
 
 /// class IntrinsicColumnWidth extends TableColumnWidth
 class IntrinsicColumnWidth$Mate extends _i1.IntrinsicColumnWidth with _i2.Mate {
@@ -199,10 +200,10 @@ class RenderTable$Mate extends _i1.RenderTable with _i2.Mate {
     /// optionalParameters: {List<Decoration?>? rowDecorations} , default:none
     super.rowDecorations,
 
-    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageConfiguration configuration = ImageConfiguration.empty} , default:processed=PrefixedIdentifierImpl
     super.configuration,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
     super.defaultVerticalAlignment,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
@@ -250,18 +251,20 @@ class RenderTable$Mate extends _i1.RenderTable with _i2.Mate {
             name: 'configuration',
             init: configuration,
             isNamed: true,
+            defaultValue: _i7.ImageConfiguration.empty,
           ),
           'defaultVerticalAlignment': _i2.BuilderArg<_i1.TableCellVerticalAlignment>(
             name: 'defaultVerticalAlignment',
             init: defaultVerticalAlignment,
             isNamed: true,
+            defaultValue: _i7.TableCellVerticalAlignment.top,
           ),
           'textBaseline': _i2.BuilderArg<_i3.TextBaseline?>(
             name: 'textBaseline',
             init: textBaseline,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<List<_i7.RenderBox>>?>(
+          'children': _i2.BuilderArg<List<List<_i8.RenderBox>>?>(
             name: 'children',
             init: children,
             isNamed: true,

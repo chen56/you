@@ -9,7 +9,8 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
 import 'package:flutter/src/widgets/shortcuts.dart' as _i6;
 import 'package:flutter/src/foundation/basic_types.dart' as _i7;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i8;
-import 'dart:ui' as _i9;
+import 'package:flutter/cupertino.dart' as _i9;
+import 'dart:ui' as _i10;
 
 /// class ActionListener extends StatefulWidget
 class ActionListener$Mate extends _i1.ActionListener with _i2.Mate {
@@ -176,7 +177,7 @@ class FocusableActionDetector$Mate extends _i1.FocusableActionDetector with _i2.
     /// optionalParameters: {void Function(bool)? onFocusChange} , default:none
     super.onFocusChange,
 
-    /// optionalParameters: {MouseCursor mouseCursor = MouseCursor.defer} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MouseCursor mouseCursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
     super.mouseCursor,
 
     /// optionalParameters: {bool includeFocusSemantics = true} , default:processed=BooleanLiteralImpl
@@ -248,6 +249,7 @@ class FocusableActionDetector$Mate extends _i1.FocusableActionDetector with _i2.
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
+            defaultValue: _i9.MouseCursor.defer,
           ),
           'includeFocusSemantics': _i2.BuilderArg<bool>(
             name: 'includeFocusSemantics',
@@ -294,7 +296,7 @@ class VoidCallbackIntent$Mate extends _i1.VoidCallbackIntent with _i2.Mate {
       /// requiredParameters: void Function() callback
       super.callback)
       : mateParams = {
-          'callback': _i2.BuilderArg<_i9.VoidCallback>(
+          'callback': _i2.BuilderArg<_i10.VoidCallback>(
             name: 'callback',
             init: callback,
             isNamed: false,

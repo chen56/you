@@ -57,7 +57,7 @@ class ChoiceChip$Mate extends _i1.ChoiceChip with _i2.Mate {
     /// optionalParameters: {OutlinedBorder? shape} , default:none
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -165,6 +165,7 @@ class ChoiceChip$Mate extends _i1.ChoiceChip with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i8.Clip.none,
           ),
           'focusNode': _i2.BuilderArg<_i10.FocusNode?>(
             name: 'focusNode',

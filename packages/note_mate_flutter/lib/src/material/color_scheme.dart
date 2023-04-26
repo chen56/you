@@ -4,6 +4,7 @@
 import 'package:flutter/src/material/color_scheme.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
+import 'package:flutter/material.dart' as _i4;
 
 /// class ColorScheme with Diagnosticable
 class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
@@ -298,13 +299,13 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
 
   /// ColorScheme ColorScheme.light({Brightness brightness = Brightness.light, Color primary = const Color(0xff6200ee), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffb00020), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700b3), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.light({
-    /// optionalParameters: {Brightness brightness = Brightness.light} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Brightness brightness = Brightness.light} , default:processed=PrefixedIdentifierImpl
     super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xff6200ee)} , default:unprocessed=InstanceCreationExpressionImpl
     super.primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onPrimary = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
@@ -316,7 +317,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , default:unprocessed=InstanceCreationExpressionImpl
     super.secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
@@ -340,7 +341,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color error = const Color(0xffb00020)} , default:unprocessed=InstanceCreationExpressionImpl
     super.error,
 
-    /// optionalParameters: {Color onError = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onError = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
@@ -349,16 +350,16 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color? onErrorContainer} , default:none
     super.onErrorContainer,
 
-    /// optionalParameters: {Color background = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color background = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.background,
 
-    /// optionalParameters: {Color onBackground = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onBackground = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onBackground,
 
-    /// optionalParameters: {Color surface = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color surface = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.surface,
 
-    /// optionalParameters: {Color onSurface = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSurface = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
@@ -395,6 +396,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'brightness',
             init: brightness,
             isNamed: true,
+            defaultValue: _i3.Brightness.light,
           ),
           'primary': _i2.BuilderArg<_i3.Color>(
             name: 'primary',
@@ -405,6 +407,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onPrimary',
             init: onPrimary,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'primaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'primaryContainer',
@@ -425,6 +428,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onSecondary',
             init: onSecondary,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'secondaryContainer',
@@ -465,6 +469,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onError',
             init: onError,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'errorContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'errorContainer',
@@ -480,21 +485,25 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'background',
             init: background,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'onBackground': _i2.BuilderArg<_i3.Color>(
             name: 'onBackground',
             init: onBackground,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'surface': _i2.BuilderArg<_i3.Color>(
             name: 'surface',
             init: surface,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'onSurface': _i2.BuilderArg<_i3.Color>(
             name: 'onSurface',
             init: onSurface,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
             name: 'surfaceVariant',
@@ -587,13 +596,13 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
 
   /// ColorScheme ColorScheme.dark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffbb86fc), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff03dac6), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xffcf6679), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff3700B3), Color? secondaryVariant = const Color(0xff03dac6)})
   ColorScheme$Mate.dark({
-    /// optionalParameters: {Brightness brightness = Brightness.dark} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Brightness brightness = Brightness.dark} , default:processed=PrefixedIdentifierImpl
     super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xffbb86fc)} , default:unprocessed=InstanceCreationExpressionImpl
     super.primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onPrimary = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
@@ -605,7 +614,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color secondary = const Color(0xff03dac6)} , default:unprocessed=InstanceCreationExpressionImpl
     super.secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
@@ -629,7 +638,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color error = const Color(0xffcf6679)} , default:unprocessed=InstanceCreationExpressionImpl
     super.error,
 
-    /// optionalParameters: {Color onError = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onError = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
@@ -641,13 +650,13 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color background = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
     super.background,
 
-    /// optionalParameters: {Color onBackground = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onBackground = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onBackground,
 
     /// optionalParameters: {Color surface = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
     super.surface,
 
-    /// optionalParameters: {Color onSurface = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSurface = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
@@ -684,6 +693,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'brightness',
             init: brightness,
             isNamed: true,
+            defaultValue: _i3.Brightness.dark,
           ),
           'primary': _i2.BuilderArg<_i3.Color>(
             name: 'primary',
@@ -694,6 +704,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onPrimary',
             init: onPrimary,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'primaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'primaryContainer',
@@ -714,6 +725,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onSecondary',
             init: onSecondary,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'secondaryContainer',
@@ -754,6 +766,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onError',
             init: onError,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'errorContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'errorContainer',
@@ -774,6 +787,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onBackground',
             init: onBackground,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'surface': _i2.BuilderArg<_i3.Color>(
             name: 'surface',
@@ -784,6 +798,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onSurface',
             init: onSurface,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
             name: 'surfaceVariant',
@@ -876,13 +891,13 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
 
   /// ColorScheme ColorScheme.highContrastLight({Brightness brightness = Brightness.light, Color primary = const Color(0xff0000ba), Color onPrimary = Colors.white, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff790000), Color onError = Colors.white, Color? errorContainer, Color? onErrorContainer, Color background = Colors.white, Color onBackground = Colors.black, Color surface = Colors.white, Color onSurface = Colors.black, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xff000088), Color? secondaryVariant = const Color(0xff018786)})
   ColorScheme$Mate.highContrastLight({
-    /// optionalParameters: {Brightness brightness = Brightness.light} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Brightness brightness = Brightness.light} , default:processed=PrefixedIdentifierImpl
     super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xff0000ba)} , default:unprocessed=InstanceCreationExpressionImpl
     super.primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onPrimary = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
@@ -894,7 +909,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , default:unprocessed=InstanceCreationExpressionImpl
     super.secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
@@ -918,7 +933,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color error = const Color(0xff790000)} , default:unprocessed=InstanceCreationExpressionImpl
     super.error,
 
-    /// optionalParameters: {Color onError = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onError = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
@@ -927,16 +942,16 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color? onErrorContainer} , default:none
     super.onErrorContainer,
 
-    /// optionalParameters: {Color background = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color background = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.background,
 
-    /// optionalParameters: {Color onBackground = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onBackground = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onBackground,
 
-    /// optionalParameters: {Color surface = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color surface = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.surface,
 
-    /// optionalParameters: {Color onSurface = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSurface = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
@@ -973,6 +988,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'brightness',
             init: brightness,
             isNamed: true,
+            defaultValue: _i3.Brightness.light,
           ),
           'primary': _i2.BuilderArg<_i3.Color>(
             name: 'primary',
@@ -983,6 +999,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onPrimary',
             init: onPrimary,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'primaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'primaryContainer',
@@ -1003,6 +1020,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onSecondary',
             init: onSecondary,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'secondaryContainer',
@@ -1043,6 +1061,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onError',
             init: onError,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'errorContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'errorContainer',
@@ -1058,21 +1077,25 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'background',
             init: background,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'onBackground': _i2.BuilderArg<_i3.Color>(
             name: 'onBackground',
             init: onBackground,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'surface': _i2.BuilderArg<_i3.Color>(
             name: 'surface',
             init: surface,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'onSurface': _i2.BuilderArg<_i3.Color>(
             name: 'onSurface',
             init: onSurface,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
             name: 'surfaceVariant',
@@ -1165,13 +1188,13 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
 
   /// ColorScheme ColorScheme.highContrastDark({Brightness brightness = Brightness.dark, Color primary = const Color(0xffefb7ff), Color onPrimary = Colors.black, Color? primaryContainer, Color? onPrimaryContainer, Color secondary = const Color(0xff66fff9), Color onSecondary = Colors.black, Color? secondaryContainer, Color? onSecondaryContainer, Color? tertiary, Color? onTertiary, Color? tertiaryContainer, Color? onTertiaryContainer, Color error = const Color(0xff9b374d), Color onError = Colors.black, Color? errorContainer, Color? onErrorContainer, Color background = const Color(0xff121212), Color onBackground = Colors.white, Color surface = const Color(0xff121212), Color onSurface = Colors.white, Color? surfaceVariant, Color? onSurfaceVariant, Color? outline, Color? outlineVariant, Color? shadow, Color? scrim, Color? inverseSurface, Color? onInverseSurface, Color? inversePrimary, Color? surfaceTint, Color? primaryVariant = const Color(0xffbe9eff), Color? secondaryVariant = const Color(0xff66fff9)})
   ColorScheme$Mate.highContrastDark({
-    /// optionalParameters: {Brightness brightness = Brightness.dark} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Brightness brightness = Brightness.dark} , default:processed=PrefixedIdentifierImpl
     super.brightness,
 
     /// optionalParameters: {Color primary = const Color(0xffefb7ff)} , default:unprocessed=InstanceCreationExpressionImpl
     super.primary,
 
-    /// optionalParameters: {Color onPrimary = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onPrimary = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onPrimary,
 
     /// optionalParameters: {Color? primaryContainer} , default:none
@@ -1183,7 +1206,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color secondary = const Color(0xff66fff9)} , default:unprocessed=InstanceCreationExpressionImpl
     super.secondary,
 
-    /// optionalParameters: {Color onSecondary = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSecondary = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onSecondary,
 
     /// optionalParameters: {Color? secondaryContainer} , default:none
@@ -1207,7 +1230,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color error = const Color(0xff9b374d)} , default:unprocessed=InstanceCreationExpressionImpl
     super.error,
 
-    /// optionalParameters: {Color onError = Colors.black} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onError = Colors.black} , default:processed=PrefixedIdentifierImpl
     super.onError,
 
     /// optionalParameters: {Color? errorContainer} , default:none
@@ -1219,13 +1242,13 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
     /// optionalParameters: {Color background = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
     super.background,
 
-    /// optionalParameters: {Color onBackground = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onBackground = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onBackground,
 
     /// optionalParameters: {Color surface = const Color(0xff121212)} , default:unprocessed=InstanceCreationExpressionImpl
     super.surface,
 
-    /// optionalParameters: {Color onSurface = Colors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color onSurface = Colors.white} , default:processed=PrefixedIdentifierImpl
     super.onSurface,
 
     /// optionalParameters: {Color? surfaceVariant} , default:none
@@ -1262,6 +1285,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'brightness',
             init: brightness,
             isNamed: true,
+            defaultValue: _i3.Brightness.dark,
           ),
           'primary': _i2.BuilderArg<_i3.Color>(
             name: 'primary',
@@ -1272,6 +1296,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onPrimary',
             init: onPrimary,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'primaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'primaryContainer',
@@ -1292,6 +1317,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onSecondary',
             init: onSecondary,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'secondaryContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'secondaryContainer',
@@ -1332,6 +1358,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onError',
             init: onError,
             isNamed: true,
+            defaultValue: _i4.Colors.black,
           ),
           'errorContainer': _i2.BuilderArg<_i3.Color?>(
             name: 'errorContainer',
@@ -1352,6 +1379,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onBackground',
             init: onBackground,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'surface': _i2.BuilderArg<_i3.Color>(
             name: 'surface',
@@ -1362,6 +1390,7 @@ class ColorScheme$Mate extends _i1.ColorScheme with _i2.Mate {
             name: 'onSurface',
             init: onSurface,
             isNamed: true,
+            defaultValue: _i4.Colors.white,
           ),
           'surfaceVariant': _i2.BuilderArg<_i3.Color?>(
             name: 'surfaceVariant',

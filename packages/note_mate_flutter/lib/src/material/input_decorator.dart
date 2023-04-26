@@ -11,7 +11,8 @@ import 'package:flutter/src/widgets/framework.dart' as _i7;
 import 'package:flutter/src/painting/edge_insets.dart' as _i8;
 import 'package:flutter/src/rendering/box.dart' as _i9;
 import 'package:flutter/src/material/input_border.dart' as _i10;
-import 'package:flutter/src/painting/borders.dart' as _i11;
+import 'package:flutter/material.dart' as _i11;
+import 'package:flutter/src/painting/borders.dart' as _i12;
 
 /// class InputDecorator extends StatefulWidget
 class InputDecorator$Mate extends _i1.InputDecorator with _i2.Mate {
@@ -616,7 +617,7 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
     /// optionalParameters: {Color? hoverColor} , default:none
     super.hoverColor,
 
-    /// optionalParameters: {InputBorder? border = InputBorder.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {InputBorder? border = InputBorder.none} , default:processed=PrefixedIdentifierImpl
     super.border,
 
     /// optionalParameters: {bool enabled = true} , default:processed=BooleanLiteralImpl
@@ -672,6 +673,7 @@ class InputDecoration$Mate extends _i1.InputDecoration with _i2.Mate {
             name: 'border',
             init: border,
             isNamed: true,
+            defaultValue: _i11.InputBorder.none,
           ),
           'enabled': _i2.BuilderArg<bool>(
             name: 'enabled',
@@ -727,10 +729,10 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
     /// optionalParameters: {int? errorMaxLines} , default:none
     super.errorMaxLines,
 
-    /// optionalParameters: {FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FloatingLabelBehavior floatingLabelBehavior = FloatingLabelBehavior.auto} , default:processed=PrefixedIdentifierImpl
     super.floatingLabelBehavior,
 
-    /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FloatingLabelAlignment floatingLabelAlignment = FloatingLabelAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.floatingLabelAlignment,
 
     /// optionalParameters: {bool isDense = false} , default:processed=BooleanLiteralImpl
@@ -841,11 +843,13 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
             name: 'floatingLabelBehavior',
             init: floatingLabelBehavior,
             isNamed: true,
+            defaultValue: _i11.FloatingLabelBehavior.auto,
           ),
           'floatingLabelAlignment': _i2.BuilderArg<_i1.FloatingLabelAlignment>(
             name: 'floatingLabelAlignment',
             init: floatingLabelAlignment,
             isNamed: true,
+            defaultValue: _i11.FloatingLabelAlignment.start,
           ),
           'isDense': _i2.BuilderArg<bool>(
             name: 'isDense',
@@ -905,12 +909,12 @@ class InputDecorationTheme$Mate extends _i1.InputDecorationTheme with _i2.Mate {
             init: fillColor,
             isNamed: true,
           ),
-          'activeIndicatorBorder': _i2.BuilderArg<_i11.BorderSide?>(
+          'activeIndicatorBorder': _i2.BuilderArg<_i12.BorderSide?>(
             name: 'activeIndicatorBorder',
             init: activeIndicatorBorder,
             isNamed: true,
           ),
-          'outlineBorder': _i2.BuilderArg<_i11.BorderSide?>(
+          'outlineBorder': _i2.BuilderArg<_i12.BorderSide?>(
             name: 'outlineBorder',
             init: outlineBorder,
             isNamed: true,

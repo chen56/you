@@ -5,13 +5,14 @@ import 'package:flutter/src/cupertino/magnifier.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/animation/curves.dart' as _i4;
-import 'package:flutter/src/widgets/magnifier.dart' as _i5;
-import 'package:flutter/src/foundation/change_notifier.dart' as _i6;
-import 'dart:ui' as _i7;
-import 'package:flutter/src/painting/border_radius.dart' as _i8;
-import 'package:flutter/src/painting/box_shadow.dart' as _i9;
-import 'package:flutter/src/painting/borders.dart' as _i10;
-import 'package:flutter/src/animation/animation.dart' as _i11;
+import 'package:flutter/animation.dart' as _i5;
+import 'package:flutter/src/widgets/magnifier.dart' as _i6;
+import 'package:flutter/src/foundation/change_notifier.dart' as _i7;
+import 'dart:ui' as _i8;
+import 'package:flutter/src/painting/border_radius.dart' as _i9;
+import 'package:flutter/src/painting/box_shadow.dart' as _i10;
+import 'package:flutter/src/painting/borders.dart' as _i11;
+import 'package:flutter/src/animation/animation.dart' as _i12;
 
 /// class CupertinoTextMagnifier extends StatefulWidget
 class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Mate {
@@ -20,7 +21,7 @@ class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Ma
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Curve animationCurve = Curves.easeOut} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve animationCurve = Curves.easeOut} , default:processed=PrefixedIdentifierImpl
     super.animationCurve,
 
     /// optionalParameters: {required MagnifierController controller} , default:none
@@ -47,8 +48,9 @@ class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Ma
             name: 'animationCurve',
             init: animationCurve,
             isNamed: true,
+            defaultValue: _i5.Curves.easeOut,
           ),
-          'controller': _i2.BuilderArg<_i5.MagnifierController>(
+          'controller': _i2.BuilderArg<_i6.MagnifierController>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -71,7 +73,7 @@ class CupertinoTextMagnifier$Mate extends _i1.CupertinoTextMagnifier with _i2.Ma
             isNamed: true,
             defaultValue: 10.0,
           ),
-          'magnifierInfo': _i2.BuilderArg<_i6.ValueNotifier<_i5.MagnifierInfo>>(
+          'magnifierInfo': _i2.BuilderArg<_i7.ValueNotifier<_i6.MagnifierInfo>>(
             name: 'magnifierInfo',
             init: magnifierInfo,
             isNamed: true,
@@ -108,7 +110,7 @@ class CupertinoMagnifier$Mate extends _i1.CupertinoMagnifier with _i2.Mate {
     /// optionalParameters: {BorderRadius borderRadius = const BorderRadius.all(Radius.elliptical(60, 50))} , default:unprocessed=InstanceCreationExpressionImpl
     super.borderRadius,
 
-    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset additionalFocalPointOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.additionalFocalPointOffset,
 
     /// optionalParameters: {List<BoxShadow> shadows = const <BoxShadow>[BoxShadow(color: Color.fromARGB(25, 0, 0, 0), blurRadius: 11, spreadRadius: 0.2)]} , default:unprocessed=ListLiteralImpl
@@ -125,32 +127,33 @@ class CupertinoMagnifier$Mate extends _i1.CupertinoMagnifier with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'size': _i2.BuilderArg<_i7.Size>(
+          'size': _i2.BuilderArg<_i8.Size>(
             name: 'size',
             init: size,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i8.BorderRadius>(
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadius>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'additionalFocalPointOffset': _i2.BuilderArg<_i7.Offset>(
+          'additionalFocalPointOffset': _i2.BuilderArg<_i8.Offset>(
             name: 'additionalFocalPointOffset',
             init: additionalFocalPointOffset,
             isNamed: true,
+            defaultValue: _i5.Offset.zero,
           ),
-          'shadows': _i2.BuilderArg<List<_i9.BoxShadow>>(
+          'shadows': _i2.BuilderArg<List<_i10.BoxShadow>>(
             name: 'shadows',
             init: shadows,
             isNamed: true,
           ),
-          'borderSide': _i2.BuilderArg<_i10.BorderSide>(
+          'borderSide': _i2.BuilderArg<_i11.BorderSide>(
             name: 'borderSide',
             init: borderSide,
             isNamed: true,
           ),
-          'inOutAnimation': _i2.BuilderArg<_i11.Animation<double>?>(
+          'inOutAnimation': _i2.BuilderArg<_i12.Animation<double>?>(
             name: 'inOutAnimation',
             init: inOutAnimation,
             isNamed: true,

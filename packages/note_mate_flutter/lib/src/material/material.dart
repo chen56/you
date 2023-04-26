@@ -4,11 +4,12 @@
 import 'package:flutter/src/material/material.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
-import 'dart:ui' as _i4;
-import 'package:flutter/src/painting/text_style.dart' as _i5;
-import 'package:flutter/src/painting/border_radius.dart' as _i6;
-import 'package:flutter/src/painting/borders.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:flutter/material.dart' as _i4;
+import 'dart:ui' as _i5;
+import 'package:flutter/src/painting/text_style.dart' as _i6;
+import 'package:flutter/src/painting/border_radius.dart' as _i7;
+import 'package:flutter/src/painting/borders.dart' as _i8;
+import 'package:flutter/src/widgets/framework.dart' as _i9;
 
 /// class Material extends StatefulWidget
 class Material$Mate extends _i1.Material with _i2.Mate {
@@ -17,7 +18,7 @@ class Material$Mate extends _i1.Material with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {MaterialType type = MaterialType.canvas} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MaterialType type = MaterialType.canvas} , default:processed=PrefixedIdentifierImpl
     super.type,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
@@ -44,7 +45,7 @@ class Material$Mate extends _i1.Material with _i2.Mate {
     /// optionalParameters: {bool borderOnForeground = true} , default:processed=BooleanLiteralImpl
     super.borderOnForeground,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Duration animationDuration = kThemeChangeDuration} , default:unprocessed=SimpleIdentifierImpl
@@ -62,6 +63,7 @@ class Material$Mate extends _i1.Material with _i2.Mate {
             name: 'type',
             init: type,
             isNamed: true,
+            defaultValue: _i4.MaterialType.canvas,
           ),
           'elevation': _i2.BuilderArg<double>(
             name: 'elevation',
@@ -69,32 +71,32 @@ class Material$Mate extends _i1.Material with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'color': _i2.BuilderArg<_i4.Color?>(
+          'color': _i2.BuilderArg<_i5.Color?>(
             name: 'color',
             init: color,
             isNamed: true,
           ),
-          'shadowColor': _i2.BuilderArg<_i4.Color?>(
+          'shadowColor': _i2.BuilderArg<_i5.Color?>(
             name: 'shadowColor',
             init: shadowColor,
             isNamed: true,
           ),
-          'surfaceTintColor': _i2.BuilderArg<_i4.Color?>(
+          'surfaceTintColor': _i2.BuilderArg<_i5.Color?>(
             name: 'surfaceTintColor',
             init: surfaceTintColor,
             isNamed: true,
           ),
-          'textStyle': _i2.BuilderArg<_i5.TextStyle?>(
+          'textStyle': _i2.BuilderArg<_i6.TextStyle?>(
             name: 'textStyle',
             init: textStyle,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i6.BorderRadiusGeometry?>(
+          'borderRadius': _i2.BuilderArg<_i7.BorderRadiusGeometry?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i7.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i8.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -105,17 +107,18 @@ class Material$Mate extends _i1.Material with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i4.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i5.Clip.none,
           ),
           'animationDuration': _i2.BuilderArg<Duration>(
             name: 'animationDuration',
             init: animationDuration,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget?>(
+          'child': _i2.BuilderArg<_i9.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -155,12 +158,12 @@ class ShapeBorderTween$Mate extends _i1.ShapeBorderTween with _i2.Mate {
     /// optionalParameters: {ShapeBorder? end} , default:none
     super.end,
   })  : mateParams = {
-          'begin': _i2.BuilderArg<_i7.ShapeBorder?>(
+          'begin': _i2.BuilderArg<_i8.ShapeBorder?>(
             name: 'begin',
             init: begin,
             isNamed: true,
           ),
-          'end': _i2.BuilderArg<_i7.ShapeBorder?>(
+          'end': _i2.BuilderArg<_i8.ShapeBorder?>(
             name: 'end',
             init: end,
             isNamed: true,

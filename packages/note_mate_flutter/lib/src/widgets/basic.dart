@@ -8,31 +8,33 @@ import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 import 'package:flutter/src/rendering/proxy_box.dart' as _i6;
 import 'package:flutter/src/rendering/custom_paint.dart' as _i7;
-import 'package:flutter/src/painting/border_radius.dart' as _i8;
-import 'package:flutter/src/painting/box_border.dart' as _i9;
-import 'package:vector_math/vector_math_64.dart' as _i10;
-import 'package:flutter/src/painting/alignment.dart' as _i11;
-import 'package:flutter/src/rendering/layer.dart' as _i12;
-import 'package:flutter/src/painting/box_fit.dart' as _i13;
-import 'package:flutter/src/painting/edge_insets.dart' as _i14;
-import 'package:flutter/src/rendering/shifted_box.dart' as _i15;
-import 'package:flutter/src/rendering/custom_layout.dart' as _i16;
-import 'package:flutter/src/rendering/box.dart' as _i17;
-import 'package:flutter/src/painting/basic_types.dart' as _i18;
-import 'package:flutter/src/rendering/stack.dart' as _i19;
-import 'package:flutter/src/rendering/flex.dart' as _i20;
-import 'package:flutter/src/rendering/wrap.dart' as _i21;
-import 'package:flutter/src/rendering/flow.dart' as _i22;
-import 'package:flutter/src/painting/inline_span.dart' as _i23;
-import 'package:flutter/src/painting/text_painter.dart' as _i24;
-import 'package:flutter/src/painting/strut_style.dart' as _i25;
-import 'package:flutter/src/rendering/selection.dart' as _i26;
-import 'package:flutter/src/animation/animation.dart' as _i27;
-import 'package:flutter/src/painting/decoration_image.dart' as _i28;
-import 'package:flutter/src/services/asset_bundle.dart' as _i29;
-import 'package:flutter/src/services/mouse_tracking.dart' as _i30;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i31;
-import 'package:flutter/src/semantics/semantics.dart' as _i32;
+import 'package:flutter/animation.dart' as _i8;
+import 'package:flutter/src/painting/border_radius.dart' as _i9;
+import 'package:flutter/cupertino.dart' as _i10;
+import 'package:flutter/src/painting/box_border.dart' as _i11;
+import 'package:vector_math/vector_math_64.dart' as _i12;
+import 'package:flutter/src/painting/alignment.dart' as _i13;
+import 'package:flutter/src/rendering/layer.dart' as _i14;
+import 'package:flutter/src/painting/box_fit.dart' as _i15;
+import 'package:flutter/src/painting/edge_insets.dart' as _i16;
+import 'package:flutter/src/rendering/shifted_box.dart' as _i17;
+import 'package:flutter/src/rendering/custom_layout.dart' as _i18;
+import 'package:flutter/src/rendering/box.dart' as _i19;
+import 'package:flutter/src/painting/basic_types.dart' as _i20;
+import 'package:flutter/src/rendering/stack.dart' as _i21;
+import 'package:flutter/src/rendering/flex.dart' as _i22;
+import 'package:flutter/src/rendering/wrap.dart' as _i23;
+import 'package:flutter/src/rendering/flow.dart' as _i24;
+import 'package:flutter/src/painting/inline_span.dart' as _i25;
+import 'package:flutter/src/painting/text_painter.dart' as _i26;
+import 'package:flutter/src/painting/strut_style.dart' as _i27;
+import 'package:flutter/src/rendering/selection.dart' as _i28;
+import 'package:flutter/src/animation/animation.dart' as _i29;
+import 'package:flutter/src/painting/decoration_image.dart' as _i30;
+import 'package:flutter/src/services/asset_bundle.dart' as _i31;
+import 'package:flutter/src/services/mouse_tracking.dart' as _i32;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i33;
+import 'package:flutter/src/semantics/semantics.dart' as _i34;
 export 'package:flutter/animation.dart';
 export 'package:flutter/painting.dart';
 
@@ -142,7 +144,7 @@ class ShaderMask$Mate extends _i1.ShaderMask with _i2.Mate {
     /// optionalParameters: {required Shader Function(Rect) shaderCallback} , default:none
     required super.shaderCallback,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BlendMode blendMode = BlendMode.modulate} , default:processed=PrefixedIdentifierImpl
     super.blendMode,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -162,6 +164,7 @@ class ShaderMask$Mate extends _i1.ShaderMask with _i2.Mate {
             name: 'blendMode',
             init: blendMode,
             isNamed: true,
+            defaultValue: _i4.BlendMode.modulate,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -197,7 +200,7 @@ class BackdropFilter$Mate extends _i1.BackdropFilter with _i2.Mate {
     /// optionalParameters: {Widget? child} , default:none
     super.child,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
     super.blendMode,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -219,6 +222,7 @@ class BackdropFilter$Mate extends _i1.BackdropFilter with _i2.Mate {
             name: 'blendMode',
             init: blendMode,
             isNamed: true,
+            defaultValue: _i4.BlendMode.srcOver,
           ),
         },
         super() {
@@ -249,7 +253,7 @@ class CustomPaint$Mate extends _i1.CustomPaint with _i2.Mate {
     /// optionalParameters: {CustomPainter? foregroundPainter} , default:none
     super.foregroundPainter,
 
-    /// optionalParameters: {Size size = Size.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Size size = Size.zero} , default:processed=PrefixedIdentifierImpl
     super.size,
 
     /// optionalParameters: {bool isComplex = false} , default:processed=BooleanLiteralImpl
@@ -280,6 +284,7 @@ class CustomPaint$Mate extends _i1.CustomPaint with _i2.Mate {
             name: 'size',
             init: size,
             isNamed: true,
+            defaultValue: _i8.Size.zero,
           ),
           'isComplex': _i2.BuilderArg<bool>(
             name: 'isComplex',
@@ -327,7 +332,7 @@ class ClipRect$Mate extends _i1.ClipRect with _i2.Mate {
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -347,6 +352,7 @@ class ClipRect$Mate extends _i1.ClipRect with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -376,13 +382,13 @@ class ClipRRect$Mate extends _i1.ClipRRect with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderRadiusGeometry? borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
     super.borderRadius,
 
     /// optionalParameters: {CustomClipper<RRect>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -393,10 +399,11 @@ class ClipRRect$Mate extends _i1.ClipRRect with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'borderRadius': _i2.BuilderArg<_i8.BorderRadiusGeometry?>(
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadiusGeometry?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
+            defaultValue: _i10.BorderRadius.zero,
           ),
           'clipper': _i2.BuilderArg<_i6.CustomClipper<_i4.RRect>?>(
             name: 'clipper',
@@ -407,6 +414,7 @@ class ClipRRect$Mate extends _i1.ClipRRect with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.antiAlias,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -440,7 +448,7 @@ class ClipOval$Mate extends _i1.ClipOval with _i2.Mate {
     /// optionalParameters: {CustomClipper<Rect>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -460,6 +468,7 @@ class ClipOval$Mate extends _i1.ClipOval with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.antiAlias,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -492,7 +501,7 @@ class ClipPath$Mate extends _i1.ClipPath with _i2.Mate {
     /// optionalParameters: {CustomClipper<Path>? clipper} , default:none
     super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -512,6 +521,7 @@ class ClipPath$Mate extends _i1.ClipPath with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.antiAlias,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -541,10 +551,10 @@ class PhysicalModel$Mate extends _i1.PhysicalModel with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
@@ -567,17 +577,19 @@ class PhysicalModel$Mate extends _i1.PhysicalModel with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i9.BoxShape>(
+          'shape': _i2.BuilderArg<_i11.BoxShape>(
             name: 'shape',
             init: shape,
             isNamed: true,
+            defaultValue: _i10.BoxShape.rectangle,
           ),
           'clipBehavior': _i2.BuilderArg<_i4.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
-          'borderRadius': _i2.BuilderArg<_i8.BorderRadius?>(
+          'borderRadius': _i2.BuilderArg<_i9.BorderRadius?>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
@@ -633,7 +645,7 @@ class PhysicalShape$Mate extends _i1.PhysicalShape with _i2.Mate {
     /// optionalParameters: {required CustomClipper<Path> clipper} , default:none
     required super.clipper,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {double elevation = 0.0} , default:processed=DoubleLiteralImpl
@@ -662,6 +674,7 @@ class PhysicalShape$Mate extends _i1.PhysicalShape with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'elevation': _i2.BuilderArg<double>(
             name: 'elevation',
@@ -733,7 +746,7 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'transform': _i2.BuilderArg<_i10.Matrix4>(
+          'transform': _i2.BuilderArg<_i12.Matrix4>(
             name: 'transform',
             init: transform,
             isNamed: true,
@@ -743,7 +756,7 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
             init: origin,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
@@ -790,7 +803,7 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
     /// optionalParameters: {Offset? origin} , default:none
     super.origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
@@ -817,10 +830,11 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
             init: origin,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
           'transformHitTests': _i2.BuilderArg<bool>(
             name: 'transformHitTests',
@@ -926,7 +940,7 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
     /// optionalParameters: {Offset? origin} , default:none
     super.origin,
 
-    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry? alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {bool transformHitTests = true} , default:processed=BooleanLiteralImpl
@@ -963,10 +977,11 @@ class Transform$Mate extends _i1.Transform with _i2.Mate {
             init: origin,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
           'transformHitTests': _i2.BuilderArg<bool>(
             name: 'transformHitTests',
@@ -1099,7 +1114,7 @@ class CompositedTransformTarget$Mate extends _i1.CompositedTransformTarget with 
             init: key,
             isNamed: true,
           ),
-          'link': _i2.BuilderArg<_i12.LayerLink>(
+          'link': _i2.BuilderArg<_i14.LayerLink>(
             name: 'link',
             init: link,
             isNamed: true,
@@ -1137,13 +1152,13 @@ class CompositedTransformFollower$Mate extends _i1.CompositedTransformFollower w
     /// optionalParameters: {bool showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
     super.showWhenUnlinked,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.offset,
 
-    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment targetAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
     super.targetAnchor,
 
-    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Alignment followerAnchor = Alignment.topLeft} , default:processed=PrefixedIdentifierImpl
     super.followerAnchor,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -1154,7 +1169,7 @@ class CompositedTransformFollower$Mate extends _i1.CompositedTransformFollower w
             init: key,
             isNamed: true,
           ),
-          'link': _i2.BuilderArg<_i12.LayerLink>(
+          'link': _i2.BuilderArg<_i14.LayerLink>(
             name: 'link',
             init: link,
             isNamed: true,
@@ -1169,16 +1184,19 @@ class CompositedTransformFollower$Mate extends _i1.CompositedTransformFollower w
             name: 'offset',
             init: offset,
             isNamed: true,
+            defaultValue: _i8.Offset.zero,
           ),
-          'targetAnchor': _i2.BuilderArg<_i11.Alignment>(
+          'targetAnchor': _i2.BuilderArg<_i13.Alignment>(
             name: 'targetAnchor',
             init: targetAnchor,
             isNamed: true,
+            defaultValue: _i10.Alignment.topLeft,
           ),
-          'followerAnchor': _i2.BuilderArg<_i11.Alignment>(
+          'followerAnchor': _i2.BuilderArg<_i13.Alignment>(
             name: 'followerAnchor',
             init: followerAnchor,
             isNamed: true,
+            defaultValue: _i10.Alignment.topLeft,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -1211,13 +1229,13 @@ class FittedBox$Mate extends _i1.FittedBox with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BoxFit fit = BoxFit.contain} , default:processed=PrefixedIdentifierImpl
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -1228,20 +1246,23 @@ class FittedBox$Mate extends _i1.FittedBox with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i13.BoxFit>(
+          'fit': _i2.BuilderArg<_i15.BoxFit>(
             name: 'fit',
             init: fit,
             isNamed: true,
+            defaultValue: _i10.BoxFit.contain,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
           'clipBehavior': _i2.BuilderArg<_i4.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -1379,7 +1400,7 @@ class Padding$Mate extends _i1.Padding with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i14.EdgeInsetsGeometry>(
+          'padding': _i2.BuilderArg<_i16.EdgeInsetsGeometry>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -1411,7 +1432,7 @@ class Align$Mate extends _i1.Align with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {double? widthFactor} , default:none
@@ -1428,10 +1449,11 @@ class Align$Mate extends _i1.Align with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
           'widthFactor': _i2.BuilderArg<double?>(
             name: 'widthFactor',
@@ -1535,7 +1557,7 @@ class CustomSingleChildLayout$Mate extends _i1.CustomSingleChildLayout with _i2.
             init: key,
             isNamed: true,
           ),
-          'delegate': _i2.BuilderArg<_i15.SingleChildLayoutDelegate>(
+          'delegate': _i2.BuilderArg<_i17.SingleChildLayoutDelegate>(
             name: 'delegate',
             init: delegate,
             isNamed: true,
@@ -1621,7 +1643,7 @@ class CustomMultiChildLayout$Mate extends _i1.CustomMultiChildLayout with _i2.Ma
             init: key,
             isNamed: true,
           ),
-          'delegate': _i2.BuilderArg<_i16.MultiChildLayoutDelegate>(
+          'delegate': _i2.BuilderArg<_i18.MultiChildLayoutDelegate>(
             name: 'delegate',
             init: delegate,
             isNamed: true,
@@ -1846,7 +1868,7 @@ class ConstrainedBox$Mate extends _i1.ConstrainedBox with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'constraints': _i2.BuilderArg<_i17.BoxConstraints>(
+          'constraints': _i2.BuilderArg<_i19.BoxConstraints>(
             name: 'constraints',
             init: constraints,
             isNamed: true,
@@ -1884,13 +1906,13 @@ class ConstraintsTransformBox$Mate extends _i1.ConstraintsTransformBox with _i2.
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {required BoxConstraints Function(BoxConstraints) constraintsTransform} , default:none
     required super.constraintsTransform,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String debugTransformType = ''} , default:processed=SimpleStringLiteralImpl
@@ -1911,12 +1933,13 @@ class ConstraintsTransformBox$Mate extends _i1.ConstraintsTransformBox with _i2.
             init: textDirection,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
-          'constraintsTransform': _i2.BuilderArg<_i15.BoxConstraintsTransform>(
+          'constraintsTransform': _i2.BuilderArg<_i17.BoxConstraintsTransform>(
             name: 'constraintsTransform',
             init: constraintsTransform,
             isNamed: true,
@@ -1925,6 +1948,7 @@ class ConstraintsTransformBox$Mate extends _i1.ConstraintsTransformBox with _i2.
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'debugTransformType': _i2.BuilderArg<String>(
             name: 'debugTransformType',
@@ -1964,13 +1988,13 @@ class UnconstrainedBox$Mate extends _i1.UnconstrainedBox with _i2.Mate {
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {Axis? constrainedAxis} , default:none
     super.constrainedAxis,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -1988,12 +2012,13 @@ class UnconstrainedBox$Mate extends _i1.UnconstrainedBox with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
-          'constrainedAxis': _i2.BuilderArg<_i18.Axis?>(
+          'constrainedAxis': _i2.BuilderArg<_i20.Axis?>(
             name: 'constrainedAxis',
             init: constrainedAxis,
             isNamed: true,
@@ -2002,6 +2027,7 @@ class UnconstrainedBox$Mate extends _i1.UnconstrainedBox with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
         },
         super() {
@@ -2028,7 +2054,7 @@ class FractionallySizedBox$Mate extends _i1.FractionallySizedBox with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {double? widthFactor} , default:none
@@ -2045,10 +2071,11 @@ class FractionallySizedBox$Mate extends _i1.FractionallySizedBox with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
           'widthFactor': _i2.BuilderArg<double?>(
             name: 'widthFactor',
@@ -2089,10 +2116,10 @@ class LimitedBox$Mate extends _i1.LimitedBox with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {double maxWidth = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {double maxWidth = double.infinity} , default:processed=PrefixedIdentifierImpl
     super.maxWidth,
 
-    /// optionalParameters: {double maxHeight = double.infinity} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {double maxHeight = double.infinity} , default:processed=PrefixedIdentifierImpl
     super.maxHeight,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -2107,11 +2134,13 @@ class LimitedBox$Mate extends _i1.LimitedBox with _i2.Mate {
             name: 'maxWidth',
             init: maxWidth,
             isNamed: true,
+            defaultValue: double.infinity,
           ),
           'maxHeight': _i2.BuilderArg<double>(
             name: 'maxHeight',
             init: maxHeight,
             isNamed: true,
+            defaultValue: double.infinity,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -2141,7 +2170,7 @@ class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {double? minWidth} , default:none
@@ -2164,10 +2193,11 @@ class OverflowBox$Mate extends _i1.OverflowBox with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
           'minWidth': _i2.BuilderArg<double?>(
             name: 'minWidth',
@@ -2223,7 +2253,7 @@ class SizedOverflowBox$Mate extends _i1.SizedOverflowBox with _i2.Mate {
     /// optionalParameters: {required Size size} , default:none
     required super.size,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -2239,10 +2269,11 @@ class SizedOverflowBox$Mate extends _i1.SizedOverflowBox with _i2.Mate {
             init: size,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -2542,7 +2573,7 @@ class SliverPadding$Mate extends _i1.SliverPadding with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i14.EdgeInsetsGeometry>(
+          'padding': _i2.BuilderArg<_i16.EdgeInsetsGeometry>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -2574,7 +2605,7 @@ class ListBody$Mate extends _i1.ListBody with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis mainAxis = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.mainAxis,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -2588,10 +2619,11 @@ class ListBody$Mate extends _i1.ListBody with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'mainAxis': _i2.BuilderArg<_i18.Axis>(
+          'mainAxis': _i2.BuilderArg<_i20.Axis>(
             name: 'mainAxis',
             init: mainAxis,
             isNamed: true,
+            defaultValue: _i10.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -2627,16 +2659,16 @@ class Stack$Mate extends _i1.Stack with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {StackFit fit = StackFit.loose} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {StackFit fit = StackFit.loose} , default:processed=PrefixedIdentifierImpl
     super.fit,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
@@ -2647,25 +2679,28 @@ class Stack$Mate extends _i1.Stack with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.AlignmentDirectional.topStart,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i19.StackFit>(
+          'fit': _i2.BuilderArg<_i21.StackFit>(
             name: 'fit',
             init: fit,
             isNamed: true,
+            defaultValue: _i10.StackFit.loose,
           ),
           'clipBehavior': _i2.BuilderArg<_i4.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
           ),
           'children': _i2.BuilderArg<List<_i5.Widget>>(
             name: 'children',
@@ -2697,16 +2732,16 @@ class IndexedStack$Mate extends _i1.IndexedStack with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = AlignmentDirectional.topStart} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
-    /// optionalParameters: {StackFit sizing = StackFit.loose} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {StackFit sizing = StackFit.loose} , default:processed=PrefixedIdentifierImpl
     super.sizing,
 
     /// optionalParameters: {int? index = 0} , default:processed=IntegerLiteralImpl
@@ -2720,10 +2755,11 @@ class IndexedStack$Mate extends _i1.IndexedStack with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.AlignmentDirectional.topStart,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
@@ -2734,11 +2770,13 @@ class IndexedStack$Mate extends _i1.IndexedStack with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
           ),
-          'sizing': _i2.BuilderArg<_i19.StackFit>(
+          'sizing': _i2.BuilderArg<_i21.StackFit>(
             name: 'sizing',
             init: sizing,
             isNamed: true,
+            defaultValue: _i10.StackFit.loose,
           ),
           'index': _i2.BuilderArg<int?>(
             name: 'index',
@@ -2907,7 +2945,7 @@ class Positioned$Mate extends _i1.Positioned with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'rect': _i2.BuilderArg<_i19.RelativeRect>(
+          'rect': _i2.BuilderArg<_i21.RelativeRect>(
             name: 'rect',
             init: rect,
             isNamed: true,
@@ -3098,25 +3136,25 @@ class Flex$Mate extends _i1.Flex with _i2.Mate {
     /// optionalParameters: {required Axis direction} , default:none
     required super.direction,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.mainAxisAlignment,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
     super.mainAxisSize,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
     super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     super.verticalDirection,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
     super.textBaseline,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
@@ -3127,35 +3165,39 @@ class Flex$Mate extends _i1.Flex with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'direction': _i2.BuilderArg<_i18.Axis>(
+          'direction': _i2.BuilderArg<_i20.Axis>(
             name: 'direction',
             init: direction,
             isNamed: true,
           ),
-          'mainAxisAlignment': _i2.BuilderArg<_i20.MainAxisAlignment>(
+          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
             name: 'mainAxisAlignment',
             init: mainAxisAlignment,
             isNamed: true,
+            defaultValue: _i10.MainAxisAlignment.start,
           ),
-          'mainAxisSize': _i2.BuilderArg<_i20.MainAxisSize>(
+          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
             name: 'mainAxisSize',
             init: mainAxisSize,
             isNamed: true,
+            defaultValue: _i10.MainAxisSize.max,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i20.CrossAxisAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
+            defaultValue: _i10.CrossAxisAlignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'verticalDirection': _i2.BuilderArg<_i18.VerticalDirection>(
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
             name: 'verticalDirection',
             init: verticalDirection,
             isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
           ),
           'textBaseline': _i2.BuilderArg<_i4.TextBaseline?>(
             name: 'textBaseline',
@@ -3166,6 +3208,7 @@ class Flex$Mate extends _i1.Flex with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'children': _i2.BuilderArg<List<_i5.Widget>>(
             name: 'children',
@@ -3201,19 +3244,19 @@ class Row$Mate extends _i1.Row with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.mainAxisAlignment,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
     super.mainAxisSize,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
     super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     super.verticalDirection,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
@@ -3227,30 +3270,34 @@ class Row$Mate extends _i1.Row with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'mainAxisAlignment': _i2.BuilderArg<_i20.MainAxisAlignment>(
+          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
             name: 'mainAxisAlignment',
             init: mainAxisAlignment,
             isNamed: true,
+            defaultValue: _i10.MainAxisAlignment.start,
           ),
-          'mainAxisSize': _i2.BuilderArg<_i20.MainAxisSize>(
+          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
             name: 'mainAxisSize',
             init: mainAxisSize,
             isNamed: true,
+            defaultValue: _i10.MainAxisSize.max,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i20.CrossAxisAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
+            defaultValue: _i10.CrossAxisAlignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'verticalDirection': _i2.BuilderArg<_i18.VerticalDirection>(
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
             name: 'verticalDirection',
             init: verticalDirection,
             isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
           ),
           'textBaseline': _i2.BuilderArg<_i4.TextBaseline?>(
             name: 'textBaseline',
@@ -3289,19 +3336,19 @@ class Column$Mate extends _i1.Column with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.mainAxisAlignment,
 
-    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MainAxisSize mainAxisSize = MainAxisSize.max} , default:processed=PrefixedIdentifierImpl
     super.mainAxisSize,
 
-    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center} , default:processed=PrefixedIdentifierImpl
     super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     super.verticalDirection,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
@@ -3315,30 +3362,34 @@ class Column$Mate extends _i1.Column with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'mainAxisAlignment': _i2.BuilderArg<_i20.MainAxisAlignment>(
+          'mainAxisAlignment': _i2.BuilderArg<_i22.MainAxisAlignment>(
             name: 'mainAxisAlignment',
             init: mainAxisAlignment,
             isNamed: true,
+            defaultValue: _i10.MainAxisAlignment.start,
           ),
-          'mainAxisSize': _i2.BuilderArg<_i20.MainAxisSize>(
+          'mainAxisSize': _i2.BuilderArg<_i22.MainAxisSize>(
             name: 'mainAxisSize',
             init: mainAxisSize,
             isNamed: true,
+            defaultValue: _i10.MainAxisSize.max,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i20.CrossAxisAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i22.CrossAxisAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
+            defaultValue: _i10.CrossAxisAlignment.center,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'verticalDirection': _i2.BuilderArg<_i18.VerticalDirection>(
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
             name: 'verticalDirection',
             init: verticalDirection,
             isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
           ),
           'textBaseline': _i2.BuilderArg<_i4.TextBaseline?>(
             name: 'textBaseline',
@@ -3380,7 +3431,7 @@ class Flexible$Mate extends _i1.Flexible with _i2.Mate {
     /// optionalParameters: {int flex = 1} , default:processed=IntegerLiteralImpl
     super.flex,
 
-    /// optionalParameters: {FlexFit fit = FlexFit.loose} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FlexFit fit = FlexFit.loose} , default:processed=PrefixedIdentifierImpl
     super.fit,
 
     /// optionalParameters: {required Widget child} , default:none
@@ -3397,10 +3448,11 @@ class Flexible$Mate extends _i1.Flexible with _i2.Mate {
             isNamed: true,
             defaultValue: 1,
           ),
-          'fit': _i2.BuilderArg<_i20.FlexFit>(
+          'fit': _i2.BuilderArg<_i22.FlexFit>(
             name: 'fit',
             init: fit,
             isNamed: true,
+            defaultValue: _i10.FlexFit.loose,
           ),
           'child': _i2.BuilderArg<_i5.Widget>(
             name: 'child',
@@ -3474,31 +3526,31 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
     super.direction,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
     super.spacing,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.runAlignment,
 
     /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
     super.runSpacing,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     super.verticalDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
@@ -3509,15 +3561,17 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'direction': _i2.BuilderArg<_i18.Axis>(
+          'direction': _i2.BuilderArg<_i20.Axis>(
             name: 'direction',
             init: direction,
             isNamed: true,
+            defaultValue: _i10.Axis.horizontal,
           ),
-          'alignment': _i2.BuilderArg<_i21.WrapAlignment>(
+          'alignment': _i2.BuilderArg<_i23.WrapAlignment>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.WrapAlignment.start,
           ),
           'spacing': _i2.BuilderArg<double>(
             name: 'spacing',
@@ -3525,10 +3579,11 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'runAlignment': _i2.BuilderArg<_i21.WrapAlignment>(
+          'runAlignment': _i2.BuilderArg<_i23.WrapAlignment>(
             name: 'runAlignment',
             init: runAlignment,
             isNamed: true,
+            defaultValue: _i10.WrapAlignment.start,
           ),
           'runSpacing': _i2.BuilderArg<double>(
             name: 'runSpacing',
@@ -3536,25 +3591,28 @@ class Wrap$Mate extends _i1.Wrap with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'crossAxisAlignment': _i2.BuilderArg<_i21.WrapCrossAlignment>(
+          'crossAxisAlignment': _i2.BuilderArg<_i23.WrapCrossAlignment>(
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
+            defaultValue: _i10.WrapCrossAlignment.start,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
           ),
-          'verticalDirection': _i2.BuilderArg<_i18.VerticalDirection>(
+          'verticalDirection': _i2.BuilderArg<_i20.VerticalDirection>(
             name: 'verticalDirection',
             init: verticalDirection,
             isNamed: true,
+            defaultValue: _i10.VerticalDirection.down,
           ),
           'clipBehavior': _i2.BuilderArg<_i4.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'children': _i2.BuilderArg<List<_i5.Widget>>(
             name: 'children',
@@ -3597,7 +3655,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     super.children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -3605,7 +3663,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'delegate': _i2.BuilderArg<_i22.FlowDelegate>(
+          'delegate': _i2.BuilderArg<_i24.FlowDelegate>(
             name: 'delegate',
             init: delegate,
             isNamed: true,
@@ -3619,6 +3677,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
           ),
         },
         super() {
@@ -3643,7 +3702,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
     /// optionalParameters: {List<Widget> children = const <Widget>[]} , default:unprocessed=ListLiteralImpl
     super.children,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -3651,7 +3710,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'delegate': _i2.BuilderArg<_i22.FlowDelegate>(
+          'delegate': _i2.BuilderArg<_i24.FlowDelegate>(
             name: 'delegate',
             init: delegate,
             isNamed: true,
@@ -3665,6 +3724,7 @@ class Flow$Mate extends _i1.Flow with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.hardEdge,
           ),
         },
         super.unwrapped() {
@@ -3692,7 +3752,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
     /// optionalParameters: {required InlineSpan text} , default:none
     required super.text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -3701,7 +3761,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     super.softWrap,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
     super.overflow,
 
     /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
@@ -3716,7 +3776,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
     super.strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
     super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
@@ -3733,7 +3793,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'text': _i2.BuilderArg<_i23.InlineSpan>(
+          'text': _i2.BuilderArg<_i25.InlineSpan>(
             name: 'text',
             init: text,
             isNamed: true,
@@ -3742,6 +3802,7 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
+            defaultValue: _i4.TextAlign.start,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection?>(
             name: 'textDirection',
@@ -3754,10 +3815,11 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'overflow': _i2.BuilderArg<_i24.TextOverflow>(
+          'overflow': _i2.BuilderArg<_i26.TextOverflow>(
             name: 'overflow',
             init: overflow,
             isNamed: true,
+            defaultValue: _i10.TextOverflow.clip,
           ),
           'textScaleFactor': _i2.BuilderArg<double>(
             name: 'textScaleFactor',
@@ -3775,22 +3837,23 @@ class RichText$Mate extends _i1.RichText with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i25.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i27.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
           ),
-          'textWidthBasis': _i2.BuilderArg<_i24.TextWidthBasis>(
+          'textWidthBasis': _i2.BuilderArg<_i26.TextWidthBasis>(
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
+            defaultValue: _i10.TextWidthBasis.parent,
           ),
           'textHeightBehavior': _i2.BuilderArg<_i4.TextHeightBehavior?>(
             name: 'textHeightBehavior',
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'selectionRegistrar': _i2.BuilderArg<_i26.SelectionRegistrar?>(
+          'selectionRegistrar': _i2.BuilderArg<_i28.SelectionRegistrar?>(
             name: 'selectionRegistrar',
             init: selectionRegistrar,
             isNamed: true,
@@ -3860,10 +3923,10 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
@@ -3875,7 +3938,7 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
     /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
     super.invertColors,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {bool isAntiAlias = false} , default:processed=BooleanLiteralImpl
@@ -3917,7 +3980,7 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
             init: color,
             isNamed: true,
           ),
-          'opacity': _i2.BuilderArg<_i27.Animation<double>?>(
+          'opacity': _i2.BuilderArg<_i29.Animation<double>?>(
             name: 'opacity',
             init: opacity,
             isNamed: true,
@@ -3927,20 +3990,22 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
             init: colorBlendMode,
             isNamed: true,
           ),
-          'fit': _i2.BuilderArg<_i13.BoxFit?>(
+          'fit': _i2.BuilderArg<_i15.BoxFit?>(
             name: 'fit',
             init: fit,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i11.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i13.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i10.Alignment.center,
           ),
-          'repeat': _i2.BuilderArg<_i28.ImageRepeat>(
+          'repeat': _i2.BuilderArg<_i30.ImageRepeat>(
             name: 'repeat',
             init: repeat,
             isNamed: true,
+            defaultValue: _i10.ImageRepeat.noRepeat,
           ),
           'centerSlice': _i2.BuilderArg<_i4.Rect?>(
             name: 'centerSlice',
@@ -3963,6 +4028,7 @@ class RawImage$Mate extends _i1.RawImage with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
+            defaultValue: _i4.FilterQuality.low,
           ),
           'isAntiAlias': _i2.BuilderArg<bool>(
             name: 'isAntiAlias',
@@ -4017,7 +4083,7 @@ class DefaultAssetBundle$Mate extends _i1.DefaultAssetBundle with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'bundle': _i2.BuilderArg<_i29.AssetBundle>(
+          'bundle': _i2.BuilderArg<_i31.AssetBundle>(
             name: 'bundle',
             init: bundle,
             isNamed: true,
@@ -4055,7 +4121,7 @@ class WidgetToRenderBoxAdapter$Mate extends _i1.WidgetToRenderBoxAdapter with _i
     /// optionalParameters: {void Function()? onUnmount} , default:none
     super.onUnmount,
   })  : mateParams = {
-          'renderBox': _i2.BuilderArg<_i17.RenderBox>(
+          'renderBox': _i2.BuilderArg<_i19.RenderBox>(
             name: 'renderBox',
             init: renderBox,
             isNamed: true,
@@ -4119,7 +4185,7 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
     /// optionalParameters: {void Function(PointerSignalEvent)? onPointerSignal} , default:none
     super.onPointerSignal,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     super.behavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -4145,7 +4211,7 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
             init: onPointerUp,
             isNamed: true,
           ),
-          'onPointerHover': _i2.BuilderArg<_i30.PointerHoverEventListener?>(
+          'onPointerHover': _i2.BuilderArg<_i32.PointerHoverEventListener?>(
             name: 'onPointerHover',
             init: onPointerHover,
             isNamed: true,
@@ -4179,6 +4245,7 @@ class Listener$Mate extends _i1.Listener with _i2.Mate {
             name: 'behavior',
             init: behavior,
             isNamed: true,
+            defaultValue: _i10.HitTestBehavior.deferToChild,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -4225,7 +4292,7 @@ class MouseRegion$Mate extends _i1.MouseRegion with _i2.Mate {
     /// optionalParameters: {void Function(PointerHoverEvent)? onHover} , default:none
     super.onHover,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
     super.cursor,
 
     /// optionalParameters: {bool opaque = true} , default:processed=BooleanLiteralImpl
@@ -4242,25 +4309,26 @@ class MouseRegion$Mate extends _i1.MouseRegion with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'onEnter': _i2.BuilderArg<_i30.PointerEnterEventListener?>(
+          'onEnter': _i2.BuilderArg<_i32.PointerEnterEventListener?>(
             name: 'onEnter',
             init: onEnter,
             isNamed: true,
           ),
-          'onExit': _i2.BuilderArg<_i30.PointerExitEventListener?>(
+          'onExit': _i2.BuilderArg<_i32.PointerExitEventListener?>(
             name: 'onExit',
             init: onExit,
             isNamed: true,
           ),
-          'onHover': _i2.BuilderArg<_i30.PointerHoverEventListener?>(
+          'onHover': _i2.BuilderArg<_i32.PointerHoverEventListener?>(
             name: 'onHover',
             init: onHover,
             isNamed: true,
           ),
-          'cursor': _i2.BuilderArg<_i31.MouseCursor>(
+          'cursor': _i2.BuilderArg<_i33.MouseCursor>(
             name: 'cursor',
             init: cursor,
             isNamed: true,
+            defaultValue: _i10.MouseCursor.defer,
           ),
           'opaque': _i2.BuilderArg<bool>(
             name: 'opaque',
@@ -4448,7 +4516,7 @@ class MetaData$Mate extends _i1.MetaData with _i2.Mate {
     /// optionalParameters: {dynamic metaData} , default:none
     super.metaData,
 
-    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {HitTestBehavior behavior = HitTestBehavior.deferToChild} , default:processed=PrefixedIdentifierImpl
     super.behavior,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -4468,6 +4536,7 @@ class MetaData$Mate extends _i1.MetaData with _i2.Mate {
             name: 'behavior',
             init: behavior,
             isNamed: true,
+            defaultValue: _i10.HitTestBehavior.deferToChild,
           ),
           'child': _i2.BuilderArg<_i5.Widget?>(
             name: 'child',
@@ -4839,7 +4908,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: label,
             isNamed: true,
           ),
-          'attributedLabel': _i2.BuilderArg<_i32.AttributedString?>(
+          'attributedLabel': _i2.BuilderArg<_i34.AttributedString?>(
             name: 'attributedLabel',
             init: attributedLabel,
             isNamed: true,
@@ -4849,7 +4918,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: value,
             isNamed: true,
           ),
-          'attributedValue': _i2.BuilderArg<_i32.AttributedString?>(
+          'attributedValue': _i2.BuilderArg<_i34.AttributedString?>(
             name: 'attributedValue',
             init: attributedValue,
             isNamed: true,
@@ -4859,7 +4928,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: increasedValue,
             isNamed: true,
           ),
-          'attributedIncreasedValue': _i2.BuilderArg<_i32.AttributedString?>(
+          'attributedIncreasedValue': _i2.BuilderArg<_i34.AttributedString?>(
             name: 'attributedIncreasedValue',
             init: attributedIncreasedValue,
             isNamed: true,
@@ -4869,7 +4938,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: decreasedValue,
             isNamed: true,
           ),
-          'attributedDecreasedValue': _i2.BuilderArg<_i32.AttributedString?>(
+          'attributedDecreasedValue': _i2.BuilderArg<_i34.AttributedString?>(
             name: 'attributedDecreasedValue',
             init: attributedDecreasedValue,
             isNamed: true,
@@ -4879,7 +4948,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: hint,
             isNamed: true,
           ),
-          'attributedHint': _i2.BuilderArg<_i32.AttributedString?>(
+          'attributedHint': _i2.BuilderArg<_i34.AttributedString?>(
             name: 'attributedHint',
             init: attributedHint,
             isNamed: true,
@@ -4904,12 +4973,12 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: textDirection,
             isNamed: true,
           ),
-          'sortKey': _i2.BuilderArg<_i32.SemanticsSortKey?>(
+          'sortKey': _i2.BuilderArg<_i34.SemanticsSortKey?>(
             name: 'sortKey',
             init: sortKey,
             isNamed: true,
           ),
-          'tagForChildren': _i2.BuilderArg<_i32.SemanticsTag?>(
+          'tagForChildren': _i2.BuilderArg<_i34.SemanticsTag?>(
             name: 'tagForChildren',
             init: tagForChildren,
             isNamed: true,
@@ -4974,22 +5043,22 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDismiss,
             isNamed: true,
           ),
-          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i32.MoveCursorHandler?>(
+          'onMoveCursorForwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
             name: 'onMoveCursorForwardByCharacter',
             init: onMoveCursorForwardByCharacter,
             isNamed: true,
           ),
-          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i32.MoveCursorHandler?>(
+          'onMoveCursorBackwardByCharacter': _i2.BuilderArg<_i34.MoveCursorHandler?>(
             name: 'onMoveCursorBackwardByCharacter',
             init: onMoveCursorBackwardByCharacter,
             isNamed: true,
           ),
-          'onSetSelection': _i2.BuilderArg<_i32.SetSelectionHandler?>(
+          'onSetSelection': _i2.BuilderArg<_i34.SetSelectionHandler?>(
             name: 'onSetSelection',
             init: onSetSelection,
             isNamed: true,
           ),
-          'onSetText': _i2.BuilderArg<_i32.SetTextHandler?>(
+          'onSetText': _i2.BuilderArg<_i34.SetTextHandler?>(
             name: 'onSetText',
             init: onSetText,
             isNamed: true,
@@ -5004,7 +5073,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             init: onDidLoseAccessibilityFocus,
             isNamed: true,
           ),
-          'customSemanticsActions': _i2.BuilderArg<Map<_i32.CustomSemanticsAction, _i4.VoidCallback>?>(
+          'customSemanticsActions': _i2.BuilderArg<Map<_i34.CustomSemanticsAction, _i4.VoidCallback>?>(
             name: 'customSemanticsActions',
             init: customSemanticsActions,
             isNamed: true,
@@ -5129,7 +5198,7 @@ class Semantics$Mate extends _i1.Semantics with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'properties': _i2.BuilderArg<_i32.SemanticsProperties>(
+          'properties': _i2.BuilderArg<_i34.SemanticsProperties>(
             name: 'properties',
             init: properties,
             isNamed: true,

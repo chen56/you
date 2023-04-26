@@ -22,8 +22,8 @@ main() async {
   _log("## main");
   List<String> include = [
     "package:flutter/",
-    "package:flutter/src/material/app_bar.dart",
-    // "package:flutter/src/cupertino/segmented_control.dart",
+    // "package:flutter/src/material/app_bar.dart",
+    "package:flutter/src/widgets/basic.dart",
     // "package:flutter/src/painting/box_shadow.dart"
     // "package:flutter/src/animation/curves.dart"
   ];
@@ -55,7 +55,7 @@ Future<void> genAll({
   _log("## resolve entry lib");
   final collection = AnalysisContextCollection(
     includedPaths: [entryFile],
-    sdkPath: env.sdkDir,
+    sdkPath: env.dartSdkDir,
     resourceProvider: PhysicalResourceProvider.INSTANCE,
   );
   var entryLib = (await collection.contexts.first.currentSession
@@ -369,12 +369,6 @@ extension _InterfaceElement on InterfaceElement {
 /// so use whitelist mode, We only deal with what we understand
 ({String info, code.Expression? value}) resolveDefaultValue(
     ParameterElement param, TypeRefers typeRefers) {
-  if (param
-      .getDisplayString(withNullability: true)
-      .contains("_MediumScrollUnderFlexibleConfig.collapsedHeight")) {
-    _log("Breakpoint ${param.getDisplayString(withNullability: true)}}");
-  }
-
   // guard clause
   if (!param.hasDefaultValue) return (info: "default:none", value: null);
   assert(param is ConstVariableElement,
@@ -383,6 +377,7 @@ extension _InterfaceElement on InterfaceElement {
   // Known situation
   ConstVariableElement constParam = param as ConstVariableElement;
 
+  // super.xxx 的向上递归
   if (constParam.constantInitializer == null &&
       constParam is SuperFormalParameterElement) {
     var x = constParam as SuperFormalParameterElement;
@@ -406,7 +401,7 @@ extension _InterfaceElement on InterfaceElement {
     if (init is ast.PrefixedIdentifier) {
       // private can not use :
       //   double toolbarHeight = _MediumScrollUnderFlexibleConfig.collapsedHeight_MediumScrollUnderFlexibleConfig.collapsedHeight
-      if (!init.prefix.staticElement!.isPrivate) {
+      if (init.prefix.staticElement!.isPrivate) {
         return null;
       }
       var ref =
@@ -464,18 +459,6 @@ void _genMateLib({
     // 如果有combinators就别导出了
     // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
     // 瞎导出会导出不存在的元素
-    ..directives.addAll([
-      // Directive((b) =>
-      // b
-      //   ..type = DirectiveType.import
-      //   ..url = "dart:core")
-      //   ,
-      //   Directive((b) =>
-      //   b
-      //     ..type = DirectiveType.import
-      //     ..url = "dart:ui")
-      //   ,
-    ])
     ..directives.addAll(lib.libraryExports
         .where((e) => e.combinators.isEmpty)
         .map((libExport) => Directive((b) => b
@@ -596,8 +579,15 @@ void _genMateLib({
               ..optionalParameters.addAll(parameters
                   .where((e) => !e.isPositional)
                   .map((param) => Parameter((b) {
+                        if (param
+                            .getDisplayString(withNullability: true)
+                            .contains("MainAxisSize.max")) {
+                          _log(
+                              "Breakpoint ${param.getDisplayString(withNullability: true)}}");
+                        }
                         var resolveResult =
                             resolveDefaultValue(param, typeRefers);
+
                         b
                           ..name = param.name
                           ..named = param.isNamed
@@ -610,7 +600,21 @@ void _genMateLib({
               ..initializers.add(
                 refer("mateParams")
                     .assign(literalMap(Map.fromEntries(parameters.map((param) {
+                  if (param
+                      .getDisplayString(withNullability: true)
+                      .contains("MainAxisSize.max")) {
+                    _log(
+                        "Breakpoint ${param.getDisplayString(withNullability: true)}}");
+                  }
+
                   var defaultValue = resolveDefaultValue(param, typeRefers);
+                  if (param
+                      .getDisplayString(withNullability: true)
+                      .contains("MainAxisSize.max")) {
+                    _log(
+                        "Breakpoint ${param.getDisplayString(withNullability: true)}}");
+                  }
+
                   var namedArguments = {
                     "name": code.literalString(param.name),
                     "init": code.refer(param.name),

@@ -6,6 +6,7 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/foundation/basic_types.dart' as _i4;
 import 'dart:ui' as _i5;
+import 'package:flutter/cupertino.dart' as _i6;
 
 /// class CupertinoSlider extends StatefulWidget
 class CupertinoSlider$Mate extends _i1.CupertinoSlider with _i2.Mate {
@@ -38,7 +39,7 @@ class CupertinoSlider$Mate extends _i1.CupertinoSlider with _i2.Mate {
     /// optionalParameters: {Color? activeColor} , default:none
     super.activeColor,
 
-    /// optionalParameters: {Color thumbColor = CupertinoColors.white} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color thumbColor = CupertinoColors.white} , default:processed=PrefixedIdentifierImpl
     super.thumbColor,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -92,6 +93,7 @@ class CupertinoSlider$Mate extends _i1.CupertinoSlider with _i2.Mate {
             name: 'thumbColor',
             init: thumbColor,
             isNamed: true,
+            defaultValue: _i6.CupertinoColors.white,
           ),
         },
         super() {

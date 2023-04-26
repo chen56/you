@@ -5,7 +5,8 @@ import 'package:flutter/src/rendering/wrap.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/rendering/box.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'dart:ui' as _i5;
+import 'package:flutter/cupertino.dart' as _i5;
+import 'dart:ui' as _i6;
 
 /// class RenderWrap extends RenderBox with ContainerRenderObjectMixin<RenderBox, WrapParentData>, RenderBoxContainerDefaultsMixin<RenderBox, WrapParentData>
 class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
@@ -14,31 +15,31 @@ class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
     /// optionalParameters: {List<RenderBox>? children} , default:none
     super.children,
 
-    /// optionalParameters: {Axis direction = Axis.horizontal} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis direction = Axis.horizontal} , default:processed=PrefixedIdentifierImpl
     super.direction,
 
-    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {WrapAlignment alignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {double spacing = 0.0} , default:processed=DoubleLiteralImpl
     super.spacing,
 
-    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {WrapAlignment runAlignment = WrapAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.runAlignment,
 
     /// optionalParameters: {double runSpacing = 0.0} , default:processed=DoubleLiteralImpl
     super.runSpacing,
 
-    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start} , default:processed=PrefixedIdentifierImpl
     super.crossAxisAlignment,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
     super.textDirection,
 
-    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {VerticalDirection verticalDirection = VerticalDirection.down} , default:processed=PrefixedIdentifierImpl
     super.verticalDirection,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'children': _i2.BuilderArg<List<_i3.RenderBox>?>(
@@ -50,11 +51,13 @@ class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
             name: 'direction',
             init: direction,
             isNamed: true,
+            defaultValue: _i5.Axis.horizontal,
           ),
           'alignment': _i2.BuilderArg<_i1.WrapAlignment>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i5.WrapAlignment.start,
           ),
           'spacing': _i2.BuilderArg<double>(
             name: 'spacing',
@@ -66,6 +69,7 @@ class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
             name: 'runAlignment',
             init: runAlignment,
             isNamed: true,
+            defaultValue: _i5.WrapAlignment.start,
           ),
           'runSpacing': _i2.BuilderArg<double>(
             name: 'runSpacing',
@@ -77,8 +81,9 @@ class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
             name: 'crossAxisAlignment',
             init: crossAxisAlignment,
             isNamed: true,
+            defaultValue: _i5.WrapCrossAlignment.start,
           ),
-          'textDirection': _i2.BuilderArg<_i5.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i6.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
@@ -87,11 +92,13 @@ class RenderWrap$Mate extends _i1.RenderWrap with _i2.Mate {
             name: 'verticalDirection',
             init: verticalDirection,
             isNamed: true,
+            defaultValue: _i5.VerticalDirection.down,
           ),
-          'clipBehavior': _i2.BuilderArg<_i5.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i6.Clip.none,
           ),
         },
         super() {

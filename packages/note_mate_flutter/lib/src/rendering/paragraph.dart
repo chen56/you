@@ -6,9 +6,10 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/inline_span.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/painting/text_painter.dart' as _i5;
-import 'package:flutter/src/painting/strut_style.dart' as _i6;
-import 'package:flutter/src/rendering/box.dart' as _i7;
-import 'package:flutter/src/rendering/selection.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i6;
+import 'package:flutter/src/painting/strut_style.dart' as _i7;
+import 'package:flutter/src/rendering/box.dart' as _i8;
+import 'package:flutter/src/rendering/selection.dart' as _i9;
 
 /// class PlaceholderSpanIndexSemanticsTag extends SemanticsTag
 class PlaceholderSpanIndexSemanticsTag$Mate extends _i1.PlaceholderSpanIndexSemanticsTag with _i2.Mate {
@@ -40,7 +41,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
   RenderParagraph$Mate(
     /// requiredParameters: InlineSpan text
     super.text, {
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {required TextDirection textDirection} , default:none
@@ -49,7 +50,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
     /// optionalParameters: {bool softWrap = true} , default:processed=BooleanLiteralImpl
     super.softWrap,
 
-    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextOverflow overflow = TextOverflow.clip} , default:processed=PrefixedIdentifierImpl
     super.overflow,
 
     /// optionalParameters: {double textScaleFactor = 1.0} , default:processed=DoubleLiteralImpl
@@ -64,7 +65,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
     super.strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
     super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
@@ -88,6 +89,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
+            defaultValue: _i4.TextAlign.start,
           ),
           'textDirection': _i2.BuilderArg<_i4.TextDirection>(
             name: 'textDirection',
@@ -104,6 +106,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             name: 'overflow',
             init: overflow,
             isNamed: true,
+            defaultValue: _i6.TextOverflow.clip,
           ),
           'textScaleFactor': _i2.BuilderArg<double>(
             name: 'textScaleFactor',
@@ -121,7 +124,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             init: locale,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i6.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i7.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
@@ -130,13 +133,14 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
+            defaultValue: _i6.TextWidthBasis.parent,
           ),
           'textHeightBehavior': _i2.BuilderArg<_i4.TextHeightBehavior?>(
             name: 'textHeightBehavior',
             init: textHeightBehavior,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i7.RenderBox>?>(
+          'children': _i2.BuilderArg<List<_i8.RenderBox>?>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -146,7 +150,7 @@ class RenderParagraph$Mate extends _i1.RenderParagraph with _i2.Mate {
             init: selectionColor,
             isNamed: true,
           ),
-          'registrar': _i2.BuilderArg<_i8.SelectionRegistrar?>(
+          'registrar': _i2.BuilderArg<_i9.SelectionRegistrar?>(
             name: 'registrar',
             init: registrar,
             isNamed: true,

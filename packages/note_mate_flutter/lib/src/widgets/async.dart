@@ -61,6 +61,7 @@ class AsyncSnapshot$Mate<T> extends _i1.AsyncSnapshot<T> with _i2.Mate {
             name: 'stackTrace',
             init: stackTrace,
             isNamed: false,
+            defaultValue: StackTrace.empty,
           ),
         },
         super.withError() {

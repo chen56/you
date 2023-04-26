@@ -6,6 +6,7 @@ import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/inline_span.dart' as _i4;
 import 'package:flutter/src/painting/strut_style.dart' as _i5;
+import 'package:flutter/cupertino.dart' as _i6;
 
 /// class PlaceholderDimensions
 class PlaceholderDimensions$Mate extends _i1.PlaceholderDimensions with _i2.Mate {
@@ -66,7 +67,7 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
     /// optionalParameters: {InlineSpan? text} , default:none
     super.text,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {TextDirection? textDirection} , default:none
@@ -87,7 +88,7 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
     super.strutStyle,
 
-    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextWidthBasis textWidthBasis = TextWidthBasis.parent} , default:processed=PrefixedIdentifierImpl
     super.textWidthBasis,
 
     /// optionalParameters: {TextHeightBehavior? textHeightBehavior} , default:none
@@ -102,6 +103,7 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
+            defaultValue: _i3.TextAlign.start,
           ),
           'textDirection': _i2.BuilderArg<_i3.TextDirection?>(
             name: 'textDirection',
@@ -138,6 +140,7 @@ class TextPainter$Mate extends _i1.TextPainter with _i2.Mate {
             name: 'textWidthBasis',
             init: textWidthBasis,
             isNamed: true,
+            defaultValue: _i6.TextWidthBasis.parent,
           ),
           'textHeightBehavior': _i2.BuilderArg<_i3.TextHeightBehavior?>(
             name: 'textHeightBehavior',

@@ -5,10 +5,12 @@ import 'package:flutter/src/widgets/viewport.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/src/rendering/viewport_offset.dart' as _i5;
-import 'package:flutter/src/rendering/viewport.dart' as _i6;
-import 'dart:ui' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i5;
+import 'package:flutter/src/rendering/viewport_offset.dart' as _i6;
+import 'package:flutter/src/rendering/viewport.dart' as _i7;
+import 'package:flutter/rendering.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/widgets/framework.dart' as _i10;
 
 /// class Viewport extends MultiChildRenderObjectWidget
 class Viewport$Mate extends _i1.Viewport with _i2.Mate {
@@ -17,7 +19,7 @@ class Viewport$Mate extends _i1.Viewport with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
     super.axisDirection,
 
     /// optionalParameters: {AxisDirection? crossAxisDirection} , default:none
@@ -35,10 +37,10 @@ class Viewport$Mate extends _i1.Viewport with _i2.Mate {
     /// optionalParameters: {double? cacheExtent} , default:none
     super.cacheExtent,
 
-    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , default:processed=PrefixedIdentifierImpl
     super.cacheExtentStyle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , default:unprocessed=ListLiteralImpl
@@ -53,6 +55,7 @@ class Viewport$Mate extends _i1.Viewport with _i2.Mate {
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
           ),
           'crossAxisDirection': _i2.BuilderArg<_i4.AxisDirection?>(
             name: 'crossAxisDirection',
@@ -65,7 +68,7 @@ class Viewport$Mate extends _i1.Viewport with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'offset': _i2.BuilderArg<_i5.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i6.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -80,17 +83,19 @@ class Viewport$Mate extends _i1.Viewport with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'cacheExtentStyle': _i2.BuilderArg<_i6.CacheExtentStyle>(
+          'cacheExtentStyle': _i2.BuilderArg<_i7.CacheExtentStyle>(
             name: 'cacheExtentStyle',
             init: cacheExtentStyle,
             isNamed: true,
+            defaultValue: _i8.CacheExtentStyle.pixel,
           ),
-          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i9.Clip.hardEdge,
           ),
-          'slivers': _i2.BuilderArg<List<_i8.Widget>>(
+          'slivers': _i2.BuilderArg<List<_i10.Widget>>(
             name: 'slivers',
             init: slivers,
             isNamed: true,
@@ -124,7 +129,7 @@ class ShrinkWrappingViewport$Mate extends _i1.ShrinkWrappingViewport with _i2.Ma
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
     super.axisDirection,
 
     /// optionalParameters: {AxisDirection? crossAxisDirection} , default:none
@@ -133,7 +138,7 @@ class ShrinkWrappingViewport$Mate extends _i1.ShrinkWrappingViewport with _i2.Ma
     /// optionalParameters: {required ViewportOffset offset} , default:none
     required super.offset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<Widget> slivers = const <Widget>[]} , default:unprocessed=ListLiteralImpl
@@ -148,23 +153,25 @@ class ShrinkWrappingViewport$Mate extends _i1.ShrinkWrappingViewport with _i2.Ma
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
           ),
           'crossAxisDirection': _i2.BuilderArg<_i4.AxisDirection?>(
             name: 'crossAxisDirection',
             init: crossAxisDirection,
             isNamed: true,
           ),
-          'offset': _i2.BuilderArg<_i5.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i6.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i9.Clip.hardEdge,
           ),
-          'slivers': _i2.BuilderArg<List<_i8.Widget>>(
+          'slivers': _i2.BuilderArg<List<_i10.Widget>>(
             name: 'slivers',
             init: slivers,
             isNamed: true,

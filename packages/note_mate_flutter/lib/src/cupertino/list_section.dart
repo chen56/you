@@ -7,7 +7,8 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 import 'dart:ui' as _i6;
-import 'package:flutter/src/painting/box_decoration.dart' as _i7;
+import 'package:flutter/cupertino.dart' as _i7;
+import 'package:flutter/src/painting/box_decoration.dart' as _i8;
 
 /// class CupertinoListSection extends StatelessWidget
 class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
@@ -28,13 +29,13 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
     /// optionalParameters: {EdgeInsetsGeometry margin = _kDefaultRowsMargin} , default:unprocessed=SimpleIdentifierImpl
     super.margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
     super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
     super.decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {double dividerMargin = _kBaseDividerMargin} , default:unprocessed=SimpleIdentifierImpl
@@ -78,8 +79,9 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
+            defaultValue: _i7.CupertinoColors.systemGroupedBackground,
           ),
-          'decoration': _i2.BuilderArg<_i7.BoxDecoration?>(
+          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
             name: 'decoration',
             init: decoration,
             isNamed: true,
@@ -88,6 +90,7 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i6.Clip.none,
           ),
           'dividerMargin': _i2.BuilderArg<double>(
             name: 'dividerMargin',
@@ -147,13 +150,13 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
     /// optionalParameters: {EdgeInsetsGeometry? margin} , default:none
     super.margin,
 
-    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color backgroundColor = CupertinoColors.systemGroupedBackground} , default:processed=PrefixedIdentifierImpl
     super.backgroundColor,
 
     /// optionalParameters: {BoxDecoration? decoration} , default:none
     super.decoration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {double dividerMargin = _kInsetDividerMargin} , default:unprocessed=SimpleIdentifierImpl
@@ -197,8 +200,9 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
+            defaultValue: _i7.CupertinoColors.systemGroupedBackground,
           ),
-          'decoration': _i2.BuilderArg<_i7.BoxDecoration?>(
+          'decoration': _i2.BuilderArg<_i8.BoxDecoration?>(
             name: 'decoration',
             init: decoration,
             isNamed: true,
@@ -207,6 +211,7 @@ class CupertinoListSection$Mate extends _i1.CupertinoListSection with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i6.Clip.hardEdge,
           ),
           'dividerMargin': _i2.BuilderArg<double>(
             name: 'dividerMargin',

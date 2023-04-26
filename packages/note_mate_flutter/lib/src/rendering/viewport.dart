@@ -5,8 +5,10 @@ import 'package:flutter/src/rendering/viewport.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/src/rendering/viewport_offset.dart' as _i5;
-import 'package:flutter/src/rendering/sliver.dart' as _i6;
+import 'package:flutter/cupertino.dart' as _i5;
+import 'package:flutter/src/rendering/viewport_offset.dart' as _i6;
+import 'package:flutter/src/rendering/sliver.dart' as _i7;
+import 'package:flutter/rendering.dart' as _i8;
 
 /// class RevealedOffset
 class RevealedOffset$Mate extends _i1.RevealedOffset with _i2.Mate {
@@ -46,7 +48,7 @@ class RevealedOffset$Mate extends _i1.RevealedOffset with _i2.Mate {
 class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
   /// RenderViewport RenderViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, double anchor = 0.0, List<RenderSliver>? children, RenderSliver? center, double? cacheExtent, CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel, Clip clipBehavior = Clip.hardEdge})
   RenderViewport$Mate({
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
     super.axisDirection,
 
     /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
@@ -67,23 +69,24 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
     /// optionalParameters: {double? cacheExtent} , default:none
     super.cacheExtent,
 
-    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {CacheExtentStyle cacheExtentStyle = CacheExtentStyle.pixel} , default:processed=PrefixedIdentifierImpl
     super.cacheExtentStyle,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'axisDirection': _i2.BuilderArg<_i4.AxisDirection>(
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
           ),
           'crossAxisDirection': _i2.BuilderArg<_i4.AxisDirection>(
             name: 'crossAxisDirection',
             init: crossAxisDirection,
             isNamed: true,
           ),
-          'offset': _i2.BuilderArg<_i5.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i6.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -94,12 +97,12 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
             isNamed: true,
             defaultValue: 0.0,
           ),
-          'children': _i2.BuilderArg<List<_i6.RenderSliver>?>(
+          'children': _i2.BuilderArg<List<_i7.RenderSliver>?>(
             name: 'children',
             init: children,
             isNamed: true,
           ),
-          'center': _i2.BuilderArg<_i6.RenderSliver?>(
+          'center': _i2.BuilderArg<_i7.RenderSliver?>(
             name: 'center',
             init: center,
             isNamed: true,
@@ -113,11 +116,13 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
             name: 'cacheExtentStyle',
             init: cacheExtentStyle,
             isNamed: true,
+            defaultValue: _i8.CacheExtentStyle.pixel,
           ),
           'clipBehavior': _i2.BuilderArg<_i3.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i3.Clip.hardEdge,
           ),
         },
         super() {
@@ -144,7 +149,7 @@ class RenderViewport$Mate extends _i1.RenderViewport with _i2.Mate {
 class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport with _i2.Mate {
   /// RenderShrinkWrappingViewport RenderShrinkWrappingViewport({AxisDirection axisDirection = AxisDirection.down, required AxisDirection crossAxisDirection, required ViewportOffset offset, Clip clipBehavior = Clip.hardEdge, List<RenderSliver>? children})
   RenderShrinkWrappingViewport$Mate({
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
     super.axisDirection,
 
     /// optionalParameters: {required AxisDirection crossAxisDirection} , default:none
@@ -153,7 +158,7 @@ class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport
     /// optionalParameters: {required ViewportOffset offset} , default:none
     required super.offset,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<RenderSliver>? children} , default:none
@@ -163,13 +168,14 @@ class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
           ),
           'crossAxisDirection': _i2.BuilderArg<_i4.AxisDirection>(
             name: 'crossAxisDirection',
             init: crossAxisDirection,
             isNamed: true,
           ),
-          'offset': _i2.BuilderArg<_i5.ViewportOffset>(
+          'offset': _i2.BuilderArg<_i6.ViewportOffset>(
             name: 'offset',
             init: offset,
             isNamed: true,
@@ -178,8 +184,9 @@ class RenderShrinkWrappingViewport$Mate extends _i1.RenderShrinkWrappingViewport
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i3.Clip.hardEdge,
           ),
-          'children': _i2.BuilderArg<List<_i6.RenderSliver>?>(
+          'children': _i2.BuilderArg<List<_i7.RenderSliver>?>(
             name: 'children',
             init: children,
             isNamed: true,

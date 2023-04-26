@@ -9,6 +9,7 @@ import 'package:flutter/src/painting/box_border.dart' as _i5;
 import 'package:flutter/src/painting/border_radius.dart' as _i6;
 import 'package:flutter/src/painting/box_shadow.dart' as _i7;
 import 'package:flutter/src/painting/gradient.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i9;
 
 /// class BoxDecoration extends Decoration
 class BoxDecoration$Mate extends _i1.BoxDecoration with _i2.Mate {
@@ -35,7 +36,7 @@ class BoxDecoration$Mate extends _i1.BoxDecoration with _i2.Mate {
     /// optionalParameters: {BlendMode? backgroundBlendMode} , default:none
     super.backgroundBlendMode,
 
-    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BoxShape shape = BoxShape.rectangle} , default:processed=PrefixedIdentifierImpl
     super.shape,
   })  : mateParams = {
           'color': _i2.BuilderArg<_i3.Color?>(
@@ -77,6 +78,7 @@ class BoxDecoration$Mate extends _i1.BoxDecoration with _i2.Mate {
             name: 'shape',
             init: shape,
             isNamed: true,
+            defaultValue: _i9.BoxShape.rectangle,
           ),
         },
         super() {

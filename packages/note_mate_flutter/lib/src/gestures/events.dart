@@ -4,24 +4,25 @@
 import 'package:flutter/src/gestures/events.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
+import 'package:flutter/animation.dart' as _i4;
 
 /// class PointerAddedEvent extends PointerEvent with _PointerEventDescription, _CopyPointerAddedEvent
 class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
   /// PointerAddedEvent PointerAddedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerAddedEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
@@ -58,6 +59,7 @@ class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -69,6 +71,7 @@ class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -80,6 +83,7 @@ class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'obscured': _i2.BuilderArg<bool>(
             name: 'obscured',
@@ -172,19 +176,19 @@ class PointerAddedEvent$Mate extends _i1.PointerAddedEvent with _i2.Mate {
 class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
   /// PointerRemovedEvent PointerRemovedEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, PointerRemovedEvent? original, int embedderId = 0})
   PointerRemovedEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {bool obscured = false} , default:processed=BooleanLiteralImpl
@@ -215,6 +219,7 @@ class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -226,6 +231,7 @@ class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -237,6 +243,7 @@ class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'obscured': _i2.BuilderArg<bool>(
             name: 'obscured',
@@ -314,10 +321,10 @@ class PointerRemovedEvent$Mate extends _i1.PointerRemovedEvent with _i2.Mate {
 class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
   /// PointerHoverEvent PointerHoverEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool synthesized = false, int embedderId = 0})
   PointerHoverEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
@@ -326,10 +333,10 @@ class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.delta,
 
     /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
@@ -381,11 +388,13 @@ class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -403,11 +412,13 @@ class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'delta': _i2.BuilderArg<_i3.Offset>(
             name: 'delta',
             init: delta,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'buttons': _i2.BuilderArg<int>(
             name: 'buttons',
@@ -536,22 +547,22 @@ class PointerHoverEvent$Mate extends _i1.PointerHoverEvent with _i2.Mate {
 class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
   /// PointerEnterEvent PointerEnterEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerEnterEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.delta,
 
     /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
@@ -606,6 +617,7 @@ class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -617,6 +629,7 @@ class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -628,11 +641,13 @@ class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'delta': _i2.BuilderArg<_i3.Offset>(
             name: 'delta',
             init: delta,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'buttons': _i2.BuilderArg<int>(
             name: 'buttons',
@@ -768,10 +783,10 @@ class PointerEnterEvent$Mate extends _i1.PointerEnterEvent with _i2.Mate {
 class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
   /// PointerExitEvent PointerExitEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.touch, int pointer = 0, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, bool down = false, bool synthesized = false, int embedderId = 0})
   PointerExitEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
@@ -780,10 +795,10 @@ class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.delta,
 
     /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
@@ -838,11 +853,13 @@ class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -860,11 +877,13 @@ class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'delta': _i2.BuilderArg<_i3.Offset>(
             name: 'delta',
             init: delta,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'buttons': _i2.BuilderArg<int>(
             name: 'buttons',
@@ -1000,19 +1019,19 @@ class PointerExitEvent$Mate extends _i1.PointerExitEvent with _i2.Mate {
 class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
   /// PointerDownEvent PointerDownEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerDownEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int buttons = kPrimaryButton} , default:unprocessed=SimpleIdentifierImpl
@@ -1061,6 +1080,7 @@ class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -1072,6 +1092,7 @@ class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1083,6 +1104,7 @@ class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'buttons': _i2.BuilderArg<int>(
             name: 'buttons',
@@ -1202,22 +1224,22 @@ class PointerDownEvent$Mate extends _i1.PointerDownEvent with _i2.Mate {
 class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
   /// PointerMoveEvent PointerMoveEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, Offset delta = Offset.zero, int buttons = kPrimaryButton, bool obscured = false, double pressure = 1.0, double pressureMin = 1.0, double pressureMax = 1.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int platformData = 0, bool synthesized = false, int embedderId = 0})
   PointerMoveEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.delta,
 
     /// optionalParameters: {int buttons = kPrimaryButton} , default:unprocessed=SimpleIdentifierImpl
@@ -1272,6 +1294,7 @@ class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -1283,6 +1306,7 @@ class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1294,11 +1318,13 @@ class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'delta': _i2.BuilderArg<_i3.Offset>(
             name: 'delta',
             init: delta,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'buttons': _i2.BuilderArg<int>(
             name: 'buttons',
@@ -1433,19 +1459,19 @@ class PointerMoveEvent$Mate extends _i1.PointerMoveEvent with _i2.Mate {
 class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
   /// PointerUpEvent PointerUpEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressure = 0.0, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerUpEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
@@ -1497,6 +1523,7 @@ class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -1508,6 +1535,7 @@ class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1519,6 +1547,7 @@ class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'buttons': _i2.BuilderArg<int>(
             name: 'buttons',
@@ -1646,19 +1675,19 @@ class PointerUpEvent$Mate extends _i1.PointerUpEvent with _i2.Mate {
 class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
   /// PointerScrollEvent PointerScrollEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, Offset scrollDelta = Offset.zero, int embedderId = 0})
   PointerScrollEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
-    /// optionalParameters: {Offset scrollDelta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset scrollDelta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.scrollDelta,
 
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
@@ -1668,11 +1697,13 @@ class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.mouse,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1684,11 +1715,13 @@ class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'scrollDelta': _i2.BuilderArg<_i3.Offset>(
             name: 'scrollDelta',
             init: scrollDelta,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'embedderId': _i2.BuilderArg<int>(
             name: 'embedderId',
@@ -1718,16 +1751,16 @@ class PointerScrollEvent$Mate extends _i1.PointerScrollEvent with _i2.Mate {
 class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCancelEvent with _i2.Mate {
   /// PointerScrollInertiaCancelEvent PointerScrollInertiaCancelEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0})
   PointerScrollInertiaCancelEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
@@ -1737,11 +1770,13 @@ class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCance
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.mouse,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1753,6 +1788,7 @@ class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCance
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'embedderId': _i2.BuilderArg<int>(
             name: 'embedderId',
@@ -1781,16 +1817,16 @@ class PointerScrollInertiaCancelEvent$Mate extends _i1.PointerScrollInertiaCance
 class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
   /// PointerScaleEvent PointerScaleEvent({Duration timeStamp = Duration.zero, PointerDeviceKind kind = PointerDeviceKind.mouse, int device = 0, Offset position = Offset.zero, int embedderId = 0, double scale = 1.0})
   PointerScaleEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.mouse} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
@@ -1803,11 +1839,13 @@ class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'kind': _i2.BuilderArg<_i3.PointerDeviceKind>(
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.mouse,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1819,6 +1857,7 @@ class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'embedderId': _i2.BuilderArg<int>(
             name: 'embedderId',
@@ -1854,7 +1893,7 @@ class PointerScaleEvent$Mate extends _i1.PointerScaleEvent with _i2.Mate {
 class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i2.Mate {
   /// PointerPanZoomStartEvent PointerPanZoomStartEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomStartEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
@@ -1863,7 +1902,7 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
@@ -1876,6 +1915,7 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1893,6 +1933,7 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'embedderId': _i2.BuilderArg<int>(
             name: 'embedderId',
@@ -1928,7 +1969,7 @@ class PointerPanZoomStartEvent$Mate extends _i1.PointerPanZoomStartEvent with _i
 class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with _i2.Mate {
   /// PointerPanZoomUpdateEvent PointerPanZoomUpdateEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, Offset pan = Offset.zero, Offset panDelta = Offset.zero, double scale = 1.0, double rotation = 0.0, bool synthesized = false})
   PointerPanZoomUpdateEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
@@ -1937,16 +1978,16 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
     super.embedderId,
 
-    /// optionalParameters: {Offset pan = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset pan = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.pan,
 
-    /// optionalParameters: {Offset panDelta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset panDelta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.panDelta,
 
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
@@ -1962,6 +2003,7 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -1979,6 +2021,7 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'embedderId': _i2.BuilderArg<int>(
             name: 'embedderId',
@@ -1990,11 +2033,13 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
             name: 'pan',
             init: pan,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'panDelta': _i2.BuilderArg<_i3.Offset>(
             name: 'panDelta',
             init: panDelta,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'scale': _i2.BuilderArg<double>(
             name: 'scale',
@@ -2040,7 +2085,7 @@ class PointerPanZoomUpdateEvent$Mate extends _i1.PointerPanZoomUpdateEvent with 
 class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Mate {
   /// PointerPanZoomEndEvent PointerPanZoomEndEvent({Duration timeStamp = Duration.zero, int device = 0, int pointer = 0, Offset position = Offset.zero, int embedderId = 0, bool synthesized = false})
   PointerPanZoomEndEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
@@ -2049,7 +2094,7 @@ class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Ma
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int embedderId = 0} , default:processed=IntegerLiteralImpl
@@ -2062,6 +2107,7 @@ class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Ma
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -2079,6 +2125,7 @@ class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Ma
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'embedderId': _i2.BuilderArg<int>(
             name: 'embedderId',
@@ -2114,19 +2161,19 @@ class PointerPanZoomEndEvent$Mate extends _i1.PointerPanZoomEndEvent with _i2.Ma
 class PointerCancelEvent$Mate extends _i1.PointerCancelEvent with _i2.Mate {
   /// PointerCancelEvent PointerCancelEvent({Duration timeStamp = Duration.zero, int pointer = 0, PointerDeviceKind kind = PointerDeviceKind.touch, int device = 0, Offset position = Offset.zero, int buttons = 0, bool obscured = false, double pressureMin = 1.0, double pressureMax = 1.0, double distance = 0.0, double distanceMax = 0.0, double size = 0.0, double radiusMajor = 0.0, double radiusMinor = 0.0, double radiusMin = 0.0, double radiusMax = 0.0, double orientation = 0.0, double tilt = 0.0, int embedderId = 0})
   PointerCancelEvent$Mate({
-    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration timeStamp = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.timeStamp,
 
     /// optionalParameters: {int pointer = 0} , default:processed=IntegerLiteralImpl
     super.pointer,
 
-    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PointerDeviceKind kind = PointerDeviceKind.touch} , default:processed=PrefixedIdentifierImpl
     super.kind,
 
     /// optionalParameters: {int device = 0} , default:processed=IntegerLiteralImpl
     super.device,
 
-    /// optionalParameters: {Offset position = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset position = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {int buttons = 0} , default:processed=IntegerLiteralImpl
@@ -2175,6 +2222,7 @@ class PointerCancelEvent$Mate extends _i1.PointerCancelEvent with _i2.Mate {
             name: 'timeStamp',
             init: timeStamp,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'pointer': _i2.BuilderArg<int>(
             name: 'pointer',
@@ -2186,6 +2234,7 @@ class PointerCancelEvent$Mate extends _i1.PointerCancelEvent with _i2.Mate {
             name: 'kind',
             init: kind,
             isNamed: true,
+            defaultValue: _i3.PointerDeviceKind.touch,
           ),
           'device': _i2.BuilderArg<int>(
             name: 'device',
@@ -2197,6 +2246,7 @@ class PointerCancelEvent$Mate extends _i1.PointerCancelEvent with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'buttons': _i2.BuilderArg<int>(
             name: 'buttons',

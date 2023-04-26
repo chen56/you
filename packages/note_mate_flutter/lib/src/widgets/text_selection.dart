@@ -8,18 +8,20 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/rendering/layer.dart' as _i5;
 import 'package:flutter/src/rendering/editable.dart' as _i6;
 import 'package:flutter/src/gestures/recognizer.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/widgets/magnifier.dart' as _i9;
-import 'package:flutter/src/rendering/selection.dart' as _i10;
-import 'package:flutter/src/foundation/change_notifier.dart' as _i11;
-import 'package:flutter/src/foundation/basic_types.dart' as _i12;
-import 'package:flutter/src/gestures/drag_details.dart' as _i13;
-import 'package:flutter/src/foundation/key.dart' as _i14;
-import 'package:flutter/src/widgets/tap_and_drag_gestures.dart' as _i15;
-import 'package:flutter/src/gestures/force_press.dart' as _i16;
-import 'package:flutter/src/gestures/tap.dart' as _i17;
-import 'package:flutter/src/gestures/long_press.dart' as _i18;
-import 'package:flutter/src/rendering/proxy_box.dart' as _i19;
+import 'package:flutter/gestures.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/widgets/magnifier.dart' as _i10;
+import 'package:flutter/src/rendering/selection.dart' as _i11;
+import 'package:flutter/src/foundation/change_notifier.dart' as _i12;
+import 'package:flutter/src/foundation/basic_types.dart' as _i13;
+import 'package:flutter/src/gestures/drag_details.dart' as _i14;
+import 'package:flutter/cupertino.dart' as _i15;
+import 'package:flutter/src/foundation/key.dart' as _i16;
+import 'package:flutter/src/widgets/tap_and_drag_gestures.dart' as _i17;
+import 'package:flutter/src/gestures/force_press.dart' as _i18;
+import 'package:flutter/src/gestures/tap.dart' as _i19;
+import 'package:flutter/src/gestures/long_press.dart' as _i20;
+import 'package:flutter/src/rendering/proxy_box.dart' as _i21;
 
 /// class TextSelectionOverlay
 class TextSelectionOverlay$Mate extends _i1.TextSelectionOverlay with _i2.Mate {
@@ -55,7 +57,7 @@ class TextSelectionOverlay$Mate extends _i1.TextSelectionOverlay with _i2.Mate {
     /// optionalParameters: {required TextSelectionDelegate selectionDelegate} , default:none
     required super.selectionDelegate,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {void Function()? onSelectionHandleTapped} , default:none
@@ -125,8 +127,9 @@ class TextSelectionOverlay$Mate extends _i1.TextSelectionOverlay with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
           ),
-          'onSelectionHandleTapped': _i2.BuilderArg<_i8.VoidCallback?>(
+          'onSelectionHandleTapped': _i2.BuilderArg<_i9.VoidCallback?>(
             name: 'onSelectionHandleTapped',
             init: onSelectionHandleTapped,
             isNamed: true,
@@ -141,7 +144,7 @@ class TextSelectionOverlay$Mate extends _i1.TextSelectionOverlay with _i2.Mate {
             init: contextMenuBuilder,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i9.TextMagnifierConfiguration>(
+          'magnifierConfiguration': _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
@@ -243,13 +246,13 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
     /// optionalParameters: {required LayerLink toolbarLayerLink} , default:none
     required super.toolbarLayerLink,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {void Function()? onSelectionHandleTapped} , default:none
     super.onSelectionHandleTapped,
 
-    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextMagnifierConfiguration magnifierConfiguration = TextMagnifierConfiguration.disabled} , default:processed=PrefixedIdentifierImpl
     super.magnifierConfiguration,
   })  : mateParams = {
           'context': _i2.BuilderArg<_i4.BuildContext>(
@@ -262,7 +265,7 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
             init: debugRequiredFor,
             isNamed: true,
           ),
-          'startHandleType': _i2.BuilderArg<_i10.TextSelectionHandleType>(
+          'startHandleType': _i2.BuilderArg<_i11.TextSelectionHandleType>(
             name: 'startHandleType',
             init: startHandleType,
             isNamed: true,
@@ -272,27 +275,27 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
             init: lineHeightAtStart,
             isNamed: true,
           ),
-          'startHandlesVisible': _i2.BuilderArg<_i11.ValueListenable<bool>?>(
+          'startHandlesVisible': _i2.BuilderArg<_i12.ValueListenable<bool>?>(
             name: 'startHandlesVisible',
             init: startHandlesVisible,
             isNamed: true,
           ),
-          'onStartHandleDragStart': _i2.BuilderArg<_i12.ValueChanged<_i13.DragStartDetails>?>(
+          'onStartHandleDragStart': _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
             name: 'onStartHandleDragStart',
             init: onStartHandleDragStart,
             isNamed: true,
           ),
-          'onStartHandleDragUpdate': _i2.BuilderArg<_i12.ValueChanged<_i13.DragUpdateDetails>?>(
+          'onStartHandleDragUpdate': _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
             name: 'onStartHandleDragUpdate',
             init: onStartHandleDragUpdate,
             isNamed: true,
           ),
-          'onStartHandleDragEnd': _i2.BuilderArg<_i12.ValueChanged<_i13.DragEndDetails>?>(
+          'onStartHandleDragEnd': _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
             name: 'onStartHandleDragEnd',
             init: onStartHandleDragEnd,
             isNamed: true,
           ),
-          'endHandleType': _i2.BuilderArg<_i10.TextSelectionHandleType>(
+          'endHandleType': _i2.BuilderArg<_i11.TextSelectionHandleType>(
             name: 'endHandleType',
             init: endHandleType,
             isNamed: true,
@@ -302,27 +305,27 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
             init: lineHeightAtEnd,
             isNamed: true,
           ),
-          'endHandlesVisible': _i2.BuilderArg<_i11.ValueListenable<bool>?>(
+          'endHandlesVisible': _i2.BuilderArg<_i12.ValueListenable<bool>?>(
             name: 'endHandlesVisible',
             init: endHandlesVisible,
             isNamed: true,
           ),
-          'onEndHandleDragStart': _i2.BuilderArg<_i12.ValueChanged<_i13.DragStartDetails>?>(
+          'onEndHandleDragStart': _i2.BuilderArg<_i13.ValueChanged<_i14.DragStartDetails>?>(
             name: 'onEndHandleDragStart',
             init: onEndHandleDragStart,
             isNamed: true,
           ),
-          'onEndHandleDragUpdate': _i2.BuilderArg<_i12.ValueChanged<_i13.DragUpdateDetails>?>(
+          'onEndHandleDragUpdate': _i2.BuilderArg<_i13.ValueChanged<_i14.DragUpdateDetails>?>(
             name: 'onEndHandleDragUpdate',
             init: onEndHandleDragUpdate,
             isNamed: true,
           ),
-          'onEndHandleDragEnd': _i2.BuilderArg<_i12.ValueChanged<_i13.DragEndDetails>?>(
+          'onEndHandleDragEnd': _i2.BuilderArg<_i13.ValueChanged<_i14.DragEndDetails>?>(
             name: 'onEndHandleDragEnd',
             init: onEndHandleDragEnd,
             isNamed: true,
           ),
-          'toolbarVisible': _i2.BuilderArg<_i11.ValueListenable<bool>?>(
+          'toolbarVisible': _i2.BuilderArg<_i12.ValueListenable<bool>?>(
             name: 'toolbarVisible',
             init: toolbarVisible,
             isNamed: true,
@@ -366,16 +369,18 @@ class SelectionOverlay$Mate extends _i1.SelectionOverlay with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
           ),
-          'onSelectionHandleTapped': _i2.BuilderArg<_i8.VoidCallback?>(
+          'onSelectionHandleTapped': _i2.BuilderArg<_i9.VoidCallback?>(
             name: 'onSelectionHandleTapped',
             init: onSelectionHandleTapped,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i9.TextMagnifierConfiguration>(
+          'magnifierConfiguration': _i2.BuilderArg<_i10.TextMagnifierConfiguration>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,
+            defaultValue: _i15.TextMagnifierConfiguration.disabled,
           ),
         },
         super() {
@@ -496,87 +501,87 @@ class TextSelectionGestureDetector$Mate extends _i1.TextSelectionGestureDetector
     /// optionalParameters: {required Widget child} , default:none
     required super.child,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i14.Key?>(
+          'key': _i2.BuilderArg<_i16.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'onTapDown': _i2.BuilderArg<_i15.GestureTapDragDownCallback?>(
+          'onTapDown': _i2.BuilderArg<_i17.GestureTapDragDownCallback?>(
             name: 'onTapDown',
             init: onTapDown,
             isNamed: true,
           ),
-          'onForcePressStart': _i2.BuilderArg<_i16.GestureForcePressStartCallback?>(
+          'onForcePressStart': _i2.BuilderArg<_i18.GestureForcePressStartCallback?>(
             name: 'onForcePressStart',
             init: onForcePressStart,
             isNamed: true,
           ),
-          'onForcePressEnd': _i2.BuilderArg<_i16.GestureForcePressEndCallback?>(
+          'onForcePressEnd': _i2.BuilderArg<_i18.GestureForcePressEndCallback?>(
             name: 'onForcePressEnd',
             init: onForcePressEnd,
             isNamed: true,
           ),
-          'onSecondaryTap': _i2.BuilderArg<_i17.GestureTapCallback?>(
+          'onSecondaryTap': _i2.BuilderArg<_i19.GestureTapCallback?>(
             name: 'onSecondaryTap',
             init: onSecondaryTap,
             isNamed: true,
           ),
-          'onSecondaryTapDown': _i2.BuilderArg<_i17.GestureTapDownCallback?>(
+          'onSecondaryTapDown': _i2.BuilderArg<_i19.GestureTapDownCallback?>(
             name: 'onSecondaryTapDown',
             init: onSecondaryTapDown,
             isNamed: true,
           ),
-          'onSingleTapUp': _i2.BuilderArg<_i15.GestureTapDragUpCallback?>(
+          'onSingleTapUp': _i2.BuilderArg<_i17.GestureTapDragUpCallback?>(
             name: 'onSingleTapUp',
             init: onSingleTapUp,
             isNamed: true,
           ),
-          'onSingleTapCancel': _i2.BuilderArg<_i15.GestureCancelCallback?>(
+          'onSingleTapCancel': _i2.BuilderArg<_i17.GestureCancelCallback?>(
             name: 'onSingleTapCancel',
             init: onSingleTapCancel,
             isNamed: true,
           ),
-          'onSingleLongTapStart': _i2.BuilderArg<_i18.GestureLongPressStartCallback?>(
+          'onSingleLongTapStart': _i2.BuilderArg<_i20.GestureLongPressStartCallback?>(
             name: 'onSingleLongTapStart',
             init: onSingleLongTapStart,
             isNamed: true,
           ),
-          'onSingleLongTapMoveUpdate': _i2.BuilderArg<_i18.GestureLongPressMoveUpdateCallback?>(
+          'onSingleLongTapMoveUpdate': _i2.BuilderArg<_i20.GestureLongPressMoveUpdateCallback?>(
             name: 'onSingleLongTapMoveUpdate',
             init: onSingleLongTapMoveUpdate,
             isNamed: true,
           ),
-          'onSingleLongTapEnd': _i2.BuilderArg<_i18.GestureLongPressEndCallback?>(
+          'onSingleLongTapEnd': _i2.BuilderArg<_i20.GestureLongPressEndCallback?>(
             name: 'onSingleLongTapEnd',
             init: onSingleLongTapEnd,
             isNamed: true,
           ),
-          'onDoubleTapDown': _i2.BuilderArg<_i15.GestureTapDragDownCallback?>(
+          'onDoubleTapDown': _i2.BuilderArg<_i17.GestureTapDragDownCallback?>(
             name: 'onDoubleTapDown',
             init: onDoubleTapDown,
             isNamed: true,
           ),
-          'onTripleTapDown': _i2.BuilderArg<_i15.GestureTapDragDownCallback?>(
+          'onTripleTapDown': _i2.BuilderArg<_i17.GestureTapDragDownCallback?>(
             name: 'onTripleTapDown',
             init: onTripleTapDown,
             isNamed: true,
           ),
-          'onDragSelectionStart': _i2.BuilderArg<_i15.GestureTapDragStartCallback?>(
+          'onDragSelectionStart': _i2.BuilderArg<_i17.GestureTapDragStartCallback?>(
             name: 'onDragSelectionStart',
             init: onDragSelectionStart,
             isNamed: true,
           ),
-          'onDragSelectionUpdate': _i2.BuilderArg<_i15.GestureTapDragUpdateCallback?>(
+          'onDragSelectionUpdate': _i2.BuilderArg<_i17.GestureTapDragUpdateCallback?>(
             name: 'onDragSelectionUpdate',
             init: onDragSelectionUpdate,
             isNamed: true,
           ),
-          'onDragSelectionEnd': _i2.BuilderArg<_i15.GestureTapDragEndCallback?>(
+          'onDragSelectionEnd': _i2.BuilderArg<_i17.GestureTapDragEndCallback?>(
             name: 'onDragSelectionEnd',
             init: onDragSelectionEnd,
             isNamed: true,
           ),
-          'behavior': _i2.BuilderArg<_i19.HitTestBehavior?>(
+          'behavior': _i2.BuilderArg<_i21.HitTestBehavior?>(
             name: 'behavior',
             init: behavior,
             isNamed: true,
@@ -621,13 +626,14 @@ class ClipboardStatusNotifier$Mate extends _i1.ClipboardStatusNotifier with _i2.
   /// ClipboardStatusNotifier ClipboardStatusNotifier({ClipboardStatus value = ClipboardStatus.unknown})
   ClipboardStatusNotifier$Mate(
       {
-      /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , default:unprocessed=PrefixedIdentifierImpl
+      /// optionalParameters: {ClipboardStatus value = ClipboardStatus.unknown} , default:processed=PrefixedIdentifierImpl
       super.value})
       : mateParams = {
           'value': _i2.BuilderArg<_i1.ClipboardStatus>(
             name: 'value',
             init: value,
             isNamed: true,
+            defaultValue: _i15.ClipboardStatus.unknown,
           )
         },
         super() {

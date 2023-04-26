@@ -6,8 +6,9 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/services/asset_bundle.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/foundation/platform.dart' as _i5;
-import 'dart:io' as _i6;
-import 'dart:typed_data' as _i7;
+import 'package:flutter/cupertino.dart' as _i6;
+import 'dart:io' as _i7;
+import 'dart:typed_data' as _i8;
 
 /// class ImageConfiguration
 class ImageConfiguration$Mate extends _i1.ImageConfiguration with _i2.Mate {
@@ -134,7 +135,7 @@ class ResizeImage$Mate extends _i1.ResizeImage with _i2.Mate {
     /// optionalParameters: {int? height} , default:none
     super.height,
 
-    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ResizeImagePolicy policy = ResizeImagePolicy.exact} , default:processed=PrefixedIdentifierImpl
     super.policy,
 
     /// optionalParameters: {bool allowUpscaling = false} , default:processed=BooleanLiteralImpl
@@ -159,6 +160,7 @@ class ResizeImage$Mate extends _i1.ResizeImage with _i2.Mate {
             name: 'policy',
             init: policy,
             isNamed: true,
+            defaultValue: _i6.ResizeImagePolicy.exact,
           ),
           'allowUpscaling': _i2.BuilderArg<bool>(
             name: 'allowUpscaling',
@@ -192,7 +194,7 @@ class FileImage$Mate extends _i1.FileImage with _i2.Mate {
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     super.scale,
   })  : mateParams = {
-          'file': _i2.BuilderArg<_i6.File>(
+          'file': _i2.BuilderArg<_i7.File>(
             name: 'file',
             init: file,
             isNamed: false,
@@ -226,7 +228,7 @@ class MemoryImage$Mate extends _i1.MemoryImage with _i2.Mate {
     /// optionalParameters: {double scale = 1.0} , default:processed=DoubleLiteralImpl
     super.scale,
   })  : mateParams = {
-          'bytes': _i2.BuilderArg<_i7.Uint8List>(
+          'bytes': _i2.BuilderArg<_i8.Uint8List>(
             name: 'bytes',
             init: bytes,
             isNamed: false,

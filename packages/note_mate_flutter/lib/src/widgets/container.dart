@@ -6,12 +6,13 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/decoration.dart' as _i4;
 import 'package:flutter/src/rendering/proxy_box.dart' as _i5;
-import 'package:flutter/src/widgets/framework.dart' as _i6;
-import 'package:flutter/src/painting/alignment.dart' as _i7;
-import 'package:flutter/src/painting/edge_insets.dart' as _i8;
-import 'dart:ui' as _i9;
-import 'package:flutter/src/rendering/box.dart' as _i10;
-import 'package:vector_math/vector_math_64.dart' as _i11;
+import 'package:flutter/cupertino.dart' as _i6;
+import 'package:flutter/src/widgets/framework.dart' as _i7;
+import 'package:flutter/src/painting/alignment.dart' as _i8;
+import 'package:flutter/src/painting/edge_insets.dart' as _i9;
+import 'dart:ui' as _i10;
+import 'package:flutter/src/rendering/box.dart' as _i11;
+import 'package:vector_math/vector_math_64.dart' as _i12;
 
 /// class DecoratedBox extends SingleChildRenderObjectWidget
 class DecoratedBox$Mate extends _i1.DecoratedBox with _i2.Mate {
@@ -23,7 +24,7 @@ class DecoratedBox$Mate extends _i1.DecoratedBox with _i2.Mate {
     /// optionalParameters: {required Decoration decoration} , default:none
     required super.decoration,
 
-    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DecorationPosition position = DecorationPosition.background} , default:processed=PrefixedIdentifierImpl
     super.position,
 
     /// optionalParameters: {Widget? child} , default:none
@@ -43,8 +44,9 @@ class DecoratedBox$Mate extends _i1.DecoratedBox with _i2.Mate {
             name: 'position',
             init: position,
             isNamed: true,
+            defaultValue: _i6.DecorationPosition.background,
           ),
-          'child': _i2.BuilderArg<_i6.Widget?>(
+          'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
@@ -108,7 +110,7 @@ class Container$Mate extends _i1.Container with _i2.Mate {
     /// optionalParameters: {Widget? child} , default:none
     super.child,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -116,17 +118,17 @@ class Container$Mate extends _i1.Container with _i2.Mate {
             init: key,
             isNamed: true,
           ),
-          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry?>(
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry?>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
           ),
-          'padding': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'color': _i2.BuilderArg<_i9.Color?>(
+          'color': _i2.BuilderArg<_i10.Color?>(
             name: 'color',
             init: color,
             isNamed: true,
@@ -151,35 +153,36 @@ class Container$Mate extends _i1.Container with _i2.Mate {
             init: height,
             isNamed: true,
           ),
-          'constraints': _i2.BuilderArg<_i10.BoxConstraints?>(
+          'constraints': _i2.BuilderArg<_i11.BoxConstraints?>(
             name: 'constraints',
             init: constraints,
             isNamed: true,
           ),
-          'margin': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+          'margin': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
             name: 'margin',
             init: margin,
             isNamed: true,
           ),
-          'transform': _i2.BuilderArg<_i11.Matrix4?>(
+          'transform': _i2.BuilderArg<_i12.Matrix4?>(
             name: 'transform',
             init: transform,
             isNamed: true,
           ),
-          'transformAlignment': _i2.BuilderArg<_i7.AlignmentGeometry?>(
+          'transformAlignment': _i2.BuilderArg<_i8.AlignmentGeometry?>(
             name: 'transformAlignment',
             init: transformAlignment,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i6.Widget?>(
+          'child': _i2.BuilderArg<_i7.Widget?>(
             name: 'child',
             init: child,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i9.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i10.Clip.none,
           ),
         },
         super() {

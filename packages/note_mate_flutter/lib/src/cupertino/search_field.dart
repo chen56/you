@@ -11,11 +11,12 @@ import 'package:flutter/src/painting/box_decoration.dart' as _i7;
 import 'dart:ui' as _i8;
 import 'package:flutter/src/painting/border_radius.dart' as _i9;
 import 'package:flutter/src/services/text_input.dart' as _i10;
-import 'package:flutter/src/painting/edge_insets.dart' as _i11;
-import 'package:flutter/src/widgets/framework.dart' as _i12;
-import 'package:flutter/src/widgets/icon.dart' as _i13;
-import 'package:flutter/src/cupertino/text_field.dart' as _i14;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i15;
+import 'package:flutter/cupertino.dart' as _i11;
+import 'package:flutter/src/painting/edge_insets.dart' as _i12;
+import 'package:flutter/src/widgets/framework.dart' as _i13;
+import 'package:flutter/src/widgets/icon.dart' as _i14;
+import 'package:flutter/src/cupertino/text_field.dart' as _i15;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i16;
 
 /// class CupertinoSearchTextField extends StatefulWidget
 class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i2.Mate {
@@ -51,13 +52,13 @@ class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i
     /// optionalParameters: {BorderRadius? borderRadius} , default:none
     super.borderRadius,
 
-    /// optionalParameters: {TextInputType? keyboardType = TextInputType.text} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextInputType? keyboardType = TextInputType.text} , default:processed=PrefixedIdentifierImpl
     super.keyboardType,
 
     /// optionalParameters: {EdgeInsetsGeometry padding = const EdgeInsetsDirectional.fromSTEB(5.5, 8, 5.5, 8)} , default:unprocessed=InstanceCreationExpressionImpl
     super.padding,
 
-    /// optionalParameters: {Color itemColor = CupertinoColors.secondaryLabel} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Color itemColor = CupertinoColors.secondaryLabel} , default:processed=PrefixedIdentifierImpl
     super.itemColor,
 
     /// optionalParameters: {double itemSize = 20.0} , default:processed=DoubleLiteralImpl
@@ -75,7 +76,7 @@ class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i
     /// optionalParameters: {Icon suffixIcon = const Icon(CupertinoIcons.xmark_circle_fill)} , default:unprocessed=InstanceCreationExpressionImpl
     super.suffixIcon,
 
-    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {OverlayVisibilityMode suffixMode = OverlayVisibilityMode.editing} , default:processed=PrefixedIdentifierImpl
     super.suffixMode,
 
     /// optionalParameters: {void Function()? onSuffixTap} , default:none
@@ -162,8 +163,9 @@ class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i
             name: 'keyboardType',
             init: keyboardType,
             isNamed: true,
+            defaultValue: _i11.TextInputType.text,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry>(
+          'padding': _i2.BuilderArg<_i12.EdgeInsetsGeometry>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -172,6 +174,7 @@ class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i
             name: 'itemColor',
             init: itemColor,
             isNamed: true,
+            defaultValue: _i11.CupertinoColors.secondaryLabel,
           ),
           'itemSize': _i2.BuilderArg<double>(
             name: 'itemSize',
@@ -179,30 +182,31 @@ class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i
             isNamed: true,
             defaultValue: 20.0,
           ),
-          'prefixInsets': _i2.BuilderArg<_i11.EdgeInsetsGeometry>(
+          'prefixInsets': _i2.BuilderArg<_i12.EdgeInsetsGeometry>(
             name: 'prefixInsets',
             init: prefixInsets,
             isNamed: true,
           ),
-          'prefixIcon': _i2.BuilderArg<_i12.Widget>(
+          'prefixIcon': _i2.BuilderArg<_i13.Widget>(
             name: 'prefixIcon',
             init: prefixIcon,
             isNamed: true,
           ),
-          'suffixInsets': _i2.BuilderArg<_i11.EdgeInsetsGeometry>(
+          'suffixInsets': _i2.BuilderArg<_i12.EdgeInsetsGeometry>(
             name: 'suffixInsets',
             init: suffixInsets,
             isNamed: true,
           ),
-          'suffixIcon': _i2.BuilderArg<_i13.Icon>(
+          'suffixIcon': _i2.BuilderArg<_i14.Icon>(
             name: 'suffixIcon',
             init: suffixIcon,
             isNamed: true,
           ),
-          'suffixMode': _i2.BuilderArg<_i14.OverlayVisibilityMode>(
+          'suffixMode': _i2.BuilderArg<_i15.OverlayVisibilityMode>(
             name: 'suffixMode',
             init: suffixMode,
             isNamed: true,
+            defaultValue: _i11.OverlayVisibilityMode.editing,
           ),
           'onSuffixTap': _i2.BuilderArg<_i8.VoidCallback?>(
             name: 'onSuffixTap',
@@ -214,7 +218,7 @@ class CupertinoSearchTextField$Mate extends _i1.CupertinoSearchTextField with _i
             init: restorationId,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i15.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i16.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,

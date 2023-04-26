@@ -21,7 +21,7 @@ class RenderAndroidView$Mate extends _i1.RenderAndroidView with _i2.Mate {
     /// optionalParameters: {required Set<Factory<OneSequenceGestureRecognizer>> gestureRecognizers} , default:none
     required super.gestureRecognizers,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'viewController': _i2.BuilderArg<_i3.AndroidViewController>(
@@ -43,6 +43,7 @@ class RenderAndroidView$Mate extends _i1.RenderAndroidView with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i6.Clip.hardEdge,
           ),
         },
         super() {

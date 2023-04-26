@@ -5,6 +5,7 @@ import 'package:flutter/src/gestures/multitap.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/gestures/recognizer.dart' as _i4;
+import 'package:flutter/animation.dart' as _i5;
 
 /// class DoubleTapGestureRecognizer extends GestureRecognizer
 class DoubleTapGestureRecognizer$Mate extends _i1.DoubleTapGestureRecognizer with _i2.Mate {
@@ -53,7 +54,7 @@ class DoubleTapGestureRecognizer$Mate extends _i1.DoubleTapGestureRecognizer wit
 class MultiTapGestureRecognizer$Mate extends _i1.MultiTapGestureRecognizer with _i2.Mate {
   /// MultiTapGestureRecognizer MultiTapGestureRecognizer({Duration longTapDelay = Duration.zero, Object? debugOwner, Set<PointerDeviceKind>? supportedDevices, bool Function(int)? allowedButtonsFilter})
   MultiTapGestureRecognizer$Mate({
-    /// optionalParameters: {Duration longTapDelay = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration longTapDelay = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.longTapDelay,
 
     /// optionalParameters: {Object? debugOwner} , default:none
@@ -69,6 +70,7 @@ class MultiTapGestureRecognizer$Mate extends _i1.MultiTapGestureRecognizer with 
             name: 'longTapDelay',
             init: longTapDelay,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'debugOwner': _i2.BuilderArg<Object?>(
             name: 'debugOwner',
@@ -105,7 +107,7 @@ class MultiTapGestureRecognizer$Mate extends _i1.MultiTapGestureRecognizer with 
 class SerialTapDownDetails$Mate extends _i1.SerialTapDownDetails with _i2.Mate {
   /// SerialTapDownDetails SerialTapDownDetails({Offset globalPosition = Offset.zero, Offset? localPosition, required PointerDeviceKind kind, int buttons = 0, int count = 1})
   SerialTapDownDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
@@ -124,6 +126,7 @@ class SerialTapDownDetails$Mate extends _i1.SerialTapDownDetails with _i2.Mate {
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
+            defaultValue: _i5.Offset.zero,
           ),
           'localPosition': _i2.BuilderArg<_i3.Offset?>(
             name: 'localPosition',
@@ -193,7 +196,7 @@ class SerialTapCancelDetails$Mate extends _i1.SerialTapCancelDetails with _i2.Ma
 class SerialTapUpDetails$Mate extends _i1.SerialTapUpDetails with _i2.Mate {
   /// SerialTapUpDetails SerialTapUpDetails({Offset globalPosition = Offset.zero, Offset? localPosition, PointerDeviceKind? kind, int count = 1})
   SerialTapUpDetails$Mate({
-    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset globalPosition = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.globalPosition,
 
     /// optionalParameters: {Offset? localPosition} , default:none
@@ -209,6 +212,7 @@ class SerialTapUpDetails$Mate extends _i1.SerialTapUpDetails with _i2.Mate {
             name: 'globalPosition',
             init: globalPosition,
             isNamed: true,
+            defaultValue: _i5.Offset.zero,
           ),
           'localPosition': _i2.BuilderArg<_i3.Offset?>(
             name: 'localPosition',

@@ -9,6 +9,7 @@ import 'package:flutter/src/widgets/framework.dart' as _i5;
 import 'package:flutter/src/rendering/table.dart' as _i6;
 import 'dart:ui' as _i7;
 import 'package:flutter/src/rendering/table_border.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i9;
 
 /// class TableRow
 class TableRow$Mate extends _i1.TableRow with _i2.Mate {
@@ -75,7 +76,7 @@ class Table$Mate extends _i1.Table with _i2.Mate {
     /// optionalParameters: {TableBorder? border} , default:none
     super.border,
 
-    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TableCellVerticalAlignment defaultVerticalAlignment = TableCellVerticalAlignment.top} , default:processed=PrefixedIdentifierImpl
     super.defaultVerticalAlignment,
 
     /// optionalParameters: {TextBaseline? textBaseline} , default:none
@@ -115,6 +116,7 @@ class Table$Mate extends _i1.Table with _i2.Mate {
             name: 'defaultVerticalAlignment',
             init: defaultVerticalAlignment,
             isNamed: true,
+            defaultValue: _i9.TableCellVerticalAlignment.top,
           ),
           'textBaseline': _i2.BuilderArg<_i7.TextBaseline?>(
             name: 'textBaseline',

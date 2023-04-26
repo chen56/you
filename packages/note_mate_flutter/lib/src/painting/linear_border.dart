@@ -4,6 +4,7 @@
 import 'package:flutter/src/painting/linear_border.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
+import 'package:flutter/cupertino.dart' as _i4;
 
 /// class LinearBorderEdge
 class LinearBorderEdge$Mate extends _i1.LinearBorderEdge with _i2.Mate {
@@ -45,7 +46,7 @@ class LinearBorderEdge$Mate extends _i1.LinearBorderEdge with _i2.Mate {
 class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
   /// LinearBorder LinearBorder({BorderSide side = BorderSide.none, LinearBorderEdge? start, LinearBorderEdge? end, LinearBorderEdge? top, LinearBorderEdge? bottom})
   LinearBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {LinearBorderEdge? start} , default:none
@@ -64,6 +65,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
+            defaultValue: _i4.BorderSide.none,
           ),
           'start': _i2.BuilderArg<_i1.LinearBorderEdge?>(
             name: 'start',
@@ -100,7 +102,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
 
   /// LinearBorder LinearBorder.start({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.start({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
@@ -113,6 +115,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
+            defaultValue: _i4.BorderSide.none,
           ),
           'alignment': _i2.BuilderArg<double>(
             name: 'alignment',
@@ -139,7 +142,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
 
   /// LinearBorder LinearBorder.end({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.end({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
@@ -152,6 +155,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
+            defaultValue: _i4.BorderSide.none,
           ),
           'alignment': _i2.BuilderArg<double>(
             name: 'alignment',
@@ -178,7 +182,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
 
   /// LinearBorder LinearBorder.top({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.top({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
@@ -191,6 +195,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
+            defaultValue: _i4.BorderSide.none,
           ),
           'alignment': _i2.BuilderArg<double>(
             name: 'alignment',
@@ -217,7 +222,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
 
   /// LinearBorder LinearBorder.bottom({BorderSide side = BorderSide.none, double alignment = 0.0, double size = 1.0})
   LinearBorder$Mate.bottom({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     super.side,
 
     /// optionalParameters: {double alignment = 0.0} , default:processed=DoubleLiteralImpl
@@ -230,6 +235,7 @@ class LinearBorder$Mate extends _i1.LinearBorder with _i2.Mate {
             name: 'side',
             init: side,
             isNamed: true,
+            defaultValue: _i4.BorderSide.none,
           ),
           'alignment': _i2.BuilderArg<double>(
             name: 'alignment',

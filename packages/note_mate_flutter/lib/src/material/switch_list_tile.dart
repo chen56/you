@@ -12,12 +12,14 @@ import 'package:flutter/src/material/material_state.dart' as _i8;
 import 'package:flutter/src/widgets/icon.dart' as _i9;
 import 'package:flutter/src/material/theme_data.dart' as _i10;
 import 'package:flutter/src/gestures/recognizer.dart' as _i11;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i12;
-import 'package:flutter/src/widgets/focus_manager.dart' as _i13;
-import 'package:flutter/src/widgets/framework.dart' as _i14;
-import 'package:flutter/src/painting/edge_insets.dart' as _i15;
-import 'package:flutter/src/material/list_tile.dart' as _i16;
-import 'package:flutter/src/painting/borders.dart' as _i17;
+import 'package:flutter/gestures.dart' as _i12;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i13;
+import 'package:flutter/src/widgets/focus_manager.dart' as _i14;
+import 'package:flutter/src/widgets/framework.dart' as _i15;
+import 'package:flutter/src/painting/edge_insets.dart' as _i16;
+import 'package:flutter/src/material/list_tile.dart' as _i17;
+import 'package:flutter/material.dart' as _i18;
+import 'package:flutter/src/painting/borders.dart' as _i19;
 
 /// class SwitchListTile extends StatelessWidget
 class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
@@ -71,7 +73,7 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     super.materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
@@ -116,7 +118,7 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     super.selected,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
     super.controlAffinity,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
@@ -218,8 +220,9 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
-          'mouseCursor': _i2.BuilderArg<_i12.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i13.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -234,7 +237,7 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: splashRadius,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i13.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -255,12 +258,12 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: tileColor,
             isNamed: true,
           ),
-          'title': _i2.BuilderArg<_i14.Widget?>(
+          'title': _i2.BuilderArg<_i15.Widget?>(
             name: 'title',
             init: title,
             isNamed: true,
           ),
-          'subtitle': _i2.BuilderArg<_i14.Widget?>(
+          'subtitle': _i2.BuilderArg<_i15.Widget?>(
             name: 'subtitle',
             init: subtitle,
             isNamed: true,
@@ -276,12 +279,12 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: dense,
             isNamed: true,
           ),
-          'contentPadding': _i2.BuilderArg<_i15.EdgeInsetsGeometry?>(
+          'contentPadding': _i2.BuilderArg<_i16.EdgeInsetsGeometry?>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,
           ),
-          'secondary': _i2.BuilderArg<_i14.Widget?>(
+          'secondary': _i2.BuilderArg<_i15.Widget?>(
             name: 'secondary',
             init: secondary,
             isNamed: true,
@@ -292,12 +295,13 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controlAffinity': _i2.BuilderArg<_i16.ListTileControlAffinity>(
+          'controlAffinity': _i2.BuilderArg<_i17.ListTileControlAffinity>(
             name: 'controlAffinity',
             init: controlAffinity,
             isNamed: true,
+            defaultValue: _i18.ListTileControlAffinity.platform,
           ),
-          'shape': _i2.BuilderArg<_i17.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i19.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -417,7 +421,7 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     super.materialTapTargetSize,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {MouseCursor? mouseCursor} , default:none
@@ -465,7 +469,7 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
     /// optionalParameters: {bool selected = false} , default:processed=BooleanLiteralImpl
     super.selected,
 
-    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ListTileControlAffinity controlAffinity = ListTileControlAffinity.platform} , default:processed=PrefixedIdentifierImpl
     super.controlAffinity,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
@@ -567,8 +571,9 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
-          'mouseCursor': _i2.BuilderArg<_i12.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i13.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -583,7 +588,7 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: splashRadius,
             isNamed: true,
           ),
-          'focusNode': _i2.BuilderArg<_i13.FocusNode?>(
+          'focusNode': _i2.BuilderArg<_i14.FocusNode?>(
             name: 'focusNode',
             init: focusNode,
             isNamed: true,
@@ -609,12 +614,12 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: tileColor,
             isNamed: true,
           ),
-          'title': _i2.BuilderArg<_i14.Widget?>(
+          'title': _i2.BuilderArg<_i15.Widget?>(
             name: 'title',
             init: title,
             isNamed: true,
           ),
-          'subtitle': _i2.BuilderArg<_i14.Widget?>(
+          'subtitle': _i2.BuilderArg<_i15.Widget?>(
             name: 'subtitle',
             init: subtitle,
             isNamed: true,
@@ -630,12 +635,12 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             init: dense,
             isNamed: true,
           ),
-          'contentPadding': _i2.BuilderArg<_i15.EdgeInsetsGeometry?>(
+          'contentPadding': _i2.BuilderArg<_i16.EdgeInsetsGeometry?>(
             name: 'contentPadding',
             init: contentPadding,
             isNamed: true,
           ),
-          'secondary': _i2.BuilderArg<_i14.Widget?>(
+          'secondary': _i2.BuilderArg<_i15.Widget?>(
             name: 'secondary',
             init: secondary,
             isNamed: true,
@@ -646,12 +651,13 @@ class SwitchListTile$Mate extends _i1.SwitchListTile with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controlAffinity': _i2.BuilderArg<_i16.ListTileControlAffinity>(
+          'controlAffinity': _i2.BuilderArg<_i17.ListTileControlAffinity>(
             name: 'controlAffinity',
             init: controlAffinity,
             isNamed: true,
+            defaultValue: _i18.ListTileControlAffinity.platform,
           ),
-          'shape': _i2.BuilderArg<_i17.ShapeBorder?>(
+          'shape': _i2.BuilderArg<_i19.ShapeBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,

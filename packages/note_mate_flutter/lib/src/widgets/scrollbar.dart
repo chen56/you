@@ -6,11 +6,12 @@ import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/animation/animation.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
-import 'package:flutter/src/painting/borders.dart' as _i6;
-import 'package:flutter/src/foundation/key.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i9;
-import 'package:flutter/src/widgets/scroll_notification.dart' as _i10;
+import 'package:flutter/cupertino.dart' as _i6;
+import 'package:flutter/src/painting/borders.dart' as _i7;
+import 'package:flutter/src/foundation/key.dart' as _i8;
+import 'package:flutter/src/widgets/framework.dart' as _i9;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i10;
+import 'package:flutter/src/widgets/scroll_notification.dart' as _i11;
 
 /// class ScrollbarPainter extends ChangeNotifier implements CustomPainter
 class ScrollbarPainter$Mate extends _i1.ScrollbarPainter with _i2.Mate {
@@ -34,7 +35,7 @@ class ScrollbarPainter$Mate extends _i1.ScrollbarPainter with _i2.Mate {
     /// optionalParameters: {double thickness = _kScrollbarThickness} , default:unprocessed=SimpleIdentifierImpl
     super.thickness,
 
-    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsets padding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     super.padding,
 
     /// optionalParameters: {double mainAxisMargin = 0.0} , default:processed=DoubleLiteralImpl
@@ -98,6 +99,7 @@ class ScrollbarPainter$Mate extends _i1.ScrollbarPainter with _i2.Mate {
             name: 'padding',
             init: padding,
             isNamed: true,
+            defaultValue: _i6.EdgeInsets.zero,
           ),
           'mainAxisMargin': _i2.BuilderArg<double>(
             name: 'mainAxisMargin',
@@ -121,7 +123,7 @@ class ScrollbarPainter$Mate extends _i1.ScrollbarPainter with _i2.Mate {
             init: trackRadius,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i6.OutlinedBorder?>(
+          'shape': _i2.BuilderArg<_i7.OutlinedBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -227,7 +229,7 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
     /// optionalParameters: {Duration timeToFade = _kScrollbarTimeToFade} , default:unprocessed=SimpleIdentifierImpl
     super.timeToFade,
 
-    /// optionalParameters: {Duration pressDuration = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration pressDuration = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.pressDuration,
 
     /// optionalParameters: {bool Function(ScrollNotification) notificationPredicate = defaultScrollNotificationPredicate} , default:unprocessed=SimpleIdentifierImpl
@@ -248,17 +250,17 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
     /// optionalParameters: {EdgeInsets? padding} , default:none
     super.padding,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i7.Key?>(
+          'key': _i2.BuilderArg<_i8.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
           ),
-          'child': _i2.BuilderArg<_i8.Widget>(
+          'child': _i2.BuilderArg<_i9.Widget>(
             name: 'child',
             init: child,
             isNamed: true,
           ),
-          'controller': _i2.BuilderArg<_i9.ScrollController?>(
+          'controller': _i2.BuilderArg<_i10.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -268,7 +270,7 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
             init: thumbVisibility,
             isNamed: true,
           ),
-          'shape': _i2.BuilderArg<_i6.OutlinedBorder?>(
+          'shape': _i2.BuilderArg<_i7.OutlinedBorder?>(
             name: 'shape',
             init: shape,
             isNamed: true,
@@ -332,8 +334,9 @@ class RawScrollbar$Mate extends _i1.RawScrollbar with _i2.Mate {
             name: 'pressDuration',
             init: pressDuration,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
-          'notificationPredicate': _i2.BuilderArg<_i10.ScrollNotificationPredicate>(
+          'notificationPredicate': _i2.BuilderArg<_i11.ScrollNotificationPredicate>(
             name: 'notificationPredicate',
             init: notificationPredicate,
             isNamed: true,

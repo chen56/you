@@ -9,6 +9,7 @@ import 'package:flutter/src/widgets/scroll_physics.dart' as _i5;
 import 'dart:ui' as _i6;
 import 'package:flutter/src/widgets/scrollable.dart' as _i7;
 import 'package:flutter/src/widgets/scroll_metrics.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i9;
 
 /// class ScrollableDetails
 class ScrollableDetails$Mate extends _i1.ScrollableDetails with _i2.Mate {
@@ -239,7 +240,7 @@ class ScrollIntent$Mate extends _i1.ScrollIntent with _i2.Mate {
     /// optionalParameters: {required AxisDirection direction} , default:none
     required super.direction,
 
-    /// optionalParameters: {ScrollIncrementType type = ScrollIncrementType.line} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollIncrementType type = ScrollIncrementType.line} , default:processed=PrefixedIdentifierImpl
     super.type,
   })  : mateParams = {
           'direction': _i2.BuilderArg<_i3.AxisDirection>(
@@ -251,6 +252,7 @@ class ScrollIntent$Mate extends _i1.ScrollIntent with _i2.Mate {
             name: 'type',
             init: type,
             isNamed: true,
+            defaultValue: _i9.ScrollIncrementType.line,
           ),
         },
         super() {

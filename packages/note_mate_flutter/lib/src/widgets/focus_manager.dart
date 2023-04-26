@@ -4,6 +4,7 @@
 import 'package:flutter/src/widgets/focus_manager.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/widgets/focus_traversal.dart' as _i3;
+import 'package:flutter/cupertino.dart' as _i4;
 
 /// class FocusNode with DiagnosticableTreeMixin, ChangeNotifier
 class FocusNode$Mate extends _i1.FocusNode with _i2.Mate {
@@ -107,7 +108,7 @@ class FocusScopeNode$Mate extends _i1.FocusScopeNode with _i2.Mate {
     /// optionalParameters: {bool canRequestFocus = true} , default:processed=BooleanLiteralImpl
     super.canRequestFocus,
 
-    /// optionalParameters: {TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TraversalEdgeBehavior traversalEdgeBehavior = TraversalEdgeBehavior.closedLoop} , default:processed=PrefixedIdentifierImpl
     super.traversalEdgeBehavior,
   })  : mateParams = {
           'debugLabel': _i2.BuilderArg<String?>(
@@ -141,6 +142,7 @@ class FocusScopeNode$Mate extends _i1.FocusScopeNode with _i2.Mate {
             name: 'traversalEdgeBehavior',
             init: traversalEdgeBehavior,
             isNamed: true,
+            defaultValue: _i4.TraversalEdgeBehavior.closedLoop,
           ),
         },
         super() {

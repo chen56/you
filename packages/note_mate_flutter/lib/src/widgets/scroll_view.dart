@@ -5,15 +5,17 @@ import 'package:flutter/src/widgets/scroll_view.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i5;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i6;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i7;
-import 'package:flutter/src/widgets/framework.dart' as _i8;
-import 'package:flutter/src/gestures/recognizer.dart' as _i9;
-import 'dart:ui' as _i10;
-import 'package:flutter/src/painting/edge_insets.dart' as _i11;
-import 'package:flutter/src/widgets/scroll_delegate.dart' as _i12;
-import 'package:flutter/src/rendering/sliver_grid.dart' as _i13;
+import 'package:flutter/cupertino.dart' as _i5;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i6;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i7;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i8;
+import 'package:flutter/src/widgets/framework.dart' as _i9;
+import 'package:flutter/src/gestures/recognizer.dart' as _i10;
+import 'package:flutter/gestures.dart' as _i11;
+import 'dart:ui' as _i12;
+import 'package:flutter/src/painting/edge_insets.dart' as _i13;
+import 'package:flutter/src/widgets/scroll_delegate.dart' as _i14;
+import 'package:flutter/src/rendering/sliver_grid.dart' as _i15;
 
 /// class CustomScrollView extends ScrollView
 class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
@@ -22,7 +24,7 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -58,16 +60,16 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -79,6 +81,7 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -86,7 +89,7 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -96,12 +99,12 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i7.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i8.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
@@ -128,7 +131,7 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'slivers': _i2.BuilderArg<List<_i8.Widget>>(
+          'slivers': _i2.BuilderArg<List<_i9.Widget>>(
             name: 'slivers',
             init: slivers,
             isNamed: true,
@@ -138,25 +141,28 @@ class CustomScrollView$Mate extends _i1.CustomScrollView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super() {
@@ -194,7 +200,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -239,16 +245,16 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -260,6 +266,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -267,7 +274,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -277,7 +284,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -288,7 +295,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -298,7 +305,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: itemExtent,
             isNamed: true,
           ),
-          'prototypeItem': _i2.BuilderArg<_i8.Widget?>(
+          'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
             name: 'prototypeItem',
             init: prototypeItem,
             isNamed: true,
@@ -326,7 +333,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i8.Widget>>(
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -336,25 +343,28 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super() {
@@ -389,7 +399,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -440,16 +450,16 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -461,6 +471,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -468,7 +479,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -478,7 +489,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -489,7 +500,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -499,17 +510,17 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: itemExtent,
             isNamed: true,
           ),
-          'prototypeItem': _i2.BuilderArg<_i8.Widget?>(
+          'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
             name: 'prototypeItem',
             init: prototypeItem,
             isNamed: true,
           ),
-          'itemBuilder': _i2.BuilderArg<_i8.NullableIndexedWidgetBuilder>(
+          'itemBuilder': _i2.BuilderArg<_i9.NullableIndexedWidgetBuilder>(
             name: 'itemBuilder',
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i12.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -547,25 +558,28 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super.builder() {
@@ -602,7 +616,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -647,16 +661,16 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {double? cacheExtent} , default:none
     super.cacheExtent,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -668,6 +682,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -675,7 +690,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -685,7 +700,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -696,22 +711,22 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'itemBuilder': _i2.BuilderArg<_i8.NullableIndexedWidgetBuilder>(
+          'itemBuilder': _i2.BuilderArg<_i9.NullableIndexedWidgetBuilder>(
             name: 'itemBuilder',
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i12.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
           ),
-          'separatorBuilder': _i2.BuilderArg<_i8.IndexedWidgetBuilder>(
+          'separatorBuilder': _i2.BuilderArg<_i9.IndexedWidgetBuilder>(
             name: 'separatorBuilder',
             init: separatorBuilder,
             isNamed: true,
@@ -744,25 +759,28 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super.separated() {
@@ -797,7 +815,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -833,16 +851,16 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -854,6 +872,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -861,7 +880,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -871,7 +890,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -882,7 +901,7 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -892,12 +911,12 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: itemExtent,
             isNamed: true,
           ),
-          'prototypeItem': _i2.BuilderArg<_i8.Widget?>(
+          'prototypeItem': _i2.BuilderArg<_i9.Widget?>(
             name: 'prototypeItem',
             init: prototypeItem,
             isNamed: true,
           ),
-          'childrenDelegate': _i2.BuilderArg<_i12.SliverChildDelegate>(
+          'childrenDelegate': _i2.BuilderArg<_i14.SliverChildDelegate>(
             name: 'childrenDelegate',
             init: childrenDelegate,
             isNamed: true,
@@ -912,25 +931,28 @@ class ListView$Mate extends _i1.ListView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super.custom() {
@@ -968,7 +990,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -1010,13 +1032,13 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -1031,6 +1053,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -1038,7 +1061,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -1048,7 +1071,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -1059,12 +1082,12 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i13.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
@@ -1092,7 +1115,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i8.Widget>>(
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -1102,20 +1125,23 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
@@ -1154,7 +1180,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -1202,16 +1228,16 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -1223,6 +1249,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -1230,7 +1257,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -1240,7 +1267,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -1251,22 +1278,22 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i13.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
           ),
-          'itemBuilder': _i2.BuilderArg<_i8.NullableIndexedWidgetBuilder>(
+          'itemBuilder': _i2.BuilderArg<_i9.NullableIndexedWidgetBuilder>(
             name: 'itemBuilder',
             init: itemBuilder,
             isNamed: true,
           ),
-          'findChildIndexCallback': _i2.BuilderArg<_i12.ChildIndexGetter?>(
+          'findChildIndexCallback': _i2.BuilderArg<_i14.ChildIndexGetter?>(
             name: 'findChildIndexCallback',
             init: findChildIndexCallback,
             isNamed: true,
@@ -1304,25 +1331,28 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super.builder() {
@@ -1358,7 +1388,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -1391,16 +1421,16 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -1412,6 +1442,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -1419,7 +1450,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -1429,7 +1460,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -1440,17 +1471,17 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
           ),
-          'gridDelegate': _i2.BuilderArg<_i13.SliverGridDelegate>(
+          'gridDelegate': _i2.BuilderArg<_i15.SliverGridDelegate>(
             name: 'gridDelegate',
             init: gridDelegate,
             isNamed: true,
           ),
-          'childrenDelegate': _i2.BuilderArg<_i12.SliverChildDelegate>(
+          'childrenDelegate': _i2.BuilderArg<_i14.SliverChildDelegate>(
             name: 'childrenDelegate',
             init: childrenDelegate,
             isNamed: true,
@@ -1465,25 +1496,28 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super.custom() {
@@ -1514,7 +1548,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -1565,16 +1599,16 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -1586,6 +1620,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -1593,7 +1628,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -1603,7 +1638,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -1614,7 +1649,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -1665,7 +1700,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i8.Widget>>(
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -1675,25 +1710,28 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super.count() {
@@ -1730,7 +1768,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Axis scrollDirection = Axis.vertical} , default:processed=PrefixedIdentifierImpl
     super.scrollDirection,
 
     /// optionalParameters: {bool reverse = false} , default:processed=BooleanLiteralImpl
@@ -1781,16 +1819,16 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
-    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ScrollViewKeyboardDismissBehavior keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual} , default:processed=PrefixedIdentifierImpl
     super.keyboardDismissBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
     super.restorationId,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -1802,6 +1840,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             name: 'scrollDirection',
             init: scrollDirection,
             isNamed: true,
+            defaultValue: _i5.Axis.vertical,
           ),
           'reverse': _i2.BuilderArg<bool>(
             name: 'reverse',
@@ -1809,7 +1848,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
@@ -1819,7 +1858,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: primary,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -1830,7 +1869,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'padding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
+          'padding': _i2.BuilderArg<_i13.EdgeInsetsGeometry?>(
             name: 'padding',
             init: padding,
             isNamed: true,
@@ -1881,7 +1920,7 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: cacheExtent,
             isNamed: true,
           ),
-          'children': _i2.BuilderArg<List<_i8.Widget>>(
+          'children': _i2.BuilderArg<List<_i9.Widget>>(
             name: 'children',
             init: children,
             isNamed: true,
@@ -1891,25 +1930,28 @@ class GridView$Mate extends _i1.GridView with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i11.DragStartBehavior.start,
           ),
           'keyboardDismissBehavior': _i2.BuilderArg<_i1.ScrollViewKeyboardDismissBehavior>(
             name: 'keyboardDismissBehavior',
             init: keyboardDismissBehavior,
             isNamed: true,
+            defaultValue: _i5.ScrollViewKeyboardDismissBehavior.manual,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super.extent() {

@@ -6,10 +6,11 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/services/platform_views.dart' as _i4;
 import 'package:flutter/src/rendering/platform_view.dart' as _i5;
-import 'dart:ui' as _i6;
-import 'package:flutter/src/foundation/basic_types.dart' as _i7;
-import 'package:flutter/src/gestures/recognizer.dart' as _i8;
-import 'package:flutter/src/services/message_codec.dart' as _i9;
+import 'package:flutter/rendering.dart' as _i6;
+import 'dart:ui' as _i7;
+import 'package:flutter/src/foundation/basic_types.dart' as _i8;
+import 'package:flutter/src/gestures/recognizer.dart' as _i9;
+import 'package:flutter/src/services/message_codec.dart' as _i10;
 
 /// class AndroidView extends StatefulWidget
 class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
@@ -24,7 +25,7 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
     /// optionalParameters: {void Function(int)? onPlatformViewCreated} , default:none
     super.onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
     super.hitTestBehavior,
 
     /// optionalParameters: {TextDirection? layoutDirection} , default:none
@@ -39,7 +40,7 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
     /// optionalParameters: {MessageCodec<dynamic>? creationParamsCodec} , default:none
     super.creationParamsCodec,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -61,13 +62,14 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
             name: 'hitTestBehavior',
             init: hitTestBehavior,
             isNamed: true,
+            defaultValue: _i6.PlatformViewHitTestBehavior.opaque,
           ),
-          'layoutDirection': _i2.BuilderArg<_i6.TextDirection?>(
+          'layoutDirection': _i2.BuilderArg<_i7.TextDirection?>(
             name: 'layoutDirection',
             init: layoutDirection,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i7.Factory<_i8.OneSequenceGestureRecognizer>>?>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -77,15 +79,16 @@ class AndroidView$Mate extends _i1.AndroidView with _i2.Mate {
             init: creationParams,
             isNamed: true,
           ),
-          'creationParamsCodec': _i2.BuilderArg<_i9.MessageCodec<dynamic>?>(
+          'creationParamsCodec': _i2.BuilderArg<_i10.MessageCodec<dynamic>?>(
             name: 'creationParamsCodec',
             init: creationParamsCodec,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i6.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i7.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i7.Clip.hardEdge,
           ),
         },
         super() {
@@ -121,7 +124,7 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
     /// optionalParameters: {void Function(int)? onPlatformViewCreated} , default:none
     super.onPlatformViewCreated,
 
-    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {PlatformViewHitTestBehavior hitTestBehavior = PlatformViewHitTestBehavior.opaque} , default:processed=PrefixedIdentifierImpl
     super.hitTestBehavior,
 
     /// optionalParameters: {TextDirection? layoutDirection} , default:none
@@ -155,8 +158,9 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
             name: 'hitTestBehavior',
             init: hitTestBehavior,
             isNamed: true,
+            defaultValue: _i6.PlatformViewHitTestBehavior.opaque,
           ),
-          'layoutDirection': _i2.BuilderArg<_i6.TextDirection?>(
+          'layoutDirection': _i2.BuilderArg<_i7.TextDirection?>(
             name: 'layoutDirection',
             init: layoutDirection,
             isNamed: true,
@@ -166,12 +170,12 @@ class UiKitView$Mate extends _i1.UiKitView with _i2.Mate {
             init: creationParams,
             isNamed: true,
           ),
-          'creationParamsCodec': _i2.BuilderArg<_i9.MessageCodec<dynamic>?>(
+          'creationParamsCodec': _i2.BuilderArg<_i10.MessageCodec<dynamic>?>(
             name: 'creationParamsCodec',
             init: creationParamsCodec,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i7.Factory<_i8.OneSequenceGestureRecognizer>>?>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>?>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -322,7 +326,7 @@ class PlatformViewSurface$Mate extends _i1.PlatformViewSurface with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i7.Factory<_i8.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,
@@ -374,7 +378,7 @@ class AndroidViewSurface$Mate extends _i1.AndroidViewSurface with _i2.Mate {
             init: hitTestBehavior,
             isNamed: true,
           ),
-          'gestureRecognizers': _i2.BuilderArg<Set<_i7.Factory<_i8.OneSequenceGestureRecognizer>>>(
+          'gestureRecognizers': _i2.BuilderArg<Set<_i8.Factory<_i9.OneSequenceGestureRecognizer>>>(
             name: 'gestureRecognizers',
             init: gestureRecognizers,
             isNamed: true,

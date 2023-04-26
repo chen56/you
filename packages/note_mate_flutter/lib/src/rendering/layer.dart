@@ -4,7 +4,8 @@
 import 'package:flutter/src/rendering/layer.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:vector_math/vector_math_64.dart' as _i4;
+import 'package:flutter/animation.dart' as _i4;
+import 'package:vector_math/vector_math_64.dart' as _i5;
 
 /// class AnnotationEntry<T>
 class AnnotationEntry$Mate<T> extends _i1.AnnotationEntry<T> with _i2.Mate {
@@ -241,13 +242,14 @@ class OffsetLayer$Mate extends _i1.OffsetLayer with _i2.Mate {
   /// OffsetLayer OffsetLayer({Offset offset = Offset.zero})
   OffsetLayer$Mate(
       {
-      /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+      /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
       super.offset})
       : mateParams = {
           'offset': _i2.BuilderArg<_i3.Offset>(
             name: 'offset',
             init: offset,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           )
         },
         super() {
@@ -267,7 +269,7 @@ class ClipRectLayer$Mate extends _i1.ClipRectLayer with _i2.Mate {
     /// optionalParameters: {Rect? clipRect} , default:none
     super.clipRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'clipRect': _i2.BuilderArg<_i3.Rect?>(
@@ -279,6 +281,7 @@ class ClipRectLayer$Mate extends _i1.ClipRectLayer with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i3.Clip.hardEdge,
           ),
         },
         super() {
@@ -301,7 +304,7 @@ class ClipRRectLayer$Mate extends _i1.ClipRRectLayer with _i2.Mate {
     /// optionalParameters: {RRect? clipRRect} , default:none
     super.clipRRect,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'clipRRect': _i2.BuilderArg<_i3.RRect?>(
@@ -313,6 +316,7 @@ class ClipRRectLayer$Mate extends _i1.ClipRRectLayer with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i3.Clip.antiAlias,
           ),
         },
         super() {
@@ -335,7 +339,7 @@ class ClipPathLayer$Mate extends _i1.ClipPathLayer with _i2.Mate {
     /// optionalParameters: {Path? clipPath} , default:none
     super.clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.antiAlias} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'clipPath': _i2.BuilderArg<_i3.Path?>(
@@ -347,6 +351,7 @@ class ClipPathLayer$Mate extends _i1.ClipPathLayer with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i3.Clip.antiAlias,
           ),
         },
         super() {
@@ -393,7 +398,7 @@ class ImageFilterLayer$Mate extends _i1.ImageFilterLayer with _i2.Mate {
     /// optionalParameters: {ImageFilter? imageFilter} , default:none
     super.imageFilter,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.offset,
   })  : mateParams = {
           'imageFilter': _i2.BuilderArg<_i3.ImageFilter?>(
@@ -405,6 +410,7 @@ class ImageFilterLayer$Mate extends _i1.ImageFilterLayer with _i2.Mate {
             name: 'offset',
             init: offset,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
         },
         super() {
@@ -427,10 +433,10 @@ class TransformLayer$Mate extends _i1.TransformLayer with _i2.Mate {
     /// optionalParameters: {Matrix4? transform} , default:none
     super.transform,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.offset,
   })  : mateParams = {
-          'transform': _i2.BuilderArg<_i4.Matrix4?>(
+          'transform': _i2.BuilderArg<_i5.Matrix4?>(
             name: 'transform',
             init: transform,
             isNamed: true,
@@ -439,6 +445,7 @@ class TransformLayer$Mate extends _i1.TransformLayer with _i2.Mate {
             name: 'offset',
             init: offset,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
         },
         super() {
@@ -461,7 +468,7 @@ class OpacityLayer$Mate extends _i1.OpacityLayer with _i2.Mate {
     /// optionalParameters: {int? alpha} , default:none
     super.alpha,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.offset,
   })  : mateParams = {
           'alpha': _i2.BuilderArg<int?>(
@@ -473,6 +480,7 @@ class OpacityLayer$Mate extends _i1.OpacityLayer with _i2.Mate {
             name: 'offset',
             init: offset,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
         },
         super() {
@@ -538,7 +546,7 @@ class BackdropFilterLayer$Mate extends _i1.BackdropFilterLayer with _i2.Mate {
     /// optionalParameters: {ImageFilter? filter} , default:none
     super.filter,
 
-    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BlendMode blendMode = BlendMode.srcOver} , default:processed=PrefixedIdentifierImpl
     super.blendMode,
   })  : mateParams = {
           'filter': _i2.BuilderArg<_i3.ImageFilter?>(
@@ -550,6 +558,7 @@ class BackdropFilterLayer$Mate extends _i1.BackdropFilterLayer with _i2.Mate {
             name: 'blendMode',
             init: blendMode,
             isNamed: true,
+            defaultValue: _i3.BlendMode.srcOver,
           ),
         },
         super() {
@@ -572,7 +581,7 @@ class PhysicalModelLayer$Mate extends _i1.PhysicalModelLayer with _i2.Mate {
     /// optionalParameters: {Path? clipPath} , default:none
     super.clipPath,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {double? elevation} , default:none
@@ -593,6 +602,7 @@ class PhysicalModelLayer$Mate extends _i1.PhysicalModelLayer with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i3.Clip.none,
           ),
           'elevation': _i2.BuilderArg<double?>(
             name: 'elevation',
@@ -633,7 +643,7 @@ class LeaderLayer$Mate extends _i1.LeaderLayer with _i2.Mate {
     /// optionalParameters: {required LayerLink link} , default:none
     required super.link,
 
-    /// optionalParameters: {Offset offset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset offset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.offset,
   })  : mateParams = {
           'link': _i2.BuilderArg<_i1.LayerLink>(
@@ -645,6 +655,7 @@ class LeaderLayer$Mate extends _i1.LeaderLayer with _i2.Mate {
             name: 'offset',
             init: offset,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
         },
         super() {
@@ -670,10 +681,10 @@ class FollowerLayer$Mate extends _i1.FollowerLayer with _i2.Mate {
     /// optionalParameters: {bool? showWhenUnlinked = true} , default:processed=BooleanLiteralImpl
     super.showWhenUnlinked,
 
-    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset? unlinkedOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.unlinkedOffset,
 
-    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset? linkedOffset = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.linkedOffset,
   })  : mateParams = {
           'link': _i2.BuilderArg<_i1.LayerLink>(
@@ -691,11 +702,13 @@ class FollowerLayer$Mate extends _i1.FollowerLayer with _i2.Mate {
             name: 'unlinkedOffset',
             init: unlinkedOffset,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
           'linkedOffset': _i2.BuilderArg<_i3.Offset?>(
             name: 'linkedOffset',
             init: linkedOffset,
             isNamed: true,
+            defaultValue: _i4.Offset.zero,
           ),
         },
         super() {

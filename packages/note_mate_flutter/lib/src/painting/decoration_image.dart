@@ -8,7 +8,8 @@ import 'package:flutter/src/painting/image_stream.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/painting/box_fit.dart' as _i6;
 import 'package:flutter/src/painting/alignment.dart' as _i7;
-import 'package:vector_math/vector_math_64.dart' as _i8;
+import 'package:flutter/cupertino.dart' as _i8;
+import 'package:vector_math/vector_math_64.dart' as _i9;
 
 /// class DecorationImage
 class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
@@ -26,13 +27,13 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
     /// optionalParameters: {BoxFit? fit} , default:none
     super.fit,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {Rect? centerSlice} , default:none
     super.centerSlice,
 
-    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {ImageRepeat repeat = ImageRepeat.noRepeat} , default:processed=PrefixedIdentifierImpl
     super.repeat,
 
     /// optionalParameters: {bool matchTextDirection = false} , default:processed=BooleanLiteralImpl
@@ -44,7 +45,7 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
     /// optionalParameters: {double opacity = 1.0} , default:processed=DoubleLiteralImpl
     super.opacity,
 
-    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FilterQuality filterQuality = FilterQuality.low} , default:processed=PrefixedIdentifierImpl
     super.filterQuality,
 
     /// optionalParameters: {bool invertColors = false} , default:processed=BooleanLiteralImpl
@@ -77,6 +78,7 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i8.Alignment.center,
           ),
           'centerSlice': _i2.BuilderArg<_i5.Rect?>(
             name: 'centerSlice',
@@ -87,6 +89,7 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
             name: 'repeat',
             init: repeat,
             isNamed: true,
+            defaultValue: _i8.ImageRepeat.noRepeat,
           ),
           'matchTextDirection': _i2.BuilderArg<bool>(
             name: 'matchTextDirection',
@@ -110,6 +113,7 @@ class DecorationImage$Mate extends _i1.DecorationImage with _i2.Mate {
             name: 'filterQuality',
             init: filterQuality,
             isNamed: true,
+            defaultValue: _i5.FilterQuality.low,
           ),
           'invertColors': _i2.BuilderArg<bool>(
             name: 'invertColors',
@@ -171,7 +175,7 @@ class ImageTilingInfo$Mate extends _i1.ImageTilingInfo with _i2.Mate {
             init: tmy,
             isNamed: true,
           ),
-          'transform': _i2.BuilderArg<_i8.Matrix4>(
+          'transform': _i2.BuilderArg<_i9.Matrix4>(
             name: 'transform',
             init: transform,
             isNamed: true,

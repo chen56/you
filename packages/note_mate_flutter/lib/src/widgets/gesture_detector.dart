@@ -13,7 +13,8 @@ import 'package:flutter/src/gestures/monodrag.dart' as _i9;
 import 'package:flutter/src/gestures/force_press.dart' as _i10;
 import 'package:flutter/src/gestures/scale.dart' as _i11;
 import 'package:flutter/src/rendering/proxy_box.dart' as _i12;
-import 'dart:ui' as _i13;
+import 'package:flutter/gestures.dart' as _i13;
+import 'dart:ui' as _i14;
 
 /// class GestureRecognizerFactoryWithHandlers<T extends GestureRecognizer> extends GestureRecognizerFactory<T>
 class GestureRecognizerFactoryWithHandlers$Mate<T extends _i1.GestureRecognizer>
@@ -237,7 +238,7 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
     /// optionalParameters: {bool excludeFromSemantics = false} , default:processed=BooleanLiteralImpl
     super.excludeFromSemantics,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool trackpadScrollCausesScale = false} , default:processed=BooleanLiteralImpl
@@ -559,6 +560,7 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i13.DragStartBehavior.start,
           ),
           'trackpadScrollCausesScale': _i3.BuilderArg<bool>(
             name: 'trackpadScrollCausesScale',
@@ -566,12 +568,12 @@ class GestureDetector$Mate extends _i2.GestureDetector with _i3.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'trackpadScrollToScaleFactor': _i3.BuilderArg<_i13.Offset>(
+          'trackpadScrollToScaleFactor': _i3.BuilderArg<_i14.Offset>(
             name: 'trackpadScrollToScaleFactor',
             init: trackpadScrollToScaleFactor,
             isNamed: true,
           ),
-          'supportedDevices': _i3.BuilderArg<Set<_i13.PointerDeviceKind>?>(
+          'supportedDevices': _i3.BuilderArg<Set<_i14.PointerDeviceKind>?>(
             name: 'supportedDevices',
             init: supportedDevices,
             isNamed: true,

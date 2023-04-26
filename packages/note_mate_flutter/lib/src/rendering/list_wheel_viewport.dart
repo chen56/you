@@ -44,7 +44,7 @@ class RenderListWheelViewport$Mate extends _i1.RenderListWheelViewport with _i2.
     /// optionalParameters: {bool renderChildrenOutsideViewport = false} , default:processed=BooleanLiteralImpl
     super.renderChildrenOutsideViewport,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {List<RenderBox>? children} , default:none
@@ -115,6 +115,7 @@ class RenderListWheelViewport$Mate extends _i1.RenderListWheelViewport with _i2.
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'children': _i2.BuilderArg<List<_i5.RenderBox>?>(
             name: 'children',

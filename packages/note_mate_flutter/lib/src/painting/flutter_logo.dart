@@ -4,7 +4,8 @@
 import 'package:flutter/src/painting/flutter_logo.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
-import 'package:flutter/src/painting/edge_insets.dart' as _i4;
+import 'package:flutter/cupertino.dart' as _i4;
+import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 
 /// class FlutterLogoDecoration extends Decoration
 class FlutterLogoDecoration$Mate extends _i1.FlutterLogoDecoration with _i2.Mate {
@@ -13,10 +14,10 @@ class FlutterLogoDecoration$Mate extends _i1.FlutterLogoDecoration with _i2.Mate
     /// optionalParameters: {Color textColor = const Color(0xFF757575)} , default:unprocessed=InstanceCreationExpressionImpl
     super.textColor,
 
-    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {FlutterLogoStyle style = FlutterLogoStyle.markOnly} , default:processed=PrefixedIdentifierImpl
     super.style,
 
-    /// optionalParameters: {EdgeInsets margin = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsets margin = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     super.margin,
   })  : mateParams = {
           'textColor': _i2.BuilderArg<_i3.Color>(
@@ -28,11 +29,13 @@ class FlutterLogoDecoration$Mate extends _i1.FlutterLogoDecoration with _i2.Mate
             name: 'style',
             init: style,
             isNamed: true,
+            defaultValue: _i4.FlutterLogoStyle.markOnly,
           ),
-          'margin': _i2.BuilderArg<_i4.EdgeInsets>(
+          'margin': _i2.BuilderArg<_i5.EdgeInsets>(
             name: 'margin',
             init: margin,
             isNamed: true,
+            defaultValue: _i4.EdgeInsets.zero,
           ),
         },
         super() {

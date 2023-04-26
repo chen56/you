@@ -87,7 +87,7 @@ class MaterialButton$Mate extends _i1.MaterialButton with _i2.Mate {
     /// optionalParameters: {ShapeBorder? shape} , default:none
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -233,6 +233,7 @@ class MaterialButton$Mate extends _i1.MaterialButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'focusNode': _i2.BuilderArg<_i11.FocusNode?>(
             name: 'focusNode',

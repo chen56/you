@@ -62,7 +62,7 @@ class Overlay$Mate extends _i1.Overlay with _i2.Mate {
     /// optionalParameters: {List<OverlayEntry> initialEntries = const <OverlayEntry>[]} , default:unprocessed=ListLiteralImpl
     super.initialEntries,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i4.Key?>(
@@ -79,6 +79,7 @@ class Overlay$Mate extends _i1.Overlay with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i5.Clip.hardEdge,
           ),
         },
         super() {

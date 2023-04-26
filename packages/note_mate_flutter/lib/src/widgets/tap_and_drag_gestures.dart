@@ -5,7 +5,9 @@ import 'package:flutter/src/widgets/tap_and_drag_gestures.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/services/keyboard_key.g.dart' as _i4;
-import 'package:flutter/src/gestures/velocity_tracker.dart' as _i5;
+import 'package:flutter/animation.dart' as _i5;
+import 'package:flutter/src/gestures/velocity_tracker.dart' as _i6;
+import 'package:flutter/cupertino.dart' as _i7;
 
 /// class TapDragDownDetails with Diagnosticable
 class TapDragDownDetails$Mate extends _i1.TapDragDownDetails with _i2.Mate {
@@ -206,7 +208,7 @@ class TapDragUpdateDetails$Mate extends _i1.TapDragUpdateDetails with _i2.Mate {
     /// optionalParameters: {Duration? sourceTimeStamp} , default:none
     super.sourceTimeStamp,
 
-    /// optionalParameters: {Offset delta = Offset.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Offset delta = Offset.zero} , default:processed=PrefixedIdentifierImpl
     super.delta,
 
     /// optionalParameters: {double? primaryDelta} , default:none
@@ -242,6 +244,7 @@ class TapDragUpdateDetails$Mate extends _i1.TapDragUpdateDetails with _i2.Mate {
             name: 'delta',
             init: delta,
             isNamed: true,
+            defaultValue: _i5.Offset.zero,
           ),
           'primaryDelta': _i2.BuilderArg<double?>(
             name: 'primaryDelta',
@@ -309,7 +312,7 @@ class TapDragUpdateDetails$Mate extends _i1.TapDragUpdateDetails with _i2.Mate {
 class TapDragEndDetails$Mate extends _i1.TapDragEndDetails with _i2.Mate {
   /// TapDragEndDetails TapDragEndDetails({Velocity velocity = Velocity.zero, double? primaryVelocity, required int consecutiveTapCount, required Set<LogicalKeyboardKey> keysPressedOnDown})
   TapDragEndDetails$Mate({
-    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Velocity velocity = Velocity.zero} , default:processed=PrefixedIdentifierImpl
     super.velocity,
 
     /// optionalParameters: {double? primaryVelocity} , default:none
@@ -321,10 +324,11 @@ class TapDragEndDetails$Mate extends _i1.TapDragEndDetails with _i2.Mate {
     /// optionalParameters: {required Set<LogicalKeyboardKey> keysPressedOnDown} , default:none
     required super.keysPressedOnDown,
   })  : mateParams = {
-          'velocity': _i2.BuilderArg<_i5.Velocity>(
+          'velocity': _i2.BuilderArg<_i6.Velocity>(
             name: 'velocity',
             init: velocity,
             isNamed: true,
+            defaultValue: _i7.Velocity.zero,
           ),
           'primaryVelocity': _i2.BuilderArg<double?>(
             name: 'primaryVelocity',

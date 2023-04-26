@@ -5,12 +5,14 @@ import 'package:flutter/src/widgets/scrollable.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/painting/basic_types.dart' as _i4;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i5;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i6;
-import 'package:flutter/src/widgets/scrollable_helpers.dart' as _i7;
-import 'package:flutter/src/gestures/recognizer.dart' as _i8;
-import 'package:flutter/src/widgets/scroll_configuration.dart' as _i9;
-import 'dart:ui' as _i10;
+import 'package:flutter/cupertino.dart' as _i5;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i6;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i7;
+import 'package:flutter/src/widgets/scrollable_helpers.dart' as _i8;
+import 'package:flutter/src/gestures/recognizer.dart' as _i9;
+import 'package:flutter/gestures.dart' as _i10;
+import 'package:flutter/src/widgets/scroll_configuration.dart' as _i11;
+import 'dart:ui' as _i12;
 
 /// class Scrollable extends StatefulWidget
 class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
@@ -19,7 +21,7 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AxisDirection axisDirection = AxisDirection.down} , default:processed=PrefixedIdentifierImpl
     super.axisDirection,
 
     /// optionalParameters: {ScrollController? controller} , default:none
@@ -40,7 +42,7 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
     /// optionalParameters: {int? semanticChildCount} , default:none
     super.semanticChildCount,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -49,7 +51,7 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
     /// optionalParameters: {ScrollBehavior? scrollBehavior} , default:none
     super.scrollBehavior,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -61,13 +63,14 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
             name: 'axisDirection',
             init: axisDirection,
             isNamed: true,
+            defaultValue: _i5.AxisDirection.down,
           ),
-          'controller': _i2.BuilderArg<_i5.ScrollController?>(
+          'controller': _i2.BuilderArg<_i6.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -77,7 +80,7 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
             init: viewportBuilder,
             isNamed: true,
           ),
-          'incrementCalculator': _i2.BuilderArg<_i7.ScrollIncrementCalculator?>(
+          'incrementCalculator': _i2.BuilderArg<_i8.ScrollIncrementCalculator?>(
             name: 'incrementCalculator',
             init: incrementCalculator,
             isNamed: true,
@@ -93,25 +96,27 @@ class Scrollable$Mate extends _i1.Scrollable with _i2.Mate {
             init: semanticChildCount,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i8.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i9.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i10.DragStartBehavior.start,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
             init: restorationId,
             isNamed: true,
           ),
-          'scrollBehavior': _i2.BuilderArg<_i9.ScrollBehavior?>(
+          'scrollBehavior': _i2.BuilderArg<_i11.ScrollBehavior?>(
             name: 'scrollBehavior',
             init: scrollBehavior,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i10.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
         },
         super() {

@@ -5,9 +5,10 @@ import 'package:flutter/src/semantics/semantics.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/foundation/diagnostics.dart' as _i4;
-import 'package:flutter/src/services/text_editing.dart' as _i5;
-import 'package:vector_math/vector_math_64.dart' as _i6;
-import 'package:flutter/src/foundation/key.dart' as _i7;
+import 'package:flutter/foundation.dart' as _i5;
+import 'package:flutter/src/services/text_editing.dart' as _i6;
+import 'package:vector_math/vector_math_64.dart' as _i7;
+import 'package:flutter/src/foundation/key.dart' as _i8;
 
 /// class SemanticsTag
 class SemanticsTag$Mate extends _i1.SemanticsTag with _i2.Mate {
@@ -136,7 +137,7 @@ class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i
     /// optionalParameters: {Object? defaultValue = kNoDefaultValue} , default:unprocessed=SimpleIdentifierImpl
     super.defaultValue,
 
-    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DiagnosticLevel level = DiagnosticLevel.info} , default:processed=PrefixedIdentifierImpl
     super.level,
 
     /// optionalParameters: {String? description} , default:none
@@ -173,6 +174,7 @@ class AttributedStringProperty$Mate extends _i1.AttributedStringProperty with _i
             name: 'level',
             init: level,
             isNamed: true,
+            defaultValue: _i5.DiagnosticLevel.info,
           ),
           'description': _i2.BuilderArg<String?>(
             name: 'description',
@@ -334,7 +336,7 @@ class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
             init: thickness,
             isNamed: true,
           ),
-          'textSelection': _i2.BuilderArg<_i5.TextSelection?>(
+          'textSelection': _i2.BuilderArg<_i6.TextSelection?>(
             name: 'textSelection',
             init: textSelection,
             isNamed: true,
@@ -384,7 +386,7 @@ class SemanticsData$Mate extends _i1.SemanticsData with _i2.Mate {
             init: tags,
             isNamed: true,
           ),
-          'transform': _i2.BuilderArg<_i6.Matrix4?>(
+          'transform': _i2.BuilderArg<_i7.Matrix4?>(
             name: 'transform',
             init: transform,
             isNamed: true,
@@ -1030,7 +1032,7 @@ class SemanticsNode$Mate extends _i1.SemanticsNode with _i2.Mate {
     /// optionalParameters: {void Function()? showOnScreen} , default:none
     super.showOnScreen,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i7.Key?>(
+          'key': _i2.BuilderArg<_i8.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -1061,7 +1063,7 @@ class SemanticsNode$Mate extends _i1.SemanticsNode with _i2.Mate {
     /// optionalParameters: {required SemanticsOwner owner} , default:none
     required super.owner,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i7.Key?>(
+          'key': _i2.BuilderArg<_i8.Key?>(
             name: 'key',
             init: key,
             isNamed: true,

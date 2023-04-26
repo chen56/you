@@ -4,10 +4,11 @@
 import 'package:flutter/src/cupertino/date_picker.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
-import 'package:flutter/src/foundation/basic_types.dart' as _i4;
-import 'package:flutter/src/cupertino/localizations.dart' as _i5;
-import 'dart:ui' as _i6;
-import 'package:flutter/src/painting/alignment.dart' as _i7;
+import 'package:flutter/cupertino.dart' as _i4;
+import 'package:flutter/src/foundation/basic_types.dart' as _i5;
+import 'package:flutter/src/cupertino/localizations.dart' as _i6;
+import 'dart:ui' as _i7;
+import 'package:flutter/src/painting/alignment.dart' as _i8;
 
 /// class CupertinoDatePicker extends StatefulWidget
 class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
@@ -16,7 +17,7 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {CupertinoDatePickerMode mode = CupertinoDatePickerMode.dateAndTime} , default:processed=PrefixedIdentifierImpl
     super.mode,
 
     /// optionalParameters: {required void Function(DateTime) onDateTimeChanged} , default:none
@@ -61,8 +62,9 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
             name: 'mode',
             init: mode,
             isNamed: true,
+            defaultValue: _i4.CupertinoDatePickerMode.dateAndTime,
           ),
-          'onDateTimeChanged': _i2.BuilderArg<_i4.ValueChanged<DateTime>>(
+          'onDateTimeChanged': _i2.BuilderArg<_i5.ValueChanged<DateTime>>(
             name: 'onDateTimeChanged',
             init: onDateTimeChanged,
             isNamed: true,
@@ -105,12 +107,12 @@ class CupertinoDatePicker$Mate extends _i1.CupertinoDatePicker with _i2.Mate {
             isNamed: true,
             defaultValue: false,
           ),
-          'dateOrder': _i2.BuilderArg<_i5.DatePickerDateOrder?>(
+          'dateOrder': _i2.BuilderArg<_i6.DatePickerDateOrder?>(
             name: 'dateOrder',
             init: dateOrder,
             isNamed: true,
           ),
-          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
@@ -153,10 +155,10 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
     /// optionalParameters: {Key? key} , default:none
     super.key,
 
-    /// optionalParameters: {CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {CupertinoTimerPickerMode mode = CupertinoTimerPickerMode.hms} , default:processed=PrefixedIdentifierImpl
     super.mode,
 
-    /// optionalParameters: {Duration initialTimerDuration = Duration.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Duration initialTimerDuration = Duration.zero} , default:processed=PrefixedIdentifierImpl
     super.initialTimerDuration,
 
     /// optionalParameters: {int minuteInterval = 1} , default:processed=IntegerLiteralImpl
@@ -165,7 +167,7 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
     /// optionalParameters: {int secondInterval = 1} , default:processed=IntegerLiteralImpl
     super.secondInterval,
 
-    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {AlignmentGeometry alignment = Alignment.center} , default:processed=PrefixedIdentifierImpl
     super.alignment,
 
     /// optionalParameters: {Color? backgroundColor} , default:none
@@ -183,11 +185,13 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
             name: 'mode',
             init: mode,
             isNamed: true,
+            defaultValue: _i4.CupertinoTimerPickerMode.hms,
           ),
           'initialTimerDuration': _i2.BuilderArg<Duration>(
             name: 'initialTimerDuration',
             init: initialTimerDuration,
             isNamed: true,
+            defaultValue: Duration.zero,
           ),
           'minuteInterval': _i2.BuilderArg<int>(
             name: 'minuteInterval',
@@ -201,17 +205,18 @@ class CupertinoTimerPicker$Mate extends _i1.CupertinoTimerPicker with _i2.Mate {
             isNamed: true,
             defaultValue: 1,
           ),
-          'alignment': _i2.BuilderArg<_i7.AlignmentGeometry>(
+          'alignment': _i2.BuilderArg<_i8.AlignmentGeometry>(
             name: 'alignment',
             init: alignment,
             isNamed: true,
+            defaultValue: _i4.Alignment.center,
           ),
-          'backgroundColor': _i2.BuilderArg<_i6.Color?>(
+          'backgroundColor': _i2.BuilderArg<_i7.Color?>(
             name: 'backgroundColor',
             init: backgroundColor,
             isNamed: true,
           ),
-          'onTimerDurationChanged': _i2.BuilderArg<_i4.ValueChanged<Duration>>(
+          'onTimerDurationChanged': _i2.BuilderArg<_i5.ValueChanged<Duration>>(
             name: 'onTimerDurationChanged',
             init: onTimerDurationChanged,
             isNamed: true,

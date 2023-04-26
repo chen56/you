@@ -15,7 +15,7 @@ class TextSelection$Mate extends _i1.TextSelection with _i2.Mate {
     /// optionalParameters: {required int extentOffset} , default:none
     required super.extentOffset,
 
-    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , default:processed=PrefixedIdentifierImpl
     super.affinity,
 
     /// optionalParameters: {bool isDirectional = false} , default:processed=BooleanLiteralImpl
@@ -35,6 +35,7 @@ class TextSelection$Mate extends _i1.TextSelection with _i2.Mate {
             name: 'affinity',
             init: affinity,
             isNamed: true,
+            defaultValue: _i3.TextAffinity.downstream,
           ),
           'isDirectional': _i2.BuilderArg<bool>(
             name: 'isDirectional',
@@ -59,7 +60,7 @@ class TextSelection$Mate extends _i1.TextSelection with _i2.Mate {
     /// optionalParameters: {required int offset} , default:none
     required super.offset,
 
-    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAffinity affinity = TextAffinity.downstream} , default:processed=PrefixedIdentifierImpl
     super.affinity,
   })  : mateParams = {
           'offset': _i2.BuilderArg<int>(
@@ -71,6 +72,7 @@ class TextSelection$Mate extends _i1.TextSelection with _i2.Mate {
             name: 'affinity',
             init: affinity,
             isNamed: true,
+            defaultValue: _i3.TextAffinity.downstream,
           ),
         },
         super.collapsed() {

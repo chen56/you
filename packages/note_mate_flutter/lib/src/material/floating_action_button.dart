@@ -10,8 +10,9 @@ import 'package:flutter/src/services/mouse_cursor.dart' as _i6;
 import 'package:flutter/src/painting/borders.dart' as _i7;
 import 'package:flutter/src/widgets/focus_manager.dart' as _i8;
 import 'package:flutter/src/material/theme_data.dart' as _i9;
-import 'package:flutter/src/painting/edge_insets.dart' as _i10;
-import 'package:flutter/src/painting/text_style.dart' as _i11;
+import 'package:flutter/cupertino.dart' as _i10;
+import 'package:flutter/src/painting/edge_insets.dart' as _i11;
+import 'package:flutter/src/painting/text_style.dart' as _i12;
 
 /// class FloatingActionButton extends StatelessWidget
 class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
@@ -71,7 +72,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
     /// optionalParameters: {ShapeBorder? shape} , default:none
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -184,6 +185,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i5.Clip.none,
           ),
           'focusNode': _i2.BuilderArg<_i8.FocusNode?>(
             name: 'focusNode',
@@ -297,7 +299,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
     /// optionalParameters: {ShapeBorder? shape} , default:none
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -401,6 +403,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i5.Clip.none,
           ),
           'focusNode': _i2.BuilderArg<_i8.FocusNode?>(
             name: 'focusNode',
@@ -506,7 +509,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
     /// optionalParameters: {ShapeBorder? shape} , default:none
     super.shape,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -610,6 +613,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i5.Clip.none,
           ),
           'focusNode': _i2.BuilderArg<_i8.FocusNode?>(
             name: 'focusNode',
@@ -706,7 +710,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
     /// optionalParameters: {required void Function()? onPressed} , default:none
     required super.onPressed,
 
-    /// optionalParameters: {MouseCursor? mouseCursor = SystemMouseCursors.click} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MouseCursor? mouseCursor = SystemMouseCursors.click} , default:processed=PrefixedIdentifierImpl
     super.mouseCursor,
 
     /// optionalParameters: {ShapeBorder? shape} , default:none
@@ -718,7 +722,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
     /// optionalParameters: {MaterialTapTargetSize? materialTapTargetSize} , default:none
     super.materialTapTargetSize,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {FocusNode? focusNode} , default:none
@@ -819,6 +823,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
+            defaultValue: _i10.SystemMouseCursors.click,
           ),
           'shape': _i2.BuilderArg<_i7.ShapeBorder?>(
             name: 'shape',
@@ -840,6 +845,7 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i5.Clip.none,
           ),
           'focusNode': _i2.BuilderArg<_i8.FocusNode?>(
             name: 'focusNode',
@@ -857,12 +863,12 @@ class FloatingActionButton$Mate extends _i1.FloatingActionButton with _i2.Mate {
             init: extendedIconLabelSpacing,
             isNamed: true,
           ),
-          'extendedPadding': _i2.BuilderArg<_i10.EdgeInsetsGeometry?>(
+          'extendedPadding': _i2.BuilderArg<_i11.EdgeInsetsGeometry?>(
             name: 'extendedPadding',
             init: extendedPadding,
             isNamed: true,
           ),
-          'extendedTextStyle': _i2.BuilderArg<_i11.TextStyle?>(
+          'extendedTextStyle': _i2.BuilderArg<_i12.TextStyle?>(
             name: 'extendedTextStyle',
             init: extendedTextStyle,
             isNamed: true,

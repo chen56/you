@@ -39,7 +39,7 @@ class FilledButton$Mate extends _i1.FilledButton with _i2.Mate {
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
@@ -93,6 +93,7 @@ class FilledButton$Mate extends _i1.FilledButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'statesController': _i2.BuilderArg<_i8.MaterialStatesController?>(
             name: 'statesController',
@@ -149,7 +150,7 @@ class FilledButton$Mate extends _i1.FilledButton with _i2.Mate {
     /// optionalParameters: {bool autofocus = false} , default:processed=BooleanLiteralImpl
     super.autofocus,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.none} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {MaterialStatesController? statesController} , default:none
@@ -203,6 +204,7 @@ class FilledButton$Mate extends _i1.FilledButton with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i4.Clip.none,
           ),
           'statesController': _i2.BuilderArg<_i8.MaterialStatesController?>(
             name: 'statesController',

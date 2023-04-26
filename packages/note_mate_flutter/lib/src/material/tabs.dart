@@ -8,16 +8,18 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/painting/edge_insets.dart' as _i5;
 import 'package:flutter/src/material/tab_controller.dart' as _i6;
 import 'dart:ui' as _i7;
-import 'package:flutter/src/painting/decoration.dart' as _i8;
-import 'package:flutter/src/painting/text_style.dart' as _i9;
-import 'package:flutter/src/gestures/recognizer.dart' as _i10;
-import 'package:flutter/src/material/material_state.dart' as _i11;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i12;
-import 'package:flutter/src/foundation/basic_types.dart' as _i13;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i14;
-import 'package:flutter/src/material/ink_well.dart' as _i15;
-import 'package:flutter/src/painting/border_radius.dart' as _i16;
-import 'package:flutter/src/painting/borders.dart' as _i17;
+import 'package:flutter/cupertino.dart' as _i8;
+import 'package:flutter/src/painting/decoration.dart' as _i9;
+import 'package:flutter/src/painting/text_style.dart' as _i10;
+import 'package:flutter/src/gestures/recognizer.dart' as _i11;
+import 'package:flutter/gestures.dart' as _i12;
+import 'package:flutter/src/material/material_state.dart' as _i13;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i14;
+import 'package:flutter/src/foundation/basic_types.dart' as _i15;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i16;
+import 'package:flutter/src/material/ink_well.dart' as _i17;
+import 'package:flutter/src/painting/border_radius.dart' as _i18;
+import 'package:flutter/src/painting/borders.dart' as _i19;
 
 /// class Tab extends StatelessWidget implements PreferredSizeWidget
 class Tab$Mate extends _i1.Tab with _i2.Mate {
@@ -117,7 +119,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
     /// optionalParameters: {double indicatorWeight = 2.0} , default:processed=DoubleLiteralImpl
     super.indicatorWeight,
 
-    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     super.indicatorPadding,
 
     /// optionalParameters: {Decoration? indicator} , default:none
@@ -144,7 +146,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
     /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
     super.unselectedLabelStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
@@ -215,8 +217,9 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             name: 'indicatorPadding',
             init: indicatorPadding,
             isNamed: true,
+            defaultValue: _i8.EdgeInsets.zero,
           ),
-          'indicator': _i2.BuilderArg<_i8.Decoration?>(
+          'indicator': _i2.BuilderArg<_i9.Decoration?>(
             name: 'indicator',
             init: indicator,
             isNamed: true,
@@ -236,7 +239,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: labelColor,
             isNamed: true,
           ),
-          'labelStyle': _i2.BuilderArg<_i9.TextStyle?>(
+          'labelStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'labelStyle',
             init: labelStyle,
             isNamed: true,
@@ -251,22 +254,23 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: unselectedLabelColor,
             isNamed: true,
           ),
-          'unselectedLabelStyle': _i2.BuilderArg<_i9.TextStyle?>(
+          'unselectedLabelStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'unselectedLabelStyle',
             init: unselectedLabelStyle,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
-          'overlayColor': _i2.BuilderArg<_i11.MaterialStateProperty<_i7.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i12.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i14.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -276,22 +280,22 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i13.ValueChanged<int>?>(
+          'onTap': _i2.BuilderArg<_i15.ValueChanged<int>?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i14.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i16.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
           ),
-          'splashFactory': _i2.BuilderArg<_i15.InteractiveInkFeatureFactory?>(
+          'splashFactory': _i2.BuilderArg<_i17.InteractiveInkFeatureFactory?>(
             name: 'splashFactory',
             init: splashFactory,
             isNamed: true,
           ),
-          'splashBorderRadius': _i2.BuilderArg<_i16.BorderRadius?>(
+          'splashBorderRadius': _i2.BuilderArg<_i18.BorderRadius?>(
             name: 'splashBorderRadius',
             init: splashBorderRadius,
             isNamed: true,
@@ -355,7 +359,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
     /// optionalParameters: {double indicatorWeight = 2.0} , default:processed=DoubleLiteralImpl
     super.indicatorWeight,
 
-    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {EdgeInsetsGeometry indicatorPadding = EdgeInsets.zero} , default:processed=PrefixedIdentifierImpl
     super.indicatorPadding,
 
     /// optionalParameters: {Decoration? indicator} , default:none
@@ -382,7 +386,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
     /// optionalParameters: {TextStyle? unselectedLabelStyle} , default:none
     super.unselectedLabelStyle,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {MaterialStateProperty<Color?>? overlayColor} , default:none
@@ -453,8 +457,9 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             name: 'indicatorPadding',
             init: indicatorPadding,
             isNamed: true,
+            defaultValue: _i8.EdgeInsets.zero,
           ),
-          'indicator': _i2.BuilderArg<_i8.Decoration?>(
+          'indicator': _i2.BuilderArg<_i9.Decoration?>(
             name: 'indicator',
             init: indicator,
             isNamed: true,
@@ -474,7 +479,7 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: labelColor,
             isNamed: true,
           ),
-          'labelStyle': _i2.BuilderArg<_i9.TextStyle?>(
+          'labelStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'labelStyle',
             init: labelStyle,
             isNamed: true,
@@ -489,22 +494,23 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: unselectedLabelColor,
             isNamed: true,
           ),
-          'unselectedLabelStyle': _i2.BuilderArg<_i9.TextStyle?>(
+          'unselectedLabelStyle': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'unselectedLabelStyle',
             init: unselectedLabelStyle,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
-          'overlayColor': _i2.BuilderArg<_i11.MaterialStateProperty<_i7.Color?>?>(
+          'overlayColor': _i2.BuilderArg<_i13.MaterialStateProperty<_i7.Color?>?>(
             name: 'overlayColor',
             init: overlayColor,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i12.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i14.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -514,22 +520,22 @@ class TabBar$Mate extends _i1.TabBar with _i2.Mate {
             init: enableFeedback,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i13.ValueChanged<int>?>(
+          'onTap': _i2.BuilderArg<_i15.ValueChanged<int>?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i14.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i16.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
           ),
-          'splashFactory': _i2.BuilderArg<_i15.InteractiveInkFeatureFactory?>(
+          'splashFactory': _i2.BuilderArg<_i17.InteractiveInkFeatureFactory?>(
             name: 'splashFactory',
             init: splashFactory,
             isNamed: true,
           ),
-          'splashBorderRadius': _i2.BuilderArg<_i16.BorderRadius?>(
+          'splashBorderRadius': _i2.BuilderArg<_i18.BorderRadius?>(
             name: 'splashBorderRadius',
             init: splashBorderRadius,
             isNamed: true,
@@ -587,13 +593,13 @@ class TabBarView$Mate extends _i1.TabBarView with _i2.Mate {
     /// optionalParameters: {ScrollPhysics? physics} , default:none
     super.physics,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {double viewportFraction = 1.0} , default:processed=DoubleLiteralImpl
     super.viewportFraction,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -611,15 +617,16 @@ class TabBarView$Mate extends _i1.TabBarView with _i2.Mate {
             init: controller,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i14.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i16.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i10.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i11.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i12.DragStartBehavior.start,
           ),
           'viewportFraction': _i2.BuilderArg<double>(
             name: 'viewportFraction',
@@ -631,6 +638,7 @@ class TabBarView$Mate extends _i1.TabBarView with _i2.Mate {
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i7.Clip.hardEdge,
           ),
         },
         super() {
@@ -667,7 +675,7 @@ class TabPageSelectorIndicator$Mate extends _i1.TabPageSelectorIndicator with _i
     /// optionalParameters: {required double size} , default:none
     required super.size,
 
-    /// optionalParameters: {BorderStyle borderStyle = BorderStyle.solid} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderStyle borderStyle = BorderStyle.solid} , default:processed=PrefixedIdentifierImpl
     super.borderStyle,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -690,10 +698,11 @@ class TabPageSelectorIndicator$Mate extends _i1.TabPageSelectorIndicator with _i
             init: size,
             isNamed: true,
           ),
-          'borderStyle': _i2.BuilderArg<_i17.BorderStyle>(
+          'borderStyle': _i2.BuilderArg<_i19.BorderStyle>(
             name: 'borderStyle',
             init: borderStyle,
             isNamed: true,
+            defaultValue: _i8.BorderStyle.solid,
           ),
         },
         super() {
@@ -760,7 +769,7 @@ class TabPageSelector$Mate extends _i1.TabPageSelector with _i2.Mate {
             init: selectedColor,
             isNamed: true,
           ),
-          'borderStyle': _i2.BuilderArg<_i17.BorderStyle?>(
+          'borderStyle': _i2.BuilderArg<_i19.BorderStyle?>(
             name: 'borderStyle',
             init: borderStyle,
             isNamed: true,

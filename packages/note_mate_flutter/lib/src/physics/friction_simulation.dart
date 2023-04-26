@@ -4,6 +4,7 @@
 import 'package:flutter/src/physics/friction_simulation.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/physics/tolerance.dart' as _i3;
+import 'package:flutter/cupertino.dart' as _i4;
 
 /// class FrictionSimulation extends Simulation
 class FrictionSimulation$Mate extends _i1.FrictionSimulation with _i2.Mate {
@@ -17,7 +18,7 @@ class FrictionSimulation$Mate extends _i1.FrictionSimulation with _i2.Mate {
 
     /// requiredParameters: double velocity
     super.velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     super.tolerance,
 
     /// optionalParameters: {double constantDeceleration = 0} , default:processed=IntegerLiteralImpl
@@ -42,6 +43,7 @@ class FrictionSimulation$Mate extends _i1.FrictionSimulation with _i2.Mate {
             name: 'tolerance',
             init: tolerance,
             isNamed: true,
+            defaultValue: _i4.Tolerance.defaultTolerance,
           ),
           'constantDeceleration': _i2.BuilderArg<double>(
             name: 'constantDeceleration',

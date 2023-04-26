@@ -7,6 +7,7 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'dart:ui' as _i5;
 import 'package:flutter/src/widgets/scroll_notification.dart' as _i6;
+import 'package:flutter/material.dart' as _i7;
 
 /// class RefreshIndicator extends StatefulWidget
 class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
@@ -42,10 +43,10 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
     /// optionalParameters: {String? semanticsValue} , default:none
     super.semanticsValue,
 
-    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , default:processed=PrefixedIdentifierImpl
     super.strokeWidth,
 
-    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
     super.triggerMode,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -104,11 +105,13 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
             name: 'strokeWidth',
             init: strokeWidth,
             isNamed: true,
+            defaultValue: _i7.RefreshProgressIndicator.defaultStrokeWidth,
           ),
           'triggerMode': _i2.BuilderArg<_i1.RefreshIndicatorTriggerMode>(
             name: 'triggerMode',
             init: triggerMode,
             isNamed: true,
+            defaultValue: _i7.RefreshIndicatorTriggerMode.onEdge,
           ),
         },
         super() {
@@ -162,10 +165,10 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
     /// optionalParameters: {String? semanticsValue} , default:none
     super.semanticsValue,
 
-    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {double strokeWidth = RefreshProgressIndicator.defaultStrokeWidth} , default:processed=PrefixedIdentifierImpl
     super.strokeWidth,
 
-    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {RefreshIndicatorTriggerMode triggerMode = RefreshIndicatorTriggerMode.onEdge} , default:processed=PrefixedIdentifierImpl
     super.triggerMode,
   })  : mateParams = {
           'key': _i2.BuilderArg<_i3.Key?>(
@@ -224,11 +227,13 @@ class RefreshIndicator$Mate extends _i1.RefreshIndicator with _i2.Mate {
             name: 'strokeWidth',
             init: strokeWidth,
             isNamed: true,
+            defaultValue: _i7.RefreshProgressIndicator.defaultStrokeWidth,
           ),
           'triggerMode': _i2.BuilderArg<_i1.RefreshIndicatorTriggerMode>(
             name: 'triggerMode',
             init: triggerMode,
             isNamed: true,
+            defaultValue: _i7.RefreshIndicatorTriggerMode.onEdge,
           ),
         },
         super.adaptive() {

@@ -4,6 +4,7 @@
 import 'package:flutter/src/physics/spring_simulation.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/physics/tolerance.dart' as _i3;
+import 'package:flutter/cupertino.dart' as _i4;
 
 /// class SpringDescription
 class SpringDescription$Mate extends _i1.SpringDescription with _i2.Mate {
@@ -101,7 +102,7 @@ class SpringSimulation$Mate extends _i1.SpringSimulation with _i2.Mate {
 
     /// requiredParameters: double velocity
     super.velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     super.tolerance,
   })  : mateParams = {
           'spring': _i2.BuilderArg<_i1.SpringDescription>(
@@ -128,6 +129,7 @@ class SpringSimulation$Mate extends _i1.SpringSimulation with _i2.Mate {
             name: 'tolerance',
             init: tolerance,
             isNamed: true,
+            defaultValue: _i4.Tolerance.defaultTolerance,
           ),
         },
         super() {
@@ -161,7 +163,7 @@ class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation with _i2.Ma
 
     /// requiredParameters: double velocity
     super.velocity, {
-    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Tolerance tolerance = Tolerance.defaultTolerance} , default:processed=PrefixedIdentifierImpl
     super.tolerance,
   })  : mateParams = {
           'spring': _i2.BuilderArg<_i1.SpringDescription>(
@@ -188,6 +190,7 @@ class ScrollSpringSimulation$Mate extends _i1.ScrollSpringSimulation with _i2.Ma
             name: 'tolerance',
             init: tolerance,
             isNamed: true,
+            defaultValue: _i4.Tolerance.defaultTolerance,
           ),
         },
         super() {

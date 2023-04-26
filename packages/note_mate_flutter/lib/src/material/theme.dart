@@ -7,7 +7,8 @@ import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/material/theme_data.dart' as _i4;
 import 'package:flutter/src/widgets/framework.dart' as _i5;
 import 'package:flutter/src/animation/curves.dart' as _i6;
-import 'dart:ui' as _i7;
+import 'package:flutter/animation.dart' as _i7;
+import 'dart:ui' as _i8;
 
 /// class Theme extends StatelessWidget
 class Theme$Mate extends _i1.Theme with _i2.Mate {
@@ -96,7 +97,7 @@ class AnimatedTheme$Mate extends _i1.AnimatedTheme with _i2.Mate {
     /// optionalParameters: {required ThemeData data} , default:none
     required super.data,
 
-    /// optionalParameters: {Curve curve = Curves.linear} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Curve curve = Curves.linear} , default:processed=PrefixedIdentifierImpl
     super.curve,
 
     /// optionalParameters: {Duration duration = kThemeAnimationDuration} , default:unprocessed=SimpleIdentifierImpl
@@ -122,13 +123,14 @@ class AnimatedTheme$Mate extends _i1.AnimatedTheme with _i2.Mate {
             name: 'curve',
             init: curve,
             isNamed: true,
+            defaultValue: _i7.Curves.linear,
           ),
           'duration': _i2.BuilderArg<Duration>(
             name: 'duration',
             init: duration,
             isNamed: true,
           ),
-          'onEnd': _i2.BuilderArg<_i7.VoidCallback?>(
+          'onEnd': _i2.BuilderArg<_i8.VoidCallback?>(
             name: 'onEnd',
             init: onEnd,
             isNamed: true,

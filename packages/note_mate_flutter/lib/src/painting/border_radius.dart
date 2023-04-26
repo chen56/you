@@ -45,21 +45,23 @@ class BorderRadius$Mate extends _i1.BorderRadius with _i2.Mate {
 
   /// BorderRadius BorderRadius.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
   BorderRadius$Mate.vertical({
-    /// optionalParameters: {Radius top = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius top = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.top,
 
-    /// optionalParameters: {Radius bottom = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius bottom = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.bottom,
   })  : mateParams = {
           'top': _i2.BuilderArg<_i3.Radius>(
             name: 'top',
             init: top,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'bottom': _i2.BuilderArg<_i3.Radius>(
             name: 'bottom',
             init: bottom,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
         },
         super.vertical() {
@@ -73,21 +75,23 @@ class BorderRadius$Mate extends _i1.BorderRadius with _i2.Mate {
 
   /// BorderRadius BorderRadius.horizontal({Radius left = Radius.zero, Radius right = Radius.zero})
   BorderRadius$Mate.horizontal({
-    /// optionalParameters: {Radius left = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius left = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.left,
 
-    /// optionalParameters: {Radius right = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius right = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.right,
   })  : mateParams = {
           'left': _i2.BuilderArg<_i3.Radius>(
             name: 'left',
             init: left,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'right': _i2.BuilderArg<_i3.Radius>(
             name: 'right',
             init: right,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
         },
         super.horizontal() {
@@ -101,37 +105,41 @@ class BorderRadius$Mate extends _i1.BorderRadius with _i2.Mate {
 
   /// BorderRadius BorderRadius.only({Radius topLeft = Radius.zero, Radius topRight = Radius.zero, Radius bottomLeft = Radius.zero, Radius bottomRight = Radius.zero})
   BorderRadius$Mate.only({
-    /// optionalParameters: {Radius topLeft = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius topLeft = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.topLeft,
 
-    /// optionalParameters: {Radius topRight = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius topRight = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.topRight,
 
-    /// optionalParameters: {Radius bottomLeft = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius bottomLeft = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.bottomLeft,
 
-    /// optionalParameters: {Radius bottomRight = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius bottomRight = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.bottomRight,
   })  : mateParams = {
           'topLeft': _i2.BuilderArg<_i3.Radius>(
             name: 'topLeft',
             init: topLeft,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'topRight': _i2.BuilderArg<_i3.Radius>(
             name: 'topRight',
             init: topRight,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'bottomLeft': _i2.BuilderArg<_i3.Radius>(
             name: 'bottomLeft',
             init: bottomLeft,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'bottomRight': _i2.BuilderArg<_i3.Radius>(
             name: 'bottomRight',
             init: bottomRight,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
         },
         super.only() {
@@ -189,21 +197,23 @@ class BorderRadiusDirectional$Mate extends _i1.BorderRadiusDirectional with _i2.
 
   /// BorderRadiusDirectional BorderRadiusDirectional.vertical({Radius top = Radius.zero, Radius bottom = Radius.zero})
   BorderRadiusDirectional$Mate.vertical({
-    /// optionalParameters: {Radius top = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius top = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.top,
 
-    /// optionalParameters: {Radius bottom = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius bottom = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.bottom,
   })  : mateParams = {
           'top': _i2.BuilderArg<_i3.Radius>(
             name: 'top',
             init: top,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'bottom': _i2.BuilderArg<_i3.Radius>(
             name: 'bottom',
             init: bottom,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
         },
         super.vertical() {
@@ -217,21 +227,23 @@ class BorderRadiusDirectional$Mate extends _i1.BorderRadiusDirectional with _i2.
 
   /// BorderRadiusDirectional BorderRadiusDirectional.horizontal({Radius start = Radius.zero, Radius end = Radius.zero})
   BorderRadiusDirectional$Mate.horizontal({
-    /// optionalParameters: {Radius start = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius start = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.start,
 
-    /// optionalParameters: {Radius end = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius end = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.end,
   })  : mateParams = {
           'start': _i2.BuilderArg<_i3.Radius>(
             name: 'start',
             init: start,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'end': _i2.BuilderArg<_i3.Radius>(
             name: 'end',
             init: end,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
         },
         super.horizontal() {
@@ -245,37 +257,41 @@ class BorderRadiusDirectional$Mate extends _i1.BorderRadiusDirectional with _i2.
 
   /// BorderRadiusDirectional BorderRadiusDirectional.only({Radius topStart = Radius.zero, Radius topEnd = Radius.zero, Radius bottomStart = Radius.zero, Radius bottomEnd = Radius.zero})
   BorderRadiusDirectional$Mate.only({
-    /// optionalParameters: {Radius topStart = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius topStart = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.topStart,
 
-    /// optionalParameters: {Radius topEnd = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius topEnd = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.topEnd,
 
-    /// optionalParameters: {Radius bottomStart = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius bottomStart = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.bottomStart,
 
-    /// optionalParameters: {Radius bottomEnd = Radius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Radius bottomEnd = Radius.zero} , default:processed=PrefixedIdentifierImpl
     super.bottomEnd,
   })  : mateParams = {
           'topStart': _i2.BuilderArg<_i3.Radius>(
             name: 'topStart',
             init: topStart,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'topEnd': _i2.BuilderArg<_i3.Radius>(
             name: 'topEnd',
             init: topEnd,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'bottomStart': _i2.BuilderArg<_i3.Radius>(
             name: 'bottomStart',
             init: bottomStart,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
           'bottomEnd': _i2.BuilderArg<_i3.Radius>(
             name: 'bottomEnd',
             init: bottomEnd,
             isNamed: true,
+            defaultValue: _i3.Radius.zero,
           ),
         },
         super.only() {

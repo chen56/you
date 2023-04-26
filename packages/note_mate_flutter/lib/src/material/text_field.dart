@@ -9,22 +9,24 @@ import 'package:flutter/src/widgets/focus_manager.dart' as _i5;
 import 'package:flutter/src/widgets/undo_history.dart' as _i6;
 import 'package:flutter/src/material/input_decorator.dart' as _i7;
 import 'package:flutter/src/services/text_input.dart' as _i8;
-import 'package:flutter/src/painting/text_style.dart' as _i9;
-import 'package:flutter/src/painting/strut_style.dart' as _i10;
-import 'dart:ui' as _i11;
-import 'package:flutter/src/painting/alignment.dart' as _i12;
-import 'package:flutter/src/services/text_formatter.dart' as _i13;
-import 'package:flutter/src/foundation/basic_types.dart' as _i14;
-import 'package:flutter/src/painting/edge_insets.dart' as _i15;
-import 'package:flutter/src/gestures/recognizer.dart' as _i16;
-import 'package:flutter/src/widgets/text_selection.dart' as _i17;
-import 'package:flutter/src/gestures/tap.dart' as _i18;
-import 'package:flutter/src/widgets/tap_region.dart' as _i19;
-import 'package:flutter/src/services/mouse_cursor.dart' as _i20;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i21;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i22;
-import 'package:flutter/src/widgets/spell_check.dart' as _i23;
-import 'package:flutter/src/widgets/magnifier.dart' as _i24;
+import 'package:flutter/cupertino.dart' as _i9;
+import 'package:flutter/src/painting/text_style.dart' as _i10;
+import 'package:flutter/src/painting/strut_style.dart' as _i11;
+import 'dart:ui' as _i12;
+import 'package:flutter/src/painting/alignment.dart' as _i13;
+import 'package:flutter/src/services/text_formatter.dart' as _i14;
+import 'package:flutter/src/foundation/basic_types.dart' as _i15;
+import 'package:flutter/src/painting/edge_insets.dart' as _i16;
+import 'package:flutter/src/gestures/recognizer.dart' as _i17;
+import 'package:flutter/gestures.dart' as _i18;
+import 'package:flutter/src/widgets/text_selection.dart' as _i19;
+import 'package:flutter/src/gestures/tap.dart' as _i20;
+import 'package:flutter/src/widgets/tap_region.dart' as _i21;
+import 'package:flutter/src/services/mouse_cursor.dart' as _i22;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i23;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i24;
+import 'package:flutter/src/widgets/spell_check.dart' as _i25;
+import 'package:flutter/src/widgets/magnifier.dart' as _i26;
 
 /// class TextField extends StatefulWidget
 class TextField$Mate extends _i1.TextField with _i2.Mate {
@@ -51,7 +53,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
     /// optionalParameters: {TextInputAction? textInputAction} , default:none
     super.textInputAction,
 
-    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextCapitalization textCapitalization = TextCapitalization.none} , default:processed=PrefixedIdentifierImpl
     super.textCapitalization,
 
     /// optionalParameters: {TextStyle? style} , default:none
@@ -60,7 +62,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
     /// optionalParameters: {StrutStyle? strutStyle} , default:none
     super.strutStyle,
 
-    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextAlign textAlign = TextAlign.start} , default:processed=PrefixedIdentifierImpl
     super.textAlign,
 
     /// optionalParameters: {TextAlignVertical? textAlignVertical} , default:none
@@ -156,7 +158,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
     /// optionalParameters: {EdgeInsets scrollPadding = const EdgeInsets.all(20.0)} , default:unprocessed=InstanceCreationExpressionImpl
     super.scrollPadding,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {bool? enableInteractiveSelection} , default:none
@@ -189,7 +191,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
     /// optionalParameters: {ContentInsertionConfiguration? contentInsertionConfiguration} , default:none
     super.contentInsertionConfiguration,
 
-    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {Clip clipBehavior = Clip.hardEdge} , default:processed=PrefixedIdentifierImpl
     super.clipBehavior,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -252,28 +254,30 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             name: 'textCapitalization',
             init: textCapitalization,
             isNamed: true,
+            defaultValue: _i9.TextCapitalization.none,
           ),
-          'style': _i2.BuilderArg<_i9.TextStyle?>(
+          'style': _i2.BuilderArg<_i10.TextStyle?>(
             name: 'style',
             init: style,
             isNamed: true,
           ),
-          'strutStyle': _i2.BuilderArg<_i10.StrutStyle?>(
+          'strutStyle': _i2.BuilderArg<_i11.StrutStyle?>(
             name: 'strutStyle',
             init: strutStyle,
             isNamed: true,
           ),
-          'textAlign': _i2.BuilderArg<_i11.TextAlign>(
+          'textAlign': _i2.BuilderArg<_i12.TextAlign>(
             name: 'textAlign',
             init: textAlign,
             isNamed: true,
+            defaultValue: _i12.TextAlign.start,
           ),
-          'textAlignVertical': _i2.BuilderArg<_i12.TextAlignVertical?>(
+          'textAlignVertical': _i2.BuilderArg<_i13.TextAlignVertical?>(
             name: 'textAlignVertical',
             init: textAlignVertical,
             isNamed: true,
           ),
-          'textDirection': _i2.BuilderArg<_i11.TextDirection?>(
+          'textDirection': _i2.BuilderArg<_i12.TextDirection?>(
             name: 'textDirection',
             init: textDirection,
             isNamed: true,
@@ -351,22 +355,22 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: maxLength,
             isNamed: true,
           ),
-          'maxLengthEnforcement': _i2.BuilderArg<_i13.MaxLengthEnforcement?>(
+          'maxLengthEnforcement': _i2.BuilderArg<_i14.MaxLengthEnforcement?>(
             name: 'maxLengthEnforcement',
             init: maxLengthEnforcement,
             isNamed: true,
           ),
-          'onChanged': _i2.BuilderArg<_i14.ValueChanged<String>?>(
+          'onChanged': _i2.BuilderArg<_i15.ValueChanged<String>?>(
             name: 'onChanged',
             init: onChanged,
             isNamed: true,
           ),
-          'onEditingComplete': _i2.BuilderArg<_i11.VoidCallback?>(
+          'onEditingComplete': _i2.BuilderArg<_i12.VoidCallback?>(
             name: 'onEditingComplete',
             init: onEditingComplete,
             isNamed: true,
           ),
-          'onSubmitted': _i2.BuilderArg<_i14.ValueChanged<String>?>(
+          'onSubmitted': _i2.BuilderArg<_i15.ValueChanged<String>?>(
             name: 'onSubmitted',
             init: onSubmitted,
             isNamed: true,
@@ -376,7 +380,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: onAppPrivateCommand,
             isNamed: true,
           ),
-          'inputFormatters': _i2.BuilderArg<List<_i13.TextInputFormatter>?>(
+          'inputFormatters': _i2.BuilderArg<List<_i14.TextInputFormatter>?>(
             name: 'inputFormatters',
             init: inputFormatters,
             isNamed: true,
@@ -397,7 +401,7 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: cursorHeight,
             isNamed: true,
           ),
-          'cursorRadius': _i2.BuilderArg<_i11.Radius?>(
+          'cursorRadius': _i2.BuilderArg<_i12.Radius?>(
             name: 'cursorRadius',
             init: cursorRadius,
             isNamed: true,
@@ -407,57 +411,58 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: cursorOpacityAnimates,
             isNamed: true,
           ),
-          'cursorColor': _i2.BuilderArg<_i11.Color?>(
+          'cursorColor': _i2.BuilderArg<_i12.Color?>(
             name: 'cursorColor',
             init: cursorColor,
             isNamed: true,
           ),
-          'selectionHeightStyle': _i2.BuilderArg<_i11.BoxHeightStyle>(
+          'selectionHeightStyle': _i2.BuilderArg<_i12.BoxHeightStyle>(
             name: 'selectionHeightStyle',
             init: selectionHeightStyle,
             isNamed: true,
           ),
-          'selectionWidthStyle': _i2.BuilderArg<_i11.BoxWidthStyle>(
+          'selectionWidthStyle': _i2.BuilderArg<_i12.BoxWidthStyle>(
             name: 'selectionWidthStyle',
             init: selectionWidthStyle,
             isNamed: true,
           ),
-          'keyboardAppearance': _i2.BuilderArg<_i11.Brightness?>(
+          'keyboardAppearance': _i2.BuilderArg<_i12.Brightness?>(
             name: 'keyboardAppearance',
             init: keyboardAppearance,
             isNamed: true,
           ),
-          'scrollPadding': _i2.BuilderArg<_i15.EdgeInsets>(
+          'scrollPadding': _i2.BuilderArg<_i16.EdgeInsets>(
             name: 'scrollPadding',
             init: scrollPadding,
             isNamed: true,
           ),
-          'dragStartBehavior': _i2.BuilderArg<_i16.DragStartBehavior>(
+          'dragStartBehavior': _i2.BuilderArg<_i17.DragStartBehavior>(
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i18.DragStartBehavior.start,
           ),
           'enableInteractiveSelection': _i2.BuilderArg<bool?>(
             name: 'enableInteractiveSelection',
             init: enableInteractiveSelection,
             isNamed: true,
           ),
-          'selectionControls': _i2.BuilderArg<_i17.TextSelectionControls?>(
+          'selectionControls': _i2.BuilderArg<_i19.TextSelectionControls?>(
             name: 'selectionControls',
             init: selectionControls,
             isNamed: true,
           ),
-          'onTap': _i2.BuilderArg<_i18.GestureTapCallback?>(
+          'onTap': _i2.BuilderArg<_i20.GestureTapCallback?>(
             name: 'onTap',
             init: onTap,
             isNamed: true,
           ),
-          'onTapOutside': _i2.BuilderArg<_i19.TapRegionCallback?>(
+          'onTapOutside': _i2.BuilderArg<_i21.TapRegionCallback?>(
             name: 'onTapOutside',
             init: onTapOutside,
             isNamed: true,
           ),
-          'mouseCursor': _i2.BuilderArg<_i20.MouseCursor?>(
+          'mouseCursor': _i2.BuilderArg<_i22.MouseCursor?>(
             name: 'mouseCursor',
             init: mouseCursor,
             isNamed: true,
@@ -467,12 +472,12 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: buildCounter,
             isNamed: true,
           ),
-          'scrollController': _i2.BuilderArg<_i21.ScrollController?>(
+          'scrollController': _i2.BuilderArg<_i23.ScrollController?>(
             name: 'scrollController',
             init: scrollController,
             isNamed: true,
           ),
-          'scrollPhysics': _i2.BuilderArg<_i22.ScrollPhysics?>(
+          'scrollPhysics': _i2.BuilderArg<_i24.ScrollPhysics?>(
             name: 'scrollPhysics',
             init: scrollPhysics,
             isNamed: true,
@@ -487,10 +492,11 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             init: contentInsertionConfiguration,
             isNamed: true,
           ),
-          'clipBehavior': _i2.BuilderArg<_i11.Clip>(
+          'clipBehavior': _i2.BuilderArg<_i12.Clip>(
             name: 'clipBehavior',
             init: clipBehavior,
             isNamed: true,
+            defaultValue: _i12.Clip.hardEdge,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',
@@ -520,12 +526,12 @@ class TextField$Mate extends _i1.TextField with _i2.Mate {
             isNamed: true,
             defaultValue: true,
           ),
-          'spellCheckConfiguration': _i2.BuilderArg<_i23.SpellCheckConfiguration?>(
+          'spellCheckConfiguration': _i2.BuilderArg<_i25.SpellCheckConfiguration?>(
             name: 'spellCheckConfiguration',
             init: spellCheckConfiguration,
             isNamed: true,
           ),
-          'magnifierConfiguration': _i2.BuilderArg<_i24.TextMagnifierConfiguration?>(
+          'magnifierConfiguration': _i2.BuilderArg<_i26.TextMagnifierConfiguration?>(
             name: 'magnifierConfiguration',
             init: magnifierConfiguration,
             isNamed: true,

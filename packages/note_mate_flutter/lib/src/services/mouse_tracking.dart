@@ -4,6 +4,7 @@
 import 'package:flutter/src/services/mouse_tracking.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/services/mouse_cursor.dart' as _i3;
+import 'package:flutter/cupertino.dart' as _i4;
 
 /// class MouseTrackerAnnotation with Diagnosticable
 class MouseTrackerAnnotation$Mate extends _i1.MouseTrackerAnnotation with _i2.Mate {
@@ -15,7 +16,7 @@ class MouseTrackerAnnotation$Mate extends _i1.MouseTrackerAnnotation with _i2.Ma
     /// optionalParameters: {void Function(PointerExitEvent)? onExit} , default:none
     super.onExit,
 
-    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {MouseCursor cursor = MouseCursor.defer} , default:processed=PrefixedIdentifierImpl
     super.cursor,
 
     /// optionalParameters: {bool validForMouseTracker = true} , default:processed=BooleanLiteralImpl
@@ -35,6 +36,7 @@ class MouseTrackerAnnotation$Mate extends _i1.MouseTrackerAnnotation with _i2.Ma
             name: 'cursor',
             init: cursor,
             isNamed: true,
+            defaultValue: _i4.MouseCursor.defer,
           ),
           'validForMouseTracker': _i2.BuilderArg<bool>(
             name: 'validForMouseTracker',

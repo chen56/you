@@ -5,8 +5,10 @@ import 'package:flutter/src/material/date_picker.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/material/date.dart' as _i4;
-import 'package:flutter/src/services/text_input.dart' as _i5;
-import 'package:flutter/src/foundation/basic_types.dart' as _i6;
+import 'package:flutter/material.dart' as _i5;
+import 'package:flutter/src/services/text_input.dart' as _i6;
+import 'package:flutter/src/foundation/basic_types.dart' as _i7;
+import 'package:flutter/cupertino.dart' as _i8;
 
 /// class DatePickerDialog extends StatefulWidget
 class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
@@ -27,7 +29,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
     /// optionalParameters: {DateTime? currentDate} , default:none
     super.currentDate,
 
-    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:processed=PrefixedIdentifierImpl
     super.initialEntryMode,
 
     /// optionalParameters: {bool Function(DateTime)? selectableDayPredicate} , default:none
@@ -42,7 +44,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
     /// optionalParameters: {String? helpText} , default:none
     super.helpText,
 
-    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DatePickerMode initialCalendarMode = DatePickerMode.day} , default:processed=PrefixedIdentifierImpl
     super.initialCalendarMode,
 
     /// optionalParameters: {String? errorFormatText} , default:none
@@ -95,6 +97,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
             name: 'initialEntryMode',
             init: initialEntryMode,
             isNamed: true,
+            defaultValue: _i5.DatePickerEntryMode.calendar,
           ),
           'selectableDayPredicate': _i2.BuilderArg<_i4.SelectableDayPredicate?>(
             name: 'selectableDayPredicate',
@@ -120,6 +123,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
             name: 'initialCalendarMode',
             init: initialCalendarMode,
             isNamed: true,
+            defaultValue: _i5.DatePickerMode.day,
           ),
           'errorFormatText': _i2.BuilderArg<String?>(
             name: 'errorFormatText',
@@ -141,7 +145,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
             init: fieldLabelText,
             isNamed: true,
           ),
-          'keyboardType': _i2.BuilderArg<_i5.TextInputType?>(
+          'keyboardType': _i2.BuilderArg<_i6.TextInputType?>(
             name: 'keyboardType',
             init: keyboardType,
             isNamed: true,
@@ -151,7 +155,7 @@ class DatePickerDialog$Mate extends _i1.DatePickerDialog with _i2.Mate {
             init: restorationId,
             isNamed: true,
           ),
-          'onDatePickerModeChange': _i2.BuilderArg<_i6.ValueChanged<_i4.DatePickerEntryMode>?>(
+          'onDatePickerModeChange': _i2.BuilderArg<_i7.ValueChanged<_i4.DatePickerEntryMode>?>(
             name: 'onDatePickerModeChange',
             init: onDatePickerModeChange,
             isNamed: true,
@@ -205,7 +209,7 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
     /// optionalParameters: {DateTime? currentDate} , default:none
     super.currentDate,
 
-    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DatePickerEntryMode initialEntryMode = DatePickerEntryMode.calendar} , default:processed=PrefixedIdentifierImpl
     super.initialEntryMode,
 
     /// optionalParameters: {String? helpText} , default:none
@@ -241,7 +245,7 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
     /// optionalParameters: {String? fieldEndLabelText} , default:none
     super.fieldEndLabelText,
 
-    /// optionalParameters: {TextInputType keyboardType = TextInputType.datetime} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {TextInputType keyboardType = TextInputType.datetime} , default:processed=PrefixedIdentifierImpl
     super.keyboardType,
 
     /// optionalParameters: {String? restorationId} , default:none
@@ -276,6 +280,7 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
             name: 'initialEntryMode',
             init: initialEntryMode,
             isNamed: true,
+            defaultValue: _i5.DatePickerEntryMode.calendar,
           ),
           'helpText': _i2.BuilderArg<String?>(
             name: 'helpText',
@@ -332,10 +337,11 @@ class DateRangePickerDialog$Mate extends _i1.DateRangePickerDialog with _i2.Mate
             init: fieldEndLabelText,
             isNamed: true,
           ),
-          'keyboardType': _i2.BuilderArg<_i5.TextInputType>(
+          'keyboardType': _i2.BuilderArg<_i6.TextInputType>(
             name: 'keyboardType',
             init: keyboardType,
             isNamed: true,
+            defaultValue: _i8.TextInputType.datetime,
           ),
           'restorationId': _i2.BuilderArg<String?>(
             name: 'restorationId',

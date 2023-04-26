@@ -9,7 +9,7 @@ class Env {
   }
   Env._();
 
-  String get sdkDir {
+  String get dartSdkDir {
     String sdkDir = path.dirname(path.dirname(Platform.resolvedExecutable));
     if (File(path.join(sdkDir, "lib/core/int.dart")).existsSync()) {
       return sdkDir;
@@ -18,7 +18,7 @@ class Env {
       throw Exception(
           "${Platform.operatingSystem} not support , only support Linux or MacOS");
     }
-    String flutter = runCommand("type", ["-p", "flutter"]);
+    String flutter = runCommand("which", ["flutter"]);
     sdkDir = path.join(path.dirname(flutter), "cache/dart-sdk");
     if (File(path.join(sdkDir, "lib/core/int.dart")).existsSync()) {
       return sdkDir;
@@ -36,7 +36,7 @@ class Env {
   ///     ->  /flutter_sdk_parent_dir/flutter/packages/flutter/lib/src/material/icons.dart
   String flutterPackageAbstractPath(String package) {
     var relativePath = package.replaceFirst("package:flutter/", "");
-    print("flutterSdkDir $flutterSdkDir");
+    // print("flutterSdkDir $flutterSdkDir");
     return path.join(flutterSdkDir, "packages/flutter/lib", relativePath);
   }
 

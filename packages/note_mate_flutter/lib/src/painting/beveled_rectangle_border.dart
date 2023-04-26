@@ -4,27 +4,30 @@
 import 'package:flutter/src/painting/beveled_rectangle_border.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/painting/borders.dart' as _i3;
-import 'package:flutter/src/painting/border_radius.dart' as _i4;
+import 'package:flutter/cupertino.dart' as _i4;
+import 'package:flutter/src/painting/border_radius.dart' as _i5;
 
 /// class BeveledRectangleBorder extends OutlinedBorder
 class BeveledRectangleBorder$Mate extends _i1.BeveledRectangleBorder with _i2.Mate {
   /// BeveledRectangleBorder BeveledRectangleBorder({BorderSide side = BorderSide.none, BorderRadiusGeometry borderRadius = BorderRadius.zero})
   BeveledRectangleBorder$Mate({
-    /// optionalParameters: {BorderSide side = BorderSide.none} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderSide side = BorderSide.none} , default:processed=PrefixedIdentifierImpl
     super.side,
 
-    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {BorderRadiusGeometry borderRadius = BorderRadius.zero} , default:processed=PrefixedIdentifierImpl
     super.borderRadius,
   })  : mateParams = {
           'side': _i2.BuilderArg<_i3.BorderSide>(
             name: 'side',
             init: side,
             isNamed: true,
+            defaultValue: _i4.BorderSide.none,
           ),
-          'borderRadius': _i2.BuilderArg<_i4.BorderRadiusGeometry>(
+          'borderRadius': _i2.BuilderArg<_i5.BorderRadiusGeometry>(
             name: 'borderRadius',
             init: borderRadius,
             isNamed: true,
+            defaultValue: _i4.BorderRadius.zero,
           ),
         },
         super() {

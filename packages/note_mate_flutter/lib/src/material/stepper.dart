@@ -5,10 +5,11 @@ import 'package:flutter/src/material/stepper.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'dart:ui' as _i3;
 import 'package:flutter/src/widgets/framework.dart' as _i4;
-import 'package:flutter/src/foundation/key.dart' as _i5;
-import 'package:flutter/src/widgets/scroll_physics.dart' as _i6;
-import 'package:flutter/src/foundation/basic_types.dart' as _i7;
-import 'package:flutter/src/painting/edge_insets.dart' as _i8;
+import 'package:flutter/material.dart' as _i5;
+import 'package:flutter/src/foundation/key.dart' as _i6;
+import 'package:flutter/src/widgets/scroll_physics.dart' as _i7;
+import 'package:flutter/src/foundation/basic_types.dart' as _i8;
+import 'package:flutter/src/painting/edge_insets.dart' as _i9;
 
 /// class ControlsDetails
 class ControlsDetails$Mate extends _i1.ControlsDetails with _i2.Mate {
@@ -75,7 +76,7 @@ class Step$Mate extends _i1.Step with _i2.Mate {
     /// optionalParameters: {required Widget content} , default:none
     required super.content,
 
-    /// optionalParameters: {StepState state = StepState.indexed} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {StepState state = StepState.indexed} , default:processed=PrefixedIdentifierImpl
     super.state,
 
     /// optionalParameters: {bool isActive = false} , default:processed=BooleanLiteralImpl
@@ -103,6 +104,7 @@ class Step$Mate extends _i1.Step with _i2.Mate {
             name: 'state',
             init: state,
             isNamed: true,
+            defaultValue: _i5.StepState.indexed,
           ),
           'isActive': _i2.BuilderArg<bool>(
             name: 'isActive',
@@ -146,7 +148,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
     /// optionalParameters: {ScrollPhysics? physics} , default:none
     super.physics,
 
-    /// optionalParameters: {StepperType type = StepperType.vertical} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {StepperType type = StepperType.vertical} , default:processed=PrefixedIdentifierImpl
     super.type,
 
     /// optionalParameters: {int currentStep = 0} , default:processed=IntegerLiteralImpl
@@ -173,7 +175,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
     /// optionalParameters: {Widget? Function(int, StepState)? stepIconBuilder} , default:none
     super.stepIconBuilder,
   })  : mateParams = {
-          'key': _i2.BuilderArg<_i5.Key?>(
+          'key': _i2.BuilderArg<_i6.Key?>(
             name: 'key',
             init: key,
             isNamed: true,
@@ -183,7 +185,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
             init: steps,
             isNamed: true,
           ),
-          'physics': _i2.BuilderArg<_i6.ScrollPhysics?>(
+          'physics': _i2.BuilderArg<_i7.ScrollPhysics?>(
             name: 'physics',
             init: physics,
             isNamed: true,
@@ -192,6 +194,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
             name: 'type',
             init: type,
             isNamed: true,
+            defaultValue: _i5.StepperType.vertical,
           ),
           'currentStep': _i2.BuilderArg<int>(
             name: 'currentStep',
@@ -199,7 +202,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
             isNamed: true,
             defaultValue: 0,
           ),
-          'onStepTapped': _i2.BuilderArg<_i7.ValueChanged<int>?>(
+          'onStepTapped': _i2.BuilderArg<_i8.ValueChanged<int>?>(
             name: 'onStepTapped',
             init: onStepTapped,
             isNamed: true,
@@ -224,7 +227,7 @@ class Stepper$Mate extends _i1.Stepper with _i2.Mate {
             init: elevation,
             isNamed: true,
           ),
-          'margin': _i2.BuilderArg<_i8.EdgeInsetsGeometry?>(
+          'margin': _i2.BuilderArg<_i9.EdgeInsetsGeometry?>(
             name: 'margin',
             init: margin,
             isNamed: true,

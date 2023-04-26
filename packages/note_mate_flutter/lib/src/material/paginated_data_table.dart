@@ -8,9 +8,10 @@ import 'package:flutter/src/widgets/framework.dart' as _i4;
 import 'package:flutter/src/material/data_table.dart' as _i5;
 import 'package:flutter/src/foundation/basic_types.dart' as _i6;
 import 'package:flutter/src/gestures/recognizer.dart' as _i7;
-import 'dart:ui' as _i8;
-import 'package:flutter/src/material/data_table_source.dart' as _i9;
-import 'package:flutter/src/widgets/scroll_controller.dart' as _i10;
+import 'package:flutter/gestures.dart' as _i8;
+import 'dart:ui' as _i9;
+import 'package:flutter/src/material/data_table_source.dart' as _i10;
+import 'package:flutter/src/widgets/scroll_controller.dart' as _i11;
 
 /// class PaginatedDataTable extends StatefulWidget
 class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
@@ -73,7 +74,7 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
     /// optionalParameters: {void Function(int?)? onRowsPerPageChanged} , default:none
     super.onRowsPerPageChanged,
 
-    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:unprocessed=PrefixedIdentifierImpl
+    /// optionalParameters: {DragStartBehavior dragStartBehavior = DragStartBehavior.start} , default:processed=PrefixedIdentifierImpl
     super.dragStartBehavior,
 
     /// optionalParameters: {Color? arrowHeadColor} , default:none
@@ -197,13 +198,14 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
             name: 'dragStartBehavior',
             init: dragStartBehavior,
             isNamed: true,
+            defaultValue: _i8.DragStartBehavior.start,
           ),
-          'arrowHeadColor': _i2.BuilderArg<_i8.Color?>(
+          'arrowHeadColor': _i2.BuilderArg<_i9.Color?>(
             name: 'arrowHeadColor',
             init: arrowHeadColor,
             isNamed: true,
           ),
-          'source': _i2.BuilderArg<_i9.DataTableSource>(
+          'source': _i2.BuilderArg<_i10.DataTableSource>(
             name: 'source',
             init: source,
             isNamed: true,
@@ -213,7 +215,7 @@ class PaginatedDataTable$Mate extends _i1.PaginatedDataTable with _i2.Mate {
             init: checkboxHorizontalMargin,
             isNamed: true,
           ),
-          'controller': _i2.BuilderArg<_i10.ScrollController?>(
+          'controller': _i2.BuilderArg<_i11.ScrollController?>(
             name: 'controller',
             init: controller,
             isNamed: true,
