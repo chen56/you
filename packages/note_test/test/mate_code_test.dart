@@ -17,6 +17,12 @@ void main() {
 
   group("toList()", () {
     test('print', () {
+      print("xxxx: ${toCode(Column$Mate(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container$Mate(),
+            ],
+          ), format: true)}");
       expect(
           toCode(
               Column$Mate(

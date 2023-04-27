@@ -175,7 +175,7 @@ material.io对Compoent的定义如下：
   - App
   - Scaffold
   - Dialogs: Dialog, AlertDialog
-- [ ] 各类Bar
+- [x] 各类Bar
   - AppBar
   - BottomAppBar
   - NavigationBar  (new, replacing BottomNavigationBar)
@@ -249,6 +249,11 @@ material.io对Compoent的定义如下：
 ### 国际化
 
 ### 布局
+
+### 调试和诊断
+
+- diagnostics.dart
+
 
 ## 综合专题计划
 

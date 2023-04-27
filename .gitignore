@@ -14,6 +14,7 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
+.run/
 
 # Files and directories created by pub
 .dart_tool/

@@ -31,7 +31,7 @@ main() async {
         .listSync()
         .map((e) => path.normalize(path.absolute(e.path)))
         .toList(),
-    sdkPath: env.sdkDir,
+    sdkPath: env.dartSdkDir,
     resourceProvider: PhysicalResourceProvider.INSTANCE,
   );
   for (final context in collection.contexts) {

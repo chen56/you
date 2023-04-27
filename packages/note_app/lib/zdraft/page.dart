@@ -7,7 +7,6 @@ import 'package:note_app/note_app.dart';
 PageMeta page = PageMeta(
   shortTitle: "草稿目录",
   builder: build,
-  layout: Layouts.defaultLayout(),
 );
 
 build(BuildContext context, Pen print) {

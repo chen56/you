@@ -34,6 +34,7 @@ import 'package:note_app/zdraft/dart3/page.g.dart' as zdraft_dart3_;
 import 'package:note_app/zdraft/layout/page.g.dart' as zdraft_layout_;
 import 'package:note_app/zdraft/material3/page.g.dart' as zdraft_material3_;
 import 'package:note_app/zdraft/page.g.dart' as zdraft_;
+import 'package:note_app/zdraft/research/remote_view/page.g.dart' as zdraft_research_remote_view_;
 import 'package:note_app/zdraft/scrollable/Dismissible/page.g.dart' as zdraft_scrollable_Dismissible_;
 import 'package:note_app/zdraft/selectable/page.g.dart' as zdraft_selectable_;
 import 'package:note_app/zdraft/state/1.vanilla_state/page.g.dart' as zdraft_state_vanilla_state_;
@@ -105,6 +106,8 @@ mixin PathsMixin {
   final Path zdraft_material3 = put("/zdraft/material3", zdraft_material3_.noteInfo);
 
   final Path zdraft = put("/zdraft", zdraft_.noteInfo);
+
+  final Path zdraft_research_remote_view = put("/zdraft/research/remote_view", zdraft_research_remote_view_.noteInfo);
 
   final Path zdraft_scrollable_Dismissible =
       put("/zdraft/scrollable/Dismissible", zdraft_scrollable_Dismissible_.noteInfo);

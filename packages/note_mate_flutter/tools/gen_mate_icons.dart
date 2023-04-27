@@ -25,7 +25,8 @@ main() async {
     writeTo: (libPath) {
       return path.join("lib", libPath);
     },
-    emitter: DartEmitter(allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true),
+    emitter: DartEmitter(
+        allocator: Allocator.simplePrefixing(), useNullSafetySyntax: true),
     dartFormatter: DartFormatter(pageWidth: 120),
   );
 }
@@ -41,11 +42,11 @@ Future<void> genAll({
   _log("## resolve entry lib");
   final collection = AnalysisContextCollection(
     includedPaths: [entryFile],
-    sdkPath: env.sdkDir,
+    sdkPath: env.dartSdkDir,
     resourceProvider: PhysicalResourceProvider.INSTANCE,
   );
-  var entryLib = (await collection.contexts.first.currentSession.getResolvedLibrary(entryFile)
-          as ResolvedLibraryResult)
+  var entryLib = (await collection.contexts.first.currentSession
+          .getResolvedLibrary(entryFile) as ResolvedLibraryResult)
       .element;
 
   _log("## gen icon register:");
@@ -78,7 +79,8 @@ _genIcons({
 }) {
   var clazz = entryLib.exportNamespace.definedNames["Icons"] as ClassElement;
   var statements = clazz.fields
-      .where((e) => e.type.element != null && e.type.element!.name == "IconData")
+      .where(
+          (e) => e.type.element != null && e.type.element!.name == "IconData")
       .map((e) => refer("result.register").call(
             [
               refer("Icons", "package:flutter/material.dart").property(e.name),

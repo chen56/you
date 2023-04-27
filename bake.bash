@@ -61,6 +61,8 @@ function follow_links() (
 )
 declare BAKE_HOME
 BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
+# 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
+cd "${BAKE_HOME}"
 
 /test1?() {
   /test1?shortHelp() {
@@ -90,13 +92,14 @@ EOF
   }
 
   /test_option?option() {
-#    echo "${name}"
-#    echo "${version}"
-     echo "???"
+    #    echo "${name}"
+    #    echo "${version}"
+    echo "???"
   }
 
 }
 
+# to do, bake new feature : option
 option() {
   local short="$1"
   local long="$2"
@@ -138,7 +141,7 @@ option() {
 /get?() {
   /get?shortHelp() { cat <<<"all: pub get"; }
   /get() {
-     /exec flutter pub get
+    /exec flutter pub get
   }
 }
 
@@ -163,12 +166,12 @@ enable_experiment=""
   /build() {
     # web-renderer=canvaskit 太大了十几MB,所以要用html版
     # github只能发到项目目录下，所以加个base-href: https://chen56.github.com/note
-#    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
+    #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
     (
-      cd packages/note_app;
+      cd packages/note_app
       run flutter build web -v $enable_experiment \
-                           --release --tree-shake-icons \
-                           --web-renderer html "$@" ;
+        --release --tree-shake-icons \
+        --web-renderer html "$@"
     )
   }
 }
@@ -176,18 +179,18 @@ enable_experiment=""
 /test?() {
   /test?shortHelp() { cat <<<"test"; }
   /test() {
-     /exec flutter test
-   }
+    /exec flutter test
+  }
 }
 
 /preview?() {
   /preview?shortHelp() { cat <<<"预览，先build,再开web server: http://localhost:8000"; }
   /preview() {
-#   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
-#    /build "$@"
+    #   http-server 不支持base href设置，所以单独build,并设置base-href为"/",而github-pages的base-href必须是repository名
+    #    /build "$@"
     /build "$@"
     # 	npx http-server ./app_note/build/web --port 8000
-    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server  ./packages/note_app/build/web --port 8000  -g --brotli
+    run deno run --allow-env --allow-read --allow-sys --allow-net npm:http-server ./packages/note_app/build/web --port 8000 -g --brotli
   }
 }
 
@@ -195,13 +198,12 @@ enable_experiment=""
   /preview_macos?shortHelp() { cat <<<"预览preview_macos版"; }
   /preview_macos() {
     (
-      cd packages/note_app;
+      cd packages/note_app
       run flutter build macos -v $enable_experiment \
-                           --release --tree-shake-icons "$@" ;
+        --release --tree-shake-icons "$@"
     )
   }
 }
-
 
 /ci?() {
   /ci?shortHelp() { cat <<<"ci重建"; }
@@ -220,18 +222,13 @@ enable_experiment=""
   /docker?shortHelp() { cat <<<"docker build"; }
   /docker() {
     (
-      docker build --tag younpc/note:latest . ;
-      mkdir -p build
-      docker run --workdir / younpc/note  tar cf - app | ( cd build;tar xf -)
-    )
-  }
-}
-/dockerRun?() {
-  /dockerRun?shortHelp() { cat <<<"docker run"; }
-  /dockerRun() {
-    (
-      # docker run --rm --name note -v $PWD/docker/nginx.conf:/etc/nginx/nginx.conf -p 8080:8080 younpc/note  ;
-      docker run --rm --name note -p 80:80 -u root:root  younpc/note ;
+      run docker build --tag younpc/note:latest . ;
+#      mkdir -p build
+#      docker run --workdir / younpc/note tar -cf - app | (
+#        cd build
+#        tar -xf -
+#      )
+#      mv build/app build/web
     )
   }
 }
@@ -241,12 +238,41 @@ enable_experiment=""
     docker image push younpc/note:latest
   }
 }
+/dockerPreview?() {
+  /dockerPreview?shortHelp() { cat <<<"docker run"; }
+  /dockerPreview() {
+    (
+      run docker build --tag younpc/note:latest . ;
+      run echo "preview:  http://localhost:8888/note"
+      run docker run --rm --name note -p 8888:80 -u root:root younpc/note
+    )
+  }
+}
+
+# sometimes, we need enter container inside to develop
+/dockerDebug?() {
+  /dockerDebug?shortHelp() { cat <<<"docker build"; }
+  /dockerDebug() {
+    run docker run -v $PWD:/home/flutter/note --workdir /home/flutter/note --rm -it fischerscode/flutter:3.10.0-1.3.pre bash
+  }
+}
+
+
 /gen?() {
   /gen?shortHelp() { cat <<<"代码生成"; }
   /gen() {
-    (cd packages/note_app ;          run dart run $enable_experiment tools/gen_pages.dart; )
-    (cd packages/note_mate_flutter ; run dart run $enable_experiment tools/gen_mates.dart; )
-    (cd packages/note_mate_flutter ; run dart run $enable_experiment tools/gen_mate_icons.dart; )
+    (
+      cd packages/note_app
+      run dart run $enable_experiment tools/gen_pages.dart
+    )
+    (
+      cd packages/note_mate_flutter
+      run dart run $enable_experiment tools/gen_mates.dart
+    )
+    (
+      cd packages/note_mate_flutter
+      run dart run $enable_experiment tools/gen_mate_icons.dart
+    )
   }
 }
 /regen?() {
@@ -263,10 +289,10 @@ enable_experiment=""
   /run() {
     # only work on macos
     # shellcheck disable=SC2155
-    local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true;
+    local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
     (
-      cd packages/note_app;
-      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@" ;
+      cd packages/note_app
+      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@"
     )
   }
 }
@@ -274,25 +300,39 @@ enable_experiment=""
 /exec?() {
   /exec?shortHelp() { cat <<<"exec [cmd] , 在各flutter项目目录依次执行exec后跟的参数cmd"; }
   /exec() {
-#       目录中有"pubspec.yaml"的，认为是flutter项目
-#        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
-#          # 用括号()开启子进程执行，可以不影响当前进程的环境
-#          ( cd "$project" ;  run "$@" ; )
-#        done
-        (cd packages/learn_dart ;        run "$@" ; )
-        (cd packages/note ;              run "$@" ; )
-        (cd packages/note_mate_flutter ; run "$@" ; )
-        (cd packages/note_app ;          run "$@" ; )
-        (cd packages/note_test ;         run "$@" ; )
-   }
+    #       目录中有"pubspec.yaml"的，认为是flutter项目
+    #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
+    #          # 用括号()开启子进程执行，可以不影响当前进程的环境
+    #          ( cd "$project" ;  run "$@" ; )
+    #        done
+    (
+      cd packages/learn_dart
+      run "$@"
+    )
+    (
+      cd packages/note
+      run "$@"
+    )
+    (
+      cd packages/note_mate_flutter
+      run "$@"
+    )
+    (
+      cd packages/note_app
+      run "$@"
+    )
+    (
+      cd packages/note_test
+      run "$@"
+    )
+  }
 }
-
 
 # 清理
 /clean?() {
   /clean?shortHelp() { cat <<<"清理项目目录"; }
   /clean() {
-     /exec flutter clean
+    /exec flutter clean
   }
 }
 
@@ -332,7 +372,7 @@ print_stack() {
 }
 # 先打印 后执行
 run() {
-#  local project=${PWD#*$BAKE_HOME}
+  #  local project=${PWD#*$BAKE_HOME}
   local project
   project=$(basename "$PWD")
   [[ "$PWD" == "$BAKE_HOME" ]] && project="root"
@@ -341,10 +381,9 @@ run() {
   return $?
 }
 
-
 exec_from_stdin() { while read cmd; do "$cmd"; done; }
-initCommands(){
-    exec_from_stdin <<< "$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')"
+initCommands() {
+  exec_from_stdin <<<"$(declare -F | grep -E "^declare -f (\/.*)\?$" | sed -r 's/^declare -f //')"
 }
 
 print_commands() {
@@ -399,15 +438,11 @@ print_commands() {
   return
 }
 
-
 ##########################################
 # 以下是 main 脚本执行区
 ##########################################
 
 trap " set +x; on_error " ERR
-
-# 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
-cd "${BAKE_HOME}"
 
 # init all sub commands
 initCommands

@@ -21,11 +21,11 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.markdown(""" # note项目机制 )
+    /// (print.markdown(""" # note项目运转机)
     (
       cellType: 'body',
       offset: 195,
-      end: 235,
+      end: 237,
       statementCount: 1,
       specialNodes: <({
         String nodeType,
@@ -37,8 +37,8 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 235,
-      end: 237,
+      offset: 237,
+      end: 239,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -48,5 +48,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAibm90ZemhueebruiHqui6q+acuuWItiIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24oIiIiCiMgbm90ZemhueebruacuuWItgoKIiIiKTsKfQo="
+      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAibm90ZemhueebruiHqui6q+acuuWItiIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24oIiIiCiMgbm90Zemhueebrui/kOi9rOacuuWItgoKIiIiKTsKfQo="
 );
