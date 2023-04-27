@@ -285,7 +285,7 @@ enable_experiment=""
 }
 
 /run?() {
-  /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8888"; }
+  /run?shortHelp() { cat <<<"flutter run: http://localhost:8888"; }
   /run() {
     # only work on macos
     # shellcheck disable=SC2155
