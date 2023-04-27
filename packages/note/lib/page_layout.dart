@@ -75,6 +75,16 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
   }
 
   @override
+  void didUpdateWidget(covariant LayoutScreen<T> oldWidget) {
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
+  void activate() {
+    super.activate();
+  }
+
+  @override
   Widget build(BuildContext context) {
     var noteResult = buildNote(context);
 
@@ -102,7 +112,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
     // why use SingleChildScrollView+ListBody replace ListView ：
     // ListView is lazy load, so page not complete, then outline load not complete.
 
-    var scrollV = SingleChildScrollView(
+    var pageBody = SingleChildScrollView(
       scrollDirection: Axis.vertical,
       controller: controllerV,
       child: ListBody(
@@ -117,67 +127,73 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
       title: Text(widget.current.shortTitle),
       toolbarHeight: 36,
     );
-    var bottomDevBar = BottomAppBar(
-        height: 36,
-        padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
-        child: Row(children: [
-          const Text("Dev Bar"),
-          Spacer(),
-          IconButton(
-            onPressed: () {},
-            tooltip: 'Search',
-            icon: Icon(Icons.search),
-          ),
-          IconButton(
-            onPressed: () {},
-            tooltip: 'Favorite',
-            icon: Icon(Icons.favorite),
-          ),
-        ]));
+
+    //only for debug mode
+    var bottomDevBar = kReleaseMode
+        ? null
+        : BottomAppBar(
+            height: 36,
+            padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
+            child: Row(children: [
+              const Text("Dev Bar"),
+              const Spacer(),
+              IconButton(
+                onPressed: () {},
+                tooltip: 'Search',
+                icon: const Icon(Icons.search),
+              ),
+              IconButton(
+                onPressed: () {},
+                tooltip: 'Favorite',
+                icon: const Icon(Icons.favorite),
+              ),
+            ]));
 
     ///  Responsive UI:
     ///  Since StatefulWidget will automatically build() when the screen size changes,
     ///  the processing of responsive UI does not require special processing,
     ///  such as ListenableBuilder
-    var w = WindowClass.fromContext(context);
-    var body = switch (w) {
-      WindowClass.compact => scrollV,
-      WindowClass.medium => SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Expanded(child: scrollV),
-              SizedBox(width: 250, child: outlineView),
-            ],
+    return switch (WindowClass.of(context)) {
+      WindowClass.compact => Scaffold(
+          appBar: appBar,
+          drawer: Drawer(child: navigatorTree),
+          endDrawer: Drawer(child: outlineView),
+          bottomNavigationBar: bottomDevBar,
+          body: pageBody,
+        ),
+      WindowClass.medium => Scaffold(
+          appBar: appBar,
+          drawer: Drawer(child: navigatorTree),
+          endDrawer: null,
+          bottomNavigationBar: bottomDevBar,
+          body: SafeArea(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(child: pageBody),
+                SizedBox(width: 250, child: outlineView),
+              ],
+            ),
           ),
         ),
-      _ => SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              SizedBox(width: 220, child: navigatorTree),
-              Expanded(child: scrollV),
-              SizedBox(width: 250, child: outlineView),
-            ],
+      // full screen size expand all
+      _ => Scaffold(
+          appBar: appBar,
+          drawer: null,
+          endDrawer: null,
+          bottomNavigationBar: bottomDevBar,
+          body: SafeArea(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                SizedBox(width: 220, child: navigatorTree),
+                Expanded(child: pageBody),
+                SizedBox(width: 250, child: outlineView),
+              ],
+            ),
           ),
         ),
     };
-    return Scaffold(
-      appBar: appBar,
-      //only for debug mode
-      bottomNavigationBar: kDebugMode ? bottomDevBar : null,
-      body: body,
-    );
-  }
-
-  @override
-  void didUpdateWidget(covariant LayoutScreen<T> oldWidget) {
-    super.didUpdateWidget(oldWidget);
-  }
-
-  @override
-  void activate() {
-    super.activate();
   }
 }
 
@@ -331,7 +347,7 @@ class _MateSampleWidget extends StatelessWidget {
     required Widget codeView,
     required MateSample content,
   }) {
-    WindowClass win = WindowClass.fromContext(context);
+    WindowClass win = WindowClass.of(context);
 
     // screen large enough
     if (win == WindowClass.expanded) {

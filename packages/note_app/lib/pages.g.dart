@@ -6,11 +6,11 @@ import 'package:note_app/1.welcome/page.g.dart' as welcome_;
 import 'package:note_app/2.note-self/notebook/page.g.dart' as note_self_notebook_;
 import 'package:note_app/2.note-self/page.g.dart' as note_self_;
 import 'package:note_app/2.note-self/sample/page.g.dart' as note_self_sample_;
-import 'package:note_app/components/container/bar/page.g.dart' as components_container_bar_;
-import 'package:note_app/components/media&assets/icon/page.g.dart' as components_media_assets_icon_;
-import 'package:note_app/components/page.g.dart' as components_;
-import 'package:note_app/components/platform&device/page.g.dart' as components_platform_device_;
-import 'package:note_app/components/stand_alone/button/page.g.dart' as components_stand_alone_button_;
+import 'package:note_app/flutter/container/bar/page.g.dart' as flutter_container_bar_;
+import 'package:note_app/flutter/media&assets/icon/page.g.dart' as flutter_media_assets_icon_;
+import 'package:note_app/flutter/page.g.dart' as flutter_;
+import 'package:note_app/flutter/platform&device/page.g.dart' as flutter_platform_device_;
+import 'package:note_app/flutter/stand_alone/button/page.g.dart' as flutter_stand_alone_button_;
 import 'package:note_app/note_app.dart';
 import 'package:note_app/page.g.dart' as root_;
 import 'package:note_app/test/nobody/page.g.dart' as test_nobody_;
@@ -19,6 +19,7 @@ import 'package:note_app/test/temp/page.g.dart' as test_temp_;
 import 'package:note_app/zdraft/2.dev/debug/page.g.dart' as zdraft_dev_debug_;
 import 'package:note_app/zdraft/2.dev/mirror/page.g.dart' as zdraft_dev_mirror_;
 import 'package:note_app/zdraft/analyzer/page.g.dart' as zdraft_analyzer_;
+import 'package:note_app/zdraft/async/page.g.dart' as zdraft_async_;
 import 'package:note_app/zdraft/components/bar/page.g.dart' as zdraft_components_bar_;
 import 'package:note_app/zdraft/components/button/ButtonStyleButton/page.g.dart'
     as zdraft_components_button_ButtonStyleButton_;
@@ -51,17 +52,15 @@ mixin PathsMixin {
 
   final Path note_self_sample = put("/2.note-self/sample", note_self_sample_.noteInfo);
 
-  final Path components_container_bar = put("/components/container/bar", components_container_bar_.noteInfo);
+  final Path flutter_container_bar = put("/flutter/container/bar", flutter_container_bar_.noteInfo);
 
-  final Path components_media_assets_icon =
-      put("/components/media&assets/icon", components_media_assets_icon_.noteInfo);
+  final Path flutter_media_assets_icon = put("/flutter/media&assets/icon", flutter_media_assets_icon_.noteInfo);
 
-  final Path components = put("/components", components_.noteInfo);
+  final Path flutter = put("/flutter", flutter_.noteInfo);
 
-  final Path components_platform_device = put("/components/platform&device", components_platform_device_.noteInfo);
+  final Path flutter_platform_device = put("/flutter/platform&device", flutter_platform_device_.noteInfo);
 
-  final Path components_stand_alone_button =
-      put("/components/stand_alone/button", components_stand_alone_button_.noteInfo);
+  final Path flutter_stand_alone_button = put("/flutter/stand_alone/button", flutter_stand_alone_button_.noteInfo);
 
   final Path root = put("/", root_.noteInfo);
 
@@ -76,6 +75,8 @@ mixin PathsMixin {
   final Path zdraft_dev_mirror = put("/zdraft/2.dev/mirror", zdraft_dev_mirror_.noteInfo);
 
   final Path zdraft_analyzer = put("/zdraft/analyzer", zdraft_analyzer_.noteInfo);
+
+  final Path zdraft_async = put("/zdraft/async", zdraft_async_.noteInfo);
 
   final Path zdraft_components_bar = put("/zdraft/components/bar", zdraft_components_bar_.noteInfo);
 
