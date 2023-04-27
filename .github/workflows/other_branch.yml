@@ -49,4 +49,4 @@ jobs:
       # build
 #      - run: flutter --version
       - run: ./bake docker
-      - run: ./bake dockerPush
+#      - run: ./bake dockerPush
