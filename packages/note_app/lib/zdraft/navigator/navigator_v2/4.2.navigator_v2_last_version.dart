@@ -26,7 +26,8 @@ class Paths {
   /// - path是常量表示匹配模式,是规则："/help"
   /// - location是变量，表示一次实际访问请求:"/help?question=xxx"
   /// <R>是NavigatorV2.push()的返回结果类型
-  static Rule<R> _rule<R>(String path, Screen<R> Function(String location) parse) {
+  static Rule<R> _rule<R>(
+      String path, Screen<R> Function(String location) parse) {
     var result = Rule<R>(path: path, parse: parse);
     _list.add(result);
     return result;
@@ -36,15 +37,16 @@ class Paths {
 Paths rules = Paths._();
 
 class App extends StatelessWidget {
-  final MyRouterDelegate delegate =
-      MyRouterDelegate(rules: rules.list, first: rules.home, notFound: rules.notFound);
+  final MyRouterDelegate delegate = MyRouterDelegate(
+      rules: rules.list, first: rules.home, notFound: rules.notFound);
 
   App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerDelegate: LoggableRouterDelegate(delegate: delegate, logger: logger),
+      routerDelegate:
+          LoggableRouterDelegate(delegate: delegate, logger: logger),
       routeInformationParser: Parser(rules: rules.list),
     );
   }
@@ -68,7 +70,8 @@ class HomeScreen extends StatelessWidget with Screen<void> {
           child: const Text(
               """String answer=await HelpScreen(question: "how about v2?").push(context)"""),
           onPressed: () async {
-            String? answer = await HelpScreen(question: "how about v2?").push(context);
+            String? answer =
+                await HelpScreen(question: "how about v2?").push(context);
             // ignore: use_build_context_synchronously
             if (!context.mounted) return;
             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -95,7 +98,8 @@ class HelpScreen extends StatelessWidget with Screen<String> {
   }
 
   @override
-  String get location => Uri(path: rule.path, queryParameters: {"question": question}).toString();
+  String get location =>
+      Uri(path: rule.path, queryParameters: {"question": question}).toString();
 
   @override
   Rule<String> get rule => rules.help;
@@ -164,7 +168,8 @@ class NavigatorV2 extends StatelessWidget {
     return Navigator(
       key: navigatorKey,
       onPopPage: (route, result) {
-        logger.log("NavigatorV2.build.onPopPage - route:${route.settings.name}, result:$result");
+        logger.log(
+            "NavigatorV2.build.onPopPage - route:${route.settings.name}, result:$result");
         if (!route.didPop(result)) {
           return false;
         }
@@ -196,7 +201,8 @@ class Parser extends RouteInformationParser<RouteInformation> {
   final List<Rule> rules;
 
   @override
-  Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
+  Future<RouteInformation> parseRouteInformation(
+      RouteInformation routeInformation) {
     return SynchronousFuture(routeInformation);
   }
 
@@ -240,7 +246,8 @@ class MyRouterDelegate extends RouterDelegate<RouteInformation>
 
   Rule match(String location) {
     Uri uri = Uri.parse(location);
-    return rules.lastWhere((element) => uri.path == element.path, orElse: () => notFound);
+    return rules.lastWhere((element) => uri.path == element.path,
+        orElse: () => notFound);
   }
 
   Future<R?> _push<R>(String location) {
@@ -400,7 +407,8 @@ class LoggableRouterDelegate<T> implements RouterDelegate<T> {
   }
 
   log(Object? msg) {
-    logger.log("${delegate.runtimeType}(id:${identityHashCode(delegate)}).$msg");
+    logger
+        .log("${delegate.runtimeType}(id:${identityHashCode(delegate)}).$msg");
   }
 }
 

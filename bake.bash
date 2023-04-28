@@ -223,12 +223,6 @@ enable_experiment=""
   /docker() {
     (
       run docker build --tag younpc/note:latest . ;
-#      mkdir -p build
-#      docker run --workdir / younpc/note tar -cf - app | (
-#        cd build
-#        tar -xf -
-#      )
-#      mv build/app build/web
     )
   }
 }
@@ -292,7 +286,7 @@ enable_experiment=""
     local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
     (
       cd packages/note_app
-      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@"
+      run flutter run --release --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@"
     )
   }
 }

@@ -15,19 +15,19 @@ RUN ./bake test
 ######################################################################
 # package
 ######################################################################
-FROM node:19.9-alpine3.16 as package
+FROM nginx:1.23.4 as nginx
+# ref:
+# https://github.com/nginxinc/docker-nginx/blob/master/mainline
+
+COPY --from=ci /home/flutter/note/packages/note_app/build/web /usr/share/nginx/html/note
 
 # The port that your application listens to.
+EXPOSE 443
 EXPOSE 80
 
-WORKDIR /app
+# WORKDIR /app
 
-# Prefer not to run as root.
+RUN rm /etc/nginx/conf.d/*
 
-COPY --from=ci /home/flutter/note/packages/note_app/build/web /app/note
-RUN npm i -g http-server
-
-# docker run --rm -p 80:80 younpc/note
-CMD ["http-server", "/app","--port" ,"80" , "-g","--brotli"]
-
+COPY nginx/ /etc/nginx/
 

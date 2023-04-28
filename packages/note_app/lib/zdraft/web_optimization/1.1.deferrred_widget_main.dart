@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:note_app/zdraft/web_optimization/1,deferrred_widget.dart'
     deferred as box;
 
+/// ref: https://docs.flutter.dev/perf/deferred-components
 main() {
-  runApp(MaterialApp(home: Scaffold(body: SomeWidget())));
+  runApp(const MaterialApp(home: Scaffold(body: SomeWidget())));
+}
+
+Future<Widget> load() {
+  var c = box.loadLibrary();
+  return c.then((value) => Future(() => box.DeferredBox()), onError: (err) {
+    debugPrint("onError???$err");
+  });
 }
 
 class SomeWidget extends StatefulWidget {
@@ -31,6 +39,7 @@ class _SomeWidgetState extends State<SomeWidget> {
           if (snapshot.hasError) {
             return Text('Error: ${snapshot.error}');
           }
+
           return box.DeferredBox();
         }
         return const CircularProgressIndicator();

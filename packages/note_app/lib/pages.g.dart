@@ -32,6 +32,7 @@ import 'package:note_app/zdraft/components/slider/page.g.dart' as zdraft_compone
 import 'package:note_app/zdraft/components/text/RichText/page.g.dart' as zdraft_components_text_RichText_;
 import 'package:note_app/zdraft/components/text/Text/page.g.dart' as zdraft_components_text_Text_;
 import 'package:note_app/zdraft/dart3/page.g.dart' as zdraft_dart3_;
+import 'package:note_app/zdraft/execption/page.g.dart' as zdraft_execption_;
 import 'package:note_app/zdraft/layout/page.g.dart' as zdraft_layout_;
 import 'package:note_app/zdraft/material3/page.g.dart' as zdraft_material3_;
 import 'package:note_app/zdraft/page.g.dart' as zdraft_;
@@ -101,6 +102,8 @@ mixin PathsMixin {
   final Path zdraft_components_text_Text = put("/zdraft/components/text/Text", zdraft_components_text_Text_.noteInfo);
 
   final Path zdraft_dart3 = put("/zdraft/dart3", zdraft_dart3_.noteInfo);
+
+  final Path zdraft_execption = put("/zdraft/execption", zdraft_execption_.noteInfo);
 
   final Path zdraft_layout = put("/zdraft/layout", zdraft_layout_.noteInfo);
 
