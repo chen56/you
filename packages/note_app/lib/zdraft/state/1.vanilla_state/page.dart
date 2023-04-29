@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "最原始的状态管理",
   builder: build,
 );

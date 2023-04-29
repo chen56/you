@@ -7,9 +7,9 @@ import 'package:note/utils.dart';
 import 'dart:convert';
 import 'package:code_builder/code_builder.dart' as code;
 
-typedef PageBuilder = void Function(BuildContext context, Pen pen);
-
-typedef PageGenInfo = ({
+typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
+typedef NoteLoader = Future<NoteBuilder> Function();
+typedef NoteSourceData = ({
   List<
       ({
         String cellType,
@@ -24,11 +24,11 @@ typedef PageGenInfo = ({
         int statementCount
       })> cells,
   String encodedCode,
-  PageMeta meta
+  NoteBuilder meta
 });
 // List<({String blockType, int end, int offset})> specialNodes
 
-PageGenInfo _emptyPageGenInfo = (
+NoteSourceData _emptyPageGenInfo = (
   cells: [
     (
       cellType: CellType.header.name,
@@ -39,9 +39,15 @@ PageGenInfo _emptyPageGenInfo = (
     )
   ],
   encodedCode: "",
-  meta: PageMeta.empty(),
+  meta: NoteBuilder.empty(),
 );
-PageSource _emptyPageSource = PageSource(pageGenInfo: _emptyPageGenInfo);
+NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
+
+/// 可序列化的config 数据
+class NoteConf {
+  final String shortTitle;
+  NoteConf({required this.shortTitle});
+}
 
 /// 本项目page开发模型，包括几部分：
 /// - 本包：page开发模型的核心数据结构，并不参与具体UI样式表现
@@ -50,21 +56,23 @@ PageSource _emptyPageSource = PageSource(pageGenInfo: _emptyPageGenInfo);
 
 /// <T>: [NavigatorV2.push] 的返回类型
 /// todo 因此类是页面定义元数据，应该是临时格式的record对象，不应是个类
-class PageMeta<T> {
+class NoteBuilder<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
-  final PageBuilder builder;
+  final NoteConf conf;
+  final NotePageBuilder builder;
   late final Layout? layout;
   final bool empty;
 
-  PageMeta({
+  NoteBuilder({
     required this.shortTitle,
     required this.builder,
     this.layout,
+    // todo remove empty field
     this.empty = false,
-  });
+  }) : conf = NoteConf(shortTitle: shortTitle);
 
-  PageMeta.empty({String shortTitle = ""})
+  NoteBuilder.empty({String shortTitle = ""})
       : this(
           empty: true,
           shortTitle: shortTitle,
@@ -77,27 +85,27 @@ class PageMeta<T> {
   }
 }
 
-class Path<T> {
+class Note<T> {
   final String name;
-  final List<Path> _children = List.empty(growable: true);
-  final Map<String, Path> _childrenMap = {};
-  final Path? parent;
+  final List<Note> _children = List.empty(growable: true);
+  final Map<String, Note> _childrenMap = {};
+  final Note? parent;
   bool expand = false;
   final Map<String, Object> attributes = {};
-  PageMeta<T> _meta = PageMeta(
+  NoteBuilder<T> _meta = NoteBuilder(
     empty: true,
     shortTitle: "",
     builder: (context, print) {},
   );
 
-  PageSource _source = _emptyPageSource;
+  NoteSource _source = _emptyPageSource;
 
-  Path._child(
+  Note._child(
     this.name, {
-    required Path this.parent,
-  }) : _meta = PageMeta.empty(shortTitle: name);
+    required Note this.parent,
+  }) : _meta = NoteBuilder.empty(shortTitle: name);
 
-  Path.root()
+  Note.root()
       : name = "",
         parent = null;
 
@@ -112,11 +120,11 @@ class Path<T> {
 
   bool get isNotEmpty => !_meta.empty;
 
-  List<Path> get children => List.unmodifiable(_children);
+  List<Note> get children => List.unmodifiable(_children);
 
-  PageSource get source => _source;
+  NoteSource get source => _source;
 
-  Path<C> put<C>(String fullPath, PageGenInfo pageGenInfo) {
+  Note<C> put<C>(String fullPath, NoteSourceData data) {
     var p = fullPath
         .split("/")
         .map((e) => e.trim())
@@ -124,12 +132,12 @@ class Path<T> {
         .toList();
     var path = _ensurePath(p);
 
-    path._meta = pageGenInfo.meta;
-    path._source = PageSource(pageGenInfo: pageGenInfo);
-    return path as Path<C>;
+    path._meta = data.meta;
+    path._source = NoteSource(pageGenInfo: data);
+    return path as Note<C>;
   }
 
-  Path _ensurePath<C>(List<String> nameList) {
+  Note _ensurePath<C>(List<String> nameList) {
     if (nameList.isEmpty) {
       return this;
     }
@@ -137,7 +145,7 @@ class Path<T> {
     assert(name != "" && name != "/",
         "path:$nameList, path[0]:'$name' must not be '' and '/' ");
     var next = _childrenMap.putIfAbsent(name, () {
-      var child = Path._child(name, parent: this);
+      var child = Note._child(name, parent: this);
       _children.add(child);
       _childrenMap[name] = child;
       return child;
@@ -153,7 +161,7 @@ class Path<T> {
     }
 
     if (isRoot) {
-      return <T>(Path<T> note) => _DefaultScreen<T>(
+      return <T>(Note<T> note) => _DefaultScreen<T>(
             current: note,
           );
     }
@@ -164,13 +172,13 @@ class Path<T> {
 
   int get level => isRoot ? 0 : parent!.level + 1;
 
-  int levelTo(Path parent) => this.level - parent.level;
+  int levelTo(Note parent) => this.level - parent.level;
 
-  List<Path> get parents => this.isRoot ? [this] : [this, ...parent!.parents];
+  List<Note> get parents => this.isRoot ? [this] : [this, ...parent!.parents];
 
   bool get isRoot => parent == null;
 
-  Path get root => isRoot ? this : parent!.root;
+  Note get root => isRoot ? this : parent!.root;
 
   String get shortTitle => _meta.shortTitle;
 
@@ -180,7 +188,7 @@ class Path<T> {
     return parentPath == "/" ? "/$name" : "$parentPath/$name";
   }
 
-  List<Path> toList({bool includeThis = true, bool Function(Path path)? test}) {
+  List<Note> toList({bool includeThis = true, bool Function(Note path)? test}) {
     test = test ?? (e) => true;
     if (!test(this)) {
       return [];
@@ -191,15 +199,15 @@ class Path<T> {
     return includeThis ? [this, ...flatChildren] : flatChildren;
   }
 
-  List<Path> topList({bool topDown = true}) {
+  List<Note> topList({bool topDown = true}) {
     if (isRoot) {
       return [this];
     }
     return [...parent!.topList(), this];
   }
 
-  Path? child(String path) {
-    Path? result = this;
+  Note? child(String path) {
+    Note? result = this;
     for (var split
         in path.split("/").map((e) => e.trim()).where((e) => e != "")) {
       result = result?._childrenMap[split];
@@ -226,7 +234,7 @@ class Path<T> {
       return "Page($path ,kids:${_children.map((e) => e.toStringShort()).toList()})";
     } else {
       StringBuffer sb = StringBuffer();
-      for (Path n in toList()) {
+      for (Note n in toList()) {
         sb.write("$n\n");
       }
       return sb.toString();
@@ -275,7 +283,7 @@ class Pen {
   late final List<NoteCell> cells;
   late NoteCell currentCell;
 
-  final Path path;
+  final Note path;
   final bool defaultCodeExpand;
 
   // Pen({required this.editors});
@@ -573,11 +581,11 @@ class OutlineNode {
   }
 }
 
-typedef Layout = Screen Function(Path page);
+typedef Layout = Screen Function(Note page);
 
 /// 在页面树上找不到任何Layout时套用这个缺省的
 class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
-  final Path<T> current;
+  final Note<T> current;
 
   _DefaultScreen({super.key, required this.current});
 
@@ -602,10 +610,11 @@ class _DefaultScreen<T> extends StatelessWidget with Screen<T> {
   String get location => current.path;
 }
 
-class PageSource {
+class NoteSource {
   late final String code;
-  final PageGenInfo _pageGenInfo;
-  PageSource({required PageGenInfo pageGenInfo}) : _pageGenInfo = pageGenInfo {
+  final NoteSourceData _pageGenInfo;
+  NoteSource({required NoteSourceData pageGenInfo})
+      : _pageGenInfo = pageGenInfo {
     var decoded = base64.decode(pageGenInfo.encodedCode);
     code = utf8.decode(decoded);
   }
@@ -637,7 +646,7 @@ class CellSource {
   final CellType cellType;
   final CodeEntity codeEntity;
   final int statementCount;
-  final PageSource _pageSource;
+  final NoteSource _pageSource;
   List<SpecialSource> specialSources;
 
   CellSource({
@@ -671,7 +680,7 @@ class SpecialSource {
   String codeType;
   final CodeEntity codeEntity;
   final NoteCell cell;
-  final PageSource pageSource;
+  final NoteSource pageSource;
   SpecialSource({
     required this.codeType,
     required this.codeEntity,
@@ -715,7 +724,7 @@ class NoteCell extends ChangeNotifier {
   NoteCell({
     required this.pen,
     required this.index,
-    required PageSource pageSource,
+    required NoteSource pageSource,
   }) {
     var codeCell = pageSource._pageGenInfo.cells[index];
     source = CellSource(
@@ -808,6 +817,7 @@ class NoteCell extends ChangeNotifier {
 
 extension NoteSampleExt on Object {
   static final _code = Expando<code.Expression>();
+  //todo 收缩sampleCode和sampleCodeStr为一个属性
   code.Expression? get sampleCode => _code[this];
   set sampleCode(code.Expression? v) => _code[this] = v;
   set sampleCodeStr(String? v) =>

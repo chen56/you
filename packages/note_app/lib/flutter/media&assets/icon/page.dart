@@ -4,7 +4,7 @@ import 'package:note/page_core.dart';
 import 'package:note_mate_flutter/mate_icons.g.dart' as mate_icons;
 import 'package:note_mate_flutter/material.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "Icon",
   builder: build,
 );

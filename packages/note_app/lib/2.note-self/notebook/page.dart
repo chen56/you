@@ -8,7 +8,7 @@ import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 import 'package:note_mate_flutter/material.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: " Notebook机制",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),

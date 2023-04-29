@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_mate_flutter/material.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "工具栏",
   builder: build,
 );

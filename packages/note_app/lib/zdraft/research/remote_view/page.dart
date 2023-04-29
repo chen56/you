@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "Remote flutter view",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,

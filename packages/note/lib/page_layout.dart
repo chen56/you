@@ -14,8 +14,8 @@ import 'sys.dart';
 const Widget _cellSplitBlock = SizedBox(height: 18);
 
 class LayoutScreen<T> extends StatefulWidget with Screen<T> {
-  final Path<T> current;
-  final Path tree;
+  final Note<T> current;
+  final Note tree;
   final bool defaultCodeExpand;
   final Editors editors;
 
@@ -198,7 +198,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
 }
 
 class _NoteTreeView extends StatefulWidget {
-  final Path root;
+  final Note root;
 
   _NoteTreeView(
     this.root, {
@@ -215,7 +215,7 @@ class _NoteTreeViewState extends State<_NoteTreeView> {
   @override
   Widget build(BuildContext context) {
     // 一页一个链接
-    Widget newLink(Path node) {
+    Widget newLink(Note node) {
       click() {
         NavigatorV2.of(context).push(node.path);
       }
@@ -507,7 +507,7 @@ class _NoteCellView extends StatelessWidget {
     }
 
     if (e is ObjectContent) {
-      return Text("${e.object}");
+      return SelectableText("${e.object}");
     }
 
     throw UnimplementedError("NoteContent not implemented : $e");

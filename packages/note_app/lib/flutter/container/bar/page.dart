@@ -4,7 +4,7 @@ import 'package:note_mate_flutter/material.dart';
 import 'package:note_mate_flutter/painting.dart' as painting;
 import 'package:note/page_core.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "Bars",
   builder: build,
 );

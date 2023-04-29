@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "exception",
   builder: build,
 );

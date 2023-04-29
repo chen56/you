@@ -144,10 +144,10 @@ class _Page {
         ],
       );
     }
+
     var buildBody = findBuild.functionExpression.body;
     assert(buildBody is BlockFunctionBody,
         "build() func only support Block Function, but(${buildBody.runtimeType})");
-
     var buildBodyBlock = (buildBody as BlockFunctionBody).block;
 
     List<_CellInfo> body = [];

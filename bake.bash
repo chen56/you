@@ -286,7 +286,7 @@ enable_experiment=""
     local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
     (
       cd packages/note_app
-      run flutter run --release --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@"
+      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@"
     )
   }
 }

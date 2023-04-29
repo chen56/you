@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "dart 3 新特性",
   builder: build,
 );

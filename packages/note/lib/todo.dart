@@ -9,6 +9,10 @@
 // export 'arena.dart' show GestureArenaEntry, GestureArenaMember;
 // mate机制有点导出问题
 
+class TODO_muitl_runtime {
+  //多运行时机制，page可以是sh，js，py等，page需指定其运行时以便可以连接多种环境运行
+}
+
 class TODO_js_static_site {
   //静态lite web版
   //https://www.patterns.dev/posts/islands-architecture/
