@@ -1,6 +1,6 @@
 import 'package:note/page_core.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "test-无build",
   builder: (context, print) {},
 );

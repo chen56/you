@@ -3,7 +3,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "web optimization",
   builder: build,
 );
@@ -50,4 +50,6 @@ Widget build(BuildContext context) {
 to do
 
   ''');
+
+  print("ss");
 }

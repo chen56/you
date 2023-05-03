@@ -11,7 +11,7 @@ enum WindowClass {
   // full screen pc
   expanded;
 
-  factory WindowClass.fromContext(BuildContext context) {
+  factory WindowClass.of(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     if (width >= 1400) return WindowClass.expanded;
     if (width >= 900) return WindowClass.medium;

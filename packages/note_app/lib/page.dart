@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "home",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),

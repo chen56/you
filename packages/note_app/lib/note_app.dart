@@ -40,22 +40,22 @@ import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
 // ]);
 
 class Paths with Navigable, PathsMixin {
-  late final Path<void> initial;
+  late final Note<void> initial;
   Paths._() {
-    initial = note_self_sample;
+    initial = zdraft_file;
   }
 
   @override
   Screen parse(String location) {
-    Path find = _root.child(location)!; // ?? notFound;
+    Note find = _root.child(location)!; // ?? notFound;
     return find.createScreen(location);
   }
 }
 
 var paths = Paths._();
 
-Path<void> _root = Path.root();
-put<C>(String path, PageGenInfo noteInfo) {
+Note<void> _root = Note.root();
+put<C>(String path, NoteSourceData noteInfo) {
   return _root.put(path, noteInfo);
 }
 
@@ -64,7 +64,7 @@ class Layouts {
     bool defaultCodeExpand = true,
   }) {
     return (path) => LayoutScreen<T>(
-          current: path as Path<T>,
+          current: path as Note<T>,
           tree: paths.root,
           editors: Editors(
             enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),

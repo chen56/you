@@ -223,12 +223,6 @@ enable_experiment=""
   /docker() {
     (
       run docker build --tag younpc/note:latest . ;
-#      mkdir -p build
-#      docker run --workdir / younpc/note tar -cf - app | (
-#        cd build
-#        tar -xf -
-#      )
-#      mv build/app build/web
     )
   }
 }
@@ -285,7 +279,7 @@ enable_experiment=""
 }
 
 /run?() {
-  /run?shortHelp() { cat <<<"开发模式 flutter run: http://localhost:8888"; }
+  /run?shortHelp() { cat <<<"flutter run: http://localhost:8888"; }
   /run() {
     # only work on macos
     # shellcheck disable=SC2155

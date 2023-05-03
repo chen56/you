@@ -34,6 +34,7 @@ dependencies:
 
   path: ^1.8.2
   code_builder: ^4.4.0
+  file: ^6.1.4
 
 dev_dependencies:
 
@@ -45,7 +46,6 @@ dev_dependencies:
   lints: ^2.0.1
 
   # for tools/gen_pages.dart
-  file: ^6.1.4
   dart_style: ^2.0.0
   glob: ^2.1.1
 
@@ -59,6 +59,10 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   uses-material-design: true
+
+
+  assets:
+    - ./
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

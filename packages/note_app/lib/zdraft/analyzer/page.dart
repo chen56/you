@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
-PageMeta page = PageMeta(
+NoteBuilder page = NoteBuilder(
   shortTitle: "test-analyzer",
   builder: build,
 );
