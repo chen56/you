@@ -1,12 +1,14 @@
 // part of "pages.g.dart";
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:note/log.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/page_core.dart';
 import 'package:note/page_layout.dart';
-import 'package:note_app/pages.g.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
-
+import 'package:note_app/note_app.deferred.g.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
@@ -38,26 +40,28 @@ import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
 //     ]),
 //   ]),
 // ]);
+Logger logger = Logger();
 
-class Paths with Navigable, PathsMixin {
+class Notes extends BaseNotes with Navigable {
   late final Note<void> initial;
-  Paths._() {
+  Notes._() {
     initial = zdraft_file;
   }
 
   @override
   Screen parse(String location) {
-    Note find = _root.child(location)!; // ?? notFound;
+    Note find = root.child(location)!; // ?? notFound;
     return find.createScreen(location);
   }
 }
 
-var paths = Paths._();
-
-Note<void> _root = Note.root();
-put<C>(String path, NoteSourceData noteInfo) {
-  return _root.put(path, noteInfo);
+void onError(e, StackTrace? stackTrace) {
+  if (kDebugMode) {
+    print("todo , how to do on onError? $e");
+  }
 }
+
+var notes = Notes._();
 
 class Layouts {
   static Layout defaultLayout<T>({
@@ -65,12 +69,33 @@ class Layouts {
   }) {
     return (path) => LayoutScreen<T>(
           current: path as Note<T>,
-          tree: paths.root,
+          tree: notes.root,
           editors: Editors(
             enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
             iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
           ),
           defaultCodeExpand: defaultCodeExpand,
         );
+  }
+}
+
+class NoteApp extends StatelessWidget {
+  const NoteApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    notes.root.extendTree(true);
+    notes.zdraft.extendTree(false);
+    return MaterialApp.router(
+      title: 'Flutter Note',
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+        useMaterial3: true,
+      ),
+      routerConfig: NavigatorV2.config(
+        initial: notes.parse(notes.initial.path),
+        navigable: notes,
+      ),
+    );
   }
 }

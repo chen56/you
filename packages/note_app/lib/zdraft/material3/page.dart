@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: "Material3概览",
   builder: build,
 );

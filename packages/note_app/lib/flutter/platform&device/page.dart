@@ -9,7 +9,7 @@ import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 import 'package:path/path.dart' as path;
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: "Platform和设备",
   builder: build,
   layout: Layouts.defaultLayout(defaultCodeExpand: true),

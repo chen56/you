@@ -8,7 +8,7 @@ import 'dart:convert';
 import 'package:code_builder/code_builder.dart' as code;
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
-typedef NoteLoader = Future<NoteBuilder> Function();
+typedef NoteLoader = Future<NoteConfPart> Function();
 typedef NoteSourceData = ({
   List<
       ({
@@ -24,7 +24,7 @@ typedef NoteSourceData = ({
         int statementCount
       })> cells,
   String encodedCode,
-  NoteBuilder meta
+  NoteConfPart meta
 });
 // List<({String blockType, int end, int offset})> specialNodes
 
@@ -39,7 +39,7 @@ NoteSourceData _emptyPageGenInfo = (
     )
   ],
   encodedCode: "",
-  meta: NoteBuilder.empty(),
+  meta: NoteConfPart.empty(),
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
@@ -56,7 +56,7 @@ class NoteConf {
 
 /// <T>: [NavigatorV2.push] 的返回类型
 /// todo 因此类是页面定义元数据，应该是临时格式的record对象，不应是个类
-class NoteBuilder<T> {
+class NoteConfPart<T> {
   /// 短标题，，应提供为page内markdown一级标题的缩短版，用于导航树等（边栏宽度有限）
   final String shortTitle;
   final NoteConf conf;
@@ -64,7 +64,7 @@ class NoteBuilder<T> {
   late final Layout? layout;
   final bool empty;
 
-  NoteBuilder({
+  NoteConfPart({
     required this.shortTitle,
     required this.builder,
     this.layout,
@@ -72,7 +72,7 @@ class NoteBuilder<T> {
     this.empty = false,
   }) : conf = NoteConf(shortTitle: shortTitle);
 
-  NoteBuilder.empty({String shortTitle = ""})
+  NoteConfPart.empty({String shortTitle = ""})
       : this(
           empty: true,
           shortTitle: shortTitle,
@@ -92,7 +92,7 @@ class Note<T> {
   final Note? parent;
   bool expand = false;
   final Map<String, Object> attributes = {};
-  NoteBuilder<T> _meta = NoteBuilder(
+  NoteConfPart<T> _meta = NoteConfPart(
     empty: true,
     shortTitle: "",
     builder: (context, print) {},
@@ -103,7 +103,7 @@ class Note<T> {
   Note._child(
     this.name, {
     required Note this.parent,
-  }) : _meta = NoteBuilder.empty(shortTitle: name);
+  }) : _meta = NoteConfPart.empty(shortTitle: name);
 
   Note.root()
       : name = "",

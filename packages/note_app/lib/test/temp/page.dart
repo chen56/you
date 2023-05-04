@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: "temp page",
   builder: build,
 );

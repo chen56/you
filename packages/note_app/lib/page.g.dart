@@ -12,7 +12,7 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 325,
+      end: 374,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -24,8 +24,8 @@ final noteInfo = (
     /// (print.markdown(r''' # home   本)
     (
       cellType: 'body',
-      offset: 325,
-      end: 399,
+      offset: 374,
+      end: 448,
       statementCount: 1,
       specialNodes: <({
         String nodeType,
@@ -37,8 +37,8 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 399,
-      end: 401,
+      offset: 448,
+      end: 450,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -48,5 +48,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9wYWdlX2NvcmUuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlX2FwcC9ub3RlX2FwcC5kYXJ0JzsKCk5vdGVCdWlsZGVyIHBhZ2UgPSBOb3RlQnVpbGRlcigKICBzaG9ydFRpdGxlOiAiaG9tZSIsCiAgYnVpbGRlcjogYnVpbGQsCiAgbGF5b3V0OiBMYXlvdXRzLmRlZmF1bHRMYXlvdXQoZGVmYXVsdENvZGVFeHBhbmQ6IHRydWUpLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBob21lIAoK5pys6aG16Z2i5bqU6K+l5piv5LiN5pq06Zyy55qEICzkvYbnjrDlnKjlubbmnKrlgZrku7vkvZXpmZDliLbvvIzpgJrov4cgLyDlj6/ku6XnnIvliLAKCiAgJycnKTsKfQo="
+      "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9wYWdlX2NvcmUuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlX2FwcC9ub3RlX2FwcC5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfYXBwL3BhZ2VzLmRlZmVycmVkLmcuZGFydCc7CgpOb3RlQnVpbGRlciBwYWdlID0gTm90ZUJ1aWxkZXIoCiAgc2hvcnRUaXRsZTogImhvbWUiLAogIGJ1aWxkZXI6IGJ1aWxkLAogIGxheW91dDogTGF5b3V0cy5kZWZhdWx0TGF5b3V0KGRlZmF1bHRDb2RlRXhwYW5kOiB0cnVlKSwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgaG9tZSAKCuacrOmhtemdouW6lOivpeaYr+S4jeaatOmcsueahCAs5L2G546w5Zyo5bm25pyq5YGa5Lu75L2V6ZmQ5Yi277yM6YCa6L+HIC8g5Y+v5Lul55yL5YiwCgogICcnJyk7Cn0K"
 );

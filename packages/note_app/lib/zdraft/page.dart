@@ -3,7 +3,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: "草稿目录",
   builder: build,
 );

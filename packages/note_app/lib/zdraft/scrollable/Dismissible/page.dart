@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:note/page_core.dart';
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: " Dismissible滑动清除",
   builder: build,
 );

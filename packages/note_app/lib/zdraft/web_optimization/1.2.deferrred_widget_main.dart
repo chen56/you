@@ -4,18 +4,26 @@ import 'package:note_app/zdraft/web_optimization/1,deferrred_widget.dart'
 
 /// ref: https://docs.flutter.dev/perf/deferred-components
 main() {
-  xx("DeferredBox", () {
-    return Future.delayed(const Duration(seconds: 1)).then((value) => box
-        .loadLibrary()
-        .then((_) => Future(() => box.DeferredBox()),
-            onError: (e, StackTrace? stackTrace) =>
-                Text("future error:$e : $stackTrace")));
+  registerNote("DeferredBox", () {
+    // var f = Future.delayed(const Duration(seconds: 3));
+    var f = Future.delayed(const Duration(seconds: 3))
+        .then((value) => throw Exception("ssss"),
+            onError: (e, StackTrace? stackTrace) {
+      print("ppp2 $e");
+    });
+    return f.then((value) => box
+            .loadLibrary()
+            .then((_) => Future(() => box.DeferredBox()),
+                onError: (e, StackTrace? stackTrace) {
+          print("ppp $e");
+          return Text("future error:$e : $stackTrace");
+        }));
   });
   runApp(const MaterialApp(home: Scaffold(body: SomeWidget())));
 }
 
 Map<String, Future<Widget> Function()> deferredMap = {};
-void xx(String name, Future<Widget> Function() deferredObject) {
+void registerNote(String name, Future<Widget> Function() deferredObject) {
   deferredMap[name] = deferredObject;
 }
 
@@ -35,10 +43,11 @@ class _SomeWidgetState extends State<SomeWidget> {
     return FutureBuilder(
       future: deferredMap["DeferredBox"]!(),
       builder: (context, snapshot) {
-        debugPrint("FutureBuilder $snapshot");
+        debugPrint("FutureBuilder.build - $snapshot");
         if (snapshot.connectionState == ConnectionState.done) {
           if (snapshot.hasError) {
-            return Text('Error: ${snapshot.error}');
+            return Text(
+                'snapshot.hasError==true: error:${snapshot.error} - data:${snapshot.data}');
           }
           return snapshot.data!;
         }

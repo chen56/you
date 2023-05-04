@@ -54,7 +54,7 @@ main() async {
     log('genPages Info ok');
 
     log('gen pages.g.dart start');
-    genPages(resolvedLibs.map((e) => e.lib), writeFS: writeFS, fmt: fmt);
+    // genPages(resolvedLibs.map((e) => e.lib), writeFS: writeFS, fmt: fmt);
     genDeferredPages(resolvedLibs, writeFS: writeFS, fmt: fmt);
     log('gen pages.g.dart ok');
   }
@@ -184,18 +184,23 @@ void genDeferredPages(
       import 'package:note/page_core.dart';
       import 'package:note_app/note_app.dart';
       
-      mixin PathsMixin {
-         $fields
+      abstract class BaseNotes {
+        static final Note<void> _root = Note.root();
+        static Note<C> put2<C>(String path, NoteSourceData noteInfo,
+            Future<NoteBuilder> Function() noteLoader) {
+          return _root.put(path, noteInfo);
+        }
+        $fields
       }
       """),
     ));
 
   String toCode =
       '${libGen.accept(DartEmitter(allocator: Allocator.none, orderDirectives: true, useNullSafetySyntax: true))}';
-  writeFS.file("lib/pages.deferred.g.dart").writeAsStringSync(toCode);
+  writeFS.file("lib/note_app.deferred.g.dart").writeAsStringSync(toCode);
   // 写2次文件，方便调试，如果格式化出错，还可以看下上面未格式化的版本看看哪错了
   writeFS
-      .file("lib/pages.deferred.g.dart")
+      .file("lib/note_app.deferred.g.dart")
       .writeAsStringSync(fmt.format(toCode));
 }
 

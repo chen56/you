@@ -12,7 +12,7 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 310,
+      end: 346,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -24,8 +24,8 @@ final noteInfo = (
     /// (print.markdown(r''' # Cheat sh)
     (
       cellType: 'body',
-      offset: 310,
-      end: 500,
+      offset: 346,
+      end: 536,
       statementCount: 1,
       specialNodes: <({
         String nodeType,
@@ -37,8 +37,8 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 500,
-      end: 502,
+      offset: 536,
+      end: 538,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -48,5 +48,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfYXBwL25vdGVfYXBwLmRhcnQnOwoKTm90ZUJ1aWxkZXIgcGFnZSA9IE5vdGVCdWlsZGVyKAogIHNob3J0VGl0bGU6ICJGbHV0dGVyIENoZWF0IHNoZWV0IiwKICBsYXlvdXQ6IExheW91dHMuZGVmYXVsdExheW91dChkZWZhdWx0Q29kZUV4cGFuZDogZmFsc2UpLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBDaGVhdCBzaGVldAoKd2lraXBlZGlhIOWumuS5ie+8mgoKPiAgKirwn5qrVGlwOioqCj4gQ2hlYXQgc2hlZXQ6IEEgY2hlYXQgc2hlZXQgKGFsc28gY2hlYXRzaGVldCkgb3IgY3JpYiBzaGVldCBpcyBhIGNvbmNpc2Ugc2V0IG9mIG5vdGVzIHVzZWQgZm9yIHF1aWNrIHJlZmVyZW5jZS4uCgogICcnJyk7Cn0K"
+      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfYXBwL25vdGVfYXBwLmRhcnQnOwoKaW1wb3J0ICcuLi9wYWdlcy5kZWZlcnJlZC5nLmRhcnQnOwoKTm90ZUJ1aWxkZXIgcGFnZSA9IE5vdGVCdWlsZGVyKAogIHNob3J0VGl0bGU6ICJGbHV0dGVyIENoZWF0IHNoZWV0IiwKICBsYXlvdXQ6IExheW91dHMuZGVmYXVsdExheW91dChkZWZhdWx0Q29kZUV4cGFuZDogZmFsc2UpLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBDaGVhdCBzaGVldAoKd2lraXBlZGlhIOWumuS5ie+8mgoKPiAgKirwn5qrVGlwOioqCj4gQ2hlYXQgc2hlZXQ6IEEgY2hlYXQgc2hlZXQgKGFsc28gY2hlYXRzaGVldCkgb3IgY3JpYiBzaGVldCBpcyBhIGNvbmNpc2Ugc2V0IG9mIG5vdGVzIHVzZWQgZm9yIHF1aWNrIHJlZmVyZW5jZS4uCgogICcnJyk7Cn0K"
 );

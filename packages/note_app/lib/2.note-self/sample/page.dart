@@ -4,7 +4,7 @@ import 'package:note_app/note_app.dart';
 import 'package:note_mate_flutter/material.dart';
 import 'package:code_builder/code_builder.dart';
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: "参数化范例机制",
   layout: Layouts.defaultLayout(defaultCodeExpand: false),
   builder: build,
