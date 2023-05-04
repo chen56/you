@@ -12,7 +12,7 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 265,
+      end: 325,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -21,12 +21,12 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.markdown(r''' # file    )
+    /// (if (kIsWeb) {print("本页面只适合桌面版本, print.markdown(r''' # file    , LocalFileSystem fs = const Loc, print(fs.directory("").absolut, print("Directory.current:${Dir)
     (
       cellType: 'body',
-      offset: 265,
-      end: 304,
-      statementCount: 1,
+      offset: 325,
+      end: 635,
+      statementCount: 5,
       specialNodes: <({
         String nodeType,
         int end,
@@ -37,8 +37,8 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 304,
-      end: 306,
+      offset: 635,
+      end: 637,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -48,5 +48,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ3BhY2thZ2U6Zmx1dHRlci93aWRnZXRzLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZS9wYWdlX2NvcmUuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlX2FwcC9ub3RlX2FwcC5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAiZmlsZeaWh+S7tuiuv+mXriIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIGZpbGUgCiAgJycnKTsKfQo="
+      "Ly8gaWdub3JlX2Zvcl9maWxlOiBmaWxlX25hbWVzCgppbXBvcnQgJ2RhcnQ6aW8nOwoKaW1wb3J0ICdwYWNrYWdlOmZpbGUvbG9jYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL2ZvdW5kYXRpb24uZGFydCc7CmltcG9ydCAncGFja2FnZTpmbHV0dGVyL3dpZGdldHMuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKCk5vdGVCdWlsZGVyIHBhZ2UgPSBOb3RlQnVpbGRlcigKICBzaG9ydFRpdGxlOiAiZmlsZeaWh+S7tuiuv+mXriIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgaWYgKGtJc1dlYikgewogICAgcHJpbnQoIuacrOmhtemdouWPqumAguWQiOahjOmdoueJiOacrO+8jCB3ZWLniYjml6Dms5Xkvb/nlKhGaWxl5Yqf6IO9LOS8muaKpemUmSIpOwogICAgcmV0dXJuOwogIH0KCiAgcHJpbnQubWFya2Rvd24ocicnJwojIGZpbGUgCiAgJycnKTsKCiAgTG9jYWxGaWxlU3lzdGVtIGZzID0gY29uc3QgTG9jYWxGaWxlU3lzdGVtKCk7CiAgLy8gcHJpbnQoZnMuaXNXYXRjaFN1cHBvcnRlZCk7CiAgcHJpbnQoZnMuZGlyZWN0b3J5KCIiKS5hYnNvbHV0ZSk7CgogIHByaW50KCJEaXJlY3RvcnkuY3VycmVudDoke0RpcmVjdG9yeS5jdXJyZW50fSIpOwogIC8vIERpcmVjdG9yeS5jdXJyZW50Cn0K"
 );

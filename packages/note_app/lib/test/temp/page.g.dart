@@ -12,7 +12,7 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 194,
+      end: 200,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -24,8 +24,8 @@ final noteInfo = (
     /// (var i = 1;, print.runInCurrentCell((print), {void x() {print.runInCurrentC)
     (
       cellType: 'body',
-      offset: 194,
-      end: 384,
+      offset: 200,
+      end: 390,
       statementCount: 3,
       specialNodes: <({
         String nodeType,
@@ -34,13 +34,13 @@ final noteInfo = (
       })>[
         (
           nodeType: 'Pen.runInCurrentCell',
-          offset: 210,
-          end: 262,
+          offset: 216,
+          end: 268,
         ),
         (
           nodeType: 'Pen.runInCurrentCell',
-          offset: 303,
-          end: 363,
+          offset: 309,
+          end: 369,
         )
       ],
     ),
@@ -48,8 +48,8 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 384,
-      end: 386,
+      offset: 390,
+      end: 392,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -59,5 +59,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAidGVtcCBwYWdlIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICB2YXIgaSA9IDE7CiAgcHJpbnQucnVuSW5DdXJyZW50Q2VsbCgocHJpbnQpIHsKICAgIHByaW50KGkpOwogIH0pOwoKICB7CiAgICB2b2lkIHgoKSB7CiAgICAgIC8vIOeJueauiuivreWPpQogICAgICBwcmludC5ydW5JbkN1cnJlbnRDZWxsKChwcmludCkgewogICAgICAgIHByaW50KGkpOwogICAgICB9KTsKICAgIH0KCiAgICB4KCk7CiAgfQp9Cg=="
+      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKCk5vdGVCdWlsZGVyIHBhZ2UgPSBOb3RlQnVpbGRlcigKICBzaG9ydFRpdGxlOiAidGVtcCBwYWdlIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICB2YXIgaSA9IDE7CiAgcHJpbnQucnVuSW5DdXJyZW50Q2VsbCgocHJpbnQpIHsKICAgIHByaW50KGkpOwogIH0pOwoKICB7CiAgICB2b2lkIHgoKSB7CiAgICAgIC8vIOeJueauiuivreWPpQogICAgICBwcmludC5ydW5JbkN1cnJlbnRDZWxsKChwcmludCkgewogICAgICAgIHByaW50KGkpOwogICAgICB9KTsKICAgIH0KCiAgICB4KCk7CiAgfQp9Cg=="
 );

@@ -12,7 +12,7 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 205,
+      end: 211,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -24,8 +24,8 @@ final noteInfo = (
     /// (print.markdown(r''' # Floating)
     (
       cellType: 'body',
-      offset: 205,
-      end: 518,
+      offset: 211,
+      end: 524,
       statementCount: 1,
       specialNodes: <({
         String nodeType,
@@ -37,8 +37,8 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 518,
-      end: 520,
+      offset: 524,
+      end: 526,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -48,5 +48,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKClBhZ2VNZXRhIHBhZ2UgPSBQYWdlTWV0YSgKICBzaG9ydFRpdGxlOiAiRmxvYXRpbmdBY3Rpb25CdXR0b24iLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBGbG9hdGluZ0FjdGlvbkJ1dHRvbgoK5rWu5Yqo5oyJ6ZKu77yM5bi46KeB5LqOW1NjYWZmb2xkXeWPs+S4i+inkueahOa1ruWKqOaMiemSruOAggoK57un5om/5YWz57O777yaCi0gW1N0YXRlbGVzc1dpZGdldF0KICAtIFtGbG9hdGluZ0FjdGlvbkJ1dHRvbl0gCiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbl0g5Zu65a6a5aSn5bCPCiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5zbWFsbF0g5bCP5LiA54K5CiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5sYXJnZV0g5aSn5LiA54K5CiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5leHRlbmRlZF0gaWNvbiArIGxhYmVsCiAgJycnKTsKfQo="
+      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL3BhZ2VfY29yZS5kYXJ0JzsKCk5vdGVCdWlsZGVyIHBhZ2UgPSBOb3RlQnVpbGRlcigKICBzaG9ydFRpdGxlOiAiRmxvYXRpbmdBY3Rpb25CdXR0b24iLAogIGJ1aWxkZXI6IGJ1aWxkLAopOwoKYnVpbGQoQnVpbGRDb250ZXh0IGNvbnRleHQsIFBlbiBwcmludCkgewogIHByaW50Lm1hcmtkb3duKHInJycKIyBGbG9hdGluZ0FjdGlvbkJ1dHRvbgoK5rWu5Yqo5oyJ6ZKu77yM5bi46KeB5LqOW1NjYWZmb2xkXeWPs+S4i+inkueahOa1ruWKqOaMiemSruOAggoK57un5om/5YWz57O777yaCi0gW1N0YXRlbGVzc1dpZGdldF0KICAtIFtGbG9hdGluZ0FjdGlvbkJ1dHRvbl0gCiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbl0g5Zu65a6a5aSn5bCPCiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5zbWFsbF0g5bCP5LiA54K5CiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5sYXJnZV0g5aSn5LiA54K5CiAgICAtIOaehOmAoOWZqFtGbG9hdGluZ0FjdGlvbkJ1dHRvbi5leHRlbmRlZF0gaWNvbiArIGxhYmVsCiAgJycnKTsKfQo="
 );

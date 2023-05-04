@@ -12,7 +12,7 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 129,
+      end: 135,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -22,5 +22,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "aW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJ0ZXN0LeaXoGJ1aWxkIiwKICBidWlsZGVyOiAoY29udGV4dCwgcHJpbnQpIHt9LAopOwo="
+      "aW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKTm90ZUJ1aWxkZXIgcGFnZSA9IE5vdGVCdWlsZGVyKAogIHNob3J0VGl0bGU6ICJ0ZXN0LeaXoGJ1aWxkIiwKICBidWlsZGVyOiAoY29udGV4dCwgcHJpbnQpIHt9LAopOwo="
 );

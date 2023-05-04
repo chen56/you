@@ -160,7 +160,6 @@ option() {
 
 # after Flutter 3.10.0-1.1.pre , records、patterns is now enabled by default;
 #enable_experiment="--enable-experiment=records,patterns"
-enable_experiment=""
 /build?() {
   /build?shortHelp() { cat <<<"生产build"; }
   /build() {
@@ -169,7 +168,7 @@ enable_experiment=""
     #    ( cd note_app; run flutter build macos -v --enable-experiment=records --release ; )
     (
       cd packages/note_app
-      run flutter build web -v $enable_experiment \
+      run flutter build web -v  \
         --release --tree-shake-icons \
         --web-renderer html "$@"
     )
@@ -199,7 +198,7 @@ enable_experiment=""
   /preview_macos() {
     (
       cd packages/note_app
-      run flutter build macos -v $enable_experiment \
+      run flutter build macos -v  \
         --release --tree-shake-icons "$@"
     )
   }
@@ -257,15 +256,15 @@ enable_experiment=""
   /gen() {
     (
       cd packages/note_app
-      run dart run $enable_experiment tools/gen_pages.dart
+      run dart run  tools/gen_pages.dart
     )
     (
       cd packages/note_mate_flutter
-      run dart run $enable_experiment tools/gen_mates.dart
+      run dart run  tools/gen_mates.dart
     )
     (
       cd packages/note_mate_flutter
-      run dart run $enable_experiment tools/gen_mate_icons.dart
+      run dart run  tools/gen_mate_icons.dart
     )
   }
 }
@@ -286,7 +285,19 @@ enable_experiment=""
     local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
     (
       cd packages/note_app
-      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome $enable_experiment "$@"
+      run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome  "$@"
+    )
+  }
+}
+/runMac?() {
+  /runMac?shortHelp() { cat <<<"flutter run: http://localhost:8888"; }
+  /runMac() {
+    # only work on macos
+    # shellcheck disable=SC2155
+    local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
+    (
+      cd packages/note_app
+      run flutter run --device-id macos "$@"
     )
   }
 }

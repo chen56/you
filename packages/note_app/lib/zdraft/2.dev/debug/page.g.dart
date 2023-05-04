@@ -12,7 +12,7 @@ final noteInfo = (
     (
       cellType: 'header',
       offset: 0,
-      end: 191,
+      end: 197,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -24,8 +24,8 @@ final noteInfo = (
     /// (print.markdown(r''' ## 范例1 普通文, print.markdown(r''' ## 范例1 普通文)
     (
       cellType: 'body',
-      offset: 191,
-      end: 455,
+      offset: 197,
+      end: 461,
       statementCount: 2,
       specialNodes: <({
         String nodeType,
@@ -37,8 +37,8 @@ final noteInfo = (
     /// ()
     (
       cellType: 'tail',
-      offset: 455,
-      end: 457,
+      offset: 461,
+      end: 463,
       statementCount: 0,
       specialNodes: <({
         String nodeType,
@@ -48,5 +48,5 @@ final noteInfo = (
     )
   ],
   encodedCode:
-      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKUGFnZU1ldGEgcGFnZSA9IFBhZ2VNZXRhKAogIHNob3J0VGl0bGU6ICJkZWJ1Z+ebuOWFsyIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIyDojIPkvosxIOaZrumAmuaWh+acrCAKCnByaW50KFdpZGdldEluc3BlY3RvclNlcnZpY2UuaW5zdGFuY2UuZ2V0Um9vdFdpZGdldFN1bW1hcnlUcmVlKCJncm91cE5hbWUiKSk7CgrmiZPljbDnu4Tku7bmoJEKCnByaW50KFdpZGdldHNCaW5kaW5nLmluc3RhbmNlLnJlbmRlclZpZXdFbGVtZW50Py50b0RpYWdub3N0aWNzTm9kZSgpLnRvU3RyaW5nRGVlcCgpKTsKCgogICcnJyk7CgogIHByaW50Lm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDmma7pgJrmlofmnKwgCgogICcnJyk7Cn0K"
+      "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvd2lkZ2V0cy5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvcGFnZV9jb3JlLmRhcnQnOwoKTm90ZUJ1aWxkZXIgcGFnZSA9IE5vdGVCdWlsZGVyKAogIHNob3J0VGl0bGU6ICJkZWJ1Z+ebuOWFsyIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIyDojIPkvosxIOaZrumAmuaWh+acrCAKCnByaW50KFdpZGdldEluc3BlY3RvclNlcnZpY2UuaW5zdGFuY2UuZ2V0Um9vdFdpZGdldFN1bW1hcnlUcmVlKCJncm91cE5hbWUiKSk7CgrmiZPljbDnu4Tku7bmoJEKCnByaW50KFdpZGdldHNCaW5kaW5nLmluc3RhbmNlLnJlbmRlclZpZXdFbGVtZW50Py50b0RpYWdub3N0aWNzTm9kZSgpLnRvU3RyaW5nRGVlcCgpKTsKCgogICcnJyk7CgogIHByaW50Lm1hcmtkb3duKHInJycKIyMg6IyD5L6LMSDmma7pgJrmlofmnKwgCgogICcnJyk7Cn0K"
 );
