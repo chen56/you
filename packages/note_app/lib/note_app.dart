@@ -1,5 +1,4 @@
 // part of "pages.g.dart";
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/log.dart';
 import 'package:note/mate.dart';
@@ -7,8 +6,13 @@ import 'package:note/navigator_v2.dart';
 import 'package:note/page_core.dart';
 import 'package:note/page_layout.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
-import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
 import 'package:note_app/note_app.deferred.g.dart';
+
+// [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
+// reducing it from 1645184 to 10272 bytes (99.4% reduction).
+// Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
+// import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
+
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
@@ -51,14 +55,42 @@ class Notes extends BaseNotes with Navigable {
   @override
   Screen parse(String location) {
     Note find = root.child(location)!; // ?? notFound;
-    return find.createScreen(location);
+    // sync mode
+    // return find.createScreen(location);
+    // async mode
+    return DeferredScreen(note: find);
   }
 }
 
-void onError(e, StackTrace? stackTrace) {
-  if (kDebugMode) {
-    print("todo , how to do on onError? $e");
+class DeferredScreen extends StatelessWidget with Screen {
+  final Note note;
+  DeferredScreen({super.key, required this.note});
+
+  @override
+  Widget build(BuildContext context) {
+    var needLoad =
+        note.meAndAncestors.where((e) => e.deferredConf != null).toList();
+    return FutureBuilder(
+      future: Future.wait(needLoad.map((e) => e.deferredConf!())),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          if (snapshot.hasError) {
+            return Text(
+                'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
+          }
+
+          for (int i = 0; i < needLoad.length; i++) {
+            needLoad[i].confPart = snapshot.data![i];
+          }
+          return note.layout(note);
+        }
+        return const CircularProgressIndicator();
+      },
+    );
   }
+
+  @override
+  String get location => note.path;
 }
 
 var notes = Notes._();
@@ -72,7 +104,7 @@ class Layouts {
           tree: notes.root,
           editors: Editors(
             enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
-            iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
+            // iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
           ),
           defaultCodeExpand: defaultCodeExpand,
         );

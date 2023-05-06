@@ -8,7 +8,7 @@ import 'dart:convert';
 import 'package:code_builder/code_builder.dart' as code;
 
 typedef NotePageBuilder = void Function(BuildContext context, Pen pen);
-typedef NoteLoader = Future<NoteConfPart> Function();
+typedef DeferredNoteConf = Future<NoteConfPart> Function();
 typedef NoteSourceData = ({
   List<
       ({
@@ -24,7 +24,7 @@ typedef NoteSourceData = ({
         int statementCount
       })> cells,
   String encodedCode,
-  NoteConfPart meta
+  // NoteConfPart meta
 });
 // List<({String blockType, int end, int offset})> specialNodes
 
@@ -39,7 +39,7 @@ NoteSourceData _emptyPageGenInfo = (
     )
   ],
   encodedCode: "",
-  meta: NoteConfPart.empty(),
+  // meta: NoteConfPart.empty(),
 );
 NoteSource _emptyPageSource = NoteSource(pageGenInfo: _emptyPageGenInfo);
 
@@ -63,7 +63,6 @@ class NoteConfPart<T> {
   final NotePageBuilder builder;
   late final Layout? layout;
   final bool empty;
-
   NoteConfPart({
     required this.shortTitle,
     required this.builder,
@@ -75,6 +74,12 @@ class NoteConfPart<T> {
   NoteConfPart.empty({String shortTitle = ""})
       : this(
           empty: true,
+          shortTitle: shortTitle,
+          builder: (context, print) {},
+        );
+  NoteConfPart.notEmpty({String shortTitle = ""})
+      : this(
+          empty: false,
           shortTitle: shortTitle,
           builder: (context, print) {},
         );
@@ -92,22 +97,36 @@ class Note<T> {
   final Note? parent;
   bool expand = false;
   final Map<String, Object> attributes = {};
-  NoteConfPart<T> _meta = NoteConfPart(
-    empty: true,
-    shortTitle: "",
-    builder: (context, print) {},
-  );
+
+  NoteConfPart<T> confPart = NoteConfPart.empty();
 
   NoteSource _source = _emptyPageSource;
 
-  Note._child(
-    this.name, {
+  DeferredNoteConf? deferredConf;
+
+  Note._child({
+    required this.name,
     required Note this.parent,
-  }) : _meta = NoteConfPart.empty(shortTitle: name);
+  }) : confPart = NoteConfPart.empty(shortTitle: name);
 
   Note.root()
       : name = "",
         parent = null;
+
+  Note<C> put<C>(
+      String fullPath, NoteSourceData data, DeferredNoteConf deferredConf) {
+    var p = fullPath
+        .split("/")
+        .map((e) => e.trim())
+        .where((e) => e.isNotEmpty)
+        .toList();
+    var path = _ensurePath(p);
+
+    path._source = NoteSource(pageGenInfo: data);
+    path.confPart = NoteConfPart.notEmpty(shortTitle: path.name);
+    path.deferredConf = deferredConf;
+    return path as Note<C>;
+  }
 
   void extendTree(bool value) {
     expand = value;
@@ -116,26 +135,13 @@ class Note<T> {
     }
   }
 
-  bool get isEmpty => _meta.empty;
+  bool get isEmpty => confPart.empty;
 
-  bool get isNotEmpty => !_meta.empty;
+  bool get isNotEmpty => !confPart.empty;
 
   List<Note> get children => List.unmodifiable(_children);
 
   NoteSource get source => _source;
-
-  Note<C> put<C>(String fullPath, NoteSourceData data) {
-    var p = fullPath
-        .split("/")
-        .map((e) => e.trim())
-        .where((e) => e.isNotEmpty)
-        .toList();
-    var path = _ensurePath(p);
-
-    path._meta = data.meta;
-    path._source = NoteSource(pageGenInfo: data);
-    return path as Note<C>;
-  }
 
   Note _ensurePath<C>(List<String> nameList) {
     if (nameList.isEmpty) {
@@ -145,7 +151,7 @@ class Note<T> {
     assert(name != "" && name != "/",
         "path:$nameList, path[0]:'$name' must not be '' and '/' ");
     var next = _childrenMap.putIfAbsent(name, () {
-      var child = Note._child(name, parent: this);
+      var child = Note._child(name: name, parent: this);
       _children.add(child);
       _childrenMap[name] = child;
       return child;
@@ -156,8 +162,8 @@ class Note<T> {
   /// 页面骨架
   /// 树形父子Page的页面骨架有继承性，即自己没有配置骨架，就用父Page的骨架
   Layout get layout {
-    if (_meta.layout != null) {
-      return _meta.layout!;
+    if (confPart.layout != null) {
+      return confPart.layout!;
     }
 
     if (isRoot) {
@@ -174,13 +180,16 @@ class Note<T> {
 
   int levelTo(Note parent) => this.level - parent.level;
 
-  List<Note> get parents => this.isRoot ? [this] : [this, ...parent!.parents];
+  List<Note> get ancestors =>
+      this.isRoot ? [] : [parent!, ...parent!.ancestors];
+
+  List<Note> get meAndAncestors => [this, ...ancestors];
 
   bool get isRoot => parent == null;
 
   Note get root => isRoot ? this : parent!.root;
 
-  String get shortTitle => _meta.shortTitle;
+  String get shortTitle => confPart.shortTitle;
 
   String get path {
     if (isRoot) return "/";
@@ -310,7 +319,7 @@ class Pen {
     // Skip the header code block
     $____________________________________________________________________();
 
-    path._meta.builder(context, this);
+    path.confPart.builder(context, this);
   }
 
   /// 新增一个cell，cell代表note中的一个代码块及其产生的内容

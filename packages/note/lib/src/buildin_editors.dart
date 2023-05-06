@@ -160,14 +160,20 @@ class IconDataEditor extends BaseValueEditor {
 
   @override
   code.Expression toCode() {
-    return editors.iconRegisters.getOrEmpty(param.value);
+    // return editors.iconRegisters.getOrEmpty(param.value);
+    if (param.value == null) {
+      return code.literalNull;
+    }
+    return code.refer("IconData", "package:flutter/widgets.dart").newInstance(
+        [code.refer("0x${param.value.codePoint.toRadixString(16)}")]);
   }
 
   @override
   Widget valueWidget(BuildContext context) {
     return Row(
       children: [
-        Text(param.toCodeExpressionString()),
+        // icons file too large, so not use IconRegistry to get icon name
+        // Text(param.toCodeExpressionString()),
         SizedBox(
           width: 20,
           height: 20,

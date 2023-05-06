@@ -155,7 +155,7 @@ void genDeferredPages(
             ${flatPagePath}_g.noteInfo,
             () => ${flatPagePath}_
                 .loadLibrary()
-                .then((value) => ${flatPagePath}_.page, onError: onError));
+                .then((value) => ${flatPagePath}_.page));
              """;
   }).join("\n");
   Library libGen = Library((b) => b
@@ -182,13 +182,11 @@ void genDeferredPages(
     ..body.add(
       code.Code("""
       import 'package:note/page_core.dart';
-      import 'package:note_app/note_app.dart';
       
       abstract class BaseNotes {
         static final Note<void> _root = Note.root();
-        static Note<C> put2<C>(String path, NoteSourceData noteInfo,
-            Future<NoteBuilder> Function() noteLoader) {
-          return _root.put(path, noteInfo);
+        static Note<C> put2<C>(String path, NoteSourceData noteInfo, DeferredNoteConf deferredConf) {
+          return _root.put(path,noteInfo,deferredConf);
         }
         $fields
       }
@@ -414,14 +412,8 @@ class _NoteLib {
       ..body.add(
         code.Block((b) => b
           ..statements.addAll([
-            Code('''
-                // ignore: always_use_package_imports
-                import 'page.dart';
-            
+            Code('''            
                 final noteInfo = (
-                  /// you need define page variable in page.dart 
-                  /// it is use to register page meta info
-                  meta: page,
                   cells: [ $cells ],
                   encodedCode: "$encodedCode"
                 ); 

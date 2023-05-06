@@ -200,6 +200,7 @@ option() {
       cd packages/note_app
       run flutter build macos -v  \
         --release --tree-shake-icons "$@"
+      run build/macos/Build/Products/Release/note_app.app
     )
   }
 }
@@ -235,7 +236,7 @@ option() {
   /dockerPreview?shortHelp() { cat <<<"docker run"; }
   /dockerPreview() {
     (
-      run docker build --tag younpc/note:latest . ;
+      run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ;
       run echo "preview:  http://localhost:8888/note"
       run docker run --rm --name note -p 8888:80 -u root:root younpc/note
     )
