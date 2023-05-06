@@ -1,11 +1,17 @@
 // part of "pages.g.dart";
+import 'package:flutter/material.dart';
+import 'package:note/log.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
 import 'package:note/page_core.dart';
 import 'package:note/page_layout.dart';
-import 'package:note_app/pages.g.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
-import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
+import 'package:note_app/note_app.deferred.g.dart';
+
+// [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
+// reducing it from 1645184 to 10272 bytes (99.4% reduction).
+// Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
+// import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
 
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
@@ -38,26 +44,56 @@ import 'package:note_mate_flutter/mate_icons.g.dart' as flutter_icons;
 //     ]),
 //   ]),
 // ]);
+Logger logger = Logger();
 
-class Paths with Navigable, PathsMixin {
+class Notes extends BaseNotes with Navigable {
   late final Note<void> initial;
-  Paths._() {
+  Notes._() {
     initial = zdraft_file;
   }
 
   @override
   Screen parse(String location) {
-    Note find = _root.child(location)!; // ?? notFound;
-    return find.createScreen(location);
+    Note find = root.child(location)!; // ?? notFound;
+    // sync mode
+    // return find.createScreen(location);
+    // async mode
+    return DeferredScreen(note: find);
   }
 }
 
-var paths = Paths._();
+class DeferredScreen extends StatelessWidget with Screen {
+  final Note note;
+  DeferredScreen({super.key, required this.note});
 
-Note<void> _root = Note.root();
-put<C>(String path, NoteSourceData noteInfo) {
-  return _root.put(path, noteInfo);
+  @override
+  Widget build(BuildContext context) {
+    var needLoad =
+        note.meAndAncestors.where((e) => e.deferredConf != null).toList();
+    return FutureBuilder(
+      future: Future.wait(needLoad.map((e) => e.deferredConf!())),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.done) {
+          if (snapshot.hasError) {
+            return Text(
+                'note load error(${note.path}): ${snapshot.error} \n${snapshot.stackTrace}');
+          }
+
+          for (int i = 0; i < needLoad.length; i++) {
+            needLoad[i].confPart = snapshot.data![i];
+          }
+          return note.layout(note);
+        }
+        return const CircularProgressIndicator();
+      },
+    );
+  }
+
+  @override
+  String get location => note.path;
 }
+
+var notes = Notes._();
 
 class Layouts {
   static Layout defaultLayout<T>({
@@ -65,12 +101,33 @@ class Layouts {
   }) {
     return (path) => LayoutScreen<T>(
           current: path as Note<T>,
-          tree: paths.root,
+          tree: notes.root,
           editors: Editors(
             enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
-            iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
+            // iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
           ),
           defaultCodeExpand: defaultCodeExpand,
         );
+  }
+}
+
+class NoteApp extends StatelessWidget {
+  const NoteApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    notes.root.extendTree(true);
+    notes.zdraft.extendTree(false);
+    return MaterialApp.router(
+      title: 'Flutter Note',
+      theme: ThemeData(
+        primarySwatch: Colors.indigo,
+        useMaterial3: true,
+      ),
+      routerConfig: NavigatorV2.config(
+        initial: notes.parse(notes.initial.path),
+        navigable: notes,
+      ),
+    );
   }
 }

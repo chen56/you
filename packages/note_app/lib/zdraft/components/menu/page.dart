@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_mate_flutter/material.dart';
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: "菜单Menu",
   builder: build,
 );

@@ -1,6 +1,6 @@
 import 'package:note/page_core.dart';
 
-NoteBuilder page = NoteBuilder(
+NoteConfPart page = NoteConfPart(
   shortTitle: "test-无build",
   builder: (context, print) {},
 );
