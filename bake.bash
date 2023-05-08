@@ -233,11 +233,20 @@ option() {
   }
 }
 /dockerPreview?() {
-  /dockerPreview?shortHelp() { cat <<<"docker run"; }
+  /dockerPreview?shortHelp() { cat <<<"docker build and run"; }
   /dockerPreview() {
     (
       run docker build --progress plain --build-arg test=off --tag younpc/note:latest . ;
       run echo "preview:  http://localhost:8888/note"
+      run docker run --rm --name note -p 8888:80 -u root:root younpc/note
+    )
+  }
+}
+/dockerRun?() {
+  /dockerRun?shortHelp() { cat <<<"docker run"; }
+  /dockerRun() {
+    (
+      run echo "preview:  <http://localhost:8888/note>"
       run docker run --rm --name note -p 8888:80 -u root:root younpc/note
     )
   }

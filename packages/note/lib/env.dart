@@ -1,10 +1,14 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as path;
 
 /// 依赖操作系统，仅在本地dev环境中运行
 class Env {
   factory Env() {
+    if (kReleaseMode) {
+      throw Exception("[Env] not support flutter release mode");
+    }
     return Env._();
   }
   Env._();
