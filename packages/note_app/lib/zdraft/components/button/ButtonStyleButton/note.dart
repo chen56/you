@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 import 'package:note_mate_flutter/material.dart';
 
 NoteConfPart page = NoteConfPart(

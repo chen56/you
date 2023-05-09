@@ -6,7 +6,7 @@ import 'dart:ui';
 import 'package:file/local.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 import 'package:note_app/note_app.dart';
 import 'package:path/path.dart' as path;
 

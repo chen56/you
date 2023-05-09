@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:note/mate.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 
 abstract class BaseValueInputEditor extends BaseValueEditor {
   BaseValueInputEditor(super.param, {required super.editors});

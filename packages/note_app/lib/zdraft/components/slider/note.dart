@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 
 NoteConfPart page = NoteConfPart(
   shortTitle: "Slider进度条",

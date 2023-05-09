@@ -10,7 +10,10 @@ import 'package:path/path.dart' as path;
 main() async {
   ResourceProvider resourceProvider = PhysicalResourceProvider.INSTANCE;
   final collection = AnalysisContextCollection(
-    includedPaths: [path.normalize(path.absolute(path.join(path.current, "lib/page_core.dart")))],
+    includedPaths: [
+      path.normalize(
+          path.absolute(path.join(path.current, "lib/note_core.dart")))
+    ],
     sdkPath: "/Users/cccc/app/flutter/bin/cache/dart-sdk",
     resourceProvider: resourceProvider,
   );
@@ -22,8 +25,8 @@ main() async {
         continue;
       }
       print("========== file: $filePath ============");
-      var result =
-          await context.currentSession.getResolvedLibrary(filePath) as ResolvedLibraryResult;
+      var result = await context.currentSession.getResolvedLibrary(filePath)
+          as ResolvedLibraryResult;
       var lib = result.element;
       for (var importLib in lib.importedLibraries) {
         for (var c in importLib.exportNamespace.definedNames.values) {

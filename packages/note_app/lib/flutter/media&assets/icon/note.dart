@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:note/mate.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).

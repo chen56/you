@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:file/local.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 
 NoteConfPart page = NoteConfPart(
   shortTitle: "file文件访问",

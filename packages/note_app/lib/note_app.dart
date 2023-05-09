@@ -1,11 +1,10 @@
 // part of "pages.g.dart";
 import 'package:flutter/material.dart';
-import 'package:note/env.dart';
 import 'package:note/log.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
-import 'package:note/page_core.dart';
-import 'package:note/page_layout.dart';
+import 'package:note/note_core.dart';
+import 'package:note/note_layout.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';
 import 'package:note/note_dev_tool.dart';

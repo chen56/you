@@ -1,6 +1,6 @@
 import 'package:analyzer/dart/analysis/features.dart';
 import 'package:flutter/material.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 import 'package:analyzer/dart/analysis/utilities.dart' as analyzer_util;
 
 NoteConfPart page = NoteConfPart(

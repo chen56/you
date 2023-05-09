@@ -2,7 +2,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:note_mate_flutter/material.dart';
 import 'package:note_mate_flutter/painting.dart' as painting;
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 
 NoteConfPart page = NoteConfPart(
   shortTitle: "Bars",
