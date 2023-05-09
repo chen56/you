@@ -22,7 +22,7 @@ import 'package:note/utils_core.dart';
 
 main() async {
   Env env = Env();
-  Glob glob = Glob("lib/**note.dart");
+  Glob glob = Glob("lib/notes/**note.dart");
   FileSystem writeFS = const LocalFileSystem();
   var fmt = DartFormatter(pageWidth: 120);
 
@@ -55,7 +55,7 @@ main() async {
 
     log('gen pages.g.dart start');
     // genPages(resolvedLibs.map((e) => e.lib), writeFS: writeFS, fmt: fmt);
-    genDeferredPages(resolvedLibs, writeFS: writeFS, fmt: fmt);
+    _genDeferredPages(resolvedLibs, writeFS: writeFS, fmt: fmt);
     log('gen pages.g.dart ok');
   }
 }
@@ -134,7 +134,7 @@ void genPages(
 //           .loadLibrary()
 //           .then((value) => welcome_.page, onError: onError));
 // }
-void genDeferredPages(
+void _genDeferredPages(
   List<_NoteLib> libs, {
   required DartFormatter fmt,
   required FileSystem writeFS,
@@ -482,7 +482,7 @@ typedef _PageInfo = ({
 /// - '/'换成'$'
 /// - 其他特殊字符换成'_'
 String flatLibPath(String packageName) {
-  String result = packageName.replaceAll("package:note_app", "");
+  String result = packageName.replaceAll("package:note_app/notes", "");
   result = path.dirname(result);
 
   if (result == "/") {

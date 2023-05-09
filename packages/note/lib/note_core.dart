@@ -26,7 +26,6 @@ typedef NoteSourceData = ({
   String encodedCode,
   // NoteConfPart meta
 });
-// List<({String blockType, int end, int offset})> specialNodes
 
 NoteSourceData _emptyPageGenInfo = (
   cells: [
@@ -248,6 +247,11 @@ class Note<T> {
       }
       return sb.toString();
     }
+  }
+
+  bool contains(String location) {
+    var c = child(location);
+    return c != null;
   }
 }
 

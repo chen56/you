@@ -55,7 +55,9 @@ class Notes extends BaseNotes with Navigable {
 
   @override
   Screen parse(String location) {
-    Note find = root.child(location)!; // ?? notFound;
+    assert(BaseNotes.rootroot.contains(location),
+        "location not found: $location ${BaseNotes.rootroot.toList()}");
+    Note find = BaseNotes.rootroot.child(location)!; // ?? notFound;
     // sync mode
     // return find.createScreen(location);
     // async mode
@@ -100,7 +102,7 @@ class Layouts {
   }) {
     return (path) => LayoutScreen<T>(
           current: path as Note<T>,
-          tree: notes.root,
+          tree: BaseNotes.rootroot,
           editors: Editors(
             enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
             // iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
@@ -116,7 +118,7 @@ class NoteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    notes.root.extendTree(true);
+    BaseNotes.rootroot.extendTree(true);
     notes.zdraft.extendTree(false);
     return MaterialApp.router(
       title: 'Flutter Note',
