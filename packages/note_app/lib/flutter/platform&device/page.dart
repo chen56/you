@@ -3,11 +3,13 @@
 import 'dart:io';
 import 'dart:ui';
 
+import 'package:file/local.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:note/page_core.dart';
 import 'package:note_app/note_app.dart';
 import 'package:path/path.dart' as path;
+import 'package:file/file.dart';
 
 NoteConfPart page = NoteConfPart(
   shortTitle: "Platform和设备",
@@ -51,11 +53,18 @@ path很有意思
 
   ''');
   print.$____________________________________________________________________();
+  print(Platform.script.toFilePath());
+  print.$____________________________________________________________________();
+  print(path.absolute("./"));
+
+  print.$____________________________________________________________________();
   print(path.absolute("a.dart"));
+  print.$____________________________________________________________________();
+  print(LocalFileSystem().currentDirectory);
 
   print.$____________________________________________________________________();
   print.markdown('''
-## environment
+## environment(web不可用)
 
   ''');
 

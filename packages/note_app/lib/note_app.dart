@@ -1,5 +1,6 @@
 // part of "pages.g.dart";
 import 'package:flutter/material.dart';
+import 'package:note/env.dart';
 import 'package:note/log.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
@@ -7,7 +8,7 @@ import 'package:note/page_core.dart';
 import 'package:note/page_layout.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';
-
+import 'package:note/note_dev_tool.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
 // Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
@@ -45,11 +46,12 @@ import 'package:note_app/note_app.deferred.g.dart';
 //   ]),
 // ]);
 Logger logger = Logger();
+var notes = Notes._();
 
 class Notes extends BaseNotes with Navigable {
   late final Note<void> initial;
   Notes._() {
-    initial = zdraft_file;
+    initial = zdraft_async;
   }
 
   @override
@@ -93,8 +95,6 @@ class DeferredScreen extends StatelessWidget with Screen {
   String get location => note.path;
 }
 
-var notes = Notes._();
-
 class Layouts {
   static Layout defaultLayout<T>({
     bool defaultCodeExpand = true,
@@ -112,7 +112,8 @@ class Layouts {
 }
 
 class NoteApp extends StatelessWidget {
-  const NoteApp({super.key});
+  final NoteDevTool noteDevTool;
+  const NoteApp({super.key, required this.noteDevTool});
 
   @override
   Widget build(BuildContext context) {

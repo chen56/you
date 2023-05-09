@@ -6,9 +6,7 @@ import 'package:path/path.dart' as path;
 /// 依赖操作系统，仅在本地dev环境中运行
 class Env {
   factory Env() {
-    if (kReleaseMode) {
-      throw Exception("[Env] not support flutter release mode");
-    }
+    assert(kDebugMode, "[Env] only support flutter debug mode");
     return Env._();
   }
   Env._();
@@ -53,5 +51,17 @@ class Env {
     stderr.write(
         "log:cmd[$cmd $args] stdout:${result.stdout}\n stderr:${result.stderr}\n");
     return "${result.stdout}";
+  }
+
+  String getFlutterProjectDir() {
+    var pwd = Platform.environment["PWD"];
+    if (pwd == null) {
+      throw Exception("not find PROJECT_DIR in env");
+    }
+    path.join(pwd, "pubspec.yaml");
+    if (!File(path.join(pwd, "pubspec.yaml")).existsSync()) {
+      throw Exception("not find pubspec.yaml in $pwd");
+    }
+    return pwd;
   }
 }
