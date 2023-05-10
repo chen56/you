@@ -8,6 +8,7 @@ import 'package:note/note_layout.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';
 import 'package:note/note_dev_tool.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
 // Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
@@ -45,19 +46,21 @@ import 'package:note/note_dev_tool.dart';
 //   ]),
 // ]);
 Logger logger = Logger();
-var notes = Notes._();
 
 class Notes extends BaseNotes with Navigable {
+  final SharedPreferences sharedPreferences;
+
   late final Note<void> initial;
-  Notes._() {
+  Notes({required this.sharedPreferences}) {
     initial = zdraft_async;
   }
 
   @override
-  Screen parse(String location) {
+  Screen switchTo(String location) {
     assert(BaseNotes.rootroot.contains(location),
         "location not found: $location ${BaseNotes.rootroot.toList()}");
     Note find = BaseNotes.rootroot.child(location)!; // ?? notFound;
+    sharedPreferences.setString("note_app.current_path", location);
     // sync mode
     // return find.createScreen(location);
     // async mode
@@ -113,23 +116,62 @@ class Layouts {
 }
 
 class NoteApp extends StatelessWidget {
+  final SharedPreferences sharedPreferences;
   final NoteDevTool noteDevTool;
-  const NoteApp({super.key, required this.noteDevTool});
+  final Notes notes;
+
+  NoteApp(
+      {super.key,
+      required this.notes,
+      required this.noteDevTool,
+      required this.sharedPreferences});
 
   @override
   Widget build(BuildContext context) {
     BaseNotes.rootroot.extendTree(true);
     notes.zdraft.extendTree(false);
-    return MaterialApp.router(
+
+    var currentPath = sharedPreferences.getString("note_app.current_path") ??
+        notes.initial.path;
+    var routerApp = MaterialApp.router(
       title: 'Flutter Note',
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         useMaterial3: true,
       ),
       routerConfig: NavigatorV2.config(
-        initial: notes.parse(notes.initial.path),
+        initial: notes.switchTo(currentPath),
         navigable: notes,
       ),
     );
+    // var syncOutter = MaterialApp(
+    //   home: Scaffold(
+    //     body: FutureBuilder(
+    //       future: _prefs.then((value) => value.),
+    //       builder: (context, snapshot) {
+    //         if (snapshot.connectionState == ConnectionState.done) {
+    //           if (snapshot.hasError) {
+    //             return Text('Error: ${snapshot.error}');
+    //           }
+    //
+    //           return snapshot.data;
+    //         }
+    //         return const CircularProgressIndicator();
+    //
+    //         if (snapshot.hasData) {
+    //           var prefs = snapshot.data as SharedPreferences;
+    //           var isDev = prefs.getBool("isDev") ?? false;
+    //           if (isDev) {
+    //             return noteDevTool.wrap(routerApp);
+    //           }
+    //           return routerApp;
+    //         }
+    //         return const CircularProgressIndicator();
+    //       },
+    //     )
+    //   ),
+    // );
+
+    return routerApp;
   }
 }

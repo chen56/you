@@ -15,7 +15,12 @@ build(BuildContext context, Pen print) async {
   print.markdown(r'''
 # 异步
 
+很好的异步视频：
+[Dart asynchronous programming: Isolates and event loops](https://medium.com/dartlang/dart-asynchronous-programming-isolates-and-event-loops-bffc3e296a6a)
+文档对应的视频：<https://www.youtube.com/watch?v=vl_AaCgudcY>
+
 ## Future
+
   ''');
 
   print.$____________________________________________________________________();

@@ -59,10 +59,10 @@ function follow_links() (
   done
   echo "$file"
 )
-declare BAKE_HOME
-BAKE_HOME=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
+declare BAKE_DIR
+BAKE_DIR=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
 # 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
-cd "${BAKE_HOME}"
+cd "${BAKE_DIR}"
 
 /test1?() {
   /test1?shortHelp() {
@@ -266,15 +266,15 @@ option() {
   /gen() {
     (
       cd packages/note_app
-      run dart run  tools/gen_pages.dart
+      run flutter test tools/gen_pages.dart
     )
     (
       cd packages/note_mate_flutter
-      run dart run  tools/gen_mates.dart
+      run flutter test  tools/gen_mates.dart
     )
     (
       cd packages/note_mate_flutter
-      run dart run  tools/gen_mate_icons.dart
+      run flutter test  tools/gen_mate_icons.dart
     )
   }
 }
@@ -387,10 +387,10 @@ print_stack() {
 }
 # 先打印 后执行
 run() {
-  #  local project=${PWD#*$BAKE_HOME}
+  #  local project=${PWD#*$BAKE_DIR}
   local project
   project=$(basename "$PWD")
-  [[ "$PWD" == "$BAKE_HOME" ]] && project="root"
+  [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
   echo -e "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
   eval "$@"
   return $?

@@ -77,7 +77,8 @@ class _Parser extends RouteInformationParser<RouteInformation> {
   _Parser();
 
   @override
-  Future<RouteInformation> parseRouteInformation(RouteInformation routeInformation) {
+  Future<RouteInformation> parseRouteInformation(
+      RouteInformation routeInformation) {
     return SynchronousFuture(routeInformation);
   }
 
@@ -118,7 +119,7 @@ class _MyRouterDelegate extends RouterDelegate<RouteInformation>
   }
 
   Future<R?> _push<R>(String location) {
-    Screen screen = _navigable.parse(location);
+    Screen screen = _navigable.switchTo(location);
     _Page page = screen._page;
     //把completer的完成指责放权给各Screen后，框架需监听其完成后删除Page
     //并在onPopPage后
@@ -145,7 +146,8 @@ class _MyRouterDelegate extends RouterDelegate<RouteInformation>
 
 /// A: Screen参数类型，R: push返回值类型
 class _Page<R> extends MaterialPage<R> {
-  _Page({required super.name, required super.child}) : super(key: ValueKey(keyGen++));
+  _Page({required super.name, required super.child})
+      : super(key: ValueKey(keyGen++));
 
   @protected
   final Completer<R?> completer = Completer();
@@ -174,7 +176,7 @@ mixin Screen<R> on Widget {
 
 /// navigator_v2.dart 是更初级的包，用此类隔离其他包的依赖性
 mixin Navigable {
-  Screen parse(String location);
+  Screen switchTo(String location);
 }
 
 class DebugPagesLog extends StatelessWidget {
