@@ -1,48 +1,56 @@
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as path;
+import 'package:file/file.dart';
+import 'package:file/local.dart';
 
 /// 依赖操作系统，仅在本地dev环境中运行
 class Env {
-  factory Env() {
-    assert(kDebugMode, "[Env] only support flutter debug mode");
-    return Env._();
+  final FileSystem fs;
+  factory Env({FileSystem fs = const LocalFileSystem()}) {
+    // assert(kDebugMode, "[Env] only support flutter debug mode");
+    return Env._(fs: fs);
   }
-  Env._();
+  Env._({this.fs = const LocalFileSystem()});
+
+  bool isSdkDir(String maybeSdkDir) {
+    return fs.file(path.join(maybeSdkDir, "lib/core/int.dart")).existsSync();
+  }
 
   String get dartSdkDir {
-    String sdkDir = path.dirname(path.dirname(Platform.resolvedExecutable));
-    if (File(path.join(sdkDir, "lib/core/int.dart")).existsSync()) {
-      return sdkDir;
-    }
-    if (!Platform.isLinux && !Platform.isMacOS) {
-      throw Exception(
-          "${Platform.operatingSystem} not support , only support Linux or MacOS");
+    checkSupport();
+
+    String maybeSdkDir =
+        path.dirname(path.dirname(Platform.resolvedExecutable));
+
+    if (isSdkDir(maybeSdkDir)) {
+      return maybeSdkDir;
     }
     String flutter = runCommand("which", ["flutter"]);
-    sdkDir = path.join(path.dirname(flutter), "cache/dart-sdk");
-    if (File(path.join(sdkDir, "lib/core/int.dart")).existsSync()) {
-      return sdkDir;
+    maybeSdkDir = path.join(path.dirname(flutter), "cache/dart-sdk");
+    if (isSdkDir(maybeSdkDir)) {
+      return maybeSdkDir;
     }
     throw Exception("not find dart sdk dir");
   }
 
+  void checkSupport() {
+    if (!Platform.isLinux && !Platform.isMacOS) {
+      throw Exception(
+          "${Platform.operatingSystem} not support , only support Linux or MacOS");
+    }
+  }
+
   String get flutterSdkDir {
+    checkSupport();
+
     String flutter = runCommand("which", ["flutter"]);
     return path.dirname(path.dirname(flutter));
   }
 
-  /// package to abstract path
-  /// package:flutter/src/material/icons.dart
-  ///     ->  /flutter_sdk_parent_dir/flutter/packages/flutter/lib/src/material/icons.dart
-  String flutterPackageAbstractPath(String package) {
-    var relativePath = package.replaceFirst("package:flutter/", "");
-    // print("flutterSdkDir $flutterSdkDir");
-    return path.join(flutterSdkDir, "packages/flutter/lib", relativePath);
-  }
-
   String runCommand(String cmd, List<String> args) {
+    checkSupport();
+
     var result = Process.runSync(cmd, args, runInShell: true);
     if (result.exitCode != 0) {
       throw Exception(
@@ -58,10 +66,22 @@ class Env {
     if (pwd == null) {
       throw Exception("not find PROJECT_DIR in env");
     }
-    path.join(pwd, "pubspec.yaml");
-    if (!File(path.join(pwd, "pubspec.yaml")).existsSync()) {
+    if (!fs.file(path.join(pwd, "pubspec.yaml")).existsSync()) {
       throw Exception("not find pubspec.yaml in $pwd");
     }
     return pwd;
   }
+
+  bool get isDesktop =>
+      !kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS);
+}
+
+const bool kIsWeb = bool.fromEnvironment('dart.library.js_util');
+const bool kReleaseMode = bool.fromEnvironment('dart.vm.product');
+const bool kProfileMode = bool.fromEnvironment('dart.vm.profile');
+const bool kDebugMode = !kReleaseMode && !kProfileMode;
+
+main() {
+  // ignore: avoid_print
+  print(kDebugMode);
 }

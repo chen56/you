@@ -47,6 +47,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // ]);
 Logger logger = Logger();
 
+@immutable
 class Notes extends BaseNotes with Navigable {
   final SharedPreferences sharedPreferences;
 
@@ -74,6 +75,7 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
+    print("DeferredScreen build ${note.path}");
     var needLoad =
         note.meAndAncestors.where((e) => e.deferredConf != null).toList();
     return FutureBuilder(
@@ -99,6 +101,7 @@ class DeferredScreen extends StatelessWidget with Screen {
   String get location => note.path;
 }
 
+@immutable
 class Layouts {
   static Layout defaultLayout<T>({
     bool defaultCodeExpand = true,
@@ -117,7 +120,7 @@ class Layouts {
 
 class NoteApp extends StatelessWidget {
   final SharedPreferences sharedPreferences;
-  final NoteDevTool noteDevTool;
+  final NoteWriteModeTool noteDevTool;
   final Notes notes;
 
   NoteApp(
@@ -144,34 +147,6 @@ class NoteApp extends StatelessWidget {
         navigable: notes,
       ),
     );
-    // var syncOutter = MaterialApp(
-    //   home: Scaffold(
-    //     body: FutureBuilder(
-    //       future: _prefs.then((value) => value.),
-    //       builder: (context, snapshot) {
-    //         if (snapshot.connectionState == ConnectionState.done) {
-    //           if (snapshot.hasError) {
-    //             return Text('Error: ${snapshot.error}');
-    //           }
-    //
-    //           return snapshot.data;
-    //         }
-    //         return const CircularProgressIndicator();
-    //
-    //         if (snapshot.hasData) {
-    //           var prefs = snapshot.data as SharedPreferences;
-    //           var isDev = prefs.getBool("isDev") ?? false;
-    //           if (isDev) {
-    //             return noteDevTool.wrap(routerApp);
-    //           }
-    //           return routerApp;
-    //         }
-    //         return const CircularProgressIndicator();
-    //       },
-    //     )
-    //   ),
-    // );
-
     return routerApp;
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note/env.dart';
 import 'package:note/note_dev_tool.dart';
 import 'package:note_app/note_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,6 +11,6 @@ void main() async {
   runApp(NoteApp(
     notes: Notes(sharedPreferences: sharedPreferences),
     sharedPreferences: sharedPreferences,
-    noteDevTool: NoteDevTool(),
+    noteDevTool: NoteWriteModeTool(env: Env()),
   ));
 }

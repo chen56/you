@@ -135,7 +135,7 @@ class _LayoutScreenState<T> extends State<LayoutScreen<T>> {
             height: 36,
             padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 2.0),
             child: Row(children: [
-              const Text("Dev Bar"),
+              const Text("Devtools"),
               const Spacer(),
               IconButton(
                 onPressed: () {},
@@ -559,7 +559,10 @@ class _NoteCellView extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 child: Tooltip(
                   message: '${cell.name}',
-                  child: Text(barText),
+                  child: Text(
+                    barText,
+                    textScaleFactor: 1.2,
+                  ),
                 ),
               ),
             ),

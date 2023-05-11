@@ -39,6 +39,19 @@ build(BuildContext context, Pen print) {
 | mediaQuery.size         | ${mediaQuery.size}                     | logical pixel                                     |
 | window.physicalSize     | ${window.physicalSize}                 | physical pixel                                    |
 | window.devicePixelRatio | ${window.devicePixelRatio}             | physical pixel= logical pixel *  devicePixelRatio |
+| Platform.isMacOS | ${Platform.isMacOS}             |   |
+| Platform.isAndroid | ${Platform.isAndroid}             |   |
+| Platform.isFuchsia | ${Platform.isFuchsia}             |   |
+| Platform.isIOS | ${Platform.isIOS}             |   |
+| Platform.isLinux | ${Platform.isLinux}             |   |
+| Platform.isWindows | ${Platform.isWindows}             |   |
+| Platform.executable | ${Platform.executable}             |   |
+| Platform.localeName | ${Platform.localeName}             |   |
+| Platform.operatingSystem | ${Platform.operatingSystem}             |   |
+| Platform.operatingSystemVersion | ${Platform.operatingSystemVersion}             |   |
+| Platform.resolvedExecutable | ${Platform.resolvedExecutable}             |   |
+| Platform.script | ${Platform.script}             |   |
+| Platform.version | ${Platform.version}             |   |
   ''');
 
   print.$____________________________________________________________________();

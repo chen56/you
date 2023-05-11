@@ -287,15 +287,27 @@ option() {
   }
 }
 
-/run?() {
-  /run?shortHelp() { cat <<<"flutter run: http://localhost:8888"; }
-  /run() {
+/runWeb?() {
+  /runWeb?shortHelp() { cat <<<"flutter run: http://localhost:8888"; }
+  /runWeb() {
     # only work on macos
     # shellcheck disable=SC2155
     local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
     (
       cd packages/note_app
       run flutter run --web-hostname "$ip" --web-port 8888 --web-renderer html --device-id chrome  "$@"
+    )
+  }
+}
+/runWebCanvaskit?() {
+  /runWebCanvaskit?shortHelp() { cat <<<"flutter run: http://localhost:9999"; }
+  /runWebCanvaskit() {
+    # only work on macos
+    # shellcheck disable=SC2155
+    local ip=$(ifconfig -l | xargs -n1 ipconfig getifaddr) || true
+    (
+      cd packages/note_app
+      run flutter run --web-hostname "$ip" --web-port 9999 --web-renderer canvaskit --device-id chrome  "$@"
     )
   }
 }

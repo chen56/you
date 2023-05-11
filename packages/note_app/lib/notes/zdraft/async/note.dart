@@ -60,6 +60,10 @@ build(BuildContext context, Pen print) async {
 web 模式不支持 Isolated，如果运行在web模式下，此范例将报错
 
 Error: Unsupported operation: dart:isolate is not supported on dart4web
+
+2018年前dart1支持web版Isolated，但dart2后被去掉了，详细信息参考：
+[[dart-announce] Dart2 Breaking Change: Removing web support for dart:mirrors and dart:isolate 2018年2月24日 ](https://groups.google.com/a/dartlang.org/g/misc/c/djfFMNCWmkE/m/F7WE8a0JAwAJ?pli=1)
+<https://groups.google.com/a/dartlang.org/g/misc/c/djfFMNCWmkE/m/F7WE8a0JAwAJ?pli=1>
   ''');
 
   print.$____________________________________________________________________();
