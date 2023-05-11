@@ -15,108 +15,12 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.cells.forEach((e) {});, print.markdown(r''' # flutter )
+    /// (print.cells.forEach((e) {});, print.markdown(r''' # flutter , print.$_______________________, ..., print.$_______________________, print.markdown(r'''  组件组合是不是很棒)
     (
       cellType: 'body',
       offset: 263,
-      end: 935,
-      statementCount: 2,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (print(MateSample(Row$Mate(chil)
-    (
-      cellType: 'body',
-      offset: 1013,
-      end: 1391,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[
-        (
-          nodeType: 'MateSample.new.firstParentStatement',
-          offset: 1016,
-          end: 1387,
-        )
-      ],
-    ),
-
-    /// (print.markdown(r''' 如果只是实验性的摆弄)
-    (
-      cellType: 'body',
-      offset: 1469,
-      end: 1598,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (print(MateSample(Row$Mate(main)
-    (
-      cellType: 'body',
-      offset: 1676,
-      end: 2069,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[
-        (
-          nodeType: 'MateSample.new.firstParentStatement',
-          offset: 1679,
-          end: 2065,
-        )
-      ],
-    ),
-
-    /// (print.markdown(r''' 暂时不支持代码编辑，)
-    (
-      cellType: 'body',
-      offset: 2147,
-      end: 2389,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (print(MateSample(Column$Mate(c)
-    (
-      cellType: 'body',
-      offset: 2467,
-      end: 2688,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[
-        (
-          nodeType: 'MateSample.new.firstParentStatement',
-          offset: 2470,
-          end: 2684,
-        )
-      ],
-    ),
-
-    /// (print.markdown(r'''  组件组合是不是很棒)
-    (
-      cellType: 'body',
-      offset: 2766,
       end: 6511,
-      statementCount: 1,
+      statementCount: 14,
       specialNodes: <({
         String nodeType,
         int end,

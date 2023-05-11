@@ -15,51 +15,12 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.markdown(''' # analyzer )
+    /// (print.markdown(''' # analyzer , print.$_______________________, var x = analyzer_util.parseStr, ..., for (int i = 0; i < times; i++, print("分析本页面源文件:$times 次, 花费时间)
     (
       cellType: 'body',
       offset: 334,
-      end: 441,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (var x = analyzer_util.parseStr, for (var e in x.unit.directive)
-    (
-      cellType: 'body',
-      offset: 519,
-      end: 710,
-      statementCount: 2,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (print.markdown('''  ## 性能不错  看)
-    (
-      cellType: 'body',
-      offset: 788,
-      end: 865,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (DateTime start = DateTime.now(, int times = 1000;, for (int i = 0; i < times; i++, print("分析本页面源文件:$times 次, 花费时间)
-    (
-      cellType: 'body',
-      offset: 943,
       end: 1276,
-      statementCount: 4,
+      statementCount: 11,
       specialNodes: <({
         String nodeType,
         int end,

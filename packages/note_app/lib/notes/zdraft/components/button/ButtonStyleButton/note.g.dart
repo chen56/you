@@ -15,44 +15,12 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.markdown(r''' # ButtonSt)
+    /// (print.markdown(r''' # ButtonSt, print.$_______________________, print(MateSample(Wrap$Mate(chi, print.$_______________________, print.markdown(r''' ## 范例2 Met)
     (
       cellType: 'body',
       offset: 260,
-      end: 815,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (print(MateSample(Wrap$Mate(chi)
-    (
-      cellType: 'body',
-      offset: 893,
-      end: 1025,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[
-        (
-          nodeType: 'MateSample.new.firstParentStatement',
-          offset: 896,
-          end: 1021,
-        )
-      ],
-    ),
-
-    /// (print.markdown(r''' ## 范例2 Met)
-    (
-      cellType: 'body',
-      offset: 1103,
       end: 1148,
-      statementCount: 1,
+      statementCount: 5,
       specialNodes: <({
         String nodeType,
         int end,

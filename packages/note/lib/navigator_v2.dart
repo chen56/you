@@ -55,17 +55,16 @@ class NavigatorV2 extends StatelessWidget {
     return _routerDelegate._push<R>(location);
   }
 
-  static RouterConfig<RouteInformation> config(
-      {required Screen initial, required Navigable navigable}) {
+  static RouterConfig<RouteInformation> config({required Navigable navigable}) {
     return RouterConfig(
       routeInformationProvider: PlatformRouteInformationProvider(
           initialRouteInformation: RouteInformation(
-        location: initial.location,
+        location: navigable.initial.location,
       )),
       routerDelegate: LoggableRouterDelegate(
           logger: logger,
           delegate: _MyRouterDelegate(
-            initial: initial,
+            initial: navigable.initial,
             navigable: navigable,
           )),
       routeInformationParser: _Parser(),
@@ -176,6 +175,7 @@ mixin Screen<R> on Widget {
 
 /// navigator_v2.dart 是更初级的包，用此类隔离其他包的依赖性
 mixin Navigable {
+  Screen get initial;
   Screen switchTo(String location);
 }
 

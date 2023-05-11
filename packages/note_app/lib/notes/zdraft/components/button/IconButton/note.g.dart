@@ -15,36 +15,17 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.markdown(r''' # IconButt)
+    /// (print.markdown(r''' # IconButt, print.$_______________________, print(MateSample(Wrap$Mate(chi)
     (
       cellType: 'body',
       offset: 253,
-      end: 353,
-      statementCount: 1,
+      end: 559,
+      statementCount: 3,
       specialNodes: <({
         String nodeType,
         int end,
         int offset,
       })>[],
-    ),
-
-    /// (print(MateSample(Wrap$Mate(chi)
-    (
-      cellType: 'body',
-      offset: 431,
-      end: 559,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[
-        (
-          nodeType: 'MateSample.new.firstParentStatement',
-          offset: 434,
-          end: 558,
-        )
-      ],
     ),
 
     /// ()

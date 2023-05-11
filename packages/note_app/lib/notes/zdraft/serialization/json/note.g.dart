@@ -15,25 +15,12 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.markdown(r''' # json   j)
+    /// (print.markdown(r''' # json   j, print.$_______________________, var userJson = '''   {     "na, ..., print('user: ${user['name']}!', print('email: ${user['email']})
     (
       cellType: 'body',
       offset: 252,
-      end: 306,
-      statementCount: 1,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[],
-    ),
-
-    /// (var userJson = '''   {     "na, Map<String, dynamic> user = js, print('user: ${user['name']}!', print('email: ${user['email']})
-    (
-      cellType: 'body',
-      offset: 384,
       end: 606,
-      statementCount: 4,
+      statementCount: 6,
       specialNodes: <({
         String nodeType,
         int end,

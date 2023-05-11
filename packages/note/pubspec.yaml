@@ -24,6 +24,8 @@ dependencies:
   stack_trace: ^1.11.0
   file: ^6.1.4
 
+  analyzer: ^5.10.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

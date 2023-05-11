@@ -15,36 +15,17 @@ final noteInfo = (
       })>[],
     ),
 
-    /// (print.markdown(''' # Material )
+    /// (print.markdown(''' # Material , print.$_______________________, var sampleIcons = {"access_tim, for (var entry in sampleIcons.)
     (
       cellType: 'body',
       offset: 633,
-      end: 735,
-      statementCount: 1,
+      end: 2656,
+      statementCount: 4,
       specialNodes: <({
         String nodeType,
         int end,
         int offset,
       })>[],
-    ),
-
-    /// (var sampleIcons = {"access_tim, for (var entry in sampleIcons.)
-    (
-      cellType: 'body',
-      offset: 813,
-      end: 2656,
-      statementCount: 2,
-      specialNodes: <({
-        String nodeType,
-        int end,
-        int offset,
-      })>[
-        (
-          nodeType: 'MateSample.new.firstParentStatement',
-          offset: 1175,
-          end: 1330,
-        )
-      ],
     ),
 
     /// ()

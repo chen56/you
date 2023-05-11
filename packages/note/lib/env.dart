@@ -64,7 +64,7 @@ class Env {
   String getFlutterProjectDir() {
     var pwd = Platform.environment["PWD"];
     if (pwd == null) {
-      throw Exception("not find PROJECT_DIR in env");
+      throw Exception("not find PWD in env");
     }
     if (!fs.file(path.join(pwd, "pubspec.yaml")).existsSync()) {
       throw Exception("not find pubspec.yaml in $pwd");

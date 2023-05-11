@@ -7,7 +7,7 @@ import 'package:note/note_core.dart';
 import 'package:note/note_layout.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';
-import 'package:note/note_dev_tool.dart';
+import 'package:note/note_dev.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
@@ -17,7 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
-// 需求被拒绝，自省会影响到dart的性能策略,只能另想办法, 目前使用代码生成 [tools/gen_pages.dart]
+// 需求被拒绝，自省会影响到dart的性能策略,只能另想办法, 目前使用代码生成 [tools/note_dev_gen.dart]
 
 // Path<void> root = Path<void>("/", meta: rootPage, kids: [
 //   Path<void>("not_found", meta: notFoundPage),
@@ -51,17 +51,19 @@ Logger logger = Logger();
 class Notes extends BaseNotes with Navigable {
   final SharedPreferences sharedPreferences;
 
-  late final Note<void> initial;
-  Notes({required this.sharedPreferences}) {
-    initial = zdraft_async;
-  }
+  Notes({required this.sharedPreferences});
+
+  @override
+  Screen get initial =>
+      switchTo(sharedPreferences.getString("note_app.notes.location") ??
+          notes_welcome.path);
 
   @override
   Screen switchTo(String location) {
     assert(BaseNotes.rootroot.contains(location),
         "location not found: $location ${BaseNotes.rootroot.toList()}");
     Note find = BaseNotes.rootroot.child(location)!; // ?? notFound;
-    sharedPreferences.setString("note_app.current_path", location);
+    sharedPreferences.setString("note_app.notes.location", location);
     // sync mode
     // return find.createScreen(location);
     // async mode
@@ -75,7 +77,6 @@ class DeferredScreen extends StatelessWidget with Screen {
 
   @override
   Widget build(BuildContext context) {
-    print("DeferredScreen build ${note.path}");
     var needLoad =
         note.meAndAncestors.where((e) => e.deferredConf != null).toList();
     return FutureBuilder(
@@ -123,6 +124,7 @@ class NoteApp extends StatelessWidget {
   final NoteWriteModeTool noteDevTool;
   final Notes notes;
 
+  // ignore: prefer_const_constructors_in_immutables
   NoteApp(
       {super.key,
       required this.notes,
@@ -131,11 +133,10 @@ class NoteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // BaseNotes.rootroot这个设计临时的，可以改善
     BaseNotes.rootroot.extendTree(true);
-    notes.zdraft.extendTree(false);
+    notes.notes_zdraft.extendTree(false);
 
-    var currentPath = sharedPreferences.getString("note_app.current_path") ??
-        notes.initial.path;
     var routerApp = MaterialApp.router(
       title: 'Flutter Note',
       theme: ThemeData(
@@ -143,7 +144,6 @@ class NoteApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routerConfig: NavigatorV2.config(
-        initial: notes.switchTo(currentPath),
         navigable: notes,
       ),
     );

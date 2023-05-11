@@ -25,18 +25,7 @@ final noteInfo = (
         String nodeType,
         int end,
         int offset,
-      })>[
-        (
-          nodeType: 'Pen.runInCurrentCell',
-          offset: 218,
-          end: 270,
-        ),
-        (
-          nodeType: 'Pen.runInCurrentCell',
-          offset: 311,
-          end: 371,
-        )
-      ],
+      })>[],
     ),
 
     /// ()

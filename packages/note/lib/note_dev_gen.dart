@@ -71,7 +71,7 @@ main() async {
 
     log('genPages Info start');
     for (var note in noteLibs) {
-      note.genPageInfoPackage(note.collectInfo());
+      note.genInfo(note.collectInfo());
     }
     log('genPages Info ok');
 
@@ -249,7 +249,7 @@ class NoteLib {
     return whereBuild.isEmpty ? null : whereBuild.first;
   }
 
-  _PageInfo collectInfo() {
+  NoteInfo collectInfo() {
     log('genPages Info $absolutePath');
 
     if (absolutePath.contains("stand_alone/button/note.dart")) {
@@ -399,7 +399,7 @@ class NoteLib {
           ""
     );
   */
-  void genPageInfoPackage(_PageInfo source) {
+  void genInfo(NoteInfo source) {
     final encodedCode = base64.encode(utf8.encode(source.code));
 
     var cells = source.cells.map((e) {
@@ -488,7 +488,7 @@ typedef _CellInfo = ({
         AstNode node,
       })> specialNodes,
 });
-typedef _PageInfo = ({
+typedef NoteInfo = ({
   String code,
   List<_CellInfo> cells,
 });
