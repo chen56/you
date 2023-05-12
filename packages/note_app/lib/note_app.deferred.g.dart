@@ -35,6 +35,7 @@ import 'package:note_app/notes/zdraft/dart3/note.dart' deferred as notes_zdraft_
 import 'package:note_app/notes/zdraft/execption/note.dart' deferred as notes_zdraft_execption_;
 import 'package:note_app/notes/zdraft/file/note.dart' deferred as notes_zdraft_file_;
 import 'package:note_app/notes/zdraft/layout/note.dart' deferred as notes_zdraft_layout_;
+import 'package:note_app/notes/zdraft/macos/note.dart' deferred as notes_zdraft_macos_;
 import 'package:note_app/notes/zdraft/material3/note.dart' deferred as notes_zdraft_material3_;
 import 'package:note_app/notes/zdraft/note.dart' deferred as notes_zdraft_;
 import 'package:note_app/notes/zdraft/research/remote_view/note.dart' deferred as notes_zdraft_research_remote_view_;
@@ -79,6 +80,7 @@ import 'notes/zdraft/dart3/note.g.dart' as notes_zdraft_dart3_g;
 import 'notes/zdraft/execption/note.g.dart' as notes_zdraft_execption_g;
 import 'notes/zdraft/file/note.g.dart' as notes_zdraft_file_g;
 import 'notes/zdraft/layout/note.g.dart' as notes_zdraft_layout_g;
+import 'notes/zdraft/macos/note.g.dart' as notes_zdraft_macos_g;
 import 'notes/zdraft/material3/note.g.dart' as notes_zdraft_material3_g;
 import 'notes/zdraft/note.g.dart' as notes_zdraft_g;
 import 'notes/zdraft/research/remote_view/note.g.dart' as notes_zdraft_research_remote_view_g;
@@ -215,6 +217,9 @@ abstract class BaseNotes {
 
   final Note notes_zdraft_layout = put2("notes/zdraft/layout", notes_zdraft_layout_g.noteInfo,
       () => notes_zdraft_layout_.loadLibrary().then((value) => notes_zdraft_layout_.page));
+
+  final Note notes_zdraft_macos = put2("notes/zdraft/macos", notes_zdraft_macos_g.noteInfo,
+      () => notes_zdraft_macos_.loadLibrary().then((value) => notes_zdraft_macos_.page));
 
   final Note notes_zdraft_material3 = put2("notes/zdraft/material3", notes_zdraft_material3_g.noteInfo,
       () => notes_zdraft_material3_.loadLibrary().then((value) => notes_zdraft_material3_.page));

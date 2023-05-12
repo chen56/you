@@ -200,7 +200,7 @@ option() {
       cd packages/note_app
       run flutter build macos -v  \
         --release --tree-shake-icons "$@"
-      run build/macos/Build/Products/Release/note_app.app
+      run open build/macos/Build/Products/Release/note_app.app
     )
   }
 }
@@ -266,7 +266,7 @@ option() {
   /gen() {
     (
       cd packages/note_app
-      run flutter test tools/gen_pages.dart
+      run dart run tools/gen_pages.dart
     )
     (
       cd packages/note_mate_flutter

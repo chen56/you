@@ -72,7 +72,7 @@ path很有意思
   print.$____________________________________________________________________();
   print(path.absolute("a.dart"));
   print.$____________________________________________________________________();
-  print(LocalFileSystem().currentDirectory);
+  print(const LocalFileSystem().currentDirectory);
 
   print.$____________________________________________________________________();
   print.markdown('''
@@ -85,6 +85,12 @@ path很有意思
     print("web版无法使用环境变量,会报错：Unsupported operation: Platform._environment");
   } else {
     Map<String, String> env = Platform.environment;
-    env.forEach((k, v) => print("Key=$k Value=$v"));
+    print(Table(
+      border: TableBorder.all(),
+      children: env.entries
+          .map((e) => TableRow(
+              children: [SelectableText(e.key), SelectableText(e.value)]))
+          .toList(),
+    ));
   }
 }

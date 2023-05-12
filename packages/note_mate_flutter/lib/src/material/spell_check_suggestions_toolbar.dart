@@ -6,6 +6,7 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'dart:ui' as _i4;
 import 'package:flutter/src/widgets/context_menu_button_item.dart' as _i5;
+import 'package:flutter/src/widgets/editable_text.dart' as _i6;
 
 /// class SpellCheckSuggestionsToolbar extends StatelessWidget
 class SpellCheckSuggestionsToolbar$Mate extends _i1.SpellCheckSuggestionsToolbar with _i2.Mate {
@@ -43,6 +44,34 @@ class SpellCheckSuggestionsToolbar$Mate extends _i1.SpellCheckSuggestionsToolbar
           key: p.get('key').build(),
           anchor: p.get('anchor').build(),
           buttonItems: p.get('buttonItems').build(),
+        );
+  }
+
+  /// SpellCheckSuggestionsToolbar SpellCheckSuggestionsToolbar.editableText({Key? key, required EditableTextState editableTextState})
+  SpellCheckSuggestionsToolbar$Mate.editableText({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required EditableTextState editableTextState} , default:none
+    required super.editableTextState,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'editableTextState': _i2.BuilderArg<_i6.EditableTextState>(
+            name: 'editableTextState',
+            init: editableTextState,
+            isNamed: true,
+          ),
+        },
+        super.editableText() {
+    mateBuilderName = 'SpellCheckSuggestionsToolbar.editableText';
+    matePackageUrl = 'package:flutter/material.dart';
+    mateBuilder = (p) => SpellCheckSuggestionsToolbar$Mate.editableText(
+          key: p.get('key').build(),
+          editableTextState: p.get('editableTextState').build(),
         );
   }
 

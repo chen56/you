@@ -6,6 +6,7 @@ import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/foundation/key.dart' as _i3;
 import 'package:flutter/src/widgets/text_selection_toolbar_anchors.dart' as _i4;
 import 'package:flutter/src/widgets/context_menu_button_item.dart' as _i5;
+import 'package:flutter/src/widgets/editable_text.dart' as _i6;
 
 /// class CupertinoSpellCheckSuggestionsToolbar extends StatelessWidget
 class CupertinoSpellCheckSuggestionsToolbar$Mate extends _i1.CupertinoSpellCheckSuggestionsToolbar with _i2.Mate {
@@ -43,6 +44,34 @@ class CupertinoSpellCheckSuggestionsToolbar$Mate extends _i1.CupertinoSpellCheck
           key: p.get('key').build(),
           anchors: p.get('anchors').build(),
           buttonItems: p.get('buttonItems').build(),
+        );
+  }
+
+  /// CupertinoSpellCheckSuggestionsToolbar CupertinoSpellCheckSuggestionsToolbar.editableText({Key? key, required EditableTextState editableTextState})
+  CupertinoSpellCheckSuggestionsToolbar$Mate.editableText({
+    /// optionalParameters: {Key? key} , default:none
+    super.key,
+
+    /// optionalParameters: {required EditableTextState editableTextState} , default:none
+    required super.editableTextState,
+  })  : mateParams = {
+          'key': _i2.BuilderArg<_i3.Key?>(
+            name: 'key',
+            init: key,
+            isNamed: true,
+          ),
+          'editableTextState': _i2.BuilderArg<_i6.EditableTextState>(
+            name: 'editableTextState',
+            init: editableTextState,
+            isNamed: true,
+          ),
+        },
+        super.editableText() {
+    mateBuilderName = 'CupertinoSpellCheckSuggestionsToolbar.editableText';
+    matePackageUrl = 'package:flutter/cupertino.dart';
+    mateBuilder = (p) => CupertinoSpellCheckSuggestionsToolbar$Mate.editableText(
+          key: p.get('key').build(),
+          editableTextState: p.get('editableTextState').build(),
         );
   }
 
