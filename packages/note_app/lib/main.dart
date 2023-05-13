@@ -6,11 +6,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   // ignore: prefer_const_constructors
+  Env env = Env();
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
   runApp(NoteApp(
-    notes: Notes(sharedPreferences: sharedPreferences),
     sharedPreferences: sharedPreferences,
-    noteDevTool: NoteWriteModeTool(env: Env()),
+    noteDevTool:
+        env.isSupportNoteDevtool() ? NoteWriteModeTool(env: env) : null,
   ));
 }

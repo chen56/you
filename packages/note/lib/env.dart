@@ -74,6 +74,8 @@ class Env {
 
   bool get isDesktop =>
       !kIsWeb && (Platform.isWindows || Platform.isLinux || Platform.isMacOS);
+
+  bool isSupportNoteDevtool() => !kIsWeb && Platform.isMacOS && kDebugMode;
 }
 
 const bool kIsWeb = bool.fromEnvironment('dart.library.js_util');

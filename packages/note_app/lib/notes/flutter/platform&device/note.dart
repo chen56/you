@@ -18,7 +18,7 @@ NoteConfPart page = NoteConfPart(
 
 build(BuildContext context, Pen print) {
   print.markdown('''
-# Platform和设备信息 
+# Platform和设备信息9
 
 ## 平台参数 
   ''');

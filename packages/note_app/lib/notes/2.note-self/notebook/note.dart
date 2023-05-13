@@ -26,7 +26,7 @@ Notebook的展示模式，是本项目的基础逻辑，类似jupyter或observab
 ''');
 
   print.$____________________________________________________________________();
-  print("hello flutter-note , i am a cell");
+  print("hello flutter-note , i am a cell. ");
   print("today is ${DateTime.now()}");
 
   print.$____________________________________________________________________();

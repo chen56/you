@@ -6,21 +6,15 @@ NoteConfPart page = NoteConfPart(
   builder: build,
 );
 
-build(BuildContext context, Pen print) {
+build(BuildContext context, Pen print) async {
   print.markdown(r'''
-## 范例1 普通文本 
+## 打印组件树 
 
+```dart
 print(WidgetInspectorService.instance.getRootWidgetSummaryTree("groupName"));
 
-打印组件树
-
 print(WidgetsBinding.instance.renderViewElement?.toDiagnosticsNode().toStringDeep());
-
-
-  ''');
-
-  print.markdown(r'''
-## 范例1 普通文本 
+```
 
   ''');
 }

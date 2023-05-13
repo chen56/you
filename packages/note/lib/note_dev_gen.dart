@@ -104,7 +104,7 @@ void genDeferredPages(
     return """
            final Note $fieldName = put2(
             "$path",
-            ${flatPagePath}_g.noteInfo,
+            ${flatPagePath}_g.noteInfo(),
             () => ${flatPagePath}_
                 .loadLibrary()
                 .then((value) => ${flatPagePath}_.page));
@@ -210,9 +210,11 @@ class NoteLib {
     List<Statement> cellStatements = [];
     int offset = buildBodyBlock.offset + 1;
     for (var st in buildBodyBlock.statements) {
-      log("statement runtimeType:${st.runtimeType} - offset:${st.offset} len:${st.length} end:${st.end}    file.len:${content.length} ,unit.len:${unit.length}  ");
-      log("---${content.toString().safeSubstring(st.offset, st.offset + 20)}---");
-      var statementType = cellStatementType(st);
+      var statementType = _cellStatementType(st);
+
+      // log("statement runtimeType:${st.runtimeType} - statementType:$statementType - offset:${st.offset} len:${st.length} end:${st.end}    file.len:${content.length} ,unit.len:${unit.length}  ");
+      // log("---${content.toString().safeSubstring(st.offset, st.offset + 20)}---");
+
       if (statementType == _CellStatementType.normal) {
         cellStatements.add(st);
         continue;
@@ -287,7 +289,7 @@ class NoteLib {
   /// ```dart
   ///    print.$____________________________________________________________________();
   /// ```
-  _CellStatementType cellStatementType(Statement statement) {
+  _CellStatementType _cellStatementType(Statement statement) {
     if (statement is! ExpressionStatement) {
       return _CellStatementType.normal;
     }
@@ -296,14 +298,14 @@ class NoteLib {
     if (expression is! MethodInvocation) {
       return _CellStatementType.normal;
     }
-
+    print(
+        "_cellStatementType expression.target?.staticType: ${expression.target}");
     // print.$____________________________________________________________________()
-    if (expression.target?.staticType
-            ?.getDisplayString(withNullability: true) !=
-        "Pen") {
+    if (expression.target?.toString() != "print") {
       return _CellStatementType.normal;
     }
-    //
+    print(
+        "_cellStatementType expression.methodName.name: ${expression.methodName.name}");
     if (expression.methodName.name !=
         "\$____________________________________________________________________") {
       return _CellStatementType.normal;
@@ -391,7 +393,7 @@ class NoteLib {
         code.Block((b) => b
           ..statements.addAll([
             Code('''            
-                final noteInfo = (
+                noteInfo() => (
                   cells: [ $cells ],
                   encodedCode: "$encodedCode"
                 ); 

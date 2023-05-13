@@ -121,20 +121,18 @@ class Layouts {
 
 class NoteApp extends StatelessWidget {
   final SharedPreferences sharedPreferences;
-  final NoteWriteModeTool noteDevTool;
-  final Notes notes;
+  final NoteWriteModeTool? noteDevTool;
 
   // ignore: prefer_const_constructors_in_immutables
   NoteApp(
-      {super.key,
-      required this.notes,
-      required this.noteDevTool,
-      required this.sharedPreferences});
+      {super.key, required this.noteDevTool, required this.sharedPreferences});
 
   @override
   Widget build(BuildContext context) {
     // BaseNotes.rootroot这个设计临时的，可以改善
     BaseNotes.rootroot.extendTree(true);
+    Notes notes = Notes(sharedPreferences: sharedPreferences);
+
     notes.notes_zdraft.extendTree(false);
 
     var routerApp = MaterialApp.router(

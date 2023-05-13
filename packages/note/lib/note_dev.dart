@@ -40,7 +40,7 @@ class NoteWriteModeService {
     Glob watchGlob = Glob("lib/notes/**note.dart");
     watchGlob
         .listFileSystem(fs, root: watchDir)
-        .map((e) async {
+        .map((FileSystemEntity e) async {
           debugPrint("NoteWriteModeService.start - gen  ${e.path}");
           return await genNoteInfo(noteBaseDir, e.path, fs);
         })
@@ -50,15 +50,36 @@ class NoteWriteModeService {
         .then((value) {
           debugPrint(
               "NoteWriteModeService.start - gen ok notes:${value.length}");
-          return DirectoryWatcher(watchDir).events;
+          return DirectoryWatcher(watchDir);
         })
         .asStream()
-        .asyncExpand((event) => event)
-        .where((e) => watchGlob.matches(e.path))
-        .listen((e) async {
+        .asyncExpand((DirectoryWatcher watcher) => watcher.events)
+        .where((WatchEvent e) => watchGlob.matches(e.path))
+        .listen((WatchEvent e) async {
           debugPrint("NoteWriteModeService.start - event ${e.type} ${e.path}");
           await genNoteInfo(noteBaseDir, e.path, fs);
+          List<NoteLib> noteLibs = await watchGlob
+              .listFileSystem(fs, root: watchDir)
+              .map((e) {
+                debugPrint(
+                    "NoteWriteModeService.start 2- genDeferredPages  ${e.path}");
+                return e;
+              })
+              .map((e) => NoteLib(
+                  baseAbsolutePath: noteBaseDir,
+                  absolutePath: e.path,
+                  writeFS: fs,
+                  fmt: _fmt))
+              .toList();
+          debugPrint(
+              "NoteWriteModeService.start - genDeferredPages start:${noteLibs.length}");
+          genDeferredPages(noteLibs, fmt: _fmt, writeFS: fs);
+          debugPrint("NoteWriteModeService.start - genDeferredPages end");
+
+          // var pro = await Process.start("ls", []);
+          // pro.stdin.writeln("r");
         });
+    // stdin.write('r');
 
     // Stream.value(1).
   }
