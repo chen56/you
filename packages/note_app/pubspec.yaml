@@ -49,9 +49,7 @@ dev_dependencies:
   # for tools/note_dev_gen.dart
   dart_style: ^2.0.0
   glob: ^2.1.1
-  flutter_tools:
-    path: /Users/cccc/git/flutter/flutter/packages/flutter_tools
-#dependency_ove rrides:
+#dependency_overrides:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
