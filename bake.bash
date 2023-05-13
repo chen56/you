@@ -266,7 +266,7 @@ option() {
   /gen() {
     (
       cd packages/note_app
-      run dart run tools/gen_pages.dart
+      run dart run tools/gen.dart
     )
     (
       cd packages/note_mate_flutter

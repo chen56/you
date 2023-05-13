@@ -488,7 +488,7 @@ typedef _NoteInfo = ({
 /// - '/'换成'$'
 /// - 其他特殊字符换成'_'
 String flatLibPath(String packageName) {
-  String result = packageName.replaceAll("package:note_app/notes", "");
+  String result = packageName.replaceAll("package:note_app", "");
   result = path.dirname(result);
 
   if (result == "/") {
