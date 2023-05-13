@@ -9,9 +9,18 @@ void main() async {
   Env env = Env();
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+  NoteDevTool? noteDevTool;
+  if (env.isSupportNoteDevtool()) {
+    noteDevTool = NoteDevTool(env: env);
+    await noteDevTool.gen.gen_note_g_dart();
+    await noteDevTool.gen.gen_note_app_g_dart();
+    noteDevTool.gen.watch().listen((event) {
+      debugPrint("watch: $event");
+    });
+  }
+
   runApp(NoteApp(
     sharedPreferences: sharedPreferences,
-    noteDevTool:
-        env.isSupportNoteDevtool() ? NoteWriteModeTool(env: env) : null,
+    noteDevTool: noteDevTool,
   ));
 }

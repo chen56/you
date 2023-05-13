@@ -121,7 +121,7 @@ class Layouts {
 
 class NoteApp extends StatelessWidget {
   final SharedPreferences sharedPreferences;
-  final NoteWriteModeTool? noteDevTool;
+  final NoteDevTool? noteDevTool;
 
   // ignore: prefer_const_constructors_in_immutables
   NoteApp(
