@@ -18,7 +18,6 @@ build(BuildContext context, Pen print) {
   print.markdown(r'''
 # Notebook机制
 
-
 ## 本项目的基本概念
 
 Notebook的展示模式，是本项目的基础逻辑，类似jupyter或observablehq，
