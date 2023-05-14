@@ -223,6 +223,9 @@ option() {
   /docker() {
     (
       run docker build --tag younpc/note:latest . ;
+      run mkdir -p build/note_app/web
+      run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
+
     )
   }
 }
