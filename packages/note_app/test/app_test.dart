@@ -1,15 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:note/mate.dart';
+import 'package:note/note_dev_gen.dart' as note_gen;
 import 'package:note_mate_flutter/cupertino.dart';
-
-import '../tools/gen_pages.dart';
 
 void main() {
   group("gen pages", () {
     test('flatLibPath', () {
-      expect(flatLibPath("package:note_app/page.dart"), "root");
-      expect(flatLibPath("package:note_app/1.x/page.dart"), "x");
-      expect(flatLibPath("package:note_app/n/1.x/page.dart"), "n_x");
+      expect(note_gen.flatLibPath("package:note_app/page.dart"), "root");
+      expect(note_gen.flatLibPath("package:note_app/1.x/page.dart"), "x");
+      expect(note_gen.flatLibPath("package:note_app/n/1.x/page.dart"), "n_x");
     });
   });
   group("mate sample", () {

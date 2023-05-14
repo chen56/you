@@ -13,6 +13,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 import 'package:file/file.dart';
 import 'package:file/local.dart';
+import 'package:flutter_test/flutter_test.dart';
 import "package:path/path.dart" as path;
 import 'package:analyzer/src/dart/element/element.dart';
 import 'package:note/env.dart';
@@ -42,6 +43,9 @@ main() async {
     },
     dartFormatter: DartFormatter(pageWidth: 120),
   );
+
+  // make `flutter run xxx.dart` no error
+  test("stub", () {});
 }
 
 Future<void> genAll({

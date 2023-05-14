@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:note/log.dart';
 import 'package:note/mate.dart';
 import 'package:note/navigator_v2.dart';
-import 'package:note/page_core.dart';
-import 'package:note/page_layout.dart';
+import 'package:note/note_core.dart';
+import 'package:note/note_layout.dart';
 import 'package:note_mate_flutter/mate_enums.g.dart' as flutter_enums;
 import 'package:note_app/note_app.deferred.g.dart';
-
+import 'package:note/note_dev.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
 // reducing it from 1645184 to 10272 bytes (99.4% reduction).
 // Tree-shaking can be disabled by providing the --no-tree-shake-icons flag
@@ -16,7 +17,7 @@ import 'package:note_app/note_app.deferred.g.dart';
 // 试用了dart 3 record，没有自省功能，无法替换掉下面的强类型字段树，已提交需求：
 // <https://github.com/dart-lang/language/issues/2826>
 // DART 3 Records Feature Requirement: Can it provide introspection capabilities similar to enum.values #2826
-// 需求被拒绝，自省会影响到dart的性能策略,只能另想办法, 目前使用代码生成 [tools/gen_pages.dart]
+// 需求被拒绝，自省会影响到dart的性能策略,只能另想办法, 目前使用代码生成 [tools/note_dev_gen.dart]
 
 // Path<void> root = Path<void>("/", meta: rootPage, kids: [
 //   Path<void>("not_found", meta: notFoundPage),
@@ -46,15 +47,23 @@ import 'package:note_app/note_app.deferred.g.dart';
 // ]);
 Logger logger = Logger();
 
+@immutable
 class Notes extends BaseNotes with Navigable {
-  late final Note<void> initial;
-  Notes._() {
-    initial = zdraft_file;
-  }
+  final SharedPreferences sharedPreferences;
+
+  Notes({required this.sharedPreferences});
 
   @override
-  Screen parse(String location) {
-    Note find = root.child(location)!; // ?? notFound;
+  Screen get initial =>
+      switchTo(sharedPreferences.getString("note_app.notes.location") ??
+          notes_welcome.path);
+
+  @override
+  Screen switchTo(String location) {
+    assert(BaseNotes.rootroot.contains(location),
+        "location not found: $location ${BaseNotes.rootroot.toList()}");
+    Note find = BaseNotes.rootroot.child(location)!; // ?? notFound;
+    sharedPreferences.setString("note_app.notes.location", location);
     // sync mode
     // return find.createScreen(location);
     // async mode
@@ -93,15 +102,14 @@ class DeferredScreen extends StatelessWidget with Screen {
   String get location => note.path;
 }
 
-var notes = Notes._();
-
+@immutable
 class Layouts {
   static Layout defaultLayout<T>({
     bool defaultCodeExpand = true,
   }) {
     return (path) => LayoutScreen<T>(
           current: path as Note<T>,
-          tree: notes.root,
+          tree: BaseNotes.rootroot,
           editors: Editors(
             enumRegister: EnumRegister.list([flutter_enums.registerEnum()]),
             // iconRegisters: IconRegisters([flutter_icons.registerIcon()]),
@@ -112,22 +120,31 @@ class Layouts {
 }
 
 class NoteApp extends StatelessWidget {
-  const NoteApp({super.key});
+  final SharedPreferences sharedPreferences;
+  final NoteDevTool? noteDevTool;
+
+  // ignore: prefer_const_constructors_in_immutables
+  NoteApp(
+      {super.key, required this.noteDevTool, required this.sharedPreferences});
 
   @override
   Widget build(BuildContext context) {
-    notes.root.extendTree(true);
-    notes.zdraft.extendTree(false);
-    return MaterialApp.router(
+    // BaseNotes.rootroot这个设计临时的，可以改善
+    BaseNotes.rootroot.extendTree(true);
+    Notes notes = Notes(sharedPreferences: sharedPreferences);
+
+    notes.notes_zdraft.extendTree(false);
+
+    var routerApp = MaterialApp.router(
       title: 'Flutter Note',
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         useMaterial3: true,
       ),
       routerConfig: NavigatorV2.config(
-        initial: notes.parse(notes.initial.path),
         navigable: notes,
       ),
     );
+    return routerApp;
   }
 }

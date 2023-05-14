@@ -7,8 +7,6 @@
 
 目前我遇到的学习问题，也是note想改善的：
 
--
-
 flutter学习资源，以文档居多，demo混杂凌乱，没有一个可以所见即所得速查各组件外观及用法的便宜地儿，比如[官网samples](https://flutter.github.io/samples/#)
 真心凌乱
 
@@ -44,35 +42,6 @@ flutter学习资源，以文档居多，demo混杂凌乱，没有一个可以所
 ```bash
 git clone git@github.com:chen56/note.git
 flutter run --web-renderer html --device-id chrome 
-```
-
-### ~~本项目相关dart 3.0的备注~~ 已恢复使用dart 2.x
-
-~~本项目是学习项目，***用是最新SDK***，要自己运行本项目，需`flutter channel master`
-
-pubspec.yaml已配置：
-
-```yaml
-environment:
-  sdk: '>=3.0.0-204.0.dev <4.0.0'
-```
-
-本项目可能会使用一些dart 3.0的体验特性，
-已配置analysis_options.yaml，告诉ide别报错，比如idea/vscode,
-参考：<https://dart.dev/tools/experiment-flags>
-
-```yaml
-analyzer:
-  enable-experiment:
-    - patterns
-    - records
-```
-
-flutter run/build需开体验特性参数：
-
-```bash
-flutter run --enable-experiment=records --enable-experiment=patterns 
-flutter build --enable-experiment=records --enable-experiment=patterns 
 ```
 
 ## project workflow

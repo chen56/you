@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/themes/vs2015.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:note/page_core.dart';
+import 'package:note/note_core.dart';
 import 'package:markdown/markdown.dart' as md;
 import 'package:note/src/flutter_highlight.dart';
 
@@ -10,7 +10,8 @@ class MarkdownContentWidget extends StatelessWidget {
   final String content;
   final ScrollController controller = ScrollController();
 
-  MarkdownContentWidget({super.key, required this.outline, required this.content});
+  MarkdownContentWidget(
+      {super.key, required this.outline, required this.content});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,8 @@ class _HeaderBuilder extends MarkdownElementBuilder {
           alignment: Alignment.centerLeft,
           child: SelectableText.rich(
             TextSpan(
-                style: preferredStyle?.copyWith(height: 2, fontWeight: FontWeight.bold),
+                style: preferredStyle?.copyWith(
+                    height: 2, fontWeight: FontWeight.bold),
                 text: text.text),
             style: preferredStyle,
           )),

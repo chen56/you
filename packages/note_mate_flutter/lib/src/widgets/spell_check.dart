@@ -4,15 +4,19 @@
 import 'package:flutter/src/widgets/spell_check.dart' as _i1;
 import 'package:note/mate.dart' as _i2;
 import 'package:flutter/src/services/spell_check.dart' as _i3;
-import 'package:flutter/src/painting/text_style.dart' as _i4;
-import 'package:flutter/src/widgets/editable_text.dart' as _i5;
+import 'dart:ui' as _i4;
+import 'package:flutter/src/painting/text_style.dart' as _i5;
+import 'package:flutter/src/widgets/editable_text.dart' as _i6;
 
 /// class SpellCheckConfiguration
 class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration with _i2.Mate {
-  /// SpellCheckConfiguration SpellCheckConfiguration({SpellCheckService? spellCheckService, TextStyle? misspelledTextStyle, Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder})
+  /// SpellCheckConfiguration SpellCheckConfiguration({SpellCheckService? spellCheckService, Color? misspelledSelectionColor, TextStyle? misspelledTextStyle, Widget Function(BuildContext, EditableTextState)? spellCheckSuggestionsToolbarBuilder})
   SpellCheckConfiguration$Mate({
     /// optionalParameters: {SpellCheckService? spellCheckService} , default:none
     super.spellCheckService,
+
+    /// optionalParameters: {Color? misspelledSelectionColor} , default:none
+    super.misspelledSelectionColor,
 
     /// optionalParameters: {TextStyle? misspelledTextStyle} , default:none
     super.misspelledTextStyle,
@@ -25,12 +29,17 @@ class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration with _i2.
             init: spellCheckService,
             isNamed: true,
           ),
-          'misspelledTextStyle': _i2.BuilderArg<_i4.TextStyle?>(
+          'misspelledSelectionColor': _i2.BuilderArg<_i4.Color?>(
+            name: 'misspelledSelectionColor',
+            init: misspelledSelectionColor,
+            isNamed: true,
+          ),
+          'misspelledTextStyle': _i2.BuilderArg<_i5.TextStyle?>(
             name: 'misspelledTextStyle',
             init: misspelledTextStyle,
             isNamed: true,
           ),
-          'spellCheckSuggestionsToolbarBuilder': _i2.BuilderArg<_i5.EditableTextContextMenuBuilder?>(
+          'spellCheckSuggestionsToolbarBuilder': _i2.BuilderArg<_i6.EditableTextContextMenuBuilder?>(
             name: 'spellCheckSuggestionsToolbarBuilder',
             init: spellCheckSuggestionsToolbarBuilder,
             isNamed: true,
@@ -41,6 +50,7 @@ class SpellCheckConfiguration$Mate extends _i1.SpellCheckConfiguration with _i2.
     matePackageUrl = 'package:flutter/cupertino.dart';
     mateBuilder = (p) => SpellCheckConfiguration$Mate(
           spellCheckService: p.get('spellCheckService').build(),
+          misspelledSelectionColor: p.get('misspelledSelectionColor').build(),
           misspelledTextStyle: p.get('misspelledTextStyle').build(),
           spellCheckSuggestionsToolbarBuilder: p.get('spellCheckSuggestionsToolbarBuilder').build(),
         );
