@@ -48,7 +48,7 @@ set -o functrace #trap inherited in function
 #
 # The function is enclosed in a subshell to avoid changing the working directory
 # of the caller.
-function follow_links() (
+function bake.follow_links() (
   cd -P "$(dirname -- "$1")"
   file="$PWD/$(basename -- "$1")"
   while [[ -L "$file" ]]; do
@@ -61,11 +61,11 @@ function follow_links() (
 )
 
 ##########################################
-# bake common init script/function
+# bake common init script
 ##########################################
 
 declare BAKE_DIR
-BAKE_DIR=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
+BAKE_DIR=$(dirname "$(bake.follow_links "${BASH_SOURCE[0]}")")
 # 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
 cd "${BAKE_DIR}"
 
@@ -99,6 +99,9 @@ cd "${BAKE_DIR}"
 # The above data structures are flattened into the following variables:
 #  _data[cmds.pub.name]="pub"
 #  _data[cmds.pub.shortHelp]="flutter pub"
+#  _data[cmds.pub.options.mirror.name]="mirror"
+#  _data[cmds.pub.options.mirror.type]="string"
+#  _data[cmds.pub.options.mirror.abbr]="m"
 #  _data[cmds.pub.cmds.get.name]="get"
 #  _data[cmds.pub.cmds.get.shortHelp]="flutter pub get"
 #  _data[cmds.pub.cmds.get.options.verbose.name]="verbose"
@@ -106,53 +109,16 @@ cd "${BAKE_DIR}"
 #  _data[cmds.build.shortHelp]="flutter build"
 #  _data[otherVar]="other value"
 declare -A _data
-
-function bake.addCmd() {
-  local -n cmdArg=$1
-  local cmdName=${cmdArg[name]}
-  for key in "${!cmdArg[@]}"; do
-    _data[cmds.$cmdName.$key]=${cmdArg[$key]}
-  done
-}
-
+declare _currentCmd=rootCmd
 ##########################################
-# app commands define
+# bake common function
 ##########################################
-
-# cmd settings use bash associative array
-# shellcheck disable=SC2034
-declare -A _cmd=(
-  [name]="pub"
-  [shortHelp]="[mono project]Commands for managing Flutter packages"
-)
-bake.addCmd _cmd
-pub(){
-    echo "run flutter pub $*"
-}
-
-_help() {
-  cat <<-'__EOF'
-____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
-|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
-|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
-Usage:
-./bake [command] [options]
-
-Available Commands:
-__EOF
-
-  print_commands
-}
-
-##########################################
-# 以下是bake命令行玩法的公共代码，与业务无关
-##########################################
-on_error() {
+bake.on_error() {
   echo "traped an error: ↑ , trace: ↓" >&2
-  print_stack
+  bake.print_stack
 }
 
-print_stack() {
+bake.print_stack() {
   local i=0
   local stackInfo
   while true; do
@@ -163,7 +129,7 @@ print_stack() {
   done
 }
 # print first, then run
-run() {
+bake.run() {
   local project
   project=$(basename "$PWD")
   [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
@@ -173,21 +139,21 @@ run() {
 }
 
 
-currentProject(){
+bake.currentProject(){
   local project
   project=$(basename "$PWD")
   [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
   echo "$project"
 }
 
-log_error(){
-  echo -e "ERROR -【$(currentProject) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
+bake.error(){
+  echo -e "ERROR -【$(bake.currentProject) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
 }
-log(){
-  echo -e "INFO  -【$(currentProject) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
+bake.info(){
+  echo -e "INFO  -【$(bake.currentProject) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
 }
 
-print_commands() {
+bake.print_commands() {
   # for each _data key that starts with "cmds.", print the command name
   for key in "${!_data[@]}"; do
     if [[ "$key" == cmds.* ]]; then
@@ -201,25 +167,163 @@ print_commands() {
   return
 }
 
+function bake.setRootCmd() {
+  local -n cmdArg=$1
+  local cmdName=${cmdArg[name]}
+  _data[rootCmd.name]=${cmdArg[name]}
+  _data[rootCmd.shortHelp]=${cmdArg[shortHelp]}
+  _data[rootCmd.help]=${cmdArg[help]}
+}
+function bake.addCmd() {
+  local -n cmdArg=$1
+  local cmdName=${cmdArg[name]}
+  for key in "${!cmdArg[@]}"; do
+    _data[$_currentCmd.cmds.$cmdName.$key]=${cmdArg[$key]}
+  done
+}
+
+
 ##########################################
-# main script
+# root command
 ##########################################
 
-trap " set +x; on_error " ERR
+# cmd settings use bash associative array
+# shellcheck disable=SC2034
+declare -A _cmd=(
+  [name]="bake"
+  [shortHelp]="root Command for flutter-note project"
+  [help]=$(cat <<- EOF
+____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
+|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
+|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
+Usage:
+./bake [command] [options]
+
+  ./bake       # 列子命令看帮助，
+  ./bake build # 子命令
+  ./bake run   # 子命令
+EOF
+  )
+)
+bake.setRootCmd _cmd
+
+################################################
+## pub
+################################################
+declare -A _cmd=(
+  [name]="pub"
+  [shortHelp]="[mono project]Commands for managing Flutter packages"
+)
+bake.addCmd _cmd
+/pub(){
+    bake.run echo "run flutter pub [$*]"
+}
+
+
+declare -A _cmd=(
+  [shortHelp]="[mono project] flutter pub get"
+)
+bake.addCmd _cmd
+/pub/get(){
+  bake.run echo "flutter pub get"
+}
+
+# https://pub.dev/documentation/args/latest/args/ArgParser-class.html
+# https://github.com/spf13/pflag/blob/master/string_array.go
+#目前倾向的格式：
+bake.cmd.shortHelp          "/pub/get" "[mono project] flutter pub get"
+bake.cmd.help               "/pub/get" "[mono project] flutter pub get"
+# cmd, optionName, abbr, default, useage
+bake.cmd.option.add         "/pub/get" verbose v "bool" false "verbose mode"
+# 放弃: option的字段相对比较固定，分开写很累赘，但如果有新增字段就会比较麻烦
+#bake.cmd.option.help        "/pub/get" verbose verbose
+#bake.cmd.option.type        "/pub/get" verbose bool
+#bake.cmd.option.abbr        "/pub/get" verbose v
+# 放弃
+#declare -A _cmd=(
+#  [name]="pub"
+#  [shortHelp]="[mono project]Commands for managing Flutter packages"
+#)
+#bake.addCmd _cmd
+# 放弃
+#bake.cmd.option "/pub/get?options.verbose.name"      verbose
+#bake.cmd.option "/pub/get?options.verbose.type"      "bool"
+#bake.cmd.option "/pub/get?options.verbose.abbr"      v
+#bake.cmd.option "/pub/get?options.verbose.default"   false
+#bake.cmd.option "/pub/get?options.verbose.shortHelp" "verbose mode"
+# 放弃
+#_data[rootCmd.cmds.pub.cmds.get.options.verbose.name]="verbose"
+#_data[rootCmd.cmds.pub.cmds.get.options.verbose.type]="bool"
+#_data[rootCmd.cmds.pub.cmds.get.options.verbose.abbr]="v"
+/pub/get(){
+  bake.run echo "flutter pub get"
+}
+
+/pub/get?(){
+  /pub/get?shortHelp(){  echo "[mono project] flutter pub get" ; }
+  /pub/get?options(){
+    bake.cmd.option "/pub/get?options.verbose.name"      verbose
+    bake.cmd.option "/pub/get?options.verbose.type"      "bool"
+    bake.cmd.option "/pub/get?options.verbose.abbr"      v
+    bake.cmd.option "/pub/get?options.verbose.default"   false
+    bake.cmd.option "/pub/get?options.verbose.shortHelp" "verbose mode"
+  }
+  /pub/get(){
+    bake.run echo "[mono project] flutter pub get" ;
+  }
+}
+bake.define.hortHelp "/pub/get" "[mono project] flutter pub get"
+bake.define.help     "/pub/get" "[mono project] flutter pub get"
+
+################################################
+## doctor
+################################################
+declare -A _cmd=(
+  [name]="doctor"
+  [shortHelp]="doctor this project"
+)
+bake.addCmd _cmd
+function doctor(){
+  bake.info "doctor start -----------------------------------"
+  for key in "${!_data[@]}"; do
+    bake.info "$key=${_data[$key]:0:50}"
+  done
+  bake.info "doctor end -__----------------------------------"
+}
+
+_help() {
+  cat <<-'__EOF'
+____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
+|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
+|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
+Usage:
+./bake [command] [options]
+
+Available Commands:
+__EOF
+
+  bake.print_commands
+}
+
+
+##########################################
+# bake common entry script
+##########################################
+trap " set +x; bake.on_error " ERR
 
 # if no args, show help
 if [ "$#" == 0 ]; then
   _help # 根命令的帮助
   echo
-  log_error "missing command, please use './bake [command]'"
+  bake.error "missing command, please use './bake [command]'"
   exit 1
 fi
 
 cmd="$1"
 shift
 if ! declare -f "$cmd" >/dev/null 2>&1; then
-  log_error "Error: 404 ,command '${cmd}' not exists, please define command function '${cmd}()'"
+  bake.error "Error: 404 ,command '${cmd}' not exists, please define command function '${cmd}()'"
   exit 1
 fi
 
-$cmd "$@"
+/$cmd "$@"
