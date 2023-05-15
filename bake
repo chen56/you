@@ -75,7 +75,46 @@ EOF
   /test1() {
     run echo "test1 <> run $*"
   }
+
+  /test1/test2?() {
+      /test1/test2?shortHelp(){
+        echo "test1/test2?shortHelp"
+      }
+      /test1/test2(){
+          run echo "test2 <> run $*"
+      }
+      /test1/test2?(){
+          echo x
+      }
+  }
+
+  /test1?children() {
+      /pub?() {
+        /pub?shortHelp() { cat <<<"all: pub get"; }
+        /pub() {
+          /exec flutter pub get
+        }
+        /pub?children() {
+          /get?() {
+            /get?shortHelp() { cat <<<"all: pub get"; }
+            /get() {
+              /exec flutter pub get
+            }
+          }
+        }
+      }
+
+      /build?() {
+        /build?shortHelp() { cat <<<"all: pub get"; }
+        /build() {
+          /exec flutter pub get
+        }
+      }
+  }
+
 }
+
+
 
 /test_option?() {
   /test_option?shortHelp() {
@@ -225,7 +264,6 @@ option() {
       run docker build --tag younpc/note:latest . ;
       run mkdir -p build/note_app/web
       run sh -c "docker run --rm --workdir /usr/share/nginx/html/note younpc/note tar cf - ./ | ( cd build/note_app/web; tar xf -)"
-
     )
   }
 }
@@ -282,16 +320,17 @@ option() {
   }
 }
 /regen?() {
-  /regen?shortHelp() { cat <<<"先删除old, 再代码生成"; }
-  /regen() {
-    run rm -f packages/note_app/lib/pages.g.dart
-    run rm -rf packages/note_mate_flutter/lib
-    /gen
-  }
+    /regen?shortHelp() { cat <<< "先删除old, 再代码生成"; }
+    /regen() {
+      echo "regen1"
+      run rm -f packages/note_app/lib/pages.g.dart
+      run rm -rf packages/note_mate_flutter/lib
+      /gen
+    }
 }
 
 /runWeb?() {
-  /runWeb?shortHelp() { cat <<<"flutter run: http://localhost:8888"; }
+  /runWeb?shortHelp() { cat <<< "flutter run: http://localhost:8888"; }
   /runWeb() {
     # only work on macos
     # shellcheck disable=SC2155

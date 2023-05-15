@@ -1,0 +1,225 @@
+#!/usr/bin/env bash
+set -o errtrace #trap inherited in sub script
+set -o errexit
+set -o functrace #trap inherited in function
+# set -x
+
+# bake == (bash)ake == 去make的bash工具
+# v0.2.20230515
+# ------------------------------------------------------------------------------
+# bake 是个简单的自建命令工具，以替代Makefile的子命令功能
+# make工具的主要特点是处理文件依赖进行增量编译，但flutter、golang、java、js项目的build工具
+# 太厉害了，这几年唯一还在用Makefile的理由就是他的子命令机制: "make build"、
+# "make run", 可以方便的自定义单一入口的父子命令，但Makefile本身的语法套路也很复杂，
+# 很多批处理还是要靠bash, 这就尴尬了，工具太多，麻烦！本脚本尝试彻底摆脱使用Makefile。
+# 经尝试，代码很少啊 ，公共代码几十行啊，还主要是提取显示子命令帮助的，功能足够了：
+#   ./bake       # 列子命令看帮助，
+#   ./bake build # 子命令
+#   ./bake run   # 子命令
+# bake命令规则：
+# 1. 定义以斜杠"/"为前缀的function作为子命令，/build、/run、/assets/list、
+#    表示命令的其父子关系，执行时去掉斜杠/, 构成父子命令：./bake assets list -x -y -z
+# 2. 命令的帮助从命令后跟?shortHelp的函数提取，比如/build?shortHelp
+# 3. 除bash外，尽量不依赖其他工具，包括linux coreutils,以便跨平台更简单
+# 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
+# ------------------------------------------------------------------------------
+
+#if ((BASH_VERSINFO[0] < 4)); then
+#  echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
+#  apt install bash  # ubuntu
+#  brew install bash # mac"
+#  exit 1
+#fi
+
+# copy from flutter
+# ----------------------
+# On Mac OS, readlink -f doesn't work, so follow_links traverses the path one
+# link at a time, and then cds into the link destination and find out where it
+# ends up.
+#
+# The returned filesystem path must be a format usable by Dart's URI parser,
+# since the Dart command line tool treats its argument as a file URI, not a
+# filename. For instance, multiple consecutive slashes should be reduced to a
+# single slash, since double-slashes indicate a URI "authority", and these are
+# supposed to be filenames. There is an edge case where this will return
+# multiple slashes: when the input resolves to the root directory. However, if
+# that were the case, we wouldn't be running this shell, so we don't do anything
+# about it.
+#
+# The function is enclosed in a subshell to avoid changing the working directory
+# of the caller.
+function follow_links() (
+  cd -P "$(dirname -- "$1")"
+  file="$PWD/$(basename -- "$1")"
+  while [[ -L "$file" ]]; do
+    cd -P "$(dirname -- "$file")"
+    file="$(readlink -- "$file")"
+    cd -P "$(dirname -- "$file")"
+    file="$PWD/$(basename -- "$file")"
+  done
+  echo "$file"
+)
+
+##########################################
+# bake common init script/function
+##########################################
+
+declare BAKE_DIR
+BAKE_DIR=$(dirname "$(follow_links "${BASH_SOURCE[0]}")")
+# 首先进入项目根目录，这样函数里就可以用相对路径，简化命令
+cd "${BAKE_DIR}"
+
+
+# Simulating object-oriented data structures with flat associative arrays
+# {
+#   cmds:{
+#     pub:{
+#       name:"pub",
+#       shortHelp:"flutter pub",
+#       cmds:{
+#        get:{
+#          name:"get",
+#          shortHelp:"flutter pub get",
+#          options:{
+#            verbose:{
+#              name:"verbose",
+#              abbr:"v",
+#            }
+#          }
+#        }
+#       }
+#     },
+#     build:{
+#       name:"build",
+#       shortHelp:"flutter build",
+#     }
+#   },
+#   "otherVar": "other value"
+# }
+# The above data structures are flattened into the following variables:
+#  _data[cmds.pub.name]="pub"
+#  _data[cmds.pub.shortHelp]="flutter pub"
+#  _data[cmds.pub.cmds.get.name]="get"
+#  _data[cmds.pub.cmds.get.shortHelp]="flutter pub get"
+#  _data[cmds.pub.cmds.get.options.verbose.name]="verbose"
+#  _data[cmds.pub.cmds.get.options.verbose.abbr]="v"
+#  _data[cmds.build.shortHelp]="flutter build"
+#  _data[otherVar]="other value"
+declare -A _data
+
+function bake.addCmd() {
+  local -n cmdArg=$1
+  local cmdName=${cmdArg[name]}
+  for key in "${!cmdArg[@]}"; do
+    _data[cmds.$cmdName.$key]=${cmdArg[$key]}
+  done
+}
+
+##########################################
+# app commands define
+##########################################
+
+# cmd settings use bash associative array
+# shellcheck disable=SC2034
+declare -A _cmd=(
+  [name]="pub"
+  [shortHelp]="[mono project]Commands for managing Flutter packages"
+)
+bake.addCmd _cmd
+pub(){
+    echo "run flutter pub $*"
+}
+
+_help() {
+  cat <<-'__EOF'
+____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
+|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
+|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
+Usage:
+./bake [command] [options]
+
+Available Commands:
+__EOF
+
+  print_commands
+}
+
+##########################################
+# 以下是bake命令行玩法的公共代码，与业务无关
+##########################################
+on_error() {
+  echo "traped an error: ↑ , trace: ↓" >&2
+  print_stack
+}
+
+print_stack() {
+  local i=0
+  local stackInfo
+  while true; do
+    stackInfo=$(caller $i 2>&1 && true) && true
+    if [[ $? != 0 ]]; then break; fi
+    echo "  $stackInfo" >&2
+    i=$((i + 1))
+  done
+}
+# print first, then run
+run() {
+  local project
+  project=$(basename "$PWD")
+  [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
+  echo -e "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
+  "$@"
+  return $?
+}
+
+
+currentProject(){
+  local project
+  project=$(basename "$PWD")
+  [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
+  echo "$project"
+}
+
+log_error(){
+  echo -e "ERROR -【$(currentProject) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
+}
+log(){
+  echo -e "INFO  -【$(currentProject) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
+}
+
+print_commands() {
+  # for each _data key that starts with "cmds.", print the command name
+  for key in "${!_data[@]}"; do
+    if [[ "$key" == cmds.* ]]; then
+      # prefix: remove the "cmds." prefix
+      local cmd=${key#cmds.}
+      # suffix: remove everything after the first dot
+      cmd=${cmd%%.*}
+      echo "  $cmd"
+    fi
+  done
+  return
+}
+
+##########################################
+# main script
+##########################################
+
+trap " set +x; on_error " ERR
+
+# if no args, show help
+if [ "$#" == 0 ]; then
+  _help # 根命令的帮助
+  echo
+  log_error "missing command, please use './bake [command]'"
+  exit 1
+fi
+
+cmd="$1"
+shift
+if ! declare -f "$cmd" >/dev/null 2>&1; then
+  log_error "Error: 404 ,command '${cmd}' not exists, please define command function '${cmd}()'"
+  exit 1
+fi
+
+$cmd "$@"
