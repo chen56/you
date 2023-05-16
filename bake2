@@ -52,6 +52,7 @@ function bake.readlink() (
 
 ##########################################
 # bake common init script
+# 公共脚本
 ##########################################
 
 declare BAKE_DIR
@@ -59,77 +60,50 @@ BAKE_PATH="$(bake.readlink "${BASH_SOURCE[0]}")"
 BAKE_DIR="$(dirname "$BAKE_PATH")"
 BAKE_FILE="$(basename "$BAKE_PATH")"
 
-# BAKE_DIR is workdir
+# set workdir
 cd "${BAKE_DIR}"
 
+# ref
+# https://pub.dev/documentation/args/latest/args/ArgParser-class.html
+# https://github.com/spf13/pflag/blob/master/string_array.go
+# https://oclif.io/docs/flags
+
+
 # Simulating object-oriented data structures with flat associative arrays
-# {
-#   cmds:{
-#     pub:{
-#       name:"pub",
-#       shortHelp:"flutter pub",
-#       cmds:{
-#        get:{
-#          name:"get",
-#          shortHelp:"flutter pub get",
-#          options:{
-#            verbose:{
-#              name:"verbose",
-#              abbr:"v",
+#{
+#   bake:{
+#     shortHelp:"./bake",
+#     cmds:{
+#       pub:{
+#         shortHelp:"flutter pub",
+#         cmds:{
+#          get:{
+#            shortHelp:"flutter pub get",
+#            options:{
+#              verbose:{
+#                name:"verbose",
+#                abbr:"v",
+#              }
 #            }
 #          }
-#        }
+#         }
 #       }
-#     },
-#     build:{
-#       name:"build",
-#       shortHelp:"flutter build",
-#     }
-#   },
-#   "otherVar": "other value"
+#   }
 # }
+#}
 # The above data structures are flattened into the following variables:
-#  _data[bake.shortHelp]="bake root cmd"
-#  _data[bake.help]="bake root cmd"
-#  _data[bake.cmds.pub.name]="pub"
-#  _data[bake.cmds.pub.shortHelp]="flutter pub"
-#  _data[bake.cmds.pub.options.mirror.name]="mirror"
-#  _data[bake.cmds.pub.options.mirror.type]="string"
-#  _data[bake.cmds.pub.options.mirror.abbr]="m"
-#  _data[bake.cmds.pub.cmds.get.name]="get"
-#  _data[bake.cmds.pub.cmds.get.shortHelp]="flutter pub get"
-#  _data[bake.cmds.pub.cmds.get.options.verbose.name]="verbose"
-#  _data[bake.cmds.pub.cmds.get.options.verbose.abbr]="v"
-#  _data[bake.cmds.build.shortHelp]="flutter build"
-#  _data[otherVar]="other value"
-## 数据操纵行为设计：
-# 放弃
-#bake.cmd.shortHelp          "/pub/get" "[mono project] flutter pub get"
-#bake.cmd.help               "/pub/get" "[mono project] flutter pub get"
-## cmd, optionName, abbr, default, useage
-#bake.cmd.option.add         "/pub/get" verbose v "bool" false "verbose mode"
-
-# 放弃: option的字段相对比较固定，分开写很累赘，但如果有新增字段就会比较麻烦
-#bake.cmd.option.help        "/pub/get" verbose verbose
-#bake.cmd.option.type        "/pub/get" verbose bool
-#bake.cmd.option.abbr        "/pub/get" verbose v
-# 放弃
-#declare -A _cmd=(
-#  [name]="pub"
-#  [shortHelp]="[mono project]Commands for managing Flutter packages"
-#)
-#bake.addCmd _cmd
-# 放弃
-#bake.cmd.option "/pub/get?options.verbose.name"      verbose
-#bake.cmd.option "/pub/get?options.verbose.type"      "bool"
-#bake.cmd.option "/pub/get?options.verbose.abbr"      v
-#bake.cmd.option "/pub/get?options.verbose.default"   false
-#bake.cmd.option "/pub/get?options.verbose.shortHelp" "verbose mode"
-# 放弃
-#_data[rootCmd.cmds.pub.cmds.get.options.verbose.name]="verbose"
-#_data[rootCmd.cmds.pub.cmds.get.options.verbose.type]="bool"
-#_data[rootCmd.cmds.pub.cmds.get.options.verbose.abbr]="v"
-
+# options define:
+#  _data[cmd./.shortHelp]="bake root cmd"
+#  _data[cmd./.help]="bake root cmd"
+#  _data[cmd./pub.shortHelp]="flutter pub"
+#  _data[cmd./pub.options.notes.type]="list"
+#  _data[cmd./pub.options.notes.abbr]="n"
+#  _data[cmd./pub/get.shortHelp]="flutter pub get"
+#  _data[cmd./pub/get.options.verbose.abbr]="v"
+# parsed options value:
+#  _data[cmd./.options.verbose.value]=true
+#  _data[cmd./pub/get.options.notes.value.0]="./lib/note.page"
+#  _data[cmd./pub/get.options.notes.value.1]="./lib/a/note.page"
 declare -A _data
 
 ##########################################
@@ -160,12 +134,6 @@ bake.run() {
   return $?
 }
 
-bake.error(){
-  echo -e "ERROR -【$(bake.project.current) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
-}
-bake.info(){
-  echo -e "INFO  -【$(bake.project.current) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
-}
 
 bake.project.current(){
   local project
@@ -174,97 +142,159 @@ bake.project.current(){
   echo "$project"
 }
 
-bake.cmd.list() {
-  # for each _data key that starts with "cmds.", print the command name
-  for key in "${!_data[@]}"; do
-    if [[ "$key" == cmds.* ]]; then
-      # prefix: remove the "cmds." prefix
-      local cmd=${key#cmds.}
-      # suffix: remove everything after the first dot
-      cmd=${cmd%%.*}
-      echo "  $cmd"
-    fi
-  done
-  return
+function bake.data.set() {
+  local path=$1
+  local value=$2
+  _data[$path]="${value}"
 }
-function bake.cmd.cmdPath2dataPath(){
-  local cmdPath=$1
-  local cmdDataPath
-  [[ "/" == "$cmdPath" ]] && cmdDataPath="bake" || cmdDataPath="bake$cmdPath"
-  # replace all "\"
-  echo "${cmdDataPath//\//".cmds."}"
+function bake.data.get() {
+  local path=$1
+  echo "${_data[$path]}"
+}
 
-}
+# bake.data.children cmd
+#   -> list data path "cmd" children name
+bake.data.children() (
+  path=$1
+
+  for key in "${!_data[@]}"; do
+    if [[ "$key" == $path.* ]]; then
+      # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+      # prefix: remove the "cmds." prefix
+      child=${key#$path.}
+      # suffix: remove everything after the first dot
+      child=${child%%.*}
+      echo "$child"
+    fi
+  done | sort -u
+  return
+)
 function bake.cmd.set() {
-  local cmdPath=$1
+  local cmd=$1
   local field=$2
   local value=$3
-
-  local cmdDataPath
-  cmdDataPath="$(bake.cmd.cmdPath2dataPath "$cmdPath")"
-
-  _data[$cmdDataPath.$field]=${value}
+  _data[cmd.$cmd.$field]=${value}
+}
+function bake.cmd.get() {
+  local cmd=$1
+  local field=$2
+  echo "${_data[cmd.$cmd.$field]}"
 }
 
+function bake.cmd.getKeys() (
+  cmd=$1
+  field=$2
+  cmdDataPath="cmd.$cmd"
+  fieldDataPath=$cmdDataPath.$field
 
+  for key in "${!_data[@]}"; do
+    if [[ "$key" == $fieldDataPath.* ]]; then
+      # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+      # prefix: remove the "cmds." prefix
+      option=${key#$cmdDataPath.options.}
+      # suffix: remove everything after the first dot
+      option=${option%%.*}
+      echo "$option"
+    fi
+    # cat x | sort -u  ==  cat x | sort | uniq
+  done | sort -u
+)
+
+# traverse up
+# /a/b
+#   -> /a/b
+#   -> /a
+#   -> /
+function bake.cmd.cmdToList(){
+  local cmd
+  cmd=$1
+
+  local currentCmd
+  currentCmd="${cmd}"
+  while [ "$currentCmd" != "" ]
+  do
+    echo "$currentCmd"
+    currentCmd=${currentCmd%/*}
+  done
+  # 如果是"/" root cmd,上面的循环不会轮到它，补一个
+  if [[ "$cmd" != "/" ]]; then
+    echo "/"
+  fi
+}
 
 function bake.cmd.main() {
     # ensure all cmd register
-    local fullNames
-    fullNames=$(declare -F | grep -E "^declare -f (\/.*)$" | sed -r 's/^declare -f (\/.*)$/\1/')
-    readarray -t fullNames <<<"$fullNames"
-    for cmdFullname in ${fullNames[*]}; do
-      local dataPath
-      dataPath="$(bake.cmd.cmdPath2dataPath "$cmdFullname")"
-      if [[ ${_data[$dataPath.shortHelp]} == "" ]]; then
-        _data[$dataPath.shortHelp]="-";
+    local cmds
+    cmds=$(declare -F | grep -E "^declare -f (\/.*)$" | sed -r 's/^declare -f (\/.*)$/\1/')
+    readarray -t cmds <<<"$cmds"
+    for cmd in ${cmds[*]}; do
+      if [[ ${_data[cmd.$cmd.shortHelp]} == "" ]]; then
+        _data[cmd.$cmd.shortHelp]="-";
       fi
     done
 
-    local cmdPath=""
-    # parse args :
+    # parse cmd :
     #   ./bake pub get -v -b
-    #     -> { cmdPath:"/pub/get", args:"-v -b" }
+    #     -> { cmd:"/pub/get", args:"-v -b" }
     #   ./bake -h
-    #     -> { cmdPath:"/", args:"-h" }
+    #     -> { cmd:"/", args:"-h" }
+    local cmd=""
     for arg in "$@"; do
-      local nextCmdPath
-      nextCmdPath="$cmdPath/$arg"
-      local toFind
-      toFind="$(bake.cmd.cmdPath2dataPath "$nextCmdPath")"
-      echo tofind:$toFind
-      if ( printf '%s\n' "${!_data[@]}" | grep "$toFind" ) > /dev/null ; then
-        cmdPath="$nextCmdPath" ;
+      if ( printf '%s\n' "${!_data[@]}" | grep "cmd.$cmd/$arg" ) > /dev/null ; then
+        cmd="$cmd/$arg" ;
         shift ;
       else
         break;
       fi
     done
     # if nothing cmd find then root cmd
-    [[ "$cmdPath" == "" ]] && cmdPath="/" || true
-    bake.info "cmd:$cmdPath args: ${*}"
+    if [[ "$cmd" == "" ]] ; then cmd="/"; fi
 
-    if ! declare -f "$cmdPath" >/dev/null 2>&1; then
-      bake.error "Error: 404 ,cmd '${cmdPath}' not exists, please define cmd function '${cmdPath}()'"
+    # parse options
+    for traverseUpCmd in $(bake.cmd.cmdToList "$cmd") ; do
+#      for option in $(bake.cmd.getKeys "$traverseUpCmd" options); do
+      for option in $(bake.data.children "cmd.$traverseUpCmd.options"); do
+        optionAbbr=$(bake.cmd.get $traverseUpCmd options.$option.abbr)
+        log "---check cmd:$traverseUpCmd - option:$option abbr:$optionAbbr"
+#        for arg in "$@"; do
+#           log "---arg:$arg"
+#           if [[ "--$option" == "$arg" ]]; then
+#             bake.data.set "cmd.$cmd.options.$option.value" true
+#           fi
+#        done
+      done
+    done
+
+    if ! declare -f "$cmd" >/dev/null 2>&1; then
+      error "Error: 404 ,cmd '${cmd}' not exists, please define cmd function '${cmd}()'"
       exit 1
     fi
-    $cmdPath "$@"
+    $cmd "$@"
 }
 
+##########################################
+# app script
+# 应用脚本
+##########################################
 
-##########################################
-# root command
-##########################################
+error(){
+  echo -e "ERROR -【$(bake.project.current) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
+}
+log(){
+  echo -e "INFO  -【$(bake.project.current) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
+}
 
 # cmd settings use bash associative array
 # shellcheck disable=SC2034
-bake.cmd.set "/" shortHelp            "[mono project] flutter pub get"
-bake.cmd.set "/" help                 "$(cat <<- EOF
+bake.data.set cmd."/".shortHelp            "[mono project] flutter pub get"
+bake.data.set cmd."/".options.help.abbr    h
+bake.data.set cmd."/".options.help.type    bool
+bake.data.set cmd."/".help                 "$(cat <<- EOF
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
 |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
 Usage:
-./${BAKE_FILE} [command] [options]
+./${BAKE_FILE} [cmd] [options] [args...]
 
   ./${BAKE_FILE}       # 列子命令看帮助，
   ./${BAKE_FILE} build # 子命令
@@ -276,15 +306,11 @@ EOF
 ## pub
 ################################################
 
-# https://pub.dev/documentation/args/latest/args/ArgParser-class.html
-# https://github.com/spf13/pflag/blob/master/string_array.go
-#目前倾向的格式：
-
-bake.cmd.set "/pub/get" shortHelp            "[mono project] flutter pub get"
-bake.cmd.set "/pub/get" help                 "[mono project] flutter pub get"
-bake.cmd.set "/pub/get" options.verbose.name verbose
-bake.cmd.set "/pub/get" options.verbose.abbr v
-bake.cmd.set "/pub/get" options.verbose.type bool
+bake.data.set cmd."/pub/get".shortHelp            "[mono project] flutter pub get"
+bake.data.set cmd."/pub/get".help                 "[mono project] flutter pub get"
+bake.data.set cmd."/pub/get".options.verbose.name verbose
+bake.data.set cmd."/pub/get".options.verbose.abbr v
+bake.data.set cmd."/pub/get".options.verbose.type bool
 /pub/get(){
     bake.run echo "run flutter pub [$*]"
 }
@@ -292,17 +318,29 @@ bake.cmd.set "/pub/get" options.verbose.type bool
 ################################################
 ## doctor
 ################################################
-function /doctor(){
-  bake.info "doctor start -----------------------------------"
+function /doctor()(
+  log "# doctor -----------------------------------"
+  echo
+  log "## list data"
   for key in "${!_data[@]}"; do
-    bake.info "$key=${_data[$key]:0:50}"
+    log "$key=${_data[$key]:0:50}"
   done
-  bake.info "doctor end -__----------------------------------"
-}
+  echo
+  log "## list cmds"
+  for cmd in $(bake.data.children cmd); do
+    log "cmd: $cmd"
+  done
+  echo
+
+)
 
 ##########################################
 # bake common entry script
 ##########################################
 trap " set +x; bake.on_error " ERR
 
+#/doctor
 bake.cmd.main "$@"
+
+#bake.cmd.getKeys "/pub/get" options
+#bake.data.children "cmd./pub/get.options"
