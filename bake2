@@ -101,19 +101,37 @@ function bake/cmd/get() (
 # Usage: bake/cmd/children <dataPath>
 #   return <dataPath> children name
 bake/cmd/children() (
-  path=$1
-
+  path=$([[ "$1" == "" ]] && echo "" || echo "$1/")
+#  echo child:$path- >&2
   for key in "${!commands[@]}"; do
-    if [[ "$key" == $path/* ]]; then
+    if [[ "$key" == / ]]; then continue; fi
+    if [[ "$key" == $path* ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
       # prefix: remove the "cmds." prefix
-      child=${key#$path.}
+      child=${key#$path/}
       # suffix: remove everything after the first dot
-      child=${child%%.*}
-      printf '%s\n' "$child"
+      child=${child%%/*}
+      echo $key--$child >&2
+      printf '%s\n' " $child"
     fi
   done | sort -u
 )
+
+function bake/cmd/list()(
+  contextCmd=$1
+  doctor
+  showList=()
+  maxLengthOfCmd=0
+  for child in $(bake/cmd/children "$contextCmd"); do
+    [[ "$contextCmd" == "" ]] && key="$child" || key="$contextCmd/$child"
+    if   [[ "$key"              == /          ]]; then continue; fi
+    if   [[ "$key"              == bake*      ]]; then continue; fi
+    if   [[ "$key"              == _*         ]]; then continue; fi
+    if   [[ "${commands[$key]}" != "type:cmd" ]]; then continue; fi
+    echo "$key : ${commands[$key/summary]}"
+  done
+)
+
 # Usage: bake/cmd/register
 # ensure all cmd register
 function bake/cmd/register() {
@@ -128,7 +146,9 @@ function bake/cmd/register() {
         key=$([[ "$traverseUpPath" == / ]] && echo "/" || echo "$traverseUpPath" )
         commands[$traverseUpPath]=$TYPE_CMD
       done
-      commands[$functionName/func]=$functionName
+      local funcFieldName
+      [[ "$functionName" == "/" ]]  && funcFieldName="/func" || funcFieldName="$functionName/func"
+      commands[$funcFieldName]=$functionName
     done <<< "$(declare -F)"
 }
 
@@ -270,10 +290,10 @@ _log(){
 ##########################################
 
 # cmd settings use bash associative array
-bake/cmd/set cmd."/".summary            "[mono project] flutter pub get"
-bake/cmd/set cmd."/".options.help.abbr    h
-bake/cmd/set cmd."/".options.help.type    bool
-bake/cmd/set cmd."/".help                 "$(cat <<- EOF
+bake/cmd/set /summary            "[mono project] flutter pub get"
+bake/cmd/set /options/help/abbr    h
+bake/cmd/set /options/help/type    bool
+bake/cmd/set /help                 "$(cat <<- EOF
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
 |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
@@ -289,11 +309,16 @@ EOF
   echo "root"
 }
 
-bake/cmd/set cmd."pub/get".summary            "[mono project] flutter pub get"
-bake/cmd/set cmd."pub/get".help                 "[mono project] flutter pub get"
-bake/cmd/set cmd."pub/get".options.verbose.name verbose
-bake/cmd/set cmd."pub/get".options.verbose.abbr v
-bake/cmd/set cmd."pub/get".options.verbose.type bool
+
+bake/cmd/set pub/summary               "[mono project] flutter pub"
+bake/cmd/set pub/summary               "[mono project] flutter pub"
+
+
+bake/cmd/set pub/get/summary            "[mono project] flutter pub get"
+bake/cmd/set pub/get/help                 "[mono project] flutter pub get"
+bake/cmd/set pub/get/options/verbose/name verbose
+bake/cmd/set pub/get/options/verbose/abbr v
+bake/cmd/set pub/get/options/verbose/type bool
 pub/get(){
   echo x
   _run echo xx
