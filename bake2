@@ -12,20 +12,23 @@ set -o functrace #trap inherited in function
 # 太厉害了，这几年唯一还在用Makefile的理由就是他的子命令机制: "make build"、
 # "make run", 可以方便的自定义单一入口的父子命令，但Makefile本身的语法套路也很复杂，
 # 很多批处理还是要靠bash, 这就尴尬了，工具太多，麻烦！本脚本尝试彻底摆脱使用Makefile。
-# 经尝试，代码很少啊 ，公共代码几十行啊，还主要是提取显示子命令帮助的，功能足够了：
+# 经尝试，代码很少啊 ，核心公共代码百十行啊，还主要是提取显示子命令帮助的，功能足够了：
 #   ./bake       # 列子命令看帮助，
 #   ./bake build # 子命令
 #   ./bake run   # 子命令
 # bake命令规则：
 # 1. 定义以斜杠"/"为前缀的function作为子命令，/build、/run、/assets/list、
 #    表示命令的其父子关系，执行时去掉斜杠/, 构成父子命令：./bake assets list -x -y -z
-# 2. 命令的帮助从命令后跟?shortHelp的函数提取，比如/build?shortHelp
-# 3. 除bash外，尽量不依赖其他工具，包括linux coreutils,以便跨平台更简单
+# 2. 除bash外，尽量不依赖其他工具，包括linux coreutils,以便跨平台更简单
 # 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
+# ref
+# https://pub.dev/documentation/args/latest/args/ArgParser-class.html
+# https://github.com/spf13/pflag/blob/master/string_array.go
+# https://oclif.io/docs/flags
 # ------------------------------------------------------------------------------
 
 #if ((BASH_VERSINFO[0] < 4)); then
-#  echo "Error: 您bash版本过低(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
+#  echo "Error: 都2082年了，您的bash还是这个版本(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
 #  apt install bash  # ubuntu
 #  brew install bash # mac"
 #  exit 1
@@ -51,10 +54,8 @@ function bake.readlink() (
 )
 
 ##########################################
-# bake common init script
-# 公共脚本
+# bake common script
 ##########################################
-
 declare BAKE_DIR
 BAKE_PATH="$(bake.readlink "${BASH_SOURCE[0]}")"
 BAKE_DIR="$(dirname "$BAKE_PATH")"
@@ -63,35 +64,7 @@ BAKE_FILE="$(basename "$BAKE_PATH")"
 # set workdir
 cd "${BAKE_DIR}"
 
-# ref
-# https://pub.dev/documentation/args/latest/args/ArgParser-class.html
-# https://github.com/spf13/pflag/blob/master/string_array.go
-# https://oclif.io/docs/flags
-
-
 # Simulating object-oriented data structures with flat associative arrays
-#{
-#   bake:{
-#     shortHelp:"./bake",
-#     cmds:{
-#       pub:{
-#         shortHelp:"flutter pub",
-#         cmds:{
-#          get:{
-#            shortHelp:"flutter pub get",
-#            options:{
-#              verbose:{
-#                name:"verbose",
-#                abbr:"v",
-#              }
-#            }
-#          }
-#         }
-#       }
-#   }
-# }
-#}
-# The above data structures are flattened into the following variables:
 # options define:
 #  _data[cmd./.shortHelp]="bake root cmd"
 #  _data[cmd./.help]="bake root cmd"
@@ -109,51 +82,24 @@ declare -A _data
 ##########################################
 # bake common function
 ##########################################
-bake.on_error() {
-  echo "trapped an error: ↑ , trace: ↓" >&2
-  bake.print_stack
-}
-
-bake.print_stack() {
-  local i=0
-  local stackInfo
-  while true; do
-    stackInfo=$(caller $i 2>&1 && true) && true
-    if [[ $? != 0 ]]; then break; fi
-    echo "  $stackInfo" >&2
-    i=$((i + 1))
-  done
-}
-# print first, then run
-bake.run() {
-  local project
-  project=$(basename "$PWD")
-  [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
-  echo -e "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
-  "$@"
-  return $?
-}
-
 
 bake.project.current(){
-  local project
-  project=$(basename "$PWD")
+  local project; project=$(basename "$PWD")
   [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
-  echo "$project"
+  printf '%s' "$project"
 }
 
 function bake.data.set() {
-  local path=$1
-  local value=$2
+  local path; path=$1 ; local value; value=$2 ;
   _data[$path]="${value}"
 }
-function bake.data.get() {
-  local path=$1
-  echo "${_data[$path]}"
-}
+function bake.data.get() (
+  path=$1
+  printf '%s' "${_data[$path]}"
+)
 
-# bake.data.children cmd
-#   -> list data path "cmd" children name
+# Usage: bake.data.children <dataPath>
+#   return <dataPath> children name
 bake.data.children() (
   path=$1
 
@@ -164,74 +110,99 @@ bake.data.children() (
       child=${key#$path.}
       # suffix: remove everything after the first dot
       child=${child%%.*}
-      echo "$child"
+      printf '%s\n' "$child"
     fi
-  done | sort -u
-  return
-)
-function bake.cmd.set() {
-  local cmd=$1
-  local field=$2
-  local value=$3
-  _data[cmd.$cmd.$field]=${value}
-}
-function bake.cmd.get() {
-  local cmd=$1
-  local field=$2
-  echo "${_data[cmd.$cmd.$field]}"
-}
-
-function bake.cmd.getKeys() (
-  cmd=$1
-  field=$2
-  cmdDataPath="cmd.$cmd"
-  fieldDataPath=$cmdDataPath.$field
-
-  for key in "${!_data[@]}"; do
-    if [[ "$key" == $fieldDataPath.* ]]; then
-      # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-      # prefix: remove the "cmds." prefix
-      option=${key#$cmdDataPath.options.}
-      # suffix: remove everything after the first dot
-      option=${option%%.*}
-      echo "$option"
-    fi
-    # cat x | sort -u  ==  cat x | sort | uniq
   done | sort -u
 )
 
-# traverse up
-# /a/b
-#   -> /a/b
-#   -> /a
-#   -> /
-function bake.cmd.cmdToList(){
-  local cmd
+# Usage: bake.cmd.register
+# ensure all cmd register
+function bake.cmd.register() {
+    while IFS=$'\n' read -r func ; do
+      # "declare -f /pub/get" cut prefix "declare -f " -> "/pub/get"
+      cmd=${func#declare -f }
+      # func start with "/" is cmd
+     ! [[ "$cmd" =~ ^/.* ]] && continue
+     ! [[ ${_data[cmd.$cmd.shortHelp]} == "" ]] && continue
+     _data[cmd.$cmd.shortHelp]="-";
+    done <<< "$(declare -F)"
+}
+
+# Usage: bake.option.match <cmd> <arg>
+# match a <arg> is a option, if true return option else return ""
+function bake.option.match()(
+  cmd=$1; arg=$2
+  for traverseUpCmd in $(bake.path_traverse_up "$cmd") ; do
+    for option in $(bake.data.children "cmd.$traverseUpCmd.options"); do
+       abbr=$(bake.data.get "cmd.$traverseUpCmd.options.$option.abbr")
+       if [[ "--$option" == "$arg" || ("$abbr" != "" && "-$abbr" == "$arg") ]] ; then
+         printf '%s' "cmd.$traverseUpCmd.options.$option"  ;
+       fi
+    done
+  done
+  printf ''
+)
+function bake.option()(
+  printf '%s' "$(bake.data.get "cmd.$1.options.$2.value")"
+)
+function bake.option.parse() {
+    local cmd; cmd=${FUNCNAME[1]}
+    shift
+    local argCount; argCount=0
+    # parse options
+    while (( $# > 0 )); do
+      optionPath=$(bake.option.match "$cmd" "$1")
+
+      # if arg not a option , parsing complete;
+      if [[ "$optionPath" == "" ]] ; then break;  fi
+
+      optionType=$(bake.data.get "$optionPath.type" )
+
+      case $optionType in
+        bool)   bake.data.set "cmd.$cmd.options.$option.value" true;
+                argCount=$((argCount+1)) ;
+                shift;;
+        string) [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <string> " >&2 && exit 1 ;
+                bake.data.set "cmd.$cmd.options.$option.value" $2
+                argCount=$((argCount+1)) && shift 2 ;;
+        list)   echo "todo." ;;
+        *) echo "error: not support cmd.$cmd.options.$option.type: <$optionType> " >&2 ; exit 1 ;;
+      esac
+    done
+    printf '%s' "$argCount"
+}
+
+# Usage: bake.path_traverse_up <cmd>
+# sample: bake.path_traverse_up /a/b
+#   /a/b
+#   /a
+#   /
+function bake.path_traverse_up()(
   cmd=$1
 
-  local currentCmd
   currentCmd="${cmd}"
   while [ "$currentCmd" != "" ]
   do
-    echo "$currentCmd"
-    currentCmd=${currentCmd%/*}
+    printf '%s\n' "$currentCmd"
+    removed=${currentCmd%/*}
+    if [[ "$removed" == "$currentCmd" ]] ; then  break; fi
+    currentCmd="$removed"
   done
   # 如果是"/" root cmd,上面的循环不会轮到它，补一个
   if [[ "$cmd" != "/" ]]; then
-    echo "/"
+    printf '%s\n' "/"
   fi
-}
+)
 
-function bake.cmd.main() {
-    # ensure all cmd register
-    local cmds
-    cmds=$(declare -F | grep -E "^declare -f (\/.*)$" | sed -r 's/^declare -f (\/.*)$/\1/')
-    readarray -t cmds <<<"$cmds"
-    for cmd in ${cmds[*]}; do
-      if [[ ${_data[cmd.$cmd.shortHelp]} == "" ]]; then
-        _data[cmd.$cmd.shortHelp]="-";
-      fi
-    done
+# Usage: split <str> <delimiter>
+bake.split() (
+  str=$1; delimiter=$2;
+  IFS="$delimiter"; declare -a list=("$str")
+  printf '%s\n' "${list[@]}"
+)
+
+function bake.main() {
+    bake.cmd.register
 
     # parse cmd :
     #   ./bake pub get -v -b
@@ -240,30 +211,14 @@ function bake.cmd.main() {
     #     -> { cmd:"/", args:"-h" }
     local cmd=""
     for arg in "$@"; do
-      if ( printf '%s\n' "${!_data[@]}" | grep "cmd.$cmd/$arg" ) > /dev/null ; then
-        cmd="$cmd/$arg" ;
-        shift ;
-      else
+      if ! ( printf '%s\n' "${!_data[@]}" | grep "cmd.$cmd/$arg" ) > /dev/null ; then
         break;
       fi
+      cmd="$cmd/$arg" ;
+      shift ;
     done
     # if nothing cmd find then root cmd
     if [[ "$cmd" == "" ]] ; then cmd="/"; fi
-
-    # parse options
-    for traverseUpCmd in $(bake.cmd.cmdToList "$cmd") ; do
-#      for option in $(bake.cmd.getKeys "$traverseUpCmd" options); do
-      for option in $(bake.data.children "cmd.$traverseUpCmd.options"); do
-        optionAbbr=$(bake.cmd.get $traverseUpCmd options.$option.abbr)
-        log "---check cmd:$traverseUpCmd - option:$option abbr:$optionAbbr"
-#        for arg in "$@"; do
-#           log "---arg:$arg"
-#           if [[ "--$option" == "$arg" ]]; then
-#             bake.data.set "cmd.$cmd.options.$option.value" true
-#           fi
-#        done
-      done
-    done
 
     if ! declare -f "$cmd" >/dev/null 2>&1; then
       error "Error: 404 ,cmd '${cmd}' not exists, please define cmd function '${cmd}()'"
@@ -274,9 +229,32 @@ function bake.cmd.main() {
 
 ##########################################
 # app script
-# 应用脚本
+# 应用项目补充的公共脚本，不在bake维护范围
 ##########################################
+# print first, then run
+run() {
+  local project; project=$(basename "$PWD")
+  [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
+  log "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
+  "$@"
+  return $?
+}
 
+on_error() {
+  echo "trapped an error: ↑ , trace: ↓" >&2
+  stack_frame
+}
+
+stack_frame() {
+  local i=0
+  local stackInfo
+  while true; do
+    stackInfo=$(caller $i 2>&1 && true) && true
+    if [[ $? != 0 ]]; then break; fi
+    echo "  $stackInfo" >&2
+    i=$((i + 1))
+  done
+}
 error(){
   echo -e "ERROR -【$(bake.project.current) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
 }
@@ -284,8 +262,12 @@ log(){
   echo -e "INFO  -【$(bake.project.current) ▶︎${FUNCNAME[1]}】-︎ $*" >&2
 }
 
+##########################################
+# app cmd script
+# 应用的命令脚本
+##########################################
+
 # cmd settings use bash associative array
-# shellcheck disable=SC2034
 bake.data.set cmd."/".shortHelp            "[mono project] flutter pub get"
 bake.data.set cmd."/".options.help.abbr    h
 bake.data.set cmd."/".options.help.type    bool
@@ -302,9 +284,6 @@ Usage:
 EOF
 )"
 
-################################################
-## pub
-################################################
 
 bake.data.set cmd."/pub/get".shortHelp            "[mono project] flutter pub get"
 bake.data.set cmd."/pub/get".help                 "[mono project] flutter pub get"
@@ -312,12 +291,17 @@ bake.data.set cmd."/pub/get".options.verbose.name verbose
 bake.data.set cmd."/pub/get".options.verbose.abbr v
 bake.data.set cmd."/pub/get".options.verbose.type bool
 /pub/get(){
-    bake.run echo "run flutter pub [$*]"
+  run echo "run flutter pub [$*]  verbose: $(bake.option "/pub/get" verbose)"
+  shift "$(bake.option.parse "$@" )"
+  run echo "run flutter pub [$*]  verbose: $(bake.option "/pub/get" verbose)"
+  /doctor
+}
+.(){
+  echo x
 }
 
-################################################
-## doctor
-################################################
+.
+
 function /doctor()(
   log "# doctor -----------------------------------"
   echo
@@ -331,16 +315,12 @@ function /doctor()(
     log "cmd: $cmd"
   done
   echo
-
 )
 
 ##########################################
 # bake common entry script
 ##########################################
-trap " set +x; bake.on_error " ERR
+trap " set +x; on_error " ERR
 
-#/doctor
-bake.cmd.main "$@"
-
-#bake.cmd.getKeys "/pub/get" options
-#bake.data.children "cmd./pub/get.options"
+bake.main "$@"
+#bake.path_traverse_up $1
