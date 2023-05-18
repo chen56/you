@@ -92,9 +92,8 @@ function bake.cmd.set() {
   local cmd; cmd=$1 ; local value; value=$2 ;
   _commands[$cmd]="${value}"
 }
-
 function bake.cmd.get() (
-  path=$1
+  path="$1"
   printf '%s' "${_commands[$path]}"
 )
 
@@ -195,12 +194,15 @@ function bake.option.match()(
   done
   printf ''
 )
-function bake.option()(
-  printf '%s' "$(bake.cmd.get "cmd.$1.options.$2.value")"
-)
+
+_commands[bake.option.add.@fields.options.name.type]=list
+_commands[bake.option.add.@fields.options.type.type]=list
+bake.option.add(){
+  declare -p
+}
+
 # Usage: bake.option.parse <cmd> [arg1] [arg2] ...
 function bake.option.parse() {
-
     local cmd; cmd="$1"
     shift
     local argCount; argCount=0
@@ -242,26 +244,30 @@ function bake.option.parse() {
         *) echo "error: not support cmd.$cmd.options.$option.type: <$optionType> " >&2 ; exit 1 ;;
       esac
     done
-#    result+="argCount='$argCount';\n"
+    result+="argCount='$argCount';\n"
     printf '%s' "$result"
 }
+function bake.help()(
+  cmd="$1"
+  echo bake.help $cmd
+)
+
 function bake.main() {
     bake.cmd.register
     # parse cmd :
     #   ./bake pub get -v -b
     #     -> { cmd:"pub.get", args:"-v -b" }
     #   ./bake -h
-    #     -> { cmd:"/", args:"-h" }
-    local cmd; local nextCmd;local arg;
+    #     -> { cmd:"", args:"-h" }
+    local cmd nextCmd  arg;
     for arg in "$@"; do
-      nextCmd=$( [[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd/$arg" )
+      nextCmd=$( [[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg" )
       [[  "${_commands[$nextCmd]}" != "type:cmd" ]] && break;
       cmd="$nextCmd" ;
       shift ;
     done
-
-    # if nothing cmd find then root cmd
-    if [[ "$cmd" == "" ]] ; then cmd="/"; fi
+    # "" is root cmd
+    if [[ "$cmd" == "" ]] ; then bake.help "" ; exit 0;  fi
 
     if ! declare -f "$cmd" >/dev/null 2>&1; then
       _error "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
@@ -349,20 +355,11 @@ EOF
 
 trap " set +x; _on_error " ERR
 
-#bake.main "$@"
+bake.main "$@"
 
-_commands[test_cmd.@fields.options.file]=type:option
-_commands[test_cmd.@fields.options.file.type]=string
-_commands[test_cmd.@fields.options.files]=type:option
-_commands[test_cmd.@fields.options.files.type]=list
-_commands[test_cmd.@fields.options.show]=type:option
-_commands[test_cmd.@fields.options.show.type]=bool
-test_cmd(){
-  declare -p
-}
 #bake.option.parse "test_cmd" "$@"
 #echo =====
-echo -e "$(bake.option.parse "$@")"
+#echo -e "$(bake.option.parse "$@")"
 #eval "$(echo -e "$(bake.option.parse "$@")")"
 #declare -p show
 #declare -p file
