@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -o errtrace #trap inherited in sub script
 set -o errexit
-set -o functrace #trap inherited in function
+#set -o functrace #trap inherited in function
 # set -x
 
 # bake == (bash)ake == 去make的bash工具
