@@ -95,6 +95,10 @@ function bake.cmd.get() (
   path="$1"
   printf '%s' "${_commands[$path]}"
 )
+function bake.cmd.toDataPath() (
+  cmd="$1"
+  printf '%s' "${_commands[$path]}"
+)
 
 # Usage: bake.cmd.data_children <dataPath>
 #   return <dataPath> children name
@@ -169,13 +173,16 @@ function bake.path_traverse_up()(
   printf '\n'
 )
 
-# Usage: split <str> <delimiter>
-bake.split() (
-  str=$1; delimiter=$2;
-  IFS="$delimiter"; declare -a list=("$str")
-  printf '%s\n' "${list[@]}"
-)
-
+# Usage: split <str> [delimiter:default \n]
+bake.split() {
+  local str=$1 delimiter=${2:-.};
+  [[ "$delimiter" == "." ]] && delimiter="\."
+  local arr
+#  # use <() process-substitution
+#  # don't use <<< "" its add newline
+  readarray -t arr < <(printf '%s' "${str//$delimiter/$'\n'}")
+  printf '%s\n' "${arr[@]}"
+}
 
 # Usage: bake.option.match <cmd> <arg>
 # match a <arg> is a option, if true return option else return ""
@@ -224,7 +231,7 @@ function bake.option.parse() {
                 local optionValue; optionValue="$2";
                 _commands[$cmd.@fields.options.$option.value]="$optionValue";
                 argCount=$((argCount+1))
-                result+="$option='$optionValue';\n"
+                result+="$option=$(printf '%q',"$optionValue");\n"
                 shift 2 ;;
         list)   [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
                 local optionValue; optionValue="$2";
@@ -238,7 +245,9 @@ function bake.option.parse() {
                 local index ; index=$((length-1))
                 _commands[$cmd.@fields.options.$option.value]="$length";
                 _commands[$cmd.@fields.options.$option.value.$index]="$optionValue";
-                result+="${option}[$index]='$optionValue';\n"
+                arr+=("$value")
+                result+="${option}+=($(printf '%q',"$optionValue"));\n"
+#                result+="${option}[$index]=$(printf '%q',"$optionValue");\n"
                 shift 2 ;;
         *) echo "error: not support cmd.$cmd.options.$option.type: <$optionType> " >&2 ; return 1 ;;
       esac
@@ -293,13 +302,23 @@ _on_error() {
   _stack_frame
 }
 
+# Usage: _stack_frame
 _stack_frame() {
   local i=0
   local stackInfo
   while true; do
     stackInfo=$(caller $i 2>&1 && true) && true
     if [[ $? != 0 ]]; then break; fi
-    echo "  $stackInfo" >&2
+
+    # parse
+    # 97 test_bake.split ./test/bake2_test.bash
+    local no func file;
+    IFS=' ' read -r no func file <<< "$stackInfo"
+
+    # clickable stack:
+    # /Users/c/git/younpc/note/test/bake2_test.bash:38 bake.test.runTest()
+    printf "%s\n" "$(_readlink $file):$no $func()" >&2
+
     i=$((i + 1))
   done
 }

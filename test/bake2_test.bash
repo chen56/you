@@ -31,7 +31,6 @@ function bake.test(){
 # 查找出所有test_函数并执行
 # 这种测试有点麻烦，不如bake.test
 function bake.test.runTest() {
-   declare -p
     while IFS=$'\n' read -r functionName ; do
       [[ "$functionName" != test* ]] && continue ;
       echo "run test - ${TEST_PATH} - $functionName()"
@@ -42,9 +41,9 @@ function bake.test.runTest() {
 
 @is_escape(){
   local actual="$1" expected="$2" msg="$3"
-  local escaped; escaped=$(printf '%q' "${actual}")
-  escaped=${escaped#$\'} # "$'str'" remove begin "$'" => "str'"
-  escaped=${escaped%\'*} # "str'" remove end "'"  => "str"
+  local escaped; escaped="$(printf '%q' "${actual}")"
+  escaped="${escaped#$\'}" # "$'str'" remove begin "$'" => "str'"
+  escaped="${escaped%\'*}" # "str'" remove end "'"  => "str"
   if [[ "$escaped" != "$expected" ]] ; then
     bake.assert.fail "assert is_escape fail: $msg
      actual  : $escaped
@@ -52,6 +51,7 @@ function bake.test.runTest() {
      return 2
   fi
 }
+
 @is(){
   local actual="$1" expected="$2" msg="$3"
   if [[ "$actual" != "$expected" ]] ; then
@@ -61,6 +61,7 @@ function bake.test.runTest() {
      return 2
   fi
 }
+#
 
 # Usage: assert <actual> <assert_op_func> <expected> [msg]
 # Sample: assert $(( 1+1 )) @is "2"
@@ -68,13 +69,53 @@ assert(){
   local actual="$1" op="$2" expected="$3" msg="$4"
   "$2" "$actual" "$3" "$4"
 }
+
 test_assert_sample(){
   assert $((1+1)) @is 2
+}
+test_bash_string_escape(){
+  # $'' 语法
+  assert $'1\n2' @is '1
+2'
+  assert '1\n2' @is '1\n2'
+
+  assert $'1
+2' @is $'1\n2'
+
+  x="1
+2"
+  assert "$(printf '%q' "$x" )" @is "$'1\n2'"
+
+
+
 }
 
 test_path_traverse_up(){
   assert "$(bake.path_traverse_up a.b)" @is_escape "a.b\na"
 }
+test_bake.split(){
+  assert "$(bake.split "a.b" '.')"  @is_escape "a\nb"
+  assert "$(bake.split "a.b." '.')" @is_escape "a\nb"
 
+  # 包含破坏性特殊字符
+  assert "$(bake.split $'a\nxb' "x" )"  @is_escape "a\\n\nb"
+  assert "$(bake.split $'a\n.b' "." )"  @is_escape "a\n\nb" "default delimiter is raw newline "
+
+  # defalut delimiter
+  assert "$(bake.split "a.b"  )"  @is_escape "a\nb" "default delimiter is . "
+
+  # other delimiter
+  assert "$(bake.split "a/b" '/')"  @is_escape "a\nb"
+  assert "$(bake.split "a
+b
+" "\n" )"  @is_escape "a\nb" "default delimiter is raw newline "
+}
 
 bake.test.runTest
+#
+#mapfile array <<< "$(echo -e "a\nb")" && { echo "return:$?" ; declare -p array; }
+#echo "[${array[0]}]"
+#[[ "[${array[0]}]" == $'[a\n]' ]] && echo xxx
+#echo
+#IFS= mapfile -d . array <<< "a.b" && { echo "return:$?" ; declare -p array; }
+#echo "[${array[0]}]"
