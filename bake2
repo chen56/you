@@ -40,7 +40,7 @@ fi
 # ends up.
 # The function is enclosed in a subshell to avoid changing the working directory
 # of the caller.
-function bake.readlink() (
+function _readlink() (
   cd -P "$(dirname -- "$1")"
   file="$PWD/$(basename -- "$1")"
   while [[ -L "$file" ]]; do
@@ -55,8 +55,7 @@ function bake.readlink() (
 ##########################################
 # bake common script
 ##########################################
-declare BAKE_DIR
-BAKE_PATH="$(bake.readlink "${BASH_SOURCE[0]}")"
+BAKE_PATH="$(_readlink "${BASH_SOURCE[0]}")"
 BAKE_DIR="$(dirname "$BAKE_PATH")"
 BAKE_FILE="$(basename "$BAKE_PATH")"
 
@@ -134,7 +133,7 @@ function bake.cmd.register() {
      local functionName
      while IFS=$'\n' read -r functionName ; do
       if [[ "$functionName" == /* && "$functionName" != /  ]]; then
-        echo "error: except the root command '/'，function $functionName() can not start with / " >&2 && exit 1
+        echo "error: except the root command '/'，function $functionName() can not start with / " >&2 && return 1
       fi
       local traverseUpPath
       for traverseUpPath in $(bake.path_traverse_up "$functionName");do
@@ -221,13 +220,13 @@ function bake.option.parse() {
                 argCount=$((argCount+1)) ;
                 result+="$option=true;\n"
                 shift;;
-        string) [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && exit 1 ;
+        string) [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
                 local optionValue; optionValue="$2";
                 _commands[$cmd.@fields.options.$option.value]="$optionValue";
                 argCount=$((argCount+1))
                 result+="$option='$optionValue';\n"
                 shift 2 ;;
-        list)   [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && exit 1 ;
+        list)   [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
                 local optionValue; optionValue="$2";
                 local length; length=${_commands[$cmd.@fields.options.$option.value]};
                 if [[  "$length" == "" ]] ;then
@@ -241,7 +240,7 @@ function bake.option.parse() {
                 _commands[$cmd.@fields.options.$option.value.$index]="$optionValue";
                 result+="${option}[$index]='$optionValue';\n"
                 shift 2 ;;
-        *) echo "error: not support cmd.$cmd.options.$option.type: <$optionType> " >&2 ; exit 1 ;;
+        *) echo "error: not support cmd.$cmd.options.$option.type: <$optionType> " >&2 ; return 1 ;;
       esac
     done
     result+="argCount='$argCount';\n"
@@ -267,11 +266,11 @@ function bake.main() {
       shift ;
     done
     # "" is root cmd
-    if [[ "$cmd" == "" ]] ; then bake.help "" ; exit 0;  fi
+    if [[ "$cmd" == "" ]] ; then bake.help "" ; return 0;  fi
 
     if ! declare -f "$cmd" >/dev/null 2>&1; then
       _error "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
-      exit 1
+      return 1
     fi
     $cmd "$@"
 }
@@ -355,8 +354,12 @@ EOF
 
 trap " set +x; _on_error " ERR
 
-bake.main "$@"
-
+# lib_mode use for other script import
+if [[ "$1" == "--lib_mode"  ]]; then
+  echo "lib_mode import: $BAKE_PATH"
+else
+  bake.main "$@"
+fi
 #bake.option.parse "test_cmd" "$@"
 #echo =====
 #echo -e "$(bake.option.parse "$@")"
