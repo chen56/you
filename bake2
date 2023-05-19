@@ -52,6 +52,34 @@ function _readlink() (
   echo "$file"
 )
 
+_on_error() {
+  echo "trapped an error: ↑ , trace: ↓" >&2
+  _stack_frame
+}
+# Usage: _stack_frame
+_stack_frame() {
+  local i=0
+  local stackInfo
+  while true; do
+    stackInfo=$(caller $i 2>&1 && true) && true
+    if [[ $? != 0 ]]; then break; fi
+
+    # parse
+    # 97 test_bake.split ./test/bake2_test.bash
+    local no func file;
+    IFS=' ' read -r no func file <<< "$stackInfo"
+
+    # clickable stack:
+    # /Users/c/git/younpc/note/test/bake2_test.bash:38 bake.test.runTest()
+    printf "%s\n" "$(_readlink $file):$no $func()" >&2
+
+    i=$((i + 1))
+  done
+}
+# Add the error catch first
+#
+trap " set +x; _on_error " ERR
+
 ##########################################
 # bake common script
 ##########################################
@@ -63,61 +91,62 @@ BAKE_FILE="$(basename "$BAKE_PATH")"
 cd "${BAKE_DIR}"
 
 # Simulating object-oriented data structures with flat associative arrays
-# options define:
-#  _commands[@fields.summary]="bake root cmd"
-#  _commands[@fields.help]="bake root cmd"
-#  _commands[pub]="type:cmd"
-#  _commands[pub.@fields.summary]="flutter pub"
-#  _commands[pub.@fields.options.notes]="type:option"
-#  _commands[pub.@fields.options.notes.type]="list"
-#  _commands[pub.@fields.options.notes.abbr]="n"
-#  _commands[pub.get]="type:cmd"
-#  _commands[pub.get.@fields.summary]="flutter pub get"
-#  _commands[pub.get.@fields.options.verbose]="type:option"
-#  _commands[pub.get.@fields.options.verbose.type]="bool"
-#  _commands[pub.get.@fields.options.verbose.abbr]="v"
-# parsed options value:
-#  _commands[@fields.options.verbose.value]=true
-#  _commands[pub.get.@fields.options.notes.value.0]="..lib/note.page"
-#  _commands[pub.get.@fields.options.notes.value.1]="./lib/a/note.page"
+# opts define:
+#  _cmdTree[@fields.summary]="bake root cmd"
+#  _cmdTree[@fields.help]="bake root cmd"
+#  _cmdTree[pub]="type:cmd"
+#  _cmdTree[pub.@fields.summary]="flutter pub"
+#  _cmdTree[pub.@fields.opts.notes]="type:option"
+#  _cmdTree[pub.@fields.opts.notes.type]="list"
+#  _cmdTree[pub.@fields.opts.notes.abbr]="n"
+#  _cmdTree[pub.get]="type:cmd"
+#  _cmdTree[pub.get.@fields.summary]="flutter pub get"
+#  _cmdTree[pub.get.@fields.opts.verbose]="type:option"
+#  _cmdTree[pub.get.@fields.opts.verbose.type]="bool"
+#  _cmdTree[pub.get.@fields.opts.verbose.abbr]="v"
+# parsed opts value:
+#  _cmdTree[@fields.opts.verbose.value]=true
+#  _cmdTree[pub.get.@fields.opts.notes.value.0]="..lib/note.page"
+#  _cmdTree[pub.get.@fields.opts.notes.value.1]="./lib/a/note.page"
 # app script dont use this variable directly, use function access
 
-#  _commands[summary]="bake root cmd"
-#  _commands[help]="bake root cmd"
-#  _commands[kids.pub]="type:cmd"
-#  _commands[kids.pub.summary]="flutter pub"
-#  _commands[kids.pub.options.notes]="type:option"
-#  _commands[kids.pub.options.notes.type]="list"
-#  _commands[kids.pub.options.notes.abbr]="n"
-#  _commands[kids.pub.kids.get]="type:cmd"
-#  _commands[kids.pub.kids.get.summary]="flutter pub get"
-#  _commands[kids.pub.kids.get.options.verbose]="type:option"
-#  _commands[kids.pub.kids.get.options.verbose.type]="bool"
-#  _commands[kids.pub.kids.get.options.verbose.abbr]="v"
-# parsed options value:
-#  _commands[options.verbose.value]=true
-#  _commands[kids.pub.kids.get.options.notes.value.0]="..lib/note.page"
-#  _commands[kids.pub.kids.get.options.notes.value.1]="./lib/a/note.page"
+#  _cmdTree[summary]="bake root cmd"
+#  _cmdTree[help]="bake root cmd"
+#  _cmdTree[kids.pub]="type:cmd"
+#  _cmdTree[kids.pub.summary]="flutter pub"
+#  _cmdTree[kids.pub.opts.notes]="type:option"
+#  _cmdTree[kids.pub.opts.notes.type]="list"
+#  _cmdTree[kids.pub.opts.notes.abbr]="n"
+#  _cmdTree[kids.pub.kids.get]="type:cmd"
+#  _cmdTree[kids.pub.kids.get.summary]="flutter pub get"
+#  _cmdTree[kids.pub.kids.get.opts.verbose]="type:option"
+#  _cmdTree[kids.pub.kids.get.opts.verbose.type]="bool"
+#  _cmdTree[kids.pub.kids.get.opts.verbose.abbr]="v"
+# parsed opts value:
+#  _cmdTree[opts.verbose.value]=true
+#  _cmdTree[kids.pub.kids.get.opts.notes.value.0]="..lib/note.page"
+#  _cmdTree[kids.pub.kids.get.opts.notes.value.1]="./lib/a/note.page"
 
-#  _commands[root/summary]="bake root cmd"
-#  _commands[root/help]="bake root cmd"
-#  _commands[pub]="type:cmd"
-#  _commands[pub/summary]="flutter pub"
-#  _commands[pub/options/notes]="type:option"
-#  _commands[pub/options/notes/type]="list"
-#  _commands[pub/options/notes/abbr]="n"
-#  _commands[pub.get]="type:cmd"
-#  _commands[pub.get/summary]="flutter pub get"
-#  _commands[pub.get/options/verbose]="type:option"
-#  _commands[pub.get/options/verbose/type]="bool"
-#  _commands[pub.get/options/verbose/abbr]="v"
-# parsed options value:
-#  _commands[root/options/verbose/value]=true
-#  _commands[pub.get/options/notes/value/0]="..lib/note.page"
-#  _commands[pub.get/options/notes/value/1]="./lib/a/note.page"
+#  _cmdTree[root/summary]="bake root cmd"
+#  _cmdTree[root/help]="bake root cmd"
+#  _cmdTree[pub]="type:cmd"
+#  _cmdTree[pub/summary]="flutter pub"
+#  _cmdTree[pub/opts/notes]="type:option"
+#  _cmdTree[pub/opts/notes/type]="list"
+#  _cmdTree[pub/opts/notes/abbr]="n"
+#  _cmdTree[pub.get]="type:cmd"
+#  _cmdTree[pub.get/summary]="flutter pub get"
+#  _cmdTree[pub.get/opts/verbose]="type:option"
+#  _cmdTree[pub.get/opts/verbose/type]="bool"
+#  _cmdTree[pub.get/opts/verbose/abbr]="v"
+# parsed opts value:
+#  _cmdTree[root/opts/verbose/value]=true
+#  _cmdTree[pub.get/opts/notes/value/0]="..lib/note.page"
+#  _cmdTree[pub.get/opts/notes/value/1]="./lib/a/note.page"
 
 # only save all commands, we use it to build command tree
-declare -A _commands
+# it is cache data from _data
+declare -A _cmdTree
 
 # save all other data
 declare -A _data
@@ -127,32 +156,20 @@ TYPE_CMD="type:cmd"
 ##########################################
 # bake common function
 ##########################################
-function bake.cmd.set() {
-  local cmd; cmd=$1 ; local value; value=$2 ;
-  _commands[$cmd]="${value}"
-}
-function bake.cmd.get() (
-  path="$1"
-  printf '%s' "${_commands[$path]}"
-)
-function bake.cmd.toDataPath() (
-  cmd="$1"
-  readarray -t arr < <(printf '%s' "$(bake.split "$cmd" ".")")
-  printf "%s.cmds" ${arr[@]}
-)
-
-# Usage: bake.cmd.data_children <dataPath>
+# Usage: bake.data.children <dataPath>
 #   return <dataPath> children name
-bake.cmd.data_children() (
+bake.data.children() (
   path="$1"
-  for key in "${!_commands[@]}"; do
-    if [[ "$key" == $path* ]]; then
+  # ${!_data[@]}: get all array keys
+  for key in "${!_data[@]}"; do
+    # if start $path
+    if [[ "$key" == "$path"* ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-      # prefix: remove the "cmds." prefix
-      child=${key#$path.}
-      # suffix: remove everything after the first dot
-      child=${child%%.*}
-      printf '%s\n' " $child"
+      # remove prefix : path:build/opts  key:build/opts/dir/type => dir/type
+      child=${key#$path/}
+      # remove suffix:  dir/type => dir
+      child=${child%%/*}
+      printf '%s\n' "$child"
     fi
   done | sort -u
 )
@@ -162,13 +179,13 @@ function bake.cmd.list()(
   doctor
 #  showList=()
 #  maxLengthOfCmd=0
-  for child in $(bake.cmd.data_children "$contextCmd"); do
+  for child in $(bake.data.children "$contextCmd"); do
     [[ "$contextCmd" == "" ]] && key="$child" || key="$contextCmd/$child"
     if   [[ "$key"              == bake*      ]]; then continue; fi
     if   [[ "$key"              == @fields*   ]]; then continue; fi
     if   [[ "$key"              == _*         ]]; then continue; fi
-    if   [[ "${_commands[$key]}" != "type:cmd" ]]; then continue; fi
-    echo "$key : ${_commands[$key.@fields.summary]}"
+    if   [[ "${_cmdTree[$key]}" != "type:cmd" ]]; then continue; fi
+    echo "$key : ${_cmdTree[$key.@fields.summary]}"
   done
 )
 
@@ -181,11 +198,11 @@ function bake.cmd.register() {
         echo "error: function $functionName() can not contains '/' " >&2 && return 1
       fi
       local traverseUpPath
-      for traverseUpPath in $(bake.path_traverse_up "$functionName");do
+      for traverseUpPath in $(bake.path_traverse_up "$functionName" ".");do
         local key; key=$([[ "$traverseUpPath" == / ]] && echo "/" || echo "$traverseUpPath" )
-        _commands["$traverseUpPath"]=""
+        _cmdTree["$traverseUpPath"]=""
       done
-      _commands[$functionName]=$functionName
+      _cmdTree[$functionName]=$functionName
 
       # list all function name
       # declare -F | awk {'print $3'} == compgen -A function
@@ -194,17 +211,17 @@ function bake.cmd.register() {
     done <<< "$(compgen -A function)"
 }
 
-# Usage: bake.path_traverse_up <cmd>
+# Usage: bake.path_traverse_up <str> <delimiter:"/">
 # sample:
-#   bake.path_traverse_up a.b     => "a.b", "a", ""
+#   bake.path_traverse_up a.b "."    => "a.b", "a", ""
 function bake.path_traverse_up()(
-  path=$1
+  local path=$1 delimiter=${2:-/}
 
   current="${path}"
   while [ "$current" != "" ]
   do
     printf '%s\n' "$current"
-    removed=${current%.*}
+    removed=${current%$delimiter*}
     if [[ "$removed" == "$current" ]] ; then  break; fi
     current="$removed"
   done
@@ -222,79 +239,109 @@ bake.split() {
   printf '%s\n' "${arr[@]}"
 }
 
-# Usage: bake.option.match <cmd> <arg>
-# match a <arg> is a option, if true return option else return ""
-# Sample: bake.option.match "build" "--dir" someDir
-#      => "build.@fields.options.dir"
-function bake.option.match()(
-  cmd=$1; arg=$2
-  for traverseUpCmd in $(bake.path_traverse_up "$cmd") ; do
-    for option in $(bake.cmd.data_children "$traverseUpCmd.@fields.options"); do
-       abbr=$(bake.cmd.get "$traverseUpCmd.@fields.options.$option.abbr")
-       if [[ "--$option" == "$arg" || ("$abbr" != "" && "-$abbr" == "$arg") ]] ; then
-         printf '%s' "$traverseUpCmd.@fields.options.$option"  ;
+# Usage: bake.opt.match <cmd> <arg>
+# match a <arg> is a option return optionDataPath else return ""
+# Sample: bake.opt.match "build" "--dir" someDir
+#      => "build.opts.dir"
+function bake.opt.match()(
+  local cmd=$1 arg=$2
+  for traverseUpCmd in $(bake.path_traverse_up "$cmd" ".") ; do
+    local opt;
+    for opt in $(bake.data.children "$traverseUpCmd/opts"); do
+       local abbr; abbr=${_data["$traverseUpCmd/opts/$opt/abbr"]}
+       if [[ "--$opt" == "$arg" || ("$abbr" != "" && "-$abbr" == "$arg") ]] ; then
+         printf '%s' "$opt"  ;
        fi
     done
   done
   printf ''
 )
 
-bake.option.add(){
-  declare -p
+# because this func is meta function, so can not use option to add self
+_data[bake.opt.add/opts/cmd/type]=string
+
+_data[bake.opt.add/opts/name/type]=string
+_data[bake.opt.add/opts/name/required]=true
+
+_data[bake.opt.add/opts/type/type]=string
+
+_data[bake.opt.add/opts/abbr/type]=string
+
+_data[bake.opt.add/opts/help/type]=string
+# bake.opt.add --cmd root --name "help" --type bool --help "print help, show all commands"
+bake.opt.add(){
+  # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
+  eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
+  if [[ "$name" == "" ]] ;then
+    echo "error: option [--name] required " >&2 && return 1 ;
+  fi
+  if [[ "$type" == "" ]] ;then
+    echo "error: option [--type] required " >&2  && return 1 ;
+  fi
+  if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list"  ]] ;then
+    echo "error: option [--type] must in [bool|string|list] " >&2  && return 1 ;
+  fi
+#  _data[$cmd/opts/$name/type]="$type"
+#  _data[$cmd/opts/$name/abbr]="$abbr"
+#  _data[$cmd/opts/$name/help]="$help"
 }
 
-# Usage: bake.option.parse <cmd> [arg1] [arg2] ...
-function bake.option.parse() {
+# Usage: bake.opt.parse <cmd> [arg1] [arg2] ...
+function bake.opt.parse() {
     local cmd; cmd="$1"
     shift
-    local argCount; argCount=0
+    local optCount; optCount=0
     local result;
 
-    # parse options
+    # parse opts
     while (( $# > 0 )); do
-      optionPath=$(bake.option.match "$cmd" "$1")
-      # if arg not a option , parsing complete;
-      if [[ "$optionPath" == "" ]] ; then break;  fi
-      # remove the prefix：build.@fields.options.base_uri => base_uri
-      option=${optionPath##*.}
-      optionType=$(bake.cmd.get "$optionPath.type" )
-      case $optionType in
-        bool)   _commands[$cmd/options.$option.value]=true;
-                argCount=$((argCount+1)) ;
-                result+="$option=true;\n"
+      local opt; opt=$(bake.opt.match "$cmd" "$1")
+      # if arg not a opt , parsing complete;
+      if [[ "$opt" == "" ]] ; then break;  fi
+      # remove the prefix：build.@fields.opts.base_uri => base_uri
+      local optType; optType=${_data["$cmd/opts/$opt/type"]}
+
+      case $optType in
+        bool)   _data[$cmd/opts/$opt/value]=true;
+                optCount=$((optCount+1)) ;
+                result+="local $opt=true;\n"
                 shift;;
-        string) [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
-                local optionValue; optionValue="$2";
-                _commands[$cmd.@fields.options.$option.value]="$optionValue";
-                argCount=$((argCount+1))
-                result+="$option=$(printf '%q',"$optionValue");\n"
+        string) [[ "$2" == "" ]] && echo "error: opt need a value: --$opt <value> " >&2 && return 1 ;
+                local optValue; optValue=$(printf '%q' "$2");
+                _data[$cmd/opts/$opt/value]="$optValue";
+                optCount=$((optCount+1))
+                result+="local $opt=$optValue;\n"
                 shift 2 ;;
         list)   [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
-                local optionValue; optionValue="$2";
-                local length; length=${_commands[$cmd.@fields.options.$option.value]};
+                local optValue; optValue="$2";
+                local length; length=${_cmdTree[$cmd/opts/$opt.value]};
                 if [[  "$length" == "" ]] ;then
                   length=1
-                  result+="declare $option;\n"
+                  result+="local $opt;\n"
                 else
                   length=$((length+1))
                 fi
                 local index ; index=$((length-1))
-                _commands[$cmd.@fields.options.$option.value]="$length";
-                _commands[$cmd.@fields.options.$option.value.$index]="$optionValue";
+                _cmdTree[$cmd.@fields.opts.$opt.value]="$length";
+                _cmdTree[$cmd.@fields.opts.$opt.value.$index]="$optValue";
                 arr+=("$value")
-                result+="${option}+=($(printf '%q',"$optionValue"));\n"
-#                result+="${option}[$index]=$(printf '%q',"$optionValue");\n"
+                result+="${option}+=($(printf '%q',"$optValue"));\n"
+#                result+="${option}[$index]=$(printf '%q',"$optValue");\n"
                 shift 2 ;;
-        *) echo "error: not support cmd.$cmd.options.$option.type: <$optionType> " >&2 ; return 1 ;;
+        *) echo "error: not support cmd.$cmd.opts.$opt.type: <$optType> " >&2 ; return 1 ;;
       esac
     done
-    result+="argCount='$argCount';\n"
-    printf '%s' "$result"
+    result+="local optCount=$optCount;\n"
+#    printf '%s' "$result"
+    echo -e "$result"
 }
 function bake.help()(
   cmd="$1"
   echo bake.help $cmd
 )
+
+bake.opt.add --cmd bake.main --name "help"    --abbr h --type bool --help "print help, show all commands"
+bake.opt.add --cmd bake.main --name "verbose" --abbr v --type bool --help "verbose run all commands"
 
 function bake.main() {
     bake.cmd.register
@@ -306,7 +353,7 @@ function bake.main() {
     local cmd nextCmd  arg;
     for arg in "$@"; do
       nextCmd=$( [[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg" )
-      [[  "${_commands[$nextCmd]}" != "type:cmd" ]] && break;
+      [[  "${_cmdTree[$nextCmd]}" != "type:cmd" ]] && break;
       cmd="$nextCmd" ;
       shift ;
     done
@@ -333,31 +380,6 @@ _run() {
   return $?
 }
 
-_on_error() {
-  echo "trapped an error: ↑ , trace: ↓" >&2
-  _stack_frame
-}
-
-# Usage: _stack_frame
-_stack_frame() {
-  local i=0
-  local stackInfo
-  while true; do
-    stackInfo=$(caller $i 2>&1 && true) && true
-    if [[ $? != 0 ]]; then break; fi
-
-    # parse
-    # 97 test_bake.split ./test/bake2_test.bash
-    local no func file;
-    IFS=' ' read -r no func file <<< "$stackInfo"
-
-    # clickable stack:
-    # /Users/c/git/younpc/note/test/bake2_test.bash:38 bake.test.runTest()
-    printf "%s\n" "$(_readlink $file):$no $func()" >&2
-
-    i=$((i + 1))
-  done
-}
 _error(){
   echo -e "ERROR -【▶︎${FUNCNAME[1]}】-︎ $*" >&2
 }
@@ -372,17 +394,23 @@ _log(){
 
 pub.get(){
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
-  bake.option.parse "${FUNCNAME[0]}" "$@"
+  bake.opt.parse "${FUNCNAME[0]}" "$@"
   declare -p
-#  _run echo "_run flutter pub [$*]  verbose: $(bake.option "pub.get" verbose)"
-#  shift "$(bake.option.parse "$@" )"
-#  _run echo "_run flutter pub [$*]  verbose: $(bake.option "pub.get" verbose)"
+#  _run echo "_run flutter pub [$*]  verbose: $(bake.opt "pub.get" verbose)"
+#  shift "$(bake.opt.parse "$@" )"
+#  _run echo "_run flutter pub [$*]  verbose: $(bake.opt "pub.get" verbose)"
 #  doctor
 }
 
 function doctor()(
-  for key in "${!_commands[@]}"; do
-    echo "$key=${_commands[$key]:0:100}"
+  echo '# doctor'
+  echo '## _cmdTree'
+  for key in "${!_cmdTree[@]}"; do
+    echo "cmd  - $key=${_cmdTree[$key]:0:100}"
+  done
+  echo '## _data'
+  for key in "${!_data[@]}"; do
+    echo "data - $key=${_data[$key]:0:100}"
   done
 )
 
@@ -392,27 +420,25 @@ function doctor()(
 # root cmd is no function ,all it is this file
 ####################################################
 # cmd settings use bash associative array
-#bake.cmd.set /summary            "[mono project] flutter pub get"
-#bake.cmd.set /options/help/abbr    h
-#bake.cmd.set /options/help/type    bool
 _rootHelp="$(cat <<- EOF
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
 |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
 Usage:
-./${BAKE_FILE} [cmd] [options] [args...]
+./${BAKE_FILE} [cmd] [opts] [args...]
 
   ./${BAKE_FILE}       # 列子命令看帮助，
   ./${BAKE_FILE} build # 子命令
   ./${BAKE_FILE} run   # 子命令
 EOF
 )"
+#bake.opt.add --cmd root --name "help" --type bool --help "print help, show all commands"
+
 
 
 # lib_mode use for other script import
 if [[ "$1" == "--lib_mode"  ]]; then
   echo "lib_mode import: $BAKE_PATH"
 else
-  trap " set +x; _on_error " ERR
   bake.main "$@"
 fi

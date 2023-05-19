@@ -97,10 +97,11 @@ test.bash_string_escape(){
 }
 
 test.path_traverse_up(){
-  assert "$(bake.path_traverse_up a.b)" @is_escape "a.b\na"
+  assert "$(bake.path_traverse_up a.b '.')" @is_escape "a.b\na"
+  assert "$(bake.path_traverse_up ''  '.')" @is ""
 }
 test.bake.split(){
-  assert "$(bake.split "a.b" '.')"  @is_escape "a\nb"
+  IFS='.' assert "$(bake.split "a.b" '.')"  @is_escape "a\nb"
   assert "$(bake.split "a.b." '.')" @is_escape "a\nb"
 
   # 包含破坏性特殊字符
@@ -117,16 +118,34 @@ b
 " "\n" )"  @is_escape "a\nb" "default delimiter is raw newline "
 }
 
-test.bake.cmd.toDataPath(){
-  bake.cmd.toDataPath "a.b"
-}
 test.bake.cmd.register()(
   bake.cmd.register
-  assert $(doctor | grep test.bake.cmd.register) \
+  assert "$(doctor | grep test.bake.cmd.register)" \
     @contains "test.bake.cmd.register=test.bake.cmd.register"
 )
+test.data.children(){
+  assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nhelp\nname\ntype"
+}
+
+test.opt.match(){
+  assert "$(bake.opt.match "bake.opt.add" "--type")" @is "type"
+}
+
+test.cmd.parse(){
+  assert "$(bake.opt.parse "bake.opt.add" --type bool)" @is_escape "local type=bool;\nlocal optCount=1;"
+}
+
+test.opt.add(){
+
+#  bake.opt.parse "bake.opt.add" --name boolopt --type bool
+  bake.opt.add --cmd "test.opt.add" --name boolopt --type bool
+}
 
 trap " set +x; _on_error " ERR
-test.bake.cmd.register
-
-#bake.test.runTest
+#test.bake.cmd.register
+echo ss
+bake.test.runTest
+#bake.opt.add --cmd build --name dir --type bool --help '
+#newline
+#help
+#'
