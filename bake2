@@ -281,9 +281,9 @@ bake.opt.add(){
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list"  ]] ;then
     echo "error: option [--type] must in [bool|string|list] " >&2  && return 1 ;
   fi
-#  _data[$cmd/opts/$name/type]="$type"
-#  _data[$cmd/opts/$name/abbr]="$abbr"
-#  _data[$cmd/opts/$name/help]="$help"
+  _data[$cmd/opts/$name/type]="$type"
+  _data[$cmd/opts/$name/abbr]="$abbr"
+  _data[$cmd/opts/$name/help]="$help"
 }
 
 # Usage: bake.opt.parse <cmd> [arg1] [arg2] ...

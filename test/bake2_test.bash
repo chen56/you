@@ -133,19 +133,18 @@ test.opt.match(){
 
 test.cmd.parse(){
   assert "$(bake.opt.parse "bake.opt.add" --type bool)" @is_escape "local type=bool;\nlocal optCount=1;"
+
+  # no exists cmd
+  assert "$(bake.opt.parse "no.exists.func" --type bool)" @is "local optCount=0;"
+
+  # no exists option
+  assert "$(bake.opt.parse "bake.opt.add" --no_exists_opt)" @is "local optCount=0;"
 }
 
 test.opt.add(){
-
-#  bake.opt.parse "bake.opt.add" --name boolopt --type bool
   bake.opt.add --cmd "test.opt.add" --name boolopt --type bool
-}
 
-trap " set +x; _on_error " ERR
-#test.bake.cmd.register
-echo ss
+  assert "$(bake.opt.parse "test.opt.add" --boolopt)" @is_escape "local boolopt=true;\nlocal optCount=1;"
+
+}
 bake.test.runTest
-#bake.opt.add --cmd build --name dir --type bool --help '
-#newline
-#help
-#'
