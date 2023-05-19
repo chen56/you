@@ -61,7 +61,16 @@ function bake.test.runTest() {
      return 2
   fi
 }
-#
+@contains(){
+  local actual="$1" expected="$2" msg="$3"
+  if [[ "$actual" != *"$expected"* ]] ; then
+    bake.assert.fail "assert contains fail: $msg
+     actual  : $actual
+     expected: $expected"
+     return 2
+  fi
+}
+
 
 # Usage: assert <actual> <assert_op_func> <expected> [msg]
 # Sample: assert $(( 1+1 )) @is "2"
@@ -111,8 +120,13 @@ b
 test.bake.cmd.toDataPath(){
   bake.cmd.toDataPath "a.b"
 }
-.sss(){
-echo s
-}
-.sss
+test.bake.cmd.register()(
+  bake.cmd.register
+  assert $(doctor | grep test.bake.cmd.register) \
+    @contains "test.bake.cmd.register=test.bake.cmd.register"
+)
+
+trap " set +x; _on_error " ERR
+test.bake.cmd.register
+
 #bake.test.runTest

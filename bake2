@@ -116,8 +116,12 @@ cd "${BAKE_DIR}"
 #  _commands[pub.get/options/notes/value/0]="..lib/note.page"
 #  _commands[pub.get/options/notes/value/1]="./lib/a/note.page"
 
+# only save all commands, we use it to build command tree
 declare -A _commands
+
+# save all other data
 declare -A _data
+
 TYPE_CMD="type:cmd"
 
 ##########################################
@@ -173,17 +177,15 @@ function bake.cmd.list()(
 function bake.cmd.register() {
      local functionName
      while IFS=$'\n' read -r functionName ; do
-      if [[ "$functionName" == /* && "$functionName" != /  ]]; then
-        echo "error: except the root command '/'，function $functionName() can not start with / " >&2 && return 1
+      if [[ "$functionName" == */*  ]]; then
+        echo "error: function $functionName() can not contains '/' " >&2 && return 1
       fi
       local traverseUpPath
       for traverseUpPath in $(bake.path_traverse_up "$functionName");do
         local key; key=$([[ "$traverseUpPath" == / ]] && echo "/" || echo "$traverseUpPath" )
-        _commands["$traverseUpPath"]=$TYPE_CMD
+        _commands["$traverseUpPath"]=""
       done
-      local funcFieldName
-      [[ "$functionName" == "/" ]]  && funcFieldName="/func" || funcFieldName="$functionName/func"
-      _commands[$funcFieldName]=$functionName
+      _commands[$functionName]=$functionName
 
       # list all function name
       # declare -F | awk {'print $3'} == compgen -A function
@@ -237,8 +239,6 @@ function bake.option.match()(
   printf ''
 )
 
-_commands[bake.option.add.@fields.options.name.type]=list
-_commands[bake.option.add.@fields.options.type.type]=list
 bake.option.add(){
   declare -p
 }
@@ -386,6 +386,7 @@ function doctor()(
   done
 )
 
+
 ####################################################
 # app entry script & root cmd
 # root cmd is no function ,all it is this file
@@ -394,7 +395,7 @@ function doctor()(
 #bake.cmd.set /summary            "[mono project] flutter pub get"
 #bake.cmd.set /options/help/abbr    h
 #bake.cmd.set /options/help/type    bool
-bake.cmd.set /help                 "$(cat <<- EOF
+_rootHelp="$(cat <<- EOF
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
 |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
@@ -407,37 +408,11 @@ Usage:
 EOF
 )"
 
-trap " set +x; _on_error " ERR
 
 # lib_mode use for other script import
 if [[ "$1" == "--lib_mode"  ]]; then
   echo "lib_mode import: $BAKE_PATH"
 else
+  trap " set +x; _on_error " ERR
   bake.main "$@"
 fi
-#bake.option.parse "test_cmd" "$@"
-#echo =====
-#echo -e "$(bake.option.parse "$@")"
-#eval "$(echo -e "$(bake.option.parse "$@")")"
-#declare -p show
-#declare -p file
-#bake.option.match "test_cmd" "--files"
-#bake.cmd.data_children "test_cmd.@fields.options"
-#cat <<< "$1" |  sed 's/$/\\n/' | tr -d '\n'
-#echo ===
-#cat <<< "$1" |  sed 's/\b/\\n/g'
-#echo ===
-#cat <<< "$1" | awk '{printf "%s\\n", $0}'
-#echo ===
-#
-#| awk '{printf "%s\\n", $0}'
-#echo -----
-#echo "${1/\n/$'s'}"
-#echo -----
-#
-#cat <<< "$1" | sed '$ ! s/$/\\n/' | tr -d '\n'
-#echo --------
-#echo -e $(cat <<< "$1" | sed '$ ! s/$/\\n/' | tr -d '\n')
-#echo --------
-
-#xxx2 "$@"
