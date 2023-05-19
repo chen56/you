@@ -70,10 +70,10 @@ assert(){
   "$2" "$actual" "$3" "$4"
 }
 
-test_assert_sample(){
+test.assert_sample(){
   assert $((1+1)) @is 2
 }
-test_bash_string_escape(){
+test.bash_string_escape(){
   # $'' 语法
   assert $'1\n2' @is '1
 2'
@@ -85,15 +85,12 @@ test_bash_string_escape(){
   x="1
 2"
   assert "$(printf '%q' "$x" )" @is "$'1\n2'"
-
-
-
 }
 
-test_path_traverse_up(){
+test.path_traverse_up(){
   assert "$(bake.path_traverse_up a.b)" @is_escape "a.b\na"
 }
-test_bake.split(){
+test.bake.split(){
   assert "$(bake.split "a.b" '.')"  @is_escape "a\nb"
   assert "$(bake.split "a.b." '.')" @is_escape "a\nb"
 
@@ -111,11 +108,11 @@ b
 " "\n" )"  @is_escape "a\nb" "default delimiter is raw newline "
 }
 
-bake.test.runTest
-#
-#mapfile array <<< "$(echo -e "a\nb")" && { echo "return:$?" ; declare -p array; }
-#echo "[${array[0]}]"
-#[[ "[${array[0]}]" == $'[a\n]' ]] && echo xxx
-#echo
-#IFS= mapfile -d . array <<< "a.b" && { echo "return:$?" ; declare -p array; }
-#echo "[${array[0]}]"
+test.bake.cmd.toDataPath(){
+  bake.cmd.toDataPath "a.b"
+}
+.sss(){
+echo s
+}
+.sss
+#bake.test.runTest

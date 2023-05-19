@@ -81,7 +81,43 @@ cd "${BAKE_DIR}"
 #  _commands[pub.get.@fields.options.notes.value.0]="..lib/note.page"
 #  _commands[pub.get.@fields.options.notes.value.1]="./lib/a/note.page"
 # app script dont use this variable directly, use function access
+
+#  _commands[summary]="bake root cmd"
+#  _commands[help]="bake root cmd"
+#  _commands[kids.pub]="type:cmd"
+#  _commands[kids.pub.summary]="flutter pub"
+#  _commands[kids.pub.options.notes]="type:option"
+#  _commands[kids.pub.options.notes.type]="list"
+#  _commands[kids.pub.options.notes.abbr]="n"
+#  _commands[kids.pub.kids.get]="type:cmd"
+#  _commands[kids.pub.kids.get.summary]="flutter pub get"
+#  _commands[kids.pub.kids.get.options.verbose]="type:option"
+#  _commands[kids.pub.kids.get.options.verbose.type]="bool"
+#  _commands[kids.pub.kids.get.options.verbose.abbr]="v"
+# parsed options value:
+#  _commands[options.verbose.value]=true
+#  _commands[kids.pub.kids.get.options.notes.value.0]="..lib/note.page"
+#  _commands[kids.pub.kids.get.options.notes.value.1]="./lib/a/note.page"
+
+#  _commands[root/summary]="bake root cmd"
+#  _commands[root/help]="bake root cmd"
+#  _commands[pub]="type:cmd"
+#  _commands[pub/summary]="flutter pub"
+#  _commands[pub/options/notes]="type:option"
+#  _commands[pub/options/notes/type]="list"
+#  _commands[pub/options/notes/abbr]="n"
+#  _commands[pub.get]="type:cmd"
+#  _commands[pub.get/summary]="flutter pub get"
+#  _commands[pub.get/options/verbose]="type:option"
+#  _commands[pub.get/options/verbose/type]="bool"
+#  _commands[pub.get/options/verbose/abbr]="v"
+# parsed options value:
+#  _commands[root/options/verbose/value]=true
+#  _commands[pub.get/options/notes/value/0]="..lib/note.page"
+#  _commands[pub.get/options/notes/value/1]="./lib/a/note.page"
+
 declare -A _commands
+declare -A _data
 TYPE_CMD="type:cmd"
 
 ##########################################
@@ -97,7 +133,8 @@ function bake.cmd.get() (
 )
 function bake.cmd.toDataPath() (
   cmd="$1"
-  printf '%s' "${_commands[$path]}"
+  readarray -t arr < <(printf '%s' "$(bake.split "$cmd" ".")")
+  printf "%s.cmds" ${arr[@]}
 )
 
 # Usage: bake.cmd.data_children <dataPath>
@@ -176,10 +213,9 @@ function bake.path_traverse_up()(
 # Usage: split <str> [delimiter:default \n]
 bake.split() {
   local str=$1 delimiter=${2:-.};
-  [[ "$delimiter" == "." ]] && delimiter="\."
-  local arr
 #  # use <() process-substitution
 #  # don't use <<< "" its add newline
+  local arr
   readarray -t arr < <(printf '%s' "${str//$delimiter/$'\n'}")
   printf '%s\n' "${arr[@]}"
 }
