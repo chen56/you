@@ -52,6 +52,19 @@ function _readlink() (
   echo "$file"
 )
 
+function doctor()(
+  echo '# doctor'
+  echo '## _cmdTree'
+  for key in "${!_cmdTree[@]}"; do
+    echo "cmd  - $key=${_cmdTree[$key]:0:100}"
+  done
+  echo '## _data'
+  for key in "${!_data[@]}"; do
+    echo "data - $key=${_data[$key]:0:100}"
+  done
+)
+
+
 _on_error() {
   echo "trapped an error: ↑ , trace: ↓" >&2
   _stack_frame
@@ -92,64 +105,28 @@ cd "${BAKE_DIR}"
 
 # Simulating object-oriented data structures with flat associative arrays
 # opts define:
-#  _cmdTree[@fields.summary]="bake root cmd"
-#  _cmdTree[@fields.help]="bake root cmd"
-#  _cmdTree[pub]="type:cmd"
-#  _cmdTree[pub.@fields.summary]="flutter pub"
-#  _cmdTree[pub.@fields.opts.notes]="type:option"
-#  _cmdTree[pub.@fields.opts.notes.type]="list"
-#  _cmdTree[pub.@fields.opts.notes.abbr]="n"
-#  _cmdTree[pub.get]="type:cmd"
-#  _cmdTree[pub.get.@fields.summary]="flutter pub get"
-#  _cmdTree[pub.get.@fields.opts.verbose]="type:option"
-#  _cmdTree[pub.get.@fields.opts.verbose.type]="bool"
-#  _cmdTree[pub.get.@fields.opts.verbose.abbr]="v"
+#  _data[root/summary]="bake root cmd"
+#  _data[root/help]="bake root cmd"
+#  _data[pub]="type:cmd"
+#  _data[pub/summary]="flutter pub"
+#  _data[pub/opts/notes]="type:option"
+#  _data[pub/opts/notes/type]="list"
+#  _data[pub/opts/notes/abbr]="n"
+#  _data[pub.get]="type:cmd"
+#  _data[pub.get/summary]="flutter pub get"
+#  _data[pub.get/opts/verbose]="type:option"
+#  _data[pub.get/opts/verbose/type]="bool"
+#  _data[pub.get/opts/verbose/abbr]="v"
 # parsed opts value:
-#  _cmdTree[@fields.opts.verbose.value]=true
-#  _cmdTree[pub.get.@fields.opts.notes.value.0]="..lib/note.page"
-#  _cmdTree[pub.get.@fields.opts.notes.value.1]="./lib/a/note.page"
-# app script dont use this variable directly, use function access
-
-#  _cmdTree[summary]="bake root cmd"
-#  _cmdTree[help]="bake root cmd"
-#  _cmdTree[kids.pub]="type:cmd"
-#  _cmdTree[kids.pub.summary]="flutter pub"
-#  _cmdTree[kids.pub.opts.notes]="type:option"
-#  _cmdTree[kids.pub.opts.notes.type]="list"
-#  _cmdTree[kids.pub.opts.notes.abbr]="n"
-#  _cmdTree[kids.pub.kids.get]="type:cmd"
-#  _cmdTree[kids.pub.kids.get.summary]="flutter pub get"
-#  _cmdTree[kids.pub.kids.get.opts.verbose]="type:option"
-#  _cmdTree[kids.pub.kids.get.opts.verbose.type]="bool"
-#  _cmdTree[kids.pub.kids.get.opts.verbose.abbr]="v"
-# parsed opts value:
-#  _cmdTree[opts.verbose.value]=true
-#  _cmdTree[kids.pub.kids.get.opts.notes.value.0]="..lib/note.page"
-#  _cmdTree[kids.pub.kids.get.opts.notes.value.1]="./lib/a/note.page"
-
-#  _cmdTree[root/summary]="bake root cmd"
-#  _cmdTree[root/help]="bake root cmd"
-#  _cmdTree[pub]="type:cmd"
-#  _cmdTree[pub/summary]="flutter pub"
-#  _cmdTree[pub/opts/notes]="type:option"
-#  _cmdTree[pub/opts/notes/type]="list"
-#  _cmdTree[pub/opts/notes/abbr]="n"
-#  _cmdTree[pub.get]="type:cmd"
-#  _cmdTree[pub.get/summary]="flutter pub get"
-#  _cmdTree[pub.get/opts/verbose]="type:option"
-#  _cmdTree[pub.get/opts/verbose/type]="bool"
-#  _cmdTree[pub.get/opts/verbose/abbr]="v"
-# parsed opts value:
-#  _cmdTree[root/opts/verbose/value]=true
-#  _cmdTree[pub.get/opts/notes/value/0]="..lib/note.page"
-#  _cmdTree[pub.get/opts/notes/value/1]="./lib/a/note.page"
+#  _data[root/opts/verbose/value]=true
+#  _data[pub.get/opts/notes/value/0]="..lib/note.page"
+#  _data[pub.get/opts/notes/value/1]="./lib/a/note.page"
+# save all other data
+declare -A _data
 
 # only save all commands, we use it to build command tree
 # it is cache data from _data
 declare -A _cmdTree
-
-# save all other data
-declare -A _data
 
 TYPE_CMD="type:cmd"
 
@@ -176,7 +153,6 @@ bake.data.children() (
 
 function bake.cmd.list()(
   contextCmd=$1
-  doctor
 #  showList=()
 #  maxLengthOfCmd=0
   for child in $(bake.data.children "$contextCmd"); do
@@ -245,12 +221,13 @@ bake.split() {
 #      => "build.opts.dir"
 function bake.opt.match()(
   local cmd=$1 arg=$2
-  for traverseUpCmd in $(bake.path_traverse_up "$cmd" ".") ; do
+  for traverseUpCmd in $(bake.path_traverse_up "$cmd" "." ) ; do
     local opt;
     for opt in $(bake.data.children "$traverseUpCmd/opts"); do
        local abbr; abbr=${_data["$traverseUpCmd/opts/$opt/abbr"]}
        if [[ "--$opt" == "$arg" || ("$abbr" != "" && "-$abbr" == "$arg") ]] ; then
          printf '%s' "$opt"  ;
+         return 0
        fi
     done
   done
@@ -292,7 +269,6 @@ function bake.opt.parse() {
     shift
     local optCount; optCount=0
     local result;
-
     # parse opts
     while (( $# > 0 )); do
       local opt; opt=$(bake.opt.match "$cmd" "$1")
@@ -342,6 +318,8 @@ function bake.help()(
 
 bake.opt.add --cmd bake.main --name "help"    --abbr h --type bool --help "print help, show all commands"
 bake.opt.add --cmd bake.main --name "verbose" --abbr v --type bool --help "verbose run all commands"
+bake.opt.add --cmd root --name "help"    --abbr h --type bool --help "print help, show all commands"
+bake.opt.add --cmd root --name "verbose" --abbr v --type bool --help "print help, show all commands"
 
 function bake.main() {
     bake.cmd.register
@@ -353,12 +331,17 @@ function bake.main() {
     local cmd nextCmd  arg;
     for arg in "$@"; do
       nextCmd=$( [[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg" )
-      [[  "${_cmdTree[$nextCmd]}" != "type:cmd" ]] && break;
+#      [[  "${_cmdTree[$nextCmd]}" == "type:cmd" ]] && break;
+      ! [[ "${_cmdTree[$nextCmd]+exists}" ]] && break;
       cmd="$nextCmd" ;
       shift ;
     done
+
     # "" is root cmd
     if [[ "$cmd" == "" ]] ; then bake.help "" ; return 0;  fi
+    # parse opts
+    eval "$(bake.opt.parse "$cmd" "$@")"
+    bake.opt.parse "$cmd" "$@"
 
     if ! declare -f "$cmd" >/dev/null 2>&1; then
       _error "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
@@ -395,25 +378,8 @@ _log(){
 pub.get(){
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   bake.opt.parse "${FUNCNAME[0]}" "$@"
-  declare -p
-#  _run echo "_run flutter pub [$*]  verbose: $(bake.opt "pub.get" verbose)"
-#  shift "$(bake.opt.parse "$@" )"
-#  _run echo "_run flutter pub [$*]  verbose: $(bake.opt "pub.get" verbose)"
-#  doctor
+  echo "pub.get [$@]"
 }
-
-function doctor()(
-  echo '# doctor'
-  echo '## _cmdTree'
-  for key in "${!_cmdTree[@]}"; do
-    echo "cmd  - $key=${_cmdTree[$key]:0:100}"
-  done
-  echo '## _data'
-  for key in "${!_data[@]}"; do
-    echo "data - $key=${_data[$key]:0:100}"
-  done
-)
-
 
 ####################################################
 # app entry script & root cmd
