@@ -50,6 +50,8 @@ function bake.test.runTest() {
     bake.assert.fail "assert is_escape fail: $msg
      actual  : $escaped
      expected: $expected"
+     echo "diff------------------------->" >&2
+     diff <(echo -e "$actual") <(echo -e "$expected") >&2
      return 2
   fi
 }
@@ -60,6 +62,8 @@ function bake.test.runTest() {
     bake.assert.fail "assert is fail: $msg
      actual  : $actual
      expected: $expected"
+     echo "diff------------------------->" >&2
+     diff <(echo -e "$actual") <(echo -e "$expected") >&2
      return 2
   fi
 }
@@ -143,27 +147,27 @@ test.bake.cmd.list_up(){
   assert "$(bake.cmd.list_up '')" @is "_root"
 }
 
-test.bake.split(){
-  assert "$(bake.split "a/b" '/')"  @is_escape "a\nb"
-  assert "$(bake.split "a/b/" '/')" @is_escape "a\nb"
+test.bake.str.split(){
+  assert "$(bake.str.split "a/b" '/')"  @is_escape "a\nb"
+  assert "$(bake.str.split "a/b/" '/')" @is_escape "a\nb"
 
   # abstract path
-  assert "$(bake.split "/a/b" '/')"  @is_escape "\na\nb"
-  assert "$(bake.split "/a/b/" '/')" @is_escape "\na\nb"
+  assert "$(bake.str.split "/a/b" '/')"  @is_escape "\na\nb"
+  assert "$(bake.str.split "/a/b/" '/')" @is_escape "\na\nb"
 
 
   # 包含破坏性特殊字符
-  assert "$(bake.split $'a\nb'  "/" )"  @is_escape "a\nb"
-  assert "$(bake.split $'a\n/b' "/" )"  @is_escape "a\n\nb"
-  assert "$(bake.split "a
+  assert "$(bake.str.split $'a\nb'  "/" )"  @is_escape "a\nb"
+  assert "$(bake.str.split $'a\n/b' "/" )"  @is_escape "a\n\nb"
+  assert "$(bake.str.split "a
 /b
 " )"  @is_escape "a\n\nb"
 
   # default delimiter
-  assert "$(bake.split "a/b"  )"  @is_escape "a\nb"
+  assert "$(bake.str.split "a/b"  )"  @is_escape "a\nb"
 
   # other delimiter
-  assert "$(bake.split "a.b" '.')"  @is_escape "a\nb"
+  assert "$(bake.str.split "a.b" '.')"  @is_escape "a\nb"
 }
 
 test.bake.cmd.register()(
@@ -172,7 +176,7 @@ test.bake.cmd.register()(
     @contains "test.bake.cmd.register=test.bake.cmd.register"
 )
 test.data.children(){
-  assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nname\noptHelp\ntype"
+  assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nname\noptHelp\nrequired\ntype"
 }
 
 test.opt.match(){
@@ -193,6 +197,7 @@ _root/opts/verbose"
 bake.opt.add/opts/cmd
 bake.opt.add/opts/name
 bake.opt.add/opts/optHelp
+bake.opt.add/opts/required
 bake.opt.add/opts/type
 _root/opts/help
 _root/opts/verbose"

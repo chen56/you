@@ -73,6 +73,7 @@ _on_error() {
   echo "trapped an error: ↑ , trace: ↓" >&2
   _stack_frame
 }
+
 # Usage: _stack_frame
 _stack_frame() {
   local i=0
@@ -82,7 +83,7 @@ _stack_frame() {
     if [[ $? != 0 ]]; then break; fi
 
     # parse
-    # 97 test_bake.split ./test/bake2_test.bash
+    # 97 test_bake.str.split ./test/bake2_test.bash
     local no func file;
     IFS=' ' read -r no func file <<< "$stackInfo"
 
@@ -94,7 +95,6 @@ _stack_frame() {
   done
 }
 # Add the error catch first
-#
 trap " set +x; _on_error " ERR
 
 ##########################################
@@ -146,62 +146,13 @@ TYPE_CMD="type:cmd"
 ##########################################
 # bake common function
 ##########################################
-# Usage: bake.data.children <dataPath>
-#   return <dataPath> children name
-bake.data.children() (
-  path="$1"
-  # ${!_data[@]}: get all array keys
-  for key in "${!_data[@]}"; do
-    # if start $path
-    if [[ "$key" == "$path"* ]]; then
-      # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-      # remove prefix : key:build/opts/dir/type/x leftPathToBeCut:build/opts => dir/type/x
-      child=$(bake.str.cutLeft "$key" "$path/")
-      # remove suffix:  dir/type/x => dir
-#      child=${child%%/*}
-      child=$(bake.path.first "$child" "/")
-      printf '%s\n' "$child"
-    fi
-  done | sort -u
-)
-function bake.cmd.list()(
-  contextCmd=$1
-#  showList=()
-#  maxLengthOfCmd=0
-  for child in $(bake.data.children "$contextCmd"); do
-    [[ "$contextCmd" == "" ]] && key="$child" || key="$contextCmd/$child"
-    if   [[ "$key"              == bake*      ]]; then continue; fi
-    if   [[ "$key"              == @fields*   ]]; then continue; fi
-    if   [[ "$key"              == _*         ]]; then continue; fi
-    if   [[ "${_cmdTree[$key]}" != "type:cmd" ]]; then continue; fi
-    echo "$key : ${_cmdTree[$key.@fields.summary]}"
-  done
-)
 
-# Usage: bake.cmd.register
-# ensure all cmd register
-function bake.cmd.register() {
-     local functionName
-     while IFS=$'\n' read -r functionName ; do
-      if [[ "$functionName" == */*  ]]; then
-        echo "error: function $functionName() can not contains '/' " >&2 && return 1
-      fi
-      local traverseUpPath
-      for traverseUpPath in $(bake.cmd.list_up "$functionName");do
-        _cmdTree["$traverseUpPath"]="PARENT_CMD_NOT_FUNC"
-      done
-      _cmdTree[$functionName]=$functionName
+# Usage: bake.str.cutLeft <str> <left>
+# bake.path.dirname a/b/c  a/b    => c
+bake.str.cutLeft(){ printf "${1#$2}"; }
 
-      # list all function name
-      # declare -F | awk {'print $3'} == compgen -A function
-      # declare -f func1  -> func1
-      # declare -fx func2 -> func2
-    done <<< "$(compgen -A function)"
-}
-
-
-# Usage: bake.split <str> [delimiter:default /]
-bake.split() {
+# Usage: bake.str.split <str> [delimiter:default /]
+bake.str.split() {
   local str=$1 delimiter=${2:-/};
 #  # use <() process-substitution
 #  # don't use <<< "" its add newline
@@ -239,6 +190,26 @@ bake.path.basename(){
   # ${1##*/}  => ## left remove until last "/"
   printf "${pathLikeStr##*$delimiter}";
 }
+
+# Usage: bake.data.children <dataPath>
+#   return <dataPath> children name
+bake.data.children() (
+  path="$1"
+  # ${!_data[@]}: get all array keys
+  for key in "${!_data[@]}"; do
+    # if start $path
+    if [[ "$key" == "$path"* ]]; then
+      # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+      # remove prefix : key:build/opts/dir/type/x leftPathToBeCut:build/opts => dir/type/x
+      child=$(bake.str.cutLeft "$key" "$path/")
+      # remove suffix:  dir/type/x => dir
+#      child=${child%%/*}
+      child=$(bake.path.first "$child" "/")
+      printf '%s\n' "$child"
+    fi
+  done | sort -u
+)
+
 # Usage: bake.cmd.list_up <cmd>
 # sample: bake.cmd.list_up a.b      => "a.b\n", "a\n", "_root"
 function bake.cmd.list_up(){
@@ -256,15 +227,13 @@ function bake.cmd.list_down(){
   bake.cmd.list_up "$1" | sed '1!G;h;$!d'; # sed magic
 #  bake.cmd.list_up "$1" | tail -r; # macos bsd only, not work on linux
 }
-# Usage: bake.str.cutLeft <str> <left>
-# bake.path.dirname a/b/c  a/b    => c
-bake.str.cutLeft(){ printf "${1#$2}"; }
+
 
 # Usage: bake.opt.match <cmd> <arg>
 # match a <arg> is a option return optionDataPath else return ""
 # Sample: bake.opt.match "build" "--dir" someDir
 #      => "build.opts.dir"
-function bake.opt.match()(
+function bake.opt.match(){
   local cmd=$1 arg=$2
   for optPath in $(bake.opt.list "$cmd") ; do
     local opt;  opt=$(bake.path.basename "$optPath")
@@ -276,10 +245,10 @@ function bake.opt.match()(
     fi
   done
   printf ''
-)
+}
 # Usage: bake.opt.list <cmd>
 # return optionDataPath list
-function bake.opt.list()(
+function bake.opt.list(){
   local cmd=$1
   local traverseUpCmd
   for traverseUpCmd in $(bake.cmd.list_up "$cmd" "." ) ; do
@@ -288,25 +257,25 @@ function bake.opt.list()(
       printf '%s\n' "$traverseUpCmd/opts/$opt"  ;
     done
   done
-)
+}
 
-# because this func is meta function, so can not use option to add self
-_data[bake.opt.add/opts/cmd/name]=cmd
-_data[bake.opt.add/opts/cmd/type]=string
-
-_data[bake.opt.add/opts/name/name]=name
-_data[bake.opt.add/opts/name/type]=string
-_data[bake.opt.add/opts/name/required]=true
-
-_data[bake.opt.add/opts/type/name]=type
-_data[bake.opt.add/opts/type/type]=string
-
-_data[bake.opt.add/opts/abbr/name]=abbr
-_data[bake.opt.add/opts/abbr/type]=string
-
+# only use by bake.opt.add,
+# because "bake.opt.add" is meta function, use this func to add self
+bake.opt._internal_add(){
+  local opt="$1" type="$2" required="$3" abbr="$4" help="$5"
+  _data[bake.opt.add/opts/$opt/name]="$opt"
+  _data[bake.opt.add/opts/$opt/type]="$type"
+  _data[bake.opt.add/opts/$opt/required]="$required"
+  _data[bake.opt.add/opts/$opt/abbr]="$abbr"
+  _data[bake.opt.add/opts/$opt/optHelp]="$optHelp"
+}
+bake.opt._internal_add "cmd" "string" "true" "" "cmd name"
+bake.opt._internal_add "name" "string" "true" "" "option name"
+bake.opt._internal_add "type" "string" "true" "" "option type"
+bake.opt._internal_add "required" "bool" "false" "" "option required"
+bake.opt._internal_add "abbr" "string" "false" "" "option abbr"
 # avoid use 'help' as option name,because it is root command option
-_data[bake.opt.add/opts/optHelp/name]=optHelp
-_data[bake.opt.add/opts/optHelp/type]=string
+bake.opt._internal_add "optHelp" "string" "false" "" "option help"
 bake.opt.add(){
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
@@ -376,15 +345,71 @@ function bake.opt.parse() {
     echo -e "$result" # -e show raw string
 }
 
+
+bake.opt.add --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
+bake.opt.add --cmd bake.cmd.set --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
+bake.opt.add --cmd bake.cmd.set --name "description" --type string --optHelp "description, long help ,show on cmd help page"
+
+function bake.cmd.set(){
+  # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
+  eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
+  if [[ "$cmd" == "" ]]; then
+    echo "error: bake.cmd.set [--cmd] required " >&2 && return 1 ;
+  fi
+#  bake.opt.parse "${FUNCNAME[0]}" "$@" >&2
+  _data[$cmd/summary]="$summary"
+  _data[$cmd/description]="$description"
+}
+function remove____bake.cmd.list()(
+  contextCmd=$1
+#  showList=()
+#  maxLengthOfCmd=0
+  for child in $(bake.data.children "$contextCmd"); do
+    [[ "$contextCmd" == "" ]] && key="$child" || key="$contextCmd/$child"
+    if   [[ "$key"              == bake*      ]]; then continue; fi
+    if   [[ "$key"              == @fields*   ]]; then continue; fi
+    if   [[ "$key"              == _*         ]]; then continue; fi
+    if   [[ "${_cmdTree[$key]}" != "type:cmd" ]]; then continue; fi
+    echo "$key : ${_cmdTree[$key.@fields.summary]}"
+  done
+)
+
+# Usage: bake.cmd.register
+# ensure all cmd register
+function bake.cmd.register() {
+     local functionName
+     while IFS=$'\n' read -r functionName ; do
+      if [[ "$functionName" == */*  ]]; then
+        echo "error: function $functionName() can not contains '/' " >&2 && return 1
+      fi
+      local traverseUpPath
+      for traverseUpPath in $(bake.cmd.list_up "$functionName");do
+        _cmdTree["$traverseUpPath"]="PARENT_CMD_NOT_FUNC"
+      done
+      _cmdTree[$functionName]=$functionName
+
+      # list all function name
+      # declare -F | awk {'print $3'} == compgen -A function
+      # declare -f func1  -> func1
+      # declare -fx func2 -> func2
+    done <<< "$(compgen -A function)"
+}
+
 function bake.help()(
   cmd="$1"
-  echo bake.help $cmd
+  echo "${_data[${cmd}/description]}"
+  for subcmd in $(bake.data.children "$cmd"); do
+    [[ "$subcmd" == bake* ]] && continue
+    [[ "$subcmd" == @fields* ]] && continue
+    [[ "$subcmd" == _* ]] && continue
+    [[ "${_cmdTree[$cmd/$subcmd]}" != "type:cmd" ]] && continue
+    echo "  $subcmd : ${_data[${cmd}/$subcmd/summary]}"
+  done
 )
 
 # _root is special cmd, it is root of all cmd
 bake.opt.add --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
 bake.opt.add --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
-
 function bake.main() {
     bake.cmd.register
     # parse cmd :
@@ -457,16 +482,19 @@ pub.get(){
 # _root cmd is no function ,all it is this file
 ####################################################
 # cmd settings use bash associative array
-_rootHelp="$(cat <<- EOF
-____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
-|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
-|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
-Usage:
-./${BAKE_FILE} [cmd] [opts] [args...]
 
-  ./${BAKE_FILE}       # 列子命令看帮助，
-  ./${BAKE_FILE} build # 子命令
-  ./${BAKE_FILE} run   # 子命令
+bake.cmd.set --cmd _root \
+  --summary "bake is a bash script tool to build project, manage dependencies, and run commands." \
+  --description "$(cat <<- EOF
+ ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
+ |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
+ |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
+ Usage:
+ ./${BAKE_FILE} [cmd] [opts] [args...]
+
+   ./${BAKE_FILE}       # 列子命令看帮助，
+   ./${BAKE_FILE} build # 子命令
+   ./${BAKE_FILE} run   # 子命令
 EOF
 )"
 
