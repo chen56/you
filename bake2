@@ -109,18 +109,27 @@ cd "${BAKE_DIR}"
 
 # Simulating object-oriented data structures with flat associative arrays
 # opts define:
-#  _data[_root/summary]="bake _root cmd"
-#  _data[_root/help]="bake _root cmd"
-#  _data[pub]="type:cmd"
-#  _data[pub/summary]="flutter pub"
-#  _data[pub/opts/notes]="type:option"
-#  _data[pub/opts/notes/type]="list"
-#  _data[pub/opts/notes/abbr]="n"
-#  _data[pub.get]="type:cmd"
-#  _data[pub.get/summary]="flutter pub get"
-#  _data[pub.get/opts/verbose]="type:option"
-#  _data[pub.get/opts/verbose/type]="bool"
-#  _data[pub.get/opts/verbose/abbr]="v"
+#_root/opts/help/abbr=h
+#_root/opts/help/cmd=_root
+#_root/opts/help/name=help
+#_root/opts/help/optHelp=print help, show all commands
+#_root/opts/help/type=bool
+#_root/opts/verbose/abbr=v
+#_root/opts/verbose/cmd=_root
+#_root/opts/verbose/name=verbose
+#_root/opts/verbose/optHelp=verbose, show more info, more hidden commands
+#_root/opts/verbose/type=bool
+#bake.opt.add/opts/abbr/name=abbr
+#bake.opt.add/opts/abbr/type=string
+#bake.opt.add/opts/cmd/name=cmd
+#bake.opt.add/opts/cmd/type=string
+#bake.opt.add/opts/name/name=name
+#bake.opt.add/opts/name/required=true
+#bake.opt.add/opts/name/type=string
+#bake.opt.add/opts/optHelp/name=optHelp
+#bake.opt.add/opts/optHelp/type=string
+#bake.opt.add/opts/type/name=type
+#bake.opt.add/opts/type/type=string
 # parsed opts value:
 #  _data[_root/opts/verbose/value]=true
 #  _data[pub.get/opts/notes/value/0]="..lib/note.page"
@@ -155,7 +164,6 @@ bake.data.children() (
     fi
   done | sort -u
 )
-
 function bake.cmd.list()(
   contextCmd=$1
 #  showList=()
@@ -179,9 +187,8 @@ function bake.cmd.register() {
         echo "error: function $functionName() can not contains '/' " >&2 && return 1
       fi
       local traverseUpPath
-      for traverseUpPath in $(bake.cmd.list_up "$functionName" ".");do
-        local key; key=$([[ "$traverseUpPath" == / ]] && echo "/" || echo "$traverseUpPath" )
-        _cmdTree["$traverseUpPath"]=""
+      for traverseUpPath in $(bake.cmd.list_up "$functionName");do
+        _cmdTree["$traverseUpPath"]="PARENT_CMD_NOT_FUNC"
       done
       _cmdTree[$functionName]=$functionName
 
@@ -232,7 +239,7 @@ bake.path.basename(){
   # ${1##*/}  => ## left remove until last "/"
   printf "${pathLikeStr##*$delimiter}";
 }
-# Usage: bake.cmd.list_up <str> <delimiter:"/">
+# Usage: bake.cmd.list_up <cmd>
 # sample: bake.cmd.list_up a.b      => "a.b\n", "a\n", "_root"
 function bake.cmd.list_up(){
   local path="${1:-_root}"
@@ -243,6 +250,9 @@ function bake.cmd.list_up(){
   done
   if [[ "$path" != "_root" ]]; then printf "_root\n"; fi
 }
+# Usage: bake.cmd.list_down <cmd>
+# reverse of bake.cmd.list_up
+function bake.cmd.list_down(){ bake.cmd.list_up "$1" | tail -r; }
 # Usage: bake.str.cutLeft <str> <left>
 # bake.path.dirname a/b/c  a/b    => c
 bake.str.cutLeft(){ printf "${1#$2}"; }
@@ -306,11 +316,12 @@ bake.opt.add(){
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list"  ]] ;then
     echo "error: option [--type] must in [bool|string|list] " >&2  && return 1 ;
   fi
-  _data[$cmd/opts/$name/name]="$name"
-  _data[$cmd/opts/$name/cmd]="$cmd"
-  _data[$cmd/opts/$name/type]="$type"
-  _data[$cmd/opts/$name/abbr]="$abbr"
-  _data[$cmd/opts/$name/optHelp]="$optHelp"
+  local optPath="$cmd/opts/$name"
+  _data[$optPath/name]="$name"
+  _data[$optPath/cmd]="$cmd"
+  _data[$optPath/type]="$type"
+  _data[$optPath/abbr]="$abbr"
+  _data[$optPath/optHelp]="$optHelp"
 }
 
 # Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
@@ -380,22 +391,31 @@ function bake.main() {
     #     -> { cmd:"", args:"-h" }
     local cmd nextCmd  arg;
     for arg in "$@"; do
-      nextCmd=$( [[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg" )
-#      [[  "${_cmdTree[$nextCmd]}" == "type:cmd" ]] && break;
-      ! [[ "${_cmdTree[$nextCmd]+exists}" ]] && break;
+      nextCmd="$( [[ "$cmd" == "" ]] && echo "$arg" || echo "$cmd.$arg" )"
+      if  [[ "${_cmdTree[$nextCmd]}" == "" ]] ; then  break; fi
       cmd="$nextCmd" ;
       shift ;
     done
 
-    # "" is _root cmd
-    if [[ "$cmd" == "" ]] ; then bake.help "" ; return 0;  fi
-    # parse opts
+    if [[ "$cmd" == "" ]] ; then cmd="_root" ; fi
+
     eval "$(bake.opt.parse "$cmd" "$@")"
+
+    if [[ "$help" == "true" ]] ; then bake.help "$cmd" ; return 0;  fi
+
+#    # parse opts
     if ! declare -f "$cmd" >/dev/null 2>&1; then
+      if [[ "${_cmdTree[$cmd]}" == "PARENT_CMD_NOT_FUNC" ]] ; then bake.help "$cmd" ; return 0; fi
       _error "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
       return 1
     fi
-    $cmd "$@"
+
+    # run cmd chain from _root:
+    # ./bake2 pub get   => run _root() -> pub() -> pub.get()
+    for upCmd in $(bake.cmd.list_down "$cmd"  ); do
+      if  [[ "${_cmdTree[$upCmd]}" == "PARENT_CMD_NOT_FUNC" ]]; then continue ; fi
+      $upCmd "$@"
+    done
 }
 
 ##########################################
