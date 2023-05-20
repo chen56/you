@@ -220,5 +220,13 @@ test.opt.add(){
   assert "$(bake.opt.parse "test.opt.add" --boolopt)" @is_escape "local boolopt=true;\nlocal optCount=1;"
 
 }
+test.opt.value(){
+#  echo test!!!!!!!!!!!!!!!!!!!!1
+  bake.opt.add --cmd "test.opt.add" --name xxx --type string
+#  echo test!!!!!!!!!!!!!!!!!!!!2
+  bake.opt.parse "test.opt.add" --xxx chen >/dev/null
+#  echo test!!!!!!!!!!!!!!!!!!!!3
+  assert "$(bake.opt.value "test.opt.add" "xxx")" @is "chen"
+}
 bake.test.runTest
-#test.cmd.parse
+test.opt.value

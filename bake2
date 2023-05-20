@@ -55,6 +55,15 @@ function _readlink() (
   done
   echo "$file"
 )
+_error(){
+  echo -e "ERROR $(date "+%F %T")-【▶︎${FUNCNAME[1]}】-︎ $*" >&2
+}
+_log(){
+  echo -e "INFO  $(date "+%F %T")-【▶︎${FUNCNAME[1]}】-︎ $*" >&2
+}
+_debug(){
+  echo -e "DEBUG $(date "+%F %T")-【▶︎${FUNCNAME[1]}】-︎ $*" >&2
+}
 
 function doctor()(
   echo '# doctor'
@@ -67,7 +76,6 @@ function doctor()(
     echo "data - $key=${_data[$key]:0:100}"
   done
 )
-
 
 _on_error() {
   echo "trapped an error: ↑ , trace: ↓" >&2
@@ -106,6 +114,8 @@ BAKE_FILE="$(basename "$BAKE_PATH")"
 
 # set workdir
 cd "${BAKE_DIR}"
+
+_debug
 
 # Simulating object-oriented data structures with flat associative arrays
 # opts define:
@@ -193,7 +203,7 @@ bake.path.basename(){
 
 # Usage: bake.data.children <dataPath>
 #   return <dataPath> children name
-bake.data.children() (
+bake.data.children() {
   path="$1"
   # ${!_data[@]}: get all array keys
   for key in "${!_data[@]}"; do
@@ -205,6 +215,32 @@ bake.data.children() (
       # remove suffix:  dir/type/x => dir
 #      child=${child%%/*}
       child=$(bake.path.first "$child" "/")
+      printf '%s\n' "$child"
+    fi
+  done | sort -u
+}
+
+bake.cmd.childrenNameMaxLength() {
+  local cmd="$1" maxLengthOfCmd=0
+  for  child in $(bake.cmd.children "$cmd") ; do
+    if ((${#child} > maxLengthOfCmd)); then maxLengthOfCmd=${#child}; fi
+  done
+  printf "$maxLengthOfCmd"
+}
+bake.cmd.children() (
+  path="$1"
+  if [[ "$path" == _root ]]; then
+    path=""
+  fi
+  # ${!_data[@]}: get all array keys
+  for key in "${!_cmdTree[@]}"; do
+    # if start $path
+    if [[ "$key" == "$path"* && "$key" != "_root" ]]; then
+      # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+      # remove prefix : key:a.b.c leftPathToBeCut:a => b.c
+      child=$(bake.str.cutLeft "$key" "$path.")
+      # remove suffix:  b.c => c
+      child=$(bake.path.first "$child" ".")
       printf '%s\n' "$child"
     fi
   done | sort -u
@@ -258,7 +294,6 @@ function bake.opt.list(){
     done
   done
 }
-
 # only use by bake.opt.add,
 # because "bake.opt.add" is meta function, use this func to add self
 bake.opt._internal_add(){
@@ -277,8 +312,14 @@ bake.opt._internal_add "abbr" "string" "false" "" "option abbr"
 # avoid use 'help' as option name,because it is root command option
 bake.opt._internal_add "optHelp" "string" "false" "" "option help"
 bake.opt.add(){
-  # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
-  eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
+  local selfCmd="${FUNCNAME[0]}"
+  eval "$(bake.opt.parse "$selfCmd" "$@")"
+#  bake.opt.parse "$selfCmd" "$@" > /dev/null
+#  local name; name="$(bake.opt.value "$selfCmd" "name")"
+#  local cmd; cmd="$(bake.opt.value "$selfCmd" "cmd")"
+#  local type; type="$(bake.opt.value "$selfCmd" "type")"
+#  local abbr; abbr="$(bake.opt.value "$selfCmd" "abbr")"
+#  local optHelp; optHelp="$(bake.opt.value "$selfCmd" "optHelp")"
   if [[ "$name" == "" ]] ;then
     echo "error: option [--name] required " >&2 && return 1 ;
   fi
@@ -296,6 +337,12 @@ bake.opt.add(){
   _data[$optPath/optHelp]="$optHelp"
 }
 
+
+# only use by bake.opt.add,
+function bake.opt.value(){
+  local cmd="$1" opt="$2"
+  printf '%s' "${_data["$cmd/opts/$opt/value"]}"
+}
 # Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
 function bake.opt.parse() {
     local cmd; cmd="${1:_root}"
@@ -304,7 +351,10 @@ function bake.opt.parse() {
     local result;
     # parse opts
     while (( $# > 0 )); do
+#      _debug bake.opt.parse  bake.opt.match start
       local optPath; optPath=$(bake.opt.match "$cmd" "$1")
+#      _debug bake.opt.parse  bake.opt.match end
+
       local opt;     opt=$(bake.path.basename "$optPath")
       # if arg not a opt , parsing complete;
       if [[ "$opt" == "" ]] ; then break;  fi
@@ -317,7 +367,7 @@ function bake.opt.parse() {
                 result+="local $opt=true;\n"
                 shift;;
         string) [[ "$2" == "" ]] && echo "error: opt need a value: --$opt <value> " >&2 && return 1 ;
-                local optValue; optValue=$(printf '%q' "$2");
+                local optValue; optValue="$(printf '%q' "$2")";
                 _data[$optPath/value]="$optValue";
                 optCount=$((optCount+1))
                 result+="local $opt=$optValue;\n"
@@ -332,11 +382,10 @@ function bake.opt.parse() {
                   length=$((length+1))
                 fi
                 local index ; index=$((length-1))
-                _cmdTree[$optPath/value]="$length";
-                _cmdTree[$optPath/value/$index]="$optValue";
+                _data[$optPath/value]="$length";
+                _data[$optPath/value/$index]="$optValue";
                 arr+=("$value")
                 result+="${option}+=($(printf '%q',"$optValue"));\n"
-#                result+="${option}[$index]=$(printf '%q',"$optValue");\n"
                 shift 2 ;;
         *) echo "parse error: not support $cmd.opts.$opt.type: <$optType> " >&2 ; return 1 ;;
       esac
@@ -344,7 +393,6 @@ function bake.opt.parse() {
     result+="local optCount=$optCount;\n"
     echo -e "$result" # -e show raw string
 }
-
 
 bake.opt.add --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
 bake.opt.add --cmd bake.cmd.set --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
@@ -360,19 +408,6 @@ function bake.cmd.set(){
   _data[$cmd/summary]="$summary"
   _data[$cmd/description]="$description"
 }
-function remove____bake.cmd.list()(
-  contextCmd=$1
-#  showList=()
-#  maxLengthOfCmd=0
-  for child in $(bake.data.children "$contextCmd"); do
-    [[ "$contextCmd" == "" ]] && key="$child" || key="$contextCmd/$child"
-    if   [[ "$key"              == bake*      ]]; then continue; fi
-    if   [[ "$key"              == @fields*   ]]; then continue; fi
-    if   [[ "$key"              == _*         ]]; then continue; fi
-    if   [[ "${_cmdTree[$key]}" != "type:cmd" ]]; then continue; fi
-    echo "$key : ${_cmdTree[$key.@fields.summary]}"
-  done
-)
 
 # Usage: bake.cmd.register
 # ensure all cmd register
@@ -397,13 +432,50 @@ function bake.cmd.register() {
 
 function bake.help()(
   cmd="$1"
-  echo "${_data[${cmd}/description]}"
-  for subcmd in $(bake.data.children "$cmd"); do
-    [[ "$subcmd" == bake* ]] && continue
-    [[ "$subcmd" == @fields* ]] && continue
-    [[ "$subcmd" == _* ]] && continue
-    [[ "${_cmdTree[$cmd/$subcmd]}" != "type:cmd" ]] && continue
-    echo "  $subcmd : ${_data[${cmd}/$subcmd/summary]}"
+  local selfCmd="${FUNCNAME[0]}"
+  eval "$(bake.opt.parse "$selfCmd" "$@")"
+
+  if [[ "${_data[${cmd}/description]}" != "" ]]; then
+     echo "${_data[${cmd}/description]}"
+  else
+     echo "${_data[${cmd}/summary]}"
+  fi
+
+  echo "
+Available Options:"
+  for optPath in $(bake.opt.list "$cmd"); do
+    local opt; opt=$(bake.path.basename "$optPath")
+    local optName; optName=${_data[$optPath/name]}
+    local optType; optType=${_data[$optPath/type]}
+    local optAbbr; optAbbr=${_data[$optPath/abbr]}
+    local optHelp; optHelp="${_data[$optPath/optHelp]}"
+    printf " --%-15s -%-5s %-10s %b\n" "$optName" "$optAbbr" "$optType" "$optHelp"
+  done
+
+
+  echo "
+Available Commands:"
+  local maxLengthOfCmd; maxLengthOfCmd="$(bake.cmd.childrenNameMaxLength "$cmd")"
+  for subcmdName in $(bake.cmd.children "$cmd"); do
+
+    # only show public cmd if not verbose
+    if [[ "$verbose" == "" && "$subcmdName" == _* ]]; then
+       continue
+    fi
+
+    local subCmd
+    if [[ "$cmd" == "_root" ]] ; then
+      subCmd="$subcmdName"
+    else
+      subCmd="$cmd/$subcmdName"
+    fi
+
+    local padding
+    padding=$(printf %-$((maxLengthOfCmd + 6))b "")
+    # 第二行开始，都补空格
+    local summary
+    summary=$(sed "2,1000s/^/$padding/g" <<<"${_data[$subCmd/summary]}")
+    printf "  %-$((maxLengthOfCmd))s    ${summary}\n" "${subcmdName}"
   done
 )
 
@@ -459,17 +531,15 @@ _run() {
   return $?
 }
 
-_error(){
-  echo -e "ERROR -【▶︎${FUNCNAME[1]}】-︎ $*" >&2
-}
-_log(){
-  echo -e "INFO  -【▶︎${FUNCNAME[1]}】-︎ $*" >&2
-}
 
 ##########################################
 # app cmd script
 # 应用的命令脚本
 ##########################################
+
+
+bake.cmd.set --cmd pub     --summary "flutter pub 的多项目命令集."
+bake.cmd.set --cmd pub.get --summary "flutter pub get 的多项目执行."
 
 pub.get(){
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
@@ -486,15 +556,17 @@ pub.get(){
 bake.cmd.set --cmd _root \
   --summary "bake is a bash script tool to build project, manage dependencies, and run commands." \
   --description "$(cat <<- EOF
- ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
- |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
- |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
- Usage:
- ./${BAKE_FILE} [cmd] [opts] [args...]
+____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
+|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
+|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
+Usage:
+./${BAKE_FILE} [cmd] [opts] [args...]
 
-   ./${BAKE_FILE}       # 列子命令看帮助，
-   ./${BAKE_FILE} build # 子命令
-   ./${BAKE_FILE} run   # 子命令
+ ./${BAKE_FILE}       # 列子命令看帮助，
+ ./${BAKE_FILE} build # 子命令
+ ./${BAKE_FILE} run   # 子命令
+
+----------------------------------------------------------
 EOF
 )"
 
