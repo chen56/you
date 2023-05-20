@@ -137,10 +137,12 @@ test.bake.str.cutLeft(){
 }
 
 
-test.bake.path.list_up(){
-  assert "$(bake.path.list_up a.b '.')" @is_escape "a.b\na"
-  assert "$(bake.path.list_up ''  '.')" @is ""
+test.bake.cmd.list_up(){
+  assert "$(bake.cmd.list_up a.b)" @is_escape "a.b\na\n_root"
+  assert "$(bake.cmd.list_up '_root')" @is "_root"
+  assert "$(bake.cmd.list_up '')" @is "_root"
 }
+
 test.bake.split(){
   assert "$(bake.split "a/b" '/')"  @is_escape "a\nb"
   assert "$(bake.split "a/b/" '/')" @is_escape "a\nb"
@@ -170,14 +172,34 @@ test.bake.cmd.register()(
     @contains "test.bake.cmd.register=test.bake.cmd.register"
 )
 test.data.children(){
-  assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nhelp\nname\ntype"
+  assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nname\noptHelp\ntype"
 }
 
 test.opt.match(){
-  assert "$(bake.opt.match "bake.opt.add" "--type")" @is "type"
+  assert "$(bake.opt.match "bake.opt.add" "--type")"    @is "bake.opt.add/opts/type"
+  assert "$(bake.opt.match "bake.opt.add" "--optHelp")" @is "bake.opt.add/opts/optHelp"
+
+  # root
+  assert "$(bake.opt.match "bake.opt.add" "--help")"    @is "_root/opts/help" "_root command option"
+}
+test.opt.list(){
+  assert "$(bake.opt.list "_root")" @is \
+"_root/opts/help
+_root/opts/verbose"
+
+  # "include parent option"
+  assert "$(bake.opt.list "bake.opt.add")" @is \
+"bake.opt.add/opts/abbr
+bake.opt.add/opts/cmd
+bake.opt.add/opts/name
+bake.opt.add/opts/optHelp
+bake.opt.add/opts/type
+_root/opts/help
+_root/opts/verbose"
 }
 
 test.cmd.parse(){
+
   assert "$(bake.opt.parse "bake.opt.add" --type bool)" @is_escape "local type=bool;\nlocal optCount=1;"
 
   # no exists cmd
@@ -194,3 +216,4 @@ test.opt.add(){
 
 }
 bake.test.runTest
+#test.cmd.parse

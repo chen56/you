@@ -179,7 +179,7 @@ function bake.cmd.register() {
         echo "error: function $functionName() can not contains '/' " >&2 && return 1
       fi
       local traverseUpPath
-      for traverseUpPath in $(bake.path.list_up "$functionName" ".");do
+      for traverseUpPath in $(bake.cmd.list_up "$functionName" ".");do
         local key; key=$([[ "$traverseUpPath" == / ]] && echo "/" || echo "$traverseUpPath" )
         _cmdTree["$traverseUpPath"]=""
       done
@@ -232,22 +232,17 @@ bake.path.basename(){
   # ${1##*/}  => ## left remove until last "/"
   printf "${pathLikeStr##*$delimiter}";
 }
-# Usage: bake.path.list_up <str> <delimiter:"/">
-# sample:
-#   bake.path.list_up a.b "."    => "a.b", "a", ""
-function bake.path.list_up()(
-  local path=$1 delimiter=${2:-/}
-
-  local current="${path}"
-  while
-    printf '%s\n' "$current"
-    local _dirname="$(bake.path.dirname "$current" "$delimiter")"
-    if [[ "$_dirname" == "$current" ]] ; then  break; fi
-    current="$_dirname"
-
-    [[ "$current" != "" ]]  # while condition
-  do true; done
-)
+# Usage: bake.cmd.list_up <str> <delimiter:"/">
+# sample: bake.cmd.list_up a.b      => "a.b\n", "a\n", "_root"
+function bake.cmd.list_up(){
+  local path="${1:-_root}"
+  local up="$path"
+  while [[ "$up" != "" ]]; do
+    printf '%s\n' "$up"
+    up=$(bake.path.dirname "$up" ".")
+  done
+  if [[ "$path" != "_root" ]]; then printf "_root\n"; fi
+}
 # Usage: bake.str.cutLeft <str> <left>
 # bake.path.dirname a/b/c  a/b    => c
 bake.str.cutLeft(){ printf "${1#$2}"; }
@@ -258,31 +253,47 @@ bake.str.cutLeft(){ printf "${1#$2}"; }
 #      => "build.opts.dir"
 function bake.opt.match()(
   local cmd=$1 arg=$2
-  local traverseUpCmd
-  for traverseUpCmd in $(bake.path.list_up "$cmd" "." ) ; do
-    local opt;
-    for opt in $(bake.data.children "$traverseUpCmd/opts"); do
-       local abbr; abbr=${_data["$traverseUpCmd/opts/$opt/abbr"]}
-       if [[ "--$opt" == "$arg" || ("$abbr" != "" && "-$abbr" == "$arg") ]] ; then
-         printf '%s' "$opt"  ;
-         return 0
-       fi
-    done
+  for optPath in $(bake.opt.list "$cmd") ; do
+    local opt;  opt=$(bake.path.basename "$optPath")
+    local abbr; abbr=${_data["$optPath/abbr"]}
+#    echo "optPath: $optPath opt:$opt abbr:$abbr" >&2
+    if [[ "--$opt" == "$arg" || ("$abbr" != "" && "-$abbr" == "$arg") ]] ; then
+     printf '%s' "$optPath"  ;
+     return 0
+    fi
   done
   printf ''
 )
+# Usage: bake.opt.list <cmd>
+# return optionDataPath list
+function bake.opt.list()(
+  local cmd=$1
+  local traverseUpCmd
+  for traverseUpCmd in $(bake.cmd.list_up "$cmd" "." ) ; do
+    local opt;
+    for opt in $(bake.data.children "$traverseUpCmd/opts"); do
+      printf '%s\n' "$traverseUpCmd/opts/$opt"  ;
+    done
+  done
+)
 
 # because this func is meta function, so can not use option to add self
+_data[bake.opt.add/opts/cmd/name]=cmd
 _data[bake.opt.add/opts/cmd/type]=string
 
+_data[bake.opt.add/opts/name/name]=name
 _data[bake.opt.add/opts/name/type]=string
 _data[bake.opt.add/opts/name/required]=true
 
+_data[bake.opt.add/opts/type/name]=type
 _data[bake.opt.add/opts/type/type]=string
 
+_data[bake.opt.add/opts/abbr/name]=abbr
 _data[bake.opt.add/opts/abbr/type]=string
 
-_data[bake.opt.add/opts/help/type]=string
+# avoid use 'help' as option name,because it is root command option
+_data[bake.opt.add/opts/optHelp/name]=optHelp
+_data[bake.opt.add/opts/optHelp/type]=string
 bake.opt.add(){
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
@@ -295,24 +306,27 @@ bake.opt.add(){
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list"  ]] ;then
     echo "error: option [--type] must in [bool|string|list] " >&2  && return 1 ;
   fi
+  _data[$cmd/opts/$name/name]="$name"
+  _data[$cmd/opts/$name/cmd]="$cmd"
   _data[$cmd/opts/$name/type]="$type"
   _data[$cmd/opts/$name/abbr]="$abbr"
-  _data[$cmd/opts/$name/help]="$help"
+  _data[$cmd/opts/$name/optHelp]="$optHelp"
 }
 
 # Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
 function bake.opt.parse() {
-    local cmd; cmd="$1"
+    local cmd; cmd="${1:_root}"
     shift
     local optCount; optCount=0
     local result;
     # parse opts
     while (( $# > 0 )); do
-      local opt; opt=$(bake.opt.match "$cmd" "$1")
+      local optPath; optPath=$(bake.opt.match "$cmd" "$1")
+      local opt;     opt=$(bake.path.basename "$optPath")
       # if arg not a opt , parsing complete;
       if [[ "$opt" == "" ]] ; then break;  fi
       # remove the prefix：build.@fields.opts.base_uri => base_uri
-      local optType; optType=${_data["$cmd/opts/$opt/type"]}
+      local optType; optType=${_data["$optPath/type"]}
 
       case $optType in
         bool)   _data[$cmd/opts/$opt/value]=true;
@@ -321,13 +335,13 @@ function bake.opt.parse() {
                 shift;;
         string) [[ "$2" == "" ]] && echo "error: opt need a value: --$opt <value> " >&2 && return 1 ;
                 local optValue; optValue=$(printf '%q' "$2");
-                _data[$cmd/opts/$opt/value]="$optValue";
+                _data[$optPath/value]="$optValue";
                 optCount=$((optCount+1))
                 result+="local $opt=$optValue;\n"
                 shift 2 ;;
         list)   [[ "$2" == "" ]] && echo "error: option $arg need a value arg: $arg <value> " >&2 && return 1 ;
                 local optValue; optValue="$2";
-                local length; length=${_cmdTree[$cmd/opts/$opt.value]};
+                local length; length=${_cmdTree[$optPath/value]};
                 if [[  "$length" == "" ]] ;then
                   length=1
                   result+="local $opt;\n"
@@ -335,13 +349,13 @@ function bake.opt.parse() {
                   length=$((length+1))
                 fi
                 local index ; index=$((length-1))
-                _cmdTree[$cmd.@fields.opts.$opt.value]="$length";
-                _cmdTree[$cmd.@fields.opts.$opt.value.$index]="$optValue";
+                _cmdTree[$optPath/value]="$length";
+                _cmdTree[$optPath/value/$index]="$optValue";
                 arr+=("$value")
                 result+="${option}+=($(printf '%q',"$optValue"));\n"
 #                result+="${option}[$index]=$(printf '%q',"$optValue");\n"
                 shift 2 ;;
-        *) echo "error: not support cmd.$cmd.opts.$opt.type: <$optType> " >&2 ; return 1 ;;
+        *) echo "parse error: not support $cmd.opts.$opt.type: <$optType> " >&2 ; return 1 ;;
       esac
     done
     result+="local optCount=$optCount;\n"
@@ -353,12 +367,9 @@ function bake.help()(
   echo bake.help $cmd
 )
 
-bake.opt.add --cmd bake.main --name "help"    --abbr h --type bool --help "print help, show all commands"
-bake.opt.add --cmd bake.main --name "verbose" --abbr v --type bool --help "verbose run all commands"
-
 # _root is special cmd, it is root of all cmd
-bake.opt.add --cmd root --name "help"    --abbr h --type bool --help "print help, show all commands"
-bake.opt.add --cmd root --name "verbose" --abbr v --type bool --help "verbose, show more info, more hidden commands"
+bake.opt.add --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
+bake.opt.add --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
 
 function bake.main() {
     bake.cmd.register
@@ -376,13 +387,10 @@ function bake.main() {
       shift ;
     done
 
-
-
     # "" is _root cmd
     if [[ "$cmd" == "" ]] ; then bake.help "" ; return 0;  fi
     # parse opts
     eval "$(bake.opt.parse "$cmd" "$@")"
-
     if ! declare -f "$cmd" >/dev/null 2>&1; then
       _error "Error: 404 ,cmd '${cmd}' not define, please define cmd function '${cmd}()'"
       return 1
