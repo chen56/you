@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-set -o errtrace # trap inherited in sub script
-set -o errexit
-set -o functrace # If set, any trap on DEBUG and RETURN are inherited by shell functions
+set -o errtrace # -E trap inherited in sub script
+set -o errexit # -e
+set -o functrace # -T If set, any trap on DEBUG and RETURN are inherited by shell functions
+set -o pipefail  # default pipeline status==last command status, If set, status=any command fail
+#set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 
 function _readlink() (
   cd -P "$(dirname -- "$1")"
@@ -96,26 +98,70 @@ test.bash_string_escape(){
   assert "$(printf '%q' "$x" )" @is "$'1\n2'"
 }
 
-test.path_traverse_up(){
-  assert "$(bake.path_traverse_up a.b '.')" @is_escape "a.b\na"
-  assert "$(bake.path_traverse_up ''  '.')" @is ""
+test.bake.path.dirname(){
+  assert "$(bake.path.dirname a/b/c '/')" @is "a/b"
+  assert "$(bake.path.dirname a     '/')" @is ""
+  assert "$(bake.path.dirname ""    '/')" @is ""
+
+  # abstract path
+  assert "$(bake.path.dirname /a/b/c '/')" @is "/a/b"
+  assert "$(bake.path.dirname /a     '/')" @is ""
+  assert "$(bake.path.dirname /      '/')" @is ""
+}
+test.bake.path.first(){
+  assert "$(bake.path.first a/b/c  '/')" @is "a"
+  assert "$(bake.path.first a      '/')" @is "a"
+  assert "$(bake.path.first ''     '/')" @is ""
+
+  assert "$(bake.path.first /a/b/c '/')" @is "/a"
+}
+
+test.bake.path.basename(){
+  assert "$(bake.path.basename a/b/c '/')" @is "c"
+  assert "$(bake.path.basename a     '/')" @is "a"
+  assert "$(bake.path.basename ""    '/')" @is ""
+
+  # abstract path
+  assert "$(bake.path.basename "/a"  '/')" @is "a"
+  assert "$(bake.path.basename "/"  '/')"  @is ""
+}
+
+test.bake.str.cutLeft(){
+  assert "$(bake.str.cutLeft a/b/c 'a/b/')" @is "c"
+  assert "$(bake.str.cutLeft a/b/c '')" @is "a/b/c"
+
+  assert "$(bake.str.cutLeft /a/b/c '/')" @is "a/b/c"
+
+  assert "$(bake.str.cutLeft a/b/c 'notStart')" @is "a/b/c"
+  assert "$(bake.str.cutLeft a/b/c '/')"        @is "a/b/c"
+}
+
+
+test.bake.path.list_up(){
+  assert "$(bake.path.list_up a.b '.')" @is_escape "a.b\na"
+  assert "$(bake.path.list_up ''  '.')" @is ""
 }
 test.bake.split(){
-  IFS='.' assert "$(bake.split "a.b" '.')"  @is_escape "a\nb"
-  assert "$(bake.split "a.b." '.')" @is_escape "a\nb"
+  assert "$(bake.split "a/b" '/')"  @is_escape "a\nb"
+  assert "$(bake.split "a/b/" '/')" @is_escape "a\nb"
+
+  # abstract path
+  assert "$(bake.split "/a/b" '/')"  @is_escape "\na\nb"
+  assert "$(bake.split "/a/b/" '/')" @is_escape "\na\nb"
+
 
   # 包含破坏性特殊字符
-  assert "$(bake.split $'a\nxb' "x" )"  @is_escape "a\\n\nb"
-  assert "$(bake.split $'a\n.b' "." )"  @is_escape "a\n\nb" "default delimiter is raw newline "
+  assert "$(bake.split $'a\nb'  "/" )"  @is_escape "a\nb"
+  assert "$(bake.split $'a\n/b' "/" )"  @is_escape "a\n\nb"
+  assert "$(bake.split "a
+/b
+" )"  @is_escape "a\n\nb"
 
-  # defalut delimiter
-  assert "$(bake.split "a.b"  )"  @is_escape "a\nb" "default delimiter is . "
+  # default delimiter
+  assert "$(bake.split "a/b"  )"  @is_escape "a\nb"
 
   # other delimiter
-  assert "$(bake.split "a/b" '/')"  @is_escape "a\nb"
-  assert "$(bake.split "a
-b
-" "\n" )"  @is_escape "a\nb" "default delimiter is raw newline "
+  assert "$(bake.split "a.b" '.')"  @is_escape "a\nb"
 }
 
 test.bake.cmd.register()(
