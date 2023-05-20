@@ -252,7 +252,10 @@ function bake.cmd.list_up(){
 }
 # Usage: bake.cmd.list_down <cmd>
 # reverse of bake.cmd.list_up
-function bake.cmd.list_down(){ bake.cmd.list_up "$1" | tail -r; }
+function bake.cmd.list_down(){
+  bake.cmd.list_up "$1" | sed '1!G;h;$!d'; # sed magic
+#  bake.cmd.list_up "$1" | tail -r; # macos bsd only, not work on linux
+}
 # Usage: bake.str.cutLeft <str> <left>
 # bake.path.dirname a/b/c  a/b    => c
 bake.str.cutLeft(){ printf "${1#$2}"; }
