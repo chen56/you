@@ -109,8 +109,8 @@ cd "${BAKE_DIR}"
 
 # Simulating object-oriented data structures with flat associative arrays
 # opts define:
-#  _data[root/summary]="bake root cmd"
-#  _data[root/help]="bake root cmd"
+#  _data[_root/summary]="bake _root cmd"
+#  _data[_root/help]="bake _root cmd"
 #  _data[pub]="type:cmd"
 #  _data[pub/summary]="flutter pub"
 #  _data[pub/opts/notes]="type:option"
@@ -122,7 +122,7 @@ cd "${BAKE_DIR}"
 #  _data[pub.get/opts/verbose/type]="bool"
 #  _data[pub.get/opts/verbose/abbr]="v"
 # parsed opts value:
-#  _data[root/opts/verbose/value]=true
+#  _data[_root/opts/verbose/value]=true
 #  _data[pub.get/opts/notes/value/0]="..lib/note.page"
 #  _data[pub.get/opts/notes/value/1]="./lib/a/note.page"
 # save all other data
@@ -146,10 +146,11 @@ bake.data.children() (
     # if start $path
     if [[ "$key" == "$path"* ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-      # remove prefix : path:build/opts  key:build/opts/dir/type => dir/type
-      child=${key#$path/}
-      # remove suffix:  dir/type => dir
-      child=${child%%/*}
+      # remove prefix : key:build/opts/dir/type/x leftPathToBeCut:build/opts => dir/type/x
+      child=$(bake.str.cutLeft "$key" "$path/")
+      # remove suffix:  dir/type/x => dir
+#      child=${child%%/*}
+      child=$(bake.path.first "$child" "/")
       printf '%s\n' "$child"
     fi
   done | sort -u
@@ -202,27 +203,24 @@ bake.split() {
   printf '%s\n' "${arr[@]}"
 }
 
+# Usage: bake.path.dirname <str> [delimiter:default /]
 # similar command dirname, but
 #     dirname root is ".", only work with "/"
 #     bake.path.dirname root is "" , can set delimiter
-# Usage: bake.path.dirname <str> [delimiter:default /]
 # bake.path.dirname a.b.c .    => a.b
 bake.path.dirname(){
   local pathLikeStr="$1" delimiter="${2:-/}"
   if [[ "$pathLikeStr" != *"$delimiter"* ]]; then printf '' ; return ; fi
   printf '%s' "${pathLikeStr%$delimiter*}"
 }
-# similar command dirname, but
-#     dirname root is ".", only work with "/"
-#     bake.path.dirname root is "" , can set delimiter
-# Usage: bake.path.dirname <str> [delimiter:default /]
-# bake.path.dirname a.b.c .    => a.b
+# Usage: bake.path.first <str> [delimiter:default /]
+# bake.path.first a.b.c .    => a
 bake.path.first(){
   local pathLikeStr="$1" delimiter="${2:-/}"
-  # if /a/b/c
+  # if /a/b/c , call :bake.path.first a/b/c /
   if [[ "$pathLikeStr" == "$delimiter"* ]] ; then
-    local x; x=$(bake.str.cutLeft "$pathLikeStr" "$delimiter")
-    printf "$delimiter$(bake.path.first "$x" "$delimiter" )"
+    local removeDelim; removeDelim=$(bake.str.cutLeft "$pathLikeStr" "$delimiter")
+    printf "$delimiter$(bake.path.first "$removeDelim" "$delimiter" )"
   else # a/b/c
     printf "${pathLikeStr%%$delimiter*}"
   fi
@@ -240,8 +238,7 @@ bake.path.basename(){
 function bake.path.list_up()(
   local path=$1 delimiter=${2:-/}
 
-  current="${path}"
-
+  local current="${path}"
   while
     printf '%s\n' "$current"
     local _dirname="$(bake.path.dirname "$current" "$delimiter")"
@@ -286,7 +283,6 @@ _data[bake.opt.add/opts/type/type]=string
 _data[bake.opt.add/opts/abbr/type]=string
 
 _data[bake.opt.add/opts/help/type]=string
-# bake.opt.add --cmd root --name "help" --type bool --help "print help, show all commands"
 bake.opt.add(){
   # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
   eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")"
@@ -304,7 +300,7 @@ bake.opt.add(){
   _data[$cmd/opts/$name/help]="$help"
 }
 
-# Usage: bake.opt.parse <cmd> [arg1] [arg2] ...
+# Usage: bake.opt.parse <cmd:default _root> [arg1] [arg2] ...
 function bake.opt.parse() {
     local cmd; cmd="$1"
     shift
@@ -349,9 +345,9 @@ function bake.opt.parse() {
       esac
     done
     result+="local optCount=$optCount;\n"
-#    printf '%s' "$result"
-    echo -e "$result"
+    echo -e "$result" # -e show raw string
 }
+
 function bake.help()(
   cmd="$1"
   echo bake.help $cmd
@@ -359,8 +355,10 @@ function bake.help()(
 
 bake.opt.add --cmd bake.main --name "help"    --abbr h --type bool --help "print help, show all commands"
 bake.opt.add --cmd bake.main --name "verbose" --abbr v --type bool --help "verbose run all commands"
+
+# _root is special cmd, it is root of all cmd
 bake.opt.add --cmd root --name "help"    --abbr h --type bool --help "print help, show all commands"
-bake.opt.add --cmd root --name "verbose" --abbr v --type bool --help "print help, show all commands"
+bake.opt.add --cmd root --name "verbose" --abbr v --type bool --help "verbose, show more info, more hidden commands"
 
 function bake.main() {
     bake.cmd.register
@@ -378,7 +376,9 @@ function bake.main() {
       shift ;
     done
 
-    # "" is root cmd
+
+
+    # "" is _root cmd
     if [[ "$cmd" == "" ]] ; then bake.help "" ; return 0;  fi
     # parse opts
     eval "$(bake.opt.parse "$cmd" "$@")"
@@ -397,7 +397,7 @@ function bake.main() {
 # print first, then _run
 _run() {
   local project; project=$(basename "$PWD")
-  [[ "$PWD" == "$BAKE_DIR" ]] && project="root"
+  [[ "$PWD" == "$BAKE_DIR" ]] && project="_root"
   _log "【${project}】▶︎${FUNCNAME[1]} ▶︎ $*"
   "$@"
   return $?
@@ -422,8 +422,8 @@ pub.get(){
 }
 
 ####################################################
-# app entry script & root cmd
-# root cmd is no function ,all it is this file
+# app entry script & _root cmd
+# _root cmd is no function ,all it is this file
 ####################################################
 # cmd settings use bash associative array
 _rootHelp="$(cat <<- EOF
@@ -438,9 +438,6 @@ Usage:
   ./${BAKE_FILE} run   # 子命令
 EOF
 )"
-#bake.opt.add --cmd root --name "help" --type bool --help "print help, show all commands"
-
-
 
 # lib_mode use for other script import
 if [[ "$1" == "--lib_mode"  ]]; then
