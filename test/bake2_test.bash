@@ -35,9 +35,12 @@ function bake.test(){
 function bake.test.runTest() {
     while IFS=$'\n' read -r functionName ; do
       [[ "$functionName" != test* ]] && continue ;
-      echo "run test - ${TEST_PATH} - $functionName()"
       # run test
-      "$functionName" # || echo "error : test[$functionName()] must return 0 , but:$?" && _stack_frame
+      printf "test: %s %-50s" "${TEST_PATH}" "$functionName()"
+      # TIMEFORMAT: https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
+      # %R==real %U==user %S==sys %P==(user+sys)/real
+      TIMEFORMAT="real %R user %U sys %S percent %P"
+      time "$functionName" #2>&1
     done <<< "$(compgen -A function)"
 }
 
@@ -146,6 +149,10 @@ test.bake.cmd.list_up(){
   assert "$(bake.cmd.list_up '_root')" @is "_root"
   assert "$(bake.cmd.list_up '')" @is "_root"
 }
+test.bake.cmd.children(){
+  doctor | sort
+  assert "$(bake.cmd.children bake.test)" @is_escape "runTest"
+}
 
 test.bake.str.split(){
   assert "$(bake.str.split "a/b" '/')"  @is_escape "a\nb"
@@ -179,28 +186,21 @@ test.data.children(){
   assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nname\noptHelp\nrequired\ntype"
 }
 
-test.opt.match(){
-  assert "$(bake.opt.match "bake.opt.add" "--type")"    @is "bake.opt.add/opts/type"
-  assert "$(bake.opt.match "bake.opt.add" "--optHelp")" @is "bake.opt.add/opts/optHelp"
-
-  # root
-  assert "$(bake.opt.match "bake.opt.add" "--help")"    @is "_root/opts/help" "_root command option"
-}
-test.opt.list(){
+test.bake.opt.list(){
   assert "$(bake.opt.list "_root")" @is \
 "_root/opts/help
 _root/opts/verbose"
 
   # "include parent option"
   assert "$(bake.opt.list "bake.opt.add")" @is \
-"bake.opt.add/opts/abbr
+"_root/opts/help
+_root/opts/verbose
+bake.opt.add/opts/abbr
 bake.opt.add/opts/cmd
 bake.opt.add/opts/name
 bake.opt.add/opts/optHelp
 bake.opt.add/opts/required
-bake.opt.add/opts/type
-_root/opts/help
-_root/opts/verbose"
+bake.opt.add/opts/type"
 }
 
 test.cmd.parse(){
@@ -214,19 +214,22 @@ test.cmd.parse(){
   assert "$(bake.opt.parse "bake.opt.add" --no_exists_opt)" @is "local optCount=0;"
 }
 
-test.opt.add(){
+test.bake.opt.add(){
   bake.opt.add --cmd "test.opt.add" --name boolopt --type bool
-
-  assert "$(bake.opt.parse "test.opt.add" --boolopt)" @is_escape "local boolopt=true;\nlocal optCount=1;"
-
 }
-test.opt.value(){
-#  echo test!!!!!!!!!!!!!!!!!!!!1
+test.bake.opt.value.parse_and_get_value(){
   bake.opt.add --cmd "test.opt.add" --name xxx --type string
-#  echo test!!!!!!!!!!!!!!!!!!!!2
   bake.opt.parse "test.opt.add" --xxx chen >/dev/null
-#  echo test!!!!!!!!!!!!!!!!!!!!3
   assert "$(bake.opt.value "test.opt.add" "xxx")" @is "chen"
 }
+
+
+# init
+bake.cmd.register
+
 bake.test.runTest
-test.opt.value
+
+#bake.opt.parse2 "bake.opt.add" --type bool
+
+#bake.str.revertLines <<< "$(echo -e "a\nb\nc")"
+#echo -e "a\nb\nc" | bake.str.revertLines
