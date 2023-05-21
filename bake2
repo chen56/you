@@ -404,6 +404,7 @@ function bake.opt.parse() {
     echo -e "$result" # -e show raw string
 }
 bake.opt.add --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
+bake.opt.add --cmd bake.cmd.set --name "usage"       --type string --optHelp "usage"
 bake.opt.add --cmd bake.cmd.set --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
 bake.opt.add --cmd bake.cmd.set --name "description" --type string --optHelp "description, long help ,show on cmd help page"
 
@@ -414,6 +415,7 @@ function bake.cmd.set(){
     echo "error: bake.cmd.set [--cmd] required " >&2 && return 1 ;
   fi
 #  bake.opt.parse "${FUNCNAME[0]}" "$@" >&2
+  _data[$cmd/usage]="$usage"
   _data[$cmd/summary]="$summary"
   _data[$cmd/description]="$description"
 }
@@ -444,6 +446,11 @@ function bake.help()(
   local selfCmd="${FUNCNAME[0]}"
   eval "$(bake.opt.parse "$selfCmd" "$@")"
 
+  local usage; usage="${_data[${cmd}/usage]}"
+  if [[ "$usage" != "" ]]; then
+    echo -e "\nUsage($cmd):  $usage \n"
+  fi
+
   if [[ "${_data[${cmd}/description]}" != "" ]]; then
      echo "${_data[${cmd}/description]}"
   else
@@ -451,8 +458,6 @@ function bake.help()(
   fi
 
   echo "
-Usage:
-  ./$BAKE_FILE $(echo $(bake.str.split "$cmd" .)) [options] [args]
 
 Available Options:"
   for optPath in $(bake.opt.list "$cmd"); do
@@ -482,11 +487,16 @@ Available Commands:"
       subCmd="$cmd/$subcmdName"
     fi
 
-    local padding
-    padding=$(printf %-$((maxLengthOfCmd + 6))b "")
     # 第二行开始，都补空格
-    local summary
-    summary=$(sed "2,1000s/^/$padding/g" <<<"${_data[$subCmd/summary]}")
+    local summary usage
+    summary="${_data[$subCmd/summary]:--}"
+    usage="${_data[$subCmd/usage]}"
+    [[ "$usage" != "" ]] &&  summary+="\nUsage: $usage"
+    summary="$(echo -e "$summary")" #  backslash escapes interpretation
+
+    local padding; padding=$(printf %-$((maxLengthOfCmd + 6))b "")
+    summary=$(sed "2,1000s/^/$padding/g" <<<"$summary" )
+
     printf "  %-$((maxLengthOfCmd))s    ${summary}\n" "${subcmdName}"
   done
 )
@@ -549,15 +559,38 @@ _run() {
 # app cmd script
 # 应用的命令脚本
 ##########################################
+bake.cmd.set --cmd all --summary "<mono>  run cmd on all mono project"\
+  --usage "Usage: ./$BAKE_FILE all [any command]"
+
+all() {
+    #       目录中有"pubspec.yaml"的，认为是flutter项目
+    #        for project in $( find . -name pubspec.yaml | sed s/pubspec.yaml$//g ) ; do
+    #          # 用括号()开启子进程执行，可以不影响当前进程的环境
+    #          ( cd "$project" ;  run "$@" ; )
+    #        done
+    (cd packages/learn_dart;        _run "$@";  )
+    (cd packages/note;              _run "$@";  )
+    (cd packages/note_mate_flutter; _run "$@";  )
+    (cd packages/note_mate;         _run "$@";  )
+    (cd packages/note_app;          _run "$@";  )
+    (cd packages/note_test;         _run "$@";  )
+}
+
+bake.cmd.set --cmd note              --usage "./$BAKE_FILE note [any command]" --summary "<project> run cmd on project"
+bake.cmd.set --cmd note_app          --usage "./$BAKE_FILE note_app [any command]"
+bake.cmd.set --cmd note_mate         --usage "./$BAKE_FILE note_mate [any command]"
+bake.cmd.set --cmd note_mate_flutter --usage "./$BAKE_FILE note_mate_flutter [any command]"
+bake.cmd.set --cmd note_test         --usage "./$BAKE_FILE note_test [any command]"
+note() (              cd packages/note;                  _run "$@";  )
+note_app() (          cd packages/note_app;              _run "$@";  )
+note_mate() (         cd packages/note_mate;             _run "$@";  )
+note_mate_flutter() ( cd packages/note_mate_flutter;     _run "$@";  )
+note_test() (         cd packages/note_test;             _run "$@";  )
 
 
-bake.cmd.set --cmd pub     --summary "flutter pub 的多项目命令集."
-bake.cmd.set --cmd pub.get --summary "flutter pub get 的多项目执行."
-
-pub.get(){
-  # 模版代码，放到每个需要使用option的函数中，然后就可以使用option了
-  bake.opt.parse "${FUNCNAME[0]}" "$@"
-  echo "pub.get [$@]"
+bake.cmd.set --cmd dep --usage "./$BAKE_FILE pub" --summary "<shortcut> ./bake all flutter pub get"
+dep(){
+  _run all flutter pub get
 }
 
 ####################################################
@@ -567,19 +600,21 @@ pub.get(){
 # cmd settings use bash associative array
 
 bake.cmd.set --cmd _root \
+  --usage "./$BAKE_FILE [cmd] [opts] [args...]" \
   --summary "bake is a bash script tool to build project, manage dependencies, and run commands." \
   --description "$(cat <<- EOF
 ____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
 |___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
 |    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
-Usage:
-./${BAKE_FILE} [cmd] [opts] [args...]
 
- ./${BAKE_FILE}       # 列子命令看帮助，
- ./${BAKE_FILE} build # 子命令
- ./${BAKE_FILE} run   # 子命令
+bake is a bash script tool to build project, manage dependencies, and run commands.
 
-----------------------------------------------------------
+Samples:
+ ./${BAKE_FILE} -h                       # show all commands help
+ ./${BAKE_FILE} -h -v                    # show all commands help , include internal commands
+ ./${BAKE_FILE} all  flutter pub get     # run "flutter pub get" on all mono projects
+ ./${BAKE_FILE} note flutter pub get     # run "flutter pub get" on note project
+
 EOF
 )"
 
