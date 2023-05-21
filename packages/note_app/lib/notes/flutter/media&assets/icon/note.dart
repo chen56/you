@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note/mate_core.dart';
+import 'package:note/mate_note.dart';
 import 'package:note/note_core.dart';
 
 // [   +4 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken,
@@ -79,73 +79,73 @@ build(BuildContext context, Pen print) {
 //         return const CircularProgressIndicator();
 //       }));
 }
-
-Widget iconsWidget(IconRegister iconRegister) {
-  ValueNotifier<Set<String>> currentSelect = ValueNotifier({""});
-  Map<String, IconData> icons =
-      iconRegister.icons.map((key, value) => MapEntry(value, key));
-  List<String> mainIconNames = icons.keys
-      .where((name) => iconTypes.every((iconExt) => !name.endsWith(iconExt)))
-      .toList()
-    ..sort((a, b) => a.compareTo(b));
-
-  return ValueListenableBuilder(
-      valueListenable: currentSelect,
-      builder: (context, value, child) {
-        // 扩展后缀选择器
-        var iconSelect = Row(children: [
-          SegmentedButton(
-            segments: const [
-              ButtonSegment(
-                value: '',
-                icon: Icon(Icons.work_history),
-                label: Text('主图标'),
-              ),
-              ButtonSegment(
-                value: '_outlined',
-                icon: Icon(Icons.work_history_outlined),
-                label: Text('outlined'),
-              ),
-              ButtonSegment(
-                value: '_rounded',
-                icon: Icon(Icons.work_history_rounded),
-                label: Text('rounded'),
-              ),
-              ButtonSegment(
-                value: '_sharp',
-                icon: Icon(Icons.work_history_sharp),
-                label: Text('sharp'),
-              ),
-            ],
-            selected: currentSelect.value,
-            onSelectionChanged: (Set<String> extSuffixs) {
-              currentSelect.value = extSuffixs;
-            },
-            multiSelectionEnabled: true,
-          )
-        ]);
-        var selectedResult = Wrap(
-          children: [
-            ...mainIconNames
-                .expand((mainName) =>
-                    currentSelect.value.map((suffix) => "$mainName$suffix"))
-                .where((name) => icons.containsKey(name))
-                .map((name) {
-              assert(icons.containsKey(name), "icon $name should be exists");
-              var icon = icons[name];
-              var iconWithTip = Tooltip(
-                message: name,
-                child: Icon(icon),
-              );
-              return iconWithTip;
-            }),
-          ],
-        );
-        return Column(
-          children: [
-            iconSelect,
-            selectedResult,
-          ],
-        );
-      });
-}
+//
+// Widget iconsWidget(IconRegister iconRegister) {
+//   ValueNotifier<Set<String>> currentSelect = ValueNotifier({""});
+//   Map<String, IconData> icons =
+//       iconRegister.icons.map((key, value) => MapEntry(value, key));
+//   List<String> mainIconNames = icons.keys
+//       .where((name) => iconTypes.every((iconExt) => !name.endsWith(iconExt)))
+//       .toList()
+//     ..sort((a, b) => a.compareTo(b));
+//
+//   return ValueListenableBuilder(
+//       valueListenable: currentSelect,
+//       builder: (context, value, child) {
+//         // 扩展后缀选择器
+//         var iconSelect = Row(children: [
+//           SegmentedButton(
+//             segments: const [
+//               ButtonSegment(
+//                 value: '',
+//                 icon: Icon(Icons.work_history),
+//                 label: Text('主图标'),
+//               ),
+//               ButtonSegment(
+//                 value: '_outlined',
+//                 icon: Icon(Icons.work_history_outlined),
+//                 label: Text('outlined'),
+//               ),
+//               ButtonSegment(
+//                 value: '_rounded',
+//                 icon: Icon(Icons.work_history_rounded),
+//                 label: Text('rounded'),
+//               ),
+//               ButtonSegment(
+//                 value: '_sharp',
+//                 icon: Icon(Icons.work_history_sharp),
+//                 label: Text('sharp'),
+//               ),
+//             ],
+//             selected: currentSelect.value,
+//             onSelectionChanged: (Set<String> extSuffixs) {
+//               currentSelect.value = extSuffixs;
+//             },
+//             multiSelectionEnabled: true,
+//           )
+//         ]);
+//         var selectedResult = Wrap(
+//           children: [
+//             ...mainIconNames
+//                 .expand((mainName) =>
+//                     currentSelect.value.map((suffix) => "$mainName$suffix"))
+//                 .where((name) => icons.containsKey(name))
+//                 .map((name) {
+//               assert(icons.containsKey(name), "icon $name should be exists");
+//               var icon = icons[name];
+//               var iconWithTip = Tooltip(
+//                 message: name,
+//                 child: Icon(icon),
+//               );
+//               return iconWithTip;
+//             }),
+//           ],
+//         );
+//         return Column(
+//           children: [
+//             iconSelect,
+//             selectedResult,
+//           ],
+//         );
+//       });
+// }
