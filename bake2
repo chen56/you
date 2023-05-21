@@ -6,16 +6,33 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 # todo trap exit and kill all subprocess
 
-# bake == (bash)ake == 去make的bash工具
-# v0.2.20230521 搞docker那样的多级命令树 目前仅在macos上跑过
-# ------------------------------------------------------------------------------
-# bake is a bash script tool to build project, manage dependencies, and run commands.
-# bake 是个简单的自建命令工具，以替代Makefile的子命令功能
+# v0.2.20230521 - It can run normally on macos
+#
+# chinese-----------------------------------------------------------------------
+# bake == (bash)ake == 去Make的bash tool
+# bake 是个简单的命令行工具，以替代Makefile的子命令功能
 # make工具的主要特点是处理文件依赖进行增量编译，但flutter、golang、java、js项目的build工具
 # 太厉害了，这几年唯一还在用Makefile的理由就是他的子命令机制: "make build"、
 # "make run", 可以方便的自定义单一入口的父子命令，但Makefile本身的语法套路也很复杂，
 # 很多批处理还是要靠bash, 这就尴尬了，工具太多，麻烦！本脚本尝试彻底摆脱使用Makefile。
 # 经尝试，代码很少啊 ，核心代码几百行啊，父子命令2百行左右，option解析2百行左右，功能足够了：
+#
+# english-----------------------------------------------------------------------
+# bake == (bash)ake == De-Make bash tool
+# bake is a simple cli tool to replace the subcommand function of Makefile
+# The main feature of the make tool is to process file dependencies for
+# incremental compilation, but the build tools for flutter, golang, java,
+# and js projects, It's so powerful, the only reason why I still use Makefile
+# in recent years is its subcommand mechanism: "make build",
+# "make run", it is convenient to customize the parent-child command of a
+# single entry, but the syntax of the Makefile itself is also very complicated.
+# A lot of batch processing still depends on bash, which is embarrassing,
+# too many tools, So complicated! This script attempts to get rid of Makefiles
+# altogether. After trying, the code is very little, the core code is
+# hundreds of lines, the parent-child command is about 200 lines,
+# and the option parse is about 200 lines, the function is enough:
+
+# chinese-----------------------------------------------------------------------
 # bake命令规则：
 # 1. 函数即命令，所有bake内的函数均可以在脚本外运行：
 #      ./bake [all function]     # bake内的所有函数均可以在脚本外直接运行
@@ -29,15 +46,59 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #      ./bake2 bake.opt.add -h   # 由于规则1，可直接用函数名运行子命令
 # 3. 你可以定义根命令"_root()"
 #      ./bake2                   # 如果有_root()函数，就执行它
-# 4. bake尽量不依赖bash以外的其他工具，包括linux coreutils,更简单通用,但由于用了关联数组等
+# 4. 像其他高级语言的cli工具一样，用简单变量就可以获取命令option:
+#    # a. 先在命令函数前定义options
+#      bake.opt.add --cmd build --name "target" --type string
+#    # b. 解析和使用option
+#      function build() {
+#         eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")";
+#         echo "build ... your option：target: $target";
+#      }
+#    # c. 调用看看:
+#      ./bake2 build --target "macos"
+# 5. bake尽量不依赖bash以外的其他工具，包括linux coreutils,更简单通用,但由于用了关联数组等
 #    依赖bash4+
+# 6. 这个文件copy走，把"bake common script end line."之下的脚本替换成你的就可以用了.
+
+# english-----------------------------------------------------------------------
+# bake rules:
+# 1. bash function are cmd, all functions in bake can be run outside the script:
+#     ./bake [all func]   # All functions in bake can be run outside script
+#     ./bake _self        # For example, this internal function,
+#                         # see bake internal variables, used to debug scripts
+#     ./bake2 test        # If you have a test() function, you can run it like this
+# 2. Functions with "." is parent-child commands, such as bake.opt.add() function
+#    is a subcommand of bake.opt(), bake.opt()  is a subcommand of bake(),
+#    even the parent command is not defined, you can also view the help :
+#     ./bake2 bake -h          # Run subcommands, or see help
+#     ./bake2 bake opt -h      # Run subcommands, or see help
+#     ./bake2 bake opt add -h  # Run subcommands, or see help
+#     ./bake2 bake.opt.add -h  # Due to rule 1, the subcommand can be run directly with the function name
+# 3. You can define the root command "_root()"
+#     ./bake2                  # If there is a _root() function, execute it
+# 4. Like other high-level language cli tools, command options can be obtained with simple variables:
+#     # a. Define options before the command function
+#     bake.opt.add --cmd build --name "target" --type string
+#     # b. Parse and use option
+#       function build() {
+#         eval "$(bake.opt.parse "${FUNCNAME[0]}" "$@")";
+#         echo "build ... your option: target: $target";
+#       }
+#     # c. Call it:
+#       ./bake2 build --target "macos"
+# 5. bake try not to depends on too many external tools other than bash,
+#    including linux coreutils, keep it simple, But because of the use of
+#    associative arrays arrays, Depend on bash4+
+# 6. Copy this file, replace the script under "bake common script end line."
+#    with yours and it will be ready to use.
+#
 # other command framework ref:
 # https://pub.dev/documentation/args/latest/args/ArgParser-class.html
 # https://github.com/spf13/pflag
 # https://oclif.io/docs/flags
 
 if ((BASH_VERSINFO[0] < 4)); then
-  echo "Error: 都2082年了，您的bash还是这个版本(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
+  echo "Error: It's 2082 ，Your bash is still this version(BASH_VERSINFO: ${BASH_VERSINFO[*]})，Please install bash 4+:
   apt install bash  # ubuntu
   brew install bash # mac"
   exit 1
