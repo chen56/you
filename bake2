@@ -8,7 +8,7 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 
 
 # bake == (bash)ake == 去make的bash工具
-# v0.2.20230515 目前仅在macos上跑过
+# v0.2.20230521 搞docker那样的多级命令树 目前仅在macos上跑过
 # ------------------------------------------------------------------------------
 # bake 是个简单的自建命令工具，以替代Makefile的子命令功能
 # make工具的主要特点是处理文件依赖进行增量编译，但flutter、golang、java、js项目的build工具
@@ -16,13 +16,17 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 # "make run", 可以方便的自定义单一入口的父子命令，但Makefile本身的语法套路也很复杂，
 # 很多批处理还是要靠bash, 这就尴尬了，工具太多，麻烦！本脚本尝试彻底摆脱使用Makefile。
 # 经尝试，代码很少啊 ，核心公共代码百十行啊，还主要是提取显示子命令帮助的，功能足够了：
-#   ./bake       # 列子命令看帮助，
+#   ./bake -h      # 列子命令看帮助，
+#   ./bake -h -v   # 列隐藏命令子命令，
 #   ./bake build # 子命令
 #   ./bake run   # 子命令
 # bake命令规则：
-# 1. 定义以斜杠"/"为前缀的function作为子命令，/build、/run、/assets/list、
-#    表示命令的其父子关系，执行时去掉斜杠/, 构成父子命令：./bake assets list -x -y -z
-# 2. 除bash外，尽量不依赖其他工具，包括linux coreutils,以便跨平台更简单
+# 1. 命令函数通过"."来形成父子关系树 pub.get、assets.list，
+#    运行，运行：
+#      ./bake2 pub -h #看帮助
+#      ./bake2 pub pub -x -y -z  # 运行pub.get函数
+#      ./bake2 pub.pub -x -y -z  # 或直接
+# 2. 尽量不依赖bash以外的其他工具，包括linux coreutils,以便跨平台更简单
 # 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
 # ref
 # https://pub.dev/documentation/args/latest/args/ArgParser-class.html
@@ -115,8 +119,6 @@ BAKE_FILE="$(basename "$BAKE_PATH")"
 # set workdir
 cd "${BAKE_DIR}"
 
-_debug
-
 # Simulating object-oriented data structures with flat associative arrays
 # opts define:
 #_root/opts/help/abbr=h
@@ -169,6 +171,10 @@ bake.str.split() {
   local arr
   readarray -t arr < <(printf '%s' "${str//$delimiter/$'\n'}")
   printf '%s\n' "${arr[@]}"
+}
+# Usage: bake.str.revertLines <<< "$(echo -e "a\nb\nc")"  => "c\nb\na"
+function bake.str.revertLines(){
+  sed '1!G;h;$!d'  # sed magic
 }
 
 # Usage: bake.path.dirname <str> [delimiter:default /]
@@ -232,10 +238,11 @@ bake.cmd.children() (
   if [[ "$path" == _root ]]; then
     path=""
   fi
+
   # ${!_data[@]}: get all array keys
   for key in "${!_cmdTree[@]}"; do
     # if start $path
-    if [[ "$key" == "$path"* && "$key" != "_root" ]]; then
+    if [[ "$key" == "$path"* && "$key" != "$path" && "$key" != "_root" ]]; then
       # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
       # remove prefix : key:a.b.c leftPathToBeCut:a => b.c
       child=$(bake.str.cutLeft "$key" "$path.")
@@ -260,57 +267,48 @@ function bake.cmd.list_up(){
 # Usage: bake.cmd.list_down <cmd>
 # reverse of bake.cmd.list_up
 function bake.cmd.list_down(){
-  bake.cmd.list_up "$1" | sed '1!G;h;$!d'; # sed magic
+  bake.cmd.list_up "$1" | bake.str.revertLines ;
 #  bake.cmd.list_up "$1" | tail -r; # macos bsd only, not work on linux
 }
 
 
-# Usage: bake.opt.match <cmd> <arg>
-# match a <arg> is a option return optionDataPath else return ""
-# Sample: bake.opt.match "build" "--dir" someDir
-#      => "build.opts.dir"
-function bake.opt.match(){
-  local cmd=$1 arg=$2
-  for optPath in $(bake.opt.list "$cmd") ; do
-    local opt;  opt=$(bake.path.basename "$optPath")
-    local abbr; abbr=${_data["$optPath/abbr"]}
-#    echo "optPath: $optPath opt:$opt abbr:$abbr" >&2
-    if [[ "--$opt" == "$arg" || ("$abbr" != "" && "-$abbr" == "$arg") ]] ; then
-     printf '%s' "$optPath"  ;
-     return 0
-    fi
-  done
-  printf ''
-}
 # Usage: bake.opt.list <cmd>
 # return optionDataPath list
 function bake.opt.list(){
   local cmd=$1
-  local traverseUpCmd
-  for traverseUpCmd in $(bake.cmd.list_up "$cmd" "." ) ; do
-    local opt;
-    for opt in $(bake.data.children "$traverseUpCmd/opts"); do
-      printf '%s\n' "$traverseUpCmd/opts/$opt"  ;
+  local upCmds;
+  readarray -t upCmds <<< "$(bake.cmd.list_up "$cmd")"
+
+  local key
+  for key in "${!_data[@]}"; do
+    if [[ "${_data[$key]}" != "type:opt" ]]; then continue ; fi
+    local upCmd
+    for upCmd in "${upCmds[@]}"; do
+      if [[ "$key" == "$upCmd/opts/"* ]]; then
+        printf '%s\n' "$key"
+      fi
     done
-  done
+  done | sort
 }
+
 # only use by bake.opt.add,
 # because "bake.opt.add" is meta function, use this func to add self
 bake.opt._internal_add(){
-  local opt="$1" type="$2" required="$3" abbr="$4" help="$5"
-  _data[bake.opt.add/opts/$opt/name]="$opt"
-  _data[bake.opt.add/opts/$opt/type]="$type"
-  _data[bake.opt.add/opts/$opt/required]="$required"
-  _data[bake.opt.add/opts/$opt/abbr]="$abbr"
-  _data[bake.opt.add/opts/$opt/optHelp]="$optHelp"
+  local cmd="$1" opt="$2" type="$3" required="$4" abbr="$5" help="$6"
+  _data[$cmd/opts/$opt]="type:opt"
+  _data[$cmd/opts/$opt/name]="$opt"
+  _data[$cmd/opts/$opt/type]="$type"
+  _data[$cmd/opts/$opt/required]="$required"
+  _data[$cmd/opts/$opt/abbr]="$abbr"
+  _data[$cmd/opts/$opt/optHelp]="$optHelp"
 }
-bake.opt._internal_add "cmd" "string" "true" "" "cmd name"
-bake.opt._internal_add "name" "string" "true" "" "option name"
-bake.opt._internal_add "type" "string" "true" "" "option type"
-bake.opt._internal_add "required" "bool" "false" "" "option required"
-bake.opt._internal_add "abbr" "string" "false" "" "option abbr"
-# avoid use 'help' as option name,because it is root command option
-bake.opt._internal_add "optHelp" "string" "false" "" "option help"
+bake.opt._internal_add bake.opt.add "cmd" "string" "true" "" "cmd name"
+bake.opt._internal_add bake.opt.add "name" "string" "true" "" "option name"
+bake.opt._internal_add bake.opt.add "type" "string" "true" "" "option type"
+bake.opt._internal_add bake.opt.add "required" "bool" "false" "" "option required"
+bake.opt._internal_add bake.opt.add "abbr" "string" "false" "" "option abbr"
+# avoid use 'help' as  option name,because it is root command option
+bake.opt._internal_add bake.opt.add "optHelp" "string" "false" "" "option help"
 bake.opt.add(){
   local selfCmd="${FUNCNAME[0]}"
   eval "$(bake.opt.parse "$selfCmd" "$@")"
@@ -329,12 +327,8 @@ bake.opt.add(){
   if [[ "$type" != "bool" && "$type" != "string" && "$type" != "list"  ]] ;then
     echo "error: option [--type] must in [bool|string|list] " >&2  && return 1 ;
   fi
-  local optPath="$cmd/opts/$name"
-  _data[$optPath/name]="$name"
-  _data[$optPath/cmd]="$cmd"
-  _data[$optPath/type]="$type"
-  _data[$optPath/abbr]="$abbr"
-  _data[$optPath/optHelp]="$optHelp"
+#  bake.opt._internal_add "cmd" "string" "true" "" "cmd name"
+  bake.opt._internal_add "$cmd" "$name" "$type" "$required" "$abbr" "$optHelp"
 }
 
 
@@ -349,20 +343,36 @@ function bake.opt.parse() {
     shift
     local optCount; optCount=0
     local result;
-    # parse opts
-    while (( $# > 0 )); do
-#      _debug bake.opt.parse  bake.opt.match start
-      local optPath; optPath=$(bake.opt.match "$cmd" "$1")
-#      _debug bake.opt.parse  bake.opt.match end
+    # while bake.opt.list
+    local optList
+    # sort: root option first , priority low -> priority high: _root>pub>pub.get
+    readarray -t optList < <(bake.opt.list "$cmd" | bake.str.revertLines )
+    # convert to associative arrays , use to check if a opt is in optMap
+    declare -A optMap;
+    declare -A optNameMap;
+    for optPath in "${optList[@]}"; do
+      local opt ; opt=$(bake.path.basename "$optPath")
+      local abbr ; abbr=${_data["$optPath/abbr"]}
+      optMap["--$opt"]="${optPath}"
+      if [[ "$abbr" != "" ]] ; then optMap["-$abbr"]="${optPath}" ; fi
+      optNameMap["$optPath"]="$opt"
+    done
 
-      local opt;     opt=$(bake.path.basename "$optPath")
-      # if arg not a opt , parsing complete;
-      if [[ "$opt" == "" ]] ; then break;  fi
+    # while all args , until it is not opt
+    while (( $# > 0 )); do
+      # find $1 arg in optMap, guess $1 is a "-h" "-help" ...
+      local optPath; optPath=${optMap[$1]}
+      # if next arg not a opt , parsing complete;
+      if [[ "$optPath" == "" ]] ; then break;  fi
+      # "${pathLikeStr##*$delimiter}"
+#      local opt; opt=$(bake.path.basename "$optPath")
+      local opt; opt=${optNameMap["$optPath"]}
+#      echo "opt:$optPath   -   ${optNameMap["$optPath"]}" >&2
       # remove the prefix：build.@fields.opts.base_uri => base_uri
       local optType; optType=${_data["$optPath/type"]}
 
       case $optType in
-        bool)   _data[$cmd/opts/$opt/value]=true;
+        bool)   _data[$optPath/value]=true;
                 optCount=$((optCount+1)) ;
                 result+="local $opt=true;\n"
                 shift;;
@@ -393,7 +403,6 @@ function bake.opt.parse() {
     result+="local optCount=$optCount;\n"
     echo -e "$result" # -e show raw string
 }
-
 bake.opt.add --cmd bake.cmd.set --name "cmd"         --type string --optHelp "cmd, function name"
 bake.opt.add --cmd bake.cmd.set --name "summary"     --type string --optHelp "summary help, short, show on cmd list"
 bake.opt.add --cmd bake.cmd.set --name "description" --type string --optHelp "description, long help ,show on cmd help page"
@@ -442,6 +451,9 @@ function bake.help()(
   fi
 
   echo "
+Usage:
+  bake $(echo $(bake.str.split "$cmd" .)) [options] [args]
+
 Available Options:"
   for optPath in $(bake.opt.list "$cmd"); do
     local opt; opt=$(bake.path.basename "$optPath")
@@ -482,7 +494,8 @@ Available Commands:"
 # _root is special cmd, it is root of all cmd
 bake.opt.add --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
 bake.opt.add --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
-function bake.main() {
+function bake.run() {
+    # init
     bake.cmd.register
     # parse cmd :
     #   ./bake pub get -v -b
@@ -574,5 +587,5 @@ EOF
 if [[ "$1" == "--lib_mode"  ]]; then
   echo "lib_mode import: $BAKE_PATH"
 else
-  bake.main "$@"
+  bake.run "$@"
 fi
