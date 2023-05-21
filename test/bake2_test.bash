@@ -34,7 +34,7 @@ function bake.test(){
 # 这种测试有点麻烦，不如bake.test
 function bake.test.runTest() {
     while IFS=$'\n' read -r functionName ; do
-      [[ "$functionName" != test* ]] && continue ;
+      [[ "$functionName" != test.* ]] && continue ;
       # run test
       printf "test: %s %-50s" "${TEST_PATH}" "$functionName()"
       # TIMEFORMAT: https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
@@ -150,7 +150,6 @@ test.bake.cmd.list_up(){
   assert "$(bake.cmd.list_up '')" @is "_root"
 }
 test.bake.cmd.children(){
-  doctor | sort
   assert "$(bake.cmd.children bake.test)" @is_escape "runTest"
 }
 
@@ -179,8 +178,8 @@ test.bake.str.split(){
 
 test.bake.cmd.register()(
   bake.cmd.register
-  assert "$(doctor | grep test.bake.cmd.register)" \
-    @contains "test.bake.cmd.register=test.bake.cmd.register"
+  assert "$(_self | grep test.bake.cmd.register)" \
+    @contains "test.bake.cmd.register"
 )
 test.data.children(){
   assert "$(bake.data.children "bake.opt.add/opts")" @is_escape "abbr\ncmd\nname\noptHelp\nrequired\ntype"

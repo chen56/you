@@ -575,6 +575,7 @@ class CellSource {
 }
 
 class SpecialSource {
+  /// todo codeType to enum, common use by this and note_dev_gen.dart
   String codeType;
   final CodeEntity codeEntity;
   final NoteCell cell;

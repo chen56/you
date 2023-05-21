@@ -6,33 +6,35 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 #set -o nounset # -u: don't use it ,it is crazy, 1.bash version is diff Behavior 2.we need like this: ${arr[@]+"${arr[@]}"}
 # todo trap exit and kill all subprocess
 
-
 # bake == (bash)ake == 去make的bash工具
 # v0.2.20230521 搞docker那样的多级命令树 目前仅在macos上跑过
 # ------------------------------------------------------------------------------
+# bake is a bash script tool to build project, manage dependencies, and run commands.
 # bake 是个简单的自建命令工具，以替代Makefile的子命令功能
 # make工具的主要特点是处理文件依赖进行增量编译，但flutter、golang、java、js项目的build工具
 # 太厉害了，这几年唯一还在用Makefile的理由就是他的子命令机制: "make build"、
 # "make run", 可以方便的自定义单一入口的父子命令，但Makefile本身的语法套路也很复杂，
 # 很多批处理还是要靠bash, 这就尴尬了，工具太多，麻烦！本脚本尝试彻底摆脱使用Makefile。
-# 经尝试，代码很少啊 ，核心公共代码百十行啊，还主要是提取显示子命令帮助的，功能足够了：
-#   ./bake -h      # 列子命令看帮助，
-#   ./bake -h -v   # 列隐藏命令子命令，
-#   ./bake build # 子命令
-#   ./bake run   # 子命令
+# 经尝试，代码很少啊 ，核心代码几百行啊，父子命令2百行左右，option解析2百行左右，功能足够了：
 # bake命令规则：
-# 1. 命令函数通过"."来形成父子关系树 pub.get、assets.list，
-#    运行，运行：
-#      ./bake2 pub -h #看帮助
-#      ./bake2 pub pub -x -y -z  # 运行pub.get函数
-#      ./bake2 pub.pub -x -y -z  # 或直接
-# 2. 尽量不依赖bash以外的其他工具，包括linux coreutils,以便跨平台更简单
-# 搞docker那样的命令树，应该也不难，目前和make一样只支持一级子命令，暂时够用。
-# ref
+# 1. 函数即命令，所有bake内的函数均可以在脚本外运行：
+#      ./bake [all function]     # bake内的所有函数均可以在脚本外直接运行
+#      ./bake _self              # 比如这个内部函数, 看bake内部变量，调试脚本用
+#      ./bake2 test              # 你如果定义过test()函数，就可以这样运行
+# 2. 带"."的函数，形成父子命令，比如 bake.opt.add()函数是bake.opt()的子命令，bake.opt()
+#    是bake()的子命令，即便未定义父命令，也可以通过父命令列子命令看帮助:
+#      ./bake2 bake -h           # 运行子命令,或看帮助
+#      ./bake2 bake opt -h       # 运行子命令,或看帮助
+#      ./bake2 bake opt add -h   # 运行子命令,或看帮助
+#      ./bake2 bake.opt.add -h   # 由于规则1，可直接用函数名运行子命令
+# 3. 你可以定义根命令"_root()"
+#      ./bake2                   # 如果有_root()函数，就执行它
+# 4. bake尽量不依赖bash以外的其他工具，包括linux coreutils,更简单通用,但由于用了关联数组等
+#    依赖bash4+
+# other command framework ref:
 # https://pub.dev/documentation/args/latest/args/ArgParser-class.html
-# https://github.com/spf13/pflag/blob/master/string_array.go
+# https://github.com/spf13/pflag
 # https://oclif.io/docs/flags
-# ------------------------------------------------------------------------------
 
 if ((BASH_VERSINFO[0] < 4)); then
   echo "Error: 都2082年了，您的bash还是这个版本(BASH_VERSINFO: ${BASH_VERSINFO[*]})，请安装bash 4+ 后重启terminal:
@@ -68,17 +70,21 @@ _log(){
 _debug(){
   echo -e "DEBUG $(date "+%F %T")-【▶︎${FUNCNAME[1]}】-︎ $*" >&2
 }
-
-function doctor()(
-  echo '# doctor'
+# list internal var , used to debug bake self
+function _self()(
+  echo '# bake _self internal var'
+  echo
   echo '## _cmdTree'
+  echo
   for key in "${!_cmdTree[@]}"; do
-    echo "cmd  - $key=${_cmdTree[$key]:0:100}"
-  done
+    printf "cmd  - %-40s = %q\n"  "$key" "${_cmdTree[$key]:0:100}"
+  done | sort
+  echo
   echo '## _data'
+  echo
   for key in "${!_data[@]}"; do
-    echo "data - $key=${_data[$key]:0:100}"
-  done
+    printf "data - %-40s = %q\n"  "$key" "${_data[$key]:0:100}"
+  done | sort
 )
 
 _on_error() {
@@ -120,37 +126,12 @@ BAKE_FILE="$(basename "$BAKE_PATH")"
 cd "${BAKE_DIR}"
 
 # Simulating object-oriented data structures with flat associative arrays
-# opts define:
-#_root/opts/help/abbr=h
-#_root/opts/help/cmd=_root
-#_root/opts/help/name=help
-#_root/opts/help/optHelp=print help, show all commands
-#_root/opts/help/type=bool
-#_root/opts/verbose/abbr=v
-#_root/opts/verbose/cmd=_root
-#_root/opts/verbose/name=verbose
-#_root/opts/verbose/optHelp=verbose, show more info, more hidden commands
-#_root/opts/verbose/type=bool
-#bake.opt.add/opts/abbr/name=abbr
-#bake.opt.add/opts/abbr/type=string
-#bake.opt.add/opts/cmd/name=cmd
-#bake.opt.add/opts/cmd/type=string
-#bake.opt.add/opts/name/name=name
-#bake.opt.add/opts/name/required=true
-#bake.opt.add/opts/name/type=string
-#bake.opt.add/opts/optHelp/name=optHelp
-#bake.opt.add/opts/optHelp/type=string
-#bake.opt.add/opts/type/name=type
-#bake.opt.add/opts/type/type=string
-# parsed opts value:
-#  _data[_root/opts/verbose/value]=true
-#  _data[pub.get/opts/notes/value/0]="..lib/note.page"
-#  _data[pub.get/opts/notes/value/1]="./lib/a/note.page"
+# use ./bake2 _self to see internal var
 # save all other data
 declare -A _data
 
 # only save all commands, we use it to build command tree
-# it is cache data from _data
+# it is cache cmd tree from _data
 declare -A _cmdTree
 
 TYPE_CMD="type:cmd"
@@ -428,11 +409,15 @@ function bake.cmd.register() {
       if [[ "$functionName" == */*  ]]; then
         echo "error: function $functionName() can not contains '/' " >&2 && return 1
       fi
-      local traverseUpPath
-      for traverseUpPath in $(bake.cmd.list_up "$functionName");do
-        _cmdTree["$traverseUpPath"]="PARENT_CMD_NOT_FUNC"
+      local upCmd
+      for upCmd in $(bake.cmd.list_up "$functionName");do
+        # if upCmd is a function , set upCmd value to data path
+        if compgen -A function | grep -q "^$upCmd$" ; then
+          _cmdTree["$upCmd"]="$upCmd"
+        else
+          _cmdTree["$upCmd"]="PARENT_CMD_NOT_FUNC"
+        fi
       done
-      _cmdTree[$functionName]=$functionName
 
       # list all function name
       # declare -F | awk {'print $3'} == compgen -A function
@@ -501,12 +486,10 @@ Available Commands:"
   done
 )
 
-# _root is special cmd, it is root of all cmd
-bake.opt.add --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
-bake.opt.add --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
-function bake.run() {
+function bake.go() {
     # init
     bake.cmd.register
+
     # parse cmd :
     #   ./bake pub get -v -b
     #     -> { cmd:"pub.get", args:"-v -b" }
@@ -533,18 +516,25 @@ function bake.run() {
       return 1
     fi
 
-    # run cmd chain from _root:
-    # ./bake2 pub get   => run _root() -> pub() -> pub.get()
-    for upCmd in $(bake.cmd.list_down "$cmd"  ); do
-      if  [[ "${_cmdTree[$upCmd]}" == "PARENT_CMD_NOT_FUNC" ]]; then continue ; fi
-      $upCmd "$@"
-    done
+    $cmd "$@"
 }
 
-##########################################
+# _root is special cmd, bake add some common options to this cmd, you can add yourself options
+bake.opt.add --cmd _root --name "help"    --abbr h --type bool --optHelp "print help, show all commands"
+bake.opt.add --cmd _root --name "verbose" --abbr v --type bool --optHelp "verbose, show more info, more hidden commands"
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# bake common script end line.
+# The above code is common code that is not related to the specific app,
+# if you want to define app-related commands,
+# please define them below to clean and separate the common and app code
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+####################################################################################
 # app script
 # 应用项目补充的公共脚本，不在bake维护范围
-##########################################
+# 此位置以上的全都是bake工具脚本，copy走可以直接用，之下的为项目特定cmd，自己弄
+####################################################################################
 # print first, then _run
 _run() {
   local project; project=$(basename "$PWD")
@@ -559,6 +549,32 @@ _run() {
 # app cmd script
 # 应用的命令脚本
 ##########################################
+
+
+bake.cmd.set --cmd _root \
+  --usage "./$BAKE_FILE [cmd] [opts] [args...]" \
+  --summary "flutter-note build cli." \
+  --description "$(cat <<- EOF
+____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
+|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
+|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
+
+flutter-note build tools.
+
+Samples:
+ ./${BAKE_FILE}                          # default run "get()"
+ ./${BAKE_FILE} -h                       # show all commands help
+ ./${BAKE_FILE} -h -v                    # show all commands help , include internal commands
+ ./${BAKE_FILE} all  flutter pub get     # run "flutter pub get" on all mono projects
+ ./${BAKE_FILE} note flutter pub get     # run "flutter pub get" on note project
+
+EOF
+)"
+_root(){
+  # default run
+  _run get
+}
+
 bake.cmd.set --cmd all --summary "<mono>  run cmd on all mono project"\
   --usage "Usage: ./$BAKE_FILE all [any command]"
 
@@ -591,37 +607,19 @@ note_test() (         cd packages/note_test;             _run "$@";  )
 bake.cmd.set --cmd get --usage "./$BAKE_FILE get" --summary "<shortcut> ./bake all flutter pub get"
 get(){ _run all flutter pub get; }
 
-bake.cmd.set --cmd test --usage "./$BAKE_FILE test" --summary "<shortcut> ./bake test flutter pub get"
-test(){ _run all flutter test; }
+bake.cmd.set --cmd test --usage "./$BAKE_FILE test" --summary "<shortcut> run all tests in all projects"
+test(){
+  ./test/bake2_test.bash
+  _run all flutter test;
+}
 
 ####################################################
 # app entry script & _root cmd
-# _root cmd is no function ,all it is this file
 ####################################################
-# cmd settings use bash associative array
-
-bake.cmd.set --cmd _root \
-  --usage "./$BAKE_FILE [cmd] [opts] [args...]" \
-  --summary "bake is a bash script tool to build project, manage dependencies, and run commands." \
-  --description "$(cat <<- EOF
-____ _    _  _ ___ ___ ____ ____    _  _ ____ ___ ____
-|___ |    |  |  |   |  |___ |__/ __ |\ | |  |  |  |___
-|    |___ |__|  |   |  |___ |  \    | \| |__|  |  |___
-
-bake is a bash script tool to build project, manage dependencies, and run commands.
-
-Samples:
- ./${BAKE_FILE} -h                       # show all commands help
- ./${BAKE_FILE} -h -v                    # show all commands help , include internal commands
- ./${BAKE_FILE} all  flutter pub get     # run "flutter pub get" on all mono projects
- ./${BAKE_FILE} note flutter pub get     # run "flutter pub get" on note project
-
-EOF
-)"
 
 # lib_mode use for other script import
 if [[ "$1" == "--lib_mode"  ]]; then
   echo "lib_mode import: $BAKE_PATH"
 else
-  bake.run "$@"
+  bake.go "$@"
 fi

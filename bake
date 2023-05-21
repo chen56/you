@@ -17,7 +17,7 @@ set -o pipefail  # default pipeline status==last command status, If set, status=
 # 经尝试，代码很少啊 ，公共代码几十行啊，还主要是提取显示子命令帮助的，功能足够了：
 #   ./bake       # 列子命令看帮助，
 #   ./bake build # 子命令
-#   ./bake run   # 子命令
+#   ./bake.go   # 子命令
 # bake命令规则：
 # 1. 定义以斜杠"/"为前缀的function作为子命令，/build、/run、/assets/list、
 #    表示命令的其父子关系，执行时去掉斜杠/, 构成父子命令：./bake assets list -x -y -z

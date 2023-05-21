@@ -6,7 +6,7 @@ noteInfo() => (
         (
           cellType: 'header',
           offset: 0,
-          end: 246,
+          end: 284,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -18,8 +18,8 @@ noteInfo() => (
         /// (print.markdown(r''' # bar  ## )
         (
           cellType: 'body',
-          offset: 246,
-          end: 362,
+          offset: 284,
+          end: 400,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -31,8 +31,8 @@ noteInfo() => (
         /// (print(MateSample(Container$Mat)
         (
           cellType: 'body',
-          offset: 440,
-          end: 982,
+          offset: 478,
+          end: 1020,
           statementCount: 1,
           specialNodes: <({
             String nodeType,
@@ -44,8 +44,8 @@ noteInfo() => (
         /// ()
         (
           cellType: 'tail',
-          offset: 982,
-          end: 984,
+          offset: 1020,
+          end: 1022,
           statementCount: 0,
           specialNodes: <({
             String nodeType,
@@ -55,5 +55,5 @@ noteInfo() => (
         )
       ],
       encodedCode:
-          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL25vdGVfY29yZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGVfbWF0ZV9mbHV0dGVyL21hdGVyaWFsLmRhcnQnOwoKTm90ZUNvbmZQYXJ0IHBhZ2UgPSBOb3RlQ29uZlBhcnQoCiAgc2hvcnRUaXRsZTogIuW3peWFt+agjyIsCiAgYnVpbGRlcjogYnVpbGQsCik7CgpidWlsZChCdWlsZENvbnRleHQgY29udGV4dCwgUGVuIHByaW50KSB7CiAgcHJpbnQubWFya2Rvd24ocicnJwojIGJhcgoKIyMgQnV0dG9uQmFyIAoK5oyJ6ZKu55qE5biD5bGA5a655Zmo77yM5Y+v5Lul5oyJ5YaF5a6555qE5a6e6ZmF5a695bqm5Zyo6KGM5oiW5YiX5LmL6Ze06LCD5pW077yM5oKo5oqK5LiL6Z2i6IyD5L6L5Lit54i25a655ZmoQ29udGFpbmVyLndpZHRo6LCD5bCP5Lqb55yL55yL77yaCgogICcnJyk7CgogIHByaW50LiRfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXygpOwogIHByaW50KAogICAgTWF0ZVNhbXBsZShDb250YWluZXIkTWF0ZSgKICAgICAgd2lkdGg6IDgwMCwKICAgICAgY29sb3I6IENvbG9ycy5ibHVlQWNjZW50LnNoYWRlMTAwLAogICAgICBjaGlsZDogQnV0dG9uQmFyJE1hdGUoCiAgICAgICAgY2hpbGRyZW46IFsKICAgICAgICAgIEVsZXZhdGVkQnV0dG9uJE1hdGUoCiAgICAgICAgICAgICAgb25QcmVzc2VkOiAoKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgiRWxldmF0ZWRCdXR0b24iKSksCiAgICAgICAgICBPdXRsaW5lZEJ1dHRvbiRNYXRlKAogICAgICAgICAgICAgIG9uUHJlc3NlZDogKCkge30sIGNoaWxkOiBUZXh0JE1hdGUoJ091dGxpbmVkQnV0dG9uJykpLAogICAgICAgICAgQ2hlY2tib3hNZW51QnV0dG9uJE1hdGUoCiAgICAgICAgICAgICAgdmFsdWU6IHRydWUsCiAgICAgICAgICAgICAgb25DaGFuZ2VkOiAoYm9vbD8gdmFsdWUpIHt9LAogICAgICAgICAgICAgIGNoaWxkOiBUZXh0JE1hdGUoJ0NoZWNrYm94TWVudUJ1dHRvbicpKSwKICAgICAgICBdLAogICAgICApLAogICAgKSksCiAgKTsKfQo="
+          "aW1wb3J0ICdwYWNrYWdlOmZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CmltcG9ydCAncGFja2FnZTpub3RlL21hdGVfbm90ZS5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOm5vdGUvbm90ZV9jb3JlLmRhcnQnOwppbXBvcnQgJ3BhY2thZ2U6bm90ZV9tYXRlX2ZsdXR0ZXIvbWF0ZXJpYWwuZGFydCc7CgpOb3RlQ29uZlBhcnQgcGFnZSA9IE5vdGVDb25mUGFydCgKICBzaG9ydFRpdGxlOiAi5bel5YW35qCPIiwKICBidWlsZGVyOiBidWlsZCwKKTsKCmJ1aWxkKEJ1aWxkQ29udGV4dCBjb250ZXh0LCBQZW4gcHJpbnQpIHsKICBwcmludC5tYXJrZG93bihyJycnCiMgYmFyCgojIyBCdXR0b25CYXIgCgrmjInpkq7nmoTluIPlsYDlrrnlmajvvIzlj6/ku6XmjInlhoXlrrnnmoTlrp7pmYXlrr3luqblnKjooYzmiJbliJfkuYvpl7TosIPmlbTvvIzmgqjmiorkuIvpnaLojIPkvovkuK3niLblrrnlmahDb250YWluZXIud2lkdGjosIPlsI/kupvnnIvnnIvvvJoKCiAgJycnKTsKCiAgcHJpbnQuJF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fKCk7CiAgcHJpbnQoCiAgICBNYXRlU2FtcGxlKENvbnRhaW5lciRNYXRlKAogICAgICB3aWR0aDogODAwLAogICAgICBjb2xvcjogQ29sb3JzLmJsdWVBY2NlbnQuc2hhZGUxMDAsCiAgICAgIGNoaWxkOiBCdXR0b25CYXIkTWF0ZSgKICAgICAgICBjaGlsZHJlbjogWwogICAgICAgICAgRWxldmF0ZWRCdXR0b24kTWF0ZSgKICAgICAgICAgICAgICBvblByZXNzZWQ6ICgpIHt9LCBjaGlsZDogVGV4dCRNYXRlKCJFbGV2YXRlZEJ1dHRvbiIpKSwKICAgICAgICAgIE91dGxpbmVkQnV0dG9uJE1hdGUoCiAgICAgICAgICAgICAgb25QcmVzc2VkOiAoKSB7fSwgY2hpbGQ6IFRleHQkTWF0ZSgnT3V0bGluZWRCdXR0b24nKSksCiAgICAgICAgICBDaGVja2JveE1lbnVCdXR0b24kTWF0ZSgKICAgICAgICAgICAgICB2YWx1ZTogdHJ1ZSwKICAgICAgICAgICAgICBvbkNoYW5nZWQ6IChib29sPyB2YWx1ZSkge30sCiAgICAgICAgICAgICAgY2hpbGQ6IFRleHQkTWF0ZSgnQ2hlY2tib3hNZW51QnV0dG9uJykpLAogICAgICAgIF0sCiAgICAgICksCiAgICApKSwKICApOwp9Cg=="
     );
